@@ -1,4 +1,3 @@
-# openperceptionx.github.io
-OpenDriveLab official website in Test Mode.
+# OpenDriveLab Official Website
 
-> To be launched in Late 2022.
+> http://opendrivelab.com/
