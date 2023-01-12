@@ -33,7 +33,7 @@ html, body{margin:0; padding:0; font-size:14px; line-height:1.6em;}
 .overlay::after{display:block; position:absolute; top:0; left:0; width:100%; height:100%; content:""; z-index:-1;}
 .overlay.startlt::after{width:50%;}
 
-.bgded{background-position:top center; background-repeat:no-repeat; background-size:cover;}
+.bgded{background-position:top center; background-repeat:no-repeat; background-size: 1200px;    }
 .circle{border-radius:50%; background-clip:padding-box;}
 
 .btn{display:inline-block; padding:8px 18px 10px; text-transform:uppercase; border:1px solid;}
