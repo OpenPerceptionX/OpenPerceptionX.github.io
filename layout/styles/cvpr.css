@@ -289,7 +289,11 @@
   /* =============================================================================
      BASIC STYLES
      ========================================================================== */
-  h2,
+  h2{
+    font-size: 6em;
+    line-height: 1.6
+  }
+
   h3,
   h4 {
     font-size: 5em;
@@ -307,6 +311,11 @@
     font-size: 2em;
   }
   p {
+    font-size: 1.6em;
+    line-height: 1.6em;
+    margin-bottom: 1.4em;
+  }
+  .p-title {
     font-size: 1.6em;
     line-height: 1.6em;
     margin-bottom: 1.4em;
@@ -396,6 +405,14 @@
   }
   .speaker-photo {
     position: absolute;
+    top: 20px;
+    left: 50px;
+    display: block;
+    width: 120px;
+    height: 120px;
+  }
+  .speaker-photo-00 {
+    position: absolute;
     top: 0;
     left: 0;
     display: block;
@@ -467,6 +484,13 @@
     font-weight: bolder;
   }
   .schedule-tbl .speaker-photo {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin-right: 20px;
+  }
+  .schedule-tbl .speaker-photo-00 {
     position: relative;
     width: 40px;
     height: 40px;
@@ -584,6 +608,11 @@
       font-size: 1.8em;
     }
     .schedule-tbl .speaker-photo {
+      width: 40px;
+      height: 40px;
+      margin-right: 5px;
+    }
+    .schedule-tbl .speaker-photo-00 {
       width: 40px;
       height: 40px;
       margin-right: 5px;
@@ -769,8 +798,9 @@
     background-image: url('../../images/event/cvpr/cvpr-20232.png');
     background-color: #2b2b2b;
     background-repeat: no-repeat;
-    background-position: right bottom;
+    background-position: right top;
     background-size: 100% auto;
+    
   }
   .logo-link,
   .tagline,
@@ -845,7 +875,19 @@
     -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
   }
+  .speaker-photo-00 .photo {
+    border-radius: 50%;
+    box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.07);
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
   .speakers-item:hover .speaker-photo .photo {
+    box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.3);
+  }
+  .speakers-item:hover .speaker-photo-00 .photo {
     box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.3);
   }
   .speech-time {

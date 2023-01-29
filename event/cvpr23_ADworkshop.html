@@ -54,7 +54,7 @@
         
           <li class="nav-item">
             
-            <a href="#challenge" title="Challenge" class="nav-link">
+            <a href="#Challenges" title="Challenges" class="nav-link">
               Challenges
             </a>
           </li>
@@ -85,19 +85,22 @@
   <!-- Top Background Image Wrapper -->
   <header class="header">
     <div class="wrapper">
-      <h1 class="logo-name">
+      <h1 class="logo-name"style="font-size: 8em;
+      line-height: 1.2">
         <a class="logo-link" href="#" title="End-to-End Autonomous Driving: Emerging Tasks and Challenges" itemprop="name">End-to-End Autonomous Driving: Emerging Tasks and Challenges</a>
       </h1>
-      <h2 class="logo-link">CVPR 2023 Workshop</h2>
+      <h2 class="logo-link" style="font-size: 4em;
+      line-height: 1.2">CVPR 2023 Workshop</h2>
     
-      <h2 class="tagline"> June 2023, Vancouver, Canada</h2>
+      <h2 class="tagline"  style="font-size: 3em;
+      line-height: 1.5">> June 2023, Vancouver, Canada</h2>
   
       <div class="call-action-area">
         
   
         
           
-          <a href="#challenges" class="call-action-link" title="Participate in our new challenges!">Participate in our new challenges!</a>
+          <a href="#Challenges" class="call-action-link" title="Participate in our new challenges!">Participate in our new challenges!</a>
         
   
         
@@ -118,7 +121,7 @@
     <div class="content three_quarter first"> 
       <!-- #################################_blank############################################################### -->
 
-      <h3><b><p class="section-title" >About</p></b></h3>
+      <b><h2 class="section-title" id="about" >About</h2></b>
       <p>Welcome to the CVPR 2023 Workshop on End-to-End Autonomous Driving!</p>
 
       <p itemprop="description">This workshop aims to bring together leading researchers and practitioners to discuss upcoming paradigms for autonomous vehicles. Central to the program is a series of invited talks and three new challenges in the self-driving domain. Each challenge combines aspects of multiple subcomponents of traditional driving stacks, e.g. joint perception and prediction or joint prediction and planning. Winners of the challenges will present their results and insights as part of the workshop. We invite researchers around the world to build new algorithms to tackle these challenging, real-world autonomous driving tasks!</p>
@@ -126,8 +129,12 @@
       <!-- <img class="imgr borderedbox inspace-5" src="../images/demo/imgr.gif" alt=""> -->
 
 
-      <section class="dates" id="dates">
-        <h3><b><p class="section-title">Dates</p></b></h3>
+      <!-- <section class="dates" id="dates">
+        <h3><b><p class="section-title">Dates</p></b></h3> -->
+      
+        <section class="dates" id="dates"><b><h2 class="section-title" id="dates" >Dates</h2></b>
+
+      
 
 <style> 
 hide {
@@ -192,8 +199,12 @@ document.getElementById("countdown").innerHTML = countdown
       </section>
 
 
-      <section class="speakers" id="speakers">
-      <h3><b><p class="section-title">Speakers</p></b></h3>
+      <!-- <section class="speakers" id="speakers">
+      <h3><b><p class="section-title">Speakers</p></b></h3> -->
+
+
+      <section class="speakers" id="speakers"><b><h2 class="section-title" id="Speakers" >Speakers</h2></b>
+
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -208,13 +219,25 @@ width: 50%;
 padding: 10px;
 }
 
+.column3 {
+float: left;
+width: 33.33%;
+padding: 10px;
+}
+
+.column4 {
+float: left;
+width: 25%;
+padding: 10px;
+}
+
 </style>
 
 <div class="row">
-<div class="column">
+<div class="column3">
 
 <article class="hoc container clear"> 
-<h5>Morning speakers</h5><br><br>
+<!-- <h5>Morning speakers</h5><br><br> -->
 
   <!-- ################################################################################################ -->
 
@@ -252,6 +275,9 @@ padding: 10px;
   <!-- </li> -->
   </li>
 
+</div>
+<div class="column3">
+
   <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person" >
     <span class="speaker-photo">
       <a href="https://alexgkendall.com" target="_blank"><img class="photo" src="../images/event/cvpr/people/Alex Kendall.jfif" alt="Alex Kendall" itemprop="image"></a>
@@ -271,10 +297,9 @@ padding: 10px;
 
 
 </ul>
-</div>
-<div class="column">
 
-<h5>Afternoon speakers</h5><br><br>
+
+<!-- <h5>Afternoon speakers</h5><br><br> -->
 
 <ul class="speakers-list">
 
@@ -294,6 +319,9 @@ padding: 10px;
     <p class="speakers-bio">Head of AI Research<br>Cruise</p>
   <!-- </li> -->
   </li>
+
+</div>
+<div class="column3">
 
   <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person" >
     <span class="speaker-photo">
@@ -324,7 +352,7 @@ padding: 10px;
 
     <h3 class="speakers-name"><a href="https://alvarezlopezjosem.github.io" target="_blank" title="Jose M. Alvarez"> Jose M. Alvarez </a>
     </h3>
-    <p class="speakers-bio">Lead of the autonomous vechicle perception research group<br>Nvidia
+    <p class="speakers-bio">Senior Research Manager<br>Nvidia
     </p>
   <!-- </li> -->
   </li>
@@ -341,7 +369,8 @@ padding: 10px;
 
 
 
-      <h3><b><p class="section-title" target="_blank" id="Schedule">Schedule</p></b></h3>
+      <!-- <h3><b><p class="section-title" target="_blank" id="Schedule">Schedule</p></b></h3> -->
+      <section class="schedule"><b><h2 class="section-title" id="Schedule" >Schedule</h2></b>
       <div class="wrapper row3">
         <main class="hoc container clear"> 
           <!-- main body -->
@@ -377,7 +406,7 @@ padding: 10px;
                       <td class="schedule-time">08:30</td>
                       <td class="schedule-slot">
                       
-                        <span class="speaker-photo">
+                        <span class="speaker-photo-00">
                           <img class="photo" src="../images/event/2023/hongyang_li.jpeg" alt="Hongyang Li">
                         </span>        
                    
@@ -401,10 +430,16 @@ padding: 10px;
           <!-- / main body -->
           <div class="clear"></div>
         </main>
-      </div>
+      </div></section>
 
 
-      <h3><b><p class="section-title">Challenges</p></b></h3>
+      <br><br>
+
+
+
+      <!-- <h3><b><p class="section-title" id="Challenges">Challenges</p></b></h3> -->
+      <section="challenges"><b><h2 class="section-title" id="Challenges" >Challenges</h2></b>
+
       <center><img class="photo" src="../images/event/cvpr/nuPlan_overview.png"><br><br></center>
 
       <h4 class="segment">nuPlan Planning Challenge</h4>
@@ -420,13 +455,16 @@ padding: 10px;
       <h4 class="segment">OpenOcc: 3D Occupancy+Flow Challenge</h4>
       <p itemprop="description">Understanding the 3D surroundings including the background and foreground object is important for autonomous driving, which can be applied for perception and planning. In the traditional 3D object detection task, the foreground object is represented by the 3D bounding box. However, the geometrical shape of the object is complex, which can not be represented by a simple 3D box, and the perception of background is absent. The goal of this task is to predict the 3D occupancy of the complete scene and the flow of the foreground objects given the input image from six cameras. In this task, we provide a large-scale occupancy benchmark based on the nuScenes dataset. The benchmark is a voxelized representation of the 3D space, and the occupancy state and semantics of voxel in 3D space are jointly estimated in this task. The complexity of this task lies in the dense prediction of 3D space given the input of image, and the flow state of foreground objects also needs to be inferred.
       </p>
+    </section>
 
 
 
+    <section="organizers"><b><h2 class="section-title" id="organizers" >Organizers</h2></b>
 
-      <h3><b><p class="section-title" target="_blank" id="organizers">Organizers</p></h3>
-      The CVPR 2023 workshop is a joint effort by a large set of researchers from a variety of organizations. They are listed below in alphabetical order.
-      <br><br>
+      <!-- <h3><b><p class="section-title" target="_blank" id="organizers">Organizers</p></h3> -->
+        <br><br>
+      <h5>The CVPR 2023 workshop is a joint effort by a large set of researchers from a variety of organizations. They are listed below in alphabetical order.
+      </h5><br><br>
       <div class="row">
         <div class="column">
 
@@ -511,6 +549,11 @@ padding: 10px;
           wanli.ouyang@sydney.edu.au          <br><br>
           <p class="speakers-bio">Professor<br>Shanghai AI Lab 
           </p>
+
+        </div>
+        <div class="column">
+          <h4 class="segment">Organizers</h4>
+          <br><br>
         <!-- </li> -->
         </li>
         <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person" >
@@ -570,9 +613,10 @@ padding: 10px;
         </li>
 
       </ul>
-        </div>
-      <div class="column">
+        </div></div>
 
+        <div class="row">
+          <div class="column">
 
       <h4 class="segment">Challenge Organizers</h4>
 
@@ -613,40 +657,53 @@ padding: 10px;
 
       <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person" >
         <span class="speaker-photo">
-          <a href="https://www2.eecs.berkeley.edu/Faculty/Homepages/svlevine.html" target="_blank"><img class="photo" src="../images/event/cvpr/people/none.png" alt="Hang Zhao" itemprop="image"></a>
+          <a href=" " target="_blank"><img class="photo" src="../images/event/cvpr/people/none.png" alt="Hang Zhao" itemprop="image"></a>
         </span>
     
         <h3 class="speech-title">
           
         </h3>
     
-        <h3 class="speakers-name"><a href="https://www2.eecs.berkeley.edu/Faculty/Homepages/svlevine.html" target="_blank" title="Sergey Levine">Wenwen 
+        <h3 class="speakers-name"><a href=" " target="_blank" title="Sergey Levine">Wenwen Tong
         </a>
         </h3>
-        <p class="speakers-bio">??? </p>
+        <p class="speakers-bio">SenseTime </p>
       <!-- </li> -->
       </li>
 
       <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person" >
         <span class="speaker-photo">
-          <a href="https://www2.eecs.berkeley.edu/Faculty/Homepages/svlevine.html" target="_blank"><img class="photo" src="../images/event/cvpr/people/none.png" alt="Hang Zhao" itemprop="image"></a>
+          <a href=" " target="_blank"><img class="photo" src="../images/event/cvpr/people/none.png" alt="Hang Zhao" itemprop="image"></a>
         </span>
     
         <h3 class="speech-title">
           
         </h3>
     
-        <h3 class="speakers-name"><a href="https://www2.eecs.berkeley.edu/Faculty/Homepages/svlevine.html" target="_blank" title="Sergey Levine">Hanming </a>
+        <h3 class="speakers-name"><a href=" " target="_blank" title="Sergey Levine">Hanming Deng</a>
         </h3>
-        <p class="speakers-bio">??? </p>
+        <p class="speakers-bio">SenseTime  </p>
       <!-- </li> -->
       </li>
 
+      <h4 class="segment">Challenge Organizers</h4>
 
+      <h5 >E2E AD Track
+      </h5>
+      
+      <br><br>
+
+      <p>TBD</p>
+
+    </div>
+    <div class="column">
+      
+      <h4 class="segment">Challenge Organizers</h4>
 
       <h5 >OpenLane Track      </h5>
 
       <br><br>
+
 
 
       <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person" >
@@ -709,40 +766,62 @@ padding: 10px;
       <!-- </li> -->
       </li>
       
-      <h5 >E2E AD Track      </h5>
-
-      <br><br>
-  
+      <h4 class="segment">Challenge Organizers</h4>
 
 
       <h5 >Motion Forecasting Track
       </h5>
 
+
       <br><br>
+      <p>TBD</p>
   
         </div></div>
+      </section>
+
 
         <div class="row">
           <div class="column">
-      <h3><b><p class="section-title" target="_blank" id="Steering Committee">Steering Committee</p></b></h3>
-      <ul class="organizers-list">
-  
-        <li class="organizers-item" itemprop="performer" itemscope itemtype="http://schema.org/Person">
-          <span class="organizer-photo">
-            <a href="https://lihongyang.info/" target="_blank"><img class="photo" src="../images/event/2023/hongyang_li.jpeg" alt="German Ros" itemprop="image"></a>
-          </span>
+
+
+
+      <!-- <h3><b><p class="section-title" target="_blank" id="Steering Committee">Steering Committee</p></b></h3> -->
+      <b><h2 class="section-title" id="Steering Committee" style="font-size: 4.8em;
+        line-height: 1.2">Steering Committee</h2></b>
+
+
+
+      <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person" >
+        <span class="speaker-photo">
+          <a href="https://lihongyang.info/" target="_blank"><img class="photo" src="../images/event/cvpr/people/hongyang_li.jpeg" 
+            alt="Hongyang Li" itemprop="image"></a>
+        </span>
     
-          <h3 class="organizers-name"><a href="https://lihongyang.info/" target="_blank" title="Hongyang Li"> Hongyang Li </a>
-          &nbsp;&nbsp; lihongyang@pjlab.org.cn
-          </h3>
-          <p class="organizers-bio">Research Scientist.</p>
-        </li>
-      </ul>
+        <h3 class="speech-title">
+          
+        </h3>
+    
+        <h3 class="speakers-name"><a href="https://lihongyang.info/" target="_blank" title="Hongyang Li"> Hongyang Li </a>
+        </h3>
+        <br>
+        lihongyang@pjlab.org.cn
+        <br><br>
+        <p class="speakers-bio">Research Scientist<br>Shanghai AI Lab & Shanghai Jiao Tong University
+        </p>
+      <!-- </li> -->
+      </li>
+      
           </div>
       <div class="column">
 
  
-      <h3><b><p class="section-title" target="_blank" id="Sponsors">Sponsors</p></b></h3>
+      <!-- <h3><b><p class="section-title" target="_blank" id="sponsors">Sponsors</p></b></h3> -->
+      <b><h2 class="section-title" id="sponsors" style="font-size: 4.8em;
+        line-height: 1.2">Sponsors</h2></b>
+      <br><br>
+      <br><br>
+
+
       <p>TBD</p>
     </div></div>
 
