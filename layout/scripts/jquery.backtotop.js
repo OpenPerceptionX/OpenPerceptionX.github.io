@@ -20,3 +20,13 @@ jQuery(window).scroll(function () {
         jQuery("#backtotop").removeClass("visible");
     }
 });
+
+function change(val){
+    if(val == "1"){
+        var show = $(".menu_one").css("display");
+        $(".menu_one").css("display",show =="none"?"block":"none");
+    }else if(val == "2"){
+        var show = $(".menu_two").css("display");
+        $(".menu_two").css("display",show =="none"?"block":"none");
+    }
+}

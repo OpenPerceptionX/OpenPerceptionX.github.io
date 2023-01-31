@@ -1,3 +1,8 @@
+@import url("fontawesome-free/css/fontawesome-all.min.css");
+/* @import url("framework.css"); */
+
+
+
 /* =============================================================================
    RESET
    ========================================================================== */
@@ -286,6 +291,8 @@
   .content section {
     padding-top: 50px;
   }
+  .nospace{margin:0; padding:0; list-style:none;}
+
   /* =============================================================================
      BASIC STYLES
      ========================================================================== */
@@ -337,6 +344,7 @@
   .nav-item {
     display: inline-block;
     margin-right: 15px;
+
   }
   .nav-link {
     font-size: 1.4em;
@@ -408,16 +416,16 @@
     top: 20px;
     left: 50px;
     display: block;
-    width: 120px;
-    height: 120px;
+    width: 95px;
+    height: 95px;
   }
   .speaker-photo-00 {
     position: absolute;
     top: 0;
     left: 0;
     display: block;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
   }
   .speech-title {
     padding-top: 10px;
@@ -430,10 +438,10 @@
     letter-spacing: -0.03em;
   }
   .speakers-name {
-    font-size: 1.6em;
+    font-size: 1.2em;
   }
   .speakers-item p {
-    font-size: 1.4em;
+    font-size: 1.2em;
   }
   /* =============================================================================
      ORGANIZER
@@ -720,6 +728,7 @@
     }
     .speakers-bio {
       display: none;
+      text-align: center;
     }
     /* organizers */
     .organizers-item {
@@ -1012,8 +1021,20 @@
     .imgl, .imgr{display:inline-block; float:none; margin:0 0 10px 0;}
     .fl_left, .fl_right{display:block; float:none;}
     .group .group > *:last-child, .clear .clear > *:last-child, .clear .group > *:last-child, .group .clear > *:last-child{margin-bottom:0;}/* Experimental - Needs more testing in different situations, stops double margin when stacking */
-    .one_half, .one_third, .two_third, .one_quarter, .two_quarter, .three_quarter, #segment > .two_third{display:block; float:none; width:auto; margin:0 0 30px 0;}
-  
+    .one_half, .one_third, .two_third, .one_quarter, .two_quarter, #segment > .two_third{display:block; float:none; width:auto; margin:0 0 30px 0;}
+    .three_quarter{display:inline-block; float:left; margin:0 0 0 4.21052%; list-style:none;}
+
+
+    .first{margin-left:0; clear:left;}
+
+    .one_quarter{width:21.8421%;}
+    .one_third{width:30.52631%;}
+    .one_half, .two_quarter{width:47.89473%;}
+    .two_third{width:65.26315%;}
+    .three_quarter{width:73.94736%;}
+
+
+
     #topbar{padding-top:15px; text-align:center;}
     #topbar > div:first-of-type ul{margin:0 0 15px 0;}
   
@@ -1057,4 +1078,145 @@
 .inspace-30{padding:30px;}
 .inspace-50{padding:50px;}
 .inspace-80{padding:80px;}
+
+
+
+.grid {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.grid-item {
+    min-width: 99px;
+    max-width: 99px;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 99px;
+    -ms-flex: 1 1 99px;
+    flex: 1 1 99px;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    margin-bottom: 1rem;
+}
+
+.grid-item figure {
+    padding: 0;
+    margin: 0;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.05);
+}
+.grid-item figure img {
+    display: block;
+    max-width: 100%;
+}
+.grid-item figcaption {
+    display: block;
+    padding: .625rem .5rem;
+    background: #474952;
+}
+body {
+    margin: 0;
+}
+
+
+/* Sidebar */
+.container .sidebar{}
+
+.sidebar .sdb_holder{margin-bottom:50px;}
+.sidebar .sdb_holder:last-child{margin-bottom:0;}
+
+/* Sidebar Navigation */
+.sidebar nav{display:block; width:100%; position:fixed;}
+.sidebar nav li{margin:0 0 3px 0; padding:0;}
+.sidebar nav a{display:block; position:relative; margin:0; padding:5px 10px 5px 15px; text-decoration:none; border:solid; border-width:0 0 1px 0;}
+.sidebar nav a::after{top:10px; left:5px; content:"\f0da";}
+.sidebar nav ul ul a{padding-left:35px;}
+.sidebar nav ul ul a::after{left:25px;}
+.sidebar nav ul ul ul a{padding-left:55px;}
+.sidebar nav ul ul ul a::after{left:45px;}
+
+
+/* Navigation */
+#mainav{}
+#mainav li a{color:inherit;}
+#mainav .active a, #mainav a:hover, #mainav li:hover > a{color:#DC8E47; background-color:inherit;}
+#mainav li li a, #mainav .active li a{color:#FFFFFF; background-color:rgba(220,142,71,.5);/* #DC8E47 */ border-color:rgba(0,0,0,.6);}
+#mainav li li:hover > a, #mainav .active .active > a{color:inherit; background-color:#DC8E47;}
+#mainav form select{color:#474747; background-color:#FFFFFF;}
+
+#breadcrumb a{color:inherit; background-color:inherit;}
+#breadcrumb li:last-child a{color:#DC8E47;}
+
+.container .sidebar nav a{color:inherit; border-color:#D7D7D7;}
+.container .sidebar nav a:hover{color:#DC8E47;}
+
+.pagination a, .pagination strong{border-color:#D7D7D7;}
+.pagination .current *{color:#FFFFFF; background-color:#DC8E47;}
+
+#backtotop{color:#FFFFFF; background-color:#DC8E47;}
+
+#mainav, #breadcrumb, .sidebar nav{line-height:normal;}
+#mainav .drop::after, #mainav li li .drop::after, #breadcrumb li a::after, .sidebar nav a::after{position:absolute; font-family:"Font Awesome\ 5 Free"; font-weight:900; font-size:10px; line-height:10px;}
+
+.bts{display:inline-block; padding:8px 18px 10px; text-transform:none; border:0.8px solid;}
+
+.bts:hover, .bts.inverse{color:#000000; background-color:#c2c2c2; border-color:#e3ddd5;}
+/* .bts, .bts.inverse:hover{color:#00ACEE; background-color:#00ACEE; border-color:#fdfdfd;} */
+.bts, .bts.inverse:hover{color:#1A1914; background-color:transparent; border-color:#fdfdfd;}
+
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.mobile-nav{
+	width: 120px;
+	height: 100%;
+}
+.nav_menu{
+	background-color: royalblue;
+	display: block;
+	font-size: 16px;
+	padding: 1em 5%;
+	border-top: 1px solid #4f4f4f;
+	border-bottom: 1px solid #292929;
+	cursor: pointer;
+	margin-left: -50px;
+	text-align: center;
+  /* position:fixed; */
+}
+.menu{
+	background-color: paleturquoise;
+	display: block;
+	font-size: 14px;
+	padding: 1em 5%;
+	border-top: 1px solid #4f4f4f;
+	border-bottom: 1px solid #292929;
+	cursor: pointer;
+	margin-left: -50px;
+	text-align: center;
+}
+li{
+	list-style-type:none
+}
+a{
+	color: white;
+}
+a:hover,
+a:focus {
+	text-decoration: none
+}
+.menu_one, .menu_two{
+	display: none;
+}
 
