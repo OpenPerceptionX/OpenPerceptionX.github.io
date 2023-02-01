@@ -34,62 +34,31 @@
   <!-- Top Background Image Wrapper -->
   <div class="bgded overlay " style="background-image:url('../images/challenge/poster.gif');"> 
     <!-- ################################################################################################ -->
-    <div class="wrapper row0">
-      <div id="topbar" class="hoc clear"> 
-        <!-- ################################################################################################ -->
-        <div class="fl_left"> 
-          <!-- ################################################################################################ -->
-          <ul class="nospace">
-            <li><i class=""></i></li>
-            <li><i class=""></i> </li>
-          </ul>
-          <!-- ################################################################################################ -->
-        </div>
-        <div class="fl_right"> 
-          <!-- ################################################################################################ -->
-          <!-- <ul class="nospace">
-            <li><a href="index.html"><i class="fa fa-lg fa-home"></i></a></li>
-            <li><a href="#" title="Help Centre"><i class="fa fa-life-bouy"></i></a></li>
 
-          </ul> -->
-          <!-- ################################################################################################ -->
-        </div>
-        <!-- ################################################################################################ -->
-      </div>
-    </div>
     <!-- ################################################################################################ -->
     <!-- ################################################################################################ -->
     <!-- ################################################################################################ -->
     <div class="wrapper row1">
-      <header id="header" class="hoc clear"> 
-        <!-- ################################################################################################ -->
-        <!-- <div id="logo" class="fl_left">
-          <h1><a href="index.html">OpenDriveLab</a></h1>
-        </div> -->
-        <nav id="mainav" class="fl_right">
-          <ul class="clear">
-            <li class="active"><a href="index.html">OpenDriveLab</a></li>
 
-            
-          </ul>
-        </nav>
-        <!-- ################################################################################################ -->
-      </header>
-    </div>
     <!-- ################################################################################################ -->
     <!-- ################################################################################################ -->
     <!-- ################################################################################################ -->
     <div id="pageintro" class="hoc clear"> 
       <!-- ################################################################################################ -->
       <article>
-        <h3 class="heading" style="font-size: 3.5em">OpenLane Mapping Challenge</h3>
+
+        <h3 class="logo-name" style="font-size: 6em">OpenLane Mapping Challenge</h3>
+
+
+<br><br>
+        <!-- <h3 class="heading" style="font-size: 3.5em">OpenLane Mapping Challenge</h3> -->
         <h2 style="font-size: 1.8em">CVPR 2023</h2>
         <footer><a style="font-size: 2em;" href="#">In conjunction with CVPR 2023, June, Vancouver, Canada</a></footer>
       </article>
       <!-- ################################################################################################ -->
-    </div>
+    </div>  </div>
     <!-- ################################################################################################ -->
-  </div>
+
   <!-- End Top Background Image Wrapper -->
 
 
@@ -112,7 +81,7 @@
       
       
 
-    <h3><b><p class="btb" target="_blank" id="Task1" style="font-size: 2.5em;">Task1 </p></b></h3>
+    <h3><b><p class="btb" target="_blank" id="Tasks" style="font-size: 2.5em;">Tasks </p></b></h3>
 
     <div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
       <table class="wsite-multicol-table">
@@ -153,7 +122,6 @@
 
 
 
-    <h3><b><p class="btb" target="_blank" id="Task2" style="font-size: 2.5em;">Task2  </p></b></h3>
 
     <div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
       <table class="wsite-multicol-table">
@@ -193,7 +161,6 @@
   <!-- ################################################################################################ -->
 
 
-    <h3><b><p class="btb" target="_blank" id="Task3" style="font-size: 2.5em;">Task3  </p></b></h3>
 
     <div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
       <table class="wsite-multicol-table">
@@ -246,14 +213,22 @@
   4. $mAP_{LCTE}$ for mAP on topology between lane centerlines and traffic elements.
   </p>
 
-  <p> <a class="bts" target="_blank" style="font-size: 2.5em; line-height: 1.4;color: blue;">OpenLane-V2 Score</a></p>
+  <!-- <p> <a class="bts" target="_blank" style="font-size: 2.5em; line-height: 1.4;color: rgb(0, 0, 0);">OpenLane-V2 Score</a></p> -->
+  <h3><b><p class="btb" target="_blank"  style="font-size: 1.5em;">OpenLane-V2 Score  </p></b></h3>
 
-  <p><a class="bts" target="_blank" style="font-size: 2em; line-height: 1.4">Lane Centerline</a> </p>
+  <!-- <h4><b><p class="btb" target="_blank" >OpenLane-V2 Score  </p></b></h4>
+
+
+  <p><a class="bts" target="_blank" style="font-size: 2em; line-height: 1.4">Lane Centerline</a> </p> -->
+  <h4><b><p class="btb" target="_blank" >Lane Centerline  </p></b></h4>
+
+
     <p>We adopt the average precision (AP) but define a match of lane centerlines by considering the discrete Frechet distance in the 3D space.
   The mAP for lane centerlines is averaged over match thresholds of $\\{0.5, 1.0, 1.5\\}$ on the corresponding distance. </p>
 
 
-  <p><a class="bts" target="_blank" style="font-size: 2em; line-height: 1.4">Traffic Element</a> </p>
+  <!-- <p><a class="bts" target="_blank" style="font-size: 2em; line-height: 1.4">Traffic Element</a> </p> -->
+  <h4><b><p class="btb" target="_blank" >raffic Element  </p></b></h4>
 
     <p>Similarly, we use AP to evaluate the task of traffic element detection.
   We consider IoU distance as the affinity measure with a match threshold of $0.75$.
@@ -262,7 +237,9 @@
   Therefore, the mAP is then averaged over attributes.  </p>
 
 
-  <p><a class="bts" target="_blank" style="font-size: 2em; line-height: 1.4">Topology</a></p>
+  <!-- <p><a class="bts" target="_blank" style="font-size: 2em; line-height: 1.4">Topology</a></p> -->
+  <h4><b><p class="btb" target="_blank" >Topology  </p></b></h4>
+
     <p>The topology metrics estimate the goodness of the relationship among lane centerlines and the relationship between lane centerlines and traffic elements.
   To formulate the task of topology prediction as a link prediction problem, we first determine a match of ground truth and predicted vertices (lane centerlines and traffic elements) in the relationship graph.
   We choose Frechet and IoU distance for the lane centerline and traffic element respectively.
@@ -285,11 +262,15 @@
   The relationship among traffic elements is also not taken into consideration.
   Thus this can be seen as a link prediction problem on a bipartite undirected graph that $G = (V^l \cup V^t, E)$ and $\hat{G} = (\hat{V}^l \cup \hat{V}^t, \hat{E})$.
 </p>
-  <p><a class="bts" target="_blank" style="font-size: 2.5em; line-height: 1.4;color: blue;">Distances</a></p>
+  <!-- <p><a class="bts" target="_blank" style="font-size: 2.5em; line-height: 1.4;color: blue;">Distances</a></p> -->
+
+  <h3><b><p class="btb" target="_blank"  style="font-size: 1.5em;">Distances  </p></b></h3>
+
 
     <p>To measure the similarity between ground truth and predicted instances, we adopt Frechet and IoU distances for directed curves and 2D bounding boxes respectively.
     </p>
-  <p><a class="bts" target="_blank" style="font-size: 2em; line-height: 1.4">Frechet Distance</a></p>
+  <!-- <p><a class="bts" target="_blank" style="font-size: 2em; line-height: 1.4">Frechet Distance</a></p> -->
+  <h4><b><p class="btb" target="_blank" >Frechet Distance </p></b></h4>
 
     <p>Discrete Frechet distance measures the geometric similarity of two ordered lists of points.
   Given a pair of curves, namely a ground truth $v = (p_1, ..., p_n)$ and a prediction $\hat{v} = (\hat{p}_1, ..., \hat{p}_k)$, a coupling $L$ is a sequence of distinct pairs between $v$ and $\hat{v}$:
@@ -310,7 +291,8 @@
   D_{Frechet}(v, \hat{v}) = min\\{||L|| \ | \ for \ all \ possible \ coupling \ L\\}.
   $$</p>
 
-  <p><a class="bts" target="_blank" style="font-size: 2em; line-height: 1.4"> IoU Distance</a></p>
+  <!-- <p><a class="bts" target="_blank" style="font-size: 2em; line-height: 1.4"> IoU Distance</a></p> -->
+  <h4><b><p class="btb" target="_blank" > IoU Distance</p></b></h4>
 
     <p>To preserve consistency to the distance mentioned above, we modify the common IoU (Intersection over Union) measure that:
 
@@ -484,9 +466,8 @@
       <div class="sdb_holder" >
         <ul>
           <li><a href="#Overview" style="font-size: 1.2em; line-height: 1.2;">Overview</a></li>
-          <li><a href="#Task1"style="font-size: 1.2em; line-height: 1.2;">Task1 </a></li>
-          <li><a href="#Task2"style="font-size: 1.2em; line-height: 1.2;">Task2 </a></li>
-          <li><a href="#Task3"style="font-size: 1.2em; line-height: 1.2;">Task3 </a></li>
+          <li><a href="#Tasks"style="font-size: 1.2em; line-height: 1.2;">Tasks </a></li>
+
 
           <li><a href="#Metrics"style="font-size: 1.2em; line-height: 1.2;">Metrics</a></li>
           <li><a href="#Leaderboard"style="font-size: 1.2em; line-height: 1.2;">Leaderboard</a></li>
