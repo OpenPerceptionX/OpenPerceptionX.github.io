@@ -1,17 +1,17 @@
-
-  <!DOCTYPE html>
-  <!--
+<!DOCTYPE html>
+<!--
   Template Name: Oleald
   Author: <a href="https://www.os-templates.com/">OS Templates</a>
   Author URI: https://www.os-templates.com/
   Licence: Free to use under our free template licence terms
   Licence URI: https://www.os-templates.com/template-terms
   -->
-  <html lang="">
-  <!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
-  <head>
-    <title>CVPR 2023 Autonomous Driving Workshop | OpenDriveLab</title>
-    <meta charset="utf-8">
+<html lang="">
+<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
+
+<head>
+  <title>CVPR 2023 Autonomous Driving Workshop | OpenDriveLab</title>
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -21,18 +21,18 @@
         inlineMath: [['$', '$'], ['\\(', '\\)']]
       }
     };
-    </script>
-    <script id="MathJax-script" async
-      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-    </script>
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+  </script>
 
-  </head>
-  <body id="top">
+</head>
+
+<body id="top">
   <!-- ################################################################################################ -->
   <!-- ################################################################################################ -->
   <!-- ################################################################################################ -->
   <!-- Top Background Image Wrapper -->
-  <div class="bgded overlay " style="background-image:url('../images/challenge/poster.gif');"> 
+  <div class="bgded overlay " style="background-image:url('../images/challenge/poster.gif');">
     <!-- ################################################################################################ -->
 
     <!-- ################################################################################################ -->
@@ -40,380 +40,479 @@
     <!-- ################################################################################################ -->
     <div class="wrapper row1">
 
-    <!-- ################################################################################################ -->
-    <!-- ################################################################################################ -->
-    <!-- ################################################################################################ -->
-    <div id="pageintro" class="hoc clear"> 
       <!-- ################################################################################################ -->
-      <article>
-        <br><br>
-        <br><br>
-        <br><br><br><br>
-
-
-        <h3 class="logo-name" style="font-size: 3.5em">Lane Mapping Challenge</h3>
-
-
-        <!-- <h3 class="heading" style="font-size: 3.5em">OpenLane Mapping Challenge</h3> -->
-        <!-- <h2 style="font-size: 1.8em">CVPR 2023</h2> -->
-        <footer><a style="font-size: 2em;" href="#">In conjunction with CVPR 2023, June, Vancouver, Canada</a></footer>
-      </article>
       <!-- ################################################################################################ -->
-    </div>  </div>
-    <!-- ################################################################################################ -->
-
-  <!-- End Top Background Image Wrapper -->
-
-
- <!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row3">
-  <main class="hoc container clear"> 
-    <!-- main body -->
-    <!-- ################################################################################################ -->
-    <div class="sidebar one_quarter first"> 
       <!-- ################################################################################################ -->
-      <h6> <b>OpenLane Mapping Challenge</b></h6>
+      <div id="pageintro" class="hoc clear">
+        <!-- ################################################################################################ -->
+        <article>
+          <br><br>
+          <br><br>
+          <br><br><br><br>
 
 
+          <h3 class="logo-name" style="font-size: 3.5em">Lane Mapping Challenge</h3>
 
-      <nav class="sdb_holder" >
-        <ul>
-          <li><a href="#Overview" style="font-size: 1.2em; line-height: 1.2; ">Overview</a></li></ul>
-          <ul>
-          <li><a href="#Tasks"style="font-size: 1.2em; line-height: 1.2;">Tasks </a></li></ul>
-          <ul>
 
-          <li><a href="#Metrics"style="font-size: 1.2em; line-height: 1.2;">Metrics</a></li></ul>
-          <ul>
-          <li><a href="#Leaderboard"style="font-size: 1.2em; line-height: 1.2;">Leaderboard</a></li></ul>
-          <ul>
-          <li><a href="#Submit"style="font-size: 1.2em; line-height: 1.2;">Submit</a></li></ul>
-          <ul>
-          <li><a href="#Rules Regarding Awards"style="font-size: 1.2em; line-height: 1.2;">Rules Regarding Awards</a></li></ul>
-          <ul>
-        </ul>
-      </nav>
-
-  
-      <!-- ################################################################################################ -->
+          <!-- <h3 class="heading" style="font-size: 3.5em">OpenLane Mapping Challenge</h3> -->
+          <!-- <h2 style="font-size: 1.8em">CVPR 2023</h2> -->
+          <footer><a style="font-size: 2em;" href="#">In conjunction with CVPR 2023, June, Vancouver, Canada</a>
+          </footer>
+        </article>
+        <!-- ################################################################################################ -->
+      </div>
     </div>
-    <div class="content three_quarter"> 
-      <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
 
-      <h3><b><p class="btb" target="_blank" id="Overview" style="font-size: 2.5em;">Overview</p></b></h3>
-      
-
-    <p>
-      Due to the complex and dynamic nature of the surrounding environment, detecting lane centerlines and traffic elements separately does not fulfill the requirement of autonomous driving. For instance, the vehicle tends to stop when the traffic light corresponding to the current lane turns red. Associating traffic elements to lanes provide crucial driving information for autonomous vehicles. Existing datasets neglect such topology on elements in the driving scenarios. To this end, we propose OpenLane-v2 to shed light on the task of road structure perception and reasoning.
-      The primary task of the dataset is road structure perception and reasoning, which requires the model to recognize the dynamic drivable states of lanes in the surrounding environment. The challenge of this dataset includes not only detecting lane centerlines and traffic elements but also recognizing the attribute of traffic elements and topology relationships on detected objects.
-    </p>
-      
-      
-
-    <h3><b><p class="btb" target="_blank" id="Tasks" style="font-size: 2.5em;">Tasks </p></b></h3>
-
-    <div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
-      <table class="wsite-multicol-table">
-        <tbody class="wsite-multicol-tbody">
-          <tr class="wsite-multicol-tr">
-            <td class="wsite-multicol-col" style="width:36.598465473146%; padding:0 15px;">
-              
-                
-    
-    <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
-    <a>
-    <img src="../images/challenge/lane.gif" alt="Picture" style="width:auto;max-width:100%;height:240px;" />
-    </a>
-    <div style="display:block;font-size:90%"></div>
-    </div></div>
-    
-    
-              
-            </td>				<td class="wsite-multicol-col" style="width:73.401534526854%; padding:0 15px;">
-              
-                
-    
-    <!-- <div class="paragraph">         <p class="bts" target="_blank" style="font-size: 3em;">nuPlan Planning Challenge</p> -->
-      <div class="paragraph">         <a class="bts" target="_blank" style="font-size: 2em; line-height: 1.4">3D Lane Detection</a>
-
-      <p itemprop="description" style="font-size: 1.2em;">The OpenLane dataset, which is the first real-world and the largest scaled 3D lane dataset to date, provides lane line annotations in 3D space.
-        Similarly, we annotate 3D lane centerlines and include the F-Score for evaluating predicted results  of undirected lane centerlines.
-        Furthermore, we define the subtask of 3D lane detection as detecting directed 3D lane centerlines from the given multi-view images covering the whole horizontal FOV.
-        </p>
-                        
-            </td>			</tr>
-        </tbody>
-      </table>
-    </div></div></div>
+    <!-- End Top Background Image Wrapper -->
 
 
-  <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <div class="wrapper row3">
+      <main class="hoc container clear">
+        <!-- main body -->
+        <!-- ################################################################################################ -->
+        <div class="sidebar one_quarter first">
+          <!-- ################################################################################################ -->
+          <h6> <b>OpenLane Mapping Challenge</b></h6>
 
 
 
+          <nav class="sdb_holder">
+            <ul>
+              <li><a href="#Overview" style="font-size: 1.2em; line-height: 1.2; ">Overview</a></li>
+            </ul>
+            <ul>
+              <li><a href="#Tasks" style="font-size: 1.2em; line-height: 1.2;">Tasks </a></li>
+            </ul>
+            <ul>
 
-    <div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
-      <table class="wsite-multicol-table">
-        <tbody class="wsite-multicol-tbody">
-          <tr class="wsite-multicol-tr">
-            <td class="wsite-multicol-col" style="width:36.598465473146%; padding:0 15px;">
-              
-                
-    
-    <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
-    <a>
-    <img src="../images/challenge/traffic_element.gif" alt="Picture" style="width:auto;max-width:100%;height:240px;" />
-    </a>
-    <div style="display:block;font-size:90%"></div>
-    </div></div>
-    
-    
-              
-            </td>				<td class="wsite-multicol-col" style="width:73.401534526854%; padding:0 15px;">
-              
-                
-    
-    <!-- <div class="paragraph">         <p class="bts" target="_blank" style="font-size: 3em;">nuPlan Planning Challenge</p> -->
-      <div class="paragraph">         <a class="bts" target="_blank" style="font-size: 2em; line-height: 1.4">Traffic Element Recognition</a>
-
-      <p itemprop="description" style="font-size: 1.2em;">Existing datasets pay little attention to the detection of traffic elements and their attribute, which provide crucial information for autonomous vehicles.
-        The attribute represents the semantic meaning of a traffic element, such as the red color of a traffic light. 
-        In this subtask, on the given image in the front view, the location of traffic elements (traffic lights and road signs) and their attributes are demanded to be perceived simultaneously.
-        Compared to typical 2D detection datasets, the challenge is that the size of traffic elements is tiny due to the large scale of outdoor environments.
-      </p>
-                        
-            </td>			</tr>
-        </tbody>
-      </table>
-    </div></div></div>
-
-  <!-- ################################################################################################ -->
+              <li><a href="#Metrics" style="font-size: 1.2em; line-height: 1.2;">Metrics</a></li>
+            </ul>
+            <ul>
+              <li><a href="#Leaderboard" style="font-size: 1.2em; line-height: 1.2;">Leaderboard</a></li>
+            </ul>
+            <ul>
+              <li><a href="#Submit" style="font-size: 1.2em; line-height: 1.2;">Submit</a></li>
+            </ul>
+            <ul>
+              <li><a href="#Rules Regarding Awards" style="font-size: 1.2em; line-height: 1.2;">Rules Regarding
+                  Awards</a></li>
+            </ul>
+            <ul>
+            </ul>
+          </nav>
 
 
+          <!-- ################################################################################################ -->
+        </div>
+        <div class="content three_quarter">
+          <!-- ################################################################################################ -->
 
-    <div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
-      <table class="wsite-multicol-table">
-        <tbody class="wsite-multicol-tbody">
-          <tr class="wsite-multicol-tr">
-            <td class="wsite-multicol-col" style="width:36.598465473146%; padding:0 15px;">
-              
-                
-    
-    <div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
-    <a>
-    <img src="../images/challenge/topology.gif" alt="Picture" style="width:auto;max-width:100%;height:240px;" />
-    </a>
-    <div style="display:block;font-size:90%"></div>
-    </div></div>
-    
-    
-              
-            </td>				<td class="wsite-multicol-col" style="width:73.401534526854%; padding:0 15px;">
-              
-                
-    
-    <!-- <div class="paragraph">         <p class="bts" target="_blank" style="font-size: 3em;">nuPlan Planning Challenge</p> -->
-      <div class="paragraph">         <a class="bts" target="_blank" style="font-size: 2em; line-height: 1.4">Topology Recognition</a>
-
-      <p itemprop="description" style="font-size: 1.2em;">We first define the task of recognizing topology relationships in the field of autonomous driving.
-        Given multi-view images, the model learns to recognize the topology relationships among lane centerlines and between lane centerlines and traffic elements.
-        The most similar task is link prediction in the field of graph, in which the vertices are given and only edges are predicted by models.
-        In our case, both vertices and edges are unknown for the model.
-        Thus, lane centerlines and traffic elements are needed to be detected first, and then the topology relationships are built.
-      </p>
-                        
-            </td>			</tr>
-        </tbody>
-      </table>
-    </div></div></div>
+          <h3><b>
+              <p class="btb" target="_blank" id="Overview" style="font-size: 2.5em;">Overview</p>
+            </b></h3>
 
 
- 
-  <!-- ################################################################################################ -->
+          <p>
+            Due to the complex and dynamic nature of the surrounding environment, detecting lane centerlines and traffic
+            elements separately does not fulfill the requirement of autonomous driving. For instance, the vehicle tends
+            to stop when the traffic light corresponding to the current lane turns red. Associating traffic elements to
+            lanes provide crucial driving information for autonomous vehicles. Existing datasets neglect such topology
+            on elements in the driving scenarios. To this end, we propose OpenLane-v2 to shed light on the task of road
+            structure perception and reasoning.
+            The primary task of the dataset is road structure perception and reasoning, which requires the model to
+            recognize the dynamic drivable states of lanes in the surrounding environment. The challenge of this dataset
+            includes not only detecting lane centerlines and traffic elements but also recognizing the attribute of
+            traffic elements and topology relationships on detected objects.
+          </p>
 
 
-  <h3><b><p class="btb" target="_blank" id="Metrics" style="font-size: 2.5em;">Metrics  </p></b></h3>
 
-  <p>
-  To evaluate performances on different aspects of the task, several metrics are adopted:
-  1. $mAP_{LC}$ for mAP on directed lane centerlines,
-  2. $mAP_{TE}$ for mAP on traffic elements,
-  3. $mAP_{LCLC}$ for mAP on topology among lane centerlines,
-  4. $mAP_{LCTE}$ for mAP on topology between lane centerlines and traffic elements.
-  </p>
+          <h3><b>
+              <p class="btb" target="_blank" id="Tasks" style="font-size: 2.5em;">Tasks </p>
+            </b></h3>
 
-  <!-- <p href="https://github.com/OpenDriveLab/OpenLane-V2/blob/master/docs/metrics.md">Detailed information about the metrics can also be found on the website.</p> -->
+          <div>
+            <div class="wsite-multicol">
+              <div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+                <table class="wsite-multicol-table">
+                  <tbody class="wsite-multicol-tbody">
+                    <tr class="wsite-multicol-tr">
+                      <td class="wsite-multicol-col" style="width:36.598465473146%; padding:0 15px;">
 
 
-  <!-- <p> <a class="bts" target="_blank" style="font-size: 2.5em; line-height: 1.4;color: rgb(0, 0, 0);">OpenLane-V2 Score</a></p> -->
-  <h3><b><p class="btb" target="_blank"  style="font-size: 1.5em;">OpenLane-V2 Score  </p></b></h3>
 
-  <!-- <h4><b><p class="btb" target="_blank" >OpenLane-V2 Score  </p></b></h4>
+                        <div>
+                          <div class="wsite-image wsite-image-border-none "
+                            style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+                            <a>
+                              <img src="../images/challenge/lane.gif" alt="Picture"
+                                style="width:auto;max-width:100%;height:240px;" />
+                            </a>
+                            <div style="display:block;font-size:90%"></div>
+                          </div>
+                        </div>
+
+
+
+                      </td>
+                      <td class="wsite-multicol-col" style="width:73.401534526854%; padding:0 15px;">
+
+
+
+                        <!-- <div class="paragraph">         <p class="bts" target="_blank" style="font-size: 3em;">nuPlan Planning Challenge</p> -->
+                        <div class="paragraph"> <a class="bts" target="_blank"
+                            style="font-size: 2em; line-height: 1.4">3D Lane Detection</a>
+
+                          <p itemprop="description" style="font-size: 1.2em;">The OpenLane dataset, which is the first
+                            real-world and the largest scaled 3D lane dataset to date, provides lane line annotations in
+                            3D space.
+                            Similarly, we annotate 3D lane centerlines and include the F-Score for evaluating predicted
+                            results of undirected lane centerlines.
+                            Furthermore, we define the subtask of 3D lane detection as detecting directed 3D lane
+                            centerlines from the given multi-view images covering the whole horizontal FOV.
+                          </p>
+
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- ################################################################################################ -->
+
+
+
+
+          <div>
+            <div class="wsite-multicol">
+              <div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+                <table class="wsite-multicol-table">
+                  <tbody class="wsite-multicol-tbody">
+                    <tr class="wsite-multicol-tr">
+                      <td class="wsite-multicol-col" style="width:36.598465473146%; padding:0 15px;">
+
+
+
+                        <div>
+                          <div class="wsite-image wsite-image-border-none "
+                            style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+                            <a>
+                              <img src="../images/challenge/traffic_element.gif" alt="Picture"
+                                style="width:auto;max-width:100%;height:240px;" />
+                            </a>
+                            <div style="display:block;font-size:90%"></div>
+                          </div>
+                        </div>
+
+
+
+                      </td>
+                      <td class="wsite-multicol-col" style="width:73.401534526854%; padding:0 15px;">
+
+
+
+                        <!-- <div class="paragraph">         <p class="bts" target="_blank" style="font-size: 3em;">nuPlan Planning Challenge</p> -->
+                        <div class="paragraph"> <a class="bts" target="_blank"
+                            style="font-size: 2em; line-height: 1.4">Traffic Element Recognition</a>
+
+                          <p itemprop="description" style="font-size: 1.2em;">Existing datasets pay little attention to
+                            the detection of traffic elements and their attribute, which provide crucial information for
+                            autonomous vehicles.
+                            The attribute represents the semantic meaning of a traffic element, such as the red color of
+                            a traffic light.
+                            In this subtask, on the given image in the front view, the location of traffic elements
+                            (traffic lights and road signs) and their attributes are demanded to be perceived
+                            simultaneously.
+                            Compared to typical 2D detection datasets, the challenge is that the size of traffic
+                            elements is tiny due to the large scale of outdoor environments.
+                          </p>
+
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- ################################################################################################ -->
+
+
+
+          <div>
+            <div class="wsite-multicol">
+              <div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+                <table class="wsite-multicol-table">
+                  <tbody class="wsite-multicol-tbody">
+                    <tr class="wsite-multicol-tr">
+                      <td class="wsite-multicol-col" style="width:36.598465473146%; padding:0 15px;">
+
+
+
+                        <div>
+                          <div class="wsite-image wsite-image-border-none "
+                            style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+                            <a>
+                              <img src="../images/challenge/topology.gif" alt="Picture"
+                                style="width:auto;max-width:100%;height:240px;" />
+                            </a>
+                            <div style="display:block;font-size:90%"></div>
+                          </div>
+                        </div>
+
+
+
+                      </td>
+                      <td class="wsite-multicol-col" style="width:73.401534526854%; padding:0 15px;">
+
+
+
+                        <!-- <div class="paragraph">         <p class="bts" target="_blank" style="font-size: 3em;">nuPlan Planning Challenge</p> -->
+                        <div class="paragraph"> <a class="bts" target="_blank"
+                            style="font-size: 2em; line-height: 1.4">Topology Recognition</a>
+
+                          <p itemprop="description" style="font-size: 1.2em;">We first define the task of recognizing
+                            topology relationships in the field of autonomous driving.
+                            Given multi-view images, the model learns to recognize the topology relationships among lane
+                            centerlines and between lane centerlines and traffic elements.
+                            The most similar task is link prediction in the field of graph, in which the vertices are
+                            given and only edges are predicted by models.
+                            In our case, both vertices and edges are unknown for the model.
+                            Thus, lane centerlines and traffic elements are needed to be detected first, and then the
+                            topology relationships are built.
+                          </p>
+
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+
+
+          <!-- ################################################################################################ -->
+
+
+          <h3><b>
+              <p class="btb" target="_blank" id="Metrics" style="font-size: 2.5em;">Metrics </p>
+            </b></h3>
+
+          <p>
+            To evaluate performances on different aspects of the task, several metrics are adopted:
+            1. $mAP_{LC}$ for mAP on directed lane centerlines,
+            2. $mAP_{TE}$ for mAP on traffic elements,
+            3. $mAP_{LCLC}$ for mAP on topology among lane centerlines,
+            4. $mAP_{LCTE}$ for mAP on topology between lane centerlines and traffic elements.
+          </p>
+
+          <!-- <p href="https://github.com/OpenDriveLab/OpenLane-V2/blob/master/docs/metrics.md">Detailed information about the metrics can also be found on the website.</p> -->
+
+
+          <!-- <p> <a class="bts" target="_blank" style="font-size: 2.5em; line-height: 1.4;color: rgb(0, 0, 0);">OpenLane-V2 Score</a></p> -->
+          <h3><b>
+              <p class="btb" target="_blank" style="font-size: 1.5em;">OpenLane-V2 Score </p>
+            </b></h3>
+
+          <!-- <h4><b><p class="btb" target="_blank" >OpenLane-V2 Score  </p></b></h4>
 
 
   <p><a class="bts" target="_blank" style="font-size: 2em; line-height: 1.4">Lane Centerline</a> </p> -->
-  <h4><b><p class="btb" target="_blank" >Lane Centerline  </p></b></h4>
+          <h4><b>
+              <p class="btb" target="_blank">Lane Centerline </p>
+            </b></h4>
 
 
-    <p>We adopt the average precision (AP) but define a match of lane centerlines by considering the discrete Frechet distance in the 3D space.
-  The mAP for lane centerlines is averaged over match thresholds of $\\{0.5, 1.0, 1.5\\}$ on the corresponding distance. </p>
+          <p>We adopt the average precision (AP) but define a match of lane centerlines by considering the discrete
+            Frechet distance in the 3D space.
+            The mAP for lane centerlines is averaged over match thresholds of $\\{0.5, 1.0, 1.5\\}$ on the corresponding
+            distance. </p>
 
 
-  <!-- <p><a class="bts" target="_blank" style="font-size: 2em; line-height: 1.4">Traffic Element</a> </p> -->
-  <h4><b><p class="btb" target="_blank" >raffic Element  </p></b></h4>
+          <!-- <p><a class="bts" target="_blank" style="font-size: 2em; line-height: 1.4">Traffic Element</a> </p> -->
+          <h4><b>
+              <p class="btb" target="_blank">raffic Element </p>
+            </b></h4>
 
-    <p>Similarly, we use AP to evaluate the task of traffic element detection.
-  We consider IoU distance as the affinity measure with a match threshold of $0.75$.
-  Besides, traffic elements have their own attribute.
-  For instance, a traffic light can be red or green, which indicates the drivable state of the lane.
-  Therefore, the mAP is then averaged over attributes.  </p>
-
-
-  <!-- <p><a class="bts" target="_blank" style="font-size: 2em; line-height: 1.4">Topology</a></p> -->
-  <h4><b><p class="btb" target="_blank" >Topology  </p></b></h4>
-
-    <p>The topology metrics estimate the goodness of the relationship among lane centerlines and the relationship between lane centerlines and traffic elements.
-  To formulate the task of topology prediction as a link prediction problem, we first determine a match of ground truth and predicted vertices (lane centerlines and traffic elements) in the relationship graph.
-  We choose Frechet and IoU distance for the lane centerline and traffic element respectively.
-  Also, the metric is average over different recalls, and the edge confidence of an unmatched vertex would be set to $0$.
-</p>
-  <p>We adopt mAP from link prediction, which is defined as a mean of APs over all vertices. 
-  Two vertices are regarded as connected if the predicted confidence of the edge is greater than $0.5$.
-  The AP of a vertex is obtained by ranking all predicted edges and calculating the accumulative mean of the precisions:
-</p>
-  $$
-  mAP = \frac{1}{|V|} \sum_{v \in V} \frac{\sum_{\hat{n} \in \hat{N}(v)} P(\hat{n}) \mathbb{1}(\hat{n} \in N(v))}{|N(v)|},
-  $$
-
-  where $N(v)$ denotes ordered list of neighbors of vertex $v$ ranked by confidence and $P(v)$ is the precision of the $i$-th vertex $v$ in the ordered list.
-</p>
-  <p>Given ground truth and predicted connectivity of lane centerlines, the mAP is calculated on $G^l = (V^l, E^l)$ and $\hat{G}^l = (\hat{V}^l, \hat{E}^l)$.
-  As the given graphs are directed, e.g., the ending point of a lane centerline is connected to the starting point of the next lane centerline, we take the mean of mAP over graphs with only in-going or out-going edges.
-</p>
-  <p>To evaluate the predicted topology between lane centerlines and traffic elements, we ignore the relationship among lane centerlines.
-  The relationship among traffic elements is also not taken into consideration.
-  Thus this can be seen as a link prediction problem on a bipartite undirected graph that $G = (V^l \cup V^t, E)$ and $\hat{G} = (\hat{V}^l \cup \hat{V}^t, \hat{E})$.
-</p>
-  <!-- <p><a class="bts" target="_blank" style="font-size: 2.5em; line-height: 1.4;color: blue;">Distances</a></p> -->
-
-  <h3><b><p class="btb" target="_blank"  style="font-size: 1.5em;">Distances  </p></b></h3>
+          <p>Similarly, we use AP to evaluate the task of traffic element detection.
+            We consider IoU distance as the affinity measure with a match threshold of $0.75$.
+            Besides, traffic elements have their own attribute.
+            For instance, a traffic light can be red or green, which indicates the drivable state of the lane.
+            Therefore, the mAP is then averaged over attributes. </p>
 
 
-    <p>To measure the similarity between ground truth and predicted instances, we adopt Frechet and IoU distances for directed curves and 2D bounding boxes respectively.
-    </p>
-  <!-- <p><a class="bts" target="_blank" style="font-size: 2em; line-height: 1.4">Frechet Distance</a></p> -->
-  <h4><b><p class="btb" target="_blank" >Frechet Distance </p></b></h4>
+          <!-- <p><a class="bts" target="_blank" style="font-size: 2em; line-height: 1.4">Topology</a></p> -->
+          <h4><b>
+              <p class="btb" target="_blank">Topology </p>
+            </b></h4>
 
-    <p>Discrete Frechet distance measures the geometric similarity of two ordered lists of points.
-  Given a pair of curves, namely a ground truth $v = (p_1, ..., p_n)$ and a prediction $\hat{v} = (\hat{p}_1, ..., \hat{p}_k)$, a coupling $L$ is a sequence of distinct pairs between $v$ and $\hat{v}$:
-</p>
-  $$
-  (p_{a_1} \ , \ \hat{p}_{b_1} \ ), ..., (p_{a_m} \ , \ \hat{p}_{b_m} \ ),
-  $$
+          <p>The topology metrics estimate the goodness of the relationship among lane centerlines and the relationship
+            between lane centerlines and traffic elements.
+            To formulate the task of topology prediction as a link prediction problem, we first determine a match of
+            ground truth and predicted vertices (lane centerlines and traffic elements) in the relationship graph.
+            We choose Frechet and IoU distance for the lane centerline and traffic element respectively.
+            Also, the metric is average over different recalls, and the edge confidence of an unmatched vertex would be
+            set to $0$.
+          </p>
+          <p>We adopt mAP from link prediction, which is defined as a mean of APs over all vertices.
+            Two vertices are regarded as connected if the predicted confidence of the edge is greater than $0.5$.
+            The AP of a vertex is obtained by ranking all predicted edges and calculating the accumulative mean of the
+            precisions:
+          </p>
+          $$
+          mAP = \frac{1}{|V|} \sum_{v \in V} \frac{\sum_{\hat{n} \in \hat{N}(v)} P(\hat{n}) \mathbb{1}(\hat{n} \in
+          N(v))}{|N(v)|},
+          $$
 
-  where $a_1, ..., a_m$ and $b_1, ..., b_m$ are nondecreasing surjection such that $1 = a_1 \leq a_i \leq a_j \leq a_m = n$ and $1 = b_1 \leq b_i \leq b_j \leq b_m = k$ for all $i < j$. Then the norm $||L||$ of a coupling $L$ is the distance of the most dissimilar pair in $L$ that:
+          where $N(v)$ denotes ordered list of neighbors of vertex $v$ ranked by confidence and $P(v)$ is the precision
+          of the $i$-th vertex $v$ in the ordered list.
+          </p>
+          <p>Given ground truth and predicted connectivity of lane centerlines, the mAP is calculated on $G^l = (V^l,
+            E^l)$ and $\hat{G}^l = (\hat{V}^l, \hat{E}^l)$.
+            As the given graphs are directed, e.g., the ending point of a lane centerline is connected to the starting
+            point of the next lane centerline, we take the mean of mAP over graphs with only in-going or out-going
+            edges.
+          </p>
+          <p>To evaluate the predicted topology between lane centerlines and traffic elements, we ignore the
+            relationship among lane centerlines.
+            The relationship among traffic elements is also not taken into consideration.
+            Thus this can be seen as a link prediction problem on a bipartite undirected graph that $G = (V^l \cup V^t,
+            E)$ and $\hat{G} = (\hat{V}^l \cup \hat{V}^t, \hat{E})$.
+          </p>
+          <!-- <p><a class="bts" target="_blank" style="font-size: 2.5em; line-height: 1.4;color: blue;">Distances</a></p> -->
 
-  $$
-  ||L|| = \mathop{max}_{i=1, ..., m} D(p_{a_i} \ , \ \hat{p}_{b_i} \ ).
-  $$
-
-  The Frechet distance of a pair of curves is the minimum norm of all possible coupling that:
-
-  $$
-  D_{Frechet}(v, \hat{v}) = min\\{||L|| \ | \ for \ all \ possible \ coupling \ L\\}.
-  $$</p>
-
-  <!-- <p><a class="bts" target="_blank" style="font-size: 2em; line-height: 1.4"> IoU Distance</a></p> -->
-  <h4><b><p class="btb" target="_blank" > IoU Distance</p></b></h4>
-
-    <p>To preserve consistency to the distance mentioned above, we modify the common IoU (Intersection over Union) measure that:
-
-  $$
-  D_{IoU}(X, \hat{X}) = 1 - \frac{|X \cap \hat{X}|}{|X \cup \hat{X}|},
-  $$
-
-  where $X$ and $\hat{X}$ is the ground truth and predicted bounding box respectively.</p>
+          <h3><b>
+              <p class="btb" target="_blank" style="font-size: 1.5em;">Distances </p>
+            </b></h3>
 
 
+          <p>To measure the similarity between ground truth and predicted instances, we adopt Frechet and IoU distances
+            for directed curves and 2D bounding boxes respectively.
+          </p>
+          <!-- <p><a class="bts" target="_blank" style="font-size: 2em; line-height: 1.4">Frechet Distance</a></p> -->
+          <h4><b>
+              <p class="btb" target="_blank">Frechet Distance </p>
+            </b></h4>
 
+          <p>Discrete Frechet distance measures the geometric similarity of two ordered lists of points.
+            Given a pair of curves, namely a ground truth $v = (p_1, ..., p_n)$ and a prediction $\hat{v} = (\hat{p}_1,
+            ..., \hat{p}_k)$, a coupling $L$ is a sequence of distinct pairs between $v$ and $\hat{v}$:
+          </p>
+          $$
+          (p_{a_1} \ , \ \hat{p}_{b_1} \ ), ..., (p_{a_m} \ , \ \hat{p}_{b_m} \ ),
+          $$
 
+          where $a_1, ..., a_m$ and $b_1, ..., b_m$ are nondecreasing surjection such that $1 = a_1 \leq a_i \leq a_j
+          \leq a_m = n$ and $1 = b_1 \leq b_i \leq b_j \leq b_m = k$ for all $i < j$. Then the norm $||L||$ of a
+            coupling $L$ is the distance of the most dissimilar pair in $L$ that: $$ ||L||=\mathop{max}_{i=1, ..., m}
+            D(p_{a_i} \ , \ \hat{p}_{b_i} \ ). $$ The Frechet distance of a pair of curves is the minimum norm of all
+            possible coupling that: $$ D_{Frechet}(v, \hat{v})=min\\{||L|| \ | \ for \ all \ possible \ coupling \ L\\}.
+            $$</p>
 
-  <!-- ################################################################################################ -->
+            <!-- <p><a class="bts" target="_blank" style="font-size: 2em; line-height: 1.4"> IoU Distance</a></p> -->
+            <h4><b>
+                <p class="btb" target="_blank"> IoU Distance</p>
+              </b></h4>
 
-      <h3><b><p class="btb" target="_blank" id="Leaderboard" style="font-size: 2.5em;">Leaderboard</p></b></h3>
+            <p>To preserve consistency to the distance mentioned above, we modify the common IoU (Intersection over
+              Union) measure that:
 
-      
-      
-      <h1>Table(s)</h1>
-      <div class="scrollable">
-        <table>
-          <thead>
-            <tr>
-              <th>Method</th>
-              <th>OLS (main metric)</th>
-              <th> $mAP_{LC}$</th>
-              <th> $mAP_{TE}$</th>
-              <th> $mAP_{LCLC}$ </th>
-              <th> $mAP_{LCTE}$</th>
-              <th>  F-Score</th>
+              $$
+              D_{IoU}(X, \hat{X}) = 1 - \frac{|X \cap \hat{X}|}{|X \cup \hat{X}|},
+              $$
 
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><a href="#">\</a></td>
-              <td>\</td>
-              <td>\</td>
-              <td>\</td>
-              <td>\</td>
-              <td>\</td>
-              <td>\</td>
-            </tr>
-            <tr>
-              <td>\</td>
-              <td>\</td>
-              <td>\</td>
-              <td><a href="#">\</a></td>
-              <td>\</td>
-              <td>\</td>
-              <td>\</td>
-            </tr>
-            <tr>
-              <td><a href="#">\</a></td>
-              <td>\</td>
-              <td>\</td>
-              <td>\</td>
-              <td>\</td>
-              <td>\</td>
-              <td>\</td>
-            </tr>
-            <tr>
-              <td><a href="#">\</a></td>
-              <td>\</td>
-              <td>\</td>
-              <td>\</td>
-              <td>\</td>
-              <td>\</td>
-              <td>\</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+              where $X$ and $\hat{X}$ is the ground truth and predicted bounding box respectively.</p>
 
 
 
 
-      
+
+            <!-- ################################################################################################ -->
+
+            <h3><b>
+                <p class="btb" target="_blank" id="Leaderboard" style="font-size: 2.5em;">Leaderboard</p>
+              </b></h3>
 
 
 
-      <h3><b><p class="btb" target="_blank" id="Submit" style="font-size: 2.5em;">Submit  </p></b></h3>
+            <h1>Table(s)</h1>
+            <div class="scrollable">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Method</th>
+                    <th>OLS (main metric)</th>
+                    <th> $mAP_{LC}$</th>
+                    <th> $mAP_{TE}$</th>
+                    <th> $mAP_{LCLC}$ </th>
+                    <th> $mAP_{LCTE}$</th>
+                    <th> F-Score</th>
 
-      Test server is coming soon.
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="#">\</a></td>
+                    <td>\</td>
+                    <td>\</td>
+                    <td>\</td>
+                    <td>\</td>
+                    <td>\</td>
+                    <td>\</td>
+                  </tr>
+                  <tr>
+                    <td>\</td>
+                    <td>\</td>
+                    <td>\</td>
+                    <td><a href="#">\</a></td>
+                    <td>\</td>
+                    <td>\</td>
+                    <td>\</td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">\</a></td>
+                    <td>\</td>
+                    <td>\</td>
+                    <td>\</td>
+                    <td>\</td>
+                    <td>\</td>
+                    <td>\</td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">\</a></td>
+                    <td>\</td>
+                    <td>\</td>
+                    <td>\</td>
+                    <td>\</td>
+                    <td>\</td>
+                    <td>\</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
 
-      <!-- <p>To be eligible to participate in the challenge, each individual/all team members must read and agree to be bound by the Official Challenge Rules.
+
+
+
+
+
+
+            <h3><b>
+                <p class="btb" target="_blank" id="Submit" style="font-size: 2.5em;">Submit </p>
+              </b></h3>
+
+            Test server is coming soon.
+
+
+            <!-- <p>To be eligible to participate in the challenge, each individual/all team members must read and agree to be bound by the Official Challenge Rules.
 
         You can only submit against the Test Set 3 times every 30 days. (Submissions that error out do not count against this total.)
         </p>
@@ -484,75 +583,80 @@
       </div> -->
 
 
-      <h3><b><p class="btb" target="_blank" id="Rules Regarding Awards" style="font-size: 2.5em;">Rules Regarding Awards  </p></b></h3>
+            <h3><b>
+                <p class="btb" target="_blank" id="Rules Regarding Awards" style="font-size: 2.5em;">Rules Regarding
+                  Awards </p>
+              </b></h3>
 
 
 
- 
-      <!-- ################################################################################################ -->
+
+            <!-- ################################################################################################ -->
+        </div>
+        <!-- ################################################################################################ -->
+        <!-- ################################################################################################ -->
+
+
+
+        <!-- ################################################################################################ -->
+        <!-- / main body -->
+        <div class="clear"></div>
+      </main>
     </div>
     <!-- ################################################################################################ -->
     <!-- ################################################################################################ -->
 
-
-
-    <!-- ################################################################################################ -->
-    <!-- / main body -->
-    <div class="clear"></div>
-  </main>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ --> 
-
-<div class="wrapper row4">
-  <footer id="footer" class="hoc clear"> 
-    <!-- ################################################################################################ -->
-    <div class="center btmspace-50">
-      <h6 class="heading">OpenDriveLab</h6>
-      <nav>
-        <ul class="nospace inline pushright uppercase">
-          <li><a href="../index.html"><i class="fas fa-lg fa-home"></i></a></li>
-          <li><a href="#">About</a></li>
-          <!-- <li><a href="#">Contact</a></li> -->
-          <li><a href="#">Terms</a></li>
-          <li><a href="#">Privacy</a></li>
-          <!-- <li><a href="#">Cookies</a></li> -->
-          <li><a href="#">Disclaimer</a></li>
-        </ul>
-      </nav>
+    <div class="wrapper row4">
+      <footer id="footer" class="hoc clear">
+        <!-- ################################################################################################ -->
+        <div class="center btmspace-50">
+          <h6 class="heading">OpenDriveLab</h6>
+          <nav>
+            <ul class="nospace inline pushright uppercase">
+              <li><a href="../index.html"><i class="fas fa-lg fa-home"></i></a></li>
+              <li><a href="#">About</a></li>
+              <!-- <li><a href="#">Contact</a></li> -->
+              <li><a href="#">Terms</a></li>
+              <li><a href="#">Privacy</a></li>
+              <!-- <li><a href="#">Cookies</a></li> -->
+              <li><a href="#">Disclaimer</a></li>
+            </ul>
+          </nav>
+        </div>
+        <!-- ################################################################################################ -->
+      </footer>
     </div>
     <!-- ################################################################################################ -->
-  </footer>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row5">
-  <div id="copyright" class="hoc clear"> 
     <!-- ################################################################################################ -->
-    <p class="fl_left">Copyright &copy; 2023 - All Rights Reserved - OpenDriveLab</p>
-    <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
     <!-- ################################################################################################ -->
-  </div>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
-<!-- JAVASCRIPTS -->
-<script src="../layout/scripts/jquery.min.js"></script>
-<script src="../layout/scripts/jquery.backtotop.js"></script>
-<script src="../layout/scripts/jquery.mobilemenu.js"></script>
-<script src="../layout/editor.md/editormd.min.js"></script>
-<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <div class="wrapper row5">
+      <div id="copyright" class="hoc clear">
+        <!-- ################################################################################################ -->
+        <p class="fl_left">Copyright &copy; 2023 - All Rights Reserved - OpenDriveLab</p>
+        <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/"
+            title="Free Website Templates">OS Templates</a></p>
+        <!-- ################################################################################################ -->
+      </div>
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+    <!-- JAVASCRIPTS -->
+    <script src="../layout/scripts/jquery.min.js"></script>
+    <script src="../layout/scripts/jquery.backtotop.js"></script>
+    <script src="../layout/scripts/jquery.mobilemenu.js"></script>
+    <script src="../layout/editor.md/editormd.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/marked@3.0.0/marked.min.js"></script>
-<script>
-var m=document.querySelectorAll('code[markdown]');
-for(var i=0;i<m.length;i++){
-m[i].outerHTML='<div>'+marked(m[i].innerHTML)+'</div>';
-}
-</script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@3.0.0/marked.min.js"></script>
+    <script>
+      var m = document.querySelectorAll('code[markdown]');
+      for (var i = 0; i < m.length; i++) {
+        m[i].outerHTML = '<div>' + marked(m[i].innerHTML) + '</div>';
+      }
+    </script>
 
 </body>
+
 </html>
