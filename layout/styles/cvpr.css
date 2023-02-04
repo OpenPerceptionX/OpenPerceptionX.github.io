@@ -1,7 +1,29 @@
 @import url("fontawesome-free/css/fontawesome-all.min.css");
 /* @import url("framework.css"); */
 
+/*add by Hongyang*/
+topic {
+  font-family: "Lucida Console", Monaco, monospace;
+  color:  #00aeff;
+  font-size: 17px;
+  background-color: #e6f7ff;
+  /*font-background: #e6f7ff;*/
+}
 
+code {
+  /*font-family: "Lucida Console", Monaco, monospace;*/
+  color:  #C0392B;
+  /*font-size: 17px;*/
+  background-color: #FDEDEC;
+  /*font-background: #e6f7ff;*/
+}
+
+comment {
+  text-indent: 400px; 
+  font-size: 14px;
+  font-weight: 300;
+  color: gray;
+}
 
 /* =============================================================================
    RESET
