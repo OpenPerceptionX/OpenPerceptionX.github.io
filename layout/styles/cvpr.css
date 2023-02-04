@@ -1,7 +1,29 @@
 @import url("fontawesome-free/css/fontawesome-all.min.css");
 /* @import url("framework.css"); */
 
+/*add by Hongyang*/
+topic {
+  font-family: "Lucida Console", Monaco, monospace;
+  color:  #00aeff;
+  font-size: 17px;
+  background-color: #e6f7ff;
+  /*font-background: #e6f7ff;*/
+}
 
+code {
+  /*font-family: "Lucida Console", Monaco, monospace;*/
+  color:  #C0392B;
+  /*font-size: 17px;*/
+  background-color: #FDEDEC;
+  /*font-background: #e6f7ff;*/
+}
+
+comment {
+  text-indent: 400px; 
+  font-size: 14px;
+  font-weight: 300;
+  color: gray;
+}
 
 /* =============================================================================
    RESET
@@ -1223,4 +1245,11 @@ a:focus {
 .menu_one, .menu_two{
 	display: none;
 }
+
+#backtotop{color:#FFFFFF; background-color:#DC8E47;}
+/* Back to Top */
+#backtotop{z-index:999; display:inline-block; position:fixed; visibility:hidden; bottom:20px; right:20px; width:36px; height:36px; line-height:36px; font-size:16px; text-align:center; opacity:.2;}
+#backtotop i{display:block; width:100%; height:100%; line-height:inherit;}
+#backtotop.visible{visibility:visible; opacity:.5;}
+#backtotop:hover{opacity:1;}
 
