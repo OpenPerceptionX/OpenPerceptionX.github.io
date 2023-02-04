@@ -12,6 +12,31 @@ File: Layout CSS
 @import url("fontawesome-free/css/fontawesome-all.min.css");
 @import url("framework.css");
 
+/*add by Hongyang*/
+topic {
+	font-family: "Lucida Console", Monaco, monospace;
+	color:  #00aeff;
+	font-size: 17px;
+	background-color: #e6f7ff;
+	/*font-background: #e6f7ff;*/
+  }
+  
+  code {
+	/*font-family: "Lucida Console", Monaco, monospace;*/
+	color:  #C0392B;
+	/*font-size: 17px;*/
+	background-color: #FDEDEC;
+	/*font-background: #e6f7ff;*/
+  }
+  
+  comment {
+	text-indent: 400px; 
+	font-size: 14px;
+	font-weight: 300;
+	color: gray;
+  }
+  
+
 /* Rows
 --------------------------------------------------------------------------------------------------------------- */
 .row0{padding:80px 0 0 0;}
@@ -502,3 +527,96 @@ table a, #comments a{background-color:inherit;}
     font-size: 10em;
     letter-spacing: -0.04em;
   }
+
+
+  .grid {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: left;
+    -webkit-justify-content: left;
+    -ms-flex-pack: left;
+    justify-content: left;
+    /* -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; */
+}
+.grid-item {
+    min-width: 99px;
+    max-width: 99px;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 99px;
+    -ms-flex: 1 1 99px;
+    flex: 1 1 99px;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    margin-bottom: 1rem;
+}
+
+.grid-item figure {
+    padding: 0;
+    margin: 0;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.05);
+}
+.grid-item figure img {
+    display: block;
+    max-width: 100%;
+}
+.grid-item figcaption {
+    display: block;
+    padding: .625rem .5rem;
+    background: #474952;
+}
+body {
+    margin: 0;
+}
+
+  /* =============================================================================
+     SPEAKER
+     ========================================================================== */
+	 .speakers-item {
+		position: relative;
+		min-height: 180px;
+		padding-left: 180px;
+		margin-bottom: 30px;
+		border-bottom: 1px dashed #e7e7e7;
+	  }
+	  .speaker-photo {
+		position: absolute;
+		top: 20px;
+		left: 50px;
+		display: block;
+		width: 95px;
+		height: 95px;
+	  }
+	  .speaker-photo-00 {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		width: 100px;
+		height: 100px;
+	  }
+	  .speech-title {
+		padding-top: 10px;
+		font-size: 2em;
+		margin-bottom: 1em;
+	  }
+	  .speech-time {
+		font-size: 18px;
+		padding: 10px 15px;
+		letter-spacing: -0.03em;
+	  }
+	  .speakers-name {
+		font-size: 1.2em;
+	  }
+	  .speakers-item p {
+		font-size: 1.2em;
+	  }
