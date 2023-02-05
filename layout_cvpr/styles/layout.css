@@ -36,7 +36,7 @@ File: Layout CSS
 
 /* Top Bar
 --------------------------------------------------------------------------------------------------------------- */
-#topbar{padding:120px 0 15px; font-size:.8rem; text-transform:uppercase;position:relative;left: -80px;top: 0px;}
+#topbar{padding:120px 0 15px; font-size:.8rem; text-transform:uppercase;position:relative;left: -80px;top: -50px;}
 
 #topbar *{margin:0; padding:0; list-style:none;}
 #topbar ul li{display:inline-block; margin-right:10px; padding-right:15px; border-right:1px solid;}
@@ -240,8 +240,8 @@ nav ul, nav ol{margin:0; padding:0; list-style:none;}
 /* Tables
 --------------------------------------------------------------------------------------------------------------- */
 table, th, td{border:1px solid; border-collapse:collapse; vertical-align:top;}
-table, th{table-layout:auto;}
-table{width:100%; margin-bottom:15px;}
+table, th{table-layout:fixed;}
+table{width:100%; margin-bottom:10px;}
 th, td{padding:5px 8px;}
 td{border-width:0 1px;}
 
