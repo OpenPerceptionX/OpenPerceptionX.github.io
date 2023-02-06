@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<!--
+  Template Name: Oleald
+  Author: <a href="https://www.os-templates.com/">OS Templates</a>
+  Author URI: https://www.os-templates.com/
+  Licence: Free to use under our free template licence terms
+  Licence URI: https://www.os-templates.com/template-terms
+  -->
+<html lang="">
+<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
+
+<head>
+  <title>Challenge at CVPR 2023 Autonomous Driving Workshop</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+  </script>
+
+</head>
+
+<body id="top">
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- Top Background Image Wrapper -->
+  <div class="bgded overlay " style="background-image:url('./images/challenge/poster.gif');">
+    <!-- ################################################################################################ -->
+
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <div class="wrapper row1">
+
+      <!-- ################################################################################################ -->
+      <!-- ################################################################################################ -->
+      <!-- ################################################################################################ -->
+      <div id="pageintro" class="hoc clear">
+        <!-- ################################################################################################ -->
+        <article>
+          <br><br>
+          <br><br>
+          <br><br><br><br>
+
+
+          <h3 class="logo-name" style="font-size: 3.5em">Autonomous Driving Challenge</h3>
+
+
+          <!-- <h3 class="heading" style="font-size: 3.5em">OpenLane Mapping Challenge</h3> -->
+          <!-- <h2 style="font-size: 1.8em">CVPR 2023</h2> -->
+          <footer><a style="font-size: 2em;">In conjunction with CVPR 2023, June, Vancouver, Canada</a>
+          </footer>
+        </article>
+        <!-- ################################################################################################ -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ################################################################################################ -->
+
+  <!-- End Top Background Image Wrapper -->
+
+
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div class="wrapper row3">
+    <main class="hoc container clear">
+      <!-- main body -->
+      <!-- ################################################################################################ -->
+      <div class="sidebar one_quarter first">
+        <!-- ################################################################################################ -->
+        <h6> <b></b></h6>
+
+        <nav class="sdb_holder" style="display:inline-block; position:fixed;bottom:20px; left:40px;">
+          <ul>
+            <li><a href="#Overview" style="font-size: 1.2em; line-height: 1.2; ">Overview</a></li>
+          </ul>
+          <ul>
+            <li><a href="#Track1" style="font-size: 1.2em; line-height: 1.2;">OpenLane Topology </a></li>
+          </ul>
+          <ul>
+            <li><a href="#Track2" style="font-size: 1.2em; line-height: 1.2;">Occupancy Prediction </a></li>
+          </ul>
+          <ul>
+            <li><a href="#Track3" style="font-size: 1.2em; line-height: 1.2;">End-to-end Autonomous Driving</a></li>
+          </ul>
+          <ul>
+            <li><a href="#Leaderboard" style="font-size: 1.2em; line-height: 1.2;">Leaderboard</a></li>
+          </ul>
+          <ul>
+            <li><a href="#starter_code" style="font-size: 1.2em; line-height: 1.2;">Starter Code</a></li>
+          </ul>
+          <ul>
+            <li><a href="#Submission" style="font-size: 1.2em; line-height: 1.2;">Submission</a></li>
+          </ul>
+          <ul>
+            <li><a href="#rules" style="font-size: 1.2em; line-height: 1.2;">General Rules</a></li>
+          </ul>
+        </nav>
+
+
+        <!-- ################################################################################################ -->
+      </div>
+      <div class="content three_quarter">
+        <!-- ################################################################################################ -->
+
+        <h3><b><p class="btb" target="_blank" id="Overview" style="font-size: 2.5em;">Overview</p></b></h3>
+
+
+        <p>
+          Why these Challenges? TODO
+        </p>
+
+
+
+        <h3><b><p class="btb" target="_blank" id="Track1" style="font-size: 2.5em;">Track 1: OpenLane Topology </p></b></h3>
+
+
+                <p>
+          We propose OpenLane-v2 to shed light on the task of road structure perception and reasoning.
+          The primary task of the dataset is road structure perception and reasoning, which requires the model to
+          recognize the dynamic drivable states of lanes in the surrounding environment. The challenge of this dataset
+          includes not only detecting lane centerlines and traffic elements but also recognizing the attribute of
+          traffic elements and topology relationships on detected objects.
+        </p>
+
+          Detailed information about OpenLane-V2 can also be found on the 
+          <b><a style="font-size: 1.5em; color: blue;"href="https://github.com/OpenDriveLab/OpenLane-V2">Github </a></b>
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0"
+                                width="191px" height="20px"
+                                src="https://ghbtns.com/github-btn.html?user=OpenDriveLab&repo=OpenLane-V2&type=star&count=true">
+                              </iframe>
+
+<!--         <div>
+          <div class="wsite-multicol">
+            <div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+              <table class="wsite-multicol-table">
+                <tbody class="wsite-multicol-tbody">
+                  <tr class="wsite-multicol-tr">
+                    <td class="wsite-multicol-col" style="width:36.598465473146%; padding:0 15px;">
+
+
+
+                      <div>
+                        <div class="wsite-image wsite-image-border-none "
+                          style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+                          <a>
+                            <img src="./images/challenge/lane.gif" alt="Picture"
+                              style="width:auto;max-width:100%;height:240px;" />
+                          </a>
+                          <div style="display:block;font-size:90%"></div>
+                        </div>
+                      </div>
+
+                    </td>
+                    <td class="wsite-multicol-col" style="width:73.401534526854%; padding:0 15px;">
+
+                       <div class="paragraph">         <p class="bts" target="_blank" style="font-size: 3em;">nuPlan Planning Challenge</p> 
+                      <div class="paragraph"> <a class="bts" target="_blank" style="font-size: 2em; line-height: 1.4">3D
+                          Lane Detection</a>
+
+                        <p itemprop="description" style="font-size: 1.2em;">We annotate 3D lane centerlines and include the F-Score for evaluating predicted
+                          results of undirected lane centerlines.
+                          Furthermore, we define the subtask of 3D lane detection as detecting directed 3D lane
+                          centerlines from the given multi-view images covering the whole horizontal FOV.
+                        </p>
+
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+
+        <div>
+          <div class="wsite-multicol">
+            <div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+              <table class="wsite-multicol-table">
+                <tbody class="wsite-multicol-tbody">
+                  <tr class="wsite-multicol-tr">
+                    <td class="wsite-multicol-col" style="width:36.598465473146%; padding:0 15px;">
+
+                      <div>
+                        <div class="wsite-image wsite-image-border-none "
+                          style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+                          <a>
+                            <img src="./images/challenge/traffic_element.gif" alt="Picture"
+                              style="width:auto;max-width:100%;height:240px;" />
+                          </a>
+                          <div style="display:block;font-size:90%"></div>
+                        </div>
+                      </div>
+
+                    </td>
+                    <td class="wsite-multicol-col" style="width:73.401534526854%; padding:0 15px;">
+
+                      <div class="paragraph"> <a class="bts" target="_blank"
+                          style="font-size: 2em; line-height: 1.4">Traffic Element Recognition</a>
+
+                        <p itemprop="description" style="font-size: 1.2em;">
+                          The attribute represents the semantic meaning of a traffic element, such as the red color of
+                          a traffic light.
+                          In this subtask, on the given image in the front view, the location of traffic elements
+                          (traffic lights and road signs) and their attributes are demanded to be perceived
+                          simultaneously.
+      
+                        </p>
+
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="wsite-multicol">
+            <div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+              <table class="wsite-multicol-table">
+                <tbody class="wsite-multicol-tbody">
+                  <tr class="wsite-multicol-tr">
+                    <td class="wsite-multicol-col" style="width:36.598465473146%; padding:0 15px;">
+
+                      <div>
+                        <div class="wsite-image wsite-image-border-none "
+                          style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+                          <a>
+                            <img src="./images/challenge/topology.gif" alt="Picture"
+                              style="width:auto;max-width:100%;height:240px;" />
+                          </a>
+                          <div style="display:block;font-size:90%"></div>
+                        </div>
+                      </div>
+
+                    </td>
+                    <td class="wsite-multicol-col" style="width:73.401534526854%; padding:0 15px;">
+
+                      <div class="paragraph"> <a class="bts" target="_blank"
+                          style="font-size: 1em;">
+                        Topology Recognition</a>
+
+                        <p itemprop="description" style="font-size: 1.2em;">We first define the task of recognizing
+                          topology relationships in the field of autonomous driving.
+                          Given multi-view images, the model learns to recognize the topology relationships among lane
+                          centerlines and between lane centerlines and traffic elements.
+                          In our case, both vertices and edges are unknown for the model.
+                          Thus, lane centerlines and traffic elements are needed to be detected first, and then the
+                          topology relationships are built.
+                        </p>
+
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div> -->
+
+
+
+        <!-- ################################################################################################ -->
+
+        <h3><b><p class="btb" target="_blank" id="Track2" style="font-size: 2.5em;">Track 2: Occupancy Prediction </p></b></h3>
+
+        Coming soon.
+
+
+        <h3><b><p class="btb" target="_blank" id="Track3" style="font-size: 2.5em;">Track 3: End-to-end Autonomous Driving </p></b></h3>
+        Coming soon.
+
+        <br>
+        For more details, please refer to <a href="https://nuplan-devkit.readthedocs.io/en/latest/competition.html">nuPlan competition 2023</a>.
+
+
+        <h3><b><p class="btb" target="_blank" id="Leaderboard" style="font-size: 2.5em;">Leaderboard</p></b></h3>
+
+        The following result is a mirrored version from test server. For latest results, please refer to TODO. <br><br><br>
+
+        <!-- <h1>Table(s)</h1> -->
+        <div class="scrollable">
+          <table>
+            <thead>
+              <tr>
+                <th>Method</th>
+                <th>OLS (main metric)</th>
+                <th> $mAP_{LC}$</th>
+                <th> $mAP_{TE}$</th>
+                <th> $mAP_{LCLC}$ </th>
+                <th> $mAP_{LCTE}$</th>
+                <th> F-Score</th>
+
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="#">\</a></td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+              </tr>
+              <tr>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+                <td><a href="#">\</a></td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+              </tr>
+              <tr>
+                <td><a href="#">\</a></td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+              </tr>
+              <tr>
+                <td><a href="#">\</a></td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+        <!-- ################################################################################################ -->
+
+
+        <h3><b>
+            <p class="btb" target="_blank" id="starter_code" style="font-size: 2.5em;">Starter Code</p>
+          </b></h3>
+
+          Coming soon.
+
+        <p>
+          To evaluate performances on different aspects of the task, several metrics are adopted:<br>
+          1. $mAP_{LC}$ for mAP on directed lane centerlines<br>
+          2. $mAP_{TE}$ for mAP on traffic elements<br>
+          3. $mAP_{LCLC}$ for mAP on topology among lane centerlines<br>
+          4. $mAP_{LCTE}$ for mAP on topology between lane centerlines and traffic elements.
+        </p>
+
+        <br><br>
+
+
+
+
+        <h3><b><p class="btb" target="_blank" id="submission" style="font-size: 2.5em;">Submission </p></b></h3>
+
+        Coming soon.
+
+
+        <h3><b><p class="btb" target="_blank" id="rules" style="font-size: 2.5em;">General Rules </p></b></h3>
+
+
+        Coming soon.
+
+      </div>
+      <!-- ################################################################################################ -->
+      <!-- ################################################################################################ -->
+
+
+
+      <!-- ################################################################################################ -->
+      <!-- / main body -->
+      <div class="clear"></div>
+    </main>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+
+  <div class="wrapper row4">
+    <footer id="footer" class="hoc clear">
+      <!-- ################################################################################################ -->
+      <div class="center btmspace-50">
+        <h6 class="heading">OpenDriveLab</h6>
+        <nav>
+          <ul class="nospace inline pushright uppercase">
+            <li><a href="http://opendrivelab.com/"><i class="fas fa-lg fa-home"></i></a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- ################################################################################################ -->
+    </footer>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div class="wrapper row5">
+    <div id="copyright" class="hoc clear">
+      <!-- ################################################################################################ -->
+      <p class="fl_left">Copyright &copy; 2023 - All Rights Reserved - OpenDriveLab</p>
+
+      <!-- ################################################################################################ -->
+    </div>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+  <!-- JAVASCRIPTS -->
+  <script src="../layout/scripts/jquery.min.js"></script>
+  <script src="../layout/scripts/jquery.backtotop.js"></script>
+  <script src="../layout/scripts/jquery.mobilemenu.js"></script>
+  <script src="../layout/editor.md/editormd.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked@3.0.0/marked.min.js"></script>
+  <script>
+    var m = document.querySelectorAll('code[markdown]');
+    for (var i = 0; i < m.length; i++) {
+      m[i].outerHTML = '<div>' + marked(m[i].innerHTML) + '</div>';
+    }
+  </script>
+
+</body>
+
+</html>
