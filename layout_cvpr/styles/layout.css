@@ -26,7 +26,7 @@ File: Layout CSS
 --------------------------------------------------------------------------------------------------------------- */
 #pageintro{padding:250px 0 740px;}
 
-#pageintro article{display:block; max-width:100%;position:absolute; top: 70px;left: 150px;text-transform:none}
+#pageintro article{display:block; max-width:100%;position:relative;text-transform:none}
 #pageintro article *{word-wrap:break-word;}
 #pageintro .heading{margin-bottom:20px; font-size:5rem;letter-spacing: 0.04em;text-align: left;text-transform:none}
 #pageintro p:first-of-type{margin-bottom:30px;}
@@ -513,8 +513,8 @@ h7{
     justify-content: center; */
 }
 .grid-item {
-    min-width: 0;
-    max-width: 200px;
+    min-width: 150px;
+    max-width: 150px;
     -webkit-box-flex: 1;
     -webkit-flex: 1 1 0;
     -ms-flex: 1 1 0;
