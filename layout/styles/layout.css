@@ -257,7 +257,7 @@ nav ul, nav ol{margin:0; padding:0; list-style:none;}
 /* Sidebar Navigation */
 .sidebar nav{display:block; width:20%;position:fixed;}
 .sidebar nav li{margin:0 0 3px 0; padding:0;}
-.sidebar nav a{display:block; position:relative; margin:0; padding:5px 10px 5px 15px; text-decoration:none; border:solid; border-width:0 0 1px 0;}
+.sidebar nav a{display:block; position:relative; margin:0; padding:5px 10px 5px 15px; text-decoration:none; border:none; border-width:0 0 1px 0;}
 .sidebar nav a::after{top:10px; left:5px; content:"\f0da";}
 .sidebar nav ul ul a{padding-left:35px;}
 .sidebar nav ul ul a::after{left:25px;}
