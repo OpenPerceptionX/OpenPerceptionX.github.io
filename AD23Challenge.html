@@ -25,6 +25,12 @@
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
   </script>
 
+  <style>
+    img:hover {
+      opacity: 0.3;
+    }
+  </style>
+
 </head>
 
 <body id="top">
@@ -117,27 +123,279 @@
 
         <p>
           Why these Challenges? TODO
+          The challenge closes at xxx, but the leaderboards will remain open for future submissions
         </p>
 
 
 
-        <h3><b><p class="btb" target="_blank" id="Track1" style="font-size: 2.5em;">Track 1: OpenLane Topology </p></b></h3>
+        <!-- OpenLane -->
 
+        <br><br><br>
+        <h3><b class="btb" target="_blank" id="Track1" style="font-size: 2.5em;">
+          Track 1: OpenLane Topology
+        </b></h3>
 
-                <p>
-          We propose OpenLane-v2 to shed light on the task of road structure perception and reasoning.
-          The primary task of the dataset is road structure perception and reasoning, which requires the model to
-          recognize the dynamic drivable states of lanes in the surrounding environment. The challenge of this dataset
-          includes not only detecting lane centerlines and traffic elements but also recognizing the attribute of
-          traffic elements and topology relationships on detected objects.
+        <a href="https://github.com/OpenDriveLab/OpenLane-V2">
+          <img
+            src="https://img.shields.io/badge/website-GitHub-blueviolet"
+            alt="GitHub" style="height: 25px"
+            onmousemove="this.className='yellow'"
+          />
+        </a>
+        <iframe 
+          style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0"
+          width="100px" height="20px"
+          src="https://ghbtns.com/github-btn.html?user=OpenDriveLab&repo=OpenLane-V2&type=star&count=true">
+        </iframe>
+
+        <a href="">
+          <img
+            src="https://img.shields.io/badge/baseline-todo-blueviolet"
+            alt="todo" style="height: 25px"
+          />
+        </a>
+
+        <a href="https://eval.ai">
+          <img
+            src="https://img.shields.io/badge/submission-EvalAI-blueviolet"
+            alt="EvalAI" style="height: 25px"
+          />
+        </a>
+
+        <br><br>
+        <p>
+          In OpenLane-V2, we annotate lane centerlines and their connectivities to provide map-like results to facilitate downstream tasks.
+          Moreover, traffic elements and their correspondences to lanes are critical for understanding the complex driving environment.
+          Participants are required to deliver results on lanes, traffic elements, and topology relationships simultaneously.
         </p>
 
-          Detailed information about OpenLane-V2 can also be found on the 
-          <b><a style="font-size: 1.5em; color: blue;"href="https://github.com/OpenDriveLab/OpenLane-V2">Github </a></b>
-          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0"
-                                width="191px" height="20px"
-                                src="https://ghbtns.com/github-btn.html?user=OpenDriveLab&repo=OpenLane-V2&type=star&count=true">
-                              </iframe>
+        <br>
+        <div class="scrollable">
+          <table>
+            <thead>
+              <tr>
+                <th>Method</th>
+                <th>OLS (main metric)</th>
+                <th> $mAP_{LC}$</th>
+                <th> $mAP_{TE}$</th>
+                <th> $mAP_{LCLC}$ </th>
+                <th> $mAP_{LCTE}$</th>
+                <th> F-Score</th>
+
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="#">\</a></td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+              </tr>
+              <tr>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+                <td><a href="#">\</a></td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+              </tr>
+              <tr>
+                <td><a href="#">\</a></td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+              </tr>
+              <tr>
+                <td><a href="#">\</a></td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+
+        <!-- occupancy -->
+
+        <br><br><br>
+        <h3><b class="btb" target="_blank" id="Track1" style="font-size: 2.5em;">
+          Track 2: Occupancy Prediction
+        </b></h3>
+
+        <a href="">
+          <img
+            src="https://img.shields.io/badge/website-todo-brightgreen"
+            alt="todo" style="height: 25px"
+          />
+        </a>
+
+        <a href="">
+          <img
+            src="https://img.shields.io/badge/submission-todo-brightgreen"
+            alt="todo" style="height: 25px"
+          />
+        </a>
+
+        <br><br>
+        <p>
+          Unlike previous perception representations, which depend on predefined geometric primitives or perceived data modalities, occupancy enjoys the flexibility to describe entities in arbitrary shapes.
+          Based on the given images, participants are needed to provide the occupancy state and semantics of each voxel in 3D space for the complete scene.
+        </p>
+
+        <br>
+        <div class="scrollable">
+          <table>
+            <thead>
+              <tr>
+                <th>Method</th>
+                <th>OLS (main metric)</th>
+                <th> $mAP_{LC}$</th>
+                <th> $mAP_{TE}$</th>
+                <th> $mAP_{LCLC}$ </th>
+                <th> $mAP_{LCTE}$</th>
+                <th> F-Score</th>
+
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="#">\</a></td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+              </tr>
+              <tr>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+                <td><a href="#">\</a></td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+              </tr>
+              <tr>
+                <td><a href="#">\</a></td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+              </tr>
+              <tr>
+                <td><a href="#">\</a></td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+
+        <!-- nuplan -->
+
+        <br><br><br>
+        <h3><b class="btb" target="_blank" id="Track1" style="font-size: 2.5em;">
+          Track 3: nuPlan Planning
+        </b></h3>
+
+        <a href="https://nuplan-devkit.readthedocs.io/en/latest/competition.html">
+          <img
+            src="https://img.shields.io/badge/website-Competition-blue"
+            alt="Competition" style="height: 25px"
+          />
+        </a>
+
+        <a href="https://eval.ai/web/challenges/challenge-page/1856/overview">
+          <img
+            src="https://img.shields.io/badge/submission-EvalAI-blue"
+            alt="EvalAI" style="height: 25px"
+          />
+        </a>
+
+        <br><br>
+        <p>
+          Previous benchmarks focus on short-term motion forecasting and are limited to open-loop evaluation.
+          NuPlan introduces long-term planning of the ego vehicle and corresponding metrics.
+          Provided as docker containers, submissions are deployed for simulation and evaluation.
+        </p>
+
+        <br>
+        <div class="scrollable">
+          <table>
+            <thead>
+              <tr>
+                <th>Method</th>
+                <th>OLS (main metric)</th>
+                <th> $mAP_{LC}$</th>
+                <th> $mAP_{TE}$</th>
+                <th> $mAP_{LCLC}$ </th>
+                <th> $mAP_{LCTE}$</th>
+                <th> F-Score</th>
+
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="#">\</a></td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+              </tr>
+              <tr>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+                <td><a href="#">\</a></td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+              </tr>
+              <tr>
+                <td><a href="#">\</a></td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+              </tr>
+              <tr>
+                <td><a href="#">\</a></td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
 
 <!--         <div>
           <div class="wsite-multicol">
@@ -271,23 +529,12 @@
 
         <!-- ################################################################################################ -->
 
-        <h3><b><p class="btb" target="_blank" id="Track2" style="font-size: 2.5em;">Track 2: Occupancy Prediction </p></b></h3>
-
-        Coming soon.
 
 
-        <h3><b><p class="btb" target="_blank" id="Track3" style="font-size: 2.5em;">Track 3: nuPlan Planning </p></b></h3>
-        Coming soon.
-
-        <br>
-        For more details, please refer to <a href="https://nuplan-devkit.readthedocs.io/en/latest/competition.html">nuPlan competition 2023</a>.
-
-
-        <h3><b><p class="btb" target="_blank" id="Leaderboard" style="font-size: 2.5em;">Leaderboard</p></b></h3>
+        <!--<h3><b><p class="btb" target="_blank" id="Leaderboard" style="font-size: 2.5em;">Leaderboard</p></b></h3>
 
         The following result is a mirrored version from test server. For latest results, please refer to TODO. <br><br><br>
 
-        <!-- <h1>Table(s)</h1> -->
         <div class="scrollable">
           <table>
             <thead>
@@ -341,13 +588,13 @@
               </tr>
             </tbody>
           </table>
-        </div>
+        </div>-->
 
 
         <!-- ################################################################################################ -->
 
 
-        <h3><b>
+        <!-- <h3><b>
             <p class="btb" target="_blank" id="starter_code" style="font-size: 2.5em;">Starter Code</p>
           </b></h3>
 
@@ -361,21 +608,20 @@
           4. $mAP_{LCTE}$ for mAP on topology between lane centerlines and traffic elements.
         </p>
 
-        <br><br>
+        <br><br>-->
 
 
 
 
-        <h3><b><p class="btb" target="_blank" id="submission" style="font-size: 2.5em;">Submission </p></b></h3>
+        <!--<h3><b><p class="btb" target="_blank" id="submission" style="font-size: 2.5em;">Submission </p></b></h3>
 
-        Coming soon.
+        Coming soon.-->
 
 
         <h3><b><p class="btb" target="_blank" id="rules" style="font-size: 2.5em;">General Rules </p></b></h3>
 
 
-
-        <textarea name="rules" id="rules" cols="55" rows="8">Coming soon.</textarea>
+        Coming soon.
 
       </div>
       <!-- ################################################################################################ -->
