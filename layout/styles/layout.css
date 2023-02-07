@@ -284,7 +284,13 @@ table, th{table-layout:auto;}
 table{width:100%; margin-bottom:15px;}
 th, td{padding:5px 8px;}
 td{border-width:0 1px;}
-
+tbody{padding: 15px 15px;}
+.wsite-multicol-col-left{width:26.598465473146%;padding:15px 15px; border-color:white; background-color:white;}
+.wsite-multicol-col-right{width:73.401534526854%; padding:150px 15px;border-color:white;}
+.wsite-image{padding-top:20px;padding-bottom:auto;margin-left:0;margin-right:0;text-align:center;}
+.wsite-image img{width:auto;max-width:100%;height: auto;vertical-align: middle;}
+.medium{font-size: medium;}
+.githubstar{margin-left: 2px; margin-bottom:-5px;}
 
 /* Gallery
 --------------------------------------------------------------------------------------------------------------- */
@@ -426,6 +432,8 @@ tr:nth-child(even), #comments li:nth-child(even){color:inherit; background-color
 table a, #comments a{background-color:inherit;}
 
 
+
+
 /* ------------------------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------------------------ */
@@ -501,10 +509,14 @@ table a, #comments a{background-color:inherit;}
 	#footer .latestimg > li, #footer .latestimg > li:nth-last-child(-n+3){display:inline-block; float:none; width:auto; margin:0 5% 5% 0;}
 	#footer .latestimg > li:last-child{margin-bottom:0;}
 	#footer .latestimg > li img{width:auto;}
+
+	.sdb_holder{  display: none;}
+
 }
 
 @media screen and (max-width:450px){
 	#topbar > div:first-of-type ul li{display:block; margin:0 0 2px 0;}
+	.sdb_holder{  display: none;}
 }
 
 
