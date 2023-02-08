@@ -132,18 +132,50 @@
           Overview
         </b></h3>
 
+        <h4>Why these Challenges?</h4>
         <p>
-          Why these Challenges? TODO
-          The challenge closes at xxx, but the leaderboards will remain open for future submissions
+           Autonomous driving is developing fast. Although still deemed as important, the requirement for cutting-edge algorithms is no longer to achieve as high as mAP for object detectors, or to recognize lanes as conventional segmentation. We believe the <topic>future</topic> of autonomous driving algorithms is to <code>bond perception closely with planning</code>. The goal of each module (object detection, laneline recognition, etc.) in perception is to server better for planning. As such, we introduce three <topic>curated, brand-new</topic> challenges following such a philosophy.
+
+           <br>
+
+           <li style="list-style-type:disc"> 
+            <topic>OpenLane Topology Challenge</topic>. Go beyond conventional laneline detection as segmentation. Recognization lanes as an abstraction of the scene - <code>centerline</code>, and building the topology between lanlines and road elements. Such a topology is to facilitate planning and routing.
+          </li>
+
+          <br> 
+
+          <li style="list-style-type:disc"> 
+            <topic>Occupancy Prediction Challenge</topic>. The representation of 3D bounding box is not enough to describe general objects (obstacles) in daily scenarios.
+             <!-- for autonomous driving.  -->
+             Instead, inspired by the concept in Robotics, we deem general object detection as an <code>Occupancy</code> representation to cover more irregular shaped objects (e.g. protruding). The output could also be fed as cost volume for planning. This idea is also endorsed by <a href="">Mobileye at CES 2023</a> and <a href="">Tesla AI Day 2022</a>.
+          </li>
+
+          <br> 
+
+          <li style="list-style-type:disc"> 
+             <topic>nuPlan Planning Challenge</topic>. To verify the effectivenss of previous two newly-designed modules in perception, we need an ultimate planning  framework with a 
+             <code>closed-loop</code> setting, trained <code>end-to-end</code>.
+            Previous motion planning benchmarks focus on short-term motion forecasting and are limited to open-loop evaluation. <code>nuPlan</code> introduces long-term planning of the ego vehicle and corresponding metrics.
+          </li>
         </p>
 
+
+        <br><br><br>
+
+        Picture: Motivation of the Challenges: bond perception more closely with planning
+
+        <br><br><br>
         <p>
+
+        <li style="list-style-type:disc"> 
+          Chat with Challenge organizers 
           <a href="https://join.slack.com/t/opendrivelab/shared_invite/zt-1p2by4kxs-Nulw9MsDEGEpsjo6fG2osg">
             <img
               src="https://img.shields.io/badge/Slack-Join-white?logo=slack&amp"
               alt="Join Slack" style="height: 25px"
             />
           </a>
+<<<<<<< HEAD
           Please find guidance in #general and join track-specific channels:
           <ul>
             <li>
@@ -153,8 +185,18 @@
               #occupancy-challenge-2023
             </li>
           </ul>
+=======
+          Please follow guidelines in <code>#general</code>
+        </li>
+        <li style="list-style-type:disc"> Contact us via <code> TODO googlegroups</code></li>
+>>>>>>> 06fece86cbb97cda4bff556b538dde4cc7c1f319
         </p>
 
+
+        Year 2023's Edition of the Challenge is hosted by <a href="">OpenDriveLab at Shanghai AI Lab</a>, <a href="">MARS Lab at Tsinghua University</a> and <a href="">nuPlan team from Motional</a>.
+        <br>
+
+        LOGO here.
 
 
         <!-- OpenLane -->
@@ -192,67 +234,51 @@
         </a>
 
         <br><br>
+
+<p>
+        <li style="list-style-type:disc">
+            Important dates TODO
+        </li>
+        <li style="list-style-type:disc">
+            Award details TODO
+        </li>
+        <li style="list-style-type:disc">
+            Point of contact: Yang Li, <code>liyang@opendrivelab.com</code>
+        </li>
+        <li style="list-style-type:disc">
+            Slack channel <code>#openlane-challenge-2023</code>
+        </li>
+</p>
+
+        <h4>Task Description</h4>
+
         <p>
-          In OpenLane-V2, we annotate lane centerlines and their connectivities to provide map-like results to facilitate downstream tasks.
-          Moreover, traffic elements and their correspondences to lanes are critical for understanding the complex driving environment.
-          Participants are required to deliver results on lanes, traffic elements, and topology relationships simultaneously.
+          TODO, maybe Figure
         </p>
 
-        <br>
-        <div class="scrollable">
-          <table>
-            <thead>
-              <tr>
-                <th>Method</th>
-                <th>OLS (main metric)</th>
-                <th> $mAP_{LC}$</th>
-                <th> $mAP_{TE}$</th>
-                <th> $mAP_{LCLC}$ </th>
-                <th> $mAP_{LCTE}$</th>
-                <th> F-Score</th>
+        <h4>Evaluation Metric, Toolkit and Baseline</h4>
+        <p>
+          Please refer to Github at TODO
+        </p>
 
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><a href="#">\</a></td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-              </tr>
-              <tr>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-                <td><a href="#">\</a></td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-              </tr>
-              <tr>
-                <td><a href="#">\</a></td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-              </tr>
-              <tr>
-                <td><a href="#">\</a></td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+
+        <h4>Leaderboard and How to Submit</h4>
+        <p>
+          Please refer to EvalAI at TODO
+        </p>
+
+
+
+        <h4>Related Literature</h4>
+        <p>
+          <li style="list-style-type:disc">
+            MapTR XXXX, ICLR 2023 Spotlight
+        </li>
+        </p>
+
+
+
+
 
 
 
