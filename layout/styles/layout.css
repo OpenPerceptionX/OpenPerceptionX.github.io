@@ -606,52 +606,13 @@ table a, #comments a{background-color:inherit;}
 	display: none;
 	text-align: center;
   }
-  
+
 body {
     margin: 0;
 }
 
+.linkcolor{color: #DC8E47;}
 
-  /* =============================================================================
-     SPEAKER
-     ========================================================================== */
-	 .speakers-item {
-		position: relative;
-		min-height: 180px;
-		padding-left: 180px;
-		margin-bottom: 30px;
-		border-bottom: 1px dashed #e7e7e7;
-	  }
-	  .speaker-photo {
-		position: absolute;
-		top: 20px;
-		left: 50px;
-		display: block;
-		width: 95px;
-		height: 95px;
-	  }
-	  .speaker-photo-00 {
-		position: absolute;
-		top: 0;
-		left: 0;
-		display: block;
-		width: 100px;
-		height: 100px;
-	  }
-	  .speech-title {
-		padding-top: 10px;
-		font-size: 2em;
-		margin-bottom: 1em;
-	  }
-	  .speech-time {
-		font-size: 18px;
-		padding: 10px 15px;
-		letter-spacing: -0.03em;
-	  }
-	  .speakers-name {
-		font-size: 1.2em;
-	  }
-	  .speakers-item p {
-		font-size: 1.2em;
-	  }
+
+
 
