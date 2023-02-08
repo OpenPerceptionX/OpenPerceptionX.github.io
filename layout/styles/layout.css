@@ -509,13 +509,13 @@ table a, #comments a{background-color:inherit;}
 	#footer .latestimg > li:last-child{margin-bottom:0;}
 	#footer .latestimg > li img{width:auto;}
 
-	.sdb_holder{  display: none;}
+	.sdb_holder{  display: flex;}
 
 }
 
 @media screen and (max-width:450px){
 	#topbar > div:first-of-type ul li{display:block; margin:0 0 2px 0;}
-	.sdb_holder{  display: none;}
+	.sdb_holder{  display: flex;}
 }
 
 
