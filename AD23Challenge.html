@@ -134,30 +134,40 @@
 
         <h4>Why these Challenges?</h4>
         <p>
-           Autonomous driving is developing fast. Although still deemed as important, the requirement for cutting-edge algorithms is no longer to achieve as high as mAP for object detectors, or to recognize lanes as conventional segmentation. We believe the <topic>future</topic> of autonomous driving algorithms is to <code>bond perception closely with planning</code>. The goal of each module (object detection, laneline recognition, etc.) in perception is to server better for planning. As such, we introduce three <topic>curated, brand-new</topic> challenges following such a philosophy.
-
-           <br>
-
-           <li style="list-style-type:disc"> 
-            <topic>OpenLane Topology Challenge</topic>. Go beyond conventional laneline detection as segmentation. Recognization lanes as an abstraction of the scene - <code>centerline</code>, and building the topology between lanlines and road elements. Such a topology is to facilitate planning and routing.
-          </li>
-
-          <br> 
-
-          <li style="list-style-type:disc"> 
-            <topic>Occupancy Prediction Challenge</topic>. The representation of 3D bounding box is not enough to describe general objects (obstacles) in daily scenarios.
-             <!-- for autonomous driving.  -->
-             Instead, inspired by the concept in Robotics, we deem general object detection as an <code>Occupancy</code> representation to cover more irregular shaped objects (e.g. protruding). The output could also be fed as cost volume for planning. This idea is also endorsed by <a href="">Mobileye at CES 2023</a> and <a href="">Tesla AI Day 2022</a>.
-          </li>
-
-          <br> 
-
-          <li style="list-style-type:disc"> 
-             <topic>nuPlan Planning Challenge</topic>. To verify the effectivenss of previous two newly-designed modules in perception, we need an ultimate planning  framework with a 
-             <code>closed-loop</code> setting, trained <code>end-to-end</code>.
-            Previous motion planning benchmarks focus on short-term motion forecasting and are limited to open-loop evaluation. <code>nuPlan</code> introduces long-term planning of the ego vehicle and corresponding metrics.
-          </li>
+           Autonomous driving is developing fast. 
+           Although still deemed important, the requirement for cutting-edge algorithms is no longer to achieve as high as mAP for object detectors, or to recognize lanes as conventional segmentation. 
+           We believe the <topic>future</topic> of autonomous driving algorithms is to <code>bond perception closely with planning</code>. 
+           The goal of each module (object detection, lane line recognition, etc.) in perception is to serve for better planning. 
+           As such, we introduce three <topic>curated, brand-new</topic> challenges following such a philosophy.
         </p>
+
+        <li style="list-style-type:disc"> 
+          <topic>OpenLane Topology Challenge</topic>. 
+          Go beyond conventional lane line detection as segmentation. 
+          Recognization lanes as an abstraction of the scene - <code>centerline</code>, and building the topology between lanlines and road elements. 
+          Such a topology is to facilitate planning and routing.
+        </li>
+
+        <br>
+
+        <li style="list-style-type:disc"> 
+          <topic>Occupancy Prediction Challenge</topic>. 
+          The representation of 3D bounding box is not enough to describe general objects (obstacles) in daily scenarios.
+          <!-- for autonomous driving.  -->
+          Instead, inspired by the concept in Robotics, we deem general object detection as an <code>Occupancy</code> representation to cover more irregular shaped objects (e.g. protruding).
+          The output could also be fed as cost volume for planning. 
+          This idea is also endorsed by <a href="">Mobileye at CES 2023</a> and <a href="">Tesla AI Day 2022</a>.
+        </li>
+
+        <br>
+
+        <li style="list-style-type:disc"> 
+          <topic>nuPlan Planning Challenge</topic>. 
+          To verify the effectivenss of previous two newly-designed modules in perception, we need an ultimate planning framework with a 
+          <code>closed-loop</code> setting, trained <code>end-to-end</code>.
+          Previous motion planning benchmarks focus on short-term motion forecasting and are limited to open-loop evaluation. 
+          <code>nuPlan</code> introduces long-term planning of the ego vehicle and corresponding metrics.
+        </li>
 
 
         <br><br><br>
@@ -165,27 +175,44 @@
         Picture: Motivation of the Challenges: bond perception more closely with planning
 
         <br><br><br>
+
+
+
+        <!-- contact -->
+
+        <h4>Contact</h4>
+
+        <a href="https://join.slack.com/t/opendrivelab/shared_invite/zt-1p2by4kxs-Nulw9MsDEGEpsjo6fG2osg">
+          <img
+            src="https://img.shields.io/badge/Slack-Join-important?logo=slack&amp"
+            alt="Join Slack" style="height: 25px"
+          />
+        </a>
+        Join Slack to Chat with Challenge organizers. Please follow the guidelines in <code>#general</code> and join track-specific channels:
+        <ul>
+          <li><code>#openlane-challenge-2023</code></li>
+          <li><code>#occupancy-challenge-2023</code></li>
+        </ul>
+
+        <a href="mailto:workshop-e2e-ad@googlegroups.com">
+          <img
+            src="https://img.shields.io/badge/email-Send-important?logo=gmail&amp"
+            alt="Send E-mail" style="height: 25px"
+          />
+        </a>
+        Contact us via <code>workshop-e2e-ad@googlegroups.com</code>.
+        
+        <br><br><br>
+
+
+
+        <!-- host -->
+
+        <h4>Host</h4>
+
         <p>
-
-        <li style="list-style-type:disc"> 
-          Chat with Challenge organizers 
-          <a href="https://join.slack.com/t/opendrivelab/shared_invite/zt-1p2by4kxs-Nulw9MsDEGEpsjo6fG2osg">
-            <img
-              src="https://img.shields.io/badge/Slack-Join-white?logo=slack&amp"
-              alt="Join Slack" style="height: 25px"
-            />
-          </a>
-          Please follow guidelines in <code>#general</code>
-        </li>
-        <li style="list-style-type:disc"> Contact us via <code> workshop-e2e-ad@googlegroups.com</code></li>
+          The year 2023's edition of the Challenge is hosted by:
         </p>
-
-
-        Year 2023's Edition of the Challenge is hosted by <a href="">OpenDriveLab at Shanghai AI Lab</a>, <a href="">MARS Lab at Tsinghua University</a> and <a href="">nuPlan team from Motional</a>.
-        <br><br>
-
-
-
 
           <div class="grid">
             <div class="grid-item">
@@ -195,9 +222,9 @@
                     <img class="photo"
                       src="images/challenge/shanghaiailab.jpeg" itemprop="image">
                     <br><br>
-                    <h1 class="speakers-name" style="text-align:center;font-size: 1em;white-space: nowrap;"> Shanghai AI Lab
-
-                    </h1>
+                    <p class="speakers-name" style="text-align:center;font-size: 1em;white-space: nowrap;">
+                      OpenDriveLab <br> at Shanghai AI Lab
+                    </p>
                   </a>
 
                 </span>
@@ -210,7 +237,7 @@
                     <img class="photo"
                       src="images/challenge/mars.jpg" itemprop="image"> <br><br>
 
-                    <h1 class="speakers-name" style="text-align:center;font-size: 1em;white-space: nowrap;"> MARS Lab </h1>
+                    <h1 class="speakers-name" style="text-align:center;font-size: 1em;white-space: nowrap;"> MARS Lab <br> at Tsinghua University </h1>
                   </a>
                   
                 </span>
@@ -223,7 +250,7 @@
                     <img class="photo" 
                       src="images/challenge/motion.png" itemprop="image"> <br><br>
 
-                    <h1 class="speakers-name" style="text-align:center;font-size: 1em;white-space: nowrap;"> Motional</h1>
+                    <h1 class="speakers-name" style="text-align:center;font-size: 1em;white-space: nowrap;"> nuPlan team from Motional </h1>
                   </a>
                   
                 </span>
