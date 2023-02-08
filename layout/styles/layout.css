@@ -204,7 +204,7 @@ If you don't want it to fade all elements, you have to list the ones you want to
 Delete it completely to stop fading
 --------------------------------------------------------------------------------------------------------------- */
 *, *::before, *::after{transition:all .3s ease-in-out;}
-#mainav form *{transition:none !important;}
+/*#mainav form *{transition:none !important;}*/
 
 
 /* ------------------------------------------------------------------------------------------------------------ */
