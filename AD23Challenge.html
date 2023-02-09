@@ -98,23 +98,24 @@
         <!-- ################################################################################################ -->
         <h6> <b></b></h6>
 
-        <nav class="sdb_holder" style="display:inline-block; position:fixed;bottom:20px; left:40px;">
+        <nav class="sdb_holder" style="display:inline-block; position:fixed;bottom:1000px; left:40px;">
           <ul>
-            <li><a href="#Overview" style="font-size: 1.2em; line-height: 1.2; ">Overview</a></li>
+            <li><a href="#Overview" style="font-size: 1.2em; line-height: 1.2; ">- Overview</a></li>
           </ul>
           <ul>
-            <li><a href="#Track1" style="font-size: 1.2em; line-height: 1.2;">OpenLane Topology </a></li>
+            <li><a href="#Track1" style="font-size: 1.2em; line-height: 1.2;">- OpenLane Topology </a></li>
           </ul>
           <ul>
-            <li><a href="#Track2" style="font-size: 1.2em; line-height: 1.2;">Occupancy Prediction </a></li>
+            <li><a href="#Track2" style="font-size: 1.2em; line-height: 1.2;">- Occupancy Prediction </a></li>
           </ul>
           <ul>
-            <li><a href="#Track3" style="font-size: 1.2em; line-height: 1.2;">nuPlan Planning</a></li>
+            <li><a href="#Track3" style="font-size: 1.2em; line-height: 1.2;">- nuPlan Planning</a></li>
           </ul>
 
           <ul>
-            <li><a href="#rules" style="font-size: 1.2em; line-height: 1.2;">General Rules</a></li>
+            <li><a href="#rules" style="font-size: 1.2em; line-height: 1.2;">- General Rules</a></li>
           </ul>
+          
         </nav>
 
 
@@ -308,6 +309,8 @@
           The <a href="https://github.com/OpenDriveLab/OpenLane-V2">OpenLane-V2</a> dataset is the perception and reasoning benchmark for scene structure in autonomous driving. 
           Given multi-view images covering the whole panoramic field of view, 
           participants are required to deliver not only perception results of lanes and traffic elements but also topology relationships among lanes and between lanes and traffic elements simultaneously.
+          <br>
+          For those who interested in lane lines perception, we also preovoide a <code>sub-track</code> for comparison.
         </p>
 
 
@@ -333,7 +336,7 @@
 
         <h4><b>Important dates</b></h4>
         <p>
-          <table style="width: 45%;">
+          <table style="width: 45%;border-collapse: collapse;">
             <tbody>
               <tr style="background-color: white">
                 <td>Challenge Period Open</td><td>Mar 16, 2023</td>
@@ -352,8 +355,8 @@
               </tr>
             </tbody>
           </table>
-          <footer style="font-size: 0.1em">* &nbsp; All due at 00:00 UTC+8.</b>
-          <footer style="font-size: 0.1em">** The test server will remain open after the challenge.</b>
+          <footer ><i style ="font-size: 0.8em;">* &nbsp; All due at 00:00 UTC+8.</i></b>
+          <footer ><i style ="font-size: 0.8em;">** &nbsp; The test server will remain open after the challenge.</i></b>
         </p>
 
 
@@ -385,50 +388,27 @@
 
 
         <h4><b>Related Literature</b></h4>
-        <p>
-          <li style="list-style-type:disc; font-size: 0.5em;">
-            Yang, Chenyu, Yuntao Chen, Hao Tian, Chenxin Tao, Xizhou Zhu, Zhaoxiang  Zhang, and others, ‘BEVFormer v2: Adapting Modern Image Backbones to  Bird’s-Eye-View Recognition via Perspective Supervision’ (arXiv, 2022)  
-          </li>
-          <li style="list-style-type:disc; font-size: 0.5em;">
-            Yicheng Liu, Yuantian Tuan, Yue Wang, Yilun Wang, Hang Zhao, 'VectorMapNet: End-to-end Vectorized HD Map Learning'(arXiv, 2022)
-          </li>
-          <li style="list-style-type:disc; font-size: 0.5em;">
-            Qi Li, Yue Wang, Yilun Wang, Hang Zhao, 'HDMapNet: An Online HD Map Construction and Evaluation Framework' (arXiv, 2022)
-          </li>
-          <li style="list-style-type:disc; font-size: 0.5em;">
-            Chen, Li, Chonghao Sima, Yang Li, Zehan Zheng, Jiajie Xu, Xiangwei Geng,  and others, ‘PersFormer: 3D Lane Detection via Perspective Transformer  and the OpenLane Benchmark’ ECCV 2022 (Oral) 
-          </li>
-          <li style="list-style-type:disc; font-size: 0.5em;">
-            Yuliang Guo, Guang Chen, Peitao Zhao, Weide Zhang, Jinghao Miao, Jingao Wang, Tae Eun Choe, 'Gen-LaneNet: A Generalized and Scalable Approach for 3D Lane Detection' (arXiv, 2020)
-          </li>
-          <li style="list-style-type:disc; font-size: 0.5em;">
-            Fan Yan, Ming Nie, Xinyue Cai, Jianhua Han, Hang Xu, Zhen Yang, Chaoqiang Ye, Yanwei Fu, Michael Bi Mi, Li Zhang, 'ONCE-3DLanes: Building Monocular 3D Lane Detection' CVPR 2022
-          </li>
-          <li style="list-style-type:disc; font-size: 0.5em;">
-            Noa Garnett, Rafi Cohen, Tomer Pe'er, Roee Lahav, Dan Levi, '3D-LaneNet: End-to-End 3D Multiple Lane Detection'  ICCV 2019
-          </li>
-        </p>
 
 
         <li style="list-style-type:disc; font-size: 0.8em;">
           Yang, Chenyu, Yuntao Chen, Hao Tian, Chenxin Tao, Xizhou Zhu, Zhaoxiang  Zhang, and others, ‘BEVFormer v2: Adapting Modern Image Backbones to  Bird’s-Eye-View Recognition via Perspective Supervision’ (arXiv, 2022)  
         </li>
-        <li style="list-style-type:disc; font-size: 0.5em;">
+        <li style="list-style-type:disc; font-size: 0.8em;">
           Yicheng Liu, Yuantian Tuan, Yue Wang, Yilun Wang, Hang Zhao, 'VectorMapNet: End-to-end Vectorized HD Map Learning'(arXiv, 2022)
         </li>
-        <li style="list-style-type:disc; font-size: 0.5em;">
+        <li style="list-style-type:disc; font-size: 0.8em;">
           Qi Li, Yue Wang, Yilun Wang, Hang Zhao, 'HDMapNet: An Online HD Map Construction and Evaluation Framework' (arXiv, 2022)
         </li>
-        <li style="list-style-type:disc; font-size: 0.5em;">
+        <li style="list-style-type:disc; font-size: 0.8em;">
           Chen, Li, Chonghao Sima, Yang Li, Zehan Zheng, Jiajie Xu, Xiangwei Geng,  and others, ‘PersFormer: 3D Lane Detection via Perspective Transformer  and the OpenLane Benchmark’ ECCV 2022 (Oral) 
         </li>
-        <li style="list-style-type:disc; font-size: 0.5em;">
+        <li style="list-style-type:disc; font-size: 0.8em;">
           Yuliang Guo, Guang Chen, Peitao Zhao, Weide Zhang, Jinghao Miao, Jingao Wang, Tae Eun Choe, 'Gen-LaneNet: A Generalized and Scalable Approach for 3D Lane Detection' (arXiv, 2020)
         </li>
-        <li style="list-style-type:disc; font-size: 0.5em;">
+        <li style="list-style-type:disc; font-size: 0.8em;">
           Fan Yan, Ming Nie, Xinyue Cai, Jianhua Han, Hang Xu, Zhen Yang, Chaoqiang Ye, Yanwei Fu, Michael Bi Mi, Li Zhang, 'ONCE-3DLanes: Building Monocular 3D Lane Detection' CVPR 2022
         </li>
-        <li style="list-style-type:disc; font-size: 0.5em;">
+        <li style="list-style-type:disc; font-size: 0.8em;">
           Noa Garnett, Rafi Cohen, Tomer Pe'er, Roee Lahav, Dan Levi, '3D-LaneNet: End-to-End 3D Multiple Lane Detection'  ICCV 2019
         </li>
 
@@ -505,8 +485,8 @@
               </tr>
             </tbody>
           </table>
-          <footer style="font-size: 0.1em">* &nbsp; All due at 00:00 UTC+8.</b>
-          <footer style="font-size: 0.1em">** The test server will remain open after the challenge.</b>
+          <footer ><i style ="font-size: 0.8em;">* &nbsp; All due at 00:00 UTC+8.</i></b>
+          <footer ><i style ="font-size: 0.8em;">** &nbsp; The test server will remain open after the challenge.</i></b>
         </p>
 
 
@@ -540,7 +520,7 @@
 
         <h4><b>Related Literature</b></h4>
         <p>
-          <li style="list-style-type:disc; font-size: 0.5em;">
+          <li style="list-style-type:disc; font-size: 0.8em;">
             <code>todo</code>  
           </li>
         </p>
@@ -704,7 +684,7 @@
 
         <h4><b>Related Literature</b></h4>
         <p>
-          <li style="list-style-type:disc; font-size: 0.5em;">
+          <li style="list-style-type:disc; font-size: 0.8em;">
             <code>todo</code>  
           </li>
         </p>

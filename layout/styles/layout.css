@@ -258,7 +258,7 @@ nav ul, nav ol{margin:0; padding:0; list-style:none;}
 .sidebar nav{display:block; width:20%;position:fixed;}
 .sidebar nav li{margin:0 0 3px 0; padding:0;}
 .sidebar nav a{display:block; position:relative; margin:0; padding:5px 10px 5px 15px; text-decoration:none; border:none; border-width:0 0 1px 0;}
-.sidebar nav a::after{top:10px; left:5px; content:"\f0da";}
+.sidebar nav a::after{top:10px; left:5px; ;}
 .sidebar nav ul ul a{padding-left:35px;}
 .sidebar nav ul ul a::after{left:25px;}
 .sidebar nav ul ul ul a{padding-left:55px;}
@@ -279,12 +279,13 @@ nav ul, nav ol{margin:0; padding:0; list-style:none;}
 
 /* Tables
 --------------------------------------------------------------------------------------------------------------- */
-table, th, td{border:1px solid; border-collapse:collapse; vertical-align:top;}
+table{border-collapse:collapse; vertical-align:top;}
 table, th{table-layout:auto;}
 table{width:100%; margin-bottom:15px;}
 th, td{padding:5px 8px;}
 td{border-width:0 1px;}
 tbody{padding: 15px 15px;}
+table, th, tr, td{border-bottom: 1px solid; border-top:1px solid;}
 .wsite-multicol-col-left{width:26.598465473146%;padding:15px 15px; border-color:white; background-color:white;}
 .wsite-multicol-col-right{width:73.401534526854%; padding:150px 15px;border-color:white;}
 .wsite-image{padding-top:20px;padding-bottom:auto;margin-left:0;margin-right:0;text-align:center;}
