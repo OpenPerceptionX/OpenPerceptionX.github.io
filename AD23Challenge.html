@@ -149,10 +149,21 @@
         </p>
 
         <li style="list-style-type:disc"> 
-          <topic>OpenLane Topology Challenge</topic>. 
-          Go beyond conventional lane line detection as segmentation. 
-          Recognizing lanes as an abstraction of the scene - <code>centerline</code>, and building the topology between lanes and traffic elements. 
-          Such a topology is to facilitate planning and routing.
+          <topic>OpenLane Mapping Challenge</topic>. Go beyond conventional lane line detection as segmentation. 
+          <!-- some intro about the importance of map -->
+          <br>
+          <!-- indent the paragraph -->
+          <li style="list-style-type:disc" > 
+            <b>Track 1: OpenLane Topology.</b>
+            Recognizing lanes as an abstraction of the scene - <code>centerline</code>, and building the topology between lanes and traffic elements. 
+            Such a topology is to facilitate planning and routing.
+          </li>
+          <!-- indent the paragraph -->
+          <li style="list-style-type:disc"> 
+            <b>Track 2: Online HD Map Construction.</topic></b>
+            Dynamically constructing vectorized local HD map using onboard sensors. Such vectorized maps can deal with highly
+            complicated road structures and provide rich semantic information for downstream tasks.
+          </li>
         </li>
 
         <br>
@@ -271,9 +282,10 @@
         <!-- track 1 -->
 
         <h3><b class="btb" target="_blank" id="Track1" style="font-size: 2.5em;">
-          Track 1: OpenLane Topology
+          Track 1: Open Mapping Challenge
         </b></h3>
-        
+        <br>
+        <h3><b style="font-size: 1.5em;">Sub-track 1: OpenLane Topology</b></h3>
         <p style="line-height:30px;">
 
         <a href="https://github.com/OpenDriveLab/OpenLane-V2">
@@ -391,12 +403,38 @@
           </li>
         </p>
 
-
         <br>
 
+        <h4><b>Related Literature</b></h4>
+        <p>
+          <li style="list-style-type:disc; font-size: 0.8em;">
+            <a href="https://arxiv.org/pdf/2010.04159.pdf">
+              Deformable DETR: Deformable Transformers for End-to-End Object Detection
+            </a>
+          </li>
+          <li style="list-style-type:disc; font-size: 0.8em;">
+            <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Can_Structured_Birds-Eye-View_Traffic_Scene_Understanding_From_Onboard_Images_ICCV_2021_paper.pdf">
+              Structured Bird's-Eye-View Traffic Scene Understanding From Onboard Images
+            </a>
+          </li>
+          <li style="list-style-type:disc; font-size: 0.8em;">
+            <a href="https://arxiv.org/pdf/2206.08920.pdf">
+              VectorMapNet: End-to-end Vectorized HD Map Learning
+            </a>
+          </li>
+          <li style="list-style-type:disc; font-size: 0.8em;">
+            <a href="https://arxiv.org/pdf/2208.14437.pdf">
+              MapTR: Structured Modeling and Learning for Online Vectorized HD Map Construction
+            </a>
+          </li>
+        </p>
 
-        <h4 ><b id='side-track'> Side Track: Online HD Map Construction</b></h4>
-        <p style="line-height:30px;">
+
+        <br><br><br>
+
+
+        <h3><b style="font-size: 1.5em;">Sub-track 2: Online HD Map Construction</b></h3>
+        <p style="line-height:20px;">
 
           <a href="https://github.com/Tsinghua-MARS-Lab/Online-HD-Map-Construction-CVPR2023">
             <img
@@ -429,35 +467,67 @@
             />
           </a>
         </p>
-        <p>
-            Online HD map construction task aims to dynamically construct the local semantic map based on onboard sensor observations. Compared to lane detection, our constructed HD map provides more semantics information of multiple categories.
-            Please refer to the pages of <a href="https://github.com/Tsinghua-MARS-Lab/Online-HD-Map-Construction-CVPR2023">repository</a> 
-          and <a href="https://eval.ai/web/challenges/challenge-page/1954/overview">submission</a> for more details.
-     
-      
-  
-          <!-- Please refer to the pages of <a href="https://github.com/Tsinghua-MARS-Lab/Online-HD-Map-Construction-CVPR2023">repository</a> 
-          and <a href="https://eval.ai/web/challenges/challenge-page/1954/overview">submission</a> for more details. -->
-        </p>
-
 
         <br>
 
+        <h4><b>Task Description</b></h4>
+        <p>
+          Constructing HD maps is a central component of autonomous driving. However, traditional mapping pipelines require a vast amount of 
+          human efforts in annotating and maintaining the map, which limits its scalability. 
+          Online HD map construction task aims to dynamically construct the local semantic map based on onboard sensor observations. 
+          Compared to lane detection, our constructed HD map provides more semantics information of multiple categories. 
+          Vectorized polyline representation are adopted to deal with complicated and even irregular road structures. 
+          For more details, please refer to our <a href="https://github.com/Tsinghua-MARS-Lab/Online-HD-Map-Construction-CVPR2023">GitHub</a>.
+        </p>
+
+        <br>
+
+        <h4><b>Participation</b></h4>
+        <p>
+          We use Chamfer Distance based Average Precision as <a href="https://github.com/Tsinghua-MARS-Lab/Online-HD-Map-Construction-CVPR2023/blob/master/resources/docs/metrics.md">metric</a> 
+          to evaluate the quality of constructed map, which is similar to 
+          the one used in 3D Lane Detection task of OpenLane topology sub-track. 
+          To participate in our track, please submit your results at <a href="https://eval.ai/web/challenges/challenge-page/1954/overview">EvalAI</a>.
+          The leaderboard would also be maintained <a href="https://github.com/Tsinghua-MARS-Lab/Online-HD-Map-Construction-CVPR2023#challenge-submission-and-leaderboard">here</a>.
+        </p>
+
+        <br>
+        
+        <h4><b>Important dates</b></h4>
+        <p>
+          Same as Sub-track 1.
+        </p>
+
+        <br>
+        
+        <h4><b> Award</b></h4>
+        <p>
+          To be announced.
+        </p>
+
+        <br>
+
+        <h4><b>Contact</b></h4>
+        <p>
+          <li style="list-style-type:disc">
+            Tianyuan Yuan, <code>yuantianyuan01@gmail.com</code>
+          </li>
+          <li style="list-style-type:disc">
+            Hang Zhao, <code>zhaohang0124@gmail.com</code>
+          </li>
+        </p>
+
+        <br>
 
         <h4><b>Related Literature</b></h4>
         <p>
           <li style="list-style-type:disc; font-size: 0.8em;">
-            <a href="https://arxiv.org/pdf/2010.04159.pdf">
-              Deformable DETR: Deformable Transformers for End-to-End Object Detection
+            <a href="https://arxiv.org/abs/2107.06307">
+              HDMapNet: An Online HD Map Construction and Evaluation Framework
             </a>
           </li>
           <li style="list-style-type:disc; font-size: 0.8em;">
-            <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Can_Structured_Birds-Eye-View_Traffic_Scene_Understanding_From_Onboard_Images_ICCV_2021_paper.pdf">
-              Structured Bird's-Eye-View Traffic Scene Understanding From Onboard Images
-            </a>
-          </li>
-          <li style="list-style-type:disc; font-size: 0.8em;">
-            <a href="https://arxiv.org/pdf/2206.08920.pdf">
+            <a href="https://arxiv.org/abs/2107.06307">
               VectorMapNet: End-to-end Vectorized HD Map Learning
             </a>
           </li>
