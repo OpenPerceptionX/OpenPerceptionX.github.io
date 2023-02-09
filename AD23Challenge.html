@@ -132,7 +132,7 @@
           Overview
         </b></h3>
 
-        <h4>Why these Challenges?</h4>
+        <h4><b>Why these Challenges?</b></h4>
 
         <p>
            Autonomous driving is developing fast. 
@@ -181,7 +181,7 @@
 
         <!-- contact -->
 
-        <h4>Contact</h4>
+        <h4><b>Contact</b></h4>
 
         <a href="https://join.slack.com/t/opendrivelab/shared_invite/zt-1p2by4kxs-Nulw9MsDEGEpsjo6fG2osg">
           <img
@@ -191,7 +191,7 @@
         </a>
         Join Slack to Chat with Challenge organizers. Please follow the guidelines in <code>#general</code> and join the track-specific channels.
 
-        <br><br>
+        <br>
 
         <a href="mailto:workshop-e2e-ad@googlegroups.com">
           <img
@@ -207,20 +207,22 @@
 
         <!-- host -->
 
-        <h4>Host</h4>
+        <h4><b>Host</b></h4>
 
         <p>
           The year 2023's edition of the Challenge is hosted by:
         </p>
 
+        <br>
+
         <div class="grid">
           <div class="grid-item" style="min-width: 220px; max-width: 220px; padding-left: 1rem; padding-right: 1.5rem;" >
             <li class="speakers-item ">
               <span class="speaker-photo">
-                <a href="https://www.shlab.org.cn/" target="_blank">
+                <a href="https://opendrivelab.com" target="_blank">
                   <img class="photo" style="width: 220px; border-radius:100%; overflow:hidden;"
-                    src="images/challenge/shanghaiailab.jpeg" >
-                  <p class="speakers-name" style="text-align:center;font-size: 1em;">OpenDriveLab <br> at Shanghai AI Lab
+                    src="images/challenge/shanghaiailab_w.png" >
+                  <p class="speakers-name" style="text-align:center;font-size: 0.9em;"><b>OpenDriveLab <br> at Shanghai AI Lab</b>
                   </p>
                 </a>
               </span>
@@ -229,11 +231,11 @@
           <div class="grid-item" style="min-width: 220px; max-width: 220px; padding-left: 1rem; padding-right: 1.5rem;" >
             <li class="speakers-item " >
               <span class="speaker-photo">
-                <a href="http://group.iiis.tsinghua.edu.cn/~marslab/#/" target="_blank">
+                <a href="http://group.iiis.tsinghua.edu.cn/~marslab/#" target="_blank">
                   <img class="photo" style="width: 220px; border-radius:100%; overflow:hidden;"
-                    src="images/challenge/mars.jpg" > 
+                    src="images/challenge/mars_w.png" > 
 
-                  <p class="speakers-name" style="text-align:center;font-size: 1em;"> MARS Lab <br>  at Tsinghua University </p>
+                  <p class="speakers-name" style="text-align:center;font-size: 0.9em;"> <b>MARS Lab <br> at Tsinghua University</b> </p>
                 </a>
               </span>
             </li>
@@ -243,19 +245,24 @@
               <span class="speaker-photo">
                 <a href="https://motional.com/" target="_blank">
                   <img class="photo" style="width: 220px; border-radius:100%; overflow:hidden;"
-                    src="images/challenge/motion.png"  > 
+                    src="images/challenge/motion_w.jpg"  > 
 
-                  <p class="speakers-name" style="text-align:center;font-size: 1em;"> nuPlan team <br>  from Motional </p>
+                  <p class="speakers-name" style="text-align:center;font-size: 0.9em;"> <b>nuPlan team <br>  from Motional</b> </p>
                 </a>
               </span>
             </li>
           </div>
-
         </div>
 
 
 
         <br><br>
+        <hr>
+        <br><br><br>
+
+
+
+        <!-- track 1 -->
 
         <h3><b class="btb" target="_blank" id="Track1" style="font-size: 2.5em;">
           Track 1: OpenLane Topology
@@ -292,60 +299,116 @@
           />
         </a>
 
-        <br><br>
+        
+        <br><br><br>
 
 
-        <li style="list-style-type:disc">
-            Award details TODO
-        </li>
-
-
-        <h4>Task Description</h4>
-
+        <h4><b>Task Description</b></h4>
         <p>
-          input / output / dataset
+          The <a href="https://github.com/OpenDriveLab/OpenLane-V2">OpenLane-V2</a> dataset is the perception and reasoning benchmark for scene structure in autonomous driving. 
+          Given multi-view images covering the whole panoramic field of view, 
+          participants are required to deliver not only perception results of lanes and traffic elements but also topology relationships among lanes and between lanes and traffic elements simultaneously.
         </p>
-
-        <h4>Evaluation Metric, Toolkit and Baseline</h4>
-        <p>
-          Please refer to Github at TODO
-        </p>
-
-
-        <h4>Leaderboard and How to Submit</h4>
-        <p>
-          Please refer to EvalAI at TODO
-        </p>
-
-
-
 
 
         <br>
 
-        <h4>Important dates</h4>
 
-        <li style="list-style-type:disc">
-          Submission begin: <code>Mar 16, 2023</code>
-        </li>
-        <li style="list-style-type:disc">
-          Submission end: <code>May 26, 2023</code>
-        </li>
+        <h4><b>Participation</b></h4>
+        <p>
+          The primary metric is <a href="https://github.com/OpenDriveLab/OpenLane-V2#task">OpenLane-V2 Score (OLS)</a>, which comprises evaluations on three sub-tasks.
+          On the website, we provide tools for 
+          <a href="https://github.com/OpenDriveLab/OpenLane-V2/blob/master/docs/devkit.md#openlanev2dataset">data access</a>,
+          <a href="https://github.com/OpenDriveLab/OpenLane-V2#plugin">training models</a>,
+          <a href="https://github.com/OpenDriveLab/OpenLane-V2/blob/master/docs/devkit.md#openlanev2evaluation">evaluations</a>,
+          and <a href="https://github.com/OpenDriveLab/OpenLane-V2/blob/master/docs/devkit.md#openlanev2visualization">visualization</a>.
+          To submit your results on <a href="https://eval.ai/web/challenges/challenge-page/1925/overview">EvalAI</a>, please 
+          follow the <a href="https://github.com/OpenDriveLab/OpenLane-V2/blob/master/docs/submission.md#submission">submission instructions</a>.
+          The leaderboard would be maintained <a href="https://github.com/OpenDriveLab/OpenLane-V2#benchmark-and-leaderboard-to-be-released">here</a>.
+        </p>
 
-        <br>
-
-        <h4>Contact</h4>
-
-        <li style="list-style-type:disc">
-          Yang Li, <code>liyang@opendrivelab.com</code>
-        </li>
-        <li style="list-style-type:disc">
-          Slack channel <code>#openlane-challenge-2023</code>
-        </li>
 
         <br>
 
-        <h4>Related Literature</h4>
+
+        <h4><b>Important dates</b></h4>
+        <p>
+          <table style="width: 45%;">
+            <tbody>
+              <tr style="background-color: white">
+                <td>Challenge Period Open</td><td>Mar 16, 2023</td>
+              </tr>
+              <tr style="background-color: white">
+                <td>Challenge Period End</td><td>May 27, 2023</td>
+              </tr>
+              <tr style="background-color: white">
+                <td>Finalist Notification</td><td>May 29, 2023</td>
+              </tr>
+              <tr style="background-color: white">
+                <td>Technical Report Deadline</td><td>Jun 10, 2023</td>
+              </tr>
+              <tr style="background-color: white">
+                <td>Winner Announcement</td><td>Jun 12, 2023</td>
+              </tr>
+            </tbody>
+          </table>
+          <footer style="font-size: 0.1em">* &nbsp; All due at 00:00 UTC+8.</b>
+          <footer style="font-size: 0.1em">** The test server will remain open after the challenge.</b>
+        </p>
+
+
+        <br>
+
+        
+        <h4><b> Award</b></h4>
+        <p>
+          For verified finalists, teams with the first, second, and third highest scores will be awarded.
+          Besides, the team with the most innovative method will be awarded.
+          The prizes will be announced.
+        </p>
+
+
+        <br>
+
+
+        <h4><b>Contact</b></h4>
+        <p>
+          <li style="list-style-type:disc">
+            Yang Li, <code>liyang@opendrivelab.com</code>
+          </li>
+          <li style="list-style-type:disc">
+            Slack channel: <code>#openlane-challenge-2023</code>
+          </li>
+        </p>
+
+        <br>
+
+
+        <h4><b>Related Literature</b></h4>
+        <p>
+          <li style="list-style-type:disc; font-size: 0.5em;">
+            Yang, Chenyu, Yuntao Chen, Hao Tian, Chenxin Tao, Xizhou Zhu, Zhaoxiang  Zhang, and others, ‘BEVFormer v2: Adapting Modern Image Backbones to  Bird’s-Eye-View Recognition via Perspective Supervision’ (arXiv, 2022)  
+          </li>
+          <li style="list-style-type:disc; font-size: 0.5em;">
+            Yicheng Liu, Yuantian Tuan, Yue Wang, Yilun Wang, Hang Zhao, 'VectorMapNet: End-to-end Vectorized HD Map Learning'(arXiv, 2022)
+          </li>
+          <li style="list-style-type:disc; font-size: 0.5em;">
+            Qi Li, Yue Wang, Yilun Wang, Hang Zhao, 'HDMapNet: An Online HD Map Construction and Evaluation Framework' (arXiv, 2022)
+          </li>
+          <li style="list-style-type:disc; font-size: 0.5em;">
+            Chen, Li, Chonghao Sima, Yang Li, Zehan Zheng, Jiajie Xu, Xiangwei Geng,  and others, ‘PersFormer: 3D Lane Detection via Perspective Transformer  and the OpenLane Benchmark’ ECCV 2022 (Oral) 
+          </li>
+          <li style="list-style-type:disc; font-size: 0.5em;">
+            Yuliang Guo, Guang Chen, Peitao Zhao, Weide Zhang, Jinghao Miao, Jingao Wang, Tae Eun Choe, 'Gen-LaneNet: A Generalized and Scalable Approach for 3D Lane Detection' (arXiv, 2020)
+          </li>
+          <li style="list-style-type:disc; font-size: 0.5em;">
+            Fan Yan, Ming Nie, Xinyue Cai, Jianhua Han, Hang Xu, Zhen Yang, Chaoqiang Ye, Yanwei Fu, Michael Bi Mi, Li Zhang, 'ONCE-3DLanes: Building Monocular 3D Lane Detection' CVPR 2022
+          </li>
+          <li style="list-style-type:disc; font-size: 0.5em;">
+            Noa Garnett, Rafi Cohen, Tomer Pe'er, Roee Lahav, Dan Levi, '3D-LaneNet: End-to-End 3D Multiple Lane Detection'  ICCV 2019
+          </li>
+        </p>
+
 
         <li style="list-style-type:disc; font-size: 0.8em;">
           Yang, Chenyu, Yuntao Chen, Hao Tian, Chenxin Tao, Xizhou Zhu, Zhaoxiang  Zhang, and others, ‘BEVFormer v2: Adapting Modern Image Backbones to  Bird’s-Eye-View Recognition via Perspective Supervision’ (arXiv, 2022)  
@@ -369,17 +432,17 @@
           Noa Garnett, Rafi Cohen, Tomer Pe'er, Roee Lahav, Dan Levi, '3D-LaneNet: End-to-End 3D Multiple Lane Detection'  ICCV 2019
         </li>
 
-
-
-
-        <!-- occupancy -->
-
         <br><br><br>
+        <hr>
+        <br><br><br>
+
+
+
+        <!-- track 2 -->
+
         <h3><b class="btb" target="_blank" id="Track2" style="font-size: 2.5em;">
           Track 2: Occupancy Prediction
         </b></h3>
-
-        <code>#occupancy-challenge-2023</code>
 
         <a href="">
           <img
@@ -395,14 +458,96 @@
           />
         </a>
 
-        <br><br>
+
+        <br><br><br>
+
+
+        <h4><b>Task Description</b></h4>
         <p>
+          <code>todo dataset</code>
           Unlike previous perception representations, which depend on predefined geometric primitives or perceived data modalities, occupancy enjoys the flexibility to describe entities in arbitrary shapes.
-          Based on the given images, participants are needed to provide the occupancy state and semantics of each voxel in 3D space for the complete scene.
+          Given multi-view images covering the whole panoramic field of view, 
+          participants are needed to provide the occupancy state and semantics of each voxel in 3D space for the complete scene.
+        </p>
+
+
+        <br>
+
+
+        <h4><b>Participation</b></h4>
+        <p>
+          <code>todo</code>
+        </p>
+
+
+        <br>
+
+
+        <h4><b>Important dates</b></h4>
+        <code>to check</code>
+        <p>
+          <table style="width: 45%;">
+            <tbody>
+              <tr style="background-color: white">
+                <td>Challenge Period Open</td><td>Mar 16, 2023</td>
+              </tr>
+              <tr style="background-color: white">
+                <td>Challenge Period End</td><td>May 27, 2023</td>
+              </tr>
+              <tr style="background-color: white">
+                <td>Finalist Notification</td><td>May 29, 2023</td>
+              </tr>
+              <tr style="background-color: white">
+                <td>Technical Report Deadline</td><td>Jun 10, 2023</td>
+              </tr>
+              <tr style="background-color: white">
+                <td>Winner Announcement</td><td>Jun 12, 2023</td>
+              </tr>
+            </tbody>
+          </table>
+          <footer style="font-size: 0.1em">* &nbsp; All due at 00:00 UTC+8.</b>
+          <footer style="font-size: 0.1em">** The test server will remain open after the challenge.</b>
+        </p>
+
+
+        <br>
+
+        
+        <h4><b> Award</b></h4>
+        <p>
+          <code>todo</code>
+          For verified finalists, teams with the first, second, and third highest scores will be awarded.
+          Besides, the team with the most innovative method will be awarded.
+          The prizes will be announced.
+        </p>
+
+
+        <br>
+
+
+        <h4><b>Contact</b></h4>
+        <p>
+          <li style="list-style-type:disc">
+            <code>todo</code>
+          </li>
+          <li style="list-style-type:disc">
+            Slack channel: <code>#occupancy-challenge-2023</code>
+          </li>
         </p>
 
         <br>
-        <div class="scrollable">
+
+
+        <h4><b>Related Literature</b></h4>
+        <p>
+          <li style="list-style-type:disc; font-size: 0.5em;">
+            <code>todo</code>  
+          </li>
+        </p>
+
+
+
+        <!-- <div class="scrollable">
           <table>
             <thead>
               <tr>
@@ -455,13 +600,18 @@
               </tr>
             </tbody>
           </table>
-        </div>
+        </div> -->
 
 
-
-        <!-- nuplan -->
 
         <br><br><br>
+        <hr>
+        <br><br><br>
+
+
+
+        <!-- track 3 -->
+
         <h3><b class="btb" target="_blank" id="Track3" style="font-size: 2.5em;">
           Track 3: nuPlan Planning
         </b></h3>
@@ -480,14 +630,86 @@
           />
         </a>
 
-        <br><br>
+
+        <br><br><br>
+
+
+        <h4><b>Task Description</b></h4>
         <p>
+          <code>todo dataset / input / output</code>
           Previous benchmarks focus on short-term motion forecasting and are limited to open-loop evaluation.
           NuPlan introduces long-term planning of the ego vehicle and corresponding metrics.
           Provided as docker containers, submissions are deployed for simulation and evaluation.
         </p>
 
+
         <br>
+
+
+        <h4><b>Participation</b></h4>
+        <p>
+          <code>todo</code>
+        </p>
+
+
+        <br>
+
+
+        <h4><b>Important dates</b></h4>
+        <code>to check</code>
+        <p>
+          <table style="width: 45%;">
+            <tbody>
+              <tr style="background-color: white">
+                <td>Challenge Period End</td><td>May 12, 2023</td>
+              </tr>
+              <tr style="background-color: white">
+                <td>Finalist Notification and Verification</td><td>May 19, 2023</td>
+              </tr>
+              <tr style="background-color: white">
+                <td>Winner Announcement</td><td>Jun 02, 2023</td>
+              </tr>
+              <tr style="background-color: white">
+                <td>Winner Presentation</td><td>Jun 18, 2023</td>
+              </tr>
+            </tbody>
+          </table>
+        </p>
+
+
+        <br>
+
+        
+        <h4><b> Award</b></h4>
+        <p>
+          <code>todo</code>
+        </p>
+
+
+        <br>
+
+
+        <h4><b>Contact</b></h4>
+        <p>
+          <li style="list-style-type:disc">
+            <code>todo</code>
+          </li>
+          <li style="list-style-type:disc">
+            Slack channel: <code>todo?</code>
+          </li>
+        </p>
+
+        <br>
+
+
+        <h4><b>Related Literature</b></h4>
+        <p>
+          <li style="list-style-type:disc; font-size: 0.5em;">
+            <code>todo</code>  
+          </li>
+        </p>
+
+        <!--
         <div class="scrollable">
           <table>
             <thead>
@@ -541,7 +763,7 @@
               </tr>
             </tbody>
           </table>
-        </div>
+        </div> -->
 
 
 <!--         <div>
@@ -766,8 +988,11 @@
 
 
 
-
         <br><br><br>
+        <hr>
+        <br><br><br>
+
+
 
         <h3><b class="btb" target="_blank" id="rules" style="font-size: 2.5em;">General Rules </b></h3>
 
