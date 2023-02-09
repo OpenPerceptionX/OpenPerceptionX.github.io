@@ -468,8 +468,8 @@ table a, #comments a{background-color:inherit;}
 	#header #logo{margin-top:3px;}
 
 	#mainav{}
-	#mainav ul{display:none;}
-	#mainav form{display:block;}
+	#mainav ul{display:block;}
+	/* #mainav form{display:block;} */
 
 	#breadcrumb{}
 
@@ -483,36 +483,125 @@ table a, #comments a{background-color:inherit;}
 	#copyright p:first-of-type{margin-bottom:10px;}
 }
 
-@media screen and (max-width:750px){
-	.imgl, .imgr{display:inline-block; float:none; margin:0 0 10px 0;}
-	.fl_left, .fl_right{display:block; float:none;}
-	.group .group > *:last-child, .clear .clear > *:last-child, .clear .group > *:last-child, .group .clear > *:last-child{margin-bottom:0;}/* Experimental - Needs more testing in different situations, stops double margin when stacking */
-	.one_half, .one_third, .two_third, .one_quarter, .two_quarter, .three_quarter, #segment > .two_third{display:block; float:none; width:auto; margin:0 0 30px 0;}
-
-	#topbar{padding-top:15px; text-align:center;}
-	#topbar > div:first-of-type ul{margin:0 0 15px 0;}
-
-	#header{padding:30px 0; text-align:center;}
-	#header #logo{margin:0 0 20px 0;}
-
-	#pageintro article, #pageintro p{max-width:none; margin:auto;}
-	#pageintro .heading{font-size:2rem;}
-
-	.sectiontitle{max-width:none; margin-bottom:50px; text-align:left;}
-	.overview > li:nth-last-child(-n+4){margin-bottom:50px;}
-
-	#segment > .two_third{margin:0; padding:40px 20px;}
-	#segment article{padding:0;}
-	#segment article i{position:inherit; top:auto; left:auto; margin-bottom:15px;}
-
-	#footer > div{text-align:left;}
-	#footer .latestimg > li, #footer .latestimg > li:nth-last-child(-n+3){display:inline-block; float:none; width:auto; margin:0 5% 5% 0;}
-	#footer .latestimg > li:last-child{margin-bottom:0;}
-	#footer .latestimg > li img{width:auto;}
-
-	.sdb_holder{  display: flex;}
-
-}
+@media screen and (max-width: 750px) {
+	.overview article {
+	  padding: 0 !important;
+	}
+	.content.three_quarter.publication tbody {
+	  display: flex;
+	  flex-direction: column;
+	}
+	.content.three_quarter.publication tbody tr {
+	  display: flex;
+	  flex-direction: column;
+	  width: 100%;
+	  justify-content: center;
+	  align-items: center;
+	}
+	.content.three_quarter.publication tbody tr .wsite-multicol-col-left,
+	.content.three_quarter.publication tbody tr .wsite-multicol-col-right {
+	  width: 90%;
+	  margin: 10px auto;
+	}
+	.imgl,
+	.imgr {
+	  display: inline-block;
+	  float: none;
+	  margin: 0 0 10px 0;
+	}
+	.fl_left,
+	.fl_right {
+	  display: block;
+	  float: none;
+	}
+	.group .group > *:last-child,
+	.clear .clear > *:last-child,
+	.clear .group > *:last-child,
+	.group .clear > *:last-child {
+	  margin-bottom: 0;
+	} /* Experimental - Needs more testing in different situations, stops double margin when stacking */
+	.one_half,
+	.one_third,
+	.two_third,
+	.one_quarter,
+	.two_quarter,
+	.three_quarter,
+	#segment > .two_third {
+	  display: block;
+	  float: none;
+	  width: auto;
+	  margin: 0 0 30px 0;
+	}
+  
+	#topbar {
+	  padding-top: 15px;
+	  text-align: center;
+	}
+	#topbar > div:first-of-type ul {
+	  margin: 0 0 15px 0;
+	}
+  
+	#header {
+	  padding: 30px 0;
+	  text-align: center;
+	}
+	#header #logo {
+	  margin: 0 0 20px 0;
+	}
+  
+	#pageintro article,
+	#pageintro p {
+	  max-width: none;
+	  margin: auto;
+	}
+	#pageintro .heading {
+	  font-size: 2rem;
+	}
+  
+	.sectiontitle {
+	  max-width: none;
+	  margin-bottom: 50px;
+	  text-align: left;
+	}
+	.overview > li:nth-last-child(-n + 4) {
+	  margin-bottom: 50px;
+	}
+  
+	#segment > .two_third {
+	  margin: 0;
+	  padding: 40px 20px;
+	}
+	#segment article {
+	  padding: 0;
+	}
+	#segment article i {
+	  position: inherit;
+	  top: auto;
+	  left: auto;
+	  margin-bottom: 15px;
+	}
+  
+	#footer > div {
+	  text-align: left;
+	}
+	#footer .latestimg > li,
+	#footer .latestimg > li:nth-last-child(-n + 3) {
+	  display: inline-block;
+	  float: none;
+	  width: auto;
+	  margin: 0 5% 5% 0;
+	}
+	#footer .latestimg > li:last-child {
+	  margin-bottom: 0;
+	}
+	#footer .latestimg > li img {
+	  width: auto;
+	}
+  
+	.sdb_holder {
+	  display: none !important;
+	}
+  }
 
 @media screen and (max-width:450px){
 	#topbar > div:first-of-type ul li{display:block; margin:0 0 2px 0;}
