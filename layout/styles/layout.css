@@ -129,7 +129,7 @@ topic {
 /* Sidebar */
 .container .sidebar{}
 
-.sidebar .sdb_holder{margin-bottom:20px;}
+.sidebar .sdb_holder{margin-bottom:0px;}
 .sidebar .sdb_holder:last-child{margin-bottom:0;}
 
 
@@ -255,7 +255,7 @@ nav ul, nav ol{margin:0; padding:0; list-style:none;}
 #breadcrumb .heading{margin:0 0 10px 0; font-size:2rem;}
 
 /* Sidebar Navigation */
-.sidebar nav{display:block; width:20%;position:fixed;}
+.sidebar nav{display:block; position:fixed;}
 .sidebar nav li{margin:0 0 3px 0; padding:0;}
 .sidebar nav a{display:block; position:relative; margin:0; padding:5px 10px 5px 15px; text-decoration:none; border:none; border-width:0 0 1px 0;}
 .sidebar nav a::after{top:10px; left:5px; ;}
@@ -704,5 +704,47 @@ body {
 .linkcolor{color: #DC8E47;}
 
 
+#keywords {
+	margin: 0 auto;
+	font-size: 1.2em;
+	margin-bottom: 15px;
+  }
+  #keywords thead {
+	cursor: pointer;
+	background: #c9dff0;
+  }
+  #keywords thead tr th { 
+	font-weight: bold;
+	padding: 12px 30px;
+	padding-left: 42px;
+  }
+  #keywords thead tr th span { 
+	padding-right: 20px;
+	background-repeat: no-repeat;
+	background-position: 100% 100%;
+  }
+  #keywords thead tr th.headerSortUp, #keywords thead tr th.headerSortDown {
+	background: #acc8dd;
+  }
+  #keywords thead tr th.headerSortUp span {
+	background-image: url('up.png');
+  }
+  #keywords thead tr th.headerSortDown span {
+	background-image: url('down.png');
+  }
+  #keywords thead tr th.sortUpBefore, #keywords thead tr th.sortDownBefore{}
+  #keywords tbody tr { 
+	color: #555;
+  }
+  #keywords tbody tr td {
+	text-align: center;
+	padding: 15px 10px;
+  }
+  #keywords tbody tr td.lalign {
+	text-align: left;
+  }
+  ::selection { background: #5f74a0; color: #fff; }
+  ::-moz-selection { background: #5f74a0; color: #fff; }
+  ::-webkit-selection { background: #5f74a0; color: #fff; }
 
 
