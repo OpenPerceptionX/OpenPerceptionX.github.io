@@ -370,7 +370,7 @@
         <h4><b>Leaderboard</b></h4>
         <p>
           <div class="scrollable">
-            <table style="text-align: center;">
+            <table id="keywords" cellspacing="0" cellpadding="0" style="text-align: center;">
               <thead>
                 <tr>
                   <th style="background-color: rgb(14, 104, 14); width: 64px;">Rank</th>
@@ -589,7 +589,7 @@
         <h4><b>Leaderboard</b></h4>
         <p>
           <div class="scrollable">
-            <table style="text-align: center;">
+            <table id="keywords" cellspacing="0" cellpadding="0" style="text-align: center;">
               <thead>
                 <tr>
                   <th style="background-color: rgb(139, 14, 14); width: 64px;">Rank</th>
@@ -809,7 +809,7 @@
         <p>
           <p>
             <div class="scrollable">
-              <table style="text-align: center;">
+              <table id="keywords" cellspacing="0" cellpadding="0" style="text-align: center;">
                 <thead>
                   <tr>
                     <th style="background-color: rgb(25, 25, 145); width: 64px;">Rank</th>
@@ -1174,72 +1174,6 @@
 
 
 
-        <!-- <table id="keywords" cellspacing="0" cellpadding="0">
-          <thead>
-            <tr>
-              <th><span>Keywords</span></th>
-              <th><span>Impressions</span></th>
-              <th><span>Clicks</span></th>
-              <th><span>CTR</span></th>
-              <th><span>Rank</span></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="lalign">silly tshirts</td>
-              <td>6,000</td>
-              <td>110</td>
-              <td>1.8%</td>
-              <td>22.2</td>
-            </tr>
-            <tr>
-              <td class="lalign">desktop workspace photos</td>
-              <td>2,200</td>
-              <td>500</td>
-              <td>22%</td>
-              <td>8.9</td>
-            </tr>
-            <tr>
-              <td class="lalign">arrested development quotes</td>
-              <td>13,500</td>
-              <td>900</td>
-              <td>6.7%</td>
-              <td>12.0</td>
-            </tr>
-            <tr>
-              <td class="lalign">popular web series</td>
-              <td>8,700</td>
-              <td>350</td>
-              <td>4%</td>
-              <td>7.0</td>
-            </tr>
-            <tr>
-              <td class="lalign">2013 webapps</td>
-              <td>9,900</td>
-              <td>460</td>
-              <td>4.6%</td>
-              <td>11.5</td>
-            </tr>
-            <tr>
-              <td class="lalign">ring bananaphone</td>
-              <td>10,500</td>
-              <td>748</td>
-              <td>7.1%</td>
-              <td>17.3</td>
-            </tr>
-            <tr>
-              <td class="lalign">ring bananaphone</td>
-              <td>11,500</td>
-              <td>748</td>
-              <td>7.1%</td>
-              <td>17.3</td>
-            </tr>
-          </tbody>
-        </table>
-         -->
-
-
-
       <!-- </div> -->
       <!-- ################################################################################################ -->
       <!-- ################################################################################################ -->
@@ -1289,77 +1223,10 @@
   <script src="/layout/scripts/jquery.mobilemenu.js"></script>
   <script src="/layout/editor.md/editormd.min.js"></script>
 
-  <script src="/layout/scripts/stopExecutionOnTimeout.js"></script>
-  <script src='/layout/scripts/jquery-2-1-3.min.js'></script>
-  <script src='/layout/scripts/jquery.tablesorter.min.js'></script>
+
 
   <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-  <script>
-      var tag=1;
-      function sortNumberAS(a, b)
-      {
-          return a - b
-      }
-      function sortNumberDesc(a, b)
-      {
-          return b-a
-      }
-
-      function SortTable(obj){
-          var td0s=document.getElementsByName("td0");
-          var td1s=document.getElementsByName("td1");
-          var td2s=document.getElementsByName("td2");
-          var td3s=document.getElementsByName("td3");
-          var tdArray0=[];
-          var tdArray1=[];
-          var tdArray2=[];
-          var tdArray3=[];
-          for(var i=0;i<td0s.length;i++){
-              tdArray0.push(td0s[i].innerHTML);
-          }
-          for(var i=0;i<td1s.length;i++){
-              tdArray1.push(parseInt(td1s[i].innerHTML));
-          }
-          for(var i=0;i<td2s.length;i++){
-              tdArray2.push(parseInt(td2s[i].innerHTML));
-          }
-          for(var i=0;i<td3s.length;i++){
-              tdArray3.push(parseInt(td3s[i].innerHTML));
-          }
-          var tds=document.getElementsByName("td"+obj.id.substr(2,1));
-          var columnArray=[];
-          for(var i=0;i<tds.length;i++){
-              columnArray.push(parseInt(tds[i].innerHTML));
-          }
-          var orginArray=[];
-          for(var i=0;i<columnArray.length;i++){
-              orginArray.push(columnArray[i]);
-          }
-          if(obj.className=="as"){
-              columnArray.sort(sortNumberAS);               //排序后的新值
-              obj.className="desc";
-          }else{
-              columnArray.sort(sortNumberDesc);               //排序后的新值
-              obj.className="as";
-          }
-
-
-          for(var i=0;i<columnArray.length;i++){
-              for(var j=0;j<orginArray.length;j++){
-                  if(orginArray[j]==columnArray[i]){
-                      document.getElementsByName("td0")[i].innerHTML=tdArray0[j];
-                      document.getElementsByName("td1")[i].innerHTML=tdArray1[j];
-                      document.getElementsByName("td2")[i].innerHTML=tdArray2[j];
-                      document.getElementsByName("td3")[i].innerHTML=tdArray3[j];
-                      orginArray[j]=null;
-                      break;
-                  }
-              }
-          }
-      }
-
-  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/marked@3.0.0/marked.min.js"></script>
   <script>
@@ -1370,5 +1237,7 @@
   </script>
 
 </body>
-
+<script src="layout/scripts/stopExecutionOnTimeout.js"></script>
+<script src='layout/scripts/jquery-2-1-3.min.js'></script>
+<script src='layout/scripts/jquery.tablesorter.min.js'></script>
 </html>
