@@ -316,8 +316,7 @@
           Given multi-view images covering the whole panoramic field of view, 
           participants are required to deliver not only perception results of lanes and traffic elements but also topology relationships among lanes and between lanes and traffic elements simultaneously.
           <br>
-          For those interested in HD map construction, we also provide a <a href='#side-track'>side track</a>, <code>HD Map construction track</code>.
-          We use <code>the same metric</code> to evaluate the performances of lane line detection as 3D Lane Detection task of OpenLane topology track.
+          For those interested in lane line perception, we also provide a <a href='#side-track'>side track</a> for online HD Map construction.
         </p>
 
 
@@ -382,7 +381,7 @@
                   <th style="background-color: rgb(14, 104, 14);">$\text{DET}_{t}$</th>
                   <th style="background-color: rgb(14, 104, 14);">$\text{TOP}_{ll}$ </th>
                   <th style="background-color: rgb(14, 104, 14);">$\text{TOP}_{lt}$</th>
-                  <th style="background-color: rgb(14, 104, 14);">F-Score*</th>
+                  <th style="background-color: rgb(14, 104, 14);">$\text{F-Score}$*</th>
                 </tr>
               </thead>
               <tbody>
@@ -449,6 +448,7 @@
           </a>
         </p>
         <p>
+          We use <code>the same distance-based mAP</code> to evaluate the performances of lane line detection.
             Online HD map construction task aims to dynamically construct the local semantic map based on onboard sensor observations. Compared to lane detection, our constructed HD map provides more semantics information of multiple categories.
             Please refer to the pages of <a href="https://github.com/Tsinghua-MARS-Lab/Online-HD-Map-Construction-CVPR2023">repository</a> 
           and <a href="https://eval.ai/web/challenges/challenge-page/1954/overview">submission</a> for more details.
@@ -596,7 +596,7 @@
                   <th style="background-color: rgb(139, 14, 14); width: 64px;">Rank</th>
                   <th style="background-color: rgb(139, 14, 14); width: 192px;">Method</th>
                   <th style="background-color: rgb(139, 14, 14);"><b>mIoU (primary metric)</b></th>
-                  <th style="background-color: rgb(139, 14, 14);">F-Score*</th>
+                  <th style="background-color: rgb(139, 14, 14);">$\text{F-Score}$*</th>
                 </tr>
               </thead>
               <tbody>
@@ -816,9 +816,9 @@
                     <th style="background-color: rgb(25, 25, 145); width: 64px;">Rank</th>
                     <th style="background-color: rgb(25, 25, 145); width: 192px;">Method</th>
                     <th style="background-color: rgb(25, 25, 145);"><b>mean score (primary metric)</b></th>
-                    <th style="background-color: rgb(25, 25, 145);"><b>Challenge 1</b></th>
-                    <th style="background-color: rgb(25, 25, 145);"><b>Challenge 2</b></th>
-                    <th style="background-color: rgb(25, 25, 145);"><b>Challenge 3</b></th>
+                    <th style="background-color: rgb(25, 25, 145);">Challenge 1</th>
+                    <th style="background-color: rgb(25, 25, 145);">Challenge 2</th>
+                    <th style="background-color: rgb(25, 25, 145);">Challenge 3</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -863,6 +863,7 @@
             Slack channel: <code>#nuplan-challenge-2023</code>
           </li>
         </p>
+
 
         <br>
 
