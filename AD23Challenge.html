@@ -109,10 +109,13 @@
             <li><a href="#Track1" style="font-size: 1.2em; line-height: 1.2;">- OpenLane Topology </a></li>
           </ul>
           <ul>
-            <li><a href="#Track2" style="font-size: 1.2em; line-height: 1.2;">- 3D Occupancy Prediction </a></li>
+            <li><a href="#Track2" style="font-size: 1.2em; line-height: 1.2;">- Online HD Map Construction </a></li>
           </ul>
           <ul>
-            <li><a href="#Track3" style="font-size: 1.2em; line-height: 1.2;">- nuPlan Planning</a></li>
+            <li><a href="#Track3" style="font-size: 1.2em; line-height: 1.2;">- 3D Occupancy Prediction </a></li>
+          </ul>
+          <ul>
+            <li><a href="#Track4" style="font-size: 1.2em; line-height: 1.2;">- nuPlan Planning</a></li>
           </ul>
 
           <ul>
@@ -158,8 +161,10 @@
         <br>
 
         <li style="list-style-type:disc"> 
-          <topic>todo</topic>. 
-          todo
+          <topic>Online HD Map Construction Challenge</topic>. 
+          Traditional mapping pipelines require a vast amount of human efforts maintaining the map, which limits its scalability. 
+          The task of online HD map construction aims to dynamically construct local <code>map</code> with rich semantics based on onboard sensors. 
+          The vectorized map can be further utilized by downstream tasks.
         </li>
 
         <br>
@@ -447,11 +452,6 @@
             </a>
           </li>
           <li style="list-style-type:disc; font-size: 0.8em;">
-            <a href="https://arxiv.org/pdf/2206.08920.pdf">
-              VectorMapNet: End-to-end Vectorized HD Map Learning
-            </a>
-          </li>
-          <li style="list-style-type:disc; font-size: 0.8em;">
             <a href="https://arxiv.org/pdf/2208.14437.pdf">
               MapTR: Structured Modeling and Learning for Online Vectorized HD Map Construction
             </a>
@@ -468,8 +468,8 @@
 
         <!-- track 2 -->
 
-        <h3><b class="btb" target="_blank" id="Track1" style="font-size: 2.5em;">
-          Track 2<br><code>name</code>
+        <h3><b class="btb" target="_blank" id="Track2" style="font-size: 2.5em;">
+          Track 2<br>Online HD Map Construction
         </b></h3>
 
         <a href="https://github.com/Tsinghua-MARS-Lab/Online-HD-Map-Construction-CVPR2023">
@@ -506,12 +506,9 @@
 
         <h4><b>Task Description</b></h4>
         <p>
-          <code>todo</code>
-          We use <code>the same distance-based mAP</code> to evaluate the performances of lane line detection.
-          Online HD map construction task aims to dynamically construct the local semantic map based on onboard sensor observations. 
-          Compared to lane detection, our constructed HD map provides more semantics information of multiple categories.
-          Please refer to the pages of <a href="https://github.com/Tsinghua-MARS-Lab/Online-HD-Map-Construction-CVPR2023">repository</a> 
-          and <a href="https://eval.ai/web/challenges/challenge-page/1954/overview">submission</a> for more details.
+          Compared to conventional lane detection, the constructed HD map provides more semantics information with multiple categories. 
+          Vectorized polyline representations are adopted to deal with complicated and even irregular road structures.
+          Given inputs from onboard sensors (cameras), the goal is to construct the complete local HD map.
         </p>
 
 
@@ -520,7 +517,9 @@
 
         <h4><b>Participation</b></h4>
         <p>
-          The primary metric is <code>todo</code>, 
+          The primary metric is mAP based on Chamfer distance over three categories, namely lane divider, boundary, and pedestrian crossing. 
+          For more details, please see our <a href="https://github.com/Tsinghua-MARS-Lab/Online-HD-Map-Construction-CVPR2023">GitHub</a>. 
+          Submission is conducted on <a href="https://eval.ai/web/challenges/challenge-page/1954/submission">EvalAI</a>.
         </p>
 
 
@@ -529,7 +528,27 @@
 
         <h4><b>Important dates</b></h4>
         <p>
-          <code>todo</code>
+          <table style="width: 50%;">
+            <tbody>
+              <tr style="background-color: white">
+                <td>Challenge Period Open</td><td>Mar 16, 2023</td>
+              </tr>
+              <tr style="background-color: white">
+                <td>Challenge Period End</td><td>May 27, 2023</td>
+              </tr>
+              <tr style="background-color: white">
+                <td>Finalist Notification</td><td>May 29, 2023</td>
+              </tr>
+              <tr style="background-color: white">
+                <td>Technical Report Deadline</td><td>Jun 10, 2023</td>
+              </tr>
+              <tr style="background-color: white">
+                <td>Winner Announcement</td><td>Jun 12, 2023</td>
+              </tr>
+            </tbody>
+          </table>
+          <footer ><i style ="font-size: 0.8em;">* &nbsp; All due at 00:00 UTC+8.</i></b>
+          <footer ><i style ="font-size: 0.8em;">** The test server will remain open after the challenge.</i></b>
         </p>
 
 
@@ -542,9 +561,12 @@
             <table style="text-align: center;"> <!-- id="keywords" cellspacing="0" cellpadding="0" -->
               <thead>
                 <tr>
-                  <th style="background-color: rgb(17, 246, 246); width: 64px;">Rank</th>
-                  <th style="background-color: rgb(17, 246, 246); width: 192px;">Method</th>
-                  <th style="background-color: rgb(17, 246, 246);"><b>xxx (primary metric)</b></th>
+                  <th style="background-color: rgb(1, 126, 126); width: 64px;">Rank</th>
+                  <th style="background-color: rgb(1, 126, 126); width: 192px;">Method</th>
+                  <th style="background-color: rgb(1, 126, 126);"><b>mAP (primary metric)</b></th>
+                  <th style="background-color: rgb(1, 126, 126);">$AP_{l}$*</th>
+                  <th style="background-color: rgb(1, 126, 126);">$AP_{b}$*</th>
+                  <th style="background-color: rgb(1, 126, 126);">$AP_{p}$*</th>
                 </tr>
               </thead>
               <tbody>
@@ -552,10 +574,14 @@
                   <td>-</td>
                   <td>-</td>
                   <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
                 </tr>
               </tbody>
             </table>
           </div>
+          <footer ><i style ="font-size: 0.8em;">* $AP$ on different classes: lane divider (l), boundary (b), and pedestrian crossing (p).</i></b>
         </p>
 
 
@@ -564,7 +590,7 @@
 
         <h4><b>Award</b></h4>
         <p>
-          <code>todo</code>
+          To be announced.
         </p>
 
 
@@ -574,7 +600,10 @@
         <h4><b>Contact</b></h4>
         <p>
           <li style="list-style-type:disc">
-            person, <code>todo</code>
+            Tianyuan Yuan, <code>yuantianyuan01@gmail.com</code>
+          </li>
+          <li style="list-style-type:disc">
+            Yicheng Liu, <code>moooooore66@gmail.com</code>
           </li>
         </p>
 
@@ -584,8 +613,18 @@
         <h4><b>Related Literature</b></h4>
         <p>
           <li style="list-style-type:disc; font-size: 0.8em;">
-            <a href="">
-              todo
+            <a href="https://arxiv.org/pdf/2107.06307.pdf">
+              HDMapNet: An Online HD Map Construction and Evaluation Framework
+            </a>
+          </li>
+          <li style="list-style-type:disc; font-size: 0.8em;">
+            <a href="https://arxiv.org/pdf/2206.08920.pdf">
+              VectorMapNet: End-to-end Vectorized HD Map Learning
+            </a>
+          </li>
+          <li style="list-style-type:disc; font-size: 0.8em;">
+            <a href="https://arxiv.org/pdf/2301.04470.pdf">
+              InstaGraM: Instance-level Graph Modeling for Vectorized HD Map Learning
             </a>
           </li>
         </p>
@@ -600,7 +639,7 @@
 
         <!-- track 3 -->
 
-        <h3><b class="btb" target="_blank" id="Track2" style="font-size: 2.5em;">
+        <h3><b class="btb" target="_blank" id="Track3" style="font-size: 2.5em;">
           Track 3<br>3D Occupancy Prediction
         </b></h3>
 
@@ -834,7 +873,7 @@
 
         <!-- track 4 -->
 
-        <h3 style="text-transform: none;"><b class="btb" target="_blank" id="Track3" style="font-size: 2.5em;">
+        <h3 style="text-transform: none;"><b class="btb" target="_blank" id="Track4" style="font-size: 2.5em;">
           Track 4<br>nuPlan Planning
         </b></h3>
 
