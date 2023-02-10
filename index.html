@@ -24,36 +24,43 @@ Licence URI: https://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- Top Background Image Wrapper -->
-<div class="bgded overlay" style="background-image:url('images/background/01.jpeg');"> 
-  <!-- ################################################################################################ -->
-  <div class="wrapper row0">
-    <div id="topbar" class="hoc clear"> 
-      <!-- ################################################################################################ -->
-      <div class="fl_left"> 
-        <!-- ################################################################################################ -->
-        <ul class="nospace">
-<!--           <li><i class="fas fa-phone"></i> +00 (123) 456 7890</li>
-          <li><i class="far fa-envelope"></i> info@domain.com</li> -->
-        </ul>
-        <!-- ################################################################################################ -->
-      </div>
-      <div class="fl_right"> 
-        <!-- ################################################################################################ -->
-        <ul class="nospace">
-<!--           <li><a href="index.html"><i class="fas fa-home"></i></a></li>
-          <li><a href="#" title="Help Centre"><i class="fas fa-life-ring"></i></a></li>
-          <li><a href="#" title="Login"><i class="fas fa-sign-in-alt"></i></a></li>
-          <li><a href="#" title="Sign Up"><i class="fas fa-edit"></i></a></li> -->
-        </ul>
-        <!-- ################################################################################################ -->
-      </div>
-      <!-- ################################################################################################ -->
+<div class="bgded overlay" style="
+  /* background-image: url('images/background/01.jpeg');background-size: 100% 100%; */overflow: hidden;">
+  <div id="container"  >
+    <div id="list">
+      <img src="images/background/01.jpeg" alt="1" />
+      <img
+        src="images/event/cvpr/cvpr-20232.png"
+        alt="2"
+      />
+      <img src="images/background/rwanda.jpeg" alt="3" />
     </div>
-  </div>
+    <div id="pointsDiv">
+      <span index="1" class="on"></span>
+      <span index="2"></span>
+      <span index="3"></span>
+    </div>        
+    <!-- ################################################################################################ -->
+    <div class="wrapper row0" style="z-index: 10">
+      <div id="topbar" class="hoc clear">
+        <!-- ################################################################################################ -->
+        <div class="fl_left">
+          <!-- ################################################################################################ -->
+          <ul class="nospace"> </ul>
+          <!-- ################################################################################################ -->
+        </div>
+        <div class="fl_right">
+          <!-- ################################################################################################ -->
+          <ul class="nospace"></ul>
+          <!-- ################################################################################################ -->
+        </div>
+        <!-- ################################################################################################ -->
+      </div>
+    </div>
   <!-- ################################################################################################ -->
   <!-- ################################################################################################ -->
   <!-- ################################################################################################ -->
-  <div class="wrapper row1">
+  <div class="wrapper row1" style="z-index: 10">
     <header id="header" class="hoc clear"> 
       <!-- ################################################################################################ -->
       <div id="logo" class="fl_left">
@@ -77,18 +84,13 @@ Licence URI: https://www.os-templates.com/template-terms
   </div>
   <!-- ################################################################################################ -->
   <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <div id="pageintro" class="hoc clear"> 
+  <div id="pageintro" class="hoc clear" class="hoc clear" style="z-index: 10; position: relative"> 
     <!-- ################################################################################################ -->
     <article class="center">
       <h3 class="heading underline">OpenDriveLab 1.0 is to be launched in March 2023.</h3>
       <p> Our mission is to explore the cutting-edge research for the future of autonomous driving.
         For the time being, we need
         to keep our heads down and cannot be involved in more commitments.
-        <!-- and achieve state-of-the-art performance in the prevailing leaderboard. -->
-      <!-- Alpha version (1.0) would focus on orginal academic research. -->
-       <!-- instead of shipped products into realistic cars. -->
-      <!-- 探索前沿问题，以原创技术为基础，打造自动驾驶新一代开源开放平台  -->
     </p>
       <footer>
         <a class="btn" target="_blank" href="./publication/index.html">Publication</a> &nbsp; &nbsp;
@@ -101,6 +103,70 @@ Licence URI: https://www.os-templates.com/template-terms
   <!-- ################################################################################################ -->
 </div>
 <!-- End Top Background Image Wrapper -->
+<div class="wrapper row4">
+  <footer id="footer" class="hoc clear">
+    <!-- ################################################################################################ -->
+    <div class="center btmspace-50">
+      <div align="center">
+        <a
+          class="twitter-timeline"
+          data-width="800"
+          data-dnt="true"
+          data-tweet-limit="2"
+          href="https://twitter.com/OpenDriveLab?ref_src=twsrc%5Etfw"
+          >Tweets by OpenDriveLab</a
+        >
+        <script
+          async
+          src="https://platform.twitter.com/widgets.js"
+          charset="utf-8"
+        ></script>
+      </div>
+
+<!-- <div class="wrapper row2">
+  <article class="hoc container clear"> 
+    <div class="center btmspace-80">
+      <h6 class="heading underline font-x2">Latest News | 最新消息 </h6>
+    </div>
+    <ul class="nospace group figures btmspace-80">
+      <li class="one_third first">
+        <figure><img src="images/gallery/news.jpeg" alt="">
+          <figcaption>
+            <time datetime="xx"><strong>20</strong> Jun</time>
+            <a href="#">Waymo Global Challenge Top First Place, at CVPR 2020</a>
+          </figcaption>
+        </figure>
+      </li>
+      <li class="one_third">
+        <figure><img src="images/gallery/news2.gif" alt="">
+          <figcaption>
+            <time datetime="2045-04-03"><strong>01</strong> Sep</time>
+            <a href="#">Introducing BEV Survey & Toolbox. XXXX</a>
+          </figcaption>
+        </figure>
+      </li>
+      <li class="one_third">
+        <div align="center">
+          <a
+            class="twitter-timeline"
+            data-width="800"
+            data-height="400"
+            data-dnt="true"
+            data-tweet-limit="1"
+            href="https://twitter.com/OpenDriveLab?ref_src=twsrc%5Etfw"
+            >Tweets by OpenDriveLab</a
+          >
+          <script
+            async
+            src="https://platform.twitter.com/widgets.js"
+            charset="utf-8"
+          ></script>
+        </div>
+      </li>
+    </ul> -->
+    <!-- <footer class="center"><a class="btn" href="#">More News</a></footer>
+  </article>
+</div> -->
 
 
 <div class="wrapper row4">
@@ -142,5 +208,94 @@ Licence URI: https://www.os-templates.com/template-terms
 <script src="layout/scripts/jquery.min.js"></script>
 <script src="layout/scripts/jquery.backtotop.js"></script>
 <script src="layout/scripts/jquery.mobilemenu.js"></script>
+<script>
+  $(function () {
+    let width = $(window).width()
+    let row1H = $('.row1 h1')
+    let pageintroH3 = $('#pageintro h3')
+    let pageintroP = $('#pageintro p')
+    $('#container')[0].style.width = '100%'
+    $('#list')[0].style.width = `${width * 4}px`
+    $('#list')[0].style.left = '0'
+    for (let i = 0; i < $('#list img').length; i++) {
+      $('#list img')[i].style.width = `${width}px`
+    }
+    // 得到所有照片的div
+    var $div = $('#list')
+    var $span = $('#pointsDiv>span')
+    //获取照片当前的位置
+    var index = 0
+    var isToggleImagEnd = true
+
+    function isToggleImg(n) {
+      if (isToggleImagEnd) {
+        isToggleImagEnd = false
+        index++
+        $div.animate(
+          {
+            left: index * -width
+          },
+          15,
+          function () {
+            switch (index) {
+              case 1:
+                row1H.text('OpenDriveLab for Autonomous Driving')
+                pageintroH3.html('CVPR 2023 Workshop<br> End-to-End Autonomous Driving: Emerging Tasks and Challenges')
+                pageintroP.text('Our mission is to explore the cutting-edge research for the future of autonomous driving. For the time being, we need to keep our heads down and cannot be involved in more commitments.')
+                break
+              case 2:
+                row1H.text('OpenDriveLab for Autonomous Driving')
+                pageintroH3.html('ICLR 2023 Workshop <br> Scene Representations for Autonomous Driving')
+                pageintroP.text('Our mission is to explore the cutting-edge research for the future of autonomous driving. For the time being, we need to keep our heads down and cannot be involved in more commitments.')
+                break
+              default:
+                row1H.text('OpenDriveLab for Autonomous Driving')
+                pageintroH3.html(
+                  'Go-oriented Autonomous Driving <br> 任务驱动的<br>自动驾驶算法体系'
+                )
+                pageintroP.text(
+                  'Our mission is to explore the cutting-edge research for the future of autonomous driving. For the time being, we need to keep our heads down and cannot be involved in more commitments.'
+                )
+            }
+            if (index == 0) {
+              index = 3
+            }
+            if (index == 3) {
+              index = 0
+            }
+            //设置图片轮播时，从最后一张跳到第一张不会有间隙，跟其他图片一样跳转
+            $div.css('left', index * -width)
+            //设置图片下面的圆点状态，更改其类属性
+            $span.removeClass('on')
+            $($span.get(index)).addClass('on')
+            isToggleImagEnd = true
+          }
+        )
+      }
+    }
+    //设置延时函数，让图片自己定时轮播下一张
+    var interval = setInterval(function () {
+      isToggleImg(0)
+    }, 3000)
+
+    // //鼠标图片上图片停止轮播，挪开继续轮播
+    // $('#container').hover(
+    //   function () {
+    //     clearInterval(interval)
+    //   },
+    //   function () {
+    //     interval = setInterval(function () {
+    //       isToggleImg(1)
+    //     }, 1000)
+    //   }
+    // )
+
+    //对小圆点设置监听事件，点击小圆点，图片跳转
+    $span.click(function () {
+      index = $(this).index()
+      isToggleImg()
+    })
+  })
+</script>
 </body>
 </html>

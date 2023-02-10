@@ -435,6 +435,10 @@ tr:nth-child(even), #comments li:nth-child(even){color:inherit; background-color
 table a, #comments a{background-color:inherit;}
 
 
+#container{
+	height: 1000px;
+}
+
 
 /* ------------------------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------------------------ */
@@ -603,6 +607,10 @@ table a, #comments a{background-color:inherit;}
 	.sdb_holder {
 	  display: none !important;
 	}
+
+	#container{
+		height: 130vh;
+	}
   }
 
 @media screen and (max-width:450px){
@@ -750,3 +758,103 @@ body {
   ::-webkit-selection { background: #5f74a0; color: #fff; }
 
 
+  /* homepage slide */
+
+  /*最外围的div*/
+  #container {
+	width: 600px;
+	/* height: 400px; */
+	overflow: hidden;
+	position: relative; /*相对定位*/
+	margin: 0 auto;
+  }
+
+  /*包含所有图片的<div>*/
+
+  #list {
+	/* width: 4200px;  */
+	/* height: 400px; */
+	height: 100%;
+	position: absolute; /*绝对定位*/
+	z-index: 1;
+  }
+
+  /*所有的图片<img>*/
+  #list img {
+	float: left; /*浮在左侧*/
+	width: 100%;
+	height: 100%;
+	opacity: 0.5;
+  }
+
+  /*包含所有圆点按钮的<div>*/
+  #pointsDiv {
+	position: absolute;
+	height: 10px;
+	/* width: 100px; */
+	z-index: 2;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	justify-content: center;
+	z-index: 99999;
+  }
+
+  /*所有的圆点<span>*/
+
+  #pointsDiv span {
+	cursor: pointer;
+	margin: 0 10px;
+	border: 1px solid #fff;
+	width: 30px;
+	height: 5px;
+	border-radius: 20px;
+	background: transparent;
+	margin-right: 5px;
+	cursor: pointer;
+  }
+
+  /*第一个<span>*/
+
+  #pointsDiv .on {
+	background: #dc8e47;
+  }
+
+  /*切换图标<a>*/
+
+  .arrow {
+	cursor: pointer;
+	display: none;
+	line-height: 39px;
+	text-align: center;
+	font-size: 36px;
+	font-weight: bold;
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	z-index: 2;
+	top: 180px;
+	background-color: RGBA(0, 0, 0, 0.3);
+	color: #fff;
+  }
+
+  /*鼠标移到切换图标上时*/
+  .arrow:hover {
+	background-color: RGBA(0, 0, 0, 0.7);
+  }
+
+  /*鼠标移到整个div区域时*/
+  #container:hover .arrow {
+	display: block; /*显示*/
+  }
+
+  /*上一个切换图标的左外边距*/
+  #prev {
+	left: 20px;
+  }
+
+  /*下一个切换图标的右外边距*/
+  #next {
+	right: 20px;
+  }
