@@ -74,7 +74,9 @@ topic {
 #pageintro .heading{margin-bottom:20px; font-size:4rem;}
 #pageintro p{max-width:75%; margin:0 auto;}
 #pageintro footer{margin-top:50px;}
-
+#pageintro footer .btn {
+	margin: 10px 0;
+  }
 
 /* Content Area
 --------------------------------------------------------------------------------------------------------------- */
