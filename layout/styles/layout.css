@@ -129,7 +129,7 @@ topic {
 /* Sidebar */
 .container .sidebar{}
 
-.sidebar .sdb_holder{margin-bottom:50px;}
+.sidebar .sdb_holder{margin-bottom:20px;}
 .sidebar .sdb_holder:last-child{margin-bottom:0;}
 
 
