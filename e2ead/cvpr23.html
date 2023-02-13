@@ -16,18 +16,35 @@ Licence URI: https://www.os-templates.com/template-terms
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link href="../layout_cvpr/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+  <script src="https://kit.fontawesome.com/8990c176d0.js" crossorigin="anonymous"></script>
+
 </head>
 
-<body id="top">
+<body id="top" class="<?php echo($_COOKIE['night'] == '1' ? 'night' : ''); ?>">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <!-- ################################################################################################ -->
   <!-- ################################################################################################ -->
   <!-- ################################################################################################ -->
   <!-- Top Background Image Wrapper -->
   <div class="bgded overlay" style="background-image:url('../images/event/cvpr/cvpr-20232.png');">
+    <header id="header" class="hoc clear"> 
+      <!-- ################################################################################################ -->
+      <!-- ################################################################################################ -->
+      <nav id="mainav" class="fl_right">
+        <ul class="clear">
+
+          <li><a href="javascript:switchNightMode()" target="_self">Dark mode
+          <i class="fa-solid fa-circle-half-stroke fa-2xl"></i></a></li>
+           
+        </ul>
+      </nav>
+      <!-- ################################################################################################ -->
+    </header>
+    
     <!-- ################################################################################################ -->
     <div id="pageintro" class="hoc clear">
       <!-- ################################################################################################ -->
+
       <article>
         <h3 class="heading" style="color: #fcb747;">End-to-End Autonomous Driving:</h3>
         <h3 class="heading" style="color:  #fcb747;">Emerging Tasks and Challenges</h3>
@@ -42,6 +59,7 @@ Licence URI: https://www.os-templates.com/template-terms
 
         <br><br>
         <br><br>
+        
 <!--         <br><br>
         <footer>
           <ul class="nospace inline pushright">
@@ -96,6 +114,7 @@ Licence URI: https://www.os-templates.com/template-terms
           <!-- TODO: Please sign up for more updates! <comment>Unscribe anytime.</comment> -->
           <!-- <br> -->
           Contact us at <code>workshop-e2e-ad@googlegroups.com</code>
+
           <style>
             code {
               color: #C0392B;
@@ -402,7 +421,7 @@ Licence URI: https://www.os-templates.com/template-terms
 
 
  <!-- Hongyang: Do NOT delete the following; it would affect follow-up font size -->
-       <b style="color:#fcb747;font-size:1.3rem">
+       <!-- <b style="color:#fcb747;font-size:1.3rem"> -->
   
   <!-- ##### Schedule #### -->
   <div class="wrapper row2">
@@ -1241,6 +1260,44 @@ Licence URI: https://www.os-templates.com/template-terms
       document.getElementById("countdown").innerHTML = countdown
     }, 1000);
   </script>
+
+  <script type = "text/javascript" >
+  function switchNightMode() {
+      var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || "0";
+      if (night == "0") {
+          document.body.classList.add("night");
+          document.cookie = "night=1;path=/";
+          console.log("夜间模式开启")
+      } else {
+          document.body.classList.remove("night");
+          document.cookie = "night=0;path=/";
+          console.log("夜间模式关闭")
+      }
+  } (function() {
+      if (document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") === "") {
+          if (new Date().getHours() > 21 || new Date().getHours() < 6) {
+              document.body.classList.add("night");
+              document.cookie = "night=1;path=/";
+              console.log("夜间模式开启")
+          } else {
+              document.body.classList.remove("night");
+              document.cookie = "night=0;path=/";
+              console.log("夜间模式关闭")
+          }
+      } else {
+          var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || "0";
+          if (night == "0") {
+              document.body.classList.remove("night")
+          } else {
+              if (night == "1") {
+                  document.body.classList.add("night")
+              }
+          }
+      }
+  })();
+  </script>
+
+
 
 </body>
 
