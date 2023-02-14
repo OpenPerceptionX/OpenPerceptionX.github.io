@@ -297,7 +297,7 @@ input:focus, textarea:focus, *:required:focus{border-color:#36D68C;}
 .row0, .row0 a{color:#FFFFFF;}
 .row1{color:#474747; background-color:#FFFFFF;}
 .row2{color:#636363; background-color:#d1d1d1;}
-.row3{color:#474747; background-color:#FFFFFF;}
+.row3{color:#474747; background-color:#dbdbdb;}
 .row4{color:#CBCBCB;}
 .row5{color:#CBCBCB; background-color:#252525;}
 
@@ -405,13 +405,13 @@ h2{
 
   }
 h3{
-    font-size: 3.5em;
+    font-size: 4em;
     line-height: 1.6;
 	text-transform:none
 
   }
 h4{
-    font-size: 4em;
+    font-size: 1.5em;
     line-height: 1.6;
 	text-transform:none
 
