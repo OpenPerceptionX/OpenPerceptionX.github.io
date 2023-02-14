@@ -30,10 +30,9 @@ Licence URI: https://www.os-templates.com/template-terms
     <div id="list">
       <img src="images/background/01.jpeg" alt="1" />
       <img
-        src="images/event/cvpr/cvpr-20232.png"
-        alt="2"
+        src="images/event/cvpr/cvpr-20232.png" alt="2"
       />
-      <img src="images/background/rwanda.jpeg" alt="3" />
+      <img src="https://deih43ym53wif.cloudfront.net/cityscape-things-to-do-in-kigali-rwanda_44e57bd0bf.jpeg" alt="3" />
     </div>
     <div id="pointsDiv">
       <span index="1" class="on"></span>
@@ -86,10 +85,9 @@ Licence URI: https://www.os-templates.com/template-terms
   <div id="pageintro" class="hoc clear" class="hoc clear" style="z-index: 10; position: relative"> 
     <!-- ################################################################################################ -->
     <article class="center">
-      <h3 class="heading underline">OpenDriveLab 1.0 is to be launched in March 2023.</h3>
+      <h3 class="heading underline">BEVFormer <br>nuScenes First Place <br>Waymo 2022 First Place</h3>
       <p> Our mission is to explore the cutting-edge research for the future of autonomous driving.
-        For the time being, we need
-        to keep our heads down and cannot be involved in more commitments.
+        For the time being, we need to keep our heads down and cannot be involved in more commitments.
     </p>
       <footer >
         <a class="btn" target="_blank" href="./publication/index.html">Publication</a> &nbsp; &nbsp;
@@ -101,27 +99,29 @@ Licence URI: https://www.os-templates.com/template-terms
   </div>
   <!-- ################################################################################################ -->
 </div>
+
+
 <!-- End Top Background Image Wrapper -->
 
-<!-- <div class="wrapper row2">
+<div class="wrapper row2">
   <article class="hoc container clear"> 
     <div class="center btmspace-80">
       <h6 class="heading underline font-x2">Latest News | 最新消息 </h6>
     </div>
     <ul class="nospace group figures btmspace-80">
       <li class="one_third first">
-        <figure><img src="images/gallery/news.jpeg" alt="">
+        <figure><img src="images/gallery/waymo.gif" alt="" style="width: 100%;">
           <figcaption>
-            <time datetime="xx"><strong>20</strong> Jun</time>
-            <a href="#">Waymo Global Challenge Top First Place, at CVPR 2020</a>
+            <time datetime="2022-06-20"><strong>20</strong> Jun</time>
+            <a href="https://zhuanlan.zhihu.com/p/531987378">Waymo Global Challenge Top First Place, at CVPR 2022</a>
           </figcaption>
         </figure>
       </li>
       <li class="one_third">
-        <figure><img src="images/gallery/news2.gif" alt="">
+        <figure><img src="images/pub/Delving.png" alt="">
           <figcaption>
-            <time datetime="2045-04-03"><strong>01</strong> Sep</time>
-            <a href="#">Introducing BEV Survey & Toolbox. XXXX</a>
+            <time datetime="2022-09-12"><strong>12</strong> Sep</time>
+            <a href="https://arxiv.org/abs/2209.05324">The most recent work on BEV perception & analysis of different solutions.</a>
           </figcaption>
         </figure>
       </li>
@@ -130,7 +130,7 @@ Licence URI: https://www.os-templates.com/template-terms
           <a
             class="twitter-timeline"
             data-width="800"
-            data-height="400"
+            data-height="300"
             data-dnt="true"
             data-tweet-limit="1"
             href="https://twitter.com/OpenDriveLab?ref_src=twsrc%5Etfw"
@@ -143,10 +143,44 @@ Licence URI: https://www.os-templates.com/template-terms
           ></script>
         </div>
       </li>
-    </ul> -->
-    <!-- <footer class="center"><a class="btn" href="#">More News</a></footer>
+    </ul> 
+    <footer class="center"><a class="btn" href="#">More News</a></footer>
   </article>
-</div> -->
+</div>
+
+<div class="bgded overlay startlt light" style="background-image:url('images/background/03.jpeg');">
+  <section id="segment" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <div class="two_third">
+      <h6 class="heading underline font-x2">Publications | 代表性工作</h6>
+      <p class="btmspace-30">Representative work published at top-tiered venues.</p>
+      <article><a href="https://arxiv.org/abs/2301.01006"><i class="fas fa-flag-checkered"></i></a>
+        <h6 class="heading">PPGeo: Policy Pre-Training for End-to-End Autonomous Driving via Self-Supervised Geometric Modeling</h6>
+        <p><code>        Policy Pre-training via Geometric modeling
+        </code></p>
+        <!-- <footer><a href="#">Read More &raquo;</a></footer> -->
+      </article>
+      <article><a href="https://arxiv.org/abs/2203.11089"><i class="fas fa-car"></i></a>
+        <h6 class="heading">PersFormer: 3D Lane Detection via Perspective Transformer and the OpenLane Benchmark</h6>
+        <p><code>[Redefine the Community]</code></p>
+        <!-- <footer><a href="#">Read More &raquo;</a></footer> -->
+      </article>
+      <article><a href="https://arxiv.org/abs/2203.17270"><i class="fab fa-hotjar"></i></a>
+        <h6 class="heading">BEVFormer: Learning Bird's-Eye-View Representation from Multi-Camera Images via Spatiotemporal Transformers</h6>
+        <p><code>[Baseline][nuScenes First Place]
+          <br>[Waymo Challenge 2022 Official First Place]</code></p>
+        <!-- <footer><a href="#">Read More &raquo;</a></footer> -->
+      </article>
+
+      <footer><a href="publication/index.html">Read More &raquo;</a></footer>
+    </div>
+    <!-- ################################################################################################ -->
+  </section>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
 
 
 <div class="wrapper row4">
@@ -219,24 +253,25 @@ Licence URI: https://www.os-templates.com/template-terms
           function () {
             switch (index) {
               case 1:
-                row1H.text('OpenDriveLab for Autonomous Driving')
+                row1H.text('OpenDriveLab | 浦驾自动驾驶开放平台')
                 pageintroH3.html('CVPR 2023 Workshop<br> End-to-End Autonomous Driving: Emerging Tasks and Challenges')
                 pageintroP.text('Our mission is to explore the cutting-edge research for the future of autonomous driving. For the time being, we need to keep our heads down and cannot be involved in more commitments.')
                 break
               case 2:
-                row1H.text('OpenDriveLab for Autonomous Driving')
+                row1H.text('OpenDriveLab | 浦驾自动驾驶开放平台')
                 pageintroH3.html('ICLR 2023 Workshop <br> Scene Representations for Autonomous Driving')
                 pageintroP.text('Our mission is to explore the cutting-edge research for the future of autonomous driving. For the time being, we need to keep our heads down and cannot be involved in more commitments.')
                 break
               default:
-                row1H.text('OpenDriveLab for Autonomous Driving')
+                row1H.text('OpenDriveLab | 浦驾自动驾驶开放平台')
                 pageintroH3.html(
-                  'Go-oriented Autonomous Driving <br> 任务驱动的<br>自动驾驶算法体系'
+                  'BEVFormer <br>nuScenes First Place  <br>Waymo 2022 First Place'
                 )
                 pageintroP.text(
                   'Our mission is to explore the cutting-edge research for the future of autonomous driving. For the time being, we need to keep our heads down and cannot be involved in more commitments.'
                 )
             }
+            
             if (index == 0) {
               index = 3
             }
