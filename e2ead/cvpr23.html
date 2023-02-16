@@ -451,27 +451,19 @@ Licence URI: https://www.os-templates.com/template-terms
       <h3><b>Schedule</b></h3>
 
 
-      <p style="font-size: large;">Please select your time zone
+      <p style="font-size: large;">Please select your time zone: 
 
         <select id="operator" style="font-size: medium;">
-          <option value="UTC-8">UTC-8 (CVPR venue time)</option>
-          <option value="UTC-4">UTC-4 / AST</option>
-          <option value="UTC">UTC / GMT</option>
-          <option value="UTC+4">UTC+4 / EIT</option>
-          <option value="UTC+8">UTC+8 / BJT</option>
-          <option value="UTC+12">UTC+12 / IDLE</option>
+          <option value="UTC-8" onclick="time_zone()">UTC-8 (CVPR venue time)</option>
+          <option value="UTC-4" onclick="time_zone()">UTC-4 / AST</option>
+          <option value="UTC" onclick="time_zone()">UTC / GMT</option>
+          <option value="UTC+4" onclick="time_zone()">UTC+4 / EIT</option>
+          <option value="UTC+8" onclick="time_zone()">UTC+8 / BJT</option>
+          <option value="UTC+12"onclick="time_zone()">UTC+12 / IDLE</option>
       </select>
-        
-        , then click the button 
-
-        <input style="font-size: medium; display:inline;font-family: cursive, sans-serif;
-        background: #2ecc71;  color: #fff; padding: 4px; border-radius: 9px;  margin-bottom: 10px;
-        margin-top: 10px;" type="button" value="Go to the local time" onclick="time_zone()">
-
-        to get the timetable for the corresponding time zone.
+      
       </p>
 
-      <br><br>
 
       <div class="schedule-tbl">
         <!-- main body -->
@@ -1459,7 +1451,10 @@ Licence URI: https://www.os-templates.com/template-terms
           Time_hour_select[j].innerHTML = Time_hour_select_temp[j];
         };
         break;
+
     }
+
+
 
   }
     function change(x){
