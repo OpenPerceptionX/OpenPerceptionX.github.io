@@ -858,3 +858,12 @@ body {
   #next {
 	right: 20px;
   }
+
+
+  ::-webkit-scrollbar {
+	width: 0 !important;
+}
+::-webkit-scrollbar {
+	width: 0 !important;
+	height: 0;
+}

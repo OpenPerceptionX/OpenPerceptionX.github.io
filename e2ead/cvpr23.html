@@ -450,6 +450,29 @@ Licence URI: https://www.os-templates.com/template-terms
       <!-- ################################################################################################ -->
       <h3><b>Schedule</b></h3>
 
+
+      <p style="font-size: large;">Please select your time zone
+
+        <select id="operator" style="font-size: medium;">
+          <option value="UTC-8">UTC-8 (CVPR venue time)</option>
+          <option value="UTC-4">UTC-4 / AST</option>
+          <option value="UTC">UTC / GMT</option>
+          <option value="UTC+4">UTC+4 / EIT</option>
+          <option value="UTC+8">UTC+8 / BJT</option>
+          <option value="UTC+12">UTC+12 / IDLE</option>
+      </select>
+        
+        , then click the button 
+
+        <input style="font-size: medium; display:inline;font-family: cursive, sans-serif;
+        background: #2ecc71;  color: #fff; padding: 4px; border-radius: 9px;  margin-bottom: 10px;
+        margin-top: 10px;" type="button" value="Go to the local time" onclick="time_zone()">
+
+        to get the timetable for the corresponding time zone.
+      </p>
+
+      <br><br>
+
       <div class="schedule-tbl">
         <!-- main body -->
         <!-- ################################################################################################ -->
@@ -466,7 +489,7 @@ Licence URI: https://www.os-templates.com/template-terms
           <tbody>
 
             <tr>
-              <td class="schedule-time">9:00</td>
+              <td class="schedule-time" ><span name="time_hour_seleting">9</span>:00</td>
               <td class="schedule-slot">
                 Hongyang Li, 
                 <span class="speakers-company">Shanghai AI Lab</span>
@@ -475,7 +498,7 @@ Licence URI: https://www.os-templates.com/template-terms
             </tr>
 
             <tr>
-              <td class="schedule-time">9:10</td>
+              <td class="schedule-time" ><span name="time_hour_seleting">9</span>:10</td>
               <td class="schedule-slot">
                 Speaker 1 <span class="speakers-company"></span>
               </td>
@@ -483,7 +506,7 @@ Licence URI: https://www.os-templates.com/template-terms
             </tr>
 
             <tr>
-              <td class="schedule-time">9:45</td>
+              <td class="schedule-time"><span name="time_hour_seleting">9</span>:45</td>
               <td class="schedule-slot">
                 Speaker 2 <span class="speakers-company"></span>
               </td>
@@ -491,7 +514,7 @@ Licence URI: https://www.os-templates.com/template-terms
             </tr>
 
             <tr>
-              <td class="schedule-time">10:20</td>
+              <td class="schedule-time"><span name="time_hour_seleting">10</span>:20</td>
               <td class="schedule-slot">
                 Coffee Break <span class="speakers-company"></span>
               </td>
@@ -499,7 +522,7 @@ Licence URI: https://www.os-templates.com/template-terms
             </tr>
 
             <tr>
-              <td class="schedule-time">10:30 - 11:30</td>
+              <td class="schedule-time"><span name="time_hour_seleting">10</span>:30 </td>
               <td class="schedule-slot">
                 Organizers and Winners<span class="speakers-company"></span>
               </td>
@@ -507,7 +530,7 @@ Licence URI: https://www.os-templates.com/template-terms
             </tr>
 
             <tr>
-              <td class="schedule-time">11:30</td>
+              <td class="schedule-time" ><span name="time_hour_seleting">11</span>:30</td>
               <td class="schedule-slot">
                 Speaker 3<span class="speakers-company"></span>
               </td>
@@ -515,7 +538,7 @@ Licence URI: https://www.os-templates.com/template-terms
             </tr>
 
             <tr>
-              <td class="schedule-time">12:05 - 13:30</td>
+              <td class="schedule-time" ><span name="time_hour_seleting">12</span>:05 </td>
               <td class="schedule-slot">
                 Lunch Break <span class="speakers-company"></span>
               </td>
@@ -523,7 +546,7 @@ Licence URI: https://www.os-templates.com/template-terms
             </tr>
 
             <tr>
-              <td class="schedule-time">13:30</td>
+              <td class="schedule-time" ><span name="time_hour_seleting">13</span>:30</td>
               <td class="schedule-slot">
                 Speaker 4 <span class="speakers-company"></span>
               </td>
@@ -531,7 +554,7 @@ Licence URI: https://www.os-templates.com/template-terms
             </tr>
 
             <tr>
-              <td class="schedule-time">14:05</td>
+              <td class="schedule-time"><span name="time_hour_seleting">14</span>:05</td>
               <td class="schedule-slot">
                 Organizers and Winners <span class="speakers-company"></span>
               </td>
@@ -539,7 +562,7 @@ Licence URI: https://www.os-templates.com/template-terms
             </tr>
 
             <tr>
-              <td class="schedule-time">14:40</td>
+              <td class="schedule-time" ><span name="time_hour_seleting">14</span>:40</td>
               <td class="schedule-slot">
                 Coffee Break <span class="speakers-company"></span>
               </td>
@@ -547,7 +570,7 @@ Licence URI: https://www.os-templates.com/template-terms
             </tr>
 
             <tr>
-              <td class="schedule-time">14:50 - 15:50</td>
+              <td class="schedule-time"><span name="time_hour_seleting">14</span>:50 </td>
               <td class="schedule-slot">
                 Organizers and Winners<span class="speakers-company"></span>
               </td>
@@ -555,7 +578,7 @@ Licence URI: https://www.os-templates.com/template-terms
             </tr>
 
             <tr>
-              <td class="schedule-time">15:50</td>
+              <td class="schedule-time" ><span name="time_hour_seleting">15</span>:50</td>
               <td class="schedule-slot">
                 Speaker 6<span class="speakers-company"></span>
               </td>
@@ -563,7 +586,7 @@ Licence URI: https://www.os-templates.com/template-terms
             </tr>
 
             <tr>
-              <td class="schedule-time">16:30 - 17:30</td>
+              <td class="schedule-time" ><span name="time_hour_seleting">16</span>:30</td>
               <td class="schedule-slot">
                 <!-- <span class="speaker-photo-00">
                       <img class="photo" src="../../images/event/2023/hongyang_li.jpeg" alt="Hongyang Li">
@@ -591,6 +614,11 @@ Licence URI: https://www.os-templates.com/template-terms
 
     </main>
   </div>
+
+
+
+
+
 
 
 
@@ -1348,6 +1376,96 @@ Licence URI: https://www.os-templates.com/template-terms
           }
       }
   })();
+  </script>
+
+<script type="text/javascript">
+  function time_zone(){
+
+    var Time_hour_select = document.getElementsByName("time_hour_seleting");
+
+    var o_time = document.getElementById("operator");
+    var op_timezone=o_time.options[o_time.selectedIndex].value;//在下拉列表中选中选择的值
+
+    console.log(op_timezone)
+
+
+    var Time_hour_select_base = [9, 9, 9, 10, 10, 11, 12, 13, 14, 14, 14, 15, 16]
+    var Time_hour_select_temp = []
+
+    switch(op_timezone){
+      case "UTC+12":
+        var i = 20;
+        for(var j=0; j < Time_hour_select.length; j++) { 
+          Time_hour_select_temp[j] = change(Time_hour_select_base[j]) + change(i);
+          if((Time_hour_select_temp[j])>=change(24)) 
+          {Time_hour_select_temp[j] = change(Time_hour_select_temp[j])-change(24) }
+          if((Time_hour_select_temp[j])<change(0)) 
+          {Time_hour_select_temp[j] = change(Time_hour_select_temp[j])+change(24) }
+          Time_hour_select[j].innerHTML = Time_hour_select_temp[j];
+        }
+        break;
+      case "UTC-8":
+      var i = 0;
+      for(var j=0; j < Time_hour_select.length; j++) { 
+          Time_hour_select_temp[j] = change(Time_hour_select_base[j]) - change(i);
+          if((Time_hour_select_temp[j])>=change(24)) 
+          {Time_hour_select_temp[j] = change(Time_hour_select_temp[j])-change(24) }
+          if((Time_hour_select_temp[j])<change(0)) 
+          {Time_hour_select_temp[j] = change(Time_hour_select_temp[j])+change(24) }
+          Time_hour_select[j].innerHTML = Time_hour_select_temp[j];
+        }
+        break;        
+      case "UTC-4":
+        var i = 4;
+        for(var j=0; j < Time_hour_select.length; j++) { 
+          Time_hour_select_temp[j] = change(Time_hour_select_base[j]) + change(i);
+          if((Time_hour_select_temp[j])>=change(24)) 
+          {Time_hour_select_temp[j] = change(Time_hour_select_temp[j])-change(24) }
+          if((Time_hour_select_temp[j])<change(0)) 
+          {Time_hour_select_temp[j] = change(Time_hour_select_temp[j])+change(24) }
+          Time_hour_select[j].innerHTML = Time_hour_select_temp[j];
+        }
+        break;
+      case "UTC":
+        var i = 8;
+        for(var j=0; j < Time_hour_select.length; j++) { 
+          Time_hour_select_temp[j] = change(Time_hour_select_base[j]) + change(i);
+          if((Time_hour_select_temp[j])>=change(24)) 
+          {Time_hour_select_temp[j] = change(Time_hour_select_temp[j])-change(24) }
+          if((Time_hour_select_temp[j])<change(0)) 
+          {Time_hour_select_temp[j] = change(Time_hour_select_temp[j])+change(24) }
+          Time_hour_select[j].innerHTML = Time_hour_select_temp[j];
+        }
+        break;
+      case "UTC+4":
+      var i = 12;
+      for(var j=0; j < Time_hour_select.length; j++) { 
+          Time_hour_select_temp[j] = change(Time_hour_select_base[j]) + change(i);
+          if((Time_hour_select_temp[j])>=change(24)) 
+          {Time_hour_select_temp[j] = change(Time_hour_select_temp[j])-change(24) }
+          if((Time_hour_select_temp[j])<change(0)) 
+          {Time_hour_select_temp[j] = change(Time_hour_select_temp[j])+change(24) }
+          Time_hour_select[j].innerHTML = Time_hour_select_temp[j];
+        }
+        break;
+      case "UTC+8":
+      var i = 16;
+        for(var j=0; j < Time_hour_select.length; j++) { 
+          Time_hour_select_temp[j] = change(Time_hour_select_base[j]) + change(i);
+          if((Time_hour_select_temp[j])>=change(24)) 
+          {Time_hour_select_temp[j] = change(Time_hour_select_temp[j])-change(24) }
+          if((Time_hour_select_temp[j])<change(0)) 
+          {Time_hour_select_temp[j] = change(Time_hour_select_temp[j])+change(24) }
+          Time_hour_select[j].innerHTML = Time_hour_select_temp[j];
+        };
+        break;
+    }
+
+  }
+    function change(x){
+      return parseFloat(x)
+    }
+    
   </script>
 
 
