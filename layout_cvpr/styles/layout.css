@@ -307,7 +307,7 @@ body.night 需要调整的区块{
   color: #aaa;
 }
 body.night img {
-    filter: brightness(30%);
+    filter: brightness(50%);
 }
 
 body.night.row0, .row0 a{color:hsl(0, 0%, 0%);}
@@ -562,4 +562,17 @@ li{
     max-width: 100%;
     position: relative;
     top: -1px;
+  }
+
+
+select {
+    display:inline;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-family: cursive, sans-serif;
+    outline: 0;
+    background: #2ecc71;
+    color: #fff;
+    padding: 4px;
+    border-radius: 9px;
   }
