@@ -453,7 +453,7 @@ Licence URI: https://www.os-templates.com/template-terms
 
       <p style="font-size: large;">Please select your time zone: 
 
-        <select id="operator" style="font-size: 0.7rem;">
+        <select id="operator" style="font-size: 0.9rem;">
           <option value="UTC-8" onclick="time_zone()">UTC-8 (CVPR venue time)</option>
           <option value="UTC-4" onclick="time_zone()">UTC-4 / AST</option>
           <option value="UTC" onclick="time_zone()">UTC / GMT</option>
@@ -461,6 +461,16 @@ Licence URI: https://www.os-templates.com/template-terms
           <option value="UTC+8" onclick="time_zone()">UTC+8 / BJT</option>
           <option value="UTC+12"onclick="time_zone()">UTC+12 / IDLE</option>
       </select>
+
+      . Then click the button <input style="display:inline;
+      font-size: 0.9rem;
+      font-family: cursive, sans-serif;
+      outline: 0;
+      background: #2ecc71;
+      color: #fff;
+      border-radius: 9px;" type="button" value="Go to the local time" onclick="time_zone()">  to enter the timetable for the corresponding time zone.
+
+
       
       </p>
 
@@ -1319,12 +1329,15 @@ Licence URI: https://www.os-templates.com/template-terms
     countDownDate = countDownDate + 1000 * 3600 * 12
     var x = setInterval(function () {
       var now = new Date().getTime();
+      console.log(now)
       var distance = countDownDate - now;
       var days = Math.floor(distance / (1000 * 60 * 60 * 24));
       var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
       var countdown = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+      console.log(countdown)
+
 
       if (distance < 0) {
         clearInterval(x);
@@ -1379,6 +1392,7 @@ Licence URI: https://www.os-templates.com/template-terms
     var op_timezone=o_time.options[o_time.selectedIndex].value;//在下拉列表中选中选择的值
 
     console.log(op_timezone)
+    
 
 
     var Time_hour_select_base = [9, 9, 9, 10, 10, 11, 12, 13, 14, 14, 14, 15, 16]
