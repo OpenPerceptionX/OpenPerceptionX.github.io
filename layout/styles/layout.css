@@ -70,9 +70,9 @@ topic {
 --------------------------------------------------------------------------------------------------------------- */
 #pageintro{padding:180px 0;}
 
-#pageintro article{display:block; max-width:70%; margin:0 auto;}
+#pageintro article{display:block; max-width:75%; margin:0 auto;}
 #pageintro .heading{margin-bottom:20px; font-size:4rem;}
-#pageintro p{max-width:80%; margin:0 auto;font: 1.5rem sans-serif;}
+#pageintro p{max-width:75%; margin:0 auto;font: 1.5rem sans-serif;}
 #pageintro footer{margin-top:50px;}
 #pageintro footer .btn {
 	margin: 10px 0;
