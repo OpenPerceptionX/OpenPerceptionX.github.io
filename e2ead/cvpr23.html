@@ -451,9 +451,9 @@ Licence URI: https://www.os-templates.com/template-terms
       <h3><b>Schedule</b></h3>
 
 
-      <p style="font-size: large;">Please select your time zone: 
+      <h2 style="font-size: large;">Please select your time zone: 
 
-        <select id="operator" style="font-size: 0.9rem;">
+        <select id="operator" style="font-size: 0.9rem;" onclick="time_zone()">
           <option value="UTC-8" onclick="time_zone()">UTC-8 (CVPR venue time)</option>
           <option value="UTC-4" onclick="time_zone()">UTC-4 / AST</option>
           <option value="UTC" onclick="time_zone()">UTC / GMT</option>
@@ -462,17 +462,9 @@ Licence URI: https://www.os-templates.com/template-terms
           <option value="UTC+12"onclick="time_zone()">UTC+12 / IDLE</option>
       </select>
 
-      . Then click the button <input style="display:inline;
-      font-size: 0.9rem;
-      font-family: cursive, sans-serif;
-      outline: 0;
-      background: #2ecc71;
-      color: #fff;
-      border-radius: 9px;" type="button" value="Go to the local time" onclick="time_zone()">  to enter the timetable for the corresponding time zone.
+      . Then check the timetable <i class=" fas fa-clock" ></i> for the corresponding time zone.<br> <br>
 
-
-      
-      </p>
+    </h2>
 
 
       <div class="schedule-tbl">
@@ -589,6 +581,18 @@ Licence URI: https://www.os-templates.com/template-terms
 
             <tr>
               <td class="schedule-time" ><span name="time_hour_seleting">16</span>:30</td>
+              <td class="schedule-slot">
+                <!-- <span class="speaker-photo-00">
+                      <img class="photo" src="../../images/event/2023/hongyang_li.jpeg" alt="Hongyang Li">
+                    </span> -->
+
+                <span class="speakers-company"> Speaker 6</span>
+              </td>
+              <td class="schedule-description">Awesome Talk</td>
+            </tr>
+
+            <tr>
+              <td class="schedule-time" ><span name="time_hour_seleting">17</span>:10</td>
               <td class="schedule-slot">
                 <!-- <span class="speaker-photo-00">
                       <img class="photo" src="../../images/event/2023/hongyang_li.jpeg" alt="Hongyang Li">
@@ -1256,7 +1260,20 @@ Licence URI: https://www.os-templates.com/template-terms
     </section>
   </div>
 
-
+  <div class="wrapper row4">
+    <footer id="footer" class="hoc clear"> 
+      <!-- ################################################################################################ -->
+      <div class="center btmspace-50">
+        <h6 class="heading">OpenDriveLab</h6>
+        <nav>
+          <ul class="nospace inline pushright uppercase">
+            <li><a style="color: #FFA500;"href="../index.html"><i class="fas fa-lg fa-home"></i></a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- ################################################################################################ -->
+    </footer>
+  </div>
 
 
 
@@ -1395,7 +1412,7 @@ Licence URI: https://www.os-templates.com/template-terms
     
 
 
-    var Time_hour_select_base = [9, 9, 9, 10, 10, 11, 12, 13, 14, 14, 14, 15, 16]
+    var Time_hour_select_base = [9, 9, 9, 10, 10, 11, 12, 13, 14, 14, 14, 15, 16, 17]
     var Time_hour_select_temp = []
 
     switch(op_timezone){
@@ -1476,6 +1493,10 @@ Licence URI: https://www.os-templates.com/template-terms
     }
     
   </script>
+
+
+
+
 
 
 
