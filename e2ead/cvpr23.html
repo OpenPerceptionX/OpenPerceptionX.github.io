@@ -468,9 +468,8 @@ Licence URI: https://www.os-templates.com/template-terms
 
 
       <div class="schedule-tbl">
-        <!-- main body -->
-        <!-- ################################################################################################ -->
-        <!-- <h1 style="font-size:0.6em"> -->
+      <!-- If you want to change the schedule, remember to change the list [Time_hour_select_base] in the function -->
+
         <h1>
         <table>
           <thead>
@@ -1404,91 +1403,68 @@ Licence URI: https://www.os-templates.com/template-terms
   function time_zone(){
 
     var Time_hour_select = document.getElementsByName("time_hour_seleting");
-
     var o_time = document.getElementById("operator");
     var op_timezone=o_time.options[o_time.selectedIndex].value;//在下拉列表中选中选择的值
-
     console.log(op_timezone)
-    
 
-
+    // If you want to change the schedule, remember to change the list [Time_hour_select_base] in the function
     var Time_hour_select_base = [9, 9, 9, 10, 10, 11, 12, 13, 14, 14, 14, 15, 16, 17]
-    var Time_hour_select_temp = []
 
     switch(op_timezone){
       case "UTC+12":
         var i = 20;
         for(var j=0; j < Time_hour_select.length; j++) { 
-          Time_hour_select_temp[j] = change(Time_hour_select_base[j]) + change(i);
-          if((Time_hour_select_temp[j])>=change(24)) 
-          {Time_hour_select_temp[j] = change(Time_hour_select_temp[j])-change(24) }
-          if((Time_hour_select_temp[j])<change(0)) 
-          {Time_hour_select_temp[j] = change(Time_hour_select_temp[j])+change(24) }
-          Time_hour_select[j].innerHTML = Time_hour_select_temp[j];
+          Time_hour_select[j].innerHTML = adjust_number(change(Time_hour_select_base[j]) + change(i));
+
         }
         break;
       case "UTC-8":
       var i = 0;
       for(var j=0; j < Time_hour_select.length; j++) { 
-          Time_hour_select_temp[j] = change(Time_hour_select_base[j]) - change(i);
-          if((Time_hour_select_temp[j])>=change(24)) 
-          {Time_hour_select_temp[j] = change(Time_hour_select_temp[j])-change(24) }
-          if((Time_hour_select_temp[j])<change(0)) 
-          {Time_hour_select_temp[j] = change(Time_hour_select_temp[j])+change(24) }
-          Time_hour_select[j].innerHTML = Time_hour_select_temp[j];
+        Time_hour_select[j].innerHTML = adjust_number(change(Time_hour_select_base[j]) + change(i));
+
         }
         break;        
       case "UTC-4":
         var i = 4;
         for(var j=0; j < Time_hour_select.length; j++) { 
-          Time_hour_select_temp[j] = change(Time_hour_select_base[j]) + change(i);
-          if((Time_hour_select_temp[j])>=change(24)) 
-          {Time_hour_select_temp[j] = change(Time_hour_select_temp[j])-change(24) }
-          if((Time_hour_select_temp[j])<change(0)) 
-          {Time_hour_select_temp[j] = change(Time_hour_select_temp[j])+change(24) }
-          Time_hour_select[j].innerHTML = Time_hour_select_temp[j];
+          Time_hour_select[j].innerHTML = adjust_number(change(Time_hour_select_base[j]) + change(i));
         }
         break;
       case "UTC":
         var i = 8;
         for(var j=0; j < Time_hour_select.length; j++) { 
-          Time_hour_select_temp[j] = change(Time_hour_select_base[j]) + change(i);
-          if((Time_hour_select_temp[j])>=change(24)) 
-          {Time_hour_select_temp[j] = change(Time_hour_select_temp[j])-change(24) }
-          if((Time_hour_select_temp[j])<change(0)) 
-          {Time_hour_select_temp[j] = change(Time_hour_select_temp[j])+change(24) }
-          Time_hour_select[j].innerHTML = Time_hour_select_temp[j];
+          Time_hour_select[j].innerHTML = adjust_number(change(Time_hour_select_base[j]) + change(i));
         }
         break;
       case "UTC+4":
       var i = 12;
       for(var j=0; j < Time_hour_select.length; j++) { 
-          Time_hour_select_temp[j] = change(Time_hour_select_base[j]) + change(i);
-          if((Time_hour_select_temp[j])>=change(24)) 
-          {Time_hour_select_temp[j] = change(Time_hour_select_temp[j])-change(24) }
-          if((Time_hour_select_temp[j])<change(0)) 
-          {Time_hour_select_temp[j] = change(Time_hour_select_temp[j])+change(24) }
-          Time_hour_select[j].innerHTML = Time_hour_select_temp[j];
+          Time_hour_select[j].innerHTML = adjust_number(change(Time_hour_select_base[j]) + change(i));
         }
         break;
       case "UTC+8":
       var i = 16;
         for(var j=0; j < Time_hour_select.length; j++) { 
-          Time_hour_select_temp[j] = change(Time_hour_select_base[j]) + change(i);
-          if((Time_hour_select_temp[j])>=change(24)) 
-          {Time_hour_select_temp[j] = change(Time_hour_select_temp[j])-change(24) }
-          if((Time_hour_select_temp[j])<change(0)) 
-          {Time_hour_select_temp[j] = change(Time_hour_select_temp[j])+change(24) }
-          Time_hour_select[j].innerHTML = Time_hour_select_temp[j];
-        };
+          Time_hour_select[j].innerHTML = adjust_number(change(Time_hour_select_base[j]) + change(i));
+        }
         break;
 
     }
 
 
-
   }
     function change(x){
+      return parseFloat(x)
+    }
+
+    function adjust_number(x){
+      if (parseFloat(x)>=parseFloat(24)){
+        x = parseFloat(x)-parseFloat(24);
+      }
+      if (parseFloat(x)<parseFloat(0)){
+        x = parseFloat(x)+parseFloat(24);
+      }
       return parseFloat(x)
     }
     
