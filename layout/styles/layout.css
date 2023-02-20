@@ -609,8 +609,13 @@ table a, #comments a{background-color:inherit;}
 	}
 
 	#container{
-		height: 130vh;
+		height: 110vh;
 	}
+
+	#pageintro .heading{margin-bottom:20px; font-size:2rem;height: 12rem ;}
+	#pageintro{padding:80px 0;}
+
+
   }
 
 @media screen and (max-width:450px){
