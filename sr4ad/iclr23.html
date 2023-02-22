@@ -340,72 +340,134 @@ href="../images/team_logo.png">
     <div class="center btmspace-80">
       <h6 class="heading underline font-x2">Schedule (Tentative)</h6>
     </div>
+
+    <h3 style="font-size: large;">Please select your time zone: 
+
+      <select id="operator" style="font-size: 1rem; display: inline;" onclick="time_zone()">
+
+
+        <option value="-12" onclick="time_zone()">UTC-11 Niue/Pago_Pago</option>
+        <option value="-11" onclick="time_zone()">UTC-10 Honolulu/Adak </option>
+        <option value="-10" onclick="time_zone()">UTC-9 Anchorage/Nome</option>
+        <option value="-9" onclick="time_zone()" >UTC-8 Vancouver/Los_Angeles</option>
+        <option value="-8" onclick="time_zone()">UTC-6 Belize/Chicago</option>
+        <option value="-7" onclick="time_zone()">UTC-5 Detroit/Jamaica</option>
+        <option value="-6" onclick="time_zone()">UTC-4 Manaus/Thule</option>
+        <option value="-5" onclick="time_zone()">UTC-3 Araguaina/Maceio</option>
+        <option value="-4" onclick="time_zone()">UTC-2 Noronha/South_Georgia</option>
+        <option value="-3" onclick="time_zone()">UTC-1 Cape_Verde/Azores</option>
+        <option value="-2" onclick="time_zone()">UTC+0 London/Canary</option>
+        <option value="-1" onclick="time_zone()">UTC+1 Paris/Berlin</option>
+        <option value="0" onclick="time_zone()" selected="selected">UTC+2 (ICLR venue time) Kigali/Cairo</option>
+        <option value="1" onclick="time_zone()">UTC+3 Moscow/Baghdad</option>
+        <option value="2" onclick="time_zone()">UTC+4 Dubai/Mahe</option>
+        <option value="3" onclick="time_zone()">UTC+5 Qyzylorda/Kerguelen</option>
+        <option value="4" onclick="time_zone()">UTC+6 Almaty/Kolkata</option>
+        <option value="5" onclick="time_zone()">UTC+7 Bangkok/Christmas</option>
+        <option value="6" onclick="time_zone()">UTC+8 Beijing/Hong_Kong</option>
+        <option value="7" onclick="time_zone()">UTC+9 Tokyo/Seoul</option>
+        <option value="8" onclick="time_zone()">UTC+10 Sydney/Brisbane</option>
+        <option value="9" onclick="time_zone()">UTC+11 Lord_Howe/Kosrae</option>
+        <option value="10" onclick="time_zone()">UTC+12 Wallis/Fiji</option>
+    </select>
+
+    . Then check the timetable <i class=" fas fa-clock" ></i> for the corresponding time zone.<br> <br>
+
+  </h3>
     <!-- <h1>Table(s)</h1> -->
       <div class="scrollable">
         <table>
           <thead>
             <tr>
               <th>TIME</th>
-              <th>CONTENT</th>
+              <th>SPEAKER</th>
+              <th>THEME</th>
+
+
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>8:50</td>
+              <td ><span name="time_hour_seleting">8</span>:50, May <a style = "color: rgb(46, 45, 45);" name = "data_seleting">5</a></td>
+              <td ><a href="https://scholar.google.ae/citations?user=ulZxvY0AAAAJ&hl=zh-CN"> Li Chen</a></td>
               <td>Introduction and opening remarks</td>
             </tr>
             <tr>
-              <td>9:00</td>
-              <td>Invited Talk: <a href="https://yiyiliao.github.io/">Yiyi Liao</a></td>
+              <td ><span name="time_hour_seleting">9</span>:00, May <a style = "color: rgb(46, 45, 45);" name = "data_seleting">5</a></td>
+              <td><a href="https://yiyiliao.github.io/">Yiyi Liao</a></td>
+              <td>Awesome Talk</td>
             </tr>
             <tr>
-              <td>9:30</td>
-              <td>Contributed Talk: <a href="https://hangzhaomit.github.io/">Hang Zhao</a></td>
+              <td ><span name="time_hour_seleting">9</span>:30, May <a style = "color: rgb(46, 45, 45);" name = "data_seleting">5</a></td>
+              <td> <a href="https://hangzhaomit.github.io/">Hang Zhao</a></td>
+              <td>Awesome Talk</td>
+
             </tr>
             <tr>
-              <td>10:00</td>
+              <td ><span name="time_hour_seleting">10</span>:00, May <a style = "color: rgb(46, 45, 45);" name = "data_seleting">5</a></td>
+              <td ><a href="https://scholar.google.ae/citations?user=ulZxvY0AAAAJ&hl=zh-CN"> Li Chen</a></td>
               <td>Contributions: Oral Session</td>
             </tr>
             <tr>
-              <td><strong>11:00</strong></td>
+              <td ><span name="time_hour_seleting">11</span>:00, May <a style = "color: rgb(46, 45, 45);" name = "data_seleting">5</a></td>
               <td><strong>Coffee Break</strong></td>
+              <td><strong>Coffee Break</strong></td>
+
             </tr>
             <tr>
-              <td>11:30</td>
-              <td>Invited Talk: <a href="https://vas.mpi-inf.mpg.de/dengxin/">Dengxin Dai</a></td>
+              <td ><span name="time_hour_seleting">11</span>:30, May <a style = "color: rgb(46, 45, 45);" name = "data_seleting">5</a></td>
+              <td> <a href="https://vas.mpi-inf.mpg.de/dengxin/">Dengxin Dai</a></td>
+              <td>Awesome Talk</td>
+
             </tr>
             <tr>
-              <td>12:00</td>
-              <td>Invited Talk: <a href="https://aisecure.github.io/">Bo Li</a></td>
+              <td ><span name="time_hour_seleting">12</span>:00, May <a style = "color: rgb(46, 45, 45);" name = "data_seleting">5</a></td>
+              <td> <a href="https://aisecure.github.io/">Bo Li</a></td>
+              <td>Awesome Talk</td>
+
             </tr>
             <tr>
-              <td><strong>12:30</strong></td>
+              <td ><span name="time_hour_seleting">12</span>:30, May <a style = "color: rgb(46, 45, 45);" name = "data_seleting">5</a></td>
               <td><strong>Lunch Break</strong></td>
+              <td><strong>Lunch Break</strong></td>
+
             </tr>
             <tr>
-              <td>13:30</td>
-              <td>Invited Talk: <a href="https://hangqiu.github.io/">Hang Qiu</a></td>
+              <td ><span name="time_hour_seleting">13</span>:30, May <a style = "color: rgb(46, 45, 45);" name = "data_seleting">5</a></td>
+              <td> <a href="https://hangqiu.github.io/">Hang Qiu</a></td>
+              <td>Awesome Talk</td>
+
             </tr>
             <tr>
-              <td>14:00</td>
+              <td ><span name="time_hour_seleting">14</span>:00, May <a style = "color: rgb(46, 45, 45);" name = "data_seleting">5</a></td>
+              <td><a href="https://mengyeren.com/">Mengye Ren</a></td>
+
               <td>Contributions: Poster Session</td>
             </tr>
             <tr>
-              <td><strong>15:00</strong></td>
+              <td ><span name="time_hour_seleting">15</span>:00, May <a style = "color: rgb(46, 45, 45);" name = "data_seleting">5</a></td>
               <td><strong>Coffee Break</strong></td>
+              <td><strong>Coffee Break</strong></td>
+
             </tr>
             <tr></tr>
-              <td>15:30</td>
-              <td>Invited Talk: <a href="https://alexliniger.github.io/">Alexander Liniger</a></td>
+            <td ><span name="time_hour_seleting">15</span>:30, May <a style = "color: rgb(46, 45, 45);" name = "data_seleting">5</a></td>
+            <td> <a href="https://alexliniger.github.io/">Alexander Liniger</a></td>
+              <td>Awesome Talk</td>
+
             </tr>
             <tr>
-              <td>16:00</td>
-              <td>Invited Talk: <a href="https://jamie.shotton.org/">Jamie Shotton</a></td>
+              <td ><span name="time_hour_seleting">16</span>:00, May <a style = "color: rgb(46, 45, 45);" name = "data_seleting">5</a></td>
+              <td> <a href="https://jamie.shotton.org/">Jamie Shotton</a></td>
+              <td>Awesome Talk</td>
+
             </tr>
             <tr>
             <tr>
-              <td>16:30-17:30</td>
+              <td ><span name="time_hour_seleting">16</span>:30-<span name="time_hour_seleting">17</span>:30, May <a style = "color: rgb(46, 45, 45);" name = "data_seleting">5</a></td>
+              <td><a href="https://mengyeren.com/">Mengye Ren</a></td>
               <td>Panel Discussion</td>
+
             </tr>
           </tbody>
         </table>
@@ -550,5 +612,57 @@ href="../images/team_logo.png">
 <script src="../layout/scripts/jquery.min.js"></script>
 <script src="../layout/scripts/jquery.backtotop.js"></script>
 <script src="../layout/scripts/jquery.mobilemenu.js"></script>
+<script type="text/javascript">
+  function time_zone(){
+
+    var Time_hour_select = document.getElementsByName("time_hour_seleting");
+    var data_select = document.getElementsByName("data_seleting");
+    var o_time = document.getElementById("operator");
+    var op_timezone=o_time.options[o_time.selectedIndex].value;//在下拉列表中选中选择的值
+    console.log(op_timezone)
+
+    // If you want to change the schedule, remember to change the list [Time_hour_select_base] in the function
+    var Time_hour_select_base = [8, 9, 9, 10, 11, 11, 12, 12, 13, 14, 15, 15, 16, 16, 17]
+    var date_select_base = [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5 ]
+
+
+
+    for(var j=0; j < Time_hour_select.length; j++) { 
+      Time_hour_select[j].innerHTML= adjust_number(change(Time_hour_select_base[j]) + change(op_timezone));
+      data_select[j].innerHTML= adjust_number_data((change(Time_hour_select_base[j]) + change(op_timezone)), date_select_base[j]);
+
+    }
+
+
+
+  }
+    function change(x){
+      return parseFloat(x)
+    }
+
+    function adjust_number(x){
+      if (parseFloat(x)>=parseFloat(24)){
+        x = parseFloat(x)-parseFloat(24);
+      }
+      if (parseFloat(x)<parseFloat(0)){
+        x = parseFloat(x)+parseFloat(24);
+      }
+      return parseFloat(x)
+    }
+
+    function adjust_number_data(x, y){
+      if (parseFloat(x)>=parseFloat(24)){
+        x = parseFloat(x)-parseFloat(24);
+        y = parseFloat(y)+parseFloat(1);
+      }
+      if (parseFloat(x)<parseFloat(0)){
+        x = parseFloat(x)+parseFloat(24);
+        y = parseFloat(y)-parseFloat(1);
+
+      }
+      return parseFloat(y)
+    }
+    
+  </script>
 </body>
 </html>
