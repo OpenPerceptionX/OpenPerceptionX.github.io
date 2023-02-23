@@ -10,26 +10,47 @@ Licence URI: https://www.os-templates.com/template-terms
 
 <head>
   <title>CVPR 2023 Autonomous Driving Workshop | OpenDriveLab</title>
+  <link rel="icon" 
+      type="image/png" 
+      href="../images/team_logo.png">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link href="../layout_cvpr/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+  <script src="https://kit.fontawesome.com/8990c176d0.js" crossorigin="anonymous"></script>
+
 </head>
 
-<body id="top">
+<body id="top" class="<?php echo($_COOKIE['night'] == '1' ? 'night' : ''); ?>">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <!-- ################################################################################################ -->
   <!-- ################################################################################################ -->
   <!-- ################################################################################################ -->
   <!-- Top Background Image Wrapper -->
   <div class="bgded overlay" style="background-image:url('../images/event/cvpr/cvpr-20232.png');">
+    <header id="header" class="hoc clear"> 
+      <!-- ################################################################################################ -->
+      <!-- ################################################################################################ -->
+      <nav id="mainav" class="fl_right">
+        <ul class="clear">
+
+          <li><a href="javascript:switchNightMode()" target="_self">Dark mode
+          <i class="fa-solid fa-circle-half-stroke fa-2xl"></i></a></li>
+           
+        </ul>
+      </nav>
+      <!-- ################################################################################################ -->
+    </header>
+    
     <!-- ################################################################################################ -->
     <div id="pageintro" class="hoc clear">
       <!-- ################################################################################################ -->
+
       <article>
         <h3 class="heading" style="color: #fcb747;">End-to-End Autonomous Driving:</h3>
         <h3 class="heading" style="color:  #fcb747;">Emerging Tasks and Challenges</h3>
         <h2> CVPR 2023 Workshop</h2>
 
-        <h2> June 18 2023, Vancouver, Canada</h2>
+        <h2> June 18, 2023, Vancouver, Canada</h2>
 
         <br><br>
         <br><br>
@@ -38,6 +59,7 @@ Licence URI: https://www.os-templates.com/template-terms
 
         <br><br>
         <br><br>
+        
 <!--         <br><br>
         <footer>
           <ul class="nospace inline pushright">
@@ -63,16 +85,19 @@ Licence URI: https://www.os-templates.com/template-terms
   </div>
   <!-- End Top Background Image Wrapper -->
   <!-- ################################################################################################ -->
-
+  <style>
+    h3 {font-size: 4rem; !important}
+    /* h3 {font-size: 2.5em;!important} */
+  </style>
 
 
   <div class="wrapper row1 ">
     <main class="hoc container clear">
       <!-- main body -->
       <!-- ################################################################################################ -->
-      <div class="fl_left btmspace-80">
+      <div class="fl_left btmspace-10">
 
-        <h4><b>Overview</b></h4>
+        <h3><b>Overview</b></h3>
         <!-- <p class="heading font-x3">Odio vestibulum id lacus vel lorem</p> -->
         <h2>
           <p>Welcome to the <a href="https://cvpr2023.thecvf.com/">CVPR 2023</a> Workshop on End-to-End Autonomous
@@ -80,23 +105,42 @@ Licence URI: https://www.os-templates.com/template-terms
         </h2>
         <p itemprop="description">
           This workshop aims to bring together leading researchers and practitioners to discuss
-          upcoming paradigms for autonomous vehicles. Central to the program is a series of <a class="topic" style="font-family: Monaco, monospace;
-          color:  #00aeff;font-size: 17px;background-color: #e6f7ff;">invited talks</a> and <a class="topic" style="font-family: Monaco, monospace;
-          color:  #00aeff;font-size: 17px;background-color: #e6f7ff;">three new challenges</a> in the self-driving
+          upcoming paradigms for autonomous vehicles. Central to the program is a series of <topic>invited talks</topic> and <topic>four new challenges</topic> in the self-driving
           domain. Each challenge combines new perspectives of multiple components in perception and planning compared to
           conventional pipelines.
           <code>Winners</code> of
           the challenges will present their results and insights as part of the workshop. We invite researchers around
           the world to build new algorithms to tackle these challenging, real-world autonomous driving tasks!
-
-          <br><br>
+        </p>
           <!-- TODO: Please sign up for more updates! <comment>Unscribe anytime.</comment> -->
           <!-- <br> -->
-          Contact us at <code>workshop-e2e-ad@googlegroups.com</code>
+
+          <p>We have a <a href="https://opendrivelab.com/sr4ad/iclr23">sibling workshop</a> on ICLR 2023. The submission deadline is Mar 1st Anywhere on Earth. Check it out!
+          </p>
+
+          Contact us at <code>workshop-e2e-ad@googlegroups.com</code>.
+
+
+
+        <!-- <form action="form.php" method="post">
+            <p>E-Mail: <input type="email" name="email" /></p>
+            <input type="submit" value="Sign Up" />
+        </form>
+        You can unsubscribe at any time. -->
+
+
+
+
+
           <style>
             code {
               color: #C0392B;
               background-color: #FDEDEC;
+            }
+
+            topic{
+              font-family: Monaco, monospace;
+              color:  #00aeff;font-size: 17px;background-color: #e6f7ff;
             }
 
             comment {
@@ -107,11 +151,18 @@ Licence URI: https://www.os-templates.com/template-terms
             }
           </style>
       </div>
+      <div class="clear"></div>
+    </main>
+  </div>
 
-      <div class="fl_left btmspace-80">
+  <div class="wrapper row2 ">
+        <main class="hoc container clear">
+          <!-- main body -->
+          <!-- ################################################################################################ -->
+          <div class="fl_left btmspace-10">
 
 
-        <h4><b>Date</b></h4>
+        <h3><b>Date</b></h3>
 
         <style>
           hide {
@@ -131,7 +182,7 @@ Licence URI: https://www.os-templates.com/template-terms
 
           <hide>&rarr;</hide>15 Feb 2023: <b>Challenge Official Announcement</b><br>
           <hide>&rarr;</hide>15 March 2023: <b>Test Data Release, Server Open</b><br>
-          <hide>&rarr;</hide><code>30 May 2023</code>: <b>Challenge Submission Deadline</b><br>
+          <hide>&rarr;</hide><code>Late May 2023</code>: <b>Challenge Submission Deadline</b><br>
           <hide>&rarr;</hide>4 Jun 2023: <b>Notification of Award</b><br>
           <hide>&rarr;</hide>15 Jun 2023: <b>Submission of Winners Talk</b><br>
         </p>
@@ -141,25 +192,7 @@ Licence URI: https://www.os-templates.com/template-terms
         </p>
 
 
-        <script>
-          var countDownDate = new Date("Oct 01, 2022 23:59:59 UTC").getTime();
-          countDownDate = countDownDate + 1000 * 3600 * 12
-          var x = setInterval(function () {
-            var now = new Date().getTime();
-            var distance = countDownDate - now;
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            var countdown = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 
-            if (distance < 0) {
-              clearInterval(x);
-              countdown = "(expired)";
-            }
-            document.getElementById("countdown").innerHTML = countdown
-          }, 1000);
-        </script>
 
 
         <!-- <footer class="center"><a class="btn" href="">Nisl sollicitudin porta</a></footer> -->
@@ -176,6 +209,1109 @@ Licence URI: https://www.os-templates.com/template-terms
   <!-- ################################################################################################ -->
   <!-- speakers -->
 
+
+  <!-- ##### Challenges #### -->
+  <div class="wrapper row4 ">
+    <main class="hoc container clear">
+      <div class="fl_left btmspace-10">
+
+        <h3 id="Challenges"><b>Challenges <a href="../AD23Challenge.html">[Website]</a></b></h3>
+
+        <li style="list-style-type:disc"> 
+          We are proud to announce  <a href="../AD23Challenge.html"> four brand-new challenges</a> this year, in collaboration with our partners - 
+          <a href="https://www.vcad.site/">Vision-Centric Autonomous Driving Workshop</a> and the <a href="https://nuplan-devkit.readthedocs.io/en/latest/competition.html">nuPlan team from Motional</a>.
+          <!-- For challenge details, please visit the <a href="../AD23Challenge.html">challenge website -->
+          </a>
+        </li>
+         <br>
+        <li style="list-style-type:disc"> The challenge is not <b style="color:#fcb747;">solely</b> about winning top place with tricks and ensembles. Each track is set with cash prizes to award both top entries
+         <b style="color:#fcb747;">as well as </b> 
+       innovative submissions. The award committee will select the most innovative submissions to present their work live.
+       <!-- Hongyang: Do NOT delete the following; it would affect follow-up font size -->
+          <!-- <b style="color:#fcb747;font-size:1.8rem"> -->
+        </li>
+        <br><br>
+
+        <ul class="nospace group element btmspace-10">
+          <li class="one_quarter first">
+            <article>
+              <a href="../AD23Challenge.html#Track1"><img src="../images/event/cvpr/openlane_s.gif" alt=""
+                  style="height:auto;width: auto;" alt=""></a>
+              <div class="txtwrap">
+                <div style="height: 6rem;"><h1 style="font-size:1.4rem">OpenLane Topology Challenge</h1></div>
+                  <div style="height: 5rem;"><p style="font-size:1rem;color: rgb(106, 105, 105);"> World's First Topology Reasoning Benchmark for Scene
+                  Structure. </p> </div>
+                <footer style="color:#fcb747;font-size:1rem"><a href="../AD23Challenge.html#Track1">Read More</a>
+                </footer>
+              </div>
+            </article>
+          </li>
+          <li class="one_quarter">
+            <article>
+              <a href="../AD23Challenge.html#Track2"><img src="../images/event/cvpr/chall2.gif" alt=""
+                  style="height:auto;width: auto;" alt=""></a>
+              <div class="txtwrap">
+                <div style="height: 6rem;"><h1 style="font-size:1.4rem">Online HD Map Construction Challenge</h1></div>
+                  <div style="height: 5rem;"><p style="font-size:1rem;color: rgb(106, 105, 105);"> Dynamically construct local HD maps using onboard sensors. </p> </div>
+                <footer style="color:#fcb747;font-size:1rem"><a href="../AD23Challenge.html#Track2">Read More</a>
+                </footer>
+              </div>
+            </article>
+          </li>
+          <li class="one_quarter">
+            <article> <a href="../AD23Challenge.html#Track3"><img src="../images/event/cvpr/chall3.gif" style="height:auto;width: auto;" alt=""></a>
+              <div class="txtwrap">
+                <div style="height: 6rem;"><h1 style="font-size:1.4rem">3D Occupancy Prediction Challenge</h1></div>
+                <div style="height: 5rem;"><p style="font-size:1rem;color: rgb(106, 105, 105);"> Occupancy as New Representation for General Object Perception.</p></div>
+
+                <footer style="color:#fcb747;font-size:1rem"><a href="../AD23Challenge.html#Track3">Read More</a></footer>
+              </div>
+            </article>
+          </li>
+
+          <li class="one_quarter">
+            <article><a href="https://eval.ai/web/challenges/challenge-page/1856/overview"><img src="../images/event/cvpr/nuplan_light.gif" style="height:auto;width: auto;" alt=""></a>
+              <div class="txtwrap">
+                <div style="height: 6rem;"><h1 style="font-size:1.4rem"> nuPlan Planning Challenge</h1></div>
+                <div style="height: 5rem;"><p style="font-size:1rem;color: rgb(106, 105, 105);"> World's First Large-scale Planning Benchmark.</p></div>
+                  
+                <footer style="color:#fcb747;font-size:1rem"><a
+                     href="../AD23Challenge.html#Track4">
+                  Read More</a></footer>
+              </div>
+            </article>
+          </li>
+        </ul>
+        <!-- <h2 id="Challenges"><b>General Rules</b></h2> -->
+
+        <!--  <b style="color:#fcb747;> -->
+          <br><br>
+        <h2 style="font-size:2rem">General Rules at a Glance</h2>
+
+        <li style="list-style-type:disc"> 
+          Each track runs in parallel and would not affect the others. That being said, one can claim <b style="color:#fcb747;">multiple</b> awards.
+        </li>
+        <li style="list-style-type:disc"> 
+          We organizers unanimously agree that research should be equal to everyone in the world and apart from other factors. As such, <b style="color:#fcb747;">all</b> companies/individuals, regardless of region/belief/etc. can participate in the challenges.  
+        </li>
+        <li style="list-style-type:disc">Workshop organizers and their teams <b style="color:#fcb747;">can</b> participate in a particular track, as long as they are concealed from test data and not a member of the Award Committee.</li>
+        <li style="list-style-type:disc">Any endeavors found to hack test data/annotation will lead to disqualification from the competition.</li>
+
+        <br>
+        <i>For more details, please refer to the full rules <a href="../AD23Challenge.html#rules">here</a>.</i>
+
+
+    </main>
+    
+  </div>
+
+
+ <!-- Speakers -->
+
+  <div class="wrapper row1">
+    <section class="hoc container clear">
+      <!-- ################################################################################################ -->
+
+      <h3><b>Speakers</b></h3>
+
+ <!-- Hongyang: Do NOT delete the following; it would affect follow-up font size -->
+       <b style="font-size:1.8rem">
+
+      <ul class="nospace group">
+
+        <li class="one_third first" itemtype="http://schema.org/Person">
+
+          <span class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
+            <a href="https://www.cs.cmu.edu/~deva/" target="_blank">
+              <img class="photo" style="width: 200px;height:200px;right: 20px;"
+                src="../images/event/cvpr/people/DevaRamanan.jfif" alt="Deva Ramanan" itemprop="image"></a>
+          </span>
+          <h1 style="font-size:0.7em"><a href="https://www.cs.cmu.edu/~deva/" target="_blank" title="Deva Ramanan"> Deva Ramanan </a>
+            <br>
+            <i>Professor</i><br>Carnegie Mellon University, USA</i>
+            <br>
+            <!-- <a_box><img style="width: 16px;height:16px;" src="../images/event/cvpr/skack.jpg"><a href="  " style="color: white;">Ask questions on Slack</a></a_box> -->
+          </h1>
+
+        </li>
+
+        <li class="one_third " itemtype="http://schema.org/Person">
+          <span class="speaker-photo">
+            <a href="https://www2.eecs.berkeley.edu/Faculty/Homepages/svlevine.html" target="_blank">
+              <img class="photo" style="width: 200px;height:200px" src="../images/event/cvpr/people/SergeyLevine.jfif"
+                alt="" itemprop="image"></a>
+          </span>
+          <h1 class="speakers-name;" style="font-size:0.7em"><a href="https://people.eecs.berkeley.edu/~svlevine/" target="_blank"
+              title="Sergey Levine">Sergey Levine </a>
+            <br>
+            <i>Associate Professor</i><br>UC Berkeley, USA
+            <br>
+            <!-- <a_box><img style="width: 16px;height:16px;" src="../images/event/cvpr/skack.jpg"><a href="  " style="color: white;">Ask questions on Slack</a></a_box> -->
+
+          </h1>
+          <!-- </li> -->
+        </li>
+
+        <li class="one_third" itemprop="performer">
+          <span class="speaker-photo">
+            <a href="https://alvarezlopezjosem.github.io" target="_blank">
+              <img class="photo" style="width: 200px;height:200px"
+                src="../images/event/cvpr/people/jose_alvarez.jpg" alt="Jose M. Alvarez" itemprop="image"></a>
+          </span>
+
+          <h1 class="speakers-name" style="font-size:0.7em"><a href="https://alvarezlopezjosem.github.io" target="_blank"
+              title="Jose M. Alvarez"> Jose M. Alvarez </a>
+            <br>
+            <i>Senior Research Manager</i><br>NVIDIA, USA
+            <br>
+            <!-- <a_box><img style="width: 16px;height:16px;" src="../images/event/cvpr/skack.jpg"><a href="  " style="color: white;">Ask questions on Slack</a></a_box> -->
+
+          </h1>
+        </li>
+
+
+      </ul>
+
+
+      <ul class="nospace group">
+
+
+        <li class="one_third first" itemprop="performer">
+          <span class="speaker-photo">
+            <a href="https://www.linkedin.com/in/chaiyuning" target="_blank">
+              <img class="photo" style="width: 200px;height:200px" src="../images/event/cvpr/people/YuningChai.jfif"
+                alt="Yuning Chai" itemprop="image"></a>
+          </span>
+
+          <h1 class="speakers-name;" style="font-size:0.7em"><a href="https://www.linkedin.com/in/chaiyuning" target="_blank"
+              title="Yuning Chai"> Yuning Chai </a>
+            <br>
+            <i>Head of AI Research</i><br>Cruise, USA</i>
+            <br>
+            <!-- <a_box><img style="width: 16px;height:16px;" src="../images/event/cvpr/skack.jpg"><a href="  " style="color: white;">Ask questions on Slack</a></a_box> -->
+
+          </h1>
+
+        </li>
+
+        <li class="one_third" itemprop="performer">
+          <span class="speaker-photo">
+            <a href="https://www.johnemmons.com" target="_blank">
+              <img class="photo" style="width: 200px;height:200px" src="../images/event/cvpr/people/JohnEmmons.jfif"
+                itemprop="image"></a>
+          </span>
+
+          <h1 class="speakers-name" style="font-size:0.7em"><a href="https://www.johnemmons.com" target="_blank" title="John Emmons"> John
+              Emmons </a>
+            <br>
+            <i>Senior Engineering Manager</i><br>Tesla, USA
+            <br>
+            <!-- <a_box><img style="width: 16px;height:16px;" src="../images/event/cvpr/skack.jpg"><a href="  " style="color: white;">Ask questions on Slack</a></a_box> -->
+
+
+          </h1>
+
+
+          <!-- </li> -->
+        </li>
+
+        <li class="one_third" itemprop="performer">
+          <span class="speaker-photo">
+            <a href="https://alexgkendall.com" target="_blank">
+              <img class="photo" style="width: 200px;height:200px" src="../images/event/cvpr/people/AlexKendall.jfif"
+                itemprop="image"></a>
+          </span>
+
+          <h1 class="speakers-name" style="font-size:0.7em"><a href="https://alexgkendall.com" target="_blank" title="Alex Kendall"> Alex
+              Kendall </a>
+            <br>
+            <i>CEO</i><br> Wayve, UK</i>
+            <br>
+            <!-- <a_box><img style="width: 16px;height:16px;" src="../images/event/cvpr/skack.jpg"><a href="  " style="color: white;">Ask questions on Slack</a></a_box> -->
+
+
+          </h1>
+
+        </li>
+
+      </ul>
+
+      <!-- ################################################################################################ -->
+    </section>
+  </div>
+
+
+ <!-- Hongyang: Do NOT delete the following; it would affect follow-up font size -->
+       <!-- <b style="color:#fcb747;font-size:1.3rem"> -->
+  
+  <!-- ##### Schedule #### -->
+  <div class="wrapper row2">
+    <main class="hoc container clear">
+      <!-- ################################################################################################ -->
+      <h3><b>Schedule</b></h3>
+
+
+      <h2 style="font-size: large;">Please select your time zone: 
+
+        <select id="operator" style="font-size: 0.9rem;" onclick="time_zone()">
+
+
+          <option value="-3" onclick="time_zone()">UTC-11 Niue/Pago_Pago</option>
+          <option value="-2" onclick="time_zone()">UTC-10 Honolulu/Adak </option>
+          <option value="-1" onclick="time_zone()">UTC-9 Anchorage/Nome</option>
+          <option value="0" onclick="time_zone()" selected="selected">UTC-8 (CVPR venue time) Vancouver/Los_Angeles</option>
+          <option value="1" onclick="time_zone()">UTC-7 Phoenix/Denver</option>
+          <option value="2" onclick="time_zone()">UTC-6 Belize/Chicago</option>
+          <option value="3" onclick="time_zone()">UTC-5 Detroit/Jamaica</option>
+          <option value="4" onclick="time_zone()">UTC-4 Manaus/Thule</option>
+          <option value="5" onclick="time_zone()">UTC-3 Araguaina/Maceio</option>
+          <option value="6" onclick="time_zone()">UTC-2 Noronha/South_Georgia</option>
+          <option value="7" onclick="time_zone()">UTC-1 Cape_Verde/Azores</option>
+          <option value="8" onclick="time_zone()">UTC+0 London/Canary</option>
+          <option value="9" onclick="time_zone()">UTC+1 Paris/Berlin</option>
+          <option value="10" onclick="time_zone()">UTC+2 Cairo/Kigali</option>
+          <option value="11" onclick="time_zone()">UTC+3 Moscow/Baghdad</option>
+          <option value="12" onclick="time_zone()">UTC+4 Dubai/Mahe</option>
+          <option value="13" onclick="time_zone()">UTC+5 Qyzylorda/Kerguelen</option>
+          <option value="14" onclick="time_zone()">UTC+6 Almaty/Kolkata</option>
+          <option value="15" onclick="time_zone()">UTC+7 Bangkok/Christmas</option>
+          <option value="16" onclick="time_zone()">UTC+8 Beijing/Hong_Kong</option>
+          <option value="17" onclick="time_zone()">UTC+9 Tokyo/Seoul</option>
+          <option value="18" onclick="time_zone()">UTC+10 Sydney/Brisbane</option>
+          <option value="19" onclick="time_zone()">UTC+11 Lord_Howe/Kosrae</option>
+          <option value="20" onclick="time_zone()">UTC+12 Wallis/Fiji</option>
+      </select>
+
+      . Then check the timetable <i class=" fas fa-clock" ></i> for the corresponding time zone.<br> <br>
+
+    </h2>
+
+
+
+      <div class="schedule-tbl">
+      <!-- If you want to change the schedule, remember to change the list [Time_hour_select_base] in the function -->
+
+        <h1>
+        <table>
+          <thead>
+            <tr>
+              <th class="schedule-time">Time</th>
+              <th class="schedule-slot">Speaker</th>
+              <th class="schedule-description">Theme</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td class="schedule-time" ><span name="time_hour_seleting">9</span>:00, Jun <a style = "color: rgb(46, 45, 45);" name = "data_seleting">18</a></td>
+              <td class="schedule-slot">
+                Hongyang Li, 
+                <span class="speakers-company">Shanghai AI Lab</span>
+              </td>
+              <td class="schedule-description">Welcome and opening remarks</td>
+            </tr>
+
+            <tr>
+              <td class="schedule-time" ><span name="time_hour_seleting">9</span>:10, Jun <a style = "color: rgb(46, 45, 45);" name = "data_seleting">18</a></td>
+              <td class="schedule-slot">
+                Speaker 1 <span class="speakers-company"></span>
+              </td>
+              <td class="schedule-description">Awesome Talk</td>
+            </tr>
+
+            <tr>
+              <td class="schedule-time"><span name="time_hour_seleting">9</span>:00, Jun <a style = "color: rgb(46, 45, 45);" name = "data_seleting">18</a></td>
+              <td class="schedule-slot">
+                Speaker 2 <span class="speakers-company"></span>
+              </td>
+              <td class="schedule-description">Awesome Talk</td>
+            </tr>
+
+            <tr>
+              <td class="schedule-time"><span name="time_hour_seleting">10</span>:20, Jun <a style = "color: rgb(46, 45, 45);" name = "data_seleting">18</a></td>
+              <td class="schedule-slot">
+                <b>Coffee Break</b> <span class="speakers-company"></span>
+              </td>
+              <td class="schedule-description"> <b>Coffee Break</b> </td>
+            </tr>
+
+            <tr>
+              <td class="schedule-time"><span name="time_hour_seleting">10</span>:30, Jun <a style = "color: rgb(46, 45, 45);" name = "data_seleting">18</a></td>
+              <td class="schedule-slot">
+                Organizers and Winners<span class="speakers-company"></span>
+              </td>
+              <td class="schedule-description">Track 1: OpenLane Topology Challenge</td>
+            </tr>
+
+            <tr>
+              <td class="schedule-time" ><span name="time_hour_seleting">11</span>:30, Jun <a style = "color: rgb(46, 45, 45);" name = "data_seleting">18</a></td>
+              <td class="schedule-slot">
+                Speaker 3<span class="speakers-company"></span>
+              </td>
+              <td class="schedule-description">Awesome Talk</td>
+            </tr>
+
+            <tr>
+              <td class="schedule-time" ><span name="time_hour_seleting">12</span>:05, Jun <a style = "color: rgb(46, 45, 45);" name = "data_seleting">18</a></td>
+              <td class="schedule-slot">
+                <b>Lunch Break</b> <span class="speakers-company"></span>
+              </td>
+              <td class="schedule-description"><b>Lunch Break</b></td>
+            </tr>
+
+            <tr>
+              <td class="schedule-time" ><span name="time_hour_seleting">13</span>:30, Jun <a style = "color: rgb(46, 45, 45);" name = "data_seleting">18</a></td>
+              <td class="schedule-slot">
+                Speaker 4 <span class="speakers-company"></span>
+              </td>
+              <td class="schedule-description">Awesome Talk</td>
+            </tr>
+
+            <tr>
+              <td class="schedule-time"><span name="time_hour_seleting">14</span>:05, Jun <a style = "color: rgb(46, 45, 45);" name = "data_seleting">18</a></td>
+              <td class="schedule-slot">
+                Organizers and Winners <span class="speakers-company"></span>
+              </td>
+              <td class="schedule-description">Track 2: Online HD Map Construction</td>
+            </tr>
+
+            <tr>
+              <td class="schedule-time" ><span name="time_hour_seleting">14</span>:40, Jun <a style = "color: rgb(46, 45, 45);" name = "data_seleting">18</a></td>
+              <td class="schedule-slot">
+                <b>Coffee Break</b> <span class="speakers-company"></span>
+              </td>
+              <td class="schedule-description"> <b>Coffee Break</b></td>
+            </tr>
+
+            <tr>
+              <td class="schedule-time"><span name="time_hour_seleting">14</span>:50, Jun <a style = "color: rgb(46, 45, 45);" name = "data_seleting">18</a></td>
+              <td class="schedule-slot">
+                Organizers and Winners<span class="speakers-company"></span>
+              </td>
+              <td class="schedule-description">Track 4: nuPlan Planning Challenge</td>
+            </tr>
+
+            <tr>
+              <td class="schedule-time" ><span name="time_hour_seleting">15</span>:50, Jun <a style = "color: rgb(46, 45, 45);" name = "data_seleting">18</a></td>
+              <td class="schedule-slot">
+                Speaker 5<span class="speakers-company"></span>
+              </td>
+              <td class="schedule-description">Awesome Talk</td>
+            </tr>
+
+            <tr>
+              <td class="schedule-time" ><span name="time_hour_seleting">16</span>:30, Jun <a style = "color: rgb(46, 45, 45);" name = "data_seleting">18</a></td>
+              <td class="schedule-slot">
+                <!-- <span class="speaker-photo-00">
+                      <img class="photo" src="../../images/event/2023/hongyang_li.jpeg" alt="Hongyang Li">
+                    </span> -->
+
+                <span class="speakers-company"> Speaker 6</span>
+              </td>
+              <td class="schedule-description">Awesome Talk</td>
+            </tr>
+
+            <tr>
+              <td class="schedule-time" ><span name="time_hour_seleting">17</span>:10-<a name="time_hour_seleting" style = "color: rgb(46, 45, 45);">18</a>:00, Jun <a style = "color: rgb(46, 45, 45);" name = "data_seleting">18</a></td>
+              <td class="schedule-slot">
+                <!-- <span class="speaker-photo-00">
+                      <img class="photo" src="../../images/event/2023/hongyang_li.jpeg" alt="Hongyang Li">
+                    </span> -->
+
+                <span class="speakers-company">TBD Moderator</span>
+              </td>
+              <td class="schedule-description">Panel discussion</td>
+            </tr>
+
+
+
+
+          </tbody>
+        </table>
+        
+        Note: Presentation and winners of 
+        <!-- <topic>Track 2: 3D Occupancy Prediction</topic> -->
+        <b>Track 3: 3D Occupancy Prediction Challenge</b>  
+        would be scheduled at 
+        <a href="https://www.vcad.site/">Vision-Centric Autonomous Driving Workshop</a>.
+
+      </h1>
+      </div>
+
+    </main>
+  </div>
+
+
+
+
+
+
+
+
+   <!-- Hongyang: Do NOT delete the following; it would affect follow-up font size -->
+       <b style="color:#fcb747;font-size:1.8rem">
+
+
+  <!-- Origanizers -->
+  <div class="wrapper row1">
+    <main class="hoc container clear">
+      <div class="fl_left btmspace-10">
+
+        <h3><b>Organizers</b></h3>
+
+        <h4><b>Workshop Organizers</b></h4>
+
+        <br><br>
+
+        <div class="wrapper">
+
+          <div class="grid">
+            <div class="grid-item">
+              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
+                <span class="speaker-photo">
+                  <a href="https://lihongyang.info/" target="_blank">
+                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
+                      src="../images/event/cvpr/people/hongyang_li.jpeg" alt="Hongyang Li" itemprop="image">
+                    <br><br>
+                    <h1 style=" text-align:center; white-space: nowrap;">Hongyang Li</h1>
+
+                  </a>
+                  <h1 style=" text-align:center;font-size:.7em;">Shanghai AI Lab</h1>
+
+                </span>
+
+              </li>
+            </div>
+            <div class="grid-item">
+              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
+                <span class="speaker-photo">
+                  <a href="https://kashyap7x.github.io/" target="_blank">
+                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
+                      src="../images/event/cvpr/people/kashyap_chitta.jpeg" alt="Kashyap Chitta" itemprop="image">
+                    <br><br>
+
+                    <h1 style=" text-align:center;white-space: nowrap;"> Kashyap Chitta </h1>
+                  </a>
+
+                  <h1 style="text-align:center;font-size:.7em;">Univeristy of Tübingen
+                  </h1>
+                </span>
+              </li>
+            </div>
+            <div class="grid-item">
+              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
+                <span class="speaker-photo">
+                  <a href="https://sites.google.com/it-caesar.de/homepage/?pli=1" target="_blank">
+                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
+                      src="../images/event/cvpr/people/HolgerCaesar.jpeg" itemprop="image">
+                    <br><br>
+                    <h1 style="text-align:center;"> Holger Caesar</h1>
+                  </a>
+
+
+                  <h1 style="text-align:center;font-size:.7em;">TU Delft</h1>
+
+                </span>
+              </li>
+            </div>
+
+
+            <div class="grid-item">
+              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
+                <span class="speaker-photo">
+                  <a href="https://shenlong.web.illinois.edu" target="_blank">
+                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
+                      src="../images/event/cvpr/people/ShenlongWang.jfif" alt="Shenlong Wang" itemprop="image">
+                    <br><br>
+
+                    <h1 style="text-align:center;"> Shenlong Wang</h1>
+
+                  </a>
+                  <h1 style="text-align:center;font-size:.7em;"> UIUC</h1>
+                </span>
+              </li>
+            </div>
+            <div class="grid-item">
+              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
+                <span class="speaker-photo">
+                  <a href="https://liuziwei7.github.io" target="_blank">
+                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
+                      src="../images/event/cvpr/people/ZiweiLiu.png" alt="Ziwei Liu" itemprop="image">
+                    <br><br>
+                    <h1 style="text-align:center;">Ziwei Liu</h1>
+                  </a>
+
+                  <h1 style="text-align:center;font-size:.7em;">NTU</h1>
+                </span>
+              </li>
+            </div>
+            <div class="grid-item">
+              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
+                <span class="speaker-photo">
+                  <a href="https://tai-wang.github.io/" target="_blank">
+                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
+                      src="../images/event/cvpr/people/wangtai.jpg"  itemprop="image">
+                    <br><br>
+                    <h1 style="text-align:center;">Tai Wang</h1>
+                  </a>
+
+                  <h1 style="text-align:center;font-size:.7em;">CUHK</h1>
+                </span>
+              </li>
+            </div>
+          </div>
+        </div>
+
+
+        <h4><b>Challenge Organizers</b></h4>
+        <br>
+        <h1 style="font-size:1em;">Track 1: OpenLane Topolopy Challenge</h1>
+        <br>
+
+        <div class="wrapper">
+
+          <div class="grid">
+            <div class="grid-item">
+              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
+                <span class="speaker-photo">
+                  <!-- <a target="_blank"> -->
+                    <img class="photo" src="../images/event/cvpr/people/yangli.jpeg"
+                      style="width: 200px;border-radius:100%; overflow:hidden;" itemprop="image">
+                    <br><br>
+                    <h1 style="text-align:center;"> Yang Li</h1>
+                  </a>
+                  <h1 style="text-align:center;font-size:.7em;">Shanghai AI Lab
+                  </h1>
+                </span>
+              </li>
+            </div>
+            <div class="grid-item">
+              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
+                <span class="speaker-photo">
+                  <!-- <a target="_blank"> -->
+                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
+                      src="../images/event/cvpr/people/wenfeng.jpg" alt="Feng Wen" itemprop="image"> <br><br>
+
+                    <h1 style="text-align:center;"> Feng Wen</h1>
+                  </a>
+                  </h1>
+                  <h1 style="text-align:center;font-size:.7em;">Huawei</h1>
+                </span>
+              </li>
+            </div>
+
+<!--             <div class="grid-item">
+              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
+                <span class="speaker-photo">
+                <a target="_blank"> 
+                    <img class="photo" src="../images/event/cvpr/people/none.png"
+                      style="width: 200px;border-radius:100%; overflow:hidden;" itemprop="image">
+                    <br><br>
+                    <h1 style="text-align:center;font-size:0.5em;"> Yicheng Wang</h1>
+                  </a>
+                  <h1 style="text-align:center;font-size:0.5em;"> Tsinghua University
+                  </h1>
+                </span>
+              </li>
+            </div> -->
+
+            <div class="grid-item">
+              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
+                <span class="speaker-photo">
+                  <a href="https://scholar.google.com/citations?user=-CJ5LkMAAAAJ&hl=zh-CN" target="_blank">
+                    <img class="photo" src="../images/event/cvpr/people/chunjingxu.jfif"
+                      style="width: 200px;border-radius:100%; overflow:hidden;" alt="Yang Li" itemprop="image">
+                    <br><br>
+                    <h1 style="text-align:center;"> Chunjing Xu</h1>
+                  </a>
+                
+                  <h1 style="text-align:center;font-size:.7em;"> Huawei</h1>
+                </span>
+              </li>
+            </div>
+
+            <div class="grid-item">
+              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
+                <span class="speaker-photo">
+                  <a href="https://xuhangcn.github.io/" target="_blank">
+                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
+                      src="../images/event/cvpr/people/HangXu.jfif" itemprop="image">
+                    <br><br>
+                    <h1 style="text-align:center;"> Hang Xu</h1>
+                  </a>
+                  <h1 style="text-align:center;font-size:0.7em;">Huawei
+                  </h1>
+                </span>
+              </li>
+            </div>
+
+
+          </div>
+        </div>
+
+        <h1 style="font-size:1em;"> Track 2: Online HD Map Construction Challenge</h1>
+        <br><br>
+
+        <div class="wrapper">
+
+          <div class="grid">
+            <div class="grid-item">
+              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
+                <span class="speaker-photo">                  
+                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
+                      src="../images/event/cvpr/people/yichengliu.jpg" itemprop="image">
+                    <br><br>
+                    <h1 style="text-align:center;">Yicheng Liu</h1>
+                  <h1 style="text-align:center;font-size:0.7em;">Tsinghua University
+                  </h1>
+                </span>
+              </li>
+            </div>
+
+            <div class="grid-item">
+              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
+                <span class="speaker-photo">
+                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
+                      src="../images/event/cvpr/people/yuantianyuan.jpg" itemprop="image">
+                    <br><br>
+                    <h1 style="text-align:center;">Tianyuan Yuan
+                  </h1>
+                  <h1 style="text-align:center;font-size:0.7em;">Tsinghua University
+                  </h1>
+                </span>
+              </li>
+            </div>
+
+
+
+           
+          </div>
+
+
+        <h1 style="font-size:1em;"> Track 3: 3D Occupancy Prediction Challenge</h1>
+
+        <br><br>
+
+        <div class="wrapper">
+
+          <div class="grid">
+            <div class="grid-item">
+              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
+                <span class="speaker-photo">
+                  <a href="https://hangzhaomit.github.io/" target="_blank">
+                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
+                      src="../images/event/cvpr/people/hangzhao.jpeg" itemprop="image">
+                    <br><br>
+                    <h1 style="text-align:center;">Hang Zhao</h1>
+                  </a>
+                  <h1 style="text-align:center;font-size:0.7em;">Tsinghua University
+                  </h1>
+                </span>
+              </li>
+            </div>
+
+            <div class="grid-item">
+              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
+                <span class="speaker-photo">
+                  <a href="https://yuewang.xyz/" target="_blank">
+                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
+                      src="../images/event/cvpr/people/yuewang.png" itemprop="image">
+                    <br><br>
+                    <h1 style="text-align:center;">Yue Wang
+                  </a>
+                  </h1>
+                  <h1 style="text-align:center;font-size:0.7em;">NVIDIA
+                  </h1>
+                </span>
+              </li>
+            </div>
+
+
+
+            <div class="grid-item">
+              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
+                <span class="speaker-photo">
+                  <a href="https://scholar.google.com/citations?user=dgYJ6esAAAAJ&hl=en" target="_blank">
+                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
+                      src="../images/event/cvpr/people/chonghao_sima.jpeg" itemprop="image">
+                    <br><br>
+                    <h1 style="text-align:center;">Chonghao Sima
+                  </a>
+                  </h1>
+                  <h1 style="text-align:center;font-size:0.7em;">Shanghai AI Lab
+                  </h1>
+                </span>
+              </li>
+            </div>
+            <div class="grid-item">
+              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
+                <span class="speaker-photo">
+                  <a href="https://scholar.google.com/citations?user=zdgKJXIAAAAJ&hl=en" target="_blank">
+                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
+                      src="../images/event/cvpr/people/lewei_lu.jpg" itemprop="image">
+                    <br><br>
+
+                    <h1 style="text-align:center;"> Lewei Lu</h1>
+                  </a>
+                  
+                  <h1 style="text-align:center;font-size:0.7em;"> SenseTime</h1>
+                  </p>
+                </span>
+              </li>
+            </div>
+
+
+
+          </div>
+        </div>
+
+        <h1 style="font-size:1em;"> Track 4: nuPlan Planning Challenge</h1>
+
+        <br><br>
+
+        <div class="wrapper">
+
+          <div class="grid">
+            <div class="grid-item">
+              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
+                <span class="speaker-photo">
+                  <a href="https://sg.linkedin.com/in/pat-karn" target="_blank">
+                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
+                      src="../images/event/cvpr/people/PatKarnchanachari.jpg"  itemprop="image">
+                    <br><br>
+                    <h1 style="text-align:center;"> Pat<br> Karnchanachari</h1>
+                  </a>
+                  
+                  <h1 style="text-align:center;font-size:0.7em;"> Motional</h1>
+                  
+                </span>
+              </li>
+            </div>
+            <div class="grid-item">
+              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
+                <span class="speaker-photo">
+                  <a href="https://sg.linkedin.com/in/geromidg" target="_blank">
+                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
+                      src="../images/event/cvpr/people/DimitrisGeromichalos.jpg" alt="Feng Wen" itemprop="image">
+                    <br><br>
+
+                    <h1 style="text-align:center;"> Dimitris<br> Geromichalos
+                    </h1>
+                  </a>
+                  <h1 style="text-align:center;font-size:0.7em;">Motional</h1>
+                  
+                </span>
+              </li>
+            </div>
+            <div class="grid-item">
+              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
+                <span class="speaker-photo">
+                  <a href="https://sites.google.com/it-caesar.de/homepage/?pli=1" target="_blank">
+                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
+                      src="../images/event/cvpr/people/HolgerCaesar.jpeg" itemprop="image">
+                    <br><br>
+                    <h1 style="text-align:center;"> Holger<br> Caesar </h1>
+                  </a>
+
+
+                  <h1 style="text-align:center;font-size:0.7em;">TU Delft</h1>
+
+                </span>
+              </li>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Steering Committee -->
+
+
+  <div class="wrapper row2">
+    <main class="hoc container clear">
+      <div class="fl_left btmspace-10">
+        <h3><b>Steering Committee</b></h3>
+
+        <div class="wrapper">
+
+          <div class="grid">
+            <div class="grid-item">
+              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
+                <span class="speaker-photo">
+                  <a href="https://scholar.google.com/citations?user=gFtI-8QAAAAJ&hl=en" target="_blank">
+                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
+                      src="../images/event/cvpr/people/qy-avator.jpg" itemprop="image">
+                    <br><br>
+                    <h1 style="text-align:center;"> Yu Qiao
+                  </a>
+                  </h1>
+                  <h1 style="text-align:center;font-size:0.7em;">Shanghai AI Lab
+                  </h1>
+                </span>
+              </li>
+            </div>
+
+            <div class="grid-item">
+              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
+                <span class="speaker-photo">
+                  <a href="http://dahua.site/" target="_blank">
+                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
+                      src="../images/event/cvpr/people/dahua.png" itemprop="image">
+                    <br><br>
+                    <h1 style="text-align:center;"> Dahua Lin
+                  </a>
+                  </h1>
+                  <h1 style="text-align:center;font-size:0.7em;">Shanghai AI Lab
+                  </h1>
+                </span>
+              </li>
+            </div>
+
+            <div class="grid-item">
+              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
+                <span class="speaker-photo">
+                  <a href="https://www.ee.cuhk.edu.hk/~xgwang/" target="_blank">
+                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
+                      src="../images/event/cvpr/people/XiaogangWang.jfif" itemprop="image">
+                    <br><br>
+                    <h1 style="text-align:center;"> Xiaogang Wang
+                  </a>
+                  </h1>
+                  <h1 style="text-align:center;font-size:0.7em;">SenseTime
+                  </h1>
+                </span>
+              </li>
+            </div>
+
+
+
+
+
+            <div class="grid-item">
+              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
+                <span class="speaker-photo">
+                  <a href="https://wlouyang.github.io" target="_blank">
+                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
+                      src="../images/event/cvpr/people/WanliOuyang.jpg" itemprop="image">
+                    <br><br>
+                    <h1 style="text-align:center;">Wanli Ouyang</h1>
+                  </a>
+                  
+                  <h1 style="text-align:center;font-size:0.7em;">Shanghai AI Lab</h1>
+                </span>
+              </li>
+            </div>
+
+            <div class="grid-item">
+              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
+                <span class="speaker-photo">
+                  <a href="https://jifengdai.org" target="_blank">
+                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
+                      src="../images/event/cvpr/people/JifengDai.jpg" alt="Jifeng Dai" itemprop="image">
+                    <br><br>
+                    <h1 style="text-align:center;"> Jifeng Dai</h1>
+                  </a>
+                  
+                  <h1 style="text-align:center;font-size:0.7em;">Tsinghua / Shanghai AI Lab</h1>
+                </span>
+              </li>
+            </div>
+
+
+            <div class="grid-item">
+              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
+                <span class="speaker-photo">
+                  <a href="https://thinklab.sjtu.edu.cn/" target="_blank">
+                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
+                      src="../images/event/cvpr/people/yanjunchi.jpeg"  itemprop="image">
+                    <br><br>
+                    <h1 style="text-align:center;"> Junchi Yan</h1>
+                  </a>
+                  
+                  <h1 style="text-align:center;font-size:0.7em;">Shanghai Jiao Tong University</h1>
+                </span>
+              </li>
+            </div>
+
+
+            <div class="grid-item">
+              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
+                <span class="speaker-photo">
+                  <a href="https://www.cvlibs.net/" target="_blank">
+                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
+                      src="../images/event/cvpr/people/AndreasGeiger.jpg"  itemprop="image">
+                    <br><br>
+                    <h1 style="text-align:center;">Andreas Geiger</h1>
+                  </a>
+                  
+                  <h1 style="text-align:center;font-size:0.7em;">University of Tübingen</h1>
+                </span>
+              </li>
+            </div>
+
+
+<!--             <div class="grid-item">
+
+              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
+                <span class="speaker-photo">
+                  <a href="https://www.ee.cuhk.edu.hk/~xgwang/" target="_blank">
+                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
+                      src="../images/event/cvpr/shijianping.jpg" itemprop="image">
+                    <br><br>
+                    <h1 style="text-align:center;font-size:0.5em;"> Jianping Shi</h1>
+                  </a>
+                  
+                  <h1 style="text-align:center;font-size:0.5em;">SenseTime
+                  </h1>
+                </span>
+              </li>
+            </div> -->
+
+
+
+          </div>
+        </div>
+
+
+    </main>
+
+  </div>
+  </div>
+
+  
+  <!-- Acknowledgment -->
+  <div class="wrapper row3" style="top: -100px;">
+    <section class="hoc container clear">
+      <div class="fl_left btmspace-10">
+
+        <!-- ################################################################################################ -->
+        <h3><b>Acknowledgment</b></h3>
+        <!-- ################################################################################################ -->
+          <p style="line-height: 1.5; font-family: 'Times New Roman', Times, serif;font-size: 0.8em;">
+            Thanks for the contributions from the following: <topic>Huijie Wang, Li Chen, Xiangwei Geng, Conghui He, Yuting Wang, Shengyin Jiang, Junjie Hou, 
+              Xiaoyu Tian, Fei Long, Tao Jiang, Wenwen Tong, Tianhao Ma.
+            </topic>
+          
+        </p>
+          
+
+
+
+    </section>
+  </div>
+
+    <!-- Sponsors -->
+  <div class="wrapper row1" style="top: -100px;">
+    <section class="hoc container clear">
+      <div class="fl_left btmspace-10">
+
+        <!-- ################################################################################################ -->
+        <h3><b>Sponsors</b></h3>
+        <!-- ################################################################################################ -->
+        <div class="wrapper">
+
+          <div class="grid">
+            <div class="grid-item">
+              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
+                <span class="speaker-photo">
+                  <a href="https://www.huawei.com/en/" target="_blank">
+                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
+                      src="../images/event/cvpr/Huawei-sq.jpeg" itemprop="image">
+                    <br><br>
+                    <h1 class="speakers-name" style="text-align:center;font-size: 1em;white-space: nowrap;"> 
+
+                    </h1>
+                  </a>
+
+                </span>
+              </li>
+            </div>
+            <div class="grid-item">
+              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
+                <span class="speaker-photo">
+                  <a href="https://www.sensetime.com/en" target="_blank">
+                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
+                      src="../images/event/cvpr/sensetime_char.jpeg" itemprop="image"> <br><br>
+
+                    <h1 class="speakers-name" style="text-align:center;font-size: 1em;white-space: nowrap;"> </h1>
+                  </a>
+                  
+                </span>
+              </li>
+            </div>
+            <div class="grid-item">
+              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
+                <span class="speaker-photo">
+                  <a href="https://www.nvidia.com/en" target="_blank">
+                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
+                      src="../images/event/cvpr/nvidia.jpg" itemprop="image"> <br><br>
+
+                    <h1 class="speakers-name" style="text-align:center;font-size: 1em;white-space: nowrap;"> </h1>
+                  </a>
+                  
+                </span>
+              </li>
+            </div>
+
+            <div class="grid-item">
+              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
+                <span class="speaker-photo">
+                  <a href="https://www.hp.com/" target="_blank">
+                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
+                      src="../images/event/cvpr/hp.png" itemprop="image"> <br><br>
+
+                    <h1 class="speakers-name" style="text-align:center;font-size: 1em;white-space: nowrap;">
+                      </h1>
+                  </a>
+                  
+                </span>
+              </li>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+  <div class="wrapper row4">
+    <footer id="footer" class="hoc clear"> 
+      <!-- ################################################################################################ -->
+      <div class="center btmspace-50">
+        <h6 class="heading">OpenDriveLab</h6>
+        <nav>
+          <ul class="nospace inline pushright uppercase">
+            <li><a style="color: #FFA500;"href="../index.html"><i class="fas fa-lg fa-home"></i></a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- ################################################################################################ -->
+    </footer>
+  </div>
+
+
+
+  <div class="wrapper row5">
+    <div id="copyright" class="hoc clear">
+      <h1 class="fl_left">Copyright &copy; 2023 - All Rights Reserved - <a href="http://opendrivelab.com/">OpenDriveLab at Shanghai AI Lab</a>
+      </h1>
+
+    </div>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+  <!-- JAVASCRIPTS -->
+  <script src="layout/scripts/jquery.min.js"></script>
+  <script src="layout/scripts/jquery.backtotop.js"></script>
+  <script src="layout/scripts/jquery.mobilemenu.js"></script>
   <style>
     a_box {
       text-decoration: none;
@@ -225,923 +1361,124 @@ Licence URI: https://www.os-templates.com/template-terms
     }
   </style>
 
+  <script>
+    var countDownDate = new Date("Oct 01, 2022 23:59:59 UTC").getTime();
+    countDownDate = countDownDate + 1000 * 3600 * 12
+    var x = setInterval(function () {
+      var now = new Date().getTime();
+      console.log(now)
+      var distance = countDownDate - now;
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      var countdown = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+      console.log(countdown)
+
+
+      if (distance < 0) {
+        clearInterval(x);
+        countdown = "(expired)";
+      }
+      document.getElementById("countdown").innerHTML = countdown
+    }, 1000);
+  </script>
+
+  <script type = "text/javascript" >
+  function switchNightMode() {
+      var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || "0";
+      if (night == "0") {
+          document.body.classList.add("night");
+          document.cookie = "night=1;path=/";
+          console.log("夜间模式开启")
+      } else {
+          document.body.classList.remove("night");
+          document.cookie = "night=0;path=/";
+          console.log("夜间模式关闭")
+      }
+  } (function() {
+      if (document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") === "") {
+          if (new Date().getHours() > 23 || new Date().getHours() < 6) {
+              document.body.classList.add("night");
+              document.cookie = "night=1;path=/";
+              console.log("夜间模式开启")
+          } else {
+              document.body.classList.remove("night");
+              document.cookie = "night=0;path=/";
+              console.log("夜间模式关闭")
+          }
+      } else {
+          var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || "0";
+          if (night == "0") {
+              document.body.classList.remove("night")
+          } else {
+              if (night == "1") {
+                  document.body.classList.add("night")
+              }
+          }
+      }
+  })();
+  </script>
+
+<script type="text/javascript">
+  function time_zone(){
+
+    var Time_hour_select = document.getElementsByName("time_hour_seleting");
+    var data_select = document.getElementsByName("data_seleting");
+    var o_time = document.getElementById("operator");
+    var op_timezone=o_time.options[o_time.selectedIndex].value;//在下拉列表中选中选择的值
+    console.log(op_timezone)
+
+    // If you want to change the schedule, remember to change the list [Time_hour_select_base] in the function
+    var Time_hour_select_base = [9, 9, 9, 10, 10, 11, 12, 13, 14, 14, 14, 15, 16, 17, 18]
+    var date_select_base = [18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18 ]
 
 
 
-  <!-- ##### Challenges #### -->
-  <div class="wrapper row4 ">
-    <main class="hoc container clear">
-      <div class="fl_left btmspace-80">
+    for(var j=0; j < Time_hour_select.length; j++) { 
+      Time_hour_select[j].innerHTML= adjust_number(change(Time_hour_select_base[j]) + change(op_timezone));
+      data_select[j].innerHTML= adjust_number_data((change(Time_hour_select_base[j]) + change(op_timezone)), date_select_base[j]);
 
-        <h4 id="Challenges"><b>Challenges</b></h4>
-
-        <li style="list-style-type:disc"> 
-          We are proud to announce <b>three</b> brand-new challenges this year, in collaboration with our partners - 
-          <a href="https://www.vcad.site/">Vision-Centric Autonomous Driving Workshop</a> and the <a href="https://nuplan-devkit.readthedocs.io/en/latest/competition.html">nuPlan team from Motional</a>.
-          For challenge details, please visit the <a href="../AD23Challenge.html">challenge website</a>.
-        </li>
-         <br>
-        <li style="list-style-type:disc"> The challenge is not <b style="color:#fcb747;">solely</b> about winning top place with tricks and ensembles. Each track is set with cash prize to award both top entries
-         <b style="color:#fcb747;">as well as </b> 
-       innovative submissions. The award committee will select the most innovative submissions to present their work live.
-       <!-- Hongyang: Do NOT delete the following; it would affect follow-up font size -->
-          <!-- <b style="color:#fcb747;font-size:1.8rem"> -->
-        </li>
-        <br><br>
-
-        <ul class="nospace group element btmspace-80">
-            <!-- /*<b style="font-size:1.8rem">          */ -->
-          <li class="one_third first">
-
-            <article>
-              <a href="../AD23Challenge.html#Track1"><img src="../images/event/cvpr/Topology.jpg" alt=""
-                  style="height:400px;width: 320px;" alt=""></a>
-              <div class="txtwrap">
-
-                <h1 style="font-size:1.4rem">OpenLane Topology Challenge</h1>
-<!--                 <p style="font-size:1rem;color: rgb(106, 105, 105);"> Perception and Reasoning Benchmark for Scene
-                  Structure</p> -->
-                <p style="font-size:1rem;color: rgb(106, 105, 105);"> World's First Topology Reasoning Benchmark for Scene
-                  Structure. </p> 
-                  <!-- Go beyond laneline detection as 2D segmentation.  -->
-                <footer style="color:#fcb747;font-size:1rem"><a href="../AD23Challenge.html#Track1">Read More</a>
-                </footer>
-              </div>
-
-            </article>
-
-          </li>
-          <li class="one_third">
-            <article> <a href="../AD23Challenge.html#Track2"><img src="../images/event/cvpr/occ.jpg" style="height:400px;width: 300px;" alt=""></a>
-              <div class="txtwrap">
-                <h1 style="font-size:1.4rem">Occupancy Prediction Challenge</h1>
-                <p style="font-size:1rem;color: rgb(106, 105, 105);"> Occupancy as New Representation for General Object Perception.</p>
-
-                <footer style="color:#fcb747;font-size:1rem"><a href="../AD23Challenge.html#Track2">Read More</a></footer>
-              </div>
-            </article>
-          </li>
-          <li class="one_third">
-            <article><a href="https://eval.ai/web/challenges/challenge-page/1856/overview"><img src="../images/event/cvpr/nuPlan_overview_v2.png" style="height:400px;width: 300px;" alt=""></a>
-              <div class="txtwrap">
-                <h1 style="font-size:1.4rem"> nuPlan Planning Challenge</h1>
-                <p style="font-size:1rem;color: rgb(106, 105, 105);"> World's First Large-scale Planning Benchmark
-                  with Raw Sensor Input, End-to-end.</p>
-                  
-                <footer style="color:#fcb747;font-size:1rem"><a
-                     href="https://eval.ai/web/challenges/challenge-page/1856/overview">
-                  Read More</a></footer>
-              </div>
-            </article>
-          </li>
-        </ul>
-        <!-- <h2 id="Challenges"><b>General Rules</b></h2> -->
-
-        <!--  <b style="color:#fcb747;> -->
-        <h2 style="font-size:2rem">General Rules at a Glance</h2>
-
-        <li style="list-style-type:disc"> 
-          Each track runs in parallel and would not affect the others. That being said, one can claim <b style="color:#fcb747;">multiple</b> awards.
-        </li>
-        <li style="list-style-type:disc"> 
-          We organizers unanimously agree that research should be equal to everyone in the world and apart from other factors. As such, <b style="color:#fcb747;">all</b> compancies/individuals, regardless of region/belief/etc. can participate in the challenges.  
-        </li>
-        <li style="list-style-type:disc">Workshop organizers and their teams <b style="color:#fcb747;">can</b> participate in a particular track, as long as they are concealed from test data and not a member of the Award Committee.</li>
-        <li style="list-style-type:disc">Each team in one track can upload results to test server <b style="color:#fcb747;">up to twice a week</b>. Any endeavors found to hack test data/annotation will lead to disqualification from the competition.</li>
-
-        <br>
-        <i>For more details, please refer to the full rules <a href="../AD23Challenge.html#rules">here</a>.</i>
+    }
 
 
-    </main>
+
+  }
+    function change(x){
+      return parseFloat(x)
+    }
+
+    function adjust_number(x){
+      if (parseFloat(x)>=parseFloat(24)){
+        x = parseFloat(x)-parseFloat(24);
+      }
+      if (parseFloat(x)<parseFloat(0)){
+        x = parseFloat(x)+parseFloat(24);
+      }
+      return parseFloat(x)
+    }
+
+    function adjust_number_data(x, y){
+      if (parseFloat(x)>=parseFloat(24)){
+        x = parseFloat(x)-parseFloat(24);
+        y = parseFloat(y)+parseFloat(1);
+      }
+      if (parseFloat(x)<parseFloat(0)){
+        x = parseFloat(x)+parseFloat(24);
+        y = parseFloat(y)-parseFloat(1);
+
+      }
+      return parseFloat(y)
+    }
     
-  </div>
+  </script>
 
 
- <!-- Speakers -->
 
-  <div class="wrapper row2">
-    <section class="hoc container clear">
-      <!-- ################################################################################################ -->
 
-      <h3><b>Speakers</b></h3>
 
- <!-- Hongyang: Do NOT delete the following; it would affect follow-up font size -->
-       <b style="font-size:1.8rem">
 
-      <ul class="nospace group">
 
-        <li class="one_third first" itemtype="http://schema.org/Person">
-
-          <span class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
-            <a href="https://www.cs.cmu.edu/~deva/" target="_blank">
-              <img class="photo" style="width: 200px;height:200px;right: 20px;"
-                src="../images/event/cvpr/people/Deva Ramanan.jfif" alt="Deva Ramanan" itemprop="image"></a>
-          </span>
-          <h1 style="font-size:0.7em"><a href="https://www.cs.cmu.edu/~deva/" target="_blank" title="Deva Ramanan"> Deva Ramanan </a>
-            <br>
-            <i>Professor</i><br>Carnegie Mellon University, USA</i>
-            <br>
-            <!-- <a_box><img style="width: 16px;height:16px;" src="../images/event/cvpr/skack.jpg"><a href="  " style="color: white;">Ask questions on Slack</a></a_box> -->
-          </h1>
-
-        </li>
-
-        <li class="one_third " itemtype="http://schema.org/Person">
-          <span class="speaker-photo">
-            <a href="https://www2.eecs.berkeley.edu/Faculty/Homepages/svlevine.html" target="_blank">
-              <img class="photo" style="width: 200px;height:200px" src="../images/event/cvpr/people/Sergey Levine.jfif"
-                alt="" itemprop="image"></a>
-          </span>
-          <h1 class="speakers-name;" style="font-size:0.7em"><a href="https://people.eecs.berkeley.edu/~svlevine/" target="_blank"
-              title="Sergey Levine">Sergey Levine </a>
-            <br>
-            <i>Associate Professor</i><br>UC Berkeley, USA
-            <br>
-            <!-- <a_box><img style="width: 16px;height:16px;" src="../images/event/cvpr/skack.jpg"><a href="  " style="color: white;">Ask questions on Slack</a></a_box> -->
-
-          </h1>
-          <!-- </li> -->
-        </li>
-
-        <li class="one_third" itemprop="performer">
-          <span class="speaker-photo">
-            <a href="https://alvarezlopezjosem.github.io" target="_blank">
-              <img class="photo" style="width: 200px;height:200px"
-                src="../images/event/cvpr/people/jose_alvarez.jpg" alt="Jose M. Alvarez" itemprop="image"></a>
-          </span>
-
-          <h1 class="speakers-name" style="font-size:0.7em"><a href="https://alvarezlopezjosem.github.io" target="_blank"
-              title="Jose M. Alvarez"> Jose M. Alvarez </a>
-            <br>
-            <i>Senior Research Manager</i><br>NVIDIA, USA
-            <br>
-            <!-- <a_box><img style="width: 16px;height:16px;" src="../images/event/cvpr/skack.jpg"><a href="  " style="color: white;">Ask questions on Slack</a></a_box> -->
-
-          </h1>
-        </li>
-
-
-      </ul>
-
-
-      <ul class="nospace group">
-
-
-        <li class="one_third first" itemprop="performer">
-          <span class="speaker-photo">
-            <a href="https://www.linkedin.com/in/chaiyuning" target="_blank">
-              <img class="photo" style="width: 200px;height:200px" src="../images/event/cvpr/people/Yuning Chai.jfif"
-                alt="Yuning Chai" itemprop="image"></a>
-          </span>
-
-          <h1 class="speakers-name;" style="font-size:0.7em"><a href="https://www.linkedin.com/in/chaiyuning" target="_blank"
-              title="Yuning Chai"> Yuning Chai </a>
-            <br>
-            <i>Head of AI Research</i><br>Cruise, USA</i>
-            <br>
-            <!-- <a_box><img style="width: 16px;height:16px;" src="../images/event/cvpr/skack.jpg"><a href="  " style="color: white;">Ask questions on Slack</a></a_box> -->
-
-          </h1>
-
-        </li>
-
-        <li class="one_third" itemprop="performer">
-          <span class="speaker-photo">
-            <a href="https://www.johnemmons.com" target="_blank">
-              <img class="photo" style="width: 200px;height:200px" src="../images/event/cvpr/people/John Emmons.jfif"
-                itemprop="image"></a>
-          </span>
-
-          <h1 class="speakers-name" style="font-size:0.7em"><a href="https://www.johnemmons.com" target="_blank" title="John Emmons"> John
-              Emmons </a>
-            <br>
-            <i>Senior Engineering Manager</i><br>Tesla, USA
-            <br>
-            <!-- <a_box><img style="width: 16px;height:16px;" src="../images/event/cvpr/skack.jpg"><a href="  " style="color: white;">Ask questions on Slack</a></a_box> -->
-
-
-          </h1>
-
-
-          <!-- </li> -->
-        </li>
-
-        <li class="one_third" itemprop="performer">
-          <span class="speaker-photo">
-            <a href="https://alexgkendall.com" target="_blank">
-              <img class="photo" style="width: 200px;height:200px" src="../images/event/cvpr/people/Alex Kendall.jfif"
-                itemprop="image"></a>
-          </span>
-
-          <h1 class="speakers-name" style="font-size:0.7em"><a href="https://alexgkendall.com" target="_blank" title="Alex Kendall"> Alex
-              Kendall </a>
-            <br>
-            <i>CEO</i><br> Wayve, UK</i>
-            <br>
-            <!-- <a_box><img style="width: 16px;height:16px;" src="../images/event/cvpr/skack.jpg"><a href="  " style="color: white;">Ask questions on Slack</a></a_box> -->
-
-
-          </h1>
-
-        </li>
-
-      </ul>
-
-      <!-- ################################################################################################ -->
-    </section>
-  </div>
-
-
- <!-- Hongyang: Do NOT delete the following; it would affect follow-up font size -->
-       <b style="color:#fcb747;font-size:1.3rem">
-  
-  <!-- ##### Schedule #### -->
-  <div class="wrapper row1">
-    <main class="hoc container clear">
-      <!-- ################################################################################################ -->
-      <h4><b>Schedule</b></h4>
-
-      <div class="schedule-tbl">
-        <!-- main body -->
-        <!-- ################################################################################################ -->
-        <!-- <h1 style="font-size:0.6em"> -->
-        <h1>
-        <table>
-          <thead>
-            <tr>
-              <th class="schedule-time">Time</th>
-              <th class="schedule-slot">Speaker</th>
-              <th class="schedule-description">Theme</th>
-            </tr>
-          </thead>
-          <tbody>
-
-            <tr>
-              <td class="schedule-time">9:00</td>
-              <td class="schedule-slot">
-                Hongyang Li, 
-                <span class="speakers-company">Shanghai AI Lab</span>
-              </td>
-              <td class="schedule-description">Welcome and opening remarks</td>
-            </tr>
-
-            <tr>
-              <td class="schedule-time">9:10</td>
-              <td class="schedule-slot">
-                Speaker 1 <span class="speakers-company"></span>
-              </td>
-              <td class="schedule-description">Awesome Talk</td>
-            </tr>
-
-            <tr>
-              <td class="schedule-time">9:45</td>
-              <td class="schedule-slot">
-                Speaker 2 <span class="speakers-company"></span>
-              </td>
-              <td class="schedule-description">Awesome Talk</td>
-            </tr>
-
-            <tr>
-              <td class="schedule-time">10:20</td>
-              <td class="schedule-slot">
-                Coffee Break <span class="speakers-company"></span>
-              </td>
-              <td class="schedule-description"></td>
-            </tr>
-
-            <tr>
-              <td class="schedule-time">10:30 - 11:30</td>
-              <td class="schedule-slot">
-                Organizers and Winners<span class="speakers-company"></span>
-              </td>
-              <td class="schedule-description">Track 1: OpenLane Topology Challenge</td>
-            </tr>
-
-            <tr>
-              <td class="schedule-time">11:30</td>
-              <td class="schedule-slot">
-                Speaker 3<span class="speakers-company"></span>
-              </td>
-              <td class="schedule-description">Awesome Talk</td>
-            </tr>
-
-            <tr>
-              <td class="schedule-time">12:05 - 13:30</td>
-              <td class="schedule-slot">
-                Lunch Break <span class="speakers-company"></span>
-              </td>
-              <td class="schedule-description"></td>
-            </tr>
-
-            <tr>
-              <td class="schedule-time">13:30</td>
-              <td class="schedule-slot">
-                Speaker 4 <span class="speakers-company"></span>
-              </td>
-              <td class="schedule-description">Awesome Talk</td>
-            </tr>
-
-            <tr>
-              <td class="schedule-time">14:05</td>
-              <td class="schedule-slot">
-                Speaker 5 <span class="speakers-company"></span>
-              </td>
-              <td class="schedule-description">Awesome Talk</td>
-            </tr>
-
-            <tr>
-              <td class="schedule-time">14:40</td>
-              <td class="schedule-slot">
-                Coffee Break <span class="speakers-company"></span>
-              </td>
-              <td class="schedule-description"></td>
-            </tr>
-
-            <tr>
-              <td class="schedule-time">14:50 - 15:50</td>
-              <td class="schedule-slot">
-                Organizers and Winners<span class="speakers-company"></span>
-              </td>
-              <td class="schedule-description">Track 3: nuPlan Planning Challenge</td>
-            </tr>
-
-            <tr>
-              <td class="schedule-time">15:50</td>
-              <td class="schedule-slot">
-                Speaker 6<span class="speakers-company"></span>
-              </td>
-              <td class="schedule-description">Awesome Talk</td>
-            </tr>
-
-            <tr>
-              <td class="schedule-time">16:30 - 17:30</td>
-              <td class="schedule-slot">
-                <!-- <span class="speaker-photo-00">
-                      <img class="photo" src="../../images/event/2023/hongyang_li.jpeg" alt="Hongyang Li">
-                    </span> -->
-
-                <span class="speakers-company">TBD Moderator</span>
-              </td>
-              <td class="schedule-description">Panel discussion</td>
-            </tr>
-
-
-
-
-          </tbody>
-        </table>
-        
-        Note: Presentation and winners of 
-        <!-- <topic>Track 2: Occupancy Prediction</topic> -->
-        <b>Track 2: Occupancy Prediction</b>  
-        would be scheduled at 
-        <a href="https://www.vcad.site/">Vision-Centric Autonomous Driving Workshop</a>.
-
-      </h1>
-      </div>
-
-    </main>
-  </div>
-
-
-
-   <!-- Hongyang: Do NOT delete the following; it would affect follow-up font size -->
-       <!-- <b style="color:#fcb747;font-size:1.8rem"> -->
-
-
-  <!-- Origanizers -->
-  <div class="wrapper row3">
-    <main class="hoc container clear">
-      <div class="fl_left btmspace-80">
-
-        <h2><b>Workshop Organizers</b></h2>
-
-        <br><br>
-
-        <div class="wrapper">
-
-          <div class="grid">
-            <div class="grid-item">
-              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
-                <span class="speaker-photo">
-                  <a href="https://lihongyang.info/" target="_blank">
-                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
-                      src="../images/event/cvpr/people/hongyang_li.jpeg" alt="Hongyang Li" itemprop="image">
-                    <br><br>
-                    <h1 style=" text-align:center; white-space: nowrap;">Hongyang Li</h1>
-
-                  </a>
-                  <h1 style=" text-align:center;font-size:.8em;">Shanghai AI Lab</h1>
-
-                </span>
-
-              </li>
-            </div>
-            <div class="grid-item">
-              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
-                <span class="speaker-photo">
-                  <a href="https://kashyap7x.github.io/" target="_blank">
-                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
-                      src="../images/event/cvpr/people/kashyap_chitta.jpeg" alt="Kashyap Chitta" itemprop="image">
-                    <br><br>
-
-                    <h1 style=" text-align:center;white-space: nowrap;"> Kashyap Chitta </h1>
-                  </a>
-
-                  <h1 style="text-align:center;font-size:.8em;">Univeristy of Tübingen
-                  </h1>
-                </span>
-              </li>
-            </div>
-            <div class="grid-item">
-              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
-                <span class="speaker-photo">
-                  <a href="https://sites.google.com/it-caesar.de/homepage/?pli=1" target="_blank">
-                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
-                      src="../images/event/cvpr/people/Holger Caesar.jpeg" itemprop="image">
-                    <br><br>
-                    <h1 style="text-align:center;"> Holger Caesar</h1>
-                  </a>
-
-
-                  <h1 style="text-align:center;font-size:.8em;">TU Delft</h1>
-
-                </span>
-              </li>
-            </div>
-
-
-            <div class="grid-item">
-              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
-                <span class="speaker-photo">
-                  <a href="https://shenlong.web.illinois.edu" target="_blank">
-                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
-                      src="../images/event/cvpr/people/Shenlong Wang.jfif" alt="Shenlong Wang" itemprop="image">
-                    <br><br>
-
-                    <h1 style="text-align:center;"> Shenlong Wang</h1>
-
-                  </a>
-                  <h1 style="text-align:center;font-size:.8em;"> UIUC</h1>
-                </span>
-              </li>
-            </div>
-            <div class="grid-item">
-              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
-                <span class="speaker-photo">
-                  <a href="https://liuziwei7.github.io" target="_blank">
-                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
-                      src="../images/event/cvpr/people/Ziwei Liu.png" alt="Ziwei Liu" itemprop="image">
-                    <br><br>
-                    <h1 style="text-align:center;">Ziwei Liu</h1>
-                  </a>
-
-                  <h1 style="text-align:center;font-size:.8em;">NTU</h1>
-                </span>
-              </li>
-            </div>
-            <div class="grid-item">
-              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
-                <span class="speaker-photo">
-                  <a href="https://tai-wang.github.io/" target="_blank">
-                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
-                      src="../images/event/cvpr/people/wangtai.jpg"  itemprop="image">
-                    <br><br>
-                    <h1 style="text-align:center;">Tai Wang</h1>
-                  </a>
-
-                  <h1 style="text-align:center;font-size:.8em;">CUHK</h1>
-                </span>
-              </li>
-            </div>
-          </div>
-        </div>
-
-
-        <h2>Challenge Organizers</h2>
-        <br>
-        <h1 style="font-size:1em;">Track 1: OpenLane Topolopy Track </h1>
-        <br>
-
-        <div class="wrapper">
-
-          <div class="grid">
-            <div class="grid-item">
-              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
-                <span class="speaker-photo">
-                  <!-- <a target="_blank"> -->
-                    <img class="photo" src="../images/event/cvpr/people/yangli.jpeg"
-                      style="width: 200px;border-radius:100%; overflow:hidden;" itemprop="image">
-                    <br><br>
-                    <h1 style="text-align:center;"> Yang Li</h1>
-                  </a>
-                  <h1 style="text-align:center;font-size:.8em;">Shanghai AI Lab
-                  </h1>
-                </span>
-              </li>
-            </div>
-            <div class="grid-item">
-              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
-                <span class="speaker-photo">
-                  <!-- <a target="_blank"> -->
-                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
-                      src="../images/event/cvpr/people/none.png" alt="Feng Wen" itemprop="image"> <br><br>
-
-                    <h1 style="text-align:center;"> Feng Wen</h1>
-                  </a>
-                  </h1>
-                  <h1 style="text-align:center;font-size:.8em;">Huawei</h1>
-                </span>
-              </li>
-            </div>
-
-<!--             <div class="grid-item">
-              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
-                <span class="speaker-photo">
-                <a target="_blank"> 
-                    <img class="photo" src="../images/event/cvpr/people/none.png"
-                      style="width: 200px;border-radius:100%; overflow:hidden;" itemprop="image">
-                    <br><br>
-                    <h1 style="text-align:center;font-size:0.5em;"> Yicheng Wang</h1>
-                  </a>
-                  <h1 style="text-align:center;font-size:0.5em;"> Tsinghua University
-                  </h1>
-                </span>
-              </li>
-            </div> -->
-
-            <div class="grid-item">
-              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
-                <span class="speaker-photo">
-                  <a href="https://scholar.google.com/citations?user=-CJ5LkMAAAAJ&hl=zh-CN" target="_blank">
-                    <img class="photo" src="../images/event/cvpr/people/chunjing xu.jfif"
-                      style="width: 200px;border-radius:100%; overflow:hidden;" alt="Yang Li" itemprop="image">
-                    <br><br>
-                    <h1 style="text-align:center;"> Chunjing Xu</h1>
-                  </a>
-                
-                  <h1 style="text-align:center;font-size:.8em;"> Huawei</h1>
-                </span>
-              </li>
-            </div>
-          </div>
-        </div>
-
-        <h1 style="font-size:1em;"> Track 2: Occupancy Prediction Track</h1>
-
-        <br><br>
-
-        <div class="wrapper">
-
-          <div class="grid">
-            <div class="grid-item">
-              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
-                <span class="speaker-photo">
-                  <a href="https://hangzhaomit.github.io/" target="_blank">
-                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
-                      src="../images/event/2023/hangzhao.jpeg" itemprop="image">
-                    <br><br>
-                    <h1 style="text-align:center;">Hang Zhao</h1>
-                  </a>
-                  <h1 style="text-align:center;font-size:0.8em;">Tsinghua University
-                  </h1>
-                </span>
-              </li>
-            </div>
-
-            <div class="grid-item">
-              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
-                <span class="speaker-photo">
-                  <a href="https://yuewang.xyz/" target="_blank">
-                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
-                      src="../images/event/cvpr/people/yuewang.png" itemprop="image">
-                    <br><br>
-                    <h1 style="text-align:center;">Yue Wang
-                  </a>
-                  </h1>
-                  <h1 style="text-align:center;font-size:0.8em;">NVIDIA
-                  </h1>
-                </span>
-              </li>
-            </div>
-
-
-
-            <div class="grid-item">
-              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
-                <span class="speaker-photo">
-                  <a href="https://scholar.google.com/citations?user=dgYJ6esAAAAJ&hl=en" target="_blank">
-                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
-                      src="../images/event/cvpr/people/chonghao_sima.jpeg" itemprop="image">
-                    <br><br>
-                    <h1 style="text-align:center;">Chonghao Sima
-                  </a>
-                  </h1>
-                  <h1 style="text-align:center;font-size:0.8em;">Shanghai AI Lab
-                  </h1>
-                </span>
-              </li>
-            </div>
-            <div class="grid-item">
-              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
-                <span class="speaker-photo">
-                  <a href="https://scholar.google.com/citations?user=zdgKJXIAAAAJ&hl=en" target="_blank">
-                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
-                      src="../images/event/cvpr/people/none.png" itemprop="image">
-                    <br><br>
-
-                    <h1 style="text-align:center;"> Lewei Lu</h1>
-                  </a>
-                  
-                  <h1 style="text-align:center;font-size:0.8em;"> SenseTime</h1>
-                  </p>
-                </span>
-              </li>
-            </div>
-
-
-
-          </div>
-        </div>
-
-        <h1 style="font-size:1em;"> Track 3: nuPlan Planning Challenge Track
-        </h1>
-
-        <br><br>
-
-        <div class="wrapper">
-
-          <div class="grid">
-            <div class="grid-item">
-              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
-                <span class="speaker-photo">
-                  <a href="https://sg.linkedin.com/in/pat-karn" target="_blank">
-                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
-                      src="../images/event/cvpr/people/Pat Karnchanachari.jpg" alt="Yang Li" itemprop="image">
-                    <br><br>
-                    <h1 style="text-align:center;"> Pat Karnchanachari</h1>
-                  </a>
-                  
-                  <h1 style="text-align:center;font-size:0.8em;"> Motional</h1>
-                  
-                </span>
-              </li>
-            </div>
-            <div class="grid-item">
-              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
-                <span class="speaker-photo">
-                  <a href="https://sg.linkedin.com/in/geromidg" target="_blank">
-                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
-                      src="../images/event/cvpr/people/Dimitris Geromichalos.jpg" alt="Feng Wen" itemprop="image">
-                    <br><br>
-
-                    <h1 style="text-align:center;"> Dimitris Geromichalos
-                    </h1>
-                  </a>
-                  <h1 style="text-align:center;font-size:0.8em;">Motional</h1>
-                  
-                </span>
-              </li>
-            </div>
-            <div class="grid-item">
-              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
-                <span class="speaker-photo">
-                  <a href="https://sites.google.com/it-caesar.de/homepage/?pli=1" target="_blank">
-                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
-                      src="../images/event/cvpr/people/Holger Caesar.jpeg" itemprop="image">
-                    <br><br>
-                    <h1 style="text-align:center;"> Holger Caesar </h1>
-                  </a>
-
-
-                  <h1 style="text-align:center;font-size:0.8em;">TU Delft</h1>
-
-                </span>
-              </li>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-
-    </main>
-  </div>
-
-  <!-- Steering Committee -->
-
-
-  <div class="wrapper row3">
-    <main class="hoc container clear">
-      <div class="fl_left btmspace-80">
-        <h2><b>Steering Committee</b></h2>
-
-        <div class="wrapper">
-
-          <div class="grid">
-            <div class="grid-item">
-              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
-                <span class="speaker-photo">
-                  <a href="https://www.ee.cuhk.edu.hk/~xgwang/" target="_blank">
-                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
-                      src="../images/event/cvpr/people/Xiaogang Wang.jfif" itemprop="image">
-                    <br><br>
-                    <h1 style="text-align:center;"> Xiaogang Wang
-                  </a>
-                  </h1>
-                  <h1 style="text-align:center;font-size:0.8em;">SenseTime
-                  </h1>
-                </span>
-              </li>
-            </div>
-
-            <div class="grid-item">
-              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
-                <span class="speaker-photo">
-                  <a href="https://scholar.google.com/citations?user=gFtI-8QAAAAJ&hl=en" target="_blank">
-                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
-                      src="../images/event/cvpr/people/qy-avator.jpg" itemprop="image">
-                    <br><br>
-                    <h1 style="text-align:center;"> Yu Qiao
-                  </a>
-                  </h1>
-                  <h1 style="text-align:center;font-size:0.8em;">Shanghai AI Lab
-                  </h1>
-                </span>
-              </li>
-            </div>
-
-            <div class="grid-item">
-              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
-                <span class="speaker-photo">
-                  <a href="http://dahua.site/" target="_blank">
-                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
-                      src="../images/event/cvpr/people/dahua.png" itemprop="image">
-                    <br><br>
-                    <h1 style="text-align:center;"> Dahua Lin
-                  </a>
-                  </h1>
-                  <h1 style="text-align:center;font-size:0.8em;">Shanghai AI Lab
-                  </h1>
-                </span>
-              </li>
-            </div>
-
-            <div class="grid-item">
-              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
-                <span class="speaker-photo">
-                  <a href="https://wlouyang.github.io" target="_blank">
-                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
-                      src="../images/event/cvpr/people/Wanli Ouyang.jpg" itemprop="image">
-                    <br><br>
-                    <h1 style="text-align:center;">Wanli Ouyang</h1>
-                  </a>
-                  
-                  <h1 style="text-align:center;font-size:0.8em;">Shanghai AI Lab</h1>
-                </span>
-              </li>
-            </div>
-
-            <div class="grid-item">
-              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
-                <span class="speaker-photo">
-                  <a href="https://jifengdai.org" target="_blank">
-                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
-                      src="../images/event/cvpr/people/Jifeng Dai.jpg" alt="Jifeng Dai" itemprop="image">
-                    <br><br>
-                    <h1 style="text-align:center;"> Jifeng Dai</h1>
-                  </a>
-                  
-                  <h1 style="text-align:center;font-size:0.8em;">Tsinghua / Shanghai AI Lab</h1>
-                </span>
-              </li>
-            </div>
-
-
-
-
-
-<!--             <div class="grid-item">
-
-              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
-                <span class="speaker-photo">
-                  <a href="https://www.ee.cuhk.edu.hk/~xgwang/" target="_blank">
-                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
-                      src="../images/event/cvpr/shijianping.jpg" itemprop="image">
-                    <br><br>
-                    <h1 style="text-align:center;font-size:0.5em;"> Jianping Shi</h1>
-                  </a>
-                  
-                  <h1 style="text-align:center;font-size:0.5em;">SenseTime
-                  </h1>
-                </span>
-              </li>
-            </div> -->
-
-
-
-          </div>
-        </div>
-
-
-    </main>
-
-  </div>
-  </div>
-
-
-  <!-- Sponsors -->
-  <div class="wrapper row3" style="top: -100px;">
-    <section class="hoc container clear">
-      <div class="fl_left btmspace-80">
-
-        <!-- ################################################################################################ -->
-        <h2><b>Sponsors</b></h2>
-        <!-- ################################################################################################ -->
-        <div class="wrapper">
-
-          <div class="grid">
-            <div class="grid-item">
-              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
-                <span class="speaker-photo">
-                  <a href="https://www.huawei.com/en/" target="_blank">
-                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
-                      src="../images/event/cvpr/Huawei-sq.jpeg" itemprop="image">
-                    <br><br>
-                    <h1 class="speakers-name" style="text-align:center;font-size: 1em;white-space: nowrap;"> Huawei
-
-                    </h1>
-                  </a>
-
-                </span>
-              </li>
-            </div>
-            <div class="grid-item">
-              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
-                <span class="speaker-photo">
-                  <a href="https://www.sensetime.com/en" target="_blank">
-                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
-                      src="../images/event/cvpr/sensetime.jfif" itemprop="image"> <br><br>
-
-                    <h1 class="speakers-name" style="text-align:center;font-size: 1em;white-space: nowrap;"> SenseTime</h1>
-                  </a>
-                  
-                </span>
-              </li>
-            </div>
-            <div class="grid-item">
-              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
-                <span class="speaker-photo">
-                  <a href="https://www.nvidia.com/en" target="_blank">
-                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
-                      src="../images/event/cvpr/nvidia.jpg" itemprop="image"> <br><br>
-
-                    <h1 class="speakers-name" style="text-align:center;font-size: 1em;white-space: nowrap;"> NVIDIA</h1>
-                  </a>
-                  
-                </span>
-              </li>
-            </div>
-
-            <div class="grid-item">
-              <li class="speakers-item " itemprop="performer" itemscope itemtype="http://schema.org/Person">
-                <span class="speaker-photo">
-                  <a href="https://www.hp.com/" target="_blank">
-                    <img class="photo" style="width: 200px;border-radius:100%; overflow:hidden;"
-                      src="../images/event/cvpr/hp.png" itemprop="image"> <br><br>
-
-                    <h1 class="speakers-name" style="text-align:center;font-size: 1em;white-space: nowrap;">
-                      Hewlett-Packard</h1>
-                  </a>
-                  
-                </span>
-              </li>
-            </div>
-
-
-          </div>
-        </div>
-      </div>
-
-    </section>
-  </div>
-
-  <div class="wrapper row5">
-    <div id="copyright" class="hoc clear">
-      <h1 class="fl_left">Copyright &copy; 2023 - All Rights Reserved - <a href="http://opendrivelab.com/">OpenDriveLab at Shanghai AI Lab</a>
-      </h1>
-
-    </div>
-  </div>
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
-  <!-- JAVASCRIPTS -->
-  <script src="layout/scripts/jquery.min.js"></script>
-  <script src="layout/scripts/jquery.backtotop.js"></script>
-  <script src="layout/scripts/jquery.mobilemenu.js"></script>
 </body>
 
 </html>
