@@ -360,7 +360,7 @@
           The primary metric is <a href="https://github.com/OpenDriveLab/OpenLane-V2#task">OpenLane-V2 Score (OLS)</a>, which comprises evaluations on three sub-tasks.
           On the website, we provide tools for 
           <a href="https://github.com/OpenDriveLab/OpenLane-V2/blob/master/docs/devkit.md#openlanev2dataset">data access</a>,
-          <a href="https://github.com/OpenDriveLab/OpenLane-V2#plugin">training models</a>,
+          <a href="https://github.com/OpenDriveLab/OpenLane-V2#train-a-model">training models</a>,
           <a href="https://github.com/OpenDriveLab/OpenLane-V2/blob/master/docs/devkit.md#openlanev2evaluation">evaluations</a>,
           and <a href="https://github.com/OpenDriveLab/OpenLane-V2/blob/master/docs/devkit.md#openlanev2visualization">visualization</a>.
           To submit your results on <a href="https://eval.ai/web/challenges/challenge-page/1925/overview">EvalAI</a>, please 
@@ -411,21 +411,21 @@
                   <th style="background-color: rgb(14, 104, 14);"><b>OLS (primary metric)</b></th>
                   <th style="background-color: rgb(14, 104, 14);">$\text{DET}_{l}$</th>
                   <th style="background-color: rgb(14, 104, 14);">$\text{DET}_{t}$</th>
-                  <th style="background-color: rgb(14, 104, 14);">$\text{TOP}_{ll}$ </th>
+                  <th style="background-color: rgb(14, 104, 14);">$\text{TOP}_{ll}$</th>
                   <th style="background-color: rgb(14, 104, 14);">$\text{TOP}_{lt}$</th>
                   <th style="background-color: rgb(14, 104, 14);">$\text{F-Score}$*</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
+                  <td>1</td>
+                  <td>Baseline</td>
+                  <td>0.29</td>
+                  <td>0.08</td>
+                  <td>0.31</td>
+                  <td>0.00</td>
+                  <td>0.01</td>
+                  <td>8.56</td>
                 </tr>
               </tbody>
             </table>
@@ -433,7 +433,7 @@
           <footer ><i style ="font-size: 0.8em;">* &nbsp; For the real-time leaderboard please refer to 
             <a href="https://eval.ai/web/challenges/challenge-page/1925/leaderboard">EvalAI</a></i>.
           </b>
-          <footer ><i style ="font-size: 0.8em;">** $\text{F-Score}$ is not taken into consideration in both the challenge and leaderboard.</i></b>
+          <footer ><i style ="font-size: 0.8em;">** $\text{F-Score}$ for lane detection is not taken into consideration in both the challenge and leaderboard.</i></b>
         </p>
 
 
@@ -1006,7 +1006,7 @@
               <thead>
                 <tr>
                   <th style="background-color: rgb(25, 25, 145); width: 64px;">Rank</th>
-                  <th style="background-color: rgb(25, 25, 145); width: 192px;">Method</th>
+                  <th style="background-color: rgb(25, 25, 145); width: 192px;">Team</th>
                   <th style="background-color: rgb(25, 25, 145);"><b>mean score (primary metric)</b></th>
                   <th style="background-color: rgb(25, 25, 145);">Challenge 1</th>
                   <th style="background-color: rgb(25, 25, 145);">Challenge 2</th>
@@ -1015,12 +1015,12 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
+                  <td>1</td>
+                  <td>Host_68305_Team (Baseline)</td>
+                  <td>0.15</td>
+                  <td>0.15</td>
+                  <td>0.39</td>
+                  <td>0.61</td>
                 </tr>
               </tbody>
             </table>
