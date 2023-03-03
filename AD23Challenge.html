@@ -139,6 +139,12 @@
           <ul>
             <li><a href="#rules" style="font-size: 1.1em; line-height: 1.2;">- General Rules</a></li>
           </ul>
+          <ul>
+            <li><a href="#FAQ" style="font-size: 1.1em; line-height: 1.2;">- FAQ</a></li>
+          </ul>
+
+
+          
           
         </nav>
 
@@ -1397,16 +1403,32 @@
 
 
 
-        <h3><b class="btb" target="_blank" id="rules" style="font-size: 2.5em;">FAQ</b></h3>
-        <br>
-        
+        <h3><b class="btb" target="_blank" id="FAQ" style="font-size: 2.5em;">FAQ</b></h3>
+        <div class="accordion-body">
+          <div class="accordion">
+            <!-- <h1>Frequently Asked Questions</h1> -->
+            <hr>
+            <div class="container">
+              <div class="label"><b>How do I participate?</b></div>
+              <div class="content">For participation, you can create a team at EvalAI, and then make a submission when the test server opens. 
+                A valid submission would be automatically viewed as a successful participation.
+              </div>
+            </div>
+            <hr>
+          </div>
+        </div>
 
-        <h4><b>How do I participate?</b></h4>
-        <p>
-          For participation, you can create a team at EvalAI, and then make a submission when the test server opens. 
-          A valid submission would be automatically viewed as a successful participation.
-        </p>
-        <br>
+
+
+        <script>
+          const accordion = document.getElementsByClassName('container');
+
+          for (i=0; i<accordion.length; i++) {
+            accordion[i].addEventListener('click', function () {
+              this.classList.toggle('active')
+            })
+          }   
+        </script>
 
 
 
