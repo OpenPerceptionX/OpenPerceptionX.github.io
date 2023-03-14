@@ -330,7 +330,7 @@ table, th, tr, td{border-bottom: 1px solid; border-top:1px solid;}
 /* Colours
 --------------------------------------------------------------------------------------------------------------- */
 body{color:#C1C2C4; background-color:#292929;}
-a{color:#DC8E47;}
+a{color:#000000;}
 a:active, a:focus{background:transparent;}/* IE10 + 11 Bugfix - prevents grey background */
 hr, .borderedbox{border-color:#D7D7D7;}
 label span{color:#FF0000; background-color:inherit;}
@@ -373,7 +373,9 @@ input:focus, textarea:focus, *:required:focus{border-color:#DC8E47;}
 
 /* Content Area */
 .overview a{color:inherit;}
-.overview article:hover a{color:#DC8E47;}
+/* .overview article:hover a{color:#DC8E47;} */
+
+.hover_color:hover{color:#DC8E47;} 
 
 .figures > li > figure figcaption a{border-color:#FFFFFF #DC8E47;}
 .figures > li > figure:hover figcaption a{border-left-color:#DC8E47;}
