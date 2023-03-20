@@ -31,12 +31,15 @@ Licence URI: https://www.os-templates.com/template-terms
       <img src="images/background/01.jpeg"/>
       <img src="images/background/03.jpeg"/>
       <img src="images/gallery/openlanev2.jpeg"/>
+      <img src="images/gallery/autonomous-vehicle-integration.png">
     </div>
 
     <div id="pointsDiv">
       <span index="1" class="on"></span>
       <span index="2"></span>
       <span index="3"></span>
+      <span index="4"></span>
+
     </div>        
     <!-- ################################################################################################ -->
     <div class="wrapper row0" style="z-index: 10">
@@ -284,6 +287,12 @@ Licence URI: https://www.os-templates.com/template-terms
                 pageintroP.text('The World First Topology Reasoning Benchmark for Scene Structure.')
                 pageintroF.html('<a class="btn" target="_blank" href="https://github.com/OpenDriveLab/OpenLane-V2">Get Hands Dirty</a> &nbsp; &nbsp; &nbsp; <a class="btn" target="_blank" href="https://opendrivelab.com/AD23Challenge.html#Track1">Challenge</a> ')
                 break
+              case 3:
+                row1H.text('OpenDriveLab ')
+                pageintroH3.html('Introducing UniAD')
+                pageintroP.text('The First comprehensive framework that incorporates full-stack driving tasks.')
+                pageintroF.html('<a class="btn" target="_blank" href="https://opendrivelab.github.io/UniAD/">Homepage</a> &nbsp; &nbsp; &nbsp; <a class="btn" target="_blank" href="https://github.com/OpenDriveLab/UniAD">Github</a> ')
+                break
               default:
                 row1H.text('OpenDriveLab ')
                 pageintroH3.html(
@@ -297,9 +306,9 @@ Licence URI: https://www.os-templates.com/template-terms
             }
             
             if (index == 0) {
-              index = 3
+              index = 4
             }
-            if (index == 3) {
+            if (index == 4) {
               index = 0
             }
             //设置图片轮播时，从最后一张跳到第一张不会有间隙，跟其他图片一样跳转
