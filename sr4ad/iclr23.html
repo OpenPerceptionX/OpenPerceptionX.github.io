@@ -358,7 +358,7 @@ href="../images/team_logo.png">
 
     <h3 style="font-size: medium; line-height: 1.4;">Please select your time zone: 
 
-      <select id="operator" style="font-size: 1rem; display: inline;" onchange="time_zone()">
+      <!-- <select id="operator" style="font-size: 1rem; display: inline;" onchange="time_zone()">
 
 
         <option value="-12" onclick="time_zone()">UTC-11 Niue/Pago_Pago</option>
@@ -384,9 +384,38 @@ href="../images/team_logo.png">
         <option value="8" onclick="time_zone()">UTC+10 Sydney/Brisbane</option>
         <option value="9" onclick="time_zone()">UTC+11 Lord_Howe/Kosrae</option>
         <option value="10" onclick="time_zone()">UTC+12 Wallis/Fiji</option>
-    </select>
+    </select> -->
 
-    <!-- . Then check the timetable <i class=" fas fa-clock" ></i> for the corresponding time zone.<br> <br> -->
+
+
+          <!-- Daylight Saving Time -->
+          <select id="operator" style="font-size: 1rem; display: inline;" onchange="time_zone()">
+
+            <option value="-13" onclick="time_zone()">UTC-11 Niue/Pago_Pago</option>
+            <option value="-12" onclick="time_zone()">UTC-10 Honolulu/Adak </option>
+            <option value="-11" onclick="time_zone()">UTC-9 Alaska/Gambier Islands</option>
+            <option value="-10" onclick="time_zone()">UTC-8 Anchorage/Nome</option>
+            <option value="-9" onclick="time_zone()" >UTC-7 Vancouver/Los_Angeles</option>
+            <option value="-8" onclick="time_zone()">UTC-6 Belize</option>
+            <option value="-7" onclick="time_zone()">UTC-5 Chicago</option>
+            <option value="-6" onclick="time_zone()">UTC-4 New_York/Detroit</option>
+            <option value="-5" onclick="time_zone()">UTC-3 Araguaina/Maceio</option>
+            <option value="-4" onclick="time_zone()">UTC-2 Noronha/South_Georgia</option>
+            <option value="-3" onclick="time_zone()">UTC-1 Cape_Verde/Azores</option>
+            <option value="-2" onclick="time_zone()">UTC+0 Ireland/Portugal</option>
+            <option value="-1" onclick="time_zone()">UTC+1 London/Canary</option>
+            <option value="0" onclick="time_zone()" selected="selected">UTC+2 (ICLR venue time) Kigali/Paris/Berlin/Cairo</option>
+            <option value="1" onclick="time_zone()">UTC+3 Moscow/Baghdad</option>
+            <option value="2" onclick="time_zone()">UTC+4 Dubai/Mahe</option>
+            <option value="3" onclick="time_zone()">UTC+5 Qyzylorda/Kerguelen</option>
+            <option value="4" onclick="time_zone()">UTC+6 Almaty/Kolkata</option>
+            <option value="5" onclick="time_zone()">UTC+7 Bangkok/Christmas</option>
+            <option value="6" onclick="time_zone()">UTC+8 Beijing/Hong_Kong</option>
+            <option value="7" onclick="time_zone()">UTC+9 Tokyo/Seoul</option>
+            <option value="8" onclick="time_zone()">UTC+10 Sydney/Brisbane</option>
+            <option value="9" onclick="time_zone()">UTC+11 Lord_Howe/Kosrae</option>
+            <option value="10" onclick="time_zone()">UTC+12 Wallis/Fiji</option>
+        </select>
 
   </h3>
     <!-- <h1>Table(s)</h1> -->
