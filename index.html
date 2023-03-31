@@ -38,6 +38,13 @@ href="../images/team_logo.png">
       <img src="images/gallery/autonomous-vehicle-integration.png">
     </div>
 
+    <div id="list-mobile" class="list-container">
+      <img src="images/gallery/01-phone.jpeg"/>
+      <img src="images/background/car-m.jpg">
+      <img src="images/background/lane-m.jpg"/>
+      <img src="images/background/car2-m.png"/>
+    </div>
+
     <div id="pointsDiv">
       <span index="1" class="on"></span>
       <span index="2"></span>
@@ -259,11 +266,18 @@ href="../images/team_logo.png">
 <script src="layout/scripts/jquery.mobilemenu.js"></script>
 <script>
   $(function () {
-    let width = $(window).width()
     let row1H = $('.row1 h1')
     let pageintroH3 = $('#pageintro h3')
     let pageintroP = $('#pageintro p')
     let pageintroF = $('#pageintro footer')
+    
+
+    let list = $('#list');
+    let listMobile = $('#list-mobile');
+    let targetList = $(window).width() <= 768 ? listMobile : list;
+    let width = $(window).width()
+
+
     console.log(width)
     $('#container')[0].style.width = '100%'
     $('#list')[0].style.width = `${width * 4}px`
@@ -271,8 +285,15 @@ href="../images/team_logo.png">
     for (let i = 0; i < $('#list img').length; i++) {
       $('#list img')[i].style.width = `${width}px`
     }
-    // 得到所有照片的div
-    var $div = $('#list')
+
+    targetList[0].style.width = `${width * 4}px`;
+    targetList[0].style.left = '0';
+    for (let i = 0; i < targetList.find('img').length; i++) {
+      targetList.find('img')[i].style.width = `${width}px`;
+    }
+
+
+    var $div = targetList;
     var $span = $('#pointsDiv>span')
     //获取照片当前的位置
     var index = 0
