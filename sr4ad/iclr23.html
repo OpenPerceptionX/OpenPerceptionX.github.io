@@ -84,10 +84,11 @@ href="../images/team_logo.png">
     <article class="center">
       <h1 class="heading underline">Scene Representations for Autonomous Driving</h1>
       <p>Hybrid workshop in conjunction with <a style ="color: #D68910;"href="https://iclr.cc/">ICLR 2023</a>, May 5th, Kigali City, Rwanda, Africa</p>
-      <footer style="font-size: small; text-align: center; margin-left: auto; margin-right: auto;"><a class="btn" href="#contribution">
+      <footer></footer>
+      <!-- <footer style="font-size: small; text-align: center; margin-left: auto; margin-right: auto;"><a class="btn" href="#contribution">
         Submit a <b>Research Insight</b> (paper/blog/repo) <br> 
         or  <b>Original Contribution</b>
-      of your own work!</a></footer>
+      of your own work!</a></footer> -->
     </article>
     <!-- ################################################################################################ -->
   </div>
@@ -243,7 +244,209 @@ href="../images/team_logo.png">
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 
-<div class="wrapper row3", id="contribution">
+<div class="wrapper row3", id="schedule">
+  <main class="hoc container clear"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <div class="center btmspace-80">
+      <h6 class="heading underline font-x2">Schedule</h6>
+    </div>
+
+    <h3 style="font-size: medium; line-height: 1.4;">Please select your time zone: 
+
+      <!-- <select id="operator" style="font-size: 1rem; display: inline;" onchange="time_zone()">
+
+
+        <option value="-12" onclick="time_zone()">UTC-11 Niue/Pago_Pago</option>
+        <option value="-11" onclick="time_zone()">UTC-10 Honolulu/Adak </option>
+        <option value="-10" onclick="time_zone()">UTC-9 Anchorage/Nome</option>
+        <option value="-9" onclick="time_zone()" >UTC-8 Vancouver/Los_Angeles</option>
+        <option value="-8" onclick="time_zone()">UTC-6 Belize/Chicago</option>
+        <option value="-7" onclick="time_zone()">UTC-5 Detroit/Jamaica</option>
+        <option value="-6" onclick="time_zone()">UTC-4 Manaus/Thule</option>
+        <option value="-5" onclick="time_zone()">UTC-3 Araguaina/Maceio</option>
+        <option value="-4" onclick="time_zone()">UTC-2 Noronha/South_Georgia</option>
+        <option value="-3" onclick="time_zone()">UTC-1 Cape_Verde/Azores</option>
+        <option value="-2" onclick="time_zone()">UTC+0 London/Canary</option>
+        <option value="-1" onclick="time_zone()">UTC+1 Paris/Berlin</option>
+        <option value="0" onclick="time_zone()" selected="selected">UTC+2 (ICLR venue time) Kigali/Cairo</option>
+        <option value="1" onclick="time_zone()">UTC+3 Moscow/Baghdad</option>
+        <option value="2" onclick="time_zone()">UTC+4 Dubai/Mahe</option>
+        <option value="3" onclick="time_zone()">UTC+5 Qyzylorda/Kerguelen</option>
+        <option value="4" onclick="time_zone()">UTC+6 Almaty/Kolkata</option>
+        <option value="5" onclick="time_zone()">UTC+7 Bangkok/Christmas</option>
+        <option value="6" onclick="time_zone()">UTC+8 Beijing/Hong_Kong</option>
+        <option value="7" onclick="time_zone()">UTC+9 Tokyo/Seoul</option>
+        <option value="8" onclick="time_zone()">UTC+10 Sydney/Brisbane</option>
+        <option value="9" onclick="time_zone()">UTC+11 Lord_Howe/Kosrae</option>
+        <option value="10" onclick="time_zone()">UTC+12 Wallis/Fiji</option>
+    </select> -->
+
+
+
+          <!-- Daylight Saving Time -->
+          <select id="operator" style="font-size: 1rem; display: inline;" onchange="time_zone()">
+
+            <option value="-13" onclick="time_zone()">UTC-11 Niue/Pago_Pago</option>
+            <option value="-12" onclick="time_zone()">UTC-10 Honolulu/Adak </option>
+            <option value="-11" onclick="time_zone()">UTC-9 Alaska/Gambier Islands</option>
+            <option value="-10" onclick="time_zone()">UTC-8 Anchorage/Nome</option>
+            <option value="-9" onclick="time_zone()" >UTC-7 Vancouver/Los_Angeles</option>
+            <option value="-8" onclick="time_zone()">UTC-6 Belize</option>
+            <option value="-7" onclick="time_zone()">UTC-5 Chicago</option>
+            <option value="-6" onclick="time_zone()">UTC-4 New_York/Detroit</option>
+            <option value="-5" onclick="time_zone()">UTC-3 Araguaina/Maceio</option>
+            <option value="-4" onclick="time_zone()">UTC-2 Noronha/South_Georgia</option>
+            <option value="-3" onclick="time_zone()">UTC-1 Cape_Verde/Azores</option>
+            <option value="-2" onclick="time_zone()">UTC+0 Ireland/Portugal</option>
+            <option value="-1" onclick="time_zone()">UTC+1 London/Canary</option>
+            <option value="0" onclick="time_zone()" selected="selected">UTC+2 (ICLR venue time) Kigali/Paris/Berlin/Cairo</option>
+            <option value="1" onclick="time_zone()">UTC+3 Moscow/Baghdad</option>
+            <option value="2" onclick="time_zone()">UTC+4 Dubai/Mahe</option>
+            <option value="3" onclick="time_zone()">UTC+5 Qyzylorda/Kerguelen</option>
+            <option value="4" onclick="time_zone()">UTC+6 Almaty/Kolkata</option>
+            <option value="5" onclick="time_zone()">UTC+7 Bangkok/Christmas</option>
+            <option value="6" onclick="time_zone()">UTC+8 Beijing/Hong_Kong</option>
+            <option value="7" onclick="time_zone()">UTC+9 Tokyo/Seoul</option>
+            <option value="8" onclick="time_zone()">UTC+10 Sydney/Brisbane</option>
+            <option value="9" onclick="time_zone()">UTC+11 Lord_Howe/Kosrae</option>
+            <option value="10" onclick="time_zone()">UTC+12 Wallis/Fiji</option>
+        </select>
+
+  </h3>
+    <!-- <h1>Table(s)</h1> -->
+      <div class="scrollable">
+        <!-- <style>
+          td{
+            border-left:1px solid;
+            border-right:1px solid;
+          }
+        </style> -->
+        <table>
+          <thead>
+            <tr>
+              <th>TIME</th>
+              <th>SPEAKER</th>
+              <th>THEME</th>
+              <th>CONTENT</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td ><span name="time_hour_seleting">8</span>:50, May <a style = "color: rgb(46, 45, 45);" name = "data_seleting">5</a></td>
+              <td ><a href="https://scholar.google.ae/citations?user=ulZxvY0AAAAJ&hl=zh-CN"> Li Chen</a></td>
+              <td>Introduction and opening remarks</td>
+              <td class="schedule-description">slides / talk recording</td>
+
+            </tr>
+            <tr>
+              <td ><span name="time_hour_seleting">9</span>:00, May <a style = "color: rgb(46, 45, 45);" name = "data_seleting">5</a></td>
+              <td><a href="https://hangqiu.github.io/">Hang Qiu</a></td>
+              <td>Awesome Talk</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td ><span name="time_hour_seleting">9</span>:30, May <a style = "color: rgb(46, 45, 45);" name = "data_seleting">5</a></td>
+              <td> <a href="https://hangzhaomit.github.io/">Hang Zhao</a></td>
+              <td>Awesome Talk</td>
+              <td></td>
+
+            </tr>
+            <tr>
+              <td ><span name="time_hour_seleting">10</span>:00, May <a style = "color: rgb(46, 45, 45);" name = "data_seleting">5</a></td>
+              <td ><a href="https://scholar.google.ae/citations?user=ulZxvY0AAAAJ&hl=zh-CN"> Li Chen</a></td>
+              <td>Contributions</td>
+              <td></td>
+
+            </tr>
+            <tr>
+              <td ><span name="time_hour_seleting">11</span>:00, May <a style = "color: rgb(46, 45, 45);" name = "data_seleting">5</a></td>
+              <td><strong>Coffee Break</strong></td>
+              <td><strong>Coffee Break</strong></td>
+              <td> - </td>
+
+
+            </tr>
+            <tr>
+              <td ><span name="time_hour_seleting">11</span>:30, May <a style = "color: rgb(46, 45, 45);" name = "data_seleting">5</a></td>
+              <td> <a href="https://vas.mpi-inf.mpg.de/dengxin/">Dengxin Dai</a></td>
+              <td>Awesome Talk</td>
+              <td></td>
+
+            </tr>
+            <tr>
+              <td ><span name="time_hour_seleting">12</span>:00, May <a style = "color: rgb(46, 45, 45);" name = "data_seleting">5</a></td>
+              <td><a href="https://yiyiliao.github.io/">Yiyi Liao</a></td>
+              <td>Awesome Talk</td>
+              <td></td>
+
+            </tr>
+            <tr>
+              <td ><span name="time_hour_seleting">12</span>:30, May <a style = "color: rgb(46, 45, 45);" name = "data_seleting">5</a></td>
+              <td><strong>Lunch Break</strong></td>
+              <td><strong>Lunch Break</strong></td>
+              <td> - </td>
+
+            </tr>
+            <tr>
+              <td ><span name="time_hour_seleting">13</span>:30, May <a style = "color: rgb(46, 45, 45);" name = "data_seleting">5</a></td>
+              <td>  <a href="https://jamie.shotton.org/">Jamie Shotton</a></td>
+              <td>Awesome Talk</td>
+              <td></td>
+
+            </tr>
+            <tr>
+              <td ><span name="time_hour_seleting">14</span>:00, May <a style = "color: rgb(46, 45, 45);" name = "data_seleting">5</a></td>
+              <td><a href="https://mengyeren.com/">Mengye Ren</a></td>
+
+              <td>Contributions</td>
+              <td></td>
+
+            </tr>
+            <tr>
+              <td ><span name="time_hour_seleting">15</span>:00, May <a style = "color: rgb(46, 45, 45);" name = "data_seleting">5</a></td>
+              <td><strong>Coffee Break</strong></td>
+              <td><strong>Coffee Break</strong></td>
+              <td> - </td>
+
+            </tr>
+            <tr></tr>
+            <td ><span name="time_hour_seleting">15</span>:30, May <a style = "color: rgb(46, 45, 45);" name = "data_seleting">5</a></td>
+            <td> <a href="https://people.ee.ethz.ch/~csakarid/">Christos Sakaridis</a></td>
+              <td>Awesome Talk</td>
+              <td></td>
+
+            </tr>
+            <tr>
+              <td ><span name="time_hour_seleting">16</span>:00, May <a style = "color: rgb(46, 45, 45);" name = "data_seleting">5</a></td>
+              <td><a href="https://aisecure.github.io/">Bo Li</a> </td>
+              <td>Awesome Talk</td>
+              <td></td>
+
+            </tr>
+            <tr>
+            <tr>
+              <td ><span name="time_hour_seleting">16</span>:30-<span name="time_hour_seleting">17</span>:30, May <a style = "color: rgb(46, 45, 45);" name = "data_seleting">5</a></td>
+              <td><a href="https://mengyeren.com/">Mengye Ren</a></td>
+              <td>Panel Discussion</td>
+              <td></td>
+
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+
+
+<div class="wrapper row2", id="contribution">
   <main class="hoc container clear"> 
     <!-- main body -->
     <div class="center btmspace-80">
@@ -348,182 +551,6 @@ href="../images/team_logo.png">
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 
-<div class="wrapper row2", id="schedule">
-  <main class="hoc container clear"> 
-    <!-- main body -->
-    <!-- ################################################################################################ -->
-    <div class="center btmspace-80">
-      <h6 class="heading underline font-x2">Schedule (Tentative)</h6>
-    </div>
-
-    <h3 style="font-size: medium; line-height: 1.4;">Please select your time zone: 
-
-      <!-- <select id="operator" style="font-size: 1rem; display: inline;" onchange="time_zone()">
-
-
-        <option value="-12" onclick="time_zone()">UTC-11 Niue/Pago_Pago</option>
-        <option value="-11" onclick="time_zone()">UTC-10 Honolulu/Adak </option>
-        <option value="-10" onclick="time_zone()">UTC-9 Anchorage/Nome</option>
-        <option value="-9" onclick="time_zone()" >UTC-8 Vancouver/Los_Angeles</option>
-        <option value="-8" onclick="time_zone()">UTC-6 Belize/Chicago</option>
-        <option value="-7" onclick="time_zone()">UTC-5 Detroit/Jamaica</option>
-        <option value="-6" onclick="time_zone()">UTC-4 Manaus/Thule</option>
-        <option value="-5" onclick="time_zone()">UTC-3 Araguaina/Maceio</option>
-        <option value="-4" onclick="time_zone()">UTC-2 Noronha/South_Georgia</option>
-        <option value="-3" onclick="time_zone()">UTC-1 Cape_Verde/Azores</option>
-        <option value="-2" onclick="time_zone()">UTC+0 London/Canary</option>
-        <option value="-1" onclick="time_zone()">UTC+1 Paris/Berlin</option>
-        <option value="0" onclick="time_zone()" selected="selected">UTC+2 (ICLR venue time) Kigali/Cairo</option>
-        <option value="1" onclick="time_zone()">UTC+3 Moscow/Baghdad</option>
-        <option value="2" onclick="time_zone()">UTC+4 Dubai/Mahe</option>
-        <option value="3" onclick="time_zone()">UTC+5 Qyzylorda/Kerguelen</option>
-        <option value="4" onclick="time_zone()">UTC+6 Almaty/Kolkata</option>
-        <option value="5" onclick="time_zone()">UTC+7 Bangkok/Christmas</option>
-        <option value="6" onclick="time_zone()">UTC+8 Beijing/Hong_Kong</option>
-        <option value="7" onclick="time_zone()">UTC+9 Tokyo/Seoul</option>
-        <option value="8" onclick="time_zone()">UTC+10 Sydney/Brisbane</option>
-        <option value="9" onclick="time_zone()">UTC+11 Lord_Howe/Kosrae</option>
-        <option value="10" onclick="time_zone()">UTC+12 Wallis/Fiji</option>
-    </select> -->
-
-
-
-          <!-- Daylight Saving Time -->
-          <select id="operator" style="font-size: 1rem; display: inline;" onchange="time_zone()">
-
-            <option value="-13" onclick="time_zone()">UTC-11 Niue/Pago_Pago</option>
-            <option value="-12" onclick="time_zone()">UTC-10 Honolulu/Adak </option>
-            <option value="-11" onclick="time_zone()">UTC-9 Alaska/Gambier Islands</option>
-            <option value="-10" onclick="time_zone()">UTC-8 Anchorage/Nome</option>
-            <option value="-9" onclick="time_zone()" >UTC-7 Vancouver/Los_Angeles</option>
-            <option value="-8" onclick="time_zone()">UTC-6 Belize</option>
-            <option value="-7" onclick="time_zone()">UTC-5 Chicago</option>
-            <option value="-6" onclick="time_zone()">UTC-4 New_York/Detroit</option>
-            <option value="-5" onclick="time_zone()">UTC-3 Araguaina/Maceio</option>
-            <option value="-4" onclick="time_zone()">UTC-2 Noronha/South_Georgia</option>
-            <option value="-3" onclick="time_zone()">UTC-1 Cape_Verde/Azores</option>
-            <option value="-2" onclick="time_zone()">UTC+0 Ireland/Portugal</option>
-            <option value="-1" onclick="time_zone()">UTC+1 London/Canary</option>
-            <option value="0" onclick="time_zone()" selected="selected">UTC+2 (ICLR venue time) Kigali/Paris/Berlin/Cairo</option>
-            <option value="1" onclick="time_zone()">UTC+3 Moscow/Baghdad</option>
-            <option value="2" onclick="time_zone()">UTC+4 Dubai/Mahe</option>
-            <option value="3" onclick="time_zone()">UTC+5 Qyzylorda/Kerguelen</option>
-            <option value="4" onclick="time_zone()">UTC+6 Almaty/Kolkata</option>
-            <option value="5" onclick="time_zone()">UTC+7 Bangkok/Christmas</option>
-            <option value="6" onclick="time_zone()">UTC+8 Beijing/Hong_Kong</option>
-            <option value="7" onclick="time_zone()">UTC+9 Tokyo/Seoul</option>
-            <option value="8" onclick="time_zone()">UTC+10 Sydney/Brisbane</option>
-            <option value="9" onclick="time_zone()">UTC+11 Lord_Howe/Kosrae</option>
-            <option value="10" onclick="time_zone()">UTC+12 Wallis/Fiji</option>
-        </select>
-
-  </h3>
-    <!-- <h1>Table(s)</h1> -->
-      <div class="scrollable">
-        <table>
-          <thead>
-            <tr>
-              <th>TIME</th>
-              <th>SPEAKER</th>
-              <th>THEME</th>
-
-
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td ><span name="time_hour_seleting">8</span>:50, May <a style = "color: rgb(46, 45, 45);" name = "data_seleting">5</a></td>
-              <td ><a href="https://scholar.google.ae/citations?user=ulZxvY0AAAAJ&hl=zh-CN"> Li Chen</a></td>
-              <td>Introduction and opening remarks</td>
-            </tr>
-            <tr>
-              <td ><span name="time_hour_seleting">9</span>:00, May <a style = "color: rgb(46, 45, 45);" name = "data_seleting">5</a></td>
-              <td><a href="https://hangqiu.github.io/">Hang Qiu</a></td>
-              <td>Awesome Talk</td>
-            </tr>
-            <tr>
-              <td ><span name="time_hour_seleting">9</span>:30, May <a style = "color: rgb(46, 45, 45);" name = "data_seleting">5</a></td>
-              <td> <a href="https://hangzhaomit.github.io/">Hang Zhao</a></td>
-              <td>Awesome Talk</td>
-
-            </tr>
-            <tr>
-              <td ><span name="time_hour_seleting">10</span>:00, May <a style = "color: rgb(46, 45, 45);" name = "data_seleting">5</a></td>
-              <td ><a href="https://scholar.google.ae/citations?user=ulZxvY0AAAAJ&hl=zh-CN"> Li Chen</a></td>
-              <td>Contributions</td>
-            </tr>
-            <tr>
-              <td ><span name="time_hour_seleting">11</span>:00, May <a style = "color: rgb(46, 45, 45);" name = "data_seleting">5</a></td>
-              <td><strong>Coffee Break</strong></td>
-              <td><strong>Coffee Break</strong></td>
-
-            </tr>
-            <tr>
-              <td ><span name="time_hour_seleting">11</span>:30, May <a style = "color: rgb(46, 45, 45);" name = "data_seleting">5</a></td>
-              <td> <a href="https://vas.mpi-inf.mpg.de/dengxin/">Dengxin Dai</a></td>
-              <td>Awesome Talk</td>
-
-            </tr>
-            <tr>
-              <td ><span name="time_hour_seleting">12</span>:00, May <a style = "color: rgb(46, 45, 45);" name = "data_seleting">5</a></td>
-              <td><a href="https://yiyiliao.github.io/">Yiyi Liao</a></td>
-              <td>Awesome Talk</td>
-
-            </tr>
-            <tr>
-              <td ><span name="time_hour_seleting">12</span>:30, May <a style = "color: rgb(46, 45, 45);" name = "data_seleting">5</a></td>
-              <td><strong>Lunch Break</strong></td>
-              <td><strong>Lunch Break</strong></td>
-
-            </tr>
-            <tr>
-              <td ><span name="time_hour_seleting">13</span>:30, May <a style = "color: rgb(46, 45, 45);" name = "data_seleting">5</a></td>
-              <td>  <a href="https://jamie.shotton.org/">Jamie Shotton</a></td>
-              <td>Awesome Talk</td>
-
-            </tr>
-            <tr>
-              <td ><span name="time_hour_seleting">14</span>:00, May <a style = "color: rgb(46, 45, 45);" name = "data_seleting">5</a></td>
-              <td><a href="https://mengyeren.com/">Mengye Ren</a></td>
-
-              <td>Contributions</td>
-            </tr>
-            <tr>
-              <td ><span name="time_hour_seleting">15</span>:00, May <a style = "color: rgb(46, 45, 45);" name = "data_seleting">5</a></td>
-              <td><strong>Coffee Break</strong></td>
-              <td><strong>Coffee Break</strong></td>
-
-            </tr>
-            <tr></tr>
-            <td ><span name="time_hour_seleting">15</span>:30, May <a style = "color: rgb(46, 45, 45);" name = "data_seleting">5</a></td>
-            <td> <a href="https://people.ee.ethz.ch/~csakarid/">Christos Sakaridis</a></td>
-              <td>Awesome Talk</td>
-
-            </tr>
-            <tr>
-              <td ><span name="time_hour_seleting">16</span>:00, May <a style = "color: rgb(46, 45, 45);" name = "data_seleting">5</a></td>
-              <td><a href="https://aisecure.github.io/">Bo Li</a> </td>
-              <td>Awesome Talk</td>
-
-            </tr>
-            <tr>
-            <tr>
-              <td ><span name="time_hour_seleting">16</span>:30-<span name="time_hour_seleting">17</span>:30, May <a style = "color: rgb(46, 45, 45);" name = "data_seleting">5</a></td>
-              <td><a href="https://mengyeren.com/">Mengye Ren</a></td>
-              <td>Panel Discussion</td>
-
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    <!-- ################################################################################################ -->
-    <!-- / main body -->
-    <div class="clear"></div>
-  </main>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
 
 <div class="wrapper row3">
   <article class="hoc container clear"> 
