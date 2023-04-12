@@ -320,7 +320,7 @@ body:not(.home) .head_fanhui{cursor:pointer;display:block;padding:0;position:fix
 .body_imgx2 .bg_imgx{  background:url(../img/motivation_br.svg) no-repeat center bottom ,url(../img/overview_t.jpg) no-repeat center 30%; background-attachment: fixed;  background-size: 100% auto,auto 580px ;} */
 .motivation{ width: 580px;  opacity: 0; }
 .bg_why{ background-color: rgba(255, 255, 255,.8);
-    backdrop-filter: blur(20px); padding-top: 50px; padding-bottom: 20pxc;}
+    backdrop-filter: blur(20px); padding-top: 50px; padding-bottom: 20px;}
     .bg_why h3 .title{ color: #ccc;}
 .mot_ts{ color: #000; font-weight: bold;}
 .track_nav{ display: flex; width: 100%;     flex-wrap: wrap;    box-sizing: border-box;}
@@ -391,7 +391,7 @@ sup{ font-size: 12px; position: relative; zoom: .8; }
     .footer_t{ padding: 20px 0;} .footer_t h6{ font-size: 16px; margin: 0;}
     .copyright, .copyright a{ font-size: 13px; padding: 10px ;}
 .btn_from{ width: 100%;}
-    .bg_why{ padding: 20px;}
+    .bg_why{ padding-top: 20px; padding-bottom: 10px;}
     .why_list ul{ padding: 0;}
     .why_list li{ padding: 10px 0;}
     .bg_why h3 .title{ color: #000;}
