@@ -409,6 +409,7 @@ sup{ font-size: 12px; position: relative; zoom: .8; }
 	.body_imgx2 .bg_imgx{  background: url(../img/overview_t.jpg) no-repeat center 10%,url(../img/motivation_br.svg) no-repeat  center bottom;background-attachment: fixed; background-size:90% auto ,100% auto ; }
     .track_nav dl{ width: 100%; padding-left: 10px; padding-top: 10%;}
     .track_nav dl dt, .track_nav dl dd{ padding: 0 0 0 10px;}
+    .track_nav dl .text{ padding-top: 5px;}
     /* .track_nav dl dd{ font-size: 12px;} */
     .mot_ts{ padding: 10px; font-size: 18px;}
     .bg { padding: 20px;}
