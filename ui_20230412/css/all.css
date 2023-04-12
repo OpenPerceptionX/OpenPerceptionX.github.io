@@ -327,16 +327,16 @@ body:not(.home) .head_fanhui{cursor:pointer;display:block;padding:0;position:fix
 .track_nav{ display: flex; width: 100%;     flex-wrap: wrap;    box-sizing: border-box;}
 .track_nav dl{transition: all .3s ease-in-out; width: 25%;  padding:30px 0 25px 0;   box-sizing: border-box; color:#fff; cursor: pointer;} 
 .cn_item .ik,.track_nav dl{ background-repeat:no-repeat; background-position:  right 0 ;background-size: auto 100%;}
-.track_nav dl dt,.track_nav dl dd{ padding-left: 30px; margin: 0;}
-.track_nav dl dt{padding-top: 20px;}
+.track_nav dl dt,.track_nav dl dd{ padding-left: 10%; margin: 0;}
+.track_nav dl dt{padding-top: 2%;}
 .track_nav dl .track{ opacity: .6;}
-.track_nav dl dd{ font-size: 21px;  padding-bottom: 5px;}
-.track_nav dl .text{ opacity: .8; padding-bottom: 20px; padding-right: 30px;}
+.track_nav dl dd{ font-size: 21px;  padding-bottom: 2%;}
+.track_nav dl .text{ opacity: .8; padding-right: 10%; padding-bottom: 2%;}
 .track_nav dl dd::after{ content: ""; width: 20px; height: 20px; display: inline-block; background-position: 0 -636px; vertical-align: middle; }
-.track_nav dl:nth-of-type(1),.cn_item:nth-of-type(1) .ik{ background-color:#496e30 ;background-image: url(../img/br1.svg) }
-.track_nav dl:nth-of-type(2),.cn_item:nth-of-type(2) .ik{ background-color:#428e8e ;background-image: url(../img/br2.svg)  ;}
-.track_nav dl:nth-of-type(3),.cn_item:nth-of-type(3) .ik{ background-color:#9b3a3a ;background-image: url(../img/br3.svg)  ;}
-.track_nav dl:nth-of-type(4),.cn_item:nth-of-type(4) .ik{ background-color:#31317c ;background-image: url(../img/br4.svg)  ;}
+.track_nav dl:nth-of-type(1),.cn_item:nth-of-type(1) .ik{ background-color:#496e30 ;background-image: url(../img/br1.svg)}
+.track_nav dl:nth-of-type(2),.cn_item:nth-of-type(2) .ik{ background-color:#428e8e ;background-image: url(../img/br2.svg)}
+.track_nav dl:nth-of-type(3),.cn_item:nth-of-type(3) .ik{ background-color:#9b3a3a ;background-image: url(../img/br3.svg)}
+.track_nav dl:nth-of-type(4),.cn_item:nth-of-type(4) .ik{ background-color:#31317c ;background-image: url(../img/br4.svg)}
 .track_nav dl:hover,.cn_item:hover .ik{ background-size: auto 200%; background-position:calc(100% + 80px) -50px;}
 @media screen and (max-width:1400px){
     .track_nav dl dd{ font-size: 18px;  }
@@ -407,7 +407,7 @@ sup{ font-size: 12px; position: relative; zoom: .8; }
     }
 	.body_imgx .bg_imgx{  background: url(../img/overview_t.jpg) no-repeat center 40%,url(../img/motivation_br.svg) no-repeat  center bottom;background-attachment: fixed; background-size:90% auto ,100% auto ; }
 	.body_imgx2 .bg_imgx{  background: url(../img/overview_t.jpg) no-repeat center 10%,url(../img/motivation_br.svg) no-repeat  center bottom;background-attachment: fixed; background-size:90% auto ,100% auto ; }
-    .track_nav dl{ width: 100%; padding: 5px 0;}
+    .track_nav dl{ width: 100%; padding-left: 10px; padding-top: 10%;}
     .track_nav dl dt, .track_nav dl dd{ padding: 0 0 0 10px;}
     /* .track_nav dl dd{ font-size: 12px;} */
     .mot_ts{ padding: 10px; font-size: 18px;}
