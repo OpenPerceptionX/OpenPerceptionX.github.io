@@ -241,7 +241,7 @@ hr {    display: block;
 .mx_num{ display: inline-block; vertical-align: middle;white-space:nowrap; }
 sub{ position: absolute; top: 7px; font-weight: normal; font-size: 12px; zoom: .9;vertical-align: top; position: relative;font-family:"Gabriola";}
 sub em{ position: absolute; right: -10px; top: -9px; zoom:1.5; font-family:  monospace; font-size: 16px; font-style: normal;}
-.footer_ts{ font-size: 12px; padding-bottom: 30px; font-style: italic;}
+.footer_ts{ font-size: 12px; font-style: italic;}
 
 @media screen and (max-device-width:1024px){
     
@@ -391,7 +391,7 @@ sup{ font-size: 12px; position: relative; zoom: .8; }
     .footer_t{ padding: 20px 0;} .footer_t h6{ font-size: 16px; margin: 0;}
     .copyright, .copyright a{ font-size: 13px; padding: 10px ;}
 .btn_from{ width: 100%;}
-    .bg_why{ padding-top: 20px; padding-bottom: 10px;}
+    .bg_why{ padding-top: 10px; padding-bottom: 5px;}
     .why_list ul{ padding: 0;}
     .why_list li{ padding: 10px 0;}
     .bg_why h3 .title{ color: #000;}
