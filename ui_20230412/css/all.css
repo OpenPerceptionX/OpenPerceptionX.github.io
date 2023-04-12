@@ -323,7 +323,7 @@ body:not(.home) .head_fanhui{cursor:pointer;display:block;padding:0;position:fix
 .bg_why{ background-color: rgba(255, 255, 255,.8);
     backdrop-filter: blur(20px); padding-top: 50px; padding-bottom: 20px;}
     .bg_why h3 .title{ color: #ccc;}
-.mot_ts{ color: #000; font-weight: bold;}
+.mot_ts{ color: grey; font-weight: bold; text-align: center;}
 .track_nav{ display: flex; width: 100%;     flex-wrap: wrap;    box-sizing: border-box;}
 .track_nav dl{transition: all .3s ease-in-out; width: 25%;  padding:30px 0 25px 0;   box-sizing: border-box; color:#fff; cursor: pointer;} 
 .cn_item .ik,.track_nav dl{ background-repeat:no-repeat; background-position:  right 0 ;background-size: auto 100%;}
@@ -715,4 +715,16 @@ a.btn_goen{
 .banner_dian{ background-image:url(../img/dian.svg); }
 .look-more { 
     bottom: 8%;}
+}
+
+.host, .host_t {
+  font-size: 20px;
+}
+@media screen and (max-device-width:1024px) {
+  .host {
+    font-size: 20px;
+  }
+  .host_t {
+    font-size: 30px;
+  }
 }
