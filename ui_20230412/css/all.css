@@ -391,7 +391,7 @@ sup{ font-size: 12px; position: relative; zoom: .8; }
     .footer_t{ padding: 20px 0;} .footer_t h6{ font-size: 16px; margin: 0;}
     .copyright, .copyright a{ font-size: 13px; padding: 10px ;}
 .btn_from{ width: 100%;}
-    .bg_why{ padding-top: 10px; padding-bottom: 5px;}
+    .bg_why{ padding-top: 10; padding-bottom: 5px; padding-left: 10px; padding-right: 10px;}
     .why_list ul{ padding: 0;}
     .why_list li{ padding: 10px 0;}
     .bg_why h3 .title{ color: #000;}
