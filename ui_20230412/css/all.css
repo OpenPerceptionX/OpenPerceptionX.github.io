@@ -734,7 +734,7 @@ a.btn_goen{
   .host {
     font-size: 12px;
   }
-  .icon_home{ display: inline-block; width: 30px; height: 30px; padding-top: 10px;}
+  .icon_home{ display: inline-block; padding-top: 20px;}
   .worldmap {
     width:80%;
     height:80%;
