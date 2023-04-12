@@ -13,6 +13,16 @@
     <link rel="icon" type="image/png" href="ui_20230412/website_icon.png">
     <link rel="stylesheet" type="text/css" href="ui_20230412/css/all.css" media="all">
 
+    <!-- latex support -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        }
+      };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
   </head>
 
 
@@ -460,52 +470,59 @@
       <br>
 
 
-      
-      <h4><b>Important dates</b></h4>
-      <p> </p>
+
+      <h4>
+        <b>Important dates</b>
+      </h4>
+
       <table class="itable">
         <tbody>
           <tr >
-            <td>Challenge Period Open</td>
-            <td>Mar 15, 2023</td>
+            <td>Challenge Period Open</td><td>Mar 15, 2023</td>
           </tr>
           <tr >
-            <td>Challenge Period End</td>
-            <td>May 26, 2023</td>
+            <td>Challenge Period End</td><td>May 26, 2023</td>
           </tr>
           <tr >
-            <td>Notification</td>
-            <td>May 28, 2023</td>
+            <td>Notification</td><td>May 28, 2023</td>
           </tr>
           <tr >
-            <td>Technical Report Deadline</td>
-            <td>Jun 09, 2023</td>
+            <td>Technical Report Deadline</td><td>Jun 09, 2023</td>
           </tr>
           <tr >
-            <td>Winner Announcement</td>
-            <td>Jun 11, 2023</td>
+            <td>Winner Announcement</td><td>Jun 11, 2023</td>
           </tr>
         </tbody>
       </table>
-      <p class="footer_ts">* &nbsp; All due at 23:59 UTC+8. <br>
-        ** The test server will remain open after the challenge.</p>
-      <p></p>
+
+      <p class="footer_ts">
+        * &nbsp; All due at 23:59 UTC+8.
+        <br>
+        ** The test server will remain open after the challenge.
+      </p>
+
+
+      
       <br>
-      <h4><b>Leaderboard</b></h4>
-      <p> </p>
+
+
+
+      <h4>
+        <b>Leaderboard</b>
+      </h4>
+
       <div class="scrollable">
         <table style="text-align: center;">
-      
           <thead>
             <tr>
-              <th style="background-color: rgb(14, 104, 14); ">Rank</th>
-              <th style="background-color: rgb(14, 104, 14); ">Method</th>
-              <th style="background-color: rgb(14, 104, 14);"><b>OLS <i>(primary metric)</i></b></th>
-              <th style="background-color: rgb(14, 104, 14);"> <span class="mx_num"> DET<sub>l</sub></span> </th>
-              <th style="background-color: rgb(14, 104, 14);"><span class="mx_num">DET <sub>t</sub></span> </th>
-              <th style="background-color: rgb(14, 104, 14);"><span class="mx_num">TOP<sub>ll</sub></span> </th>
-              <th style="background-color: rgb(14, 104, 14);"><span class="mx_num">TOP<sub>lt</sub></span> </th>
-              <th style="background-color: rgb(14, 104, 14);">F-Score*</th>
+              <th style="background-color: rgb(14, 104, 14); width: 64px;">Rank</th>
+              <th style="background-color: rgb(14, 104, 14); width: 192px;">Method</th>
+              <th style="background-color: rgb(14, 104, 14);"><b>OLS (primary metric)</b></th>
+              <th style="background-color: rgb(14, 104, 14);">$\text{DET}_{l}$</th>
+              <th style="background-color: rgb(14, 104, 14);">$\text{DET}_{t}$</th>
+              <th style="background-color: rgb(14, 104, 14);">$\text{TOP}_{ll}$</th>
+              <th style="background-color: rgb(14, 104, 14);">$\text{TOP}_{lt}$</th>
+              <th style="background-color: rgb(14, 104, 14);">$\text{F-Score}$*</th>
             </tr>
           </thead>
           <tbody>
@@ -521,6 +538,16 @@
             </tr>
             <tr>
               <td>2</td>
+              <td>WeakChicken</td>
+              <td>0.17</td>
+              <td>0.00</td>
+              <td>0.68</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td>3</td>
               <td>anonymous_team</td>
               <td>0.02</td>
               <td>0.00</td>
@@ -530,7 +557,7 @@
               <td>0.09</td>
             </tr>
             <tr>
-              <td>3</td>
+              <td>4</td>
               <td>boketto</td>
               <td>0.00</td>
               <td>0.00</td>
@@ -542,6 +569,7 @@
           </tbody>
         </table>
       </div>
+
       <p class="footer_ts">* &nbsp; For the real-time leaderboard please refer to <a href="https://eval.ai/web/challenges/challenge-page/1925/leaderboard">EvalAI</a>. <br>
         ** <b>F-Score</b> for lane detection is not taken into consideration in both the challenge and leaderboard.</p>
       <p></p>
