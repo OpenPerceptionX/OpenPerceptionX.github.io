@@ -725,8 +725,18 @@ a.btn_goen{
 .host {
   font-size: 20px;
 }
+.worldmap{
+  width:40%;
+  height:40%;
+  margin: 20px auto
+}
 @media screen and (max-device-width:1024px) {
   .host {
     font-size: 12px;
+  }
+  .icon_home{ display: inline-block; width: 30px; height: 30px; padding-top: 10px;}
+  .worldmap {
+    width:80%;
+    height:80%;
   }
 }
