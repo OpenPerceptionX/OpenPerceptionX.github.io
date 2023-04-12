@@ -1,6 +1,6 @@
 body{color: #333; line-height:21px;}
 body,html,dl,dt,dd,ul,li{padding:0; margin:0; }
-body, input, textarea, select ,code,topic { font-size: 14px;
+body, input, textarea, select ,code,topic, eachtrack { font-size: 14px;
     font-family: Verdana, Geneva, sans-serif;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -89,9 +89,9 @@ display: table}
     }
     .lj_button2{ 
        
-            background-image: -moz-linear-gradient( 0deg, rgb(83,201,188) 0%, rgb(158,239,212) 100%);
-            background-image: -webkit-linear-gradient( 0deg, rgb(83,201,188) 0%, rgb(158,239,212) 100%);
-            background-image: -ms-linear-gradient( 0deg, rgb(83,201,188) 0%, rgb(158,239,212) 100%);
+            background-image: -moz-linear-gradient( 0deg, white 0%, white 100%);
+            background-image: -webkit-linear-gradient( 0deg, white 0%, white 100%);
+            background-image: -ms-linear-gradient( 0deg, white 0%, white 100%);
                      
     }
 
@@ -103,9 +103,9 @@ display: table}
       } 
       .lj_button2:hover{ 
        
-            background-image: -moz-linear-gradient( 0deg, rgb(158,239,212) 0%, rgb(197,255,249) 98%);
-            background-image: -webkit-linear-gradient( 0deg, rgb(158,239,212) 0%, rgb(197,255,249) 98%);
-            background-image: -ms-linear-gradient( 0deg, rgb(158,239,212) 0%, rgb(197,255,249) 98%);
+            background-image: -moz-linear-gradient( 0deg, rgb(191,191,191) 0%, rgb(191,191,191) 98%);
+            background-image: -webkit-linear-gradient( 0deg, rgb(191,191,191) 0%, rgb(191,191,191) 98%);
+            background-image: -ms-linear-gradient( 0deg, rgb(191,191,191) 0%, rgb(191,191,191) 98%);
           
          
       }
@@ -141,6 +141,11 @@ topic {
   
 }
 code{    color: #C0392B;}
+eachtrack{
+  color: white;
+  text-decoration: underline;
+  font-weight: 900;
+}
 @media screen and (max-device-width:1024px){
 		 .rnav_this .r_ul li svg path{ fill:#000}
 	 .r_ul li.this svg path{ fill:rgb(218,25,121)}
@@ -722,9 +727,9 @@ a.btn_goen{
 }
 @media screen and (max-device-width:1024px) {
   .host {
-    font-size: 20px;
+    font-size: 10px;
   }
   .host_t {
-    font-size: 30px;
+    font-size: 15px;
   }
 }
