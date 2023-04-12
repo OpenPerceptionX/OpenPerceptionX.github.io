@@ -722,14 +722,11 @@ a.btn_goen{
     bottom: 8%;}
 }
 
-.host, .host_t {
+.host {
   font-size: 20px;
 }
 @media screen and (max-device-width:1024px) {
   .host {
-    font-size: 10px;
-  }
-  .host_t {
-    font-size: 15px;
+    font-size: 12px;
   }
 }
