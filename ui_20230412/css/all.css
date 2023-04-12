@@ -327,10 +327,11 @@ body:not(.home) .head_fanhui{cursor:pointer;display:block;padding:0;position:fix
 .track_nav{ display: flex; width: 100%;     flex-wrap: wrap;    box-sizing: border-box;}
 .track_nav dl{transition: all .3s ease-in-out; width: 25%;  padding:30px 0 25px 0;   box-sizing: border-box; color:#fff; cursor: pointer;} 
 .cn_item .ik,.track_nav dl{ background-repeat:no-repeat; background-position:  right 0 ;background-size: auto 100%;}
-.track_nav dl dt,.track_nav dl dd{ padding: 0 0 0 20px; margin: 0;}
+.track_nav dl dt,.track_nav dl dd{ padding-left: 30px; margin: 0;}
+.track_nav dl dt{padding-top: 20px;}
 .track_nav dl .track{ opacity: .6;}
 .track_nav dl dd{ font-size: 21px;  padding-bottom: 5px;}
-.track_nav dl .text{ opacity: .8; padding: 20px;}
+.track_nav dl .text{ opacity: .8; padding-bottom: 20px; padding-right: 30px;}
 .track_nav dl dd::after{ content: ""; width: 20px; height: 20px; display: inline-block; background-position: 0 -636px; vertical-align: middle; }
 .track_nav dl:nth-of-type(1),.cn_item:nth-of-type(1) .ik{ background-color:#496e30 ;background-image: url(../img/br1.svg) }
 .track_nav dl:nth-of-type(2),.cn_item:nth-of-type(2) .ik{ background-color:#428e8e ;background-image: url(../img/br2.svg)  ;}
