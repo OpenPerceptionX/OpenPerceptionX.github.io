@@ -1,1590 +1,1465 @@
 <!DOCTYPE html>
-<!--
-  Template Name: Oleald
-  Author: <a href="https://www.os-templates.com/">OS Templates</a>
-  Author URI: https://www.os-templates.com/
-  Licence: Free to use under our free template licence terms
-  Licence URI: https://www.os-templates.com/template-terms
-  -->
-<html lang="">
-<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
-
-<head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-84JVLWLQB5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-84JVLWLQB5');
-</script>
+<html lang="en">
 
 
-  <title>Challenge at CVPR 2023 Autonomous Driving Workshop</title>
-  <meta name="description" content="Based on cvpr2023 workshop, Opendrivelab introduce four curated, brand-new challenges following: OpenLane Topology Challenge; Online HD Map Construction Challenge; 3D Occupancy Prediction Challenge; nuPlan Planning Challenge.">
-  <meta name="keywords" content="CVPR2023Challenge,Autonomous Driving,E2EAD,cvprworkshop,e2eadChallenge ,OpenLane Topology Challenge, Online HD Map Construction Challenge, 3D Occupancy Prediction Challenge, nuPlan Planning Challenge">
-  <meta name="author" content="OpenDriveLab">
 
-  <link rel="icon" 
-      type="image/png" 
-      href="images/team_logo.png">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script>
-    MathJax = {
-      tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']]
-      }
-    };
-  </script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-  </script>
+  <head>
 
-  <style>
-    img:hover {
-      opacity: 0.3;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 
-  <style>
-    img:hover {
-      opacity: 0.3;
-    }
-    .wrapper .sidebar nav {
-      position: relative !important;
-      top: 0;
-      width: 100%;
-    }
-    .sidebar.one_quarter.first {
-      position: sticky;
-      top: 50%;
-    }
+    <title>Challenge at CVPR 2023 Autonomous Driving Workshop</title>
+    <link rel="icon" type="image/png" href="ui_20230412/website_icon.png">
+    <link rel="stylesheet" type="text/css" href="ui_20230412/css/all.css" media="all">
 
-    .overview article:hover a{color:#DC8E47;}
-    a{color:#DC8E47;}
+    <!-- latex support -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        }
+      };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
-  </style>
-
-</head>
-
-<body id="top">
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <!-- Top Background Image Wrapper -->
-  <div class="bgded overlay " style="background-image:url('./images/challenge/poster_s.png');">
-    <!-- ################################################################################################ -->
-
-    <!-- ################################################################################################ -->
-    <!-- ################################################################################################ -->
-    <!-- ################################################################################################ -->
-    <div class="wrapper row1">
-
-      <!-- ################################################################################################ -->
-      <!-- ################################################################################################ -->
-      <!-- ################################################################################################ -->
-      <div id="pageintro" class="hoc clear">
-        <!-- ################################################################################################ -->
-        <article>
-          <!-- <br><br>
-          <br><br>
-          <br><br><br><br> -->
+  </head>
 
 
-          <h1><b class="logo-name" style="font-size: 2.8em">
-            <span style="white-space:nowrap;">Autonomous</span>  <span style="white-space:nowrap;">Driving</span>  <span style="white-space:nowrap;">Challenge</span> 
-          </b></h1>
 
 
-          <!-- <h3 class="heading" style="font-size: 3.5em">OpenLane Mapping Challenge</h3> -->
-          <!-- <h2 style="font-size: 1.8em">CVPR 2023</h2> -->
-          <footer>
-            <b style="font-size: 1.5em">In conjunction with</b>
-            <br><br>
-            <b style="font-size: 2em">CVPR 2023 Workshops</b>
-            <br><br>
-            <div style="padding:0 60px;line-height: 1.7;">
-            <li><b><a href="https://opendrivelab.com/e2ead/cvpr23" style="font-size: 1.5em; color: #DC8E47"> End-to-End Autonomous Driving Workshop</a></b></li>
-            <li><b><a href="https://www.vcad.site/" style="font-size: 1.5em; color: #DC8E47">Vision-Centric Autonomous Driving Workshop</a></b></li>
-            </div>
-            <br>
-            <b style="font-size: 1.5em">June 18, Vancouver, Canada</b>
- 
-          </footer>
-        </article>
-        <!-- ################################################################################################ -->
+  <body class="home">
+
+
+
+    <!-- header -->
+
+    <div class="header"> 
+
+      <div class="rnav m"></div>
+
+      <div class="qh_langw">
+
+        <div class="qh_lang">
+          <a data-gd="#FAQ">FAQ</a>
+        </div>
+
+        <!-- <div class="qh_lang">
+          <a href="index_cn.html">中</a>
+          <a href="index.html" class="this">EN</a>
+        </div> -->
+
       </div>
+
     </div>
-  </div>
-
-  <!-- ################################################################################################ -->
-
-  <!-- End Top Background Image Wrapper -->
 
 
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <div class="wrapper row3">
-    <main class="hoc container clear">
-      <!-- main body -->
-      <!-- ################################################################################################ -->
-      <div class="sidebar one_quarter first">
-        <!-- ################################################################################################ -->
-        <h6> <b></b></h6>
 
-        <nav class="sdb_holder" >
+    <div class="rnav_br"></div>
+
+
+
+    <!-- banner -->
+
+    <div class="bannerw">
+      <div class="banner" style="background-image: url(ui_20230412/img/index_banner.jpg);">
+        <div class="banner_dian"></div>
+      
+        <div class="banner_textw">
+          <div class="bg">
+            <div class="juzhongduiqi">
+              <div>
+
+                <div class="t_text">
+                  <img src="ui_20230412/img/auto.svg" class="title_auto" /> 
+                  <img src="ui_20230412/img/challeng.svg" class="title_challeng" /> 
+                </div>
+
+                <p class="r_t">
+                  In conjunction with
+                </p>
+
+                <p>
+                  <img src="ui_20230412/img/cvpr2023.svg" class="titel_cvpr" data-swiper-parallax-x="-1600" />
+                </p>
+
+                <div class="banner_text">
+                  <p>
+                    <a href="./e2ead/cvpr23.html">
+                      End-to-End Autonomous Driving Workshop
+                    </a>
+                  </p>
+                  <p>
+                    <a href="https://vcad.site/">
+                      Vision-Centric Autonomous Driving Workshop
+                    </a>
+                  </p>
+                </div>
+
+                <p class="r_time">
+                  June 18, Vancouver, Canada
+                </p>
+
+                <p>
+                  <img src="ui_20230412/img/sh_logo.svg" class=" banner_img" data-swiper-parallax-x="-1600" />
+                </p>
+
+                <br />
+
+                <!-- <span class="lj_button" data-swiper-parallax-x="-4000"  data-hd="#Contact">Contact</span>  -->
+                <span class="lj_button2" data-swiper-parallax-x="-4000"  data-hd="#Participation">Participate</span>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+
+
+      <!-- navigation bar -->
+
+      <div class="r_ul">
+        <ul class="bg">
+          <li class="this" data-gd=".bg_why">Overview</li>
+          <li data-gd="#Track1">OpenLane Topology</li>
+          <li data-gd="#Track2">Online HD Map Construction</li>
+          <li data-gd="#Track3">3D Occupancy Prediction</li>
+          <li data-gd="#Track4">nuPlan Planning</li>
+          <li data-gd="#rules">General Rules</li>
+          <li data-gd="#FAQ">FAQ</li>
+        </ul>
+      </div>
+
+    </div>
+
+
+
+    <!-- overview -->
+
+    <div class="bg_imgx">
+      <div class="bg_why">
+
+        <div class="bg"> 
+                
+          <h3>
+            <b class="title" target="_blank" id="Overview">Overview</b>
+          </h3>
+
+          <br>
+
+          <h4>
+            <b>Why these Challenges?</b>
+          </h4>
+          <p>
+            Autonomous driving is developing fast. 
+            Although still deemed important, the requirement for cutting-edge algorithms is no longer to achieve as high as mAP for object detectors, or to recognize lanes as conventional segmentation. 
+            We believe the <topic>future</topic> of autonomous driving algorithms is to <topic>bond perception closely with planning</topic>. 
+            As such, we introduce four <topic>curated, brand-new</topic> challenges following such a philosophy.
+          </p>
+
+        </div>
+
+
+
+        <!-- <div class="why_list">
           <ul>
-            <li><a href="#Overview" style="font-size: 1.1em; line-height: 1.2; ">- Overview</a>
-              <ul>
-                <li><a href="#Contact" style="font-size: 1em; line-height: 1; ">- Contact</a></li>
-                <!-- <li><a href="#Feedback" style="font-size: 1em; line-height: 1; ">- Feedback</a></li> -->
-                <li><a href="#Participation" style="font-size: 1em; line-height: 1; ">- Participation</a>
-                </li>
-              </ul>
-            
+            <li>
+              <h2>OpenLane Topology Challenge</h2>
+              Go beyond conventional lane line detection as segmentation. 
+              Recognizing lanes as an abstraction of the scene - <code>centerline</code>, and building the topology between lanes and traffic elements. 
+              Such a <code>topology</code> is to facilitate planning and routing.
+            </li>
+            <li>
+              <h2>Online HD Map Construction Challenge</h2>
+              Traditional mapping pipelines require a vast amount of human effort to maintain, which limits their scalability. 
+              This task aims to dynamically construct local <code>maps</code> with rich semantics based on onboard sensors. 
+              The vectorized map can be further utilized by downstream tasks.
+            </li>
+            <li>
+              <h2>3D Occupancy Prediction Challenge</h2>
+              The representation of 3D bounding boxes is not enough to describe general objects (obstacles).
+              Instead, inspired by the concept in Robotics, we deem general object detection as an <code>occupancy</code> representation to cover more irregularly shaped objects (e.g., protruding).
+              The output could also be fed as cost volume for planning. 
+              This idea is also endorsed by <a href="https://www.mobileye.com/ces-2023">Mobileye at CES 2023</a> and <a href="https://www.youtube.com/watch?v=ODSJsviD_SU">Tesla AI Day 2022</a>.
+            </li>
+            <li>
+              <h2>nuPlan Planning Challenge</h2>
+              To verify the effectiveness of the newly-designed modules in perception, we need an ultimate planning framework with
+              a <code>closed-loop</code> setting.
+              Previous motion planning benchmarks focus on short-term motion forecasting and are limited to open-loop evaluation. 
+              <code>nuPlan</code> introduces long-term planning of the ego vehicle and corresponding metrics.
             </li>
           </ul>
-          <ul>
-            <li><a href="#Track1" style="font-size: 1.1em; line-height: 1.2;">- OpenLane Topology </a></li>
-          </ul>
-          <ul>
-            <li><a href="#Track2" style="font-size: 1.1 em; line-height: 1.4;">- Online HD Map Construction </a></li>
-          </ul>
-          <ul>
-            <li><a href="#Track3" style="font-size: 1.1em; line-height: 1.2;">- 3D Occupancy Prediction </a></li>
-          </ul>
-          <ul>
-            <li><a href="#Track4" style="font-size: 1.1em; line-height: 1.2;">- nuPlan Planning</a></li>
-          </ul>
-          <ul>
-            <li><a href="#rules" style="font-size: 1.1em; line-height: 1.2;">- General Rules</a></li>
-          </ul>
-          <ul>
-            <li><a href="#FAQ" style="font-size: 1.1em; line-height: 1.2;">- FAQ</a></li>
-          </ul>
+        </div> -->
 
-
-          
-          
-        </nav>
-
-
-        <!-- ################################################################################################ -->
       </div>
-      <div class="content three_quarter">
-        <!-- ################################################################################################ -->
+
+      
+
+      <div class="bg"> 
+        
+        <img alt="motivation" src="ui_20230412/img/overview_2_t_s.png" >
+
+        <h3 class="mot_ts">
+          Motivation of the Challenges: bond perception more closely with planning.
+        </h3>
+        
+      </div>
+      <br>
 
 
 
+      <div class="track_nav">
 
-        <!-- Overview -->
+        <dl data-hd="#Track1">
+          <dt class="track">Track 1</dt>
+          <dd>OpenLane Topology Challenge</dd>
+          <dt class="text">
+            Go beyond conventional lane line detection as segmentation. 
+            Recognizing lanes as an abstraction of the scene - <eachtrack>centerline</eachtrack>, and building the topology between lanes and traffic elements. 
+            Such a <eachtrack>topology</eachtrack> is to facilitate planning and routing.
+          </dt>
+        </dl>
 
-        <h3><b class="btb" target="_blank" id="Overview" style="font-size: 2.5em;">
-          Overview
-        </b></h3>
+        <dl data-hd="#Track2">
+          <dt>Track 2</dt>
+          <dd>Online HD Map Construction Challenge</dd>
+          <dt class="text">
+            Traditional mapping pipelines require a vast amount of human effort to maintain, which limits their scalability. 
+            This task aims to dynamically construct local <eachtrack>maps</eachtrack> with rich semantics based on onboard sensors. 
+            The vectorized map can be further utilized by downstream tasks.
+          </dt>
+        </dl>
 
-        <br>
+        <dl data-hd="#Track3">
+          <dt>Track 3</dt>
+          <dd>3D Occupancy Prediction Challenge</dd>
+          <dt class="text">
+            The representation of 3D bounding boxes is not enough to describe general objects (obstacles).
+            Instead, inspired by the concept in Robotics, we deem general object detection as an <eachtrack>occupancy</eachtrack> representation to cover more irregularly shaped objects (e.g., protruding).
+            The output could also be fed as cost volume for planning. 
+            This idea is also endorsed by <eachtrack>Mobileye at CES 2023</eachtrack> and <eachtrack>Tesla AI Day 2022</eachtrack>.
+          </dt>
+        </dl>
 
-        <h4><b>Why these Challenges?</b></h4>
+        <dl data-hd="#Track4">
+          <dt>Track 4</dt>
+          <dd>nuPlan Planning Challenge</dd>
+          <dt class="text">
+            To verify the effectiveness of the newly-designed modules in perception, we need an ultimate planning framework with
+            a <eachtrack>closed-loop</eachtrack> setting.
+            Previous motion planning benchmarks focus on short-term motion forecasting and are limited to open-loop evaluation. 
+            <eachtrack>nuPlan</eachtrack> introduces long-term planning of the ego vehicle and corresponding metrics.
+          </dt>
+        </dl>
 
-        <p>
-           Autonomous driving is developing fast. 
-           Although still deemed important, the requirement for cutting-edge algorithms is no longer to achieve as high as mAP for object detectors, or to recognize lanes as conventional segmentation. 
-           We believe the <topic>future</topic> of autonomous driving algorithms is to <topic>bond perception closely with planning</topic>. 
-           <!--The goal of each module (object detection, lane line recognition, etc.) in perception is to serve better planning. -->
-           As such, we introduce four <topic>curated, brand-new</topic> challenges following such a philosophy.
+      </div>
+    </div>
+
+
+
+    <div class="bg_huise kin Contact_br">
+      <div class="bg"> 
+            
+        <!-- Participation -->
+
+        <h4>
+          <b id="Participation">Participation</b>
+        </h4>
+
+        <p> 
+          For participation, you can create a team at EvalAI, and then make a submission. 
+          A valid submission would be automatically viewed as a successful participation.
+          No more than <b>ten</b> individuals are allowed in a team.
+          For more details please refer to <a data-gd="#FAQ">FAQ</a> and description in each track.
+          <br><br>
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSepfNu34EF80BIA7DwbqVOUD3hCytIXAU42gIIXna3OwiTlgA/viewform?embedded=true" width=100% height=400px frameborder="0" marginheight="20" marginwidth="20">正在加载…</iframe>
         </p>
 
-        <li style="list-style-type:disc"> 
-          <topic>OpenLane Topology Challenge</topic>. 
-          Go beyond conventional lane line detection as segmentation. 
-          Recognizing lanes as an abstraction of the scene - <code>centerline</code>, and building the topology between lanes and traffic elements. 
-          Such a <code>topology</code> is to facilitate planning and routing.
-        </li>
+        
 
-        <br>
+        <!-- <button class="btn_from" > <i class="tb"></i> Participation</button>
+        <div class="open_from"> <div class="close"></div>
+          <div class="open_from_in">
+        
+          <iframe
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSepfNu34EF80BIA7DwbqVOUD3hCytIXAU42gIIXna3OwiTlgA/viewform?embedded=true"
+                      frameborder="0" >正在加载…</iframe>
+        </div>
+        </div> -->
 
-        <li style="list-style-type:disc"> 
-          <topic>Online HD Map Construction Challenge</topic>. 
-          Traditional mapping pipelines require a vast amount of human effort to maintain, which limits their scalability. 
-          This task aims to dynamically construct local <code>maps</code> with rich semantics based on onboard sensors. 
-          The vectorized map can be further utilized by downstream tasks.
-        </li>
-
-        <br>
-
-        <li style="list-style-type:disc"> 
-          <topic>3D Occupancy Prediction Challenge</topic>. 
-          The representation of 3D bounding boxes is not enough to describe general objects (obstacles).
-          <!-- for autonomous driving.  -->
-          Instead, inspired by the concept in Robotics, we deem general object detection as an <code>occupancy</code> representation to cover more irregularly shaped objects (e.g., protruding).
-          The output could also be fed as cost volume for planning. 
-          This idea is also endorsed by <a href="https://www.mobileye.com/ces-2023">Mobileye at CES 2023</a> and <a href="https://www.youtube.com/watch?v=ODSJsviD_SU">Tesla AI Day 2022</a>.
-        </li>
-
-        <br>
-
-        <li style="list-style-type:disc"> 
-          <topic>nuPlan Planning Challenge</topic>. 
-          To verify the effectiveness of the newly-designed modules in perception, we need an ultimate planning framework with
-          a <code>closed-loop</code> setting.
-          Previous motion planning benchmarks focus on short-term motion forecasting and are limited to open-loop evaluation. 
-          <code>nuPlan</code> introduces long-term planning of the ego vehicle and corresponding metrics.
-        </li>
 
 
         <br>
-        <figure>
-          <img alt="motivation" src="images/challenge/overview_2_t_s.png" style="pointer-events: none;"/>
-          <figcaption style="text-align: center; color: grey;font-size: 1.2em;"><b>Motivation of the Challenges: bond perception more closely with planning.</b></figcaption>
-        </figure>
-        <br><br>
+            
 
-
-
+        
         <!-- contact -->
+        <h4>
+          <b id="Contact">Contact</b>
+        </h4>
 
-        <h4><b id="Contact">Contact</b></h4>
-        <p>
-          <a href="mailto:workshop-e2e-ad@googlegroups.com">
+        <p> 
+          <a href="mailto:workshop-e2e-ad@googlegroups.com" class="h_imga"> 
             <img
               src="https://img.shields.io/badge/email-Send-important?logo=gmail&amp"
               alt="Send E-mail" style="height: 25px"
             />
-          </a>
+          </a> 
           Contact us via <code>workshop-e2e-ad@googlegroups.com</code> with the prefix [CVPR 2023 E2EAD].
         </p>
-        <p>
-          <a href="https://join.slack.com/t/opendrivelab/shared_invite/zt-1rcp42b35-Wc5I0MhUrahlM5qDeJrVqQ">
+
+        <p> 
+          <a href="https://join.slack.com/t/opendrivelab/shared_invite/zt-1rcp42b35-Wc5I0MhUrahlM5qDeJrVqQ"  class="h_imga"> 
             <img
               src="https://img.shields.io/badge/Slack-Join-important?logo=slack&amp"
               alt="Join Slack" style="height: 25px"
             />
-          </a>
+          </a> 
           Join Slack to chat with Challenge organizers. Please follow the guidelines in <code>#general</code> and join the track-specific channels.
         </p>
-        <p>
-          <a href="images/challenge/wechatgroup.jpeg">
+
+        <p> 
+          <a href="images/challenge/wechatgroup.jpeg"  class="h_imga"> 
             <img
               src="https://img.shields.io/badge/WeChat-Join-important?logo=wechat&amp"
               alt="Join Wechat" style="height: 25px"
             />
-          </a>
+          </a> 
           Join WeChat group to chat with Challenge organizers.
         </p>
 
 
+
         <br>
 
 
-        <!-- <h4><b id="Feedback">Feedback</b></h4>
-        <p>
-          Filling out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSepfNu34EF80BIA7DwbqVOUD3hCytIXAU42gIIXna3OwiTlgA/viewform?usp=sf_link">form</a> for <code>sign-up or feedback</code>.
-        </p>
-        
-
-        <br> -->
-
-
-
-
-        <!-- participate -->
-
-        <h4><b id="Participation">Participation</b></h4>
-        <p>
-          For participation, you can create a team at EvalAI, and then make a submission. 
-          A valid submission would be automatically viewed as a successful participation.
-          No more than <b>ten</b> individuals are allowed in a team.
-          For more details please refer to <a href="https://opendrivelab.com/AD23Challenge.html#FAQ">FAQ</a> and description in each track.
-        </p>
-
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSepfNu34EF80BIA7DwbqVOUD3hCytIXAU42gIIXna3OwiTlgA/viewform?embedded=true" width=100% height=400px frameborder="0" marginheight="20" marginwidth="20">正在加载…</iframe>
-                
-        <br><br>
-
-
-        
 
         <!-- host -->
 
-        <h4><b>Host</b></h4>
+        <h4>
+          <b>Host</b>
+        </h4>
 
-        <p>
+        <p> 
           The year 2023's edition of the Challenge is hosted by:
-        </p>
-
-        <br>
-
-        <div class="grid">
-          <div class="grid-item" style="min-width: 180px; max-width: 180px; padding-left: 1rem; padding-right: 1.5rem;" >
-            <li class="speakers-item ">
-              <span class="speaker-photo">
-                <a href="https://opendrivelab.com" target="_blank">
-                  <img class="photo" style="width: 180px; border-radius:100%; overflow:hidden;"
-                    src="images/challenge/shanghaiailab_w.png" >
-                  <p class="speakers-name" style="text-align:center;font-size: 0.9em;"><b>OpenDriveLab<br>at Shanghai AI Lab</b>
+          <br><br>
+          <div class="link_logo">
+            <ul>
+              <li> 
+                <a href="https://opendrivelab.com" target="_blank"> 
+                  <img src="ui_20230412/img/link_1.svg">
+                  <p>
+                    <b class="host">OpenDriveLab<br>at Shanghai AI Lab</b>
                   </p>
-                </a>
-              </span>
-            </li>
-          </div>
-          <!-- <div class="grid-item" style="min-width: 180px; max-width: 180px; padding-left: 1rem; padding-right: 1.5rem;" >
-            <li class="speakers-item ">
-              <span class="speaker-photo">
-                <a href="https://www.huawei.com/en/" target="_blank">
-                  <img class="photo" style="width: 180px; border-radius:100%; overflow:hidden;"
-                    src="images/event/cvpr/Huawei-sq.jpeg" >
-                  <p class="speakers-name" style="text-align:center;font-size: 0.9em;"><b>Huawei<br></b><a style="color: gray;font-size: x-small;"> Responsible for Track 1</a>
+                </a> 
+              </li>
+              <li> 
+                <a href="http://group.iiis.tsinghua.edu.cn/~marslab/#" target="_blank"> 
+                  <img src="ui_20230412/img/link_2.svg">
+                  <p>
+                    <b class="host">MARS Lab at<br> Tsinghua University</b>
                   </p>
-                </a>
-              </span>
-            </li>
-          </div> -->
-          <div class="grid-item" style="min-width: 180px; max-width: 180px; padding-left: 1rem; padding-right: 1.5rem;" >
-            <li class="speakers-item " >
-              <span class="speaker-photo">
-                <a href="http://group.iiis.tsinghua.edu.cn/~marslab/#" target="_blank">
-                  <img class="photo" style="width: 180px; border-radius:100%; overflow:hidden;"
-                    src="images/challenge/mars_w.png" > 
-
-                  <p class="speakers-name" style="text-align:center;font-size: 0.9em;"> <b>MARS Lab at<br> Tsinghua University</b> </p>
-                </a>
-              </span>
-            </li>
+                </a> 
+              </li>
+              <li> 
+                <a href="https://motional.com" target="_blank"> 
+                  <img src="ui_20230412/img/link_3.svg">
+                  <p>
+                    <b class="host">nuPlan team<br>from Motional</b>
+                  </p>
+                </a> 
+              </li>
+            </ul>
           </div>
-          <div class="grid-item" style="min-width: 180px; max-width: 180px; padding-left: 1rem; padding-right: 1.5rem;" >
-            <li class="speakers-item " >
-              <span class="speaker-photo">
-                <a href="https://motional.com/" target="_blank">
-                  <img class="photo" style="width: 180px; border-radius:100%; overflow:hidden;"
-                    src="images/challenge/motion_w.jpg"  > 
-
-                  <p class="speakers-name" style="text-align:center;font-size: 0.9em;"> <b>nuPlan team<br>from Motional</b> </p>
-                </a>
-              </span>
-            </li>
-          </div>
-        </div>
-
-
-
-
-        <br><br>
-        <hr>
-        <br><br><br>
-
-
-
-        <!-- track 1 -->
-
-        <h3><b class="btb" target="_blank" id="Track1" style="font-size: 2.5em;">
-          Track 1<br>OpenLane Topology
-        </b></h3>
-        
-        <a href="https://github.com/OpenDriveLab/OpenLane-V2">
-          <img
-            src="https://img.shields.io/badge/website-GitHub-darkgreen"
-            alt="GitHub" style="height: 25px"
-          />
-        </a>
-
-        <a href="https://github.com/OpenDriveLab/OpenLane-V2">
-          <img
-            src="https://img.shields.io/github/stars/OpenDriveLab/OpenLane-V2?style=social"
-            alt="GitHub" style="height: 25px"
-          />
-        </a>
-
-        <a href="https://github.com/OpenDriveLab/OpenLane-V2">
-          <img
-            src="https://img.shields.io/github/forks/OpenDriveLab/OpenLane-V2?style=social"
-            alt="GitHub" style="height: 25px"
-          />
-        </a>
-
-        <a href="https://eval.ai/web/challenges/challenge-page/1925">
-          <img
-            src="https://img.shields.io/badge/submission-EvalAI-darkgreen"
-            alt="EvalAI" style="height: 25px"
-          />
-        </a>
-
-        
-        <br><br><br>
-
-
-        <h4><b>Task Description</b></h4>
-        <p>
-          The <a href="https://github.com/OpenDriveLab/OpenLane-V2">OpenLane-V2</a> dataset* is the perception and reasoning benchmark for scene structure in autonomous driving. 
-          Given multi-view images covering the whole panoramic field of view, 
-          participants are required to deliver not only perception results of lanes and traffic elements but also topology relationships among lanes and between lanes and traffic elements simultaneously.
-        <footer ><i style ="font-size: 0.8em;">* The dataset, OpenLane-V2 at Shanghai AI Lab, is named as RoadGenome at Huawei and publically as OpenLane-Huawei.</i></b>
         </p>
 
 
-        <br>
+      </div>
+    </div>
 
 
-        <h4><b>Participation</b></h4>
-        <p>
-          The primary metric is <a href="https://github.com/OpenDriveLab/OpenLane-V2#task">OpenLane-V2 Score (OLS)</a>, which comprises evaluations on three sub-tasks.
-          On the website, we provide tools for 
-          <a href="https://github.com/OpenDriveLab/OpenLane-V2/blob/master/docs/devkit.md#openlanev2dataset">data access</a>,
-          <a href="https://github.com/OpenDriveLab/OpenLane-V2#train-a-model">training models</a>,
-          <a href="https://github.com/OpenDriveLab/OpenLane-V2/blob/master/docs/devkit.md#openlanev2evaluation">evaluations</a>,
-          and <a href="https://github.com/OpenDriveLab/OpenLane-V2/blob/master/docs/devkit.md#openlanev2visualization">visualization</a>.
-          To submit your results on <a href="https://eval.ai/web/challenges/challenge-page/1925/overview">EvalAI</a>, please 
-          follow the <a href="https://github.com/OpenDriveLab/OpenLane-V2/blob/master/docs/submission.md#submission">submission instructions</a>.
-        </p>
 
+    <!-- track 1 -->
 
-        <br>
-
-
-        <h4><b>Important dates</b></h4>
-        <p>
-          <table style="width: 50%;">
-            <tbody>
-              <tr style="background-color: white">
-                <td>Challenge Period Open</td><td>Mar 15, 2023</td>
-              </tr>
-              <tr style="background-color: white">
-                <td>Challenge Period End</td><td>May 26, 2023</td>
-              </tr>
-              <tr style="background-color: white">
-                <td>Notification</td><td>May 28, 2023</td>
-              </tr>
-              <tr style="background-color: white">
-                <td>Technical Report Deadline</td><td>Jun 09, 2023</td>
-              </tr>
-              <tr style="background-color: white">
-                <td>Winner Announcement</td><td>Jun 11, 2023</td>
-              </tr>
-            </tbody>
-          </table>
-          <footer ><i style ="font-size: 0.8em;">* &nbsp; All due at 23:59 UTC+8.</i></b>
-          <footer ><i style ="font-size: 0.8em;">** The test server will remain open after the challenge.</i></b>
-        </p>
-
-
-        <br>
-
-
-        <h4><b>Leaderboard</b></h4>
-        <p>
-          <div class="scrollable">
-            <table style="text-align: center;"> <!-- id="keywords" cellspacing="0" cellpadding="0" -->
-              <thead>
-                <tr>
-                  <th style="background-color: rgb(14, 104, 14); width: 64px;">Rank</th>
-                  <th style="background-color: rgb(14, 104, 14); width: 192px;">Method</th>
-                  <th style="background-color: rgb(14, 104, 14);"><b>OLS (primary metric)</b></th>
-                  <th style="background-color: rgb(14, 104, 14);">$\text{DET}_{l}$</th>
-                  <th style="background-color: rgb(14, 104, 14);">$\text{DET}_{t}$</th>
-                  <th style="background-color: rgb(14, 104, 14);">$\text{TOP}_{ll}$</th>
-                  <th style="background-color: rgb(14, 104, 14);">$\text{TOP}_{lt}$</th>
-                  <th style="background-color: rgb(14, 104, 14);">$\text{F-Score}$*</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>BeingStrong</td>
-                  <td>0.25</td>
-                  <td>0.12</td>
-                  <td>0.54</td>
-                  <td>0.00</td>
-                  <td>0.08</td>
-                  <td>0.24</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>WeakChicken</td>
-                  <td>0.17</td>
-                  <td>0.00</td>
-                  <td>0.68</td>
-                  <td>0.00</td>
-                  <td>0.00</td>
-                  <td>0.00</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>anonymous_team</td>
-                  <td>0.02</td>
-                  <td>0.00</td>
-                  <td>0.05</td>
-                  <td>0.00</td>
-                  <td>0.00</td>
-                  <td>0.09</td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>boketto</td>
-                  <td>0.00</td>
-                  <td>0.00</td>
-                  <td>0.00</td>
-                  <td>0.00</td>
-                  <td>0.00</td>
-                  <td>0.00</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <footer ><i style ="font-size: 0.8em;">* &nbsp; For the real-time leaderboard please refer to 
-            <a href="https://eval.ai/web/challenges/challenge-page/1925/leaderboard">EvalAI</a></i>.
-          </b>
-          <footer ><i style ="font-size: 0.8em;">** $\text{F-Score}$ for lane detection is not taken into consideration in both the challenge and leaderboard.</i></b>
-        </p>
-
-
-        <br>
-        
-
-        <h4><b>Award</b></h4>
-        <p>
-          <table style="width: 50%;">
-            <tbody>
-              <tr style="background-color: white">
-                <td>1st Place</td><td>USD $15,000</td>
-              </tr>
-              <tr style="background-color: white">
-                <td>2nd Place</td><td>USD $5,000</td>
-              </tr>
-              <tr style="background-color: white">
-                <td>Innovation Prize</td><td>USD $5,000</td>
-              </tr>
-            </tbody>
-          </table>
-        </p>
-
-
-        <br>
-
-
-        <h4><b>Contact</b></h4>
-        <p>
-          <li style="list-style-type:disc">
-            Huijie Wang, <code>wanghuijie@pjlab.org.cn</code>
-          </li>
-          <li style="list-style-type:disc">
-            Slack channel: <code>#openlane-challenge-2023</code>
-          </li>
-        </p>
-
-
-        <br>
-
-
-        <h4><b>Related Literature</b></h4>
-        <p>
-          <li style="list-style-type:disc;">
-            <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Can_Structured_Birds-Eye-View_Traffic_Scene_Understanding_From_Onboard_Images_ICCV_2021_paper.pdf">
-              Structured Bird's-Eye-View Traffic Scene Understanding From Onboard Images
-            </a>
-          </li>
-          <li style="list-style-type:disc;">
-            <a href="https://arxiv.org/pdf/2203.11089.pdf">
-              PersFormer: 3D Lane Detection via Perspective Transformer and the OpenLane Benchmark
-            </a>
-          </li>
-          <li style="list-style-type:disc;">
-            <a href="https://arxiv.org/pdf/2208.14437.pdf">
-              MapTR: Structured Modeling and Learning for Online Vectorized HD Map Construction
-            </a>
-          </li>
-        </p>
-
-
-
-        <br><br><br>
-        <hr>
-        <br><br><br>
-
-
-
-        <!-- track 2 -->
-
-        <h3><b class="btb" target="_blank" id="Track2" style="font-size: 2.5em;">
-          Track 2<br>Online HD Map Construction
-        </b></h3>
-
-        <a href="https://github.com/Tsinghua-MARS-Lab/Online-HD-Map-Construction-CVPR2023">
-          <img
-            src="https://img.shields.io/badge/website-GitHub-darkcyan"
-            alt="GitHub" style="height: 25px"
-          />
-        </a>
-
-        <a href="https://github.com/Tsinghua-MARS-Lab/Online-HD-Map-Construction-CVPR2023">
-          <img
-            src="https://img.shields.io/github/stars/Tsinghua-MARS-Lab/Online-HD-Map-Construction-CVPR2023?style=social"
-            alt="GitHub" style="height: 25px"
-          />
-        </a>
-
-        <a href="https://github.com/Tsinghua-MARS-Lab/Online-HD-Map-Construction-CVPR2023">
-          <img
-            src="https://img.shields.io/github/forks/Tsinghua-MARS-Lab/Online-HD-Map-Construction-CVPR2023?style=social"
-            alt="GitHub" style="height: 25px"
-          />
-        </a>
-
-        <a href="https://eval.ai/web/challenges/challenge-page/1954/overview">
-          <img
-            src="https://img.shields.io/badge/submission-EvalAI-darkcyan"
-            alt="EvalAI" style="height: 25px"
-          />
-        </a>
-        
-
-        <br><br><br>
-
-
-        <h4><b>Task Description</b></h4>
-        <p>
-          Compared to conventional lane detection, the constructed HD map provides more semantics information with multiple categories. 
-          Vectorized polyline representations are adopted to deal with complicated and even irregular road structures.
-          Given inputs from onboard sensors (cameras), the goal is to construct the complete local HD map.
-        </p>
-
-
-        <br>
-
-
-        <h4><b>Participation</b></h4>
-        <p>
-          The primary metric is mAP based on Chamfer distance over three categories, namely lane divider, boundary, and pedestrian crossing. 
-          Please refer to our <a href="https://github.com/Tsinghua-MARS-Lab/Online-HD-Map-Construction-CVPR2023">GitHub</a> for details on 
-          <a href="https://github.com/Tsinghua-MARS-Lab/Online-HD-Map-Construction-CVPR2023/blob/master/resources/docs/data.md">data</a>
-          and <a href="https://github.com/Tsinghua-MARS-Lab/Online-HD-Map-Construction-CVPR2023/blob/master/resources/docs/get_started.md#evaluation">evaluation</a>.
-          Submission is conducted on <a href="https://eval.ai/web/challenges/challenge-page/1954/overview">EvalAI</a>.
-        </p>
-
-
-        <br>
-
-
-        <h4><b>Important dates</b></h4>
-        <p>
-          <table style="width: 50%;">
-            <tbody>
-              <tr style="background-color: white">
-                <td>Challenge Period Open</td><td>Mar 15, 2023</td>
-              </tr>
-              <tr style="background-color: white">
-                <td>Challenge Period End</td><td>May 26, 2023</td>
-              </tr>
-              <tr style="background-color: white">
-                <td>Notification</td><td>May 28, 2023</td>
-              </tr>
-              <tr style="background-color: white">
-                <td>Technical Report Deadline</td><td>Jun 09, 2023</td>
-              </tr>
-              <tr style="background-color: white">
-                <td>Winner Announcement</td><td>Jun 11, 2023</td>
-              </tr>
-            </tbody>
-          </table>
-          <footer ><i style ="font-size: 0.8em;">* &nbsp; All due at 23:59 UTC+8.</i></b>
-          <footer ><i style ="font-size: 0.8em;">** The test server will remain open after the challenge.</i></b>
-        </p>
-
-
-        <br>
-
-
-        <h4><b>Leaderboard</b></h4>
-        <p>
-          <div class="scrollable">
-            <table style="text-align: center;"> <!-- id="keywords" cellspacing="0" cellpadding="0" -->
-              <thead>
-                <tr>
-                  <th style="background-color: rgb(1, 126, 126); width: 64px;">Rank</th>
-                  <th style="background-color: rgb(1, 126, 126); width: 192px;">Method</th>
-                  <th style="background-color: rgb(1, 126, 126);"><b>mAP (primary metric)</b></th>
-                  <th style="background-color: rgb(1, 126, 126);">$AP_{div}$*</th>
-                  <th style="background-color: rgb(1, 126, 126);">$AP_{bound}$*</th>
-                  <th style="background-color: rgb(1, 126, 126);">$AP_{pc}$*</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Host_75980_Team</td>
-                  <td>42.11</td>
-                  <td>50.11</td>
-                  <td>40.26</td>
-                  <td>35.95</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <footer ><i style ="font-size: 0.8em;">* &nbsp; For the real-time leaderboard please refer to 
-            <a href="https://eval.ai/web/challenges/challenge-page/1954/leaderboard">EvalAI</a></i>.
-          </b>
-          <footer ><i style ="font-size: 0.8em;">** $AP$ on different classes: lane divider (div), boundary (bound), and pedestrian crossing (pc).</i></b>
-        </p>
-
-
-        <br>
-        
-
-        <h4><b>Award</b></h4>
-        <p>
-          <table style="width: 50%;">
-            <tbody>
-              <tr style="background-color: white">
-                <td>1st Place</td><td>USD $15,000</td>
-              </tr>
-              <tr style="background-color: white">
-                <td>2nd Place</td><td>USD $5,000</td>
-              </tr>
-              <tr style="background-color: white">
-                <td>Innovation Prize</td><td>USD $5,000</td>
-              </tr>
-            </tbody>
-          </table>
-        </p>
-
-
-        <br>
-
-
-        <h4><b>Contact</b></h4>
-        <p>
-          <li style="list-style-type:disc">
-            Tianyuan Yuan, <code>yuantianyuan01@gmail.com</code>
-          </li>
-          <li style="list-style-type:disc">
-            Slack channel: <code>#map-challenge-2023</code>
-          </li>
-        </p>
-
-
-        <br>
-
-        <h4><b>Related Literature</b></h4>
-        <p>
-          <li style="list-style-type:disc">
-            <a href="https://arxiv.org/pdf/2107.06307.pdf">
-              HDMapNet: An Online HD Map Construction and Evaluation Framework
-            </a>
-          </li>
-          <li style="list-style-type:disc">
-            <a href="https://arxiv.org/pdf/2206.08920.pdf">
-              VectorMapNet: End-to-end Vectorized HD Map Learning
-            </a>
-          </li>
-          <li style="list-style-type:disc">
-            <a href="https://arxiv.org/pdf/2301.04470.pdf">
-              InstaGraM: Instance-level Graph Modeling for Vectorized HD Map Learning
-            </a>
-          </li>
-        </p>
-
-
-
-        <br><br><br>
-        <hr>
-        <br><br><br>
-
-
-
-        <!-- track 3 -->
-
-        <h3><b class="btb" target="_blank" id="Track3" style="font-size: 2.5em;">
-          Track 3<br>3D Occupancy Prediction
-        </b></h3>
-
-        <a href="https://github.com/CVPR2023-Occupancy-Prediction-Challenge/CVPR2023-Occupancy-Prediction-Challenge">
-          <img
-            src="https://img.shields.io/badge/website-GitHub-darkred"
-            alt="GitHub" style="height: 25px"
-          />
-        </a>
-
-        <a href="https://github.com/CVPR2023-Occupancy-Prediction-Challenge/CVPR2023-Occupancy-Prediction-Challenge">
-          <img
-            src="https://img.shields.io/github/stars/CVPR2023-Occupancy-Prediction-Challenge/CVPR2023-Occupancy-Prediction-Challenge?style=social"
-            alt="GitHub" style="height: 25px"
-          />
-        </a>
-
-        <a href="https://github.com/CVPR2023-Occupancy-Prediction-Challenge/CVPR2023-Occupancy-Prediction-Challenge">
-          <img
-            src="https://img.shields.io/github/forks/CVPR2023-Occupancy-Prediction-Challenge/CVPR2023-Occupancy-Prediction-Challenge?style=social"
-            alt="GitHub" style="height: 25px"
-          />
-        </a>
-
-        <a href="https://eval.ai/web/challenges/challenge-page/1956/overview">
-          <img
-            src="https://img.shields.io/badge/submission-EvalAI-darkred"
-            alt="EvalAI" style="height: 25px"
-          />
-        </a>
-
-
-        <br><br><br>
-
-
-        <h4><b>Task Description</b></h4>
-        <p>
-          Unlike previous perception representations, which depend on predefined geometric primitives or perceived data modalities, 
-          occupancy enjoys the flexibility to describe entities in arbitrary shapes.
-          In this track, we provide a large-scale <a href="https://github.com/CVPR2023-Occupancy-Prediction-Challenge/CVPR2023-Occupancy-Prediction-Challenge">occupancy benchmark</a>. 
-          Given multi-view images covering the whole panoramic field of view, 
-          participants are needed to provide the occupancy state and semantics of each voxel in 3D space for the complete scene.
-        </p>
-
-
-        <br>
-
-
-        <h4><b>Participation</b></h4>
-        <p>
-          The primary metric of this track is mIoU.
-          On the <a href="https://github.com/CVPR2023-Occupancy-Prediction-Challenge/CVPR2023-Occupancy-Prediction-Challenge">website</a>, 
-          we provide detailed information for the dataset, evaluation, and submission instructions.
-          The test server is hosted on <a href="https://eval.ai/web/challenges/challenge-page/1956/overview">EvalAI</a>.
-        </p>
-
-
-        <br>
-
-
-        <h4><b>Important dates</b></h4>
-        <p>
-          <table style="width: 50%;">
-            <tbody>
-              <tr style="background-color: white">
-                <td>Dataset and Devkit Release</td><td>Feb 20, 2023</td>
-              </tr>
-              <tr style="background-color: white">
-                <td>Challenge Period Open</td><td>Pending</td>
-              </tr>
-              <tr style="background-color: white">
-                <td>Challenge Period End</td><td>Jun 01, 2023</td>
-              </tr>
-              <tr style="background-color: white">
-                <td>Notification</td><td>Jun 03, 2023</td>
-              </tr>
-              <tr style="background-color: white">
-                <td>Technical Report Deadline</td><td>Jun 10, 2023</td>
-              </tr>
-              <tr style="background-color: white">
-                <td>Winner Announcement</td><td>Jun 12, 2023</td>
-              </tr>
-            </tbody>
-          </table>
-          <footer ><i style ="font-size: 0.8em;">* &nbsp; All due at 23:59 UTC+8.</i></b>
-          <footer ><i style ="font-size: 0.8em;">** The test server will remain open after the challenge.</i></b>
-        </p>
-
-
-        <br>
-
-
-        <h4><b>Leaderboard</b></h4>
-        <p>
-          <div class="scrollable">
-            <table style="text-align: center;"> <!-- id="keywords" cellspacing="0" cellpadding="0" -->
-              <thead>
-                <tr>
-                  <th style="background-color: rgb(139, 14, 14); width: 64px;">Rank</th>
-                  <th style="background-color: rgb(139, 14, 14); width: 192px;">Method</th>
-                  <th style="background-color: rgb(139, 14, 14);"><b>mIoU (primary metric)</b></th>
-                  <th style="background-color: rgb(139, 14, 14);">$\text{F-Score}$*</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <footer ><i style ="font-size: 0.8em;">* &nbsp; For the real-time leaderboard please refer to 
-            <a href="https://eval.ai/web/challenges/challenge-page/1956/leaderboard">EvalAI</a></i>.
-          </b>
-          <footer ><i style ="font-size: 0.8em;">** $\text{F-Score}$ is not taken into consideration in both the challenge and leaderboard.</i></b>
-        </p>
-
-
-        <br>
-
-        
-        <h4><b>Award</b></h4>
-        <p>
-          <table style="width: 50%;">
-            <tbody>
-              <tr style="background-color: white">
-                <td>1st Place</td><td>USD $15,000</td>
-              </tr>
-              <tr style="background-color: white">
-                <td>2nd Place</td><td>USD $5,000</td>
-              </tr>
-              <tr style="background-color: white">
-                <td>Innovation Prize</td><td>USD $5,000</td>
-              </tr>
-            </tbody>
-          </table>
-        </p>
-
-
-
-        <br>
-
-
-        <h4><b>Contact</b></h4>
-        <p>
-          <li style="list-style-type:disc">
-            Xiaoyu Tian, <code>cntxy001@gmail.com</code>
-          </li>
-          <li style="list-style-type:disc">
-            Chonghao Sima, <code>chonghaosima@gmail.com</code>
-          </li>
-          <li style="list-style-type:disc">
-            Slack channel: <code>#occupancy-challenge-2023</code>
-          </li>
-        </p>
-
-        <br>
-
-
-        <h4><b>Related Literature</b></h4>
-        <p>
-          <li style="list-style-type:disc">
-            <a href="https://arxiv.org/pdf/2003.04618.pdf">
-              Convolutional Occupancy Networks
-            </a>
-          </li>
-          <li style="list-style-type:disc">
-            <a href="https://arxiv.org/pdf/2203.03875.pdf">
-              Occupancy Flow Fields for Motion Forecasting in Autonomous Driving
-            </a>
-          </li>
-          <li style="list-style-type:disc">
-            <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Cao_MonoScene_Monocular_3D_Semantic_Scene_Completion_CVPR_2022_paper.pdf">
-              MonoScene: Monocular 3D Semantic Scene Completion
-            </a>
-          </li>
-          <li style="list-style-type:disc">
-            <a href="https://arxiv.org/pdf/2301.00527.pdf">
-              Diffusion Probabilistic Models for Scene-Scale 3D Categorical Data
-            </a>
-          </li>
-        </p>
-
-
-
-        <!-- <div class="scrollable">
-          <table>
-            <thead>
-              <tr>
-                <th>Method</th>
-                <th>OLS (main metric)</th>
-                <th> $mAP_{LC}$</th>
-                <th> $mAP_{TE}$</th>
-                <th> $mAP_{LCLC}$ </th>
-                <th> $mAP_{LCTE}$</th>
-                <th> F-Score</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><a href="#">\</a></td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-              </tr>
-              <tr>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-                <td><a href="#">\</a></td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-              </tr>
-              <tr>
-                <td><a href="#">\</a></td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-              </tr>
-              <tr>
-                <td><a href="#">\</a></td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-              </tr>
-            </tbody>
-          </table>
-        </div> -->
-
-
-
-        <br><br><br>
-        <hr>
-        <br><br><br>
-
-
-
-        <!-- track 4 -->
-
-        <h3 style="text-transform: none;"><b class="btb" target="_blank" id="Track4" style="font-size: 2.5em;">
-          Track 4<br>nuPlan Planning
-        </b></h3>
-
-        <a href="https://github.com/motional/nuplan-devkit">
-          <img
-            src="https://img.shields.io/badge/website-GitHub-darkblue"
-            alt="GitHub" style="height: 25px"
-          />
-        </a>
-
-        <a href="https://github.com/motional/nuplan-devkit">
-          <img
-            src="https://img.shields.io/github/stars/motional/nuplan-devkit?style=social"
-            alt="GitHub" style="height: 25px"
-          />
-        </a>
-
-        <a href="https://github.com/motional/nuplan-devkit">
-          <img
-            src="https://img.shields.io/github/forks/motional/nuplan-devkit?style=social"
-            alt="GitHub" style="height: 25px"
-          />
-        </a>
-
-        <a href="https://eval.ai/web/challenges/challenge-page/1856/overview">
-          <img
-            src="https://img.shields.io/badge/submission-EvalAI-darkblue"
-            alt="EvalAI" style="height: 25px"
-          />
-        </a>
-
-
-        <br><br><br>
-
-
-        <h4><b>Task Description</b></h4>
-        <p>
-          Previous benchmarks focus on short-term motion forecasting and are limited to open-loop evaluation.
-          <a href="https://www.nuscenes.org/nuplan">nuPlan</a> introduces long-term planning of the ego vehicle and corresponding metrics.
-          Provided as docker containers, submissions are deployed for simulation and evaluation.
-        </p>
-
-
-        <br>
-
-
-        <h4><b>Participation</b></h4>
-        <p>
-          The primary metric is the mean score over three increasingly complex modes: 
-          <a href="https://nuplan-devkit.readthedocs.io/en/latest/competition.html#challenge-1-open-loop">open-loop</a>, 
-          <a href="https://nuplan-devkit.readthedocs.io/en/latest/competition.html#challenge-2-closed-loop-non-reactive-agents">closed-loop non-reactive agents</a>,
-          and <a href="https://nuplan-devkit.readthedocs.io/en/latest/competition.html#challenge-3-closed-loop-reactive-agents">closed-loop reactive agents</a>.
-          Participants can follow the <a href="https://nuplan-devkit.readthedocs.io/en/latest/competition.html#getting-started">steps</a> to begin the competition.
-          To submit your results on <a href="https://eval.ai/web/challenges/challenge-page/1856/overview">EvalAI</a>, please 
-          follow the <a href="https://nuplan-devkit.readthedocs.io/en/latest/competition.html#making-a-submission">submission instructions</a>.
-        </p>
-
-
-        <br>
-
-
-        <h4><b>Important dates</b></h4>
-        <p>
-          <table style="width: 50%;">
-            <tbody>
-              <tr style="background-color: white">
-                <td>Test Phase End</td><td>May 18, 2023</td>
-              </tr>
-              <tr style="background-color: white">
-                <td>Notification and Verification</td><td>May 19, 2023</td>
-              </tr>
-              <tr style="background-color: white">
-                <td>Winner Announcement</td><td>Jun 02, 2023</td>
-              </tr>
-              <tr style="background-color: white">
-                <td>Winner Presentation</td><td>Jun 18, 2023</td>
-              </tr>
-            </tbody>
-          </table>
-        </p>
-
-
-        <br>
-
-
-        <h4><b>Leaderboard</b></h4>
-        <p>
-          <div class="scrollable">
-            <table style="text-align: center;"> <!-- id="keywords" cellspacing="0" cellpadding="0" -->
-              <thead>
-                <tr>
-                  <th style="background-color: rgb(25, 25, 145); width: 64px;">Rank</th>
-                  <th style="background-color: rgb(25, 25, 145); width: 192px;">Team</th>
-                  <th style="background-color: rgb(25, 25, 145);"><b>mean score (primary metric)</b></th>
-                  <th style="background-color: rgb(25, 25, 145);">Challenge 1</th>
-                  <th style="background-color: rgb(25, 25, 145);">Challenge 2</th>
-                  <th style="background-color: rgb(25, 25, 145);">Challenge 3</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Host_68305_Team (Baseline)</td>
-                  <td>0.15</td>
-                  <td>0.15</td>
-                  <td>0.39</td>
-                  <td>0.61</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <footer ><i style ="font-size: 0.8em;">* For the real-time leaderboard please refer to 
-            <a href="https://eval.ai/web/challenges/challenge-page/1856/leaderboard">EvalAI</a></i>.
-          </b>
-        </p>
-
-
-        <br>
-        
-        
-        <h4><b>Award</b></h4>
-        <p>
-          <table style="width: 50%;">
-            <tbody>
-              <tr style="background-color: white">
-                <td>1st Place</td><td>USD $10,000</td>
-              </tr>
-              <tr style="background-color: white">
-                <td>2nd Place</td><td>USD $8,000</td>
-              </tr>
-              <tr style="background-color: white">
-                <td>3rd Place</td><td>USD $5,000</td>
-              </tr>
-              <tr style="background-color: white">
-                <td>Innovation Prize</td><td>USD $5,000</td>
-              </tr>
-            </tbody>
-          </table>
-        </p>
-
-
-        <br>
-
-
-        <h4><b>Contact</b></h4>
-        <p>
-          <li style="list-style-type:disc">
-            <a href="https://github.com/motional/nuplan-devkit/issues">GitHub issue</a>
-          </li>
-          <li style="list-style-type:disc">
-            Motional, <code>nuScenes@motional.com</code>
-          </li>
-          <li style="list-style-type:disc">
-            Slack channel: <code>#nuplan-challenge-2023</code>
-          </li>
-        </p>
-
-
-        <br>
-
-
-        <h4><b>Related Literature</b></h4>
-        <p>
-          <li style="list-style-type:disc">
-            <a href="https://arxiv.org/pdf/2206.03004.pdf">
-              Driving in Real Life with Inverse Reinforcement Learning
-            </a>
-          </li>
-          <li style="list-style-type:disc">
-            <a href="https://openaccess.thecvf.com/content/CVPR2022W/Precognition/papers/Hazard_Importance_Is_in_Your_Attention_Agent_Importance_Prediction_for_Autonomous_CVPRW_2022_paper.pdf">
-              Importance Is in Your Attention: Agent Importance Prediction for Autonomous Driving
-            </a>
-          </li>
-        </p>
-
-        <!--
-        <div class="scrollable">
-          <table>
-            <thead>
-              <tr>
-                <th>Method</th>
-                <th>OLS (main metric)</th>
-                <th> $mAP_{LC}$</th>
-                <th> $mAP_{TE}$</th>
-                <th> $mAP_{LCLC}$ </th>
-                <th> $mAP_{LCTE}$</th>
-                <th> F-Score</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><a href="#">\</a></td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-              </tr>
-              <tr>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-                <td><a href="#">\</a></td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-              </tr>
-              <tr>
-                <td><a href="#">\</a></td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-              </tr>
-              <tr>
-                <td><a href="#">\</a></td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-              </tr>
-            </tbody>
-          </table>
-        </div> -->
-
-
-<!--         <div>
-          <div class="wsite-multicol">
-            <div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
-              <table class="wsite-multicol-table">
-                <tbody class="wsite-multicol-tbody">
-                  <tr class="wsite-multicol-tr">
-                    <td class="wsite-multicol-col" style="width:36.598465473146%; padding:0 15px;">
-                      <div>
-                        <div class="wsite-image wsite-image-border-none "
-                          style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
-                          <a>
-                            <img src="./images/challenge/lane.gif" alt="Picture"
-                              style="width:auto;max-width:100%;height:240px;" />
-                          </a>
-                          <div style="display:block;font-size:90%"></div>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="wsite-multicol-col" style="width:73.401534526854%; padding:0 15px;">
-                       <div class="paragraph">         <p class="bts" target="_blank" style="font-size: 3em;">nuPlan Planning Challenge</p> 
-                      <div class="paragraph"> <a class="bts" target="_blank" style="font-size: 2em; line-height: 1.4">3D
-                          Lane Detection</a>
-                        <p itemprop="description" style="font-size: 1.2em;">We annotate 3D lane centerlines and include the F-Score for evaluating predicted
-                          results of undirected lane centerlines.
-                          Furthermore, we define the subtask of 3D lane detection as detecting directed 3D lane
-                          centerlines from the given multi-view images covering the whole horizontal FOV.
-                        </p>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="wsite-multicol">
-            <div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
-              <table class="wsite-multicol-table">
-                <tbody class="wsite-multicol-tbody">
-                  <tr class="wsite-multicol-tr">
-                    <td class="wsite-multicol-col" style="width:36.598465473146%; padding:0 15px;">
-                      <div>
-                        <div class="wsite-image wsite-image-border-none "
-                          style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
-                          <a>
-                            <img src="./images/challenge/traffic_element.gif" alt="Picture"
-                              style="width:auto;max-width:100%;height:240px;" />
-                          </a>
-                          <div style="display:block;font-size:90%"></div>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="wsite-multicol-col" style="width:73.401534526854%; padding:0 15px;">
-                      <div class="paragraph"> <a class="bts" target="_blank"
-                          style="font-size: 2em; line-height: 1.4">Traffic Element Recognition</a>
-                        <p itemprop="description" style="font-size: 1.2em;">
-                          The attribute represents the semantic meaning of a traffic element, such as the red color of
-                          a traffic light.
-                          In this subtask, on the given image in the front view, the location of traffic elements
-                          (traffic lights and road signs) and their attributes are demanded to be perceived
-                          simultaneously.
+    <div class="bg"> 
       
-                        </p>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="wsite-multicol">
-            <div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
-              <table class="wsite-multicol-table">
-                <tbody class="wsite-multicol-tbody">
-                  <tr class="wsite-multicol-tr">
-                    <td class="wsite-multicol-col" style="width:36.598465473146%; padding:0 15px;">
-                      <div>
-                        <div class="wsite-image wsite-image-border-none "
-                          style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
-                          <a>
-                            <img src="./images/challenge/topology.gif" alt="Picture"
-                              style="width:auto;max-width:100%;height:240px;" />
-                          </a>
-                          <div style="display:block;font-size:90%"></div>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="wsite-multicol-col" style="width:73.401534526854%; padding:0 15px;">
-                      <div class="paragraph"> <a class="bts" target="_blank"
-                          style="font-size: 1em;">
-                        Topology Recognition</a>
-                        <p itemprop="description" style="font-size: 1.2em;">We first define the task of recognizing
-                          topology relationships in the field of autonomous driving.
-                          Given multi-view images, the model learns to recognize the topology relationships among lane
-                          centerlines and between lane centerlines and traffic elements.
-                          In our case, both vertices and edges are unknown for the model.
-                          Thus, lane centerlines and traffic elements are needed to be detected first, and then the
-                          topology relationships are built.
-                        </p>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>6
-            </div>
-          </div>
-        </div> -->
+      <h3>
+        <b class="title" target="_blank" id="Track1">
+          Track 1
+          <br>
+          OpenLane Topology
+        </b>
+      </h3>
+
+      <a href="https://github.com/OpenDriveLab/OpenLane-V2">
+        <img
+          src="https://img.shields.io/badge/website-GitHub-darkgreen"
+          alt="GitHub" class="h_img"
+        />
+      </a>
+
+      <a href="https://github.com/OpenDriveLab/OpenLane-V2">
+        <img
+          src="https://img.shields.io/github/stars/OpenDriveLab/OpenLane-V2?style=social"
+          alt="GitHub" class="h_img"
+        />
+      </a>
+
+      <a href="https://github.com/OpenDriveLab/OpenLane-V2">
+        <img
+          src="https://img.shields.io/github/forks/OpenDriveLab/OpenLane-V2?style=social"
+          alt="GitHub" class="h_img"
+        />
+      </a>
+
+      <a href="https://eval.ai/web/challenges/challenge-page/1925">
+        <img
+          src="https://img.shields.io/badge/submission-EvalAI-darkgreen"
+          alt="EvalAI" class="h_img"
+        />
+      </a>
 
 
 
-        <!-- ################################################################################################ -->
+      <br>
+      <br>
+      <br>
+
+
+      
+      <h4>
+        <b>Task Description</b>
+      </h4>
+
+      <p> 
+        The <a href="https://github.com/OpenDriveLab/OpenLane-V2">OpenLane-V2</a> dataset* is the perception and reasoning benchmark for scene structure in autonomous driving. 
+        Given multi-view images covering the whole panoramic field of view, 
+        participants are required to deliver not only perception results of lanes and traffic elements but also topology relationships among lanes and between lanes and traffic elements simultaneously.
+      </p>
+
+      <p class="footer_ts">
+        * The dataset, OpenLane-V2 at Shanghai AI Lab, is named as RoadGenome at Huawei and publically as OpenLane-Huawei.
+      </p>
 
 
 
-        <!--<h3><b><p class="btb" target="_blank" id="Leaderboard" style="font-size: 2.5em;">Leaderboard</p></b></h3>
-        The following result is a mirrored version from test server. For latest results, please refer to TODO. <br><br><br>
-        <div class="scrollable">
-          <table>
-            <thead>
-              <tr>
-                <th>Method</th>
-                <th>OLS (main metric)</th>
-                <th> $mAP_{LC}$</th>
-                <th> $mAP_{TE}$</th>
-                <th> $mAP_{LCLC}$ </th>
-                <th> $mAP_{LCTE}$</th>
-                <th> F-Score</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><a href="#">\</a></td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-              </tr>
-              <tr>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-                <td><a href="#">\</a></td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-              </tr>
-              <tr>
-                <td><a href="#">\</a></td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-                <td>\</td>
-              </tr>
-              <tr>
-                <td><a href="#">\</a></td>6############################################################ -->
-
-
-        <!-- <h3><b>
-            <p class="btb" target="_blank" id="starter_code" style="font-size: 2.5em;">Starter Code</p>
-          </b></h3>
-          Coming soon.
-        <p>
-          To evaluate performances on different aspects of the task, several metrics are adopted:<br>
-          1. $mAP_{LC}$ for mAP on directed lane centerlines<br>
-          2. $mAP_{TE}$ for mAP on traffic elements<br>
-          3. $mAP_{LCLC}$ for mAP on topology among lane centerlines<br>
-          4. $mAP_{LCTE}$ for mAP on topology between lane centerlines and traffic elements.
-        </p>
-6
--->
-
-        <br><br><br>
-        <hr>
-        <br><br><br>
+      <br>
 
 
 
-        <h3><b class="btb" target="_blank" id="rules" style="font-size: 2.5em;">General Rules </b></h3>
-
-        <p>
-          Please refer to <a href="https://docs.google.com/document/d/18wEN6XdSW2VpVgSo0hHEKPN6KPptqvOUv5Znc2_lB3o/edit?usp=sharing">rules</a>.
-        </p>
-
-
-
-
-
-
-
-
-        <br><br><br>
-        <hr>
-        <br><br><br> 
+      <h4>
+        <b>Participation</b>
+      </h4>
+      <p> 
+        The primary metric is <a href="https://github.com/OpenDriveLab/OpenLane-V2#task">OpenLane-V2 Score (OLS)</a>, which comprises evaluations on three sub-tasks.
+        On the website, we provide tools for 
+        <a href="https://github.com/OpenDriveLab/OpenLane-V2/blob/master/docs/devkit.md#openlanev2dataset">data access</a>,
+        <a href="https://github.com/OpenDriveLab/OpenLane-V2#train-a-model">training models</a>,
+        <a href="https://github.com/OpenDriveLab/OpenLane-V2/blob/master/docs/devkit.md#openlanev2evaluation">evaluations</a>,
+        and <a href="https://github.com/OpenDriveLab/OpenLane-V2/blob/master/docs/devkit.md#openlanev2visualization">visualization</a>.
+        To submit your results on <a href="https://eval.ai/web/challenges/challenge-page/1925/overview">EvalAI</a>, please 
+        follow the <a href="https://github.com/OpenDriveLab/OpenLane-V2/blob/master/docs/submission.md#submission">submission instructions</a>.
+      </p>
 
 
 
-        <h3><b class="btb" target="_blank" id="FAQ" style="font-size: 2.5em;">FAQ</b></h3>
-        <div class="accordion-body">
-          <div class="accordion">
-            <!-- <h1>Frequently Asked Questions</h1>  -->
-
-            <hr>
-
-            <div class="container">
-              <div class="label"><b>How do we/I download the data?</b></div>
-              <div class="content">For each track, we provide links for downloading data in the GitHub repository.
-                The repository, which might also contain dataset API, baseline model, and other helpful information, is a good start to begin your participation.
-              </div>
-            </div>
-            
-            <hr>
-
-            <div class="container">
-              <div class="label"><b>How many times can we/I make a submission?</b></div>
-              <div class="content">
-                Each track has its submission limit. Please refer to the EvalAI for each track.
-                Submissions that error out do not count against this limit.
-              </div>
-            </div>
-
-            <hr>
-
-            <div class="container">
-              <div class="label"><b>How many tracks can we/I take part in?</b></div>
-              <div class="content">
-                A team can participate in multiple tracks.
-                An entity cannot be affiliated with more than one team unless the entity is an academic entity (e.g., a university).
-              </div>
-            </div>
-
-            <hr>
+      <br>
 
 
-          </div>
-        </div>
 
-        <hr>
+      <h4>
+        <b>Important dates</b>
+      </h4>
+
+      <table class="itable">
+        <tbody>
+          <tr >
+            <td>Challenge Period Open</td><td>Mar 15, 2023</td>
+          </tr>
+          <tr >
+            <td>Challenge Period End</td><td>May 26, 2023</td>
+          </tr>
+          <tr >
+            <td>Notification</td><td>May 28, 2023</td>
+          </tr>
+          <tr >
+            <td>Technical Report Deadline</td><td>Jun 09, 2023</td>
+          </tr>
+          <tr >
+            <td>Winner Announcement</td><td>Jun 11, 2023</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="footer_ts">
+        * &nbsp; All due at 23:59 UTC+8.
+        <br>
+        ** The test server will remain open after the challenge.
+      </p>
 
 
-    <div class="wrapper row3">
+      
+      <br>
 
-      <div style='width:40%;height:40%;margin: 20px auto'>
-      <!-- <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=W01goUbw9Xtnjh8gWPvnFjg9_mxO7w6jeXoD72spiX8"></script> -->
-      <!-- <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=n&d=W01goUbw9Xtnjh8gWPvnFjg9_mxO7w6jeXoD72spiX8&cmn=ff0000&cmo=ff9953'></script>       -->
-      <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=tt&d=W01goUbw9Xtnjh8gWPvnFjg9_mxO7w6jeXoD72spiX8&cmn=ff0000&cmo=ff955c'></script>
+
+
+      <h4>
+        <b>Leaderboard</b>
+      </h4>
+
+      <div class="scrollable">
+        <table style="text-align: center;">
+          <thead>
+            <tr>
+              <th style="background-color: rgb(14, 104, 14);">Rank</th>
+              <th style="background-color: rgb(14, 104, 14);">Method</th>
+              <th style="background-color: rgb(14, 104, 14);"><b>OLS <i>(primary metric)</i></b></th>
+              <th style="background-color: rgb(14, 104, 14);">$\text{DET}_{l}$</th>
+              <th style="background-color: rgb(14, 104, 14);">$\text{DET}_{t}$</th>
+              <th style="background-color: rgb(14, 104, 14);">$\text{TOP}_{ll}$</th>
+              <th style="background-color: rgb(14, 104, 14);">$\text{TOP}_{lt}$</th>
+              <th style="background-color: rgb(14, 104, 14);">$\text{F-Score**}$</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>BeingStrong</td>
+              <td>0.25</td>
+              <td>0.12</td>
+              <td>0.54</td>
+              <td>0.00</td>
+              <td>0.08</td>
+              <td>0.24</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>WeakChicken</td>
+              <td>0.17</td>
+              <td>0.00</td>
+              <td>0.68</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>anonymous_team</td>
+              <td>0.02</td>
+              <td>0.00</td>
+              <td>0.05</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.09</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>boketto</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+              <td>0.00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="footer_ts">
+        * &nbsp; For the real-time leaderboard please refer to <a href="https://eval.ai/web/challenges/challenge-page/1925/leaderboard">EvalAI</a>.
+        <br>
+        ** $\text{F-Score}$ for lane detection is not taken into consideration in both the challenge and leaderboard.
+      </p>
+
+      
+
+      <br>
+
+
+
+      <h4><b>Award</b></h4>
+
+      <table class="itable">
+        <tbody>
+          <tr>
+            <td>1st Place</td><td>USD $15,000</td>
+          </tr>
+          <tr>
+            <td>2nd Place</td><td>USD $5,000</td>
+          </tr>
+          <tr>
+            <td>Innovation Prize</td><td>USD $5,000</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+      <br>
+
+
+
+      <h4>
+        <b>Contact</b>
+      </h4>
+
+      <li style="list-style-type:disc">
+        Huijie Wang, <code>wanghuijie@pjlab.org.cn</code>
+      </li>
+      <li style="list-style-type:disc">
+        Slack channel: <code>#openlane-challenge-2023</code>
+      </li>
+
+
+
+      <br><br>
+
+      
+
+      <h4>
+        <b>Related Literature</b>
+      </h4>
+
+      <li style="list-style-type:disc;">
+        <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Can_Structured_Birds-Eye-View_Traffic_Scene_Understanding_From_Onboard_Images_ICCV_2021_paper.pdf">
+          Structured Bird's-Eye-View Traffic Scene Understanding From Onboard Images
+        </a>
+      </li>
+
+      <li style="list-style-type:disc;">
+        <a href="https://arxiv.org/pdf/2203.11089.pdf">
+          PersFormer: 3D Lane Detection via Perspective Transformer and the OpenLane Benchmark
+        </a>
+      </li>
+
+      <li style="list-style-type:disc;">
+        <a href="https://arxiv.org/pdf/2208.14437.pdf">
+          MapTR: Structured Modeling and Learning for Online Vectorized HD Map Construction
+        </a>
+      </li>
+
+
+
+      <br>
+      <br>
+      <br>
     </div>
 
+
+    
+    <!-- track 2 -->
+
+    <div class="bg_huise">
+      <div class="bg">
+      <br>
+      <br>
+      <br>
+      
+      <h3>
+        <b class="title" target="_blank" id="Track2"> 
+          Track 2
+          <br>
+          Online HD Map Construction
+        </b>
+      </h3>
+
+      <a href="https://github.com/Tsinghua-MARS-Lab/Online-HD-Map-Construction-CVPR2023">
+        <img
+          src="https://img.shields.io/badge/website-GitHub-darkcyan"
+          alt="GitHub" class="h_img"
+        />
+      </a>
+
+      <a href="https://github.com/Tsinghua-MARS-Lab/Online-HD-Map-Construction-CVPR2023">
+        <img
+          src="https://img.shields.io/github/stars/Tsinghua-MARS-Lab/Online-HD-Map-Construction-CVPR2023?style=social"
+          alt="GitHub" class="h_img"
+        />
+      </a>
+
+      <a href="https://github.com/Tsinghua-MARS-Lab/Online-HD-Map-Construction-CVPR2023">
+        <img
+          src="https://img.shields.io/github/forks/Tsinghua-MARS-Lab/Online-HD-Map-Construction-CVPR2023?style=social"
+          alt="GitHub" class="h_img"
+        />
+      </a>
+
+      <a href="https://eval.ai/web/challenges/challenge-page/1954/overview">
+        <img
+          src="https://img.shields.io/badge/submission-EvalAI-darkcyan"
+          alt="EvalAI" class="h_img"
+        />
+      </a>
+        
+        
+        
+      <br>
+      <br>
+      <br>
+
+
+
+      <h4>
+        <b>Task Description</b>
+      </h4>
+
+      <p> 
+        Compared to conventional lane detection, the constructed HD map provides more semantics information with multiple categories. 
+        Vectorized polyline representations are adopted to deal with complicated and even irregular road structures.
+        Given inputs from onboard sensors (cameras), the goal is to construct the complete local HD map.
+      </p>
+
+
+
+      <br>
+
+
+
+      <h4>
+        <b>Participation</b>
+      </h4>
+
+      <p> 
+        The primary metric is mAP based on Chamfer distance over three categories, namely lane divider, boundary, and pedestrian crossing. 
+        Please refer to our <a href="https://github.com/Tsinghua-MARS-Lab/Online-HD-Map-Construction-CVPR2023">GitHub</a> for details on 
+        <a href="https://github.com/Tsinghua-MARS-Lab/Online-HD-Map-Construction-CVPR2023/blob/master/resources/docs/data.md">data</a>
+        and <a href="https://github.com/Tsinghua-MARS-Lab/Online-HD-Map-Construction-CVPR2023/blob/master/resources/docs/get_started.md#evaluation">evaluation</a>.
+        Submission is conducted on <a href="https://eval.ai/web/challenges/challenge-page/1954/overview">EvalAI</a>.
+      </p>
+
+
+
+      <br>
+
+
+
+      <h4>
+        <b>Important dates</b>
+      </h4>
+
+      <table class="itable">
+        <tbody>
+          <tr >
+            <td>Challenge Period Open</td><td>Mar 15, 2023</td>
+          </tr>
+          <tr >
+            <td>Challenge Period End</td><td>May 26, 2023</td>
+          </tr>
+          <tr >
+            <td>Notification</td><td>May 28, 2023</td>
+          </tr>
+          <tr >
+            <td>Technical Report Deadline</td><td>Jun 09, 2023</td>
+          </tr>
+          <tr >
+            <td>Winner Announcement</td><td>Jun 11, 2023</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="footer_ts">
+        * &nbsp; All due at 23:59 UTC+8.
+        <br>
+        ** The test server will remain open after the challenge.
+      </p>
+
+
+
+      <br>
+
+
+
+      <h4>
+        <b>Leaderboard</b>
+      </h4>
+
+      <div class="scrollable">
+        <table style="text-align: center;">
+          <thead>
+            <tr>
+              <th style="background-color: rgb(1, 126, 126);">Rank</th>
+              <th style="background-color: rgb(1, 126, 126);">Method</th>
+              <th style="background-color: rgb(1, 126, 126);"><b>mAP <i>(primary metric)</i></b></th>
+              <th style="background-color: rgb(1, 126, 126);">$AP_{div}\text{**}$</th>
+              <th style="background-color: rgb(1, 126, 126);">$AP_{bound}\text{**}$</th>
+              <th style="background-color: rgb(1, 126, 126);">$AP_{pc}\text{**}$</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Host_75980_Team</td>
+              <td>42.11</td>
+              <td>50.11</td>
+              <td>40.26</td>
+              <td>35.95</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="footer_ts">
+        * &nbsp; For the real-time leaderboard please refer to <a href="https://eval.ai/web/challenges/challenge-page/1954/leaderboard">EvalAI</a>.
+        <br>
+        ** $AP$ on different classes: lane divider (div), boundary (bound), and pedestrian crossing (pc).
+      </p>
+    
+
+
+
+      <br>
+
+
+
+      <h4>
+        <b>Award</b>
+      </h4>
+
+      <table class="itable">
+        <tbody>
+          <tr>
+            <td>1st Place</td><td>USD $15,000</td>
+          </tr>
+        <tr>
+          <td>2nd Place</td><td>USD $5,000</td>
+        </tr>
+        <tr>
+          <td>Innovation Prize</td><td>USD $5,000</td>
+        </tr>
+        </tbody>
+      </table>
+
+
+
+      <br>
+
+
+
+      <h4>
+        <b>Contact</b>
+      </h4>
+
+      <li style="list-style-type:disc">
+        Tianyuan Yuan, <code>yuantianyuan01@gmail.com</code>
+      </li>
+      <li style="list-style-type:disc">
+        Slack channel: <code>#map-challenge-2023</code>
+      </li>
+
+
+
+      <br><br>
+
+
+
+      <h4>
+        <b>Related Literature</b>
+      </h4>
+
+      <li style="list-style-type:disc">
+        <a href="https://arxiv.org/pdf/2107.06307.pdf">
+          HDMapNet: An Online HD Map Construction and Evaluation Framework
+        </a>
+      </li>
+      <li style="list-style-type:disc">
+        <a href="https://arxiv.org/pdf/2206.08920.pdf">
+          VectorMapNet: End-to-end Vectorized HD Map Learning
+        </a>
+      </li>
+      <li style="list-style-type:disc">
+        <a href="https://arxiv.org/pdf/2301.04470.pdf">
+          InstaGraM: Instance-level Graph Modeling for Vectorized HD Map Learning
+        </a>
+      </li>
+
+
+
+      <br>
+      <br>
+      <br>
+    
+    
+      </div>
+    </div>
+    
+
+
+    <!-- track 3 -->
+
+    <div class="bg">
+      <br>
+      <br>
+      <br>
+
+      <h3>
+        <b class="title" target="_blank" id="Track3">
+          Track 3
+          <br>
+          3D Occupancy Prediction
+        </b>
+      </h3>
+
+
+
+      <a href="https://github.com/CVPR2023-Occupancy-Prediction-Challenge/CVPR2023-Occupancy-Prediction-Challenge">
+        <img
+          src="https://img.shields.io/badge/website-GitHub-darkred"
+          alt="GitHub" class="h_img"
+        />
+      </a>
+
+      <a href="https://github.com/CVPR2023-Occupancy-Prediction-Challenge/CVPR2023-Occupancy-Prediction-Challenge">
+        <img
+          src="https://img.shields.io/github/stars/CVPR2023-Occupancy-Prediction-Challenge/CVPR2023-Occupancy-Prediction-Challenge?style=social"
+          alt="GitHub" class="h_img"
+        />
+      </a>
+
+      <a href="https://github.com/CVPR2023-Occupancy-Prediction-Challenge/CVPR2023-Occupancy-Prediction-Challenge">
+        <img
+          src="https://img.shields.io/github/forks/CVPR2023-Occupancy-Prediction-Challenge/CVPR2023-Occupancy-Prediction-Challenge?style=social"
+          alt="GitHub" class="h_img"
+        />
+      </a>
+
+      <a href="https://eval.ai/web/challenges/challenge-page/1956/overview">
+        <img
+          src="https://img.shields.io/badge/submission-EvalAI-darkred"
+          alt="EvalAI" class="h_img"
+        />
+      </a>
+      
+      
+      <br>
+      <br>
+      <br>
+
+
+
+      <h4>
+        <b>Task Description</b>
+      </h4>
+
+      <p> 
+        Unlike previous perception representations, which depend on predefined geometric primitives or perceived data modalities, 
+        occupancy enjoys the flexibility to describe entities in arbitrary shapes.
+        In this track, we provide a large-scale <a href="https://github.com/CVPR2023-Occupancy-Prediction-Challenge/CVPR2023-Occupancy-Prediction-Challenge">occupancy benchmark</a>. 
+        Given multi-view images covering the whole panoramic field of view, 
+        participants are needed to provide the occupancy state and semantics of each voxel in 3D space for the complete scene.
+      </p>
+
+
+
+      <br>
+
+
+
+      <h4>
+        <b>Participation</b>
+      </h4>
+
+      <p> 
+        The primary metric of this track is mIoU.
+        On the <a href="https://github.com/CVPR2023-Occupancy-Prediction-Challenge/CVPR2023-Occupancy-Prediction-Challenge">website</a>, 
+        we provide detailed information for the dataset, evaluation, and submission instructions.
+        The test server is hosted on <a href="https://eval.ai/web/challenges/challenge-page/1956/overview">EvalAI</a>.
+      </p>
+
+
+
+      <br>
+
+
+
+      <h4>
+        <b>Important dates</b>
+      </h4>
+
+      <table class="itable">
+        <tbody>
+          <tr >
+            <td>Dataset and Devkit Release</td><td>Feb 20, 2023</td>
+          </tr>
+          <tr >
+            <td>Challenge Period Open</td><td>Pending</td>
+          </tr>
+          <tr >
+            <td>Challenge Period End</td><td>Jun 01, 2023</td>
+          </tr>
+          <tr >
+            <td>Notification</td><td>Jun 03, 2023</td>
+          </tr>
+          <tr >
+            <td>Technical Report Deadline</td><td>Jun 10, 2023</td>
+          </tr>
+          <tr >
+            <td>Winner Announcement</td><td>Jun 12, 2023</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="footer_ts">
+        * &nbsp; All due at 23:59 UTC+8.
+        <br>
+        ** The test server will remain open after the challenge.
+      </p>
+    
+      
+
+      <br>
+
+
+
+
+      <h4>
+        <b>Leaderboard</b>
+      </h4>
+
+      <div class="scrollable">
+        <table style="text-align: center;">
+          <thead>
+            <tr>
+              <th style="background-color: rgb(139, 14, 14);">Rank</th>
+              <th style="background-color: rgb(139, 14, 14);">Method</th>
+              <th style="background-color: rgb(139, 14, 14);"><b>mIoU <i>(primary metric)</i></b></th>
+              <th style="background-color: rgb(139, 14, 14);">$\text{F-Score**}$</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="footer_ts">
+        * &nbsp; For the real-time leaderboard please refer to <a href="https://eval.ai/web/challenges/challenge-page/1956/leaderboard">EvalAI</a>.
+        <br>
+        ** $\text{F-Score}$ is not taken into consideration in both the challenge and leaderboard.
+      </p>
+    
+
+
+      <br>
+
+
+
+      <h4>
+        <b>Award</b>
+      </h4>
+
+      <table class="itable">
+        <tbody>
+          <tr>
+            <td>1st Place</td><td>USD $15,000</td>
+          </tr>
+          <tr>
+            <td>2nd Place</td><td>USD $5,000</td>
+          </tr>
+          <tr>
+            <td>Innovation Prize</td><td>USD $5,000</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+      <br>
+
+
+
+      <h4>
+        <b>Contact</b>
+      </h4>
+
+      <li style="list-style-type:disc">
+        Xiaoyu Tian, <code>cntxy001@gmail.com</code>
+      </li>
+      <li style="list-style-type:disc">
+        Chonghao Sima, <code>chonghaosima@gmail.com</code>
+      </li>
+      <li style="list-style-type:disc">
+        Slack channel: <code>#occupancy-challenge-2023</code>
+      </li>
+
+
+
+      <br><br>
+
+
+
+      <h4>
+        <b>Related Literature</b>
+      </h4>
+
+      <li style="list-style-type:disc">
+        <a href="https://arxiv.org/pdf/2003.04618.pdf">
+          Convolutional Occupancy Networks
+        </a>
+      </li>
+      <li style="list-style-type:disc">
+        <a href="https://arxiv.org/pdf/2203.03875.pdf">
+          Occupancy Flow Fields for Motion Forecasting in Autonomous Driving
+        </a>
+      </li>
+      <li style="list-style-type:disc">
+        <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Cao_MonoScene_Monocular_3D_Semantic_Scene_Completion_CVPR_2022_paper.pdf">
+          MonoScene: Monocular 3D Semantic Scene Completion
+        </a>
+      </li>
+      <li style="list-style-type:disc">
+        <a href="https://arxiv.org/pdf/2301.00527.pdf">
+          Diffusion Probabilistic Models for Scene-Scale 3D Categorical Data
+        </a>
+      </li>
+
+      
+      <br>
+      <br>
+      <br>
     </div>
 
-        <script>
-          const accordion = document.getElementsByClassName('container');
-
-          for (i=0; i<accordion.length; i++) {
-            accordion[i].addEventListener('click', function () {
-              this.classList.toggle('active')
-            })
-          }   
-        </script>
 
 
+    <!-- track 4 -->
+
+    <div class="bg_huise">
+      <br>
+      <br>
+      <br>
+      <div class="bg">
+    
+      <h3><b class="title" target="_blank" id="Track4"> 
+        Track 4
+        <br>
+        nuPlan Planning
+      </b></h3>
+
+      <a href="https://github.com/motional/nuplan-devkit">
+        <img
+          src="https://img.shields.io/badge/website-GitHub-darkblue"
+          alt="GitHub" class="h_img"
+        />
+      </a>
+
+      <a href="https://github.com/motional/nuplan-devkit">
+        <img
+          src="https://img.shields.io/github/stars/motional/nuplan-devkit?style=social"
+          alt="GitHub" class="h_img"
+        />
+      </a>
+
+      <a href="https://github.com/motional/nuplan-devkit">
+        <img
+          src="https://img.shields.io/github/forks/motional/nuplan-devkit?style=social"
+          alt="GitHub" class="h_img"
+        />
+      </a>
+
+      <a href="https://eval.ai/web/challenges/challenge-page/1856/overview">
+        <img
+          src="https://img.shields.io/badge/submission-EvalAI-darkblue"
+          alt="EvalAI" class="h_img"
+        />
+      </a>
+                      
+      
+
+      <br>
+      <br>
+      <br>
 
 
-      <!-- </div> -->
-      <!-- ################################################################################################ -->
-      <!-- ################################################################################################ -->
+
+      <h4>
+        <b>Task Description</b>
+      </h4>
+      <p> 
+        Previous benchmarks focus on short-term motion forecasting and are limited to open-loop evaluation.
+        <a href="https://www.nuscenes.org/nuplan">nuPlan</a> introduces long-term planning of the ego vehicle and corresponding metrics.
+        Provided as docker containers, submissions are deployed for simulation and evaluation.
+      </p>
 
 
 
-      <!-- ################################################################################################ -->
-      <!-- / main body -->
-      <div class="clear"></div>
-    </main>
+      <br>
+
+
+
+      <h4>
+        <b>Participation</b>
+      </h4>
+      <p> 
+        The primary metric is the mean score over three increasingly complex modes: 
+        <a href="https://nuplan-devkit.readthedocs.io/en/latest/competition.html#challenge-1-open-loop">open-loop</a>, 
+        <a href="https://nuplan-devkit.readthedocs.io/en/latest/competition.html#challenge-2-closed-loop-non-reactive-agents">closed-loop non-reactive agents</a>,
+        and <a href="https://nuplan-devkit.readthedocs.io/en/latest/competition.html#challenge-3-closed-loop-reactive-agents">closed-loop reactive agents</a>.
+        Participants can follow the <a href="https://nuplan-devkit.readthedocs.io/en/latest/competition.html#getting-started">steps</a> to begin the competition.
+        To submit your results on <a href="https://eval.ai/web/challenges/challenge-page/1856/overview">EvalAI</a>, please 
+        follow the <a href="https://nuplan-devkit.readthedocs.io/en/latest/competition.html#making-a-submission">submission instructions</a>.
+      </p>
+
+
+
+      <br>
+
+
+
+      <h4>
+        <b>Important dates</b>
+      </h4>
+
+      <table class="itable">
+        <tbody>
+          <tr >
+            <td>Test Phase End</td><td>May 18, 2023</td>
+          </tr>
+          <tr >
+            <td>Notification and Verification</td><td>May 19, 2023</td>
+          </tr>
+          <tr >
+            <td>Winner Announcement</td><td>Jun 02, 2023</td>
+          </tr>
+          <tr >
+            <td>Winner Presentation</td><td>Jun 18, 2023</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+      <br>
+
+
+
+      <h4>
+        <b>Leaderboard</b>
+      </h4>
+
+      <div class="scrollable">
+        <table style="text-align: center;">
+          <thead>
+            <tr>
+              <th style="background-color: rgb(25, 25, 145);">Rank</th>
+              <th style="background-color: rgb(25, 25, 145);">Team</th>
+              <th style="background-color: rgb(25, 25, 145);"><b>mean score <i>(primary metric)</i></b></th>
+              <th style="background-color: rgb(25, 25, 145);">Challenge 1</th>
+              <th style="background-color: rgb(25, 25, 145);">Challenge 2</th>
+              <th style="background-color: rgb(25, 25, 145);">Challenge 3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Host_68305_Team (Baseline)</td>
+              <td>0.15</td>
+              <td>0.15</td>
+              <td>0.39</td>
+              <td>0.61</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="footer_ts">
+        * For the real-time leaderboard please refer to <a href="https://eval.ai/web/challenges/challenge-page/1856/leaderboard">EvalAI</a>.
+      </p>
+
+
+
+      <br>
+
+
+      
+      <h4><b>Award</b></h4>
+
+      <table class="itable">
+        <tbody>
+          <tr>
+            <td>1st Place</td><td>USD $10,000</td>
+          </tr>
+          <tr>
+            <td>2nd Place</td><td>USD $8,000</td>
+          </tr>
+          <tr>
+            <td>3rd Place</td><td>USD $5,000</td>
+          </tr>
+          <tr>
+            <td>Innovation Prize</td><td>USD $5,000</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+      <br>
+
+
+
+      <h4>
+        <b>Contact</b>
+      </h4>
+
+      <li style="list-style-type:disc">
+        <a href="https://github.com/motional/nuplan-devkit/issues">GitHub issue</a>
+      </li>
+      <li style="list-style-type:disc">
+        Motional, <code>nuScenes@motional.com</code>
+      </li>
+      <li style="list-style-type:disc">
+        Slack channel: <code>#nuplan-challenge-2023</code>
+      </li>
+
+
+
+      <br><br>
+
+
+
+      <h4>
+        <b>Related Literature</b>
+      </h4>
+
+      <li style="list-style-type:disc">
+        <a href="https://arxiv.org/pdf/2206.03004.pdf">
+          Driving in Real Life with Inverse Reinforcement Learning
+        </a>
+      </li>
+      <li style="list-style-type:disc">
+        <a href="https://openaccess.thecvf.com/content/CVPR2022W/Precognition/papers/Hazard_Importance_Is_in_Your_Attention_Agent_Importance_Prediction_for_Autonomous_CVPRW_2022_paper.pdf">
+          Importance Is in Your Attention: Agent Importance Prediction for Autonomous Driving
+        </a>
+      </li>
+
+
+
+      
+      <br>
+      <br>
+      <br>
+
+
+
+      </div>
+    </div>
+
+
+
+
+        
+    <div class="bg">
+      <br>
+      <br>
+      <br>
+
+      <h3>
+        <b class="title" target="_blank" id="rules">General Rules</b>
+      </h3>
+
+      <p> 
+        Please refer to <a href="https://docs.google.com/document/d/18wEN6XdSW2VpVgSo0hHEKPN6KPptqvOUv5Znc2_lB3o/edit?usp=sharing">rules</a>.
+      </p>
+
+      <br>
+      <br>
+      <br>
+
+    </div>
+
+    <div class="bg_huise">
+      <br>
+      <br>
+      <br>
+      <div class="bg">
+
+      <h3>
+        <b class="title" target="_blank" id="FAQ">FAQ</b>
+      </h3>
+      <br>
+
+      <div class="accordion-body">
+        <div class="accordion"> 
+          
+          <hr>
+
+          <div class="container">
+            <div class="label"><b>How do we/I download the data?</b></div>
+            <div class="content">For each track, we provide links for downloading data in the GitHub repository.
+              The repository, which might also contain dataset API, baseline model, and other helpful information, is a good start to begin your participation.
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="container">
+            <div class="label"><b>How many times can we/I make a submission?</b></div>
+            <div class="content">
+              Each track has its submission limit. Please refer to the EvalAI for each track.
+              Submissions that error out do not count against this limit.
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="container">
+            <div class="label"><b>How many tracks can we/I take part in?</b></div>
+            <div class="content">
+              A team can participate in multiple tracks.
+              An entity cannot be affiliated with more than one team unless the entity is an academic entity (e.g., a university).
+            </div>
+          </div>
+
+          <hr>
+          
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
   </div>
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
 
-  <div class="wrapper row4">
-    <footer id="footer" class="hoc clear">
-      <!-- ################################################################################################ -->
-      <div class="center btmspace-50">
-        <h6 class="heading">OpenDriveLab</h6>
+
+
+  <div class="bg">
+    <div class="wrapper row3">
+      <div class="worldmap">
+        <!-- <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=W01goUbw9Xtnjh8gWPvnFjg9_mxO7w6jeXoD72spiX8"></script> -->
+        <!-- <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=n&d=W01goUbw9Xtnjh8gWPvnFjg9_mxO7w6jeXoD72spiX8&cmn=ff0000&cmo=ff9953'></script>       -->
+        <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=tt&d=W01goUbw9Xtnjh8gWPvnFjg9_mxO7w6jeXoD72spiX8&cmn=ff0000&cmo=ff955c'></script>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+
+
+      
+        
+    <footer class="footer"  > 
+      <div class="footer_t">
+        <h6>OPENDRIVELAB</h6>
         <nav>
           <ul class="nospace inline pushright uppercase">
-            <li><a style="color:#D68910;" href="http://opendrivelab.com/"><i class="fas fa-lg fa-home"></i></a></li>
+            <li><a  href="https://opendrivelab.com"><i class="tb icon_home"></i></a></li>
           </ul>
         </nav>
       </div>
-      <!-- ################################################################################################ -->
-    </footer>
-  </div>
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <div class="wrapper row5">
-    <div id="copyright" class="hoc clear">
-      <!-- ################################################################################################ -->
-      <p class="fl_left">Copyright &copy; 2023 - All Rights Reserved - OpenDriveLab</p>
 
-</body>
-<script src="layout/scripts/stopExecutionOnTimeout.js"></script>
-<script src='layout/scripts/jquery-2-1-3.min.js'></script>
-<script src='layout/scripts/jquery.tablesorter.min.js'></script>
+    <div class="copyright" >
+      <p>Copyright © 2023 - All Rights Reserved - <a style="color:#D68910;" href="http://opendrivelab.com/">OpenDriveLab at Shanghai AI Lab</a>
+      </p>
+    </div>
+    </footer>
+    <script src="ui_20230412/js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script> 
+    <script src="ui_20230412/js/all.js" type="text/javascript" charset="utf-8"></script> 
+    
+  </body>
 </html>
