@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+  </head>
+
+  <style>
+    button {
+        font-family: 'Ubuntu', sans-serif;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 170px;
+        height: 40px;
+        line-height: 1;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        border: 3px solid blueviolet;
+        background: #fff;
+        color: blueviolet;
+        border-radius: 40px;
+        cursor: pointer;
+        overflow: hidden;
+        transition: all .35s;
+    }
+
+    button:hover {
+        background: blueviolet;
+        color: white;
+    }
+
+    button span {
+        opacity: 1;
+        visibility: visible;
+        transition: all .35s;
+    }
+
+    .success {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        border-radius: 50%;
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .35s;
+    }
+
+    .success svg {
+        width: 20px;
+        height: 20px;
+        fill: yellowgreen;
+        transform-origin: 50% 50%;
+        transform: translateY(-50%) rotate(0deg) scale(0);
+        transition: all .35s;
+    }
+
+    .mailing_list_button.submit {
+        width: 40px;
+        height: 40px;
+    }
+
+    .mailing_list_button.submit .success {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .mailing_list_button.submit .success svg {
+        margin-top: 50%;
+        transform: translateY(-50%) rotate(720deg) scale(1);
+    }
+
+    .mailing_list_button.submit span {
+        opacity: 0;
+        visibility: hidden;
+    }
+  </style>
+
+  <body>
+    <form id="mailing_list" class="mailing_list" action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSdUL2T5QY0-jLY8gr6ViGxkaFaUAfHsfGWpqMJaEOTSrvFJCQ/formResponse" method="post" target="stop">
+        <div>
+            <div>
+                Sign Up for Updates
+            </div>
+        </div>
+        <div>
+            <input id="mailing_list_input" class="mailing_list_input" type="email" autocomplete="off" placeholder="email" name="entry.2025395434">
+            <button id="mailing_list_button" class="mailing_list_button" type="submit" >
+                <span>Sign Up</span>
+                <div class="success">
+                    <svg viewBox="0 0 29.756 29.756" style="enable-background:new 0 0 29.756 29.756;" xml:space="preserve">
+                        <path d="
+                        M29.049,5.009L28.19,4.151c-0.943-0.945-2.488-0.945-3.434,0L10.172,18.737l-5.175-5.173   
+                        c-0.943-0.944-2.489-0.944-3.432,0.001l-0.858,0.857c-0.943,0.944-0.943,2.489,0,3.433l7.744,7.752   
+                        c0.944,0.943,2.489,0.943,3.433,0L29.049,8.442C29.991,7.498,29.991,5.953,29.049,5.009z" />
+                    </svg>
+                </div>
+            </button>        
+        </div>
+    </form>
+    <iframe name="stop" style="display: none;"></iframe>
+  </body>
+
+  <script>
+    let form = document.getElementById("mailing_list");
+    let input = document.getElementById("mailing_list_input");
+    let button = document.getElementById("mailing_list_button");
+    // onload
+    button.disabled = true;
+    button.classList.toggle("deactive");
+    // check input
+    input.addEventListener("change", change);
+    function change() {
+        let val = input.value;
+        let empty = val == null || val == "";
+        let valid = val.match(
+            /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        );
+        if (!empty && valid) {
+            button.disabled = false;
+            button.classList.toggle("active");
+        } else {
+            button.disabled = true;
+            button.classList.toggle("deactive");
+        }
+    }
+    // submit
+    form.addEventListener("submit", submit);
+    function submit() {
+        button.classList.toggle("submit");
+        button.disabled = true;
+        input.removeEventListener("change", change);
+    }
+  </script>
+  
+</html>
+
+
