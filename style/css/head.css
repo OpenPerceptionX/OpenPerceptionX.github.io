@@ -199,7 +199,7 @@ body:not(.home) .head_fanhui{cursor:pointer;display:block;padding:0;position:fix
 .head_fanhui::after{transform:rotate(-45deg);-ms-transform:rotate(-45deg);-moz-transform:rotate(-45deg);-webkit-transform:rotate(-45deg);-o-transform:rotate(-45deg); content:""; width:12px ; height:12px; border:2px solid ; color:#fff; border-right:none; border-bottom:none; display:block; position:absolute; left:18px; top:17px}
 .header_this .header .head_fanhui::after,.rnav_this .head_fanhui::after {color:#000;}
 /* .logo{height:32px; width: 120px; margin-top:8px; background-size:auto 100%; } */
-.rnav ~ .logo{margin-left:36px; }
+.rnav ~ .logo{margin-left:12px; }
 /* .header_this .header .logo,.rnav_this .logo{background-image:url(../img/logo_.svg) ; } */
 .banner_textw{ padding: 0 10px ; width: calc(100% - 20px);}
 .title_auto,.title_challeng{ height: 30px;}

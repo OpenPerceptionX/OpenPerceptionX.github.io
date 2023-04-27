@@ -1,5 +1,9 @@
 
 .peoplewbr:nth-of-type(even){ background-color: #f2f2f2;}
+
+br {
+  user-select: none;
+}
     
 .people_img {
   background-color: #f2f2f2;
