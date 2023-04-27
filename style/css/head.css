@@ -403,7 +403,7 @@ body:not(.home) .head_fanhui{cursor:pointer;display:block;padding:0;position:fix
     .banner_cy,.home.cn .banner_cy{ background-size: 100% auto; background-repeat: no-repeat; background-position: right bottom; height: 280px;}
     }
 
-    .go_top{ cursor: pointer; width: 40px; height: 40px; background: url(../img/new/top.svg) no-repeat center;background-color: rgba(0, 0, 0,.7);backdrop-filter: blur(20px); position: fixed; bottom: -50px; right: 20px; border-radius: 50% ; background-size: 40% auto;transition: all 800ms cubic-bezier(0.75, 0, 0.15, 1); z-index: 1000;  }
+    .go_top{ cursor: pointer; width: 40px; height: 40px; background: url(../img/icon/top.svg) no-repeat center;background-color: rgba(0, 0, 0,.7);backdrop-filter: blur(20px); position: fixed; bottom: -50px; right: 20px; border-radius: 50% ; background-size: 40% auto;transition: all 800ms cubic-bezier(0.75, 0, 0.15, 1); z-index: 1000;  }
     .header_this .go_top{ bottom: 20px;}
 
     @media screen and (max-device-width:1024px){
