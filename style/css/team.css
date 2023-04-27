@@ -4,6 +4,10 @@
 br {
   user-select: none;
 }
+
+h3 {
+  user-select: none;
+}
     
 .people_img {
   background-color: #f2f2f2;
