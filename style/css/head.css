@@ -353,10 +353,11 @@ body:not(.home) .head_fanhui{cursor:pointer;display:block;padding:0;position:fix
     padding: 8px 0 8px 0; height: auto;
     /* width: calc(100% - 30px); */
 }
-.logo{ margin: 0 auto 0 0;}
+.logo{ margin: 0 auto 0 0; font-size: 22px; line-height: 32px; }
+.logo,.logo a{ color: #fff;}
 @media screen and (max-device-width: 1024px){
     .logo img{height:36px;}
-   
+    .logo{   font-size: 18px;}
   }
 .qh_langw{ padding: 0;}
 .qh_lang{ margin-top: 0;}
