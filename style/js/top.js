@@ -1,9 +1,9 @@
 // 插入头部
-$.get("header.html",function(result){
+$.get("header.html?1x",function(result){
   $("body").prepend(result)
 })
 //插入底部
-$.get("footer.html",function(result){
+$.get("footer.html?xx",function(result){
   $("body").append(result)
 })
 
@@ -16,85 +16,19 @@ $.get("banner.html",function(result){
  $(document).ready(function () {
  //首页导航高亮
 
-    $(".scrollable").each(function(){
-      ($(this).find("tr").length>2) ? $(this).addClass("scrollable2") : '';
-    })
-    
-            var richeng_nav = $(".r_ul")
-    
-    
-            $("[data-gd]").click(
-                function () {
-                    $(this).addClass("this");
-                    // richeng_nav.addClass("r_ul_this");
-                    var data_url2 = $(this).attr("data-gd");
-                    var time2 = 200
-                    // $("html,body").animate({ scrollTop: $(data_url2).offset().top - 100}, time2,function(){
-                    $('html,body').animate({scrollTop: $(data_url2).offset().top - 100}, 200);
-                    // }); 
-                    if($(window).width()<1025){
-                    $("body").removeClass("rnav_this")
-                    }
-                });
-            var nt2 = !1;
-            $(window).bind("scroll",
-                function () {
-                var w_hiehgt2 = 70;
-                    var st2 = $(document).scrollTop();//往下滚的高度
-                    
-                    if($(".why_list").length>0){
-    
-                    var img = $(".why_list li:nth-last-of-type(1)")
-                    if (st2 > img.offset().top - w_hiehgt2) {
-                    $("body").addClass("body_imgx");
-                    }else{
-                    $("body").removeClass("body_imgx");
-                    }
-    
-          }
-    
-          if($(".motivation").length>0){
-                            var imgx = $(".motivation")
-                    if (st2 > imgx.offset().top - w_hiehgt2) {
-                    $("body").addClass("body_imgx2");
-                    }else{
-                    $("body").removeClass("body_imgx2");
-                    }
-                    
-          }
-                    
-                            var bannerw = $(".bannerw").height() - $(".r_ul").height() 
-                    if (st2 > bannerw) {
-                    $(".r_ul").addClass("r_ul_this");
-                    }else{
-                    $(".r_ul").removeClass("r_ul_this");
-                    }
-                    
-                 
-    
-                    $(".r_ul li").each(function (index, element) {
-    
-                        var day2 = $(this).attr("data-gd");
-                        if (st2 > ($(day2).offset().top - 200)) {
-                            $(this).addClass("this").siblings().removeClass("this");
-                        }
-                        else {
-                            $(this).removeClass("this");
-                        }
-                    });
-    
-                });
-    
+   
+     
     
        
     
-      $('[data-hd]').click(function () {
-        var hhh = $(this).attr("data-hd")
+     
+        $(document).on("click", "[data-hd2]", function () {
+        var hhh = $(this).attr("data-hd2")
         $('html,body').animate({scrollTop: $(hhh).offset().top - 60}, 800);
     });
  
     
-        var l_daohang =$(".header");
+        var l_daohang =$("body");
         var nt2 = !1;
         $(window).bind("scroll",
             function() {
@@ -102,10 +36,10 @@ $.get("banner.html",function(result){
                 nt2 = nt2 ? nt2: 40;
                 // console.log(nt2)
                 if(st2>nt2){
-                  l_daohang.addClass("this");
+                  l_daohang.addClass("header_this");
               }
               else{
-                l_daohang.removeClass("this");
+                l_daohang.removeClass("header_this");
               }
             });
       //打开菜单
@@ -114,11 +48,8 @@ $.get("banner.html",function(result){
         });
      
     
-      $(document).on("click", ".btn_from,.close", function () {
-        $(".open_from").toggle()
-        $("body").toggleClass('open_from_this')
-        });
-      });
+   
+  
     
 
 //手机版
@@ -129,7 +60,7 @@ $.get("banner.html",function(result){
       return false
       }
       });
-
+    });
       
 //join&people
 //转换模板
