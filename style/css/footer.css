@@ -29,8 +29,8 @@
       align-items: center;
       -ms-flex-pack: justify;
       justify-content: space-between;}
-      .footer_o .o_r a{ padding: 0 5px;}
-      .footer_o .o_r a:nth-last-child(1){ padding-right: 0;}
+      .footer_o .o_r a{ padding: 0 7px;}
+      /* .footer_o .o_r a:nth-last-child(1){ padding-left: 0;} */
   .footer_o .o_r a:hover{ opacity: .8;}
   .color_bai,.color_bai a{ color: #fff;}
   .color_bai a:hover{ text-decoration: underline; color: #ffa500;}
