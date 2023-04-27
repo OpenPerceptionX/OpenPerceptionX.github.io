@@ -37,15 +37,23 @@ justify-content: center; padding: 0 0 40px 0;  }
 .people_list dl a,.people_list dl{ display: flex;align-items: center;}
 .people_list .people_img { margin-right: 8px;}
 .people_list ,.people_list a{ color: #000;}
+
 .people_list a h2{ 
-color: #6bc0ec; }
+  color: rgb(0, 0, 191); 
+  font-size: 23px;
+  font-weight: 700;
+}
+.people_list a p{ 
+  font-size: 15px;
+}
+
  .people_list h2 { display: inline-block; position: relative;  margin-bottom: 0;   font-size: 16px;}
  .people_list p{ font-size: 13px; margin-top: 8px; line-height: 18px;}
  .people_list dl a:hover img{ background-color:#94c9e5 ; }
  .people_list dl a h2::before {
 content: '';
 height: 0;
-border-bottom: 2px solid #6bc0ec;
+border-bottom: 2px solid rgb(0, 0, 191);
 width: 0;
 display:block;
 position: absolute;
