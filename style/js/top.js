@@ -1,9 +1,9 @@
 // 插入头部
-$.get("header.html?1x",function(result){
+$.get("components/header.html?1x",function(result){
   $("body").prepend(result)
 })
 //插入底部
-$.get("footer.html?xx",function(result){
+$.get("components/footer.html?xx",function(result){
   $("body").append(result)
 })
 
