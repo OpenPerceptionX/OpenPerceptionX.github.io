@@ -1,0 +1,52 @@
+<svg id="host_br" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1866" height="594" viewBox="0 0 1866 594">
+  <defs>
+    <style>
+      .cls-1, .cls-4 {
+        fill-rule: evenodd;
+      }
+
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: #bac9b0;
+      }
+
+      .cls-3 {
+        fill: #e5bfbf;
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-5 {
+        fill: #d5daeb;
+      }
+
+      .cls-6 {
+        fill: #c1dbdb;
+      }
+
+      .cls-7 {
+        fill: #afc9c9;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="240.516" y1="3378.34" x2="240.516" y2="3242" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e1f3d5"/>
+      <stop offset="1" stop-color="#d5e2cc"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="1624.655" y1="3387" x2="1624.655" y2="3150" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#edeff2"/>
+      <stop offset="1" stop-color="#d4daeb"/>
+    </linearGradient>
+  </defs>
+  <path id="形状_30" data-name="形状 30" class="cls-1" d="M495,3271c-1.2,1.36-115.182,50.88-220,82-111.711,33.16-227.757,26.76-289,19.59v-44.56c36.634,7.99,120.106,20.76,221,.97,49.423-9.69,190.581-47.16,262-87C469,3242,496.2,3269.64,495,3271Z" transform="translate(0 -2793)"/>
+  <circle id="椭圆_1" data-name="椭圆 1" class="cls-2" cx="483" cy="463" r="19"/>
+  <circle id="椭圆_1_拷贝_2" data-name="椭圆 1 拷贝 2" class="cls-3" cx="1626.36" cy="198.36" r="19.36"/>
+  <path id="形状_32" data-name="形状 32" class="cls-4" d="M1696.33,3325.64a429.828,429.828,0,0,1,24.53,61.36h-42.73a224.783,224.783,0,0,0-17.54-47.45c-31.55,11.06-62.06,21-89.59,26.45-130.8,25.88-218.97-53.58-170-139,64.86-113.12,233.57-8.65,274.22,61.69C1813.06,3228,1819,3150,1819,3150l43,5C1832.82,3246.68,1766.03,3295.52,1696.33,3325.64ZM1446,3254c-29.23,47.4,25.11,108.93,191.98,49.43a243.877,243.877,0,0,0-35.57-34.63C1558.16,3233.66,1483.91,3192.53,1446,3254Z" transform="translate(0 -2793)"/>
+  <circle id="椭圆_1_拷贝_3" data-name="椭圆 1 拷贝 3" class="cls-5" cx="1727.36" cy="19.36" r="19.36"/>
+  <circle id="椭圆_1_拷贝_4" data-name="椭圆 1 拷贝 4" class="cls-6" cx="254.359" cy="213.36" r="19.359"/>
+  <circle id="椭圆_1_拷贝" data-name="椭圆 1 拷贝" class="cls-7" cx="1841.5" cy="353.5" r="24.5"/>
+</svg>

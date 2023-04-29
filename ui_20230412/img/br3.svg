@@ -1,0 +1,27 @@
+<svg id="br3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="241.906" height="120" viewBox="0 0 241.906 120">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-2);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="824.047" y1="1684" x2="824.047" y2="1564" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#9b3a3a"/>
+      <stop offset="1" stop-color="#b94349"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="774.672" y1="1684" x2="894.672" y2="1564" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ba4247"/>
+      <stop offset="1" stop-color="#f54e5a"/>
+    </linearGradient>
+  </defs>
+  <path id="_1" data-name="1" class="cls-1" d="M703.079,1564H945v120H704.568Z" transform="translate(-703.094 -1564)"/>
+  <path id="_1-2" data-name="1" class="cls-2" d="M738.317,1684l-13.984-120H945v60.55c-15.081,18.85-32.117,38.95-50.981,59.45h-155.7Z" transform="translate(-703.094 -1564)"/>
+</svg>
