@@ -23,6 +23,8 @@
     </script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
+    <link href="/style/css/footer.css?11" rel="stylesheet" type="text/css" media="all">
+
   </head>
 
 
@@ -1511,7 +1513,7 @@
 
       
         
-    <footer class="footer"  > 
+    <!-- <footer class="footer"  > 
       <div class="footer_t">
         <h6>OPENDRIVELAB</h6>
         <nav>
@@ -1525,9 +1527,15 @@
       <p>Copyright © 2023 - All Rights Reserved - <a style="color:#D68910;" href="http://opendrivelab.com/">OpenDriveLab at Shanghai AI Lab</a>
       </p>
     </div>
-    </footer>
+    </footer> -->
     <script src="/style/cvpr2023/js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script> 
     <script src="/style/cvpr2023/js/all.js" type="text/javascript" charset="utf-8"></script> 
+
+    <script>
+    $.get("/components/footer.html?xx",function(result){
+      $("body").append(result)
+    })
+    </script>
     
   </body>
 </html>

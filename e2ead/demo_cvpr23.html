@@ -8,6 +8,8 @@
 <title>CVPR 2023 Autonomous Driving Workshop | OpenDriveLab</title>
 <link rel="icon" type="image/png" href="/style/cvpr2023/img/team_logo.png">
 <link href="/style/cvpr2023/css/all.css" rel="stylesheet" type="text/css" media="all">
+<link href="/style/css/footer.css?11" rel="stylesheet" type="text/css" media="all">
+
 </head>
 
 <body class="cvpr23 home">
@@ -17,8 +19,8 @@
     <div class="rnav m"></div>
     <!-- <a class="logo" href="https://opendrivelab.com/e2ead/cvpr23.html"></a> -->
     <div class="qh_langw">
-      <div class="qh_lang"><a href="https://opendrivelab.com/AD23Challenge.html#FAQ">FAQ</a></div>
-      <div class="qh_lang"><a href="https://opendrivelab.com/e2ead/cvpr23.html">EN</a><a href="https://opendrivelab.com/AD23Challenge_cn.html" class="this">中<font class="m">文</font></a></div>
+      <!-- <div class="qh_lang"><a href="https://opendrivelab.com/AD23Challenge.html#FAQ">FAQ</a></div> -->
+      <!-- <div class="qh_lang"><a href="https://opendrivelab.com/e2ead/cvpr23.html">EN</a><a href="https://opendrivelab.com/AD23Challenge_cn.html" class="this">中<font class="m">文</font></a></div> -->
     </div>
   </div>
   <div class="rnav_br"></div>
@@ -1054,7 +1056,7 @@
   
  
  
-      <footer class="footer"  > 
+      <!-- <footer class="footer"  > 
         <div class="footer_t">
           <h6>OpenDriveLab</h6>
           <nav>
@@ -1068,7 +1070,9 @@
         <p>Copyright © 2023 - All Rights Reserved - <a style="color:#D68910;" href="http://opendrivelab.com/">OpenDriveLab at Shanghai AI Lab</a>
         </p>
       </div>
-      </footer>
+      </footer> -->
+
+
 
 <script src="/style/cvpr2023/js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script> 
 <script src="/style/cvpr2023/js/all.js" type="text/javascript" charset="utf-8"></script>
@@ -1133,5 +1137,10 @@ var imgs = [
     }); 
 
 </script>
+<script>
+  $.get("/components/footer.html?xx",function(result){
+    $("body").append(result)
+  })
+  </script>
 </body>
 </html>
