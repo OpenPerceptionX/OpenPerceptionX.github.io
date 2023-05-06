@@ -760,6 +760,12 @@ a.btn_goen{
   font-size: 33px; 
   line-height: 50px; 
   font-weight: 900;
-   user-select: none; 
-   margin-bottom: 1%;
+  user-select: none; 
+  margin-bottom: 1%;
+}
+@media screen and (max-device-width:1024px) {
+  .my_subtitle {
+    font-size: 33px; 
+    line-height: 50px; 
+  }
 }
