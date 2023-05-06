@@ -12,6 +12,18 @@
  
 /* 头部开始 */
 
+.logo {
+    font-size:x-large; 
+    font-weight: 800; 
+    user-select: none;
+}
+@media screen and (max-device-width:1024px) {
+    .logo {
+        font-size:large; 
+    }
+}
+
+
 
 .header{min-width:1100px;}
 .why_list h2::before,.tb,.track_nav dl dd::after,.accordion .label::before{ background-image: url(../img/tb.svg); background-repeat: no-repeat;}
