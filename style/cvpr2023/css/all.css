@@ -751,7 +751,15 @@ a.btn_goen{
 }
 @media screen and (max-device-width:1024px) {
   .my_title {
-    font-size: 33px; 
-    line-height: 55px; 
+    font-size: 39px; 
+    line-height: 50px; 
   }
+}
+
+.my_subtitle {
+  font-size: 33px; 
+  line-height: 50px; 
+  font-weight: 900;
+   user-select: none; 
+   margin-bottom: 1%;
 }
