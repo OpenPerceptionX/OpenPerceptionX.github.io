@@ -1,14 +1,14 @@
 // 插入头部
-$.get("components/header.html?1x",function(result){
+$.get("/components/header.html?1x",function(result){
   $("body").prepend(result)
 })
 //插入底部
-$.get("components/footer.html?xx",function(result){
+$.get("/components/footer.html?xx",function(result){
   $("body").append(result)
 })
 
 // 插入banner
-$.get("components/banner.html",function(result){
+$.get("/components/banner.html",function(result){
   $("#content").before(result);
   $("body").removeClass("loadings")
 })
