@@ -742,10 +742,16 @@ a.btn_goen{
 }
 
 .my_title {
-  font-size: 500%; 
+  font-size: 77px; 
   font-weight: 900; 
   user-select: none;
   margin-bottom: 1%; 
   line-height: 99px; 
   color: goldenrod;
+}
+@media screen and (max-device-width:1024px) {
+  .my_title {
+    font-size: 33px; 
+    line-height: 55px; 
+  }
 }
