@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport"
+        content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<title>CVPR 2023 Autonomous Driving Workshop | OpenDriveLab</title>
+<link rel="icon" type="image/png" href="/style/cvpr2023/img/team_logo.png">
+<link href="/style/cvpr2023/css/all.css" rel="stylesheet" type="text/css" media="all">
+</head>
+
+<body class="cvpr23 home">
+<!-- 如果是首頁加上 樣式 home -->
+
+  <div class="header"> <a class="head_fanhui" href="https://opendrivelab.com/e2ead/cvpr23.html"></a>
+    <div class="rnav m"></div>
+    <!-- <a class="logo" href="https://opendrivelab.com/e2ead/cvpr23.html"></a> -->
+    <div class="qh_langw">
+      <div class="qh_lang"><a href="https://opendrivelab.com/AD23Challenge.html#FAQ">FAQ</a></div>
+      <div class="qh_lang"><a href="https://opendrivelab.com/e2ead/cvpr23.html">EN</a><a href="https://opendrivelab.com/AD23Challenge_cn.html" class="this">中<font class="m">文</font></a></div>
+    </div>
+  </div>
+  <div class="rnav_br"></div>
+  <div class="bannerw">
+  <div class="banner" style="background-image: url(/style/cvpr2023/img/banner.jpg);">
+    <div class="banner_dian"></div>
+   
+    <div class="banner_textw">
+      <div class="bg">
+        <div class="juzhongduiqi">
+          <div>
+		    <p class="index_end"><img src="/style/cvpr2023/img/indexend.svg"   data-swiper-parallax-x="-1600" /><img src="/style/cvpr2023/img/indexauto.svg"  data-swiper-parallax-x="-1600" /></p>
+            <div class="t_text t_text2 m"> <img src="/style/cvpr2023/img/title1.svg"   /><img src="/style/cvpr2023/img/title2.svg"   /> </div>
+                   <div class="t_text  pc"> <img src="/style/cvpr2023/img/title.svg" class="title_auto" /></div>
+          
+            <p><img src="/style/cvpr2023/img/cvpr2023.svg" class="titel_cvpr" data-swiper-parallax-x="-1600" /></p>
+            <p class="r_time">June 18, Vancouver, Canada</p>
+            
+            <p>Contact us at
+              <span class="im">:</span>
+              <br class="m">
+			<i class="tb imail"></i>
+			workshop-e2e-ad@googlegroups.com
+            </p>
+            <p><img src="/style/cvpr2023/img/sh_logo.svg" class=" banner_img" data-swiper-parallax-x="-1600" /></p>
+            <br />
+            <a class="lj_button" data-swiper-parallax-x="-4000"  href="https://opendrivelab.com/AD23Challenge.html#Contact">Contact</a> <a class="lj_button2" data-swiper-parallax-x="-4000"  href="https://opendrivelab.com/AD23Challenge.html#Participation">Participation</a> </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+  <div class="r_ul">
+    <ul class="bg">
+      <li class="this" data-gd="#id1">Overview</li>
+      <li data-gd="#id2">TimeLine</li>
+	    <li data-gd="#id3">
+ 
+
+
+<svg xmlns="http://www.w3.org/2000/svg" width="360.937" height="74" viewBox="0 0 360.937 74">
+  <path id="challeng" fill="#fff" d="M538.086,311.132l-1.8,11.811h11.67S561.711,323.718,560.36,340h0.07l-2.81,19h-14l0.136-.924c-0.376.131-.73,0.247-1.051,0.348L545.578,339h-0.112c0.167-5.484-3-6-3-6h-7.717l-3.968,26h-16l9.258-56.937,16.012-.057Zm-45.049-9.022h25L515.013,314h-14s-16.208-3.113-21.07,16c-5.244,20.617,11.421,18,11.421,18l18.255-1-2.925,11.5h-33s-19.881-.465-13.513-25.5S484.48,302.11,493.037,302.11Zm85.917,20.833h22l-0.006.108,2.988,0.01L598.62,359h-16l0.2-1.331c-0.348.115-.7,0.228-1.049,0.331a27.417,27.417,0,0,1-6.147,1s-16.656-2.33-14.486-17C563.831,323.772,578.954,322.943,578.954,322.943ZM581.247,348l3.2-1.334L586.466,333h-5s-4.093.631-5.184,8C575.242,348.032,581.247,348,581.247,348Zm46.8-45.994-1.35,9.127L619.619,359h-16l8.423-56.937Zm23,0-1.35,9.127L642.62,359h-16l8.423-56.937Zm17.9,20.938h10s12,0.688,12.475,14.056h0.445l-0.887,6H666.181a4.872,4.872,0,0,0,4.083,4.882,7.528,7.528,0,0,0,2.348-.882h16.869c-4.879,9.189-17.862,12-17.862,12h-6s-16.9-.667-14.485-17C653.831,323.772,668.954,322.943,668.954,322.943Zm7.4,14.056c-0.545-3.611-2.891-4-2.891-4h-2s-2.466.382-4.08,4h8.971Zm17.221,2h0l0.147-1h0.036c2.563-12.348,17.183-15,17.183-15h8s14.784,2.652,13.743,15h0.038l-3.106,21h-15l2.9-19.607h-0.014c0.527-5.083-2.456-5.488-3.681-5.445-1.228-.044-4.4.374-5.33,5.659h-0.007L705.619,359h-15l2.958-20v0Zm19.74-5a3.623,3.623,0,0,1,.507-0.051,3.3,3.3,0,0,1,.493.051h-1Zm39.3,25h-4s-16.928-.483-14.484-17c2.7-18.227,17.819-19.056,17.819-19.056h6v0.01L775.945,323s0.886,0.773-1.811,19c-0.051.346-.119,0.681-0.191,1.013l0.044-.013-0.357,2.409L771.62,359c-2.068,13.974-16.116,17-16.116,17H733.9l1.176-7.947h17.4a3.508,3.508,0,0,0,2.69-1.394l-0.734.342,1.223-8.266c-0.652.181-1.039,0.266-1.039,0.266h-2Zm4.628-11,1.046-.313L759.282,341v0a0.013,0.013,0,0,0,0-.006L760.466,333h-6s-4.093.631-5.183,8c-0.772,5.213,2.325,6.543,3.981,6.882l-0.017.118h4Zm39.707-25.056h10s12,0.688,12.475,14.056h0.445l-0.887,6H794.181a4.872,4.872,0,0,0,4.083,4.882,7.528,7.528,0,0,0,2.348-.882h16.869c-4.879,9.189-17.862,12-17.862,12h-6s-16.9-.667-14.484-17C781.831,323.772,796.954,322.943,796.954,322.943Zm7.4,14.056c-0.545-3.611-2.891-4-2.891-4h-2s-2.466.382-4.08,4h8.971Z" transform="translate(-458.938 -302)"/>
+</svg>
+
+
+        
+      </li>
+      
+    
+      <li data-gd="#id4">Speakers</li>
+	  <li data-gd="#id5">Schedule</li>
+      <li data-gd="#id6">Organizers</li>
+      <li data-gd="#id7">Committee</li>
+    </ul>
+  </div>
+  </div>
+  <!-- ################################################################################################ -->
+  
+    
+ 
+    
+    
+  
+  
+    <div class="wrapper row1 " id="id1">
+      <div class="hoc bg clear">
+  
+  
+          <h3 class="h_title">Overview</h3>
+    
+          <h2>
+            Welcome to the <a href="https://cvpr2023.thecvf.com/" class="color_lvse ">CVPR 2023</a> Workshop on End-to-End Autonomous
+              Driving!
+          </h2>
+          <p itemprop="description">
+            This workshop aims to bring together leading researchers and practitioners to discuss
+            upcoming paradigms for autonomous vehicles. Central to the program is a series of <topic>invited talks</topic> and <topic>four new challenges</topic> in the self-driving
+            domain. Each challenge combines new perspectives of multiple components in perception and planning compared to
+            conventional pipelines.
+            <code>Winners</code> of
+            the challenges will present their results and insights as part of the workshop. We invite researchers around
+            the world to build new algorithms to tackle these challenging, real-world autonomous driving tasks!
+          </p>
+        
+  
+            <p>The workshop <a href="https://opendrivelab.com/sr4ad/iclr23">Scene Representations For Autonomous Driving</a> on ICLR 2023 will be held on May 5th. Check it out!
+            </p>
+  
+            Contact us at <a class="xh" href="mailto:workshop-e2e-ad@googlegroups.com">workshop-e2e-ad@googlegroups.com</a>. 
+  
+            <!-- <p class="color_lvse xh"  > <a href="https://forms.gle/TcmAd2cNNFoo7x829"> Sign up for updates via the link</a>.</p> -->
+  
+      
+        </div>
+       
+    </div>
+  
+    <div class="wrapper row2 bg_data"  id="id2">
+          <div class="hoc bg clear">
+            <!-- main body -->
+           
+  
+  
+          <h3 class="h_title">Time Line</h3>
+   
+  
+  
+          <h2>Challenge</h2>
+		 <div class="data_list">
+      <dl class="old">
+        <dt>15 Feb 2023</dt>
+        <dd>Challenge Official Announcement</dd>
+      </dl>
+      <dl class="old">
+        <dt>15 March 2023</dt>
+        <dd>Test Data Release, Server Open</dd>
+      </dl>
+      <dl class="new">
+        <dt>Late May 2023</dt>
+        <dd>Challenge Submission Deadline</dd>
+      </dl>
+      <dl>
+        <dt>4 Jun 2023</dt>
+        <dd>Notification of Award</dd>
+      </dl>
+      <dl>
+        <dt>15 Jun 2023</dt>
+        <dd>Submission of Winners Talk</dd>
+      </dl>
+      </div>
+
+      <h2>Workshop</h2>
+      <div class="data_list">
+      <dl class="new">
+        <dt>18 Jun 2023, Full day</dt>
+        <dd>Workshop Event</dd>
+      </dl>
+		 </div>
+  
+          <div class="clear"></div>
+      </div></div>
+   
+    
+    <!-- speakers -->
+  
+    <!-- ##### Challenges #### -->
+    <div class="wrapper row4 " id="id3">
+      <div class="hoc bg clear">
+          <h3  class="h_title" id="Challenges"><b>Challenges <a href="https://opendrivelab.com/AD23Challenge.html">[Participation]</a></b></h3>
+          <li > 
+            We are proud to announce  <a href="https://opendrivelab.com/AD23Challenge.html"> four brand-new challenges</a> this year, in collaboration with our partners - 
+            <a href="https://www.vcad.site/">Vision-Centric Autonomous Driving Workshop</a> and the <a href="https://nuplan-devkit.readthedocs.io/en/latest/competition.html">nuPlan team from Motional</a>.
+         
+            
+          </li>
+           <br>
+          <li > The challenge is not <b class="color_cheng">solely</b> about winning top place with tricks and ensembles. Each track is set with cash prizes to award both top entries
+           <b class="color_cheng">as well as </b> 
+         innovative submissions. The award committee will select the most innovative submissions to present their work live.
+    
+          </li>
+          
+  
+          <ul class="gif_list">
+            <li>
+           
+                <a href="https://opendrivelab.com/AD23Challenge.html#Track1">
+                  <span class="loading loading_box0">
+                     
+                  </span>
+                  <img src="/style/cvpr2023/img/g1.png" alt="OpenLane Topology Challenge" id="g0" >
+                  <div class="lin"> <h1 >OpenLane Topology Challenge</h1>
+                    <p > World's First Topology Reasoning Benchmark for Scene
+                    Structure. </p>
+                 <span class="btn">Read More
+                  </span>
+                  </div>
+           </a>
+            </li>
+            <li >
+           
+                <a href="https://opendrivelab.com/AD23Challenge.html#Track2">  <span class="loading loading_box1">
+                     
+                </span><img src="/style/cvpr2023/img/g2.png" id="g1" alt="Online HD Map Construction Challenge" >
+                
+                <div class="lin">
+                  <h1 >Online HD Map Construction Challenge</h1>
+                    <p > Dynamically construct local HD maps using onboard sensors. </p> 
+                    <span class="btn">Read More
+                    </span></div>
+              </a>
+            </li>
+            <li>
+         <a href="https://opendrivelab.com/AD23Challenge.html#Track3">  <span class="loading loading_box2">
+                     
+         </span><img id="g2" src="/style/cvpr2023/img/g3.png"  alt="">
+          <div class="lin">
+                 <h1 >3D Occupancy Prediction Challenge</h1>
+                  <p > Occupancy as New Representation for General Object Perception.</p>
+  
+                  <span class="btn">Read More
+                </span>
+            </div>
+            </a>
+           
+            </li>
+  
+            <li >
+           <a href="https://eval.ai/web/challenges/challenge-page/1856/overview">  <span class="loading loading_box3">
+                     
+           </span><img src="/style/cvpr2023/img/g4.png" id="g3" alt=" nuPlan Planning Challenge">
+            <div class="lin">
+                  <h1 > nuPlan Planning Challenge</h1>
+                  <p > World's First Large-scale Planning Benchmark.</p>
+                  <span class="btn">Read More
+                </span>
+                </div>
+               </a>
+             
+            </li>
+          </ul>
+ 
+            
+          <h2>General Rules at a Glance</h2>
+  
+          <li > 
+            Each track runs in parallel and would not affect the others. That being said, one can claim <b class="color_cheng">multiple</b> awards.
+          </li>
+          <li > 
+            We organizers unanimously agree that research should be equal to everyone in the world and apart from other factors. As such, <b class="color_cheng">all</b> companies/individuals, regardless of region/belief/etc. can participate in the challenges.  
+          </li>
+          <li >Workshop organizers and their teams <b class="color_cheng">can</b> participate in a particular track, as long as they are concealed from test data and not a member of the Award Committee.</li>
+          <li >Any endeavors found to hack test data/annotation will lead to disqualification from the competition.</li>
+  
+          <br>
+          <i>For more details, please refer to the full rules <a href="https://opendrivelab.com/AD23Challenge.html#rules">here</a>.</i>
+  
+  
+      </div>
+      
+    </div>
+  
+  
+   <!-- Speakers -->
+  
+    <div class="wrapper row1" id="id4">
+      <section class="hoc bg clear">
+        
+  
+        <h3  class="h_title">Speakers</h3>
+  
+ 
+        
+  
+        <ul class=" group">
+  
+          <li>
+  
+           
+              <a href="https://www.cs.cmu.edu/~deva/" target="_blank">
+                <div class="photo">   <img  src="/style/cvpr2023/img/people/DevaRamanan.png" alt="Deva Ramanan" ></div>
+              
+            
+            <h1>Deva Ramanan </h1>
+      <p>  <i>Professor</i>Carnegie Mellon University, USA</p>
+              
+            
+  </a>
+          </li>
+  
+          <li >
+            
+              <a href="https://www2.eecs.berkeley.edu/Faculty/Homepages/svlevine.html" target="_blank">
+                <div class="photo">    <img   src="/style/cvpr2023/img/people/SergeyLevine.png" alt="" ></div>
+           
+            <h1>Sergey Levine </h1>
+           
+              <p><i>Associate Professor</i>UC Berkeley, USA</p>
+         
+              
+  
+            
+          </a>
+          </li>
+  
+          <li>
+              <a href="https://alvarezlopezjosem.github.io" target="_blank">
+                <div class="photo">   <img  src="/style/cvpr2023/img/people/jose_alvarez.png" alt="Jose M. Alvarez" ></div>
+            
+  
+            <h1 > Jose M. Alvarez </h1>
+          <p>
+              <i>Senior Research Manager</i>NVIDIA, USA</li>
+              </p>
+      
+  
+           
+          </li>
+  
+  
+      
+  
+    
+  
+  
+          <li>
+            
+              <a href="https://scholar.google.com/citations?user=i7U4YogAAAAJ&amp;hl=en" target="_blank">
+                <div class="photo"> <img  src="/style/cvpr2023/img/people/YuningChai.png" alt="Yuning Chai" ></div>
+            <h1> Yuning Chai   </h1>
+             <p>
+              <i>Head of AI Research</i>Cruise, USA
+        
+              </p>
+  
+           
+  </a>
+          </li>
+  
+          <li >
+            
+              <a href="https://www.johnemmons.com" target="_blank">
+                <div class="photo">   <img   src="/style/cvpr2023/img/people/JohnEmmons.png" ></div>
+        
+  
+            <h1 > John
+                Emmons </h1>
+        <p>
+              <i>Senior Engineering Manager</i>Tesla, USA
+         
+               </p>
+  
+   
+  </a>
+  
+         
+          </li>
+  
+          <li>
+            
+              <a href="https://alexgkendall.com" target="_blank">
+                <div class="photo"> 
+                <img  src="/style/cvpr2023/img/people/AlexKendall.png" ></div>
+      
+  
+            <h1 > Alex
+                Kendall   </h1>
+          <p>
+              <i>CEO</i> Wayve, UK
+            
+              </p>
+  
+  </a>
+          
+  
+          </li>
+  
+   
+  
+          <li >
+  
+           
+              <a href="https://medium.com/@patrickllgc" target="_blank">
+                <div class="photo"> 
+                <img  src="/style/cvpr2023/img/people/patrick.png" alt="Patrick Langechuan Liu" >
+        </div>
+            <h1>Patrick Langechuan Liu</h1> 
+               <p>
+              <i>Director, Principal Engineer</i>XPENG, China
+          </p>
+              
+        </a>
+  
+          </li>
+  
+        </ul>
+  
+     
+  
+        
+      </section>
+    </div>
+  
+  
+ 
+    
+    <!-- ##### Schedule #### -->
+    <div class="wrapper row2 bg_Schedule" id="id5">
+      <div class="hoc bg clear">
+        
+        <h3 class="h_title"><b>Schedule</b></h3>
+  
+  
+        <h2 style="font-size: large;">Please select your time zone: 
+  
+        
+  
+        <select id="operator" style="font-size: 0.9rem;" onchange="time_zone()">
+  
+          <option value="-4" onclick="time_zone()">UTC-11 Niue/Pago_Pago</option>
+          <option value="-3" onclick="time_zone()">UTC-10 Honolulu/Adak </option>
+          <option value="-2" onclick="time_zone()">UTC-9 Alaska/Gambier Islands</option>
+          <option value="-1" onclick="time_zone()">UTC-8 Anchorage/Nome</option>
+          <option value="0" onclick="time_zone()" selected="selected">UTC-7 (CVPR venue time) Vancouver/Los_Angeles</option>
+          <option value="1" onclick="time_zone()">UTC-6 Belize</option>
+          <option value="2" onclick="time_zone()">UTC-5 Chicago</option>
+          <option value="3" onclick="time_zone()">UTC-4 New_York/Detroit</option>
+          <option value="4" onclick="time_zone()">UTC-3 Araguaina/Maceio/Thule</option>
+          <option value="5" onclick="time_zone()">UTC-2 Noronha/South_Georgia</option>
+          <option value="6" onclick="time_zone()">UTC-1 Cape_Verde/Azores</option>
+          <option value="7" onclick="time_zone()">UTC+0 Ireland/Portugal</option>
+          <option value="8" onclick="time_zone()">UTC+1 London/Canary</option>
+          <option value="9" onclick="time_zone()">UTC+2 Paris/Berlin/Cairo/Kigali</option>
+          <option value="10" onclick="time_zone()">UTC+3 Moscow/Baghdad</option>
+          <option value="11" onclick="time_zone()">UTC+4 Dubai/Mahe</option>
+          <option value="12" onclick="time_zone()">UTC+5 Qyzylorda/Kerguelen</option>
+          <option value="13" onclick="time_zone()">UTC+6 Almaty/Kolkata</option>
+          <option value="14" onclick="time_zone()">UTC+7 Bangkok/Christmas</option>
+          <option value="15" onclick="time_zone()">UTC+8 Beijing/Hong_Kong</option>
+          <option value="16" onclick="time_zone()">UTC+9 Tokyo/Seoul</option>
+          <option value="17" onclick="time_zone()">UTC+10 Sydney/Brisbane</option>
+          <option value="18" onclick="time_zone()">UTC+11 Lord_Howe/Kosrae</option>
+          <option value="17" onclick="time_zone()">UTC+12 Wallis/Fiji</option>
+      </select>
+  
+  
+  
+      </h2>
+  
+  
+  
+         <div class="schedule-tbl">
+          <table>
+            <thead>
+              <tr>
+                <th class="schedule-time">Time</th>
+                <th class="schedule-slot">Speaker</th>
+                <th class="schedule-description">Theme</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="schedule-time"><span name="time_hour_seleting">9</span>:00,<br class="m"> Jun <a  name="data_seleting">18</a></td>
+                <td class="schedule-slot">
+                  Hongyang Li,
+                  <span class="speakers-company">Shanghai AI Lab</span>
+                </td>
+                <td class="schedule-description">Welcome and opening remarks</td>
+              </tr>
+  
+              <tr>
+                <td class="schedule-time"><span name="time_hour_seleting">9</span>:10,<br class="m"> Jun <a  name="data_seleting">18</a></td>
+                <td class="schedule-slot">
+                  Patrick Langechuan Liu <span class="speakers-company"></span>
+                </td>
+                <td class="schedule-description">Awesome Talk</td>
+              </tr>
+  
+              <tr>
+                <td class="schedule-time"><span name="time_hour_seleting">9</span>:45,<br class="m"> Jun <a  name="data_seleting">18</a></td>
+                <td class="schedule-slot">
+                  Deva Ramanan <span class="speakers-company"></span>
+                </td>
+                <td class="schedule-description">Awesome Talk</td>
+              </tr>
+  
+              <tr>
+                <td class="schedule-time"><span name="time_hour_seleting">10</span>:20,<br class="m"> Jun <a  name="data_seleting">18</a></td>
+                <td class="schedule-slot">
+                  <b>Coffee Break</b> <span class="speakers-company"></span>
+                </td>
+                <td class="schedule-description"> <b>Coffee Break</b> </td>
+              </tr>
+  
+              <tr>
+                <td class="schedule-time"><span name="time_hour_seleting">10</span>:30,<br class="m"> Jun <a  name="data_seleting">18</a></td>
+                <td class="schedule-slot">
+                  Organizers and Winners<span class="speakers-company"></span>
+                </td>
+                <td class="schedule-description">Track 1: OpenLane Topology Challenge</td>
+              </tr>
+  
+              <tr>
+                <td class="schedule-time"><span name="time_hour_seleting">11</span>:30,<br class="m"> Jun <a  name="data_seleting">18</a></td>
+                <td class="schedule-slot">
+                  John Emmons<span class="speakers-company"></span>
+                </td>
+                <td class="schedule-description">Awesome Talk</td>
+              </tr>
+  
+              <tr>
+                <td class="schedule-time"><span name="time_hour_seleting">12</span>:05,<br class="m"> Jun <a  name="data_seleting">18</a></td>
+                <td class="schedule-slot">
+                  <b>Lunch Break</b> <span class="speakers-company"></span>
+                </td>
+                <td class="schedule-description"><b>Lunch Break</b></td>
+              </tr>
+  
+              <tr>
+                <td class="schedule-time"><span name="time_hour_seleting">13</span>:30,<br class="m"> Jun <a  name="data_seleting">18</a></td>
+                <td class="schedule-slot">
+                  Jose M. Alvarez <span class="speakers-company"></span>
+                </td>
+                <td class="schedule-description">Awesome Talk</td>
+              </tr>
+  
+              <tr>
+                <td class="schedule-time"><span name="time_hour_seleting">14</span>:05,<br class="m"> Jun <a  name="data_seleting">18</a></td>
+                <td class="schedule-slot">
+                  Organizers and Winners <span class="speakers-company"></span>
+                </td>
+                <td class="schedule-description">Track 4: nuPlan Planning Challenge</td>
+              </tr>
+              
+  
+              <tr>
+                <td class="schedule-time"><span name="time_hour_seleting">15</span>:05,<br class="m"> Jun <a  name="data_seleting">18</a></td>
+                <td class="schedule-slot">
+                  <b>Coffee Break</b> <span class="speakers-company"></span>
+                </td>
+                <td class="schedule-description"> <b>Coffee Break</b></td>
+              </tr>
+  
+              
+  
+              <tr>
+                <td class="schedule-time"><span name="time_hour_seleting">15</span>:15,<br class="m"> Jun <a  name="data_seleting">18</a></td>
+                <td class="schedule-slot">
+                  Alex Kendall<span class="speakers-company"></span>
+                </td>
+                <td class="schedule-description">Awesome Talk</td>
+              </tr>
+  
+              <tr>
+                <td class="schedule-time"><span name="time_hour_seleting">15</span>:50,<br class="m"> Jun <a  name="data_seleting">18</a></td>
+                <td class="schedule-slot">
+   
+                  <span class="speakers-company"> Sergey Levine</span>
+                </td>
+                <td class="schedule-description">Awesome Talk</td>
+              </tr>
+  
+              <tr>
+                <td class="schedule-time"><span name="time_hour_seleting">16</span>:25,<br class="m"> Jun <a  name="data_seleting">18</a></td>
+                <td class="schedule-slot">
+            
+  
+                  <span class="speakers-company"> Yuning Chai</span>
+                </td>
+                <td class="schedule-description">Awesome Talk</td>
+              </tr>
+  
+              <tr>
+                <td class="schedule-time"><span name="time_hour_seleting">17</span>:00-<a name="time_hour_seleting" >17</a>:35,<br class="m"> Jun <a  name="data_seleting">18</a></td>
+                <td class="schedule-slot">
+  
+                  <span class="speakers-company">TBD Moderator</span>
+                </td>
+                <td class="schedule-description">Panel discussion</td>
+
+  
+            </tbody>
+          </table>
+          Note: Presentation and winners of 
+          <b>Track 2: Online HD Map Construction Challenge </b> and <b>Track 3: 3D Occupancy Prediction Challenge</b>  
+          would be scheduled at 
+          <a href="https://www.vcad.site/">Vision-Centric Autonomous Driving Workshop</a>.
+        </h1>
+        </div>
+  
+      </div>
+    </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <!-- Origanizers -->
+    <div class="wrapper row1" id="id6">
+      <div class="hoc bg clear">
+         
+  
+          <h3 class="h_title"><b>Organizers</b></h3>
+  
+          <h4><b>Workshop Organizers</b></h4>
+  
+          
+  
+          <div class="wrapper">
+  
+            <div class="grid">
+         
+                <li>
+                  
+                    <a href="https://lihongyang.info/" target="_blank">
+                  <div class="photo"><img  src="/style/cvpr2023/img/people/hongyang_li.png" alt="Hongyang Li" ></div>
+                      
+                      <h1>Hongyang Li</h1>
+  
+                    </a>
+                    <p>Shanghai AI Lab</p>
+  
+                  </span>
+  
+                </li>
+             
+                <li>
+                  
+                    <a href="https://kashyap7x.github.io/" target="_blank">
+                       <div class="photo">     <img  src="/style/cvpr2023/img/people/kashyap_chitta.png" alt="Kashyap Chitta" ></div>
+                      
+  
+                      <h1> Kashyap Chitta </h1>
+                    </a>
+  
+                    <p>Univeristy of Tübingen
+                    </p>
+                  </li>
+           
+           
+                <li>
+                  
+                    <a href="https://sites.google.com/it-caesar.de/homepage/?pli=1" target="_blank">
+                       <div class="photo">     <img  src="/style/cvpr2023/img/people/HolgerCaesar.png" ></div>
+                      
+                      <h1> Holger Caesar</h1>
+                    </a>
+  
+  
+                    <p>TU Delft</p>
+  
+                  </li>
+       
+                <li>
+                  
+                    <a href="https://shenlong.web.illinois.edu" target="_blank">
+                     <div class="photo">     <img  src="/style/cvpr2023/img/people/ShenlongWang.png" alt="Shenlong Wang" ></div>
+                      
+  
+                      <h1> Shenlong Wang</h1>
+  
+                    </a>
+                    <p> UIUC</p>
+                  </li>
+  
+                <li>
+                  
+                    <a href="https://liuziwei7.github.io" target="_blank">
+                       <div class="photo">     <img  src="/style/cvpr2023/img/people/ZiweiLiu.png" alt="Ziwei Liu" ></div>
+                      
+                      <h1>Ziwei Liu</h1>
+                    </a>
+  
+                    <p>NTU</p>
+                  </li>
+              
+                <li>
+                  
+                    <a href="https://tai-wang.github.io/" target="_blank">
+                      <div class="photo">     <img  src="/style/cvpr2023/img/people/wangtai.png" ></div>
+                      
+                      <h1>Tai Wang</h1>
+                    </a>
+  
+                    <p>CUHK</p>
+                  </li>
+          
+            </div>
+          </div>
+  
+  
+          <h4><b>Challenge Organizers</b></h4>
+      
+          <h5 class="atitle">Track 1: OpenLane Topolopy Challenge</h5>
+       
+          <div class="wrapper">
+  
+            <div class="grid">
+      
+                <li>
+                  
+          
+                    <div class="photo">     <img  src="/style/cvpr2023/img/people/wanghuijie.png" ></div>
+                      
+                      <h1>Huijie Wang</h1>
+                    
+                    <p>Shanghai AI Lab
+                    </p>
+                  </li>
+        
+                <li>
+                  
+                    
+                      <div class="photo">     <img src="/style/cvpr2023/img/people/yangli.png" ></div>
+                      
+                      <h1> Yang Li</h1>
+                    
+                    <p>Shanghai AI Lab
+                    </p>
+                  </li>
+ 
+                <li>
+                  
+                    
+                       <div class="photo">     <img  src="/style/cvpr2023/img/people/wenfeng.png" alt="Feng Wen" > </div>
+  
+                      <h1> Feng Wen</h1>
+                    
+                    
+                    <p>Huawei</p>
+                  </li>
+           
+  
+  <!--              
+                <li >
+                  
+                  <a target="_blank"> 
+                      <div class="photo">     <img  src="/style/cvpr2023/img/people/none.png"
+                        ></div>
+                      
+                      <h1> Yicheng Wang</h1>
+                    </a>
+                    <p> Tsinghua University
+                    </p>
+                  </li>
+            -->
+   
+                <li>
+                  
+                    <a href="https://scholar.google.com/citations?user=-CJ5LkMAAAAJ&amp;hl=zh-CN" target="_blank">
+                      <div class="photo">     <img  src="/style/cvpr2023/img/people/chunjingxu.png" alt="Yang Li" ></div>
+                      
+                      <h1> Chunjing Xu</h1>
+                    </a>
+                  
+                    <p> Huawei</p>
+                  </li>
+      
+                <li>
+                  
+                    <a href="https://xuhangcn.github.io/" target="_blank">
+                      <div class="photo">     <img  src="/style/cvpr2023/img/people/HangXu.png" ></div>
+                      
+                      <h1> Hang Xu</h1>
+                    </a>
+                    <p>Huawei
+                    </p>
+                  </li>
+           
+  
+  
+            </div>
+          </div>
+  
+          <h5 class="atitle"> Track 2: Online HD Map Construction Challenge</h5>
+          
+  
+          <div class="wrapper">
+  
+            <div class="grid">
+             
+                <li>
+                                    
+                       <div class="photo">     <img  src="/style/cvpr2023/img/people/yichengliu.png" ></div>
+                      
+                      <h1>Yicheng Liu</h1>
+                    <p>Tsinghua University
+                    </p>
+                  </li>
+            
+                <li>
+                  
+                    <div class="photo">     <img  src="/style/cvpr2023/img/people/yuantianyuan.png" ></div>
+                      
+                      <h1>Tianyuan Yuan
+                    </h1>
+                    <p>Tsinghua University
+                    </p>
+                  </li>
+         
+  
+  
+             
+            </div>
+  
+  
+          <h5 class="atitle"> Track 3: 3D Occupancy Prediction Challenge</h5>
+  
+          
+  
+          <div class="wrapper">
+  
+            <div class="grid">
+          
+                <li>
+                  
+                    <a href="https://hangzhaomit.github.io/" target="_blank">
+                     <div class="photo">     <img  src="/style/cvpr2023/img/people/hangzhao.png" ></div>
+                      
+                      <h1>Hang Zhao</h1>
+                    </a>
+                    <p>Tsinghua University
+                    </p>
+                  </li>
+        
+                <li>
+                  
+                    <!-- <a href="" target="_blank"> -->
+                       <div class="photo">     <img  src="/style/cvpr2023/img/people/xioayu_tian.png" ></div>
+                      
+                      <h1>Xiaoyu Tian
+                    <!-- </a> -->
+                    </h1>
+                    <p>Tsinghua University
+                    </p>
+                  </li>
+       
+                <li>
+                  
+                    <a href="https://scholar.google.com/citations?user=dgYJ6esAAAAJ&amp;hl=en" target="_blank">
+                       <div class="photo">     <img  src="/style/cvpr2023/img/people/chonghao_sima.png" ></div>
+                      
+                      </a><h1><a href="https://scholar.google.com/citations?user=dgYJ6esAAAAJ&amp;hl=en" target="_blank">Chonghao Sima
+                    </a>
+                    </h1>
+                    <p>Shanghai AI Lab
+                    </p>
+                  </li>
+        
+                <li>
+                  
+                    <a href="https://yuewang.xyz/" target="_blank">
+                       <div class="photo">     <img  src="/style/cvpr2023/img/people/yuewang.png" ></div>
+                      
+                      </a><h1><a href="https://yuewang.xyz/" target="_blank">Yue Wang
+                    </a>
+                    </h1>
+                    <p>NVIDIA
+                    </p>
+                  </li>
+        
+                <li>
+                  
+                    <a href="https://scholar.google.com/citations?user=zdgKJXIAAAAJ&amp;hl=en" target="_blank">
+                       <div class="photo">     <img  src="/style/cvpr2023/img/people/lewei_lu.png" ></div>
+                      
+  
+                      <h1> Lewei Lu</h1>
+                    </a>
+                    
+                    <p> SenseTime</p>
+                    
+                  </li>
+        
+  
+  
+  
+            </div>
+          </div>
+  
+          <h5 class="atitle"> Track 4: nuPlan Planning Challenge</h5>
+  
+          
+  
+          <div class="wrapper">
+  
+            <div class="grid">
+      
+                <li>
+                  
+                    <!-- <a href="https://sg.linkedin.com/in/pat-karn" target="_blank"> -->
+                       <div class="photo">     <img  src="/style/cvpr2023/img/people/PatKarnchanachari.png" ></div>
+                      
+                      <h1> Pat<br> Karnchanachari</h1>
+                    <!-- </a> -->
+                    
+                    <p> Motional</p>
+                    
+                  </li>
+    
+                <li>
+                  
+                    <!-- <a href="https://sg.linkedin.com/in/geromidg" target="_blank"> -->
+                       <div class="photo">     <img  src="/style/cvpr2023/img/people/DimitrisGeromichalos.png" alt="Feng Wen" ></div>
+                      
+  
+                      <h1> Dimitris<br> Geromichalos
+                      </h1>
+                    <!-- </a> -->
+                    <p>Motional</p>
+                    
+                  </li>
+        
+                <li>
+                  
+                    <a href="https://sites.google.com/it-caesar.de/homepage/?pli=1" target="_blank">
+                       <div class="photo">     <img  src="/style/cvpr2023/img/people/HolgerCaesar.png" ></div>
+                      
+                      <h1> Holger<br> Caesar </h1>
+                    </a>
+  
+  
+                    <p>TU Delft</p>
+  
+                  </li>
+     
+  
+            </div>
+          </div>
+  
+        </div>
+  
+      </div>
+    </div>
+ 
+  
+    <!-- Steering Committee -->
+  
+  
+    <div class="wrapper row2" id="id7">
+      <div class="hoc bg clear">
+    
+          <h3><b>Steering Committee</b></h3>
+  
+          <div class="wrapper">
+  
+            <div class="grid">
+          
+                <li>
+                  
+                    <a href="https://scholar.google.com/citations?user=gFtI-8QAAAAJ&amp;hl=en" target="_blank">
+                       <div class="photo">     <img  src="/style/cvpr2023/img/people/qy-avator.png" ></div>
+                      
+                      </a><h1><a href="https://scholar.google.com/citations?user=gFtI-8QAAAAJ&amp;hl=en" target="_blank"> Yu Qiao
+                    </a>
+                    </h1>
+                    <p>Shanghai AI Lab
+                    </p>
+                  </li>
+
+                  <li>
+                  
+                    <a href="https://scholar.google.com/citations?user=gFtI-8QAAAAJ&amp;hl=en" target="_blank">
+                       <div class="photo">     <img  src="/style/cvpr2023/img/people/yaojun.png" ></div>
+                      <h1> Jun Yao</h1>
+                    </a>
+                    <p>Huawei
+                    </p>
+                  </li>                  
+        
+                <li>
+                  
+                    <a href="http://dahua.site/" target="_blank">
+                       <div class="photo">     <img  src="/style/cvpr2023/img/people/dahua.png" ></div>
+                      
+                      </a><h1><a href="http://dahua.site/" target="_blank"> Dahua Lin
+                    </a>
+                    </h1>
+                    <p>Shanghai AI Lab
+                    </p>
+                  </li>
+    
+                <li>
+                  
+                    <a href="https://www.ee.cuhk.edu.hk/~xgwang/" target="_blank">
+                       <div class="photo">     <img  src="/style/cvpr2023/img/people/XiaogangWang.png" ></div>
+                      
+                      </a><h1><a href="https://www.ee.cuhk.edu.hk/~xgwang/" target="_blank"> Xiaogang Wang
+                    </a>
+                    </h1>
+                    <p>SenseTime
+                    </p>
+                  </li>
+        
+                <li>
+                  
+                    <a href="https://wlouyang.github.io" target="_blank">
+                       <div class="photo">     <img  src="/style/cvpr2023/img/people/WanliOuyang.png" ></div>
+                      
+                      <h1>Wanli Ouyang</h1>
+                    </a>
+                    
+                    <p>Shanghai AI Lab</p>
+                  </li>
+            
+                <li>
+                  
+                    <a href="https://jifengdai.org" target="_blank">
+                       <div class="photo">     <img  src="/style/cvpr2023/img/people/JifengDai.png" alt="Jifeng Dai" ></div>
+                      
+                      <h1> Jifeng Dai</h1>
+                    </a>
+                    
+                    <p>Tsinghua / Shanghai AI Lab</p>
+                  </li>
+         
+                <li>
+                  
+                    <a href="https://thinklab.sjtu.edu.cn/" target="_blank">
+                       <div class="photo">     <img  src="/style/cvpr2023/img/people/yanjunchi.png" ></div>
+                      
+                      <h1> Junchi Yan</h1>
+                    </a>
+                    
+                    <p>Shanghai Jiao Tong University</p>
+                  </li>
+            
+                <li>
+                  
+                    <a href="https://www.cvlibs.net/" target="_blank">
+                       <div class="photo">     <img  src="/style/cvpr2023/img/people/AndreasGeiger.png" ></div>
+                      
+                      <h1>Andreas Geiger</h1>
+                    </a>
+                    
+                    <p>University of Tübingen</p>
+                  </li>
+              
+   
+  
+  
+            </div>
+          </div>
+  
+  
+      </div></div>
+  
+ 
+ 
+      <footer class="footer"  > 
+        <div class="footer_t">
+          <h6>OpenDriveLab</h6>
+          <nav>
+            <ul class="nospace inline pushright uppercase">
+              <li><a  href="https://opendrivelab.com/AD23Challenge.html"><i class="tb icon_home"></i></a></li>
+            </ul>
+          </nav>
+        </div>
+      
+      <div class="copyright" >
+        <p>Copyright © 2023 - All Rights Reserved - <a style="color:#D68910;" href="http://opendrivelab.com/">OpenDriveLab at Shanghai AI Lab</a>
+        </p>
+      </div>
+      </footer>
+
+<script src="/style/cvpr2023/js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script> 
+<script src="/style/cvpr2023/js/all.js" type="text/javascript" charset="utf-8"></script>
+<script>
+
+var imgs = [
+      "/style/cvpr2023/img/g1.gif",
+      "/style/cvpr2023/img/g2.gif",
+      "/style/cvpr2023/img/g3.gif",
+      "/style/cvpr2023/img/g4.gif",
+    ];
+
+    var index = 0;
+    var len = imgs.length;
+
+    // 计数器
+    var count = 0; //初始化已加载的图片为 0
+    // var $progress = $(".progress");
+
+    $.each(imgs, function(i, src) {
+      // i 是索引
+      // 每遍历一个元素就通过new 来实例化一个img对象
+      var imgObj = new Image();
+
+      $(imgObj).on("load error", function() {
+        //  $progress.html() 是修改  <p class="progress"></p> 标签的百分比内容
+        // ((count + 1) / len) * 100)+ "%" 是用已加载的图片数除以总图片数乘以 100，加上百分号来代表加载进度
+        // Math.round() 是取整数
+
+       
+        // $progress.html(Math.round(((count + 1) / len) * 100) + "%");
+
+        // 当加载图片数量大于或等于len-1时，隐藏掉loading页
+        // console.log(imgs[i])
+        $("#g"+i).attr("src", imgs[i]);
+        $(".loading_box"+i).hide();
+        // if (count >= len - 1) {
+         
+          
+        // }
+
+        count++;
+      });
+      // 加载完成后为图片的 src 赋值
+      imgObj.src = src;
+      
+    });
+
+    $(".btn").on("click", function() {
+      if ($(this).data("btn") === "prev") {
+        index--;
+        if (index < 0) {
+          index = 0;
+        }
+      } else {
+        index++;
+        if (index > len - 1) {
+          index = len - 1;
+        }
+      }
+      $("#img").attr("src", imgs[index]);
+    }); 
+
+</script>
+</body>
+</html>
