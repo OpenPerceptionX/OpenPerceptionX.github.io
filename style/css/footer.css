@@ -16,6 +16,13 @@
 
 }
 
+.o_l a {
+    font-size:x-large; 
+    font-weight: 800; 
+    color: grey; 
+    user-select: none;
+}
+
   /* 底部 */ 
  
 .copyright{background: #252525; }
