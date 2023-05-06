@@ -111,7 +111,7 @@ display: table}
       }
 .t_text{ padding:  0 0  30px 0;}
 .banner_textw .r_t{ font-size: 20px; padding-bottom: 20px;}
-.banner_textw .r_time{ font-size: 20px; padding-bottom: 40px;}
+.banner_textw .r_time{ font-size: 20px; padding-bottom: 40px; user-select: none;}
 .banner_text,.banner_text a{ padding-left: 30px; padding-bottom: 10px; font-size: 26px; color: #ffe474; font-weight: bold;}
 .banner_text a:hover{ color: #fdff74;}
 .banner_text a::before{ content: ""; display: inline-block; background: #ffe474; width: 8px; height: 8px; vertical-align: middle; margin-right: 5px; position: relative; top:-2px;}
@@ -739,4 +739,13 @@ a.btn_goen{
     width:80%;
     height:80%;
   }
+}
+
+.my_title {
+  font-size: 500%; 
+  font-weight: 900; 
+  user-select: none;
+  margin-bottom: 1%; 
+  line-height: 99px; 
+  color: goldenrod;
 }
