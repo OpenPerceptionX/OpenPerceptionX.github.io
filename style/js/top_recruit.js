@@ -8,7 +8,7 @@ $.get("/components/footer.html?xx",function(result){
 })
 
 // 插入banner
-$.get("/components/banner_team.html",function(result){
+$.get("/components/banner_recruit.html",function(result){
   $("#content").before(result);
   $("body").removeClass("loadings")
 })
