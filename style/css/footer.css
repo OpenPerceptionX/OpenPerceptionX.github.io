@@ -50,6 +50,9 @@
       .o_r{ margin-left: auto;}
   .o_l{ margin-right: auto; text-align: left; display: none;}
   .o_l img{max-width: 25vw;}
+  .o_r {
+    display: initial;
+  }
   .footer_nav .bg{flex-wrap: wrap;}
   .footer_nav dl dt,.footer_nav dl dd{ padding-right: 20px;}
   .footer_nav dl{  width:33.3%; padding-bottom: 30px;}
