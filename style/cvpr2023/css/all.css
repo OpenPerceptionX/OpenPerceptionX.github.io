@@ -783,3 +783,16 @@ a.btn_goen{
     display: none;
   }
 }
+
+.schedule-time {
+  text-align: left;
+}
+.schedule-slot {
+  text-align: left;
+}
+.schedule-description {
+  text-align: left;
+}
+.schedule-meta {
+  text-align: left;
+}
