@@ -120,7 +120,7 @@ display: table}
 .r_ul{ position: absolute; bottom: 0; left: 0; right: 0; line-height: 64px; background-color: rgba(0, 0, 0,.5);
     backdrop-filter: blur(20px);} 
 .r_ul ul{ display: flex; justify-content:space-between;}
-.r_ul li{ color: #fff; cursor: pointer;}
+.r_ul li{ color: #fff; cursor: pointer; font-weight: bold;}
 .r_ul li.this{ color: #ffdf90; position: relative;}
 .r_ul li.this::before{ 
     background-image: -moz-linear-gradient( 0deg, rgb(245,203,32) 0%, rgb(218,25,121) 100%);
