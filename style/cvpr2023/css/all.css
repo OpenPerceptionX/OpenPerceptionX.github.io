@@ -484,9 +484,9 @@ comment {
      } .group li h1, .group li a h1{ color: #70b3d9;
       }
       .group li:nth-of-type(4n + 1){ margin: 0;}
-.group .photo{ position: relative; left: 0; top: 0; border-radius: 0 0 18px 38px;  overflow: hidden;}
+.group .photo{ position: relative; left: 0; top: 0; border-radius: 0 0 0 38px;  overflow: hidden;}
 .group li .photo::before{ display: block; content: ""; width: 100%; position: relative; padding-top: 100%;border-radius: 18px 28px 18px 38px; background: #96c9e6; margin-top: 20px;} 
-.group .photo img{ width: 120%; max-width: 120%; position: absolute; bottom: 0; left: 0;}
+.group .photo img{ width: 100%; max-width: 100%; position: absolute; bottom: 0; left: 0;}
 .group li{ text-align: left;}
 .group li h1{ padding: 10px 0; margin: 0; font-size: 18px; font-family: Arial, Helvetica, sans-serif;}
 .group li p{ padding:  0; margin: 0; line-height: 18px;}
@@ -771,4 +771,8 @@ a.btn_goen{
     font-size: 23px; 
     line-height: 40px; 
   }
+}
+
+.group li .workshop_speaker_title {
+  font-size: 15px;
 }
