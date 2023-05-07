@@ -451,7 +451,7 @@ comment {
                 color: gray;
               }
 [name="data_seleting"],[name="time_hour_seleting"]{color: rgb(46, 45, 45);}
-.atitle{ font-size: 18px; padding-top: 40px; font-family: Arial, Helvetica, sans-serif;}
+.atitle{ font-size: 23px; padding-top: 13px; padding-bottom: 13px;font-family: Arial, Helvetica, sans-serif; text-transform: none; user-select: none;}
  
  
 .grid{ display: flex;  flex-wrap: wrap;    box-sizing: border-box; }
