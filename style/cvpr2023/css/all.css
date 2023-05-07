@@ -187,6 +187,7 @@ th {    background-color: #373737;
 table {
     border-collapse: collapse;
     vertical-align: top;
+    overflow-x: auto;
 }
 table, th, td {
     border-color: #D7D7D7 !important ;
