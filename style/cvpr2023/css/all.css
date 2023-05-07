@@ -579,7 +579,7 @@ comment {
 			.data_list dl dt::before{  left:-24px; top:10px}
 			.data_list dl dt{ position:absolute; top:-15px}
 			.h_title{     font-size: 38px;padding-bottom:10px;}
-      .h2_title{     font-size: 30px;padding-bottom:10px;}
+      .h2_title{     font-size: 23px;padding-bottom:10px;}
 	 .gif_list { display: flex;   box-sizing: border-box; flex-wrap: wrap;  }
 	 .gif_list li{ position:relative; background:#fff; width:100%; margin: 10px 0 ;  padding:0 50% 0 0  }
 	  .gif_list li:nth-of-type(odd){padding:0 0 0 50%;}
