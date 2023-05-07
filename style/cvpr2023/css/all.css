@@ -187,7 +187,6 @@ th {    background-color: #373737;
 table {
     border-collapse: collapse;
     vertical-align: top;
-    overflow-x: auto;
 }
 table, th, td {
     border-color: #D7D7D7 !important ;
@@ -519,7 +518,7 @@ comment {
   .data_list dl.new{ border-color: #54c9bd;}
   .data_list dl.new dt::before{ background-color:#54c9bd ;}
   .color_lvse,.color_lvse a{color: #54c9bd;}
- .bg_Schedule{ background:#f5f5f5 url(../img/i_2.png) no-repeat center bottom; }
+ /* .bg_Schedule{ background:#f5f5f5 url(../img/i_2.png) no-repeat center bottom; } */
 
   @media screen and (min-width:1024px){
     .data_list { display: flex;flex-wrap: wrap; box-sizing: border-box; }
@@ -782,5 +781,14 @@ a.btn_goen{
 @media screen and (max-device-width:1024px) {
   .no_in_moblie {
     display: none;
+  }
+  .schedule-slot {
+    width: 20%;
+  }
+  .schedule-description {
+    width: 20%;
+  }
+  .schedule-meta {
+    width: 20%;
   }
 }
