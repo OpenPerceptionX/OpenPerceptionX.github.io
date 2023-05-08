@@ -450,7 +450,7 @@ comment {
                 font-weight: 300;
                 color: gray;
               }
-[name="data_seleting"],[name="time_hour_seleting"]{color: rgb(46, 45, 45);}
+[name="data_seleting"],[name="time_hour_seleting"]{color: rgb(46, 45, 45); display: inline}
 .atitle{ font-size: 23px; padding-top: 13px; padding-bottom: 13px;font-family: Arial, Helvetica, sans-serif; text-transform: none; user-select: none;}
  
  
