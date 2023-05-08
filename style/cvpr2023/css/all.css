@@ -787,6 +787,7 @@ a.btn_goen{
   text-align: left;
   word-break: keep-all;
   word-wrap: break-word;
+  white-space: nowrap;
 }
 .schedule-slot {
   text-align: left;
