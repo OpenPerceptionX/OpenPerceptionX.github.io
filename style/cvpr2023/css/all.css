@@ -231,7 +231,7 @@ hr {    display: block;
 
 
 /* host */
-.link_logo ul{ display: flex; justify-content: space-between; text-align: justify;}
+.link_logo ul{ display: flex; justify-content: space-between;}
 .link_logo li{ 
     background-color: rgba(255, 255, 255, 0.702); width: 33.3%; margin: 0 15px;
     box-shadow: 0px 1px 11px 0px rgba(4, 0, 0, 0.1); text-align: center;
@@ -246,7 +246,7 @@ hr {    display: block;
 .mx_num{ display: inline-block; vertical-align: middle;white-space:nowrap; }
 sub{ position: absolute; top: 7px; font-weight: normal; font-size: 12px; zoom: .9;vertical-align: top; position: relative;font-family:"Gabriola";}
 sub em{ position: absolute; right: -10px; top: -9px; zoom:1.5; font-family:  monospace; font-size: 16px; font-style: normal;}
-.footer_ts{ font-size: 12px; font-style: italic; text-align: justify;}
+.footer_ts{ font-size: 12px; font-style: italic;}
 
 @media screen and (max-device-width:1024px){
     
@@ -799,9 +799,6 @@ a.btn_goen{
   text-align: left;
 }
 
-.my_justify, .text {
-  text-align: justify;
-}
 
 .go_top{ cursor: pointer; width: 40px; height: 40px; background: url(/style/img/icon/top.svg) no-repeat center;background-color: rgba(0, 0, 0,.7);backdrop-filter: blur(20px); position: fixed; bottom: -50px; right: 20px; border-radius: 50% ; background-size: 40% auto;transition: all 800ms cubic-bezier(0.75, 0, 0.15, 1); z-index: 1000;  }
 .header.this ~ .go_top{ bottom: 20px;}
