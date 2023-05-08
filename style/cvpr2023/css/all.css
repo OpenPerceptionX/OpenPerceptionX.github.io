@@ -417,7 +417,7 @@ sup{ font-size: 12px; position: relative; zoom: .8; }
     .track_nav dl .text{ padding-top: 10px;}
     /* .track_nav dl dd{ font-size: 12px;} */
     .mot_ts{ padding: 10px; font-size: 18px;}
-    .bg { padding: 20px;}
+    .bg { padding: 20px 16px;}
     .Contact_br{ padding: 10px 0; margin-bottom: 20px;}
     .Contact_br a.h_imga{ display: block;}
     /* .link_logo ul{flex-wrap: wrap;
@@ -496,9 +496,12 @@ comment {
     -webkit-appearance: none;
     /* NGRkZGRkY==>MwMDAwMDA 替换为黑色*/ background-color: #6bc0ec; border-radius: 18px;
         background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNjA5NzMwNTExMTgwIiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDE2NzAgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjcxNCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIzMjYuMTcxODc1IiBoZWlnaHQ9IjIwMCI+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj48L3N0eWxlPjwvZGVmcz48cGF0aCBkPSJNMCAxODguNjMxNTc5bDgzNS4zNjg0MjEgODM1LjM2ODQyMUwxNjcwLjczNjg0MiAxODguNjMxNTc5bC0xODguNjMxNTc5LTE4OC42MzE1NzktNjQ2LjczNjg0MiA2NDYuNzM2ODQyTDE4OC42MzE1NzkgMHoiIGZpbGw9IiNGRkZGRkYiIHAtaWQ9IjcxNSI+PC9wYXRoPjwvc3ZnPg==) ;  background-size: 10px auto ; background-repeat: no-repeat; background-position: calc(100% - 10px) center ; outline: none;}
-        .schedule-tbl table{ background-color: #fff; overflow-x: auto;}
+        .schedule-tbl { background-color: #fff; overflow-x: auto;}
+        
         .schedule-tbl table td{ border-color:#fff !important ;}
         .schedule-tbl table tr:nth-of-type(odd) td{ background-color: #f9f9f9;}
+        .schedule-tbl table th:not(:nth-last-of-type(1)), .schedule-tbl table td:not(:nth-last-of-type(1)){ padding-right: 0;}
+        .schedule-tbl table td,  .schedule-tbl table th{font-size: 12px;}
   .nav_map_select select option{ color: #000;  }
 
   .data_list{ padding: 0 0 30px 0;}
@@ -598,7 +601,7 @@ comment {
 	  .grid li p{ font-size:12px;}
 	  .atitle{ padding-top:0;}
 	  #operator{ width:100%;}
-   .schedule-tbl .schedule-meta{  overflow: scroll;}
+   /* .schedule-tbl .schedule-meta{  overflow: scroll;} */
 	  .schedule-tbl th,.schedule-tbl td{ text-align:left}
 	  .grid li h1{ font-size:14px;}
 	}
@@ -798,4 +801,12 @@ a.btn_goen{
 
 .my_justify, .text {
   text-align: justify;
+}
+
+.go_top{ cursor: pointer; width: 40px; height: 40px; background: url(/style/img/icon/top.svg) no-repeat center;background-color: rgba(0, 0, 0,.7);backdrop-filter: blur(20px); position: fixed; bottom: -50px; right: 20px; border-radius: 50% ; background-size: 40% auto;transition: all 800ms cubic-bezier(0.75, 0, 0.15, 1); z-index: 1000;  }
+.header.this ~ .go_top{ bottom: 20px;}
+
+@media screen and (max-device-width:1024px){
+    .go_top{   width: 34px; height: 34px}
+
 }
