@@ -496,7 +496,7 @@ comment {
     -webkit-appearance: none;
     /* NGRkZGRkY==>MwMDAwMDA 替换为黑色*/ background-color: #6bc0ec; border-radius: 18px;
         background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNjA5NzMwNTExMTgwIiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDE2NzAgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjcxNCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIzMjYuMTcxODc1IiBoZWlnaHQ9IjIwMCI+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj48L3N0eWxlPjwvZGVmcz48cGF0aCBkPSJNMCAxODguNjMxNTc5bDgzNS4zNjg0MjEgODM1LjM2ODQyMUwxNjcwLjczNjg0MiAxODguNjMxNTc5bC0xODguNjMxNTc5LTE4OC42MzE1NzktNjQ2LjczNjg0MiA2NDYuNzM2ODQyTDE4OC42MzE1NzkgMHoiIGZpbGw9IiNGRkZGRkYiIHAtaWQ9IjcxNSI+PC9wYXRoPjwvc3ZnPg==) ;  background-size: 10px auto ; background-repeat: no-repeat; background-position: calc(100% - 10px) center ; outline: none;}
-        .schedule-tbl { background-color: #fff; overflow-x: auto;}
+        .schedule-tbl table{ background-color: #fff; overflow-x: auto;}
         
         .schedule-tbl table td{ border-color:#fff !important ;}
         .schedule-tbl table tr:nth-of-type(odd) td{ background-color: #f9f9f9;}
