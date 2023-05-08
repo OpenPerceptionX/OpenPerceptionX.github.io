@@ -785,9 +785,6 @@ a.btn_goen{
 
 .schedule-time {
   text-align: left;
-  word-break: keep-all;
-  word-wrap: break-word;
-  white-space: nowrap;
 }
 .schedule-slot {
   text-align: left;
