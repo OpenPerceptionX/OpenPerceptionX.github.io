@@ -807,3 +807,12 @@ a.btn_goen{
     .go_top{   width: 34px; height: 34px}
 
 }
+
+ol {
+  margin-top: 3px;
+  margin-bottom: 10px;
+}
+
+.paper_title {
+  margin-bottom: 7px;
+}
