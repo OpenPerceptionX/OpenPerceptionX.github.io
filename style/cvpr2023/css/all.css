@@ -756,7 +756,7 @@ a.btn_goen{
 }
 @media screen and (max-device-width:1024px) {
   .my_title {
-    font-size: 39px; 
+    font-size: 33px; 
     line-height: 50px; 
   }
 }
