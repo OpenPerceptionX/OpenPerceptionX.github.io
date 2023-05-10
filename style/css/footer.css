@@ -15,7 +15,9 @@
       .copyright p{ margin: 0;}
 
 }
-
+br {
+    user-select: none;
+}
 .o_l a {
     font-size:x-large; 
     font-weight: 800; 
