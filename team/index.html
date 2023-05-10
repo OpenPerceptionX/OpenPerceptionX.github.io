@@ -28,9 +28,11 @@
  var imgurl = "/style/img/team/"
     var data = [
       {
-       title:"Visioner",
+       title:"Globalist",
       //  stitle:"3D Occupancy Prediction Challenge",
        list:[
+       {img:imgurl+"junchi_yan.jpg",name:"Junchi Yan",content:"Shanghai Jiao Tong University",url:"https://thinklab.sjtu.edu.cn/"},
+        {img:imgurl+"andreas_geiger.jpg",name:"Andreas Geiger",content:"Max Planck Institute",url:"https://www.cvlibs.net/"},
         {img:imgurl+"hongyang_li.jpg",name:"Hongyang Li",content:"Research Scientist",url:"https://lihongyang.info/"},
         ]
       },
@@ -39,21 +41,17 @@
        list:[
         {img:imgurl+"li_chen.jpg",name:"Li Chen",content:"End-to-end AD",url:"https://scholar.google.com/citations?user=ulZxvY0AAAAJ"},
         {img:imgurl+"chonghao_sima.jpg",name:"Chonghao Sima",content:"Perception",url:"https://scholar.google.com/citations?user=dgYJ6esAAAAJ"},
-        {img:imgurl+"jiazhi_yang.jpg",name:"Jiazhi Yang",content:"AGI",url:"javaScript:", class:"without_url"},        ]
+        {img:imgurl+"jiazhi_yang.jpg",name:"Jiazhi Yang",content:"AGI",url:"javaScript:", class:"without_url"},        
+        {img:imgurl+"huijie_wang.jpg",name:"Huijie Wang",content:"Perception",url:"javaScript:", class:"without_url"}, 
+        {img:imgurl+"yang_li.jpg",name:"Yang Li",content:"Big Data",url:"javaScript:", class:"without_url"}, 
+      ]
       },
       {
-       title:"Practitioner",
+       title:"Discoverist",
        list:[
         {img:imgurl+"tianyu_li.jpg",name:"Tianyu Li",content:"Fudan University",url:"javaScript:", class:"without_url"},
         {img:imgurl+"xiaosong_jia.jpg",name:"Xiaosong Jia",content:"Shanghai Jiao Tong University",url:"https://jiaxiaosong1002.github.io"},
         {img:imgurl+"penghao_wu.jpg",name:"Penghao Wu",content:"University of California San Diego",url:"https://scholar.google.com/citations?user=9mssd5EAAAAJ"},
-        ]
-      },
-      {
-       title:"Globalist",
-       list:[
-        {img:imgurl+"junchi_yan.jpg",name:"Junchi Yan",content:"Shanghai Jiao Tong University",url:"https://thinklab.sjtu.edu.cn/"},
-        {img:imgurl+"andreas_geiger.jpg",name:"Andreas Geiger",content:"Max Planck Institute",url:"https://www.cvlibs.net/"},
         ]
       }
     ];
@@ -63,7 +61,7 @@
 //获取列表模板插入数据
 
 
-var item = '<dl><a href="{{url}}"><dt><div class="people_img"><img data-src="{{img}}" src="/style/img/loading.png"></div></dt><dd><h2 class={{class}}>{{name}} </h2><p>{{content}}</p></dd></a></dl>';
+var item = '<dl><a href="{{url}}" class={{class}}><dt><div class="people_img"><img data-src="{{img}}" src="/style/img/loading.png"></div></dt><dd><h2>{{name}} </h2><p>{{content}}</p></dd></a></dl>';
 
 var ilist = '<div class="peoplewbr"><div class="bg"><h3 class="title_">{{title}}</h3><h5 class="btitle">{{stitle}}</h5><br><br><div class="people_list"><list></div></div><br></div>';
 

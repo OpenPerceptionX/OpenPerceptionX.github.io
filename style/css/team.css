@@ -51,7 +51,10 @@ justify-content: center; padding: 0 0 40px 0;  }
   font-size: 23px;
   font-weight: 700;
 }
-.people_list a .without_url {
+.people_list .without_url {
+  cursor: default;
+}
+.people_list .without_url h2 {
   color: #000;
 }
 .people_list a p{ 
@@ -73,7 +76,7 @@ right: 0;
 transition: all 300ms cubic-bezier(0.75, 0, 0.25, 1);
 
  }
-.people_list dl a .without_url::before {
+.people_list dl .without_url h2::before {
   border-bottom: 0px solid #000;
  }
 .people_list dl a:focus h2::before,.people_list dl a:hover h2::before {
