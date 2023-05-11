@@ -757,7 +757,7 @@ a.btn_goen{
 }
 @media screen and (max-device-width:1024px) {
   .my_title {
-    font-size: 37px; 
+    font-size: 33px; 
     line-height: 50px; 
   }
 }
@@ -771,7 +771,7 @@ a.btn_goen{
 }
 @media screen and (max-device-width:1024px) {
   .my_subtitle {
-    font-size: 23px; 
+    font-size: 20px; 
     line-height: 40px; 
   }
 }
