@@ -362,7 +362,11 @@ body:not(.twitterkw_body) .eventlist dl {
  .k3 .imorex a{ border:1px solid }
  .k3, .k2{ padding: 20px 0 80px 0;}
 
- 
+.bannerw .banner {
+    background-position: center; 
+    /* background-blend-mode: overlay;  */
+    background-size: cover;
+}
 
  @media screen and (max-device-width: 1024px){
     .home_swiper .swiper-slide .banner{background-size: cover ; background: none !important;}
