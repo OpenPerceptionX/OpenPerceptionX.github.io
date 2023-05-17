@@ -26,20 +26,20 @@ z-index: 2;object-fit: cover;
   
 .icon { display: inline-block;}
 .icon a{ padding: 0 20px 0 0; transition: all 0.4s ease-in-out;}
-.icon img{ height: 30px;}
+.icon a img{ height: 23px;}
 
 .icon .icon2{ display: none;}
  .icon:hover a {opacity: 1;}
  .icon a:hover .icon1{ display:none;}
  .icon a:hover .icon2{ display: inline-block;}
 
- .publication_list .hover_color{  vertical-align: baseline;     color: #000; text-transform: none;}
+ .publication_list .hover_color{  vertical-align: baseline;     color: rgb(63, 63, 63); text-transform: none; font-weight: bold;}
 .publication_list .hover_color:hover{ color: rgb(0, 0, 191); text-decoration: underline;} 
 .publication_list .hover_color2{ font-size: 16px;  vertical-align: baseline;     color: #6c6c6c; font-family: Arial, Helvetica, sans-serif; margin-top: 1.5%;}
 /* .publication_list .hover_color2:hover{ color: #C0392B; text-decoration: underline;}  */
 .publication_list dl{  padding: 20px 0;display: flex;  flex-wrap: nowrap;
    
-    justify-content: left;  border-bottom: 1px solid #e7e7e7; align-items: center;}
+    justify-content: left;  border-bottom: 0px solid #e7e7e7; align-items: center;}
     .publication_list dl:nth-of-type(1){ padding-top: 5px;}
 .publication_list p{ font-size: 14px; line-height: 16px; color: #a7a7a7; padding: 5px 0 5px 0; margin: 0;}
 .publication_list p a{ padding: 5px 10px 5px 0; display: inline-block;}
@@ -71,7 +71,7 @@ z-index: 2;object-fit: cover;
 .pub_nav a:hover div{  background-color: rgb(0, 0, 191) ; border-color: rgb(0, 0, 191); color: #fff;}
 .pub_nav a:hover div{ max-width: 500px;}
 
-.publicationk{ width: 100%;}
+.publicationk{ width: 100%; margin-top: 3%;}
 .publicationk{ padding-top:20px ;padding-bottom: 20px ;}
 .publicationk:nth-of-type(1){ padding-top:40px ; }
 
