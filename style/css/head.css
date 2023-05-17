@@ -88,7 +88,7 @@ body.rnav_this .rnav_br{display:block;z-index:99;}
 .juzhongduiqi{
 display: table} 
 .banner_textw p{ padding: 0 0 10px 0; margin: 0; }
-.banner_textw h1{ font-size: 80px; font-weight: bold; margin: 0; padding:5px 0 0 0; line-height: 80px;}
+.banner_textw h1{ font-size: 70px; font-weight: bold; margin: 0; padding:5px 0 0 0; line-height: 80px;}
 
 
 .banner_textw .lj_button{margin-top:10px; margin-bottom: 40px;}
@@ -427,5 +427,5 @@ body:not(.home) .head_fanhui{cursor:pointer;display:block;padding:0;position:fix
 
   
     @media screen and (max-device-width:1024px){
-        .banner_textw h1{ font-size: 60px;}
+        .banner_textw h1{ font-size: 40px;}
     }
