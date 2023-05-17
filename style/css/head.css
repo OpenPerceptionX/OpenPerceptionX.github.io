@@ -427,5 +427,8 @@ body:not(.home) .head_fanhui{cursor:pointer;display:block;padding:0;position:fix
 
   
     @media screen and (max-device-width:1024px){
-        .banner_textw h1{ font-size: 40px;}
+        .banner_textw h1{ font-size: 50px;}
+    }
+    @media screen and (max-device-width:1024px){
+        .banner_textw h2{ font-size: 30px;}
     }
