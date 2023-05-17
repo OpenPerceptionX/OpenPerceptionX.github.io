@@ -5,12 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport"
     content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-<title>Challenge at CVPR 2023 Autonomous Driving Workshop</title>
-<link rel="icon" type="image/png" href="style/img/team_logo.png">
-<link href="style/css/body.css" rel="stylesheet" type="text/css" media="all">
-<link href="style/css/head.css" rel="stylesheet" type="text/css" media="all">
-<link href="style/css/footer.css?1" rel="stylesheet" type="text/css" media="all">
-<link href="style/css/publication.css?11111" rel="stylesheet" type="text/css" media="all">
+<title>Publications | OpenDriveLab</title>
+<meta name="description" content="Most of the influential and interesting publications published by OpenDriveLab come from top conferences and journals in the computer field, such as ICML, ECCV, ICCV, NeurIPS, ICLR, CVPR.">
+<meta name="keywords" content="OpenDriveLab Publication, Autonomous Driving, E2EAD, BEV, OpenLane, Bird-eye-view Perception, End-to-end Autonomous Driving, ">
+<meta name="author" content="OpenDriveLab">
+<link rel="icon" type="image/png" href="/style/img/team_logo.png">
+<link href="/style/css/body.css" rel="stylesheet" type="text/css" media="all">
+<link href="/style/css/head.css" rel="stylesheet" type="text/css" media="all">
+<link href="/style/css/footer.css?1" rel="stylesheet" type="text/css" media="all">
+<link href="/style/css/publications.css?11111" rel="stylesheet" type="text/css" media="all">
 </head>
 <body class="loadings">
 
@@ -47,8 +50,8 @@
 
 </body>
  
-<script src="style/js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="style/js/top.js?12" type="text/javascript" charset="utf-8"></script>
+<script src="/style/js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/style/js/top_publications.js?12" type="text/javascript" charset="utf-8"></script>
 <script>
   
     
@@ -62,7 +65,7 @@
        id:"editor-pick",
        list:[
         {
-        img:"style/img/team_logo.png",
+        img:"/style/img/team_logo.png",
         title:"Planning-oriented Autonomous Driving",
         url:"https://opendrivelab.com/e2ead/cvpr23.html",
         ititle:"Yihan Hu, Jiazhi Yang, Li Chen, Keyu Li, Chonghao Sima, Hongyang Li, et al.",
@@ -88,7 +91,7 @@
         content:"A paradigm for autonomous driving that applies both Transformer and Temporal structure to generate BEV features.",
       },
       {
-        img:"style/img/team_logo.png",
+        img:"/style/img/team_logo.png",
         title:"Planning-oriented Autonomous Driving",
         url:"https://opendrivelab.com/e2ead/cvpr23.html",
         ititle:"Yihan Hu, Jiazhi Yang, Li Chen, Keyu Li, Chonghao Sima, Hongyang Li, et al.",
@@ -101,7 +104,7 @@
         content:"A comprehensive framework up-to-date that incorporates full-stack driving tasks in one network.",
       },
       {
-        img:"style/img/team_logo.png",
+        img:"/style/img/team_logo.png",
         title:"Planning-oriented Autonomous Driving",
         url:"https://opendrivelab.com/e2ead/cvpr23.html",
         ititle:"Yihan Hu, Jiazhi Yang, Li Chen, Keyu Li, Chonghao Sima, Hongyang Li, et al.",
@@ -121,7 +124,7 @@
    id:"end-to-end",
    list:[
     {
-    img:"style/img/team_logo.png",
+    img:"/style/img/team_logo.png",
     title:"Planning-oriented Autonomous Driving",
     url:"https://opendrivelab.com/e2ead/cvpr23.html",
     ititle:"Yihan Hu, Jiazhi Yang, Li Chen, Keyu Li, Chonghao Sima, Hongyang Li, et al.",
@@ -140,7 +143,7 @@
    id:"bev-perception",
    list:[
     {
-    img:"style/img/team_logo.png",
+    img:"/style/img/team_logo.png",
     title:"Planning-oriented Autonomous Driving",
     url:"https://opendrivelab.com/e2ead/cvpr23.html",
     ititle:"Yihan Hu, Jiazhi Yang, Li Chen, Keyu Li, Chonghao Sima, Hongyang Li, et al.",
@@ -159,7 +162,7 @@
    id:"pp",
    list:[
     {
-    img:"style/img/team_logo.png",
+    img:"/style/img/team_logo.png",
     title:"Planning-oriented Autonomous Driving",
     url:"https://opendrivelab.com/e2ead/cvpr23.html",
     ititle:"Yihan Hu, Jiazhi Yang, Li Chen, Keyu Li, Chonghao Sima, Hongyang Li, et al.",
@@ -178,7 +181,7 @@
    id:"cv-at-large",
    list:[
     {
-    img:"style/img/team_logo.png",
+    img:"/style/img/team_logo.png",
     title:"Planning-oriented Autonomous Driving",
     url:"https://opendrivelab.com/e2ead/cvpr23.html",
     ititle:"Yihan Hu, Jiazhi Yang, Li Chen, Keyu Li, Chonghao Sima, Hongyang Li, et al.",
@@ -205,7 +208,7 @@
 var s = x[i].split(",")
 var a = s[0]
 var url = s[1]
-idata = '<a href="'+url+'"><img src="style/img/home/'+itb[a]+'.svg" class="icon1"><img src="style/img/home/'+itb[a]+'_this.svg" class="icon2"></a>'
+idata = '<a href="'+url+'"><img src="/style/img/home/'+itb[a]+'.svg" class="icon1"><img src="/style/img/home/'+itb[a]+'_this.svg" class="icon2"></a>'
 html += idata;
 }
 
@@ -239,7 +242,7 @@ var myshuju = shuju[i]
     var img = myshuju.list[ii]["img"]
     var url = myshuju.list[ii]["url"]
     if(img !==""){
-      myshuju.list[ii]["img"] = '<dt><a href="'+url+'"><div class="publication_img"><img data-src="'+img+'" src="style/img/none.png"></div></a></dt>'
+      myshuju.list[ii]["img"] = '<dt><a href="'+url+'"><div class="publication_img"><img data-src="'+img+'" src="/style/img/none.png"></div></a></dt>'
     }
   
     console.log(myshuju.list[ii]["img"])
