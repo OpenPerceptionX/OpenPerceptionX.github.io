@@ -4,7 +4,7 @@
 .t_text {text-shadow: rgba(0,0,0,.3) 2px 2px 0;font-family: "Poppins", Arial, sans-serif;font-size: 100px;font-weight: 900;line-height: 48px;font-family: Georgia, "Times New Roman", Times, serif;line-height: 120%;}
 .t_text_sub{font-family: "Poppins", Arial, sans-serif;font-size: 30px; line-height: 120%;}
 @media screen and (max-device-width: 1024px) {
-    .t_text {font-size: 50px;}
+    .t_text {font-size: 45px;}
     .t_text_sub {
         font-size: 23px;
     }
