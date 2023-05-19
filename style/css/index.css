@@ -92,11 +92,11 @@ transform:  rotate(360deg);-webkit-transform:  rotate(360deg);}
 }
 /* twitter */
 .k4 {padding-bottom: 70px;position: relative;}
-.k4 .kin {position: relative;z-index: 2;}
+.k4 .kin {position: relative;z-index: 2; background: rgb(1, 156, 223, 0.3); padding-top: 3%; padding-bottom: 3%; border-radius: 20px;}
 .k4 .loadx {color: #019cdf;z-index: 1;position: absolute;}
 .k4 .jtb {background-image: url(/style/img/loadx__.png);}
-.twitterkw {width: calc(100% - 70px);position: relative;background: #fff;margin-bottom: 20px;max-width: 1000px;margin: 0 auto;}
-.twitterk {display: block;clear: both;overflow: hidden;}
+.twitterkw {width: calc(100% - 50px);position: relative;background: #fff;margin-bottom: 20px;margin: 0 auto;border-radius: 20px;}
+.twitterk {display: block;clear: both;overflow: hidden;border-radius: 20px;}
 .twitterkw, .twitterkw:hover {background-color: #fff;}
 .twitterk .twitter-timeline {margin: -8px -2px !important;width: calc(100% + 4px) !important;max-width: calc(100% + 4px) !important;}
 .btn_Twitter.imorex a {color: rgb(29, 155, 240);}
@@ -130,7 +130,7 @@ border-radius:0;background:rgb(29, 155, 240);}
 .evevt_img {position: relative;}
 .evevt_img::before {display: block;content: "";width: 100%;position: relative;padding-top: 65%;}
 .evevt_img img {transition: all 0.4s ease-in-out;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;width: 100%;height: 100%;position: absolute;bottom: 0;left: 0;z-index: 2;object-fit: cover;}
-.eventlist dd {transition: all 0.4s ease-in-out;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;padding: 20px 70px 20px 20px;color: #000;}
+.eventlist dd {transition: all 0.4s ease-in-out;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;padding: 20px 70px 20px 20px;color: rgba(0,0,0,.8); font-weight: bold;}
 .eventlist dt {position: relative;}
 .eventlist dl > span {transition: all 0.4s ease-in-out;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;line-height: 18px;font-size: 12px;color: rgb(29, 155, 240);z-index: 10;background-color: rgb(29, 155, 240);background-color: rgba(255,255,255,.5);backdrop-filter: blur(20px);pointer-events: none;display: block;position: absolute;bottom: 18px;right: 18px;width: 70px;height: auto;padding: 15px 0 15px 0px;text-align: right;border-left: 3px solid rgb(29, 155, 240);}
 .eventlist span b {font-family: Georgia, "Times New Roman", Times, serif;font-size: 16px;}
@@ -141,11 +141,14 @@ border-radius:0;background:rgb(29, 155, 240);}
 .eventlist dl a::after {content: '';height: 100%;width: 0;display: inline-block;position: absolute;bottom: 0;right: 0;transition: all 300ms cubic-bezier(0.75, 0, 0.25, 1);background: rgb(29, 155, 240);z-index: 1;}
 .eventlist dl a:hover::after {left: 0;right: 0;width: 100%;}
 .eventlist dl a {overflow: hidden;}
-.eventlist dl a::before {content: '';height: 100%;width: 100%;display: inline-block;position: absolute;bottom: 0;left: -100%;margin-left: 10px;transition: all 300ms cubic-bezier(0.75, 0, 0.25, 1);background: rgb(29, 155, 240);z-index: 1;}
+.eventlist dl a::before {content: '';height: 100%;width: 100%;display: inline-block;position: absolute;bottom: 0;left: -100%;margin-left: 7px;transition: all 300ms cubic-bezier(0.75, 0, 0.25, 1);background: rgb(29, 155, 240);z-index: 1;}
 .eventlist dl a:hover::before {left: -100%;width: 0;}
 .eventlist dl dd button {display: none;}
 
 @media screen and (min-width: 1024px) {
+.eventlist dl > span {
+    padding: 15px 0 15px 0px;
+}
 .eventlist dl {width: calc(33.3% - 20px);margin-left: 10px;margin-right: 10px;}
 .eventk .kin {margin: 0 -10px;}
 .eventlist dl:nth-of-type(1) {width: calc(66.6% - 20px);}
@@ -231,7 +234,7 @@ border-radius:0;background:rgb(29, 155, 240);}
 .eventlist dd {min-height: 34px;padding: 10px 90px 18px 15px;line-height: 18px;}
 .eventlist dl > span {padding: 0 15px 0 0;right: 0;bottom: 10px;width: 70px;}
 .twitterk {position: inherit;background: #fff;overflow-y: hidden;}
-.twitterkw {width: 100%;}
+.twitterkw {width: 100%; background: #000;}
 .twitter_title, .twitter_title a {color: rgb(29, 155, 240) !important;}
 .pc {display: none;}
 .imorex {width: 100%;padding: 0 0 30px 0;}
