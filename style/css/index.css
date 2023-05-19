@@ -4,9 +4,9 @@
 .t_text {text-shadow: rgba(0,0,0,.3) 2px 2px 0;font-family: "Poppins", Arial, sans-serif;font-size: 100px;font-weight: 900;line-height: 48px;font-family: Georgia, "Times New Roman", Times, serif;line-height: 120%;}
 .t_text_sub{font-family: "Poppins", Arial, sans-serif;font-size: 30px; line-height: 120%;}
 @media screen and (max-device-width: 1024px) {
-    .t_text {font-size: 43px;}
+    .t_text {font-size: 50px;}
     .t_text_sub {
-        font-size: 17px;
+        font-size: 23px;
     }
 }
 
@@ -32,7 +32,7 @@ h5 {
 ::-ms-input-placeholder {color: #b2b2b2;}
 .k1 {
     /* background: url(/style/img/mail/br.png) no-repeat center bottom; */
-    background-color: #f2f2f2;
+    background-color: lightgray;
     /* border-bottom: 1px solid #f0f5f5; */
 }
 .k1 .bg {position: relative;background: url(/style/img/mail/ibr.png) no-repeat center bottom;padding-top: 35px;}
