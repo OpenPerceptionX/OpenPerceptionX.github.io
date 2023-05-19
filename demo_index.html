@@ -74,7 +74,7 @@
                       The next generation of the software algorithm framework in autonomous driving.
                     </div>
                   </div>
-                  <br><br><br>
+                  <br><br>
                   <a class="lj_button" data-swiper-parallax-x="-4000" target="_blank"
                       href="https://github.com/OpenDriveLab/BEVPerception-Survey-Recipe">Project</a> <a class="lj_button2" data-swiper-parallax-x="-4000" target="_blank"
                       href="https://arxiv.org/abs/2209.05324">Survey Paper</a>
@@ -105,7 +105,7 @@
                       Our mission is to explore the cutting-edge research for the future of autonomous driving.
                     </div>
                   </div>
-                  <br><br><br>
+                  <br><br>
                   <a class="lj_button" data-swiper-parallax-x="-4000" target="_blank"
                       href="https://github.com/OpenDriveLab/UniAD">Github</a> <a class="lj_button2" data-swiper-parallax-x="-4000" target="_blank"
                       href="https://zhuanlan.zhihu.com/p/497686355">Openpilot</a>
@@ -136,7 +136,7 @@
                       The world first topology reasoning benchmark for scene structure.
                     </div>
                   </div>
-                  <br><br><br>
+                  <br><br>
                   <a class="lj_button" data-swiper-parallax-x="-4000" target="_blank"
                       href="https://github.com/OpenDriveLab/OpenLane-V2">Get Hands Dirty</a> <a class="lj_button2" data-swiper-parallax-x="-4000" target="_blank"
                       href="https://opendrivelab.com/AD23Challenge.html#Track1">Challenge</a>
@@ -167,7 +167,7 @@
                           UniAD: The first comprehensive framework that incorporates full-stack driving tasks.
                         </div>
                       </div>
-                      <br><br><br>
+                      <br><br>
                       <a class="lj_button" data-swiper-parallax-x="-4000" target="_blank"
                           href="https://opendrivelab.github.io/UniAD">Homepage</a> <a class="lj_button2" data-swiper-parallax-x="-4000" target="_blank"
                           href="https://github.com/OpenDriveLab/UniAD">Github</a>
@@ -271,7 +271,7 @@
         <!-- 列表 -->
         <div class="eventlist">
           <div class="eventlisti"></div>
-          <div class="imorex m"> <a href="https://opendrivelab.com/event/" target="_blank">More Events </a> </div>
+          <div class="imorex m"> <a href="/" target="_blank">More Events</a> </div>
         </div>
       </div>
       <!-- <div class="imorex pc"> <a href="https://opendrivelab.com/event/" target="_blank">More Events </a> </div> -->
@@ -300,46 +300,46 @@
   var Event_list = [
 
     {
-      img: "https://opendrivelab.com/images/event/cvpr_cover.jpeg",
-      url: "https://opendrivelab.com/e2ead/cvpr23.html",
+      img: "/style/img/events/cvpr_2023_workshop.jpg",
+      url: "/e2ead/cvpr23.html",
       time: "2023-06-18",
-      content: "CVPR 2023 Workshop on <br>End-to-End Autonomous Driving: Emerging Tasks and Challenges"
+      content: "CVPR 2023 Workshop<br><br>End-to-End Autonomous Driving: Emerging Tasks and Challenges"
     },
     {
-      img: "https://opendrivelab.com/images/event/iclr_cover.jpeg",
-      url: "https://opendrivelab.com/sr4ad/iclr23.html",
+      img: "/style/img/events/iclr_2023_workshop.jpg",
+      url: "/sr4ad/iclr23.html",
       time: "2023-05-05",
-      content: "ICLR 2023 Workshop on <br>Scene Representations For Autonomous Driving"
+      content: "ICLR 2023 Workshop<br><br>Scene Representations for Autonomous Driving"
     },
     {
-      img: "https://opendrivelab.com/images/gallery/zhihuichuxing.png",
-      url: "https://zhuanlan.zhihu.com/p/608231152",
-      time: "2023-2-26",
-      content: "GAIDC 2023<br>数联新出行 开源新发展"
+      img: "/style/img/events/conference_2023.jpg",
+      url: "https://mp.weixin.qq.com/s/BQUFVXFyIOp7yE7gWVUGcA",
+      time: "2023-02-26",
+      content: "GAIDC 2023<br><br>数联新出行 开源新发展"
     },
     {
-      img: "https://opendrivelab.com/images/gallery/waymo.png",
+      img: "/style/img/events/waymo_2022.jpg",
       url: "https://zhuanlan.zhihu.com/p/531987378",
       time: "2022-06-20",
-      content: "Waymo Challenge, First Place <br> at CVPR 2022"
+      content: "Waymo Global Challenge<br>Top First Place<br>at CVPR 2022"
     },
     {
-      img: "https://opendrivelab.com/images/event/prcv_cover.png",
-      url: "ttps://zhuanlan.zhihu.com/p/596218293",
+      img: "/style/img/events/prcv_2022.jpg",
+      url: "https://zhuanlan.zhihu.com/p/596218293",
       time: "2022-12-24",
-      content: " PRCV 2022 WORKSHOP<br>自动驾驶感知技术发展趋势与探索"
+      content: "PRCV 2022 Workshop<br><br>自动驾驶感知技术发展趋势与探索"
     }
 
   ];
 
-  var Event_item = '<dl><span>{{time}}</span><a href="{{url}}"><dt><div class="evevt_img"><img data-src="{{img}}"></div></dt><dd>{{content}}<button>Enter</button></dd></a></dl>';
+  var Event_item = '<dl><span>{{time}}</span><a href="{{url}}"><dt><div class="evevt_img"><img data-src="{{img}}"></div></dt><dd>{{content}}</dd></a></dl>';
   function set_time(itime) {
     if(itime !== undefined){
     var m = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"]
     var t = itime.split("-");
     var y_num = parseInt(t[1]) - 1
     var yufen = m[y_num]
-    var tt = "<b>" + t[2] + " " + yufen + "</b> " + t[0] + "";
+    var tt = "<b>" + yufen + " " + t[2]   + "</b> " + t[0] + "";
     return tt
   }
   }
