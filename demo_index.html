@@ -255,19 +255,19 @@
         <!-- 列表 -->
         <div class="eventlist">
           <div class="eventlisti"></div>
-          <div class="imorex m"> <a href="https://opendrivelab.com/event/" target="_blank">More Events</a> </div>
+          <div class="imorex m"> <a href="https://opendrivelab.com/event/" target="_blank">More Events </a> </div>
         </div>
       </div>
-      <div class="imorex pc"> <a href="https://opendrivelab.com/event/" target="_blank">More Events</a> </div>
+      <div class="imorex pc"> <a href="https://opendrivelab.com/event/" target="_blank">More Events </a> </div>
     </div>
   </div>
   <!-- Publication -->
   <div class="k3">
     <div class="bg">
       <h3 class="title_">Publications </h3>
-      <h5 class="btitle"> Representative work published at top-tiered venues.</h5>
+      <h5 class="btitle">Representative work published at top-tiered venues.</h5>
       <div class="Publications_list"> </div>
-      <div class="imorex"> <a href="#" target="_blank">More Publications</a> </div>
+      <div class="imorex btn_Twitter"> <a href="/publications">More publications </a> </div>
     </div>
   </div>
   <!-- Publication end --> 
@@ -345,44 +345,29 @@
   }
 
   ///插入Publications_list
-  var ltb = ['<a href="publication.html#editor-pick" title="Editor\'s Pick"><i class="icon__1"></i></a>', '<a href="publication.html#end-to-end" title="End-To-End Autonomous Driving"><i class="icon__2"></i></a>', '<a href="publication.html#bev-perception" title="Bird\'s-eye-view Perception"><i class="icon__3"></i></a>', '<a href="publication.html#pp" title="Prediction and Planning"><i class="icon__4"></i></a>', '<a href="publication.html#cv-at-large" title="Computer Vision at Large"><i class="icon__5"></i></a>']
+  var ltb = ['<a href="https://arxiv.org/abs/2212.10156" title="Editor\'s Pick"><i class="icon__1"></i></a>', '<a href="https://arxiv.org/abs/2203.11089" title="End-To-End Autonomous Driving"><i class="icon__2"></i></a>', '<a href="https://arxiv.org/abs/2203.17270" title="Bird\'s-eye-view Perception"><i class="icon__3"></i></a>', '<a href="publication.html#pp" title="Prediction and Planning"><i class="icon__4"></i></a>', '<a href="publication.html#cv-at-large" title="Computer Vision at Large"><i class="icon__5"></i></a>']
   var itb = ["icon_cv", "icon_gg", "icon_jqzx", "icon_zh"]
   var Publications_list = [
     {
-      ltb: myicon("0"), title: "UniAD: Planning-oriented Autonomous Driving", url: "https://opendrivelab.com/e2ead/cvpr23.html",
-      title2: "CVPR 2023 Award Candidate", url2: "",
-      itb: totubao("0,https://opendrivelab.com|1,#|2,#|3,#"),
-      code: "[Baseline] [nuScenes First Place]"
+      ltb: myicon("1"), title: "UniAD: Planning-oriented Autonomous Driving", url: "https://arxiv.org/abs/2212.10156",
+      title2: "CVPR 2023 Award Candidate", 
+      url2: "",
+      itb: totubao("r_github,https://github.com/OpenDriveLab/UniAD|r_zhihu,https://zhuanlan.zhihu.com/p/597019546"),
+      code: "[Sell a New Philosophy]"
     },
     {
-      ltb: myicon("1"), title: "UniAD: Planning-oriented Autonomous Driving", url: "https://opendrivelab.com/e2ead/cvpr23.html",
-      title2: "CVPR 2023 Award Candidate", url2: "",
-      itb: totubao("0,https://opendrivelab.com|1,#|2"),
-      code: "[Baseline] [nuScenes First Place]"
+      ltb: myicon("2"), title: "PersFormer: 3D Lane Detection via Perspective Transformer and the OpenLane Benchmark", url: "https://arxiv.org/abs/2203.11089",
+      title2: "ECCV 2022 (Oral)", 
+      url2: "",
+      itb: totubao("r_github,https://github.com/OpenDriveLab/PersFormer_3DLane|r_dataset,https://github.com/OpenDriveLab/OpenLane|r_zhihu,https://zhuanlan.zhihu.com/p/495979738"),
+      code: "[Redefine the Community]"
     },
     {
-      ltb: myicon("2"), title: "UniAD: Planning-oriented Autonomous Driving", url: "https://opendrivelab.com/e2ead/cvpr23.html",
-      title2: "CVPR 2023 Award Candidate", url2: "",
-      itb: totubao("3,#"),
-      code: "[Baseline] [nuScenes First Place]"
-    },
-    {
-      ltb: myicon("3"), title: "UniAD: Planning-oriented Autonomous Driving", url: "https://opendrivelab.com/e2ead/cvpr23.html",
-      title2: "CVPR 2023 Award Candidate", url2: "",
-      itb: totubao("3,#"),
-      code: "[Baseline] [nuScenes First Place]"
-    },
-    {
-      ltb: myicon("4"), title: "UniAD: Planning-oriented Autonomous Driving", url: "https://opendrivelab.com/e2ead/cvpr23.html",
-      title2: "CVPR 2023 Award Candidate", url2: "",
-      itb: totubao("0,https://opendrivelab.com"),
-      code: "[Baseline] [nuScenes First Place]"
-    },
-    {
-      ltb: myicon("0"), title: "UniAD: Planning-oriented Autonomous Driving", url: "https://opendrivelab.com/e2ead/cvpr23.html",
-      title2: "CVPR 2023 Award Candidate", url2: "",
-      itb: totubao("0,https://opendrivelab.com"),
-      code: "[Baseline] [nuScenes First Place]"
+      ltb: myicon("0"), title: "BEVFormer: Learning Bird's-Eye-View Representation from Multi-Camera Images via Spatiotemporal Transformers", url: "https://arxiv.org/abs/2203.17270",
+      title2: "ECCV 2022", 
+      url2: "",
+      itb: totubao("r_github,https://github.com/fundamentalvision/BEVFormer|r_zhihu,https://zhuanlan.zhihu.com/p/564295059"),
+      code: "[nuScenes First Place] [Waymo Challenge 2022 First Place]"
     },
 
   ];
@@ -390,7 +375,7 @@
 
 
 
-  var Publications_item = '<dl><dt>{{ltb}}</dt><dd><h6><a class="hover_color" href="{{url}}">{{title}}</a><a class="hover_color2" href="{{url2}}">{{title2}}</a></h6><p class="item_p"><code>{{code}}</code><span class="icon">{{itb}}</span></p></dd></dl>';
+  var Publications_item = '<dl><dt>{{ltb}}</dt><dd><h6><a class="hover_color" href="{{url}}">{{title}}</a><br></h6><p class="item_p"><code>{{title2}}&nbsp&nbsp&nbsp{{code}}</code><span class="icon">{{itb}}</span></p></dd></dl>';
 
   function myicon(a) {
     console.log(ltb[a])
@@ -405,7 +390,7 @@
       var s = x[i].split(",")
       var a = s[0]
       var url = s[1]
-      idata = '<a href="' + url + '"><img src="/style/img/home/' + itb[a] + '.svg" class="icon1"><img src="/style/img/home/' + itb[a] + '_this.svg" class="icon2"></a>'
+      idata = '<a href="' + url + '"><img src="/style/img/icon/' + a + '.png" class="icon1"><img src="/style/img/icon/' + a + '.png" class="icon2"></a>'
       html += idata;
     }
 
