@@ -37,7 +37,7 @@ z-index: 2;object-fit: contain;
 .publication_list .hover_color:hover{ color: rgb(0, 0, 191); text-decoration: underline;} 
 .publication_list .hover_color2{ font-size: 16px;  vertical-align: baseline;     color: #6c6c6c; font-family: Arial, Helvetica, sans-serif; margin-top: 1.5%;}
 .hover_color2 a, .hover_color2 a:link, .hover_color2 a:active{color: rgb(0, 0, 191);}
-.hover_color2 a:hover{ color: #1284e4; text-decoration: underline;}
+.hover_color2 a:hover{ text-decoration: underline;}
 /* .publication_list .hover_color2:hover{ color: #C0392B; text-decoration: underline;}  */
 .publication_list dl{  padding: 20px 0;display: flex;  flex-wrap: nowrap;
    
