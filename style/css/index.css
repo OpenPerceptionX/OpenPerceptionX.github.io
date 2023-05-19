@@ -1,13 +1,15 @@
 @import url("swiper-bundle.min.css");
 #box {overflow-y: scroll;width: 100vw;height: 100vw;}
 /* banner */
-.t_text {text-shadow: rgba(0,0,0,.3) 2px 2px 0;font-family: "Poppins", Arial, sans-serif;font-size: 40px;font-weight: 900;line-height: 48px;font-family: Georgia, "Times New Roman", Times, serif;}
+.t_text {text-shadow: rgba(0,0,0,.3) 2px 2px 0;font-family: "Poppins", Arial, sans-serif;font-size: 100px;font-weight: 900;line-height: 48px;font-family: Georgia, "Times New Roman", Times, serif;line-height: 120%;}
+.t_text_sub{font-family: "Poppins", Arial, sans-serif;font-size: 30px; line-height: 120%;}
 .jdtx {width: 200px;height: 3px;background: rgba(255, 255, 255, .2);position: absolute;top: calc(100vh - 80px);left: 0;z-index: 100;}
 .jdtx span {display: block;height: 3px;background: rgba(255, 255, 255, 1);transition: all 0.4s ease-in-out;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;}
 .jdtxw {position: relative;}
 .home_swiper {width: 100%;height: 100vh;overflow: hidden;}
 .lj_button2, .lj_button {background: #fff;}
-.banner_textw p {font-size: 21px;text-shadow: rgba(0,0,0,.6) 2px 2px 0;}
+.lj_button2:hover, .lj_button:hover {background: lightblue;}
+/* .banner_textw p {font-size: 21px;text-shadow: rgba(0,0,0,.6) 2px 2px 0;} */
 
 h3 {
     user-select: none;
