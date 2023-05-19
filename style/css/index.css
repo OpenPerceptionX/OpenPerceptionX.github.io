@@ -3,6 +3,13 @@
 /* banner */
 .t_text {text-shadow: rgba(0,0,0,.3) 2px 2px 0;font-family: "Poppins", Arial, sans-serif;font-size: 100px;font-weight: 900;line-height: 48px;font-family: Georgia, "Times New Roman", Times, serif;line-height: 120%;}
 .t_text_sub{font-family: "Poppins", Arial, sans-serif;font-size: 30px; line-height: 120%;}
+@media screen and (max-device-width: 1024px) {
+    .t_text {font-size: 33px;}
+    .t_text_sub {
+        font-size: 17px;
+    }
+}
+
 .jdtx {width: 200px;height: 3px;background: rgba(255, 255, 255, .2);position: absolute;top: calc(100vh - 80px);left: 0;z-index: 100;}
 .jdtx span {display: block;height: 3px;background: rgba(255, 255, 255, 1);transition: all 0.4s ease-in-out;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;}
 .jdtxw {position: relative;}
@@ -224,7 +231,6 @@ border-radius:0;background:rgb(29, 155, 240);}
 .twitterkw {width: calc(100%);padding: 0 20px 20px 20px;margin: 0 -20px;}
 .mailing_list_button {margin: 10px 0 0 0;}
 .lj_button, .lj_button2 {white-space: nowrap;width: auto;padding: 0 20px;}
-.t_text {font-size: 28px;line-height: 32px;padding-bottom: 18px;}
 .banner_textw p {font-size: 18px;}
 .Publications_list dt i {width: 18px;height: 18px;}
 .evevt_img::before {padding-top: 55%;}
