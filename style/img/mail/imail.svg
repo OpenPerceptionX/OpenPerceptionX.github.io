@@ -1,0 +1,16 @@
+<svg id="imail" xmlns="http://www.w3.org/2000/svg" width="23" height="19" viewBox="0 0 23 19">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #62ccd0;
+      }
+
+      .cls-2 {
+        fill: #1f2d2d;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <rect id="i" class="cls-1" x="3" y="4" width="20" height="15"/>
+  <path id="i-2" data-name="i" class="cls-2" d="M727,158a1.837,1.837,0,0,1-2,2H709a1.048,1.048,0,0,1-1.293-.96c0-.853,1.293-1.04,1.293-1.04h16V147l-7.509,6.843L708,146v-1a1.89,1.89,0,0,1,2-2h15a1.923,1.923,0,0,1,2,2v13Zm-17-13,7.491,6.3L725,145H710Zm-4,9h7l1,2h-8v-2Zm0-4h4l1,2h-5v-2Z" transform="translate(-706 -143)"/>
+</svg>
