@@ -147,7 +147,7 @@ border-radius:0;background:rgb(29, 155, 240);}
 .k2 .imorex a {color: #aa8d7d;}
 .k2 .imorex a:hover {color: #fff;background-color: #aa8d7d;border-color: #aa8d7d;}
 /* Publications */
-.Publications_list {padding: 30px 0;}
+/* .Publications_list {padding: 30px 0;} */
 .Publications_list .hover_color {vertical-align: baseline;padding-right: 20px;color: #000;font-weight: bold;color: rgb(63, 63, 63);}
 .Publications_list .hover_color:hover {color: rgb(0, 0, 191);text-decoration: underline;}
 /* .Publications_list .hover_color2 {vertical-align: baseline;padding-right: 20px;color: #C0392B; display: inline-block;} */
@@ -264,4 +264,8 @@ video::-webkit-media-controls-volume-slider {display: none;}video::-webkit-media
 .videobody .header, .videobody .swiper-pagination {display: none;}
 .video_close {pointer-events: all;position: absolute;bottom: 10%;z-index: 100;display: flex;align-items: center;justify-content: center;outline: 0;border: 0;text-align: center;height: 44px;width: 44px;font-size: 24px;align-items: center;letter-spacing: .23px;font-weight: 700;cursor: pointer;text-decoration: none;background: rgba(255, 255, 255, .9);backdrop-filter: blur(20px);border-radius: 50%;}
 .video_close::before {content: "×";}
+}
+
+.btitle {
+    margin-bottom: 30px;
 }
