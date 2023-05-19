@@ -86,7 +86,7 @@ width: 100%
  }
  @media screen and (max-device-width:1024px){
  .people_list dl{ width: 100%; margin: 0; padding: 10px 0;}
- .people_list .people_img { width: 100px; height: 100px;}
+ .people_list .people_img { width: 90px; height: 90px;}
 
 
  }
