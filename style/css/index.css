@@ -149,8 +149,8 @@ border-radius:0;background:rgb(29, 155, 240);}
 .eventlist dl a:hover::before {left: -100%;width: 0;}
 .eventlist dl dd button {display: none;}
 
-/* @media screen and (min-width: 1024px) {
-.eventlist dl > span {
+@media screen and (min-width: 1024px) {
+/* .eventlist dl > span {
     padding: 15px 0 15px 0px;
 } */
 .eventlist dl {width: calc(33.3% - 20px);margin-left: 10px;margin-right: 10px;}
