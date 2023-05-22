@@ -75,7 +75,7 @@ h5 {
 
 /* 等待动画 */
 
-.loadx {line-height: 70px;color: rgb(0, 0, 191);width: 140px;height: 40px;position: fixed;z-index: 1011;top: 50%;left: 50%;margin: -20px 0 0 -70px;text-align: center;margin-top: 3px;}
+.loadx {line-height: 70px;color: rgb(0, 0, 191);width: 140px;height: 40px;position: fixed;z-index: 1011;top: 50%;left: 50%;margin: -20px 0 0 -70px;text-align: center;margin-top: 1px;}
 .loadx .jtb {width: 26px;height: 26px;display: block;
     /* background: url(/style/img/loadx___.png) no-repeat center; */
     position: absolute;top: 0;left: 50%;margin-left: -13px;-webkit-animation: load 0.6s linear infinite;animation: load 0.6s linear infinite;}
@@ -294,7 +294,7 @@ video::-webkit-media-controls-volume-slider {display: none;}video::-webkit-media
 }
 
 .btitle {
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
 p .email_link {
