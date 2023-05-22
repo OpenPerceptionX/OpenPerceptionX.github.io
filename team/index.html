@@ -33,9 +33,9 @@
        title:"Globalist",
       //  stitle:"3D Occupancy Prediction Challenge",
        list:[
-       {img:imgurl+"yu_qiao.jpg",name:"Yu Qiao",content:"Shanghai AI Lab",url:"https://scholar.google.com/citations?user=gFtI-8QAAAAJ"},
-       {img:imgurl+"junchi_yan.jpg",name:"Junchi Yan",content:"Shanghai Jiao Tong University",url:"https://thinklab.sjtu.edu.cn"},
-        {img:imgurl+"andreas_geiger.jpg",name:"Andreas Geiger",content:"Max Planck Institute",url:"https://www.cvlibs.net"},
+       {img:imgurl+"yu_qiao.jpg",name:"Yu Qiao",content:"Shanghai AI Lab",url:"https://scholar.google.com/citations?user=gFtI-8QAAAAJ",role:"Consultant"},
+       {img:imgurl+"junchi_yan.jpg",name:"Junchi Yan",content:"Shanghai Jiao Tong University",url:"https://thinklab.sjtu.edu.cn",role:"Consultant"},
+        {img:imgurl+"andreas_geiger.jpg",name:"Andreas Geiger",content:"Max Planck Institute",url:"https://www.cvlibs.net",role:"Consultant"},
         {img:imgurl+"hongyang_li.jpg",name:"Hongyang Li",content:"Research Scientist",url:"https://lihongyang.info"},
         ]
       },
@@ -64,7 +64,7 @@
 //获取列表模板插入数据
 
 
-var item = '<dl><a href="{{url}}" class={{class}}><dt><div class="people_img"><img data-src="{{img}}" src="/style/img/loading.png"></div></dt><dd><h2>{{name}} </h2><p>{{content}}</p></dd></a></dl>';
+var item = '<dl><a href="{{url}}" class={{class}}><dt><div class="people_img"><img data-src="{{img}}" src="/style/img/loading.png"></div></dt><dd><h2>{{name}} </h2><p class="content">{{content}}</p><p class="role">{{role}}</p></dd></a></dl>';
 
 var ilist = '<div class="peoplewbr"><div class="bg"><h3 class="title_">{{title}}</h3><h5 class="btitle">{{stitle}}</h5><br><br><div class="people_list"><list></div></div><br></div>';
 
