@@ -116,7 +116,7 @@ transform:  rotate(360deg);-webkit-transform:  rotate(360deg);}
 body:not(.twitterkw_body ) .k4 {position: absolute;width: 1px;left: -1000px;}
 .twitterkw_body .k4 {display: block;}
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 1024px) {
 .k4 .kin {overflow-x: hidden;overflow-y: auto;height: 600px;margin-bottom: 40px; border-radius: 10px;}
 .k4 .kin::-webkit-scrollbar {
 border-radius:0;width:6px;background:#f8f8f8;}
@@ -151,7 +151,7 @@ border-radius:0;background:rgb(29, 155, 240);}
 .eventlist dl a:hover::before {left: -100%;width: 0;}
 .eventlist dl dd button {display: none;}
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 1024px) {
 .eventlist dl > span {
     padding: 5px 0 5px 0px;
 }
@@ -194,7 +194,7 @@ border-radius:0;background:rgb(29, 155, 240);}
 .Publications_list p {padding: 0;margin: 0;}
 .Publications_list dd h6 {padding: 0 0 6px 0;margin: 0;}
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 1024px) {
 .Publications_list .item_p {display: flex;width: 100%;align-items: center;justify-content: space-between;}
 /* .Publications_list code {display: flex;align-items: center; font-size: 15px;} */
 }
