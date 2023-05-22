@@ -15,7 +15,7 @@ h3 {
   border-radius: 50%;
   position: relative;
   overflow: hidden;
-  width: 80px;
+  width: 90px;
   margin: 0 auto;
 }  .peoplewbr:nth-of-type(even)   .people_img {
   background: #fff;}
@@ -90,3 +90,12 @@ width: 100%
 
 
  }
+
+.content {
+  margin-bottom: -7px;
+}
+.role {
+  margin: 0px;
+  display: inline-block;
+  color: rgb(128, 128, 128, 0.7);
+}
