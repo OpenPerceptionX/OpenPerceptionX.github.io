@@ -233,7 +233,7 @@ border-radius:0;background:rgb(29, 155, 240);}
 .icon img {height: 20px;}
 .Publications_list dd h6 {font-size: 16px;}
 .Publications_list dd h6 > a {display: block;padding-right: 0 !important;}
-.Publications_list .hover_color2 {padding-bottom: 4px;}
+/* .Publications_list .hover_color2 {padding-bottom: 4px;} */
 .Publications_list {padding: 0 0 20px 0;}
 .eventlist dd {min-height: 34px;padding: 10px 90px 18px 15px;line-height: 18px;}
 .eventlist dl > span {padding: 0 15px 0 0;right: 0;bottom: 10px;width: 70px;}
