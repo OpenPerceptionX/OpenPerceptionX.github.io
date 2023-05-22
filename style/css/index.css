@@ -164,7 +164,7 @@ border-radius:0;background:rgb(29, 155, 240);}
 /* .eventlist dl:nth-of-type(1) dd button {display: block;background: none;border: none;position: absolute;bottom: 30px;font-size: 16px;padding: 0;color: #ccc;} */
 .eventlist dl:nth-of-type(1) img {object-fit: fill;}
 }
-.imorex {text-align: center;font-size: 16px;}
+.imorex {text-align: center;font-size: 16px; margin-top: 30px;}
 .imorex a {border: 1px solid;display: inline-block;padding: 15px 20px;min-width: 240px;background: #fff;color: #DC8E47;transition: all 0.4s ease-in-out;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;}
 .imorex a:hover {color: #fff;background-color: #DC8E47;border-color: #DC8E47;}
 .k2 .imorex a {color: #aa8d7d;}
@@ -231,7 +231,7 @@ border-radius:0;background:rgb(29, 155, 240);}
 .Publications_list dd {width: calc(100% - 44px);min-width: calc(100% - 44px);padding-bottom: 5px;border: none;margin-bottom: 0;}
 .imorex a {padding: 10px 20px;min-width: auto;font-size: 13px;}
 .icon img {height: 20px;}
-.Publications_list dd h6 {font-size: 16px;}
+.Publications_list dd h6 {font-size: 20px;}
 .Publications_list dd h6 > a {display: block;padding-right: 0 !important;}
 /* .Publications_list .hover_color2 {padding-bottom: 4px;} */
 .Publications_list {padding: 0 0 20px 0;}
