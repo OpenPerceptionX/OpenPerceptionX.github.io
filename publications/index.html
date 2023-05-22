@@ -90,7 +90,7 @@
       
      
       if (url_list[i]["name"] == h) {
-        var htm = '<a href="' + url_list[i]["url"] + '" >' + h + '</a>'
+        var htm = '<a href="' + url_list[i]["url"] + '" target="_blank">' + h + '</a>'
         var h = htm;
         
       } 
@@ -323,7 +323,7 @@ for(var i=0;i<len;i++){
       var s = x[i].split(",")
       var a = s[0]
       var url = s[1]
-      idata = '<a href="' + url + '"><img src="/style/img/icon/' + a + '.png" class="icon1"><img src="/style/img/icon/' + a + '.png" class="icon2"></a>'
+      idata = '<a href="' + url + '" target="_blank"><img src="/style/img/icon/' + a + '.png" class="icon1"><img src="/style/img/icon/' + a + '.png" class="icon2"></a>'
       html += idata;
     }
 
@@ -334,7 +334,7 @@ for(var i=0;i<len;i++){
   //获取列表模板插入数据
 
 
-  var item = '<dl>{{img}}<dd><h2><a class="hover_color" href="{{url}}">{{title}}</a></h2><h3 class="hover_color2">{{ititle}}{{iititle}}</h3><p><a class="title2">{{title2}}</a><br><span class="icon">{{GitHub}}{{itb}}</span></p><p style="font-size: 15px;">{{content}}</p></dd></dl>';
+  var item = '<dl>{{img}}<dd><h2><a class="hover_color" href="{{url}}" target="_blank">{{title}}</a></h2><h3 class="hover_color2">{{ititle}}{{iititle}}</h3><p><a class="title2" target="_blank">{{title2}}</a><br><span class="icon">{{GitHub}}{{itb}}</span></p><p style="font-size: 15px;">{{content}}</p></dd></dl>';
 
   var ilist = '<div class="publicationk"  ><name id="{{id}}"/><h3 class="title_1"><span>{{title}}</span></h3><div class="publication_list" ><div class="kin"><list></div></div></div>';
 
@@ -356,13 +356,13 @@ for(var i=0;i<len;i++){
         var img = myshuju.list[ii]["img"];
         var url = myshuju.list[ii]["url"];
         if (img !== "") {
-          myshuju.list[ii]["img"] = '<dt><a href="' + url + '"><div class="publication_img"><img data-src="' + img + '" src="/style/img/loading.png"></div></a></dt>'
+          myshuju.list[ii]["img"] = '<dt><a href="' + url + '" target="_blank"><div class="publication_img"><img data-src="' + img + '" src="/style/img/loading.png"></div></a></dt>'
         }
  
         if (myshuju.list[ii]["GitHub_url"]) {
           var GitHub_url = myshuju.list[ii]["GitHub_url"];
           var GitHub_img = myshuju.list[ii]["GitHub_img"];
-          var jtb = '<a href="' + GitHub_url + '"><img src="' + GitHub_img + '" alt="GitHub"  ></a>'
+          var jtb = '<a href="' + GitHub_url + '" target="_blank"><img src="' + GitHub_img + '" alt="GitHub"  ></a>'
           myshuju.list[ii]["GitHub"] = jtb;
    
         }

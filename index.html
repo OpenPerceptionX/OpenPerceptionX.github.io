@@ -238,7 +238,7 @@
         <i class="fas fa-envelope"></i>
         <a href="mailto:contact@opendrivelab.com" class="email_link">contact@opendrivelab.com</a>
         or
-        <a href="https://lihongyang.info" class="email_link">Dr. Hongyang Li</a>.      
+        <a href="https://lihongyang.info" class="email_link" target="_blank">Dr. Hongyang Li</a>.      
       </p>
       <!-- <div class="imorex btn_Twitter"> <a href="/publications">More publications </a> </div> -->
     </div>
@@ -352,7 +352,7 @@
 
   ];
 
-  var Event_item = '<dl><span>{{time}}</span><a href="{{url}}"><dt><div class="evevt_img"><img data-src="{{img}}"></div></dt><dd>{{content}}</dd></a></dl>';
+  var Event_item = '<dl><span>{{time}}</span><a href="{{url}}" target="_blank"><dt><div class="evevt_img"><img data-src="{{img}}"></div></dt><dd>{{content}}</dd></a></dl>';
   function set_time(itime) {
     if(itime !== undefined){
     var m = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"]
@@ -382,9 +382,9 @@
 
   ///插入Publications_list
   var ltb = [
-    '<a href="https://arxiv.org/abs/2203.17270" title=""><i class="icon__1"></i></a>', 
-    '<a href="https://arxiv.org/abs/2212.10156" title=""><i class="icon__2"></i></a>', 
-    '<a href="https://arxiv.org/abs/2203.11089" title=""><i class="icon__3"></i></a>', 
+    '<a href="https://arxiv.org/abs/2203.17270" title="" target="_blank"><i class="icon__1"></i></a>', 
+    '<a href="https://arxiv.org/abs/2212.10156" title="" target="_blank"><i class="icon__2"></i></a>', 
+    '<a href="https://arxiv.org/abs/2203.11089" title="" target="_blank"><i class="icon__3"></i></a>', 
     '<a href="publication.html#pp" title="Prediction and Planning"><i class="icon__4"></i></a>', 
     '<a href="publication.html#cv-at-large" title="Computer Vision at Large"><i class="icon__5"></i></a>']
   var itb = ["icon_cv", "icon_gg", "icon_jqzx", "icon_zh"]
@@ -416,7 +416,7 @@
 
 
 
-  var Publications_item = '<dl><dt>{{ltb}}</dt><dd><h6><a class="hover_color" href="{{url}}">{{title}}</a></h6><p class="item_p"><code>{{title2}}&nbsp&nbsp&nbsp{{code}}</code><span class="icon">{{itb}}</span></p></dd></dl>';
+  var Publications_item = '<dl><dt>{{ltb}}</dt><dd><h6><a class="hover_color" href="{{url}}" target="_blank">{{title}}</a></h6><p class="item_p"><code>{{title2}}&nbsp&nbsp&nbsp{{code}}</code><span class="icon">{{itb}}</span></p></dd></dl>';
 
   function myicon(a) {
     console.log(ltb[a])
@@ -431,7 +431,7 @@
       var s = x[i].split(",")
       var a = s[0]
       var url = s[1]
-      idata = '<a href="' + url + '"><img src="/style/img/icon/' + a + '.png" class="icon1"><img src="/style/img/icon/' + a + '.png" class="icon2"></a>'
+      idata = '<a href="' + url + '" target="_blank"><img src="/style/img/icon/' + a + '.png" class="icon1"><img src="/style/img/icon/' + a + '.png" class="icon2"></a>'
       html += idata;
     }
 
