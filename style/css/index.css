@@ -93,10 +93,10 @@ transform:  rotate(360deg);-webkit-transform:  rotate(360deg);}
 /* twitter */
 .k4 {padding-bottom: 70px;position: relative; background: rgb(29, 155, 240,0.1);}
 .k4 .kin {position: relative;z-index: 2; width: 80%; margin-left: 10%;}
-@media screen and (max-device-width:1024px) {
+/* @media screen and (max-device-width:1024px) {
     .k4 .kin {width: 100%; margin-left: 0%;}
 
-}
+} */
 .k4 .loadx {color: #019cdf;z-index: 1;position: absolute;}
 .k4 .jtb {background-image: url(/style/img/loadx__.png); }
 .twitterkw {width: calc(100%);position: relative;background: #fff;}
@@ -149,10 +149,10 @@ border-radius:0;background:rgb(29, 155, 240);}
 .eventlist dl a:hover::before {left: -100%;width: 0;}
 .eventlist dl dd button {display: none;}
 
-@media screen and (min-width: 1024px) {
+/* @media screen and (min-width: 1024px) {
 .eventlist dl > span {
     padding: 15px 0 15px 0px;
-}
+} */
 .eventlist dl {width: calc(33.3% - 20px);margin-left: 10px;margin-right: 10px;}
 .eventk .kin {margin: 0 -10px;}
 .eventlist dl:nth-of-type(1) {width: calc(66.6% - 20px);}
@@ -186,7 +186,7 @@ border-radius:0;background:rgb(29, 155, 240);}
 .Publications_list dt a {border: 1px solid rgba(0,0,0,.1);height: 54px;width: 54px;border-radius: 50%;display: inline-block;display: flex;align-items: center;justify-content: center;margin-bottom: 20px;}
 /* .Publications_list dt a:hover {background-color: rgb(0, 0, 191,0.8);border-color: rgb(0, 0, 191,0.8);} */
 .Publications_list dl {display: flex;}
-.Publications_list dd {padding-bottom: 20px;margin-bottom: 0;border-bottom: 0px solid #e7e7e7;width: calc(100% - 80px);}
+.Publications_list dd {padding-bottom: 20px;margin-bottom: 20px;border-bottom: 0px solid #e7e7e7;width: calc(100% - 80px);}
 .Publications_list dl dt {width: 80px;}
 .Publications_list code {padding: 1px 10px;margin: 0;font-size: 12px;background: #FEF5E7;color: #D68910;border-radius: 0 8px 8px 8px;display: inline-block;}
 .Publications_list p {padding: 0;margin: 0;}
@@ -236,7 +236,7 @@ border-radius:0;background:rgb(29, 155, 240);}
 /* .Publications_list .hover_color2 {padding-bottom: 4px;} */
 .Publications_list {padding: 0 0 20px 0;}
 .eventlist dd {min-height: 34px;padding: 10px 90px 18px 15px;line-height: 18px;}
-.eventlist dl > span {padding: 0 15px 0 0;right: 0;bottom: 10px;width: 70px;}
+/* .eventlist dl > span {padding: 0 15px 0 0;right: 0;bottom: 10px;width: 70px;} */
 .twitterk {position: inherit;background: #fff;overflow-y: hidden;}
 /* .twitterkw {width: 100%; background: #000;} */
 .twitter_title, .twitter_title a {color: rgb(29, 155, 240) !important;}
