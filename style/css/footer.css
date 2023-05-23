@@ -57,7 +57,7 @@ br {
       @media screen and (max-device-width:1024px){
       .footer_o{ padding: 0 20px;}
       .footer_o .o_r img{ width:25px}
-      .footer_o .o_qr img{ width:80%; margin: 10%;}
+      .footer_o .o_qr img{ width:50%; margin-left: 50%;}
       .o_r{ margin-left: auto;}
   .o_l{ margin-right: auto; text-align: left; display: none;}
   .o_l img{max-width: 25vw;}
