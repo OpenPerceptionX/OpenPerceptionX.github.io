@@ -5,7 +5,7 @@
 .icon_home{ display: block; width: 100px; height: 40px; background-position: 30px -590px;}
 .copyright .icon_home{  transform: scale(.5);  margin-right: -35px; 
     -webkit-transform: scale(.5); }
-.copyright{ padding-top: 10px;padding-bottom: 10px;}
+.copyright{ padding-top: 10px;padding-bottom: 10px; user-select: none;}
 .copyright,.copyright a{ color: grey;}
 
 @media screen and (max-device-width:1024px){
@@ -41,7 +41,7 @@ br {
  .copyright a:hover{ text-decoration: underline;}
   .footer_o  .o_r img{ width:33px;}
   .footer_o  .o_qr img{ width:129px; text-align: right;}
-  .footer_o .bg{ padding: 15px 300;   display: flex;
+  .footer_o .bg{ display: flex;
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
       -ms-flex-align: center;
