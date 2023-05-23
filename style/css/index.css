@@ -354,12 +354,12 @@ p .email_link:hover {
 
 @media screen and (max-device-width: 1024px) {
     .research_list dl {
-        width: 80%;
+        width: 90%;
         margin-bottom: 10%;
     }
     .research_list dl a > span {
-        margin-left: 7%;
-        margin-top: 7%;
+        margin-left: 5%;
+        margin-top: 5%;
         font-size: 23px;
     }
 }
