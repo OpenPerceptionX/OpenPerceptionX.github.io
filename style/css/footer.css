@@ -21,7 +21,7 @@ br {
     user-select: none;
 }
 @media screen and (max-device-width:1024px){
-    br {
+    .footer br, .footer_o br {
         display: none;
     }
 }
