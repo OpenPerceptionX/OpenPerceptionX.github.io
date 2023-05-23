@@ -64,7 +64,7 @@ br {
       .footer_nav dl:nth-last-child(1){ width: auto; margin-left: auto;}
       }
       @media screen and (max-device-width:1024px){
-      .footer_o{ padding: 0 20px;}
+      /* .footer_o{ padding: 0 20px;} */
       .footer_o .o_r img{ width:25px}
       .o_r, .o_qr{ margin-left: auto;}
   .o_l{ margin-right: auto; text-align: left; display: none;}
