@@ -15,9 +15,18 @@
       .copyright p{ margin: 0;}
 
 }
+
+
 br {
     user-select: none;
 }
+@media screen and (max-device-width:1024px){
+    br {
+        display: none;
+    }
+}
+
+
 .o_l a {
     font-size:x-large; 
     font-weight: 800; 
@@ -67,12 +76,3 @@ br {
   .footer_nav dl dt,.footer_nav dl dd{ padding-right: 20px;}
   .footer_nav dl{  width:33.3%; padding-bottom: 30px;}
       }
-
-br {
-    user-select: none;
-}
-@media screen and (max-device-width:1024px){
-    .not_in_mobile {
-        display: none;
-    }
-}
