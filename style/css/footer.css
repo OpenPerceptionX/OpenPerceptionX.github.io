@@ -73,7 +73,7 @@ br {
   .footer_nav .bg{flex-wrap: wrap;}
   .footer_nav dl dt,.footer_nav dl dd{ padding-right: 20px;}
   .footer_nav dl{  width:33.3%; padding-bottom: 30px;}
-  .bg {
+  .footer_o .bg {
     margin-bottom: -20px;
   }
       }
