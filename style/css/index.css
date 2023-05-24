@@ -311,7 +311,7 @@ p .email_link:hover {
     flex-wrap: wrap;
 }
 .research_list dl{
-    width: 31%;
+    width: 32%;
     margin: auto;
     background: #fff;
     display: flex;
@@ -327,9 +327,10 @@ p .email_link:hover {
     margin-top: 1%;
     position: absolute;
     user-select: none;
-    font-size: 27px;
+    font-size: 23px;
     color: white;
     font-weight: 900;
+    line-height: 30px;
 }
 
 .research_list dl:hover{
@@ -345,7 +346,7 @@ p .email_link:hover {
 
 
 .research_list dl a img{
-    border-radius: 50px;
+    /* border-radius: 50px; */
     width: 100%;
     height: 180px;
     background-blend-mode: overlay; background-color: rgb(63, 63, 63, 0.3); background-size: cover; background-position: center;
@@ -353,12 +354,12 @@ p .email_link:hover {
 
 @media screen and (max-device-width: 1024px) {
     .research_list dl {
-        width: 80%;
+        width: 90%;
         margin-bottom: 10%;
     }
     .research_list dl a > span {
-        margin-left: 7%;
-        margin-top: 7%;
+        margin-left: 5%;
+        margin-top: 5%;
         font-size: 23px;
     }
 }
