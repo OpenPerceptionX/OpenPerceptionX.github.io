@@ -363,3 +363,7 @@ p .email_link:hover {
         font-size: 23px;
     }
 }
+
+.publication_auxiliary {
+    text-decoration: underline;
+}
