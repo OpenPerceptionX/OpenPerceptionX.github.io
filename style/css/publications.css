@@ -123,3 +123,8 @@ br {
 em {
   text-transform: none;
 }
+
+.publication_auxiliary {
+  text-decoration: underline;
+  margin-left: -10px;
+}
