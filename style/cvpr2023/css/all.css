@@ -820,3 +820,7 @@ ol {
 .paper_title {
   margin-bottom: 7px;
 }
+
+.leaderboard {
+  width: 50%;
+}
