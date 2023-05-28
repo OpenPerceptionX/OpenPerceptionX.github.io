@@ -78,7 +78,7 @@ z-index: 2;object-fit: contain;
 .pub_nav a:hover div{  background-color: rgb(0, 0, 191) ; border-color: rgb(0, 0, 191); color: #fff;}
 .pub_nav a:hover div{ max-width: 500px;}
 
-.publicationk{ width: 100%; margin-top: 3%;}
+.publicationk{ width: 100%; margin-top: 1%;}
 .publicationk{ padding-top:20px ;padding-bottom: 20px ;}
 .publicationk:nth-of-type(1){ padding-top:40px ; }
 
