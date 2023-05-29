@@ -133,21 +133,33 @@ z-index: 2;object-fit: cover;
 .join_img{ position: relative; height: 100%;}
 .join_list dl dt{ position: relative; height: 100%;}
 .join_list p{ font-size: 12px; line-height: 16px;}
-.join_list dl dt{ width:45%;}
-.join_list dl dd{ width: calc(55% - 30px); padding: 15px;}
-.join_list h2{ font-size: 16px; padding: 0; margin-bottom: 6px;text-overflow: ellipsis;
+.join_list dl dt{ width:0%;}
+.join_list dl dd{ width: calc(100% - 30px); padding: 15px;}
+.join_list h2{ font-size: 17px;  text-overflow: ellipsis;
+    margin-top: -5%;
+    margin-bottom: -5%;
+    margin-left: -3%;
+    margin-right: -3%;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
     -webkit-line-clamp: 3;/*--行数--*/}
-.join_list h3{ font-size: 13px;}
+.join_list h3{ font-size: 13px;
+    margin-left: -2%;
+    margin-right: -3%;}
+.join_list .content{ 
+    font-size: 13px;
+    line-height: 150%;
+    margin-bottom: 3%;
+    margin-left: -3%;
+    margin-right: -3%;
+}
 
-
-.join_list dd button{ font-size: 12px; padding: 5px 20px;}
+.join_list dd button{ font-size: 12px;  width: 90%; padding-top: 3%; padding-bottom: 3%;}
 .join_list .bg{ padding:0 12px;}
 .join_list dl{ margin-top: 12px;}
 .joinwbr>.bg{ padding: 0;}
-.title_1{ padding-left: 12px; font-size: 28px;  cursor: pointer; }
+.title_1{ padding-left: 5%; font-size: 28px;  cursor: pointer; padding-right: 5%; }
 /* .join_icon{ height: 34px;} */
 .join_list dl:nth-of-type(1){ margin-top: 5px;}
 .join_icon{ font-size: 24px;}
@@ -155,7 +167,7 @@ z-index: 2;object-fit: cover;
 .join_list p{ margin: 4px 0 0 0;}
 .join_list dd a{ z-index: 100; display: block;  position: absolute; left: 0; top: 0; right: 0; bottom: 0; height: auto;}
 .join_list .kin{ padding: 0 0 20px 0;}
-.join_list dd a button{ position: absolute; right: 0; bottom: 0; opacity: 0;}
+.join_list dd a button{ position: absolute; right: 5%; bottom: 5%;}
 
 /* .join_list a{ display: block; width: 100%; text-align: right;}*/
 .m_zy .join_list dl:nth-of-type(odd) dt { right: 0;
@@ -175,7 +187,7 @@ z-index: 2;object-fit: cover;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    -webkit-line-clamp: 2;/*--行数--*/}
+    -webkit-line-clamp: 200;/*--行数--*/}
 
 }
 
@@ -189,6 +201,12 @@ z-index: 2;object-fit: cover;
 }
 .description a:hover{
     text-decoration: underline;
+}
+@media screen and (max-device-width:1024px){
+    .description {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
 }
 
 .ititle {
