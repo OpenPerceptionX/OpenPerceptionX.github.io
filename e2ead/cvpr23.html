@@ -74,10 +74,10 @@
   <div class="r_ul">
     <ul class="bg">
       <li data-gd="#id1">Overview</li>
-      <li data-gd="#id2">Date</li>
-	    <li data-gd="#id3">Challenges</li>    
+      <!-- <li data-gd="#id2">Date</li> -->
+      <li data-gd="#id5">Schedule</li>
       <li data-gd="#id4">Speakers</li>
-	    <li data-gd="#id5">Schedule</li>
+	    <li data-gd="#id3">Challenges</li>    
       <li data-gd="#id6">Organizers</li>
       <li data-gd="#id7">Steering Committee</li>
     </ul>
@@ -128,9 +128,8 @@
        
     </div>
   
-    <div class="wrapper row2 bg_data"  id="id2">
+    <!-- <div class="wrapper row2 bg_data"  id="id2">
           <div class="hoc bg clear">
-            <!-- main body -->
            
   
   
@@ -173,10 +172,357 @@
 		 </div>
   
           <div class="clear"></div>
-      </div></div>
+      </div></div> -->
    
+
+        <!-- ##### Schedule #### -->
+        <div class="wrapper row2 bg_Schedule" id="id5">
+          <div class="hoc bg clear">
+            
+            <h1 class="h_title" id="schedule"><b>Schedule</b></h1>
+      
+      
+            <h2 style="font-size: large; text-transform: none">Please select your time zone: 
+      
+            
+      
+            <select id="operator" style="font-size: 0.9rem;" onchange="time_zone()">
+      
+              <option value="-4" onclick="time_zone()">UTC-11 Niue/Pago_Pago</option>
+              <option value="-3" onclick="time_zone()">UTC-10 Honolulu/Adak </option>
+              <option value="-2" onclick="time_zone()">UTC-9 Alaska/Gambier Islands</option>
+              <option value="-1" onclick="time_zone()">UTC-8 Anchorage/Nome</option>
+              <option value="0" onclick="time_zone()" selected="selected">UTC-7 (CVPR venue time) Vancouver/Los_Angeles</option>
+              <option value="1" onclick="time_zone()">UTC-6 Belize</option>
+              <option value="2" onclick="time_zone()">UTC-5 Chicago</option>
+              <option value="3" onclick="time_zone()">UTC-4 New_York/Detroit</option>
+              <option value="4" onclick="time_zone()">UTC-3 Araguaina/Maceio/Thule</option>
+              <option value="5" onclick="time_zone()">UTC-2 Noronha/South_Georgia</option>
+              <option value="6" onclick="time_zone()">UTC-1 Cape_Verde/Azores</option>
+              <option value="7" onclick="time_zone()">UTC+0 Ireland/Portugal</option>
+              <option value="8" onclick="time_zone()">UTC+1 London/Canary</option>
+              <option value="9" onclick="time_zone()">UTC+2 Paris/Berlin/Cairo/Kigali</option>
+              <option value="10" onclick="time_zone()">UTC+3 Moscow/Baghdad</option>
+              <option value="11" onclick="time_zone()">UTC+4 Dubai/Mahe</option>
+              <option value="12" onclick="time_zone()">UTC+5 Qyzylorda/Kerguelen</option>
+              <option value="13" onclick="time_zone()">UTC+6 Almaty/Kolkata</option>
+              <option value="14" onclick="time_zone()">UTC+7 Bangkok/Christmas</option>
+              <option value="15" onclick="time_zone()">UTC+8 Beijing/Hong_Kong</option>
+              <option value="16" onclick="time_zone()">UTC+9 Tokyo/Seoul</option>
+              <option value="17" onclick="time_zone()">UTC+10 Sydney/Brisbane</option>
+              <option value="18" onclick="time_zone()">UTC+11 Lord_Howe/Kosrae</option>
+              <option value="17" onclick="time_zone()">UTC+12 Wallis/Fiji</option>
+          </select>
+      
+      
+      
+          </h2>
+      
+      
+      
+             <div class="schedule-tbl">
+              <table>
+                <thead>
+                  <tr>
+                    <th class="schedule-time">Time</th>
+                    <th class="schedule-slot">Speaker</th>
+                    <th class="schedule-description">Theme</th>
+                    <th class="schedule-meta">Content</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="schedule-time"><span name="time_hour_seleting">9</span>:00,<br class="m"> Jun <a  name="data_seleting">18</a></td>
+                    <td class="schedule-slot">
+                      Hongyang Li,
+                      <span class="speakers-company">Shanghai AI Lab</span>
+                    </td>
+                    <td class="schedule-description">Welcome and Opening Remarks</td>
+                    <td class="schedule-description">slides / talk</td>
+                  </tr>
+      
+                  <tr>
+                    <td class="schedule-time"><span name="time_hour_seleting">9</span>:10,<br class="m"> Jun <a  name="data_seleting">18</a></td>
+                    <td class="schedule-slot">
+                      Patrick Langechuan Liu <span class="speakers-company"></span>
+                    </td>
+                    <td class="schedule-description">Awesome Talk</td>
+                    <td class="schedule-description"></td>
+                  </tr>
+      
+                  <tr>
+                    <td class="schedule-time"><span name="time_hour_seleting">9</span>:45,<br class="m"> Jun <a  name="data_seleting">18</a></td>
+                    <td class="schedule-slot">
+                      Deva Ramanan <span class="speakers-company"></span>
+                    </td>
+                    <td class="schedule-description">Awesome Talk</td>
+                    <td class="schedule-description"></td>
+                  </tr>
+      
+                  <tr>
+                    <td class="schedule-time"><span name="time_hour_seleting">10</span>:20,<br class="m"> Jun <a  name="data_seleting">18</a></td>
+                    <td class="schedule-slot">
+                      <b>Coffee Break</b> <span class="speakers-company"></span>
+                    </td>
+                    <td class="schedule-description"> <b>Coffee Break</b> </td>
+                    <td class="schedule-description">-</td>
+                  </tr>
+      
+                  <tr>
+                    <td class="schedule-time"><span name="time_hour_seleting">10</span>:30,<br class="m"> Jun <a  name="data_seleting">18</a></td>
+                    <td class="schedule-slot">
+                      Organizers and Winners<span class="speakers-company"></span>
+                    </td>
+                    <td class="schedule-description">Track 1: OpenLane Topology Challenge</td>
+                    <td class="schedule-description"></td>
+                  </tr>
+      
+                  <tr>
+                    <td class="schedule-time"><span name="time_hour_seleting">11</span>:30,<br class="m"> Jun <a  name="data_seleting">18</a></td>
+                    <td class="schedule-slot">
+                      Phil Duan<span class="speakers-company"></span>
+                    </td>
+                    <td class="schedule-description">Awesome Talk</td>
+                    <td class="schedule-description"></td>
+                  </tr>
+      
+                  <tr>
+                    <td class="schedule-time"><span name="time_hour_seleting">12</span>:05,<br class="m"> Jun <a  name="data_seleting">18</a></td>
+                    <td class="schedule-slot">
+                      <b>Lunch Break</b> <span class="speakers-company"></span>
+                    </td>
+                    <td class="schedule-description"><b>Lunch Break</b></td>
+                    <td class="schedule-description">-</td>
+                  </tr>
+      
+                  <tr>
+                    <td class="schedule-time"><span name="time_hour_seleting">13</span>:30,<br class="m"> Jun <a  name="data_seleting">18</a></td>
+                    <td class="schedule-slot">
+                      Jose M. Alvarez <span class="speakers-company"></span>
+                    </td>
+                    <td class="schedule-description">Awesome Talk</td>
+                    <td class="schedule-description"></td>
+                  </tr>
+      
+                  <tr>
+                    <td class="schedule-time"><span name="time_hour_seleting">14</span>:05,<br class="m"> Jun <a  name="data_seleting">18</a></td>
+                    <td class="schedule-slot">
+                      Organizers and Winners <span class="speakers-company"></span>
+                    </td>
+                    <td class="schedule-description">Track 4: nuPlan Planning Challenge</td>
+                    <td class="schedule-description"></td>
+                  </tr>
+                  
+      
+                  <tr>
+                    <td class="schedule-time"><span name="time_hour_seleting">15</span>:05,<br class="m"> Jun <a  name="data_seleting">18</a></td>
+                    <td class="schedule-slot">
+                      <b>Coffee Break</b> <span class="speakers-company"></span>
+                    </td>
+                    <td class="schedule-description"> <b>Coffee Break</b></td>
+                    <td class="schedule-description">-</td>
+                  </tr>
+      
+                  
+      
+                  <tr>
+                    <td class="schedule-time"><span name="time_hour_seleting">15</span>:15,<br class="m"> Jun <a  name="data_seleting">18</a></td>
+                    <td class="schedule-slot">
+                      Alex Kendall<span class="speakers-company"></span>
+                    </td>
+                    <td class="schedule-description">Do 2023's AI Breakthroughs Apply to AVs too?</td>
+                    <td class="schedule-description"></td>
+                  </tr>
+      
+                  <tr>
+                    <td class="schedule-time"><span name="time_hour_seleting">15</span>:50,<br class="m"> Jun <a  name="data_seleting">18</a></td>
+                    <td class="schedule-slot">
+       
+                      <span class="speakers-company"> Sergey Levine</span>
+                    </td>
+                    <td class="schedule-description">Reinforcement Learning</td>
+                    <td class="schedule-description"></td>
+                  </tr>
+      
+                  <tr>
+                    <td class="schedule-time"><span name="time_hour_seleting">16</span>:25,<br class="m"> Jun <a  name="data_seleting">18</a></td>
+                    <td class="schedule-slot">
+                
+      
+                      <span class="speakers-company"> Yuning Chai</span>
+                    </td>
+                    <td class="schedule-description">Awesome Talk</td>
+                    <td class="schedule-description"></td>
+                  </tr>
+      
+                  <tr>
+                    <td class="schedule-time"><span name="time_hour_seleting">17</span>:00-<a name="time_hour_seleting" >17</a>:35,<br class="m"> Jun <a  name="data_seleting">18</a></td>
+                    <td class="schedule-slot">
+      
+                      <span class="speakers-company">TBD Moderator</span>
+                    </td>
+                    <td class="schedule-description">Panel Discussion</td>
+                    <td class="schedule-description"></td>
+                  </tr>
     
-    <!-- speakers -->
+      
+                </tbody>
+              </table>
+              </div>
+              <div>
+              Note: Presentation and winners of         
+            <b>Track 2: Online HD Map Construction Challenge </b> and <b>Track 3: 3D Occupancy Prediction Challenge</b>  
+            would be scheduled at 
+            <a href="https://www.vcad.site/">Vision-Centric Autonomous Driving Workshop</a>.
+            </h1>
+            </div>
+      
+          </div>
+        </div>
+      
+    
+   <!-- Speakers -->
+  
+   <div class="wrapper row1" id="id4">
+    <section class="hoc bg clear">
+      
+
+      <h1  class="h_title" id="speakers">Speakers</h1>
+
+
+      
+
+      <ul class=" group">
+
+        <li>
+
+         
+            <a href="https://www.cs.cmu.edu/~deva" target="_blank">
+              <div class="photo">   <img  src="/style/img/team/deva_ramanan.jpg" alt="Deva Ramanan" ></div>
+            
+          
+          <h1>Deva Ramanan</h1>
+    <p>  <i class="workshop_speaker_title">Professor</i>Carnegie Mellon University, USA</p>
+            
+          
+</a>
+        </li>
+
+        <li >
+          
+            <a href="https://www2.eecs.berkeley.edu/Faculty/Homepages/svlevine.html" target="_blank">
+              <div class="photo">    <img   src="/style/img/team/sergey_levine.jpg" alt="Sergey Levine" ></div>
+         
+          <h1>Sergey Levine</h1>
+         
+            <p><i class="workshop_speaker_title">Associate Professor</i>UC Berkeley, USA</p>
+       
+            
+
+          
+        </a>
+        </li>
+
+        <li>
+            <a href="https://alvarezlopezjosem.github.io" target="_blank">
+              <div class="photo">   <img  src="/style/img/team/jose_alvarez.jpg" alt="Jose M. Alvarez" ></div>
+          
+
+          <h1 >Jose M. Alvarez</h1>
+        <p>
+            <i class="workshop_speaker_title">Senior Research Manager</i>NVIDIA, USA</li>
+            </p>
+    
+
+         
+        </li>
+
+
+    
+
+  
+
+
+        <li>
+          
+            <a href="https://scholar.google.com/citations?user=i7U4YogAAAAJ" target="_blank">
+              <div class="photo"> <img  src="/style/img/team/yuning_chai.jpg" alt="Yuning Chai" ></div>
+          <h1>Yuning Chai</h1>
+           <p>
+            <i class="workshop_speaker_title">Head of AI Research</i>Cruise, USA
+      
+            </p>
+
+         
+</a>
+        </li>
+
+        <li >
+          
+            <a href="https://www.linkedin.com/in/phduan" target="_blank">
+              <div class="photo">   <img   src="/style/img/team/phil_duan.jpg"  alt="Phil Duan"  ></div>
+      
+
+          <h1 > Phil Duan </h1>
+      <p>
+            <i>Autopilot Vison Lead</i>Tesla, USA
+       
+             </p>
+
+ 
+</a>
+
+       
+        </li>
+
+        <li>
+          
+            <a href="https://alexgkendall.com" target="_blank">
+              <div class="photo"> 
+              <img  src="/style/img/team/alex_kendall.jpg" alt="Alex Kendall"></div>
+    
+
+          <h1 >Alex Kendall</h1>
+        <p>
+            <i class="workshop_speaker_title">CEO</i>Wayve, UK
+          
+            </p>
+
+</a>
+        
+
+        </li>
+
+ 
+
+        <li >
+
+         
+            <a href="https://medium.com/@patrickllgc" target="_blank">
+              <div class="photo"> 
+              <img  src="/style/img/team/patrick_liu.jpg" alt="Patrick Langechuan Liu" >
+      </div>
+          <h1>Patrick Langechuan Liu</h1> 
+             <p>
+            <i class="workshop_speaker_title">Director, Principal Engineer</i>XPENG, China
+        </p>
+            
+      </a>
+
+        </li>
+
+      </ul>
+
+   
+
+      
+    </section>
+  </div>
+
+
+
+
+
   
     <!-- ##### Challenges #### -->
     <div class="wrapper row4 " id="id3">
@@ -280,351 +626,7 @@
     </div>
   
   
-   <!-- Speakers -->
-  
-    <div class="wrapper row1" id="id4">
-      <section class="hoc bg clear">
-        
-  
-        <h1  class="h_title" id="speakers">Speakers</h1>
-  
- 
-        
-  
-        <ul class=" group">
-  
-          <li>
-  
-           
-              <a href="https://www.cs.cmu.edu/~deva" target="_blank">
-                <div class="photo">   <img  src="/style/img/team/deva_ramanan.jpg" alt="Deva Ramanan" ></div>
-              
-            
-            <h1>Deva Ramanan</h1>
-      <p>  <i class="workshop_speaker_title">Professor</i>Carnegie Mellon University, USA</p>
-              
-            
-  </a>
-          </li>
-  
-          <li >
-            
-              <a href="https://www2.eecs.berkeley.edu/Faculty/Homepages/svlevine.html" target="_blank">
-                <div class="photo">    <img   src="/style/img/team/sergey_levine.jpg" alt="Sergey Levine" ></div>
-           
-            <h1>Sergey Levine</h1>
-           
-              <p><i class="workshop_speaker_title">Associate Professor</i>UC Berkeley, USA</p>
-         
-              
-  
-            
-          </a>
-          </li>
-  
-          <li>
-              <a href="https://alvarezlopezjosem.github.io" target="_blank">
-                <div class="photo">   <img  src="/style/img/team/jose_alvarez.jpg" alt="Jose M. Alvarez" ></div>
-            
-  
-            <h1 >Jose M. Alvarez</h1>
-          <p>
-              <i class="workshop_speaker_title">Senior Research Manager</i>NVIDIA, USA</li>
-              </p>
-      
-  
-           
-          </li>
-  
-  
-      
-  
-    
-  
-  
-          <li>
-            
-              <a href="https://scholar.google.com/citations?user=i7U4YogAAAAJ" target="_blank">
-                <div class="photo"> <img  src="/style/img/team/yuning_chai.jpg" alt="Yuning Chai" ></div>
-            <h1>Yuning Chai</h1>
-             <p>
-              <i class="workshop_speaker_title">Head of AI Research</i>Cruise, USA
-        
-              </p>
-  
-           
-  </a>
-          </li>
-  
-          <li >
-            
-              <a href="https://www.linkedin.com/in/phduan" target="_blank">
-                <div class="photo">   <img   src="/style/img/team/phil_duan.jpg"  alt="Phil Duan"  ></div>
-        
-  
-            <h1 > Phil Duan </h1>
-        <p>
-              <i>Autopilot Vison Lead</i>Tesla, USA
-         
-               </p>
-  
-   
-  </a>
-  
-         
-          </li>
-  
-          <li>
-            
-              <a href="https://alexgkendall.com" target="_blank">
-                <div class="photo"> 
-                <img  src="/style/img/team/alex_kendall.jpg" alt="Alex Kendall"></div>
-      
-  
-            <h1 >Alex Kendall</h1>
-          <p>
-              <i class="workshop_speaker_title">CEO</i>Wayve, UK
-            
-              </p>
-  
-  </a>
-          
-  
-          </li>
-  
-   
-  
-          <li >
-  
-           
-              <a href="https://medium.com/@patrickllgc" target="_blank">
-                <div class="photo"> 
-                <img  src="/style/img/team/patrick_liu.jpg" alt="Patrick Langechuan Liu" >
-        </div>
-            <h1>Patrick Langechuan Liu</h1> 
-               <p>
-              <i class="workshop_speaker_title">Director, Principal Engineer</i>XPENG, China
-          </p>
-              
-        </a>
-  
-          </li>
-  
-        </ul>
-  
-     
-  
-        
-      </section>
-    </div>
-  
-  
- 
-    
-    <!-- ##### Schedule #### -->
-    <div class="wrapper row2 bg_Schedule" id="id5">
-      <div class="hoc bg clear">
-        
-        <h1 class="h_title" id="schedule"><b>Schedule</b></h1>
-  
-  
-        <h2 style="font-size: large; text-transform: none">Please select your time zone: 
-  
-        
-  
-        <select id="operator" style="font-size: 0.9rem;" onchange="time_zone()">
-  
-          <option value="-4" onclick="time_zone()">UTC-11 Niue/Pago_Pago</option>
-          <option value="-3" onclick="time_zone()">UTC-10 Honolulu/Adak </option>
-          <option value="-2" onclick="time_zone()">UTC-9 Alaska/Gambier Islands</option>
-          <option value="-1" onclick="time_zone()">UTC-8 Anchorage/Nome</option>
-          <option value="0" onclick="time_zone()" selected="selected">UTC-7 (CVPR venue time) Vancouver/Los_Angeles</option>
-          <option value="1" onclick="time_zone()">UTC-6 Belize</option>
-          <option value="2" onclick="time_zone()">UTC-5 Chicago</option>
-          <option value="3" onclick="time_zone()">UTC-4 New_York/Detroit</option>
-          <option value="4" onclick="time_zone()">UTC-3 Araguaina/Maceio/Thule</option>
-          <option value="5" onclick="time_zone()">UTC-2 Noronha/South_Georgia</option>
-          <option value="6" onclick="time_zone()">UTC-1 Cape_Verde/Azores</option>
-          <option value="7" onclick="time_zone()">UTC+0 Ireland/Portugal</option>
-          <option value="8" onclick="time_zone()">UTC+1 London/Canary</option>
-          <option value="9" onclick="time_zone()">UTC+2 Paris/Berlin/Cairo/Kigali</option>
-          <option value="10" onclick="time_zone()">UTC+3 Moscow/Baghdad</option>
-          <option value="11" onclick="time_zone()">UTC+4 Dubai/Mahe</option>
-          <option value="12" onclick="time_zone()">UTC+5 Qyzylorda/Kerguelen</option>
-          <option value="13" onclick="time_zone()">UTC+6 Almaty/Kolkata</option>
-          <option value="14" onclick="time_zone()">UTC+7 Bangkok/Christmas</option>
-          <option value="15" onclick="time_zone()">UTC+8 Beijing/Hong_Kong</option>
-          <option value="16" onclick="time_zone()">UTC+9 Tokyo/Seoul</option>
-          <option value="17" onclick="time_zone()">UTC+10 Sydney/Brisbane</option>
-          <option value="18" onclick="time_zone()">UTC+11 Lord_Howe/Kosrae</option>
-          <option value="17" onclick="time_zone()">UTC+12 Wallis/Fiji</option>
-      </select>
-  
-  
-  
-      </h2>
-  
-  
-  
-         <div class="schedule-tbl">
-          <table>
-            <thead>
-              <tr>
-                <th class="schedule-time">Time</th>
-                <th class="schedule-slot">Speaker</th>
-                <th class="schedule-description">Theme</th>
-                <th class="schedule-meta">Content</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="schedule-time"><span name="time_hour_seleting">9</span>:00,<br class="m"> Jun <a  name="data_seleting">18</a></td>
-                <td class="schedule-slot">
-                  Hongyang Li,
-                  <span class="speakers-company">Shanghai AI Lab</span>
-                </td>
-                <td class="schedule-description">Welcome and Opening Remarks</td>
-                <td class="schedule-description">slides / talk</td>
-              </tr>
-  
-              <tr>
-                <td class="schedule-time"><span name="time_hour_seleting">9</span>:10,<br class="m"> Jun <a  name="data_seleting">18</a></td>
-                <td class="schedule-slot">
-                  Patrick Langechuan Liu <span class="speakers-company"></span>
-                </td>
-                <td class="schedule-description">Awesome Talk</td>
-                <td class="schedule-description"></td>
-              </tr>
-  
-              <tr>
-                <td class="schedule-time"><span name="time_hour_seleting">9</span>:45,<br class="m"> Jun <a  name="data_seleting">18</a></td>
-                <td class="schedule-slot">
-                  Deva Ramanan <span class="speakers-company"></span>
-                </td>
-                <td class="schedule-description">Awesome Talk</td>
-                <td class="schedule-description"></td>
-              </tr>
-  
-              <tr>
-                <td class="schedule-time"><span name="time_hour_seleting">10</span>:20,<br class="m"> Jun <a  name="data_seleting">18</a></td>
-                <td class="schedule-slot">
-                  <b>Coffee Break</b> <span class="speakers-company"></span>
-                </td>
-                <td class="schedule-description"> <b>Coffee Break</b> </td>
-                <td class="schedule-description">-</td>
-              </tr>
-  
-              <tr>
-                <td class="schedule-time"><span name="time_hour_seleting">10</span>:30,<br class="m"> Jun <a  name="data_seleting">18</a></td>
-                <td class="schedule-slot">
-                  Organizers and Winners<span class="speakers-company"></span>
-                </td>
-                <td class="schedule-description">Track 1: OpenLane Topology Challenge</td>
-                <td class="schedule-description"></td>
-              </tr>
-  
-              <tr>
-                <td class="schedule-time"><span name="time_hour_seleting">11</span>:30,<br class="m"> Jun <a  name="data_seleting">18</a></td>
-                <td class="schedule-slot">
-                  Phil Duan<span class="speakers-company"></span>
-                </td>
-                <td class="schedule-description">Awesome Talk</td>
-                <td class="schedule-description"></td>
-              </tr>
-  
-              <tr>
-                <td class="schedule-time"><span name="time_hour_seleting">12</span>:05,<br class="m"> Jun <a  name="data_seleting">18</a></td>
-                <td class="schedule-slot">
-                  <b>Lunch Break</b> <span class="speakers-company"></span>
-                </td>
-                <td class="schedule-description"><b>Lunch Break</b></td>
-                <td class="schedule-description">-</td>
-              </tr>
-  
-              <tr>
-                <td class="schedule-time"><span name="time_hour_seleting">13</span>:30,<br class="m"> Jun <a  name="data_seleting">18</a></td>
-                <td class="schedule-slot">
-                  Jose M. Alvarez <span class="speakers-company"></span>
-                </td>
-                <td class="schedule-description">Awesome Talk</td>
-                <td class="schedule-description"></td>
-              </tr>
-  
-              <tr>
-                <td class="schedule-time"><span name="time_hour_seleting">14</span>:05,<br class="m"> Jun <a  name="data_seleting">18</a></td>
-                <td class="schedule-slot">
-                  Organizers and Winners <span class="speakers-company"></span>
-                </td>
-                <td class="schedule-description">Track 4: nuPlan Planning Challenge</td>
-                <td class="schedule-description"></td>
-              </tr>
-              
-  
-              <tr>
-                <td class="schedule-time"><span name="time_hour_seleting">15</span>:05,<br class="m"> Jun <a  name="data_seleting">18</a></td>
-                <td class="schedule-slot">
-                  <b>Coffee Break</b> <span class="speakers-company"></span>
-                </td>
-                <td class="schedule-description"> <b>Coffee Break</b></td>
-                <td class="schedule-description">-</td>
-              </tr>
-  
-              
-  
-              <tr>
-                <td class="schedule-time"><span name="time_hour_seleting">15</span>:15,<br class="m"> Jun <a  name="data_seleting">18</a></td>
-                <td class="schedule-slot">
-                  Alex Kendall<span class="speakers-company"></span>
-                </td>
-                <td class="schedule-description">Do 2023's AI Breakthroughs Apply to AVs too?</td>
-                <td class="schedule-description"></td>
-              </tr>
-  
-              <tr>
-                <td class="schedule-time"><span name="time_hour_seleting">15</span>:50,<br class="m"> Jun <a  name="data_seleting">18</a></td>
-                <td class="schedule-slot">
-   
-                  <span class="speakers-company"> Sergey Levine</span>
-                </td>
-                <td class="schedule-description">Reinforcement Learning</td>
-                <td class="schedule-description"></td>
-              </tr>
-  
-              <tr>
-                <td class="schedule-time"><span name="time_hour_seleting">16</span>:25,<br class="m"> Jun <a  name="data_seleting">18</a></td>
-                <td class="schedule-slot">
-            
-  
-                  <span class="speakers-company"> Yuning Chai</span>
-                </td>
-                <td class="schedule-description">Awesome Talk</td>
-                <td class="schedule-description"></td>
-              </tr>
-  
-              <tr>
-                <td class="schedule-time"><span name="time_hour_seleting">17</span>:00-<a name="time_hour_seleting" >17</a>:35,<br class="m"> Jun <a  name="data_seleting">18</a></td>
-                <td class="schedule-slot">
-  
-                  <span class="speakers-company">TBD Moderator</span>
-                </td>
-                <td class="schedule-description">Panel Discussion</td>
-                <td class="schedule-description"></td>
-              </tr>
 
-  
-            </tbody>
-          </table>
-          </div>
-          <div>
-          Note: Presentation and winners of         
-        <b>Track 2: Online HD Map Construction Challenge </b> and <b>Track 3: 3D Occupancy Prediction Challenge</b>  
-        would be scheduled at 
-        <a href="https://www.vcad.site/">Vision-Centric Autonomous Driving Workshop</a>.
-        </h1>
-        </div>
-  
-      </div>
-    </div>
   
   
   
