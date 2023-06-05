@@ -133,7 +133,7 @@ $(".scrollable").each(function(){
     console.log(op_timezone)
 
     // If you want to change the schedule, remember to change the list [Time_hour_select_base] in the function
-    var Time_hour_select_base = [9, 9, 9, 10, 11, 11, 11, 12, 13, 14, 14, 15, 15, 16, 17, 17]
+    var Time_hour_select_base = [9, 9, 9, 10, 11, 11, 11, 12, 13, 14, 14, 15, 15, 16, 17, 18]
     var date_select_base = [18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18]
 
 
