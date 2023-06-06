@@ -535,7 +535,7 @@ comment {
     .data_list dl{ border-left-style: solid; border-left-width: 1px ;}
   .scrollable th{white-space:nowrap;}
     .scrollable{  width: 100%; overflow-x: auto;}
-    .scrollable  th i{ font-size: 12px; font-style: normal; font-weight: normal;}
+    /* .scrollable  th i{ font-size: 12px; font-style: normal; font-weight: normal;}
     .scrollable  th ,.scrollable  td{ text-align: left;}
     .scrollable2  th i{   display: block;white-space:nowrap;}
     .scrollable2 TABLE {display: block; width: 100%; clear: both;}
@@ -545,7 +545,7 @@ comment {
     .scrollable2 table{ border-top:1px solid #e7e7e7}
     .scrollable2 TBODY {display: block; display: -webkit-box; width:auto; white-space: nowrap; overflow-x: auto; overflow-y: hidden;}
     .scrollable2 TBODY TR {display: inline-block; vertical-align: top;}
-    .scrollable2 TBODY TD, .scrollable2  TH { padding: 0 10px; height: 40px; display: flex; justify-content: center;   flex-direction: column;}
+    .scrollable2 TBODY TD, .scrollable2  TH { padding: 0 10px; height: 40px; display: flex; justify-content: center;   flex-direction: column;} */
  
   }
 
@@ -823,4 +823,8 @@ ol {
 
 .leaderboard {
   width: 50%;
+}
+
+.speakers-company {
+  color: gray;
 }
