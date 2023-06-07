@@ -833,7 +833,7 @@ $(function () {
             var htmlStr = `<tr class="item">
         <td>${item.Rank}</td>
         <td>${item.team}</td>
-        <td>${item.Organization}</td>
+        <td>-</td>
         <td><b>${item.Score}</b></td>
         <td></td>
       </tr>
@@ -853,9 +853,9 @@ $(function () {
     $(".table_list_4 tr th:nth-child(2)").click(function () {
         mysort($(this), 'team', allData_4)
     })
-    $(".table_list_4 tr th:nth-child(3)").click(function () {
-        mysort($(this), 'Organization', allData_4)
-    })
+    // $(".table_list_4 tr th:nth-child(3)").click(function () {
+    //     mysort($(this), 'Organization', allData_4)
+    // })
     $(".table_list_4 tr th:nth-child(4)").click(function () {
         mysort($(this), 'Score', allData_4)
     })
