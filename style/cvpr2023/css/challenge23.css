@@ -751,17 +751,17 @@ a.btn_goen{
 }
 
 .my_title {
-  font-size: 77px; 
+  font-size: 60px; 
   font-weight: 900; 
   user-select: none;
   margin-bottom: 1%; 
-  line-height: 99px; 
+  line-height: 60px; 
   color: goldenrod;
 }
 @media screen and (max-device-width:1024px) {
   .my_title {
     font-size: 30px; 
-    line-height: 50px; 
+    line-height: 35px; 
   }
 }
 
@@ -827,8 +827,8 @@ ol {
 
 .jijiji{
   font-size: 38px;
-  margin-left: 10px;
-  margin-top: -100px;
+  margin-left: 5px;
+  /* margin-top: -100px; */
 }
 @media screen and (max-device-width:1024px){
   .jijiji{
