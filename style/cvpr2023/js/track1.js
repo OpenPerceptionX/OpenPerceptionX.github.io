@@ -2,6 +2,7 @@ $(function () {
     // 定义的数据
     var allData = [
         {
+            "Organization": "MEGVII Technology",
             "Rank": 1,
             "Team": "MFV",
             "DET_l": 0.36,
@@ -12,6 +13,7 @@ $(function () {
             "Fscore": 0.26
         },
         {
+            "Organization": "QCraft",
             "Rank": 2,
             "Team": "qcraft2 *",
             "DET_l": 0.42,
@@ -22,6 +24,7 @@ $(function () {
             "Fscore": 0.48
         },
         {
+            "Organization": "AMD AEAI",
             "Rank": 3,
             "Team": "Victory",
             "DET_l": 0.22,
@@ -32,6 +35,7 @@ $(function () {
             "Fscore": 0.25
         },
         {
+            "Organization": "QCraft",
             "Rank": 4,
             "Team": "qcraft-team *",
             "DET_l": 0.30,
@@ -42,6 +46,7 @@ $(function () {
             "Fscore": 0.35
         },
         {
+            "Organization": "Middle East Technical University",
             "Rank": 5,
             "Team": "PlatypusWhisperers",
             "DET_l": 0.22,
@@ -52,6 +57,7 @@ $(function () {
             "Fscore": 0.46
         },
         {
+            "Organization": "MeiTuan",
             "Rank": 6,
             "Team": "gavin",
             "DET_l": 0.18,
@@ -62,6 +68,7 @@ $(function () {
             "Fscore": 0.25
         },
         {
+            "Organization": "Beihang University",
             "Rank": 7,
             "Team": "qwertyczx (e110_r)",
             "DET_l": 0.26,
@@ -72,6 +79,7 @@ $(function () {
             "Fscore": 0.28
         },
         {
+            "Organization": "Turing Inc.",
             "Rank": 8,
             "Team": "turing-machine",
             "DET_l": 0.13,
@@ -82,6 +90,7 @@ $(function () {
             "Fscore": 0.25
         },
         {
+            "Organization": "-",
             "Rank": 9,
             "Team": "Haoqing",
             "DET_l": 0.09,
@@ -92,6 +101,7 @@ $(function () {
             "Fscore": 0.4
         },
         {
+            "Organization": "-",
             "Rank": 10,
             "Team": "TopoNet-Anonymous",
             "DET_l": 0.19,
@@ -101,7 +111,8 @@ $(function () {
             "OLS": 0.33,
             "Fscore": 0.28
         },
-        {
+        {        
+            "Organization": "-",
             "Rank": 11,
             "Team": "BVLab",
             "DET_l": 0.12,
@@ -112,6 +123,7 @@ $(function () {
             "Fscore": 0.27
         },
         {
+            "Organization": "-",
             "Rank": 12,
             "Team": "HDI_EasternExpo",
             "DET_l": 0.14,
@@ -122,6 +134,7 @@ $(function () {
             "Fscore": 0.20
         },
         {
+            "Organization": "-",
             "Rank": 13,
             "Team": "ArterySentinel",
             "DET_l": 0.12,
@@ -132,6 +145,7 @@ $(function () {
             "Fscore": 0.22
         },
         {
+            "Organization": "Tsinghua University",
             "Rank": 14,
             "Team": "WeakChicken",
             "DET_l": 0.00,
@@ -162,7 +176,7 @@ $(function () {
             var htmlStr = `<tr class="item">
         <td>${item.Rank}</td>
         <td>${item.Team}</td>
-        <td>-</td>
+        <td>${item.Organization}</td>
         <td><b>${item.OLS}</b></td>
         <td>${item.DET_l}</td>
         <td>${item.DET_t}</td>
@@ -184,6 +198,9 @@ $(function () {
     })
     $(".table_list tr th:nth-child(2)").click(function () {
         mysort($(this), 'Team', allData)
+    })
+    $(".table_list tr th:nth-child(3)").click(function () {
+        mysort($(this), 'Organization', allData)
     })
     $(".table_list tr th:nth-child(4)").click(function () {
         mysort($(this), 'OLS', allData)
