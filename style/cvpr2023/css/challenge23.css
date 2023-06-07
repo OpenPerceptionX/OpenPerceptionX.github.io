@@ -845,6 +845,16 @@ ol {
   color: lightgray;
 }
 
+
+.speakers-company {
+  color: gray;
+}
+.qr_img{ height: 128px;}
+.qr_dec {
+  margin-left: 36px;
+}
+
+
 @media screen and (max-device-width:1024px){
   .my_subtitle_a{
     text-decoration: underline;
@@ -853,8 +863,8 @@ ol {
   .my_subtitle_a:hover{
     color: lightgray;
   }
-}
-
-.speakers-company {
-  color: gray;
+  .qr_img{ height: 96px;}
+  .qr_dec {
+    margin-left: 20px;
+  }
 }
