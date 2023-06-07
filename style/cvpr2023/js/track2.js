@@ -1,7 +1,7 @@
 $(function () {
     // 定义的数据
     var allData_2 = [
-        {
+        {      "Organization": "Mach Drive",
             "Rank": 1,
             "team": "MACH",
             "mAP": 83.5,
@@ -9,7 +9,7 @@ $(function () {
             "Divider": 81.54,
             "Boundary": 82.29
         },
-        {
+        {      "Organization": "Independent Researcher",
             "Rank": 2,
             "team": "MapNeXt",
             "mAP": 73.65,
@@ -18,6 +18,7 @@ $(function () {
             "Boundary": 75.34
         },
         {
+            "Organization": "Shanghai Jiao Tong University",
             "Rank": 3,
             "team": "SJTUCR",
             "mAP": 73.39,
@@ -26,6 +27,7 @@ $(function () {
             "Boundary": 74.73
         },
         {
+            "Organization": "Lotus NYO",
             "Rank": 4,
             "team": "LTS (MapLTS2)",
             "mAP": 72.56,
@@ -34,6 +36,7 @@ $(function () {
             "Boundary": 71.8
         },
         {
+            "Organization": "University of Science and Technology of China",
             "Rank": 5,
             "team": "ustc_vgg",
             "mAP": 71.02,
@@ -41,7 +44,7 @@ $(function () {
             "Divider": 73.24,
             "Boundary": 70.76
         },
-        {
+        {      "Organization": "Xi'an Jiaotong University",
             "Rank": 6,
             "team": "XJTU-IAIR",
             "mAP": 70.43,
@@ -50,6 +53,7 @@ $(function () {
             "Boundary": 72.07
         },
         {
+            "Organization": "-",
             "Rank": 7,
             "team": "MapVision",
             "mAP": 69.71,
@@ -58,6 +62,7 @@ $(function () {
             "Boundary": 70.06
         },
         {
+            "Organization": "-",
             "Rank": 8,
             "team": "Qml",
             "mAP": 68.28,
@@ -66,6 +71,7 @@ $(function () {
             "Boundary": 69.21
         },
         {
+            "Organization": "-",
             "Rank": 9,
             "team": "SAITAD",
             "mAP": 67.34,
@@ -74,6 +80,7 @@ $(function () {
             "Boundary": 69.45
         },
         {
+            "Organization": "GACRD",
             "Rank": 10,
             "team": "MapSeg",
             "mAP": 67.1,
@@ -82,6 +89,7 @@ $(function () {
             "Boundary": 67.46
         },
         {
+            "Organization": "-",
             "Rank": 11,
             "team": "IgniteVision",
             "mAP": 66.41,
@@ -90,6 +98,7 @@ $(function () {
             "Boundary": 66.76
         },
         {
+            "Organization": "-",
             "Rank": 12,
             "team": "LOMG (LOMG)",
             "mAP": 64.53,
@@ -98,6 +107,7 @@ $(function () {
             "Boundary": 63.96
         },
         {
+            "Organization": "-",
             "Rank": 13,
             "team": "MapKP",
             "mAP": 64.11,
@@ -106,6 +116,7 @@ $(function () {
             "Boundary": 65.01
         },
         {
+            "Organization": "-",
             "Rank": 14,
             "team": "MapLCF_HuaweiNoah",
             "mAP": 62.79,
@@ -114,6 +125,7 @@ $(function () {
             "Boundary": 61.77
         },
         {
+            "Organization": "-",
             "Rank": 15,
             "team": "Victory",
             "mAP": 60.66,
@@ -122,6 +134,7 @@ $(function () {
             "Boundary": 62.99
         },
         {
+            "Organization": "-",
             "Rank": 16,
             "team": "DNTCAD",
             "mAP": 59.84,
@@ -130,6 +143,7 @@ $(function () {
             "Boundary": 61.39
         },
         {
+            "Organization": "-",
             "Rank": 17,
             "team": "litemap (Litemap)",
             "mAP": 58.43,
@@ -138,6 +152,7 @@ $(function () {
             "Boundary": 60.89
         },
         {
+            "Organization": "-",
             "Rank": 18,
             "team": "Bell",
             "mAP": 56.94,
@@ -146,6 +161,7 @@ $(function () {
             "Boundary": 57.38
         },
         {
+            "Organization": "HDI",
             "Rank": 19,
             "team": "HDI_Striker (tiny)",
             "mAP": 52.77,
@@ -154,6 +170,7 @@ $(function () {
             "Boundary": 48.8
         },
         {
+            "Organization": "-",
             "Rank": 20,
             "team": "Ctyun-AI (BaseLine)",
             "mAP": 42.65,
@@ -162,6 +179,7 @@ $(function () {
             "Boundary": 40.77
         },
         {
+            "Organization": "-",
             "Rank": 21,
             "team": "Host_75980_Team (VectorMapNet-Baseline)",
             "mAP": 42.11,
@@ -190,7 +208,7 @@ $(function () {
             var htmlStr = `<tr class="item">
         <td>${item.Rank}</td>
         <td>${item.team}</td>
-        <td>-</td>
+        <td>${item.Organization}</td>
         <td><b>${item.mAP}</b></td>
         <td>${item.Ped_Crossing}</td>
         <td>${item.Divider}</td>
@@ -211,6 +229,9 @@ $(function () {
     })
     $(".table_list_2 tr th:nth-child(2)").click(function () {
         mysort($(this), 'team', allData_2)
+    })
+    $(".table_list_2 tr th:nth-child(3)").click(function () {
+        mysort($(this), 'Organization', allData_2)
     })
     $(".table_list_2 tr th:nth-child(4)").click(function () {
         mysort($(this), 'mAP', allData_2)

@@ -2,6 +2,7 @@ $(function () {
     // 定义的数据
     var allData_4 = [
         {
+            "Organization": "University of Tübingen",
             "Rank": 1,
             "team": "CS_Tu",
             "Score": 0.9,
@@ -31,6 +32,7 @@ $(function () {
             "ch3_speed_limit_compliance": 1
         },
         {
+            "Organization": "Horizon Robotics",
             "Rank": 2,
             "team": "autoHorizon2023 (hoplan)",
             "Score": 0.87,
@@ -60,6 +62,7 @@ $(function () {
             "ch3_speed_limit_compliance": 0.96
         },
         {
+            "Organization": "Pegasus Tech",
             "Rank": 3,
             "team": "pegasus_weitao (pegasus_multi_path)",
             "Score": 0.85,
@@ -89,6 +92,7 @@ $(function () {
             "ch3_speed_limit_compliance": 0.94
         },
         {
+            "Organization": "Nanyang Technological University",
             "Rank": 4,
             "team": "AID (GameFormer Planner)",
             "Score": 0.83,
@@ -118,6 +122,7 @@ $(function () {
             "ch3_speed_limit_compliance": 0.98
         },
         {
+            "Organization": "Xi'an Jiaotong University",
             "Rank": 5,
             "team": "wheeljack",
             "Score": 0.82,
@@ -147,6 +152,7 @@ $(function () {
             "ch3_speed_limit_compliance": 0.98
         },
         {
+            "Organization": "-",
             "Rank": 6,
             "team": "xg_test (ltp-planner)",
             "Score": 0.82,
@@ -176,6 +182,7 @@ $(function () {
             "ch3_speed_limit_compliance": 0.98
         },
         {
+            "Organization": "-",
             "Rank": 7,
             "team": "Forecast_MAE (planning, preliminary)",
             "Score": 0.8,
@@ -205,6 +212,7 @@ $(function () {
             "ch3_speed_limit_compliance": 0.98
         },
         {
+            "Organization": "Motional",
             "Rank": 8,
             "team": "Host_68305_Team (UrbanDriver)",
             "Score": 0.75,
@@ -234,6 +242,8 @@ $(function () {
             "ch3_speed_limit_compliance": 0.98
         },
         {
+            "Organization":
+            "The Hong Kong University of Science and Technology (Guangzhou)",
             "Rank": 9,
             "team": "HatOff2JuiceWRLD (& Haaland)",
             "Score": 0.74,
@@ -263,6 +273,7 @@ $(function () {
             "ch3_speed_limit_compliance": 0.97
         },
         {
+            "Organization": "Mines Paris, Valeo DAR, UC Berkeley",
             "Rank": 10,
             "team": "raphamas (MBAPPE)",
             "Score": 0.74,
@@ -292,6 +303,7 @@ $(function () {
             "ch3_speed_limit_compliance": 0.98
         },
         {
+            "Organization": "Tsinghua University",
             "Rank": 11,
             "team": "LBYD-base",
             "Score": 0.74,
@@ -321,6 +333,7 @@ $(function () {
             "ch3_speed_limit_compliance": 0.97
         },
         {
+            "Organization": "-",
             "Rank": 12,
             "team": "Jit_Ray_Chowdhury",
             "Score": 0.74,
@@ -350,6 +363,7 @@ $(function () {
             "ch3_speed_limit_compliance": 0.97
         },
         {
+            "Organization": "-",
             "Rank": 13,
             "team": "Join_planner",
             "Score": 0.71,
@@ -379,6 +393,7 @@ $(function () {
             "ch3_speed_limit_compliance": 0.97
         },
         {
+            "Organization": "-",
             "Rank": 14,
             "team": "Captain",
             "Score": 0.7,
@@ -408,6 +423,7 @@ $(function () {
             "ch3_speed_limit_compliance": 0.96
         },
         {
+            "Organization": "-",
             "Rank": 15,
             "team": "captain_net",
             "Score": 0.69,
@@ -437,6 +453,7 @@ $(function () {
             "ch3_speed_limit_compliance": 0.99
         },
         {
+            "Organization": "-",
             "Rank": 16,
             "team": "adet",
             "Score": 0.66,
@@ -466,6 +483,7 @@ $(function () {
             "ch3_speed_limit_compliance": 0.99
         },
         {
+            "Organization": "-",
             "Rank": 17,
             "team": "bbbong",
             "Score": 0.64,
@@ -495,6 +513,7 @@ $(function () {
             "ch3_speed_limit_compliance": 1
         },
         {
+            "Organization": "-",
             "Rank": 18,
             "team": "avr",
             "Score": 0.63,
@@ -524,6 +543,7 @@ $(function () {
             "ch3_speed_limit_compliance": 1
         },
         {
+            "Organization": "-",
             "Rank": 19,
             "team": "Driver_go",
             "Score": 0.61,
@@ -553,6 +573,7 @@ $(function () {
             "ch3_speed_limit_compliance": 0.99
         },
         {
+            "Organization": "-",
             "Rank": 20,
             "team": "crazy_planner",
             "Score": 0.6,
@@ -582,6 +603,7 @@ $(function () {
             "ch3_speed_limit_compliance": 0.95
         },
         {
+            "Organization": "-",
             "Rank": 21,
             "team": "Host_68305_Team (IDMPlanner)",
             "Score": 0.59,
@@ -611,6 +633,7 @@ $(function () {
             "ch3_speed_limit_compliance": 0.96
         },
         {
+            "Organization": "-",
             "Rank": 22,
             "team": "changdrive",
             "Score": 0.57,
@@ -640,6 +663,7 @@ $(function () {
             "ch3_speed_limit_compliance": 0.99
         },
         {
+            "Organization": "Intel",
             "Rank": 23,
             "team": "Lidan",
             "Score": 0.57,
@@ -669,6 +693,7 @@ $(function () {
             "ch3_speed_limit_compliance": 1
         },
         {
+            "Organization": "China Telecommunications Corporation",
             "Rank": 24,
             "team": "Ctyun",
             "Score": 0.51,
@@ -698,6 +723,7 @@ $(function () {
             "ch3_speed_limit_compliance": 0.99
         },
         {
+            "Organization": "-",
             "Rank": 25,
             "team": "NaNny (raster_model)",
             "Score": 0.42,
@@ -727,6 +753,7 @@ $(function () {
             "ch3_speed_limit_compliance": 0.95
         },
         {
+            "Organization": "Motional",
             "Rank": 26,
             "team": "Host_68305_Team (SimplePlanner)",
             "Score": 0.31,
@@ -756,6 +783,7 @@ $(function () {
             "ch3_speed_limit_compliance": 0.98
         },
         {
+            "Organization": "University of Science and Technology of China",
             "Rank": 27,
             "team": "NIC-showtime (LaneGCN)",
             "Score": 0.18,
@@ -805,7 +833,7 @@ $(function () {
             var htmlStr = `<tr class="item">
         <td>${item.Rank}</td>
         <td>${item.team}</td>
-        <td>-</td>
+        <td>${item.Organization}</td>
         <td><b>${item.Score}</b></td>
         <td></td>
       </tr>
@@ -824,6 +852,9 @@ $(function () {
     })
     $(".table_list_4 tr th:nth-child(2)").click(function () {
         mysort($(this), 'team', allData_4)
+    })
+    $(".table_list_4 tr th:nth-child(3)").click(function () {
+        mysort($(this), 'Organization', allData_4)
     })
     $(".table_list_4 tr th:nth-child(4)").click(function () {
         mysort($(this), 'Score', allData_4)

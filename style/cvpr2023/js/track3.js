@@ -2,6 +2,7 @@ $(function () {
     // 定义的数据
     var allData_3 = [
         {
+            "Organization": "NVIDIA",
             "Rank": 1,
             "team": "NVOCC (FB-OCC) *",
             "mIoU": 54.19,
@@ -24,6 +25,7 @@ $(function () {
             "vegetation": 53.76
         },
         {
+            "Organization": "42dot",
             "Rank": 2,
             "team": "42dot (MiLO)",
             "mIoU": 52.45,
@@ -46,6 +48,7 @@ $(function () {
             "vegetation": 53.74
         },
         {
+            "Organization": "Xiaomi Car, Peking University",
             "Rank": 3,
             "team": "UniOcc (final)",
             "mIoU": 51.27,
@@ -68,6 +71,7 @@ $(function () {
             "vegetation": 54.98
         },
         {
+            "Organization": "SAIC AI Lab",
             "Rank": 4,
             "team": "occ-heiheihei *",
             "mIoU": 49.36,
@@ -90,6 +94,7 @@ $(function () {
             "vegetation": 46.26
         },
         {
+            "Organization": "Harbin Institute of Technology",
             "Rank": 5,
             "team": "occ_transformer",
             "mIoU": 49.23,
@@ -112,6 +117,7 @@ $(function () {
             "vegetation": 45.04
         },
         {
+            "Organization": "Huawei Noah's Ark Lab",
             "Rank": 6,
             "team": "CakeCake (Noah CV Lab - POP)",
             "mIoU": 49.21,
@@ -134,6 +140,7 @@ $(function () {
             "vegetation": 46.34
         },
         {
+            "Organization": "University of Electronic Science and Technology of China",
             "Rank": 7,
             "team": "sdada (TEST)",
             "mIoU": 49.12,
@@ -156,6 +163,7 @@ $(function () {
             "vegetation": 52.49
         },
         {
+            "Organization": "Zhejiang University, University of Glasgow",
             "Rank": 8,
             "team": "LSS-Query",
             "mIoU": 49.02,
@@ -178,6 +186,7 @@ $(function () {
             "vegetation": 45.77
         },
         {
+            "Organization": "Xi'an Jiaotong University",
             "Rank": 9,
             "team": "JUST Coding",
             "mIoU": 48.69,
@@ -200,6 +209,7 @@ $(function () {
             "vegetation": 50.45
         },
         {
+            "Organization": "Institute of Computing Technology Chinese Academy of Sciences",
             "Rank": 10,
             "team": "Simple Occ",
             "mIoU": 48.58,
@@ -222,6 +232,7 @@ $(function () {
             "vegetation": 47.46
         },
         {
+            "Organization": "-",
             "Rank": 11,
             "team": "OccNeXt",
             "mIoU": 48.05,
@@ -244,6 +255,7 @@ $(function () {
             "vegetation": 44.69
         },
         {
+            "Organization": "-",
             "Rank": 12,
             "team": "ThreeNewHand",
             "mIoU": 48.02,
@@ -266,6 +278,7 @@ $(function () {
             "vegetation": 46.14
         },
         {
+            "Organization": "Zhejiang Lab",
             "Rank": 13,
             "team": "HuLuWa",
             "mIoU": 47.86,
@@ -288,6 +301,7 @@ $(function () {
             "vegetation": 46.95
         },
         {
+            "Organization": "-",
             "Rank": 14,
             "team": "SYSU Alpha Cat",
             "mIoU": 47.75,
@@ -310,6 +324,7 @@ $(function () {
             "vegetation": 47.06
         },
         {
+            "Organization": "Shandong University of Science and Technology",
             "Rank": 15,
             "team": "Topacc (DA ER OCC)",
             "mIoU": 47.72,
@@ -332,6 +347,7 @@ $(function () {
             "vegetation": 47.84
         },
         {
+            "Organization": "-",
             "Rank": 16,
             "team": "VinAI",
             "mIoU": 47.62,
@@ -354,6 +370,7 @@ $(function () {
             "vegetation": 43.55
         },
         {
+            "Organization": "-",
             "Rank": 17,
             "team": "IEI_AP (a'a)",
             "mIoU": 47.51,
@@ -376,6 +393,7 @@ $(function () {
             "vegetation": 44.64
         },
         {
+            "Organization": "-",
             "Rank": 18,
             "team": "Turing Brain Team",
             "mIoU": 47.36,
@@ -398,6 +416,7 @@ $(function () {
             "vegetation": 45.77
         },
         {
+            "Organization": "-",
             "Rank": 19,
             "team": "UM-DriveAI",
             "mIoU": 47.19,
@@ -420,6 +439,7 @@ $(function () {
             "vegetation": 48.34
         },
         {
+            "Organization": "-",
             "Rank": 20,
             "team": "Brave3D (VQFormer)",
             "mIoU": 47.16,
@@ -442,6 +462,7 @@ $(function () {
             "vegetation": 43.61
         },
         {
+            "Organization": "-",
             "Rank": 21,
             "team": "LTS (LTS)",
             "mIoU": 47.1,
@@ -464,6 +485,7 @@ $(function () {
             "vegetation": 44.54
         },
         {
+            "Organization": "-",
             "Rank": 22,
             "team": "Occ666 (Occ-BEV)",
             "mIoU": 45.92,
@@ -486,6 +508,7 @@ $(function () {
             "vegetation": 42.25
         },
         {
+            "Organization": "The Hong Kong University of Science and Technology (Guangzhou)",
             "Rank": 23,
             "team": "occ-dd (Intern_occ)",
             "mIoU": 45.51,
@@ -508,6 +531,7 @@ $(function () {
             "vegetation": 44.98
         },
         {
+            "Organization": "Hikvision",
             "Rank": 24,
             "team": "Sindri (RMMC-Occ(Intern-small))",
             "mIoU": 45,
@@ -530,6 +554,7 @@ $(function () {
             "vegetation": 38.12
         },
         {
+            "Organization": "-",
             "Rank": 25,
             "team": "yushan",
             "mIoU": 44.4,
@@ -552,6 +577,7 @@ $(function () {
             "vegetation": 42.64
         },
         {
+            "Organization": "University of Science and Technology of China",
             "Rank": 26,
             "team": "Skyship (stbase-512x1408)",
             "mIoU": 44.21,
@@ -574,6 +600,7 @@ $(function () {
             "vegetation": 38.93
         },
         {
+            "Organization": "-",
             "Rank": 27,
             "team": "ad (LSS)",
             "mIoU": 43.93,
@@ -596,6 +623,7 @@ $(function () {
             "vegetation": 42.27
         },
         {
+            "Organization": "-",
             "Rank": 28,
             "team": "TaiKuLa (ensemble_67)",
             "mIoU": 43.52,
@@ -618,6 +646,7 @@ $(function () {
             "vegetation": 41.39
         },
         {
+            "Organization": "-",
             "Rank": 29,
             "team": "GeWu (Multitask)",
             "mIoU": 43.22,
@@ -640,6 +669,7 @@ $(function () {
             "vegetation": 39.45
         },
         {
+            "Organization": "-",
             "Rank": 30,
             "team": "sdfasdf (InternImage)",
             "mIoU": 42.38,
@@ -662,6 +692,7 @@ $(function () {
             "vegetation": 36.34
         },
         {
+            "Organization": "Ulsan National Institution of Science and Technology",
             "Rank": 31,
             "team": "3DVisionLab (Final)",
             "mIoU": 42.11,
@@ -683,7 +714,7 @@ $(function () {
             "manmade": 46.82,
             "vegetation": 36.45
         },
-        {
+        {      "Organization": "-",
             "Rank": 32,
             "team": "TwoNewHands (bev det e15)",
             "mIoU": 41.9,
@@ -706,6 +737,7 @@ $(function () {
             "vegetation": 38.48
         },
         {
+            "Organization": "-",
             "Rank": 33,
             "team": "Swin_L_640x1600_Ensemble_TTA (Swin_L_640x1600_Ensemble_TTA_T)",
             "mIoU": 41.42,
@@ -728,6 +760,7 @@ $(function () {
             "vegetation": 35.36
         },
         {
+            "Organization": "University of Science and Technology of China",
             "Rank": 34,
             "team": "Spirit of Optimus",
             "mIoU": 41.36,
@@ -750,6 +783,7 @@ $(function () {
             "vegetation": 35.42
         },
         {
+            "Organization": "SIMIT",
             "Rank": 35,
             "team": "SIMIT (TripleBugs)",
             "mIoU": 40.21,
@@ -771,7 +805,7 @@ $(function () {
             "manmade": 43.34,
             "vegetation": 34.01
         },
-        {
+        {      "Organization": "-",
             "Rank": 36,
             "team": "NLperception",
             "mIoU": 39.72,
@@ -794,6 +828,7 @@ $(function () {
             "vegetation": 34.7
         },
         {
+            "Organization": "-",
             "Rank": 37,
             "team": "Cool_AV",
             "mIoU": 39.18,
@@ -816,6 +851,7 @@ $(function () {
             "vegetation": 39.07
         },
         {
+            "Organization": "-",
             "Rank": 38,
             "team": "LHWA-occ",
             "mIoU": 38.51,
@@ -838,6 +874,7 @@ $(function () {
             "vegetation": 36.17
         },
         {
+            "Organization": "-",
             "Rank": 39,
             "team": "KongMaster (occ)",
             "mIoU": 37.95,
@@ -860,6 +897,7 @@ $(function () {
             "vegetation": 31.55
         },
         {
+            "Organization": "-",
             "Rank": 40,
             "team": "DMCV",
             "mIoU": 34.29,
@@ -882,6 +920,7 @@ $(function () {
             "vegetation": 23.92
         },
         {
+            "Organization": "-",
             "Rank": 41,
             "team": "mogumoguAI",
             "mIoU": 32.27,
@@ -904,6 +943,7 @@ $(function () {
             "vegetation": 38.23
         },
         {
+            "Organization": "-",
             "Rank": 42,
             "team": "fdocc",
             "mIoU": 24.05,
@@ -926,28 +966,7 @@ $(function () {
             "vegetation": 14.33
         },
         {
-            "Rank": 44,
-            "team": "Baseline-bevformer (Baseline)",
-            "mIoU": 23.7,
-            "others": 10.24,
-            "barrier": 36.77,
-            "bicycle": 11.7,
-            "bus": 29.87,
-            "car": 38.92,
-            "construction_vehicle": 10.29,
-            "motorcycle": 22.05,
-            "pedestrian": 16.21,
-            "traffic_cone": 14.69,
-            "trailer": 27.44,
-            "truck": 23.13,
-            "driveable_surface": 48.19,
-            "other_flat": 33.1,
-            "sidewalk": 29.8,
-            "terrain": 17.64,
-            "manmade": 19.01,
-            "vegetation": 13.75
-        },
-        {
+            "Organization": "-",
             "Rank": 43,
             "team": "lukavetoshkin (baseline_bevformer)",
             "mIoU": 23.7,
@@ -970,6 +989,30 @@ $(function () {
             "vegetation": 13.74
         },
         {
+            "Organization": "-",
+            "Rank": 44,
+            "team": "Baseline-bevformer (Baseline)",
+            "mIoU": 23.7,
+            "others": 10.24,
+            "barrier": 36.77,
+            "bicycle": 11.7,
+            "bus": 29.87,
+            "car": 38.92,
+            "construction_vehicle": 10.29,
+            "motorcycle": 22.05,
+            "pedestrian": 16.21,
+            "traffic_cone": 14.69,
+            "trailer": 27.44,
+            "truck": 23.13,
+            "driveable_surface": 48.19,
+            "other_flat": 33.1,
+            "sidewalk": 29.8,
+            "terrain": 17.64,
+            "manmade": 19.01,
+            "vegetation": 13.75
+        },
+        {
+            "Organization": "-",
             "Rank": 45,
             "team": "DADADADA",
             "mIoU": 23.35,
@@ -992,6 +1035,7 @@ $(function () {
             "vegetation": 12.79
         },
         {
+            "Organization": "-",
             "Rank": 46,
             "team": "NaNny (LightGBM)",
             "mIoU": 14.31,
@@ -1014,6 +1058,7 @@ $(function () {
             "vegetation": 12.85
         },
         {
+            "Organization": "-",
             "Rank": 47,
             "team": "leo yang",
             "mIoU": 13.35,
@@ -1036,6 +1081,7 @@ $(function () {
             "vegetation": 9.24
         },
         {
+            "Organization": "-",
             "Rank": 48,
             "team": "ARM330 (YOLOX_OCC)",
             "mIoU": 2.77,
@@ -1078,7 +1124,7 @@ $(function () {
             var htmlStr = `<tr class="item">
         <td>${item.Rank}</td>
         <td>${item.team}</td>
-        <td>-</td>
+        <td>${item.Organization}</td>
         <td><b>${item.mIoU}</b></td>
         <td></td>
       </tr>
@@ -1097,6 +1143,9 @@ $(function () {
     })
     $(".table_list_3 tr th:nth-child(2)").click(function () {
         mysort($(this), 'team', allData_3)
+    })
+    $(".table_list_3 tr th:nth-child(3)").click(function () {
+        mysort($(this), 'Organization', allData_3)
     })
     $(".table_list_3 tr th:nth-child(4)").click(function () {
         mysort($(this), 'mIoU', allData_3)
