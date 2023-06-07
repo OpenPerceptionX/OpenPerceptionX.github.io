@@ -14,6 +14,10 @@
     <meta name="author" content="OpenDriveLab">
     <link rel="icon" type="image/png" href="/style/img/team_logo.png">
     <link rel="stylesheet" type="text/css" href="/style/cvpr2023/css/all.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/style/cvpr2023/css/track1.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/style/cvpr2023/css/track2.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/style/cvpr2023/css/track3.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/style/cvpr2023/css/track4.css" media="all">
 
     <!-- latex support -->
     <script>
@@ -462,6 +466,59 @@
       <br>
       <br>
 
+      <h4>
+        <b>Leaderboard</b>
+      </h4>
+
+      <div class="scrollable">
+        <table style="text-align: center;" class="table_list">
+          <thead>
+            <tr style="width: 100%;">
+              <th style="width: 5%;">Rank</th>
+              <th style="width: 15%;">Team Name</th>
+              <th style="width: 15%;">Institution</th>
+              <th style="width: 25%;"><b>OLS (primary)</b></th>
+              <th style="width: 10%;">$\text{DET}_{l}$</th>
+              <th style="width: 10%;">$\text{DET}_{t}$</th>
+              <th style="width: 10%;">$\text{TOP}_{ll}$</th>
+              <th style="width: 10%;">$\text{TOP}_{lt}$</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="page">
+              <td colspan="2"><button id="prev">Previous</button></td>
+              <td colspan="2">Page <input type="text" id="curpage" value="1"> of <span id="total">30</span></td>
+              <td colspan="2">
+                <select name="" id="pageOption">
+                  <option value="10">10rows</option>
+                  <option value="20">20rows</option>
+                  <!-- <option value="25">25rows</option> -->
+                  <!-- <option value="50">50rows</option>
+                  <option value="100">100rows</option> -->
+                </select>
+              </td>
+              <td colspan="2"><button id="next">Next</button></td>
+            </tr>
+          </tbody>
+        </table>
+  
+      </div>
+
+      <!-- <p class="footer_ts">
+        * &nbsp; For the real-time leaderboard please refer to <a href="https://eval.ai/web/challenges/challenge-page/1925/leaderboard">EvalAI</a>.
+        <br>
+        ** $\text{F-Score}$ for lane detection is not taken into consideration in both the challenge and leaderboard.
+      </p> -->
+      <!-- <img src="/style/img/events/challenge_2023/leaderboard_track_1.jpg" class="leaderboard"> -->
+      <p>
+        Above is the final leaderboard. A notification was sent from <a href="javaScript:">openlane-topology@googlegroups.com</a>. If you did not receive the notification, please specify your email and team name to <a href="mailto:wanghuijie@pjlab.org.cn">wanghuijie@pjlab.org.cn</a>.
+      </p>
+      <p class="footer_ts">
+        * Under investigation.
+      </p>
+
+      <br>
+
 
       
       <h4>
@@ -535,73 +592,7 @@
 
 
 
-      <h4>
-        <b>Leaderboard</b>
-      </h4>
-
-      <!-- <div class="scrollable">
-        <table style="text-align: center;">
-          <thead>
-            <tr>
-              <th style="background-color: rgb(14, 104, 14);">Rank</th>
-              <th style="background-color: rgb(14, 104, 14);">Method</th>
-              <th style="background-color: rgb(14, 104, 14);"><b>OLS <i>(primary metric)</i></b></th>
-              <th style="background-color: rgb(14, 104, 14);">$\text{DET}_{l}$</th>
-              <th style="background-color: rgb(14, 104, 14);">$\text{DET}_{t}$</th>
-              <th style="background-color: rgb(14, 104, 14);">$\text{TOP}_{ll}$</th>
-              <th style="background-color: rgb(14, 104, 14);">$\text{TOP}_{lt}$</th>
-              <th style="background-color: rgb(14, 104, 14);">$\text{F-Score**}$</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>BeingStrong</td>
-              <td>0.25</td>
-              <td>0.12</td>
-              <td>0.54</td>
-              <td>0.00</td>
-              <td>0.08</td>
-              <td>0.24</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>WeakChicken</td>
-              <td>0.17</td>
-              <td>0.00</td>
-              <td>0.68</td>
-              <td>0.00</td>
-              <td>0.00</td>
-              <td>0.00</td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>boketto</td>
-              <td>0.00</td>
-              <td>0.00</td>
-              <td>0.00</td>
-              <td>0.00</td>
-              <td>0.00</td>
-              <td>0.00</td>
-            </tr>
-          </tbody>
-        </table>
-      </div> -->
-
-      <!-- <p class="footer_ts">
-        * &nbsp; For the real-time leaderboard please refer to <a href="https://eval.ai/web/challenges/challenge-page/1925/leaderboard">EvalAI</a>.
-        <br>
-        ** $\text{F-Score}$ for lane detection is not taken into consideration in both the challenge and leaderboard.
-      </p> -->
-      <img src="/style/img/events/challenge_2023/leaderboard_track_1.jpg" class="leaderboard">
-      <p>
-        Above is the final leaderboard. A notification was sent from <a href="javaScript:">openlane-topology@googlegroups.com</a>. If you did not receive the notification, please specify your email and team name to <a href="mailto:wanghuijie@pjlab.org.cn">wanghuijie@pjlab.org.cn</a>.
-      </p>
-      <p class="footer_ts">
-        * Under investigation.
-      </p>
-
-      <br>
+      
 
 
 
@@ -737,6 +728,81 @@
       <br>
       <br>
 
+      <h4>
+        <b>Leaderboard</b>
+      </h4>
+      <div class="scrollable">
+        <table style="text-align: center;" class="table_list_2">
+          <thead>
+            <tr style="width: 100%;">
+              <th style="width: 5%;">Rank</th>
+              <th style="width: 15%;">Team Name</th>
+              <th style="width: 15%;">Institution</th>
+              <th style="width: 35%;"><b>mAP (primary)</b></th>
+              <th style="width: 15%;">Ped Crossing</th>
+              <th style="width: 10%;">Divider</th>
+              <th style="width: 10%;">Boundary</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="page_2">
+              <td colspan="2"><button id="prev_2">Previous</button></td>
+              <td colspan="2">Page <input type="text" id="curpage_2" value="1"> of <span id="total_2">30</span></td>
+              <td colspan="1">
+                <select name="" id="pageOption_2">
+                  <option value="10">10rows</option>
+                  <option value="20">20rows</option>
+                  <!-- <option value="25">25rows</option> -->
+                  <!-- <option value="50">50rows</option>
+                  <option value="100">100rows</option> -->
+                </select>
+              </td>
+              <td colspan="2"><button id="next_2">Next</button></td>
+            </tr>
+          </tbody>
+        </table>
+  
+      </div>
+      <!-- <div class="scrollable">
+        <table style="text-align: center;">
+          <thead>
+            <tr>
+              <th style="background-color: rgb(1, 126, 126);">Rank</th>
+              <th style="background-color: rgb(1, 126, 126);">Method</th>
+              <th style="background-color: rgb(1, 126, 126);"><b>mAP <i>(primary metric)</i></b></th>
+              <th style="background-color: rgb(1, 126, 126);">$AP_{div}\text{**}$</th>
+              <th style="background-color: rgb(1, 126, 126);">$AP_{bound}\text{**}$</th>
+              <th style="background-color: rgb(1, 126, 126);">$AP_{pc}\text{**}$</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Host_75980_Team</td>
+              <td>42.11</td>
+              <td>50.11</td>
+              <td>40.26</td>
+              <td>35.95</td>
+            </tr>
+          </tbody>
+        </table>
+      </div> -->
+
+      <!-- <p class="footer_ts">
+        * &nbsp; For the real-time leaderboard please refer to <a href="https://eval.ai/web/challenges/challenge-page/1954/leaderboard">EvalAI</a>.
+        <br>
+        ** $AP$ on different classes: lane divider (div), boundary (bound), and pedestrian crossing (pc).
+      </p> -->
+      <!-- <img src="/style/img/events/challenge_2023/leaderboard_track_2.png" class="leaderboard"> -->
+      <p>
+        Above is the final leaderboard. A notification was sent from <a href="javaScript:">online-hd-map-construction@googlegroups.com</a>. If you did not receive the notification, please specify your email and team name to <a href="mailto:wanghuijie@pjlab.org.cn">wanghuijie@pjlab.org.cn</a>.
+      </p>
+    
+
+
+
+      <br>
+
 
 
       <h4>
@@ -807,50 +873,7 @@
 
 
 
-      <h4>
-        <b>Leaderboard</b>
-      </h4>
-
-      <!-- <div class="scrollable">
-        <table style="text-align: center;">
-          <thead>
-            <tr>
-              <th style="background-color: rgb(1, 126, 126);">Rank</th>
-              <th style="background-color: rgb(1, 126, 126);">Method</th>
-              <th style="background-color: rgb(1, 126, 126);"><b>mAP <i>(primary metric)</i></b></th>
-              <th style="background-color: rgb(1, 126, 126);">$AP_{div}\text{**}$</th>
-              <th style="background-color: rgb(1, 126, 126);">$AP_{bound}\text{**}$</th>
-              <th style="background-color: rgb(1, 126, 126);">$AP_{pc}\text{**}$</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Host_75980_Team</td>
-              <td>42.11</td>
-              <td>50.11</td>
-              <td>40.26</td>
-              <td>35.95</td>
-            </tr>
-          </tbody>
-        </table>
-      </div> -->
-
-      <!-- <p class="footer_ts">
-        * &nbsp; For the real-time leaderboard please refer to <a href="https://eval.ai/web/challenges/challenge-page/1954/leaderboard">EvalAI</a>.
-        <br>
-        ** $AP$ on different classes: lane divider (div), boundary (bound), and pedestrian crossing (pc).
-      </p> -->
-      <img src="/style/img/events/challenge_2023/leaderboard_track_2.png" class="leaderboard">
-      <p>
-        Above is the final leaderboard. A notification was sent from <a href="javaScript:">online-hd-map-construction@googlegroups.com</a>. If you did not receive the notification, please specify your email and team name to <a href="mailto:wanghuijie@pjlab.org.cn">wanghuijie@pjlab.org.cn</a>.
-      </p>
-    
-
-
-
-      <br>
-
+      
 
 
       <h4>
@@ -977,6 +1000,80 @@
       <br>
 
 
+      <h4>
+        <b>Leaderboard</b>
+      </h4>
+
+      <div class="scrollable">
+        <table style="text-align: center;" class="table_list_3">
+          <thead>
+            <tr style="width: 100%;">
+              <th style="width: 5%;">Rank</th>
+              <th style="width: 15%;">Team Name</th>
+              <th style="width: 25%;">Institution</th>
+              <th style="width: 35%;"><b>mIoU (primary)</b></th>
+              <th style="width: 20%;"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="page_3">
+              <td colspan="2"><button id="prev_3">Previous</button></td>
+              <td colspan="1">Page <input type="text" id="curpage_3" value="1"> of <span id="total_3">30</span></td>
+              <td colspan="1">
+                <select name="" id="pageOption_3">
+                  <option value="10">10rows</option>
+                  <option value="20">20rows</option>
+                  <!-- <option value="25">25rows</option> -->
+                  <!-- <option value="50">50rows</option>
+                  <option value="100">100rows</option> -->
+                </select>
+              </td>
+              <td colspan="2"><button id="next_3">Next</button></td>
+            </tr>
+          </tbody>
+        </table>
+  
+      </div>
+
+      <!-- <div class="scrollable">
+        <table style="text-align: center;">
+          <thead>
+            <tr>
+              <th style="background-color: rgb(139, 14, 14);">Rank</th>
+              <th style="background-color: rgb(139, 14, 14);">Method</th>
+              <th style="background-color: rgb(139, 14, 14);"><b>mIoU <i>(primary metric)</i></b></th>
+              <th style="background-color: rgb(139, 14, 14);">$\text{F-Score**}$</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+      </div> -->
+
+      <!-- <p class="footer_ts">
+        * &nbsp; For the real-time leaderboard please refer to <a href="https://eval.ai/web/challenges/challenge-page/2045/leaderboard">EvalAI</a>.
+        <br>
+        ** $\text{F-Score}$ is not taken into consideration in both the challenge and leaderboard.
+      </p> -->
+      <!-- <img src="/style/img/events/challenge_2023/leaderboard_track_3.jpg" class="leaderboard"> -->
+      <p>
+        Above is the final leaderboard. A notification was sent from <a href="javaScript:">3d-occupancy-prediction-{1,2,3}@googlegroups.com</a> (please ignore duplicate emails). If you did not receive the notification, please specify your email and team name to <a href="mailto:wanghuijie@pjlab.org.cn">wanghuijie@pjlab.org.cn</a>.
+      </p>
+      <p class="footer_ts">
+        * Under investigation.
+      </p>
+    
+
+
+      <br>
+
+
 
       <h4>
         <b>Task Description</b>
@@ -1051,47 +1148,7 @@
 
 
 
-      <h4>
-        <b>Leaderboard</b>
-      </h4>
-
-      <!-- <div class="scrollable">
-        <table style="text-align: center;">
-          <thead>
-            <tr>
-              <th style="background-color: rgb(139, 14, 14);">Rank</th>
-              <th style="background-color: rgb(139, 14, 14);">Method</th>
-              <th style="background-color: rgb(139, 14, 14);"><b>mIoU <i>(primary metric)</i></b></th>
-              <th style="background-color: rgb(139, 14, 14);">$\text{F-Score**}$</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-            </tr>
-          </tbody>
-        </table>
-      </div> -->
-
-      <!-- <p class="footer_ts">
-        * &nbsp; For the real-time leaderboard please refer to <a href="https://eval.ai/web/challenges/challenge-page/2045/leaderboard">EvalAI</a>.
-        <br>
-        ** $\text{F-Score}$ is not taken into consideration in both the challenge and leaderboard.
-      </p> -->
-      <img src="/style/img/events/challenge_2023/leaderboard_track_3.jpg" class="leaderboard">
-      <p>
-        Above is the final leaderboard. A notification was sent from <a href="javaScript:">3d-occupancy-prediction-{1,2,3}@googlegroups.com</a> (please ignore duplicate emails). If you did not receive the notification, please specify your email and team name to <a href="mailto:wanghuijie@pjlab.org.cn">wanghuijie@pjlab.org.cn</a>.
-      </p>
-      <p class="footer_ts">
-        * Under investigation.
-      </p>
-    
-
-
-      <br>
+      
 
 
 
@@ -1224,6 +1281,76 @@
       <br>
       <br>
 
+      <h4>
+        <b>Leaderboard</b>
+      </h4>
+
+      <div class="scrollable">
+        <table style="text-align: center;" class="table_list_4">
+          <thead>
+            <tr style="width: 100%;">
+              <th style="width: 5%;">Rank</th>
+              <th style="width: 15%;">Team Name</th>
+              <th style="width: 25%;">Institution</th>
+              <th style="width: 35%;"><b>mIoU (primary)</b></th>
+              <th style="width: 20%;"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="page_4">
+              <td colspan="2"><button id="prev_4">Previous</button></td>
+              <td colspan="1">Page <input type="text" id="curpage_4" value="1"> of <span id="total_4">30</span></td>
+              <td colspan="1">
+                <select name="" id="pageOption_4">
+                  <option value="10">10rows</option>
+                  <option value="20">20rows</option>
+                  <!-- <option value="25">25rows</option> -->
+                  <!-- <option value="50">50rows</option>
+                  <option value="100">100rows</option> -->
+                </select>
+              </td>
+              <td colspan="2"><button id="next_4">Next</button></td>
+            </tr>
+          </tbody>
+        </table>
+  
+      </div>
+
+      <!-- <div class="scrollable">
+        <table style="text-align: center;">
+          <thead>
+            <tr>
+              <th style="background-color: rgb(25, 25, 145);">Rank</th>
+              <th style="background-color: rgb(25, 25, 145);">Team</th>
+              <th style="background-color: rgb(25, 25, 145);"><b>mean score <i>(primary metric)</i></b></th>
+              <th style="background-color: rgb(25, 25, 145);">Challenge 1</th>
+              <th style="background-color: rgb(25, 25, 145);">Challenge 2</th>
+              <th style="background-color: rgb(25, 25, 145);">Challenge 3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Host_68305_Team (Baseline)</td>
+              <td>0.15</td>
+              <td>0.15</td>
+              <td>0.39</td>
+              <td>0.61</td>
+            </tr>
+          </tbody>
+        </table>
+      </div> -->
+
+      <!-- <p class="footer_ts">
+        * For the real-time leaderboard please refer to <a href="https://eval.ai/web/challenges/challenge-page/1856/leaderboard">EvalAI</a>.
+      </p> -->
+      <!-- <img src="/style/img/events/challenge_2023/leaderboard_track_4.png" class="leaderboard"> -->
+      <p>
+        Above is the final leaderboard. Notifications are sent to prize winners from <a href="mailto:pat.karnchanachari@motional.com">pat.karnchanachari@motional.com</a>.
+      </p>
+
+      <br>
+
 
 
       <h4>
@@ -1290,44 +1417,7 @@
 
 
 
-      <h4>
-        <b>Leaderboard</b>
-      </h4>
-
-      <!-- <div class="scrollable">
-        <table style="text-align: center;">
-          <thead>
-            <tr>
-              <th style="background-color: rgb(25, 25, 145);">Rank</th>
-              <th style="background-color: rgb(25, 25, 145);">Team</th>
-              <th style="background-color: rgb(25, 25, 145);"><b>mean score <i>(primary metric)</i></b></th>
-              <th style="background-color: rgb(25, 25, 145);">Challenge 1</th>
-              <th style="background-color: rgb(25, 25, 145);">Challenge 2</th>
-              <th style="background-color: rgb(25, 25, 145);">Challenge 3</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Host_68305_Team (Baseline)</td>
-              <td>0.15</td>
-              <td>0.15</td>
-              <td>0.39</td>
-              <td>0.61</td>
-            </tr>
-          </tbody>
-        </table>
-      </div> -->
-
-      <!-- <p class="footer_ts">
-        * For the real-time leaderboard please refer to <a href="https://eval.ai/web/challenges/challenge-page/1856/leaderboard">EvalAI</a>.
-      </p> -->
-      <img src="/style/img/events/challenge_2023/leaderboard_track_4.png" class="leaderboard">
-      <p>
-        Above is the final leaderboard. Notifications are sent to prize winners from <a href="mailto:pat.karnchanachari@motional.com">pat.karnchanachari@motional.com</a>.
-      </p>
-
-      <br>
+      
 
 
       
@@ -1588,7 +1678,10 @@
     </footer> -->
     <script src="/style/cvpr2023/js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script> 
     <script src="/style/cvpr2023/js/all.js" type="text/javascript" charset="utf-8"></script> 
-
+    <script src="/style/cvpr2023/js/track1.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/style/cvpr2023/js/track2.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/style/cvpr2023/js/track3.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/style/cvpr2023/js/track4.js" type="text/javascript" charset="utf-8"></script>
     <script>
     $.get("/components/footer.html?xx",function(result){
       $("body").append(result)
