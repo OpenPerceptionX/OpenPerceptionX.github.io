@@ -1124,7 +1124,7 @@ $(function () {
             var htmlStr = `<tr class="item">
         <td>${item.Rank}</td>
         <td>${item.team}</td>
-        <td>${item.Organization}</td>
+        <td>-</td>
         <td><b>${item.mIoU}</b></td>
         <td></td>
       </tr>
@@ -1144,9 +1144,9 @@ $(function () {
     $(".table_list_3 tr th:nth-child(2)").click(function () {
         mysort($(this), 'team', allData_3)
     })
-    $(".table_list_3 tr th:nth-child(3)").click(function () {
-        mysort($(this), 'Organization', allData_3)
-    })
+    // $(".table_list_3 tr th:nth-child(3)").click(function () {
+    //     mysort($(this), 'Organization', allData_3)
+    // })
     $(".table_list_3 tr th:nth-child(4)").click(function () {
         mysort($(this), 'mIoU', allData_3)
     })
