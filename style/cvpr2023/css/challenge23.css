@@ -852,6 +852,11 @@ ol {
 .qr_img{ height: 128px;}
 .qr_dec {
   margin-left: 36px;
+  user-select: none;
+}
+.qr_dec2 {
+  margin-left: 87px;
+  user-select: none;
 }
 
 
@@ -866,5 +871,8 @@ ol {
   .qr_img{ height: 96px;}
   .qr_dec {
     margin-left: 20px;
+  }
+  .qr_dec2 {
+    margin-left: 48px;
   }
 }
