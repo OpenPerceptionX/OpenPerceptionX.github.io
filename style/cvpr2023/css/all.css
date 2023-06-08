@@ -829,3 +829,44 @@ ol {
 .speakers-company {
   color: gray;
 }
+
+
+.my_subtitle_a{
+  text-decoration: underline;
+  color: white;
+}
+.my_subtitle_a:hover{
+  color: lightgray;
+}
+
+
+.speakers-company {
+  color: gray;
+}
+.qr_img{ height: 128px;}
+.qr_dec {
+  margin-left: 36px;
+  user-select: none;
+}
+.qr_dec2 {
+  margin-left: 87px;
+  user-select: none;
+}
+
+
+@media screen and (max-device-width:1024px){
+  .my_subtitle_a{
+    text-decoration: underline;
+    color: white;
+  }
+  .my_subtitle_a:hover{
+    color: lightgray;
+  }
+  .qr_img{ height: 96px;}
+  .qr_dec {
+    margin-left: 20px;
+  }
+  .qr_dec2 {
+    margin-left: 48px;
+  }
+}
