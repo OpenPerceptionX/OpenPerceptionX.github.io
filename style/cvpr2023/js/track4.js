@@ -833,7 +833,7 @@ $(function () {
             var htmlStr = `<tr class="item">
         <td>${item.Rank}</td>
         <td>${item.team}</td>
-        <td>-</td>
+        <td>${item.Organization}</td>
         <td><b>${item.Score}</b></td>
         <td></td>
       </tr>
