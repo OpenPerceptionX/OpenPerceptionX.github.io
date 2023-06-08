@@ -779,6 +779,12 @@ a.btn_goen{
     line-height: 40px; 
   }
 }
+.my_subtitle a{
+  color: #ffe474;
+}
+.my_subtitle a:hover{
+  color: #fdff74;
+}
 
 .group li .workshop_speaker_title {
   font-size: 15px;
@@ -854,12 +860,12 @@ ol {
 }
 
 
-@media screen and (max-device-width:1024px){
-  .my_subtitle_a{
+@media screen and (max-device-width:1024px) {
+  .r_time .my_subtitle_a{
     text-decoration: underline;
     color: white;
   }
-  .my_subtitle_a:hover{
+  .r_time .my_subtitle_a:hover{
     color: lightgray;
   }
   .qr_img{ height: 96px;}
