@@ -2,7 +2,8 @@ $(function () {
     // 定义的数据
     var allData = [
         {
-            "Organization": "MEGVII Technology",
+            "Organization": "MEGVII Technology<br>旷视科技",
+            "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 1,
             "Team": "MFV",
             "DET_l": 0.36,
@@ -13,7 +14,8 @@ $(function () {
             "Fscore": 0.26
         },
         {
-            "Organization": "QCraft",
+            "Organization": "QCraft<br>轻舟智航",
+            "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 2,
             "Team": "qcraft2 *",
             "DET_l": 0.42,
@@ -25,6 +27,7 @@ $(function () {
         },
         {
             "Organization": "AMD AEAI",
+            "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 3,
             "Team": "Victory",
             "DET_l": 0.22,
@@ -35,7 +38,8 @@ $(function () {
             "Fscore": 0.25
         },
         {
-            "Organization": "QCraft",
+            "Organization": "QCraft<br>轻舟智航",
+            "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 4,
             "Team": "qcraft-team *",
             "DET_l": 0.30,
@@ -47,6 +51,7 @@ $(function () {
         },
         {
             "Organization": "Middle East Technical University",
+            "Country" : "/style/cvpr2023/img/country/TUR.svg",
             "Rank": 5,
             "Team": "PlatypusWhisperers",
             "DET_l": 0.22,
@@ -57,7 +62,8 @@ $(function () {
             "Fscore": 0.46
         },
         {
-            "Organization": "MeiTuan",
+            "Organization": "MeiTuan<br>美团",
+            "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 6,
             "Team": "gavin",
             "DET_l": 0.18,
@@ -68,7 +74,8 @@ $(function () {
             "Fscore": 0.25
         },
         {
-            "Organization": "Beihang University",
+            "Organization": "Beihang University<br>北京航空航天大学",
+            "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 7,
             "Team": "qwertyczx (e110_r)",
             "DET_l": 0.26,
@@ -80,6 +87,7 @@ $(function () {
         },
         {
             "Organization": "Turing Inc.",
+            "Country" : "/style/cvpr2023/img/country/JPN.svg",
             "Rank": 8,
             "Team": "turing-machine",
             "DET_l": 0.13,
@@ -91,6 +99,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 9,
             "Team": "Haoqing",
             "DET_l": 0.09,
@@ -102,6 +111,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 10,
             "Team": "TopoNet-Anonymous",
             "DET_l": 0.19,
@@ -113,6 +123,7 @@ $(function () {
         },
         {        
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 11,
             "Team": "BVLab",
             "DET_l": 0.12,
@@ -124,6 +135,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 12,
             "Team": "HDI_EasternExpo",
             "DET_l": 0.14,
@@ -135,6 +147,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 13,
             "Team": "ArterySentinel",
             "DET_l": 0.12,
@@ -145,7 +158,8 @@ $(function () {
             "Fscore": 0.22
         },
         {
-            "Organization": "Tsinghua University",
+            "Organization": "Tsinghua University<br>清华大学",
+            "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 14,
             "Team": "WeakChicken",
             "DET_l": 0.00,
@@ -166,6 +180,17 @@ $(function () {
     var curPage = 1
     renderList(allData)
     // 渲染数据列表
+    function num(i) {
+        var n = i.toFixed(2);
+        return(n);
+        }
+    function filter(i) {
+        if(i == '/style/cvpr2023/img/country/blank.png'){
+            return('-')
+        } else {
+            return('<img src='+i+' style="width: 33px; user-select: none;"/>')
+        }
+    }
     function renderList(data) {
         // 总页数
         pages = Math.ceil(total / page)
@@ -176,12 +201,13 @@ $(function () {
             var htmlStr = `<tr class="item">
         <td>${item.Rank}</td>
         <td>${item.Team}</td>
+        <td>${filter(item.Country)}</td>
         <td>${item.Organization}</td>
-        <td><b>${item.OLS}</b></td>
-        <td>${item.DET_l}</td>
-        <td>${item.DET_t}</td>
-        <td>${item.TOP_ll}</td>
-        <td>${item.TOP_lt}</td>
+        <td><b>${num(item.OLS)}</b></td>
+        <td>${num(item.DET_l)}</td>
+        <td>${num(item.DET_t)}</td>
+        <td>${num(item.TOP_ll)}</td>
+        <td>${num(item.TOP_lt)}</td>
       </tr>
 
       `
@@ -196,25 +222,22 @@ $(function () {
     $(".table_list tr th:nth-child(1)").click(function () {
         mysort($(this), 'Rank', allData)
     })
-    $(".table_list tr th:nth-child(2)").click(function () {
-        mysort($(this), 'Team', allData)
-    })
-    $(".table_list tr th:nth-child(3)").click(function () {
-        mysort($(this), 'Organization', allData)
-    })
-    $(".table_list tr th:nth-child(4)").click(function () {
+    // $(".table_list tr th:nth-child(2)").click(function () {
+    //     mysort($(this), 'Team', allData)
+    // })
+    $(".table_list tr th:nth-child(5)").click(function () {
         mysort($(this), 'OLS', allData)
     })
-    $(".table_list tr th:nth-child(5)").click(function () {
+    $(".table_list tr th:nth-child(6)").click(function () {
         mysort($(this), 'DET_l', allData)
     })
-    $(".table_list tr th:nth-child(6)").click(function () {
+    $(".table_list tr th:nth-child(7)").click(function () {
         mysort($(this), 'DET_t', allData)
     })
-    $(".table_list tr th:nth-child(7)").click(function () {
+    $(".table_list tr th:nth-child(8)").click(function () {
         mysort($(this), 'TOP_ll', allData)
     })
-    $(".table_list tr th:nth-child(8)").click(function () {
+    $(".table_list tr th:nth-child(9)").click(function () {
         mysort($(this), 'TOP_lt', allData)
     })
     // $(".table_list tr th:nth-child(9)").click(function () {

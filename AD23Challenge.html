@@ -470,8 +470,9 @@
             <tr style="width: 100%;">
               <th style="width: 5%;">Rank</th>
               <th style="width: 15%;">Team Name</th>
-              <th style="width: 15%;">Institution</th>
-              <th style="width: 25%;"><b>OLS (primary)</b></th>
+              <th style="width: 5%;">Country</th>
+              <th style="width: 20%;">Institution</th>
+              <th style="width: 15%;"><b>OLS (primary)</b></th>
               <th style="width: 10%;">$\text{DET}_{l}$</th>
               <th style="width: 10%;">$\text{DET}_{t}$</th>
               <th style="width: 10%;">$\text{TOP}_{ll}$</th>
@@ -481,8 +482,11 @@
           <tbody>
             <tr class="page">
               <td colspan="2"><button id="prev">Previous</button></td>
-              <td colspan="2">Page <input type="text" id="curpage" value="1"> of <span id="total">30</span></td>
-              <td colspan="2">
+              <td colspan="1"></td>
+              <td colspan="1"><button id="next">Next</button></td>
+              <td colspan="5">
+                Page <input type="text" id="curpage" value="1"> of <span id="total">30</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <select name="" id="pageOption">
                   <option value="10">10rows</option>
                   <option value="20">20rows</option>
@@ -491,7 +495,6 @@
                   <option value="100">100rows</option> -->
                 </select>
               </td>
-              <td colspan="2"><button id="next">Next</button></td>
             </tr>
           </tbody>
         </table>
@@ -731,9 +734,10 @@
             <tr style="width: 100%;">
               <th style="width: 5%;">Rank</th>
               <th style="width: 15%;">Team Name</th>
-              <th style="width: 15%;">Institution</th>
-              <th style="width: 35%;"><b>mAP (primary)</b></th>
-              <th style="width: 15%;">Ped Crossing</th>
+              <th style="width: 5%;">Country</th>
+              <th style="width: 20%;">Institution</th>
+              <th style="width: 25%;"><b>mAP (primary)</b></th>
+              <th style="width: 10%;">Ped Crossing</th>
               <th style="width: 10%;">Divider</th>
               <th style="width: 10%;">Boundary</th>
             </tr>
@@ -741,8 +745,11 @@
           <tbody>
             <tr class="page_2">
               <td colspan="2"><button id="prev_2">Previous</button></td>
-              <td colspan="2">Page <input type="text" id="curpage_2" value="1"> of <span id="total_2">30</span></td>
-              <td colspan="1">
+              <td colspan="1"></td>
+              <td colspan="1"><button id="next_2">Next</button></td>
+              <td colspan="4">
+                Page <input type="text" id="curpage_2" value="1"> of <span id="total_2">30</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <select name="" id="pageOption_2">
                   <option value="10">10rows</option>
                   <option value="20">20rows</option>
@@ -751,7 +758,6 @@
                   <option value="100">100rows</option> -->
                 </select>
               </td>
-              <td colspan="2"><button id="next_2">Next</button></td>
             </tr>
           </tbody>
         </table>
@@ -1004,16 +1010,19 @@
             <tr style="width: 100%;">
               <th style="width: 5%;">Rank</th>
               <th style="width: 15%;">Team Name</th>
-              <th style="width: 25%;">Institution</th>
-              <th style="width: 35%;"><b>mIoU (primary)</b></th>
-              <th style="width: 20%;"></th>
+              <th style="width: 5%;">Country</th>
+              <th style="width: 20%;">Institution</th>
+              <th style="width: 55%;"><b>mIoU (primary)</b></th>
             </tr>
           </thead>
           <tbody>
             <tr class="page_3">
               <td colspan="2"><button id="prev_3">Previous</button></td>
-              <td colspan="1">Page <input type="text" id="curpage_3" value="1"> of <span id="total_3">30</span></td>
+              <td colspan="1"></td>
+              <td colspan="1"><button id="next_3">Next</button></td>
               <td colspan="1">
+                Page <input type="text" id="curpage_3" value="1"> of <span id="total_3">30</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <select name="" id="pageOption_3">
                   <option value="10">10rows</option>
                   <option value="20">20rows</option>
@@ -1022,7 +1031,6 @@
                   <option value="100">100rows</option> -->
                 </select>
               </td>
-              <td colspan="2"><button id="next_3">Next</button></td>
             </tr>
           </tbody>
         </table>
@@ -1285,16 +1293,22 @@
             <tr style="width: 100%;">
               <th style="width: 5%;">Rank</th>
               <th style="width: 15%;">Team Name</th>
-              <th style="width: 25%;">Institution</th>
-              <th style="width: 35%;"><b>mIoU (primary)</b></th>
-              <th style="width: 20%;"></th>
+              <th style="width: 5%;">Country</th>
+              <th style="width: 20%;">Institution</th>
+              <th style="width: 25%;"><b>Overall Score (primary)</b></th>
+              <th style="width: 10%;"><b>CH1 Score</b></th>
+              <th style="width: 10%;"><b>CH2 Score</b></th>
+              <th style="width: 10%;"><b>CH3 Score</b></th>
             </tr>
           </thead>
           <tbody>
             <tr class="page_4">
               <td colspan="2"><button id="prev_4">Previous</button></td>
-              <td colspan="1">Page <input type="text" id="curpage_4" value="1"> of <span id="total_4">30</span></td>
-              <td colspan="1">
+              <td colspan="1"></td>
+              <td colspan="1"><button id="next_4">Next</button></td>
+              <td colspan="4">
+                Page <input type="text" id="curpage_4" value="1"> of <span id="total_4">30</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <select name="" id="pageOption_4">
                   <option value="10">10rows</option>
                   <option value="20">20rows</option>
@@ -1303,7 +1317,6 @@
                   <option value="100">100rows</option> -->
                 </select>
               </td>
-              <td colspan="2"><button id="next_4">Next</button></td>
             </tr>
           </tbody>
         </table>
