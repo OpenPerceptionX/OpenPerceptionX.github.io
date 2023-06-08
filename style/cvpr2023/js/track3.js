@@ -2,7 +2,8 @@ $(function () {
     // 定义的数据
     var allData_3 = [
         {
-            "Organization": "NVIDIA",
+            "Organization": "NVIDIA<br>英伟达",
+            "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 1,
             "team": "NVOCC (FB-OCC) *",
             "mIoU": 54.19,
@@ -26,6 +27,7 @@ $(function () {
         },
         {
             "Organization": "42dot",
+            "Country" : "/style/cvpr2023/img/country/KOR.svg",
             "Rank": 2,
             "team": "42dot (MiLO)",
             "mIoU": 52.45,
@@ -48,7 +50,8 @@ $(function () {
             "vegetation": 53.74
         },
         {
-            "Organization": "Xiaomi Car, Peking University",
+            "Organization": "Xiaomi Car, Peking University<br>小米汽车, 北京大学",
+            "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 3,
             "team": "UniOcc (final)",
             "mIoU": 51.27,
@@ -71,7 +74,8 @@ $(function () {
             "vegetation": 54.98
         },
         {
-            "Organization": "SAIC AI Lab",
+            "Organization": "SAIC AI Lab<br>上汽 AI LAB",
+            "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 4,
             "team": "occ-heiheihei *",
             "mIoU": 49.36,
@@ -94,7 +98,8 @@ $(function () {
             "vegetation": 46.26
         },
         {
-            "Organization": "Harbin Institute of Technology",
+            "Organization": "Harbin Institute of Technology<br>哈尔滨工业大学",
+            "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 5,
             "team": "occ_transformer",
             "mIoU": 49.23,
@@ -117,7 +122,8 @@ $(function () {
             "vegetation": 45.04
         },
         {
-            "Organization": "Huawei Noah's Ark Lab",
+            "Organization": "Huawei Noah's Ark Lab<br>华为诺亚方舟实验室",
+            "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 6,
             "team": "CakeCake (Noah CV Lab - POP)",
             "mIoU": 49.21,
@@ -140,7 +146,8 @@ $(function () {
             "vegetation": 46.34
         },
         {
-            "Organization": "University of Electronic Science and Technology of China",
+            "Organization": "University of Electronic Science and Technology of China<br>电子科技大学",
+            "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 7,
             "team": "sdada (TEST)",
             "mIoU": 49.12,
@@ -163,7 +170,8 @@ $(function () {
             "vegetation": 52.49
         },
         {
-            "Organization": "Zhejiang University, University of Glasgow",
+            "Organization": "Zhejiang University, University of Glasgow<br>浙江大学",
+            "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 8,
             "team": "LSS-Query",
             "mIoU": 49.02,
@@ -186,7 +194,8 @@ $(function () {
             "vegetation": 45.77
         },
         {
-            "Organization": "Xi'an Jiaotong University",
+            "Organization": "Xi'an Jiaotong University<br>西安交通大学",
+            "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 9,
             "team": "JUST Coding",
             "mIoU": 48.69,
@@ -209,7 +218,8 @@ $(function () {
             "vegetation": 50.45
         },
         {
-            "Organization": "Institute of Computing Technology Chinese Academy of Sciences",
+            "Organization": "Institute of Computing Technology Chinese Academy of Sciences<br>中国科学院计算技术研究所",
+            "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 10,
             "team": "Simple Occ",
             "mIoU": 48.58,
@@ -233,6 +243,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 11,
             "team": "OccNeXt",
             "mIoU": 48.05,
@@ -256,6 +267,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 12,
             "team": "ThreeNewHand",
             "mIoU": 48.02,
@@ -278,7 +290,8 @@ $(function () {
             "vegetation": 46.14
         },
         {
-            "Organization": "Zhejiang Lab",
+            "Organization": "Zhejiang Lab<br>之江实验室",
+            "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 13,
             "team": "HuLuWa",
             "mIoU": 47.86,
@@ -302,6 +315,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 14,
             "team": "SYSU Alpha Cat",
             "mIoU": 47.75,
@@ -324,7 +338,8 @@ $(function () {
             "vegetation": 47.06
         },
         {
-            "Organization": "Shandong University of Science and Technology",
+            "Organization": "Shandong University of Science and Technology<br>山东科技大学",
+            "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 15,
             "team": "Topacc (DA ER OCC)",
             "mIoU": 47.72,
@@ -348,6 +363,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 16,
             "team": "VinAI",
             "mIoU": 47.62,
@@ -371,6 +387,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 17,
             "team": "IEI_AP (a'a)",
             "mIoU": 47.51,
@@ -394,6 +411,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 18,
             "team": "Turing Brain Team",
             "mIoU": 47.36,
@@ -417,6 +435,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 19,
             "team": "UM-DriveAI",
             "mIoU": 47.19,
@@ -440,6 +459,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 20,
             "team": "Brave3D (VQFormer)",
             "mIoU": 47.16,
@@ -463,6 +483,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 21,
             "team": "LTS (LTS)",
             "mIoU": 47.1,
@@ -486,6 +507,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 22,
             "team": "Occ666 (Occ-BEV)",
             "mIoU": 45.92,
@@ -508,7 +530,8 @@ $(function () {
             "vegetation": 42.25
         },
         {
-            "Organization": "The Hong Kong University of Science and Technology (Guangzhou)",
+            "Organization": "The Hong Kong University of Science and Technology (Guangzhou)<br>香港科技大学（广州）",
+            "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 23,
             "team": "occ-dd (Intern_occ)",
             "mIoU": 45.51,
@@ -531,7 +554,8 @@ $(function () {
             "vegetation": 44.98
         },
         {
-            "Organization": "Hikvision",
+            "Organization": "Hikvision<br>海康威视",
+            "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 24,
             "team": "Sindri (RMMC-Occ(Intern-small))",
             "mIoU": 45,
@@ -555,6 +579,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 25,
             "team": "yushan",
             "mIoU": 44.4,
@@ -577,7 +602,8 @@ $(function () {
             "vegetation": 42.64
         },
         {
-            "Organization": "University of Science and Technology of China",
+            "Organization": "University of Science and Technology of China<br>中国科学技术大学",
+            "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 26,
             "team": "Skyship (stbase-512x1408)",
             "mIoU": 44.21,
@@ -601,6 +627,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 27,
             "team": "ad (LSS)",
             "mIoU": 43.93,
@@ -624,6 +651,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 28,
             "team": "TaiKuLa (ensemble_67)",
             "mIoU": 43.52,
@@ -647,6 +675,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 29,
             "team": "GeWu (Multitask)",
             "mIoU": 43.22,
@@ -670,6 +699,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 30,
             "team": "sdfasdf (InternImage)",
             "mIoU": 42.38,
@@ -693,6 +723,7 @@ $(function () {
         },
         {
             "Organization": "Ulsan National Institution of Science and Technology",
+            "Country" : "/style/cvpr2023/img/country/KOR.svg",
             "Rank": 31,
             "team": "3DVisionLab (Final)",
             "mIoU": 42.11,
@@ -714,7 +745,9 @@ $(function () {
             "manmade": 46.82,
             "vegetation": 36.45
         },
-        {      "Organization": "-",
+        {
+            "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 32,
             "team": "TwoNewHands (bev det e15)",
             "mIoU": 41.9,
@@ -738,8 +771,9 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 33,
-            "team": "Swin_L_640x1600_Ensemble_TTA (Swin_L_640x1600_Ensemble_TTA_T)",
+            "team": "Swin_L_640x1600 Ensemble_TTA",
             "mIoU": 41.42,
             "others": 22.53,
             "barrier": 44.96,
@@ -760,7 +794,8 @@ $(function () {
             "vegetation": 35.36
         },
         {
-            "Organization": "University of Science and Technology of China",
+            "Organization": "University of Science and Technology of China<br>中国科学技术大学",
+            "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 34,
             "team": "Spirit of Optimus",
             "mIoU": 41.36,
@@ -783,7 +818,8 @@ $(function () {
             "vegetation": 35.42
         },
         {
-            "Organization": "SIMIT",
+            "Organization": "SIMIT<br>中国科学院上海微系统与信息技术研究所",
+            "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 35,
             "team": "SIMIT (TripleBugs)",
             "mIoU": 40.21,
@@ -805,7 +841,9 @@ $(function () {
             "manmade": 43.34,
             "vegetation": 34.01
         },
-        {      "Organization": "-",
+        {
+            "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 36,
             "team": "NLperception",
             "mIoU": 39.72,
@@ -829,6 +867,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 37,
             "team": "Cool_AV",
             "mIoU": 39.18,
@@ -852,6 +891,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 38,
             "team": "LHWA-occ",
             "mIoU": 38.51,
@@ -875,6 +915,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 39,
             "team": "KongMaster (occ)",
             "mIoU": 37.95,
@@ -898,6 +939,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 40,
             "team": "DMCV",
             "mIoU": 34.29,
@@ -921,6 +963,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 41,
             "team": "mogumoguAI",
             "mIoU": 32.27,
@@ -944,6 +987,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 42,
             "team": "fdocc",
             "mIoU": 24.05,
@@ -967,6 +1011,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 43,
             "team": "lukavetoshkin (baseline_bevformer)",
             "mIoU": 23.7,
@@ -990,6 +1035,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 44,
             "team": "Baseline-bevformer (Baseline)",
             "mIoU": 23.7,
@@ -1013,6 +1059,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 45,
             "team": "DADADADA",
             "mIoU": 23.35,
@@ -1036,6 +1083,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 46,
             "team": "NaNny (LightGBM)",
             "mIoU": 14.31,
@@ -1059,6 +1107,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 47,
             "team": "leo yang",
             "mIoU": 13.35,
@@ -1082,6 +1131,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 48,
             "team": "ARM330 (YOLOX_OCC)",
             "mIoU": 2.77,
@@ -1114,6 +1164,17 @@ $(function () {
     var curPage_3 = 1
     renderList(allData_3)
     // 渲染数据列表
+    function num(i) {
+        var n = i.toFixed(2);
+        return(n);
+        }
+        function filter(i) {
+            if(i == '/style/cvpr2023/img/country/blank.png'){
+                return('-')
+            } else {
+                return('<img src='+i+' style="width: 33px; user-select: none;"/>')
+            }
+        }
     function renderList(data) {
         // 总页数
         pages_3 = Math.ceil(total_3 / page_3)
@@ -1124,9 +1185,9 @@ $(function () {
             var htmlStr = `<tr class="item">
         <td>${item.Rank}</td>
         <td>${item.team}</td>
+        <td>${filter(item.Country)}</td>
         <td>${item.Organization}</td>
-        <td><b>${item.mIoU}</b></td>
-        <td></td>
+        <td><b>${num(item.mIoU)}</b></td>
       </tr>
 
       `
@@ -1141,13 +1202,10 @@ $(function () {
     $(".table_list_3 tr th:nth-child(1)").click(function () {
         mysort($(this), 'Rank', allData_3)
     })
-    $(".table_list_3 tr th:nth-child(2)").click(function () {
-        mysort($(this), 'team', allData_3)
-    })
-    $(".table_list_3 tr th:nth-child(3)").click(function () {
-        mysort($(this), 'Organization', allData_3)
-    })
-    $(".table_list_3 tr th:nth-child(4)").click(function () {
+    // $(".table_list_3 tr th:nth-child(2)").click(function () {
+    //     mysort($(this), 'team', allData_3)
+    // })
+    $(".table_list_3 tr th:nth-child(5)").click(function () {
         mysort($(this), 'mIoU', allData_3)
     })
     // 排序方法

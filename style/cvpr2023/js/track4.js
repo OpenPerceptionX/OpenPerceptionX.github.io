@@ -3,6 +3,7 @@ $(function () {
     var allData_4 = [
         {
             "Organization": "University of Tübingen",
+            "Country" : "/style/cvpr2023/img/country/DEU.svg",
             "Rank": 1,
             "team": "CS_Tu",
             "Score": 0.9,
@@ -32,7 +33,8 @@ $(function () {
             "ch3_speed_limit_compliance": 1
         },
         {
-            "Organization": "Horizon Robotics",
+            "Organization": "Horizon Robotics<br>地平线",
+            "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 2,
             "team": "autoHorizon2023 (hoplan)",
             "Score": 0.87,
@@ -62,7 +64,8 @@ $(function () {
             "ch3_speed_limit_compliance": 0.96
         },
         {
-            "Organization": "Pegasus Tech",
+            "Organization": "Pegasus Tech<br>云骥智行",
+            "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 3,
             "team": "pegasus_weitao (pegasus_multi_path)",
             "Score": 0.85,
@@ -92,7 +95,8 @@ $(function () {
             "ch3_speed_limit_compliance": 0.94
         },
         {
-            "Organization": "Nanyang Technological University",
+            "Organization": "Nanyang Technological University<br>南洋理工大学",
+            "Country" : "/style/cvpr2023/img/country/SGP.svg",
             "Rank": 4,
             "team": "AID (GameFormer Planner)",
             "Score": 0.83,
@@ -122,7 +126,8 @@ $(function () {
             "ch3_speed_limit_compliance": 0.98
         },
         {
-            "Organization": "Xi'an Jiaotong University",
+            "Organization": "Xi'an Jiaotong University<br>西安交通大学",
+            "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 5,
             "team": "wheeljack",
             "Score": 0.82,
@@ -153,6 +158,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 6,
             "team": "xg_test (ltp-planner)",
             "Score": 0.82,
@@ -183,6 +189,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 7,
             "team": "Forecast_MAE (planning, preliminary)",
             "Score": 0.8,
@@ -213,6 +220,7 @@ $(function () {
         },
         {
             "Organization": "Motional",
+            "Country" : "/style/cvpr2023/img/country/USA.svg",
             "Rank": 8,
             "team": "Host_68305_Team (UrbanDriver)",
             "Score": 0.75,
@@ -243,7 +251,8 @@ $(function () {
         },
         {
             "Organization":
-            "The Hong Kong University of Science and Technology (Guangzhou)",
+                "The Hong Kong University of Science and Technology (Guangzhou)<br>香港科技大学（广州）",
+            "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 9,
             "team": "HatOff2JuiceWRLD (& Haaland)",
             "Score": 0.74,
@@ -274,6 +283,7 @@ $(function () {
         },
         {
             "Organization": "Mines Paris, Valeo DAR, UC Berkeley",
+            "Country" : "/style/cvpr2023/img/country/FRA.svg",
             "Rank": 10,
             "team": "raphamas (MBAPPE)",
             "Score": 0.74,
@@ -303,7 +313,8 @@ $(function () {
             "ch3_speed_limit_compliance": 0.98
         },
         {
-            "Organization": "Tsinghua University",
+            "Organization": "Tsinghua University<br>清华大学",
+            "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 11,
             "team": "LBYD-base",
             "Score": 0.74,
@@ -334,6 +345,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 12,
             "team": "Jit_Ray_Chowdhury",
             "Score": 0.74,
@@ -364,6 +376,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 13,
             "team": "Join_planner",
             "Score": 0.71,
@@ -394,6 +407,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 14,
             "team": "Captain",
             "Score": 0.7,
@@ -424,6 +438,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 15,
             "team": "captain_net",
             "Score": 0.69,
@@ -454,6 +469,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 16,
             "team": "adet",
             "Score": 0.66,
@@ -484,6 +500,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 17,
             "team": "bbbong",
             "Score": 0.64,
@@ -514,6 +531,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 18,
             "team": "avr",
             "Score": 0.63,
@@ -544,6 +562,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 19,
             "team": "Driver_go",
             "Score": 0.61,
@@ -574,6 +593,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 20,
             "team": "crazy_planner",
             "Score": 0.6,
@@ -604,6 +624,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 21,
             "team": "Host_68305_Team (IDMPlanner)",
             "Score": 0.59,
@@ -634,6 +655,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 22,
             "team": "changdrive",
             "Score": 0.57,
@@ -664,6 +686,7 @@ $(function () {
         },
         {
             "Organization": "Intel",
+            "Country" : "/style/cvpr2023/img/country/USA.svg",
             "Rank": 23,
             "team": "Lidan",
             "Score": 0.57,
@@ -693,7 +716,8 @@ $(function () {
             "ch3_speed_limit_compliance": 1
         },
         {
-            "Organization": "China Telecommunications Corporation",
+            "Organization": "China Telecommunications Corporation<br>中国电信集团有限公司",
+            "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 24,
             "team": "Ctyun",
             "Score": 0.51,
@@ -724,6 +748,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 25,
             "team": "NaNny (raster_model)",
             "Score": 0.42,
@@ -754,6 +779,7 @@ $(function () {
         },
         {
             "Organization": "Motional",
+            "Country" : "/style/cvpr2023/img/country/USA.svg",
             "Rank": 26,
             "team": "Host_68305_Team (SimplePlanner)",
             "Score": 0.31,
@@ -783,17 +809,18 @@ $(function () {
             "ch3_speed_limit_compliance": 0.98
         },
         {
-            "Organization": "University of Science and Technology of China",
+            "Organization": "University of Science and Technology of China<br>中国科学技术大学",
+            "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 27,
             "team": "NIC-showtime (LaneGCN)",
             "Score": 0.18,
-            "ch1_overall_score": 0.41,
+            "ch1_overall_score": 0.27,
             "ch1_avg_displacement_error_within_bound": null,
             "ch1_final_displacement_error_within_bound": null,
             "ch1_miss_rate_within_bound": null,
             "ch1_avg_heading_error_within_bound": null,
             "ch1_final_heading_error_within_bound": null,
-            "ch2_overall_score": null,
+            "ch2_overall_score": 	0.11,
             "ch2_ego_is_making_progress": null,
             "ch2_drivable_area_compliance": null,
             "ch2_driving_direction_compliance": null,
@@ -802,7 +829,7 @@ $(function () {
             "ch2_time_to_collision_within_bound": null,
             "ch2_ego_progress_along_expert_route": null,
             "ch2_speed_limit_compliance": null,
-            "ch3_overall_score": null,
+            "ch3_overall_score": 0.14,
             "ch3_ego_is_making_progress": null,
             "ch3_drivable_area_compliance": null,
             "ch3_driving_direction_compliance": null,
@@ -823,6 +850,17 @@ $(function () {
     var curPage_4 = 1
     renderList(allData_4)
     // 渲染数据列表
+    function num(i) {
+        var n = i.toFixed(2);
+        return(n);
+        }
+        function filter(i) {
+            if(i == '/style/cvpr2023/img/country/blank.png'){
+                return('-')
+            } else {
+                return('<img src='+i+' style="width: 33px; user-select: none;"/>')
+            }
+        }
     function renderList(data) {
         // 总页数
         pages_4 = Math.ceil(total_4 / page_4)
@@ -833,9 +871,12 @@ $(function () {
             var htmlStr = `<tr class="item">
         <td>${item.Rank}</td>
         <td>${item.team}</td>
+        <td>${filter(item.Country)}</td>
         <td>${item.Organization}</td>
-        <td><b>${item.Score}</b></td>
-        <td></td>
+        <td><b>${num(item.Score)}</b></td>
+        <td>${num(item.ch1_overall_score)}</td>
+        <td>${num(item.ch2_overall_score)}</td>
+        <td>${num(item.ch3_overall_score)}</td>
       </tr>
 
       `
@@ -850,14 +891,20 @@ $(function () {
     $(".table_list_4 tr th:nth-child(1)").click(function () {
         mysort($(this), 'Rank', allData_4)
     })
-    $(".table_list_4 tr th:nth-child(2)").click(function () {
-        mysort($(this), 'team', allData_4)
-    })
-    // $(".table_list_4 tr th:nth-child(3)").click(function () {
-    //     mysort($(this), 'Organization', allData_4)
+    // $(".table_list_4 tr th:nth-child(2)").click(function () {
+    //     mysort($(this), 'team', allData_4)
     // })
-    $(".table_list_4 tr th:nth-child(4)").click(function () {
+    $(".table_list_4 tr th:nth-child(5)").click(function () {
         mysort($(this), 'Score', allData_4)
+    })
+    $(".table_list_4 tr th:nth-child(6)").click(function () {
+        mysort($(this), 'ch1_overall_score', allData_4)
+    })
+    $(".table_list_4 tr th:nth-child(7)").click(function () {
+        mysort($(this), 'ch2_overall_score', allData_4)
+    })
+    $(".table_list_4 tr th:nth-child(8)").click(function () {
+        mysort($(this), 'ch3_overall_score', allData_4)
     })
     // 排序方法
     function mysort(obj, field, data) {

@@ -1,7 +1,9 @@
 $(function () {
     // 定义的数据
     var allData_2 = [
-        {      "Organization": "Mach Drive",
+        {
+            "Organization": "Mach Drive<br>迈驰智行",
+            "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 1,
             "team": "MACH",
             "mAP": 83.5,
@@ -9,7 +11,9 @@ $(function () {
             "Divider": 81.54,
             "Boundary": 82.29
         },
-        {      "Organization": "Independent Researcher",
+        {
+            "Organization": "Independent Researcher",
+            "Country" : "/style/cvpr2023/img/country/USA.svg",
             "Rank": 2,
             "team": "MapNeXt",
             "mAP": 73.65,
@@ -18,7 +22,8 @@ $(function () {
             "Boundary": 75.34
         },
         {
-            "Organization": "Shanghai Jiao Tong University",
+            "Organization": "Shanghai Jiao Tong University<br>上海交通大学",
+            "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 3,
             "team": "SJTUCR",
             "mAP": 73.39,
@@ -27,7 +32,8 @@ $(function () {
             "Boundary": 74.73
         },
         {
-            "Organization": "Lotus NYO",
+            "Organization": "Lotus NYO<br>路特斯汽车",
+            "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 4,
             "team": "LTS (MapLTS2)",
             "mAP": 72.56,
@@ -36,7 +42,8 @@ $(function () {
             "Boundary": 71.8
         },
         {
-            "Organization": "University of Science and Technology of China",
+            "Organization": "University of Science and Technology of China<br>中国科学技术大学",
+            "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 5,
             "team": "ustc_vgg",
             "mAP": 71.02,
@@ -44,7 +51,9 @@ $(function () {
             "Divider": 73.24,
             "Boundary": 70.76
         },
-        {      "Organization": "Xi'an Jiaotong University",
+        {
+            "Organization": "Xi'an Jiaotong University<br>西安交通大学",
+            "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 6,
             "team": "XJTU-IAIR",
             "mAP": 70.43,
@@ -54,6 +63,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 7,
             "team": "MapVision",
             "mAP": 69.71,
@@ -63,6 +73,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 8,
             "team": "Qml",
             "mAP": 68.28,
@@ -72,6 +83,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 9,
             "team": "SAITAD",
             "mAP": 67.34,
@@ -80,7 +92,8 @@ $(function () {
             "Boundary": 69.45
         },
         {
-            "Organization": "GACRD",
+            "Organization": "GACRD<br>广汽研究院",
+            "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 10,
             "team": "MapSeg",
             "mAP": 67.1,
@@ -90,6 +103,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 11,
             "team": "IgniteVision",
             "mAP": 66.41,
@@ -99,6 +113,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 12,
             "team": "LOMG (LOMG)",
             "mAP": 64.53,
@@ -108,6 +123,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 13,
             "team": "MapKP",
             "mAP": 64.11,
@@ -117,6 +133,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 14,
             "team": "MapLCF_HuaweiNoah",
             "mAP": 62.79,
@@ -126,6 +143,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 15,
             "team": "Victory",
             "mAP": 60.66,
@@ -135,6 +153,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 16,
             "team": "DNTCAD",
             "mAP": 59.84,
@@ -144,6 +163,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 17,
             "team": "litemap (Litemap)",
             "mAP": 58.43,
@@ -153,6 +173,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 18,
             "team": "Bell",
             "mAP": 56.94,
@@ -161,7 +182,8 @@ $(function () {
             "Boundary": 57.38
         },
         {
-            "Organization": "HDI",
+            "Organization": "HDI<br>武汉中海庭",
+            "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 19,
             "team": "HDI_Striker (tiny)",
             "mAP": 52.77,
@@ -171,6 +193,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 20,
             "team": "Ctyun-AI (BaseLine)",
             "mAP": 42.65,
@@ -180,6 +203,7 @@ $(function () {
         },
         {
             "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 21,
             "team": "Host_75980_Team (VectorMapNet-Baseline)",
             "mAP": 42.11,
@@ -198,6 +222,17 @@ $(function () {
     var curPage_2 = 1
     renderList(allData_2)
     // 渲染数据列表
+    function num(i) {
+        var n = i.toFixed(2);
+        return(n);
+        }
+        function filter(i) {
+            if(i == '/style/cvpr2023/img/country/blank.png'){
+                return('-')
+            } else {
+                return('<img src='+i+' style="width: 33px; user-select: none;"/>')
+            }
+        }
     function renderList(data) {
         // 总页数
         pages_2 = Math.ceil(total_2 / page_2)
@@ -208,11 +243,12 @@ $(function () {
             var htmlStr = `<tr class="item">
         <td>${item.Rank}</td>
         <td>${item.team}</td>
+        <td>${filter(item.Country)}</td>
         <td>${item.Organization}</td>
-        <td><b>${item.mAP}</b></td>
-        <td>${item.Ped_Crossing}</td>
-        <td>${item.Divider}</td>
-        <td>${item.Boundary}</td>
+        <td><b>${num(item.mAP)}</b></td>
+        <td>${num(item.Ped_Crossing)}</td>
+        <td>${num(item.Divider)}</td>
+        <td>${num(item.Boundary)}</td>
       </tr>
 
       `
@@ -227,22 +263,19 @@ $(function () {
     $(".table_list_2 tr th:nth-child(1)").click(function () {
         mysort($(this), 'Rank', allData_2)
     })
-    $(".table_list_2 tr th:nth-child(2)").click(function () {
-        mysort($(this), 'team', allData_2)
-    })
-    $(".table_list_2 tr th:nth-child(3)").click(function () {
-        mysort($(this), 'Organization', allData_2)
-    })
-    $(".table_list_2 tr th:nth-child(4)").click(function () {
+    // $(".table_list_2 tr th:nth-child(2)").click(function () {
+    //     mysort($(this), 'team', allData_2)
+    // })
+    $(".table_list_2 tr th:nth-child(5)").click(function () {
         mysort($(this), 'mAP', allData_2)
     })
-    $(".table_list_2 tr th:nth-child(5)").click(function () {
+    $(".table_list_2 tr th:nth-child(6)").click(function () {
         mysort($(this), 'Ped_Crossing', allData_2)
     })
-    $(".table_list_2 tr th:nth-child(6)").click(function () {
+    $(".table_list_2 tr th:nth-child(7)").click(function () {
         mysort($(this), 'Divider', allData_2)
     })
-    $(".table_list_2 tr th:nth-child(7)").click(function () {
+    $(".table_list_2 tr th:nth-child(8)").click(function () {
         mysort($(this), 'Boundary', allData_2)
     })
     // 排序方法
