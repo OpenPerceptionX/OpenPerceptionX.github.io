@@ -11,6 +11,51 @@
 <link rel="icon" type="image/png" href="/style/img/team_logo.png">
 <link href="/style/cvpr2023/css/all.css" rel="stylesheet" type="text/css" media="all">
 <link href="/style/css/footer.css?11" rel="stylesheet" type="text/css" media="all">
+<link href="/style/css/head.css" rel="stylesheet" type="text/css" media="all">
+<style>
+  .r_ul a{padding:0px 0px;}
+@media screen and (min-width:1024px){
+	.r_ul.r_ul_this{ position:fixed; top:0; bottom:auto;}
+}
+.lj_button, .lj_button2, .lj_button3{ color: #333 !important;
+  user-select: none;
+    height: 64px; outline: none; text-align: center; line-height: 47px; font-size: 16px;
+     border:none;  cursor: pointer; display: inline-block; margin-right: 10px;
+        background-image: -moz-linear-gradient( 0deg, rgb(245,203,32) 0%, rgb(255,223,147) 100%);
+        background-image: -webkit-linear-gradient( 0deg, rgb(245,203,32) 0%, rgb(255,223,147) 100%);
+        background-image: -ms-linear-gradient( 0deg, rgb(245,203,32) 0%, rgb(255,223,147) 100%);
+   padding: 0 10px;
+        min-width: 144px;
+        height: 47px;
+        transition: all 0.4s ease-in-out;
+        -webkit-transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+ 
+      
+    }
+    .lj_button2, .lj_button3{ 
+       
+            background-image: -moz-linear-gradient( 0deg, white 0%, white 100%);
+            background-image: -webkit-linear-gradient( 0deg, white 0%, white 100%);
+            background-image: -ms-linear-gradient( 0deg, white 0%, white 100%);
+                     
+    }
+
+       .lj_button:hover{ 
+        background-image: -moz-linear-gradient( 0deg, rgb(255,223,147) 0%, rgb(255,244,200) 96%);
+        background-image: -webkit-linear-gradient( 0deg, rgb(255,223,147) 0%, rgb(255,244,200) 96%);
+        background-image: -ms-linear-gradient( 0deg, rgb(255,223,147) 0%, rgb(255,244,200) 96%);
+       
+      } 
+      .lj_button2:hover, .lj_button3:hover{ 
+       
+            background-image: -moz-linear-gradient( 0deg, rgb(191,191,191) 0%, rgb(191,191,191) 98%);
+            background-image: -webkit-linear-gradient( 0deg, rgb(191,191,191) 0%, rgb(191,191,191) 98%);
+            background-image: -ms-linear-gradient( 0deg, rgb(191,191,191) 0%, rgb(191,191,191) 98%);
+          
+         
+      }
+</style>
 <script src="https://kit.fontawesome.com/8990c176d0.js" crossorigin="anonymous"></script>
 
 </head>
@@ -18,19 +63,6 @@
 <body class="cvpr23 home">
 <!-- 如果是首頁加上 樣式 home -->
 
-  <div class="header"> <a class="head_fanhui" href="/sr4ad/cvpr23.html"></a>
-    <div class="rnav m"></div>
-    <!-- <a class="logo" href="/e2ead/cvpr23.html"></a> -->
-    <div class="qh_langw">
-      <!-- <div class="qh_lang"><a href="/AD23Challenge.html#FAQ">FAQ</a></div> -->
-      <!-- <div class="qh_lang"><a href="/e2ead/cvpr23.html">EN</a><a href="/AD23Challenge_cn.html" class="this">中<font class="m">文</font></a></div> -->
-      <div class="qh_lang">
-        <a href="/" style="user-select: none;">Home</a>
-      </div>
-    </div>
-  </div>
-  <a class="go_top" href="#"></a>
-  <div class="rnav_br"></div>
   <div class="bannerw">
   <div class="banner" style="background-image: url(/style/cvpr2023/iclr2023/banner.jpg); background-blend-mode: overlay; background-color: rgb(63, 63, 63); background-size: cover;">
     <div class="banner_dian"></div>
@@ -97,11 +129,11 @@
   
   <div class="r_ul">
     <ul class="bg">
-      <li data-gd="#id1">Overview</li>
-      <li data-gd="#id4">Speakers</li>
-	    <li data-gd="#schedule">Schedule</li>
-      <li data-gd="#id7">Call for Contributions</li>
-      <li data-gd="#id6">Organizers</li>
+      <li data-gd="#id1"><a href="#overview">Overview</a></li>
+      <li data-gd="#id4"><a href="#speakers">Speakers</a></li>
+	    <li data-gd="#schedule"><a href="#schedule">Schedule</a></li>
+      <li data-gd="#id7"><a href="#call_for_contributions">Call for Contributions</a></li>
+      <li data-gd="#id6"><a href="#organizers">Organizers</a></li>
     </ul>
   </div>
   </div>
@@ -114,7 +146,7 @@
   
   
     <div class="wrapper row2 " id="id1">
-      <div class="hoc bg clear">
+      <div class="hoc bg clear" id="overview">
   
   
           <h1 class="h_title">Overview</h1>
@@ -168,7 +200,7 @@
    <!-- Speakers -->
   
     <div class="wrapper row1" id="id4">
-      <section class="hoc bg clear">
+      <section class="hoc bg clear" id="speakers">
         
   
         <h1  class="h_title">Speakers</h1>
@@ -306,7 +338,7 @@
     
     <!-- ##### Schedule #### -->
     <div class="wrapper row2 bg_Schedule" id="schedule">
-      <div class="hoc bg clear">
+      <div class="hoc bg clear" id="schedule">
         
         <h1 class="h_title"><b>Schedule</b></h1>
   
@@ -479,7 +511,7 @@
   
   
       <div class="wrapper row1" id="id7">
-        <div class="hoc bg clear">
+        <div class="hoc bg clear" id="call_for_contributions">
       
             <h1 class="h_title" style="text-transform: none;">Call for Contributions</h1>
   
@@ -727,7 +759,7 @@
   
     <!-- Origanizers -->
     <div class="wrapper row2" id="id6">
-      <div class="hoc bg clear">
+      <div class="hoc bg clear" id="organizers">
          
   
           <h1 class="h_title">Organizers</h1>
@@ -854,6 +886,7 @@
 
 <script src="/style/cvpr2023/js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script> 
 <script src="/style/cvpr2023/js/all.js" type="text/javascript" charset="utf-8"></script>
+<script src="/style/js/top_index.js?111" type="text/javascript" charset="utf-8"></script>
 <script>
 
 var imgs = [
@@ -915,11 +948,6 @@ var imgs = [
     }); 
 
 </script>
-<script>
-  $.get("/components/footer.html?xx",function(result){
-    $("body").append(result)
-  })
-  </script>
   <script type="text/javascript">
     function iclr_time_zone(){
   

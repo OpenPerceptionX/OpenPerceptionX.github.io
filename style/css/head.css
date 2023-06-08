@@ -164,7 +164,7 @@ code{    color: #C0392B;}
 .header_this .header,.rnav_this .header{background-color:rgba(255, 255, 255, 1); -moz-box-shadow:0 0 10px rgba(0,0,0,.1);
     -webkit-box-shadow:0 0 10px rgba(0,0,0,.1);box-shadow:0 0 10px rgba(0,0,0,.1);}
 .this .r_ss.this i::before{color:#000;}
-.header_this .header ,.header_this .header a{color:#000;}
+.header_this .header ,.header_this .header a{color:rgb(0, 0, 0, 0.8); }
 
 @media screen and (min-width:1024px){
     
@@ -307,7 +307,7 @@ body:not(.home) .head_fanhui{cursor:pointer;display:block;padding:0;position:fix
 }
 .r_ul2i>li:nth-of-type(1){}
 /* .r_ul2i li,.r_ul2i li a{color:#fff; } */
-.r_ul2i li a{display: block;}
+.r_ul2i li a{display: block; font-weight: bold;}
 .submenu li{ min-width: 100%;white-space:nowrap;}
 
 
