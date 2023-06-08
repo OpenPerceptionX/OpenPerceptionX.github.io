@@ -176,7 +176,7 @@ $(function () {
             var htmlStr = `<tr class="item">
         <td>${item.Rank}</td>
         <td>${item.Team}</td>
-        <td>-</td>
+        <td>${item.Organization}</td>
         <td><b>${item.OLS}</b></td>
         <td>${item.DET_l}</td>
         <td>${item.DET_t}</td>
@@ -199,9 +199,9 @@ $(function () {
     $(".table_list tr th:nth-child(2)").click(function () {
         mysort($(this), 'Team', allData)
     })
-    // $(".table_list tr th:nth-child(3)").click(function () {
-    //     mysort($(this), 'Organization', allData)
-    // })
+    $(".table_list tr th:nth-child(3)").click(function () {
+        mysort($(this), 'Organization', allData)
+    })
     $(".table_list tr th:nth-child(4)").click(function () {
         mysort($(this), 'OLS', allData)
     })
