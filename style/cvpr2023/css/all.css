@@ -159,6 +159,7 @@ eachtrack{
 	.r_ul li{ padding-left:10px;}
 	.r_ul li.this{ color: rgb(218,25,121); position: relative;}
 	.r_ul li.this::before{ margin:0; top:50%; left:0; width:4px; height:20px; margin-top:-10px}
+  .header{transition:all 0.4s ease-in-out;-webkit-transition:all 0.4s ease-in-out;-moz-transition:all 0.4s ease-in-out; position:absolute; top:0; left:0; width:100%; z-index:10; background-color:rgba(255, 255, 255, 0); z-index:99; height: 48px; }
 .header{ position: fixed;}
 .header.this .qh_lang a,.rnav_this .qh_lang a{border-color:#000; color:#000;}
 .header.this .qh_lang a.this,.rnav_this .qh_lang a.this{background-color:#000; background:linear-gradient(90deg, #000, #000);color:#fff;}
