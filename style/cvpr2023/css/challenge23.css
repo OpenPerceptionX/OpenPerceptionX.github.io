@@ -879,3 +879,12 @@ ol {
     margin-left: 48px;
   }
 }
+
+.banner_img{
+  height: 33px;
+}
+@media screen and (max-device-width:1024px){
+  .banner_img{
+    height: 23px;
+  }
+}
