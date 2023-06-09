@@ -374,7 +374,7 @@ body:not(.home) .head_fanhui{cursor:pointer;display:block;padding:0;position:fix
 
 .itable{ width: 50%; background-color: #f1f1f1;}
 .bg_huise .itable{ background-color: #fff;}
-.scrollable tr td:nth-of-type(2),.scrollable tr th:nth-of-type(2){ text-align: left;}
+/* .scrollable tr td:nth-of-type(2),.scrollable tr th:nth-of-type(2){ text-align: left;} */
 sup{ font-size: 12px; position: relative; zoom: .8; }
 
  
@@ -921,4 +921,13 @@ ol {
 }
 .title a:hover .title_link{
   display: inherit;
+}
+
+.li_mobile {
+  display: none;
+}
+@media screen and (max-device-width:1024px){
+  .li_mobile {
+    display: inherit;
+  }
 }

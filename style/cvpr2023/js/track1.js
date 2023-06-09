@@ -6,168 +6,168 @@ $(function () {
             "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 1,
             "Team": "MFV",
-            "DET_l": 0.36,
-            "DET_t": 0.80,
-            "TOP_ll": 0.23,
-            "TOP_lt": 0.33,
-            "OLS": 0.55,
-            "Fscore": 0.26
+            "DET_l": 0.3577,
+            "DET_t": 0.7970,
+            "TOP_ll": 0.2252,
+            "TOP_lt": 0.3348,
+            "OLS": 0.5519,
+            "Fscore": 0.2559
         },
         {
             "Organization": "QCraft<br>轻舟智航",
             "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 2,
             "Team": "qcraft2 *",
-            "DET_l": 0.42,
-            "DET_t": 0.64,
-            "TOP_ll": 0.07,
-            "TOP_lt": 0.30,
-            "OLS": 0.47,
-            "Fscore": 0.48
+            "DET_l": 0.4168,
+            "DET_t": 0.6372,
+            "TOP_ll": 0.0657,
+            "TOP_lt": 0.3037,
+            "OLS": 0.4654,
+            "Fscore": 0.4805
         },
         {
-            "Organization": "AMD AEAI",
+            "Organization": "AMD",
             "Country" : "/style/cvpr2023/img/country/USA.svg",
             "Rank": 3,
             "Team": "Victory",
-            "DET_l": 0.22,
-            "DET_t": 0.72,
-            "TOP_ll": 0.13,
-            "TOP_lt": 0.23,
-            "OLS": 0.45,
-            "Fscore": 0.25
+            "DET_l": 0.2184,
+            "DET_t": 0.7245,
+            "TOP_ll": 0.1324,
+            "TOP_lt": 0.2261,
+            "OLS": 0.4456,
+            "Fscore": 0.2530
         },
         {
             "Organization": "QCraft<br>轻舟智航",
             "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 4,
             "Team": "qcraft-team *",
-            "DET_l": 0.30,
-            "DET_t": 0.64,
-            "TOP_ll": 0.05,
-            "TOP_lt": 0.25,
-            "OLS": 0.41,
-            "Fscore": 0.35
+            "DET_l": 0.2960,
+            "DET_t": 0.6374,
+            "TOP_ll": 0.0463,
+            "TOP_lt": 0.2469,
+            "OLS": 0.4114,
+            "Fscore": 0.3467
         },
         {
             "Organization": "Middle East Technical University",
             "Country" : "/style/cvpr2023/img/country/TUR.svg",
             "Rank": 5,
             "Team": "PlatypusWhisperers",
-            "DET_l": 0.22,
-            "DET_t": 0.71,
-            "TOP_ll": 0.06,
-            "TOP_lt": 0.16,
-            "OLS": 0.39,
-            "Fscore": 0.46
+            "DET_l": 0.2164,
+            "DET_t": 0.7061,
+            "TOP_ll": 0.0575,
+            "TOP_lt": 0.1562,
+            "OLS": 0.3894,
+            "Fscore": 0.4611
         },
         {
             "Organization": "MeiTuan<br>美团",
             "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 6,
             "Team": "gavin",
-            "DET_l": 0.18,
-            "DET_t": 0.70,
-            "TOP_ll": 0.04,
-            "TOP_lt": 0.21,
-            "OLS": 0.39,
-            "Fscore": 0.25
+            "DET_l": 0.1790,
+            "DET_t": 0.7028,
+            "TOP_ll": 0.0401,
+            "TOP_lt": 0.2112,
+            "OLS": 0.3854,
+            "Fscore": 0.2478
         },
         {
             "Organization": "Beihang University<br>北京航空航天大学",
             "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 7,
             "Team": "qwertyczx (e110_r)",
-            "DET_l": 0.26,
-            "DET_t": 0.66,
-            "TOP_ll": 0.03,
-            "TOP_lt": 0.19,
-            "OLS": 0.39,
-            "Fscore": 0.28
+            "DET_l": 0.2643,
+            "DET_t": 0.6607,
+            "TOP_ll": 0.0317,
+            "TOP_lt": 0.1918,
+            "OLS": 0.3853,
+            "Fscore": 0.2817
         },
         {
             "Organization": "Turing Inc.",
             "Country" : "/style/cvpr2023/img/country/JPN.svg",
             "Rank": 8,
             "Team": "turing-machine",
-            "DET_l": 0.13,
-            "DET_t": 0.79,
-            "TOP_ll": 0.01,
-            "TOP_lt": 0.13,
-            "OLS": 0.35,
-            "Fscore": 0.25
+            "DET_l": 0.1335,
+            "DET_t": 0.7864,
+            "TOP_ll": 0.0148,
+            "TOP_lt": 0.1266,
+            "OLS": 0.3493,
+            "Fscore": 0.2494
         },
         {
             "Organization": "-",
             "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 9,
             "Team": "Haoqing",
-            "DET_l": 0.09,
-            "DET_t": 0.72,
-            "TOP_ll": 0.04,
-            "TOP_lt": 0.15,
-            "OLS": 0.35,
-            "Fscore": 0.4
+            "DET_l": 0.0863,
+            "DET_t": 0.7187,
+            "TOP_ll": 0.0369,
+            "TOP_lt": 0.1516,
+            "OLS": 0.3466,
+            "Fscore": 0.4019
         },
         {
             "Organization": "-",
             "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 10,
             "Team": "TopoNet-Anonymous",
-            "DET_l": 0.19,
-            "DET_t": 0.58,
-            "TOP_ll": 0.02,
-            "TOP_lt": 0.16,
-            "OLS": 0.33,
-            "Fscore": 0.28
+            "DET_l": 0.1945,
+            "DET_t": 0.5842,
+            "TOP_ll": 0.0227,
+            "TOP_lt": 0.1591,
+            "OLS": 0.3322,
+            "Fscore": 0.2757
         },
         {        
             "Organization": "-",
             "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 11,
             "Team": "BVLab",
-            "DET_l": 0.12,
-            "DET_t": 0.64,
-            "TOP_ll": 0.03,
-            "TOP_lt": 0.16,
-            "OLS": 0.33,
-            "Fscore": 0.27
+            "DET_l": 0.1235,
+            "DET_t": 0.6416,
+            "TOP_ll": 0.0253,
+            "TOP_lt": 0.1558,
+            "OLS": 0.3297,
+            "Fscore": 0.2700
         },
         {
             "Organization": "-",
             "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 12,
             "Team": "HDI_EasternExpo",
-            "DET_l": 0.14,
-            "DET_t": 0.64,
-            "TOP_ll": 0.01,
-            "TOP_lt": 0.15,
-            "OLS": 0.32,
-            "Fscore": 0.20
+            "DET_l": 0.1389,
+            "DET_t": 0.6367,
+            "TOP_ll": 0.0130,
+            "TOP_lt": 0.1546,
+            "OLS": 0.3207,
+            "Fscore": 0.1998
         },
         {
             "Organization": "-",
             "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 13,
             "Team": "ArterySentinel",
-            "DET_l": 0.12,
-            "DET_t": 0.45,
-            "TOP_ll": 0.00,
-            "TOP_lt": 0.03,
-            "OLS": 0.19,
-            "Fscore": 0.22
+            "DET_l": 0.1182,
+            "DET_t": 0.4459,
+            "TOP_ll": 0.0008,
+            "TOP_lt": 0.0286,
+            "OLS": 0.1904,
+            "Fscore": 0.2175
         },
         {
             "Organization": "Tsinghua University<br>清华大学",
             "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 14,
             "Team": "WeakChicken",
-            "DET_l": 0.00,
-            "DET_t": 0.68,
-            "TOP_ll": 0.00,
-            "TOP_lt": 0.00,
-            "OLS": 0.17,
-            "Fscore": 0.00
+            "DET_l": 0.0000,
+            "DET_t": 0.6772,
+            "TOP_ll": 0.0000,
+            "TOP_lt": 0.0000,
+            "OLS": 0.1695,
+            "Fscore": 0.0000
         }
     ]
     // 每页显示数据量
@@ -181,7 +181,8 @@ $(function () {
     renderList(allData)
     // 渲染数据列表
     function num(i) {
-        var n = i.toFixed(2);
+
+        var n = (i*100).toFixed(2);
         return(n);
         }
     function filter(i) {
@@ -200,10 +201,10 @@ $(function () {
         data.forEach((item, index) => {
             var htmlStr = `<tr class="item">
         <td>${item.Rank}</td>
-        <td>${item.Team}</td>
         <td>${filter(item.Country)}</td>
         <td>${item.Organization}</td>
         <td><b>${num(item.OLS)}</b></td>
+        <td>${item.Team}</td>
         <td>${num(item.DET_l)}</td>
         <td>${num(item.DET_t)}</td>
         <td>${num(item.TOP_ll)}</td>

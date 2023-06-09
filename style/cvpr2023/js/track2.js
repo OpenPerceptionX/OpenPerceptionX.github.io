@@ -242,10 +242,10 @@ $(function () {
         data.forEach((item, index) => {
             var htmlStr = `<tr class="item">
         <td>${item.Rank}</td>
-        <td>${item.team}</td>
         <td>${filter(item.Country)}</td>
         <td>${item.Organization}</td>
         <td><b>${num(item.mAP)}</b></td>
+        <td>${item.team}</td>
         <td>${num(item.Ped_Crossing)}</td>
         <td>${num(item.Divider)}</td>
         <td>${num(item.Boundary)}</td>
