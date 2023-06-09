@@ -1082,8 +1082,8 @@ $(function () {
             "vegetation": 12.79
         },
         {
-            "Organization": "-",
-            "Country" : "/style/cvpr2023/img/country/blank.png",
+            "Organization": "Independent Researcher",
+            "Country" : "/style/cvpr2023/img/country/DEU.png",
             "Rank": 46,
             "team": "NaNny (LightGBM)",
             "mIoU": 14.31,

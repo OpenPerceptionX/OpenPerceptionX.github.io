@@ -64,7 +64,7 @@ $(function () {
             "ch3_speed_limit_compliance": 0.96
         },
         {
-            "Organization": "Pegasus Tech<br>云骥智行",
+            "Organization": "Pegasus<br>云骥智行",
             "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 3,
             "team": "pegasus_weitao (pegasus_multi_path)",
@@ -282,7 +282,7 @@ $(function () {
             "ch3_speed_limit_compliance": 0.97
         },
         {
-            "Organization": "Mines Paris, Valeo DAR",
+            "Organization": "Mines Paris",
             "Country" : "/style/cvpr2023/img/country/FRA.svg",
             "Rank": 10,
             "team": "raphamas (MBAPPE)",
@@ -468,8 +468,8 @@ $(function () {
             "ch3_speed_limit_compliance": 0.99
         },
         {
-            "Organization": "-",
-            "Country" : "/style/cvpr2023/img/country/blank.png",
+            "Organization": "C&BIS",
+            "Country" : "/style/cvpr2023/img/country/KOR.png",
             "Rank": 16,
             "team": "adet",
             "Score": 0.66,
@@ -499,8 +499,8 @@ $(function () {
             "ch3_speed_limit_compliance": 0.99
         },
         {
-            "Organization": "-",
-            "Country" : "/style/cvpr2023/img/country/blank.png",
+            "Organization": "C&BIS",
+            "Country" : "/style/cvpr2023/img/country/KOR.png",
             "Rank": 17,
             "team": "bbbong",
             "Score": 0.64,
