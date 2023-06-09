@@ -894,3 +894,16 @@ ol {
     height: 23px;
   }
 }
+
+.h_title a{
+  color: inherit;
+}
+
+.h_title a img{
+  height: 30px;
+  margin-left: 20px;
+  display: none;
+}
+.h_title a:hover img{
+  display: inherit;
+}
