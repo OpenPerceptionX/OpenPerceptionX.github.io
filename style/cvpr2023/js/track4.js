@@ -282,7 +282,7 @@ $(function () {
             "ch3_speed_limit_compliance": 0.97
         },
         {
-            "Organization": "Mines Paris, Valeo DAR, UC Berkeley",
+            "Organization": "Mines Paris, Valeo DAR",
             "Country" : "/style/cvpr2023/img/country/FRA.svg",
             "Rank": 10,
             "team": "raphamas (MBAPPE)",
