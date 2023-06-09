@@ -885,3 +885,12 @@ ol {
   width: 20px;
   min-width: 20px;
 }
+
+.banner_img{
+  height: 33px;
+}
+@media screen and (max-device-width:1024px){
+  .banner_img{
+    height: 23px;
+  }
+}
