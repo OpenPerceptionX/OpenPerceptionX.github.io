@@ -899,11 +899,26 @@ ol {
   color: inherit;
 }
 
-.h_title a img{
+.h_title a .title_link{
   height: 30px;
   margin-left: 20px;
   display: none;
 }
-.h_title a:hover img{
+.h_title a:hover .title_link{
+  display: inherit;
+}
+
+
+
+.title a{
+  color: inherit;
+}
+
+.title a .title_link{
+  height: 30px;
+  margin-left: 20px;
+  display: none;
+}
+.title a:hover .title_link{
   display: inherit;
 }

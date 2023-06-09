@@ -908,3 +908,17 @@ ol {
 .link_logo ul li a {
   margin-bottom: -5%;
 }
+
+
+.h_title a{
+  color: inherit;
+}
+
+.h_title a .title_link{
+  height: 30px;
+  margin-left: 20px;
+  display: none;
+}
+.h_title a:hover .title_link{
+  display: inherit;
+}
