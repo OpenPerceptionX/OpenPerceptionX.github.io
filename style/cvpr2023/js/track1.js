@@ -27,7 +27,7 @@ $(function () {
         },
         {
             "Organization": "AMD AEAI",
-            "Country" : "/style/cvpr2023/img/country/CHN.svg",
+            "Country" : "/style/cvpr2023/img/country/USA.svg",
             "Rank": 3,
             "Team": "Victory",
             "DET_l": 0.22,
