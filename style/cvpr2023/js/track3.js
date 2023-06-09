@@ -3,7 +3,7 @@ $(function () {
     var allData_3 = [
         {
             "Organization": "NVIDIA<br>英伟达",
-            "Country" : "/style/cvpr2023/img/country/CHN.svg",
+            "Country" : "/style/cvpr2023/img/country/USA.svg",
             "Rank": 1,
             "team": "NVOCC (FB-OCC) *",
             "mIoU": 54.19,
