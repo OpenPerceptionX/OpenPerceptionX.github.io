@@ -271,7 +271,7 @@ body:not(.home) .head_fanhui{cursor:pointer;display:block;padding:0;position:fix
 .logo{height:32px; width: 120px; margin-top:8px; background-size:auto 100%; }
 .rnav ~ .logo{margin-left:54px; }
 
-.header.this .logo,.rnav_this .logo{background-image:url(../img/logo_.svg) ; }
+/* .header.this .logo,.rnav_this .logo{background-image:url(../img/logo_.svg) ; } */
 .banner_textw{ padding: 0 10px ; width: calc(100% - 20px);}
 .title_auto,.title_challeng{ height: 30px;}
 .titel_cvpr{ height: 20px;}
