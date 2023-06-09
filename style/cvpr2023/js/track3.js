@@ -1184,10 +1184,10 @@ $(function () {
         data.forEach((item, index) => {
             var htmlStr = `<tr class="item">
         <td>${item.Rank}</td>
-        <td>${item.team}</td>
         <td>${filter(item.Country)}</td>
         <td>${item.Organization}</td>
         <td><b>${num(item.mIoU)}</b></td>
+        <td>${item.team}</td>
       </tr>
 
       `
