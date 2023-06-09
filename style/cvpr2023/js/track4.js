@@ -469,7 +469,7 @@ $(function () {
         },
         {
             "Organization": "C&BIS",
-            "Country" : "/style/cvpr2023/img/country/KOR.png",
+            "Country" : "/style/cvpr2023/img/country/KOR.svg",
             "Rank": 16,
             "team": "adet",
             "Score": 0.66,
@@ -500,7 +500,7 @@ $(function () {
         },
         {
             "Organization": "C&BIS",
-            "Country" : "/style/cvpr2023/img/country/KOR.png",
+            "Country" : "/style/cvpr2023/img/country/KOR.svg",
             "Rank": 17,
             "team": "bbbong",
             "Score": 0.64,

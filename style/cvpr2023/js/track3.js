@@ -1083,7 +1083,7 @@ $(function () {
         },
         {
             "Organization": "Independent Researcher",
-            "Country" : "/style/cvpr2023/img/country/DEU.png",
+            "Country" : "/style/cvpr2023/img/country/DEU.svg",
             "Rank": 46,
             "team": "NaNny (LightGBM)",
             "mIoU": 14.31,
