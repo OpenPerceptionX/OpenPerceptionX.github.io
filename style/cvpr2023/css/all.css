@@ -444,7 +444,7 @@ sup{ font-size: 12px; position: relative; zoom: .8; }
 .itable th,.itable td{ border-color: #fff !important;}
 .bg_huise .itable th,.bg_huise .itable td{ border-color: #f2f2f2 !important;}
 .hoc{padding-top: 80px;padding-bottom: 80px;}
-.row4 { background: #252525; color: #fff;}
+.row4 { background: rgb(64, 64, 64); color: #fff;}
 .row4 a{color: #54c9bd;}
 .color_cheng{color:#fcb747;}
 .motivation{ width: 80%;}

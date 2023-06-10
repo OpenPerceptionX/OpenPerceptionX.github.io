@@ -33,7 +33,7 @@ $(function () {
         },
         {
             "Organization": "Lotus NYO<br>路特斯汽车",
-            "Country" : "/style/cvpr2023/img/country/CHN.svg",
+            "Country" : "/style/cvpr2023/img/country/UK.svg",
             "Rank": 4,
             "team": "LTS (MapLTS2)",
             "mAP": 72.56,
