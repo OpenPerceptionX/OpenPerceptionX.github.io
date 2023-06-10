@@ -623,8 +623,8 @@ $(function () {
             "ch3_speed_limit_compliance": 0.95
         },
         {
-            "Organization": "-",
-            "Country" : "/style/cvpr2023/img/country/blank.png",
+            "Organization": "Motional",
+            "Country" : "/style/cvpr2023/img/country/USA.svg",
             "Rank": 21,
             "team": "Host_68305_Team (IDMPlanner)",
             "Score": 0.59,
