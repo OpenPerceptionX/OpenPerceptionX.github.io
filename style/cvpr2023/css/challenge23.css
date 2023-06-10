@@ -52,7 +52,7 @@ body.rnav_this .rnav_br{display:block;z-index:99;}
 .rnav:after {transition:transform 0.2s ease-in 0s;content:"";display:block;height:14px;width:22px;background:none;margin-top:-8px;position:absolute;left:12px;top:24px;}
 .rnav_this .rnav:after{transform:rotate(45deg); border-bottom:none; height:0;-ms-transform:rotate(45deg);-moz-transform:rotate(45deg);-webkit-transform:rotate(45deg); -o-transform:rotate(45deg);margin-top:0;width:24px;}
 .rnav_this .rnav:before {transform:rotate(-45deg);width:24px;-ms-transform:rotate(-45deg);-moz-transform:rotate(-45deg);-webkit-transform:rotate(-45deg); -o-transform:rotate(-45deg);}
-.m,.head_fanhui{display:none; }
+.m,.head_fanhui{display:none;}
 
 .header.this .head_fanhui::after,.rnav_this .head_fanhui::after {color:#000;}
 .rnav:before{background:#fff;}
