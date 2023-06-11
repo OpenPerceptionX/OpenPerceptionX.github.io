@@ -869,7 +869,7 @@ $(function () {
         // 渲染列表数据
         data.forEach((item, index) => {
             var htmlStr = `<tr class="item">
-        <td>${item.Rank}</td>
+            <td style="text-align: left;">&nbsp;&nbsp;&nbsp;${item.Rank}</td>
         <td>${filter(item.Country)}</td>
         <td>${item.Organization}</td>
         <td><b>${num(item.Score)}</b></td>
