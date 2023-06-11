@@ -4,8 +4,8 @@ $(function () {
         {
             "Organization": "Mach Drive<br>迈驰智行",
             "Country" : "/style/cvpr2023/img/country/CHN.svg",
-            "Rank": 1,
-            "team": "MACH",
+            "Rank": "1<img src='/style/cvpr2023/img/rank01.png' style='padding: 0px 0px 0px 5px; width: 20px; user-select: none;'/><img src='/style/cvpr2023/img/blomb1.png' style='padding: 0px 0px 0px 5px; width: 20px; user-select: none;'/>",
+            "team": "MACH <br> <a href=\"/e2ead/AD23Challenge/Track_2_MACH.pdf\">[paper]</a>",
             "mAP": 83.5,
             "Ped_Crossing": 86.66,
             "Divider": 81.54,
@@ -14,7 +14,7 @@ $(function () {
         {
             "Organization": "Independent Researcher",
             "Country" : "/style/cvpr2023/img/country/USA.svg",
-            "Rank": 2,
+            "Rank": "2<img src='/style/cvpr2023/img/rank02.png' style='padding: 0px 0px 0px 5px; width: 20px; user-select: none;'/>",
             "team": "MapNeXt",
             "mAP": 73.65,
             "Ped_Crossing": 68.94,
@@ -25,7 +25,7 @@ $(function () {
             "Organization": "Shanghai Jiao Tong University<br>上海交通大学",
             "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 3,
-            "team": "SJTUCR",
+            "team": "SJTUCR  <br> <a href=\"/e2ead/AD23Challenge/Track_2_SJTUCR.pdf\">[paper]</a>",
             "mAP": 73.39,
             "Ped_Crossing": 70.37,
             "Divider": 75.08,
@@ -35,7 +35,7 @@ $(function () {
             "Organization": "Lotus NYO<br>路特斯汽车",
             "Country" : "/style/cvpr2023/img/country/UK.svg",
             "Rank": 4,
-            "team": "LTS (MapLTS2)",
+            "team": "LTS (MapLTS2) <br> <a href=\"/e2ead/AD23Challenge/Track_2_LTS.pdf\">[paper]</a>",
             "mAP": 72.56,
             "Ped_Crossing": 72.67,
             "Divider": 73.2,
@@ -95,7 +95,7 @@ $(function () {
             "Organization": "GACRD<br>广汽研究院",
             "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 10,
-            "team": "MapSeg",
+            "team": "MapSeg  <br> <a href=\"/e2ead/AD23Challenge/Track_2_MapSeg.pdf\">[paper]</a>",
             "mAP": 67.1,
             "Ped_Crossing": 63.52,
             "Divider": 70.33,
@@ -241,7 +241,7 @@ $(function () {
         // 渲染列表数据
         data.forEach((item, index) => {
             var htmlStr = `<tr class="item">
-        <td>${item.Rank}</td>
+            <td style="text-align: left;">&nbsp;&nbsp;&nbsp;${item.Rank}</td>
         <td>${filter(item.Country)}</td>
         <td>${item.Organization}</td>
         <td><b>${num(item.mAP)}</b></td>
