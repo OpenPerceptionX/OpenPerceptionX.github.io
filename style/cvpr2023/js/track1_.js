@@ -5,7 +5,8 @@ $(function () {
             "Organization": "MEGVII Technology<br>旷视科技",
             "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 1,
-            "Team": "MFV",
+            "Team": "MFV <br> <a href=\"/e2ead/AD23Challenge/Track_1_MFV.pdf\">[paper]</a>",
+            "prize" : "/style/cvpr2023/img/rank01.png",
             "DET_l": 0.3577,
             "DET_t": 0.7970,
             "TOP_ll": 0.2252,
@@ -14,9 +15,11 @@ $(function () {
             "Fscore": 0.2559
         },
         {
-            "Organization": "QCraft<br>轻舟智航",
+            "Organization": "QCraft *<br>轻舟智航",
             "Country" : "/style/cvpr2023/img/country/CHN.svg",
-            "Rank": 2,
+            "Rank": "-",
+            "prize" : "",
+            "Link": "",
             "Team": "qcraft2 *",
             "DET_l": 0.4168,
             "DET_t": 0.6374,
@@ -28,7 +31,9 @@ $(function () {
         {
             "Organization": "AMD",
             "Country" : "/style/cvpr2023/img/country/USA.svg",
-            "Rank": 3,
+            "Rank": 2,
+            "prize" : "/style/cvpr2023/img/rank02.png",
+            "Link": "",
             "Team": "Victory",
             "DET_l": 0.2184,
             "DET_t": 0.7245,
@@ -38,9 +43,11 @@ $(function () {
             "Fscore": 0.2530
         },
         {
-            "Organization": "QCraft<br>轻舟智航",
+            "Organization": "QCraft *<br>轻舟智航",
             "Country" : "/style/cvpr2023/img/country/CHN.svg",
-            "Rank": 4,
+            "Rank": "-",
+            "prize" : "",
+            "Link": "",
             "Team": "qcraft-team *",
             "DET_l": 0.2960,
             "DET_t": 0.6374,
@@ -52,8 +59,10 @@ $(function () {
         {
             "Organization": "Middle East Technical University",
             "Country" : "/style/cvpr2023/img/country/TUR.svg",
-            "Rank": 5,
-            "Team": "PlatypusWhisperers",
+            "Rank": 3,
+            "prize" : "/style/cvpr2023/img/blomb1.png",
+            "Link": "<a href=\"/e2ead/AD23Challenge/Track_1_PlatypusWhisperers.pdf\">[paper]</a>",
+            "Team": "PlatypusWhisperers <br> <a href=\"/e2ead/AD23Challenge/Track_1_PlatypusWhisperers.pdf\">[paper]</a>",
             "DET_l": 0.2209,
             "DET_t": 0.7061,
             "TOP_ll": 0.0602,
@@ -64,8 +73,10 @@ $(function () {
         {
             "Organization": "MeiTuan<br>美团",
             "Country" : "/style/cvpr2023/img/country/CHN.svg",
-            "Rank": 6,
-            "Team": "gavin",
+            "Rank": 4,
+            "prize" : "",
+            "Link": "<a href=\"/e2ead/AD23Challenge/Track_1_gavin.pdf\">[paper]</a>",
+            "Team": "gavin <br> <a href=\"/e2ead/AD23Challenge/Track_1_gavin.pdf\">[paper]</a>",
             "DET_l": 0.1790,
             "DET_t": 0.7028,
             "TOP_ll": 0.0401,
@@ -76,7 +87,9 @@ $(function () {
         {
             "Organization": "Beihang University<br>北京航空航天大学",
             "Country" : "/style/cvpr2023/img/country/CHN.svg",
-            "Rank": 7,
+            "Rank": 5,
+            "prize" : "",
+            "Link": "",
             "Team": "qwertyczx (e110_r)",
             "DET_l": 0.2643,
             "DET_t": 0.6607,
@@ -88,7 +101,9 @@ $(function () {
         {
             "Organization": "Turing Inc.",
             "Country" : "/style/cvpr2023/img/country/JPN.svg",
-            "Rank": 8,
+            "Rank": 6,
+            "prize" : "",
+            "Link": "",
             "Team": "turing-machine",
             "DET_l": 0.1335,
             "DET_t": 0.7864,
@@ -100,7 +115,9 @@ $(function () {
         {
             "Organization": "-",
             "Country" : "/style/cvpr2023/img/country/blank.png",
-            "Rank": 9,
+            "Rank": 7,
+            "prize" : "",
+            "Link": "",
             "Team": "Haoqing",
             "DET_l": 0.0863,
             "DET_t": 0.7187,
@@ -112,7 +129,9 @@ $(function () {
         {
             "Organization": "-",
             "Country" : "/style/cvpr2023/img/country/blank.png",
-            "Rank": 10,
+            "Rank": 8,
+            "prize" : "",
+            "Link": "",
             "Team": "TopoNet-Anonymous",
             "DET_l": 0.1950,
             "DET_t": 0.5842,
@@ -124,7 +143,9 @@ $(function () {
         {        
             "Organization": "-",
             "Country" : "/style/cvpr2023/img/country/blank.png",
-            "Rank": 11,
+            "Rank": 9,
+            "prize" : "",
+            "Link": "",
             "Team": "BVLab",
             "DET_l": 0.1235,
             "DET_t": 0.6416,
@@ -136,7 +157,9 @@ $(function () {
         {
             "Organization": "-",
             "Country" : "/style/cvpr2023/img/country/blank.png",
-            "Rank": 12,
+            "Rank": 10,
+            "prize" : "",
+            "Link": "",
             "Team": "HDI_EasternExpo",
             "DET_l": 0.1389,
             "DET_t": 0.6367,
@@ -148,7 +171,9 @@ $(function () {
         {
             "Organization": "-",
             "Country" : "/style/cvpr2023/img/country/blank.png",
-            "Rank": 13,
+            "Rank": 11,
+            "prize" : "",
+            "Link": "",
             "Team": "ArterySentinel",
             "DET_l": 0.1182,
             "DET_t": 0.4459,
@@ -160,7 +185,9 @@ $(function () {
         {
             "Organization": "Tsinghua University<br>清华大学",
             "Country" : "/style/cvpr2023/img/country/CHN.svg",
-            "Rank": 14,
+            "Rank": 12,
+            "prize" : "",
+            "Link": "",
             "Team": "WeakChicken",
             "DET_l": 0.0000,
             "DET_t": 0.6772,
@@ -192,6 +219,21 @@ $(function () {
             return('<img src='+i+' style="width: 33px; user-select: none;"/>')
         }
     }
+    function filter_rank(i) {
+        if(i == 1){
+            return(i + '<img src='+ '/style/cvpr2023/img/rank01.png' +' style="padding: 0px 0px 0px 5px; width: 20px; user-select: none;"/>')
+        }
+        if (i == 2) {
+            return(i + '<img src='+ '/style/cvpr2023/img/rank02.png' +' style="padding: 0px 0px 0px 5px; width: 20px; user-select: none;"/>')
+        }
+        if (i == 3) {
+        return(i + '<img src='+ '/style/cvpr2023/img/blomb1.png' +' style="padding: 0px 0px 0px 5px; width: 20px; user-select: none;"/>')
+    } else {
+        return(i)
+    }
+
+    }
+
     function renderList(data) {
         // 总页数
         pages = Math.ceil(total / page)
@@ -200,7 +242,7 @@ $(function () {
         // 渲染列表数据
         data.forEach((item, index) => {
             var htmlStr = `<tr class="item">
-        <td>${item.Rank}</td>
+        <td style="text-align: left;">&nbsp;&nbsp;&nbsp;${filter_rank(item.Rank)}</td>
         <td>${filter(item.Country)}</td>
         <td>${item.Organization}</td>
         <td><b>${num(item.OLS)}</b></td>
