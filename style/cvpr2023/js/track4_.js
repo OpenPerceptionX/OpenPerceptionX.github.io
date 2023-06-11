@@ -98,7 +98,7 @@ $(function () {
             "Organization": "Nanyang Technological University<br>南洋理工大学",
             "Country" : "/style/cvpr2023/img/country/SGP.svg",
             "Rank": "4<img src='/style/cvpr2023/img/blomb1.png' style='padding: 0px 0px 0px 5px; width: 20px; user-select: none;'/>",
-            "team": "AID (GameFormer Planner) <a href=\"/e2ead/AD23Challenge/Track_4_AID.pdf\">[paper]</a>",
+            "team": "AID (GameFormer Planner) <a href=\"/e2ead/AD23Challenge/Track_4_AID.pdf\">[paper]</a> <a href=\"https://arxiv.org/abs/2303.05760\">[arXiv]</a>",
             "Score": 0.83,
             "ch1_overall_score": 0.84,
             "ch1_avg_displacement_error_within_bound": 0.81,
@@ -499,8 +499,10 @@ $(function () {
             "ch3_speed_limit_compliance": 0.99
         },
         {
-            "Organization": "C&BIS",
-            "Country" : "/style/cvpr2023/img/country/KOR.svg",
+            // "Organization": "C&BIS",
+            // "Country" : "/style/cvpr2023/img/country/KOR.svg",
+                        "Organization": "-",
+            "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 17,
             "team": "bbbong",
             "Score": 0.64,
