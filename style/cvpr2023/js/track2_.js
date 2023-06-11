@@ -95,7 +95,7 @@ $(function () {
             "Organization": "GACRD<br>广汽研究院",
             "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 10,
-            "team": "MapSeg  <br> <a href=\"/e2ead/AD23Challenge/Track_2_MapSeg.pdf\">[paper]</a>",
+            "team": "MapSeg  <br> <a href=\"/e2ead/AD23Challenge/Track_2_MapSeg.pdf\">[paper]</a> <a href=\"https://github.com/FlyEgle/CVPR_hdmap\">[code]</a>",
             "mAP": 67.1,
             "Ped_Crossing": 63.52,
             "Divider": 70.33,
