@@ -113,7 +113,7 @@ display: table}
       }
 .t_text{ padding:  0 0  30px 0;}
 .banner_textw .r_t{ font-size: 20px; padding-bottom: 20px;}
-.banner_textw .r_time{ font-size: 20px; padding-bottom: 40px; user-select: none;}
+.banner_textw .r_time{ font-size: 17px; padding-bottom: 40px; user-select: none; line-height: 10px;}
 .banner_text,.banner_text a{ padding-left: 7px; padding-bottom: 10px; font-size: 26px; color: #ffe474; font-weight: bold;}
 .banner_text a:hover{ color: #fdff74;}
 .banner_text a::before{ content: ""; display: inline-block; background: #ffe474; width: 8px; height: 8px; vertical-align: middle; margin-right: 5px; position: relative; top:-2px;}
@@ -152,7 +152,7 @@ eachtrack{
 		 .rnav_this .r_ul li svg path{ fill:#000}
 	 .r_ul li.this svg path{ fill:rgb(218,25,121)}
     .banner{ background-size: 200% auto; background-repeat: no-repeat; background-position: right bottom;}
-    .banner_text, .banner_text a{ font-size: 16px;}
+    .banner_text, .banner_text a{ font-size: 12px;}
     .banner_textw  .r_time{ font-size: 16px;}
     .lj_button, .lj_button2, .lj_button3{ line-height: 40px; height: 40px; width: 40%; min-width: auto; font-size: 12px; margin-right: 10px; padding: 0;}
     .banner_img{ height: 16px;}
@@ -253,7 +253,7 @@ hr {    display: block;
 sub{ position: absolute; top: 7px; font-weight: normal; font-size: 12px; zoom: .9;vertical-align: top; position: relative;font-family:"Gabriola";}
 sub em{ position: absolute; right: -10px; top: -9px; zoom:1.5; font-family:  monospace; font-size: 16px; font-style: normal;}
 .footer_ts{ font-size: 12px; font-style: italic;}
-
+.title_auto,.title_challeng{ height: 60px;}
 @media screen and (max-device-width:1024px){
     
 
@@ -770,16 +770,19 @@ a.btn_goen{
 }
 
 .my_subtitle {
-  font-size: 33px; 
-  line-height: 50px; 
+  font-size: 23px; 
+  line-height: 30px; 
   font-weight: 900;
   user-select: none; 
-  margin-bottom: 1%;
+  /* margin-bottom: 1%; */
 }
 @media screen and (max-device-width:1024px) {
   .my_subtitle {
     font-size: 20px; 
-    line-height: 40px; 
+    line-height: 20px; 
+  }
+  .banner_text {
+    line-height: 15px;
   }
 }
 .my_subtitle a{
@@ -950,10 +953,20 @@ ol {
 }
 
 .title_cvpr {
-  width: 30%;
+  width: 15%;
 }
 @media screen and (max-device-width:1024px){
   .title_cvpr {
-    width: 50%;
+    width: 40%;
+  }
+}
+
+.banner_text a{
+  font-size: 20px;
+  line-height: 0;
+}
+@media screen and (max-device-width:1024px){
+  .banner_text a{
+    line-height: 20px;
   }
 }
