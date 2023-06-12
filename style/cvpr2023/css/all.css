@@ -940,3 +940,11 @@ ol {
     width: 78%;
   }
 }
+
+.r_time .my_subtitle_email{
+  text-decoration: underline;
+  color: white;
+}
+.r_time .my_subtitle_email:hover {
+  color: lightgray;
+}
