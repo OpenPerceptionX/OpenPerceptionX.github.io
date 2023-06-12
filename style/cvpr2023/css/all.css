@@ -948,3 +948,12 @@ ol {
 .r_time .my_subtitle_email:hover {
   color: lightgray;
 }
+
+.title_cvpr {
+  width: 30%;
+}
+@media screen and (max-device-width:1024px){
+  .title_cvpr {
+    width: 50%;
+  }
+}
