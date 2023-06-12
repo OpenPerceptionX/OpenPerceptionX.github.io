@@ -154,7 +154,7 @@ eachtrack{
     .banner{ background-size: 200% auto; background-repeat: no-repeat; background-position: right bottom;}
     .banner_text, .banner_text a{ font-size: 16px;}
     .banner_textw  .r_time{ font-size: 16px;}
-    .lj_button, .lj_button2, .lj_button3{ line-height: 40px; height: 40px; width: 40%; min-width: auto; font-size: 14px; margin-right: 10px; padding: 0;}
+    .lj_button, .lj_button2, .lj_button3{ line-height: 40px; height: 40px; width: 40%; min-width: auto; font-size: 12px; margin-right: 10px; padding: 0;}
     .banner_img{ height: 16px;}
 	.r_ul li{ padding-left:10px;}
 	.r_ul li.this{ color: rgb(218,25,121); position: relative;}
@@ -424,7 +424,7 @@ sup{ font-size: 12px; position: relative; zoom: .8; }
     /* .track_nav dl dd{ font-size: 12px;} */
     .mot_ts{ padding: 10px; font-size: 18px;}
     .bg { padding: 20px 16px;}
-    .Contact_br{ padding: 10px 0; margin-bottom: 20px;}
+    .Contact_br{ padding: 10px 0;}
     .Contact_br a.h_imga{ display: block;}
     /* .link_logo ul{flex-wrap: wrap;
         box-sizing: border-box;}
@@ -929,5 +929,14 @@ ol {
 @media screen and (max-device-width:1024px){
   .li_mobile {
     display: inherit;
+  }
+}
+
+.qinghua_logo {
+  width: 45.7%;
+}
+@media screen and (max-device-width:1024px){
+  .qinghua_logo {
+    width: 78%;
   }
 }
