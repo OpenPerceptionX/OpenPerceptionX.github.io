@@ -101,7 +101,7 @@ $(function () {
             "Organization": "Harbin Institute of Technology<br>哈尔滨工业大学",
             "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": "5<img src='/style/cvpr2023/img/blomb1.png' style='padding: 0px 0px 0px 5px; width: 20px; user-select: none;'/>",
-            "team": "occ_transformer",
+            "team": "occ_transformer <a href=\"/e2ead/AD23Challenge/Track_3_occ_transformer.pdf\">[paper]</a>",
             "mIoU": 49.23,
             "others": 26.91,
             "barrier": 53.57,
