@@ -75,14 +75,14 @@ display: table}
 .banner_textw .lj_button{margin-top:20px;}
 .lj_button, .lj_button2, .lj_button3{ color: #333 !important;
   user-select: none;
-    height: 64px; outline: none; text-align: center; line-height: 47px; font-size: 16px;
+    height: 64px; outline: none; text-align: center; line-height: 40px; font-size: 16px;
      border:none;  cursor: pointer; display: inline-block; margin-right: 10px;
         background-image: -moz-linear-gradient( 0deg, rgb(245,203,32) 0%, rgb(255,223,147) 100%);
         background-image: -webkit-linear-gradient( 0deg, rgb(245,203,32) 0%, rgb(255,223,147) 100%);
         background-image: -ms-linear-gradient( 0deg, rgb(245,203,32) 0%, rgb(255,223,147) 100%);
    padding: 0 10px;
         min-width: 144px;
-        height: 47px;
+        height: 40px;
         transition: all 0.4s ease-in-out;
         -webkit-transition: all 0.4s ease-in-out;
         -moz-transition: all 0.4s ease-in-out;
@@ -755,17 +755,17 @@ a.btn_goen{
 }
 
 .my_title {
-  font-size: 77px; 
+  font-size: 50px; 
   font-weight: 900; 
   user-select: none;
   margin-bottom: 1%; 
-  line-height: 99px; 
+  line-height: 60px; 
   color: goldenrod;
 }
 @media screen and (max-device-width:1024px) {
   .my_title {
-    font-size: 33px; 
-    line-height: 50px; 
+    font-size: 30px; 
+    line-height: 40px; 
   }
 }
 
@@ -890,7 +890,7 @@ ol {
 }
 
 .banner_img{
-  height: 33px;
+  height: 23px;
 }
 @media screen and (max-device-width:1024px){
   .banner_img{
