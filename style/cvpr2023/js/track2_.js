@@ -32,7 +32,7 @@ $(function () {
             "Boundary": 74.73
         },
         {
-            "Organization": "Lotus NYO<br>路特斯汽车",
+            "Organization": "Lotus NYO",
             "Country" : "/style/cvpr2023/img/country/UK.svg",
             "Rank": 4,
             "team": "LTS (MapLTS2) <br> <a href=\"/e2ead/AD23Challenge/Track_2_LTS.pdf\">[paper]</a>",
