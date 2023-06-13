@@ -53,7 +53,7 @@ $(function () {
             "Organization": "Xiaomi Car, Peking University<br>小米汽车, 北京大学",
             "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 3,
-            "team": "UniOcc (final) <a href=\"/e2ead/AD23Challenge/Track_3_UniOcc.pdf\">[paper]</a>",
+            "team": "UniOcc (final)",
             "mIoU": 51.27,
             "others": 26.94,
             "barrier": 56.17,
