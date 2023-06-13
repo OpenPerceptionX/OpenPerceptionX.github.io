@@ -2,10 +2,10 @@ $(function () {
     // 定义的数据
     var allData_3 = [
         {
-            "Organization": "NVIDIA<br>英伟达",
+            "Organization": "NVIDIA",
             "Country" : "/style/cvpr2023/img/country/USA.svg",
-            "Rank": 1,
-            "team": "NVOCC (FB-OCC) *",
+            "Rank": "1<img src='/style/cvpr2023/img/rank01.png' style='padding: 0px 0px 0px 5px; width: 20px; user-select: none;'/><img src='/style/cvpr2023/img/blomb1.png' style='padding: 0px 0px 0px 5px; width: 20px; user-select: none;'/>",
+            "team": "NVOCC (FB-OCC) <a href=\"/e2ead/AD23Challenge/Track_3_NVOCC.pdf\">[paper]</a>",
             "mIoU": 54.19,
             "others": 28.95,
             "barrier": 57.98,
@@ -28,8 +28,8 @@ $(function () {
         {
             "Organization": "42dot",
             "Country" : "/style/cvpr2023/img/country/KOR.svg",
-            "Rank": 2,
-            "team": "42dot (MiLO)",
+            "Rank": "2<img src='/style/cvpr2023/img/rank02.png' style='padding: 0px 0px 0px 5px; width: 20px; user-select: none;'/>",
+            "team": "42dot (MiLO) <a href=\"/e2ead/AD23Challenge/Track_3_42dot.pdf\">[paper]</a>",
             "mIoU": 52.45,
             "others": 27.8,
             "barrier": 56.28,
@@ -53,7 +53,7 @@ $(function () {
             "Organization": "Xiaomi Car, Peking University<br>小米汽车, 北京大学",
             "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 3,
-            "team": "UniOcc (final)",
+            "team": "UniOcc (final) <a href=\"/e2ead/AD23Challenge/Track_3_UniOcc.pdf\">[paper]</a>",
             "mIoU": 51.27,
             "others": 26.94,
             "barrier": 56.17,
@@ -77,7 +77,7 @@ $(function () {
             "Organization": "SAIC AI Lab<br>上汽 AI LAB",
             "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 4,
-            "team": "occ-heiheihei *",
+            "team": "occ-heiheihei <a href=\"/e2ead/AD23Challenge/Track_3_occ-heiheihei.pdf\">[paper]</a>",
             "mIoU": 49.36,
             "others": 28.43,
             "barrier": 54.49,
@@ -100,8 +100,8 @@ $(function () {
         {
             "Organization": "Harbin Institute of Technology<br>哈尔滨工业大学",
             "Country" : "/style/cvpr2023/img/country/CHN.svg",
-            "Rank": 5,
-            "team": "occ_transformer",
+            "Rank": "5<img src='/style/cvpr2023/img/blomb1.png' style='padding: 0px 0px 0px 5px; width: 20px; user-select: none;'/>",
+            "team": "occ_transformer <a href=\"/e2ead/AD23Challenge/Track_3_occ_transformer.pdf\">[paper]</a>",
             "mIoU": 49.23,
             "others": 26.91,
             "barrier": 53.57,
@@ -413,7 +413,7 @@ $(function () {
             "Organization": "-",
             "Country" : "/style/cvpr2023/img/country/blank.png",
             "Rank": 18,
-            "team": "Turing Brain Team",
+            "team": "Turing Brain Team <a href=\"/e2ead/AD23Challenge/Track_3_Turing_Brain_Team.pdf\">[paper]</a>",
             "mIoU": 47.36,
             "others": 26.18,
             "barrier": 51.63,
@@ -530,8 +530,8 @@ $(function () {
             "vegetation": 42.25
         },
         {
-            "Organization": "The Hong Kong University of Science and Technology (Guangzhou)<br>香港科技大学（广州）",
-            "Country" : "/style/cvpr2023/img/country/CHN.svg",
+            "Organization": "The Hong Kong University of Science and Technology<br>香港科技大学",
+            "Country" : "/style/cvpr2023/img/country/HK.svg",
             "Rank": 23,
             "team": "occ-dd (Intern_occ)",
             "mIoU": 45.51,
@@ -1183,7 +1183,7 @@ $(function () {
         // 渲染列表数据
         data.forEach((item, index) => {
             var htmlStr = `<tr class="item">
-        <td>${item.Rank}</td>
+            <td style="text-align: left;">&nbsp;&nbsp;&nbsp;${item.Rank}</td>
         <td>${filter(item.Country)}</td>
         <td>${item.Organization}</td>
         <td><b>${num(item.mIoU)}</b></td>
