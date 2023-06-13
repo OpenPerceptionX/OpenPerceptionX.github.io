@@ -986,3 +986,9 @@ ol {
 .inactive_link:hover {
   color: gray;
 }
+
+.road_genome {
+  color: orange;
+  background-color: rgb(255, 165, 0, 0.2);
+  padding: 1px;
+}
