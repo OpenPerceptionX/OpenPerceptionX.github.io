@@ -972,3 +972,17 @@ ol {
     line-height: 20px;
   }
 }
+
+.blue_emphasize {
+  color: darkblue;
+  background-color: lightblue;
+  padding: 1px;
+}
+
+.inactive_link {
+  color: gray;
+  cursor: default;
+}
+.inactive_link:hover {
+  color: gray;
+}

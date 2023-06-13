@@ -2,7 +2,7 @@ $(function () {
     // 定义的数据
     var allData_3 = [
         {
-            "Organization": "NVIDIA<br>英伟达",
+            "Organization": "NVIDIA",
             "Country" : "/style/cvpr2023/img/country/USA.svg",
             "Rank": "1<img src='/style/cvpr2023/img/rank01.png' style='padding: 0px 0px 0px 5px; width: 20px; user-select: none;'/><img src='/style/cvpr2023/img/blomb1.png' style='padding: 0px 0px 0px 5px; width: 20px; user-select: none;'/>",
             "team": "NVOCC (FB-OCC) <a href=\"/e2ead/AD23Challenge/Track_3_NVOCC.pdf\">[paper]</a>",
@@ -530,8 +530,8 @@ $(function () {
             "vegetation": 42.25
         },
         {
-            "Organization": "The Hong Kong University of Science and Technology (Guangzhou)<br>香港科技大学（广州）",
-            "Country" : "/style/cvpr2023/img/country/CHN.svg",
+            "Organization": "The Hong Kong University of Science and Technology<br>香港科技大学",
+            "Country" : "/style/cvpr2023/img/country/HK.svg",
             "Rank": 23,
             "team": "occ-dd (Intern_occ)",
             "mIoU": 45.51,

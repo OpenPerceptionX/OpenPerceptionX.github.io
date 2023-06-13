@@ -95,7 +95,7 @@ $(function () {
             "ch3_speed_limit_compliance": 0.94
         },
         {
-            "Organization": "Nanyang Technological University<br>南洋理工大学",
+            "Organization": "Nanyang Technological University",
             "Country" : "/style/cvpr2023/img/country/SGP.svg",
             "Rank": "4<img src='/style/cvpr2023/img/blomb1.png' style='padding: 0px 0px 0px 5px; width: 20px; user-select: none;'/>",
             "team": "AID (GameFormer Planner) <a href=\"/e2ead/AD23Challenge/Track_4_AID.pdf\">[paper]</a> <a href=\"https://arxiv.org/abs/2303.05760\">[arXiv]</a>",
@@ -251,8 +251,8 @@ $(function () {
         },
         {
             "Organization":
-                "The Hong Kong University of Science and Technology (Guangzhou)<br>香港科技大学（广州）",
-            "Country" : "/style/cvpr2023/img/country/CHN.svg",
+                "The Hong Kong University of Science and Technology<br>香港科技大学",
+            "Country" : "/style/cvpr2023/img/country/HK.svg",
             "Rank": 9,
             "team": "HatOff2JuiceWRLD (& Haaland)",
             "Score": 0.7442,
