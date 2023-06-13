@@ -924,3 +924,12 @@ ol {
 .h_title a:hover .title_link{
   display: inherit;
 }
+
+
+.reference {
+  color: inherit;
+  text-decoration: underline;
+}
+.reference:hover {
+  color: darkgray;
+}
