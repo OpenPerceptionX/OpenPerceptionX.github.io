@@ -931,5 +931,16 @@ ol {
   text-decoration: underline;
 }
 .reference:hover {
-  color: darkgray;
+  color: inherit;
+}
+
+
+.schedule_title {
+  color: black;
+}
+.schedule_title:hover {
+  color: black;
+}
+.schedule_title .title_link{
+  width: 11px;
 }
