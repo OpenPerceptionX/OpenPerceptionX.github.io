@@ -62,7 +62,7 @@ $(function () {
             "Rank": 3,
             "prize" : "/style/cvpr2023/img/blomb1.png",
             "Link": "<a href=\"/e2ead/AD23Challenge/Track_1_PlatypusWhisperers.pdf\">[paper]</a>",
-            "Team": "PlatypusWhisperers <br> <a href=\"/e2ead/AD23Challenge/Track_1_PlatypusWhisperers.pdf\">[paper]</a>",
+            "Team": "PlatypusWhisperers <br> <a href=\"/e2ead/AD23Challenge/Track_1_PlatypusWhisperers.pdf\">[paper]</a> <a href=\"https://arxiv.org/pdf/2306.05419.pdf\">[arXiv]</a>",
             "DET_l": 0.2209,
             "DET_t": 0.7061,
             "TOP_ll": 0.0602,
