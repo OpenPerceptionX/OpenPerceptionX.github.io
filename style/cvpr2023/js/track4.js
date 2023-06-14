@@ -5,7 +5,7 @@ $(function () {
             "Organization": "University of Tübingen",
             "Country" : "/style/cvpr2023/img/country/DEU.svg",
             "Rank": "1<img src='/style/cvpr2023/img/rank01.png' style='padding: 0px 0px 0px 5px; width: 20px; user-select: none;'/>",
-            "team": "CS_Tu <a href=\"/e2ead/AD23Challenge/Track_4_CS_Tu.pdf\">[paper]</a>",
+            "team": "CS_Tu <br> <a href=\"/e2ead/AD23Challenge/Track_4_CS_Tu.pdf\">[paper]</a> <a href=\"https://arxiv.org/pdf/2306.07962.pdf\">[arXiv]</a> <a href=\"https://github.com/autonomousvision/nuplan_garage\">[code]</a>",
             "Score": 0.8952,
             "ch1_overall_score": 0.8289,
             "ch1_avg_displacement_error_within_bound": 0.8338,
