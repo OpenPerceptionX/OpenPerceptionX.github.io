@@ -190,12 +190,12 @@ border-radius:0;background:rgb(29, 155, 240);}
 .Publications_list dl {display: flex;}
 .Publications_list dd {padding-bottom: 20px;margin-bottom: 20px;border-bottom: 0px solid #e7e7e7;width: calc(100% - 80px);}
 .Publications_list dl dt {width: 80px;}
-.Publications_list code {padding: 1px 10px;margin: 0;font-size: 12px;background: rgba(83, 194, 240, 0.2);color: rgb(12,49,143);border-radius: 0 8px 8px 8px;display: inline-block;}
+.Publications_list code {padding: 1px 10px;margin: 0;font-size: 12px;background: rgba(83, 194, 240, 0.2);color: rgb(12,49,143);border-radius: 0 8px 8px 8px;display: inline-block;  margin-right: 1%;}
 .Publications_list p {padding: 0;margin: 0;}
 .Publications_list dd h6 {padding: 0 0 6px 0;margin: 0;}
 
 @media screen and (min-width: 1024px) {
-.Publications_list .item_p {display: flex;width: 100%;align-items: center;justify-content: space-between;}
+.Publications_list .item_p {display: flex;width: 100%;align-items: center;}
 /* .Publications_list code {display: flex;align-items: center; font-size: 15px;} */
 }
 .icon {display: inline-block;}
