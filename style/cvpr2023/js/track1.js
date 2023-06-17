@@ -34,7 +34,7 @@ $(function () {
             "Rank": 2,
             "prize" : "/style/cvpr2023/img/rank02.png",
             "Link": "",
-            "Team": "Victory <a href=\"javaScript:\" class=\"inactive_link\" style=\"color: gray;\">[paper]</a>",
+            "Team": "Victory <a href=\"/e2ead/AD23Challenge/Track_1_Victory.pdf\">[paper]</a>",
             "DET_l": 0.2184,
             "DET_t": 0.7245,
             "TOP_ll": 0.1324,
