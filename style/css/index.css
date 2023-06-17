@@ -371,3 +371,12 @@ p .email_link:hover {
 .publication_auxiliary:hover {
     color: rgba(12,49,143,0.5);
 }
+@media screen and (max-device-width: 1024px) {
+    .publication_auxiliary {
+        text-decoration: underline;
+        color: rgb(12,49,143);
+    }
+    .publication_auxiliary:hover {
+        color: rgba(12,49,143,0.5);
+    }
+}
