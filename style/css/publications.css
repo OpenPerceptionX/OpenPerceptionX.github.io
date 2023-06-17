@@ -23,7 +23,7 @@ z-index: 2;object-fit: contain;
 }
  
  .title_1{ text-align: left; font-weight: bold; user-select: none; font-size: 30px; text-transform: none;}
-  code{  margin: 0; font-size: 15px; background: #FEF5E7; color: #D68910;   border-radius: 0 8px 8px 8px; display: inline-block; user-select: none;}
+  code{  margin: 0; font-size: 15px; background: rgba(83, 194, 240, 0.2);color: rgb(12,49,143);   border-radius: 0 8px 8px 8px; display: inline-block; user-select: none;}
 
   
 .icon { display: inline-block;}
@@ -115,9 +115,10 @@ br {
 .title2 {
   font-size: 15px;
   margin-bottom: 1.5%;
+  color: rgb(12,49,143)
 }
 .title2:hover {
-  color: #D68910;
+  color: rgb(12,49,143)
 }
 
 em {
@@ -126,5 +127,9 @@ em {
 
 .publication_auxiliary {
   text-decoration: underline;
+  color: rgb(12,49,143);
   margin-left: -10px;
+}
+.publication_auxiliary:hover {
+  color: rgba(12,49,143,0.5);
 }
