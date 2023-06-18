@@ -167,8 +167,8 @@ border-radius:0;background:rgb(29, 155, 240);}
 .eventlist dl:nth-of-type(1) img {object-fit: fill;}
 }
 .imorex {text-align: center;font-size: 16px}
-.imorex a {border: 1px solid;display: inline-block;padding: 15px 20px;min-width: 240px;background: #fff;color: #DC8E47;transition: all 0.4s ease-in-out;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;}
-.imorex a:hover {color: #fff;background-color: #DC8E47;border-color: #DC8E47;}
+.imorex a {border: 1px solid;display: inline-block;padding: 15px 20px;min-width: 240px;background: #fff;color: rgb(12,49,143);transition: all 0.4s ease-in-out;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;}
+.imorex a:hover {color: #fff;background-color: rgba(12,49,143,0.5);border-color: rgba(12,49,143,0.5);}
 .k2 .imorex a {color: #aa8d7d;}
 .k2 .imorex a:hover {color: #fff;background-color: #aa8d7d;border-color: #aa8d7d;}
 /* Publications */
