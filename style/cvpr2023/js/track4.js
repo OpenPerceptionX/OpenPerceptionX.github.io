@@ -67,7 +67,7 @@ $(function () {
             "Organization": "Pegasus<br>云骥智行",
             "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": "3<img src='/style/cvpr2023/img/rank03.png' style='padding: 0px 0px 0px 5px; width: 20px; user-select: none;'/>",
-            "team": "pegasus_weitao (pegasus_multi_path)",
+            "team": "pegasus_weitao (pegasus_multi_path) <a href=\"/e2ead/AD23Challenge/Track_4_pegasus_weitao.pdf\">[paper]</a>",
             "Score": 0.8477,
             "ch1_overall_score": 0.8758,
             "ch1_avg_displacement_error_within_bound": 0.84,

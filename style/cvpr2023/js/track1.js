@@ -5,7 +5,7 @@ $(function () {
             "Organization": "MEGVII Technology<br>旷视科技",
             "Country" : "/style/cvpr2023/img/country/CHN.svg",
             "Rank": 1,
-            "Team": "MFV <br> <a href=\"/e2ead/AD23Challenge/Track_1_MFV.pdf\">[paper]</a>",
+            "Team": "MFV <br> <a href=\"/e2ead/AD23Challenge/Track_1_MFV.pdf\">[paper]</a> <a href=\"https://arxiv.org/pdf/2306.09590.pdf\">[arXiv]</a>",
             "prize" : "/style/cvpr2023/img/rank01.png",
             "DET_l": 0.3577,
             "DET_t": 0.7970,
