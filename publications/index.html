@@ -1,43 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport"
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
     content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-<title>Publications | OpenDriveLab</title>
-<meta name="description"
+  <title>Publications | OpenDriveLab</title>
+  <meta name="description"
     content="Most of the influential and interesting publications published by OpenDriveLab come from top conferences and journals in the computer field, such as ICML, ECCV, ICCV, NeurIPS, ICLR, CVPR.">
-<meta name="keywords"
+  <meta name="keywords"
     content="OpenDriveLab Publication, Autonomous Driving, E2EAD, BEV, OpenLane, Bird-eye-view Perception, End-to-end Autonomous Driving, ">
-<meta name="author" content="OpenDriveLab">
-<link rel="icon" type="image/png" href="/style/img/team_logo.png">
-<link href="/style/css/body.css" rel="stylesheet" type="text/css" media="all">
-<link href="/style/css/head.css" rel="stylesheet" type="text/css" media="all">
-<link href="/style/css/footer.css?1" rel="stylesheet" type="text/css" media="all">
-<link href="/style/css/publications.css?111111" rel="stylesheet" type="text/css" media="all">
+  <meta name="author" content="OpenDriveLab">
+  <link rel="icon" type="image/png" href="/style/img/team_logo.png">
+  <link href="/style/css/body.css" rel="stylesheet" type="text/css" media="all">
+  <link href="/style/css/head.css" rel="stylesheet" type="text/css" media="all">
+  <link href="/style/css/footer.css?1" rel="stylesheet" type="text/css" media="all">
+  <link href="/style/css/publications.css?111111" rel="stylesheet" type="text/css" media="all">
 </head>
 
 <body class="loadings">
-<div id="content" class="content">
-  <div class="bg">
-    <div class="pub_nav">
-      <div class="kin"> <a href="#editor_pick" title="Editor's Pick">
-        <div> <i class="icon__1"></i> <span>Editor's Pick</span> </div>
-        </a> <a href="#end_to_end_ad" title="End-to-end Autonomous Driving">
-        <div><i class="icon__2"></i> <span>End-to-end Autonomous Driving</span> </div>
-        </a> <a href="#bev_perception" title="Bird's-eye-view Perception">
-        <div><i class="icon__3"></i><span>Bird's-eye-view Perception</span></div>
-        </a> <a href="#prediction_and_planning" title="Prediction and Planning">
-        <div><i class="icon__4"></i> <span>Prediction and Planning</span> </div>
-        </a> <a href="#cv_at_scale" title="Computer Vision at Scale">
-        <div><i class="icon__5"></i> <span>Computer Vision at Scale</span> </div>
-        </a> </div>
+  <div id="content" class="content">
+    <div class="bg">
+      <div class="pub_nav">
+        <div class="kin"> <a href="#editor_pick" title="Editor's Pick">
+            <div> <i class="icon__1"></i> <span>Editor's Pick</span> </div>
+          </a> <a href="#end_to_end_ad" title="End-to-end Autonomous Driving">
+            <div><i class="icon__2"></i> <span>End-to-end Autonomous Driving</span> </div>
+          </a> <a href="#bev_perception" title="Bird's-eye-view Perception">
+            <div><i class="icon__3"></i><span>Bird's-eye-view Perception</span></div>
+          </a> <a href="#prediction_and_planning" title="Prediction and Planning">
+            <div><i class="icon__4"></i> <span>Prediction and Planning</span> </div>
+          </a> <a href="#cv_at_scale" title="Computer Vision at Scale">
+            <div><i class="icon__5"></i> <span>Computer Vision at Scale</span> </div>
+          </a> </div>
+      </div>
+      <div class="publicationw "> </div>
     </div>
-    <div class="publicationw "> </div>
   </div>
-</div>
-<!-- 内容end -->
+  <!-- 内容end -->
 
 </body>
 <script src="/style/js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
@@ -84,31 +85,31 @@
   //添加url
   function add_url(a) {
     var len = url_list.length;
- 
+
     var h = a.toString();
     for (var i = 0; i < len; i++) {
-      
-     
+
+
       if (url_list[i]["name"] == h) {
         var htm = '<a href="' + url_list[i]["url"] + '" target="_blank">' + h + '</a>'
         var h = htm;
-        
-      } 
-      
+
+      }
+
     }
     return h
   }
 
   function cur(a) {
-var h = a.split(",")
-var len = h.length;
-var htm = ""
-for(var i=0;i<len;i++){
-  var fh = (i==0)?"":", "
-  htm += fh+add_url(h[i].replace(/^\s+|\s+$/g,""))
-}
- return htm
+    var h = a.split(",")
+    var len = h.length;
+    var htm = ""
+    for (var i = 0; i < len; i++) {
+      var fh = (i == 0) ? "" : ", "
+      htm += fh + add_url(h[i].replace(/^\s+|\s+$/g, ""))
     }
+    return htm
+  }
   var itb = ["icon_cv", "icon_gg", "icon_jqzx", "icon_zh"]
   var data = [
     {
@@ -121,7 +122,7 @@ for(var i=0;i<len;i++){
           title: "Planning-oriented Autonomous Driving",
           url: "https://arxiv.org/abs/2212.10156",
           ititle: "Yihan Hu, Jiazhi Yang, Li Chen, Keyu Li, Chonghao Sima, Hongyang Li",
-          iititle:", <em>et al.</em>",
+          iititle: ", <em>et al.</em>",
           title2: '<a href="https://cvpr2023.thecvf.com/Conferences/2023/AcceptedPapers" target="_blank" class="publication_auxiliary">CVPR 2023 Award Candidate (12 out of 9155)</a> &nbsp <code>[Sell a New Philosophy]</code>',
           GitHub_url: "https://github.com/OpenDriveLab/UniAD",
           GitHub_img: "https://img.shields.io/github/stars/OpenDriveLab/UniAD?style=social",
@@ -129,11 +130,34 @@ for(var i=0;i<len;i++){
           content: "A comprehensive framework up-to-date that incorporates full-stack driving tasks in one network.",
         },
         {
+          img: "/style/img/pub/occnet.jpg",
+          title: "Scene as Occupancy",
+          url: "https://arxiv.org/abs/2306.02851",
+          ititle: "Wenwen Tong, Chonghao Sima, Tai Wang, Silei Wu, Hanming Deng, Li Chen, Yi Gu, Lewei Lu, Ping Luo, Dahua Lin, Hongyang Li",
+          // iititle: ", <em>et al.</em>",
+          title2: "arXiv 2023",
+          GitHub_url: "https://github.com/OpenDriveLab/OccNet",
+          GitHub_img: "https://img.shields.io/github/stars/opendrivelab/OccNet?style=social",
+          content: "Occupancy serves as a general representation of the scene and could facilitate perception and planning in the full-stack of autonomous driving.",
+        },
+      {
+          img: "/style/img/pub/toponet.jpg",
+          title: "Topology Reasoning for Driving Scenes",
+          url: "https://arxiv.org/abs/2304.05277",
+          ititle: "Tianyu Li, Li Chen, Xiangwei Geng, Huijie Wang, Yang Li ",
+          iititle: ", <em>et al.</em>",
+          title2: "arXiv 2023",
+          GitHub_url: "https://github.com/OpenDriveLab/TopoNet",
+          GitHub_img: "https://img.shields.io/github/stars/opendrivelab/TopoNet?style=social",
+          // itb:totubao(""),
+          content: "A new baseline for scene topology reasoning, which unifies heterogeneous feature learning and enhances feature interactions via the graph neural network architecture and the knowledge graph design.",
+        },
+        {
           img: "/style/img/pub/bevf1.jpg",
           title: "BEVFormer: Learning Bird's-Eye-View Representation from Multi-Camera Images via Spatiotemporal Transformers",
           url: "https://arxiv.org/abs/2203.17270",
           ititle: "Zhiqi Li, Wenhai Wang, Hongyang Li, Enze Xie, Chonghao Sima",
-          iititle:", <em>et al.</em>",
+          iititle: ", <em>et al.</em>",
           title2: "ECCV 2022 &nbsp <code>[nuScenes First Place]</code> <code>[Waymo Challenge 2022 First Place]</code>",
           GitHub_url: "https://github.com/fundamentalvision/BEVFormer",
           GitHub_img: "https://img.shields.io/github/stars/fundamentalvision/BEVFormer?style=social",
@@ -145,7 +169,7 @@ for(var i=0;i<len;i++){
           title: "PersFormer: 3D Lane Detection via Perspective Transformer and the OpenLane Benchmark",
           url: "https://arxiv.org/abs/2203.11089",
           ititle: "Li Chen, Chonghao Sima, Yang Li, Xiangwei Geng, Junchi Yan",
-          iititle:", <em>et al.</em>",
+          iititle: ", <em>et al.</em>",
           title2: "ECCV 2022 (Oral) &nbsp <code>[Redefine the Community]</code>",
           GitHub_url: "https://github.com/OpenDriveLab/PersFormer_3DLane",
           GitHub_img: "https://img.shields.io/github/stars/OpenDriveLab/PersFormer_3DLane?style=social",
@@ -163,7 +187,7 @@ for(var i=0;i<len;i++){
           title: "Think Twice before Driving: Towards Scalable Decoders for End-to-End Autonomous Driving",
           url: "https://arxiv.org/abs/2305.06242",
           ititle: "Xiaosong Jia, Penghao Wu, Li Chen",
-          iititle:", <em>et al.</em>",
+          iititle: ", <em>et al.</em>",
           title2: "CVPR 2023",
           GitHub_url: "https://github.com/OpenDriveLab/ThinkTwice",
           GitHub_img: "https://img.shields.io/github/stars/opendrivelab/thinktwice?style=social",
@@ -197,7 +221,7 @@ for(var i=0;i<len;i++){
           title: "ST-P3: End-to-end Vision-based Autonomous Driving via Spatial-Temporal Feature Learning",
           url: "https://arxiv.org/abs/2207.07601",
           ititle: "Shengchao Hu, Li Chen, Penghao Wu, Hongyang Li",
-          iititle:", <em>et al.</em>",
+          iititle: ", <em>et al.</em>",
           title2: "ECCV 2022",
           GitHub_url: "https://github.com/OpenDriveLab/st-p3",
           GitHub_img: "https://img.shields.io/github/stars/OpenDriveLab/st-p3?style=social",
@@ -211,11 +235,55 @@ for(var i=0;i<len;i++){
       id: "bev_perception",
       list: [
         {
+          img: "/style/img/pub/openlanev2.jpg",
+          title: "OpenLane-V2: A Topology Reasoning Benchmark for Scene Understanding in Autonomous Driving",
+          url: "https://arxiv.org/abs/2304.10440",
+          ititle: "Huijie Wang, Tianyu Li, Yang Li, Li Chen, Chonghao Sima",
+          iititle: ", <em>et al.</em>",
+          title2: "arXiv 2023",
+          GitHub_url: "https://github.com/OpenDriveLab/OpenLane-V2",
+          GitHub_img: "https://img.shields.io/github/stars/opendrivelab/OpenLane-V2?style=social",
+          content: "The world's first perception and reasoning benchmark for scene structure in autonomous driving.",
+        },
+        {
+          img: "/style/img/pub/sdf.jpg",
+          title: "Sparse Dense Fusion for 3D Object Detection",
+          url: "https://arxiv.org/abs/2304.04179",
+          ititle: "Yulu Gao, Chonghao Sima, Shaoshuai Shi, Shangzhe Di, Si Liu, Hongyang Li",
+          // iititle: ", <em>et al.</em>",
+          title2: "arXiv 2023",
+          // GitHub_url: "https://github.com/OpenDriveLab/OpenLane-V2",
+          // GitHub_img: "https://img.shields.io/github/stars/opendrivelab/OpenLane-V2?style=social",
+          content: "",
+        },
+        {
+          img: "/style/img/pub/drive-3daug.jpg",
+          title: "3D Data Augmentation for Driving Scenes on Camera",
+          url: "https://arxiv.org/abs/2303.10340",
+          ititle: "Wenwen Tong, Jiangwei Xie, Tianyu Li, Hanming Deng, Xiangwei Geng, Ruoyi Zhou, Dingchen Yang, Bo Dai, Lewei Lu, Hongyang Li",
+          // iititle: ", <em>et al.</em>",
+          title2: "arXiv 2023",
+          // GitHub_url: "https://github.com/OpenDriveLab/OpenLane-V2",
+          // GitHub_img: "https://img.shields.io/github/stars/opendrivelab/OpenLane-V2?style=social",
+          content: "",
+        },
+        {
+          img: "/style/img/pub/gapretrain.jpg",
+          title: "Geometric-aware Pretraining for Vision-centric 3D Object Detection",
+          url: "https://arxiv.org/abs/2304.03105",
+          ititle: "Linyan Huang, Huijie Wang, Jia Zeng, Shengchuan Zhang, Liujuan Cao, Rongrong Ji, Junchi Yan, Hongyang Li",
+          // iititle: ", <em>et al.</em>",
+          title2: "arXiv 2023",
+          // GitHub_url: "https://github.com/OpenDriveLab/BEVPerception-Survey-Recipe",
+          // GitHub_img: "https://img.shields.io/github/stars/opendrivelab/BEVPerception-Survey-Recipe?style=social",
+          content: "",
+        },
+        {
           img: "/style/img/pub/Delving.jpg",
           title: "Delving into the Devils of Bird's-Eye-View Perception: A Review, Evaluation and Recipe",
           url: "https://arxiv.org/abs/2209.05324",
           ititle: "Hongyang Li, Chonghao Sima, Jifeng Dai, Wenhai Wang, Lewei Lu",
-          iititle:", <em>et al.</em>",
+          iititle: ", <em>et al.</em>",
           title2: "arXiv 2022 &nbsp <code>[Setup the Table]</code>",
           GitHub_url: "https://github.com/opendrivelab/bevperception-survey-recipe",
           GitHub_img: "https://img.shields.io/github/stars/opendrivelab/bevperception-survey-recipe?style=social",
@@ -227,7 +295,7 @@ for(var i=0;i<len;i++){
           title: "BEVFormer v2: Adapting Modern Image Backbones to Bird's-Eye-View Recognition via Perspective Supervision",
           url: "https://arxiv.org/abs/2211.10439",
           ititle: "Chenyu Yang, Xizhou Zhu, Hongyang Li, Jifeng Dai",
-          iititle:", <em>et al.</em>",
+          iititle: ", <em>et al.</em>",
           title2: "CVPR 2023 Highlight",
           // GitHub_url:"https://github.com/OpenDriveLab/UniAD",
           // GitHub_img:"https://img.shields.io/github/stars/OpenDriveLab/UniAD?style=social",
@@ -239,7 +307,7 @@ for(var i=0;i<len;i++){
           title: "Distilling Focal Knowledge from Imperfect Expert for 3D Object Detection",
           url: "/file/1662_focaldistiller_camera_ready.pdf",
           ititle: "Jia Zeng, Li Chen",
-          iititle:", <em>et al.</em>",
+          iititle: ", <em>et al.</em>",
           title2: "CVPR 2023",
           // GitHub_url:"https://github.com/OpenDriveLab/UniAD",
           // GitHub_img:"https://img.shields.io/github/stars/OpenDriveLab/UniAD?style=social",
@@ -257,7 +325,7 @@ for(var i=0;i<len;i++){
           title: "Towards Capturing the Temporal Dynamics for Trajectory Prediction: a Coarse-to-Fine Approach",
           url: "https://openreview.net/forum?id=PZiKO7mjC43",
           ititle: "Xiaosong Jia, Li Chen, Penghao Wu, Jia Zeng",
-          iititle:", <em>et al.</em>",
+          iititle: ", <em>et al.</em>",
           title2: "CoRL 2022",
           // GitHub_url:"",
           // GitHub_img:"",
@@ -282,11 +350,23 @@ for(var i=0;i<len;i++){
       id: "cv_at_scale",
       list: [
         {
+          img: "/style/img/pub/mutr.jpg",
+          title: "Referred by Multi-Modality: A Unified Temporal Transformer for Video Object Segmentation",
+          url: "https://arxiv.org/abs/2305.16318",
+          ititle: "Shilin Yan, Renrui Zhang, Ziyu Guo, Wenchao Chen, Wei Zhang, Hongyang Li, Yu Qiao, Zhongjiang He, Peng Gao",
+          // iititle: ", <em>et al.</em>",
+          title2: "arxiv 2023",
+          GitHub_url: "https://github.com/OpenGVLab/MUTR",
+          GitHub_img: "https://img.shields.io/github/stars/OpenGVLab/MUTR?style=social",
+          // itb:totubao("0,https://opendrivelab.com|1,#|2,#|3,#"),
+          content: "",
+        },
+        {
           img: "/style/img/pub/stare.jpg",
           title: "Stare at What You See: Masked Image Modeling without Reconstruction",
           url: "https://arxiv.org/abs/2211.08887",
           ititle: "Hongwei Xue, Peng Gao, Hongyang Li",
-          iititle:", <em>et al.</em>",
+          iititle: ", <em>et al.</em>",
           title2: "CVPR 2023",
           GitHub_url: "https://github.com/OpenPerceptionX/maskalign",
           GitHub_img: "https://img.shields.io/github/stars/OpenPerceptionX/maskalign?style=social",
@@ -298,12 +378,24 @@ for(var i=0;i<len;i++){
           title: "Mimic before Reconstruct: Enhancing Masked Autoencoders with Feature Mimicking",
           url: "https://arxiv.org/abs/2303.05475",
           ititle: "Peng Gao, Renrui Zhang, Rongyao Fang, Ziyi Lin, Hongyang Li, Hongsheng Li, Qiao Yu",
-          iititle:"",
+          iititle: "",
           title2: "arXiv 2023",
           GitHub_url: "https://github.com/Alpha-VL/ConvMAE",
           GitHub_img: "https://img.shields.io/github/stars/Alpha-VL/ConvMAE?style=social",
           // itb:totubao("0,https://opendrivelab.com|1,#|2,#|3,#"),
           content: "Introducing high-level and low-level representations to MAE without interference during pre-training.",
+        },
+        {
+          img: "/style/img/pub/arb.jpg",
+          title: "Align Representations With Base: A New Approach to Self-Supervised Learning",
+          url: "https://openaccess.thecvf.com/content/CVPR2022/html/Zhang_Align_Representations_With_Base_A_New_Approach_to_Self-Supervised_Learning_CVPR_2022_paper.html",
+          ititle: "Shaofeng Zhang, Lyn Qiu, Feng Zhu, Junchi Yan, Hengrui Zhang, Rui Zhao, Hongyang Li, Xiaokang Yang",
+          iititle: "",
+          title2: "CVPR 2022",
+          //GitHub_url: "https://github.com/Alpha-VL/ConvMAE",
+          // GitHub_img: "https://img.shields.io/github/stars/Alpha-VL/ConvMAE?style=social",
+          // itb:totubao("0,https://opendrivelab.com|1,#|2,#|3,#"),
+          content: "",
         },
       ]
     },
@@ -313,7 +405,7 @@ for(var i=0;i<len;i++){
 
 
   function totubao(b) {
-    if (b=="") {
+    if (b == "") {
       return ""
     }
     var html = ""
@@ -358,17 +450,17 @@ for(var i=0;i<len;i++){
         if (img !== "") {
           myshuju.list[ii]["img"] = '<dt><a href="' + url + '" target="_blank"><div class="publication_img"><img data-src="' + img + '" src="/style/img/loading.png"></div></a></dt>'
         }
- 
+
         if (myshuju.list[ii]["GitHub_url"]) {
           var GitHub_url = myshuju.list[ii]["GitHub_url"];
           var GitHub_img = myshuju.list[ii]["GitHub_img"];
           var jtb = '<a href="' + GitHub_url + '" target="_blank"><img src="' + GitHub_img + '" alt="GitHub"  ></a>'
           myshuju.list[ii]["GitHub"] = jtb;
-   
+
         }
- 
+
         myshuju.list[ii]["ititle"] = cur(myshuju.list[ii]["ititle"])
-       
+
 
         h += template(item, myshuju.list[ii])
 
@@ -395,4 +487,5 @@ for(var i=0;i<len;i++){
 
 
 </script>
+
 </html>
