@@ -17,8 +17,8 @@ h1, h2, h3, h4, h5, h6 {
     font-family: Georgia, "Times New Roman", Times, serif;
 }
 a{text-decoration: none;}
-a,a:link,a:active{color: #DC8E47;  }
-a:hover{color: #c0392b;}
+/* a,a:link,a:active{color: #DC8E47;  }
+a:hover{color: #c0392b;} */
 dl,dt,dd,ul,li{list-style:none;}
 img{max-width:100%; vertical-align: middle;}
 .bg{ max-width: 1100px; margin: 0 auto;}
