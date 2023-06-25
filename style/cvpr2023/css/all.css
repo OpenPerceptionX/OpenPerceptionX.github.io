@@ -2756,29 +2756,30 @@ ol {
   font-style: italic;
 }
 
-/* picture hall */
+/* picture wall */
 
 
-.pic_hall_container {
-  width: 1000px;
-  height: 450px;
+.pic_wall_container {
+  width: 1060px;
+  height: 600px;
   margin: 60px auto;
   position: relative;
 }
 
-.pic_hall_container img {
-  padding: 10px 10px 15px;
+.pic_wall_container img {
+  padding: 3px;
   background: white;
   border: 1px solid #ddd;
   box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.4);
+  margin: 6px auto;
 }
 
-.pic_hall_pic {
-  width: 200px;
-  height: 150px;
-  margin-right: 1%;
+.pic_wall_pic {
+  width: 160px;
+  height: 106px;
+  /* margin-right: 1%; */
 }
 
-.pic_hall_container>img:hover {
+.pic_wall_container>img:hover {
   opacity: 0.6;
 }
