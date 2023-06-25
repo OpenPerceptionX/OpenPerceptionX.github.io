@@ -2755,3 +2755,30 @@ ol {
   border-left: gray solid 2px;
   font-style: italic;
 }
+
+/* picture hall */
+
+
+.pic_hall_container {
+  width: 1000px;
+  height: 450px;
+  margin: 60px auto;
+  position: relative;
+}
+
+.pic_hall_container img {
+  padding: 10px 10px 15px;
+  background: white;
+  border: 1px solid #ddd;
+  box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.4);
+}
+
+.pic_hall_pic {
+  width: 200px;
+  height: 150px;
+  margin-right: 1%;
+}
+
+.pic_hall_container>img:hover {
+  opacity: 0.6;
+}
