@@ -11,25 +11,22 @@
 <link rel="icon" type="image/png" href="/style/img/team_logo.png">
 <link href="/style/cvpr2023/css/challenge23.css" rel="stylesheet" type="text/css" media="all">
 <link href="/style/css/footer.css?11" rel="stylesheet" type="text/css" media="all">
+<link href="/style/css/head_event.css" rel="stylesheet" type="text/css" media="all">
+<style>
+  .r_ul a{padding:0px 0px;}
+@media screen and (min-width:1024px){
+	.r_ul.r_ul_this{ position:fixed; top:0; bottom:auto;}
+}
+</style>
 <script src="https://kit.fontawesome.com/8990c176d0.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="cvpr23 home">
 <!-- 如果是首頁加上 樣式 home -->
 
-  <div class="header"> <a class="head_fanhui" href="/e2ead/cvpr23.html"></a>
-    <div class="rnav m"></div>
-    <!-- <a class="logo" href="/e2ead/cvpr23.html"></a> -->
-    <div class="qh_langw">
-      <!-- <div class="qh_lang"><a href="/AD23Challenge.html#FAQ">FAQ</a></div> -->
-      <!-- <div class="qh_lang"><a href="/e2ead/cvpr23.html">EN</a><a href="/AD23Challenge_cn.html" class="this">中<font class="m">文</font></a></div> -->
-      <div class="qh_lang">
-        <a href="/" style="user-select: none;">主页</a>
-      </div>
-    </div>
-  </div>
-  <a class="go_top" href="#"></a>
-  <div class="rnav_br"></div>
+<div class="header" href="/"> <a class="head_fanhui" href="/"></a>
+  <div class="rnav m" style="margin-left: 86%;"></div>
+</div>
   <div class="bannerw">
   <div class="banner" style="background-image: url(/style/cvpr2023/img/beijing/beijing.jpg); background-blend-mode: overlay; background-color: rgb(63, 63, 63); background-size: cover; background-position: center;">
     <div class="banner_dian"></div>
@@ -66,13 +63,13 @@
             <p>
               <img src="/style/cvpr2023/img/sh_ai_lab.png" class=" banner_img" data-swiper-parallax-x="-1600" style="user-select: none;"/>
             </p>
-            <br>
+            <!-- <br>
             <p>
               <img src="/style/cvpr2023/img/beijing/20230607-184104.png" class=" qr_img" data-swiper-parallax-x="-1600" style="user-select: none;"/>
               <img src="/style/cvpr2023/img/beijing/20230607-141111.jpg" class=" qr_img" style="margin-left: 2%;" data-swiper-parallax-x="-1600" style="user-select: none;"/>
               <br>
               <span class="qr_dec">报名链接</span> <span class="qr_dec2">直播链接</span>
-            </p>
+            </p> -->
             <!-- <br />
             <a class="lj_button2" data-swiper-parallax-x="-4000"  href="mailto:ad_workshop_beijing_2023@googlegroups.com" style="user-select: none;">报名链接</a> </div> -->
         </div>
@@ -83,6 +80,7 @@
   
   <div class="r_ul">
     <ul class="bg">
+      <li data-gd="#tttttt"class="li_mobile"><a href="/"><img src="/style/img/team_logo_long.png" style="display: inline; width: 50%; margin-left: -3%;"></a></li>
       <li data-gd="#id5"><a href="#schedule">活动日程</a></li>
       <li data-gd="#id6"><a href="#thanks">特别鸣谢</a></li>
     </ul>
@@ -350,17 +348,12 @@
   
       </div></div>
   
-
+      <div class="wrapper row2" id="tttttt" style="display: none;"></div>
 
 
 
 <script src="/style/cvpr2023/js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script> 
 <script src="/style/cvpr2023/js/challenge23.js" type="text/javascript" charset="utf-8"></script>
-
-<script>
-  $.get("/components/footer.html?xx",function(result){
-    $("body").append(result)
-  })
-  </script>
+<script src="/style/js/top_event.js?111" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
