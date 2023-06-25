@@ -79,3 +79,13 @@ br {
       }
 
 .o_l img{ max-height: 100px;    max-width: 230px;}
+
+.o_l a .footer_logo_color {
+    display: none;
+}
+.o_l a:hover .footer_logo_white {
+    display: none;
+}
+.o_l a:hover .footer_logo_color {
+    display: inherit;
+}
