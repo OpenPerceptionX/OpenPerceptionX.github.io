@@ -2780,6 +2780,7 @@ ol {
   /* height: 106px; */
   /* margin-right: 1%; */
 }
+
 @media screen and (max-device-width:1024px) {
   .pic_wall_pic {
     width: 30%;
