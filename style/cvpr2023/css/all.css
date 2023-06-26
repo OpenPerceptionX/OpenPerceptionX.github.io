@@ -2780,6 +2780,6 @@ ol {
   /* margin-right: 1%; */
 }
 
-.pic_wall_container>img:hover {
-  opacity: 0.2;
+.pic_wall_container>a img:hover {
+  opacity: 0.8;
 }
