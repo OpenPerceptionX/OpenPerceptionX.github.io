@@ -2703,3 +2703,41 @@ ol {
     display: inherit;
   }
 }
+
+/* picture wall */
+
+
+.pic_wall_container {
+  /* width: 1060px; */
+  /* height: 600px; */
+  margin: 30px auto;
+  position: relative;
+  /* overflow-y: scroll; */
+}
+
+.pic_wall_container img {
+  padding: 3px;
+  background: white;
+  border: 1px solid #ddd;
+  box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.4);
+  margin: 6px auto;
+}
+
+.pic_wall_pic {
+  width: 18.9%;
+  /* height: 106px; */
+  /* margin-right: 1%; */
+}
+
+@media screen and (max-device-width:1024px) {
+  .pic_wall_pic {
+    width: 30%;
+    /* height: 106px; */
+    /* margin-right: 1%; */
+  }
+}
+
+
+.pic_wall_container>a img:hover {
+  opacity: 0.7;
+}
