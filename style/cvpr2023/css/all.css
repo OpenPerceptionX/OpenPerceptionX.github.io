@@ -2760,10 +2760,11 @@ ol {
 
 
 .pic_wall_container {
-  width: 1060px;
-  height: 600px;
-  margin: 60px auto;
+  /* width: 1060px; */
+  /* height: 600px; */
+  margin: 30px auto;
   position: relative;
+  /* overflow-y: scroll; */
 }
 
 .pic_wall_container img {
@@ -2781,5 +2782,5 @@ ol {
 }
 
 .pic_wall_container>a img:hover {
-  opacity: 0.8;
+  opacity: 0.7;
 }
