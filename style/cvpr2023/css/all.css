@@ -2776,10 +2776,18 @@ ol {
 }
 
 .pic_wall_pic {
-  width: 160px;
-  height: 106px;
+  width: 18.9%;
+  /* height: 106px; */
   /* margin-right: 1%; */
 }
+@media screen and (max-device-width:1024px) {
+  .pic_wall_pic {
+    width: 30%;
+    /* height: 106px; */
+    /* margin-right: 1%; */
+  }
+}
+
 
 .pic_wall_container>a img:hover {
   opacity: 0.7;
