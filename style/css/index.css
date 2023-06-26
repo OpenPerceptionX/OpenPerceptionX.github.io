@@ -311,7 +311,7 @@ p .email_link:hover {
     flex-wrap: wrap;
 }
 .research_list dl{
-    width: 32%;
+    width: 32.9%;
     margin: auto;
     background: #fff;
     display: flex;
@@ -334,7 +334,7 @@ p .email_link:hover {
 }
 
 .research_list dl:hover{
-    opacity: 0.8;
+    opacity: 0.7;
 }
 .research_list .inactivate_dl:hover{
     opacity: 1;
