@@ -387,42 +387,48 @@
       img: "/style/img/events/beijing20230618.png",
       url: "/e2ead/cvpr23_CN.html",
       time: "2023-06-18",
-      content: "行业大模型论坛<br>暨<br>自动驾驶国际挑战赛分享会"
+      content: "行业大模型论坛<br>暨<br>自动驾驶国际挑战赛分享会",
+      target:"_self"
     },
     {
       img: "/style/img/events/cvpr_2023_workshop.jpg",
       url: "/e2ead/cvpr23.html",
       time: "2023-06-18",
-      content: "CVPR 2023 Workshop<br><br>End-to-End Autonomous Driving: Emerging Tasks and Challenges"
+      content: "CVPR 2023 Workshop<br><br>End-to-End Autonomous Driving: Emerging Tasks and Challenges",
+      target:"_self"
     },
     {
       img: "/style/img/events/iclr_2023_workshop.jpg",
       url: "/sr4ad/iclr23.html",
       time: "2023-05-05",
-      content: "ICLR 2023 Workshop<br><br>Scene Representations for Autonomous Driving"
+      content: "ICLR 2023 Workshop<br><br>Scene Representations for Autonomous Driving",
+      target:"_self"
     },
     {
       img: "/style/img/events/conference_2023.jpg",
       url: "https://mp.weixin.qq.com/s/BQUFVXFyIOp7yE7gWVUGcA",
       time: "2023-02-26",
-      content: "GAIDC 2023<br><br>数联新出行 开源新发展"
+      content: "GAIDC 2023<br><br>数联新出行 开源新发展",
+      target:"_blank"
     },
     // {
     //   img: "/style/img/events/waymo_2022.jpg",
     //   url: "https://zhuanlan.zhihu.com/p/531987378",
     //   time: "2022-06-20",
-    //   content: "Waymo Global Challenge<br>Top First Place<br>at CVPR 2022"
+    //   content: "Waymo Global Challenge<br>Top First Place<br>at CVPR 2022",
+    // target:"_blank"
     // },
     {
       img: "/style/img/events/prcv_2022.jpg",
       url: "https://zhuanlan.zhihu.com/p/596218293",
       time: "2022-12-24",
-      content: "PRCV 2022 Workshop<br><br>自动驾驶感知技术发展趋势与探索"
+      content: "PRCV 2022 Workshop<br><br>自动驾驶感知技术发展趋势与探索",
+      target:"_blank"
     }
 
   ];
 
-  var Event_item = '<dl><span>{{time}}</span><a href="{{url}}" target="_blank"><dt><div class="evevt_img"><img data-src="{{img}}"></div></dt><dd>{{content}}</dd></a></dl>';
+  var Event_item = '<dl><span>{{time}}</span><a href="{{url}}" target="{{target}}"><dt><div class="evevt_img"><img data-src="{{img}}"></div></dt><dd>{{content}}</dd></a></dl>';
   function set_time(itime) {
     if(itime !== undefined){
     var m = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"]
