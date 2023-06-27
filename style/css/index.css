@@ -26,49 +26,7 @@ h5 {
     text-transform: none;
 }
 
-/* 表单 */
-::-webkit-input-placeholder {color: #b2b2b2;} 
-::-moz-placeholder {color: #b2b2b2;} 
-::-ms-input-placeholder {color: #b2b2b2;}
-.k1 {
-    /* background: url(/style/img/mail/br.png) no-repeat center bottom; */
-    background-color: lightgray;
-    border-bottom: 3px solid lightgray;
-}
-.k1 .bg {position: relative;background: url(/style/img/mail/ibr.png) no-repeat center bottom;padding-top: 35px;}
-.k1 .bg::before {z-index: 2;pointer-events: none;content: "";display: block;width: 100%;height: 100%;background: url(/style/img/mail/mail.png) no-repeat bottom;position: absolute;bottom: 0;}
-.iform {box-shadow: 0px 0px 0px 1px rgba(224, 224, 224, 0.24);padding: 50px 0 200px 0;background: #fff;margin: 0 27px;border-top: 1px solid #61cdd2;border-radius: 28px;position: relative;z-index: 1;}
-.iform::after {width: 30%;height: 1px;border-top: 1px solid #019cdf;right: 20%;content: "";position: absolute;top: -1px;}
-.iform::before {width: 20%;height: 1px;border-top: 1px solid #0f2139;right: 0;content: "";position: absolute;top: -1px;height: 40px;border-radius: 0 28px 0 0;}
-.mailing_list {text-align: center;width: 100%;display: flex;align-items: center;justify-content: center;padding-top: 40px;}
-.mailing_list_input {color: #62ccd0;background: #fff;width: 380px;height: 48px;padding: 0;margin-left: 40px;font-size: 20px;font-weight: 300;border-radius: 33px;border: 1px solid rgb(223, 223, 223);padding-left: 50px;max-width: 500px;-webkit-appearance: none;background: url(/style/img/mail/imail.svg) no-repeat 20px center;}
-.mailing_list_input:focus {outline: none;border: 1px solid #c1c1c1;}
-.mailing_list_button {margin-left: 8px;outline: none;padding: 0;width: 23%;max-width: 150px;height: 52px;line-height: 52px;font-size: 20px;font-weight: bold;border-radius: 33px;border: none;color: #fff;background-color: #58ccbe;background-image: -moz-linear-gradient( -128deg, rgb(1,156,223) 0%, rgb(104,188,182) 44%, rgb(97,205,210) 100%);background-image: -webkit-linear-gradient( -128deg, rgb(1,156,223) 0%, rgb(104,188,182) 44%, rgb(97,205,210) 100%);background-image: -ms-linear-gradient( -128deg, rgb(1,156,223) 0%, rgb(104,188,182) 44%, rgb(97,205,210) 100%);cursor: pointer;margin-left: 10px;}
-.mailing_list_button:hover {background-color: #58ccbe;opacity: .5;}
-.mailing_list_button:disabled {background: #f2f2f2;color: rgb(223, 223, 223);}
-.mailing_list_button:disabled:hover {cursor: not-allowed;}
-.mailing_list_button span {visibility: visible;transition: all .1s;}
-.mailing_list_button.submit .success {opacity: 1;visibility: visible;}
-.mailing_list_button.submit span {visibility: hidden;}
-.success {margin-top: -44px;z-index: 1;opacity: 0;visibility: hidden;}
-.success svg {width: 30px;height: 30px;fill: #58ccbe;}
 
-@media screen and (max-device-width:1024px) {
-.mailing_list {flex-wrap: wrap;padding: 10px 20px 0 20px;width: calc(100% - 40px);}
-.mailing_list_input {width: 100%;text-align: center;padding: 0;}
-.mailing_list_button {width: 50%;margin-top: 20px;}
-.k1 .bg {padding: 0;}
-.k1 .bg {background: url(/style/img/mail/ibr2.png?2) no-repeat center bottom;background-size: 100% auto;}
-.k1 .bg::before {background: url(/style/img/mail/mail2.png?2) no-repeat bottom;background-size: 100% auto;}
-.k1 {padding: 20px 10px 0 10px;}
-.iform {margin: 0 10px;padding: 25px 0 90px 0;}
-.mailing_list_input {height: 44px;font-size: 14px;background-size: 18px auto;}
-.mailing_list_button {height: 44px;line-height: 44px;font-size: 14px;}
-.k1 .title_ + .btitle {font-size: 13px;}
-}
-.title_ {
-    margin-top: 2%;
-}
 /* 表单 */
 .open_from {display: none;position: fixed;top: -200%;left: -200%;width: 1px;height: 1px;}
 .open_from .loading {display: none;}
