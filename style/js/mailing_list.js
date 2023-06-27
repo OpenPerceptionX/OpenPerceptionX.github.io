@@ -6,7 +6,7 @@ function checkURL() {
     img.onload = function () {
         //console.log("//谷歌可以访问");
         // 插入头部
-        if ( +new Date() - start > 3000){
+        if ( +new Date() - start > 300){
             localStorage.setItem("havefrom","false");
             nofrom();
             return;
