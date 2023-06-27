@@ -82,22 +82,22 @@ function ifrom() {
 //开始
 //  localStorage.setItem("havefrom","")
 // console.log(localStorage.getItem("havefrom"));
-
+nofrom();
 checkURL();
 
-if(localStorage.getItem("havefrom")=="false"){
-    nofrom();
+// if(localStorage.getItem("havefrom")=="false"){
+//     nofrom();
   
 
-}
-else{
+// }
+// else{
     
    
    
  
 
 
-}
+// }
 
 
 
