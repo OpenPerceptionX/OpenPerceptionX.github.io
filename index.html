@@ -240,7 +240,7 @@
 
 
 
-  <!-- <div id="mailing_list"></div> -->
+  <div id="mailing_list"></div>
 
 
 
@@ -621,54 +621,54 @@ else{
   }
 
 
-  //表单
-  var from_url = "https://alt.jotfor.ms/231391751464053"
-  let submitted = false;
-  let form = document.getElementById("mailing_list");
-  let input = document.getElementById("mailing_list_input");
-  let button = document.getElementById("mailing_list_button");
-  // onload
-  button.disabled = true;
-  // check input
-  input.addEventListener("input", change);
+  // //表单
+  // var from_url = "https://alt.jotfor.ms/231391751464053"
+  // let submitted = false;
+  // let form = document.getElementById("mailing_list");
+  // let input = document.getElementById("mailing_list_input");
+  // let button = document.getElementById("mailing_list_button");
+  // // onload
+  // button.disabled = true;
+  // // check input
+  // input.addEventListener("input", change);
 
-  function change() {
-    if (submitted) {
-      button.classList.remove("submit");
-    }
-    let val = input.value;
-    let empty = val == null || val == "";
-    let valid = val.match(
-      /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    );
-    if (!empty && valid) {
-      button.disabled = false;
-    } else {
-      button.disabled = true;
-    }
-  }
-  // submit
-  form.addEventListener("submit", mail);
+  // function change() {
+  //   if (submitted) {
+  //     button.classList.remove("submit");
+  //   }
+  //   let val = input.value;
+  //   let empty = val == null || val == "";
+  //   let valid = val.match(
+  //     /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  //   );
+  //   if (!empty && valid) {
+  //     button.disabled = false;
+  //   } else {
+  //     button.disabled = true;
+  //   }
+  // }
+  // // submit
+  // form.addEventListener("submit", mail);
 
-  function mail() {
-    button.classList.toggle("submit");
-    var that = $("#mailing_list")
-    var inputx = $("#mailing_list_input")
-    var newUrl = from_url + "?email=" + inputx.val()
-    that.attr({
-      "action": newUrl
-    })
-    $(".open_from iframe").attr("src", newUrl)
-    $(".open_from").toggle()
-    $("body").toggleClass('open_from_this')
-    button.disabled = true;
-    submitted = true;
-  }
-  $(document).on("click", ".close", function () {
-    $(".open_from iframe").attr("src", "")
-    $(".open_from").toggle()
-    $("body").toggleClass('open_from_this')
-  });
+  // function mail() {
+  //   button.classList.toggle("submit");
+  //   var that = $("#mailing_list")
+  //   var inputx = $("#mailing_list_input")
+  //   var newUrl = from_url + "?email=" + inputx.val()
+  //   that.attr({
+  //     "action": newUrl
+  //   })
+  //   $(".open_from iframe").attr("src", newUrl)
+  //   $(".open_from").toggle()
+  //   $("body").toggleClass('open_from_this')
+  //   button.disabled = true;
+  //   submitted = true;
+  // }
+  // $(document).on("click", ".close", function () {
+  //   $(".open_from iframe").attr("src", "")
+  //   $(".open_from").toggle()
+  //   $("body").toggleClass('open_from_this')
+  // });
   //检测twitter是否加载成功
   (function ($, h, c) {
     var a = $([]),
