@@ -6,6 +6,11 @@ function checkURL() {
     img.onload = function () {
         //console.log("//谷歌可以访问");
         // 插入头部
+        if ( +new Date() - start > 3000){
+            localStorage.setItem("havefrom","false");
+            nofrom();
+            return;
+        }
         $.get("/components/mailing_list.html", function (result) {
             $("#mailing_list").html(result);
             ifrom();
@@ -22,6 +27,7 @@ function checkURL() {
          
     };
     img.src = "//www.google.com/images/errors/robot.png" + "?t=" + new Date().getTime();
+    var start = +new Date();
 }
 
 function nofrom(){
