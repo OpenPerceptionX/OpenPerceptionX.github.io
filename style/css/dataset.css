@@ -2545,10 +2545,10 @@ h2, h3 {
   margin-top: 1%;
   position: absolute;
   user-select: none;
-  font-size: 30px;
+  font-size: 23px;
   color: white;
   font-weight: 900;
-  line-height: 36px;
+  line-height: 30px;
 }
 
 .research_list dl:hover{
