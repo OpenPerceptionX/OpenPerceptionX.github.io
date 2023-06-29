@@ -890,24 +890,24 @@ $(function () {
         $("#total_4").text(pages_4)
     }
     // 根据name进行排序
-    $(".table_list_4 tr th:nth-child(1)").click(function () {
-        mysort($(this), 'Rank', allData_4)
-    })
+    // $(".table_list_4 tr th:nth-child(1)").click(function () {
+    //     mysort($(this), 'Rank', allData_4)
+    // })
     // $(".table_list_4 tr th:nth-child(2)").click(function () {
     //     mysort($(this), 'team', allData_4)
     // })
-    $(".table_list_4 tr th:nth-child(5)").click(function () {
-        mysort($(this), 'Score', allData_4)
-    })
-    $(".table_list_4 tr th:nth-child(6)").click(function () {
-        mysort($(this), 'ch1_overall_score', allData_4)
-    })
-    $(".table_list_4 tr th:nth-child(7)").click(function () {
-        mysort($(this), 'ch2_overall_score', allData_4)
-    })
-    $(".table_list_4 tr th:nth-child(8)").click(function () {
-        mysort($(this), 'ch3_overall_score', allData_4)
-    })
+    // $(".table_list_4 tr th:nth-child(5)").click(function () {
+    //     mysort($(this), 'Score', allData_4)
+    // })
+    // $(".table_list_4 tr th:nth-child(6)").click(function () {
+    //     mysort($(this), 'ch1_overall_score', allData_4)
+    // })
+    // $(".table_list_4 tr th:nth-child(7)").click(function () {
+    //     mysort($(this), 'ch2_overall_score', allData_4)
+    // })
+    // $(".table_list_4 tr th:nth-child(8)").click(function () {
+    //     mysort($(this), 'ch3_overall_score', allData_4)
+    // })
     // 排序方法
     function mysort(obj, field, data) {
         obj.siblings("th").removeClass()
