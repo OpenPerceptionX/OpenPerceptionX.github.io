@@ -54,11 +54,26 @@
     outline: none;
     border-radius:3px;
     width: 2.5rem;
-    padding-left: .5rem;
     text-align: center;
     border: 1px solid #ccc;
 }
 
 .option_selection td {
     background-color: rgb(100, 100, 168); 
+}
+
+#date_search {
+    outline: none;
+    border-radius:3px;
+    width: 100px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+#team_search {
+    outline: none;
+    border-radius:3px;
+    width: 100px;
+    text-align: left;
+    border: 1px solid #ccc;
 }
