@@ -19,7 +19,8 @@ $(function () {
             "mAP": 73.65,
             "Ped_Crossing": 68.94,
             "Divider": 76.66,
-            "Boundary": 75.34
+            "Boundary": 75.34,
+            "option": 'yes'
         },
         {
             "Organization": "Shanghai Jiao Tong University<br>上海交通大学",
@@ -233,6 +234,13 @@ $(function () {
                 return('<img src='+i+' style="width: 33px; user-select: none;"/>')
             }
         }
+    function filter_undefined(i) {
+        if (i == undefined) {
+            return('N/A')
+        } else {
+            return(i)
+        }
+    }
     function renderList(data) {
         // 总页数
         pages_0 = Math.ceil(total_0 / page_0)
@@ -246,6 +254,7 @@ $(function () {
         <td>${item.Organization}</td>
         <td><b>${num(item.mAP)}</b></td>
         <td>${item.team}</td>
+        <td>${filter_undefined(item.option)}</td>
         <td>${num(item.Ped_Crossing)}</td>
         <td>${num(item.Divider)}</td>
         <td>${num(item.Boundary)}</td>
@@ -343,5 +352,26 @@ $(function () {
             curPage_0 = inpVal
         }
         renderList(allData_0)
+    })
+    // 筛选
+    $("#opt1").change(function () {
+        var selVal = $(this).val()
+        var res1 = []
+        var res2 = []
+        allData_0.forEach(item => {
+            if (item.option == undefined) {
+                res1.push(item)
+            } else {
+                res2.push(item)
+            }
+        })
+        if (selVal == 'na') {
+            console.log(res1);
+            renderList(res1.slice((curPage_0 - 1) * page_0, page_0 * curPage_0))
+        } else if (selVal == 'yes') {
+            renderList(res2.slice((curPage_0 - 1) * page_0, page_0 * curPage_0))
+        } else {
+            renderList(allData_0.slice((curPage_0 - 1) * page_0, page_0 * curPage_0))
+        }
     })
 })
