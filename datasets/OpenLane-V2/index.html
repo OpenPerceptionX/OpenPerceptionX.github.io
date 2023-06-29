@@ -18,7 +18,31 @@
   <link href="/style/css/footer.css?1" rel="stylesheet" type="text/css" media="all">
   <link href="/style/css/dataset.css" rel="stylesheet" type="text/css" media="all">
   <link rel="stylesheet" type="text/css" href="/datasets/OpenLane-V2/task_0.css" media="all">
+  <!-- latex support -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
+  <link href="/style/css/footer.css?11" rel="stylesheet" type="text/css" media="all">
+  <link href="/style/css/head_event.css" rel="stylesheet" type="text/css" media="all">
+  <style>
+    .r_ul a {
+      padding: 0px 0px;
+    }
+
+    @media screen and (min-width:1024px) {
+      .r_ul.r_ul_this {
+        position: fixed;
+        top: 0;
+        bottom: auto;
+      }
+    }
+  </style>
 </head>
 
 <body class="loadings">
@@ -142,8 +166,8 @@
               <th style="width: 10%;">$\text{TOP}_{lt}$</th>
             </tr>
             <tr class="option_selection">
-              <td></td>
-              <td></td>
+              <td><input type="text" id="date_search"></td>
+              <td><input type="text" id="team_search"></td>
               <td></td>
               <td></td>
               <td></td>

@@ -225,7 +225,8 @@ $(function () {
     var pages_0 = Math.ceil(total_0 / page_0)
     // 渲染数据列表
     function num(i) {
-        var n = i.toFixed(2);
+
+        var n = (i*100).toFixed(2);
         return(n);
         }
         function filter(i) {
@@ -356,6 +357,38 @@ $(function () {
         }
         renderList(selected_data_0)
     })
+    // 手动日期
+    document.getElementById("date_search").addEventListener("input", searchdate);
+    function searchdate() {
+        var inpVal = $(this).val()
+        if (inpVal == '') {
+            selected_data_0 = allData_0
+        } else {
+            selected_data_0 = []
+            allData_0.forEach(item => {
+                if (item.date.startsWith(inpVal)) {
+                    selected_data_0.push(item)
+                }
+            })
+        }
+        renderList(selected_data_0.slice((curPage_0 - 1) * page_0, page_0 * curPage_0))
+    }
+    // 手动队伍
+    document.getElementById("team_search").addEventListener("input", searchteam);
+    function searchteam() {
+        var inpVal = $(this).val()
+        if (inpVal == '') {
+            selected_data_0 = allData_0
+        } else {
+            selected_data_0 = []
+            allData_0.forEach(item => {
+                if (item.Team.includes(inpVal)) {
+                    selected_data_0.push(item)
+                }
+            })
+        }
+        renderList(selected_data_0.slice((curPage_0 - 1) * page_0, page_0 * curPage_0))
+    }
     // 筛选
     $("#opt1").change(function () {
         var selVal = $(this).val()
