@@ -1199,15 +1199,15 @@ $(function () {
         $("#total_3").text(pages_3)
     }
     // 根据name进行排序
-    $(".table_list_3 tr th:nth-child(1)").click(function () {
-        mysort($(this), 'Rank', allData_3)
-    })
+    // $(".table_list_3 tr th:nth-child(1)").click(function () {
+    //     mysort($(this), 'Rank', allData_3)
+    // })
     // $(".table_list_3 tr th:nth-child(2)").click(function () {
     //     mysort($(this), 'team', allData_3)
     // })
-    $(".table_list_3 tr th:nth-child(5)").click(function () {
-        mysort($(this), 'mIoU', allData_3)
-    })
+    // $(".table_list_3 tr th:nth-child(5)").click(function () {
+    //     mysort($(this), 'mIoU', allData_3)
+    // })
     // 排序方法
     function mysort(obj, field, data) {
         obj.siblings("th").removeClass()

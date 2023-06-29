@@ -260,24 +260,24 @@ $(function () {
         $("#total_2").text(pages_2)
     }
     // 根据name进行排序
-    $(".table_list_2 tr th:nth-child(1)").click(function () {
-        mysort($(this), 'Rank', allData_2)
-    })
+    // $(".table_list_2 tr th:nth-child(1)").click(function () {
+    //     mysort($(this), 'Rank', allData_2)
+    // })
     // $(".table_list_2 tr th:nth-child(2)").click(function () {
     //     mysort($(this), 'team', allData_2)
     // })
-    $(".table_list_2 tr th:nth-child(5)").click(function () {
-        mysort($(this), 'mAP', allData_2)
-    })
-    $(".table_list_2 tr th:nth-child(6)").click(function () {
-        mysort($(this), 'Ped_Crossing', allData_2)
-    })
-    $(".table_list_2 tr th:nth-child(7)").click(function () {
-        mysort($(this), 'Divider', allData_2)
-    })
-    $(".table_list_2 tr th:nth-child(8)").click(function () {
-        mysort($(this), 'Boundary', allData_2)
-    })
+    // $(".table_list_2 tr th:nth-child(5)").click(function () {
+    //     mysort($(this), 'mAP', allData_2)
+    // })
+    // $(".table_list_2 tr th:nth-child(6)").click(function () {
+    //     mysort($(this), 'Ped_Crossing', allData_2)
+    // })
+    // $(".table_list_2 tr th:nth-child(7)").click(function () {
+    //     mysort($(this), 'Divider', allData_2)
+    // })
+    // $(".table_list_2 tr th:nth-child(8)").click(function () {
+    //     mysort($(this), 'Boundary', allData_2)
+    // })
     // 排序方法
     function mysort(obj, field, data) {
         obj.siblings("th").removeClass()

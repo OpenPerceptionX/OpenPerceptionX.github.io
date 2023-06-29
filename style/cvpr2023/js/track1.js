@@ -262,27 +262,27 @@ $(function () {
         $("#total").text(pages)
     }
     // 根据name进行排序
-    $(".table_list tr th:nth-child(1)").click(function () {
-        mysort($(this), 'Rank', allData)
-    })
+    // $(".table_list tr th:nth-child(1)").click(function () {
+    //     mysort($(this), 'Rank', allData)
+    // })
     // $(".table_list tr th:nth-child(2)").click(function () {
     //     mysort($(this), 'Team', allData)
     // })
-    $(".table_list tr th:nth-child(5)").click(function () {
-        mysort($(this), 'OLS', allData)
-    })
-    $(".table_list tr th:nth-child(6)").click(function () {
-        mysort($(this), 'DET_l', allData)
-    })
-    $(".table_list tr th:nth-child(7)").click(function () {
-        mysort($(this), 'DET_t', allData)
-    })
-    $(".table_list tr th:nth-child(8)").click(function () {
-        mysort($(this), 'TOP_ll', allData)
-    })
-    $(".table_list tr th:nth-child(9)").click(function () {
-        mysort($(this), 'TOP_lt', allData)
-    })
+    // $(".table_list tr th:nth-child(5)").click(function () {
+    //     mysort($(this), 'OLS', allData)
+    // })
+    // $(".table_list tr th:nth-child(6)").click(function () {
+    //     mysort($(this), 'DET_l', allData)
+    // })
+    // $(".table_list tr th:nth-child(7)").click(function () {
+    //     mysort($(this), 'DET_t', allData)
+    // })
+    // $(".table_list tr th:nth-child(8)").click(function () {
+    //     mysort($(this), 'TOP_ll', allData)
+    // })
+    // $(".table_list tr th:nth-child(9)").click(function () {
+    //     mysort($(this), 'TOP_lt', allData)
+    // })
     // $(".table_list tr th:nth-child(9)").click(function () {
     //     mysort($(this), 'Fscore', allData)
     // })
