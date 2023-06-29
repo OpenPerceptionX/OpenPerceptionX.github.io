@@ -1,16 +1,16 @@
 .table_list_0 th{
     background-color: rgb(0, 0, 68); 
     cursor: pointer;
+    border-top: 5px solid rgb(0, 0, 68);
+    border-bottom: 5px solid rgb(0, 0, 68);
 }
 .table_list_0 tr th.asc{
     /* box-sizing:content-box; */
-    border-top:7px solid blue;
-    background-color: rgb(0, 0, 114); 
+    border-top:5px solid rgb(83, 194, 240);
 }
 .table_list_0 tr th.desc{
     /* box-sizing:content-box; */
-    border-bottom:7px solid blue;
-    background-color: rgb(0, 0, 114); 
+    border-bottom:5px solid rgb(83, 194, 240);
 }
 .table_list_0 tr.page{
     background-color: #fff!important;
@@ -60,5 +60,5 @@
 }
 
 .option_selection td {
-    background-color: rgba(0, 0, 68, 0.5); 
+    background-color: rgb(100, 100, 168); 
 }
