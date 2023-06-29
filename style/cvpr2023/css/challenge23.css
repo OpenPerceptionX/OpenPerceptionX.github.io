@@ -797,7 +797,7 @@ hr {
 /* host */
 .link_logo ul {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .link_logo li {
