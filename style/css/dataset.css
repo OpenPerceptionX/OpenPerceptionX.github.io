@@ -2582,3 +2582,7 @@ h2, h3 {
       font-size: 23px;
   }
 }
+
+h2 {
+  text-transform: none;
+}

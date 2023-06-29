@@ -1,5 +1,5 @@
 .table_list_0 th{
-    background-color: rgb(1, 126, 126); 
+    background-color: rgb(33, 33, 33); 
     cursor: pointer;
 }
 .table_list_0 tr th.asc{
@@ -53,4 +53,8 @@
     padding-left: .5rem;
     text-align: center;
     border: 1px solid #ccc;
+}
+
+th {
+    user-select: none;
 }
