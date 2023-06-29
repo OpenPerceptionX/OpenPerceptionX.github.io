@@ -1,14 +1,16 @@
 .table_list_0 th{
-    background-color: rgb(33, 33, 33); 
+    background-color: rgb(0, 0, 68); 
     cursor: pointer;
 }
 .table_list_0 tr th.asc{
-    box-sizing: border-box;
-    border-top:5px solid blue;
+    /* box-sizing:content-box; */
+    border-top:7px solid blue;
+    background-color: rgb(0, 0, 114); 
 }
 .table_list_0 tr th.desc{
-    box-sizing: border-box;
-    border-bottom:5px solid blue;
+    /* box-sizing:content-box; */
+    border-bottom:7px solid blue;
+    background-color: rgb(0, 0, 114); 
 }
 .table_list_0 tr.page{
     background-color: #fff!important;
@@ -41,6 +43,8 @@
     display: inline-block;
     background-color: #e5e5e5;
     cursor: pointer;
+    font-weight: bold;
+    color: rgb(0, 0, 68);
 }
 .page_0 button:hover{
     background-color: #b2b2b2;
@@ -56,5 +60,5 @@
 }
 
 .option_selection td {
-    background-color: rgba(33, 33, 33, 0.5);
+    background-color: rgba(0, 0, 68, 0.5); 
 }
