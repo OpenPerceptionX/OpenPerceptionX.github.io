@@ -2586,3 +2586,7 @@ h2, h3 {
 h2 {
   text-transform: none;
 }
+
+th {
+  user-select: none;
+}
