@@ -14,7 +14,8 @@ $(function () {
             "TOP_lt": 0.3348,
             "OLS": 0.5519,
             "Fscore": 0.2559,
-            "option": "yes"
+            "option": "yes",
+            "Authors": "Dongming Wu, Fan Jia, Jiahao Chang, Zhuoling Li, Jianjian Sun, Chunrui Han, Shuailin Li, Yingfei Liu, Zheng Ge, Tiancai Wang",
         },
         {
             "Organization": "QCraft<br>轻舟智航",
@@ -38,13 +39,14 @@ $(function () {
             "date": "2023-06-01",
             "prize" : "/style/cvpr2023/img/rank02.png",
             "Link": "",
-            "Team": "Victory <a href=\"/e2ead/AD23Challenge/Track_1_Victory.pdf\">[paper]</a>",
+            "Team": "Victory <br><a href=\"/e2ead/AD23Challenge/Track_1_Victory.pdf\">[paper]</a>",
             "DET_l": 0.2184,
             "DET_t": 0.7245,
             "TOP_ll": 0.1324,
             "TOP_lt": 0.2261,
             "OLS": 0.4456,
-            "Fscore": 0.2530
+            "Fscore": 0.2530,
+            "Authors": "Mingjie Lu, Yuanxian Huang, Ji Liu, Jinzhang Peng, Lu Tian, Ashish Sirasao",
         },
         {
             "Organization": "QCraft<br>轻舟智航",
@@ -74,7 +76,8 @@ $(function () {
             "TOP_ll": 0.0602,
             "TOP_lt": 0.1570,
             "OLS": 0.3922,
-            "Fscore": 0.4592
+            "Fscore": 0.4592,
+            "Authors": "M. Esat Kalfaoglu, Halil Ibrahim Ozturk, Ozsel Kilinc, Alptekin Temizel",
         },
         {
             "Organization": "MeiTuan<br>美团",
@@ -89,7 +92,8 @@ $(function () {
             "TOP_ll": 0.0401,
             "TOP_lt": 0.2112,
             "OLS": 0.3854,
-            "Fscore": 0.2478
+            "Fscore": 0.2478,
+            "Authors": "Jiawei Zhao, Xuede Li, Junfeng Luo",
         },
         {
             "Organization": "Beihang University<br>北京航空航天大学",
@@ -243,6 +247,13 @@ $(function () {
             return(i)
         }
     }
+    function filter_desc(i) {
+        if (i == undefined) {
+            return('-')
+        } else {
+            return(i)
+        }
+    }
     function renderList(data) {
         // 总页数
         total_0 = selected_data_0.length
@@ -263,7 +274,16 @@ $(function () {
         <td>${num(item.TOP_ll)}</td>
         <td>${num(item.TOP_lt)}</td>
       </tr>
-
+      <tr class="info">
+      <td colspan="13">
+          <p>
+              <b>Authors:</b> &nbsp; ${filter_desc(item.Authors)}
+          </p>
+          <p>
+                <b>Description:</b> &nbsp; ${filter_desc(item.Description)}
+          </p>
+      </td>
+</tr>
       `
             $(htmlStr).insertBefore($(".page_0"))
         })
@@ -419,5 +439,10 @@ $(function () {
         }
         renderList(selected_data_0.slice((curPage_0 - 1) * page_0, page_0 * curPage_0))
     })
+        // 详情信息显示
+        $(".table_list_0").on("click",'.item',function(){
+            $(this).next(".info").slideToggle(100).siblings(".info").hide()
+            $(this).find("td:first-child").toggleClass("jt")
+        })
     $(".table_list_0 tr th:nth-child(5)").click()
 })

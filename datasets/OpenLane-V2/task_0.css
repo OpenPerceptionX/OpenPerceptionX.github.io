@@ -21,6 +21,9 @@
 }
 .table_list_0 tbody tr.item{
     background-color:#f7f7f7 ;
+}
+.table_list_0 tbody tr.item:hover{
+    background-color:#f1f1f1 ;
     cursor: pointer;
 }
 /* .table_list_0 tbody tr.item td{
@@ -80,4 +83,19 @@
     width: 100px;
     text-align: left;
     border: 1px solid #ccc;
+}
+
+
+.info{
+    /* height: 240px; */
+    display: none;
+}
+.info p{
+    /* display: flex;
+    align-items: flex-start; */
+    margin: 0rem 1.5rem;
+    text-align: left;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    /* padding-right: 2rem; */
 }
