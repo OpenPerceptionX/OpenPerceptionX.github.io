@@ -357,16 +357,19 @@ $(function () {
         }
         renderList(selected_data_0)
     })
+    var inpVal_date = ''
+    var inpVal_team = ''
+    var selVal_opt1 = 'all'
     // 手动日期
     document.getElementById("date_search").addEventListener("input", searchdate);
     function searchdate() {
-        var inpVal = $(this).val()
-        if (inpVal == '') {
+        inpVal_date = $(this).val()
+        if (inpVal_date == '' && inpVal_team == '' && selVal_opt1 == 'all') {
             selected_data_0 = allData_0
         } else {
             selected_data_0 = []
             allData_0.forEach(item => {
-                if (item.date.startsWith(inpVal)) {
+                if (item.date.includes(inpVal_date) && item.Team.includes(inpVal_team) && opt1_macth(selVal_opt1, item.option)) {
                     selected_data_0.push(item)
                 }
             })
@@ -376,13 +379,13 @@ $(function () {
     // 手动队伍
     document.getElementById("team_search").addEventListener("input", searchteam);
     function searchteam() {
-        var inpVal = $(this).val()
-        if (inpVal == '') {
+        inpVal_team = $(this).val()
+        if (inpVal_date == '' && inpVal_team == '' && selVal_opt1 == 'all') {
             selected_data_0 = allData_0
         } else {
             selected_data_0 = []
             allData_0.forEach(item => {
-                if (item.Team.includes(inpVal)) {
+                if (item.date.includes(inpVal_date) && item.Team.includes(inpVal_team) && opt1_macth(selVal_opt1, item.option)) {
                     selected_data_0.push(item)
                 }
             })
@@ -390,27 +393,31 @@ $(function () {
         renderList(selected_data_0.slice((curPage_0 - 1) * page_0, page_0 * curPage_0))
     }
     // 筛选
-    $("#opt1").change(function () {
-        var selVal = $(this).val()
-        var res1 = []
-        var res2 = []
-        allData_0.forEach(item => {
-            if (item.option == undefined) {
-                res1.push(item)
-            } else {
-                res2.push(item)
-            }
-        })
-        if (selVal == 'na') {
-            selected_data_0 = res1;
-            renderList(selected_data_0.slice((curPage_0 - 1) * page_0, page_0 * curPage_0))
-        } else if (selVal == 'yes') {
-            selected_data_0 = res2;
-            renderList(selected_data_0.slice((curPage_0 - 1) * page_0, page_0 * curPage_0))
-        } else {
-            selected_data_0 = allData_0;
-            renderList(selected_data_0.slice((curPage_0 - 1) * page_0, page_0 * curPage_0))
+    function opt1_macth(selected_option, entry_option) {
+        if (selected_option == 'all') {
+            return(true)
         }
+        if (selected_option == 'na' && entry_option == undefined) {
+            return(true)
+        }
+        if (selected_option == 'yes' && entry_option == 'yes') {
+            return(true)
+        }
+        return(false)
+    }
+    $("#opt1").change(function () {
+        selVal_opt1 = $(this).val()
+        if (inpVal_date == '' && inpVal_team == '' && selVal_opt1 == 'all') {
+            selected_data_0 = allData_0
+        } else {
+            selected_data_0 = []
+            allData_0.forEach(item => {
+                if (item.date.includes(inpVal_date) && item.Team.includes(inpVal_team) && opt1_macth(selVal_opt1, item.option)) {
+                    selected_data_0.push(item)
+                }
+            })
+        }
+        renderList(selected_data_0.slice((curPage_0 - 1) * page_0, page_0 * curPage_0))
     })
     $(".table_list_0 tr th:nth-child(5)").click()
 })
