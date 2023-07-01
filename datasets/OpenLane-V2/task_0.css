@@ -4,6 +4,10 @@
     border-top: 5px solid rgb(0, 0, 68);
     border-bottom: 5px solid rgb(0, 0, 68);
 }
+.table_list_0 tr th{ 
+    border-top:5px solid rgb(36, 36, 177);
+    border-bottom:5px solid rgb(36, 36, 177);
+}
 .table_list_0 tr th.asc{
     /* box-sizing:content-box; */
     border-top:5px solid rgb(83, 194, 240);
