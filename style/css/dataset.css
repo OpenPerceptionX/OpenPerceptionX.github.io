@@ -2468,7 +2468,7 @@ h2, h3 {
   padding-top: 30px;
 }
 
-.section h2, .section h3, .section p {
+.section h2, .section h3, .section p, li{
   color: lightgray;
 }
 

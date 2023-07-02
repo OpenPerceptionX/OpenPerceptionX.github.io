@@ -19,11 +19,11 @@
 .table_list_0 tr.page{
     background-color: #fff!important;
 }
-.table_list_0 tbody tr.item{
+.table_list_0 tbody tr.item, .item{
     background-color:#f7f7f7 ;
 }
 .table_list_0 tbody tr.item:hover{
-    background-color:#f1f1f1 ;
+    background-color:#e1e1e1 ;
     cursor: pointer;
 }
 /* .table_list_0 tbody tr.item td{
