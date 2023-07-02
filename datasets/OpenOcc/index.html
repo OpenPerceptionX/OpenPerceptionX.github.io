@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport"
     content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-  <title>OpenLane-V2 | OpenDriveLab</title>
+  <title>OpenOcc | OpenDriveLab</title>
   <!-- <meta name="description"
     content="Most of the influential and interesting publications published by OpenDriveLab come from top conferences and journals in the computer field, such as ICML, ECCV, ICCV, NeurIPS, ICLR, CVPR."> -->
   <meta name="keywords"
-    content="OpenLane-V2">
+    content="OpenOcc">
   <meta name="author" content="OpenDriveLab">
   <link rel="icon" type="image/png" href="/style/img/team_logo.png">
   <link href="/style/css/body.css" rel="stylesheet" type="text/css" media="all">
@@ -59,28 +59,31 @@
       <h3>Overview</h3>
       <p>
         
-        <a href="https://github.com/OpenDriveLab/OpenLane-V2" target="_blank">
+        <a href="https://github.com/CVPR2023-Occupancy-Prediction-Challenge/CVPR2023-Occupancy-Prediction-Challenge"  target="_blank">
           <img src="https://img.shields.io/badge/details-GitHub-blue" alt="GitHub" class="h_img" />
         </a>
-
-        <a href="https://github.com/OpenDriveLab/OpenLane-V2" target="_blank">
-          <img src="https://img.shields.io/github/stars/OpenDriveLab/OpenLane-V2?style=social" alt="GitHub" class="h_img" />
+    
+        <a href="https://github.com/CVPR2023-Occupancy-Prediction-Challenge/CVPR2023-Occupancy-Prediction-Challenge"  target="_blank">
+          <img
+            src="https://img.shields.io/github/stars/CVPR2023-Occupancy-Prediction-Challenge/CVPR2023-Occupancy-Prediction-Challenge?style=social"
+            alt="GitHub" class="h_img" />
         </a>
-
-        <a href="https://github.com/OpenDriveLab/OpenLane-V2" target="_blank">
-          <img src="https://img.shields.io/github/forks/OpenDriveLab/OpenLane-V2?style=social" alt="GitHub" class="h_img" />
+    
+        <a href="https://github.com/CVPR2023-Occupancy-Prediction-Challenge/CVPR2023-Occupancy-Prediction-Challenge"  target="_blank">
+          <img
+            src="https://img.shields.io/github/forks/CVPR2023-Occupancy-Prediction-Challenge/CVPR2023-Occupancy-Prediction-Challenge?style=social"
+            alt="GitHub" class="h_img" />
         </a>
 
         <br><br>
 
-        Go beyond conventional lane line detection as segmentation.
-        Recognizing lanes as an abstraction of the scene - <eachtrack>centerline</eachtrack>, and building the
-        topology between lanes and traffic elements.
-        Such a <eachtrack>topology</eachtrack> is to facilitate planning and routing.
+        The representation of 3D bounding boxes is not enough to describe general objects (obstacles).
+        Instead, inspired by the concept in Robotics, we deem general object detection as an <eachtrack>occupancy</eachtrack> representation to cover more irregularly shaped objects (e.g., protruding).
+        The output could also be fed as cost volume for planning.
 
         <br><br>
 
-        <img src="/datasets/OpenLane-V2/overview.jpg" style="width: 100%;">
+        <img src="/datasets/OpenOcc/overview.jpg" style="width: 100%;">
       </p>
 
 
@@ -88,16 +91,16 @@
 
       <h3>Submission</h3>
       <p>
-        <a href="https://eval.ai/web/challenges/challenge-page/1925"  target="_blank">
+        <a href="https://eval.ai/web/challenges/challenge-page/2045/overview" target="_blank">
           <img src="https://img.shields.io/badge/test server-EvalAI-blue" alt="EvalAI" class="h_img" />
         </a>
 
         <br><br>
         
         If you wish to add new / modify results to the leaderboard, please drop us an email to <a
-        class='my_subtitle_email' href="mailto:contact@opendrivelab.com?subject=[OpenLane-V2]">contact@opendrivelab.com</a> with the prefix [OpenLane-V2] and the following information:
+        class='my_subtitle_email' href="mailto:contact@opendrivelab.com?subject=[OpenOcc]">contact@opendrivelab.com</a> with the prefix [OpenOcc] and the following information:
 
-        <li style="list-style-type:disc;">Task: Scene Structure Perception and Reasoning</li>
+        <li style="list-style-type:disc;">Task: 3D Occupancy Prediction</li>
         <li style="list-style-type:disc;">Submission No., which can be found in the URL of the result file</li>
         <li style="list-style-type:disc;">Team Name</li>
         <li style="list-style-type:disc;">Authors</li>
@@ -113,6 +116,7 @@
       <h3>Citation</h3>
         <p>
           Please use the following citation when referencing the dataset:
+
           <div class="container tm-container-gallery">
             <div class="row">
               <div class="col-2">
@@ -122,47 +126,15 @@
       
                 <div
                   style="background-color: rgba(242, 242, 242,1); padding-top: 10px; padding-bottom: 10px; border-radius: 10px; white-space: nowrap; overflow-x: scroll;">
-                  &nbsp;&nbsp;&nbsp;@article{wang2023openlanev2,
+                  &nbsp;&nbsp;&nbsp;@article{tian2023occ3d,
                   <br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title={OpenLane-V2: A Topology Reasoning Benchmark for Scene
-                  Understanding in Autonomous Driving},
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title={Occ3D: A Large-Scale 3D Occupancy Prediction Benchmark for
+                  Autonomous Driving},
                   <br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;author={Wang, Huijie and Li, Tianyu and Li, Yang and Chen, Li and Sima,
-                  Chonghao and Liu, Zhenbo and Wang, Yuting and Jiang, Shengyin and Jia, Peijin and Wang, Bangjun and Wen,
-                  Feng and Xu, Hang and Luo, Ping and Yan, Junchi and Zhang, Wei and Li, Hongyang},
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;author={Tian, Xiaoyu and Jiang, Tao and Yun, Longfei and Wang, Yue and
+                  Wang, Yilun and Zhao, Hang},
                   <br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;journal={arXiv preprint arXiv:2304.10440},
-                  <br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;year={2023}
-                  <br>
-                  &nbsp;&nbsp;&nbsp;}
-                </div>
-              </div>
-              <div class="col-">
-              </div>
-      
-            </div>
-      
-          </div>
-      
-          <div class="container tm-container-gallery">
-            <div class="row">
-              <div class="col-2">
-              </div>
-              <div class=" col-6">
-                <br>
-      
-                <div
-                  style="background-color: rgba(242, 242, 242,1); padding-top: 10px; padding-bottom: 10px; border-radius: 10px; white-space: nowrap; overflow-x: scroll;">
-                  &nbsp;&nbsp;&nbsp;@article{li2023toponet,
-                  <br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title={Topology Reasoning for Driving Scenes},
-                  <br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;author={Li, Tianyu and Chen, Li and Geng, Xiangwei and Wang, Huijie and
-                  Li, Yang and Liu, Zhenbo and Jiang, Shengyin and Wang, Yuting and Xu, Hang and Xu, Chunjing and Wen, Feng
-                  and Luo, Ping and Yan, Junchi and Zhang, Wei and Wang, Xiaogang and Qiao, Yu and Li, Hongyang},
-                  <br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;journal={arXiv preprint arXiv:2304.05277},
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;journal={arXiv preprint arXiv:2304.14365},
                   <br>
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;year={2023}
                   <br>
@@ -177,45 +149,19 @@
           </div>
         </p>
 
-      <!-- <h3>Task</h3>
-      <p>
-        <div class="research_list">
-          <dl>
-            <a href="#openlane_topology">
-              <span>Scene Structure<br>Perception<br>and<br>Reasoning</span>
-              <img src="/style/img/bg/autonomous-vehicle-integration_l.jpg" />
-            </a>
-            
-          </dl>
-          <dl>
-            <a href="https://github.com/OpenDriveLab/BEVPerception-Survey-Recipe" target="_blank">
-              <span>3D Centerline<br>Detection</span>
-              <img src="/style/img/research/bev.jpg"/>
-            </a>
-          </dl>
-          <dl class="inactivate_dl">
-            <a href="javaScript:" class="inactivate_a">
-              <span>Lane State<br>Recognition</span>
-              <img src="/style/img/research/agi_wb.jpg"/>
-            </a>
-          </dl>
-      </div>
-      </p> -->
-
-
     </div>
   </div>
 
 
   <!-- task 0 -->
 
-  <div class="section_even" id="openlane_topology">
+  <div class="section_even" id="3d_occupancy_prediction">
     <div class="bg">
 
 
       <h2 class="title">
-        <a href="#openlane_topology">
-          Scene Structure Perception and Reasoning
+        <a href="#3d_occupancy_prediction">
+          3D Occupancy Prediction
           <img src="/style/img/icon/link.png" class="title_link" />
         </a>
       </h2>   
@@ -233,12 +179,9 @@
               <th style="width: 20%;min-width: 125px; cursor: default; border-top: 5px solid rgb(0, 0, 68); border-bottom: 5px solid rgb(0, 0, 68);">Team Name</th>
               <th style="width: 5%; min-width: 125px;  cursor: default; border-top: 5px solid rgb(0, 0, 68); border-bottom: 5px solid rgb(0, 0, 68);">Country / Region</th>
               <th style="width: 20%; min-width: 125px; cursor: default; border-top: 5px solid rgb(0, 0, 68); border-bottom: 5px solid rgb(0, 0, 68);">Institution</th>
-              <th style="width: 10%;min-width: 200px;"><b>OLS (primary)</b></th>
+              <th style="width: 10%; min-width: 200px;"><b>mIoU (primary)</b></th>
               <th style="width: 10%;   cursor: default; border-top: 5px solid rgb(0, 0, 68); border-bottom: 5px solid rgb(0, 0, 68);">option</th>
-              <th style="width: 10%;">$\text{DET}_{l}$</th>
-              <th style="width: 10%;">$\text{DET}_{t}$</th>
-              <th style="width: 10%;">$\text{TOP}_{ll}$</th>
-              <th style="width: 10%;">$\text{TOP}_{lt}$</th>
+              <th style="width: 10%;min-width: 200px;">mIoU (per class)</th>
             </tr>
             <tr class="option_selection">
               <td><input type="text" id="date_search"></td>
@@ -253,17 +196,34 @@
                   <option value="yes">yes</option>
                 </select>
               </td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td>
+                <select name="" id="perclass" style="width: 180px;">
+                  <option value="others">Others</option>
+                  <option value="barrier">Barrier</option>
+                  <option value="bicycle">Bicycle</option>
+                  <option value="bus">Bus</option>
+                  <option value="car">Car</option>
+                  <option value="construction_vehicle">Construction Vehicle</option>
+                  <option value="motorcycle">Motorcycle</option>
+                  <option value="pedestrian">Pedestrian</option>
+                  <option value="traffic_cone">Traffic Cone</option>
+                  <option value="trailer">Trailer</option>
+                  <option value="truck">Truck</option>
+                  <option value="driveable_surface">Driveable Surface</option>
+                  <option value="other_flat">Other Flat</option>
+                  <option value="sidewalk">Sidewalk</option>
+                  <option value="terrain">Terrain</option>
+                  <option value="manmade">Manmade</option>
+                  <option value="vegetation">Vegetation</option>
+                </select>
+              </td>
             </tr>
           </thead>
           <tbody>
             <tr class="page_0">
               <td colspan="2"><button id="prev_0">Previous</button></td>
               <td colspan="2"><button id="next_0">Next</button></td>
-              <td colspan="6">
+              <td colspan="3">
                 Page <input type="text" id="curpage_0" value="1"> of <span id="total_0">30</span>
                 &nbsp;&nbsp;&nbsp;
                 <select name="" id="pageOption_0">
@@ -278,39 +238,42 @@
 
       <h3>Task Description</h3>
       <p>
+        Unlike previous perception representations, which depend on predefined geometric primitives or perceived data
+        modalities,
+        occupancy enjoys the flexibility to describe entities in arbitrary shapes.
         Given multi-view images covering the whole panoramic field of view,
-        participants are required to deliver not only perception results of lanes and traffic elements but also topology
-        relationships among lanes and between lanes and traffic elements simultaneously.
+        participants are needed to provide the occupancy state and semantics of each voxel in 3D space for the complete
+        scene.
       </p>
 
       <h3>Challenges</h3>
-      <p><h4>OpenLane Topology Challenge, CVPR 2023</h4></p>
+      <p><h4>3D Occupancy Prediction Challenge, CVPR 2023</h4></p>
       <p>
-        The first challenge on OpenLane-V2 was held at CVPR 2023 as part of the <a href="/AD23Challenge.html" style="font-weight: bold; text-decoration: underline;">Autonomous Driving Challenge</a>.
+        The first challenge on OpenOcc was held at CVPR 2023 as part of the <a href="/AD23Challenge.html" style="font-weight: bold; text-decoration: underline;">Autonomous Driving Challenge</a>.
         A summary of the results can be seen below. 
-        For details, please refer to the <a href="/AD23Challenge.html#openlane_topology" style="font-weight: bold; text-decoration: underline;">challenge leaderboard</a>.
+        For details, please refer to the <a href="/AD23Challenge.html##3d_occupancy_prediction" style="font-weight: bold; text-decoration: underline;">challenge leaderboard</a>.
         <div>
           <table class="table_list_cvpr23" style="width:auto;">
             <thead>
               <tr style="text-align: left;">
                 <th>Award</th>
-                <th><b>OLS</b></th>
+                <th><b>mIoU</b></th>
                 <th>Team Name</th>
               </tr>
               <tr class="item">
-                <td>Outstanding Champion</td>
-                <td>55.19</td>
-                <td>MFV</td>
+                <td>Outstanding Champion & Innovation Award</td>
+                <td>54.19</td>
+                <td>NVOCC</td>
               </tr>
               <tr class="item">
                 <td>Honorable Runner-up</td>
-                <td>44.56</td>
-                <td>Victory</td>
+                <td>52.45</td>
+                <td>42dot</td>
               </tr>
               <tr class="item">
                 <td>Innovation Award</td>
-                <td>39.22</td>
-                <td>PlatypusWhisperers</td>
+                <td>49.23</td>
+                <td>occ_transformer</td>
               </tr>
             </thead>
           </table>
@@ -327,8 +290,8 @@
 
 
 <script src="/style/js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="/style/js/top_openlanev2.js" type="text/javascript" charset="utf-8"></script>
-<script src="/datasets/OpenLane-V2/tack_0.js" type="text/javascript" charset="utf-8"></script>
+<script src="/style/js/top_openocc.js" type="text/javascript" charset="utf-8"></script>
+<script src="/datasets/OpenOcc/tack_0.js" type="text/javascript" charset="utf-8"></script>
 
 
 </html>
