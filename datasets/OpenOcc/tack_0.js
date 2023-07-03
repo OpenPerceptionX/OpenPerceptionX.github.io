@@ -25,7 +25,7 @@ $(function () {
             "manmade": 64.28,
             "vegetation": 53.76,
             "Authors": "Zhiqi Li, Zhiding Yu, David Austin, Mingsheng Fang, Shiyi Li, Jan Kautz, Jose M. Alvarez",
-            "date": "unknown"
+            "date": "2023-06-01"
         },
         {
             "Organization": "42dot",
