@@ -2614,7 +2614,7 @@ th {
 #date_search, select {
   outline: none;
   border-radius:3px;
-  width: 100px;
+  width: 75px;
   text-align: left;
   border: 1px solid #ccc;
 }
@@ -2622,7 +2622,7 @@ th {
 #team_search {
   outline: none;
   border-radius:3px;
-  width: 100px;
+  width: 75px;
   text-align: left;
   border: 1px solid #ccc;
 }
