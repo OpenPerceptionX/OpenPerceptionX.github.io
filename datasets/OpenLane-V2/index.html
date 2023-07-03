@@ -97,7 +97,7 @@
         If you wish to add new / modify results to the leaderboard, please drop us an email to <a
         class='my_subtitle_email' href="mailto:contact@opendrivelab.com?subject=[OpenLane-V2]">contact@opendrivelab.com</a> with the prefix [OpenLane-V2] and the following information:
 
-        <li style="list-style-type:disc;">Task: Scene Structure Perception and Reasoning</li>
+        <li style="list-style-type:disc;">Task: OpenLane Toplology</li>
         <li style="list-style-type:disc;">Submission No., which can be found in the URL of the result file</li>
         <li style="list-style-type:disc;">Team Name</li>
         <li style="list-style-type:disc;">Authors</li>
@@ -209,13 +209,13 @@
 
   <!-- task 0 -->
 
-  <div class="section_even" id="scene_structure_perception_and_reasoning">
+  <div class="section_even" id="openlane_topology">
     <div class="bg">
 
 
       <h2 class="title">
-        <a href="#scene_structure_perception_and_reasoning">
-          Scene Structure Perception and Reasoning
+        <a href="#openlane_topology">
+          OpenLane Toplology
           <img src="/style/img/icon/link.png" class="title_link" />
         </a>
       </h2>   
@@ -234,7 +234,8 @@
               <th style="width: 5%; min-width: 125px;  cursor: default; border-top: 5px solid rgb(0, 0, 68); border-bottom: 5px solid rgb(0, 0, 68);">Country / Region</th>
               <th style="width: 20%; min-width: 125px; cursor: default; border-top: 5px solid rgb(0, 0, 68); border-bottom: 5px solid rgb(0, 0, 68);">Institution</th>
               <th style="width: 10%;min-width: 200px;"><b>OLS (primary)</b></th>
-              <th style="width: 10%;   cursor: default; border-top: 5px solid rgb(0, 0, 68); border-bottom: 5px solid rgb(0, 0, 68);">option</th>
+              <th style="width: 10%;   cursor: default; border-top: 5px solid rgb(0, 0, 68); border-bottom: 5px solid rgb(0, 0, 68);">External Data</th>
+              <th style="width: 10%;   cursor: default; border-top: 5px solid rgb(0, 0, 68); border-bottom: 5px solid rgb(0, 0, 68);">Foundation Model</th>
               <th style="width: 10%;">$\text{DET}_{l}$</th>
               <th style="width: 10%;">$\text{DET}_{t}$</th>
               <th style="width: 10%;">$\text{TOP}_{ll}$</th>
@@ -249,8 +250,15 @@
               <td>
                 <select name="" id="opt1">
                   <option value="all">All</option>
-                  <option value="na">N/A</option>
-                  <option value="yes">yes</option>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+                </select>
+              </td>
+              <td>
+                <select name="" id="opt2">
+                  <option value="all">All</option>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
                 </select>
               </td>
               <td></td>
@@ -263,7 +271,7 @@
             <tr class="page_0">
               <td colspan="2"><button id="prev_0">Previous</button></td>
               <td colspan="2"><button id="next_0">Next</button></td>
-              <td colspan="6">
+              <td colspan="7">
                 Page <input type="text" id="curpage_0" value="1"> of <span id="total_0">30</span>
                 &nbsp;&nbsp;&nbsp;
                 <select name="" id="pageOption_0">
