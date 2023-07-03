@@ -51,7 +51,7 @@ $(function () {
             "manmade": 63,
             "vegetation": 53.74,
             "Authors": "Thang Vu, Jung-Hee Kim, Myeongjin Kim, Seokwoo Jung, Seong-Gyun Jeong",
-            "date": "unknown"
+            "date": "2023-06-01"
         },
         {
             "Organization": "Xiaomi Car, Peking University<br>小米汽车, 北京大学",
@@ -77,7 +77,7 @@ $(function () {
             "manmade": 63.82,
             "vegetation": 54.98,
             "Authors": "Mingjie Pan, Li Liu, Jiaming Liu, Peixiang Huang, Longlong Wang, Shaoqing Xu, Zhiyi Lai, Shanghang Zhang, Kuiyuan Yang",
-            "date": "unknown"
+            "date": "2023-05-31"
         },
         {
             "Organization": "SAIC AI Lab<br>上汽 AI LAB",
@@ -103,7 +103,7 @@ $(function () {
             "manmade": 57.95,
             "vegetation": 46.26,
             "Authors": "Yangyang Ding, Luying Huang, Jiachen Zhong",
-            "date": "unknown"
+            "date": "2023-06-01"
         },
         {
             "Organization": "Harbin Institute of Technology<br>哈尔滨工业大学",
@@ -129,7 +129,7 @@ $(function () {
             "manmade": 57.14,
             "vegetation": 45.04,
             "Authors": "Jian Liu, Sipeng Zhang, Chuixin Kong, Wenyuan Zhang, Yuhang Wu, Yikang Ding, Borun Xu, Ruibo Ming, Donglai Wei, Xianming Liu",
-            "date": "unknown"
+            "date": "2023-06-01"
         },
         {
             "Organization": "Huawei Noah's Ark Lab<br>华为诺亚方舟实验室",
@@ -154,7 +154,7 @@ $(function () {
             "terrain": 57.66,
             "manmade": 57.63,
             "vegetation": 46.34,
-            "date": "unknown"
+            "date": "2023-06-01"
         },
         {
             "Organization": "University of Electronic Science and Technology of China<br>电子科技大学",
@@ -179,7 +179,7 @@ $(function () {
             "terrain": 60.1,
             "manmade": 62.28,
             "vegetation": 52.49,
-            "date": "unknown"
+            "date": "2023-06-01"
         },
         {
             "Organization": "Zhejiang University, University of Glasgow<br>浙江大学",
@@ -204,7 +204,7 @@ $(function () {
             "terrain": 58.37,
             "manmade": 57.06,
             "vegetation": 45.77,
-            "date": "unknown"
+            "date": "2023-06-01"
         },
         {
             "Organization": "Xi'an Jiaotong University<br>西安交通大学",
@@ -229,7 +229,7 @@ $(function () {
             "terrain": 59.58,
             "manmade": 59.93,
             "vegetation": 50.45,
-            "date": "unknown"
+            "date": "2023-06-01"
         },
         {
             "Organization": "Institute of Computing Technology Chinese Academy of Sciences<br>中国科学院计算技术研究所",
@@ -254,7 +254,7 @@ $(function () {
             "terrain": 57.51,
             "manmade": 57.53,
             "vegetation": 47.46,
-            "date": "unknown"
+            "date": "2023-06-01"
         },
         {
             "Organization": "-",
@@ -279,7 +279,7 @@ $(function () {
             "terrain": 55.65,
             "manmade": 55.54,
             "vegetation": 44.69,
-            "date": "unknown"
+            "date": "2023-06-01"
         },
         {
             "Organization": "-",
@@ -304,7 +304,7 @@ $(function () {
             "terrain": 56.89,
             "manmade": 58.38,
             "vegetation": 46.14,
-            "date": "unknown"
+            "date": "2023-06-01"
         },
         {
             "Organization": "Zhejiang Lab<br>之江实验室",
@@ -329,7 +329,7 @@ $(function () {
             "terrain": 53.78,
             "manmade": 57.68,
             "vegetation": 46.95,
-            "date": "unknown"
+            "date": "2023-06-01"
         },
         {
             "Organization": "-",
@@ -354,7 +354,7 @@ $(function () {
             "terrain": 56,
             "manmade": 57.23,
             "vegetation": 47.06,
-            "date": "unknown"
+            "date": "2023-06-01"
         },
         {
             "Organization": "Shandong University of Science and Technology<br>山东科技大学",
@@ -379,7 +379,7 @@ $(function () {
             "terrain": 56.59,
             "manmade": 58.31,
             "vegetation": 47.84,
-            "date": "unknown"
+            "date": "2023-05-31"
         },
         {
             "Organization": "-",
@@ -404,7 +404,7 @@ $(function () {
             "terrain": 55.22,
             "manmade": 54.97,
             "vegetation": 43.55,
-            "date": "unknown"
+            "date": "2023-06-01"
         },
         {
             "Organization": "-",
@@ -429,7 +429,7 @@ $(function () {
             "terrain": 58.13,
             "manmade": 54.37,
             "vegetation": 44.64,
-            "date": "unknown"
+            "date": "2023-06-01"
         },
         {
             "Organization": "-",
@@ -455,7 +455,7 @@ $(function () {
             "manmade": 57.21,
             "vegetation": 45.77,
             "Authors": "Yuichi Inoue, Daiki Shiotsuka",
-            "date": "unknown"
+            "date": "2023-06-01"
         },
         {
             "Organization": "-",
@@ -480,7 +480,7 @@ $(function () {
             "terrain": 57.4,
             "manmade": 57.98,
             "vegetation": 48.34,
-            "date": "unknown"
+            "date": "2023-06-01"
         },
         {
             "Organization": "-",
@@ -505,7 +505,7 @@ $(function () {
             "terrain": 53.81,
             "manmade": 53.48,
             "vegetation": 43.61,
-            "date": "unknown"
+            "date": "2023-06-01"
         },
         {
             "Organization": "-",
@@ -530,7 +530,7 @@ $(function () {
             "terrain": 54.35,
             "manmade": 54.56,
             "vegetation": 44.54,
-            "date": "unknown"
+            "date": "2023-05-31"
         },
         {
             "Organization": "-",
@@ -555,7 +555,7 @@ $(function () {
             "terrain": 53.58,
             "manmade": 53.94,
             "vegetation": 42.25,
-            "date": "unknown"
+            "date": "2023-06-01"
         },
         {
             "Organization": "The Hong Kong University of Science and Technology<br>香港科技大学",
@@ -580,7 +580,7 @@ $(function () {
             "terrain": 55.24,
             "manmade": 54.84,
             "vegetation": 44.98,
-            "date": "unknown"
+            "date": "2023-05-31"
         },
         {
             "Organization": "Hikvision<br>海康威视",
@@ -605,7 +605,7 @@ $(function () {
             "terrain": 50.22,
             "manmade": 48.56,
             "vegetation": 38.12,
-            "date": "unknown"
+            "date": "2023-06-01"
         },
         {
             "Organization": "-",
@@ -630,7 +630,7 @@ $(function () {
             "terrain": 53.22,
             "manmade": 53.35,
             "vegetation": 42.64,
-            "date": "unknown"
+            "date": "2023-05-28"
         },
         {
             "Organization": "University of Science and Technology of China<br>中国科学技术大学",
@@ -655,7 +655,7 @@ $(function () {
             "terrain": 50.72,
             "manmade": 50.42,
             "vegetation": 38.93,
-            "date": "unknown"
+            "date": "2023-05-31"
         },
         {
             "Organization": "-",
@@ -680,7 +680,7 @@ $(function () {
             "terrain": 53.74,
             "manmade": 53,
             "vegetation": 42.27,
-            "date": "unknown"
+            "date": "2023-05-17"
         },
         {
             "Organization": "-",
@@ -705,7 +705,7 @@ $(function () {
             "terrain": 51.99,
             "manmade": 53.48,
             "vegetation": 41.39,
-            "date": "unknown"
+            "date": "2023-05-31"
         },
         {
             "Organization": "-",
@@ -730,7 +730,7 @@ $(function () {
             "terrain": 51.3,
             "manmade": 51,
             "vegetation": 39.45,
-            "date": "unknown"
+            "date": "2023-05-28"
         },
         {
             "Organization": "-",
@@ -755,7 +755,7 @@ $(function () {
             "terrain": 52.98,
             "manmade": 46.67,
             "vegetation": 36.34,
-            "date": "unknown"
+            "date": "2023-05-15"
         },
         {
             "Organization": "Ulsan National Institution of Science and Technology",
@@ -780,7 +780,7 @@ $(function () {
             "terrain": 51.48,
             "manmade": 46.82,
             "vegetation": 36.45,
-            "date": "unknown"
+            "date": "2023-06-01"
         },
         {
             "Organization": "-",
@@ -805,7 +805,7 @@ $(function () {
             "terrain": 51,
             "manmade": 50.21,
             "vegetation": 38.48,
-            "date": "unknown"
+            "date": "2023-06-01"
         },
         {
             "Organization": "-",
@@ -830,7 +830,7 @@ $(function () {
             "terrain": 52.33,
             "manmade": 45.6,
             "vegetation": 35.36,
-            "date": "unknown"
+            "date": "2023-05-12"
         },
         {
             "Organization": "University of Science and Technology of China<br>中国科学技术大学",
@@ -855,7 +855,7 @@ $(function () {
             "terrain": 48.44,
             "manmade": 45.81,
             "vegetation": 35.42,
-            "date": "unknown"
+            "date": "2023-05-25"
         },
         {
             "Organization": "SIMIT<br>中国科学院上海微系统与信息技术研究所",
@@ -880,7 +880,7 @@ $(function () {
             "terrain": 49.68,
             "manmade": 43.34,
             "vegetation": 34.01,
-            "date": "unknown"
+            "date": "2023-06-01"
         },
         {
             "Organization": "-",
@@ -905,7 +905,7 @@ $(function () {
             "terrain": 48.53,
             "manmade": 44.11,
             "vegetation": 34.7,
-            "date": "unknown"
+            "date": "2023-05-25"
         },
         {
             "Organization": "-",
@@ -930,7 +930,7 @@ $(function () {
             "terrain": 42.14,
             "manmade": 44.73,
             "vegetation": 39.07,
-            "date": "unknown"
+            "date": "2023-06-01"
         },
         {
             "Organization": "-",
@@ -955,7 +955,7 @@ $(function () {
             "terrain": 45.45,
             "manmade": 48.81,
             "vegetation": 36.17,
-            "date": "unknown"
+            "date": "2023-06-01"
         },
         {
             "Organization": "-",
@@ -980,7 +980,7 @@ $(function () {
             "terrain": 44.8,
             "manmade": 40.51,
             "vegetation": 31.55,
-            "date": "unknown"
+            "date": "2023-05-25"
         },
         {
             "Organization": "-",
@@ -1005,7 +1005,7 @@ $(function () {
             "terrain": 40.1,
             "manmade": 30.5,
             "vegetation": 23.92,
-            "date": "unknown"
+            "date": "2023-06-01"
         },
         {
             "Organization": "-",
@@ -1030,7 +1030,7 @@ $(function () {
             "terrain": 47.53,
             "manmade": 45.74,
             "vegetation": 38.23,
-            "date": "unknown"
+            "date": "2023-06-01"
         },
         {
             "Organization": "-",
@@ -1055,7 +1055,7 @@ $(function () {
             "terrain": 16.36,
             "manmade": 20.96,
             "vegetation": 14.33,
-            "date": "unknown"
+            "date": "2023-05-29"
         },
         {
             "Organization": "-",
@@ -1080,7 +1080,7 @@ $(function () {
             "terrain": 17.66,
             "manmade": 19.02,
             "vegetation": 13.74,
-            "date": "unknown"
+            "date": "2023-05-31"
         },
         {
             "Organization": "-",
@@ -1105,7 +1105,7 @@ $(function () {
             "terrain": 17.64,
             "manmade": 19.01,
             "vegetation": 13.75,
-            "date": "unknown"
+            "date": "2023-05-12"
         },
         {
             "Organization": "-",
@@ -1130,7 +1130,7 @@ $(function () {
             "terrain": 16.45,
             "manmade": 16.01,
             "vegetation": 12.79,
-            "date": "unknown"
+            "date": "2023-05-31"
         },
         {
             "Organization": "Independent Researcher",
@@ -1155,7 +1155,7 @@ $(function () {
             "terrain": 6.14,
             "manmade": 17.23,
             "vegetation": 12.85,
-            "date": "unknown"
+            "date": "2023-06-01"
         },
         {
             "Organization": "-",
@@ -1180,7 +1180,7 @@ $(function () {
             "terrain": 9.2,
             "manmade": 13.92,
             "vegetation": 9.24,
-            "date": "unknown"
+            "date": "2023-05-21"
         },
         {
             "Organization": "-",
@@ -1205,7 +1205,7 @@ $(function () {
             "terrain": 3.61,
             "manmade": 0.97,
             "vegetation": 1.69,
-            "date": "unknown"
+            "date": "2023-06-01"
         }
     ]
     // 每页显示数据量
