@@ -25,7 +25,9 @@ $(function () {
             "manmade": 64.28,
             "vegetation": 53.76,
             "Authors": "Zhiqi Li, Zhiding Yu, David Austin, Mingsheng Fang, Shiyi Li, Jan Kautz, Jose M. Alvarez",
-            "date": "2023-06-01"
+            "date": "2023-06-01",
+            "option": "Yes",
+            "option2": "No"
         },
         {
             "Organization": "42dot",
@@ -1231,13 +1233,13 @@ $(function () {
                 return('<img src='+i+' style="width: 33px; user-select: none;"/>')
             }
         }
-    function filter_undefined(i) {
-        if (i == undefined) {
-            return('N/A')
-        } else {
-            return(i)
+        function filter_undefined(i) {
+            if (i == undefined) {
+                return('-')
+            } else {
+                return(i)
+            }
         }
-    }
     function filter_desc(i) {
         if (i == undefined) {
             return('-')
@@ -1321,6 +1323,7 @@ $(function () {
         <td>${item.Organization}</td>
         <td><b>${num(item.mIoU)}</b></td>
         <td>${filter_undefined(item.option)}</td>
+        <td>${filter_undefined(item.option2)}</td>
         <td>${num(select_perclass(perclass, item))}</td>
       </tr>
       <tr class="info">
@@ -1348,7 +1351,7 @@ $(function () {
     $(".table_list_0 tr th:nth-child(5)").click(function () {
         mysort($(this), 'mIoU', selected_data_0)
     })
-    $(".table_list_0 tr th:nth-child(7)").click(function () {
+    $(".table_list_0 tr th:nth-child(8)").click(function () {
         mysort($(this), perclass, selected_data_0)
     })
     // 排序方法
@@ -1420,16 +1423,17 @@ $(function () {
     var inpVal_date = ''
     var inpVal_team = ''
     var selVal_opt1 = 'all'
+    var selVal_opt2 = 'all'
     // 手动日期
     document.getElementById("date_search").addEventListener("input", searchdate);
     function searchdate() {
         inpVal_date = $(this).val()
-        if (inpVal_date == '' && inpVal_team == '' && selVal_opt1 == 'all') {
+        if (inpVal_date == '' && inpVal_team == '' && selVal_opt1 == 'all'  && selVal_opt2 == 'all') {
             selected_data_0 = allData_0
         } else {
             selected_data_0 = []
             allData_0.forEach(item => {
-                if (item.date.includes(inpVal_date) && item.team.includes(inpVal_team) && opt1_macth(selVal_opt1, item.option)) {
+                if (item.date.includes(inpVal_date) && item.team.includes(inpVal_team) && opt1_macth(selVal_opt1, item.option) && opt1_macth(selVal_opt2, item.option2)) {
                     selected_data_0.push(item)
                 }
             })
@@ -1440,13 +1444,12 @@ $(function () {
     document.getElementById("team_search").addEventListener("input", searchteam);
     function searchteam() {
         inpVal_team = $(this).val()
-        console.log(inpVal_team)
-        if (inpVal_date == '' && inpVal_team == '' && selVal_opt1 == 'all') {
+        if (inpVal_date == '' && inpVal_team == '' && selVal_opt1 == 'all'  && selVal_opt2 == 'all') {
             selected_data_0 = allData_0
         } else {
             selected_data_0 = []
             allData_0.forEach(item => {
-                if (item.date.includes(inpVal_date) && item.team.includes(inpVal_team) && opt1_macth(selVal_opt1, item.option)) {
+                if (item.date.includes(inpVal_date) && item.team.includes(inpVal_team) && opt1_macth(selVal_opt1, item.option) && opt1_macth(selVal_opt2, item.option2)) {
                     selected_data_0.push(item)
                 }
             })
@@ -1458,22 +1461,36 @@ $(function () {
         if (selected_option == 'all') {
             return(true)
         }
-        if (selected_option == 'na' && entry_option == undefined) {
+        if (selected_option == 'Yes' && entry_option == 'Yes') {
             return(true)
         }
-        if (selected_option == 'yes' && entry_option == 'yes') {
+        if (selected_option == 'No' && entry_option == 'No') {
             return(true)
         }
         return(false)
     }
     $("#opt1").change(function () {
         selVal_opt1 = $(this).val()
-        if (inpVal_date == '' && inpVal_team == '' && selVal_opt1 == 'all') {
+        if (inpVal_date == '' && inpVal_team == '' && selVal_opt1 == 'all'  && selVal_opt2 == 'all') {
             selected_data_0 = allData_0
         } else {
             selected_data_0 = []
             allData_0.forEach(item => {
-                if (item.date.includes(inpVal_date) && item.team.includes(inpVal_team) && opt1_macth(selVal_opt1, item.option)) {
+                if (item.date.includes(inpVal_date) && item.team.includes(inpVal_team) && opt1_macth(selVal_opt1, item.option) && opt1_macth(selVal_opt2, item.option2)) {
+                    selected_data_0.push(item)
+                }
+            })
+        }
+        renderList(selected_data_0.slice((curPage_0 - 1) * page_0, page_0 * curPage_0))
+    })
+    $("#opt2").change(function () {
+        selVal_opt2 = $(this).val()
+        if (inpVal_date == '' && inpVal_team == '' && selVal_opt1 == 'all'  && selVal_opt2 == 'all') {
+            selected_data_0 = allData_0
+        } else {
+            selected_data_0 = []
+            allData_0.forEach(item => {
+                if (item.date.includes(inpVal_date) && item.team.includes(inpVal_team) && opt1_macth(selVal_opt1, item.option) && opt1_macth(selVal_opt2, item.option2)) {
                     selected_data_0.push(item)
                 }
             })
