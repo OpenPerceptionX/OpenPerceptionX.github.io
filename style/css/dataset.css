@@ -437,7 +437,7 @@ body {
   
   eachtrack {
     color: white;
-    text-decoration: underline;
+    /* text-decoration: underline; */
     font-weight: 900;
   }
   
@@ -2640,4 +2640,14 @@ th {
   margin-top: 1rem;
   margin-bottom: 1rem;
   /* padding-right: 2rem; */
+}
+
+
+.previouslink {
+  font-weight: bold; 
+  text-decoration: underline;
+  color: inherit;
+}
+.previouslink:hover {
+  opacity: 0.7;
 }
