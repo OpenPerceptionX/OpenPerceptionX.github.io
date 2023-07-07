@@ -13,6 +13,8 @@
 <link href="/style/css/head.css" rel="stylesheet" type="text/css" media="all">
 <link href="/style/css/footer.css" rel="stylesheet" type="text/css" media="all">
 <link href="/style/css/recruit.css" rel="stylesheet" type="text/css" media="all">
+<script src="https://kit.fontawesome.com/8990c176d0.js" crossorigin="anonymous"></script>
+
 </head>
 <body class="loadings">
 
@@ -32,8 +34,8 @@
     var data = [
       {
         // hongyangli@sjtu.edu.cn
-        title: "关于招生",
-        description: "OpenDriveLab涵盖自动驾驶大模型、端到端自动驾驶、BEV感知、通用人工智能等多个研究方向。致力于探索前沿自动驾驶技术，推出标杆性工作，开源服务社区，推动国际化交流，推动行业共同发展，让未来的出行更加安全、便捷和智能。请参考<a href='/publications'>学术成果</a><br><br>我们非常欢迎有志于学术的学生，加入我们的研究团队实习或联培。如果你想加入我们，我们希望你：<br>-&nbsp;&nbsp;了解我们近年研究聚焦的主要方向，一方面方便了解我们在做什么，另一方面方便后续面试中有更好的表现。<br>-&nbsp;&nbsp;报考本课题组直硕/直博生联培计划的三年级本科生，成绩不作具体要求，但需获得推免资格；<br>-&nbsp;&nbsp;对于通用视觉，端到端自动驾驶等相关的研究方向具有高度的研究兴趣，需有相关项目的实践经验以及论文产出；<br>-&nbsp;&nbsp;具备良好的数学基础，熟练掌握线性代数、统计学、随机过程、凸优化、机器学习等课程；<br>-&nbsp;&nbsp;具备良好的英语读写能力，要求通过英语六级且成绩优秀（600分以上）；<br>-&nbsp;&nbsp;熟练掌握程序设计语言，至少要求Python、C++，以及相关开发技能，ACM/ICPC竞赛获奖选手优先；<br>-&nbsp;&nbsp;积极主动，有坚韧不拔的毅力，思维清晰、逻辑性强，具有良好的表达能力，对于自身学习目标及未来规划有着清晰的安排。<br><br>上述要求不是硬性的，因为比起知识和技能，科研的热情其实也很重要。我们希望全面培养学生的科研能力，不仅希望他们能够独立完成我们安排的科研项目，掌握最前沿的算法，还希望他们能够独立提出问题，并具备把握研究方向的能力。<br><br>如果你有意愿加入我们，请将简历（包括本科阶段成绩及排名，参与竞赛和项目，发表论文，所获荣誉等，汇总到不超过两页）、成绩单以及自己的求学与研究期望和感兴趣的研究方向发送至<a href=mailto: hongyangli@sjtu.edu.cn> hongyangli@sjtu.edu.cn</a>",
+        title: "关于招生招聘",
+        description: "<br>OpenDriveLab涵盖自动驾驶大模型、端到端自动驾驶、BEV感知、通用人工智能等多个研究方向。我们致力于探索前沿自动驾驶技术，推出标杆性工作，开源服务社区，推动国际化交流，推动行业共同发展。<br><br>我们十分欢迎有志于学术的人士加入研究团队。如果你想加入我们，我们希望你：<br>-&nbsp;&nbsp;身心健康，拥有强壮的体魄，为事业发展打下基础；<br>-&nbsp;&nbsp;了解我们近年聚焦的主要研究方向；<br>-&nbsp;&nbsp;对于自动驾驶、通用人工智能等相关研究方向具有高度的兴趣，发表过相应领域顶级会议期刊论文；<br>-&nbsp;&nbsp;有计算机相关背景，熟悉深度学习以及计算机视觉等基本知识；<br>-&nbsp;&nbsp;熟练掌握程序设计语言，比如Python和C++，以及相关开发技能；<br>-&nbsp;&nbsp;具备良好的数学基础，熟练掌握线性代数、统计学、随机过程、凸优化、机器学习等知识；<br>-&nbsp;&nbsp;具备良好的英语读写能力，要求通过英语六级且成绩优秀（600分以上）；<br>-&nbsp;&nbsp;积极主动，有坚韧不拔的毅力，思维清晰、逻辑性强，具有良好的表达能力，对于自身目标及未来规划有着清晰的安排。<br><br>上述要求不是硬性的，因为比起知识和技能，科研的热情也很重要。我们不仅希望你能够独立完成我们的科研项目，掌握最前沿的算法，还希望你能够独立提出问题，并具备把握研究方向的能力。<br><br>如果你有意愿加入我们，请将简历、成绩单以及自己的研究期望发送至<i class='fas fa-envelope'></i><a href='mailto:contact@opendrivelab.com?subject=[Recruit]' class='email_link'>contact@opendrivelab.com</a>或者联系<a href='https://lihongyang.info' class='email_link' target='_blank'>李弘扬博士</a>。",
         open: "active",//空为关闭，active为开启
         bg_color: "",//背景色#3e0000
         hover_text_color: "",//打开后标题白色white，或黑色 为空,适用于黑背背景图
@@ -52,7 +54,8 @@
 //获取列表模板插入数据
 
 var item = '<dl {{this}}><dt><div class="join_img"><img data-src="{{img}}" src="style/img/none.png"></div></dt><dd><h2 class="ititle">{{ititle}}</h2><br><p class="content">{{content}}</p><h3>{{istitle}}</h3><br><a href="{{url}}"><button>{{button}}</button></a></dd></dl>';
-var ilist = '<div class="joinwbr col_{{col}} {{open}} {{hover_text_color}}" style="background-image:url({{bg}}); background-color:{{bg_color}}" ><div class="bg"><h3 class="title_1"><span class="weight_span">{{title}}</span><span class="join_icon"></span></h3><p class="description">{{description}}</p></div><div class="join_list" ><div class="bg"><div class="kin"><list></div></div></div></div>';
+var ilist = '<div class="bg"><br><br><br><h3 class="title_1">{{title}}</h3><p class="description">{{description}}</p><br><br><br></div><div class="join_list" ><div class="bg"><div class="kin"><list></div></div></div>';
+  // var ilist = '<div class="joinwbr col_{{col}} {{open}} {{hover_text_color}}" style="background-image:url({{bg}}); background-color:{{bg_color}}" ><div class="bg"><h3 class="title_1"><span class="weight_span">{{title}}</span><span class="join_icon"></span></h3><p class="description">{{description}}</p></div><div class="join_list" ><div class="bg"><div class="kin"><list></div></div></div></div>';
 
 tohtml(data,$("#content"),item,ilist)
 function tohtml(shuju,div,item,ilist){
