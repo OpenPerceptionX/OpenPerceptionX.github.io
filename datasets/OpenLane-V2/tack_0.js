@@ -14,7 +14,7 @@ $(function () {
             "TOP_lt": 0.3348,
             "OLS": 0.5519,
             "Fscore": 0.2559,
-            "option": "yes",
+            "option": "Yes",
             "Authors": "Dongming Wu, Fan Jia, Jiahao Chang, Zhuoling Li, Jianjian Sun, Chunrui Han, Shuailin Li, Yingfei Liu, Zheng Ge, Tiancai Wang",
         },
         {
@@ -30,7 +30,9 @@ $(function () {
             "TOP_ll": 0.0657,
             "TOP_lt": 0.3037,
             "OLS": 0.4654,
-            "Fscore": 0.4805
+            "Fscore": 0.4805,
+            "option2": "Yes",
+            "option": "No",
         },
         {
             "Organization": "AMD",
@@ -199,7 +201,7 @@ $(function () {
             "TOP_lt": 0.0286,
             "OLS": 0.1904,
             "Fscore": 0.2175,
-            "option": "yes"
+            "option": "Yes"
         },
         {
             "Organization": "Tsinghua University<br>清华大学",
@@ -242,7 +244,7 @@ $(function () {
         }
     function filter_undefined(i) {
         if (i == undefined) {
-            return('N/A')
+            return('-')
         } else {
             return(i)
         }
@@ -269,6 +271,7 @@ $(function () {
         <td>${item.Organization}</td>
         <td><b>${num(item.OLS)}</b></td>
         <td>${filter_undefined(item.option)}</td>
+        <td>${filter_undefined(item.option2)}</td>
         <td>${num(item.DET_l)}</td>
         <td>${num(item.DET_t)}</td>
         <td>${num(item.TOP_ll)}</td>
@@ -299,16 +302,16 @@ $(function () {
     $(".table_list_0 tr th:nth-child(5)").click(function () {
         mysort($(this), 'OLS', selected_data_0)
     })
-    $(".table_list_0 tr th:nth-child(7)").click(function () {
+    $(".table_list_0 tr th:nth-child(8)").click(function () {
         mysort($(this), 'DET_l', selected_data_0)
     })
-    $(".table_list_0 tr th:nth-child(8)").click(function () {
+    $(".table_list_0 tr th:nth-child(9)").click(function () {
         mysort($(this), 'DET_t', selected_data_0)
     })
-    $(".table_list_0 tr th:nth-child(9)").click(function () {
+    $(".table_list_0 tr th:nth-child(10)").click(function () {
         mysort($(this), 'TOP_ll', selected_data_0)
     })
-    $(".table_list_0 tr th:nth-child(10)").click(function () {
+    $(".table_list_0 tr th:nth-child(11)").click(function () {
         mysort($(this), 'TOP_lt', selected_data_0)
     })
     // 排序方法
@@ -380,16 +383,17 @@ $(function () {
     var inpVal_date = ''
     var inpVal_team = ''
     var selVal_opt1 = 'all'
+    var selVal_opt2 = 'all'
     // 手动日期
     document.getElementById("date_search").addEventListener("input", searchdate);
     function searchdate() {
         inpVal_date = $(this).val()
-        if (inpVal_date == '' && inpVal_team == '' && selVal_opt1 == 'all') {
+        if (inpVal_date == '' && inpVal_team == '' && selVal_opt1 == 'all'  && selVal_opt2 == 'all') {
             selected_data_0 = allData_0
         } else {
             selected_data_0 = []
             allData_0.forEach(item => {
-                if (item.date.includes(inpVal_date) && item.Team.includes(inpVal_team) && opt1_macth(selVal_opt1, item.option)) {
+                if (item.date.includes(inpVal_date) && item.Team.includes(inpVal_team) && opt1_macth(selVal_opt1, item.option) && opt1_macth(selVal_opt2, item.option2)) {
                     selected_data_0.push(item)
                 }
             })
@@ -400,12 +404,12 @@ $(function () {
     document.getElementById("team_search").addEventListener("input", searchteam);
     function searchteam() {
         inpVal_team = $(this).val()
-        if (inpVal_date == '' && inpVal_team == '' && selVal_opt1 == 'all') {
+        if (inpVal_date == '' && inpVal_team == '' && selVal_opt1 == 'all'  && selVal_opt2 == 'all') {
             selected_data_0 = allData_0
         } else {
             selected_data_0 = []
             allData_0.forEach(item => {
-                if (item.date.includes(inpVal_date) && item.Team.includes(inpVal_team) && opt1_macth(selVal_opt1, item.option)) {
+                if (item.date.includes(inpVal_date) && item.Team.includes(inpVal_team) && opt1_macth(selVal_opt1, item.option) && opt1_macth(selVal_opt2, item.option2)) {
                     selected_data_0.push(item)
                 }
             })
@@ -417,22 +421,36 @@ $(function () {
         if (selected_option == 'all') {
             return(true)
         }
-        if (selected_option == 'na' && entry_option == undefined) {
+        if (selected_option == 'Yes' && entry_option == 'Yes') {
             return(true)
         }
-        if (selected_option == 'yes' && entry_option == 'yes') {
+        if (selected_option == 'No' && entry_option == 'No') {
             return(true)
         }
         return(false)
     }
     $("#opt1").change(function () {
         selVal_opt1 = $(this).val()
-        if (inpVal_date == '' && inpVal_team == '' && selVal_opt1 == 'all') {
+        if (inpVal_date == '' && inpVal_team == '' && selVal_opt1 == 'all'  && selVal_opt2 == 'all') {
             selected_data_0 = allData_0
         } else {
             selected_data_0 = []
             allData_0.forEach(item => {
-                if (item.date.includes(inpVal_date) && item.Team.includes(inpVal_team) && opt1_macth(selVal_opt1, item.option)) {
+                if (item.date.includes(inpVal_date) && item.Team.includes(inpVal_team) && opt1_macth(selVal_opt1, item.option) && opt1_macth(selVal_opt2, item.option2)) {
+                    selected_data_0.push(item)
+                }
+            })
+        }
+        renderList(selected_data_0.slice((curPage_0 - 1) * page_0, page_0 * curPage_0))
+    })
+    $("#opt2").change(function () {
+        selVal_opt2 = $(this).val()
+        if (inpVal_date == '' && inpVal_team == '' && selVal_opt1 == 'all'  && selVal_opt2 == 'all') {
+            selected_data_0 = allData_0
+        } else {
+            selected_data_0 = []
+            allData_0.forEach(item => {
+                if (item.date.includes(inpVal_date) && item.Team.includes(inpVal_team) && opt1_macth(selVal_opt1, item.option) && opt1_macth(selVal_opt2, item.option2)) {
                     selected_data_0.push(item)
                 }
             })

@@ -39,7 +39,7 @@
     </div>
   </div>
   <!-- 内容end -->
-
+<div style="display: none;"><script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=DNOF-eW4FC3EmQDNVwZLkEjDxAGXcXFYxVSEq1QZhHs&cl=ffffff&w=a"></script></div>
 </body>
 <script src="/style/js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="/style/js/top_publications.js?12" type="text/javascript" charset="utf-8"></script>
@@ -117,16 +117,28 @@
       title: "Editor's Pick",
       id: "editor_pick",
       list: [
+      {
+          img: "/style/img/pub/e2esurvey.jpg",
+          title: "End-to-end Autonomous Driving: Challenges and Frontiers",
+          url: "https://arxiv.org/abs/2306.16927",
+          ititle: "Li Chen, Penghao Wu, Kashyap Chitta, Bernhard Jaeger, Andreas Geiger, Hongyang Li",
+          // iititle: ", <em>et al.</em>",
+          title2: 'arXiv 2023',
+          GitHub_url: "https://github.com/OpenDriveLab/End-to-end-Autonomous-Driving",
+          GitHub_img: "https://img.shields.io/github/stars/OpenDriveLab/End-to-end-Autonomous-Driving?style=social",
+          // itb: totubao(""),
+          content: "In this survey, we provide a comprehensive analysis of more than 250 papers on the motivation, roadmap, methodology, challenges, and future trends in end-to-end autonomous driving.",
+        },
         {
           img: "/style/img/pub/goal.jpg",
           title: "Planning-oriented Autonomous Driving",
           url: "https://arxiv.org/abs/2212.10156",
           ititle: "Yihan Hu, Jiazhi Yang, Li Chen, Keyu Li, Chonghao Sima, Hongyang Li",
           iititle: ", <em>et al.</em>",
-          title2: '<a href="https://cvpr2023.thecvf.com/Conferences/2023/AcceptedPapers" target="_blank" class="publication_auxiliary">CVPR 2023 Best Paper Award</a>',
+          title2: '<a href="https://cvpr2023.thecvf.com/Conferences/2023/Awards" target="_blank" class="publication_auxiliary">CVPR 2023 Best Paper Award</a>',
           GitHub_url: "https://github.com/OpenDriveLab/UniAD",
           GitHub_img: "https://img.shields.io/github/stars/OpenDriveLab/UniAD?style=social",
-          itb: totubao("r_zhihu,https://zhuanlan.zhihu.com/p/597019546|r_blog,https://mp.weixin.qq.com/s/QBRTiku0_rF6GM1fHfi4lw"),
+          itb: totubao("r_zhihu,https://zhuanlan.zhihu.com/p/638780421|r_blog,https://mp.weixin.qq.com/s/2-e4pdzE0Ppt29T_MZPwHg|youtube_red,https://www.youtube.com/watch?v=cyrxJJ_nnaQ|r_slide,https://opendrivelab.com/e2ead/UniAD_plenary_talk_slides.pdf"),
           content: "A comprehensive framework up-to-date that incorporates full-stack driving tasks in one network.",
         },
         {
@@ -173,7 +185,7 @@
           title2: "ECCV 2022 (Oral) &nbsp <code>[Redefine the Community]</code>",
           GitHub_url: "https://github.com/OpenDriveLab/PersFormer_3DLane",
           GitHub_img: "https://img.shields.io/github/stars/OpenDriveLab/PersFormer_3DLane?style=social",
-          itb: totubao("r_dataset,https://github.com/OpenDriveLab/OpenLane|r_zhihu,https://zhuanlan.zhihu.com/p/495979738"),
+          itb: totubao("r_blog,https://patrick-llgc.github.io/Learning-Deep-Learning/paper_notes/persformer.html|r_dataset,https://github.com/OpenDriveLab/OpenLane|r_zhihu,https://zhuanlan.zhihu.com/p/552908337"),
           content: "PersFormer adopts a unified 2D/3D anchor design and an auxiliary task to detect 2D/3D lanes; we release one of the first large-scale real-world 3D lane datasets, OpenLane.",
         }
       ]
@@ -202,7 +214,7 @@
           title2: "ICLR 2023",
           GitHub_url: "https://github.com/opendrivelab/ppgeo",
           GitHub_img: "https://img.shields.io/github/stars/opendrivelab/ppgeo?style=social",
-          itb: totubao("r_zhihu,https://zhuanlan.zhihu.com/p/601456429|r_jiqizhixin,https://www.jiqizhixin.com/articles/2023-01-27-2?from=synced&keyword=opendrivelab|r_slide,https://docs.google.com/presentation/d/1d0MGh3XCxuZujtYgZ0sr6xsAKZ4uS50p/edit?usp=sharing&ouid=118212253182146260973&rtpof=true&sd=true"),
+          itb: totubao("r_slide,https://docs.google.com/presentation/d/1d0MGh3XCxuZujtYgZ0sr6xsAKZ4uS50p/edit?usp=sharing&ouid=118212253182146260973&rtpof=true&sd=true"),
           content: "An intuitive and straightforward fully self-supervised framework curated for the policy pre-training in visuomotor driving.",
         },
         {
@@ -287,7 +299,7 @@
           title2: "arXiv 2022 &nbsp <code>[Setup the Table]</code>",
           GitHub_url: "https://github.com/opendrivelab/bevperception-survey-recipe",
           GitHub_img: "https://img.shields.io/github/stars/opendrivelab/bevperception-survey-recipe?style=social",
-          itb: totubao("r_zhihu,https://zhuanlan.zhihu.com/p/565212506|r_jiqizhixin,https://www.jiqizhixin.com/articles/2023-02-14-4?from=synced&keyword=opendrivelab"),
+          // itb: totubao("r_zhihu,https://zhuanlan.zhihu.com/p/565212506|r_jiqizhixin,https://www.jiqizhixin.com/articles/2023-02-14-4?from=synced&keyword=opendrivelab"),
           content: "We review the most recent work on BEV perception and provide analysis of different solutions.",
         },
         {
@@ -305,7 +317,7 @@
         {
           img: "/style/img/pub/focaldistiller.jpg",
           title: "Distilling Focal Knowledge from Imperfect Expert for 3D Object Detection",
-          url: "/file/1662_focaldistiller_camera_ready.pdf",
+          url: "https://openaccess.thecvf.com/content/CVPR2023/papers/Zeng_Distilling_Focal_Knowledge_From_Imperfect_Expert_for_3D_Object_Detection_CVPR_2023_paper.pdf",
           ititle: "Jia Zeng, Li Chen",
           iititle: ", <em>et al.</em>",
           title2: "CVPR 2023",
@@ -368,8 +380,8 @@
           ititle: "Hongwei Xue, Peng Gao, Hongyang Li",
           iititle: ", <em>et al.</em>",
           title2: "CVPR 2023",
-          GitHub_url: "https://github.com/OpenPerceptionX/maskalign",
-          GitHub_img: "https://img.shields.io/github/stars/OpenPerceptionX/maskalign?style=social",
+          GitHub_url: "https://github.com/OpenDriveLab/maskalign",
+          GitHub_img: "https://img.shields.io/github/stars/OpenDriveLab/maskalign?style=social",
           // itb:totubao("0,https://opendrivelab.com|1,#|2,#|3,#"),
           content: "An efficient MIM paradigm MaskAlign and a Dynamic Alignment module to apply learnable alignment to tackle the problem of input inconsistency.",
         },

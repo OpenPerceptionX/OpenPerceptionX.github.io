@@ -126,6 +126,41 @@
       
                 <div
                   style="background-color: rgba(242, 242, 242,1); padding-top: 10px; padding-bottom: 10px; border-radius: 10px; white-space: nowrap; overflow-x: scroll;">
+                  &nbsp;&nbsp;&nbsp;@article{sima2023_occnet,
+                  <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title={Scene as Occupancy},
+                  <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;author={Chonghao Sima and Wenwen Tong and Tai Wang and Li Chen and Silei Wu and Hanming Deng  and Yi Gu and Lewei Lu and Ping Luo and Dahua Lin and Hongyang Li},
+                  <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;year={2023},
+                  <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eprint={2306.02851},
+                  <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;archivePrefix={arXiv},
+                  <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;primaryClass={cs.CV},
+                  <br>
+                  &nbsp;&nbsp;&nbsp;}
+                </div>
+              </div>
+              <div class="col-">
+              </div>
+      
+            </div>
+      
+          </div>
+      
+          <br>
+      
+          <div class="container tm-container-gallery">
+            <div class="row">
+              <div class="col-2">
+              </div>
+              <div class=" col-6">
+      
+      
+                <div
+                  style="background-color: rgba(242, 242, 242,1); padding-top: 10px; padding-bottom: 10px; border-radius: 10px; white-space: nowrap; overflow-x: scroll;">
                   &nbsp;&nbsp;&nbsp;@article{tian2023occ3d,
                   <br>
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title={Occ3D: A Large-Scale 3D Occupancy Prediction Benchmark for
@@ -171,16 +206,18 @@
 
 
       <h3>Leaderboard</h3>
+      <p>
       <div class="scrollable">
         <table style="text-align: center;" class="table_list_0">
           <thead>
             <tr style="width: 100%;">
-              <th style="width: 20%; min-width: 125px;">Date</th>
-              <th style="width: 20%;min-width: 125px; cursor: default; border-top: 5px solid rgb(0, 0, 68); border-bottom: 5px solid rgb(0, 0, 68);">Team Name</th>
-              <th style="width: 5%; min-width: 125px;  cursor: default; border-top: 5px solid rgb(0, 0, 68); border-bottom: 5px solid rgb(0, 0, 68);">Country / Region</th>
+              <th style="width: 10%; min-width: 100px;">Date</th>
+              <th style="width: 20%;min-width: 100px; cursor: default; border-top: 5px solid rgb(0, 0, 68); border-bottom: 5px solid rgb(0, 0, 68);">Team Name</th>
+              <th style="width: 5%; min-width: 75px;  cursor: default; border-top: 5px solid rgb(0, 0, 68); border-bottom: 5px solid rgb(0, 0, 68);">Country / Region</th>
               <th style="width: 20%; min-width: 125px; cursor: default; border-top: 5px solid rgb(0, 0, 68); border-bottom: 5px solid rgb(0, 0, 68);">Institution</th>
-              <th style="width: 10%; min-width: 200px;"><b>mIoU (primary)</b></th>
-              <th style="width: 10%;   cursor: default; border-top: 5px solid rgb(0, 0, 68); border-bottom: 5px solid rgb(0, 0, 68);">option</th>
+              <th style="width: 10%; min-width: 75px;"><b>mIoU (primary)</b></th>
+              <th style="width: 10%;   cursor: default; border-top: 5px solid rgb(0, 0, 68); border-bottom: 5px solid rgb(0, 0, 68);">External Data</th>
+              <th style="width: 10%;   cursor: default; border-top: 5px solid rgb(0, 0, 68); border-bottom: 5px solid rgb(0, 0, 68);">Foundation Model</th>
               <th style="width: 10%;min-width: 200px;">mIoU (per class)</th>
             </tr>
             <tr class="option_selection">
@@ -192,8 +229,15 @@
               <td>
                 <select name="" id="opt1">
                   <option value="all">All</option>
-                  <option value="na">N/A</option>
-                  <option value="yes">yes</option>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+                </select>
+              </td>
+              <td>
+                <select name="" id="opt2">
+                  <option value="all">All</option>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
                 </select>
               </td>
               <td>
@@ -223,7 +267,7 @@
             <tr class="page_0">
               <td colspan="2"><button id="prev_0">Previous</button></td>
               <td colspan="2"><button id="next_0">Next</button></td>
-              <td colspan="3">
+              <td colspan="4">
                 Page <input type="text" id="curpage_0" value="1"> of <span id="total_0">30</span>
                 &nbsp;&nbsp;&nbsp;
                 <select name="" id="pageOption_0">
@@ -235,6 +279,7 @@
           </tbody>
         </table>
       </div>
+     </p>
 
       <h3>Task Description</h3>
       <p>
@@ -249,9 +294,9 @@
       <h3>Challenges</h3>
       <p><h4>3D Occupancy Prediction Challenge, CVPR 2023</h4></p>
       <p>
-        The first challenge on OpenOcc was held at CVPR 2023 as part of the <a href="/AD23Challenge.html" style="font-weight: bold; text-decoration: underline;">Autonomous Driving Challenge</a>.
+        The first challenge on OpenOcc was held at CVPR 2023 as part of the <a class="previouslink" href="/AD23Challenge.html">Autonomous Driving Challenge</a>.
         A summary of the results can be seen below. 
-        For details, please refer to the <a href="/AD23Challenge.html##3d_occupancy_prediction" style="font-weight: bold; text-decoration: underline;">challenge leaderboard</a>.
+        For details, please refer to the <a class="previouslink" href="/AD23Challenge.html##3d_occupancy_prediction">challenge leaderboard</a>.
         <div>
           <table class="table_list_cvpr23" style="width:auto;">
             <thead>
@@ -285,7 +330,7 @@
   </div>
 
 
-
+<div style="display: none;"><script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=ZFthchXfw90jR2ns7v5qNQhYghoUg_W0OkdCYsQJ5Ys&cl=ffffff&w=a"></script></div>
 </body>
 
 

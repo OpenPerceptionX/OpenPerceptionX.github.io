@@ -13,6 +13,8 @@
 <link href="/style/css/head.css" rel="stylesheet" type="text/css" media="all">
 <link href="/style/css/footer.css" rel="stylesheet" type="text/css" media="all">
 <link href="/style/css/recruit.css" rel="stylesheet" type="text/css" media="all">
+<script src="https://kit.fontawesome.com/8990c176d0.js" crossorigin="anonymous"></script>
+
 </head>
 <body class="loadings">
 
@@ -51,7 +53,8 @@
 //获取列表模板插入数据
 
 var item = '<dl {{this}}><dt><div class="join_img"><img data-src="{{img}}" src="style/img/none.png"></div></dt><dd><h2 class="ititle">{{ititle}}</h2><br><p class="content">{{content}}</p><h3>{{istitle}}</h3><br><a href="{{url}}"><button>{{button}}</button></a></dd></dl>';
-var ilist = '<div class="joinwbr col_{{col}} {{open}} {{hover_text_color}}" style="background-image:url({{bg}}); background-color:{{bg_color}}" ><div class="bg"><h3 class="title_1"><span class="weight_span">{{title}}</span><span class="join_icon"></span></h3><p class="description">{{description}}</p></div><div class="join_list" ><div class="bg"><div class="kin"><list></div></div></div></div>';
+var ilist = '<div class="bg"><br><br><br><h3 class="title_1">{{title}}</h3><p class="description">{{description}}</p><br><br><br></div><div class="join_list" ><div class="bg"><div class="kin"><list></div></div></div>';
+  // var ilist = '<div class="joinwbr col_{{col}} {{open}} {{hover_text_color}}" style="background-image:url({{bg}}); background-color:{{bg_color}}" ><div class="bg"><h3 class="title_1"><span class="weight_span">{{title}}</span><span class="join_icon"></span></h3><p class="description">{{description}}</p></div><div class="join_list" ><div class="bg"><div class="kin"><list></div></div></div></div>';
 
 tohtml(data,$("#content"),item,ilist)
 function tohtml(shuju,div,item,ilist){

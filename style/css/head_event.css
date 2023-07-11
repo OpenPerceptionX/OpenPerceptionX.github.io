@@ -276,6 +276,11 @@ body:not(.home) .head_fanhui{cursor:pointer;display:block;padding:0;position:fix
     -moz-transition: all 0.2s ease-in-out;
     
 }
+
+.submenu li a img {
+    display: inline;
+    height: 14px;
+}
 /* .r_ul2 .submenu li:hover a::after {
   content: ""; display: block; width: 4px; height: 18px; position: absolute; left: 22px; top:16px;
    background-color: #fff;
