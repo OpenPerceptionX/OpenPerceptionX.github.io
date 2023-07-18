@@ -316,3 +316,67 @@ p .email_link:hover {
     padding-left: 16px;
     font-size: large;
 }
+
+.lj_button3 {
+    color: #333 !important;
+    user-select: none;
+    height: 64px;
+    outline: none;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 10px;
+    background-image: -moz-linear-gradient(0deg, rgb(245, 203, 32) 0%, rgb(255, 223, 147) 100%);
+    background-image: -webkit-linear-gradient(0deg, rgb(245, 203, 32) 0%, rgb(255, 223, 147) 100%);
+    background-image: -ms-linear-gradient(0deg, rgb(245, 203, 32) 0%, rgb(255, 223, 147) 100%);
+    padding: 0 10px;
+    min-width: 144px;
+    height: 40px;
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+  
+  
+  }
+  .lj_button3 {
+
+    background-image: -moz-linear-gradient(0deg, white 0%, white 100%);
+    background-image: -webkit-linear-gradient(0deg, white 0%, white 100%);
+    background-image: -ms-linear-gradient(0deg, white 0%, white 100%);
+  
+  }
+
+  .lj_button3:hover {
+
+    background-image: -moz-linear-gradient(0deg, rgb(191, 191, 191) 0%, rgb(191, 191, 191) 98%);
+    background-image: -webkit-linear-gradient(0deg, rgb(191, 191, 191) 0%, rgb(191, 191, 191) 98%);
+    background-image: -ms-linear-gradient(0deg, rgb(191, 191, 191) 0%, rgb(191, 191, 191) 98%);
+  
+  
+  }
+
+  @media screen and (max-device-width:1024px) {
+
+    .lj_button,
+    .lj_button2,
+    .lj_button3 {
+      line-height: 40px;
+      height: 40px;
+      width: 40%;
+      min-width: auto;
+      font-size: 12px;
+      margin-right: 10px;
+      padding: 0;
+    }
+}
+
+@media screen and (max-device-width:1024px) {
+  
+    .lj_button3 {
+      margin-top: 10px;
+    }
+  }
+  
