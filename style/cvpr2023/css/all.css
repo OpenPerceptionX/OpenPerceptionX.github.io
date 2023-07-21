@@ -2793,3 +2793,14 @@ ol {
 .pic_wall_container>a img:hover {
   opacity: 0.7;
 }
+
+.imghalf {
+  width: 40%;
+  margin: auto;
+  user-select: none;
+}
+@media screen and (max-device-width:1024px) {
+  .imghalf {
+    width: 45%;
+  }
+}
