@@ -78,7 +78,7 @@ transform:  rotate(360deg);-webkit-transform:  rotate(360deg);}
 .no_mailing .iform{ padding-bottom:100px; }
 .no_mailing .mailing_list_button{ display: block; margin: 0 auto; text-align: center; width: 50%;}
 @media screen and (max-device-width:1024px) {
-    .no_mailing .mailing_list_button {width: 50%;margin-top: 20px;margin-left: 900px}
+    .no_mailing .mailing_list_button {width: 50%;margin-top: 20px;margin-left: 32.5%}
 }
 .no_mailing .mailing_list{ padding-top: 20px;}
 .no_mailing .btitle{ padding-bottom: 0; margin-bottom: 0;}
