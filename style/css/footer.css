@@ -96,7 +96,7 @@ br {
 }
 @media screen and (max-device-width:1024px){
     .copyright_br {
-        display: inline;
+        display: inherit;
     }
     .copyright_span {
         display: none;
