@@ -207,7 +207,7 @@ border-radius:0;background:rgb(29, 155, 240);}
 .imorex {width: 100%;padding: 0 0 30px 0;}
 .twitterkw {width: calc(100%);padding: 0 20px 20px 20px;margin: 0 -20px;}
 .mailing_list_button {margin: 10px 0 0 0;}
-.lj_button, .lj_button2 {white-space: nowrap;width: auto;padding: 0 20px;}
+.lj_button, .lj_button2 {white-space: nowrap;padding: 0 20px; width: 90px;}
 .banner_textw p {font-size: 18px;}
 .Publications_list dt i {width: 18px;height: 18px;}
 .evevt_img::before {padding-top: 55%;}
@@ -222,7 +222,7 @@ border-radius:0;background:rgb(29, 155, 240);}
 .swiper-pagination-bullet:hover::before {opacity: 1;background: rgb(0, 0, 191);}
 .swiper-pagination-bullet.swiper-pagination-bullet-active::before {background: rgb(255, 255, 255);opacity: 1;}
 .swiper-pagination {bottom: 2% !important;left: calc((100% - 1100px)/2) !important;width: auto !important;}
-.banner_textw .kin {padding-bottom: 10px;min-height: 180px;}
+.banner_textw .kin {padding-bottom: 10px;min-height: 120px;}
 .video video {min-height: 100vh;width: auto;min-width: 100vw;}
 .banner {overflow: hidden;}
 .video {position: absolute;top: 50%;height: 500vh;margin-top: -250vh;left: 50%;margin-left: -250vw;width: 500vw;text-align: center;display: flex;justify-content: center;align-items: center;}
