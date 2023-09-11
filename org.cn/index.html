@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport"
+    content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <title>OpenDriveLab | Autonomous Driving at Shanghai AI Lab</title>
+<meta name="author" content="OpenDriveLab">
+<link rel="icon" type="image/png" href="./team_logo.png">
+<link href="./org.cn.css" rel="stylesheet" type="text/css" media="all">
+
+</head>
+
+<body class="loadings home no_gd">
+  
+
+
+
+<div class="header"  > 
+  <div class="bg">
+    <div class="rnav m"></div>
+    <div class="logo">
+      <a href="https://opendrivelab.com/"> <img src="./team_logo_long_white.png" class="bai"> <img src="./team_logo_long.png" class="hei"></a> 
+    </div>
+    <!-- <div class="r_ul2">
+      <ul class="r_ul2i">
+        <li class="#"><a href="/" style="user-select: none">Home</a></li>
+        
+      </ul>
+    </div> -->
+    </div>
+  </div>
+  <div class="rnav_br"></div>
+  <!-- <div class="go_top" data-hd2="body"></div> -->
+  
+
+
+
+
+
+
+<div class="swiper home_swiper">
+  <div class="swiper-wrapper"> 
+    <div class="swiper-slide">
+      <div class="bannerw" style="background-image: url(./autonomous-vehicle-integration.png); background-blend-mode: overlay; background-color: rgb(63, 63, 63, 0.7); background-size: cover; background-position: center;">
+        <div class="banner" style="background-image: url(./autonomous-vehicle-integration.png); background-blend-mode: overlay; background-color: rgb(63, 63, 63, 0.7); background-size: cover; background-position: center;">
+          <div class="banner_dian"></div>
+          <div class="banner_textw">
+            <div class="bg">
+              <div class="juzhongduiqi">
+                <div>
+                  <div class="kin">
+                    <a class="t_text" data-swiper-parallax="-300" data-swiper-parallax-duration="600" href="https://opendrivelab.com/">
+                      OpenDriveLab
+                      <br>
+                      <span>Autonomous Driving at Shanghai AI Lab</span>
+                    </a>
+                  </div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  <div class="swiper-pagination"></div>
+</div>
+
+
+<footer class="footer">
+
+
+  <div class="copyright">
+    <p>
+      OpenDriveLab at Shanghai AI Lab
+      <span class="copyright_span">|</span><span class="copyright_br"><br style="display: inline;"></span>
+      Copyright © 2022 - 2023 All Rights Reserved
+      <span class="copyright_span">|</span><span class="copyright_br"><br style="display: inline;"></span>
+      <a href="https://beian.miit.gov.cn/" target="_blank">沪ICP备2021009351号</a>
+    </p>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+<script src="./jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script>
+
+$("body").removeClass("loadings")
+
+$(document).ready(function () {
+//首页导航高亮
+
+  
+    
+   
+      
+   
+    
+       $(document).on("click", "[data-hd2]", function () {
+       var hhh = $(this).attr("data-hd2")
+       $('html,body').animate({scrollTop: $(hhh).offset().top - 60}, 800);
+   });
+
+   
+       var l_daohang =$("body");
+       var nt2 = !1;
+       $(window).bind("scroll",
+           function() {
+               var st2 = $(document).scrollTop();//往下滚的高度
+               nt2 = nt2 ? nt2: 40;
+               // console.log(nt2)
+               if(st2>nt2){
+                 l_daohang.addClass("header_this");
+             }
+             else{
+               l_daohang.removeClass("header_this");
+             }
+           });
+     //打开菜单
+     $(document).on("click", ".rnav", function () {
+       $("body").toggleClass('rnav_this')
+       });
+    
+   
+  
+ 
+   
+
+//手机版
+     $(document).on("click", ".r_ul2i li a", function (e) {
+       var j = $(this).next(".submenu").length
+     if(j == 1){
+       $(this).parent().toggleClass("this2").siblings("li").removeClass("this2")
+     return false
+     }
+     });
+   });
+     
+//join&people
+//转换模板
+function template(tem,obj){
+ let reg =/{{(\w*)}}/;
+ let arr =[];
+ while(arr =reg.exec(tem) ){
+ tem = tem.replace(arr[0],(obj[arr[1]]==undefined?"":obj[arr[1]]));
+ }
+ return tem
+}
+//替换替换列表
+function template2(tem,obj){
+let reg =/<list(\w*)>/;
+ let arr =[];
+   tem = tem.replace(reg,obj);
+ return tem
+}
+
+
+
+function start(){
+//not('[data-isLoaded]')选中已加载的图片不需要重新加载
+$('#content img').not('[data-isLoaded]').each(function(){
+var $node=$(this)
+if(isShow($node)){
+ loadImg($node)
+}
+})
+}
+//判断图片是否在视野中
+function isShow($node){
+return $node.offset().top<=$(window).height()+$(window).scrollTop()
+}
+//判断图片是否加载
+function loadImg($img){
+$img.attr('src',$img.attr('data-src'))//把data-src的值 赋值给src
+$img.attr('data-isLoaded',1)//区别图片是否被加载过，防止重新加载
+} 
+</script>
+
+</html>
