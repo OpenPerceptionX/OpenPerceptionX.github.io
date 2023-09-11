@@ -406,8 +406,9 @@ body:not(.home) .head_fanhui{cursor:pointer;display:block;padding:0;position:fix
 }
 .logo{ margin: 0 auto 0 0; font-size: 22px; line-height: 32px; }
 .logo,.logo a{ color: #fff;}
+.logo img {margin-top: 2%;}
 @media screen and (max-device-width: 1024px){
-    .logo img{height:30px;}
+    .logo img{height:30px; margin-left: 10%;}
     .logo{   font-size: 18px;}
   }
 .qh_langw{ padding: 0;}
@@ -584,6 +585,13 @@ color: white;}
 .t_text span {
     font-size: 36px;
 }
+.moblieonly {
+    display: none;
+}
 @media screen and (max-device-width: 1024px) {
-    .t_text {font-size: 45px;}
+    .t_text {font-size: 40px;}
+    .t_text span {font-size: 14px;}
+    .moblieonly {
+        display: inline;
+    }
 }
