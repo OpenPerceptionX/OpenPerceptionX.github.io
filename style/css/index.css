@@ -217,9 +217,9 @@ border-radius:0;background:rgb(29, 155, 240);}
 
 .swiper-button-next, .swiper-button-prev {width: 50%;height: 100%;top: 80px;opacity: 0;}
 .banner_textw a {position: relative;z-index: 100;}
-.swiper-pagination-bullet {opacity: 1;border-radius: 0;background: none;width: 50px;height: 100px;line-height: 100px;margin: 0 !important;text-align: center;}
-.swiper-pagination-bullet::before {opacity: .5;content: "";border-radius: 5px;border: 2px solid #fff;height: 4px;width: 30px;display: inline-block;}
-.swiper-pagination-bullet:hover::before {opacity: 1;background: rgb(0, 0, 191);}
+.swiper-pagination-bullet {opacity: 1;border-radius: 0;background: none;width: 50px;margin: 0 !important;text-align: center;}
+.swiper-pagination-bullet::before {opacity: .5;content: "";border-radius: 0px;border: 2px solid #fff;height: 0px;width: 30px;display: inline-block;}
+.swiper-pagination-bullet:hover::before {opacity: 1;}
 .swiper-pagination-bullet.swiper-pagination-bullet-active::before {background: rgb(255, 255, 255);opacity: 1;}
 .swiper-pagination {bottom: 2% !important;left: calc((100% - 1100px)/2) !important;width: auto !important;}
 .banner_textw .kin {padding-bottom: 10px;min-height: 120px;}
