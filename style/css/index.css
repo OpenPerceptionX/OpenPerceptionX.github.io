@@ -15,7 +15,7 @@
 .jdtxw {position: relative;}
 .home_swiper {width: 100%;height: 100vh;overflow: hidden;}
 
-.banner_button {background: none; color: white; font-size: large; text-decoration: underline; opacity: .8;}
+.banner_button {background: none; color: white; font-size: large; opacity: .8; font-weight: bold;}
 .banner_button:hover {opacity: 1;}
 .banner_button_split {color: white; font-size: large; opacity: .8;}
 
