@@ -95,11 +95,17 @@ br {
 .copyright_br {
     display: none;
 }
+.copyright p {
+    font-size: 10pt;
+}
 @media screen and (max-device-width:1024px){
     .copyright_br {
         display: inline;
     }
     .copyright_span {
         display: none;
+    }
+    .copyright p {
+        font-size: 5pt;
     }
 }
