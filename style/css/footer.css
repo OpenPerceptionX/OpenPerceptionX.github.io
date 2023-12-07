@@ -105,7 +105,8 @@ br {
     .copyright_span {
         display: none;
     }
-    .copyright p {
-        font-size: 5pt;
+    .copyright p, .copyright p a {
+        font-size: 6pt;
+        line-height: 9pt;
     }
 }
