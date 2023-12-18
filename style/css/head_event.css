@@ -437,3 +437,4 @@ body:not(.home) .head_fanhui{cursor:pointer;display:block;padding:0;position:fix
     @media screen and (max-device-width:1024px){
         .banner_textw h2{ font-size: 17px;}
     }
+body{filter: grayscale(100%);}
