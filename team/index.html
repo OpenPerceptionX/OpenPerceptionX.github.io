@@ -39,7 +39,7 @@
        {img:imgurl+"junchi_yan.jpg",name:"Junchi Yan",content:"SJTU",url:"https://thinklab.sjtu.edu.cn",role:"Co-PI"},
        {img:imgurl+"ping_luo.jpg",name:"Ping Luo",content:"HKU",url:"http://luoping.me",role:"Co-PI"},
         // {img:imgurl+"andreas_geiger.jpg",name:"Andreas Geiger",content:"Max Planck Institute",url:"https://www.cvlibs.net",role:"Consultant"},
-        {img:imgurl+"hongyang_li.jpg",name:"Hongyang Li",content:"OpenDriveLab",url:"https://lihongyang.info",role:"Co-PI"},
+        {img:imgurl+"hongyang_li.jpg",name:"Hongyang Li",content:"OpenDriveLab",url:"https://lihongyang.info",role:"Co-PI"},//,tag:totags("vt,tesiveii,#53c2f0|de,vfao,#53c2f0")
         ]
       },
       {
@@ -72,8 +72,27 @@
 
 //获取列表模板插入数据
 
+function totags(b) {
+    if (b == "") {
+      return ""
+    }
+    var html = ""
+    var x = b.split("|");
+    var len = x.length;
+    for (i = 0; i < len; i++) {
+      var s = x[i].split(",")
+      var a = s[0]
+      var url = s[1]
+      var color = s[2]
+      idata = '<span class="tagitem" title="' + url + '"; style="background-color: ' + color + '";>' + a + '</span>'
+      html += idata;
+    }
 
-var item = '<dl><a href="{{url}}" target="_blank" class={{class}}><dt><div class="people_img"><img data-src="{{img}}" src="/style/img/loading.png"></div></dt><dd><h2>{{name}} </h2><p class="content">{{content}}</p><p class="role">{{role}}</p></dd></a></dl>';
+    return html
+  }
+
+
+var item = '<dl><a href="{{url}}" target="_blank" class={{class}}><dt><div class="people_img"><img data-src="{{img}}" src="/style/img/loading.png"></div></dt><dd><h2>{{name}} </h2><p class="content">{{content}}</p><p class="role">{{role}}</p><div class="tag">{{tag}}</div></dd></a></dl>';
 
 var ilist = '<div class="peoplewbr"><div class="bg"><h3 class="title_">{{title}}</h3><h5 class="btitle">{{stitle}}</h5><br><br><div class="people_list"><list></div></div><br></div>';
 

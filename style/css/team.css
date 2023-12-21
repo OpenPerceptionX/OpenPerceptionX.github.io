@@ -99,3 +99,28 @@ width: 100%
   display: inline-block;
   color: rgb(128, 128, 128, 0.7);
 }
+
+.tag {
+  display: flex; 
+  flex-direction: row; 
+}
+
+.tagitem {
+  position: relative;
+  margin-right: 10%;
+  user-select: none;
+  /* background-color: #53c2f0; */
+  padding: 1% 5% 1% 5%;
+  border-radius: 15%;
+}
+
+.tagitem:hover:after {
+  position: absolute;
+  content: attr(title);
+  top: -4vh;
+  background-color: #0c318f;
+  color: #ffffff;
+  padding: 1vh;
+  border-radius: 1vh;
+  z-index: 3;
+}
