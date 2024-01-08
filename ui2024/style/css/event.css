@@ -1,0 +1,69 @@
+.banner {
+    width: 100%;
+    height: 100%;
+    background-image: url(/ui2024/style/background/background_4_3.svg);
+    background-size: cover; 
+    background-position: center;
+}
+.banner_container {
+    padding: max(33px, 3%);
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.banner_container div {
+    display: flex;
+    margin-top: 33px;
+}
+
+
+
+.banner_logo {
+    flex-direction: row;
+}
+.banner_logo img {
+    height: 66px;
+    margin-right: 33px;
+}
+
+
+
+.banner_title_cn {
+    flex-direction: row;
+}
+.banner_title_cn img {
+    height: 128px;
+    margin-right: 33px;
+}
+.banner_title_cn span {
+    align-items: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(233, 233, 233);
+}
+
+
+
+.banner_title_en span {
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(233, 233, 233);
+}
+
+
+
+.banner_content span, .banner_content span a {
+    font-size: 23px;
+    color: rgb(233, 233, 233);
+}
+
+
+
+.track_title {
+    margin: 0;
+}
+.track_title h1 {
+    font-size: 500%;
+    margin: 0;
+}
