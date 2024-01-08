@@ -22,7 +22,7 @@ desktop
 
 
 
-body {
+/* body {
     margin: 0;
     font-family: San Francisco, system-ui;
 }
@@ -79,7 +79,7 @@ a:hover .link_img {
 span a, p a, li a{
     font-weight: normal;
     color: #00a0e8;
-}
+} */
 
 
 
