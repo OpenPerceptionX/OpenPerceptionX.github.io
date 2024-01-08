@@ -155,7 +155,7 @@ span a, p a, li a{
     width: 100%;
 }
 .block_left div .person_container div h4, .block_left div .person_container div span, .block_left div .person_two_column div .person_container div h4, .block_left div .person_two_column div .person_container div span {
-    margin-bottom: 7px;
+    margin: 7px 0;
     text-align: left;
 }
 .block_left div .person_container div div, .block_left div .person_two_column div .person_container div div {
