@@ -1,0 +1,93 @@
+.drivelmcode {
+    background-color: lightblue;
+    color: darkblue;
+    font-weight: bold;
+}
+
+br {
+    user-select: none;
+}
+
+
+
+.drivelmbanner {
+    margin: 5% 0;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.drivelmbanner span {
+    width: 80%;
+    font-weight: bold;
+    font-size: 160%;
+    text-align: center;
+}
+.drivelmbanner .drivelmbannerimg {
+    width: 80%;
+}
+.drivelmbanner .divelmwidget {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-basis: 0;
+    flex-wrap: wrap;
+}
+.drivelmbanner .divelmwidget a img {
+    margin: 5px;
+}
+
+
+
+.drivelmtriple {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.drivelmtriple div {
+    width: 330px;
+}
+.drivelmtriple .drivelmicon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.drivelmtriple div div h5 {
+    text-align: center;
+    text-transform: none;
+    font-size: larger;
+    font-weight: bold;
+}
+.drivelmtriple div div p {
+    text-align: justify;
+}
+
+
+
+
+.citation {
+    background-color: lightgray;
+    margin: 13px 0;
+    padding: 17px;
+    border-radius: 7px;
+    overflow-x: scroll;
+    text-wrap: nowrap;
+}
+.citation br {
+    user-select: text;
+}
+
+
+
+.drivelmbrand {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.drivelmbrand img {
+    height: 80px;
+}
