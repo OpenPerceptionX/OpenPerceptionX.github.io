@@ -21,9 +21,16 @@ br {
 }
 .drivelmbanner span {
     width: 80%;
-    font-weight: bold;
-    font-size: 160%;
+    font-size: 200%;
     text-align: center;
+}
+.drivelmbanner p {
+    width: 80%;
+    font-size: 140%;
+    text-align: center;
+}
+.drivelmbanner p a:hover {
+    text-decoration: underline;
 }
 .drivelmbanner .drivelmbannerimg {
     width: 80%;
@@ -89,5 +96,5 @@ br {
     justify-content: space-between;
 }
 .drivelmbrand img {
-    height: 80px;
+    height: 45px;
 }
