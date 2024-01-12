@@ -3,9 +3,9 @@
 //   $("body").prepend(result)
 // })
 //插入底部
-$.get("/components/footer.html?xx",function(result){
-  $("body").append(result)
-})
+// $.get("/components/footer.html?xx",function(result){
+//   $("body").append(result)
+// })
 
 // 插入banner
 $.get("/components/banner_openocc.html",function(result){
