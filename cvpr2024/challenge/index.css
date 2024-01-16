@@ -122,3 +122,10 @@
 .track_title h2 {
     font-size: 200%;
 }
+
+
+
+.widget {
+    height: 33px;
+    margin-right: 10px;
+}
