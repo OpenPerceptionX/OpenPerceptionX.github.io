@@ -1,0 +1,112 @@
+<link   href="/ui2024/style/css/header.css" rel="stylesheet" type="text/css" media="all" as="style"/>
+<div class="header" id="header" style="display: none;">
+    <div class="block_header">
+
+        <div class="header_left">
+            <a href="/">
+                <img id="header_logo" src="/ui2024/style/icon/star_league_white.png"/>
+            </a>
+        </div>
+
+        <div class="header_right" id="header_right">
+            <ul>
+
+                <li onclick="drop()">
+                    <a>Event</a>
+                    <ul class="dropdown">
+                        <li><a href="/cvpr2024/challenge/" onclick="stop_propagation()">Challenge @ CVPR 2024</a></li>
+                        <!-- <li><a href="/cvpr2024/workshop/" onclick="stop_propagation()">Workshop @ CVPR 2024</a></li> -->
+                        <li><a href="https://opendrivelab.com/cvpr2024/" target="_blank" onclick="stop_propagation()">Workshop @ CVPR 2024</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="https://github.com/sponsors/OpenDriveLab" target="_blank">🤍 Sponsor</a></li>
+
+            </ul>
+        </div>
+
+        <div class="nav_button" onclick="show()">
+            <img id="nav_button" src="/ui2024/style/icon/nav_white.png" />
+        </div>
+
+    </div>
+</div>
+
+<script defer>
+    const as_transparent = () => {
+        header.classList.remove("nav_scoll");
+        header_logo.src = "/ui2024/style/icon/star_league_white.png";
+        nav_button.src = "/ui2024/style/icon/nav_white.png";
+    };
+    const as_white = () => {
+        header.classList.add("nav_scoll");
+        header_logo.src = "/ui2024/style/icon/star_league.png";
+        nav_button.src = "/ui2024/style/icon/nav.png";
+    };
+</script>
+
+
+
+<script defer>
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 0) {
+            as_white();
+        } else {
+            if (header_right.style.display != "flex") {
+                as_transparent();
+            }
+        }
+    });
+</script>
+
+
+
+<script defer>
+    const show = () => {
+        if (header_right.style.display === "none" || !header_right.style.display) {
+            header_right.style.display = "flex";
+            as_white();
+        } else {
+            header_right.style.display = "none";
+            if (window.scrollY === 0) {
+                as_transparent();
+            }
+            let elements = document.getElementsByClassName("dropdown");
+            for (let i = 0; i < elements.length; i++) {
+                elements[i].style.display = "none";
+            }
+        }
+    };
+</script>
+
+
+
+<script defer>
+    const drop = () => {
+        if (window.innerWidth <= 1024) {
+            eles = document.getElementsByClassName("dropdown");
+            for (let i = 0; i < eles.length; i++) {
+                if (eles[i] != event.currentTarget.children[1]) {
+                    eles[i].style.display = "none";
+                }
+            }
+            if (event.currentTarget.children[1].style.display === "none" || !event.currentTarget.children[1].style.display) {
+                event.currentTarget.children[1].style.display = "flex";
+            } else {
+                event.currentTarget.children[1].style.display = "none";
+            }
+        }
+    };
+    const stop_propagation = () => {
+        if (window.innerWidth <= 1024) {
+            event.stopPropagation();
+        }
+    };
+</script>
+
+<script async>
+    window.onload = function() {
+        // 当页面加载完成后，显示 <div class="header" id="header"> 的内容
+        document.getElementById('header').style.display = 'block';
+    };
+</script>
