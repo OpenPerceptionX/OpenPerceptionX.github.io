@@ -24,13 +24,12 @@
 
 
 .footer_first_row a img {
-    height: 44px;
+    height: 66px;
 }
 .footer_first_row {
     display: grid;
     grid-template-columns: 20% 80%;
 }
-
 
 
 .footer_second_row a img {
@@ -55,7 +54,4 @@
 .footer_third_row span, .footer_third_row span a {
     color: gray;
     font-size: small;
-    @media (max-width: 1024px) {
-        font-size: xx-small;
-    }
 }
