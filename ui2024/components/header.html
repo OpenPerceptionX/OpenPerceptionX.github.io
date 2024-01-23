@@ -1,24 +1,43 @@
-<link   href="/ui2024/style/css/header.css" rel="stylesheet" type="text/css" media="all" as="style"/>
+<link href="/ui2024/style/css/header.css" rel="stylesheet" type="text/css" media="all" as="style"/>
+
+
+
 <div class="header" id="header" style="display: none;">
     <div class="block_header">
 
         <div class="header_left">
             <a href="/">
-                <img id="header_logo" src="/ui2024/style/icon/star_league_white.png"/>
+                <img id="header_logo" src="/ui2024/style/icon/OpenDriveLab_white.png"/>
             </a>
         </div>
 
         <div class="header_right" id="header_right">
             <ul>
 
+                <li><a href="/team/">Team</a></li>
+
+                <li onclick="drop()">
+                    <a>Research</a>
+                    <ul class="dropdown">
+                        <li><a href="/DriveAGI.html" onclick="stop_propagation()">DriveAGI</a></li>
+                        <li><a href="https://github.com/OpenDriveLab/End-to-end-Autonomous-Driving" target="_blank" onclick="stop_propagation()">End-to-end Autonomous Driving</a></li>
+                        <li><a href="https://github.com/OpenDriveLab/BEVPerception-Survey-Recipe" target="_blank" onclick="stop_propagation()">Bird's-eye-view Perception</a></li>
+                    </ul>
+                </li>
+
                 <li onclick="drop()">
                     <a>Event</a>
                     <ul class="dropdown">
                         <li><a href="/cvpr2024/challenge/" onclick="stop_propagation()">Challenge @ CVPR 2024</a></li>
-                        <!-- <li><a href="/cvpr2024/workshop/" onclick="stop_propagation()">Workshop @ CVPR 2024</a></li> -->
-                        <li><a href="https://opendrivelab.com/cvpr2024/" target="_blank" onclick="stop_propagation()">Workshop @ CVPR 2024</a></li>
+                        <li><a href="/cvpr2024/" onclick="stop_propagation()">Events @ CVPR 2024</a></li>
+                        <li><a href="/e2ead/cvpr23_CN.html" onclick="stop_propagation()">自动驾驶论坛 @ 北京 2023</a></li>
+                        <li><a href="/AD23Challenge.html" onclick="stop_propagation()">AD Challenge @ CVPR 2023</a></li>
+                        <li><a href="/e2ead/cvpr23.html" onclick="stop_propagation()">E2EAD Workshop @ CVPR 2023</a></li>
+                        <li><a href="/sr4ad/iclr23.html" onclick="stop_propagation()">SR4AD Workshop @ ICLR 2023</a></li>
                     </ul>
                 </li>
+
+                <li><a href="/publications/">Publication</a></li>
 
                 <li><a href="https://github.com/sponsors/OpenDriveLab" target="_blank">🤍 Sponsor</a></li>
 
@@ -32,15 +51,17 @@
     </div>
 </div>
 
+
+
 <script defer>
     const as_transparent = () => {
         header.classList.remove("nav_scoll");
-        header_logo.src = "/ui2024/style/icon/star_league_white.png";
+        header_logo.src = "/ui2024/style/icon/OpenDriveLab_white.png";
         nav_button.src = "/ui2024/style/icon/nav_white.png";
     };
     const as_white = () => {
         header.classList.add("nav_scoll");
-        header_logo.src = "/ui2024/style/icon/star_league.png";
+        header_logo.src = "/ui2024/style/icon/OpenDriveLab.png";
         nav_button.src = "/ui2024/style/icon/nav.png";
     };
 </script>
@@ -104,9 +125,10 @@
     };
 </script>
 
+
+
 <script async>
     window.onload = function() {
-        // 当页面加载完成后，显示 <div class="header" id="header"> 的内容
-        document.getElementById('header').style.display = 'block';
+        header.style.display = "block";
     };
 </script>

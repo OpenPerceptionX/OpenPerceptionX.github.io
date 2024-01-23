@@ -6,11 +6,11 @@ html {
 
 
 .header img {
-    height: 33px;
+    height: 27px;
 }
 @media screen and (max-width: 1024px) {
     .header img {
-        height: 66px;
+        height: 44px;
         margin: 22px 0;
     }
 }
