@@ -1,157 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport"
-    content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-<title>Event | OpenDriveLab</title>
-<meta name="keywords" content="OpenDriveLab events, OpenDriveLab news, Autonomous Driving, E2EAD, BEV, OpenLane, Bird-eye-view Perception, End-to-end Autonomous Driving, Shanghai AI Lab">
-<meta name="author" content="OpenDriveLab">
-<link rel="icon" type="image/png" href="/style/img/team_logo.png">
-<link href="/style/css/body.css" rel="stylesheet" type="text/css" media="all">
-<link href="/style/css/head.css" rel="stylesheet" type="text/css" media="all">
-<link href="/style/css/footer.css" rel="stylesheet" type="text/css" media="all">
-<link href="/style/css/events.css" rel="stylesheet" type="text/css" media="all">
-</head>
+    <title>Event | OpenDriveLab</title>
+    <meta name="keywords" content="OpenDriveLab, Event, Challenge, Autonomous Driving, Autonomous Agent, Embodied AI">
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-L7VEDHS6G8"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <link rel="icon" type="image/png" href="/ui2024/style/icon/D_small.png">
 
-  gtag('config', 'G-L7VEDHS6G8');
-</script>
+    <link href="/ui2024/style/css/all.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/ui2024/style/css/narrow_banner.css" rel="stylesheet" type="text/css" media="all"/>
 
-
-<body class="loadings">
-
-<!-- 内容开始 添加 m_zy ：手机版 图片左右对齐，不用的话删除-->
-<div class="joinw  " id="content"></div>
-<!-- 内容end -->
-
-</body>
- 
-<script src="/style/js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="/style/js/top_events.js?12" type="text/javascript" charset="utf-8"></script>
-<script>
-  
-    
- //join-----------------------------------------------------------
-    var data = [
-      {
-       title:"2023",
-       open:"active",//空为关闭，active为开启
-       bg_color:"white",//背景色#3e0000
-       hover_text_color:"",//打开后标题白色white，或黑色 为空,适用于黑背背景图
-       col:1,//可设置1~4，每行1~4列 仅pc;
-       bg:"",//背景颜色 imgurl+"index_banner.jpg"
-       list:[
-        {img:"/style/img/events/beijing20230618.png",ititle:"行业大模型论坛<br>暨<br>自动驾驶国际挑战赛分享会",content:"",url:"/e2ead/cvpr23_CN.html",date:"June 18",target:"_self"},
-        {img:"/style/img/events/cvpr_2023_workshop.jpg",ititle:"CVPR 2023 Workshop<br><br>End-to-End Autonomous Driving:<br>Emerging Tasks and Challenges",content:"",url:"/e2ead/cvpr23.html",date:"June 18",target:"_self"},
-        {img:"/style/img/events/iclr_2023_workshop.jpg",ititle:"ICLR 2023 Workshop<br><br>Scene Representations<br>for Autonomous Driving",content:"",url:"/sr4ad/iclr23.html",date:"May 05",target:"_self"},
-        {img:"/style/img/events/conference_2023.jpg",ititle:"GAIDC 2023<br><br>数联新出行 开源新发展",content:"",url:"https://mp.weixin.qq.com/s/BQUFVXFyIOp7yE7gWVUGcA",date:"February 26",target:"_blank"},
-        ]
-      },
-      {
-       title:"2022",
-       open:"active",//空为关闭，active为开启
-       bg_color:"#f2f2f2",//背景色#3e0000
-       hover_text_color:"",//打开后标题白色white，或黑色 为空,适用于黑背背景图
-       col:1,//可设置1~4，每行1~4列 仅pc;
-       bg:"",//背景颜色 imgurl+"index_banner.jpg"
-       list:[
-        {img:"/style/img/events/prcv_2022.jpg",ititle:"PRCV 2022 Workshop<br><br>自动驾驶感知技术发展趋势与探索",content:"",url:"https://zhuanlan.zhihu.com/p/596218293",date:"December 24",target:"_blank"},
-        {img:"/style/img/events/waymo_2022.jpg",ititle:"Waymo Global Challenge at CVPR 2022<br><br>Top First Place",content:"",url:"https://zhuanlan.zhihu.com/p/531987378",date:"June 20",target:"_blank"},
-        ]
-      },
-    ];
-  
-  
-
-
-//获取列表模板插入数据
-
-var item = '<a href="{{url}}" target="{{target}}"><dl {{this}}><dt><div class="join_img"><img data-src="{{img}}" src="style/img/none.png"></div></dt><dd><h2 class="ititle">{{ititle}}</h2><br><p class="content">{{content}}</p><span>{{date}}</span></dd></dl></a>';
-var ilist = '<div class="joinwbr col_{{col}} {{open}} {{hover_text_color}}" style="background-image:url({{bg}}); background-color:{{bg_color}}" ><div class="bg"><h3 class="title_1"><span class="weight_span">{{title}}</span></h3><p class="description">{{description}}</p></div><div class="join_list" ><div class="bg"><div class="kin"><list></div></div></div></div>';
-  // <span class="join_icon"></span>
-tohtml(data,$("#content"),item,ilist)
-function tohtml(shuju,div,item,ilist){
-var html = ""
-  var len = shuju.length
-  for(i=0;i<len;i++){
-idata = template(ilist,shuju[i])
-//console.log(idata)
-var len2 = shuju[i].list.length;
-var myshuju = shuju[i]
-  var h = ""
-  for(var ii=0;ii<len2;ii++){
-  h += template(item,myshuju.list[ii])
-  
-};
-html += template2(idata,h)
-}
-div.append(html);
-start()
-}
-
-//滚动时，显示对应图片
-	$(window).on('scroll',function(){
-		start()
-	})
-
-
-// $(function(){
-//   $(document).on("click",".title_1",function(){
-//   var s =$(this).parents(".joinwbr")
-//   s.toggleClass("active");
-//   start();
-//   setTimeout(function(){
-//     start();
-//   },800)
-  
-//   }) 
-// })
- 
-    
-
-
-
-
-
-
-
-  </script>
-</html>
-
-<!DOCTYPE html>
-<!--
-Template Name: Besloor
-Author: <a href="https://www.os-templates.com/">OS Templates</a>
-Author URI: https://www.os-templates.com/
-Copyright: OS-Templates.com
-Licence: Free to use under our free template licence terms
-Licence URI: https://www.os-templates.com/template-terms
--->
-<html lang="">
-<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
-
-<head>
-  <title> Event | OpenDriveLab </title>
-  <meta name="description" content="Latest news and relevant information on influential and interesting events and competitions that OpenDriveLab hosts and attends on a daily basis.">
-  <meta name="keywords" content="OpenDriveLab events, OpenDriveLab news, Autonomous Driving, E2EAD, BEV, OpenLane, Bird-eye-view Perception, End-to-end Autonomous Driving, Shanghai AI Lab">
-  <meta name="author" content="OpenDriveLab">
-  <link rel="icon" 
-      type="image/png" 
-      href="../images/team_logo.png">
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
-  <link href="../layout/styles/events.css" rel="stylesheet" type="text/css" media="all">
-
+    <script src="/ui2024/js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 
 
@@ -168,225 +24,193 @@ Licence URI: https://www.os-templates.com/template-terms
 
 
 
+<script>
+    $.get("/ui2024/components/header.html",function(result){
+        $("body").prepend(result)
+    })
+    $.get("/ui2024/components/footer.html",function(result){
+        $("body").append(result)
+    })
+</script>
 
-<body id="top">
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <!-- Top Background Image Wrapper -->
-  <div class="bgded overlay" style="background-image:url('../images/gallery/stage-publications.jpeg');">
-    <!-- ################################################################################################ -->
-    <div class="wrapper row0">
-      <div id="topbar" class="hoc clear">
-        <!-- ################################################################################################ -->
-        <div class="fl_left">
-          <!-- ################################################################################################ -->
-          <ul class="nospace">
-            <!--           <li><i class="fas fa-phone"></i> +00 (123) 456 7890</li>
-          <li><i class="far fa-envelope"></i> info@domain.com</li> -->
-          </ul>
-          <!-- ################################################################################################ -->
+
+
+<body>
+
+    
+
+    <div class="banner">
+        <div class="banner_container">
+            <div class="banner_title_en">
+                <span>Event</span>
+            </div>
         </div>
-        <div class="fl_right">
-          <!-- ################################################################################################ -->
-          <ul class="nospace">
-            <!--           <li><a href="index.html"><i class="fas fa-home"></i></a></li>
-          <li><a href="#" title="Help Centre"><i class="fas fa-life-ring"></i></a></li>
-          <li><a href="#" title="Login"><i class="fas fa-sign-in-alt"></i></a></li>
-          <li><a href="#" title="Sign Up"><i class="fas fa-edit"></i></a></li> -->
-          </ul>
-          <!-- ################################################################################################ -->
-        </div>
-        <!-- ################################################################################################ -->
-      </div>
-    </div>
-    <!-- ################################################################################################ -->
-    <!-- ################################################################################################ -->
-    <!-- ################################################################################################ -->
-    <div class="wrapper row1">
-      <header id="header" class="hoc clear">
-        <!-- ################################################################################################ -->
-        <div id="logo" class="fl_left">
-          <h1>OpenDriveLab </h1>
-        </div>
-        <!-- ################################################################################################ -->
-        <nav id="mainav" class="fl_right">
-          <ul class="clear">
-            <li><a href="../index.html">Home</a></li>
-
-            <li class="active"><a class="drop" href="index.html">Event</a>
-              <ul>
-                <li><a href="../sr4ad/iclr23.html">ICLR 2023 Workshop</a></li>
-                <li><a href="../e2ead/cvpr23.html">CVPR 2023 Workshop</a></li>
-
-                <!-- <li><a class="drop">Past Events</a>
-                <ul>
-                  <li><a href="https://zhuanlan.zhihu.com/p/573144047">PRCV 2022 自动驾驶专业论坛（主办）</a></li>
-                  <li><a href="https://docs.google.com/presentation/d/1DBJ417-31FPvodk4mK5BG_2NNL6nHW3jR8IMFJZlJpI/edit?usp=sharing">VALSE 2022 专业论坛报告</a></li>
-                  <li><a href="https://docs.google.com/presentation/d/1cfBy_1X10AQOx0NbF6izfqJkhViTVGlQ3JcQ9wokrfo/edit?usp=sharing">ECCV 2022 Workshop Talk </a></li>
-                </ul>
-              </li>     -->
-              </ul>
-            </li>
-<!--             <li><a target="_blank" href="https://www.zhihu.com/people/PerceptionX/posts">Blog In Chinese <i
-                  class="fas fa-external-link-square-alt"></i></a>
-            </li> -->
-            <li><a href="../publication/index.html">Publication</a></li>
-          </ul>
-        </nav>
-        <!-- ################################################################################################ -->
-      </header>
-    </div>
-    <!-- ################################################################################################ -->
-    <!-- ################################################################################################ -->
-    <!-- ################################################################################################ -->
-
-    <div id="breadcrumb" class="hoc clear">
-      <!-- ################################################################################################ -->
-      <h2 class="heading">Events</h2>
-      <!-- ################################################################################################ -->
     </div>
 
 
- <div class="wrapper row2" >
-  <article class="hoc container clear">
 
-      <section id=timeline>
+    <br><br><br>
 
-        <div class="demo-card-wrapper">
-          <div class="demo-card demo-card--step5">
-            <div class="head">
-              <div class="number-box">
-                <span>Jun 18</span>
-              </div>
-              <h2> CVPR 2023 Workshop</h2>
-            </div>
-            <div class="body">
-              <a href="../e2ead/cvpr23.html">
-                End-to-End Autonomous Driving: Emerging Tasks and Challenges
-              </p>
-              <img src="../images/event/cvpr_cover.jpeg" alt="">
+
+
+    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;" id="2024">
+        <div style="flex-grow: 1;">
+            <a class="h1_title" href="#2024">
+                <h1>
+                    2024
+                    <img loading="lazy" class="link_img"/>
+                </h1>
             </a>
-            </div>
-          </div>
-      
-          <div class="demo-card demo-card--step4">
-            <div class="head">
-              <div class="number-box">
-                <span>May 5</span>
-              </div>
-              <h2> ICLR 2023 Workshop</h2>
-            </div>
-            <div class="body">
-              <a href="../sr4ad/iclr23.html">
-                Scene Representations For Autonomous Driving            </p>
-              <img src="../images/event/iclr_cover.jpeg" alt="">
-            </a>
-            </div>
-          </div>
-      
-          <div class="demo-card demo-card--step3"style="background-color: gray;">
-            <div class="head">
-              <div class="number-box">
-                <span>Feb 26</span>
-              </div>
-              <h2> GAIDC 2023</h2>
-            </div>
-            <div class="body">
-              <a href="https://mp.weixin.qq.com/s/BQUFVXFyIOp7yE7gWVUGcA">
-                数联新出行 开源新发展            </p>
-              <img src="../images/gallery/zhihuichuxing.png" >
-            </a>
-            </div>
-          </div>
-      
-          <div class="demo-card demo-card--step2"style="background-color: gray;">
-            <div class="head">
-              <div class="number-box">
-                <span>Jun 20</span>
-              </div>
-              <h2> CVPR 2022 Challenge</h2>
-            </div>
-            <div class="body">
-              <a href="https://zhuanlan.zhihu.com/p/531987378">
-                Waymo Global Challenge Top First Place, at CVPR 2022
-              </p>
-              <img src="../images/gallery/waymo.png" >
-            </a>
-            </div>
-          </div>
-      
-          <div class="demo-card demo-card--step1" style="background-color: gray;">
-            <div class="head">
-              <div class="number-box">
-                <span>Dec 24</span>
-              </div>
-              <h2> PRCV 2022 Workshop</h2>
-            </div>
-            <div class="body">
-              <a href="https://zhuanlan.zhihu.com/p/596218293" >
-                自动驾驶感知技术发展趋势与探索            </p>
-              <img src="../images/event/prcv_cover.png" >
-            </a>
-            </div>
-          </div>
-
-          
-          
-        </div>
-      </section>
-
-    </article>
-  </div>
-
-
-
-
-
-
-
-
-  <div class="wrapper row4">
-    <footer id="footer" class="hoc clear">
-      <!-- ################################################################################################ -->
-      <div class="center btmspace-80">
-        <div class="four_quarter">
-
-          <h6 class="heading">OpenDriveLab</h6>
-          <nav>
-            <ul class="nospace inline pushright uppercase">
-              <li><a style="color:#D68910;"href="../index.html"><i class="fas fa-lg fa-home"></i></a></li>
-
-            </ul>
-          </nav>
-        </div>
-      </div>
-      <!-- ################################################################################################ -->
-    </footer>
-  </div>
-
-
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <div class="wrapper row5">
-    <div id="copyright" class="hoc clear">
-      <!-- ################################################################################################ -->
-      <p class="fl_left">Copyright &copy; 2023 - All Rights Reserved - OpenDriveLab</p>
-      <!-- <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/" -->
-          <!-- title="Free Website Templates">OS Templates</a></p> -->
-      <!-- ################################################################################################ -->
+        </div> 
     </div>
-  </div>
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
-  <!-- JAVASCRIPTS -->
-  <script src="../layout/scripts/jquery.min.js"></script>
-  <script src="../layout/scripts/jquery.backtotop.js"></script>
-  <script src="../layout/scripts/jquery.mobilemenu.js"></script>
+    <br><br>
+    <div class="block_left" style="margin-top: 0; padding-top: 0">
+        <div style="flex-grow: 1;">
+
+            <div class="event_container">
+
+                <a href="/cvpr2024/">
+                    <img loading="lazy" style="background-image: url(/ui2024/style/event/cvpr2024_workshop.jpg);"/>
+                    <div>
+                        <h2>CVPR 2024 Workshop</h2>
+                        <h3>Foundation Models for Autonomous Systems</h3>
+                        <span>June</span>
+                    </div>
+                </a>
+
+                <a href="/cvpr2024/challenge/">
+                    <img loading="lazy" style="background-image: url(/ui2024/style/event/cvpr2024_challenge.jpg);"/>
+                    <div>
+                        <h2>CVPR 2024 Challenge</h2>
+                        <h3>Autonomous System Challenge</h3>
+                        <span>June</span>
+                    </div>
+                </a>
+
+            </div>
+
+        </div> 
+    </div>
+
+
+
+    <div class="block" style="margin: 0;">
+        <div class="navigator"></div>
+    </div>
+
+
+
+    <br><br><br>
+
+
+
+    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;" id="2023">
+        <div style="flex-grow: 1;">
+            <a class="h1_title" href="#2023">
+                <h1>
+                    2023
+                    <img loading="lazy" class="link_img"/>
+                </h1>
+            </a>
+        </div> 
+    </div>
+    <br><br>
+    <div class="block_left" style="margin-top: 0; padding-top: 0">
+        <div style="flex-grow: 1;">
+
+            <div class="event_container">
+
+                <a href="/e2ead/cvpr23.html">
+                    <img loading="lazy" style="background-image: url(/ui2024/style/event/cvpr2023_workshop.jpg);"/>
+                    <div>
+                        <h2>CVPR 2023 Workshop</h2>
+                        <h3>End-to-End Autonomous Driving: Emerging Tasks and Challenges</h3>
+                        <span>June 18</span>
+                    </div>
+                </a>
+
+                <a href="/e2ead/cvpr23_CN.html">
+                    <img loading="lazy" style="background-image: url(/ui2024/style/event/beijing_618.jpg);"/>
+                    <div>
+                        <h2>行业大模型论坛<br>暨<br>自动驾驶国际挑战赛分享会</h2>
+                        <span>June 18</span>
+                    </div>
+                </a>
+
+                <a href="/sr4ad/iclr23.html">
+                    <img loading="lazy" style="background-image: url(/ui2024/style/event/iclr2024_workshop.jpg);"/>
+                    <div>
+                        <h2>ICLR 2023 Workshop</h2>
+                        <h3>Scene Representations for Autonomous Driving</h3>
+                        <span>May 05</span>
+                    </div>
+                </a>
+                
+                <!-- <a href="https://mp.weixin.qq.com/s/BQUFVXFyIOp7yE7gWVUGcA" target="_blank"> -->
+                <a href="https://mp.weixin.qq.com/s?__biz=MzkyMDUzMDE2Mw==&mid=2247485797&idx=1&sn=4c6631d1edfd666e82f0c966ba0162ad&source=41#wechat_redirect" target="_blank">
+                    <img loading="lazy" style="background-image: url(/ui2024/style/event/gaidc2023.jpg);"/>
+                    <div>
+                        <h2>GAIDC 2023</h2>
+                        <h3>数联新出行 开源新发展</h3>
+                        <span>February 26</span>
+                    </div>
+                </a>
+
+            </div>
+
+        </div> 
+    </div>
+
+    
+
+    <div class="block" style="margin: 0;">
+        <div class="navigator"></div>
+    </div>
+
+
+
+
+    <br><br><br>
+
+
+
+    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;" id="2022">
+        <div style="flex-grow: 1;">
+            <a class="h1_title" href="#2022">
+                <h1>
+                    2022
+                    <img loading="lazy" class="link_img"/>
+                </h1>
+            </a>
+        </div> 
+    </div>
+    <br><br>
+    <div class="block_left" style="margin-top: 0; padding-top: 0">
+        <div style="flex-grow: 1;">
+
+            <div class="event_container">
+
+                <a href="https://zhuanlan.zhihu.com/p/596218293" target="_blank">
+                    <img loading="lazy" style="background-image: url(/ui2024/style/event/prcv2022.jpg);"/>
+                    <div>
+                        <h2>PRCV 2022 Workshop</h2>
+                        <h3>自动驾驶感知技术发展趋势与探索</h3>
+                        <span>December 24</span>
+                    </div>
+                </a>
+
+                <a href="https://zhuanlan.zhihu.com/p/531987378" target="_blank">
+                    <img loading="lazy" style="background-image: url(/ui2024/style/event/waymo2022.jpg);"/>
+                    <div>
+                        <h2>Waymo Global Challenge at CVPR 2022</h2>
+                        <h3>Top First Place</h3>
+                        <span>June 20</span>
+                    </div>
+                </a>
+
+            </div>
+
+        </div> 
+    </div>
 
 </body>
-
-</html>

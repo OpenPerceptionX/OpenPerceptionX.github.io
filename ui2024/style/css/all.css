@@ -252,3 +252,35 @@ span a, p a, li a{
 .widget_container a img {
     height: 100%;
 }
+
+
+
+.block_left div .event_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 512px);
+    justify-content: space-between;
+    gap: 33px;
+    margin-bottom: max(33px, 3%);
+}
+.block_left div .event_container a {
+    background-color: rgb(233, 233, 233);
+}
+.block_left div .event_container a img {
+    height: 288px;
+    width: 100%;
+    background-size: cover; 
+    background-position: left;
+}
+.block_left div .event_container a div {
+    padding: 11px 33px;
+    h2 {
+        margin-bottom: 0;
+    }
+    span {
+        text-align: right;
+        color: #00a0e8;
+        margin: 11px 0;
+        padding-right: 11px;
+        border-right: 3px solid #00a0e8;
+    }
+}
