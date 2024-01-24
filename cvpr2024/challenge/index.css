@@ -118,6 +118,13 @@
     font-size: 333%;
     margin: 0;
 }
+.track_fig {
+    width: 55%;
+    border-radius: 55%;
+    @media screen and (max-width: 1024px) {
+        display: none;
+    }
+}
 
 
 
