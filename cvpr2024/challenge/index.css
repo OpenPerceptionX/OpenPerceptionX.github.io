@@ -18,11 +18,11 @@
     flex-direction: row;
 }
 .banner_logo img {
-    height: 66px;
+    height: 55px;
     margin-right: 33px;
 }
 .banner_logo_u img {
-    height: 66px;
+    height: 55px;
 }
 
 
@@ -43,7 +43,7 @@
 
 
 .banner_title_en span {
-    font-size: 99px;
+    font-size: 66px;
     font-weight: bold;
     color: rgb(233, 233, 233);
     text-align: left;
