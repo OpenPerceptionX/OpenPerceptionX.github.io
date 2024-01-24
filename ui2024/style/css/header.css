@@ -10,7 +10,7 @@ html {
 }
 @media screen and (max-width: 1024px) {
     .header img {
-        height: 44px;
+        height: 66px;
         margin: 22px 0;
     }
 }
