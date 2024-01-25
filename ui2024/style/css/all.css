@@ -260,7 +260,7 @@ span a, p a, li a{
     display: grid;
     grid-template-columns: repeat(auto-fill, 512px);
     justify-content: space-between;
-    gap: 33px;
+    gap: 22px;
     margin-bottom: max(33px, 3%);
     @media screen and (max-width: 1024px) {
         grid-template-columns: repeat(auto-fill, 100%);
@@ -279,7 +279,11 @@ span a, p a, li a{
     }
 }
 .block_left div .event_container a div {
-    padding: 11px 33px;
+    justify-content: space-between;
+    height: 192px;
+}
+.block_left div .event_container a div div {
+    padding: 0 33px 11px 33px;
     h2 {
         margin-bottom: 0;
     }
