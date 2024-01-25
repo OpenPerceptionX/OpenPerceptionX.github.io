@@ -45,7 +45,7 @@ a:any-link:hover, a:-webkit-any-link:hover {
 }
 a .link_img {
     display: none;
-    content: url(/ui2024/style/icon/link.png);
+    content: url(/assets/icon/link.png);
 }
 a:hover .link_img {
     display: inline;
