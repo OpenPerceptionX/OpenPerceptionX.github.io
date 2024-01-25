@@ -244,7 +244,7 @@ span a, p a, li a{
         color: #0c318f;
     }
 }
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px) {
     .widget_container a span {
         font-size: 23px;
         color: #0c318f;
@@ -262,6 +262,9 @@ span a, p a, li a{
     justify-content: space-between;
     gap: 33px;
     margin-bottom: max(33px, 3%);
+    @media screen and (max-width: 1024px) {
+        grid-template-columns: repeat(auto-fill, 100%);
+    }
 }
 .block_left div .event_container a {
     background-color: rgb(233, 233, 233);
@@ -271,6 +274,9 @@ span a, p a, li a{
     width: 100%;
     background-size: cover; 
     background-position: left;
+    @media screen and (max-width: 1024px) {
+        height: 50vw;
+    }
 }
 .block_left div .event_container a div {
     padding: 11px 33px;
