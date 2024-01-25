@@ -231,8 +231,8 @@
                             Occupancy and Flow
                         </a>
                         <br><br><br>
-                        <a href="#embodiedscan">
-                            EmbodiedScan
+                        <a href="#multiview-3d-visual-grounding">
+                            Multi-View 3D Visual Grounding
                         </a>
                         <br><br><br>
                         <a href="#mapless_driving">
@@ -266,7 +266,7 @@
             <a href="#end_to_end_driving_at_scale">End-to-End Driving at Scale</a>
             <a href="#predictive_world_model">Predictive World Model</a>
             <a href="#occupancy_and_flow">Occupancy and Flow</a>
-            <a href="#embodiedscan">EmbodiedScan</a>
+            <a href="#multiview-3d-visual-grounding">Multi-View 3D Visual Grounding</a>
             <a href="#carla">CARLA Autonomous Driving Challenge</a>
             <a href="#driving_with_language">Driving with Language</a>
             <a href="#mapless_driving">Mapless Driving</a>
@@ -649,15 +649,15 @@
 
 
 
-    <div class="block_right left_right" id="embodiedscan">
+    <div class="block_right left_right" id="multiview-3d-visual-grounding">
 
         <div style="flex-grow: 7;">
-            <a class="track_title" href="#embodiedscan">
+            <a class="track_title" href="#multiview-3d-visual-grounding">
                 <h2>
                     Track
                     <img loading="lazy" class="link_img"/>
                 </h2>
-                <h1>EmbodiedScan</h1>
+                <h1>Multi-View 3D Visual Grounding</h1>
             </a>
 
             <br><br>
@@ -679,7 +679,7 @@
 
             <h2>Task Description</h2>
             <span>
-                todo
+                Compared with the driving scene, the indoor embodied 3D perception system is faced with multi-modal input including language instructions, more complex semantic understanding, more diverse object categories and orientations, and greatly different perceptual space and needs. Based on this, we construct EmbodiedScan, a holistic multi-modal, ego-centric 3D perception suite. In this track, given language prompts decribing specific objects, models are required to detect them in the scene and predict their oriented 3D bounding boxes.
             </span>
             
             <br>
@@ -716,49 +716,54 @@
             <span>
                 Please consider citing our work if the challenge helps your research with the following BibTex:
             </span>
-            <!-- <div class="citation">
-                @article{sima2023_occnet,
+            <div class="citation">
+                @article{wang2023embodiedscan,
                     <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;title={Scene as Occupancy},
+                    &nbsp;&nbsp;&nbsp;&nbsp;title={EmbodiedScan: A Holistic Multi-Modal 3D Perception Suite Towards Embodied AI},
                     <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;author={Chonghao Sima and Wenwen Tong and Tai Wang and Li Chen and Silei Wu and Hanming Deng  and Yi Gu and Lewei Lu and Ping Luo and Dahua Lin and Hongyang Li},
+                    &nbsp;&nbsp;&nbsp;&nbsp;author={Wang, Tai and Mao, Xiaohan and Zhu, Chenming and Xu, Runsen and Lyu, Ruiyuan and Li, Peisen and Chen, Xiao and Zhang, Wenwei and Chen, Kai and Xue, Tianfan and Liu, Xihui and Lu, Cewu and Lin, Dahua and Pang, Jiangmiao},
                     <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+                    &nbsp;&nbsp;&nbsp;&nbsp;journal={arXiv preprint arXiv:2312.16170},
                     <br>
                     &nbsp;&nbsp;&nbsp;&nbsp;year={2023}
                     <br>
                 }
-            </div> -->
+            </div>
 
             <br>
             <h2>Contact</h2>
             <ul class="rules">
                 <li>
-                    Tai Wang (XXX), <code>XXX</code>
+                    Tai Wang (OpenRobotLab), <code>taiwang.me@gmail.com</code>
                 </li>
                 <li>
-                    Slack channel: <code>#XXX</code>
+                    Slack channel: <code>#visual-grounding-2024</code>
                 </li>
             </ul>
 
             <br>
             <h2>Related Literature</h2>
             <ul class="rules">
-                <!-- <li>
-                    <a href="https://arxiv.org/abs/2306.02851" target="_blank">
-                        Scene as Occupancy
+                <li>
+                    <a href="https://arxiv.org/abs/2312.16170" target="_blank">
+                        EmbodiedScan: A Holistic Multi-Modal 3D Perception Suite Towards Embodied AI
                     </a>
                 </li>
                 <li>
-                    <a href="https://arxiv.org/abs/2003.04618" target="_blank">
-                        Convolutional Occupancy Networks
+                    <a href="https://arxiv.org/abs/2309.09456" target="_blank">
+                        Object2Scene: Putting Objects in Context for Open-Vocabulary 3D Detection
                     </a>
                 </li>
                 <li>
-                    <a href="https://arxiv.org/abs/2203.03875" target="_blank">
-                        Occupancy Flow Fields for Motion Forecasting in Autonomous Driving
+                    <a href="https://link.springer.com/chapter/10.1007/978-3-031-20080-9_28" target="_blank">
+                        FCAF3D: Fully Convolutional Anchor-Free 3D Object Detection
                     </a>
-                </li> -->
+                </li>
+                <li>
+                    <a href="https://github.com/open-mmlab/mmdetection3d" target="_blank">
+                        MMDetection3D: OpenMMLab's Next-Generation Platform for General 3D Object Detection
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
@@ -1607,14 +1612,14 @@
                 </div>
 
                 <div>
-                    <h2>EmbodiedScan</h2>
+                    <h2>Multi-View 3D Visual Grounding</h2>
                     <div class="person_container">
                         <div>
                             <a href="https://tai-wang.github.io/" target="_blank">
                                 <img loading="lazy" src="/ui2024/style/person/tai_wang.jpg"/>
                             </a>
                             <h4>Tai Wang</h4>
-                            <span>xxx</span>
+                            <span>Shanghai AI Lab</span>
                             <div></div>
                         </div>
                     </div>
