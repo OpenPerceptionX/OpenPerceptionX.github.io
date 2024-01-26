@@ -1,0 +1,918 @@
+<head>
+    <title>Workshop at CVPR 2024 | OpenDriveLab</title>
+    <meta name="keywords" content="FM4AS, OpenDriveLab, CVPR 2024, Workshop, Autonomous Driving, Autonomous Agent, Embodied AI">
+
+    <link rel="icon" type="image/png" href="/assets/icon/D_small.png">
+
+    <link href="/ui2024/css/all.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="./index.css" rel="stylesheet" type="text/css" media="all"/>
+
+    <script src="/ui2024/js/jquery-3.7.1.min.js"  crossorigin="anonymous"></script>
+</head>
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L7VEDHS6G8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L7VEDHS6G8');
+</script>
+
+
+
+<script>
+    $.get("/ui2024/components/header.html",function(result){
+        $("body").prepend(result)
+    })
+    $.get("/ui2024/components/footer.html",function(result){
+        $("body").append(result)
+    })
+</script>
+
+
+
+<script>
+    function convertTimezone(offset) {
+      // 获取所选时区的偏移量
+      var selectedOffset = parseInt(offset);
+
+      // 获取所有具有特定类和属性的时间元素
+      var eventTimes = document.querySelectorAll(".event-time");
+
+      // 遍历每个时间元素，将其时间根据所选时区进行调整
+      eventTimes.forEach(function (eventTime) {
+        // 获取原始时间
+        var originalTime = new Date(
+          eventTime.getAttribute("data-original-time")
+        );
+
+        // 根据所选偏移量调整时间
+        var adjustedTime = new Date(
+          originalTime.getTime() + selectedOffset * 60 * 60 * 1000
+        );
+
+        // 格式化调整后的时间为 "09:00, June 18" 的形式
+        var hours = adjustedTime.getHours().toString().padStart(2, "0");
+        var minutes = adjustedTime.getMinutes().toString().padStart(2, "0");
+        var month = adjustedTime.toLocaleString("en-US", { month: "long" });
+        var day = adjustedTime.getDate();
+
+        var formattedTime = hours + ":" + minutes + ", " + month + " " + day;
+
+        // 更新时间元素的内容为调整后的时间
+        eventTime.textContent = formattedTime;
+      });
+    }
+    
+    window.addEventListener('load', function() {
+         // 在页面加载完成后执行的代码
+          // 获取用户所在的时区
+          var userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+            console.log('userTimeZone=====================',userTimeZone )
+            // 根据用户所在的时区，找到对应的下拉选项并将其选中
+            var timezoneSelect = document.getElementById('timezoneSelect');
+            var userOptionFound = false;
+            for (var i = 0; i < timezoneSelect.options.length; i++) {
+                if (timezoneSelect.options[i].value === userTimeZone) {
+                    timezoneSelect.selectedIndex = i;
+                    userOptionFound = true;
+                    break;
+                }
+            }
+
+            // 如果用户所在的时区在下拉选项中不存在，生成对应的 UTC 时区选项并选中
+            if (!userOptionFound) {
+                var utcOffset = new Date().getTimezoneOffset() / -60;
+                var utcOption = document.createElement('option');
+                utcOption.value = utcOffset;
+                utcOption.textContent = userTimeZone+' '+'('+'UTC+'+ utcOffset +')';
+                console.log('utcOption=====================',utcOption.value,utcOption.textContent)
+                timezoneSelect.insertBefore(utcOption, timezoneSelect.firstChild);  // 插入到首位
+                timezoneSelect.value = utcOffset;
+            }
+
+            // 调用 convertTimezone 方法，根据用户所在的时区进行时间转换
+            convertTimezone(timezoneSelect.value);
+    });
+</script>
+
+
+
+
+<body>
+
+    
+
+    <div class="banner">
+        <div class="banner_container">
+
+            <div class="banner_logo">
+                <img loading="lazy" src="/assets/icon/cvpr/cvpr2024_white.png"/>
+                <img loading="lazy" src="/assets/icon/cvpr/ieee_cs_white.png"/>
+            </div>
+            
+            <div class="banner_title">
+                <span>Foundation Models for Autonomous Systems</span>
+            </div>
+
+            <div class="banner_content">
+                <span>
+                    CVPR 2024 Workshop
+                    <br>
+                    June, Seattle, USA 
+                </span>
+            </div>
+
+            <div class="banner_logo_u">
+                <a target="_blank"><img loading="lazy" src="/assets/icon/star_league_white.png"/></a>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <br id="challenge"><br id="contact"><br>
+
+
+
+    <div class="block_left">
+        <div style="flex-grow: 6;">
+
+            <span>
+                Autonomous systems, such as robots and self-driving cars, have rapidly evolved over the past decades. Recently, foundation models have emerged as a promising approach to build more generalist autonomous systems, due to their ability of learning from vast amounts of data and generalize to new tasks. The motivation behind this workshop is to explore the potential of foundation models for autonomous agents, and discuss the challenges and opportunities associated with this approach.
+            </span>
+            <br>
+
+            <a class="track_title" href="#contact">
+                <h2>
+                    Contact
+                    <img loading="lazy" class="link_img"/>
+                </h2>
+            </a>
+            <span class="note">
+                <a href="mailto:workshop-e2e-ad@googlegroups.com" style="margin-right: 11px;">
+                    <img loading="lazy" src="/assets/icon/email.png"/>
+                </a>
+                <span>
+                    Contact us via <code>workshop-e2e-ad@googlegroups.com</code> with the prefix [CVPR 2024 FM4AS].
+                </span>
+            </span>
+            <br>
+            
+        </div>
+        <div style="flex-grow: 1;"></div>
+        <div style="flex-grow: 6;">
+            
+            <a class="track_title" href="#challenge">
+                <h2>
+                    Challenge
+                    <img loading="lazy" class="link_img"/>
+                </h2>
+            </a>
+            <span>
+                The field of autonomous driving (AD) is rapidly evolving, and recent advancements from the machine learning community such as large language models (LLM) and world models bring great potential. We believe the future of AD lies in explainable, end-to-end models that understand the world and generalize to unvisited environments. In light of this, we propose six new challenges that push the boundary of existing perception, prediction and planning pipelines.
+            </span>
+            <br>
+            <span class="note">
+                <a href="/cvpr2024/challenge/" style="margin-right: 11px;">
+                    <img loading="lazy" src="./challenge.png"/>
+                </a>
+                <span>
+                    Check out the <a href="/cvpr2024/challenge/"><code>Challenge</code></a> website for more details.
+                </span>
+            </span>
+
+        </div>
+    </div>
+
+
+
+    <br><br><br>
+
+
+
+    <div class="block">
+        <div class="navigator">
+            <a href="#schedule">Schedule</a>
+            <a href="#speaker">Speaker</a>
+            <a href="#organizer">Organizer</a>
+            <a href="#committee">Steering/Award Committee</a>
+            <br><br>
+        </div>
+    </div>
+
+
+
+    <br><br><br>
+
+
+
+    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;" id="schedule">
+        <div style="flex-grow: 1;">
+            <a class="track_title" href="#schedule">
+                <h1>
+                    Schedule
+                    <img loading="lazy" class="link_img"/>
+                </h1>
+            </a>
+        </div> 
+    </div>
+    <br>
+    <div class="block_left" style="margin-top: 0; padding-top: 0">
+
+        <div style="flex-grow: 1;">
+            <div style="width: 260px;margin: 24px 0px;">
+                <select id="timezoneSelect" onchange="convertTimezone(this.value)">
+                  <option value="-11">Niue/Pago_Pago (UTC-11)</option>
+                  <option value="-10">Honolulu/Adak (UTC-10)</option>
+                  <option value="-9">Alaska/Gambier Islands (UTC-9)</option>
+                  <option value="-8">Anchorage/Nome (UTC-8)</option>
+                  <option value="-7">Vancouver/Los_Angeles (UTC-7)</option>
+                  <option value="-6">Belize (UTC-6)</option>
+                  <option value="-5">Chicago (UTC-5)</option>
+                  <option value="-4">New_York/Detroit (UTC-4)</option>
+                  <option value="-3">Araguaina/Maceio/Thule (UTC-3)</option>
+                  <option value="-2">Noronha/South_Georgia (UTC-2)</option>
+                  <option value="-1">Cape_Verde/Azores (UTC-1)</option>
+                  <option value="0">Ireland/Portugal (UTC+0)</option>
+                  <option value="1">London/Canary (UTC+1)</option>
+                  <option value="2">Paris/Berlin/Cairo/Kigali (UTC+2)</option>
+                  <option value="3">Moscow/Baghdad (UTC+3)</option>
+                  <option value="4">Dubai/Mahe (UTC+4)</option>
+                  <option value="5">Qyzylorda/Kerguelen (UTC+5)</option>
+                  <option value="6">Almaty/Kolkata (UTC+6)</option>
+                  <option value="7">Bangkok/Christmas (UTC+7)</option>
+                  <option value="8">Beijing/Hong_Kong (UTC+8)</option>
+                  <option value="9">Tokyo/Seoul (UTC+9)</option>
+                  <option value="10">Sydney/Brisbane (UTC+10)</option>
+                  <option value="11">Lord_Howe/Kosrae (UTC+11)</option>
+                  <option value="12">Wallis/Fiji (UTC+12)</option>
+                </select>
+            </div>
+            <span>
+                Time zone:
+            </span>
+            <div class="rankTable">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Speaker</th>
+                            <th>Theme</th>
+                            <th>Content</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td class="event-time" data-original-time="2024-06-18T09:00:00">09:00, June 18</td>
+                            <td>Hongyang Li</td>
+                            <td>Opening Remarks: Autonomous Systems in the Era of Foundation Models </td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td class="event-time" data-original-time="2024-06-18T09:10:00">09:10, June 18</td>
+                            <td>Jeannette Bohg</td>
+                            <td>Foundation Models for Solving Robotic Problems</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td class="event-time" data-original-time="2024-06-18T09:40:00">09:40, June 18</td>
+                            <td>Ted Xiao</td>
+                            <td>The Art and Science of Taming Large-scale Data</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td class="event-time" data-original-time="2024-06-18T10:10:00">10:10, June 18</td>
+                            <td>Winners</td>
+                            <td>Track</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td class="event-time" data-original-time="2024-06-18T10:40:00">10:40, June 18</td>
+                            <td>Coffee Break</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td class="event-time" data-original-time="2024-06-18T11:00:00">11:00, June 18</td>
+                            <td>Sergey Levine</td>
+                            <td>Reinforcement Learning in Robotics</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr >
+                            <td class="event-time" data-original-time="2024-06-18T11:30:00">11:30, June 18</td>
+                            <td>Winners</td>
+                            <td>Track</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr >
+                            <td class="event-time" data-original-time="2024-06-18T12:00:00">12:00, June 18</td>
+                            <td>Lunch Break</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td class="event-time" data-original-time="2024-06-18T13:10:00">13:10, June 18</td>
+                            <td>Adrien Gaidon</td>
+                            <td>Principle-centric AI for Autonomous Systems</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td class="event-time" data-original-time="2024-06-18T13:40:00">13:40, June 18</td>
+                            <td>Winners</td>
+                            <td>Track</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td class="event-time" data-original-time="2024-06-18T14:10:00">14:10, June 18</td>
+                            <td>Alex Kendall</td>
+                            <td>Applying AI Breakthroughs to Autonomous Driving</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td class="event-time" data-original-time="2024-06-18T14:40:00">14:40, June 18</td>
+                            <td>Coffee Break</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td class="event-time" data-original-time="2024-06-18T15:00:00">15:00, June 18</td>
+                            <td>Phil Duan</td>
+                            <td>Building Foundation Models for Autonomous Driving</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td class="event-time" data-original-time="2024-06-18T15:30:00">15:30, June 18</td>
+                            <td>Li Chen</td>
+                            <td>End-to-end Frameworks</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td class="event-time" data-original-time="2024-06-18T16:00:00">16:00, June 18</td>
+                            <td>Organizers and Speakers</td>
+                            <td>Debate on Applications of Foundation Models</td>
+                            <td>-</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <span>
+                Rank:
+            </span>
+            <table id="myTable" class="rankTable">
+                <thead>
+                    <tr>
+                        <th onclick="sortTable(0, 'rank')">rank <span class="sort-icon" id="sortIcon0"></span></th>
+                        <th onclick="sortTable(1, 'metrics')">primary metric <span class="sort-icon" id="sortIcon1"></span></th>
+                        <th onclick="sortTable(2, 'country')">Country / Region <span class="sort-icon" id="sortIcon2"></span>
+                        </th>
+                        <th onclick="sortTable(3, 'key')">key1 <span class="sort-icon" id="sortIcon3"></span></th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                </tbody>
+            </table>
+            <div style="display: flex;flex-direction: row;justify-content: flex-start;" class="rankTable">
+                <button onclick="previousPage()">Previous</button>
+                <button onclick="nextPage()">Next</button>
+                <select id="pageSize" onchange="changePageSize()">
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+        </div> 
+    </div>
+
+    
+
+    <br><br><br>
+
+
+
+    <div class="block" style="margin: 0;">
+        <div class="navigator"></div>
+    </div>
+
+
+
+    <br><br><br>
+
+
+
+    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;" id="speaker">
+        <div style="flex-grow: 1;">
+            <a class="track_title" href="#speaker">
+                <h1>
+                    Speaker
+                    <img loading="lazy" class="link_img"/>
+                </h1>
+            </a>
+        </div> 
+    </div>
+    <br><br>
+    <div class="block_left" style="margin-top: 0; padding-top: 0">
+        <div style="flex-grow: 1;">
+
+            <div class="person_container">
+                <div>
+                    <a href="https://people.eecs.berkeley.edu/~svlevine/" target="_blank">
+                        <img loading="lazy" src="/assets/person/sergey_levine.jpg"/>
+                    </a>
+                    <h4>Sergey Levine</h4>
+                    <span><i>Associate Professor</i><br>UC Berkeley, USA</span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://web.stanford.edu/~bohg/" target="_blank">
+                        <img loading="lazy" src="/assets/person/jeannette_bohg.jpg"/>
+                    </a>
+                    <h4>Jeannette Bohg</h4>
+                    <span><i>Assistant Professor</i><br>Stanford, USA</span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://adriengaidon.com/" target="_blank">
+                        <img loading="lazy" src="/assets/person/adrien_gaidon.jpg"/>
+                    </a>
+                    <h4>Adrien Gaidon</h4>
+                    <span><i>Head of Machine Learning</i><br>Toyota Research Institute, USA</span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://alexgkendall.com" target="_blank">
+                        <img loading="lazy" src="/assets/person/alex_kendall.jpg"/>
+                    </a>
+                    <h4>Alex Kendall</h4>
+                    <span><i>Co-Founder & CEO</i><br>Wayve, UK</span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://tedxiao.me/" target="_blank">
+                        <img loading="lazy" src="/assets/person/ted_xiao.jpg"/>
+                    </a>
+                    <h4>Ted Xiao</h4>
+                    <span><i>Senior Research Scientist</i><br>Google DeepMind, USA</span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://scholar.google.com/citations?user=ulZxvY0AAAAJ" target="_blank">
+                        <img loading="lazy" src="/assets/person/li_chen.jpg"/>
+                    </a>
+                    <h4>Li Chen</h4>
+                    <span><i>Research Scientist</i><br>Shanghai AI Lab, China</span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://www.linkedin.com/in/phduan" target="_blank">
+                        <img loading="lazy" src="/assets/person/phil_duan.jpg"/>
+                    </a>
+                    <h4>Phil Duan</h4>
+                    <span><i>Autopilot Vision Lead</i><br>Tesla, USA</span>
+                    <div></div>
+                </div>
+            </div>
+
+        </div> 
+    </div>
+
+
+
+    <br>
+
+
+
+    <div class="block" style="margin: 0;">
+        <div class="navigator"></div>
+    </div>
+
+
+
+    <br><br><br>
+
+
+
+    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;" id="organizer">
+        <div style="flex-grow: 1;">
+            <a class="track_title" href="#organizer">
+                <h1>
+                    Organizer
+                    <img loading="lazy" class="link_img"/>
+                </h1>
+            </a>
+        </div> 
+    </div>
+    <br><br>
+    <div class="block_left" style="margin-top: 0; padding-top: 0">
+        <div style="flex-grow: 1;">
+
+            <div class="person_container">
+                <div>
+                    <a href="https://lihongyang.info" target="_blank">
+                        <img loading="lazy" src="/assets/person/hongyang_li.jpg"/>
+                    </a>
+                    <h4>Hongyang Li</h4>
+                    <span>Shanghai AI Lab</span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://faikit.github.io/" target="_blank">
+                        <img loading="lazy" src="/assets/person/huijie_wang.jpg"/>
+                    </a>
+                    <h4>Huijie Wang</h4>
+                    <span>Shanghai AI Lab</span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://kashyap7x.github.io" target="_blank">
+                        <img loading="lazy" src="/assets/person/kashyap_chitta.jpg"/>
+                    </a>
+                    <h4>Kashyap Chitta</h4>
+                    <span>Univeristy of Tübingen</span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://sites.google.com/it-caesar.de/homepage/" target="_blank">
+                        <img loading="lazy" src="/assets/person/holger_caesar.jpg"/>
+                    </a>
+                    <h4>Holger Caesar</h4>
+                    <span>TU Delft</span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://germanros.net/" target="_blank">
+                        <img loading="lazy" src="/assets/person/german_ros.jpg"/>
+                    </a>
+                    <h4>German Ros</h4>
+                    <span>NVIDIA</span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://mysite.ku.edu.tr/fguney/" target="_blank">
+                        <img loading="lazy" src="/assets/person/fatma_güney.jpg"/>
+                    </a>
+                    <h4>Fatma Güney</h4>
+                    <span>Koç University</span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://people.ee.ethz.ch/~csakarid/" target="_blank">
+                        <img loading="lazy" src="/assets/person/christos_sakaridis.jpg"/>
+                    </a>
+                    <h4>Christos Sakaridis</h4>
+                    <span>ETH Zürich</span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://anthonyhu.github.io/" target="_blank">
+                        <img loading="lazy" src="/assets/person/anthony_hu.jpg"/>
+                    </a>
+                    <h4>Anthony Hu</h4>
+                    <span>Wayve</span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://www.cs.utexas.edu/~dchen/" target="_blank">
+                        <img loading="lazy" src="/assets/person/dian_chen.jpg"/>
+                    </a>
+                    <h4>Dian Chen</h4>
+                    <span>Waabi</span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://hangqiu.github.io/" target="_blank">
+                        <img loading="lazy" src="/assets/person/hang_qiu.jpg"/>
+                    </a>
+                    <h4>Hang Qiu</h4>
+                    <span>UC Riverside</span>
+                    <div></div>
+                </div>
+                <div>
+                    <a>
+                        <img loading="lazy" src="/assets/person/jiajie_xu.jpg"/>
+                    </a>
+                    <h4>Jiajie Xu</h4>
+                    <span>CMU</span>
+                    <div></div>
+                </div>
+            </div>
+
+
+        </div> 
+    </div>
+
+
+
+    <br>
+
+
+
+    <div class="block" style="margin: 0;">
+        <div class="navigator"></div>
+    </div>
+
+
+
+    <br><br><br>
+
+
+
+    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;" id="committee">
+        <div style="flex-grow: 1;">
+            <a class="track_title" href="#committee">
+                <h1>
+                    Steering/Award Committee
+                    <img loading="lazy" class="link_img"/>
+                </h1>
+            </a>
+        </div> 
+    </div>
+    <br><br>
+    <div class="block_left" style="margin-top: 0; padding-top: 0">
+        <div style="flex-grow: 1;">
+
+            <div class="person_container">
+                <div>
+                    <a href="https://scholar.google.com/citations?user=gFtI-8QAAAAJ" target="_blank">
+                        <img loading="lazy" src="/assets/person/yu_qiao.jpg"/>
+                    </a>
+                    <h4>Yu Qiao</h4>
+                    <span>Shanghai AI Lab<br><i style="color: gray;">Lead Scientist / Professor</i></span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://www.cvlibs.net" target="_blank">
+                        <img loading="lazy" src="/assets/person/andreas_geiger.jpg"/>
+                    </a>
+                    <h4>Andreas Geiger</h4>
+                    <span>Univeristy of Tübingen<br><i style="color: gray;">Head of CS / Professor</i></span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://gr.xjtu.edu.cn/web/jrxue" target="_blank">
+                        <img loading="lazy" src="/assets/person/jianru_xue.jpg"/>
+                    </a>
+                    <h4>Jianru Xue</h4>
+                    <span>Xi’an Jiaotong University<br><i style="color: gray;">Yangtze River Scholar / Professor</i></span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://baoquanchen.info/" target="_blank">
+                        <img loading="lazy" src="/assets/person/baoquan_chen.jpg"/>
+                    </a>
+                    <h4>Baoquan Chen</h4>
+                    <span>Peking University<br><i style="color: gray;">Associate Dean / BOYA Distinguished Professor</i></span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://air.tsinghua.edu.cn/en/info/1046/1188.htm" target="_blank">
+                        <img loading="lazy" src="/assets/person/yaqin_zhang.jpg"/>
+                    </a>
+                    <h4>Ya-Qin Zhang</h4>
+                    <span>Tsinghua University<br><i style="color: gray;">Academician of CAE / Chair Professor</i></span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://alexgkendall.com" target="_blank">
+                        <img loading="lazy" src="/assets/person/alex_kendall.jpg"/>
+                    </a>
+                    <h4>Alex Kendall</h4>
+                    <span>Wayve<br><i style="color: gray;">Co-Founder & CEO</i></span>
+                    <div></div>
+                </div>
+            </div>
+
+
+        </div> 
+    </div>
+
+
+
+    <br>
+
+
+
+</body>
+
+<script defer>
+    const data = [
+      {
+        metrics: 0.94,
+        country: "China",
+        flag: "China",
+        key: "key1测试1111111",
+      },
+      {
+        metrics: 0.93,
+        country: "United States",
+        flag: "United States",
+        key: "key1测试2",
+      },
+      { metrics: 0.89, country: "Japan", flag: "Japan", key: "key1测试3" },
+      {
+        metrics: 0.66,
+        country: "Türkiye",
+        flag: "Türkiye",
+        key: "key1测试4",
+      },
+      {
+        metrics: 0.34,
+        country: "Britain",
+        flag: "Britain",
+        key: "key1测试5",
+      },
+      {
+        metrics: 0.094,
+        country: "China",
+        flag: "China",
+        key: "key1测试1111111",
+      },
+      {
+        metrics: 0.093,
+        country: "United States",
+        flag: "United States",
+        key: "key1测试2",
+      },
+      { metrics: 0.089, country: "Japan", flag: "Japan", key: "key1测试3" },
+      {
+        metrics: 0.066,
+        country: "Türkiye",
+        flag: "Türkiye",
+        key: "key1测试4",
+      },
+      {
+        metrics: 0.034,
+        country: "Britain",
+        flag: "Britain",
+        key: "key1测试5",
+      },
+      {
+        metrics: 0.0094,
+        country: "China",
+        flag: "China",
+        key: "key1测试1111111",
+      },
+      {
+        metrics: 0.0093,
+        country: "United States",
+        flag: "United States",
+        key: "key1测试2",
+      },
+      { metrics: 0.0089, country: "Japan", flag: "Japan", key: "key1测试3" },
+      {
+        metrics: 0.0066,
+        country: "Türkiye",
+        flag: "Türkiye",
+        key: "key1测试4",
+      },
+      {
+        metrics: 0.0034,
+        country: "Britain",
+        flag: "Britain",
+        key: "key1测试5",
+      },
+      {
+        metrics: 0.00094,
+        country: "China",
+        flag: "China",
+        key: "key1测试1111111",
+      },
+      {
+        metrics: 0.00093,
+        country: "United States",
+        flag: "United States",
+        key: "key1测试2",
+      },
+      { metrics: 0.00089, country: "Japan", flag: "Japan", key: "key1测试3" },
+      {
+        metrics: 0.00066,
+        country: "Türkiye",
+        flag: "Türkiye",
+        key: "key1测试4",
+      },
+      {
+        metrics: 0.00034,
+        country: "Britain",
+        flag: "Britain",
+        key: "key1测试5",
+      },
+    ];
+    // const data = [
+    //   {rank: 1, metrics: 0.94, country: "China", flag: "China", key: "key1测试1111111" },
+    //   {rank: 2, metrics: 0.93, country: "United States", flag: "United States", key: "key1测试2" },
+    //   {rank: 3, metrics: 0.89, country: "Japan", flag: "Japan", key: "key1测试3" },
+    //   {rank: 4, metrics: 0.66, country: "Türkiye", flag: "Türkiye", key: "key1测试4" },
+    //   {rank: 5, metrics: 0.34, country: "Britain", flag: "Britain", key: "key1测试5" },
+    // ];
+
+    // 根据metrics排序
+    data.sort((a, b) => b.metrics - a.metrics);
+
+    // 为每行数据添加rank值
+    data.forEach((item, index) => {
+      item.rank = index + 1;
+    });
+    console.log('data=========================',data)
+    let currentPage = 1;
+    let pageSize = 10;
+    let sortColumn = null;
+    let sortDirection = "asc";
+
+    function renderTable() {
+      const tableBody = document.getElementById("tableBody");
+      tableBody.innerHTML = " ";
+      const start = (currentPage - 1) * pageSize;
+      const end = currentPage * pageSize;
+      const paginatedData = data.slice(start, end);
+      paginatedData.forEach((item, index) => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+        <td>${item.rank}</td>
+        <td>${item.metrics}</td>
+        <td>
+            <img src="/assets/flag/${item.flag}.png" alt="${item.country}"> ${item.country}</td>
+        <td>${item.key}</td>
+      `;
+        tableBody.appendChild(row);
+      });
+    }
+
+    function sortTable(columnIndex, columnKey) {
+      if (sortColumn === columnKey) {
+        sortDirection = sortDirection === "asc" ? "desc" : "asc";
+      } else {
+        sortColumn = columnKey;
+        sortDirection = "asc";
+      }
+      updateSortIcons(columnIndex);
+      data.sort((a, b) => {
+        if (sortDirection === "asc") {
+          return a[columnKey] - b[columnKey];
+        } else {
+          return b[columnKey] - a[columnKey];
+        }
+      });
+      renderTable();
+    }
+
+    function updateSortIcons(columnIndex) {
+      const sortIcons = document.querySelectorAll(".sort-icon");
+      sortIcons.forEach((icon, index) => {
+        if (index === columnIndex) {
+          if (sortDirection === "asc") {
+            icon.className = "sort-icon up";
+            icon.innerHTML = "▲";
+          } else {
+            icon.className = "sort-icon down";
+            icon.innerHTML = "▼";
+          }
+        } else {
+          icon.className = "sort-icon";
+          icon.innerHTML = "";
+        }
+      });
+    }
+
+    function previousPage() {
+      if (currentPage > 1) {
+        currentPage--;
+        renderTable();
+      }
+    }
+
+    function nextPage() {
+      const totalPages = Math.ceil(data.length / pageSize);
+      if (currentPage < totalPages) {
+        currentPage++;
+        renderTable();
+      }
+    }
+
+    function changePageSize() {
+      pageSize = parseInt(document.getElementById("pageSize").value, 10);
+      renderTable();
+    }
+
+    renderTable();
+  </script>
