@@ -42,4 +42,7 @@
             width: 22px;
         }
     }
+    &:nth-child(5) {
+        display: none;
+    }
 }
