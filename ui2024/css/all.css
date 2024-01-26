@@ -155,7 +155,7 @@ span a, p a, li a{
         grid-template-columns: repeat(auto-fill, 100%);
     }
     .block_left div .person_container, .block_left div .person_two_column div .person_container {
-        grid-template-columns: repeat(auto-fill, 20%);
+        grid-template-columns: repeat(auto-fill, 30%);
     }
 }
 
