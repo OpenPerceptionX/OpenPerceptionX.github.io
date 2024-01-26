@@ -85,6 +85,9 @@ i {
     font-size: 333%;
     margin: 0;
 }
+.track_title h2 {
+    font-size: 167%;
+}
 .navigator a {
     font-size: large;
 }

@@ -118,6 +118,9 @@
     font-size: 333%;
     margin: 0;
 }
+.track_title h2 {
+    font-size: 167%;
+}
 .track_fig {
     width: 55%;
     border-radius: 55%;
