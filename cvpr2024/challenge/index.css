@@ -1,3 +1,9 @@
+h2 {
+    font-size: 167%;
+}
+
+
+
 .banner {
     width: 100%;
     height: 100%;
@@ -117,9 +123,6 @@
 .track_title h1 {
     font-size: 333%;
     margin: 0;
-}
-.track_title h2 {
-    font-size: 167%;
 }
 .track_fig {
     width: 55%;
