@@ -1,0 +1,45 @@
+.timetable_select {
+    flex-direction: row !important;
+    justify-content: left;
+    align-items: center;
+}
+.timetable_select select {
+    margin-left: 11px;
+    padding: 7px;
+    border: 0;
+    border-radius: 11px;
+    background-color: rgb(233, 233, 233);
+    width: 192px;
+}
+
+
+
+.timetable_table table {
+    border-collapse: collapse;
+    border-bottom: 3px solid rgb(233, 233, 233);
+}
+.timetable_table table thead {
+    background-color: gray;
+    color: white;
+}
+.timetable_table table tbody tr {
+    &:nth-child(2n) {
+        background-color: rgb(233, 233, 233);
+    }
+}
+.timetable_table table thead tr th, .timetable_table table tbody tr td {
+    text-align: left;
+    padding: 11px;
+    &:nth-child(1) {
+        text-wrap: nowrap;
+    }
+    &:nth-child(2) {
+        text-align: right;
+        width: 17px;
+        padding: 0;
+        margin: 0;
+        img {
+            width: 17px;
+        }
+    }
+}
