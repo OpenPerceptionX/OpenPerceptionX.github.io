@@ -2,6 +2,9 @@
     flex-direction: row !important;
     justify-content: left;
     align-items: center;
+    @media screen and (max-width: 1024px) {
+        justify-content: space-between;
+    }
 }
 .timetable_select select {
     margin-left: 11px;
@@ -10,6 +13,18 @@
     border-radius: 11px;
     background-color: rgb(233, 233, 233);
     width: 192px;
+    @media screen and (max-width: 1024px) {
+        width: 50%;
+        height: 5vw;
+        border-radius: 5vw;
+        padding-left: 2vw;
+        font-size: 2vw;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .timetable_select {
+        font-size: 3vw;
+    }
 }
 
 
