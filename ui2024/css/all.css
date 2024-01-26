@@ -124,11 +124,6 @@ span a, p a, li a{
 .citation br {
     user-select: text;
 }
-@media screen and (max-width: 1024px) {
-    .citation {
-        font-size: xx-small;
-    }
-}
 
 
 
