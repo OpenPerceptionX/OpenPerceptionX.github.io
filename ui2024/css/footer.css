@@ -54,4 +54,7 @@
 .footer_third_row span, .footer_third_row span a {
     color: gray;
     font-size: small;
+    @media screen and (min-width: 1024px) {
+        font-size: x-small;
+    }
 }
