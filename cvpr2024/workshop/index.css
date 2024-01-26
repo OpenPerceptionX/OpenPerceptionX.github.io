@@ -1,3 +1,6 @@
+h2 {
+    font-size: 167%;
+}
 i {
     color: gray;
     display: inline-block;
@@ -84,9 +87,6 @@ i {
 .track_title h1 {
     font-size: 333%;
     margin: 0;
-}
-.track_title h2 {
-    font-size: 167%;
 }
 .navigator a {
     font-size: large;
