@@ -135,13 +135,6 @@
 @media screen and (max-width: 1024px) {
     .rules {
         padding-inline-start: 27px;
-        font-size: 1rem;
-    }
-    html {
-        font-size: 16px !important; 
-    }
-    span{
-        font-size: 1.25rem;
     }
 }
 .faq ul {
@@ -169,12 +162,6 @@
 @media screen and (max-width: 1024px) {
     .date_award {
         width: 80%;
-    }
-    html {
-        font-size: 16px !important; 
-    }
-    .date_award tbody tr td  {
-        font-size: 1.5rem;
     }
 }
 
