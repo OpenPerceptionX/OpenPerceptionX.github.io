@@ -35,11 +35,11 @@
     }
     &:nth-child(2) {
         text-align: right;
-        width: 17px;
+        width: 22px;
         padding: 0;
         margin: 0;
         img {
-            width: 17px;
+            width: 22px;
         }
     }
 }
