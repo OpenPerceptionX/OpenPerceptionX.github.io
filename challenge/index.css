@@ -20,12 +20,20 @@ h2 {
     display: flex;
     margin-top: 33px;
 }
-.banner_logo, .banner_logo_u {
+.banner_logo {
     flex-direction: row;
 }
 .banner_logo img {
     height: 55px;
     margin-right: 33px;
+}
+.banner_logo_u {
+    flex-direction: column;
+}
+.banner_logo_u span{
+    font-size: 17px;
+    color: rgb(233, 233, 233);
+    margin-bottom: 11px;
 }
 .banner_logo_u img {
     height: 55px;

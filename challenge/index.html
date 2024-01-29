@@ -1,0 +1,1808 @@
+<head>
+    <title>Challenge at CVPR 2024 | OpenDriveLab</title>
+    <meta name="keywords" content="OpenDriveLab, CVPR 2024, Challenge, Autonomous Driving, Autonomous Agent, Embodied AI">
+
+    <link rel="icon" type="image/png" href="/assets/icon/D_small.png">
+
+    <link href="/ui2024/css/all.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/ui2024/css/timeline.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="./index.css" rel="stylesheet" type="text/css" media="all"/>
+
+    <script src="/ui2024/js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L7VEDHS6G8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L7VEDHS6G8');
+</script>
+
+
+
+<script>
+    $.get("/ui2024/components/header.html",function(result){
+        $("body").prepend(result)
+    })
+    $.get("/ui2024/components/footer.html",function(result){
+        $("body").append(result)
+    })
+</script>
+
+
+
+<body>
+
+    
+
+    <div class="banner">
+        <div class="banner_container">
+
+            <div class="banner_logo">
+                <img loading="lazy" src="/assets/icon/cvpr/cvpr2024_white.png"/>
+                <img loading="lazy" src="/assets/icon/cvpr/ieee_cs_white.png"/>
+            </div>
+            
+            <!-- <div class="banner_title_cn">
+                <img loading="lazy" src="/assets/icon/pujia_white.png"/>
+                <span>自动驾驶<br>挑战赛</span>
+            </div> -->
+
+            <div class="banner_title_en">
+                <span>Autonomous Grand Challenge</span>
+            </div>
+
+            <div class="banner_content">
+                <span>
+                    In conjunction with CVPR 2024 Workshop
+                    <br>
+                    <a href="/cvpr2024/workshop/">Foundation Models for Autonomous Systems</a>
+                    <br>
+                    June, Seattle, USA
+                </span>
+            </div>
+
+            <div class="banner_logo_u">
+                <span>Hosted by Star League<br></span>
+                <a href="https://starleague.ai/" target="_blank"><img loading="lazy" src="/assets/icon/star_league_white.png"/></a>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <br id="why_these_tracks"><br id="timeline"><br id="participation">
+
+
+
+    <div class="block_left" id="contact">
+        <div style="flex-grow: 6;">
+
+            <a class="track_title" href="#why_these_tracks">
+                <h2>
+                    Why these tracks?
+                    <img loading="lazy" class="link_img"/>
+                </h2>
+            </a>
+            <span>
+                The field of autonomy is rapidly evolving, and recent advancements from the machine learning community, such as large language models (LLM) and world models, bring great potential. We believe the future lies in explainable, end-to-end models that understand the world and generalize to unvisited environments. In light of this, we propose seven new challenges that push the boundary of existing perception, prediction, and planning pipelines.
+            </span>
+            <br>
+
+
+
+            <a class="track_title" href="#participation">
+                <h2>
+                    Participation
+                    <img loading="lazy" class="link_img"/>
+                </h2>
+            </a>
+            <span class="note">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSctm2iipw5r1_wY-kVt7X-4RRynnt3ZzYMzaBVzEpNStoc-rQ/viewform" target="_blank" style="margin-right: 11px;">
+                    <img loading="lazy" src="/assets/icon/google_form.png"/>
+                </a>
+                <span>
+                    For participation in the challenge, it is a <b>strict requirement</b> to register for your team by filling in this <a href="https://docs.google.com/forms/d/e/1FAIpQLSctm2iipw5r1_wY-kVt7X-4RRynnt3ZzYMzaBVzEpNStoc-rQ/viewform" target="_blank" style="margin-right: 11px;">Google Form</a>. The registration information can be edited till June 01, 2024.
+                </span>
+            </span>
+            <br>
+
+
+
+            <a class="track_title" href="#contact">
+                <h2>
+                    Contact
+                    <img loading="lazy" class="link_img"/>
+                </h2>
+            </a>
+            <span class="note">
+                <a href="mailto:workshop-e2e-ad@googlegroups.com" style="margin-right: 11px;">
+                    <img loading="lazy" src="/assets/icon/email.png"/>
+                </a>
+                <span>
+                    Contact us via <code>workshop-e2e-ad@googlegroups.com</code>
+                </span>
+            </span>
+            <br>
+            <span class="note">
+                <a href="https://join.slack.com/t/opendrivelab/shared_invite/zt-1rcp42b35-Wc5I0MhUrahlM5qDeJrVqQ" target="_blank" style="margin-right: 11px;">
+                    <img loading="lazy" src="/assets/icon/slack.png"/>
+                </a>
+                <span>
+                    Join Slack to chat with Challenge organizers. Please follow the guidelines in <code>#general</code> and join the track-specific channels.
+                </span>
+            </span>
+            <br>
+            
+
+            
+        </div>
+        <div style="flex-grow: 1;"></div>
+        <div style="flex-grow: 6;">
+            
+            <a class="track_title" href="#timeline">
+                <h2>
+                    Timeline
+                    <img loading="lazy" class="link_img"/>
+                </h2>
+            </a>
+            <div class="timeline">
+                <div class="entries">
+                    <div class="entry">
+                        <h3 class="title">Jan. 31</h3>
+                        <span class="content">Challenge Announcement</span>
+                    </div>
+                    <div class="entry">
+                        <h3 class="title">Feb. 10</h3>
+                        <span class="content">Challenge Setups Ready<br><code>[internal]</code></span>
+                    </div>
+                    <div class="entry">
+                        <h3 class="title">Mar. 01</h3>
+                        <span class="content">Challenge Release</span>
+                    </div>
+                    <div class="entry">
+                        <h3 class="title">Mar. 15</h3>
+                        <span class="content">Test Server Open</span>
+                    </div>
+                    <div class="entry">
+                        <h3 class="title">Jun. 01</h3>
+                        <span class="content">Test Server Close / Registration Deadline</span>
+                    </div>
+                    <div class="entry">
+                        <h3 class="title">Jun. 07</h3>
+                        <span class="content">Technical Report Submission Deadline</span>
+                    </div>
+                    <div class="entry">
+                        <h3 class="title">Jun. 12</h3>
+                        <span class="content">Winner Decision<br><code>[internal]</code></span>
+                    </div>
+                    <div class="entry">
+                        <h3 class="title">Workshop Day @ Seattle</h3>
+                        <span class="content">Winner Announcement & Presentation</span>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <span style="font-size: small;">Note: General timeline of the whole challenge. Please check the timeline of each track.</span>
+
+        </div>
+    </div>
+
+
+
+    <br><br><br>
+
+
+
+    <div class="block" id="overview">
+        
+        <div class="glance">
+
+            <div class="glance_left">
+                <div class="planning">
+                    <p>
+                        <a href="#end_to_end_driving_at_scale">
+                            End-to-End Driving at Scale
+                        </a>
+                        <br><br><br>
+                        <a href="#carla">
+                            CARLA Autonomous Driving Challenge
+                        </a>
+                        <br><br><br>
+                        <a href="#driving_with_language">
+                            Driving with Language
+                        </a>
+                    </p>
+                    <div class="glance_divider" style="background-color: #19327c;"></div>
+                </div>                
+            </div>
+
+            <img loading="lazy" src="./challenge_text.png"/>
+
+            <div class="glance_right">
+                <div class="perception">
+                    <p>
+                        <a href="#occupancy_and_flow">
+                            Occupancy and Flow
+                        </a>
+                        <br><br><br>
+                        <a href="#multiview-3d-visual-grounding">
+                            Multi-View 3D Visual Grounding <code>Embodied AI</code>
+                        </a>
+                        <br><br><br>
+                        <a href="#mapless_driving">
+                            Mapless Driving
+                        </a>
+                    </p>
+                    <div class="glance_divider" style="background-color: #6fb5dd;"></div>
+                </div>
+                <div class="prediction">
+                    <p>
+                        <a href="#predictive_world_model">
+                            Predictive World Model
+                        </a>
+                    </p>
+                    <div class="glance_divider" style="background-color: #4894d0;"></div>
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+
+
+
+    <br><br><br>
+
+
+
+    <div class="block">
+        <div class="navigator">
+            <a href="#end_to_end_driving_at_scale">E2E Driving at Scale</a>
+            <a href="#predictive_world_model">Predictive World Model</a>
+            <a href="#occupancy_and_flow">Occupancy and Flow</a>
+            <a href="#multiview-3d-visual-grounding">Multi-View 3D Visual Grounding</a>
+            <a href="#carla">CARLA</a>
+            <a href="#driving_with_language">Driving with Language</a>
+            <a href="#mapless_driving">Mapless Driving</a>
+            <br><br>
+        </div>
+    </div>
+
+
+
+    <div class="block_left left_right" id="end_to_end_driving_at_scale">
+
+        <div style="flex-grow: 7;">
+            <a class="track_title" href="#end_to_end_driving_at_scale">
+                <h2>
+                    Track
+                    <img loading="lazy" class="link_img"/>
+                </h2>
+                <h1>End-to-End Driving at Scale</h1>
+            </a>
+
+            <br><br>
+            
+            <div class="widget_container">
+                <a target="_blank">
+                    <!-- <span>Test Server @ &nbsp;</span> -->
+                    <img loading="lazy" src="/assets/icon/hugging_face_long.png"/>
+                    <span>&nbsp; to be released.</span>
+                </a>
+            </div>
+
+            <br class="track_fig"><br class="track_fig">
+
+            <img class="track_fig" src="./e2e_driving_at_scale.jpg"/>
+
+            <br>
+
+        </div>
+
+        <div style="flex-grow: 1;"></div>
+
+        <div style="flex-grow: 16;">
+
+            <h2>Task Description</h2>
+            <span>
+                Benchmarking sensorimotor driving policies with real data is challenging due to the limited scale of prior datasets and the misalignment between open- and closed-loop metrics. In this track, we use the large-scale OpenScene dataset and aim to bridge the gap between the two evaluation paradigms. Our Non-Reactive Autonomous Vehicle Simulation framework (NAVSim) gathers closed-loop metrics for end-to-end driving by unrolling simplified bird's eye view abstractions of scenes for a short simulation horizon. It operates under the condition that the policy has no influence on the environment, which enables efficient, open-loop metric computation while being better aligned with closed-loop evaluations than traditional displacement errors.
+            </span>
+            
+            <br>
+            <h2>Important Dates</h2>
+            <table class="date_award">
+                <tbody>
+                    <tr>
+                        <td>Test Server Open</td><td class="last_column">March 15, 2024</td>
+                    </tr>
+                    <tr>
+                        <td>Test Server Close</td><td class="last_column">June 01, 2024</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+            <h2>Award</h2>
+            <table class="date_award">
+                <tbody>
+                    <tr>
+                        <td class="first_icon"><img loading="lazy" src='/assets/icon/bulb.png'/></td><td>Innovation Award</td><td class="last_column">USD 18,000</td>
+                    </tr>
+                    <tr>
+                        <td class="first_icon"><img loading="lazy" src='/assets/icon/rank01.png'/></td><td>Outstanding Champion</td><td class="last_column">USD 9,000</td>
+                    </tr>
+                    <tr>
+                        <td class="first_icon"><img loading="lazy" src='/assets/icon/rank02.png'/></td><td>Honorable Runner-up</td><td class="last_column">USD 3,000</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+            <h2>Citation</h2>
+            <span>
+                Please consider citing our work if the challenge helps your research with the following BibTex:
+            </span>
+            <div class="citation">
+                @inproceedings{Dauner2023CORL, 
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;title = {Parting with Misconceptions about Learning-based Vehicle Motion Planning},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;author = {Daniel Dauner and Marcel Hallgarten and Andreas Geiger and Kashyap Chitta},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;booktitle = {Conference on Robot Learning (CoRL)},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;year = {2023}
+                    <br>
+                }
+            </div>
+            <div class="citation">
+                @misc{Contributors2024navsim,
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;title={NAVSim: Data-Driven Non-Reactive Autonomous Vehicle Simulation},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;author={NAVSim Contributors},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;howpublished={\url{https://github.com/autonomousvision/navsim}},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;year={2024}
+                    <br>
+                }
+            </div>
+
+            <br>
+            <h2>Contact</h2>
+            <ul class="rules">
+                <li>
+                    Kashyap Chitta (University of Tübingen), <code>kashyap.chitta@uni-tuebingen.de</code>
+                </li>
+                <li>
+                    <a href="https://join.slack.com/t/opendrivelab/shared_invite/zt-1rcp42b35-Wc5I0MhUrahlM5qDeJrVqQ" target="_blank">Slack channel: </a><code>#e2e-driving-2024</code>
+                </li>
+            </ul>
+
+            <br>
+            <h2>Related Literature</h2>
+            <ul class="rules">
+                <li>
+                    <a href="https://ieeexplore.ieee.org/abstract/document/9863660" target="_blank">
+                        TransFuser: Imitation With Transformer-Based Sensor Fusion for Autonomous Driving
+                    </a>
+                </li>
+                <li>
+                    <a href="https://openaccess.thecvf.com/content/CVPR2023/html/Hu_Planning-Oriented_Autonomous_Driving_CVPR_2023_paper.html" target="_blank">
+                        Planning-Oriented Autonomous Driving
+                    </a>
+                </li>
+                <li>
+                    <a href="https://arxiv.org/abs/2306.16927" target="_blank">
+                        End-to-end Autonomous Driving: Challenges and Frontiers
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div class="block_right left_right" id="predictive_world_model">
+
+        <div style="flex-grow: 7;">
+            <a class="track_title" href="#predictive_world_model">
+                <h2>
+                    Track
+                    <img loading="lazy" class="link_img"/>
+                </h2>
+                <h1>Predictive World Model</h1>
+            </a>
+
+            <br><br>
+            
+            <div class="widget_container">
+                <a target="_blank">
+                    <!-- <span>Test Server @ &nbsp;</span> -->
+                    <img loading="lazy" src="/assets/icon/hugging_face_long.png"/>
+                    <span>&nbsp; to be released.</span>
+                </a>
+            </div>
+
+            <br class="track_fig"><br class="track_fig">
+
+            <img class="track_fig" src="./predictive_world_model.jpg"/>
+
+            <br>
+
+        </div>
+
+        <div style="flex-grow: 1;"></div>
+
+        <div style="flex-grow: 16;">
+
+            <h2>Task Description</h2>
+            <span>
+                Serving as an abstract spatio-temporal representation of reality, the world model can predict future states based on the current state. The learning process of world models has the potential to elevate a pre-trained foundation model to the next level. Given vision-only inputs, the neural network outputs point clouds in the future to testify its predictive capability of the world.
+            </span>
+            
+            <br>
+            <h2>Important Dates</h2>
+            <table class="date_award">
+                <tbody>
+                    <tr>
+                        <td>Test Server Open</td><td class="last_column">March 15, 2024</td>
+                    </tr>
+                    <tr>
+                        <td>Test Server Close</td><td class="last_column">June 01, 2024</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+            <h2>Award</h2>
+            <table class="date_award">
+                <tbody>
+                    <tr>
+                        <td class="first_icon"><img loading="lazy" src='/assets/icon/bulb.png'/></td><td>Innovation Award</td><td class="last_column">USD 18,000</td>
+                    </tr>
+                    <tr>
+                        <td class="first_icon"><img loading="lazy" src='/assets/icon/rank01.png'/></td><td>Outstanding Champion</td><td class="last_column">USD 9,000</td>
+                    </tr>
+                    <tr>
+                        <td class="first_icon"><img loading="lazy" src='/assets/icon/rank02.png'/></td><td>Honorable Runner-up</td><td class="last_column">USD 3,000</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+            <h2>Citation</h2>
+            <span>
+                Please consider citing our work if the challenge helps your research with the following BibTex:
+            </span>
+            <div class="citation">
+                @article{yang2023visual,
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;title={Visual Point Cloud Forecasting enables Scalable Autonomous Driving},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;author={Yang, Zetong and Chen, Li and Sun, Yanan and Li, Hongyang},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;journal={arXiv preprint arXiv:2312.17655},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;year={2023}
+                    <br>
+                }
+            </div>
+
+            <br>
+            <h2>Contact</h2>
+            <ul class="rules">
+                <li>
+                    Zetong Yang (OpenDriveLab), <code>yangzetong@pjlab.org</code>
+                </li>
+                <li>
+                    <a href="https://join.slack.com/t/opendrivelab/shared_invite/zt-1rcp42b35-Wc5I0MhUrahlM5qDeJrVqQ" target="_blank">Slack channel: </a><code>#predictive-world-model-2024</code>
+                </li>
+            </ul>
+
+            <br>
+            <h2>Related Literature</h2>
+            <ul class="rules">
+                <li>
+                    <a href="https://arxiv.org/abs/2312.17655" target="_blank">
+                        Visual Point Cloud Forecasting enables Scalable Autonomous Driving
+                    </a>
+                </li>
+                <li>
+                    <a href="https://ieeexplore.ieee.org/document/10321736" target="_blank">
+                        Delving Into the Devils of Bird's-Eye-View Perception: A Review, Evaluation and Recipe
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div class="block_left left_right" id="occupancy_and_flow">
+
+        <div style="flex-grow: 7;">
+            <a class="track_title" href="#occupancy_and_flow">
+                <h2>
+                    Track
+                    <img loading="lazy" class="link_img"/>
+                </h2>
+                <h1>Occupancy and Flow</h1>
+            </a>
+
+            <br><br>
+            
+            <div class="widget_container">
+                <a target="_blank">
+                    <!-- <span>Test Server @ &nbsp;</span> -->
+                    <img loading="lazy" src="/assets/icon/hugging_face_long.png"/>
+                    <span>&nbsp; to be released.</span>
+                </a>
+            </div>
+
+            <br class="track_fig"><br class="track_fig">
+
+            <img class="track_fig" src="./occupancy_and_flow.jpg"/>
+
+            <br>
+
+        </div>
+
+        <div style="flex-grow: 1;"></div>
+
+        <div style="flex-grow: 16;">
+
+            <h2>Task Description</h2>
+            <span>
+                The representation of 3D bounding boxes is not enough to describe general objects (obstacles). Instead, inspired by the concept in Robotics, we deem general object detection as an occupancy representation to cover more irregularly shaped objects (e.g., protruding). The goal of this task is to predict the 3D occupancy of the complete scene and the flow of the foreground objects given the input image from six cameras. 
+            </span>
+            
+            <br>
+            <h2>Important Dates</h2>
+            <table class="date_award">
+                <tbody>
+                    <tr>
+                        <td>Test Server Open</td><td class="last_column">March 15, 2024</td>
+                    </tr>
+                    <tr>
+                        <td>Test Server Close</td><td class="last_column">June 01, 2024</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+            <h2>Award</h2>
+            <table class="date_award">
+                <tbody>
+                    <tr>
+                        <td class="first_icon"><img loading="lazy" src='/assets/icon/bulb.png'/></td><td>Innovation Award</td><td class="last_column">USD 18,000</td>
+                    </tr>
+                    <tr>
+                        <td class="first_icon"><img loading="lazy" src='/assets/icon/rank01.png'/></td><td>Outstanding Champion</td><td class="last_column">USD 9,000</td>
+                    </tr>
+                    <tr>
+                        <td class="first_icon"><img loading="lazy" src='/assets/icon/rank02.png'/></td><td>Honorable Runner-up</td><td class="last_column">USD 3,000</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+            <h2>Citation</h2>
+            <span>
+                Please consider citing our work if the challenge helps your research with the following BibTex:
+            </span>
+            <div class="citation">
+                @article{sima2023_occnet,
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;title={Scene as Occupancy},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;author={Chonghao Sima and Wenwen Tong and Tai Wang and Li Chen and Silei Wu and Hanming Deng  and Yi Gu and Lewei Lu and Ping Luo and Dahua Lin and Hongyang Li},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;year={2023}
+                    <br>
+                }
+            </div>
+            <div class="citation">
+                @article{liu2023fully,
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;title={Fully Sparse 3D Panoptic Occupancy Prediction},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;author={Liu, Haisong and Wang, Haiguang and Chen, Yang and Yang, Zetong and Zeng, Jia and Chen, Li and Wang, Limin},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;journal={arXiv preprint arXiv:2312.17118},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;year={2023}
+                    <br>
+                }
+            </div>
+
+            <br>
+            <h2>Contact</h2>
+            <ul class="rules">
+                <li>
+                    Haisong Liu (OpenDriveLab), <code>afterthat97@gmail.com</code>
+                </li>
+                <li>
+                    <a href="https://join.slack.com/t/opendrivelab/shared_invite/zt-1rcp42b35-Wc5I0MhUrahlM5qDeJrVqQ" target="_blank">Slack channel: </a><code>#occupancy-and-flow-2024</code>
+                </li>
+            </ul>
+
+            <br>
+            <h2>Related Literature</h2>
+            <ul class="rules">
+                <li>
+                    <a href="https://arxiv.org/abs/2306.02851" target="_blank">
+                        Scene as Occupancy
+                    </a>
+                </li>
+                <li>
+                    <a href="https://arxiv.org/abs/2003.04618" target="_blank">
+                        Convolutional Occupancy Networks
+                    </a>
+                </li>
+                <li>
+                    <a href="https://arxiv.org/abs/2203.03875" target="_blank">
+                        Occupancy Flow Fields for Motion Forecasting in Autonomous Driving
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div class="block_right left_right" id="multiview-3d-visual-grounding">
+
+        <div style="flex-grow: 7;">
+            <a class="track_title" href="#multiview-3d-visual-grounding">
+                <h2>
+                    Track
+                    <img loading="lazy" class="link_img"/>
+                </h2>
+                <h1>Multi-View 3D Visual Grounding</h1>
+            </a>
+
+            <br><br>
+            
+            <div class="widget_container">
+                <a target="_blank">
+                    <!-- <span>Test Server @ &nbsp;</span> -->
+                    <img loading="lazy" src="/assets/icon/hugging_face_long.png"/>
+                    <span>&nbsp; to be released.</span>
+                </a>
+            </div>
+
+            <br class="track_fig"><br class="track_fig">
+
+            <img class="track_fig" src="./multiview_3d_visual_grounding.jpg"/>
+
+            <br>
+
+        </div>
+
+        <div style="flex-grow: 1;"></div>
+
+        <div style="flex-grow: 16;">
+
+            <h2>Task Description</h2>
+            <span>
+                Compared to driving scenes, the indoor embodied 3D perception system faces multi-modal input, including language instructions, more complex semantic understanding, diverse object categories and orientations, and different perceptual spaces and needs. Based on this, we construct EmbodiedScan, a holistic multi-modal, ego-centric 3D perception suite. In this track, given language prompts describing specific objects, models are required to detect them in the scene and predict their oriented 3D bounding boxes.
+            </span>
+            
+            <br>
+            <h2>Important Dates</h2>
+            <table class="date_award">
+                <tbody>
+                    <tr>
+                        <td>Test Server Open</td><td class="last_column">March 15, 2024</td>
+                    </tr>
+                    <tr>
+                        <td>Test Server Close</td><td class="last_column">June 01, 2024</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+            <h2>Award</h2>
+            <table class="date_award">
+                <tbody>
+                    <tr>
+                        <td class="first_icon"><img loading="lazy" src='/assets/icon/bulb.png'/></td><td>Innovation Award</td><td class="last_column">USD 12,000</td>
+                    </tr>
+                    <tr>
+                        <td class="first_icon"><img loading="lazy" src='/assets/icon/rank01.png'/></td><td>Outstanding Champion</td><td class="last_column">USD 6,000</td>
+                    </tr>
+                    <tr>
+                        <td class="first_icon"><img loading="lazy" src='/assets/icon/rank02.png'/></td><td>Honorable Runner-up</td><td class="last_column">USD 2,000</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+            <h2>Citation</h2>
+            <span>
+                Please consider citing our work if the challenge helps your research with the following BibTex:
+            </span>
+            <div class="citation">
+                @article{wang2023embodiedscan,
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;title={EmbodiedScan: A Holistic Multi-Modal 3D Perception Suite Towards Embodied AI},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;author={Wang, Tai and Mao, Xiaohan and Zhu, Chenming and Xu, Runsen and Lyu, Ruiyuan and Li, Peisen and Chen, Xiao and Zhang, Wenwei and Chen, Kai and Xue, Tianfan and Liu, Xihui and Lu, Cewu and Lin, Dahua and Pang, Jiangmiao},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;journal={arXiv preprint arXiv:2312.16170},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;year={2023}
+                    <br>
+                }
+            </div>
+
+            <br>
+            <h2>Contact</h2>
+            <ul class="rules">
+                <li>
+                    Tai Wang (OpenRobotLab), <code>taiwang.me@gmail.com</code>
+                </li>
+                <li>
+                    <a href="https://join.slack.com/t/opendrivelab/shared_invite/zt-1rcp42b35-Wc5I0MhUrahlM5qDeJrVqQ" target="_blank">Slack channel: </a><code>#visual-grounding-2024</code>
+                </li>
+            </ul>
+
+            <br>
+            <h2>Related Literature</h2>
+            <ul class="rules">
+                <li>
+                    <a href="https://arxiv.org/abs/2312.16170" target="_blank">
+                        EmbodiedScan: A Holistic Multi-Modal 3D Perception Suite Towards Embodied AI
+                    </a>
+                </li>
+                <li>
+                    <a href="https://arxiv.org/abs/2309.09456" target="_blank">
+                        Object2Scene: Putting Objects in Context for Open-Vocabulary 3D Detection
+                    </a>
+                </li>
+                <li>
+                    <a href="https://link.springer.com/chapter/10.1007/978-3-031-20080-9_28" target="_blank">
+                        FCAF3D: Fully Convolutional Anchor-Free 3D Object Detection
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/open-mmlab/mmdetection3d" target="_blank">
+                        MMDetection3D: OpenMMLab's Next-Generation Platform for General 3D Object Detection
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+    <div class="block_left left_right" id="carla">
+
+        <div style="flex-grow: 7;">
+            <a class="track_title" href="#carla">
+                <h2>
+                    Track
+                    <img loading="lazy" class="link_img"/>
+                </h2>
+                <h1>CARLA Autonomous Driving Challenge</h1>
+            </a>
+
+            <br><br>
+            
+            <div class="widget_container">
+                <a href="https://eval.ai/web/challenges/challenge-page/2098/overview" target="_blank">
+                    <span>Test Server @ &nbsp;</span>
+                    <img loading="lazy" src="/assets/icon/evalai_long.png"/>
+                </a>
+            </div>
+
+            <br class="track_fig"><br class="track_fig">
+
+            <img class="track_fig" src="./carla.jpg"/>
+
+            <br>
+
+        </div>
+
+        <div style="flex-grow: 1;"></div>
+
+        <div style="flex-grow: 16;">
+
+            <h2>Task Description</h2>
+            <span>
+                To verify the effectiveness of AD systems, we need an ultimate planning framework with a closed-loop setting. The CARLA AD Leaderboard challenges agents to drive through a set of predefined routes. For each route, agents will be initialized at a starting point and directed to drive to a destination point, provided with a description of the route through GPS style coordinates, map coordinates or route instructions. Routes are defined in a variety of situations, including freeways, urban areas, residential districts and rural settings. The Leaderboard evaluates AD agents in a variety of weather conditions, including daylight scenes, sunset, rain, fog, and night, among others.
+            </span>
+            
+            <br>
+            <h2>Important Dates</h2>
+            <table class="date_award">
+                <tbody>
+                    <tr>
+                        <td>Test Server Open</td><td class="last_column">February 01, 2024</td>
+                    </tr>
+                    <tr>
+                        <td>Test Server Close</td><td class="last_column">May 15, 2024</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+            <h2>Leaderboard</h2>
+            <span>
+                See <a href="https://leaderboard.carla.org/leaderboard/" target="_blank">CARLA Leaderboard 2.0</a>.
+            </span>
+
+            <br>
+            <h2>Award</h2>
+            <span>
+                Computer hardware or a cash award of equivalent value.
+            </span>
+
+            <br>
+            <h2>Citation</h2>
+            <span>
+                Please consider citing our work if the challenge helps your research with the following BibTex:
+            </span>
+            <div class="citation">
+                @inproceedings{dosovitskiy2017carla,
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;title={CARLA: An open urban driving simulator},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;author={Dosovitskiy, Alexey and Ros, German and Codevilla, Felipe and Lopez, Antonio and Koltun, Vladlen},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;booktitle={Conference on robot learning},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;year={2017}
+                    <br>
+                }
+            </div>
+
+            <br>
+            <h2>Contact</h2>
+            <ul class="rules">
+                <li>
+                    <a href="https://join.slack.com/t/opendrivelab/shared_invite/zt-1rcp42b35-Wc5I0MhUrahlM5qDeJrVqQ" target="_blank">Slack channel: </a><code>#carla-2024</code>
+                </li>
+                <li>
+                    <a href="https://discord.gg/kJM5DhmKHJ">Discord</a>
+                </li>
+            </ul>
+
+            <br>
+            <h2>Related Literature</h2>
+            <ul class="rules">
+                <li>
+                    <a href="https://proceedings.mlr.press/v78/dosovitskiy17a.html" target="_blank">
+                        CARLA: An Open Urban Driving Simulator
+                    </a>
+                </li>
+                <li>
+                    <a href="https://openaccess.thecvf.com/content/CVPR2023/html/Shao_ReasonNet_End-to-End_Driving_With_Temporal_and_Global_Reasoning_CVPR_2023_paper.html" target="_blank">
+                        ReasonNet: End-to-End Driving With Temporal and Global Reasoning
+                    </a>
+                </li>
+                <li>
+                    <a href="https://proceedings.mlr.press/v205/shao23a.html" target="_blank">
+                        Safety-Enhanced Autonomous Driving Using Interpretable Sensor Fusion Transformer
+                    </a>
+                </li>
+                <li>
+                    <a href="https://proceedings.neurips.cc/paper_files/paper/2022/hash/286a371d8a0a559281f682f8fbf89834-Abstract-Conference.html" target="_blank">
+                        Trajectory-guided Control Prediction for End-to-end Autonomous Driving: A Simple yet Strong Baseline
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div class="block_right left_right" id="driving_with_language">
+
+        <div style="flex-grow: 7;">
+            <a class="track_title" href="#driving_with_language">
+                <h2>
+                    Track
+                    <img loading="lazy" class="link_img"/>
+                </h2>
+                <h1>Driving with Language</h1>
+            </a>
+
+            <br><br>
+            
+            <div class="widget_container">
+                <a target="_blank">
+                    <!-- <span>Test Server @ &nbsp;</span> -->
+                    <img loading="lazy" src="/assets/icon/hugging_face_long.png"/>
+                    <span>&nbsp; to be released.</span>
+                </a>
+            </div>
+
+            <br class="track_fig"><br class="track_fig">
+
+            <img class="track_fig" src="./driving_with_language.jpg"/>
+
+            <br>
+
+        </div>
+
+        <div style="flex-grow: 1;"></div>
+
+        <div style="flex-grow: 16;">
+
+            <h2>Task Description</h2>
+            <span>
+                Incorporating linguistic modality, this task connects Vision Language Models (VLMs) and autonomous driving systems. The model will introduce the reasoning ability of LLM to make decisions, and pursue generalizable and explainable driving behavior. Given multi-view images as inputs, models are required to answer questions covering various aspects of driving.
+            </span>
+            
+            <br>
+            <h2>Important Dates</h2>
+            <table class="date_award">
+                <tbody>
+                    <tr>
+                        <td>Test Server Open</td><td class="last_column">March 15, 2024</td>
+                    </tr>
+                    <tr>
+                        <td>Test Server Close</td><td class="last_column">June 01, 2024</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+            <h2>Award</h2>
+            <span>
+                Computer hardware or a cash award of equivalent value.
+            </span>
+
+            <br>
+            <h2>Citation</h2>
+            <span>
+                Please consider citing our work if the challenge helps your research with the following BibTex:
+            </span>
+            <div class="citation">
+                @article{sima2023drivelm,
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;title={DriveLM: Driving with Graph Visual Question Answering},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;author={Sima, Chonghao and Renz, Katrin and Chitta, Kashyap and Chen, Li and Zhang, Hanxue and Xie, Chengen and Luo, Ping and Geiger, Andreas and Li, Hongyang},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;journal={arXiv preprint arXiv:2312.14150},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;year={2023}
+                    <br>
+                }
+            </div>
+
+            <br>
+            <h2>Contact</h2>
+            <ul class="rules">
+                <li>
+                    Chonghao Sima (OpenDriveLab), <code>chonghaosima@gmail.com</code>
+                </li>
+                <li>
+                    <a href="https://join.slack.com/t/opendrivelab/shared_invite/zt-1rcp42b35-Wc5I0MhUrahlM5qDeJrVqQ" target="_blank">Slack channel: </a><code>#driving-with-language-2024</code>
+                </li>
+            </ul>
+
+            <br>
+            <h2>Related Literature</h2>
+            <ul class="rules">
+                <li>
+                    <a href="https://arxiv.org/abs/2312.14150" target="_blank">
+                        DriveLM: Driving with Graph Visual Question Answering
+                    </a>
+                </li>
+                <li>
+                    <a href="https://arxiv.org/abs/2311.01043" target="_blank">
+                        LLM4Drive: A Survey of Large Language Models for Autonomous Driving
+                    </a>
+                </li>
+                <li>
+                    <a href="https://arxiv.org/abs/2312.11562" target="_blank">
+                        A Survey of Reasoning with Foundation Models
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div class="block_left left_right" id="mapless_driving">
+
+        <div style="flex-grow: 7;">
+            <a class="track_title" href="#mapless_driving">
+                <h2>
+                    Track
+                    <img loading="lazy" class="link_img"/>
+                </h2>
+                <h1>Mapless Driving</h1>
+            </a>
+
+            <br><br>
+            
+            <div class="widget_container">
+                <a target="_blank">
+                    <!-- <span>Test Server @ &nbsp;</span> -->
+                    <img loading="lazy" src="/assets/icon/hugging_face_long.png"/>
+                    <span>&nbsp; to be released.</span>
+                </a>
+            </div>
+
+            <br class="track_fig"><br class="track_fig">
+
+            <img class="track_fig" src="./mapless_driving.jpg"/>
+
+            <br>
+
+        </div>
+
+        <div style="flex-grow: 1;"></div>
+
+        <div style="flex-grow: 16;">
+
+            <h2>Task Description</h2>
+            <span>
+                Driving without High-Definition (HD) maps demands a high level of active scene understanding capacity. This challenge aims to explore the boundaries of scene reasoning. Neural networks take multi-view images and Standard-Definition (SD) Map as input, then provide not only perception results of lanes and traffic elements but also topology relationships among lanes and between lanes and traffic elements simultaneously. 
+            </span>
+            
+            <br>
+            <h2>Important Dates</h2>
+            <table class="date_award">
+                <tbody>
+                    <tr>
+                        <td>Test Server Open</td><td class="last_column">March 15, 2024</td>
+                    </tr>
+                    <tr>
+                        <td>Test Server Close</td><td class="last_column">June 01, 2024</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+            <h2>Award</h2>
+            <span>
+                Computer hardware or a cash award of equivalent value.
+            </span>
+
+            <br>
+            <h2>Citation</h2>
+            <span>
+                Please consider citing our work if the challenge helps your research with the following BibTex:
+            </span>
+            <div class="citation">
+                @inproceedings{wang2023openlanev2,
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;title={OpenLane-V2: A Topology Reasoning Benchmark for Unified 3D HD Mapping}, 
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;author={Wang, Huijie and Li, Tianyu and Li, Yang and Chen, Li and Sima, Chonghao and Liu, Zhenbo and Wang, Bangjun and Jia, Peijin and Wang, Yuting and Jiang, Shengyin and Wen, Feng and Xu, Hang and Luo, Ping and Yan, Junchi and Zhang, Wei and Li, Hongyang},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;booktitle={NeurIPS},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;year={2023}
+                    <br>
+                }
+            </div>
+            <div class="citation">
+                @inproceedings{li2023lanesegnet,
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;title={LaneSegNet: Map Learning with Lane Segment Perception for Autonomous Driving},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;author={Li, Tianyu and Jia, Peijin and Wang, Bangjun and Chen, Li and Jiang, Kun and Yan, Junchi and Li, Hongyang},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;booktitle={ICLR},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;year={2024}
+                    <br>
+                }
+            </div>
+
+            <br>
+            <h2>Contact</h2>
+            <ul class="rules">
+                <li>
+                    Tianyu Li (OpenDriveLab), <code>litianyu@opendrivelab.com</code>
+                </li>
+                <li>
+                    <a href="https://join.slack.com/t/opendrivelab/shared_invite/zt-1rcp42b35-Wc5I0MhUrahlM5qDeJrVqQ" target="_blank">Slack channel: </a><code>#mapless-driving-2024</code>
+                </li>
+            </ul>
+
+            <br>
+            <h2>Related Literature</h2>
+            <ul class="rules">
+                <li>
+                    <a href="https://arxiv.org/abs/2304.10440" target="_blank">
+                        OpenLane-V2: A Topology Reasoning Benchmark for Unified 3D HD Mapping
+                    </a>
+                </li>
+                <li>
+                    <a href="https://arxiv.org/abs/2312.16108" target="_blank">
+                        LaneSegNet: Map Learning with Lane Segment Perception for Autonomous Driving
+                    </a>
+                </li>
+                <li>
+                    <a href="https://arxiv.org/abs/2304.05277" target="_blank">
+                        Graph-based Topology Reasoning for Driving Scenes
+                    </a>
+                </li>
+                <li>
+                    <a href="https://arxiv.org/abs/2208.14437" target="_blank">
+                        MapTR: Structured Modeling and Learning for Online Vectorized HD Map Construction
+                    </a>
+                </li>
+                <li>
+                    <a href="https://arxiv.org/abs/2203.11089" target="_blank">
+                        PersFormer: 3D Lane Detection via Perspective Transformer and the OpenLane Benchmark
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <!-- <div class="block_left left_right" id="Template">
+
+        <div style="flex-grow: 7;">
+            <a class="track_title" href="#Template">
+                <h2>
+                    Track
+                    <img loading="lazy" class="link_img"/>
+                </h2>
+                <h1>Template</h1>
+            </a>
+
+            <br><br>
+            
+            <div class="widget_container">
+                <a href="#" target="_blank">
+                    <span>Test Server @ &nbsp;</span>
+                    <img loading="lazy" src="/assets/icon/hugging_face_long.png"/>
+                </a>
+            </div>
+
+            <br>
+            
+            <div class="widget_container">
+                <a href="https://github.com/OpenDriveLab/OpenLane-V2">
+                    <img loading="lazy" src="https://img.shields.io/badge/website-GitHub-darkgreen"/>
+                </a>
+                <a href="https://github.com/OpenDriveLab/OpenLane-V2">
+                    <img loading="lazy" src="https://img.shields.io/github/stars/OpenDriveLab/OpenLane-V2?style=social"/>
+                </a>
+                <a href="https://github.com/OpenDriveLab/OpenLane-V2">
+                    <img loading="lazy" src="https://img.shields.io/github/forks/OpenDriveLab/OpenLane-V2?style=social"/>
+                </a>
+                <a href="https://eval.ai/web/challenges/challenge-page/1925">
+                    <img loading="lazy" src="https://img.shields.io/badge/submission-EvalAI-darkgreen"/>
+                </a>
+            </div>
+
+            <br>
+
+        </div>
+
+        <div style="flex-grow: 1;"></div>
+
+        <div style="flex-grow: 16;">
+
+            <h2>Task Description</h2>
+            <span>
+                The OpenLane-V2 dataset* is the perception and reasoning benchmark for scene structure in autonomous driving. Given multi-view images covering the whole panoramic field of view, participants are required to deliver not only perception results of lanes and traffic elements but also topology relationships among lanes and between lanes and traffic elements simultaneously.
+                <br><br>
+                * The dataset, OpenLane-V2 at Shanghai AI Lab, is named as Road Genome at Huawei and publically as OpenLane-Huawei.
+            </span>
+
+            <br>
+            <h2>Participation</h2>
+            <span>
+                The primary metric is <a href="https://github.com/OpenDriveLab/OpenLane-V2">OpenLane-V2</a>  (OLS), which comprises evaluations <a>on three sub-tasks. On the</a> website, we provide tools for data access, training models, evaluations, and visualization. To submit your results on EvalAI, please follow the submission instructions.
+            </span>
+            
+            <br>
+            <h2>Important Dates</h2>
+            <table class="date_award">
+                <tbody>
+                    <tr>
+                        <td>Challenge Period Open</td><td class="last_column">March 15, 2023</td>
+                    </tr>
+                    <tr>
+                        <td>Challenge Period End</td><td class="last_column">June 01, 2023</td>
+                    </tr>
+                    <tr>
+                        <td>Technical Report Deadline</td><td class="last_column">June 09, 2023</td>
+                    </tr>
+                    <tr>
+                        <td>Winner Announcement</td><td class="last_column">June 13, 2023</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+            <h2>Award</h2>
+            <table class="date_award">
+                <tbody>
+                    <tr>
+                        <td class="first_icon"><img loading="lazy" src='/assets/icon/bulb.png'/></td><td>Innovation Award</td><td class="last_column">USD 18,000</td>
+                    </tr>
+                    <tr>
+                        <td class="first_icon"><img loading="lazy" src='/assets/icon/rank01.png'/></td><td>Outstanding Champion</td><td class="last_column">USD 9,000</td>
+                    </tr>
+                    <tr>
+                        <td class="first_icon"><img loading="lazy" src='/assets/icon/rank02.png'/></td><td>Honorable Runner-up</td><td class="last_column">USD 3,000</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+            <h2>Citation</h2>
+            <span>
+                Please consider citing our work if the challenge helps your research with the following BibTex:
+            </span>
+            <div class="citation">
+                @inproceedings{wang2023openlanev2,
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;title={OpenLane-V2: A Topology Reasoning Benchmark for Unified 3D HD Mapping},
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;author={Wang, Huijie and Li, Tianyu and Li, Yang and Chen, Li and Sima, Chonghao and Liu, Zhenbo and Wang, Bangjun and Jia, Peijin and Wang, Yuting and Jiang, Shengyin and Wen, Feng and Xu, Hang and Luo, Ping and Yan, Junchi and Zhang, Wei and Li, Hongyang},
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;booktitle={NeurIPS},
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;year={2023}
+                <br>
+                }
+            </div>
+
+            <br>
+            <h2>Contact</h2>
+            <ul class="rules">
+                <li>
+                    Huijie Wang (OpenDriveLab), <code>wanghuijie@pjlab.org.cn</code>
+                </li>
+                <li>
+                    <a href="https://join.slack.com/t/opendrivelab/shared_invite/zt-1rcp42b35-Wc5I0MhUrahlM5qDeJrVqQ" target="_blank">Slack channel: </a><code>#openlane-challenge-2023</code>
+                </li>
+            </ul>
+
+            <br>
+            <h2>Related Literature</h2>
+            <ul class="rules">
+                <li>
+                    <a href="https://arxiv.org/pdf/2304.05277.pdf" target="_blank">
+                        Topology Reasoning for Driving Scenes
+                    </a>
+                </li>
+                <li>
+                    <a href="https://arxiv.org/pdf/2304.10440.pdf" target="_blank">
+                        OpenLane-V2: A Topology Reasoning Benchmark for Scene Understanding in Autonomous Driving
+                    </a>
+                </li>
+                <li>
+                    <a href="https://arxiv.org/pdf/2203.11089.pdf" target="_blank">
+                        PersFormer: 3D Lane Detection via Perspective Transformer and the OpenLane Benchmark
+                    </a>
+                </li>
+                <li>
+                    <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Can_Structured_Birds-Eye-View_Traffic_Scene_Understanding_From_Onboard_Images_ICCV_2021_paper.pdf" target="_blank">
+                        Structured Bird's-Eye-View Traffic Scene Understanding From Onboard Images
+                    </a>
+                </li>
+                <li>
+                    <a href="https://arxiv.org/pdf/2208.14437.pdf" target="_blank">
+                        MapTR: Structured Modeling and Learning for Online Vectorized HD Map Construction
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div> -->
+
+
+
+    <div class="block" style="margin: 0;">
+        <div class="navigator"></div>
+    </div>
+
+
+
+    <br><br><br>
+
+
+    
+    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;" id="general_rules">
+        <div style="flex-grow: 1;">
+            <a class="track_title" href="#general_rules">
+                <h1>
+                    General Rules
+                    <img loading="lazy" class="link_img"/>
+                </h1>
+            </a>
+        </div> 
+    </div>
+    <br>
+    <div class="block_left" style="margin-top: 0; padding-top: 0;">
+        <div style="flex-grow: 10;">
+
+            <h2>Eligibility</h2>
+            <ul class="rules">
+                <li>
+                    A participant must be a member of a team and cannot be a member of multiple teams.
+                </li>
+                <li>
+                    Participants can form teams of up to <b>10</b> people.
+                </li>
+                <li>
+                    A team can participate in multiple tracks but is limited to one submission account. 
+                </li>
+                <li>
+                    A team must be registered for <a href="#participation">participation</a>.
+                </li>
+                <li>
+                    <b>An entity can have multiple teams.</b>
+                </li>
+                <li>
+                    Participants will receive certificates. Winners of the main tracks will be invited to present during the CVPR workshop and may be invited to a tentative report for documenting the challenge.
+                </li>
+                <li>
+                    Attempting to hack the test set or engaging in similar behaviors will result in disqualification.
+                </li>
+            </ul>
+
+            <br>
+            <h2>Technical</h2>
+            <ul class="rules">
+                <li>
+                    <b>The use of all publicly available datasets and pretrained weights is allowed.</b> The use of private datasets or pretrained weights is prohibited.
+                </li>
+                <li>
+                    The use of future frames is prohibited except where explicitly stated. 
+                </li>
+                <li>
+                    The use of data must be described explicitly in the technical report. 
+                </li>
+                <li>
+                    All technical reports will be made public after the conclusion of the challenge.
+                </li>
+            </ul>
+
+            <br>
+            <h2>Awards</h2>
+            <ul class="rules">
+                <li>
+                    To be eligible for awards: 
+                </li>
+                <ul class="ul_li" style="margin-top: 0; margin-bottom: 0;">
+                    <li>
+                        Any participant in a team cannot be involved in the execution or administration of the track;
+                    </li>
+                    <li>
+                        Teams must make their results public on the leaderboard before the submission deadline and continue to keep them public thereafter;
+                    </li>
+                    <li>
+                        Teams must submit a <b>technical report</b> for each track in PDF format of at most 4 pages (excluding references);
+                    </li>
+                    <li>
+                        If requested, teams must provide their code, docker image, or necessary materials to the award committee for verification. 
+                    </li>
+                </ul>
+                <li>
+                    Innovation awards will be decided through a double-blind reviewing process on the technical reports by the award committee. Winners of Innovation awards can overlap with Outstanding Champion and Honorable Runner-up.
+                </li>
+                <li>
+                    The organizers reserve the right to update the rules in response to unforeseen circumstances in order to better serve the mission of the challenge. The organizers reserve the right to disqualify teams that have violated the rules. Organizers reserve all rights for the final explanation.
+                </li>
+            </ul>
+            
+        </div>
+        <div style="flex-grow: 1;"><br><br></div>
+        <div style="flex-grow: 6;">
+
+            <h2>FAQ</h2>
+            <ul class="rules faq">
+                <li>
+                    How do we/I download the data?
+                </li>
+                <ul class="ul_li">
+                    <li>
+                        For each track, we provide links for downloading data in the repository. The repository, which might also contain dataset API, baseline model, and other helpful information, is a good start to begin your participation.
+                    </li>
+                </ul>
+
+                <li>
+                    How many times can we/I make a submission?
+                </li>
+                <ul class="ul_li">
+                    <li>
+                        Each track has its submission limit. Please refer to the test server for each track. Submissions that error out do not count against this limit.
+                    </li>
+                </ul>
+
+                <li>
+                    Should we/I use future frames during inference?
+                </li>
+                <ul class="ul_li">
+                    <li>
+                        No future frame is allowed except that it is noted explicitly.
+                    </li>
+                </ul>
+
+                <li>
+                    Which template of a technical report should we/I follow? How to submit the technical report?
+                </li>
+                <ul class="ul_li">
+                    <li>
+                        The format of a technical report is constrained to a PDF file. We recommend using the <a href="https://github.com/cvpr-org/author-kit/releases/tag/CVPR2024-v2" target="_blank">CVPR 2024 template</a>. Submission instructions will be released by June 2024.
+                    </li>
+                </ul>
+            </ul>
+
+        </div>
+    </div>
+
+
+
+    <br><br><br>
+
+
+
+    <div class="block" style="margin: 0;">
+        <div class="navigator"></div>
+    </div>
+
+
+
+    <br><br><br>
+
+
+
+    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;" id="organizers">
+        <div style="flex-grow: 1;">
+            <a class="track_title" href="#organizers">
+                <h1>
+                    Organizers
+                    <img loading="lazy" class="link_img"/>
+                </h1>
+            </a>
+        </div> 
+    </div>
+    <br>
+    <div class="block_left" style="margin-top: 0; padding-top: 0">
+        <div style="flex-grow: 1;">
+
+            <h2>General</h2>
+            <div class="person_container">
+                <div>
+                    <a href="https://faikit.github.io/" target="_blank">
+                        <img loading="lazy" src="/assets/person/huijie_wang.jpg"/>
+                    </a>
+                    <h4>Huijie Wang</h4>
+                    <span>Shanghai AI Lab</span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://scholar.google.com/citations?user=X6vTmEMAAAAJ" target="_blank">
+                        <img loading="lazy" src="/assets/person/tianyu_li.jpg"/>
+                    </a>
+                    <h4>Tianyu Li</h4>
+                    <span>Fudan University</span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://github.com/gihharwtw" target="_blank">
+                        <img loading="lazy" src="/assets/person/yihang_qiu.jpg"/>
+                    </a>
+                    <h4>Yihang Qiu</h4>
+                    <span>SJTU</span>
+                    <div></div>
+                </div>
+                <div>
+                    <a>
+                        <img loading="lazy" src="/assets/person/jiajie_xu.jpg"/>
+                    </a>
+                    <h4>Jiajie Xu</h4>
+                    <span>CMU</span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://oceanpang.github.io/" target="_blank">
+                        <img loading="lazy" src="/assets/person/jiangmiao_pang.jpg"/>
+                    </a>
+                    <h4>Jiangmiao Pang</h4>
+                    <span>Shanghai AI Lab</span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://anthonyhu.github.io/" target="_blank">
+                        <img loading="lazy" src="/assets/person/anthony_hu.jpg"/>
+                    </a>
+                    <h4>Anthony Hu</h4>
+                    <span>Wayve</span>
+                    <div></div>
+                </div>
+            </div>
+
+            <div class="person_two_column">
+
+                <div>
+                    <h2>End-to-End Driving at Scale</h2>
+                    <div class="person_container">
+                        <div>
+                            <a href="https://kashyap7x.github.io/" target="_blank">
+                                <img loading="lazy" src="/assets/person/kashyap_chitta.jpg"/>
+                            </a>
+                            <h4>Kashyap Chitta</h4>
+                            <span>University of Tübingen</span>
+                            <div></div>
+                        </div>
+                        <div>
+                            <a href="https://www.borisivanovic.com/" target="_blank">
+                                <img loading="lazy" src="/assets/person/boris_ivanovic.jpg"/>
+                            </a>
+                            <h4>Boris Ivanovic</h4>
+                            <span>NVIDIA</span>
+                            <div></div>
+                        </div>
+                        <div>
+                            <a href="https://research.nvidia.com/person/marco-pavone" target="_blank">
+                                <img loading="lazy" src="/assets/person/marco_pavone.jpg"/>
+                            </a>
+                            <h4>Marco Pavone</h4>
+                            <span>NVIDIA</span>
+                            <div></div>
+                        </div>
+                        <div>
+                            <a href="https://tisl.cs.toronto.edu/author/igor-gilitschenski/" target="_blank">
+                                <img loading="lazy" src="/assets/person/igor_gilitschenski.jpg"/>
+                            </a>
+                            <h4>Igor Gilitschenski</h4>
+                            <span>University of Toronto</span>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h2>Predictive World Model</h2>
+                    <div class="person_container">
+                        <div>
+                            <a>
+                                <img loading="lazy" src="/assets/person/zetong_yang.jpg"/>
+                            </a>
+                            <h4>Zetong Yang</h4>
+                            <span>Shanghai AI Lab</span>
+                            <div></div>
+                        </div>
+                        <div>
+                            <a href="https://sg.linkedin.com/in/pat-karn" target="_blank">
+                                <img loading="lazy" src="/assets/person/pat_karnchanachari.jpg"/>
+                            </a>
+                            <h4>Pat Karnchanachari</h4>
+                            <span>Motional</span>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h2>Occupancy and Flow</h2>
+                    <div class="person_container">
+                        <div>
+                            <a href="https://github.com/afterthat97" target="_blank">
+                                <img loading="lazy" src="/assets/person/haisong_liu.jpg"/>
+                            </a>
+                            <h4>Haisong Liu</h4>
+                            <span>Nanjing University</span>
+                            <div></div>
+                        </div>
+                        <div>
+                            <a href="https://sg.linkedin.com/in/fongwk" target="_blank">
+                                <img loading="lazy" src="/assets/person/whye_kit_fong.jpg"/>
+                            </a>
+                            <h4>Whye Kit Fong</h4>
+                            <span>Motional</span>
+                            <div></div>
+                        </div>
+                        <div>
+                            <a href="https://zhouyunsong-sjtu.github.io/" target="_blank">
+                                <img loading="lazy" src="/assets/person/yunsong_zhou.jpg"/>
+                            </a>
+                            <h4>Yunsong Zhou</h4>
+                            <span>SJTU</span>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h2>Multi-View 3D Visual Grounding</h2>
+                    <div class="person_container">
+                        <div>
+                            <a href="https://tai-wang.github.io/" target="_blank">
+                                <img loading="lazy" src="/assets/person/tai_wang.jpg"/>
+                            </a>
+                            <h4>Tai Wang</h4>
+                            <span>Shanghai AI Lab</span>
+                            <div></div>
+                        </div>
+                        <div>
+                            <a href="https://scholar.google.com/citations?user=-zT1NKwAAAAJ" target="_blank">
+                                <img loading="lazy" src="/assets/person/xiaohan_mao.jpg"/>
+                            </a>
+                            <h4>Xiaohan Mao</h4>
+                            <span>Shanghai AI Lab</span>
+                            <div></div>
+                        </div>
+                        <div>
+                            <a href="https://scholar.google.com/citations?user=QabwS_wAAAAJ" target="_blank">
+                                <img loading="lazy" src="/assets/person/chenming_zhu.jpg"/>
+                            </a>
+                            <h4>Chenming Zhu</h4>
+                            <span>HKU</span>
+                            <div></div>
+                        </div>
+                        <div>
+                            <a target="_blank">
+                                <img loading="lazy" src="/assets/person/ruiyuan_lyu.jpg"/>
+                            </a>
+                            <h4>Ruiyuan Lyu</h4>
+                            <span>Shanghai AI Lab</span>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h2>CARLA Autonomous Driving Challenge</h2>
+                    <div class="person_container">
+                        <div>
+                            <a href="https://germanros.net/" target="_blank">
+                                <img loading="lazy" src="/assets/person/german_ros.jpg"/>
+                            </a>
+                            <h4>German Ros</h4>
+                            <span>NVIDIA</span>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h2>Driving with Language</h2>
+                    <div class="person_container">
+                        <div>
+                            <a href="https://scholar.google.com/citations?user=dgYJ6esAAAAJ" target="_blank">
+                                <img loading="lazy" src="/assets/person/chonghao_sima.jpg"/>
+                            </a>
+                            <h4>Chonghao Sima</h4>
+                            <span>Shanghai AI Lab</span>
+                            <div></div>
+                        </div>
+                        <div>
+                            <a>
+                                <img loading="lazy" src="/assets/person/hanxue_zhang.jpg"/>
+                            </a>
+                            <h4>Hanxue Zhang</h4>
+                            <span>SJTU</span>
+                            <div></div>
+                        </div>
+                        <div>
+                            <a href="https://kashyap7x.github.io/" target="_blank">
+                                <img loading="lazy" src="/assets/person/kashyap_chitta.jpg"/>
+                            </a>
+                            <h4>Kashyap Chitta</h4>
+                            <span>University of Tübingen</span>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h2>Mapless Driving</h2>
+                    <div class="person_container">
+                        <div>
+                            <a href="https://scholar.google.com/citations?user=X6vTmEMAAAAJ" target="_blank">
+                                <img loading="lazy" src="/assets/person/tianyu_li.jpg"/>
+                            </a>
+                            <h4>Tianyu Li</h4>
+                            <span>Fudan University</span>
+                            <div></div>
+                        </div>
+                        <div>
+                            <a href="https://faikit.github.io/" target="_blank">
+                                <img loading="lazy" src="/assets/person/huijie_wang.jpg"/>
+                            </a>
+                            <h4>Huijie Wang</h4>
+                            <span>Shanghai AI Lab</span>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div> 
+    </div>
+
+
+
+    <br><br><br>
+
+
+
+    <!-- <div class="block" style="margin: 0;">
+        <div class="navigator"></div>
+    </div>
+
+
+
+    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;" id="affiliation">
+        <div style="flex-grow: 1;">
+            <a class="track_title" href="#affiliation">
+                <br><br><br>
+                <h1>
+                    Affiliation
+                    <img loading="lazy" class="link_img"/>
+                </h1>
+            </a>
+        </div> 
+    </div>
+    <br>
+    <div class="block_left" style="margin-top: 0; padding-top: 0">
+        <div style="flex-grow: 1;">
+            <div class="brand_container">
+                <div class="brand_logos"><a href="https://www.shlab.org.cn/" target="_blank"><img loading="lazy" src="/assets/brand/shanghai_ai_lab_.png"/></a></div>
+                <div class="brand_logos"><a href="https://uni-tuebingen.de/" target="_blank"><img loading="lazy" src="/assets/brand/tubingen.png"/></a></div>
+                <div class="brand_logos"><a href="https://motional.com/" target="_blank"><img loading="lazy" src="/assets/brand/motional.png"/></a></div>
+                <div class="brand_logos"><a href="https://carla.org/" target="_blank"><img loading="lazy" src="/assets/brand/CARLA.png"/></a></div>
+                <div class="brand_logos"><a href="https://www.nvidia.com/" target="_blank"><img loading="lazy" src="/assets/brand/NVIDIA.png"/></a></div>
+                <div></div>
+            </div>
+        </div> 
+    </div>
+    <br><br><br> -->
+
+
+
+    <!-- <div class="block" style="margin: 0;">
+        <div class="navigator"></div>
+    </div>
+
+
+
+    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;" id="sponsor">
+        <div style="flex-grow: 1;">
+            <a class="track_title" href="#sponsor">
+                <br><br><br>
+                <h1>
+                    Sponsor
+                    <img loading="lazy" class="link_img"/>
+                </h1>
+            </a>
+        </div> 
+    </div>
+    <br>
+    <div class="block_left" style="margin-top: 0; padding-top: 0">
+        <div style="flex-grow: 1;">
+            <div class="brand_container">
+                <div class="brand_logos"><a href="https://www.meituan.com/" target="_blank"><img loading="lazy" src="/assets/brand/meituan.png"/></a></div>
+                <div class="brand_logos"><a href="https://www.hp.com/" target="_blank"><img loading="lazy" src="/assets/brand/hp.svg"/></a></div>
+                <div></div>
+            </div>
+        </div> 
+    </div>
+    <br><br><br> -->
+
+
+
+</body>
