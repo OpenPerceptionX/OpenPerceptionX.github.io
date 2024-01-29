@@ -50,7 +50,7 @@
 
 
 
-<script defer>
+<script>
     const as_transparent = () => {
         header.classList.remove("nav_scoll");
         header_logo.src = "/assets/icon/OpenDriveLab_white.png";
@@ -65,7 +65,7 @@
 
 
 
-<script defer>
+<script>
     window.addEventListener("scroll", function () {
         if (window.scrollY > 0) {
             as_white();
@@ -79,7 +79,7 @@
 
 
 
-<script defer>
+<script>
     const show = () => {
         if (header_right.style.display === "none" || !header_right.style.display) {
             header_right.style.display = "flex";
@@ -99,7 +99,7 @@
 
 
 
-<script defer>
+<script>
     const drop = () => {
         if (window.innerWidth <= 1024) {
             eles = document.getElementsByClassName("dropdown");
@@ -124,7 +124,7 @@
 
 
 
-<script async>
+<script>
     window.onload = function() {
         header.style.display = "block";
     };
