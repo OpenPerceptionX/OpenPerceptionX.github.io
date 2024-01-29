@@ -96,6 +96,9 @@ i {
     font-size: 333%;
     margin: 0;
 }
+.track_title_span {
+    margin-top: 11px;
+}
 .navigator a {
     font-size: large;
 }
