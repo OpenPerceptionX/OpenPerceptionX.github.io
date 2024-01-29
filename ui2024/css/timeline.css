@@ -33,7 +33,7 @@
     span {
         text-align: right;
         margin-bottom: 7px;
-        code {
+        .code {
             font-weight: normal;
             font-size: small;
             background-color: transparent;
