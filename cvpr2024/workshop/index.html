@@ -52,24 +52,28 @@
       });
     }
     window.addEventListener('load', function() {
-        var userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-        var userOptionFound = false;
-        for (var i = 0; i < timezoneSelect.options.length; i++) {
-            if (timezoneSelect.options[i].value === userTimeZone) {
-                timezoneSelect.selectedIndex = i;
-                userOptionFound = true;
-                break;
-            }
-        }
-        if (!userOptionFound) {
-            var utcOffset = new Date().getTimezoneOffset() / -60;
-            var utcOption = document.createElement('option');
-            utcOption.value = utcOffset;
-            utcOption.textContent = userTimeZone+' '+'('+'UTC+'+ utcOffset +')';
-            timezoneSelect.value = utcOffset;
-        }
+        timezoneSelect.selectedIndex = 5;
         convertTimezone(timezoneSelect.value);
     });
+    // window.addEventListener('load', function() {
+    //     var userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    //     var userOptionFound = false;
+    //     for (var i = 0; i < timezoneSelect.options.length; i++) {
+    //         if (timezoneSelect.options[i].value === userTimeZone) {
+    //             timezoneSelect.selectedIndex = i;
+    //             userOptionFound = true;
+    //             break;
+    //         }
+    //     }
+    //     if (!userOptionFound) {
+    //         var utcOffset = new Date().getTimezoneOffset() / -60;
+    //         var utcOption = document.createElement('option');
+    //         utcOption.value = utcOffset;
+    //         utcOption.textContent = userTimeZone+' '+'('+'UTC+'+ utcOffset +')';
+    //         timezoneSelect.value = utcOffset;
+    //     }
+    //     convertTimezone(timezoneSelect.value);
+    // });
 </script>
 
 
