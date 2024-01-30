@@ -60,7 +60,7 @@ span a, p a, li a{
 
 
 
-.banner_container, .block, .block_left, .block_right, .block_footer, .block_header {
+.banner_container, .block, .block_left, .block_right, .block_center, .block_footer, .block_header {
     display: flex;
     flex-basis: 0;
     padding: 0 max(55px, 5%);
@@ -94,6 +94,10 @@ span a, p a, li a{
     .block_left, .block_right {
         flex-direction: column;
     }
+}
+.block_center {
+    flex-direction: column;
+    justify-content: center;
 }
 
 
