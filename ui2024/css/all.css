@@ -74,7 +74,12 @@ span a, p a, li a{
             width: 20%;
             text-align: center;
             padding: 11px;
+            display: flex;
+            align-items: center;
         }
+    }
+    @media screen and (max-width: 1024px) {
+        top: 110px;
     }
 }
 
