@@ -331,7 +331,7 @@ span a, p a, li a{
 }
 .block_left div .event_container a div {
     justify-content: space-between;
-    height: 192px;
+    height: 320px;
 }
 .block_left div .event_container a div div {
     padding: 0 33px 11px 33px;
@@ -343,6 +343,6 @@ span a, p a, li a{
         color: #00a0e8;
         margin: 11px 0;
         padding-right: 11px;
-        border-right: 3px solid #00a0e8;
+        border-right: 7px solid #00a0e8;
     }
 }
