@@ -272,14 +272,14 @@ p .email_link:hover {
     flex-wrap: wrap;
 }
 .research_list dl{
-    width: 32.9%;
+    width: 49%;
     margin: auto;
     background: #fff;
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
     align-items: center;
-    /* margin-bottom: 20px; */
+    margin-bottom: 11px;
 }
 
 .research_list dl a {width: 100%;height: 100%;}
