@@ -61,10 +61,11 @@ span a, p a, li a{
 
 
 .sticky {
+    position: -webkit-sticky;
     position: sticky;
     z-index: 900;
     flex-basis: 1;
-    background-color: white;
+    /* background-color: white; */
     top: 65px;
     flex-direction: column;
     .sticky_row {
@@ -73,16 +74,21 @@ span a, p a, li a{
         a {
             width: 20%;
             text-align: center;
-            padding: 11px;
+            padding: 17px;
             display: flex;
-            align-items: center;
         }
     }
     @media screen and (max-width: 1024px) {
         top: 110px;
     }
 }
-
+.sticky_colored {
+    background-color: rgb(233, 233, 233);
+    border-bottom: 3px solid white;
+    .navigator {
+        border-bottom: 3px solid white;
+    }
+}
 
 
 .banner_container, .block, .block_left, .block_right, .block_center, .block_footer, .block_header {
@@ -148,6 +154,7 @@ span a, p a, li a{
     margin-top: 7px;
     padding: 17px;
     border-radius: 7px;
+    font-size: 88%;
     font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
     color: #0a3069;
     span {
@@ -200,7 +207,7 @@ span a, p a, li a{
 
 
 
-.block_left div .brand_container {
+.brand_container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -208,22 +215,22 @@ span a, p a, li a{
     align-items: center;
     margin: 0 min(-33px, -3%);
 }
-.block_left div .brand_container div {
+.brand_container div {
     margin: max(22px, 2%) max(33px, 3%);
 }
-.block_left div .brand_container div img {
+.brand_container div img {
     height: 66px;
 }
-.block_left div .brand_container div {
+.brand_container div {
     display: flex;
     flex-direction: row;
 }
-.block_left div .brand_container div div {
+.brand_container div div {
     display: flex;
     flex-direction: column-reverse;
     margin: 0 0 0 7px ;
 }
-.block_left div .brand_container div div div {
+.brand_container div div div {
     color: white;
     font-weight: bold;
     padding: 5px;
@@ -232,10 +239,10 @@ span a, p a, li a{
     user-select: none;
 }
 @media screen and (max-width: 1024px) {
-    .block_left div .brand_container div img {
+    .brand_container div img {
         height: 55px;
     }
-    .block_left div .brand_container div div div {
+    .brand_container div div div {
         font-size: normal;
     }
 }
