@@ -60,6 +60,26 @@ span a, p a, li a{
 
 
 
+.sticky {
+    position: sticky;
+    z-index: 900;
+    flex-basis: 1;
+    background-color: white;
+    top: 65px;
+    flex-direction: column;
+    .sticky_row {
+        display: flex;
+        justify-content: space-evenly;
+        a {
+            width: 20%;
+            text-align: center;
+            padding: 11px;
+        }
+    }
+}
+
+
+
 .banner_container, .block, .block_left, .block_right, .block_center, .block_footer, .block_header {
     display: flex;
     flex-basis: 0;
