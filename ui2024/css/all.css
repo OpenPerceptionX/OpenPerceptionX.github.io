@@ -34,6 +34,11 @@ img {
 li {
     list-style-type: circle;
 }
+@media screen and (max-width: 1024px) {
+    h1, h2, h3, h4, h5, h6, p, span, a, li, table, div {
+        font-size: 110%;
+    }
+}
 
 
 
@@ -65,7 +70,11 @@ span a, p a, li a{
     position: sticky;
     z-index: 900;
     flex-basis: 1;
-    /* background-color: white; */
+    background-color: rgb(233, 233, 233);
+    border-bottom: 3px solid white;
+    .navigator {
+        border-bottom: 3px solid white;
+    }
     top: 65px;
     flex-direction: column;
     .sticky_row {
@@ -75,20 +84,13 @@ span a, p a, li a{
             width: 20%;
             text-align: center;
             padding: 17px;
-            display: flex;
         }
     }
     @media screen and (max-width: 1024px) {
         top: 110px;
     }
 }
-.sticky_colored {
-    background-color: rgb(233, 233, 233);
-    border-bottom: 3px solid white;
-    .navigator {
-        border-bottom: 3px solid white;
-    }
-}
+
 
 
 .banner_container, .block, .block_left, .block_right, .block_center, .block_footer, .block_header {

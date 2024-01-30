@@ -241,7 +241,7 @@
                     </div>
                 </div>
             </div>
-            <br id="participation">
+            <br id="host">
             <span style="font-size: small;">Note: General timeline of the whole challenge. Please check the timeline of each track.</span>
         </div>
 
@@ -256,7 +256,7 @@
                 <img loading="lazy" class="link_img"/>
             </h2>
         </a>
-        <div style="flex-grow: 1;">
+        <div style="flex-grow: 1;"  id="sponsor">
             <div class="brand_container">
                 <div class="brand_logos"><a href="https://uni-tuebingen.de/" target="_blank"><img loading="lazy" src="/assets/brand/tubingen.png"/></a></div>
                 <div class="brand_logos"><a href="https://motional.com/" target="_blank"><img loading="lazy" src="/assets/brand/motional.png"/></a></div>
@@ -268,7 +268,7 @@
 
 
 
-        <a class="track_title" href="#sponsor">
+        <a class="track_title" href="#sponsor" id="participation">
             <h2>
                 Sponsor
                 <img loading="lazy" class="link_img"/>
@@ -1380,7 +1380,7 @@
 
 
 
-    <br><br><br id="affiliation">
+    <br><br><br>
 
 
 
@@ -1653,15 +1653,3 @@
 
 
 </body>
-
-
-
-<script>
-    window.addEventListener("scroll", function () {
-        if (window.scrollY > 3370) {
-            sticky.classList.add("sticky_colored");
-        } else {
-            sticky.classList.remove("sticky_colored");
-        }
-    });
-</script>
