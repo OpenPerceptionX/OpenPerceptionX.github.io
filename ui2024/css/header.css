@@ -72,7 +72,7 @@ header.white {
 }
 @media screen and (min-width: 1024px) {
     .header_right ul li {
-        height: 66px;
+        height: 50px;
         position: relative;
         & .dropdown {
             display: none;
