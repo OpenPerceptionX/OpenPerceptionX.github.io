@@ -65,7 +65,7 @@ h2 {
 .banner_content span, .banner_content span a {
     font-size: 23px;
     color: rgb(233, 233, 233);
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 
