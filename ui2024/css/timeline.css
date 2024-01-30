@@ -3,7 +3,7 @@
     position: absolute;
     top: 0px;
     bottom: 0px;
-    left: 35%;
+    left: 20%;
     width: 3px;
     border-radius: 3px;
     background-color: rgb(33, 33, 33);
@@ -13,10 +13,8 @@
 }
 
 .timeline > .entries > .entry {
-    margin-right: 71.5%;
-    text-align: right;
-    /* .title {
-        position: relative;
+    margin-bottom: 11px;
+    .title {
         &:before {
             content: "";
             position: absolute;
@@ -24,9 +22,9 @@
             height: 13px;
             background-color: rgb(33, 33, 33);
             border-radius: 100%;
-            right: -27.4%;
+            right: calc(80% - 8px);
         }
-    } */
+    }
     h3 {
         margin: 3px 0;
     }
@@ -41,18 +39,33 @@
             margin-right: 0;
         }
     }
+    &:nth-child(2), &:nth-child(8), &:nth-child(9) {
+        margin-right: 85%;
+        text-align: right;
+    }
     &:nth-child(1), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7), &:nth-child(10), &:nth-child(11), &:nth-child(12) {
-        margin-right: 0%;
-        margin-left: 42%;
+        margin-left: 25%;
         text-align: left;
-        float: right;
-        /* .title {
+    }
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .timeline > :before {
+        left: 40%;
+    }
+    .timeline > .entries > .entry {
+        .title {
             &:before {
-                left: -13.6%;
+                right: calc(60% - 8px);
             }
-        } */
-        .content {
-            text-align: left;
+        }
+        &:nth-child(2), &:nth-child(8), &:nth-child(9) {
+            margin-right: 65%;
+        }
+        &:nth-child(1), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7), &:nth-child(10), &:nth-child(11), &:nth-child(12) {
+            margin-left: 45%;
         }
     }
 }
