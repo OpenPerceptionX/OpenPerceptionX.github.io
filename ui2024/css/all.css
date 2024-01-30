@@ -36,7 +36,7 @@ li {
 }
 @media screen and (max-width: 1024px) {
     h1, h2, h3, h4, h5, h6, p, span, a, li, table, div {
-        font-size: 110%;
+        font-size: 111%;
     }
 }
 
@@ -79,11 +79,18 @@ span a, p a, li a{
     flex-direction: column;
     .sticky_row {
         display: flex;
-        justify-content: space-evenly;
         a {
             width: 20%;
             text-align: center;
             padding: 17px;
+        }
+        .image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                height: 20px;
+            }
         }
     }
     @media screen and (max-width: 1024px) {

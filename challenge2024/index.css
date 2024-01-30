@@ -119,6 +119,14 @@ h2 {
     font-weight: bold;
     user-select: none;
 }
+@media screen and (max-width: 1024px) {
+    .glance a {
+        font-size: 60%;
+    }
+    .notinmobile {
+        display: none;
+    }
+}
 
 
 
