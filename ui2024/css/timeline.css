@@ -3,7 +3,7 @@
     position: absolute;
     top: 0px;
     bottom: 0px;
-    left: 20%;
+    left: 30%;
     width: 3px;
     border-radius: 3px;
     background-color: rgb(33, 33, 33);
@@ -22,7 +22,7 @@
             height: 13px;
             background-color: rgb(33, 33, 33);
             border-radius: 100%;
-            right: calc(80% - 8px);
+            right: calc(70% - 8px);
         }
     }
     h3 {
@@ -40,11 +40,11 @@
         }
     }
     &:nth-child(2), &:nth-child(8), &:nth-child(9) {
-        margin-right: 85%;
+        margin-right: 75%;
         text-align: right;
     }
     &:nth-child(1), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7), &:nth-child(10), &:nth-child(11), &:nth-child(12) {
-        margin-left: 25%;
+        margin-left: 35%;
         text-align: left;
     }
 }
