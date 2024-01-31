@@ -67,7 +67,10 @@
             margin-left: 45%;
         }
     }
-    .content {
+    h3 {
         font-size: 80%;
+    }
+    .content {
+        font-size: 60%;
     }
 }
