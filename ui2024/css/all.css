@@ -22,7 +22,6 @@ br {
 code {
     color: #00a0e8;
     font-weight: bold;
-    font-size: larger;
     background-color: rgba(0, 160, 232, .23);
     padding: 0 3px;
     user-select: all;
@@ -35,7 +34,7 @@ li {
     list-style-type: circle;
 }
 @media screen and (max-width: 1024px) {
-    h1, h2, h3, h4, h5, h6, p, span, a, li, table, div {
+    h1, h2, h3, h4, h5, h6, p, span, li, table, div {
         font-size: 121%;
     }
 }
