@@ -121,7 +121,7 @@ h2 {
 }
 @media screen and (max-width: 1024px) {
     .glance a {
-        font-size: 60%;
+        font-size: 40%;
     }
     .notinmobile {
         display: none;
