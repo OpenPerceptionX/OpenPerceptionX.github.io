@@ -74,7 +74,7 @@ span a, p a, li a{
     .navigator {
         border-bottom: 3px solid white;
     }
-    top: 65px;
+    top: 64px;
     flex-direction: column;
     .sticky_row {
         display: flex;
