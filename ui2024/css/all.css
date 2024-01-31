@@ -57,6 +57,9 @@ a:hover .link_img {
     display: inline;
     height: 20px;
 }
+a:active, a:focus {
+    opacity: 1;
+}
 
 span a, p a, li a{
     font-weight: normal;
