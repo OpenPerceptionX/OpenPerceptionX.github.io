@@ -95,6 +95,9 @@ span a, p a, li a{
             img {
                 height: 20px;
             }
+            img:hover {
+                opacity: .33;
+            }
         }
     }
     @media screen and (max-width: 1024px) {
@@ -342,7 +345,7 @@ span a, p a, li a{
 }
 .block_left div .event_container a div {
     justify-content: space-between;
-    height: 192px;
+    height: 224px;
     @media screen and (max-width: 1024px) {
         height: 320px;
     }
