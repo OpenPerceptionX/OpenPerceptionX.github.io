@@ -9,7 +9,7 @@
 }
 .banner_container div {
     display: flex;
-    margin-top: 33px;
+    margin-top: 1vh;
 }
 .banner_title_en span {
     font-size: 11vh;
