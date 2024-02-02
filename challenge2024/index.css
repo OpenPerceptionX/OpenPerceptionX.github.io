@@ -197,3 +197,20 @@ h2 {
         margin-right: 11px;
     }
 }
+
+
+
+.double_logos .seperator {
+    background-color: rgb(233, 233, 233);
+    width: 3px;
+    margin-left: 22px;
+    margin-right: 13px;
+}
+.double_logos div img {
+    height: 55px;
+}
+@media screen and (max-width: 1024px) {
+    .double_logos div img {
+        height: 44px;
+    }
+}
