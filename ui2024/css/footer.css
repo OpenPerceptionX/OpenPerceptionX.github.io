@@ -23,12 +23,30 @@
 }
 
 
+
 .footer_first_row a img {
     height: 39px;
 }
 .footer_first_row {
     display: grid;
-    grid-template-columns: 20% 80%;
+    /* grid-template-columns: 20% 80%; */
+}
+.footer_align_left div {
+    background-color: rgb(233, 233, 233);
+    width: 1px;
+    margin: 0 22px;
+    height: 39px;
+    display: inline-block;
+}
+@media screen and (max-width: 768px) {
+    .footer_align_left {
+        flex-direction: column;
+    }
+    .footer_align_left div {
+        width: 100%;
+        margin: 22px 0;
+        height: 1px;
+    }
 }
 
 
