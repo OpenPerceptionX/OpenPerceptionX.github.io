@@ -68,7 +68,7 @@ br {
       .footer_o .o_r a{ padding-left: 10px;}
       .footer_o .o_qr img{ width:86px}
       .o_r, .o_qr{ margin-left: auto;}
-  .o_l{ margin-right: auto; text-align: left; display: none;}
+  .o_l{ margin-right: auto; text-align: left; margin-bottom: 22px;}
   .o_l img{max-width: 25vw;}
   .footer_nav .bg{flex-wrap: wrap;}
   .footer_nav dl dt,.footer_nav dl dd{ padding-right: 20px;}
