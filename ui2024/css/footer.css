@@ -26,6 +26,7 @@
 
 .footer_first_row a img {
     height: 39px;
+    margin-bottom: 33px;
 }
 .footer_first_row {
     display: grid;
@@ -37,15 +38,14 @@
     margin: 0 22px;
     height: 39px;
     display: inline-block;
+    margin-bottom: 33px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 832px) {
     .footer_align_left {
         flex-direction: column;
     }
     .footer_align_left div {
-        width: 100%;
-        margin: 22px 0;
-        height: 1px;
+        display: none;
     }
 }
 
