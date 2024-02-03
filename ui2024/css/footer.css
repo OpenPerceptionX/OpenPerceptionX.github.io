@@ -35,10 +35,12 @@
 .footer_align_left div {
     background-color: rgb(233, 233, 233);
     width: 1px;
-    margin: 0 22px;
     height: 39px;
     display: inline-block;
     margin-bottom: 33px;
+}
+.footer_align_left a, .footer_align_left div {
+    margin-right: 33px;
 }
 @media screen and (max-width: 832px) {
     .footer_align_left {
