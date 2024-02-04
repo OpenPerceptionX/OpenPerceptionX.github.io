@@ -375,6 +375,7 @@ span a, p a, li a{
 .publication_container div {
     display: flex;
     flex-direction: row;
+    margin-bottom: 11px;
 }
 .publication_container div .publication_container_first {
     align-items: center;
