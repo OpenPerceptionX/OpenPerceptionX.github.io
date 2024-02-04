@@ -401,9 +401,9 @@ span a, p a, li a{
     }
     h2 {
         font-size: 222%;
-        /* @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 1024px) {
             font-size: 6vw;
-        } */
+        }
     }
     h4 {
         font-weight: normal;
