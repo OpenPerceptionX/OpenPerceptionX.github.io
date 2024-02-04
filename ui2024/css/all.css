@@ -369,3 +369,53 @@ span a, p a, li a{
         }
     }
 }
+
+
+
+.publication_container div {
+    display: flex;
+    flex-direction: row;
+}
+.publication_container div .publication_container_first {
+    align-items: center;
+    margin-right: 22px;
+    a img {
+        height: 22vh;
+    }
+}
+.publication_container div .publication_container_second {
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    h2, h4, div, span {
+        margin: 7px 0;
+        padding: 0;
+    }
+    h2 {
+        font-size: 222%;
+    }
+    h4 {
+        font-weight: normal;
+        a {
+            color: #0c318f;
+        }
+    }
+    div {
+        flex-direction: column;
+        div {
+            flex-direction: row;
+            a {
+                height: 27px;
+                margin-right: 22px;
+                color: #0c318f;
+                img {
+                    height: 100%;
+                }
+            }
+        }
+    }
+    span {
+        font-style: italic;
+        color: gray;
+    }
+}

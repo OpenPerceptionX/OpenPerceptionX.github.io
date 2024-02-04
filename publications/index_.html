@@ -36,6 +36,79 @@
 
 
 
+<script>
+    var url_list = [{
+        name: 'Li Chen',
+        url: 'https://scholar.google.com/citations?user=ulZxvY0AAAAJ'
+    }, {
+        name: 'Penghao Wu',
+        url: 'https://scholar.google.com/citations?user=9mssd5EAAAAJ'
+    }, {
+        name: 'Chonghao Sima',
+        url: 'https://scholar.google.com/citations?user=dgYJ6esAAAAJ'
+    }, {
+        name: 'Hongyang Li',
+        url: 'https://lihongyang.info'
+    }, {
+        name: 'Xiaosong Jia',
+        url: 'https://jiaxiaosong1002.github.io'
+    }, {
+        name: 'Junchi Yan',
+        url: 'https://thinklab.sjtu.edu.cn'
+    }, {
+        name: 'Andreas Geiger',
+        url: 'https://www.cvlibs.net'
+    }, {
+        name: 'Yu Qiao',
+        url: 'https://scholar.google.com/citations?user=gFtI-8QAAAAJ'
+    }, {
+        name: 'Huijie Wang',
+        url: 'https://scholar.google.com/citations?user=Xg4cp-EAAAAJ'
+    }, {
+        name: 'Jiazhi Yang',
+        url: 'https://scholar.google.com/citations?user=Ju7nGX8AAAAJ'
+    }, {
+        name: 'Tianyu Li',
+        url: 'https://scholar.google.com/citations?user=X6vTmEMAAAAJ'
+    },];
+    function add_url(a) {
+        var len = url_list.length;
+
+        var h = a.toString();
+        for (var i = 0; i < len; i++) {
+        if (url_list[i]["name"] == h) {
+            var htm = '<a href="' + url_list[i]["url"] + '" target="_blank">' + h + '</a>'
+            var h = htm;
+
+        }
+        }
+        return h
+    }
+
+  
+  function cur(a) {
+    var h = a.split(",")
+    var len = h.length;
+    var htm = ""
+    for (var i = 0; i < len; i++) {
+      var fh = (i == 0) ? "" : ", "
+      htm += fh + add_url(h[i].replace(/^\s+|\s+$/g, ""))
+    }
+    return htm
+  }
+    addEventListener("load", () => {
+        var authors_lists = document.getElementsByClassName("authors");
+        for (var i = 0; i < authors_lists.length; i++) {
+            authors_list = authors_lists[i];
+            console.log(authors_list.textContent);
+            authors_list.textContent = cur(authors_list.textContent);
+            console.log(authors_list.textContent);
+        }
+    })
+</script>
+
+
+
 <body>
 
     
@@ -78,7 +151,7 @@
                     </div>
                     <div class="publication_container_second">
                         <h2><a href="https://arxiv.org/abs/2212.10156" target="_blank">Planning-oriented Autonomous Driving</a></h2>
-                        <h6>Yihan Hu, Jiazhi Yang, Li Chen, Keyu Li, Chonghao Sima, Hongyang Li, <i>et al.</i></h6>
+                        <h4 class="authors">Yihan Hu, Jiazhi Yang, Li Chen, Keyu Li, Chonghao Sima, Hongyang Li, <i>et al.</i></h4>
                         <div>
                             <div>
                                 <a href="https://cvpr2023.thecvf.com/Conferences/2023/Awards" target="_blank">CVPR 2023 Best Paper Award</a>
