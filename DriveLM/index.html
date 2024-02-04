@@ -38,7 +38,7 @@
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
   <link href="/style/css/footer.css?11" rel="stylesheet" type="text/css" media="all">
-  <link href="/style/css/head_event.css" rel="stylesheet" type="text/css" media="all">
+  <!-- <link href="/style/css/head_event.css" rel="stylesheet" type="text/css" media="all"> -->
   <style>
     .r_ul a {
       padding: 0px 0px;
@@ -404,10 +404,7 @@
 // })
 
 // 插入banner
-$.get("/components/banner_openocc.html",function(result){
-  $("#content").before(result);
-  $("body").removeClass("loadings")
-})
+  $("body").removeClass("loadings");
 
  $(document).ready(function () {
  //首页导航高亮
