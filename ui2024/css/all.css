@@ -76,25 +76,25 @@ span a, p a, li a{
     }
     top: 64px;
     flex-direction: column;
-    .sticky_row {
+    & .sticky_row {
         display: flex;
-        a {
+        & a {
             width: 20%;
             text-align: center;
             padding: 17px;
         }
-        a:hover {
+        & a:hover {
             color: #00a0e8;
             opacity: 1;
         }
-        .image {
+        & .image {
             display: flex;
             align-items: center;
             justify-content: center;
-            img {
+            & img {
                 height: 20px;
             }
-            img:hover {
+            & img:hover {
                 opacity: .33;
             }
         }
@@ -172,14 +172,14 @@ span a, p a, li a{
     font-size: 88%;
     font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
     color: #0a3069;
-    span {
+    & span {
         display: contents;
     }
-    .citation_red {
+    & .citation_red {
         font-size: 99%;
         color: #cf222e;
     }
-    .citation_blue {
+    & .citation_blue {
         font-size: 99%;
         color: #6639ba;
     }
@@ -351,10 +351,10 @@ span a, p a, li a{
 }
 .block_left div .event_container a div div {
     padding: 0 33px 11px 33px;
-    h2 {
+    & h2 {
         margin-bottom: 0;
     }
-    span {
+    & span {
         text-align: right;
         color: #00a0e8;
         margin: 11px 0;
@@ -384,7 +384,7 @@ span a, p a, li a{
 .publication_container div .publication_container_first {
     align-items: center;
     margin-right: 22px;
-    a img {
+    & a img {
         width: max(17vw, 384px);
         @media screen and (max-width: 1024px) {
             width: 100%;
@@ -395,17 +395,17 @@ span a, p a, li a{
     flex-grow: 1;
     flex-direction: column;
     justify-content: center;
-    h2, h4, div, span {
+    & h2, h4, div, span {
         margin: 5px 0;
         padding: 0;
     }
-    h2 {
+    & h2 {
         font-size: 222%;
         @media screen and (max-width: 1024px) {
             font-size: 44px;
         }
     }
-    h4 {
+    & h4 {
         font-weight: normal;
         a {
             color: #0c318f;
@@ -414,18 +414,18 @@ span a, p a, li a{
             font-size: 33px;
         }
     }
-    div {
+    & div {
         flex-direction: column;
-        div {
+        & div {
             flex-direction: row;
-            a {
+            & a {
                 font-weight: normal;
                 margin-right: 22px;
                 color: #0c318f;
                 @media screen and (max-width: 1024px) {
                     font-size: 33px;
                 }
-                img {
+                & img {
                     height: 27px;
                     @media screen and (max-width: 1024px) {
                         height: 44px;
@@ -434,7 +434,7 @@ span a, p a, li a{
             }
         }
     }
-    span {
+    & span {
         font-style: italic;
         color: gray;
         text-align: justify;

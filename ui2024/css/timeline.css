@@ -14,7 +14,7 @@
 
 .timeline > .entries > .entry {
     margin-bottom: 13px;
-    .title {
+    & .title {
         &:before {
             content: "";
             position: absolute;
@@ -25,13 +25,13 @@
             right: calc(75% - 8px);
         }
     }
-    h3 {
+    & h3 {
         margin: 3px 0;
     }
-    span {
+    & span {
         text-align: right;
         margin-bottom: 7px;
-        .code {
+        & .code {
             font-weight: normal;
             background-color: transparent;
             padding-right: 0;
@@ -55,7 +55,7 @@
         left: 40%;
     }
     .timeline > .entries > .entry {
-        .title {
+        & .title {
             &:before {
                 right: calc(60% - 8px);
             }

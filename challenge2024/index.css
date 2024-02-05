@@ -167,14 +167,14 @@ h2 {
     width: 67%;
 }
 .date_award tbody tr {
-    .first_icon {
+    & .first_icon {
         width: 20px;
-        img {
+        & img {
             width: 20px; 
             user-select: none;
         }
     }
-    .last_column {
+    & .last_column {
         width: 40%;
     }
 }
