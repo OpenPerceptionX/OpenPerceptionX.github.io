@@ -37,6 +37,26 @@
 
 
 <script>
+    window.addEventListener("scroll", function () {
+        if (document.body.clientWidth <= 1024) {
+            if (sticky.getBoundingClientRect().top <= 110) {
+                sticky.classList.add("sticky_top");
+            } else {
+                sticky.classList.remove("sticky_top");
+            }
+        } else {
+            if (sticky.getBoundingClientRect().top <= 64) {
+                sticky.classList.add("sticky_top");
+            } else {
+                sticky.classList.remove("sticky_top");
+            }
+        }
+    })
+</script>
+
+
+
+<script>
     var url_list = [{
         name: 'Li Chen',
         url: 'https://scholar.google.com/citations?user=ulZxvY0AAAAJ'
@@ -129,7 +149,7 @@
             <a href="#editor_pick">Editor's Pick</a>
             <a></a>
             <a></a>
-            <a href="#" class="image"><img src="/assets/icon/top.png"/></a>
+            <a href="#" class="image"><img src="/assets/icon/top_white.png"/></a>
         </div>
         <div class="navigator"></div>
         <div class="sticky_row">

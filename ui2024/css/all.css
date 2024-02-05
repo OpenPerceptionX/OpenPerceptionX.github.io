@@ -69,12 +69,10 @@ span a, p a, li a{
     position: sticky;
     z-index: 900;
     flex-basis: 1;
-    background-color: rgb(233, 233, 233);
-    border-bottom: 3px solid white;
     top: 64px;
     flex-direction: column;
     & .navigator {
-        border-bottom: 3px solid white;
+        border-bottom: 3px solid rgb(233, 233, 233);
     }
     & .sticky_row {
         display: flex;
@@ -84,7 +82,7 @@ span a, p a, li a{
             padding: 17px;
         }
         & a:hover {
-            color: #00a0e8;
+            color: #53c2f0;
             opacity: 1;
         }
         & .image {
@@ -101,6 +99,15 @@ span a, p a, li a{
     }
     @media screen and (max-width: 1024px) {
         top: 110px;
+    }
+}
+.sticky_top {
+    background-color: #0c318f;
+    & .navigator {
+        border-bottom: 3px solid white;
+    }
+    & .sticky_row a {
+        color: white;
     }
 }
 
