@@ -81,7 +81,7 @@ span a, p a, li a{
         a {
             width: 20%;
             text-align: center;
-            padding: 23px;
+            padding: 17px;
         }
         a:hover {
             color: #00a0e8;
@@ -402,7 +402,7 @@ span a, p a, li a{
     h2 {
         font-size: 222%;
         @media screen and (max-width: 1024px) {
-            font-size: 5vw;
+            font-size: 44px;
         }
     }
     h4 {
@@ -411,7 +411,7 @@ span a, p a, li a{
             color: #0c318f;
         }
         @media screen and (max-width: 1024px) {
-            font-size: 3vw;
+            font-size: 33px;
         }
     }
     div {
@@ -422,11 +422,14 @@ span a, p a, li a{
                 font-weight: normal;
                 margin-right: 22px;
                 color: #0c318f;
+                @media screen and (max-width: 1024px) {
+                    font-size: 33px;
+                }
                 img {
                     height: 27px;
-                }
-                @media screen and (max-width: 1024px) {
-                    font-size: 3vw;
+                    @media screen and (max-width: 1024px) {
+                        height: 44px;
+                    }
                 }
             }
         }
@@ -434,9 +437,9 @@ span a, p a, li a{
     span {
         font-style: italic;
         color: gray;
+        text-align: justify;
         @media screen and (max-width: 1024px) {
-            font-size: 3vw;
-            text-align: justify;
+            font-size: 33px;
         }
     }
 }
