@@ -126,7 +126,14 @@
 
 
 <script>
-    $(document).ready(function() {
+    // $(document).onload(function() {
+    //     header.style.display = "block";
+    // });
+    function showheader() {
+        console.log('1');
         header.style.display = "block";
-    });
+        window.removeEventListener("scroll", showheader);
+    }
+    window.addEventListener("load", showheader);
+    window.addEventListener("scroll", showheader);
 </script>
