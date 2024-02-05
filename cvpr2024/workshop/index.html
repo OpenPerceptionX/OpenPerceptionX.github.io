@@ -38,6 +38,26 @@
 
 
 <script>
+    window.addEventListener("scroll", function () {
+        if (document.body.clientWidth <= 1024) {
+            if (sticky.getBoundingClientRect().top <= 110) {
+                sticky.classList.add("sticky_top");
+            } else {
+                sticky.classList.remove("sticky_top");
+            }
+        } else {
+            if (sticky.getBoundingClientRect().top <= 64) {
+                sticky.classList.add("sticky_top");
+            } else {
+                sticky.classList.remove("sticky_top");
+            }
+        }
+    })
+</script>
+
+
+
+<script>
     function convertTimezone(offset) {
         var selectedOffset = parseInt(offset);
         var eventTimes = document.querySelectorAll(".itimetable_table_time");
@@ -180,18 +200,23 @@
 
 
 
-    <br><br><br>
+    <br id="schedule"><br><br>
 
 
 
-    <div class="block">
-        <div class="navigator">
-            <a href="/challenge2024/">Autonomous Grand Challenge</a>
+    <div class="block sticky" id="sticky">
+        <div class="sticky_row">
+            <a href="/challenge2024/">Challenge</a>
+            <a></a>
+            <a></a>
+            <a href="#" class="image"><img src="/assets/icon/top_white.png"/></a>
+        </div>
+        <div class="navigator"></div>
+        <div class="sticky_row">
             <a href="#schedule">Schedule</a>
             <a href="#speakers">Speakers</a>
             <a href="#organizers">Organizers</a>
-            <a href="#committee">Steering & Award Committee</a>
-            <br><br>
+            <a href="#committee">Committee</a>
         </div>
     </div>
 
@@ -201,7 +226,7 @@
 
 
 
-    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;" id="schedule">
+    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;">
         <div style="flex-grow: 1;">
             <a class="track_title" href="#schedule">
                 <h1>
@@ -370,7 +395,7 @@
                             <td>-</td>
                         </tr>
 
-                        <tr>
+                        <tr id="speakers">
                             <td class="itimetable_table_time" data-original-time="2024-06-18T22:30:00"></td>
                             <td><img loading="lazy" src="/assets/brand/shanghai_ai_lab.png"/></td>
                             <td>Li Chen<br><i>Shanghai AI Lab, China</i></td>
@@ -409,7 +434,7 @@
 
 
 
-    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;" id="speakers">
+    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;">
         <div style="flex-grow: 1;">
             <a class="track_title" href="#speakers">
                 <h1>
@@ -476,7 +501,7 @@
                     <a href="https://www.linkedin.com/in/phduan" target="_blank">
                         <img loading="lazy" src="/assets/person/phil_duan.jpg"/>
                     </a>
-                    <h4>Phil Duan<code style="background-color: transparent; font-weight: normal; font-size: 80%;">[tentative]</code></h4>
+                    <h4 id="organizers">Phil Duan<code style="background-color: transparent; font-weight: normal; font-size: 80%;">[tentative]</code></h4>
                     <span><i>Autopilot Vision Lead</i><br>Tesla, USA</span>
                     <div></div>
                 </div>
@@ -501,7 +526,7 @@
 
 
 
-    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;" id="organizers">
+    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;">
         <div style="flex-grow: 1;">
             <a class="track_title" href="#organizers">
                 <h1>
@@ -600,7 +625,7 @@
                     <a>
                         <img loading="lazy" src="/assets/person/jiajie_xu.jpg"/>
                     </a>
-                    <h4>Jiajie Xu</h4>
+                    <h4 id="committee">Jiajie Xu</h4>
                     <span>CMU</span>
                     <div></div>
                 </div>
@@ -626,7 +651,7 @@
 
 
 
-    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;" id="committee">
+    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;">
         <div style="flex-grow: 1;">
             <a class="track_title" href="#committee">
                 <h1>
