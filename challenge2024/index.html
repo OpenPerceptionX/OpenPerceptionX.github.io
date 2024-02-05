@@ -39,22 +39,12 @@
 
 <script>
     window.addEventListener("scroll", function () {
-        if (document.body.clientWidth <= 1024) {
-            if (sticky.getBoundingClientRect().top <= 110) {
-                sticky.classList.add("sticky_top");
-                sticky_top_img.src = "/assets/icon/top_white.png";
-            } else {
-                sticky.classList.remove("sticky_top");
-                sticky_top_img.src = "/assets/icon/top.png";
-            }
+        if (sticky.getBoundingClientRect().top <= 64) {
+            sticky.classList.add("sticky_top");
+            sticky_top_img.src = "/assets/icon/top_white.png";
         } else {
-            if (sticky.getBoundingClientRect().top <= 64) {
-                sticky.classList.add("sticky_top");
-                sticky_top_img.src = "/assets/icon/top_white.png";
-            } else {
-                sticky.classList.remove("sticky_top");
-                sticky_top_img.src = "/assets/icon/top.png";
-            }
+            sticky.classList.remove("sticky_top");
+            sticky_top_img.src = "/assets/icon/top.png";
         }
     })
 </script>

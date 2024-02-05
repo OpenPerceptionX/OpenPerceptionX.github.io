@@ -39,23 +39,12 @@
 
 <script>
     window.addEventListener("scroll", function () {
-        change_sticky();
-    });
-    const change_sticky = () => {
-        if (document.body.clientWidth <= 1024) {
-            if (sticky.getBoundingClientRect().top <= 110) {
-                sticky.classList.add("sticky_top");
-            } else {
-                sticky.classList.remove("sticky_top");
-            }
+        if (sticky.getBoundingClientRect().top <= 64) {
+            sticky.classList.add("sticky_top");
         } else {
-            if (sticky.getBoundingClientRect().top <= 64) {
-                sticky.classList.add("sticky_top");
-            } else {
-                sticky.classList.remove("sticky_top");
-            }
+            sticky.classList.remove("sticky_top");
         }
-    }
+    })
 </script>
 
 

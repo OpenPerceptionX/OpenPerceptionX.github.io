@@ -95,7 +95,14 @@ span a, p a, li a{
         }
     }
     @media screen and (max-width: 1024px) {
+        background-color: #0c318f;
         top: 110px;
+        & .navigator {
+            border-bottom: 3px solid white;
+        }
+        & .sticky_row a {
+            color: white;
+        }
     }
 }
 .sticky_top {
