@@ -402,7 +402,7 @@ span a, p a, li a{
     h2 {
         font-size: 222%;
         @media screen and (max-width: 1024px) {
-            font-size: 6vw;
+            font-size: 5vw;
         }
     }
     h4 {
@@ -410,9 +410,9 @@ span a, p a, li a{
         a {
             color: #0c318f;
         }
-        /* @media screen and (max-width: 1024px) {
-            font-size: 4vw;
-        } */
+        @media screen and (max-width: 1024px) {
+            font-size: 3vw;
+        }
     }
     div {
         flex-direction: column;
@@ -424,9 +424,9 @@ span a, p a, li a{
                 img {
                     height: 27px;
                 }
-                /* @media screen and (max-width: 1024px) {
-                    font-size: 4vw;
-                } */
+                @media screen and (max-width: 1024px) {
+                    font-size: 3vw;
+                }
             }
         }
     }
@@ -434,7 +434,7 @@ span a, p a, li a{
         font-style: italic;
         color: gray;
         @media screen and (max-width: 1024px) {
-            /* font-size: 4vw; */
+            font-size: 3vw;
             text-align: justify;
         }
     }
