@@ -41,14 +41,18 @@
     window.addEventListener("scroll", function () {
         if (document.body.clientWidth <= 1024) {
             if (sticky.getBoundingClientRect().top <= 110) {
+                sticky.classList.remove("sticky_nontop");
                 sticky.classList.add("sticky_top");
             } else {
+                sticky.classList.add("sticky_nontop");
                 sticky.classList.remove("sticky_top");
             }
         } else {
             if (sticky.getBoundingClientRect().top <= 64) {
+                sticky.classList.remove("sticky_nontop");
                 sticky.classList.add("sticky_top");
             } else {
+                sticky.classList.add("sticky_nontop");
                 sticky.classList.remove("sticky_top");
             }
         }
