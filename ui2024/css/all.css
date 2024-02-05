@@ -71,9 +71,6 @@ span a, p a, li a{
     flex-basis: 1;
     top: 64px;
     flex-direction: column;
-    & .navigator {
-        border-bottom: 3px solid rgb(233, 233, 233);
-    }
     & .sticky_row {
         display: flex;
         & a {
@@ -99,6 +96,15 @@ span a, p a, li a{
     }
     @media screen and (max-width: 1024px) {
         top: 110px;
+    }
+}
+.sticky_nontop {
+    background-color: white;
+    & .navigator {
+        border-bottom: 3px solid rgb(233, 233, 233);
+    }
+    & .sticky_row a {
+        color: rgb(33, 33, 33);
     }
 }
 .sticky_top {
