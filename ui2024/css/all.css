@@ -71,11 +71,11 @@ span a, p a, li a{
     flex-basis: 1;
     background-color: rgb(233, 233, 233);
     border-bottom: 3px solid white;
-    .navigator {
-        border-bottom: 3px solid white;
-    }
     top: 64px;
     flex-direction: column;
+    & .navigator {
+        border-bottom: 3px solid white;
+    }
     & .sticky_row {
         display: flex;
         & a {
@@ -215,7 +215,7 @@ span a, p a, li a{
 }
 @media screen and (max-width: 1024px) {
     .block_left div .person_container {
-        h4, span {
+        & h4, span {
             font-size: 66%;
         }
     }
@@ -303,7 +303,7 @@ span a, p a, li a{
     flex-grow: 1;
     display: flex;
     align-items: center;
-    span {
+    & span {
         font-size: 17px;
         color: #0c318f;
     }
@@ -364,7 +364,7 @@ span a, p a, li a{
 }
 @media screen and (max-width: 1024px) {
     .block_left div .event_container a div div {
-        h2, h3, span {
+        & h2, h3, span {
             font-size: 66%;
         }
     }
@@ -407,11 +407,11 @@ span a, p a, li a{
     }
     & h4 {
         font-weight: normal;
-        a {
-            color: #0c318f;
-        }
         @media screen and (max-width: 1024px) {
             font-size: 33px;
+        }
+        & a {
+            color: #0c318f;
         }
     }
     & div {
