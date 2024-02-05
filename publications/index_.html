@@ -48,16 +48,16 @@
         url: 'https://scholar.google.com/citations?user=dgYJ6esAAAAJ'
     }, {
         name: 'Hongyang Li',
-        url: 'https://lihongyang.info'
+        url: 'https://scholar.google.com/citations?user=Hfrih1EAAAAJ'
     }, {
         name: 'Xiaosong Jia',
-        url: 'https://jiaxiaosong1002.github.io'
+        url: 'https://scholar.google.com/citations?user=JeFQwxUAAAAJ'
     }, {
         name: 'Junchi Yan',
-        url: 'https://thinklab.sjtu.edu.cn'
+        url: 'https://scholar.google.com/citations?user=ga230VoAAAAJ'
     }, {
         name: 'Andreas Geiger',
-        url: 'https://www.cvlibs.net'
+        url: 'https://scholar.google.com/citations?user=SrVnrPcAAAAJ'
     }, {
         name: 'Yu Qiao',
         url: 'https://scholar.google.com/citations?user=gFtI-8QAAAAJ'
@@ -84,25 +84,23 @@
         }
         return h
     }
-
   
-  function cur(a) {
-    var h = a.split(",")
-    var len = h.length;
-    var htm = ""
-    for (var i = 0; i < len; i++) {
-      var fh = (i == 0) ? "" : ", "
-      htm += fh + add_url(h[i].replace(/^\s+|\s+$/g, ""))
+    function cur(a) {
+        var h = a.split(",")
+        var len = h.length;
+        var htm = ""
+        for (var i = 0; i < len; i++) {
+            var fh = (i == 0) ? "" : ", "
+            htm += fh + add_url(h[i].replace(/^\s+|\s+$/g, ""))
+        }
+        return htm
     }
-    return htm
-  }
+
     addEventListener("load", () => {
         var authors_lists = document.getElementsByClassName("authors");
         for (var i = 0; i < authors_lists.length; i++) {
             authors_list = authors_lists[i];
-            // console.log(authors_list.textContent);
-            // authors_list.textContent = cur(authors_list.textContent);
-            // console.log(authors_list.textContent);
+            authors_list.innerHTML = cur(authors_list.textContent);
         }
     })
 </script>
