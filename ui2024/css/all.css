@@ -98,15 +98,6 @@ span a, p a, li a{
         top: 110px;
     }
 }
-.sticky_nontop {
-    background-color: white;
-    & .navigator {
-        border-bottom: 3px solid rgb(233, 233, 233);
-    }
-    & .sticky_row a {
-        color: rgb(33, 33, 33);
-    }
-}
 .sticky_top {
     background-color: #0c318f;
     & .navigator {
