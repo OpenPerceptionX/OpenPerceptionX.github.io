@@ -108,7 +108,7 @@ i {
     display: flex;
     flex-direction: row;
     align-items: center;
-    img {
+    & img {
         width: 33px !important;
         margin-right: 11px;
     }
