@@ -396,7 +396,7 @@ span a, p a, li a{
     flex-direction: column;
     justify-content: center;
     h2, h4, div, span {
-        margin: 7px 0;
+        margin: 5px 0;
         padding: 0;
     }
     h2 {
@@ -419,6 +419,7 @@ span a, p a, li a{
         div {
             flex-direction: row;
             a {
+                font-weight: normal;
                 margin-right: 22px;
                 color: #0c318f;
                 img {
