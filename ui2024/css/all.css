@@ -385,7 +385,7 @@ span a, p a, li a{
     align-items: center;
     margin-right: 22px;
     a img {
-        width: 17vw;
+        width: max(17vw, 384px);
         @media screen and (max-width: 1024px) {
             width: 100%;
         }
