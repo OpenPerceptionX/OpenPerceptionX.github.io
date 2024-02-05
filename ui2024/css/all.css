@@ -412,6 +412,7 @@ span a, p a, li a{
         }
         & a {
             color: #0c318f;
+            font-weight: normal;
         }
     }
     & div {
