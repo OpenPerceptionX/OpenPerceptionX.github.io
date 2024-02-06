@@ -67,9 +67,9 @@ span a, p a, li a{
 .sticky {
     position: -webkit-sticky;
     position: sticky;
-    z-index: 900;
+    z-index: 3000;
     flex-basis: 1;
-    top: 64px;
+    top: 0px;
     flex-direction: column;
     & .sticky_row {
         display: flex;
@@ -96,7 +96,7 @@ span a, p a, li a{
     }
     @media screen and (max-width: 1024px) {
         background-color: #0c318f;
-        top: 110px;
+        /* top: 110px; */
         & .navigator {
             border-bottom: 3px solid white;
         }
