@@ -41,8 +41,10 @@
     window.addEventListener("scroll", function () {
         if (sticky.getBoundingClientRect().top <= 64) {
             sticky.classList.add("sticky_top");
+            header.style.display = "none";
         } else {
             sticky.classList.remove("sticky_top");
+            header.style.display = "block";
         }
     })
 </script>

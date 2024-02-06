@@ -45,8 +45,10 @@
         if (sticky.getBoundingClientRect().top <= 64) {
             sticky.classList.add("sticky_top");
             sticky_top_img.src = "/assets/icon/top_white.png";
+            header.style.display = "none";
         } else {
             sticky.classList.remove("sticky_top");
+            header.style.display = "block";
             if (document.body.clientWidth > 1024) {
                 sticky_top_img.src = "/assets/icon/top.png";
             }
