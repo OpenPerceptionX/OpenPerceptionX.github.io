@@ -1,0 +1,61 @@
+.banner {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(33, 33, 33);
+}
+.banner_container div {
+    display: flex;
+    margin-top: 1vh;
+}
+.banner_title_en span {
+    font-size: 9vh;
+    font-weight: bold;
+    color: rgb(233, 233, 233);
+    text-align: left;
+    @media screen and (max-width: 1024px) {
+        font-size: 7vh;
+    }
+}
+.banner_subtitle_en span {
+    font-size: 3vh;
+    color: rgb(233, 233, 233);
+    text-align: left;
+}
+
+
+
+
+.block_title {
+    margin: 0;
+}
+.block_title h1 {
+    font-size: 333%;
+    margin: 0;
+}
+.block_title h3 {
+    margin: 0;
+    font-weight: normal;
+}
+
+
+
+.left_right {
+    padding-top: max(55px, 5%);
+    padding-bottom: max(55px, 5%);
+}
+
+
+
+.left_right div .event_container {
+    grid-template-columns: repeat(auto-fill, 27vw);
+    margin: 0;
+}
+.left_right div .event_container a img {
+    height: 15vw;
+}
+
+
+
+.publication_container div .publication_container_second h2 {
+    font-size: 167%;
+}
