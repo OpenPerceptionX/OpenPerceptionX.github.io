@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    -webkit-text-size-adjust: none;
+    font-family: "San Francisco", "system-ui";
+    text-transform: none;
+    color: rgb(33, 33, 33);
+}
+
+
+
+.white {
+    color: white;
+}
+.Owhite {
+    color: rgb(233, 233, 233);
+}
+.Oblue {
+    color: #00a0e8;
+}
+.hoverOblue:hover {
+    opacity: 1;
+    color: #00a0e8;
+}
+.Odarkblue {
+    color: #0c318f;
+}
+.gray {
+    color: gray;
+}
+
+
+
+code {
+    color: #00a0e8;
+    background-color: rgba(0, 160, 232, .23);
+    padding: 0 3px;
+    user-select: all;
+    margin: 0 3px;
+    font-size: inherit;
+    text-decoration: none;
+    font-weight: bold;
+}
+a, i, b {
+    font-size: inherit;
+    text-decoration: none;
+    color: inherit;
+}
+span, p, td, li {
+    font-size: 16px;
+    font-weight: normal;
+}
+h6 {
+    font-size: 20px;
+    font-weight: normal;
+    margin: 0;
+}
+h5 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+h4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0;
+}
+h1 {
+    font-size: 64px;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+
+.header li, .header a {
+    font-weight: bold;
+    @media screen and (max-width: 1024px) {
+        font-size: 32px;
+    }
+}
+.footer_third_row span, .footer_third_row span a {
+    font-size: 12px;
+}
+
+
+
+.sticky {
+    font-weight: bold;
+}
+
+
+.citation {
+    font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+}

@@ -1,0 +1,294 @@
+body {
+    margin: 0;
+}
+
+
+
+p, span, li {
+    text-align: justify;
+}
+br {
+    user-select: none;
+}
+img {
+    user-select: none;
+}
+li {
+    list-style-type: circle;
+}
+
+
+
+a:any-link:hover, a:-webkit-any-link:hover {
+    opacity: .67;
+}
+a .link_img {
+    display: none;
+    content: url(/assets/icon/link.png);
+}
+a:hover .link_img {
+    display: inline;
+    height: 20px;
+}
+
+
+
+.banner_container, .block, .block_left, .block_right, .block_center, .block_footer, .block_header {
+    display: flex;
+    flex-basis: 0;
+    padding: 0 max(55px, 5%);
+}
+.banner_container {
+    height: 88%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.block_left {
+    flex-direction: row;
+}
+.block_right {
+    flex-direction: row-reverse;
+    background-color: rgb(233, 233, 233);
+}
+.left_right {
+    padding-top: max(33px, 3%);
+    padding-bottom: max(33px, 3%);
+    @media screen and (max-width: 1024px) {
+        padding-bottom: max(55px, 5%);
+    }
+}
+.block_left div, .block_right div {
+    display: flex;
+    flex-basis: 0;
+    flex-direction: column;
+}
+@media screen and (max-width: 1024px) {
+    .block_left, .block_right {
+        flex-direction: column;
+    }
+}
+.block_center {
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+.navigator {
+    border-bottom: 3px solid rgb(233, 233, 233);
+    flex-grow: 1;
+}
+.navigator a, .navigator br {
+    margin-right: max(22px, 2%);
+    text-wrap: nowrap;
+    @media screen and (max-width: 1024px) {
+        display: none;
+    }
+}
+
+
+
+.block_left div .person_two_column {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 45%);
+    justify-content: space-between;
+    column-gap: max(55px, 5%);
+}
+.block_left div .person_container, .block_left div .person_two_column div .person_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    justify-content: space-between;
+    gap: 33px;
+    margin-bottom: max(33px, 3%);
+}
+.block_left div .person_container div img, .block_left div .person_two_column div .person_container div img {
+    width: 100%;
+}
+.block_left div .person_container div h4, .block_left div .person_two_column div .person_container div h4 {
+    margin: 11px 0;
+    text-align: left;
+}
+.block_left div .person_container div span, .block_left div .person_two_column div .person_container div span {
+    margin-bottom: 7px;
+    text-align: left;
+}
+.block_left div .person_container div div, .block_left div .person_two_column div .person_container div div {
+    border-bottom: 3px solid rgb(233, 233, 233);
+}
+@media screen and (max-width: 1024px) {
+    .block_left div .person_two_column {
+        grid-template-columns: repeat(auto-fill, 100%);
+    }
+    .block_left div .person_container, .block_left div .person_two_column div .person_container {
+        grid-template-columns: repeat(auto-fill, 45%);
+    }
+}
+
+
+
+.brand_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 min(-33px, -3%);
+}
+.brand_container div {
+    margin: max(22px, 2%) max(33px, 3%);
+}
+.brand_container div img {
+    height: 66px;
+}
+.brand_container div {
+    display: flex;
+    flex-direction: row;
+}
+.brand_container div div {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0 0 0 7px ;
+}
+.brand_container div div div {
+    padding: 5px;
+    border-radius: 33px;
+    user-select: none;
+}
+@media screen and (max-width: 1024px) {
+    .brand_container div img {
+        height: 55px;
+    }
+}
+
+
+
+.block_left div .brand_container_title {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 min(-11px, -1%);
+}
+.block_left div .brand_container_title div {
+    margin: max(11px, 1%);
+}
+.block_left div .brand_container_title div img {
+    height: 33px;
+}
+
+
+
+.widget_container {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-between;
+}
+/* .widget_container br {
+    @media screen and (max-width: 1024px){
+        display: none;
+    }
+} */
+.widget_container a {
+    height: 33px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+.widget_container a img {
+    height: 100%;
+}
+
+
+
+.block_left div .event_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 512px);
+    justify-content: space-between;
+    gap: 22px;
+    margin-bottom: max(33px, 3%);
+    @media screen and (max-width: 1024px) {
+        grid-template-columns: repeat(auto-fill, 100%);
+    }
+}
+.block_left div .event_container a {
+    background-color: rgb(233, 233, 233);
+}
+.block_left div .event_container a img {
+    height: 288px;
+    width: 100%;
+    background-size: cover; 
+    background-position: left;
+    @media screen and (max-width: 1024px) {
+        height: 50vw;
+    }
+}
+.block_left div .event_container a div {
+    justify-content: space-between;
+    height: 224px;
+    @media screen and (max-width: 1024px) {
+        height: 320px;
+    }
+}
+.block_left div .event_container a div div {
+    padding: 0 33px 11px 33px;
+    & h2 {
+        margin-bottom: 0;
+    }
+    & span {
+        text-align: right;
+        margin: 11px 0;
+        padding-right: 11px;
+        border-right: 7px solid #00a0e8;
+    }
+}
+
+
+
+.publication_container div {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 22px;
+    @media screen and (max-width: 1024px) {
+        flex-direction: column;
+        margin: 33px 0;
+    }
+}
+.publication_container div .publication_container_first {
+    align-items: center;
+    margin-right: 22px;
+    & a img {
+        width: max(17vw, 384px);
+        @media screen and (max-width: 1024px) {
+            width: 100%;
+        }
+    }
+}
+.publication_container div .publication_container_second {
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    & h2, h4, div, span {
+        margin: 5px 0;
+        padding: 0;
+    }
+    & div {
+        flex-direction: column;
+        & div {
+            flex-direction: row;
+            & a {
+                margin-right: 22px;
+                & img {
+                    height: 27px;
+                    @media screen and (max-width: 1024px) {
+                        height: 44px;
+                    }
+                }
+            }
+        }
+    }
+    & span {
+        text-align: justify;
+    }
+}

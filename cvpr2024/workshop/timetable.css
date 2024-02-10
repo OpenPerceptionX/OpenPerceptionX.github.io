@@ -18,12 +18,6 @@
         height: 5vw;
         border-radius: 5vw;
         padding-left: 2vw;
-        font-size: 2vw;
-    }
-}
-@media screen and (max-width: 1024px) {
-    .timetable_select {
-        font-size: 3vw;
     }
 }
 
