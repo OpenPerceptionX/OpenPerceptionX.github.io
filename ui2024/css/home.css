@@ -55,7 +55,19 @@
 }
 
 
-
-.publication_container div .publication_container_second h2 {
-    font-size: 167%;
+.publication_container div {
+    &:last-child {
+        margin-bottom: 0px;
+    }
+}
+.publication_container div .publication_container_second {
+    & h2 {
+        font-size: x-large;
+    }
+    & div div {
+        align-items: center;
+        & a code {
+            font-size: large;
+        }
+    }
 }
