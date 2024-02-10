@@ -5,6 +5,7 @@
     flex-basis: 1;
     top: 0px;
     flex-direction: column;
+    font-weight: bold;
     & .sticky_row {
         display: flex;
         & a {
