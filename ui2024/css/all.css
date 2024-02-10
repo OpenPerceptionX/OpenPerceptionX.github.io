@@ -3,7 +3,13 @@ body {
     -webkit-text-size-adjust: none;
     font-family: "San Francisco", "system-ui";
 }
-
+.header li, .header a {
+    font-size: 32px;
+    font-weight: bold;
+}
+.footer_third_row span, .footer_third_row span a {
+    font-size: 12px;
+}
 
 
 h1, h2, h3, h4, h5, h6, p, span, a, li, table, div {
