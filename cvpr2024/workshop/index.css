@@ -1,14 +1,3 @@
-h2 {
-    font-size: 167%;
-}
-i {
-    color: gray;
-    display: inline-block;
-    margin: 3px 0;
-}
-
-
-
 .banner {
     width: 100%;
     height: 100%;
@@ -36,7 +25,6 @@ i {
     flex-direction: column;
 }
 .banner_logo_u span{
-    font-size: 17px;
     color: rgb(233, 233, 233);
     margin-bottom: 11px;
 }
@@ -50,8 +38,6 @@ i {
     flex-direction: row;
 }
 .banner_title span {
-    font-size: 66px;
-    font-weight: bold;
     color: rgb(233, 233, 233);
     text-align: left;
 }
@@ -59,15 +45,12 @@ i {
 
 
 .banner_title_sub span, .banner_title_sub span a {
-    font-size: 23px;
     color: rgb(233, 233, 233);
-    font-weight: bold;
 }
 
 
 
 .banner_content span {
-    font-size: 23px;
     color: rgb(233, 233, 233);
 }
 
@@ -92,14 +75,10 @@ i {
     margin: 0;
 }
 .track_title h1 {
-    font-size: 333%;
     margin: 0;
 }
 .track_title_span {
     margin-top: 11px;
-}
-.navigator a {
-    font-size: large;
 }
 
 
