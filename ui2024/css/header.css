@@ -66,7 +66,6 @@ header.white {
 }
 .header_right ul li a {
     color: white;
-    font-weight: bold;
     padding: 11px;
     width: 100%;
 }
@@ -127,7 +126,6 @@ header.white {
           margin: 0;
             & li {
                 width: 100%;
-                font-size: 33px;
                 height: 66px;
                 line-height: 66px;
                 padding: 22px 6% 44px 6%;
