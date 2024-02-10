@@ -4,8 +4,10 @@ body {
     font-family: "San Francisco", "system-ui";
 }
 .header li, .header a {
-    font-size: 32px;
     font-weight: bold;
+    @media screen and (max-width: 1024px) {
+        font-size: 32px;
+    }
 }
 .footer_third_row span, .footer_third_row span a {
     font-size: 12px;
