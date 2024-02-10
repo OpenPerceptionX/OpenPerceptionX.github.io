@@ -45,39 +45,60 @@ a, i, b {
     text-decoration: none;
     color: inherit;
 }
-span, p, td, li {
+span, p, td, th, li, select {
     font-size: 16px;
     font-weight: normal;
+    @media screen and (max-width: 1024px) {
+        font-size: 24px;
+    }
 }
 h6 {
     font-size: 20px;
     font-weight: normal;
     margin: 0;
+    @media screen and (max-width: 1024px) {
+        font-size: 28px;
+    }
 }
 h5 {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     margin: 0;
+    @media screen and (max-width: 1024px) {
+        font-size: 28px;
+    }
 }
 h4 {
     font-size: 20px;
     font-weight: bold;
     margin: 0;
+    @media screen and (max-width: 1024px) {
+        font-size: 28px;
+    }
 }
 h3 {
     font-size: 24px;
     font-weight: bold;
     margin: 0;
+    @media screen and (max-width: 1024px) {
+        font-size: 32px;
+    }
 }
 h2 {
     font-size: 32px;
     font-weight: bold;
     margin: 0;
+    @media screen and (max-width: 1024px) {
+        font-size: 40px;
+    }
 }
 h1 {
     font-size: 64px;
     font-weight: bold;
     margin: 0;
+    @media screen and (max-width: 1024px) {
+        font-size: 72px;
+    }
 }
 
 
@@ -90,6 +111,9 @@ h1 {
 }
 .footer_third_row span, .footer_third_row span a {
     font-size: 12px;
+    @media screen and (max-width: 1024px) {
+        font-size: 16px;
+    }
 }
 
 
