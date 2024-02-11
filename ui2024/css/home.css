@@ -8,33 +8,11 @@
     margin-top: 1vh;
 }
 .banner_title_en span {
-    font-size: 9vh;
-    font-weight: bold;
-    color: rgb(233, 233, 233);
     text-align: left;
-    @media screen and (max-width: 1024px) {
-        font-size: 7vh;
-    }
 }
 .banner_subtitle_en span {
     font-size: 3vh;
-    color: rgb(233, 233, 233);
     text-align: left;
-}
-
-
-
-
-.block_title {
-    margin: 0;
-}
-.block_title h1 {
-    font-size: 333%;
-    margin: 0;
-}
-.block_title h3 {
-    margin: 0;
-    font-weight: normal;
 }
 
 
@@ -60,14 +38,6 @@
         margin-bottom: 0px;
     }
 }
-.publication_container div .publication_container_second {
-    & h2 {
-        font-size: x-large;
-    }
-    & div div {
-        align-items: center;
-        & a code {
-            font-size: large;
-        }
-    }
+.publication_container div .publication_container_second div div {
+    align-items: center;
 }
