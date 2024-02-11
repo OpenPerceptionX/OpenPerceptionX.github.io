@@ -60,15 +60,7 @@ h6 {
         font-size: 30px;
     }
 }
-h5 {
-    font-size: 20px;
-    font-weight: bold;
-    margin: 0;
-    @media screen and (max-width: 1024px) {
-        font-size: 30px;
-    }
-}
-h4 {
+h5, h4 {
     font-size: 20px;
     font-weight: bold;
     margin: 0;
