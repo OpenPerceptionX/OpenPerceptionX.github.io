@@ -6,10 +6,12 @@
     background-position: center;
     background-blend-mode: overlay;
     background-color: rgb(33, 33, 33, .7);
+    @media screen and (max-width: 1024px) {
+        height: 23vh;
+    }
 }
 .banner_container div {
     display: flex;
-    margin-top: 1vh;
 }
 .banner_title_en span {
     text-align: left;
