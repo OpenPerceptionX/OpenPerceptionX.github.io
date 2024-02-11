@@ -29,7 +29,6 @@
 }
 .timetable_table table thead {
     background-color: gray;
-    color: white;
 }
 .timetable_table table tbody tr {
     &:nth-child(2n) {

@@ -38,20 +38,7 @@
     flex-direction: row;
 }
 .banner_title span {
-    color: rgb(233, 233, 233);
     text-align: left;
-}
-
-
-
-.banner_title_sub span, .banner_title_sub span a {
-    color: rgb(233, 233, 233);
-}
-
-
-
-.banner_content span {
-    color: rgb(233, 233, 233);
 }
 
 
@@ -66,19 +53,6 @@
         height: 44px;
         margin-right: 11px;
     }
-}
-
-
-
-
-.track_title {
-    margin: 0;
-}
-.track_title h1 {
-    margin: 0;
-}
-.track_title_span {
-    margin-top: 11px;
 }
 
 
