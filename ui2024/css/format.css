@@ -274,6 +274,7 @@ a:hover .link_img {
         flex-direction: column;
         & div {
             flex-direction: row;
+            align-items: center;
             & a {
                 margin-right: 22px;
                 & img {
