@@ -3,7 +3,13 @@ body {
     -webkit-text-size-adjust: none;
     font-family: "San Francisco", "system-ui";
     text-transform: none;
-    color: rgb(33, 33, 33);
+    color: #212121;
+}
+.mobilevisible {
+    display: none;
+    @media screen and (max-width: 1024px) {
+        display: block;
+    }
 }
 
 
