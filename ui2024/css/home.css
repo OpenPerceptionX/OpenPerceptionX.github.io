@@ -62,3 +62,25 @@
         }
     }
 }
+
+
+
+.research_container {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, 47%);
+    gap: 33px;
+    justify-content: space-between;
+    & a {
+        height: 256px;
+        background-size: cover; 
+        background-position: center;
+        background-blend-mode: overlay;
+        background-color: rgb(33, 33, 33, .3);
+        & h2 {
+            margin: 33px;
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        grid-template-columns: repeat(auto-fill, 100%);
+    }
+}
