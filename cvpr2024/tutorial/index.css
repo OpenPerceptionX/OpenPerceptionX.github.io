@@ -3,12 +3,9 @@
     height: 100%;
     background-image: url(/assets/background/seattle_gen.jpg);
     background-size: cover; 
-    background-position: 60%;
+    background-position: center;
     background-blend-mode: overlay;
     background-color: rgb(33, 33, 33, .7);
-    @media screen and (max-width: 1024px) {
-        background-position: 51%;
-    }
 }
 .banner_container div {
     display: flex;
