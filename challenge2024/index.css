@@ -1,5 +1,5 @@
-h2 {
-    font-size: 167%;
+li a {
+    color: #00a0e8;
 }
 
 
@@ -28,8 +28,6 @@ h2 {
     flex-direction: column;
 }
 .banner_logo_u span{
-    font-size: 17px;
-    color: rgb(233, 233, 233);
     margin-bottom: 11px;
 }
 .banner_logo_u img {
@@ -38,34 +36,8 @@ h2 {
 
 
 
-/* .banner_title_cn {
-    flex-direction: row;
-}
-.banner_title_cn img {
-    height: 128px;
-    margin-right: 33px;
-}
-.banner_title_cn span {
-    font-size: 48px;
-    font-weight: bold;
-    color: rgb(233, 233, 233);
-} */
-
-
-
 .banner_title_en span {
-    font-size: 66px;
-    font-weight: bold;
-    color: rgb(233, 233, 233);
     text-align: left;
-}
-
-
-
-.banner_content span, .banner_content span a {
-    font-size: 23px;
-    color: rgb(233, 233, 233);
-    /* font-weight: bold; */
 }
 
 
@@ -115,14 +87,9 @@ h2 {
     margin: 0;
 }
 .glance div p a {
-    color: rgb(33, 33, 33);
-    font-weight: bold;
     user-select: none;
 }
 @media screen and (max-width: 1024px) {
-    .glance a {
-        font-size: 40%;
-    }
     .notinmobile {
         display: none;
     }
@@ -134,7 +101,6 @@ h2 {
     margin: 0;
 }
 .track_title h1 {
-    font-size: 333%;
     margin: 0;
 }
 .track_fig {
