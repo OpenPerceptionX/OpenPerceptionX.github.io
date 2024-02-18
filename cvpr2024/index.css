@@ -9,6 +9,7 @@
 
 
 .banner_container {
+    height: 100%;
     justify-content: center;
     align-items: center;
 }
@@ -20,10 +21,17 @@
     display: flex;
     justify-content: space-evenly;
     align-items: flex-end;
+    margin-bottom: 10vh;
+    @media screen and (max-width: 1536px) {
+        justify-content: space-between;
+    }
 }
 .banner_logo img {
-    width: 20vw;
+    width: max(17vw, 384px);
     height: fit-content;
+    @media screen and (max-width: 1536px) {
+        width: 40vw;
+    }
 }
 
 
@@ -31,6 +39,7 @@
 .container {
     width: 100%;
     display: grid;
+    gap: 5vh;
     grid-template-columns: repeat(auto-fill, 27vw);
     justify-content: space-between;
     & a {
@@ -49,7 +58,10 @@
             }
         }
     }
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1536px) {
         grid-template-columns: repeat(auto-fill, 100%);
+        & a {
+            height: 17vh;
+        }
     }
 }
