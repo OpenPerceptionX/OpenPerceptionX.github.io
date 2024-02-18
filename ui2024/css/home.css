@@ -22,17 +22,20 @@
 }
 
 
+@media screen and (min-width: 1024px) {
+    .left_right div .event_container {
+        grid-template-columns: repeat(auto-fill, 27vw);
+        margin: 0;
+    }
+    .left_right div .event_container a img {
+        height: 15vw;
+    }
+}
 
-.left_right div .event_container {
-    grid-template-columns: repeat(auto-fill, 27vw);
-    margin: 0;
-}
-.left_right div .event_container a img {
-    height: 15vw;
-}
 
 
 .publication_container div {
+    margin: 11px 0;
     &:last-child {
         margin-bottom: 0px;
     }
