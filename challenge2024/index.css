@@ -93,6 +93,9 @@ li a {
     .notinmobile {
         display: none;
     }
+    .glance b {
+        font-size: smaller;
+    }
 }
 
 
