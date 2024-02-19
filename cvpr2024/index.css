@@ -24,14 +24,13 @@
     margin-bottom: 10vh;
     @media screen and (max-width: 1536px) {
         margin-bottom: 7vh;
-        justify-content: space-between;
     }
 }
 .banner_logo img {
     width: max(17vw, 384px);
     height: fit-content;
     @media screen and (max-width: 1536px) {
-        width: 40vw;
+        width: 30vw;
         height: auto;
     }
 }
