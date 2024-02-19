@@ -30,7 +30,7 @@
     width: max(17vw, 384px);
     height: fit-content;
     @media screen and (max-width: 1536px) {
-        width: 30vw;
+        width: 27vw;
         height: auto;
     }
 }
