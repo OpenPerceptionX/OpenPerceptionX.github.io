@@ -29,9 +29,10 @@
 }
 .banner_logo img {
     width: max(17vw, 384px);
-    height: fit-content !important;
+    height: fit-content;
     @media screen and (max-width: 1536px) {
         width: 40vw;
+        height: auto;
     }
 }
 
