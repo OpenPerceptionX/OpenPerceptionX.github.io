@@ -16,7 +16,7 @@
 
                 <li><a href="/team/">Team</a></li>
 
-                <li onclick="drop()" class="dropdown_button">
+                <li onclick="drop()">
                     <a>Research</a>
                     <ul class="dropdown">
                         <li><a href="/DriveAGI.html" onclick="stop_propagation()">DriveAGI</a></li>
@@ -26,7 +26,7 @@
                     </ul>
                 </li>
 
-                <li onclick="drop()" class="dropdown_button">
+                <li onclick="drop()">
                     <a>Event</a>
                     <ul class="dropdown">
                         <li><a href="/cvpr2024/workshop/" onclick="stop_propagation()">Workshop @ CVPR 2024</a></li>
@@ -82,7 +82,7 @@
 
 <script>
     if (window.innerWidth > 1024) {
-        eles = document.getElementsByClassName("dropdown_button");
+        eles = document.getElementsByClassName("header");
         for (let i = 0; i < eles.length; i++) {
             eles[i].addEventListener("mouseover", () => {
                 as_white();
