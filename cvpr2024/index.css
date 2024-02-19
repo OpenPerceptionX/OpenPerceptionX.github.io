@@ -23,12 +23,13 @@
     align-items: flex-end;
     margin-bottom: 10vh;
     @media screen and (max-width: 1536px) {
+        margin-bottom: 7vh;
         justify-content: space-between;
     }
 }
 .banner_logo img {
     width: max(17vw, 384px);
-    height: fit-content;
+    height: fit-content !important;
     @media screen and (max-width: 1536px) {
         width: 40vw;
     }
@@ -39,7 +40,7 @@
 .container {
     width: 100%;
     display: grid;
-    gap: 5vh;
+    gap: 3vh;
     grid-template-columns: repeat(auto-fill, 27vw);
     justify-content: space-between;
     & a {
