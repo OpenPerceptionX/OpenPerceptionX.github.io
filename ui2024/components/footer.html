@@ -23,10 +23,7 @@
                     <img src="/assets/brand/shanghai_ai_lab_.png" class="footer_logo_color"/>
                 </a>
             </div>
-            <div class="footer_align_right">
-                <!-- TODO mailing list -->
-                <!-- <img src="/assets/icon/OpenDriveLab_white.png" style="width: 200px;"/> -->
-            </div>
+            <div class="footer_align_right"></div>
         </div>
 
 
@@ -79,20 +76,37 @@
 
         <br><br>
         <div class="footer_navigator"></div>
-        <br>
+        <br><br>
 
+
+
+        <!-- <div class="footer_subscribe">
+            <div class="footer_align_left"></div>
+            <div class="footer_align_right">
+                <span class="Owhite">Subscribe to our newsletter & stay updated!</span>
+                <form>
+                    <input id="subscribe_input" placeholder="@email">
+                    <button id="subscribe_button" class="gray" disabled>Submit</button>
+                </form>
+            </div>
+        </div>
+
+
+
+        <br> -->
+        
 
 
         <div class="footer_third_row">
-            <span>OpenDriveLab at Shanghai AI Lab</span>
+            <span class="gray">OpenDriveLab at Shanghai AI Lab</span>
             <br>
-            <span>© 2021 - 2024 All Rights Reserved</span>
+            <span class="gray">© 2021 - 2024 All Rights Reserved</span>
             <br><br>
             <!-- <span style="user-select: all;">上海市徐汇区龙文路129号国际传媒港L1栋10层C区</span>
             <br>
             <span style="user-select: all;">Area C, Floor 10, Building L1, 129 Longwen Rd, Shanghai</span>
             <br> -->
-            <span><a href="https://beian.miit.gov.cn/" target="_blank">沪ICP备2021009351号</a></span>
+            <span class="gray"><a href="https://beian.miit.gov.cn/" target="_blank">沪ICP备2021009351号</a></span>
         </div>
 
 
@@ -103,3 +117,24 @@
 
     </div>
 </div>
+
+
+
+<!-- <script>
+    subscribe_input.addEventListener("input", () => {
+        let val = subscribe_input.value;
+        let empty = val == null || val == "";
+        let valid = val.match(
+            /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        );
+        if (!empty && valid) {
+            subscribe_button.disabled = false;
+            subscribe_button.classList.add("Owhite");
+            subscribe_button.classList.remove("gray");
+        } else {
+            subscribe_button.disabled = true;
+            subscribe_button.classList.add("gray");
+            subscribe_button.classList.remove("Owhite");
+        }
+    })
+</script> -->

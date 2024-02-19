@@ -52,6 +52,7 @@
 }
 
 
+
 .footer_second_row a img {
     height: 33px;
 }
@@ -71,6 +72,42 @@
 .footer_navigator {
     border-bottom: 1px solid gray;
 }
-.footer_third_row span, .footer_third_row span a {
-    color: gray;
+
+
+
+.footer_subscribe {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    & .footer_align_right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100%;
+        & span {
+            width: 100%;
+            text-align: left;
+            margin-bottom: 7px;
+        }
+        & form {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            border-bottom: 1px solid gray;
+            & input {
+                color: rgb(233, 233, 233);
+                background-color: transparent;
+                border: 0;
+                padding: 11px 0;
+                width: 80%;
+                outline: none;
+            }
+            & button {
+                background-color: transparent;
+                border: 0;
+                text-align: left;
+            }
+        }
+    }
 }
