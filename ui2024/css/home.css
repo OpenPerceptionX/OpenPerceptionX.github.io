@@ -100,7 +100,7 @@
         & .form_double {
             display: grid;
             justify-content: space-between;
-            grid-template-columns: repeat(auto-fill, 44%);
+            grid-template-columns: repeat(auto-fill, 48%);
         }
         & .form_button {
             flex-direction: row;
