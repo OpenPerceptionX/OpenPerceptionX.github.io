@@ -19,6 +19,10 @@
 .left_right {
     padding-top: max(55px, 5%);
     padding-bottom: max(55px, 5%);
+    @media screen and (max-width: 1024px) {
+        padding-top: max(77px, 7%);
+        padding-bottom: max(99px, 9%);
+    }
 }
 
 
@@ -91,7 +95,7 @@
 
 .feedback_form {
     background-color: rgb(33, 33, 33);
-    border: 1px solid rgb(33, 33, 33);
+    border: 3px solid rgb(33, 33, 33);
     & form {
         width: 100%;
         display: flex;
