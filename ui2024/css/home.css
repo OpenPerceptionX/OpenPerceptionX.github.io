@@ -58,7 +58,9 @@
         }
         & img {
             height: 84px;
-            width: fit-content;
+            @media screen and (min-width: 1024px) {
+                width: fit-content;
+            }
         }
     }
 }
