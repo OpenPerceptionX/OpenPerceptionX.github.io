@@ -112,10 +112,10 @@
         }
         & input, textarea {
             background-color: transparent;
-            border: 0;
             padding: 11px 0;
             width: 100%;
             outline: none;
+            border: 1px solid rgb(33, 33, 33);
             border-bottom: 1px solid gray;
             margin-bottom: 33px;
         }
