@@ -1,13 +1,19 @@
-<!DOCTYPE html>
-<html lang="en" id="htmlbody">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loading...</title>
+    <title>redirecting</title>
 </head>
+
+
+
+<body>
+    <p>redirecting...</p>
+</body>
+
+
+
 <body>
     <script>
         var doc = document.getElementById('htmlbody');
+        console.log(this)
         xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
             if (this.readyState == 4) {
@@ -18,8 +24,7 @@
                 if (this.status == 404) doc.innerHTML = "Page not found.";
             }
         }
-        xhttp.open("GET", "index.html", true);
-        xhttp.send();
+        // xhttp.open("GET", "index.html", true);
+        // xhttp.send();
     </script>
 </body>
-</html>
