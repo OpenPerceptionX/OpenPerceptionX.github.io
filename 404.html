@@ -22,6 +22,11 @@
 
 
 <script>
-    var path = new URL(document.URL).pathname;
-    window.location = '/'
+    switch (new URL(document.URL).pathname) {
+        case "/lihongyang.html": 
+            window.location = "https://lihongyang.info/";
+            break
+        default:
+            window.location = "/";
+    };
 </script>
