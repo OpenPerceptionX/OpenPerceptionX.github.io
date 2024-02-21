@@ -51,7 +51,7 @@ a, i, b {
     text-decoration: none;
     color: inherit;
 }
-span, p, td, th, li, select, button, input {
+span, p, td, th, li, select, button, input, textarea {
     font-size: 16px;
     font-weight: normal;
     @media screen and (max-width: 1024px) {
