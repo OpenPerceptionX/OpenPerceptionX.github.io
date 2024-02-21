@@ -33,6 +33,8 @@
             window.location = "/challenge204/";
             break
         default:
-            window.location = "/";
+            // window.location = "/";
+            console.log(new URL(document.URL).pathname);
+            console.log(document.URL);
     };
 </script>
