@@ -8,6 +8,11 @@
     <link href="/ui2024/css/format.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="/ui2024/css/font.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="/ui2024/css/home.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/ui2024/css/swiper.css" rel="stylesheet" type="text/css" media="all"/>
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script src="/ui2024/js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
@@ -44,13 +49,45 @@
     
 
     <div class="banner">
-        <div class="banner_container">
-            <div class="banner_title_en">
-                <h1 class="Owhite">Publication</h1>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <!-- slide -->
+                <div class="swiper-slide" style="background-image: url(/style/img/bg/drivelm.jpg);">
+                    <div class="banner_container">
+                        <div class="banner_title_en">
+                            <h1 class="Owhite">Publication</h1>
+                        </div>
+                        <div class="banner_subtitle_en">
+                            <h6 class="Owhite">We position OpenDriveLab as one of the most top research teams around globe, since we've got talented people and published work at top venues.</h6>
+                        </div>
+                    </div>
+                </div>
+                <!-- slide -->
+                <div class="swiper-slide" style="background-image: url(/style/img/bg/drivelm.jpg);">
+                    <div class="banner_container">
+                        <div class="banner_title_en">
+                            <h1 class="Owhite">Publication</h1>
+                        </div>
+                        <div class="banner_subtitle_en">
+                            <h6 class="Owhite">We position OpenDriveLab as one of the most top research teams around globe, since we've got talented people and published work at top venues.</h6>
+                        </div>
+                    </div>
+                </div>
+                <!-- slide -->
+                <div class="swiper-slide" style="background-image: url(/style/img/bg/drivelm.jpg);">
+                    <div class="banner_container">
+                        <div class="banner_title_en">
+                            <h1 class="Owhite">Publication</h1>
+                        </div>
+                        <div class="banner_subtitle_en">
+                            <h6 class="Owhite">We position OpenDriveLab as one of the most top research teams around globe, since we've got talented people and published work at top venues.</h6>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="banner_subtitle_en">
-                <h6 class="Owhite">We position OpenDriveLab as one of the most top research teams around globe, since we've got talented people and published work at top venues.</h6>
-            </div>
+            <!-- <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div> -->
+            <div class="swiper-pagination"></div>
         </div>
     </div>
 
@@ -301,12 +338,6 @@
 
 
 
-    <!-- <div class="block feedback_form" style="margin: 0;">
-        <div class="navigator"></div>
-    </div> -->
-    
-
-
 </body>
 
 
@@ -340,4 +371,26 @@
     contact_form_email_confirm.addEventListener("input", check_contact_form);
     contact_form_affiliation.addEventListener("input", check_contact_form);
     contact_form_message.addEventListener("input", check_contact_form);
+</script>
+
+
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 3,
+        centeredSlides: true,
+        autoplay: {
+            delay: 3333,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
 </script>

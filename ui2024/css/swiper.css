@@ -1,0 +1,41 @@
+.swiper {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(33, 33, 33);
+}
+.swiper-slide {
+    display: flex;
+    background-blend-mode: overlay; 
+    background-color: rgb(33, 33, 33, 0.3); 
+    background-size: cover; 
+    background-position: center;
+}
+
+
+
+.swiper-pagination {
+    text-align: left !important;
+    margin: 33px max(55px, 5%);
+}
+.swiper-pagination-bullet {
+    height: 5px !important;
+    width: 33px !important;
+    border-radius: 33px !important;
+    background-color: gray !important;
+    opacity: 1 !important;
+}
+.swiper-pagination-bullet-active {
+    background-color: rgb(233, 233, 233) !important;
+}
+
+
+
+.banner_container div {
+    display: flex;
+}
+.banner_title_en span {
+    text-align: left;
+}
+.banner_subtitle_en span {
+    text-align: left;
+}
