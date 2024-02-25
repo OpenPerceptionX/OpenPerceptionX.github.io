@@ -30,12 +30,23 @@
 
 
 
-.banner_container div {
-    display: flex;
+.banner_container_button a, .banner_container_button span {
+    opacity: .67;
 }
-.banner_title_en span {
-    text-align: left;
+.banner_container_button a:hover {
+    opacity: 1;
 }
-.banner_subtitle_en span {
-    text-align: left;
+
+
+
+@media screen and (max-width: 1024px) {
+    .drivelm_moblie {
+        background-position-x: 38%;
+    }
+    .uniad_mobile {
+        background-position-x: left;
+    }
+    .bev_survey_mobile {
+        background-position-x: 45%;
+    }
 }
