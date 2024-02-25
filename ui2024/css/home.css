@@ -3,16 +3,6 @@
     height: 100%;
     background-color: rgb(33, 33, 33);
 }
-.banner_container div {
-    display: flex;
-    margin-top: 1vh;
-}
-.banner_title_en span {
-    text-align: left;
-}
-.banner_subtitle_en span {
-    text-align: left;
-}
 
 
 
