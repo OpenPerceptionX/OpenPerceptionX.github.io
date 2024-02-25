@@ -29,9 +29,7 @@
 }
 
 
-.banner_container_title, .banner_container_subtitle {
-    text-shadow: rgb(33, 33, 33) 3px 3px 13px;
-}
+
 .banner_container_button a, .banner_container_button span {
     opacity: .67;
 }

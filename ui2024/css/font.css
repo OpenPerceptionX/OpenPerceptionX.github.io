@@ -33,6 +33,9 @@ body {
 .gray {
     color: gray;
 }
+.text_shadow {
+    text-shadow: rgb(33, 33, 33) 3px 3px 13px;
+}
 
 
 
