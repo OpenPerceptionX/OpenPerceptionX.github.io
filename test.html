@@ -98,7 +98,7 @@
             var jsonString = JSON.stringify(jsonObject);
 
             var xhr = new XMLHttpRequest();
-            xhr.open('POST', 'http://8.137.53.196:8000/signup/', true);
+            xhr.open('POST', 'https://openxlab.org.cn/gw/drivelab-register-api-service/signup/', true);
             xhr.setRequestHeader('Content-Type', 'application/json');
             xhr.onreadystatechange = function () {
                 if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
