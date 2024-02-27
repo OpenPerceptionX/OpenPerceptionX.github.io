@@ -331,7 +331,7 @@
     </div>
 
 
-<!-- 
+
     <div class="block_left left_right feedback_form">
 
         <div style="flex-grow: 7;">
@@ -347,34 +347,34 @@
         <div style="flex-grow: 1;"></div>
 
         <div style="flex-grow: 16;">
-            <form>
+            <form method="post" onsubmit="formContact()" enctype='application/json' id="contact_form">
                 <div class="form_double">
                     <span class="Owhite">First Name</span>
                     <span class="Owhite">Last Name</span>
-                    <input class="Owhite" id="contact_form_first_name" placeholder="name">
-                    <input class="Owhite" id="contact_form_last_name" placeholder="surname">
+                    <input class="Owhite" id="contact_form_first_name" placeholder="name" maxlength="32">
+                    <input class="Owhite" id="contact_form_last_name" placeholder="surname" maxlength="32">
                 </div>
                 <div class="form_double">
                     <span class="Owhite">Email Address</span>
                     <span class="Owhite">Confirm Email Address</span>
-                    <input class="Owhite" id="contact_form_email" placeholder="name.surname@opendrivelab.com">
-                    <input class="Owhite" id="contact_form_email_confirm" placeholder="name.surname@opendrivelab.com">
+                    <input class="Owhite" id="contact_form_email" placeholder="name.surname@opendrivelab.com" maxlength="100">
+                    <input class="Owhite" id="contact_form_email_confirm" placeholder="name.surname@opendrivelab.com" maxlength="100">
                 </div>
                 <div>
                     <span class="Owhite">Affiliation</span>
-                    <input class="Owhite" id="contact_form_affiliation" placeholder="OpenDriveLab">
+                    <input class="Owhite" id="contact_form_affiliation" placeholder="OpenDriveLab" maxlength="100">
                 </div>
                 <div>
                     <span class="Owhite">Message</span>
-                    <textarea class="Owhite" id="contact_form_message" placeholder="Artificial intelligence is..."></textarea>
+                    <textarea class="Owhite" id="contact_form_message" placeholder="Artificial intelligence is..." maxlength="200"></textarea>
                 </div>
                 <div class="form_button">
-                    <button id="contact_form_button" class="gray" disabled>Submit</button>
+                    <button id="contact_form_button" class="gray" disabled onclick="formContactSubmit()">Submit</button>
                 </div>
             </form>
         </div>
 
-    </div> -->
+    </div>
 
 
 
@@ -398,7 +398,6 @@
             contact_form_button.disabled = false;
             contact_form_button.classList.add("Owhite");
             contact_form_button.classList.remove("gray");
-            // contact_form_first_name.value = "";
         } else {
             contact_form_button.disabled = true;
             contact_form_button.classList.add("gray");
@@ -411,6 +410,48 @@
     contact_form_email_confirm.addEventListener("input", check_contact_form);
     contact_form_affiliation.addEventListener("input", check_contact_form);
     contact_form_message.addEventListener("input", check_contact_form);
+</script>
+
+
+
+<script>
+    function formContact() {
+        event.preventDefault()
+    }
+
+    function formContactSubmit() {
+        var formData = new FormData(contact_form);
+        formData.append("email", contact_form_email.value);
+        formData.append("message", contact_form_message.value);
+        formData.append("organization", contact_form_affiliation.value);
+        formData.append("first_name", contact_form_first_name.value);
+        formData.append("last_name", contact_form_last_name.value);
+
+        var jsonObject = {};
+        formData.forEach(function(value, key){
+            jsonObject[key] = value;
+        });
+        var jsonString = JSON.stringify(jsonObject);
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'https://drivelab.openxlab.org.cn/gw/drivelab-register-api-service/signup/', true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                alert('Message sent.');
+                contact_form_email.value = "";
+                contact_form_email_confirm.value = "";
+                contact_form_message.value = "";
+                contact_form_affiliation.value = "";
+                contact_form_first_name.value = "";
+                contact_form_last_name.value = "";
+                contact_form_button.disabled = true;
+                contact_form_button.classList.add("gray");
+                contact_form_button.classList.remove("Owhite");
+            }
+        };
+        xhr.send(jsonString);
+    }
 </script>
 
 
