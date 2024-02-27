@@ -88,9 +88,9 @@
             <div class="footer_align_left"></div>
             <div class="footer_align_right">
                 <span class="Owhite">Subscribe to our newsletter & stay updated!</span>
-                <form>
-                    <input class="Owhite" id="subscribe_input" placeholder="@email">
-                    <button id="subscribe_button" class="gray" disabled>Submit</button>
+                <form method="post" onsubmit="formSubscribe()" enctype='application/json' id="subscribe_form">
+                    <input class="Owhite" id="subscribe_input" placeholder="@email" name="email" maxlength="100">
+                    <button id="subscribe_button" class="gray" disabled onclick="formSubscribeSubmit()">Submit</button>
                 </form>
             </div>
         </div>
@@ -123,8 +123,8 @@
 </div>
 
 
-
-<!-- <script>
+<!-- 
+<script>
     subscribe_input.addEventListener("input", () => {
         let val = subscribe_input.value;
         let empty = val == null || val == "";
@@ -141,4 +141,41 @@
             subscribe_button.classList.remove("Owhite");
         }
     })
+</script>
+
+
+
+<script>
+    function formSubscribe() {
+        event.preventDefault()
+    }
+
+    function formSubscribeSubmit() {
+        var formData = new FormData(subscribe_form);
+        formData.append("email", subscribe_input.value);
+        formData.append("message", "");
+        formData.append("organization", "");
+        formData.append("first_name", "");
+        formData.append("last_name", "");
+
+        var jsonObject = {};
+        formData.forEach(function(value, key){
+            jsonObject[key] = value;
+        });
+        var jsonString = JSON.stringify(jsonObject);
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'https://drivelab.openxlab.org.cn/gw/drivelab-register-api-service/signup/', true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                alert('Subscribed');
+                subscribe_input.value = "";
+                subscribe_button.disabled = true;
+                subscribe_button.classList.add("gray");
+                subscribe_button.classList.remove("Owhite");
+            }
+        };
+        xhr.send(jsonString);
+    }
 </script> -->
