@@ -3,8 +3,8 @@ $(function () {
     var allData_4 = [
         {
             "Organization": "University of Tübingen",
-            "Country" : "/style/cvpr2023/img/country/DEU.svg",
-            "Rank": "1<img src='/style/cvpr2023/img/rank01.png' style='padding: 0px 0px 0px 5px; width: 20px; user-select: none;'/>",
+            "Country" : "/ui2023/cvpr2023/img/country/DEU.svg",
+            "Rank": "1<img src='/ui2023/cvpr2023/img/rank01.png' style='padding: 0px 0px 0px 5px; width: 20px; user-select: none;'/>",
             "team": "CS_Tu <br> <a href=\"/e2ead/AD23Challenge/Track_4_CS_Tu.pdf\">[paper]</a> <a href=\"https://arxiv.org/pdf/2306.07962.pdf\">[arXiv]</a> <a href=\"https://github.com/autonomousvision/tuplan_garage\">[code]</a>",
             "Score": 0.8952,
             "ch1_overall_score": 0.8289,
@@ -34,8 +34,8 @@ $(function () {
         },
         {
             "Organization": "Horizon Robotics<br>地平线",
-            "Country" : "/style/cvpr2023/img/country/CHN.svg",
-            "Rank": "2<img src='/style/cvpr2023/img/rank02.png' style='padding: 0px 0px 0px 5px; width: 20px; user-select: none;'/>",
+            "Country" : "/ui2023/cvpr2023/img/country/CHN.svg",
+            "Rank": "2<img src='/ui2023/cvpr2023/img/rank02.png' style='padding: 0px 0px 0px 5px; width: 20px; user-select: none;'/>",
             "team": "autoHorizon2023 (hoplan) <a href=\"/e2ead/AD23Challenge/Track_4_autoHorizon.pdf\">[paper]</a>",
             "Score": 0.8745,
             "ch1_overall_score": 0.8523,
@@ -65,8 +65,8 @@ $(function () {
         },
         {
             "Organization": "Pegasus<br>云骥智行",
-            "Country" : "/style/cvpr2023/img/country/CHN.svg",
-            "Rank": "3<img src='/style/cvpr2023/img/rank03.png' style='padding: 0px 0px 0px 5px; width: 20px; user-select: none;'/>",
+            "Country" : "/ui2023/cvpr2023/img/country/CHN.svg",
+            "Rank": "3<img src='/ui2023/cvpr2023/img/rank03.png' style='padding: 0px 0px 0px 5px; width: 20px; user-select: none;'/>",
             "team": "pegasus_weitao (pegasus_multi_path) <a href=\"/e2ead/AD23Challenge/Track_4_pegasus_weitao.pdf\">[paper]</a>",
             "Score": 0.8477,
             "ch1_overall_score": 0.8758,
@@ -96,8 +96,8 @@ $(function () {
         },
         {
             "Organization": "Nanyang Technological University",
-            "Country" : "/style/cvpr2023/img/country/SGP.svg",
-            "Rank": "4<img src='/style/cvpr2023/img/blomb1.png' style='padding: 0px 0px 0px 5px; width: 20px; user-select: none;'/>",
+            "Country" : "/ui2023/cvpr2023/img/country/SGP.svg",
+            "Rank": "4<img src='/ui2023/cvpr2023/img/blomb1.png' style='padding: 0px 0px 0px 5px; width: 20px; user-select: none;'/>",
             "team": "AID (GameFormer Planner) <a href=\"/e2ead/AD23Challenge/Track_4_AID.pdf\">[paper]</a> <a href=\"https://arxiv.org/abs/2303.05760\">[arXiv]</a>",
             "Score": 0.8288,
             "ch1_overall_score": 0.8400,
@@ -127,7 +127,7 @@ $(function () {
         },
         {
             "Organization": "Xi'an Jiaotong University<br>西安交通大学",
-            "Country" : "/style/cvpr2023/img/country/CHN.svg",
+            "Country" : "/ui2023/cvpr2023/img/country/CHN.svg",
             "Rank": 5,
             "team": "wheeljack",
             "Score": 0.8220,
@@ -158,7 +158,7 @@ $(function () {
         },
         {
             "Organization": "-",
-            "Country" : "/style/cvpr2023/img/country/blank.png",
+            "Country" : "/ui2023/cvpr2023/img/country/blank.png",
             "Rank": 6,
             "team": "xg_test (ltp-planner)",
             "Score": 0.8214,
@@ -189,7 +189,7 @@ $(function () {
         },
         {
             "Organization": "-",
-            "Country" : "/style/cvpr2023/img/country/blank.png",
+            "Country" : "/ui2023/cvpr2023/img/country/blank.png",
             "Rank": 7,
             "team": "Forecast_MAE (planning, preliminary)",
             "Score": 0.7983,
@@ -220,7 +220,7 @@ $(function () {
         },
         {
             "Organization": "Motional (Baseline)",
-            "Country" : "/style/cvpr2023/img/country/USA.svg",
+            "Country" : "/ui2023/cvpr2023/img/country/USA.svg",
             "Rank": 8,
             "team": "Host_68305_Team (UrbanDriver)",
             "Score": 0.7467,
@@ -252,7 +252,7 @@ $(function () {
         {
             "Organization":
                 "The Hong Kong University of Science and Technology<br>香港科技大学",
-            "Country" : "/style/cvpr2023/img/country/HK.svg",
+            "Country" : "/ui2023/cvpr2023/img/country/HK.svg",
             "Rank": 9,
             "team": "HatOff2JuiceWRLD (& Haaland)",
             "Score": 0.7442,
@@ -283,8 +283,8 @@ $(function () {
         },
         {
             "Organization": "Mines Paris",
-            "Country" : "/style/cvpr2023/img/country/FRA.svg",
-            "Rank": "10<img src='/style/cvpr2023/img/icons8-feather-emoji-96.png' style='padding: 0px 0px 0px 5px; width: 20px; user-select: none;'/>",
+            "Country" : "/ui2023/cvpr2023/img/country/FRA.svg",
+            "Rank": "10<img src='/ui2023/cvpr2023/img/icons8-feather-emoji-96.png' style='padding: 0px 0px 0px 5px; width: 20px; user-select: none;'/>",
             "team": "raphamas (MBAPPE) <a href=\"/e2ead/AD23Challenge/Track_4_raphamas.pdf\">[paper]</a>",
             "Score": 0.7410,
             "ch1_overall_score": 0.7861,
@@ -314,7 +314,7 @@ $(function () {
         },
         {
             "Organization": "Tsinghua University<br>清华大学",
-            "Country" : "/style/cvpr2023/img/country/CHN.svg",
+            "Country" : "/ui2023/cvpr2023/img/country/CHN.svg",
             "Rank": 11,
             "team": "LBYD-base",
             "Score": 0.7387,
@@ -345,7 +345,7 @@ $(function () {
         },
         {
             "Organization": "-",
-            "Country" : "/style/cvpr2023/img/country/blank.png",
+            "Country" : "/ui2023/cvpr2023/img/country/blank.png",
             "Rank": 12,
             "team": "Jit_Ray_Chowdhury",
             "Score": 0.7355,
@@ -376,7 +376,7 @@ $(function () {
         },
         {
             "Organization": "-",
-            "Country" : "/style/cvpr2023/img/country/blank.png",
+            "Country" : "/ui2023/cvpr2023/img/country/blank.png",
             "Rank": 13,
             "team": "Join_planner",
             "Score": 0.7071,
@@ -407,7 +407,7 @@ $(function () {
         },
         {
             "Organization": "-",
-            "Country" : "/style/cvpr2023/img/country/blank.png",
+            "Country" : "/ui2023/cvpr2023/img/country/blank.png",
             "Rank": 14,
             "team": "Captain",
             "Score": 0.6951,
@@ -438,7 +438,7 @@ $(function () {
         },
         {
             "Organization": "-",
-            "Country" : "/style/cvpr2023/img/country/blank.png",
+            "Country" : "/ui2023/cvpr2023/img/country/blank.png",
             "Rank": 15,
             "team": "captain_net",
             "Score": 0.6858,
@@ -469,7 +469,7 @@ $(function () {
         },
         {
             "Organization": "C&BIS",
-            "Country" : "/style/cvpr2023/img/country/KOR.svg",
+            "Country" : "/ui2023/cvpr2023/img/country/KOR.svg",
             "Rank": 16,
             "team": "adet",
             "Score": 0.6570,
@@ -500,9 +500,9 @@ $(function () {
         },
         {
             // "Organization": "C&BIS",
-            // "Country" : "/style/cvpr2023/img/country/KOR.svg",
+            // "Country" : "/ui2023/cvpr2023/img/country/KOR.svg",
                         "Organization": "-",
-            "Country" : "/style/cvpr2023/img/country/blank.png",
+            "Country" : "/ui2023/cvpr2023/img/country/blank.png",
             "Rank": 17,
             "team": "bbbong",
             "Score": 0.6363,
@@ -533,7 +533,7 @@ $(function () {
         },
         {
             "Organization": "-",
-            "Country" : "/style/cvpr2023/img/country/blank.png",
+            "Country" : "/ui2023/cvpr2023/img/country/blank.png",
             "Rank": 18,
             "team": "avr",
             "Score": 0.6298,
@@ -564,7 +564,7 @@ $(function () {
         },
         {
             "Organization": "-",
-            "Country" : "/style/cvpr2023/img/country/blank.png",
+            "Country" : "/ui2023/cvpr2023/img/country/blank.png",
             "Rank": 19,
             "team": "Driver_go",
             "Score": 0.6116,
@@ -595,7 +595,7 @@ $(function () {
         },
         {
             "Organization": "-",
-            "Country" : "/style/cvpr2023/img/country/blank.png",
+            "Country" : "/ui2023/cvpr2023/img/country/blank.png",
             "Rank": 20,
             "team": "crazy_planner",
             "Score": 0.6037,
@@ -626,7 +626,7 @@ $(function () {
         },
         {
             "Organization": "Motional (Baseline)",
-            "Country" : "/style/cvpr2023/img/country/USA.svg",
+            "Country" : "/ui2023/cvpr2023/img/country/USA.svg",
             "Rank": 21,
             "team": "Host_68305_Team (IDMPlanner)",
             "Score": 0.5912,
@@ -657,7 +657,7 @@ $(function () {
         },
         {
             "Organization": "-",
-            "Country" : "/style/cvpr2023/img/country/blank.png",
+            "Country" : "/ui2023/cvpr2023/img/country/blank.png",
             "Rank": 22,
             "team": "changdrive",
             "Score": 0.5730,
@@ -688,7 +688,7 @@ $(function () {
         },
         {
             "Organization": "Intel",
-            "Country" : "/style/cvpr2023/img/country/USA.svg",
+            "Country" : "/ui2023/cvpr2023/img/country/USA.svg",
             "Rank": 23,
             "team": "Lidan",
             "Score": 0.5707,
@@ -719,7 +719,7 @@ $(function () {
         },
         {
             "Organization": "China Telecommunications Corporation<br>中国电信集团有限公司",
-            "Country" : "/style/cvpr2023/img/country/CHN.svg",
+            "Country" : "/ui2023/cvpr2023/img/country/CHN.svg",
             "Rank": 24,
             "team": "Ctyun",
             "Score": 0.5140,
@@ -750,7 +750,7 @@ $(function () {
         },
         {
             "Organization": "-",
-            "Country" : "/style/cvpr2023/img/country/blank.png",
+            "Country" : "/ui2023/cvpr2023/img/country/blank.png",
             "Rank": 25,
             "team": "NaNny (raster_model)",
             "Score": 0.4157,
@@ -781,7 +781,7 @@ $(function () {
         },
         {
             "Organization": "Motional (Baseline)",
-            "Country" : "/style/cvpr2023/img/country/USA.svg",
+            "Country" : "/ui2023/cvpr2023/img/country/USA.svg",
             "Rank": 26,
             "team": "Host_68305_Team (SimplePlanner)",
             "Score": 0.3057,
@@ -812,7 +812,7 @@ $(function () {
         },
         {
             "Organization": "University of Science and Technology of China<br>中国科学技术大学",
-            "Country" : "/style/cvpr2023/img/country/CHN.svg",
+            "Country" : "/ui2023/cvpr2023/img/country/CHN.svg",
             "Rank": 27,
             "team": "NIC-showtime (LaneGCN)",
             "Score": 0.1754,
@@ -857,7 +857,7 @@ $(function () {
         return(n);
         }
         function filter(i) {
-            if(i == '/style/cvpr2023/img/country/blank.png'){
+            if(i == '/ui2023/cvpr2023/img/country/blank.png'){
                 return('-')
             } else {
                 return('<img src='+i+' style="width: 33px; user-select: none;"/>')

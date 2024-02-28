@@ -3,8 +3,8 @@ $(function () {
     var allData_2 = [
         {
             "Organization": "Mach Drive<br>迈驰智行",
-            "Country" : "/style/cvpr2023/img/country/CHN.svg",
-            "Rank": "1<img src='/style/cvpr2023/img/rank01.png' style='padding: 0px 0px 0px 5px; width: 20px; user-select: none;'/><img src='/style/cvpr2023/img/blomb1.png' style='padding: 0px 0px 0px 5px; width: 20px; user-select: none;'/>",
+            "Country" : "/ui2023/cvpr2023/img/country/CHN.svg",
+            "Rank": "1<img src='/ui2023/cvpr2023/img/rank01.png' style='padding: 0px 0px 0px 5px; width: 20px; user-select: none;'/><img src='/ui2023/cvpr2023/img/blomb1.png' style='padding: 0px 0px 0px 5px; width: 20px; user-select: none;'/>",
             "team": "MACH <br> <a href=\"/e2ead/AD23Challenge/Track_2_MACH.pdf\">[paper]</a>",
             "mAP": 83.5,
             "Ped_Crossing": 86.66,
@@ -13,8 +13,8 @@ $(function () {
         },
         {
             "Organization": "Independent Researcher",
-            "Country" : "/style/cvpr2023/img/country/USA.svg",
-            "Rank": "2<img src='/style/cvpr2023/img/rank02.png' style='padding: 0px 0px 0px 5px; width: 20px; user-select: none;'/>",
+            "Country" : "/ui2023/cvpr2023/img/country/USA.svg",
+            "Rank": "2<img src='/ui2023/cvpr2023/img/rank02.png' style='padding: 0px 0px 0px 5px; width: 20px; user-select: none;'/>",
             "team": "MapNeXt",
             "mAP": 73.65,
             "Ped_Crossing": 68.94,
@@ -23,7 +23,7 @@ $(function () {
         },
         {
             "Organization": "Shanghai Jiao Tong University<br>上海交通大学",
-            "Country" : "/style/cvpr2023/img/country/CHN.svg",
+            "Country" : "/ui2023/cvpr2023/img/country/CHN.svg",
             "Rank": 3,
             "team": "SJTUCR  <br> <a href=\"/e2ead/AD23Challenge/Track_2_SJTUCR.pdf\">[paper]</a>",
             "mAP": 73.39,
@@ -33,7 +33,7 @@ $(function () {
         },
         {
             "Organization": "Lotus NYO",
-            "Country" : "/style/cvpr2023/img/country/UK.svg",
+            "Country" : "/ui2023/cvpr2023/img/country/UK.svg",
             "Rank": 4,
             "team": "LTS (MapLTS2) <br> <a href=\"/e2ead/AD23Challenge/Track_2_LTS.pdf\">[paper]</a>",
             "mAP": 72.56,
@@ -43,7 +43,7 @@ $(function () {
         },
         {
             "Organization": "University of Science and Technology of China<br>中国科学技术大学",
-            "Country" : "/style/cvpr2023/img/country/CHN.svg",
+            "Country" : "/ui2023/cvpr2023/img/country/CHN.svg",
             "Rank": 5,
             "team": "ustc_vgg",
             "mAP": 71.02,
@@ -53,7 +53,7 @@ $(function () {
         },
         {
             "Organization": "Xi'an Jiaotong University<br>西安交通大学",
-            "Country" : "/style/cvpr2023/img/country/CHN.svg",
+            "Country" : "/ui2023/cvpr2023/img/country/CHN.svg",
             "Rank": 6,
             "team": "XJTU-IAIR",
             "mAP": 70.43,
@@ -63,7 +63,7 @@ $(function () {
         },
         {
             "Organization": "-",
-            "Country" : "/style/cvpr2023/img/country/blank.png",
+            "Country" : "/ui2023/cvpr2023/img/country/blank.png",
             "Rank": 7,
             "team": "MapVision",
             "mAP": 69.71,
@@ -73,7 +73,7 @@ $(function () {
         },
         {
             "Organization": "-",
-            "Country" : "/style/cvpr2023/img/country/blank.png",
+            "Country" : "/ui2023/cvpr2023/img/country/blank.png",
             "Rank": 8,
             "team": "Qml",
             "mAP": 68.28,
@@ -83,7 +83,7 @@ $(function () {
         },
         {
             "Organization": "-",
-            "Country" : "/style/cvpr2023/img/country/blank.png",
+            "Country" : "/ui2023/cvpr2023/img/country/blank.png",
             "Rank": 9,
             "team": "SAITAD",
             "mAP": 67.34,
@@ -93,7 +93,7 @@ $(function () {
         },
         {
             "Organization": "GACRD<br>广汽研究院",
-            "Country" : "/style/cvpr2023/img/country/CHN.svg",
+            "Country" : "/ui2023/cvpr2023/img/country/CHN.svg",
             "Rank": 10,
             "team": "MapSeg  <br> <a href=\"/e2ead/AD23Challenge/Track_2_MapSeg.pdf\">[paper]</a> <a href=\"https://github.com/FlyEgle/CVPR_hdmap\">[code]</a>",
             "mAP": 67.1,
@@ -103,7 +103,7 @@ $(function () {
         },
         {
             "Organization": "-",
-            "Country" : "/style/cvpr2023/img/country/blank.png",
+            "Country" : "/ui2023/cvpr2023/img/country/blank.png",
             "Rank": 11,
             "team": "IgniteVision",
             "mAP": 66.41,
@@ -113,7 +113,7 @@ $(function () {
         },
         {
             "Organization": "-",
-            "Country" : "/style/cvpr2023/img/country/blank.png",
+            "Country" : "/ui2023/cvpr2023/img/country/blank.png",
             "Rank": 12,
             "team": "LOMG (LOMG)",
             "mAP": 64.53,
@@ -123,7 +123,7 @@ $(function () {
         },
         {
             "Organization": "-",
-            "Country" : "/style/cvpr2023/img/country/blank.png",
+            "Country" : "/ui2023/cvpr2023/img/country/blank.png",
             "Rank": 13,
             "team": "MapKP",
             "mAP": 64.11,
@@ -133,7 +133,7 @@ $(function () {
         },
         {
             "Organization": "-",
-            "Country" : "/style/cvpr2023/img/country/blank.png",
+            "Country" : "/ui2023/cvpr2023/img/country/blank.png",
             "Rank": 14,
             "team": "MapLCF_HuaweiNoah",
             "mAP": 62.79,
@@ -143,7 +143,7 @@ $(function () {
         },
         {
             "Organization": "-",
-            "Country" : "/style/cvpr2023/img/country/blank.png",
+            "Country" : "/ui2023/cvpr2023/img/country/blank.png",
             "Rank": 15,
             "team": "Victory",
             "mAP": 60.66,
@@ -153,7 +153,7 @@ $(function () {
         },
         {
             "Organization": "-",
-            "Country" : "/style/cvpr2023/img/country/blank.png",
+            "Country" : "/ui2023/cvpr2023/img/country/blank.png",
             "Rank": 16,
             "team": "DNTCAD",
             "mAP": 59.84,
@@ -163,7 +163,7 @@ $(function () {
         },
         {
             "Organization": "-",
-            "Country" : "/style/cvpr2023/img/country/blank.png",
+            "Country" : "/ui2023/cvpr2023/img/country/blank.png",
             "Rank": 17,
             "team": "litemap (Litemap)",
             "mAP": 58.43,
@@ -173,7 +173,7 @@ $(function () {
         },
         {
             "Organization": "-",
-            "Country" : "/style/cvpr2023/img/country/blank.png",
+            "Country" : "/ui2023/cvpr2023/img/country/blank.png",
             "Rank": 18,
             "team": "Bell",
             "mAP": 56.94,
@@ -183,7 +183,7 @@ $(function () {
         },
         {
             "Organization": "HDI<br>武汉中海庭",
-            "Country" : "/style/cvpr2023/img/country/CHN.svg",
+            "Country" : "/ui2023/cvpr2023/img/country/CHN.svg",
             "Rank": 19,
             "team": "HDI_Striker (tiny)",
             "mAP": 52.77,
@@ -193,7 +193,7 @@ $(function () {
         },
         {
             "Organization": "-",
-            "Country" : "/style/cvpr2023/img/country/blank.png",
+            "Country" : "/ui2023/cvpr2023/img/country/blank.png",
             "Rank": 20,
             "team": "Ctyun-AI (BaseLine)",
             "mAP": 42.65,
@@ -203,7 +203,7 @@ $(function () {
         },
         {
             "Organization": "-",
-            "Country" : "/style/cvpr2023/img/country/blank.png",
+            "Country" : "/ui2023/cvpr2023/img/country/blank.png",
             "Rank": 21,
             "team": "Host_75980_Team (VectorMapNet-Baseline)",
             "mAP": 42.11,
@@ -227,7 +227,7 @@ $(function () {
         return(n);
         }
         function filter(i) {
-            if(i == '/style/cvpr2023/img/country/blank.png'){
+            if(i == '/ui2023/cvpr2023/img/country/blank.png'){
                 return('-')
             } else {
                 return('<img src='+i+' style="width: 33px; user-select: none;"/>')

@@ -3,10 +3,10 @@ $(function () {
     var allData = [
         {
             "Organization": "MEGVII Technology<br>旷视科技",
-            "Country" : "/style/cvpr2023/img/country/CHN.svg",
+            "Country" : "/ui2023/cvpr2023/img/country/CHN.svg",
             "Rank": 1,
             "Team": "MFV <br> <a href=\"/e2ead/AD23Challenge/Track_1_MFV.pdf\">[paper]</a> <a href=\"https://arxiv.org/pdf/2306.09590.pdf\">[arXiv]</a>",
-            "prize" : "/style/cvpr2023/img/rank01.png",
+            "prize" : "/ui2023/cvpr2023/img/rank01.png",
             "DET_l": 0.3577,
             "DET_t": 0.7970,
             "TOP_ll": 0.2252,
@@ -16,7 +16,7 @@ $(function () {
         },
         {
             "Organization": "QCraft *<br>轻舟智航",
-            "Country" : "/style/cvpr2023/img/country/CHN.svg",
+            "Country" : "/ui2023/cvpr2023/img/country/CHN.svg",
             "Rank": "-",
             "prize" : "",
             "Link": "",
@@ -30,9 +30,9 @@ $(function () {
         },
         {
             "Organization": "AMD",
-            "Country" : "/style/cvpr2023/img/country/USA.svg",
+            "Country" : "/ui2023/cvpr2023/img/country/USA.svg",
             "Rank": 2,
-            "prize" : "/style/cvpr2023/img/rank02.png",
+            "prize" : "/ui2023/cvpr2023/img/rank02.png",
             "Link": "",
             "Team": "Victory <a href=\"/e2ead/AD23Challenge/Track_1_Victory.pdf\">[paper]</a>",
             "DET_l": 0.2184,
@@ -44,7 +44,7 @@ $(function () {
         },
         {
             "Organization": "QCraft *<br>轻舟智航",
-            "Country" : "/style/cvpr2023/img/country/CHN.svg",
+            "Country" : "/ui2023/cvpr2023/img/country/CHN.svg",
             "Rank": "-",
             "prize" : "",
             "Link": "",
@@ -58,9 +58,9 @@ $(function () {
         },
         {
             "Organization": "Middle East Technical University",
-            "Country" : "/style/cvpr2023/img/country/TUR.svg",
+            "Country" : "/ui2023/cvpr2023/img/country/TUR.svg",
             "Rank": 3,
-            "prize" : "/style/cvpr2023/img/blomb1.png",
+            "prize" : "/ui2023/cvpr2023/img/blomb1.png",
             "Link": "<a href=\"/e2ead/AD23Challenge/Track_1_PlatypusWhisperers.pdf\">[paper]</a>",
             "Team": "PlatypusWhisperers <br> <a href=\"/e2ead/AD23Challenge/Track_1_PlatypusWhisperers.pdf\">[paper]</a> <a href=\"https://arxiv.org/pdf/2306.05419.pdf\">[arXiv]</a>",
             "DET_l": 0.2209,
@@ -72,7 +72,7 @@ $(function () {
         },
         {
             "Organization": "MeiTuan<br>美团",
-            "Country" : "/style/cvpr2023/img/country/CHN.svg",
+            "Country" : "/ui2023/cvpr2023/img/country/CHN.svg",
             "Rank": 4,
             "prize" : "",
             "Link": "<a href=\"/e2ead/AD23Challenge/Track_1_gavin.pdf\">[paper]</a>",
@@ -86,7 +86,7 @@ $(function () {
         },
         {
             "Organization": "Beihang University<br>北京航空航天大学",
-            "Country" : "/style/cvpr2023/img/country/CHN.svg",
+            "Country" : "/ui2023/cvpr2023/img/country/CHN.svg",
             "Rank": 5,
             "prize" : "",
             "Link": "",
@@ -100,7 +100,7 @@ $(function () {
         },
         {
             "Organization": "Turing Inc.",
-            "Country" : "/style/cvpr2023/img/country/JPN.svg",
+            "Country" : "/ui2023/cvpr2023/img/country/JPN.svg",
             "Rank": 6,
             "prize" : "",
             "Link": "",
@@ -114,7 +114,7 @@ $(function () {
         },
         {
             "Organization": "-",
-            "Country" : "/style/cvpr2023/img/country/blank.png",
+            "Country" : "/ui2023/cvpr2023/img/country/blank.png",
             "Rank": 7,
             "prize" : "",
             "Link": "",
@@ -128,7 +128,7 @@ $(function () {
         },
         {
             "Organization": "-",
-            "Country" : "/style/cvpr2023/img/country/blank.png",
+            "Country" : "/ui2023/cvpr2023/img/country/blank.png",
             "Rank": 8,
             "prize" : "",
             "Link": "",
@@ -142,7 +142,7 @@ $(function () {
         },
         {        
             "Organization": "-",
-            "Country" : "/style/cvpr2023/img/country/blank.png",
+            "Country" : "/ui2023/cvpr2023/img/country/blank.png",
             "Rank": 9,
             "prize" : "",
             "Link": "",
@@ -156,7 +156,7 @@ $(function () {
         },
         {
             "Organization": "-",
-            "Country" : "/style/cvpr2023/img/country/blank.png",
+            "Country" : "/ui2023/cvpr2023/img/country/blank.png",
             "Rank": 10,
             "prize" : "",
             "Link": "",
@@ -170,7 +170,7 @@ $(function () {
         },
         {
             "Organization": "-",
-            "Country" : "/style/cvpr2023/img/country/blank.png",
+            "Country" : "/ui2023/cvpr2023/img/country/blank.png",
             "Rank": 11,
             "prize" : "",
             "Link": "",
@@ -184,7 +184,7 @@ $(function () {
         },
         {
             "Organization": "Tsinghua University<br>清华大学",
-            "Country" : "/style/cvpr2023/img/country/CHN.svg",
+            "Country" : "/ui2023/cvpr2023/img/country/CHN.svg",
             "Rank": 12,
             "prize" : "",
             "Link": "",
@@ -213,7 +213,7 @@ $(function () {
         return(n);
         }
     function filter(i) {
-        if(i == '/style/cvpr2023/img/country/blank.png'){
+        if(i == '/ui2023/cvpr2023/img/country/blank.png'){
             return('-')
         } else {
             return('<img src='+i+' style="width: 33px; user-select: none;"/>')
@@ -221,13 +221,13 @@ $(function () {
     }
     function filter_rank(i) {
         if(i == 1){
-            return(i + '<img src='+ '/style/cvpr2023/img/rank01.png' +' style="padding: 0px 0px 0px 5px; width: 20px; user-select: none;"/>')
+            return(i + '<img src='+ '/ui2023/cvpr2023/img/rank01.png' +' style="padding: 0px 0px 0px 5px; width: 20px; user-select: none;"/>')
         }
         if (i == 2) {
-            return(i + '<img src='+ '/style/cvpr2023/img/rank02.png' +' style="padding: 0px 0px 0px 5px; width: 20px; user-select: none;"/>')
+            return(i + '<img src='+ '/ui2023/cvpr2023/img/rank02.png' +' style="padding: 0px 0px 0px 5px; width: 20px; user-select: none;"/>')
         }
         if (i == 3) {
-        return(i + '<img src='+ '/style/cvpr2023/img/blomb1.png' +' style="padding: 0px 0px 0px 5px; width: 20px; user-select: none;"/>')
+        return(i + '<img src='+ '/ui2023/cvpr2023/img/blomb1.png' +' style="padding: 0px 0px 0px 5px; width: 20px; user-select: none;"/>')
     } else {
         return(i)
     }
