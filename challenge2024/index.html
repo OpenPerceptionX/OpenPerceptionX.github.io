@@ -461,7 +461,7 @@
             <span>
                 Benchmarking sensorimotor driving policies with real data is challenging due to the limited scale of prior datasets and the misalignment between open- and closed-loop metrics. In this track, we use the large-scale OpenScene dataset and aim to bridge the gap between the two evaluation paradigms. Our Non-Reactive Autonomous Vehicle Simulation framework (NAVSim) gathers closed-loop metrics for end-to-end driving by unrolling simplified bird's eye view abstractions of scenes for a short simulation horizon. It operates under the condition that the policy has no influence on the environment, which enables efficient, open-loop metric computation while being better aligned with closed-loop evaluations than traditional displacement errors.
                 <br><br>
-                The private test set is provided by <a class="Oblue" href="https://www.nuscenes.org/nuplan" target="_blank">nuPlan</a> from <a class="Oblue" href="https://motional.com/" target="_blank">Motional</a>.
+                The private test set is provided by <a class="Oblue" href="https://www.nuscenes.org/nuplan" target="_blank">nuPlan</a> from <a class="Oblue" href="https://motional.com/" target="_blank">Motional</a>. Details and test server are available at <a class="Oblue" target="_blank" href="https://huggingface.co/spaces/AGC2024-P/e2e-driving-2024">Hugging Face</a>.
             </span>
             
             <br><br>
@@ -607,7 +607,7 @@
             <span>
                 Serving as an abstract spatio-temporal representation of reality, the world model can predict future states based on the current state. The learning process of world models has the potential to provide a pre-trained foundation model for autonomous driving. Given vision-only inputs, the neural network outputs point clouds in the future to testify its predictive capability of the world.
                 <br><br>
-                The private test set is provided by <a class="Oblue" href="https://www.nuscenes.org/nuplan" target="_blank">nuPlan</a> from <a class="Oblue" href="https://motional.com/" target="_blank">Motional</a>.
+                The private test set is provided by <a class="Oblue" href="https://www.nuscenes.org/nuplan" target="_blank">nuPlan</a> from <a class="Oblue" href="https://motional.com/" target="_blank">Motional</a>. Details and test server are available at <a class="Oblue" target="_blank" href="https://huggingface.co/spaces/AGC2024-P/predictive-world-model-2024">Hugging Face</a>.
             </span>
             
             <br><br>
@@ -734,7 +734,7 @@
             <span>
                 The representation of 3D bounding boxes is not enough to describe general objects (obstacles). Instead, inspired by concepts in robotics, we perform general object detection via an occupancy representation to cover more irregularly shaped (e.g., protruding) objects. The goal of this task is to predict the 3D occupancy of the complete scene and the flow of the foreground objects given the input image from six cameras. 
                 <br><br>
-                The private test set is provided by <a class="Oblue" href="https://www.nuscenes.org/nuscenes" target="_blank">nuScenes</a> from <a class="Oblue" href="https://motional.com/" target="_blank">Motional</a>.
+                The private test set is provided by <a class="Oblue" href="https://www.nuscenes.org/nuscenes" target="_blank">nuScenes</a> from <a class="Oblue" href="https://motional.com/" target="_blank">Motional</a>. Details and test server are available at <a class="Oblue" target="_blank" href="https://huggingface.co/spaces/AGC2024-S/occupancy-and-flow-2024">Hugging Face</a>.
             </span>
             
             <br><br>
@@ -886,6 +886,8 @@
             <br>
             <span>
                 Compared to driving scenes, the indoor embodied 3D perception systems face multi-modal input, including language instructions, more complex semantic understanding, diverse object categories and orientations, and different perceptual spaces and needs. Based on this, we construct EmbodiedScan, a holistic multi-modal, ego-centric 3D perception suite. In this track, given language prompts describing specific objects, models are required to detect them in the scene and predict their oriented 3D bounding boxes.
+                <br><br>
+                Details and test server are available at <a class="Oblue" target="_blank" href="https://huggingface.co/spaces/AGC2024/visual-grounding-2024">Hugging Face</a>.
             </span>
             
             <br><br>
@@ -1023,6 +1025,8 @@
             <br>
             <span>
                 To verify the effectiveness of AD systems, we need an ultimate planning framework with a closed-loop setting. The CARLA AD Leaderboard challenges agents to drive through a set of predefined routes. For each route, agents will be initialized at a starting point and directed to drive to a destination point, provided with a description of the route through GPS style coordinates, map coordinates or route instructions. Routes are defined in a variety of situations, including freeways, urban areas, residential districts and rural settings. The Leaderboard evaluates AD agents in a variety of weather conditions, including daylight scenes, sunset, rain, fog, and night, among others.
+                <br><br>
+                Details and test server are available at <a class="Oblue" target="_blank" href="https://eval.ai/web/challenges/challenge-page/2098/overview">EvalAI</a>.
             </span>
             
             <br><br>
@@ -1172,6 +1176,8 @@
             <br>
             <span>
                 Incorporating the language modality, this task connects Vision Language Models (VLMs) and autonomous driving systems. The model will introduce the reasoning ability of LLMs to make decisions, and pursue generalizable and explainable driving behavior. Given multi-view images as inputs, models are required to answer questions covering various aspects of driving.
+                <br><br>
+                Details and test server are available at <a class="Oblue" target="_blank" href="https://huggingface.co/spaces/AGC2024/driving-with-language-2024">Hugging Face</a>.
             </span>
             
             <br><br>
@@ -1310,7 +1316,9 @@
             <h2>Task Description</h2>
             <br>
             <span>
-                Driving without High-Definition (HD) maps demands a high level of active scene understanding capacity. This challenge aims to explore the boundaries of scene reasoning. Neural networks take multi-view images and Standard-Definition (SD) Map as input, then provide not only perception results of lanes and traffic elements but also topology relationships among lanes and between lanes and traffic elements simultaneously. 
+                Driving without High-Definition (HD) maps demands a high level of active scene understanding capacity. This challenge aims to explore the boundaries of scene reasoning. Neural networks take multi-view images and Standard-Definition (SD) Map as input, then provide not only perception results of lanes and traffic elements but also topology relationships among lanes and between lanes and traffic elements simultaneously.
+                <br><br>
+                Details and test server are available at <a class="Oblue" target="_blank" href="https://huggingface.co/spaces/AGC2024/mapless-driving-2024">Hugging Face</a>.
             </span>
             
             <br><br>
