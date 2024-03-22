@@ -1,0 +1,24 @@
+.block_left div .person_container div div, .block_left div .person_two_column div .person_container div div {
+    border-bottom: 1px solid rgb(127, 127, 127);
+}
+.block_left div .person_container div .person_container_icon {
+    width: 100%;
+    border: 0px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 33px);
+    justify-content: space-between;
+    & a {
+        width: 23px;
+        margin-bottom: 7px;
+
+    }
+}
+@media screen and (max-width: 1024px) {
+    .block_left div .person_container div .person_container_icon {
+        grid-template-columns: repeat(auto-fill, 44px);
+        & a {
+            width: 33px;
+            margin-bottom: 11px;
+        }
+    }
+}
