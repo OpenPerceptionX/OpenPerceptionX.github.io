@@ -62,10 +62,7 @@
     @media screen and (max-width: 1536px) {
         grid-template-columns: repeat(auto-fill, 100%);
         & a {
-            height: 10vh;
-            & h1 {
-                font-size: 90%;
-            }
+            height: 11vh;
         }
     }
 }
