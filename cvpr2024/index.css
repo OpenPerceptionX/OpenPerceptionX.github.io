@@ -41,10 +41,10 @@
     width: 100%;
     display: grid;
     gap: 3vh;
-    grid-template-columns: repeat(auto-fill, 27vw);
+    grid-template-columns: repeat(auto-fill, 40vw);
     justify-content: space-between;
     & a {
-        height: 30vh;
+        height: 23vh;
         background-size: cover; 
         background-position: center;
         background-blend-mode: overlay;
@@ -62,7 +62,7 @@
     @media screen and (max-width: 1536px) {
         grid-template-columns: repeat(auto-fill, 100%);
         & a {
-            height: 17vh;
+            height: 10vh;
         }
     }
 }
