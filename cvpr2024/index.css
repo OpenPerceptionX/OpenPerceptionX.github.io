@@ -63,6 +63,9 @@
         grid-template-columns: repeat(auto-fill, 100%);
         & a {
             height: 10vh;
+            & h1 {
+                font-size: 90%;
+            }
         }
     }
 }
