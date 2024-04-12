@@ -1,0 +1,65 @@
+.banner {
+    width: 100%;
+    height: 100%;
+    background-image: url(/assets/background/chongqing.jpg);
+    background-size: cover; 
+    background-position: left;
+    background-blend-mode: overlay;
+    background-color: rgb(33, 33, 33, .7);
+}
+.banner_container div {
+    display: flex;
+    margin-top: 33px;
+}
+.banner_logo {
+    flex-direction: row;
+}
+.banner_logo img {
+    height: 99px;
+    margin-right: 33px;
+}
+.banner_logo_u {
+    flex-direction: column;
+}
+.banner_logo_u span{
+    color: rgb(233, 233, 233);
+    margin-bottom: 11px;
+}
+.banner_logo_u img {
+    height: 55px;
+}
+
+
+
+.banner_title {
+    flex-direction: row;
+}
+.banner_title span {
+    text-align: left;
+}
+
+
+
+.note {
+    display: flex; 
+    align-items: center;
+}
+.note a img {
+    height: 33px;
+    @media screen and (max-width: 1024px) {
+        height: 44px;
+        margin-right: 11px;
+    }
+}
+
+
+
+.person_container div span span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    & img {
+        width: 33px !important;
+        margin-right: 11px;
+    }
+}
