@@ -54,3 +54,12 @@
         display: none;
     }
 }
+
+
+
+.timetable_table {
+    ul {
+        margin: 0;
+        padding-inline-start: 20px;
+    }
+}
