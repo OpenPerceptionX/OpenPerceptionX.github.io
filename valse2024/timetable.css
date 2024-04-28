@@ -40,7 +40,6 @@
     padding: 11px;
     &:nth-child(1) {
         text-wrap: nowrap;
-        display: none;
     }
     &:nth-child(2) {
         text-align: right;
@@ -54,4 +53,11 @@
     &:nth-child(5) {
         display: none;
     }
+}
+
+
+
+.timetable_table ul {
+    padding-inline-start: 0px;
+    margin: 0;
 }
