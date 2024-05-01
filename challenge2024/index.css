@@ -195,3 +195,9 @@ li a {
         margin-right: 11px;
     }
 }
+
+
+
+.brand_container div a:hover {
+    opacity: 1;
+}
