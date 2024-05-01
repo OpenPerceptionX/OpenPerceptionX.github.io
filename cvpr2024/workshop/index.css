@@ -56,13 +56,3 @@
 }
 
 
-
-.person_container div span span {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    & img {
-        width: 33px !important;
-        margin-right: 11px;
-    }
-}
