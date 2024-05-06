@@ -183,3 +183,21 @@ li a {
         height: 44px;
     }
 }
+
+
+
+.person_container div span span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    & img {
+        width: 33px !important;
+        margin-right: 11px;
+    }
+}
+
+
+
+.brand_container div a:hover {
+    opacity: 1;
+}
