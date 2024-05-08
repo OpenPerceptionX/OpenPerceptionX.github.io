@@ -36,7 +36,7 @@
         margin-right: 80%;
         text-align: right;
     }
-    &:nth-child(1), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7), &:nth-child(10), &:nth-child(11), &:nth-child(12) {
+    &:nth-child(1), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7), &:nth-child(10), &:nth-child(11), &:nth-child(12), &:nth-child(13) {
         margin-left: 30%;
         text-align: left;
     }
@@ -57,7 +57,7 @@
         &:nth-child(2), &:nth-child(8), &:nth-child(9) {
             margin-right: 65%;
         }
-        &:nth-child(1), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7), &:nth-child(10), &:nth-child(11), &:nth-child(12) {
+        &:nth-child(1), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7), &:nth-child(10), &:nth-child(11), &:nth-child(12), &:nth-child(13) {
             margin-left: 45%;
         }
     }
