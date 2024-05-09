@@ -108,13 +108,16 @@ function track7render() {
         const row = document.createElement("tr");
         row.innerHTML = `
             <td>${item.rank}</td>
+            <td><img src="/ui2024/style/icon/flag/${item.flag}.png" alt="${item.country}"> ${item.country}</td>
+            <td>ins</td>
             <td>${item.metrics}</td>
-            <td>
-                <img src="/ui2024/style/icon/flag/${item.flag}.png" alt="${item.country}"> ${item.country}</td>
+            <td>name</td>
+            <td>links</td>
             <td>${item.key}</td>
         `;
         tableBody.appendChild(row);
     });
+    document.getElementById("track7pages").innerHTML = `<b>${currentPage} / ${Math.ceil(track7data.length / pageSize)}</b>`;
 }
 
 function track7sort(columnIndex, columnKey) {
