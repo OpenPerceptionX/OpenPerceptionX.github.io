@@ -10,6 +10,7 @@
     <link href="/ui2024/css/sticky.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="/ui2024/css/citation.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="./timeline.css" rel="stylesheet" type="text/css" media="all"/>
+    <!-- <link href="./leaderboard.css" rel="stylesheet" type="text/css" media="all"/> -->
     <link href="./index.css" rel="stylesheet" type="text/css" media="all"/>
 
     <script src="/ui2024/js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -1341,21 +1342,30 @@
 
             <!-- <h2>Leaderboard</h2>
             <br>
-            <table>
-                <thead>
-                    <tr>
-                        <th onclick="track7sort(0, 'rank')">rank</th>
-                        <th onclick="track7sort(1, 'metrics')">primary metric</th>
-                        <th>Country / Region</th>
-                        <th onclick="track7sort(3, 'key')">key1</th>
-                    </tr>
-                </thead>
-                <tbody id="track7table">
-                </tbody>
-            </table>
-            <div>
-                <button onclick="track7previous()">Previous</button>
-                <button onclick="track7next()">Next</button>
+            <div class="leaderboard">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="white"><b>Rank</b></th>
+                            <th class="white"><b>Country / Region</b></th>
+                            <th class="white"><b>Institution</b></th>
+                            <th class="white button" onclick="track7sort(1, 'metrics')"><b>XXX (primary)</b></th>
+                            <th class="white"><b>Team Name</b></th>
+                            <th class="white"><b>Links</b></th>
+                            <th  class="white button" onclick="track7sort(3, 'key')"><b>key</b></th>
+                        </tr>
+                    </thead>
+                    <tbody id="track7table"></tbody>
+                </table>
+                <div>
+                    <div>
+                        <button onclick="track7previous()"><b>⬅</b></button>
+                        <button onclick="track7next()"><b>➡</b></button>
+                    </div>
+                    <div>
+                        <button class="nonbutton" id="track7pages"></button>
+                    </div>
+                </div>
             </div>
 
             <br><br> -->
