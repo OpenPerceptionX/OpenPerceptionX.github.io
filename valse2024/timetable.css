@@ -51,7 +51,12 @@
         }
     }
     &:nth-child(5) {
-        display: none;
+        & img {
+            width: 22px;
+            @media screen and (max-width: 1024px) {
+                width: 33px;
+            }
+        }
     }
 }
 
