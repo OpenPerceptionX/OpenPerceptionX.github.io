@@ -22,3 +22,20 @@
         }
     }
 }
+
+
+.teamtable {
+    width: min-content;
+    table-layout: fixed;
+}
+.teamtable tbody tr td {
+    &:nth-child(1) {
+        width: 16px;
+    }
+    &:nth-child(2), &:nth-child(3) {
+        width: 128px;
+    }
+    &:nth-child(4) {
+        width: 256px;
+    }
+}
