@@ -32,8 +32,11 @@
     &:nth-child(1) {
         width: 16px;
     }
-    &:nth-child(2), &:nth-child(3) {
-        width: 128px;
+    &:nth-child(2) {
+        width: 160px;
+    }
+    &:nth-child(3) {
+        width: 160px;
     }
     &:nth-child(4) {
         width: 256px;
