@@ -31,6 +31,9 @@
         width: 100%;
     }
 }
+.teamtable tbody {
+    vertical-align: top;
+}
 .teamtable tbody tr td {
     &:nth-child(1) {
         width: 16px;
