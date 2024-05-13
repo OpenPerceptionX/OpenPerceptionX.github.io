@@ -110,20 +110,48 @@ li a {
 .sevent {
     padding-top: max(22px, 2%) !important;
     padding-bottom: max(22px, 2%) !important;
+    & .img_challenge {
+        background-image: url(/assets/background/seattle_space_needle.jpg);
+    }
+    & .img_workshop {
+        background-image: url(/assets/background/seattle.jpg);
+    }
+    & .img_tutorial {
+        background-image: url(/assets/background/seattle_gen.jpg);
+    }
+    & .img_challenge {
+        background-image: url(/assets/background/seattle_space_needle.jpg);
+    }
     & h4 {
-        display: block;
-        background-color: gray;
+        width: fit-content;
+        background-image: linear-gradient(to right, #0c318f, #53c2f0, #00a0e8);
+        -webkit-background-clip: text;
+        color: transparent;
+        user-select: none;
     }
     & a {
         text-decoration: underline;
     }
-    & img {
-        width: 100%;
+    & div {
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+    & .img {
+        padding: 128px;
+        user-select: none;
+        background-size: cover; 
+        background-position: center;
         border-radius: 99px;
     }
-    & div {
-        padding-left: 5%;
-        padding-right: 5%;
+    @media screen and (max-width: 1024px) {
+        margin-bottom: 33px;
+        & .desc {
+            display: none;
+        }
+        & .img {
+            padding: 192px;
+            margin-bottom: 33px;
+        }
     }
 }
 
