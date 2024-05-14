@@ -102,6 +102,12 @@ li a {
 }
 
 
+.person_container {
+    padding-left: 7%;
+    padding-right: 7%;
+    gap: 10%!important;
+}
+
 
 
 .rules {
