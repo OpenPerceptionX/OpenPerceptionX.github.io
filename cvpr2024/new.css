@@ -119,8 +119,8 @@ li a {
     & .img_tutorial {
         background-image: url(/assets/background/seattle_gen.jpg);
     }
-    & .img_challenge {
-        background-image: url(/assets/background/seattle_space_needle.jpg);
+    & .img_social {
+        background-image: url(/assets/event/photo-1491438590914-bc09fcaaf77a.jpg);
     }
     & h4 {
         width: fit-content;
