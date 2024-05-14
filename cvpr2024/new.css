@@ -85,7 +85,7 @@ li a {
         text-decoration: underline;
     }
     & .img {
-        padding: 128px;
+        padding: 160px;
         user-select: none;
         background-size: cover; 
         background-position: center;
@@ -131,7 +131,7 @@ li a {
         text-decoration: underline;
     }
     & img {
-        width: 512px ;
+        width: min(512px, 150%);
     }
     & .spub_icon{
         height: 24px;
