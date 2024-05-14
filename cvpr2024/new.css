@@ -109,3 +109,27 @@ li a {
 .srecruit {
     background-color: rgb(33, 33, 33);
 }
+
+
+
+.spub {
+    padding-top: max(22px, 2%) !important;
+    padding-bottom: max(11px, 1%) !important;
+    & h4{
+        width: fit-content;
+        background-image: linear-gradient(to right, #0c318f, #53c2f0, #00a0e8);
+        -webkit-background-clip: text;
+        color: transparent;
+        user-select: none;
+    }
+    & a {
+        text-decoration: underline;
+    }
+    & img {
+        width: 512px ;
+    }
+    & .spub_icon{
+        height: 24px;
+        width: auto;
+    }
+}
