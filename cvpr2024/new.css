@@ -52,11 +52,15 @@ li a {
 .spad div {
     padding-left: 7%;
     padding-right: 7%;
+    @media screen and (max-width: 1024px) {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 
 .sevent {
-    padding-top: max(22px, 2%) !important;
+    padding-top: max(66px, 2%) !important;
     padding-bottom: max(22px, 2%) !important;
     & .img_challenge {
         background-image: url(/assets/background/seattle_space_needle.jpg);
@@ -89,9 +93,9 @@ li a {
     }
     @media screen and (max-width: 1024px) {
         margin-bottom: 33px;
-        & .desc {
+        /* & .desc {
             display: none;
-        }
+        } */
         & .img {
             padding: 192px;
             margin-bottom: 33px;
@@ -108,6 +112,7 @@ li a {
 
 .srecruit {
     background-color: rgb(33, 33, 33);
+    margin-bottom: -1px;
 }
 
 
@@ -131,5 +136,17 @@ li a {
     & .spub_icon{
         height: 24px;
         width: auto;
+    }
+    @media screen and (max-width: 1024px) {
+        & img {width: 100%;}
+    }
+}
+
+
+
+.joinus {
+    align-items: center;
+    @media screen and (max-width: 1024px) {
+        align-items: flex-start;
     }
 }
