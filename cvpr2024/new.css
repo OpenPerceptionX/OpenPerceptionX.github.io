@@ -49,6 +49,12 @@ li a {
 
 
 
+.spad div {
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+
 .sevent {
     padding-top: max(22px, 2%) !important;
     padding-bottom: max(22px, 2%) !important;
@@ -74,10 +80,6 @@ li a {
     & a {
         text-decoration: underline;
     }
-    & div {
-        padding-left: 7%;
-        padding-right: 7%;
-    }
     & .img {
         padding: 128px;
         user-select: none;
@@ -94,18 +96,12 @@ li a {
             padding: 192px;
             margin-bottom: 33px;
         }
-        & div {
-            padding-left: 0;
-            padding-right: 0;
-        }
     }
 }
 
 
 .person_container {
-    padding-left: 7%;
-    padding-right: 7%;
-    gap: 10%!important;
+    gap: 10% !important;
 }
 
 
