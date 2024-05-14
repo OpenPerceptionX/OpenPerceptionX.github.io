@@ -49,64 +49,6 @@ li a {
 
 
 
-.glance {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-.glance div {
-    width: 100%;
-}
-.glance img {
-    height: 256px;
-}
-.glance div div .glance_divider {
-    min-width: 7px;
-    max-width: 7px;
-    height: 100%;
-    border-radius: 3px;
-}
-.glance .glance_left {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.glance .glance_left p {
-    text-align: right;
-}
-.glance .glance_right {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-.glance .glance_left div {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-}
-.glance .glance_right div {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-}
-.glance div p {
-    padding: 7px 17px;
-    margin: 0;
-}
-.glance div p a {
-    user-select: none;
-}
-@media screen and (max-width: 1024px) {
-    .notinmobile {
-        display: none;
-    }
-    .glance b {
-        font-size: 60%;
-    }
-}
-
-
-
 .sevent {
     padding-top: max(22px, 2%) !important;
     padding-bottom: max(22px, 2%) !important;
@@ -151,6 +93,10 @@ li a {
         & .img {
             padding: 192px;
             margin-bottom: 33px;
+        }
+        & div {
+            padding-left: 0;
+            padding-right: 0;
         }
     }
 }
