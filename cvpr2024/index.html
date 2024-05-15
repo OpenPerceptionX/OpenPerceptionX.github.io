@@ -1,16 +1,16 @@
 <head>
-    <title>Events at CVPR 2024 | OpenDriveLab</title>
-    <meta name="keywords" content="FM4AS, OpenDriveLab, CVPR 2024, Event, Autonomous Driving, Autonomous Agent, Embodied AI">
+    <title>CVPR 2024 | OpenDriveLab</title>
+    <meta name="keywords" content="OpenDriveLab, CVPR 2024, Challenge, Autonomous Driving, Autonomous Agent, Embodied AI">
     <meta name="description" content="OpenDriveLab is committed to exploring cutting-edge autonomous driving technology, launching a series of benchmarking work, open source to serve the community, and promote the common development of the industry. Friends who are committed to making influential research are welcome to join!">
 
     <link rel="icon" type="image/png" href="/assets/icon/D_small.png">
 
     <link href="/ui2024/css/format.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="/ui2024/css/font.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/ui2024/css/sticky.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="./index.css" rel="stylesheet" type="text/css" media="all"/>
 
-    <script src="/ui2024/js/jquery-3.7.1.min.js"  crossorigin="anonymous"></script>
+    <script src="/ui2024/js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
 </head>
 
 
@@ -38,9 +38,28 @@
 
 
 
-<body>
+<script>
+    window.addEventListener("scroll", function () {
+        if (document.body.clientWidth <= 1024) {
+            sticky_top_img.src = "/assets/icon/top_white.png";
+        };
+        if (sticky.getBoundingClientRect().top <= 64) {
+            sticky.classList.add("sticky_top");
+            sticky_top_img.src = "/assets/icon/top_white.png";
+            header.style.display = "none";
+        } else {
+            sticky.classList.remove("sticky_top");
+            header.style.display = "block";
+            if (document.body.clientWidth > 1024) {
+                sticky_top_img.src = "/assets/icon/top.png";
+            }
+        }
+    })
+</script>
 
-    
+
+
+<body>
 
     <div class="banner">
         <div class="banner_container">
@@ -50,26 +69,334 @@
                 <img loading="lazy" src="/assets/icon/cvpr/ieee_cs_white.png"/>
             </div>
 
-            <div class="container">
-                <a href="/cvpr2024/workshop/" style="background-image: url(/assets/background/seattle.jpg);">
-                    <h1 class="Owhite">WORKSHOP</h1>
-                </a>
-                <a href="/challenge2024/"  style="background-image: url(/assets/background/seattle_space_needle.jpg);" >
-                    <h1 class="Owhite">CHALLENGE</h1>
-                </a>
-                <a href="/cvpr2024/tutorial/" style="background-image: url(/assets/background/seattle_gen.jpg);">
-                    <h1 class="Owhite">TUTORIAL</h1>
-                </a>
-                <a style="background-color: gray;">
-                    <h1 class="Owhite">Social</h1>
-                </a>
+            <div class="banner_title_en">
+                <h1 class="Owhite">OpenDriveLab at CVPR 2024</h1>
             </div>
-            
+
+            <div class="banner_content Owhite">
+                <h6>
+                    <a href="https://cvpr.thecvf.com/" target="_blank" style="text-decoration: underline;">June 17 - 21, Seattle, USA</a>
+                </h6>
+            </div>
+
         </div>
     </div>
 
 
 
+    <br id="events"><br><br><br>
+
+
+    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;">
+        <div style="flex-grow: 1;">
+            <a href="#events">
+                <h1 style="user-select: none;">
+                    Enjoy our thrilling events
+                    <img loading="lazy" class="link_img"/>
+                </h1>
+            </a>
+        </div> 
+    </div>
+
+    <br>
+
+
+    <div class="block_right left_right sevent spad">
+
+        <div style="flex-grow: 7;">
+            <a href="/challenge2024/"><div class="img img_challenge"> </div></a>
+        </div>
+
+        <!-- <div style="flex-grow: 1;"></div> -->
+
+        <div style="flex-grow: 16;">
+
+            <h4>Challenge</h4>
+            <br>
+            <h2>Autonomous Grand Challenge</h2>
+            <br>
+            <span class="desc">
+                The field of autonomy is rapidly evolving, and recent advancements from the machine learning community, such as large language models (LLM) and world models, bring great potential. We believe the future lies in explainable, end-to-end models that understand the world and generalize to unvisited environments. In light of this, we propose seven new challenges that push the boundary of existing perception, prediction, and planning pipelines.
+            </span>
+            <br>
+            <span><a href="/challenge2024/">More</a></span>
+
+        </div>
+    </div>
+
+
+
+    <div class="block_left left_right sevent spad">
+
+        <div style="flex-grow: 7;">
+            <a href="/cvpr2024/workshop/"><div class="img img_workshop"></div></a>
+        </div>
+
+        <!-- <div style="flex-grow: 1;"></div> -->
+
+        <div style="flex-grow: 16;">
+
+            <h4>Workshop</h4>
+            <br>
+            <h2>Foundation Models for Autonomous Systems</h2>
+            <br>
+            <span class="desc">
+                Autonomous systems, such as robots and self-driving cars, have rapidly evolved over the past decades. Recently, foundation models have emerged as a promising approach to building more generalist autonomous systems due to their ability to learn from vast amounts of data and generalize to new tasks. The motivation behind this workshop is to explore the potential of foundation models for autonomous agents and discuss the challenges and opportunities associated with this approach.
+            </span>
+            <br>
+            <span><a href="/cvpr2024/workshop/">Summit 435, June 17</a></span>
+
+        </div>
+    </div>
+
+
+
+    <div class="block_right left_right sevent spad">
+
+        <div style="flex-grow: 7;">
+            <a href="/cvpr2024/tutorial/"><div class="img img_tutorial"></div></a>
+        </div>
+
+        <!-- <div style="flex-grow: 1;"></div> -->
+
+        <div style="flex-grow: 16;">
+
+            <h4>Tutorial</h4>
+            <br>
+            <h2>Towards Building AGI in Autonomy and Robotics</h2>
+            <br>
+            <span class="desc">
+                In this tutorial, we explore the intersection of AGI technologies and the advancement of autonomous systems, specifically in the field of robotics. We invite participants to embark on an investigative journey that covers essential concepts, frameworks, and challenges. Through discussion, we aim to shed light on the crucial role of fundamental models in enhancing the cognitive abilities of autonomous agents. Through cooperation, we aim to chart a path for the future of robotics, where the integration of AGI enables autonomous systems to push the limits of their capabilities and intelligence, ushering in a new era of intelligent autonomy.
+            </span>
+            <br>
+            <span><a href="/cvpr2024/tutorial/">Summit 447, June 18 AM</a></span>
+
+        </div>
+    </div>
+
+
+
+    <div class="block_left left_right sevent spad">
+
+        <div style="flex-grow: 7;">
+            <a href="https://na.eventscloud.com/ereg/index.php?eventid=778726" target="_blank"><div class="img img_social"></div></a>
+        </div>
+
+        <!-- <div style="flex-grow: 1;"></div> -->
+
+        <div style="flex-grow: 16;">
+
+            <h4>Social</h4>
+            <br>
+            <h2>How to Adapt Academic Role with Emerging Technologies?</h2>
+            <br>
+            <span class="desc">
+                Although the past century witnessed an unprecedented expansion of scientific and technological knowledge, there are concerns that innovative activity is slowing. It is not uncommon for individuals to compromise their personal research interests in order to fulfill academic obligations, such as funding, service, etc. Nevertheless, preserving one's research interests is crucial for fostering diversity in research.
+            </span>
+            <br>
+            <span><a href="https://na.eventscloud.com/ereg/index.php?eventid=778726" target="_blank">Registration via CVPR Portal</a></span>
+
+
+        </div>
+    </div>
+
+
+
+    <br><br><br>
+
+    <div class="block" style="margin: 0;">
+        <div class="navigator"></div>
+    </div>
+
+    <br id="talks"><br><br>
+
+
+
+    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;">
+        <div style="flex-grow: 1;">
+            <a href="#talks">
+                <h1 style="user-select: none;">
+                    Explore our talks
+                    <img loading="lazy" class="link_img"/>
+                </h1>
+            </a>
+        </div> 
+    </div>
+
+    <br>
+
+
+    <div class="block_left left_right sevent spad">
+
+        <div style="flex-grow: 1;">
+            <h2>The Sixth Workshop on Precognition: Seeing Through the Future</h2>
+            <br>
+            <span class="desc">
+                The workshop will discuss recent approaches and research trends not only in anticipating human behavior from videos, but also precognition in multiple other visual applications, such as medical imaging, health-care, human face aging prediction, early event prediction, autonomous driving forecasting, and so on.
+            </span>
+            <br>
+            <span><a href="https://sites.google.com/view/ieeecvf-cvpr2024-precognition" target="_blank">Summit Elliott Bay, June 18 PM</a></span>
+            <br>
+            <span style="text-align: right;">presented by Hongyang Li</span>
+        </div>
+
+        <br><br><br><br>
+
+        <div style="flex-grow: 1;">
+            <h2> End-to-End Autonomy: A New Era  of Self-Driving </h2>
+            <br>
+            <span class="desc">
+                This tutorial aims to dissect the complexities and nuances of end-to-end autonomy, covering theoretical foundations, practical implementations and challenges, and future directions of this evolving technology.
+            </span>
+            <br>
+            <span><a href="https://wayve.ai/cvpr-e2ead-tutorial/" target="_blank">Summit 444, June 18 PM</a></span>
+            <br>
+            <span style="text-align: right;">presented by Hongyang Li</span>
+        </div>
+
+    </div>
+
+
+
+    <br><br>
+
+    <div class="block" style="margin: 0;">
+        <div class="navigator"></div>
+    </div>
+
+    <br id="papers"><br><br>
+
+
+
+    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;">
+        <div style="flex-grow: 1;">
+            <a href="#papers">
+                <h1 style="user-select: none;">
+                    Meet our team
+                    <img loading="lazy" class="link_img"/>
+                </h1>
+            </a>
+        </div> 
+    </div>
+    <br><br>
+    <div class="block_left left_right spad spub">
+
+        <div style="flex-grow: 7;">
+            <a href="https://arxiv.org/abs/2403.09630" target="_blank"><img src="/assets/publication/genad.jpg"/></a>
+        </div>
+        <br><br>
+        <div style="flex-grow: 16;">
+
+            <h4>Highlight</h4>
+            <br>
+            <h2><a href="https://arxiv.org/abs/2403.09630" target="_blank" style="text-decoration: none !important">Generalized Predictive Model for Autonomous Driving</a></h2>
+            <br>
+            <span class="desc">
+                GenAD is the first large-scale <b>video world model</b> in the autonomous driving discipline. To empower the generalization ability of our model, we acquire over <b>2000 hours</b> of driving videos from the web, spanning areas all over the world with diverse weather conditions and traffic scenarios. Inheriting the merits of recent latent diffusion models, GenAD handles the challenging dynamics in driving scenes with novel temporal reasoning blocks. We showcase that it can generalize to various unseen driving datasets in a zero-shot manner. GenAD can be adapted into an action-conditioned prediction model or a motion planner, holding great potential for real-world driving applications. The <b>OpenDV-YouTube Dataset</b> is hosted <a href="https://github.com/opendrivelab/driveagi?tab=readme-ov-file#genad-dataset-opendv-youtube" target="_blank">here</a>.
+            </span>
+            <br>
+            <span><a>Venue: TBD</a></span>
+            
+        </div>
+        
+    </div>
+
+    <br><br><br><br>
+
+    <div class="block_left left_right spad spub">
+
+        <div style="flex-grow: 7;">
+            <a href="https://arxiv.org/abs/2312.17655" target="_blank"><img src="/assets/publication/vidar.jpg"/></a>
+        </div>
+        <br><br>
+        <div style="flex-grow: 16;">
+
+            <h4>Highlight</h4>
+            <br>
+            <h2><a href="https://arxiv.org/abs/2312.17655" target="_blank" style="text-decoration: none !important">Visual Point Cloud Forecasting enables Scalable Autonomous Driving</a></h2>
+            <br>
+            <span class="desc">
+                ViDAR is a pioneering <b>multi-modal world model</b> designed for autonomous driving. It is capable of predicting future point clouds from historical visual input by understanding the 3D structures and temporal dynamics, and eventually benefits downstream tasks. ViDAR is a pioneering general world model designed for autonomous driving. It is capable of predicting future point clouds from historical visual input by understanding the 3D structures and temporal dynamics, and eventually benefits downstream tasks. All codes, pre-trained models, and fine-tuned models are released <a href="https://github.com/OpenDriveLab/ViDAR" target="_blank">here</a>.
+            </span>
+            <br>
+            <span><a>Venue: TBD</a></span>
+            
+        </div>
+        
+    </div>
+
+    <br><br><br><br>
+
+    <div class="block_left left_right spad spub">
+
+        <div style="flex-grow: 7;">
+            <a href="https://arxiv.org/abs/2403.08770" target="_blank"><img src="/assets/publication/FastMAC.jpg"/></a>
+        </div>
+        <br><br>
+        <div style="flex-grow: 16;">
+
+            <h4>Poster</h4>
+            <br>
+            <h2><a href="https://arxiv.org/abs/2403.08770" target="_blank" style="text-decoration: none !important">FastMAC: Stochastic Spectral Sampling of Correspondence Grap</a></h2>
+            <br>
+            <span class="desc">
+                FastMAC is a complete 3D registration algorithm, introduces graph signal processing into the domain of correspondence graph. It works for both indoor and outdoor benchmarks. Experimentally, an 80 times acceleration on MAC can be achieved on KITTI. Code and model checkpoints is hosted <a href="https://github.com/Forrest-110/FastMAC" target="_blank">here</a>.
+            </span>
+            <br>
+            <span><a>Venue: TBD</a></span>
+            
+        </div>
+        
+    </div>
+
+
+
+    <br><br><br><br>
+
+    <div class="block" style="margin: 0;">
+        <div class="navigator"></div>
+    </div>
+
+    <br id="sponsors"><br><br>
+
+
+
+    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;">
+        <div style="flex-grow: 1;">
+            <a href="#sponsors">
+                <h1 style="user-select: none;">
+                    Great thanks to our sponsors
+                    <img loading="lazy" class="link_img"/>
+                </h1>
+            </a>
+        </div> 
+    </div>
+    <br><br><br>
+    <div class="block_left" style="margin-top: 0; padding-top: 0">
+        <div style="flex-grow: 1;" class="spad">
+
+            <div class="person_container">
+                <div>
+                    <a href="https://www.hp.com/" target="_blank">
+                        <img loading="lazy" src="/assets/brand/hp.svg"/>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.meituan.com/" target="_blank">
+                        <img loading="lazy" src="/assets/brand/meituan_square.png"/>
+                    </a>
+                </div>
+            </div>
+
+
+        </div> 
+    </div>
+
+
+    
+    <div class="block" style="margin: 0;">
+        <div class="navigator"></div>
+    </div>
 
     <br id="DEI"><br><br>
 
@@ -77,19 +404,19 @@
 
     <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;">
         <div style="flex-grow: 1;">
-            <a class="track_title" href="#DEI">
-                <h1>
-                    Diversity, Equity, and Inclusion
+            <a href="#DEI">
+                <h1 style="user-select: none;">
+                    Diversity, equity, and inclusion
                     <img loading="lazy" class="link_img"/>
                 </h1>
             </a>
         </div> 
     </div>
-    <br><br>
-    <div class="block_left" style="margin-top: 0; padding-top: 0">
+    <br><br><br>
+    <div class="block_left spad" style="margin-top: 0; padding-top: 0">
         <div style="flex-grow: 1;">
             <span>
-                Respecting the <a class="Oblue" href="https://cvpr.thecvf.com/Conferences/2024/DEI" target="_blank">CVPR 2024 DEI statement</a>, organizers, speakers, and committee members of our events, encompassing the workshop, challenge, and tutorial, curated a wide variety of researchers from both academia and industry, with different backgrounds, regions, genders, and ages.
+                Respecting the <a style="text-decoration: underline;" href="https://cvpr.thecvf.com/Conferences/2024/DEI" target="_blank">CVPR 2024 DEI statement</a>, organizers, speakers, and committee members of our events, encompassing the workshop, challenge, and tutorial, curated a wide variety of researchers from both academia and industry, with different backgrounds, regions, genders, and ages.
                 <br><br>
                 Many of the greatest ideas come from a diverse mix of minds, backgrounds, and experiences. We provide equal opportunities to all participants without regard to nationality, affiliation, race, religion, color, age, disability, or any other restriction. We believe diversity drives innovation. When we say we welcome participation from everyone, we mean everyone.
             </span>
@@ -98,69 +425,34 @@
 
 
 
-    <br id="organizers"><br><br>
-
-
-    
-    <div class="block" style="margin: 0;">
-        <div class="navigator"></div>
-    </div>
+    <br><br><br><br>
 
 
 
-    <br><br><br>
+    <div class="srecruit">
 
+        <br><br><br>
 
-
-    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;">
-        <div style="flex-grow: 1;">
-            <a class="track_title" href="#organizers">
-                <h1>
-                    Organizers
-                    <img loading="lazy" class="link_img"/>
+        <div class="block_left joinus" style="margin-bottom: 0; padding-bottom: 0;">
+            <div style="flex-grow: 4;">
+                <h1 class="Owhite" style="user-select: none;">
+                    Join us
                 </h1>
-            </a>
-        </div> 
+            </div> 
+            <br><br>
+            <div style="flex-grow: 1;"></div>
+            <div style="flex-grow: 16;">
+                <span class="Owhite">
+                    Looking for opportunities in <b>Shanghai / Hong Kong</b>?
+                    <br><br>
+                    We are searching for talents from all over the world. Are you looking for opportunities as Postdoc, full-time employee, intern, <i>etc.</i>? Don't hesitate to contact us via <i class="fas fa-envelope"></i> <a href="mailto:contact@opendrivelab.com" style="text-decoration: underline;">contact@opendrivelab.com</a> or <a href="https://lihongyang.info" target="_blank" style="text-decoration: underline;">Dr. Hongyang Li</a>.
+                </span>
+            </div> 
+        </div>
+
+        <br><br><br><br><br>
     </div>
-    <br><br>
-    <div class="block_left" style="margin-top: 0; padding-top: 0">
-        <div style="flex-grow: 1;">
-
-            <div class="person_container">
-                <div>
-                    <a href="https://lihongyang.info" target="_blank">
-                        <img loading="lazy" src="/assets/person/hongyang_li.jpg"/>
-                    </a>
-                    <h4>Hongyang Li</h4>
-                    <span>Shanghai AI Lab</span>
-                    <div></div>
-                </div>
-                <div>
-                    <a href="https://hangqiu.github.io/" target="_blank">
-                        <img loading="lazy" src="/assets/person/hang_qiu.jpg"/>
-                    </a>
-                    <h4>Hang Qiu</h4>
-                    <span>UC Riverside</span>
-                    <div></div>
-                </div>
-                <div>
-                    <a>
-                        <img loading="lazy" src="/assets/person/jiajie_xu.jpg"/>
-                    </a>
-                    <h4>Jiajie Xu</h4>
-                    <span>CMU</span>
-                    <div></div>
-                </div>
-            </div>
-
-
-        </div> 
-    </div>
-
-
-
-    <br>
-
 
 
 </body>
+
