@@ -58,26 +58,6 @@ li a {
     }
 }
 
-.spadtalks div {
-    padding-left: 2% !important;
-    padding-right: 2% !important;
-    &:first-child {
-        padding-left: 7% !important;
-    }
-    &:last-child {
-        padding-right: 7% !important;
-    }
-    @media screen and (max-width: 1024px) {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-        &:first-child {
-            padding-left: 0 !important;
-        }
-        &:last-child {
-            padding-right: 0 !important;
-        }
-    }
-}
 
 
 .sevent {
