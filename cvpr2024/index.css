@@ -59,17 +59,23 @@ li a {
 }
 
 .spadtalks div {
-    padding-left: 2%;
-    padding-right: 2%;
+    padding-left: 2% !important;
+    padding-right: 2% !important;
     &:first-child {
-        padding-left: 7%;
+        padding-left: 7% !important;
     }
     &:last-child {
-        padding-right: 7%;
+        padding-right: 7% !important;
     }
     @media screen and (max-width: 1024px) {
-        padding-left: 0;
-        padding-right: 0;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        &:first-child {
+            padding-left: 0 !important;
+        }
+        &:last-child {
+            padding-right: 0 !important;
+        }
     }
 }
 
