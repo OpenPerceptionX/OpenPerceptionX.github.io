@@ -84,6 +84,7 @@ li a {
     }
     & a {
         text-decoration: underline;
+        color: #00a0e8;
     }
     & .img {
         padding: 160px;
