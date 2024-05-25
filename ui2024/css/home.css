@@ -138,3 +138,9 @@
         width: 100%;
     }
 }
+
+
+
+li {
+    list-style-type: disc;
+}
