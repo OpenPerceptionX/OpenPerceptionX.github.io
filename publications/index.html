@@ -114,6 +114,9 @@
         name: 'Yihang Qiu',
         url: 'https://scholar.google.com/citations?user=qgRUOdIAAAAJ'
     }, {
+        name: 'Qingwen Bu',
+        url: 'https://scholar.google.com/citations?user=-JCRysgAAAAJ'
+    }, {
         name: 'Tianyu Li',
         url: 'https://scholar.google.com/citations?user=X6vTmEMAAAAJ'
     },];
@@ -183,8 +186,8 @@
         <div class="navigator"></div>
         <div class="sticky_row">
             <a href="#end_to_end_ad">End-to-End AD</a>
-            <a href="#bev_perception">BEV Perception</a>
-            <a href="#prediction_and_planning">Prediction and Planning</a>
+            <a href="#ad_algorithm">AD Algorithm</a>
+            <a href="#embodied_ai">Embodied AI</a>
             <a href="#cv_at_scale">CV at Scale</a>
         </div>
     </div>
@@ -213,29 +216,11 @@
 
                 <div>
                     <div class="publication_container_first">
-                        <a href="https://arxiv.org/abs/2403.09630" target="_blank"><img loading="lazy" src="/assets/publication/genad.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://arxiv.org/abs/2403.09630" target="_blank">Generalized Predictive Model for Autonomous Driving</a></h2>
-                        <span class="authors">Jiazhi Yang, Shenyuan Gao, Yihang Qiu, Li Chen, Tianyu Li, Bo Dai, Kashyap Chitta, Penghao Wu, Jia Zeng, Ping Luo, Jun Zhang, Andreas Geiger, Yu Qiao, Hongyang Li</span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">CVPR 2024 (Highlight)</span>
-                            </div>
-                            <div>
-                                <a href="https://github.com/OpenDriveLab/DriveAGI" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/OpenDriveLab/DriveAGI?style=social"/></a>
-                            </div>
-                        </div>
-                        <span class="gray"><i>We aim to establish a generalized video prediction paradigm for autonomous driving by presenting the largest multimodal driving video dataset to date, OpenDV-2K, and a generative model that predicts the future given past visual and textual input, GenAD.</i></span>
-                    </div>
-                </div>
-                <div>
-                    <div class="publication_container_first">
                         <a href="https://openaccess.thecvf.com/content/CVPR2023/html/Hu_Planning-Oriented_Autonomous_Driving_CVPR_2023_paper.html" target="_blank"><img loading="lazy" src="/assets/publication/uniad.jpg"/></a>
                     </div>
                     <div class="publication_container_second">
                         <h2><a href="https://openaccess.thecvf.com/content/CVPR2023/html/Hu_Planning-Oriented_Autonomous_Driving_CVPR_2023_paper.html" target="_blank">Planning-oriented Autonomous Driving</a></h2>
-                        <span class="authors">Yihan Hu, Jiazhi Yang, Li Chen, Keyu Li, Chonghao Sima, Hongyang Li, <i>et al.</i></span>
+                        <span class="authors">Yihan Hu, Jiazhi Yang, Li Chen, Keyu Li, Chonghao Sima, Xizhou Zhu, Siqi Chai, Senyao Du, Tianwei Lin, Wenhai Wang, Lewei Lu, Xiaosong Jia, Qiang Liu, Jifeng Dai, Yu Qiao, Hongyang Li</span>
                         <div>
                             <div>
                                 <span class="Odarkblue"><a href="https://cvpr2023.thecvf.com/Conferences/2023/Awards" target="_blank" style="text-decoration: underline;">CVPR 2023 Best Paper Award</a></span>
@@ -253,6 +238,64 @@
                 </div>
                 <div>
                     <div class="publication_container_first">
+                        <a href="https://link.springer.com/chapter/10.1007/978-3-031-20077-9_1" target="_blank"><img loading="lazy" src="/assets/publication/bevformer.jpg"/></a>
+                    </div>
+                    <div class="publication_container_second">
+                        <h2><a href="https://link.springer.com/chapter/10.1007/978-3-031-20077-9_1" target="_blank">BEVFormer: Learning Bird's-Eye-View Representation from Multi-Camera Images via Spatiotemporal Transformers</a></h2>
+                        <span class="authors">Zhiqi Li, Wenhai Wang, Hongyang Li, Enze Xie, Chonghao Sima, Tong Lu, Yu Qiao, Jifeng Dai</span>
+                        <div>
+                            <div>
+                                <span class="Odarkblue">ECCV 2022 <code>[nuScenes First Place]</code> <code>[Waymo Challenge 2022 First Place]</code></span>
+                            </div>
+                            <div>
+                                <a href="https://github.com/fundamentalvision/BEVFormer" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/fundamentalvision/BEVFormer?style=social"/></a>
+                                <a href="https://zhuanlan.zhihu.com/p/564295059" target="_blank"><img loading="lazy" src="/assets/icon/zhihu.png"/></a>
+                            </div>
+                        </div>
+                        <span class="gray"><i>A paradigm for autonomous driving that applies both Transformer and Temporal structure to generate BEV features.</i></span>
+                    </div>
+                </div>
+                <div>
+                    <div class="publication_container_first">
+                        <a href="https://arxiv.org/abs/2312.14150" target="_blank"><img loading="lazy" src="/assets/publication/drivelm.jpg"/></a>
+                    </div>
+                    <div class="publication_container_second">
+                        <h2><a href="https://arxiv.org/abs/2312.14150" target="_blank">DriveLM: Driving with Graph Visual Question Answering</a></h2>
+                        <span class="authors">Chonghao Sima, Katrin Renz, Kashyap Chitta, Li Chen, Hanxue Zhang, Chengen Xie, Ping Luo, Andreas Geiger, Hongyang Li</span>
+                        <div>
+                            <div>
+                                <span class="Odarkblue">arXiv 2024</span>
+                            </div>
+                            <div>
+                                <a href="https://github.com/OpenDriveLab/DriveLM" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/OpenDriveLab/DriveLM?style=social"/></a>
+                                <a href="https://github.com/OpenDriveLab/DriveLM" target="_blank"><img loading="lazy" src="/assets/icon/dataset.png"/></a>
+                                <a href="https://opendrivelab.com/DriveLM/" target="_blank"><img loading="lazy" src="/assets/icon/webpage.png"/></a>
+                                <a href="https://huggingface.co/datasets/OpenDriveLab-org/DriveLM" target="_blank"><img loading="lazy" src="/assets/icon/hugging_face.png"/></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="publication_container_first">
+                        <a href="https://opendrivelab.github.io/mpi.github.io/resources/RSS_2024_MPI.pdf" target="_blank"><img loading="lazy" src="/assets/publication/mpi.jpg"/></a>
+                    </div>
+                    <div class="publication_container_second">
+                        <h2><a href="https://opendrivelab.github.io/mpi.github.io/resources/RSS_2024_MPI.pdf" target="_blank">Learning Manipulation by Predicting Interaction</a></h2>
+                        <span class="authors">Jia Zeng, Qingwen Bu, Bangjun Wang, Wenke Xia, Li Chen, Hao Dong, Haoming Song, Dong Wang, Di Hu, Ping Luo, Heming Cui, Bin Zhao, Xuelong Li, Yu Qiao, Hongyang Li</span>
+                        <div>
+                            <div>
+                                <span class="Odarkblue">RSS 2024</span>
+                            </div>
+                            <div>
+                                <a href="https://github.com/OpenDriveLab/MPI" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/OpenDriveLab/MPI?style=social"/></a>
+                                <a href="https://opendrivelab.github.io/mpi.github.io/" target="_blank"><img loading="lazy" src="/assets/icon/webpage.png"/></a>
+                            </div>
+                        </div>
+                        <span class="gray"><i>We propose a general pre-training pipeline that learns Manipulation by Predicting the Interaction (MPI).</i></span>
+                    </div>
+                </div>
+                <div>
+                    <div class="publication_container_first">
                         <a href="https://doi.org/10.1360/SSI-2023-0313" target="_blank"><img loading="lazy" src="/assets/publication/datasurvey.jpg"/></a>
                     </div>
                     <div class="publication_container_second">
@@ -262,7 +305,7 @@
                             <div>
                                 <span class="Odarkblue">中国科学：信息科学</span>
                             </div>
-                            <div>
+                            <div id="end_to_end_ad">
                                 <a href="https://github.com/OpenDriveLab/DriveAGI" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/OpenDriveLab/DriveAGI?style=social"/></a>
                                 <a href="https://www.researchgate.net/publication/375331218_Open-sourced_Data_Ecosystem_in_Autonomous_Driving_the_Present_and_Future?channel=doi&linkId=65467b44ce88b87031c4ceab&showFulltext=true" target="_blank"><img src="/assets/icon/researchgate.png"/></a>
                                 <a href="https://arxiv.org/abs/2312.03408" target="_blank"><img loading="lazy" src="/assets/icon/arxiv.png"/></a>
@@ -270,79 +313,9 @@
                         </div>
                     </div>
                 </div>
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://arxiv.org/abs/2306.16927" target="_blank"><img loading="lazy" src="/assets/publication/e2esurvey.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://arxiv.org/abs/2306.16927" target="_blank">End-to-end Autonomous Driving: Challenges and Frontiers</a></h2>
-                        <span class="authors">Li Chen, Penghao Wu, Kashyap Chitta, Bernhard Jaeger, Andreas Geiger, Hongyang Li</span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">arXiv 2023</span>
-                            </div>
-                            <div>
-                                <a href="https://github.com/OpenDriveLab/End-to-end-Autonomous-Driving" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/OpenDriveLab/End-to-end-Autonomous-Driving?style=social"/></a>
-                            </div>
-                        </div>
-                        <span class="gray"><i>In this survey, we provide a comprehensive analysis of more than 250 papers on the motivation, roadmap, methodology, challenges, and future trends in end-to-end autonomous driving.</i></span>
-                    </div>
-                </div>
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://ieeexplore.ieee.org/document/10321736" target="_blank"><img loading="lazy" src="/assets/publication/bevsurvey.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://ieeexplore.ieee.org/document/10321736" target="_blank">Delving into the Devils of Bird's-Eye-View Perception: A Review, Evaluation and Recipe</a></h2>
-                        <span class="authors">Hongyang Li, Chonghao Sima, Jifeng Dai, Wenhai Wang, Lewei Lu, <i>et al.</i></span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">TPAMI 2023 <code>[Setup the Table]</code></span>
-                            </div>
-                            <div>
-                                <a href="https://github.com/opendrivelab/bevperception-survey-recipe" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/opendrivelab/bevperception-survey-recipe?style=social"/></a>
-                            </div>
-                        </div>
-                        <span class="gray"><i>We review the most recent work on BEV perception and provide analysis of different solutions.</i></span>
-                    </div>
-                </div>
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://openreview.net/forum?id=OMOOO3ls6g" target="_blank"><img loading="lazy" src="/assets/publication/openlanev2.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://openreview.net/forum?id=OMOOO3ls6g" target="_blank">OpenLane-V2: A Topology Reasoning Benchmark for Unified 3D HD Mapping</a></h2>
-                        <span class="authors">Huijie Wang, Tianyu Li, Yang Li, Li Chen, Chonghao Sima, <i>et al.</i></span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">NeurIPS 2023 Track Datasets and Benchmarks</span>
-                            </div>
-                            <div>
-                                <a href="https://github.com/OpenDriveLab/OpenLane-V2" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/opendrivelab/OpenLane-V2?style=social"/></a>
-                            </div>
-                        </div>
-                        <span class="gray"><i>The world's first perception and reasoning benchmark for scene structure in autonomous driving.</i></span>
-                    </div>
-                </div>
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://link.springer.com/chapter/10.1007/978-3-031-20077-9_1" target="_blank"><img loading="lazy" src="/assets/publication/bevformer.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://link.springer.com/chapter/10.1007/978-3-031-20077-9_1" target="_blank">BEVFormer: Learning Bird's-Eye-View Representation from Multi-Camera Images via Spatiotemporal Transformers</a></h2>
-                        <span class="authors">Zhiqi Li, Wenhai Wang, Hongyang Li, Enze Xie, Chonghao Sima, <i>et al.</i></span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">ECCV 2022 <code>[nuScenes First Place]</code> <code>[Waymo Challenge 2022 First Place]</code></span>
-                            </div>
-                            <div id="end_to_end_ad">
-                                <a href="https://github.com/fundamentalvision/BEVFormer" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/fundamentalvision/BEVFormer?style=social"/></a>
-                                <a href="https://zhuanlan.zhihu.com/p/564295059" target="_blank"><img loading="lazy" src="/assets/icon/zhihu.png"/></a>
-                            </div>
-                        </div>
-                        <span class="gray"><i>A paradigm for autonomous driving that applies both Transformer and Temporal structure to generate BEV features.</i></span>
-                    </div>
-                </div>
+
+
+
 
             </div>
         </div> 
@@ -375,6 +348,44 @@
 
                 <div>
                     <div class="publication_container_first">
+                        <a href="https://arxiv.org/abs/2403.09630" target="_blank"><img loading="lazy" src="/assets/publication/genad.jpg"/></a>
+                    </div>
+                    <div class="publication_container_second">
+                        <h2><a href="https://arxiv.org/abs/2403.09630" target="_blank">Generalized Predictive Model for Autonomous Driving</a></h2>
+                        <span class="authors">Jiazhi Yang, Shenyuan Gao, Yihang Qiu, Li Chen, Tianyu Li, Bo Dai, Kashyap Chitta, Penghao Wu, Jia Zeng, Ping Luo, Jun Zhang, Andreas Geiger, Yu Qiao, Hongyang Li</span>
+                        <div>
+                            <div>
+                                <span class="Odarkblue">CVPR 2024 (Highlight)</span>
+                            </div>
+                            <div>
+                                <a href="https://github.com/OpenDriveLab/DriveAGI" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/OpenDriveLab/DriveAGI?style=social"/></a>
+                                <a href="https://github.com/OpenDriveLab/DriveAGI" target="_blank"><img loading="lazy" src="/assets/icon/dataset.png"/></a>
+
+                            </div>
+                        </div>
+                        <span class="gray"><i>We aim to establish a generalized video prediction paradigm for autonomous driving by presenting the largest multimodal driving video dataset to date, OpenDV-2K, and a generative model that predicts the future given past visual and textual input, GenAD.</i></span>
+                    </div>
+                </div>
+                <div>
+                    <div class="publication_container_first">
+                        <a href="https://arxiv.org/abs/2312.17655" target="_blank"><img loading="lazy" src="/assets/publication/vidar.jpg"/></a>
+                    </div>
+                    <div class="publication_container_second">
+                        <h2><a href="https://arxiv.org/abs/2312.17655" target="_blank">Visual Point Cloud Forecasting enables Scalable Autonomous Driving</a></h2>
+                        <span class="authors">Zetong Yang, Li Chen, Yanan Sun, Hongyang Li</span>
+                        <div>
+                            <div>
+                                <span class="Odarkblue">CVPR 2024 (Highlight)</span>
+                            </div>
+                            <div>
+                                <a href="https://github.com/OpenDriveLab/ViDAR" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/OpenDriveLab/ViDAR?style=social"/></a>
+                            </div>
+                        </div>
+                        <span class="gray"><i>A new self-supervised pre-training task for end-to-end autonomous driving, predicting future point clouds from historical visual inputs, joint modeling the 3D geometry and temporal dynamics for simultaneous perception, prediction, and planning.</i></span>
+                    </div>
+                </div>
+                <div>
+                    <div class="publication_container_first">
                         <a href="https://arxiv.org/abs/2403.04593" target="_blank"><img loading="lazy" src="/assets/publication/elm.jpg"/></a>
                     </div>
                     <div class="publication_container_second">
@@ -393,43 +404,6 @@
                 </div>
                 <div>
                     <div class="publication_container_first">
-                        <a href="https://arxiv.org/abs/2312.14150" target="_blank"><img loading="lazy" src="/assets/publication/drivelm.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://arxiv.org/abs/2312.14150" target="_blank">DriveLM: Driving with Graph Visual Question Answering</a></h2>
-                        <span class="authors">Chonghao Sima, Katrin Renz, Kashyap Chitta, Li Chen, Hanxue Zhang, Chengen Xie, Ping Luo, Andreas Geiger, Hongyang Li</span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">arXiv 2024</span>
-                            </div>
-                            <div>
-                                <a href="https://github.com/OpenDriveLab/DriveLM" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/OpenDriveLab/DriveLM?style=social"/></a>
-                                <a href="https://opendrivelab.com/DriveLM/" target="_blank"><img loading="lazy" src="/assets/icon/webpage.png"/></a>
-                                <a href="https://huggingface.co/datasets/OpenDriveLab-org/DriveLM" target="_blank"><img loading="lazy" src="/assets/icon/hugging_face.png"/></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://arxiv.org/abs/2311.01043" target="_blank"><img loading="lazy" src="/assets/publication/llm4drive.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://arxiv.org/abs/2311.01043" target="_blank">A Survey of Large Language Models for Autonomous Driving</a></h2>
-                        <span class="authors">Zhenjie Yang, Xiaosong Jia, Hongyang Li, Junchi Yan</span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">arXiv 2023</span>
-                            </div>
-                            <div>
-                                <a href="https://github.com/Thinklab-SJTU/Awesome-LLM4AD" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/Thinklab-SJTU/Awesome-LLM4AD?style=social"/></a>
-                            </div>
-                        </div>
-                        <span class="gray"><i>A collection of research papers about LLM-for-Autonomous-Driving (LLM4AD).</i></span>
-                    </div>
-                </div>
-                <div>
-                    <div class="publication_container_first">
                         <a href="https://openaccess.thecvf.com/content/ICCV2023/html/Jia_DriveAdapter_Breaking_the_Coupling_Barrier_of_Perception_and_Planning_in_ICCV_2023_paper.html" target="_blank"><img loading="lazy" src="/assets/publication/driveadapted.jpg"/></a>
                     </div>
                     <div class="publication_container_second">
@@ -444,6 +418,24 @@
                             </div>
                         </div>
                         <span class="gray"><i>A new paradigm for end-to-end autonomous driving without causal confusion issue.</i></span>
+                    </div>
+                </div>
+                <div>
+                    <div class="publication_container_first">
+                        <a href="https://arxiv.org/abs/2306.16927" target="_blank"><img loading="lazy" src="/assets/publication/e2esurvey.jpg"/></a>
+                    </div>
+                    <div class="publication_container_second">
+                        <h2><a href="https://arxiv.org/abs/2306.16927" target="_blank">End-to-end Autonomous Driving: Challenges and Frontiers</a></h2>
+                        <span class="authors">Li Chen, Penghao Wu, Kashyap Chitta, Bernhard Jaeger, Andreas Geiger, Hongyang Li</span>
+                        <div>
+                            <div>
+                                <span class="Odarkblue">arXiv 2023</span>
+                            </div>
+                            <div>
+                                <a href="https://github.com/OpenDriveLab/End-to-end-Autonomous-Driving" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/OpenDriveLab/End-to-end-Autonomous-Driving?style=social"/></a>
+                            </div>
+                        </div>
+                        <span class="gray"><i>In this survey, we provide a comprehensive analysis of more than 250 papers on the motivation, roadmap, methodology, challenges, and future trends in end-to-end autonomous driving.</i></span>
                     </div>
                 </div>
                 <div>
@@ -513,7 +505,7 @@
                             <div>
                                 <span class="Odarkblue">ECCV 2022</span>
                             </div>
-                            <div id="bev_perception">
+                            <div id="ad_algorithm">
                                 <a href="https://github.com/OpenDriveLab/st-p3" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/OpenDriveLab/st-p3?style=social"/></a>
                                 <a href="https://zhuanlan.zhihu.com/p/544387122" target="_blank"><img loading="lazy" src="/assets/icon/zhihu.png"/></a>
                             </div>
@@ -538,9 +530,9 @@
 
     <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;">
         <div style="flex-grow: 1;">
-            <a class="h1_title" href="#bev_perception">
+            <a class="h1_title" href="#ad_algorithm">
                 <h1>
-                    Bird's-Eye-View Perception
+                    AD Algorithm
                     <img loading="lazy" class="link_img"/>
                 </h1>
             </a>
@@ -551,24 +543,6 @@
         <div style="flex-grow: 1;">
             <div class="publication_container">
 
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://arxiv.org/abs/2312.17655" target="_blank"><img loading="lazy" src="/assets/publication/vidar.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://arxiv.org/abs/2312.17655" target="_blank">Visual Point Cloud Forecasting enables Scalable Autonomous Driving</a></h2>
-                        <span class="authors">Zetong Yang, Li Chen, Yanan Sun, Hongyang Li</span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">CVPR 2024 (Highlight)</span>
-                            </div>
-                            <div>
-                                <a href="https://github.com/OpenDriveLab/ViDAR" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/OpenDriveLab/ViDAR?style=social"/></a>
-                            </div>
-                        </div>
-                        <span class="gray"><i>A new self-supervised pre-training task for end-to-end autonomous driving, predicting future point clouds from historical visual inputs, joint modeling the 3D geometry and temporal dynamics for simultaneous perception, prediction, and planning.</i></span>
-                    </div>
-                </div>
                 <div>
                     <div class="publication_container_first">
                         <a href="https://arxiv.org/abs/2312.16108" target="_blank"><img loading="lazy" src="/assets/publication/lanesegnet.jpg"/></a>
@@ -607,6 +581,62 @@
                 </div>
                 <div>
                     <div class="publication_container_first">
+                        <a href="https://openreview.net/forum?id=OMOOO3ls6g" target="_blank"><img loading="lazy" src="/assets/publication/openlanev2.jpg"/></a>
+                    </div>
+                    <div class="publication_container_second">
+                        <h2><a href="https://openreview.net/forum?id=OMOOO3ls6g" target="_blank">OpenLane-V2: A Topology Reasoning Benchmark for Unified 3D HD Mapping</a></h2>
+                        <span class="authors">Huijie Wang, Tianyu Li, Yang Li, Li Chen, Chonghao Sima, <i>et al.</i></span>
+                        <div>
+                            <div>
+                                <span class="Odarkblue">NeurIPS 2023 Track Datasets and Benchmarks</span>
+                            </div>
+                            <div>
+                                <a href="https://github.com/OpenDriveLab/OpenLane-V2" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/opendrivelab/OpenLane-V2?style=social"/></a>
+                                <a href="https://github.com/OpenDriveLab/OpenLane-V2" target="_blank"><img loading="lazy" src="/assets/icon/dataset.png"/></a>
+
+                            </div>
+                        </div>
+                        <span class="gray"><i>The world's first perception and reasoning benchmark for scene structure in autonomous driving.</i></span>
+                    </div>
+                </div>
+                <div>
+                    <div class="publication_container_first">
+                        <a href="https://ieeexplore.ieee.org/document/10321736" target="_blank"><img loading="lazy" src="/assets/publication/bevsurvey.jpg"/></a>
+                    </div>
+                    <div class="publication_container_second">
+                        <h2><a href="https://ieeexplore.ieee.org/document/10321736" target="_blank">Delving into the Devils of Bird's-Eye-View Perception: A Review, Evaluation and Recipe</a></h2>
+                        <span class="authors">Hongyang Li, Chonghao Sima, Jifeng Dai, Wenhai Wang, Lewei Lu, <i>et al.</i></span>
+                        <div>
+                            <div>
+                                <span class="Odarkblue">TPAMI 2023 <code>[Setup the Table]</code></span>
+                            </div>
+                            <div>
+                                <a href="https://github.com/opendrivelab/bevperception-survey-recipe" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/opendrivelab/bevperception-survey-recipe?style=social"/></a>
+                            </div>
+                        </div>
+                        <span class="gray"><i>We review the most recent work on BEV perception and provide analysis of different solutions.</i></span>
+                    </div>
+                </div>
+                <div>
+                    <div class="publication_container_first">
+                        <a href="https://arxiv.org/abs/2311.01043" target="_blank"><img loading="lazy" src="/assets/publication/llm4drive.jpg"/></a>
+                    </div>
+                    <div class="publication_container_second">
+                        <h2><a href="https://arxiv.org/abs/2311.01043" target="_blank">LLM4Drive: A Survey of Large Language Models for Autonomous Driving</a></h2>
+                        <span class="authors">Zhenjie Yang, Xiaosong Jia, Hongyang Li, Junchi Yan</span>
+                        <div>
+                            <div>
+                                <span class="Odarkblue">arXiv 2023</span>
+                            </div>
+                            <div>
+                                <a href="https://github.com/Thinklab-SJTU/Awesome-LLM4AD" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/Thinklab-SJTU/Awesome-LLM4AD?style=social"/></a>
+                            </div>
+                        </div>
+                        <span class="gray"><i>A collection of research papers about LLM-for-Autonomous-Driving (LLM4AD).</i></span>
+                    </div>
+                </div>
+                <div>
+                    <div class="publication_container_first">
                         <a href="https://arxiv.org/abs/2306.02851" target="_blank"><img loading="lazy" src="/assets/publication/occnet.jpg"/></a>
                     </div>
                     <div class="publication_container_second">
@@ -621,6 +651,69 @@
                             </div>
                         </div>
                         <span class="gray"><i>Occupancy serves as a general representation of the scene and could facilitate perception and planning in the full-stack of autonomous driving.</i></span>
+                    </div>
+                </div>
+                <div>
+                    <div class="publication_container_first">
+                        <a href="https://arxiv.org/abs/2304.04179" target="_blank"><img loading="lazy" src="/assets/publication/sparse_yulu.jpg"/></a>
+                    </div>
+                    <div class="publication_container_second">
+                        <h2><a href="https://arxiv.org/abs/2304.04179" target="_blank">Sparse Dense Fusion for 3D Object Detection</a></h2>
+                        <span class="authors">Yulu Gao, Chonghao Sima, Shaoshuai Shi, Shangzhe Di, Si Liu, Hongyang Li</i></span>
+                        <div>
+                            <div>
+                                <span class="Odarkblue">IROS 2023</span>
+                            </div>
+                        </div>
+                        <span class="gray"><i>We propose Sparse Dense Fusion (SDF), a complementary framework that incorporates both sparse-fusion and dense-fusion modules via the Transformer architecture.</i></span>
+                    </div>
+                </div>
+                <div>
+                    <div class="publication_container_first">
+                        <a href="https://arxiv.org/abs/2205.09753" target="_blank"><img loading="lazy" src="/assets/publication/hdgt.jpg"/></a>
+                    </div>
+                    <div class="publication_container_second">
+                        <h2><a href="https://arxiv.org/abs/2205.09753" target="_blank">HDGT: Heterogeneous driving graph transformer for multi-agent trajectory prediction via scene encoding</a></h2>
+                        <span class="authors">Xiaosong Jia, Penghao Wu, Li Chen, Hongyang Li, Yu Liu, Junchi Yan</i></span>
+                        <div>
+                            <div>
+                                <span class="Odarkblue">TPAMI 2023</span>
+                            </div>
+                            <div>
+                                <a href="https://github.com/OpenPerceptionX/HDGT" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/OpenPerceptionX/HDGT?style=social"/></a>
+                            </div>
+                        </div>
+                        <span class="gray"><i>HDGT formulates the driving scene as a heterogeneous graph with different types of nodes and edges.</i></span>
+                    </div>
+                </div>
+                <div>
+                    <div class="publication_container_first">
+                        <a href="https://openaccess.thecvf.com/content/CVPR2023/html/Zeng_Distilling_Focal_Knowledge_From_Imperfect_Expert_for_3D_Object_Detection_CVPR_2023_paper.html" target="_blank"><img loading="lazy" src="/assets/publication/fd3d.jpg"/></a>
+                    </div>
+                    <div class="publication_container_second">
+                        <h2><a href="https://openaccess.thecvf.com/content/CVPR2023/html/Zeng_Distilling_Focal_Knowledge_From_Imperfect_Expert_for_3D_Object_Detection_CVPR_2023_paper.html" target="_blank">Distilling Focal Knowledge from Imperfect Expert for 3D Object Detection</a></h2>
+                        <span class="authors">Jia Zeng, Li Chen, <i>et al.</i></span>
+                        <div>
+                            <div>
+                                <span class="Odarkblue">CVPR 2023</span>
+                            </div>
+                        </div>
+                        <span class="gray"><i>We investigate on how to distill the knowledge from an imperfect expert. We propose FD3D, a Focal Distiller for 3D object detection.</i></span>
+                    </div>
+                </div>
+                <div>
+                    <div class="publication_container_first">
+                        <a href="https://openaccess.thecvf.com/content/CVPR2023/html/Yang_BEVFormer_v2_Adapting_Modern_Image_Backbones_to_Birds-Eye-View_Recognition_via_CVPR_2023_paper.html" target="_blank"><img loading="lazy" src="/assets/publication/bevformerv2.jpg"/></a>
+                    </div>
+                    <div class="publication_container_second">
+                        <h2><a href="https://openaccess.thecvf.com/content/CVPR2023/html/Yang_BEVFormer_v2_Adapting_Modern_Image_Backbones_to_Birds-Eye-View_Recognition_via_CVPR_2023_paper.html" target="_blank">BEVFormer v2: Adapting Modern Image Backbones to Bird's-Eye-View Recognition via Perspective Supervision</a></h2>
+                        <span class="authors">Chenyu Yang, Xizhou Zhu, Hongyang Li, Jifeng Dai, <i>et al.</i></span>
+                        <div>
+                            <div>
+                                <span class="Odarkblue">CVPR 2023 Highlight</span>
+                            </div>
+                        </div>
+                        <span class="gray"><i>A novel bird's-eye-view (BEV) detector with perspective supervision, which converges faster and better suits modern image backbones.</i></span>
                     </div>
                 </div>
                 <div>
@@ -643,17 +736,17 @@
                 </div>
                 <div>
                     <div class="publication_container_first">
-                        <a href="https://arxiv.org/abs/2304.04179" target="_blank"><img loading="lazy" src="/assets/publication/sparse_yulu.jpg"/></a>
+                        <a href="https://arxiv.org/abs/2304.03105" target="_blank"><img loading="lazy" src="/assets/publication/gapretrain.jpg"/></a>
                     </div>
                     <div class="publication_container_second">
-                        <h2><a href="https://arxiv.org/abs/2304.04179" target="_blank">Sparse Dense Fusion for 3D Object Detection</a></h2>
-                        <span class="authors">Yulu Gao, Chonghao Sima, Shaoshuai Shi, Shangzhe Di, Si Liu, Hongyang Li</i></span>
+                        <h2><a href="https://arxiv.org/abs/2304.03105" target="_blank">Geometric-aware Pretraining for Vision-centric 3D Object Detection</a></h2>
+                        <span class="authors">Linyan Huang, Huijie Wang, Jia Zeng, Shengchuan Zhang, Liujuan Cao, Rongrong Ji, Junchi Yan, Hongyang Li</i></span>
                         <div>
                             <div>
-                                <span class="Odarkblue">IROS 2023</span>
+                                <span class="Odarkblue">arXiv 2023</span>
                             </div>
                         </div>
-                        <span class="gray"><i>We propose Sparse Dense Fusion (SDF), a complementary framework that incorporates both sparse-fusion and dense-fusion modules via the Transformer architecture.</i></span>
+                        <span class="gray"><i>We propose GAPretrain, a plug-and-play framework that boosts 3D detection by pretraining with spatial-structural cues and BEV representation.</i></span>
                     </div>
                 </div>
                 <div>
@@ -673,47 +766,17 @@
                 </div>
                 <div>
                     <div class="publication_container_first">
-                        <a href="https://arxiv.org/abs/2304.03105" target="_blank"><img loading="lazy" src="/assets/publication/gapretrain.jpg"/></a>
+                        <a href="https://proceedings.mlr.press/v205/jia23a.html" target="_blank"><img loading="lazy" src="/assets/publication/traj_xiaosong.jpg"/></a>
                     </div>
                     <div class="publication_container_second">
-                        <h2><a href="https://arxiv.org/abs/2304.03105" target="_blank">Geometric-aware Pretraining for Vision-centric 3D Object Detection</a></h2>
-                        <span class="authors">Linyan Huang, Huijie Wang, Jia Zeng, Shengchuan Zhang, Liujuan Cao, Rongrong Ji, Junchi Yan, Hongyang Li</i></span>
+                        <h2><a href="https://proceedings.mlr.press/v205/jia23a.html" target="_blank">Towards Capturing the Temporal Dynamics for Trajectory Prediction: a Coarse-to-Fine Approach</a></h2>
+                        <span class="authors">Xiaosong Jia, Li Chen, Penghao Wu, Jia Zeng, <i>et al.</i></span>
                         <div>
                             <div>
-                                <span class="Odarkblue">arXiv 2023</span>
+                                <span class="Odarkblue">CoRL 2022</span>
                             </div>
                         </div>
-                        <span class="gray"><i>We propose GAPretrain, a plug-and-play framework that boosts 3D detection by pretraining with spatial-structural cues and BEV representation.</i></span>
-                    </div>
-                </div>
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://openaccess.thecvf.com/content/CVPR2023/html/Yang_BEVFormer_v2_Adapting_Modern_Image_Backbones_to_Birds-Eye-View_Recognition_via_CVPR_2023_paper.html" target="_blank"><img loading="lazy" src="/assets/publication/bevformerv2.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://openaccess.thecvf.com/content/CVPR2023/html/Yang_BEVFormer_v2_Adapting_Modern_Image_Backbones_to_Birds-Eye-View_Recognition_via_CVPR_2023_paper.html" target="_blank">BEVFormer v2: Adapting Modern Image Backbones to Bird's-Eye-View Recognition via Perspective Supervision</a></h2>
-                        <span class="authors">Chenyu Yang, Xizhou Zhu, Hongyang Li, Jifeng Dai, <i>et al.</i></span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">CVPR 2023 Highlight</span>
-                            </div>
-                        </div>
-                        <span class="gray"><i>A novel bird's-eye-view (BEV) detector with perspective supervision, which converges faster and better suits modern image backbones.</i></span>
-                    </div>
-                </div>
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://openaccess.thecvf.com/content/CVPR2023/html/Zeng_Distilling_Focal_Knowledge_From_Imperfect_Expert_for_3D_Object_Detection_CVPR_2023_paper.html" target="_blank"><img loading="lazy" src="/assets/publication/fd3d.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://openaccess.thecvf.com/content/CVPR2023/html/Zeng_Distilling_Focal_Knowledge_From_Imperfect_Expert_for_3D_Object_Detection_CVPR_2023_paper.html" target="_blank">Distilling Focal Knowledge from Imperfect Expert for 3D Object Detection</a></h2>
-                        <span class="authors">Jia Zeng, Li Chen, <i>et al.</i></span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">CVPR 2023</span>
-                            </div>
-                        </div>
-                        <span class="gray"><i>We investigate on how to distill the knowledge from an imperfect expert. We propose FD3D, a Focal Distiller for 3D object detection.</i></span>
+                        <span class="gray"><i>We find taking scratch trajectories generated by MLP as input, a refinement module based on structures with temporal prior, could  boost the accuracy.</i></span>
                     </div>
                 </div>
                 <div>
@@ -727,7 +790,7 @@
                             <div>
                                 <span class="Odarkblue">ECCV 2022 (Oral) <code>[Redefine the Community]</code></span>
                             </div>
-                            <div id="prediction_and_planning">
+                            <div id="embodied_ai">
                                 <a href="https://github.com/OpenDriveLab/PersFormer_3DLane" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/OpenDriveLab/PersFormer_3DLane?style=social"/></a>
                                 <a href="https://github.com/OpenDriveLab/OpenLane" target="_blank"><img loading="lazy" src="/assets/icon/dataset.png"/></a>
                                 <a href="https://patrick-llgc.github.io/Learning-Deep-Learning/paper_notes/persformer.html" target="_blank"><img loading="lazy" src="/assets/icon/article.png"/></a>
@@ -754,9 +817,9 @@
 
     <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;">
         <div style="flex-grow: 1;">
-            <a class="h1_title" href="#prediction_and_planning">
+            <a class="h1_title" href="#embodied_ai">
                 <h1>
-                    Prediction and Planning
+                    Embodied AI
                     <img loading="lazy" class="link_img"/>
                 </h1>
             </a>
@@ -769,35 +832,21 @@
 
                 <div>
                     <div class="publication_container_first">
-                        <a href="https://proceedings.mlr.press/v205/jia23a.html" target="_blank"><img loading="lazy" src="/assets/publication/traj_xiaosong.jpg"/></a>
+                        <a href="https://opendrivelab.github.io/mpi.github.io/resources/RSS_2024_MPI.pdf" target="_blank"><img loading="lazy" src="/assets/publication/mpi.jpg"/></a>
                     </div>
                     <div class="publication_container_second">
-                        <h2><a href="https://proceedings.mlr.press/v205/jia23a.html" target="_blank">Towards Capturing the Temporal Dynamics for Trajectory Prediction: a Coarse-to-Fine Approach</a></h2>
-                        <span class="authors">Xiaosong Jia, Li Chen, Penghao Wu, Jia Zeng, <i>et al.</i></span>
-                        <div>
+                        <h2><a href="https://opendrivelab.github.io/mpi.github.io/resources/RSS_2024_MPI.pdf" target="_blank">Learning Manipulation by Predicting Interaction</a></h2>
+                        <span class="authors">Jia Zeng, Qingwen Bu, Bangjun Wang, Wenke Xia, Li Chen, Hao Dong, Haoming Song, Dong Wang, Di Hu, Ping Luo, Heming Cui, Bin Zhao, Xuelong Li, Yu Qiao, Hongyang Li</span>
+                        <div id="cv_at_scale">
                             <div>
-                                <span class="Odarkblue">CoRL 2022</span>
+                                <span class="Odarkblue">RSS 2024</span>
+                            </div>
+                            <div>
+                                <a href="https://github.com/OpenDriveLab/MPI" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/OpenDriveLab/MPI?style=social"/></a>
+                                <a href="https://opendrivelab.github.io/mpi.github.io/" target="_blank"><img loading="lazy" src="/assets/icon/webpage.png"/></a>
                             </div>
                         </div>
-                        <span class="gray"><i>We find taking scratch trajectories generated by MLP as input, a refinement module based on structures with temporal prior, could  boost the accuracy.</i></span>
-                    </div>
-                </div>
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://arxiv.org/abs/2205.09753" target="_blank"><img loading="lazy" src="/assets/publication/hdgt.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://arxiv.org/abs/2205.09753" target="_blank">HDGT: Heterogeneous driving graph transformer for multi-agent trajectory prediction via scene encoding</a></h2>
-                        <span class="authors">Xiaosong Jia, Penghao Wu, Li Chen, Hongyang Li, Yu Liu, Junchi Yan</i></span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">TPAMI 2023</span>
-                            </div>
-                            <div id="cv_at_scale">
-                                <a href="https://github.com/OpenPerceptionX/HDGT" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/OpenPerceptionX/HDGT?style=social"/></a>
-                            </div>
-                        </div>
-                        <span class="gray"><i>HDGT formulates the driving scene as a heterogeneous graph with different types of nodes and edges.</i></span>
+                        <span class="gray"><i>We propose a general pre-training pipeline that learns Manipulation by Predicting the Interaction (MPI).</i></span>
                     </div>
                 </div>
 
@@ -830,6 +879,23 @@
         <div style="flex-grow: 1;">
 
             <div class="publication_container">
+                <div>
+                    <div class="publication_container_first">
+                        <a href="https://arxiv.org/abs/2403.08770" target="_blank"><img loading="lazy" src="/assets/publication/FastMAC.jpg"/></a>
+                    </div>
+                    <div class="publication_container_second">
+                        <h2><a href="https://arxiv.org/abs/2403.08770" target="_blank">FastMAC: Stochastic Spectral Sampling of Correspondence Grap</a></h2>
+                        <span class="authors">Yifei Zhang, Hao Zhao, Hongyang Li, Siheng Chen</span>
+                        <div>
+                            <div>
+                                <span class="Odarkblue">CVPR 2024</span>
+                            </div>
+                            <div>
+                                <a href="https://github.com/Forrest-110/FastMAC" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/Forrest-110/FastMAC?style=social"/></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div>
                     <div class="publication_container_first">
                         <a href="https://arxiv.org/abs/2305.16318" target="_blank"><img loading="lazy" src="/assets/publication/mutr.jpg"/></a>
