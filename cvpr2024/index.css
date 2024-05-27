@@ -50,8 +50,8 @@ li a {
 
 
 .spad div {
-    padding-left: 7%;
-    padding-right: 7%;
+    padding-left: 2%;
+    padding-right: 2%;
     @media screen and (max-width: 1024px) {
         padding-left: 0;
         padding-right: 0;
@@ -133,7 +133,7 @@ li a {
         text-decoration: underline;
     }
     & img {
-        width: min(512px, 150%);
+        width: min(512px, 100%);
     }
     & .spub_icon{
         height: 24px;
