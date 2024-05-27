@@ -152,3 +152,10 @@ li a {
         align-items: flex-start;
     }
 }
+
+
+
+h2 a {
+    color: inherit !important;
+    text-decoration: inherit !important;
+}
