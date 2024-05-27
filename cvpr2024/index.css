@@ -182,6 +182,9 @@ h2 a {
         & a img {
             height: 64px;
             border-radius: 100%;
+            @media screen and (max-width: 1024px) {
+                height: 80px;
+            }
         }
         & div {
             gap: 0;
