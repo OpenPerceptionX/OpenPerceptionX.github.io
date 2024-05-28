@@ -50,8 +50,8 @@ li a {
 
 
 .spad div {
-    padding-left: 7%;
-    padding-right: 7%;
+    padding-left: 2%;
+    padding-right: 2%;
     @media screen and (max-width: 1024px) {
         padding-left: 0;
         padding-right: 0;
@@ -133,7 +133,7 @@ li a {
         text-decoration: underline;
     }
     & img {
-        width: min(512px, 150%);
+        width: min(512px, 100%);
     }
     & .spub_icon{
         height: 24px;
@@ -150,5 +150,50 @@ li a {
     align-items: center;
     @media screen and (max-width: 1024px) {
         align-items: flex-start;
+    }
+}
+
+
+
+h2 a {
+    color: inherit !important;
+    text-decoration: inherit !important;
+}
+
+
+
+.event_speaker {
+    padding: 0 !important;
+    width: 100%;
+    border: 0px;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, 256px);
+    justify-content: space-between;
+    gap: 16px;
+    @media screen and (max-width: 1024px) {
+        grid-template-columns: repeat(auto-fill, 45%);
+    }
+    & div {
+        padding: 0 !important;
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+        width: fit-content;
+        & a img {
+            height: 64px;
+            border-radius: 100%;
+            @media screen and (max-width: 1024px) {
+                height: 80px;
+            }
+        }
+        & div {
+            gap: 0;
+            min-width: 192px;
+            flex-direction: column;
+            justify-content: space-evenly;
+            @media screen and (max-width: 1024px) {
+                min-width: 100%;
+            }
+        }
     }
 }
