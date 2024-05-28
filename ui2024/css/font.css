@@ -40,6 +40,7 @@ body {
 
 
 code {
+    font-family: inherit;
     color: #00a0e8;
     background-color: rgba(0, 160, 232, .23);
     padding: 0 3px;
