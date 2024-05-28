@@ -197,3 +197,10 @@ h2 a {
         }
     }
 }
+
+
+a .link_img_show {
+    display: inline;
+    width: 20px;
+    content: url(/assets/icon/link.png);
+}
