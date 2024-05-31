@@ -1,4 +1,4 @@
-const track7data = [
+const track2data = [
     {
         team: "-",
         primary: 1,
@@ -13,9 +13,9 @@ const track7data = [
 ];
 
 
-let track7sortDirection = "asc";
-track7data.sort((a, b) => b.primary - a.primary);
-track7data.forEach((item, index) => {
+let track2sortDirection = "desc";
+track2data.sort((a, b) => - b.primary + a.primary);
+track2data.forEach((item, index) => {
     if (item.disqualified) {
         item.rank = "*";
     } else {
@@ -25,16 +25,16 @@ track7data.forEach((item, index) => {
 
 
 
-let track7currentPage = 1;
-let track7pageSize = 10;
-let track7sortColumn = null;
+let track2currentPage = 1;
+let track2pageSize = 10;
+let track2sortColumn = null;
 
 
 
-function track7render() {
-    const track7tableBody = document.getElementById("track7table");
-    track7tableBody.innerHTML = "";
-    track7data.slice((track7currentPage - 1) * track7pageSize, track7currentPage * track7pageSize).forEach((item, index) => {
+function track2render() {
+    const track2tableBody = document.getElementById("track2table");
+    track2tableBody.innerHTML = "";
+    track2data.slice((track2currentPage - 1) * track2pageSize, track2currentPage * track2pageSize).forEach((item, index) => {
         const row = document.createElement("tr");
         row.innerHTML = `
             <td>${item.rank} <img src="/assets/icon/${item.award}.png" class="inlineimg"/></td>
@@ -46,43 +46,43 @@ function track7render() {
             <td>${item.metric1}</td>
             <td>${item.metric2}</td>
         `;
-        track7tableBody.appendChild(row);
+        track2tableBody.appendChild(row);
     });
-    document.getElementById("track7pages").innerHTML = `<b>${track7currentPage} / ${Math.ceil(track7data.length / track7pageSize)}</b>`;
+    document.getElementById("track2pages").innerHTML = `<b>${track2currentPage} / ${Math.ceil(track2data.length / track2pageSize)}</b>`;
 
     if (window.innerWidth < 1024) {
-        document.getElementById("track7tablefoot").style.width = document.getElementById("track7table").offsetWidth - 270;
+        document.getElementById("track2tablefoot").style.width = document.getElementById("track2table").offsetWidth - 270;
     }
 }
 
 
 
-function track7sort(columnIndex, columnKey) {
-    if (track7sortColumn === columnKey) {
-        track7sortDirection = track7sortDirection === "asc" ? "desc" : "asc";
+function track2sort(columnIndex, columnKey) {
+    if (track2sortColumn === columnKey) {
+        track2sortDirection = track2sortDirection === "desc" ? "asc" : "desc";
     } else {
-        track7sortColumn = columnKey;
-        track7sortDirection = "asc";
+        track2sortColumn = columnKey;
+        track2sortDirection = "desc";
     }
-    track7updateSortIcons(columnIndex);
-    track7data.sort((a, b) => {
-        if (track7sortDirection === "asc") {
+    track2updateSortIcons(columnIndex);
+    track2data.sort((a, b) => {
+        if (track2sortDirection === "asc") {
             return a[columnKey] - b[columnKey];
         } else {
             return b[columnKey] - a[columnKey];
         }
     });
-    track7currentPage = 1;
-    track7render();
+    track2currentPage = 1;
+    track2render();
 }
 
 
 
-function track7updateSortIcons(columnIndex) {
-    const sortIcons = document.querySelectorAll(".track7button");
+function track2updateSortIcons(columnIndex) {
+    const sortIcons = document.querySelectorAll(".track2button");
     sortIcons.forEach((icon, index) => {
         if (index === columnIndex) {
-            if (track7sortDirection === "asc") {
+            if (track2sortDirection === "asc") {
                 icon.innerHTML = icon.innerHTML.replace("&nbsp;&nbsp;&nbsp;", "▲");
                 icon.innerHTML = icon.innerHTML.replace("▼", "▲");
             } else {
@@ -98,18 +98,18 @@ function track7updateSortIcons(columnIndex) {
 
 
 
-function track7previous() {
-    if (track7currentPage > 1) {
-        track7currentPage--;
-        track7render();
+function track2previous() {
+    if (track2currentPage > 1) {
+        track2currentPage--;
+        track2render();
     }
 }
 
 
 
-function track7next() {
-    if (track7currentPage < Math.ceil(track7data.length / track7pageSize)) {
-        track7currentPage++;
-        track7render();
+function track2next() {
+    if (track2currentPage < Math.ceil(track2data.length / track2pageSize)) {
+        track2currentPage++;
+        track2render();
     }
 }
