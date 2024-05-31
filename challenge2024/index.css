@@ -201,3 +201,19 @@ li a {
 .brand_container div a:hover {
     opacity: 1;
 }
+
+
+
+.awardwinner {
+    padding: 17px;
+    & img {
+        height: 23px;
+    }
+    & span {
+        margin-top: 17px;
+        margin-left: 11px;
+        padding-left: 23px;
+        border-left: solid 3px gray;
+        margin-bottom: 7px;
+    }
+}
