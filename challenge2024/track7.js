@@ -47,6 +47,8 @@ function track7render() {
         track7tableBody.appendChild(row);
     });
     document.getElementById("track7pages").innerHTML = `<b>${track7currentPage} / ${Math.ceil(track7data.length / track7pageSize)}</b>`;
+
+    document.getElementById("track7tablefoot").style.width = document.getElementById("track7table").offsetWidth - 130;
 }
 
 
