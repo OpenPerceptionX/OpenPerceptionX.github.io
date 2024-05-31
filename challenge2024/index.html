@@ -1369,27 +1369,29 @@
             <h2>Leaderboard</h2>
             <br>
             <div class="leaderboard">
-                <table>
-                    <thead>
-                        <tr>
-                            <th class="white"><b>Rank</b></th>
-                            <th class="white"><b>Country / Region</b></th>
-                            <th class="white"><b>Institution</b></th>
-                            <th class="white track7button" onclick="track7sort(0, 'primary')"><b>UniScore (primary) ▼</b></th>
-                            <th class="white"><b>Team Name</b></th>
-                            <th class="white"><b>Links</b></th>
-                            <th class="white track7button" onclick="track7sort(1, 'metric1')"><b>$\text{DET}_{l}$ &nbsp;&nbsp;&nbsp;</b></th>
-                        </tr>
-                    </thead>
-                    <tbody id="track7table"></tbody>
-                </table>
-                <div>
-                    <div>
-                        <button onclick="track7previous()"><b>⇤</b></button>
-                        <button onclick="track7next()"><b>⇥</b></button>
-                    </div>
-                    <div>
-                        <button class="nonbutton" id="track7pages"></button>
+                <div class="leaderboardscroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="white"><b>Rank</b></th>
+                                <th class="white"><b>Country / Region</b></th>
+                                <th class="white"><b>Institution</b></th>
+                                <th class="white track7button" onclick="track7sort(0, 'primary')"><b>UniScore (primary) ▼</b></th>
+                                <th class="white"><b>Team Name</b></th>
+                                <th class="white"><b>Links</b></th>
+                                <th class="white track7button" onclick="track7sort(1, 'metric1')"><b>$\text{DET}_{l}$ &nbsp;&nbsp;&nbsp;</b></th>
+                            </tr>
+                        </thead>
+                        <tbody id="track7table"></tbody>
+                    </table>
+                    <div id="track7tablefoot">
+                        <div>
+                            <button onclick="track7previous()"><b>⇤</b></button>
+                            <button onclick="track7next()"><b>⇥</b></button>
+                        </div>
+                        <div>
+                            <button class="nonbutton" id="track7pages"></button>
+                        </div>
                     </div>
                 </div>
             </div>

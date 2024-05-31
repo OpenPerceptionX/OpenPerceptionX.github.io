@@ -1,4 +1,19 @@
-.leaderboard table {
+@media screen and (max-width: 1024px) {
+    .leaderboard {
+        width: 100%;
+        display: block !important;
+        & div {
+            width: 100%;
+        }
+        & .leaderboardscroll {
+            overflow-x: scroll !important;
+        }
+    }
+}
+
+
+
+.leaderboard div table {
     border-collapse: collapse;
     & thead {
         user-select: none;
@@ -7,20 +22,20 @@
         cursor: pointer;
     }
 }
-.leaderboard table thead {
+.leaderboard div table thead {
     background-color: #0c318f;
     text-wrap: nowrap;
     & tr th {
-        line-height: 39px;
+        line-height: 33px;
     }
 }
-.leaderboard table tbody tr {
+.leaderboard div table tbody tr {
     background-color: rgb(255, 255, 255);
     &:nth-child(2n) {
         background-color: rgb(233, 233, 233);
     }
 }
-.leaderboard table thead tr th, .leaderboard table tbody tr td {
+.leaderboard div table thead tr th, .leaderboard div table tbody tr td {
     text-align: left;
     padding: 11px;
     &:nth-child(1) {
@@ -30,7 +45,7 @@
 
 
 
-.leaderboard div {
+.leaderboard div div {
     background-color: #0c318f;
     display: flex;
     flex-direction: row;
