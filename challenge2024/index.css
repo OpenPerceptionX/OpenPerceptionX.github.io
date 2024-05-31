@@ -215,5 +215,8 @@ li a {
         padding-left: 23px;
         border-left: solid 3px gray;
         margin-bottom: 7px;
+        @media screen and (max-width: 1024px) {
+            padding-left: 30px;
+        }
     }
 }
