@@ -48,7 +48,7 @@ function track7render() {
     });
     document.getElementById("track7pages").innerHTML = `<b>${track7currentPage} / ${Math.ceil(track7data.length / track7pageSize)}</b>`;
 
-    if (window.innerWidt < 1024) {
+    if (window.innerWidth < 1024) {
         document.getElementById("track7tablefoot").style.width = document.getElementById("track7table").offsetWidth - 130;
     }
 }
