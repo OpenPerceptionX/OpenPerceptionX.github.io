@@ -49,6 +49,10 @@ function track6render() {
         track6tableBody.appendChild(row);
     });
     document.getElementById("track6pages").innerHTML = `<b>${track6currentPage} / ${Math.ceil(track6data.length / track6pageSize)}</b>`;
+
+    if (window.innerWidth < 1024) {
+        document.getElementById("track6tablefoot").style.width = document.getElementById("track6table").offsetWidth;
+    }
 }
 
 
