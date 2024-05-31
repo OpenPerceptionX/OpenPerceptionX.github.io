@@ -3,6 +3,7 @@ const track7data = [
         team: "-",
         primary: 1,
         metric1: 1,
+        metric2: 1,
         country: "-",
         institution: "-",
         award: "blank",
@@ -43,6 +44,7 @@ function track7render() {
             <td>${item.team}</td>
             <td>${item.links}</td>
             <td>${item.metric1}</td>
+            <td>${item.metric2}</td>
         `;
         track7tableBody.appendChild(row);
     });
