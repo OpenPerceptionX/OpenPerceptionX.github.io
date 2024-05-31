@@ -25,6 +25,12 @@
     </script>
     <script id="MathJax-script" async src="/ui2024/js/tex-chtml.js"></script>
 
+    <script src="./track1.js"></script>
+    <script src="./track2.js"></script>
+    <script src="./track3.js"></script>
+    <script src="./track4.js"></script>
+    <script src="./track5.js"></script>
+    <script src="./track6.js"></script>
     <script src="./track7.js"></script>
 </head>
 
@@ -496,6 +502,37 @@
 
         <div style="flex-grow: 16;">
 
+            <h2>Leaderboard</h2>
+            <br>
+            <div class="leaderboard">
+                <div class="leaderboardscroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="white"><b>Rank</b></th>
+                                <th class="white"><b>Country / Region</b></th>
+                                <th class="white"><b>Institution</b></th>
+                                <th class="white track1button" onclick="track1sort(0, 'primary')"><b>PDM Score (primary) ▼</b></th>
+                                <th class="white"><b>Team Name</b></th>
+                                <th class="white"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="track1table"></tbody>
+                    </table>
+                    <div id="track1tablefoot">
+                        <div>
+                            <button onclick="track1previous()"><b>⇤</b></button>
+                            <button onclick="track1next()"><b>⇥</b></button>
+                        </div>
+                        <div>
+                            <button class="nonbutton" id="track1pages"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br><br>
+
             <h2>Task Description</h2>
             <br>
             <span>
@@ -643,6 +680,39 @@
 
         <div style="flex-grow: 16;">
 
+            <h2>Leaderboard</h2>
+            <br>
+            <div class="leaderboard">
+                <div class="leaderboardscroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="white"><b>Rank</b></th>
+                                <th class="white"><b>Country / Region</b></th>
+                                <th class="white"><b>Institution</b></th>
+                                <th class="white track2button" onclick="track2sort(0, 'primary')"><b>CD@overall (primary) ▲</b></th>
+                                <th class="white"><b>Team Name</b></th>
+                                <th class="white"></th>
+                                <th class="white track2button" onclick="track2sort(1, 'metric1')"><b>CD@0.5s &nbsp;&nbsp;&nbsp;</b></th>
+                                <th class="white track2button" onclick="track2sort(2, 'metric2')"><b>CD@3.0s &nbsp;&nbsp;&nbsp;</b></th>
+                            </tr>
+                        </thead>
+                        <tbody id="track2table"></tbody>
+                    </table>
+                    <div id="track2tablefoot">
+                        <div>
+                            <button onclick="track2previous()"><b>⇤</b></button>
+                            <button onclick="track2next()"><b>⇥</b></button>
+                        </div>
+                        <div>
+                            <button class="nonbutton" id="track2pages"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br><br>
+
             <h2>Task Description</h2>
             <br>
             <span>
@@ -769,6 +839,39 @@
         <div style="flex-grow: 1;"></div>
 
         <div style="flex-grow: 16;">
+
+            <h2>Leaderboard</h2>
+            <br>
+            <div class="leaderboard">
+                <div class="leaderboardscroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="white"><b>Rank</b></th>
+                                <th class="white"><b>Country / Region</b></th>
+                                <th class="white"><b>Institution</b></th>
+                                <th class="white track3button" onclick="track3sort(0, 'primary')"><b>OccScore (primary) ▼</b></th>
+                                <th class="white"><b>Team Name</b></th>
+                                <th class="white"></th>
+                                <th class="white track3button" onclick="track3sort(1, 'metric1')"><b>RayIoU &nbsp;&nbsp;&nbsp;</b></th>
+                                <th class="white track3button" onclick="track3sort(2, 'metric2')"><b>mAVE &nbsp;&nbsp;&nbsp;</b></th>
+                            </tr>
+                        </thead>
+                        <tbody id="track3table"></tbody>
+                    </table>
+                    <div id="track3tablefoot">
+                        <div>
+                            <button onclick="track3previous()"><b>⇤</b></button>
+                            <button onclick="track3next()"><b>⇥</b></button>
+                        </div>
+                        <div>
+                            <button class="nonbutton" id="track3pages"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br><br>
 
             <h2>Task Description</h2>
             <br>
@@ -915,6 +1018,38 @@
 
         <div style="flex-grow: 16;">
 
+            <h2>Leaderboard</h2>
+            <br>
+            <div class="leaderboard">
+                <div class="leaderboardscroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="white"><b>Rank</b></th>
+                                <th class="white"><b>Country / Region</b></th>
+                                <th class="white"><b>Institution</b></th>
+                                <th class="white track4button" onclick="track4sort(0, 'primary')"><b>Overall@0.25 (primary) ▼</b></th>
+                                <th class="white"><b>Team Name</b></th>
+                                <th class="white"></th>
+                                <th class="white track4button" onclick="track4sort(1, 'metric1')"><b>Overall@0.5 &nbsp;&nbsp;&nbsp;</b></th>
+                            </tr>
+                        </thead>
+                        <tbody id="track4table"></tbody>
+                    </table>
+                    <div id="track4tablefoot">
+                        <div>
+                            <button onclick="track4previous()"><b>⇤</b></button>
+                            <button onclick="track4next()"><b>⇥</b></button>
+                        </div>
+                        <div>
+                            <button class="nonbutton" id="track4pages"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br><br>
+
             <h2>Task Description</h2>
             <br>
             <span>
@@ -1053,6 +1188,38 @@
         <div style="flex-grow: 1;"></div>
 
         <div style="flex-grow: 16;">
+
+            <h2>Leaderboard</h2>
+            <br>
+            <div class="leaderboard">
+                <div class="leaderboardscroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="white"><b>Rank</b></th>
+                                <th class="white"><b>Country / Region</b></th>
+                                <th class="white"><b>Institution</b></th>
+                                <th class="white track5button" onclick="track5sort(0, 'primary')"><b>Driving Score (primary) ▼</b></th>
+                                <th class="white"><b>Team Name</b></th>
+                                <th class="white"></th>
+                                <th class="white track5button" onclick="track5sort(1, 'metric1')"><b>Route Completion &nbsp;&nbsp;&nbsp;</b></th>
+                            </tr>
+                        </thead>
+                        <tbody id="track5table"></tbody>
+                    </table>
+                    <div id="track5tablefoot">
+                        <div>
+                            <button onclick="track5previous()"><b>⇤</b></button>
+                            <button onclick="track5next()"><b>⇥</b></button>
+                        </div>
+                        <div>
+                            <button class="nonbutton" id="track5pages"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br><br>
 
             <h2>Task Description</h2>
             <br>
@@ -1204,6 +1371,39 @@
         <div style="flex-grow: 1;"></div>
 
         <div style="flex-grow: 16;">
+
+            <h2>Leaderboard</h2>
+            <br>
+            <div class="leaderboard">
+                <div class="leaderboardscroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="white"><b>Rank</b></th>
+                                <th class="white"><b>Country / Region</b></th>
+                                <th class="white"><b>Institution</b></th>
+                                <th class="white track6button" onclick="track6sort(0, 'primary')"><b>Final Score (primary) ▼</b></th>
+                                <th class="white"><b>Team Name</b></th>
+                                <th class="white"></th>
+                                <th class="white track6button" onclick="track6sort(1, 'metric1')"><b>Accuracy &nbsp;&nbsp;&nbsp;</b></th>
+                                <th class="white track6button" onclick="track6sort(2, 'metric2')"><b>ChatGPT &nbsp;&nbsp;&nbsp;</b></th>
+                            </tr>
+                        </thead>
+                        <tbody id="track6table"></tbody>
+                    </table>
+                    <div id="track6tablefoot">
+                        <div>
+                            <button onclick="track6previous()"><b>⇤</b></button>
+                            <button onclick="track6next()"><b>⇥</b></button>
+                        </div>
+                        <div>
+                            <button class="nonbutton" id="track6pages"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br><br>
 
             <h2>Task Description</h2>
             <br>
@@ -1378,7 +1578,7 @@
                                 <th class="white"><b>Institution</b></th>
                                 <th class="white track7button" onclick="track7sort(0, 'primary')"><b>UniScore (primary) ▼</b></th>
                                 <th class="white"><b>Team Name</b></th>
-                                <th class="white"><b>Links</b></th>
+                                <th class="white"></th>
                                 <th class="white track7button" onclick="track7sort(1, 'metric1')"><b>$\text{DET}_{ls}$ &nbsp;&nbsp;&nbsp;</b></th>
                                 <th class="white track7button" onclick="track7sort(2, 'metric2')"><b>$\text{DET}_{a}$ &nbsp;&nbsp;&nbsp;</b></th>
                             </tr>
@@ -2107,11 +2307,11 @@
 
 
 <script>
-    // track1render();
-    // track2render();
-    // track3render();
-    // track4render();
-    // track5render();
-    // track6render();
+    track1render();
+    track2render();
+    track3render();
+    track4render();
+    track5render();
+    track6render();
     track7render();
 </script>
