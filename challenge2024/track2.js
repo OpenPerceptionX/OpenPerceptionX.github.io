@@ -49,10 +49,6 @@ function track2render() {
         track2tableBody.appendChild(row);
     });
     document.getElementById("track2pages").innerHTML = `<b>${track2currentPage} / ${Math.ceil(track2data.length / track2pageSize)}</b>`;
-
-    if (window.innerWidth < 1024) {
-        document.getElementById("track2tablefoot").style.width = document.getElementById("track2table").offsetWidth - 270;
-    }
 }
 
 

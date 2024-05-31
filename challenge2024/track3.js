@@ -49,10 +49,6 @@ function track3render() {
         track3tableBody.appendChild(row);
     });
     document.getElementById("track3pages").innerHTML = `<b>${track3currentPage} / ${Math.ceil(track3data.length / track3pageSize)}</b>`;
-
-    if (window.innerWidth < 1024) {
-        document.getElementById("track3tablefoot").style.width = document.getElementById("track3table").offsetWidth - 270;
-    }
 }
 
 
