@@ -47,10 +47,6 @@ function track5render() {
         track5tableBody.appendChild(row);
     });
     document.getElementById("track5pages").innerHTML = `<b>${track5currentPage} / ${Math.ceil(track5data.length / track5pageSize)}</b>`;
-
-    if (window.innerWidth < 1024) {
-        document.getElementById("track5tablefoot").style.width = document.getElementById("track5table").offsetWidth - 130;
-    }
 }
 
 
