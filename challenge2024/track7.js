@@ -1,173 +1,109 @@
 const track7data = [
     {
-        metrics: 0.94,
-        country: "China",
-        flag: "China",
-        key: "key1测试1111111",
-    },
-    {
-        metrics: 0.93,
-        country: "United States",
-        flag: "United States",
-        key: "key1测试2",
-    },
-    {
-        metrics: 0.66,
-        country: "Türkiye",
-        flag: "Türkiye",
-        key: "key1测试4",
-    },
-    {
-        metrics: 0.34,
-        country: "Britain",
-        flag: "Britain",
-        key: "key1测试5",
-    },
-    {
-        metrics: 0.094,
-        country: "China",
-        flag: "China",
-        key: "key1测试1111111",
-    },
-    {
-        metrics: 0.093,
-        country: "United States",
-        flag: "United States",
-        key: "key1测试2",
-    },
-    {
-        metrics: 0.066,
-        country: "Türkiye",
-        flag: "Türkiye",
-        key: "key1测试4",
-    },
-    {
-        metrics: 0.034,
-        country: "Britain",
-        flag: "Britain",
-        key: "key1测试5",
-    },
-    {
-        metrics: 0.0094,
-        country: "China",
-        flag: "China",
-        key: "key1测试1111111",
-    },
-    {
-        metrics: 0.0093,
-        country: "United States",
-        flag: "United States",
-        key: "key1测试2",
-    },
-    {
-        metrics: 0.0066,
-        country: "Türkiye",
-        flag: "Türkiye",
-        key: "key1测试4",
-    },
-    {
-        metrics: 0.0034,
-        country: "Britain",
-        flag: "Britain",
-        key: "key1测试5",
-    },
-    {
-        metrics: 0.00094,
-        country: "China",
-        flag: "China",
-        key: "key1测试1111111",
-    },
-    {
-        metrics: 0.00093,
-        country: "United States",
-        flag: "United States",
-        key: "key1测试2",
-    },
-    {
-        metrics: 0.00066,
-        country: "Türkiye",
-        flag: "Türkiye",
-        key: "key1测试4",
+        primary: 1,
+        metric1: 1,
+        country: "-",
+        institution: "-",
+        team: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
     },
 ];
 
-track7data.sort((a, b) => b.metrics - a.metrics);
+
+let track7sortDirection = "asc";
+track7data.sort((a, b) => b.primary - a.primary);
 track7data.forEach((item, index) => {
-    item.rank = index + 1;
+    if (item.disqualified) {
+        item.rank = "*";
+    } else {
+        item.rank = index + 1;
+    }
 });
 
-let currentPage = 1;
-let pageSize = 10;
-let sortColumn = null;
-let sortDirection = "asc";
+
+
+let track7currentPage = 1;
+let track7pageSize = 10;
+let track7sortColumn = null;
+
+
 
 function track7render() {
-    const tableBody = document.getElementById("track7table");
-    tableBody.innerHTML = "";
-    track7data.slice((currentPage - 1) * pageSize, currentPage * pageSize).forEach((item, index) => {
+    const track7tableBody = document.getElementById("track7table");
+    track7tableBody.innerHTML = "";
+    track7data.slice((track7currentPage - 1) * track7pageSize, track7currentPage * track7pageSize).forEach((item, index) => {
         const row = document.createElement("tr");
         row.innerHTML = `
-            <td>${item.rank}</td>
-            <td><img src="/ui2024/style/icon/flag/${item.flag}.png" alt="${item.country}"> ${item.country}</td>
-            <td>ins</td>
-            <td>${item.metrics}</td>
-            <td>name</td>
-            <td>links</td>
-            <td>${item.key}</td>
+            <td>${item.rank} <img src="/assets/icon/${item.award}.png" class="inlineimg"/></td>
+            <td><img src="/assets/flags/${item.country}.svg" class="inlineimg"/> ${item.country}</td>
+            <td>${item.institution}</td>
+            <td><b>${item.primary}</b></td>
+            <td>${item.team}</td>
+            <td>${item.links}</td>
+            <td>${item.metric1}</td>
         `;
-        tableBody.appendChild(row);
+        track7tableBody.appendChild(row);
     });
-    document.getElementById("track7pages").innerHTML = `<b>${currentPage} / ${Math.ceil(track7data.length / pageSize)}</b>`;
+    document.getElementById("track7pages").innerHTML = `<b>${track7currentPage} / ${Math.ceil(track7data.length / track7pageSize)}</b>`;
 }
+
+
 
 function track7sort(columnIndex, columnKey) {
-if (sortColumn === columnKey) {
-    sortDirection = sortDirection === "asc" ? "desc" : "asc";
-} else {
-    sortColumn = columnKey;
-    sortDirection = "asc";
-}
-updateSortIcons(columnIndex);
-track7data.sort((a, b) => {
-    if (sortDirection === "asc") {
-    return a[columnKey] - b[columnKey];
+    if (track7sortColumn === columnKey) {
+        track7sortDirection = track7sortDirection === "asc" ? "desc" : "asc";
     } else {
-    return b[columnKey] - a[columnKey];
+        track7sortColumn = columnKey;
+        track7sortDirection = "asc";
     }
-});
-track7render();
+    track7updateSortIcons(columnIndex);
+    track7data.sort((a, b) => {
+        if (track7sortDirection === "asc") {
+            return a[columnKey] - b[columnKey];
+        } else {
+            return b[columnKey] - a[columnKey];
+        }
+    });
+    track7currentPage = 1;
+    track7render();
 }
 
-function updateSortIcons(columnIndex) {
-const sortIcons = document.querySelectorAll(".sort-icon");
-sortIcons.forEach((icon, index) => {
-    if (index === columnIndex) {
-    if (sortDirection === "asc") {
-        icon.className = "sort-icon up";
-        icon.innerHTML = "▲";
-    } else {
-        icon.className = "sort-icon down";
-        icon.innerHTML = "▼";
-    }
-    } else {
-    icon.className = "sort-icon";
-    icon.innerHTML = "";
-    }
-});
+
+
+function track7updateSortIcons(columnIndex) {
+    const sortIcons = document.querySelectorAll(".track7button");
+    sortIcons.forEach((icon, index) => {
+        if (index === columnIndex) {
+            if (track7sortDirection === "asc") {
+                icon.innerHTML = icon.innerHTML.replace("&nbsp;&nbsp;&nbsp;", "▲");
+                icon.innerHTML = icon.innerHTML.replace("▼", "▲");
+            } else {
+                icon.innerHTML = icon.innerHTML.replace("&nbsp;&nbsp;&nbsp;", "▼");
+                icon.innerHTML = icon.innerHTML.replace("▲", "▼");
+            }
+        } else {
+            icon.innerHTML = icon.innerHTML.replace("▼", "&nbsp;&nbsp;&nbsp;");
+            icon.innerHTML = icon.innerHTML.replace("▲", "&nbsp;&nbsp;&nbsp;");
+        }
+    });
 }
+
+
 
 function track7previous() {
-    if (currentPage > 1) {
-        currentPage--;
+    if (track7currentPage > 1) {
+        track7currentPage--;
         track7render();
     }
 }
+
+
 
 function track7next() {
-    if (currentPage < Math.ceil(track7data.length / pageSize)) {
-        currentPage++;
+    if (track7currentPage < Math.ceil(track7data.length / track7pageSize)) {
+        track7currentPage++;
         track7render();
     }
 }
-
-track7render();
