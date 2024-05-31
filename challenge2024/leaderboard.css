@@ -38,7 +38,7 @@
     user-select: none;
     & button {
         margin: 11px 0px 11px 22px;
-        padding: 3px 0 5px 0;
+        padding: 3px 0 3px 0;
         width: 66px;
         border: 0px;
         background-color: rgb(255, 255, 255);
@@ -51,13 +51,14 @@
     & .nonbutton {
         margin: 11px 22px;
         padding: 5px 0 3px 0;
-        width: 66px;
-        border: 0px;
-        background-color: rgb(255, 255, 255);
-        border-radius: 13px;
-        color: #0c318f;
         &:hover {
             cursor: default;
         }
     }
+}
+
+
+
+.inlineimg {
+    height: 13px;
 }
