@@ -15,11 +15,13 @@ const track2data = [
 
 let track2sortDirection = "desc";
 track2data.sort((a, b) => - b.primary + a.primary);
-track2data.forEach((item, index) => {
+index = 0
+track2data.forEach((item, xxx) => {
     if (item.disqualified) {
         item.rank = "*";
     } else {
         item.rank = index + 1;
+        index = index + 1;
     }
 });
 
