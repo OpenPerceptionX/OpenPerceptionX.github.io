@@ -14,11 +14,13 @@ const track5data = [
 
 let track5sortDirection = "asc";
 track5data.sort((a, b) => b.primary - a.primary);
-track5data.forEach((item, index) => {
+index = 0
+track5data.forEach((item, xxx) => {
     if (item.disqualified) {
         item.rank = "*";
     } else {
         item.rank = index + 1;
+        index = index + 1;
     }
 });
 

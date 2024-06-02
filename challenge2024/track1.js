@@ -706,11 +706,13 @@ const track1data = [
 
 let track1sortDirection = "asc";
 track1data.sort((a, b) => b.primary - a.primary);
-track1data.forEach((item, index) => {
+index = 0
+track1data.forEach((item, xxx) => {
     if (item.disqualified) {
         item.rank = "*";
     } else {
         item.rank = index + 1;
+        index = index + 1;
     }
 });
 
