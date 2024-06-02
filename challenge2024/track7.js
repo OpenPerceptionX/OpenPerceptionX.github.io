@@ -18,7 +18,7 @@ const track7data = [
         country: "-",
         institution: "-",
         award: "blank",
-        disqualified: false,
+        disqualified: true,
         links: ""
     },
     {
@@ -29,7 +29,7 @@ const track7data = [
         country: "-",
         institution: "-",
         award: "blank",
-        disqualified: false,
+        disqualified: true,
         links: ""
     },
     {
@@ -40,7 +40,7 @@ const track7data = [
         country: "-",
         institution: "-",
         award: "blank",
-        disqualified: false,
+        disqualified: true,
         links: ""
     },
     {
@@ -51,7 +51,7 @@ const track7data = [
         country: "-",
         institution: "-",
         award: "blank",
-        disqualified: false,
+        disqualified: true,
         links: ""
     },
     {
@@ -62,7 +62,7 @@ const track7data = [
         country: "-",
         institution: "-",
         award: "blank",
-        disqualified: false,
+        disqualified: true,
         links: ""
     },
     {
@@ -73,7 +73,7 @@ const track7data = [
         country: "-",
         institution: "-",
         award: "blank",
-        disqualified: false,
+        disqualified: true,
         links: ""
     },
     {
@@ -84,7 +84,7 @@ const track7data = [
         country: "-",
         institution: "-",
         award: "blank",
-        disqualified: false,
+        disqualified: true,
         links: ""
     },
     {
@@ -106,7 +106,7 @@ const track7data = [
         country: "-",
         institution: "-",
         award: "blank",
-        disqualified: false,
+        disqualified: true,
         links: ""
     },
     {
