@@ -1,13 +1,706 @@
 const track1data = [
     {
-        team: "-",
-        primary: 1,
+        team: "Team NVIDIA",
+        primary: "0.9274",
         country: "-",
         institution: "-",
         award: "blank",
         disqualified: false,
         links: ""
     },
+    {
+        team: "ZERON",
+        primary: "0.8747",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "abc",
+        primary: "0.8626",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "xiaokt001",
+        primary: "0.8549",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "Neuros",
+        primary: "0.8542",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "TBD",
+        primary: "0.8535",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "ppp",
+        primary: "0.8502",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "cam_f0_only",
+        primary: "0.8488",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "sdw2go",
+        primary: "0.8488",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "Baseline: Transfuser",
+        primary: "0.8483",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "mczhi",
+        primary: "0.8478",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "lukedart",
+        primary: "0.8471",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "xxxyppp",
+        primary: "0.8470",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "abc002",
+        primary: "0.8458",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "abc",
+        primary: "0.8414",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "cyxum",
+        primary: "0.8413",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "pxyang",
+        primary: "0.8408",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "ucaszyp",
+        primary: "0.8408",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "VCCIV",
+        primary: "0.8404",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "catttt31",
+        primary: "0.8382",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "abc",
+        primary: "0.8377",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "Akira",
+        primary: "0.8351",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "wlll",
+        primary: "0.8350",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "VCCIV",
+        primary: "0.8292",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "Teora",
+        primary: "0.8267",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "Plusgo",
+        primary: "0.8255",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "abc",
+        primary: "0.8178",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "pxyang1",
+        primary: "0.8174",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "ucwxb",
+        primary: "0.8173",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "weitao",
+        primary: "0.8168",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "Plusgo",
+        primary: "0.8161",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "TBD",
+        primary: "0.8114",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "sai0119",
+        primary: "0.8087",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "6d777",
+        primary: "0.8085",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "frank2000sinatral",
+        primary: "0.8078",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "Ldq666666",
+        primary: "0.8069",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "ucwxb",
+        primary: "0.8005",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "sai",
+        primary: "0.7952",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "xxxxxznb",
+        primary: "0.7920",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "USTC",
+        primary: "0.7920",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "xadsda",
+        primary: "0.7892",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "morsun",
+        primary: "0.7868",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "ugxx",
+        primary: "0.7829",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "JohnZhan",
+        primary: "0.7788",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "pppc",
+        primary: "0.7701",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "ucwxb",
+        primary: "0.7665",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "imstvn",
+        primary: "0.7643",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "zhiaid",
+        primary: "0.7635",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "wwwucasp",
+        primary: "0.7556",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "zypzyp",
+        primary: "0.7468",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "ssa",
+        primary: "0.7312",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "YouGiOh",
+        primary: "0.7125",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "SmallFish",
+        primary: "0.6949",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "chenehlf",
+        primary: "0.6914",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "YujieGuo",
+        primary: "0.6881",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "ZBY2024",
+        primary: "0.6836",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "SmallFish",
+        primary: "0.6699",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "ZBY",
+        primary: "0.6626",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "Alissa0708",
+        primary: "0.6625",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "Alissa111",
+        primary: "0.6596",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "yh1306",
+        primary: "0.6593",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "ZBY",
+        primary: "0.6578",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "hao1306",
+        primary: "0.6532",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "ZBY2024",
+        primary: "0.6504",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "Junqiao",
+        primary: "0.6412",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "Alissa1215",
+        primary: "0.6393",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "TUMDriving1",
+        primary: "0.6331",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "ggboy123",
+        primary: "0.6310",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "Mauerrr",
+        primary: "0.6290",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "aidzhiyu",
+        primary: "0.6109",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "LeoHuaDY",
+        primary: "0.6099",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "Mrchicken007",
+        primary: "0.5798",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "llll2024",
+        primary: "0.5732",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "Gewerbegebiet",
+        primary: "0.5582",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "le123le",
+        primary: "0.5542",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "ghgh2024",
+        primary: "0.4462",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "zehaooooo",
+        primary: "0.3820",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "Baseline: Constant Velocity",
+        primary: "0.1930",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    }
 ];
 
 
