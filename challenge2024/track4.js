@@ -1,14 +1,164 @@
 const track4data = [
     {
-        team: "-",
-        primary: 1,
-        metric1: 1,
+        team: "THU-LenovoAI",
+        primary: "0.5959",
+        metric1: "0.3472",
         country: "-",
         institution: "-",
         award: "blank",
         disqualified: false,
         links: ""
     },
+    {
+        team: "chanc101",
+        primary: "0.5858",
+        metric1: "0.3463",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "Mi-Robot",
+        primary: "0.4692",
+        metric1: "0.2038",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "pku",
+        primary: "0.4594",
+        metric1: "0.2521",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "cuhksz-cv-lab",
+        primary: "0.4542",
+        metric1: "0.2505",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "MaxPower",
+        primary: "0.4542",
+        metric1: "0.2356",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "CharlesliangC",
+        primary: "0.4495",
+        metric1: "0.1632",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "alk",
+        primary: "0.4272",
+        metric1: "0.1808",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "3dvlab",
+        primary: "0.4259",
+        metric1: "0.2346",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "Zerek",
+        primary: "0.3866",
+        metric1: "0.1405",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "test",
+        primary: "0.3798",
+        metric1: "0.1616",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "bidirectionalFoil",
+        primary: "0.3745",
+        metric1: "0.1747",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "yesname",
+        primary: "0.3708",
+        metric1: "0.1684",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "Prometheus",
+        primary: "0.3708",
+        metric1: "0.1684",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "UniEmbodied3D",
+        primary: "0.3665",
+        metric1: "0.1438",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "nightwind",
+        primary: "0.2101",
+        metric1: "0.0833",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    }
 ];
 
 
