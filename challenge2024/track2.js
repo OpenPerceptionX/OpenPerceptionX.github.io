@@ -1,15 +1,180 @@
 const track2data = [
     {
-        team: "-",
-        primary: 1,
-        metric1: 1,
-        metric2: 1,
+        team: "USTC_IAT_United",
+        primary: "0.6615",
+        metric1: "0.5448",
+        metric2: "0.7878",
         country: "-",
         institution: "-",
         award: "blank",
         disqualified: false,
         links: ""
     },
+    {
+        team: "Huawei-Noah & CUHK-SZ",
+        primary: "0.7958",
+        metric1: "0.5596",
+        metric2: "0.9996",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "mcchi",
+        primary: "0.9396",
+        metric1: "0.7669",
+        metric2: "1.1677",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "Test",
+        primary: "1.4457",
+        metric1: "1.2784",
+        metric2: "1.6168",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "test",
+        primary: "1.5231",
+        metric1: "1.1985",
+        metric2: "1.7908",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "FGFGFGFGF",
+        primary: "1.5388",
+        metric1: "1.3262",
+        metric2: "1.7133",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "baseline",
+        primary: "1.5870",
+        metric1: "1.3270",
+        metric2: "1.9300",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "test",
+        primary: "1.5870",
+        metric1: "1.3270",
+        metric2: "1.9300",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "Oracle",
+        primary: "1.5871",
+        metric1: "1.3274",
+        metric2: "1.9318",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "jiangxb24",
+        primary: "1.5873",
+        metric1: "1.3273",
+        metric2: "1.9325",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "Test",
+        primary: "1.6247",
+        metric1: "1.3311",
+        metric2: "1.9649",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "cdcdcxcy",
+        primary: "1.6311",
+        metric1: "1.3615",
+        metric2: "1.9507",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "wm",
+        primary: "3.6411",
+        metric1: "3.4584",
+        metric2: "3.7533",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "ABC",
+        primary: "7.8603",
+        metric1: "11.9668",
+        metric2: "5.6330",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "3DVLab",
+        primary: "22.5286",
+        metric1: "22.5762",
+        metric2: "22.5172",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "Gyomber",
+        primary: "22.7817",
+        metric1: "12.0847",
+        metric2: "25.0160",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    }
 ];
 
 
