@@ -18,7 +18,7 @@ const track7data = [
         country: "-",
         institution: "-",
         award: "blank",
-        disqualified: true,
+        disqualified: false,
         links: ""
     },
     {
@@ -29,7 +29,7 @@ const track7data = [
         country: "-",
         institution: "-",
         award: "blank",
-        disqualified: true,
+        disqualified: false,
         links: ""
     },
     {
