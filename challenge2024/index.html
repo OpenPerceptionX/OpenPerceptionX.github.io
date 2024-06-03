@@ -451,9 +451,9 @@
         </div>
         <div class="navigator"></div>
         <div class="sticky_row">
-            <a href="#carla">CARLA</a>
             <a href="#driving_with_language">Driving with Language</a>
             <a href="#mapless_driving">Mapless Driving</a>
+            <a href="#carla">CARLA</a>
             <a href="#" class="image"><img src="/assets/icon/top.png" id="sticky_top_img"/></a>
         </div>
     </div>
@@ -1239,7 +1239,7 @@
             
             <br><br>
 
-            <h2 id="carla">Related Literature</h2>
+            <h2 id="driving_with_language">Related Literature</h2>
             <br>
             <ul class="rules">
                 <li>
@@ -1268,218 +1268,7 @@
 
 
 
-
     <div class="block_left left_right">
-
-        <div style="flex-grow: 7;">
-            <a class="track_title" href="#carla">
-                <h2>
-                    Track
-                    <img loading="lazy" class="link_img"/>
-                </h2>
-                <h1>CARLA Autonomous Driving Challenge</h1>
-            </a>
-
-            <br><br>
-            
-            <div class="widget_container">
-                <a href="https://eval.ai/web/challenges/challenge-page/2098/overview" target="_blank">
-                    <span class="Odarkblue"><b>Test Server @ &nbsp;</b></span>
-                    <img loading="lazy" src="/assets/icon/evalai_long.png"/>
-                </a>
-            </div>
-
-            <br><br class="track_fig">
-
-            <img class="track_fig" src="./carla.jpg"/>
-
-            <br>
-
-        </div>
-
-        <div style="flex-grow: 1;"></div>
-
-        <div style="flex-grow: 16;">
-
-            <h2>Leaderboard</h2>
-            <br>
-            <div class="leaderboard">
-                <div class="leaderboardscroll">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th class="white" style="width: 22px"><b>Rank</b></th>
-                                <th class="white" style="width: 33px"><b>Country / Region</b></th>
-                                <th class="white" style="width: 111px"><b>Institution</b></th>
-                                <th class="white track5button" style="width: 55px" onclick="track5sort(0, 'primary')"><b>Driving Score (primary) ▼</b></th>
-                                <th class="white" style="width: 181px"><b>Team Name</b></th>
-                                <th class="white" style="width: 33px"></th>
-                                <th class="white track5button" style="width: 55px" onclick="track5sort(1, 'metric1')"><b>Route Completion &nbsp;&nbsp;&nbsp;</b></th>
-                            </tr>
-                        </thead>
-                        <tbody id="track5table"></tbody>
-                    </table>
-                    <div id="track5tablefoot">
-                        <div>
-                            <button onclick="track5previous()"><b>⇤</b></button>
-                            <button onclick="track5next()"><b>⇥</b></button>
-                        </div>
-                        <div>
-                            <button class="nonbutton" id="track5pages"></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- <br>
-
-            <div class="awardwinner" style="background-color: rgb(255, 156, 0, .3);">
-                <h4><img src="/assets/icon/bulb.png"/> &nbsp; Innovation Award goes to <b style="text-decoration: underline;">xxxxx</b> for</h4>
-                <span>
-                    xscoixw
-                </span>
-            </div>
-
-            <br>
-
-            <div class="awardwinner" style="background-color: rgb(254, 229, 106, .3);">
-                <h4><img src="/assets/icon/rank01.png"/> &nbsp; Outstanding Champion goes to <b style="text-decoration: underline;">xxxxx</b> for</h4>
-                <span>
-                    xscoixw
-                </span>
-            </div>
-
-            <br>
-
-            <div class="awardwinner" style="background-color: rgb(189, 189, 189, .3);">
-                <h4><img src="/assets/icon/rank02.png"/> &nbsp; Honorable Runner-up goes to <b style="text-decoration: underline;">xxxxx</b> for</h4>
-                <span>
-                    xscoixw
-                </span>
-            </div> -->
-
-            <br><br>
-
-            <!-- <h2>Important Dates</h2>
-            <br>
-            <table class="date_award">
-                <tbody>
-                    <tr>
-                        <td>Test Server Open</td><td class="last_column">March 25, 2024</td>
-                    </tr>
-                    <tr>
-                        <td>Test Server Close</td><td class="last_column">June 01, 2024</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <br><br> -->
-
-            <!-- <h2>Leaderboard</h2>
-            <br>
-            <span>
-                See <a class="Oblue" href="https://leaderboard.carla.org/leaderboard/" target="_blank">CARLA Leaderboard 2.0</a>.
-            </span>
-
-            <br><br> -->
-
-            <h2>Award</h2>
-            <br>
-            <table class="date_award">
-                <tbody>
-                    <tr>
-                        <td class="first_icon"><img loading="lazy" src='/assets/icon/bulb.png'/></td><td>Innovation Award</td><td class="last_column">USD 10,000</td>
-                    </tr>
-                    <tr>
-                        <td class="first_icon"><img loading="lazy" src='/assets/icon/rank01.png'/></td><td>Outstanding Champion</td><td class="last_column">HP Workstation</td>
-                    </tr>
-                    <tr>
-                        <td class="first_icon"><img loading="lazy" src='/assets/icon/rank02.png'/></td><td>Honorable Runner-up</td><td class="last_column">HP Workstation</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <br><br>
-
-            <h2>Citation</h2>
-            <br>
-            <span>
-                Please consider citing our work if the challenge helps your research with the following BibTex:
-            </span>
-            <div class="citation">
-                <span class="citation_red">@inproceedings</span>{<span class="citation_blue">dosovitskiy2017carla</span>,
-                    <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;title={CARLA: An open urban driving simulator},
-                    <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;author={Dosovitskiy, Alexey and Ros, German and Codevilla, Felipe and Lopez, Antonio and Koltun, Vladlen},
-                    <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;booktitle={Conference on robot learning},
-                    <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;year={2017}
-                    <br>
-                }
-            </div>
-
-            <br><br>
-
-            <h2>Contact</h2>
-            <br>
-            <ul class="rules">
-                <li>
-                    <a href="https://discord.gg/kJM5DhmKHJ" target="_blank">Discord</a>
-                </li>
-                <li>
-                    <a href="https://join.slack.com/t/opendrivelab/shared_invite/zt-2ft3dfjoz-6XErfBts4s_8Fen88wO4Jg" target="_blank">Slack channel: </a><code>#carla-2024</code>
-                </li>
-            </ul>
-
-            <br><br>
-
-            <h2>Task Description</h2>
-            <br>
-            <span>
-                To verify the effectiveness of AD systems, we need an ultimate planning framework with a closed-loop setting. The CARLA AD Leaderboard challenges agents to drive through a set of predefined routes. For each route, agents will be initialized at a starting point and directed to drive to a destination point, provided with a description of the route through GPS style coordinates, map coordinates or route instructions. Routes are defined in a variety of situations, including freeways, urban areas, residential districts and rural settings. The Leaderboard evaluates AD agents in a variety of weather conditions, including daylight scenes, sunset, rain, fog, and night, among others.
-                <br><br>
-                Details and test server are available at <a class="Oblue" target="_blank" href="https://eval.ai/web/challenges/challenge-page/2098/overview">EvalAI</a>.
-            </span>
-            
-            <br><br>
-
-            <h2 id="driving_with_language">Related Literature</h2>
-            <br>
-            <ul class="rules">
-                <li>
-                    <a href="https://proceedings.mlr.press/v78/dosovitskiy17a.html" target="_blank">
-                        CARLA: An Open Urban Driving Simulator
-                    </a>
-                </li>
-                <li>
-                    <a href="https://openaccess.thecvf.com/content/CVPR2023/html/Shao_ReasonNet_End-to-End_Driving_With_Temporal_and_Global_Reasoning_CVPR_2023_paper.html" target="_blank">
-                        ReasonNet: End-to-End Driving With Temporal and Global Reasoning
-                    </a>
-                </li>
-                <li>
-                    <a href="https://proceedings.mlr.press/v205/shao23a.html" target="_blank">
-                        Safety-Enhanced Autonomous Driving Using Interpretable Sensor Fusion Transformer
-                    </a>
-                </li>
-                <li>
-                    <a href="https://proceedings.neurips.cc/paper_files/paper/2022/hash/286a371d8a0a559281f682f8fbf89834-Abstract-Conference.html" target="_blank">
-                        Trajectory-guided Control Prediction for End-to-end Autonomous Driving: A Simple yet Strong Baseline
-                    </a>
-                </li>
-                <li>
-                    <a href="https://arxiv.org/abs/2306.07957" target="_blank">
-                        Hidden Biases of End-to-End Driving Models
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-
-
-    <div class="block_right left_right">
 
         <div style="flex-grow: 7;">
             <a class="track_title" href="#driving_with_language">
@@ -1697,7 +1486,7 @@
 
 
 
-    <div class="block_left left_right">
+    <div class="block_right left_right">
 
         <div style="flex-grow: 7;">
             <a class="track_title" href="#mapless_driving">
@@ -1873,7 +1662,7 @@
             
             <br><br>
 
-            <h2 id="general_rules">Related Literature</h2>
+            <h2 id="carla">Related Literature</h2>
             <br>
             <ul class="rules">
                 <li>
@@ -1904,6 +1693,217 @@
             </ul>
         </div>
     </div>
+
+
+
+    <div class="block_left left_right">
+
+        <div style="flex-grow: 7;">
+            <a class="track_title" href="#carla">
+                <h2>
+                    Track
+                    <img loading="lazy" class="link_img"/>
+                </h2>
+                <h1>CARLA Autonomous Driving Challenge</h1>
+            </a>
+
+            <br><br>
+            
+            <div class="widget_container">
+                <a href="https://eval.ai/web/challenges/challenge-page/2098/overview" target="_blank">
+                    <span class="Odarkblue"><b>Test Server @ &nbsp;</b></span>
+                    <img loading="lazy" src="/assets/icon/evalai_long.png"/>
+                </a>
+            </div>
+
+            <br><br class="track_fig">
+
+            <img class="track_fig" src="./carla.jpg"/>
+
+            <br>
+
+        </div>
+
+        <div style="flex-grow: 1;"></div>
+
+        <div style="flex-grow: 16;">
+
+            <!-- <h2>Leaderboard</h2>
+            <br>
+            <div class="leaderboard">
+                <div class="leaderboardscroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="white" style="width: 22px"><b>Rank</b></th>
+                                <th class="white" style="width: 33px"><b>Country / Region</b></th>
+                                <th class="white" style="width: 111px"><b>Institution</b></th>
+                                <th class="white track5button" style="width: 55px" onclick="track5sort(0, 'primary')"><b>Driving Score (primary) ▼</b></th>
+                                <th class="white" style="width: 181px"><b>Team Name</b></th>
+                                <th class="white" style="width: 33px"></th>
+                                <th class="white track5button" style="width: 55px" onclick="track5sort(1, 'metric1')"><b>Route Completion &nbsp;&nbsp;&nbsp;</b></th>
+                            </tr>
+                        </thead>
+                        <tbody id="track5table"></tbody>
+                    </table>
+                    <div id="track5tablefoot">
+                        <div>
+                            <button onclick="track5previous()"><b>⇤</b></button>
+                            <button onclick="track5next()"><b>⇥</b></button>
+                        </div>
+                        <div>
+                            <button class="nonbutton" id="track5pages"></button>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- <br>
+
+            <div class="awardwinner" style="background-color: rgb(255, 156, 0, .3);">
+                <h4><img src="/assets/icon/bulb.png"/> &nbsp; Innovation Award goes to <b style="text-decoration: underline;">xxxxx</b> for</h4>
+                <span>
+                    xscoixw
+                </span>
+            </div>
+
+            <br>
+
+            <div class="awardwinner" style="background-color: rgb(254, 229, 106, .3);">
+                <h4><img src="/assets/icon/rank01.png"/> &nbsp; Outstanding Champion goes to <b style="text-decoration: underline;">xxxxx</b> for</h4>
+                <span>
+                    xscoixw
+                </span>
+            </div>
+
+            <br>
+
+            <div class="awardwinner" style="background-color: rgb(189, 189, 189, .3);">
+                <h4><img src="/assets/icon/rank02.png"/> &nbsp; Honorable Runner-up goes to <b style="text-decoration: underline;">xxxxx</b> for</h4>
+                <span>
+                    xscoixw
+                </span>
+            </div> -->
+
+            <br><br>
+
+            <!-- <h2>Important Dates</h2>
+            <br>
+            <table class="date_award">
+                <tbody>
+                    <tr>
+                        <td>Test Server Open</td><td class="last_column">March 25, 2024</td>
+                    </tr>
+                    <tr>
+                        <td>Test Server Close</td><td class="last_column">June 01, 2024</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br><br> -->
+
+            <!-- <h2>Leaderboard</h2>
+            <br>
+            <span>
+                See <a class="Oblue" href="https://leaderboard.carla.org/leaderboard/" target="_blank">CARLA Leaderboard 2.0</a>.
+            </span>
+
+            <br><br> -->
+
+            <h2>Award</h2>
+            <br>
+            <table class="date_award">
+                <tbody>
+                    <tr>
+                        <td class="first_icon"><img loading="lazy" src='/assets/icon/bulb.png'/></td><td>Innovation Award</td><td class="last_column">USD 10,000</td>
+                    </tr>
+                    <tr>
+                        <td class="first_icon"><img loading="lazy" src='/assets/icon/rank01.png'/></td><td>Outstanding Champion</td><td class="last_column">HP Workstation</td>
+                    </tr>
+                    <tr>
+                        <td class="first_icon"><img loading="lazy" src='/assets/icon/rank02.png'/></td><td>Honorable Runner-up</td><td class="last_column">HP Workstation</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br><br>
+
+            <h2>Citation</h2>
+            <br>
+            <span>
+                Please consider citing our work if the challenge helps your research with the following BibTex:
+            </span>
+            <div class="citation">
+                <span class="citation_red">@inproceedings</span>{<span class="citation_blue">dosovitskiy2017carla</span>,
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;title={CARLA: An open urban driving simulator},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;author={Dosovitskiy, Alexey and Ros, German and Codevilla, Felipe and Lopez, Antonio and Koltun, Vladlen},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;booktitle={Conference on robot learning},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;year={2017}
+                    <br>
+                }
+            </div>
+
+            <br><br>
+
+            <h2>Contact</h2>
+            <br>
+            <ul class="rules">
+                <li>
+                    <a href="https://discord.gg/kJM5DhmKHJ" target="_blank">Discord</a>
+                </li>
+                <li>
+                    <a href="https://join.slack.com/t/opendrivelab/shared_invite/zt-2ft3dfjoz-6XErfBts4s_8Fen88wO4Jg" target="_blank">Slack channel: </a><code>#carla-2024</code>
+                </li>
+            </ul>
+
+            <br><br>
+
+            <h2>Task Description</h2>
+            <br>
+            <span>
+                To verify the effectiveness of AD systems, we need an ultimate planning framework with a closed-loop setting. The CARLA AD Leaderboard challenges agents to drive through a set of predefined routes. For each route, agents will be initialized at a starting point and directed to drive to a destination point, provided with a description of the route through GPS style coordinates, map coordinates or route instructions. Routes are defined in a variety of situations, including freeways, urban areas, residential districts and rural settings. The Leaderboard evaluates AD agents in a variety of weather conditions, including daylight scenes, sunset, rain, fog, and night, among others.
+                <br><br>
+                Details and test server are available at <a class="Oblue" target="_blank" href="https://eval.ai/web/challenges/challenge-page/2098/overview">EvalAI</a>.
+            </span>
+            
+            <br><br>
+
+            <h2 id="general_rules">Related Literature</h2>
+            <br>
+            <ul class="rules">
+                <li>
+                    <a href="https://proceedings.mlr.press/v78/dosovitskiy17a.html" target="_blank">
+                        CARLA: An Open Urban Driving Simulator
+                    </a>
+                </li>
+                <li>
+                    <a href="https://openaccess.thecvf.com/content/CVPR2023/html/Shao_ReasonNet_End-to-End_Driving_With_Temporal_and_Global_Reasoning_CVPR_2023_paper.html" target="_blank">
+                        ReasonNet: End-to-End Driving With Temporal and Global Reasoning
+                    </a>
+                </li>
+                <li>
+                    <a href="https://proceedings.mlr.press/v205/shao23a.html" target="_blank">
+                        Safety-Enhanced Autonomous Driving Using Interpretable Sensor Fusion Transformer
+                    </a>
+                </li>
+                <li>
+                    <a href="https://proceedings.neurips.cc/paper_files/paper/2022/hash/286a371d8a0a559281f682f8fbf89834-Abstract-Conference.html" target="_blank">
+                        Trajectory-guided Control Prediction for End-to-end Autonomous Driving: A Simple yet Strong Baseline
+                    </a>
+                </li>
+                <li>
+                    <a href="https://arxiv.org/abs/2306.07957" target="_blank">
+                        Hidden Biases of End-to-End Driving Models
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
 
 
 
