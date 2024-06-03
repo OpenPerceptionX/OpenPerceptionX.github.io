@@ -65,17 +65,17 @@ const track7data = [
         disqualified: true,
         links: ""
     },
-    {
-        team: "\u3068\u304f\u3081\u3044",
-        primary: "0.5700",
-        metric1: "0.3937",
-        metric2: "0.3843",
-        country: "-",
-        institution: "-",
-        award: "blank",
-        disqualified: true,
-        links: ""
-    },
+    // {
+    //     team: "\u3068\u304f\u3081\u3044",
+    //     primary: "0.5700",
+    //     metric1: "0.3937",
+    //     metric2: "0.3843",
+    //     country: "-",
+    //     institution: "-",
+    //     award: "blank",
+    //     disqualified: true,
+    //     links: ""
+    // },
     {
         team: "ethan",
         primary: "0.5673",
@@ -98,17 +98,17 @@ const track7data = [
         disqualified: false,
         links: ""
     },
-    {
-        team: "gdives",
-        primary: "0.5645",
-        metric1: "0.4225",
-        metric2: "0.3472",
-        country: "-",
-        institution: "-",
-        award: "blank",
-        disqualified: true,
-        links: ""
-    },
+    // {
+    //     team: "gdives",
+    //     primary: "0.5645",
+    //     metric1: "0.4225",
+    //     metric2: "0.3472",
+    //     country: "-",
+    //     institution: "-",
+    //     award: "blank",
+    //     disqualified: true,
+    //     links: ""
+    // },
     {
         team: "yehaiy",
         primary: "0.5588",
