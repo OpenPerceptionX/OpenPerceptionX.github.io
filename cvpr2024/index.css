@@ -106,6 +106,12 @@ li a {
 }
 
 
+.spub a {
+    text-decoration: underline;
+    color: #00a0e8;
+}
+
+
 .person_container {
     gap: 10% !important;
 }
