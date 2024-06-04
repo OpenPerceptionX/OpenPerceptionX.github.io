@@ -193,7 +193,7 @@
       <div class="columns is-centered has-text-centered">
         <div class="column is-two-thirds ">
           <div class="content has-text-justified">
-            Representation learning methods towards robot manipulation have blossomed in recent years. Due to the scarcity of in-domain robot demonstrations, prevailing approaches tend to leverage large-scale video datasets of human-object interaction, to build reusable features for visuomotor policy learning. However, these methods focus only on high-level semantic cues or low-level pixel information, and disregard the interactive dynamics in manipulation processes, resulting in suboptimal empowerment for downstream tasks. Hereby, we propose <strong>MPI</strong>, which enhances interaction-oriented representation by simulating the manipulation process. We decompose each action sequence into the initial state, transitional state, and final state.  Given a pair of keyframes representing the initial and final states, along with language instructions, the model is required to predict the image of the transition state and locate the interaction object. We conduct a comprehensive evaluation across five distinct robot learning tasks. The experimental results demonstrate that <strong>MPI</strong> exhibits remarkable improvement compared to state-of-the-art methods in both real-world robot platforms and simulation environments.
+            Representation learning approaches for robotic manipulation have boomed in recent years. Due to the scarcity of in-domain robot data, prevailing methodologies tend to leverage large-scale human video datasets to extract generalizable features for visuomotor policy learning. Despite the progress achieved, prior endeavors disregard the interactive dynamics that capture behavior patterns and physical interaction during the manipulation process, resulting in an inadequate understanding of the relationship between objects and the environment. To this end, we propose a general pre-training pipeline that learns Manipulation by Predicting the Interaction (MPI) and enhances the visual representation. Given a pair of keyframes representing the initial and final states, along with language instructions, our algorithm predicts the transition frame and detects the interaction object, respectively. These two learning objectives achieve superior comprehension towards “how-to-interact” and “where-to-interact”. We conduct a comprehensive evaluation of several challenging robotic tasks. The experimental results demonstrate that MPI exhibits remarkable improvement by 10% to 64% compared with previous state-of-the-art in real-world robot platforms as well as simulation environments.
           </div>
         </div>
         </div>
@@ -268,7 +268,7 @@
                     <br>
                   </div>
                   <div class="col">
-                    <video class="center" playsinline autoplay loop muted src="./resources/mpi/visuomotor/lift_up_the_pot_lid_2.mp4" width="100%" style="border-radius:10px;"></video>
+                    <video class="center" playsinline autoplay loop muted src="./resources/mpi/visuomotor/mov_pot_into_sink_2.mp4" width="100%" style="border-radius:10px;"></video>
                     <center> Put pot into sink (2x speed)</center>
                     <br>
                   </div>
