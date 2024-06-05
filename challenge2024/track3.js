@@ -1,15 +1,257 @@
 const track3data = [
     {
-        team: "-",
-        primary: 1,
-        metric1: 1,
-        metric2: 1,
+        team: "IEIT-AD",
+        primary: "0.4890",
+        metric1: "0.4605",
+        metric2: "0.2541",
         country: "-",
         institution: "-",
         award: "blank",
         disqualified: false,
         links: ""
     },
+    {
+        team: "SaicOcc",
+        primary: "0.4457",
+        metric1: "0.4307",
+        metric2: "0.4193",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "Huawei-Noah & CUHK-SZ",
+        primary: "0.4265",
+        metric1: "0.4320",
+        metric2: "0.6236",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "Harbour-Chips",
+        primary: "0.4089",
+        metric1: "0.3776",
+        metric2: "0.3092",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "GaussianOcc",
+        primary: "0.4042",
+        metric1: "0.4054",
+        metric2: "0.6066",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "Mi-Robot",
+        primary: "0.4041",
+        metric1: "0.3835",
+        metric2: "0.4105",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "ARM330",
+        primary: "0.3567",
+        metric1: "0.3286",
+        metric2: "0.3909",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "CXZN & CUPT",
+        primary: "0.3353",
+        metric1: "0.3057",
+        metric2: "0.3981",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "NJVLab",
+        primary: "0.3218",
+        metric1: "0.3154",
+        metric2: "0.6202",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "xyq019971",
+        primary: "0.3048",
+        metric1: "0.2952",
+        metric2: "0.6088",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "HCMUT",
+        primary: "0.2600",
+        metric1: "0.2521",
+        metric2: "0.6688",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "beintelli",
+        primary: "0.2585",
+        metric1: "0.2378",
+        metric2: "0.5551",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "SYI team",
+        primary: "0.2566",
+        metric1: "0.2403",
+        metric2: "0.5965",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "SYI team",
+        primary: "0.2566",
+        metric1: "0.2403",
+        metric2: "0.5965",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "Laoda24vsYaoxi",
+        primary: "0.2497",
+        metric1: "0.2314",
+        metric2: "0.5854",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "danking",
+        primary: "0.2485",
+        metric1: "0.2362",
+        metric2: "0.6408",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "Haobo Zhang",
+        primary: "0.2479",
+        metric1: "0.2344",
+        metric2: "0.6302",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "gouziwang1",
+        primary: "0.2183",
+        metric1: "0.2038",
+        metric2: "0.6512",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "CUMT",
+        primary: "0.1940",
+        metric1: "0.1785",
+        metric2: "0.6659",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "RainbowJin",
+        primary: "0.0884",
+        metric1: "0.0559",
+        metric2: "0.6192",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "ClearLove7777",
+        primary: "0.0018",
+        metric1: "0.0020",
+        metric2: "10.8684",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "yuki",
+        primary: "0.0015",
+        metric1: "0.0017",
+        metric2: "11.9385",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "UM-IT",
+        primary: "0.4528",
+        metric1: "0.4507",
+        metric2: "0.5288",
+        country: "-",
+        institution: "-",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    }
 ];
 
 
