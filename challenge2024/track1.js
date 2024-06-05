@@ -2,8 +2,9 @@ const track1data = [
     {
         team: "Team NVIDIA",
         primary: "0.9274",
-        country: "-",
-        institution: "-",
+        country: "US",
+        // institution: "NVIDIA, Nankai University, Nanjing University, Fudan University, East China Normal University, Beijing Institute of Technology<br>英伟达、南开大学、南京大学、复旦大学、华东师范大学、北京理工大学",
+        institution: "NVIDIA",
         award: "blank",
         disqualified: false,
         links: ""
@@ -11,8 +12,8 @@ const track1data = [
     {
         team: "ZERON",
         primary: "0.8747",
-        country: "-",
-        institution: "-",
+        country: "CN",
+        institution: "ZERON<br>零一汽车",
         award: "blank",
         disqualified: false,
         links: ""
@@ -23,7 +24,7 @@ const track1data = [
         country: "-",
         institution: "-",
         award: "blank",
-        disqualified: false,
+        disqualified: true,
         links: ""
     },
     {
@@ -38,8 +39,9 @@ const track1data = [
     {
         team: "Neuros",
         primary: "0.8542",
-        country: "-",
-        institution: "-",
+        country: "CN",
+        // institution: "CASIA, University of Science and Technology Beijing<br>中国科学院自动化研究所、北京科技大学",
+        institution: "CASIA<br>中国科学院自动化研究所",
         award: "blank",
         disqualified: false,
         links: ""
@@ -50,7 +52,7 @@ const track1data = [
         country: "-",
         institution: "-",
         award: "blank",
-        disqualified: false,
+        disqualified: true,
         links: ""
     },
     {
@@ -131,7 +133,7 @@ const track1data = [
         country: "-",
         institution: "-",
         award: "blank",
-        disqualified: false,
+        disqualified: true,
         links: ""
     },
     {
@@ -164,10 +166,10 @@ const track1data = [
     {
         team: "VCCIV",
         primary: "0.8404",
-        country: "-",
-        institution: "-",
+        country: "CN",
+        institution: "Xi'an Jiaotong University<br>西安交通大学",
         award: "blank",
-        disqualified: false,
+        disqualified: true,
         links: ""
     },
     {
@@ -185,7 +187,7 @@ const track1data = [
         country: "-",
         institution: "-",
         award: "blank",
-        disqualified: false,
+        disqualified: true,
         links: ""
     },
     {
@@ -209,16 +211,16 @@ const track1data = [
     {
         team: "VCCIV",
         primary: "0.8292",
-        country: "-",
-        institution: "-",
+        country: "CN",
+        institution: "Xi'an Jiaotong University<br>西安交通大学",
         award: "blank",
-        disqualified: false,
+        disqualified: true,
         links: ""
     },
     {
         team: "Teora",
         primary: "0.8267",
-        country: "-",
+        country: "KR",
         institution: "-",
         award: "blank",
         disqualified: false,
@@ -230,7 +232,7 @@ const track1data = [
         country: "-",
         institution: "-",
         award: "blank",
-        disqualified: false,
+        disqualified: true,
         links: ""
     },
     {
@@ -239,7 +241,7 @@ const track1data = [
         country: "-",
         institution: "-",
         award: "blank",
-        disqualified: false,
+        disqualified: true,
         links: ""
     },
     {
@@ -257,7 +259,7 @@ const track1data = [
         country: "-",
         institution: "-",
         award: "blank",
-        disqualified: false,
+        disqualified: true,
         links: ""
     },
     {
@@ -275,7 +277,7 @@ const track1data = [
         country: "-",
         institution: "-",
         award: "blank",
-        disqualified: false,
+        disqualified: true,
         links: ""
     },
     {
@@ -284,7 +286,7 @@ const track1data = [
         country: "-",
         institution: "-",
         award: "blank",
-        disqualified: false,
+        disqualified: true,
         links: ""
     },
     {
@@ -329,7 +331,7 @@ const track1data = [
         country: "-",
         institution: "-",
         award: "blank",
-        disqualified: false,
+        disqualified: true,
         links: ""
     },
     {
@@ -410,7 +412,7 @@ const track1data = [
         country: "-",
         institution: "-",
         award: "blank",
-        disqualified: false,
+        disqualified: true,
         links: ""
     },
     {
@@ -470,10 +472,10 @@ const track1data = [
     {
         team: "SmallFish",
         primary: "0.6949",
-        country: "-",
+        country: "DE",
         institution: "-",
         award: "blank",
-        disqualified: false,
+        disqualified: true,
         links: ""
     },
     {
@@ -500,16 +502,16 @@ const track1data = [
         country: "-",
         institution: "-",
         award: "blank",
-        disqualified: false,
+        disqualified: true,
         links: ""
     },
     {
         team: "SmallFish",
         primary: "0.6699",
-        country: "-",
+        country: "DE",
         institution: "-",
         award: "blank",
-        disqualified: false,
+        disqualified: true,
         links: ""
     },
     {
@@ -518,7 +520,7 @@ const track1data = [
         country: "-",
         institution: "-",
         award: "blank",
-        disqualified: false,
+        disqualified: true,
         links: ""
     },
     {
@@ -554,7 +556,7 @@ const track1data = [
         country: "-",
         institution: "-",
         award: "blank",
-        disqualified: false,
+        disqualified: true,
         links: ""
     },
     {
@@ -572,7 +574,7 @@ const track1data = [
         country: "-",
         institution: "-",
         award: "blank",
-        disqualified: false,
+        disqualified: true,
         links: ""
     },
     {
