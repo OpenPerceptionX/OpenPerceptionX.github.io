@@ -27,7 +27,7 @@ const track3data = [
         metric1: "0.4320",
         metric2: "0.6236",
         country: "CN",
-        institution: "The Chinese University of Hong Kong (Shenzhen), Huawei<br>香港中文大学（深圳）、华为",
+        institution: "The Chinese University of Hong Kong, Shenzhen / Huawei<br>香港中文大学（深圳） / 华为",
         award: "blank",
         disqualified: false,
         links: ""
@@ -49,7 +49,7 @@ const track3data = [
         metric1: "0.4054",
         metric2: "0.6066",
         country: "CN",
-        institution: "GaussianOcc",
+        institution: "-",
         award: "blank",
         disqualified: false,
         links: ""
@@ -82,7 +82,7 @@ const track3data = [
         metric1: "0.3057",
         metric2: "0.3981",
         country: "CN",
-        institution: "ChangXian Intelligence, Chongqing University of Posts and Telecommunications<br>长线智能、重庆邮电大学",
+        institution: "ChangXian Intelligence / Chongqing University of Posts and Telecommunications<br>长线智能 / 重庆邮电大学",
         award: "blank",
         disqualified: false,
         links: ""
@@ -247,7 +247,7 @@ const track3data = [
         metric1: "0.4507",
         metric2: "0.5288",
         country: "MO",
-        institution: "University of Macau, Inceptio Technology<br>澳门大学、嬴彻科技",
+        institution: "University of Macau / Inceptio Technology<br>澳门大学 / 嬴彻科技",
         award: "blank",
         disqualified: false,
         links: ""
