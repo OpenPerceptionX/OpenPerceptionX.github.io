@@ -40,8 +40,7 @@ const track1data = [
         team: "Neuros",
         primary: "0.8542",
         country: "CN",
-        institution: "CASIA, University of Science and Technology Beijing<br>中国科学院自动化研究所、北京科技大学",
-        // institution: "CASIA<br>中国科学院自动化研究所",
+        institution: "Institute of Automation, Chinese Academy of Sciences / University of Science and Technology Beijing<br>中国科学院自动化研究所 / 北京科技大学",
         award: "blank",
         disqualified: false,
         links: ""
