@@ -4,8 +4,8 @@ const track7data = [
         primary: "0.6600",
         metric1: "0.5074",
         metric2: "0.5557",
-        country: "-",
-        institution: "-",
+        country: "CN",
+        institution: "Langge Technology<br>朗歌科技",
         award: "blank",
         disqualified: false,
         links: ""
@@ -26,8 +26,8 @@ const track7data = [
         primary: "0.6281",
         metric1: "0.4994",
         metric2: "0.4638",
-        country: "-",
-        institution: "-",
+        country: "CN",
+        institution: "Beijing Institute of Technology / MEGVII<br>北京科技大学 / 旷视科技",
         award: "blank",
         disqualified: false,
         links: ""
@@ -37,8 +37,8 @@ const track7data = [
         primary: "0.5927",
         metric1: "0.4181",
         metric2: "0.5159",
-        country: "-",
-        institution: "-",
+        country: "DE",
+        institution: "Bosch / Tsinghua University",
         award: "blank",
         disqualified: true,
         links: ""
@@ -48,8 +48,8 @@ const track7data = [
         primary: "0.5886",
         metric1: "0.4187",
         metric2: "0.4438",
-        country: "-",
-        institution: "-",
+        country: "US",
+        institution: "AMD",
         award: "blank",
         disqualified: true,
         links: ""
@@ -59,8 +59,8 @@ const track7data = [
         primary: "0.5806",
         metric1: "0.3929",
         metric2: "0.3990",
-        country: "-",
-        institution: "-",
+        country: "CN",
+        institution: "Didi Chuxing<br>滴滴出行",
         award: "blank",
         disqualified: true,
         links: ""
@@ -92,8 +92,8 @@ const track7data = [
         primary: "0.5668",
         metric1: "0.3934",
         metric2: "0.4150",
-        country: "-",
-        institution: "-",
+        country: "DE",
+        institution: "TUM / University of Stuttgart",
         award: "blank",
         disqualified: false,
         links: ""
@@ -169,8 +169,8 @@ const track7data = [
         primary: "0.5161",
         metric1: "0.4036",
         metric2: "0.2153",
-        country: "-",
-        institution: "-",
+        country: "CN",
+        institution: "South China Agricultural University<br>华南农业大学",
         award: "blank",
         disqualified: false,
         links: ""
@@ -279,8 +279,8 @@ const track7data = [
         primary: "0.4528",
         metric1: "0.3667",
         metric2: "0.3788",
-        country: "-",
-        institution: "-",
+        country: "CN",
+        institution: "Beijing Institute of Technology<br>北京科技大学",
         award: "blank",
         disqualified: false,
         links: ""
@@ -315,7 +315,7 @@ const track7data = [
         country: "-",
         institution: "-",
         award: "blank",
-        disqualified: false,
+        disqualified: true,
         links: ""
     },
     {
@@ -356,8 +356,8 @@ const track7data = [
         primary: "0.3825",
         metric1: "0.2729",
         metric2: "0.2335",
-        country: "-",
-        institution: "-",
+        country: "CN",
+        institution: "HDI<br>武汉中海庭",     // Unknown Full-name
         award: "blank",
         disqualified: false,
         links: ""
@@ -367,8 +367,8 @@ const track7data = [
         primary: "0.3759",
         metric1: "0.2990",
         metric2: "0.2367",
-        country: "-",
-        institution: "-",
+        country: "VN",
+        institution: "Ho Chi Minh City University of Technology",
         award: "blank",
         disqualified: false,
         links: ""
@@ -378,8 +378,8 @@ const track7data = [
         primary: "0.3717",
         metric1: "0.2527",
         metric2: "0.2061",
-        country: "-",
-        institution: "-",
+        country: "CN",
+        institution: "Xi'an Jiao Tong University<br>西安交通大学",
         award: "blank",
         disqualified: false,
         links: ""
