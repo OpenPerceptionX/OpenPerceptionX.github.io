@@ -24,7 +24,7 @@ const track4data = [
         primary: "0.4692",
         metric1: "0.2038",
         country: "CN",
-        institution: "XiaoMi Robot<br>小米机器人",
+        institution: "Xiaomi Robot<br>小米机器人",
         award: "blank",
         disqualified: false,
         links: ""

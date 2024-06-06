@@ -60,7 +60,7 @@ const track3data = [
         metric1: "0.3835",
         metric2: "0.4105",
         country: "CN",
-        institution: "XiaoMi Robot<br>小米机器人",
+        institution: "Xiaomi Robot<br>小米机器人",
         award: "blank",
         disqualified: false,
         links: ""
@@ -71,7 +71,7 @@ const track3data = [
         metric1: "0.3286",
         metric2: "0.3909",
         country: "CN",
-        institution: "XiaoMi<br>小米",
+        institution: "Xiaomi<br>小米",
         award: "blank",
         disqualified: false,
         links: ""
