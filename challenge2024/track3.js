@@ -27,7 +27,7 @@ const track3data = [
         metric1: "0.4320",
         metric2: "0.6236",
         country: "CN",
-        institution: "The Chinese University of Hong Kong, Shenzhen / Huawei<br>香港中文大学（深圳） / 华为",
+        institution: "Huawei / The Chinese University of Hong Kong, Shenzhen<br>华为 / 香港中文大学（深圳）",
         award: "blank",
         disqualified: false,
         links: ""
