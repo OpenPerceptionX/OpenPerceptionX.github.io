@@ -5,7 +5,7 @@ const track2data = [
         metric1: "0.5448",
         metric2: "0.7878",
         country: "CN",
-        institution: "University of Science and Technology of China / Baidu<br>中国科学技术大学 / 百度",
+        institution: "University of Science and Technology of China<br>中国科学技术大学",
         award: "blank",
         disqualified: false,
         links: ""
@@ -16,7 +16,7 @@ const track2data = [
         metric1: "0.5596",
         metric2: "0.9996",
         country: "CN",
-        institution: "The Chinese University of Hong Kong, Shenzhen / Huawei<br>香港中文大学（深圳）/ 华为",
+        institution: "Huawei / The Chinese University of Hong Kong, Shenzhen<br>华为 / 香港中文大学（深圳）",
         award: "blank",
         disqualified: false,
         links: ""
