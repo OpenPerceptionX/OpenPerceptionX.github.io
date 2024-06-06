@@ -37,8 +37,8 @@ const track60data = [
         primary: "0.7509",
         metric1: "0.7511",
         metric2: "65.9302",
-        country: "-",
-        institution: "-",
+        country: "CN",
+        institution: "Sun Yat-sen University / Meituan<br>中山大学 / 美团",
         award: "blank",
         disqualified: false,
         links: ""
@@ -59,8 +59,8 @@ const track60data = [
         primary: "0.7183",
         metric1: "0.7013",
         metric2: "61.3644",
-        country: "-",
-        institution: "-",
+        country: "US",
+        institution: "AMD",
         award: "blank",
         disqualified: false,
         links: ""
@@ -81,8 +81,8 @@ const track60data = [
         primary: "0.7165",
         metric1: "0.6831",
         metric2: "61.3000",
-        country: "-",
-        institution: "-",
+        country: "CN",
+        institution: "Southeast University<br>东南大学",
         award: "blank",
         disqualified: false,
         links: ""
@@ -103,8 +103,8 @@ const track60data = [
         primary: "0.7095",
         metric1: "0.7294",
         metric2: "64.6506",
-        country: "-",
-        institution: "-",
+        country: "CN",
+        institution: "University of Chinese Academy of Sciences<br>中国科学院大学",
         award: "blank",
         disqualified: false,
         links: ""
