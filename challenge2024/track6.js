@@ -26,8 +26,8 @@ const track6data = [
         primary: "0.7759",
         metric1: "0.7597",
         metric2: "64.7224",
-        country: "-",
-        institution: "-",
+        country: "CN",
+        institution: "Chongqing Changan Automobile Co. Ltd / Chongqing University of Posts and Telecommunications<br>长安汽车 / 重庆邮电大学",
         award: "blank",
         disqualified: false,
         links: ""
@@ -59,8 +59,8 @@ const track6data = [
         primary: "0.7420",
         metric1: "0.7170",
         metric2: "61.2355",
-        country: "-",
-        institution: "-",
+        country: "CN",
+        institution: "Tsinghua University<br>清华大学",
         award: "blank",
         disqualified: false,
         links: ""
@@ -125,8 +125,9 @@ const track6data = [
         primary: "0.7091",
         metric1: "0.7358",
         metric2: "64.6090",
-        country: "-",
-        institution: "-",
+        country: "CN",
+        // institution: "Institute of Software Chinese Academy of Sciences, Nanjing University of Science and Technology, Central South University<br>中国科学院软件研究所、南京理工大学、中南大学",
+        institution: "Institute of Software, Chinese Academy of Sciences<br>中国科学院软件研究所",
         award: "blank",
         disqualified: false,
         links: ""
@@ -158,8 +159,8 @@ const track6data = [
         primary: "0.6778",
         metric1: "0.6793",
         metric2: "56.4965",
-        country: "-",
-        institution: "-",
+        country: "CH",
+        institution: "Swiss Federal Institute of Technology in Lausanne",
         award: "blank",
         disqualified: false,
         links: ""
@@ -183,7 +184,7 @@ const track6data = [
         country: "-",
         institution: "-",
         award: "blank",
-        disqualified: false,
+        disqualified: true,
         links: ""
     },
     {
@@ -213,8 +214,9 @@ const track6data = [
         primary: "0.6533",
         metric1: "0.7567",
         metric2: "58.9765",
-        country: "-",
-        institution: "-",
+        country: "CN",
+        // institution: "Tianjin University, Chinese Academy of Sciences' Institute of Automation, University of Cambridge<br>天津大学、中国科学院自动化研究所、剑桥大学",
+        institution: "Tianjin University<br>天津大学",
         award: "blank",
         disqualified: false,
         links: ""
@@ -312,8 +314,8 @@ const track6data = [
         primary: "0.5732",
         metric1: "0.6658",
         metric2: "63.9175",
-        country: "-",
-        institution: "-",
+        country: "DE",
+        institution: "Bosch",
         award: "blank",
         disqualified: false,
         links: ""
@@ -356,8 +358,8 @@ const track6data = [
         primary: "0.5527",
         metric1: "0.7300",
         metric2: "60.7720",
-        country: "-",
-        institution: "-",
+        country: "CN",
+        institution: "Sun Yat-sen University<br>中山大学",
         award: "blank",
         disqualified: false,
         links: ""
@@ -367,8 +369,8 @@ const track6data = [
         primary: "0.5522",
         metric1: "0.7255",
         metric2: "60.8134",
-        country: "-",
-        institution: "-",
+        country: "CN",
+        institution: "Chongqing University of Posts and Telecommunications<br>重庆邮电大学",
         award: "blank",
         disqualified: false,
         links: ""
@@ -455,8 +457,8 @@ const track6data = [
         primary: "0.5161",
         metric1: "0.5920",
         metric2: "55.6361",
-        country: "-",
-        institution: "-",
+        country: "CN",
+        institution: "Beijing Institute of Technology<br>北京科技大学",
         award: "blank",
         disqualified: false,
         links: ""
@@ -488,8 +490,8 @@ const track6data = [
         primary: "0.5105",
         metric1: "0.6139",
         metric2: "56.9799",
-        country: "-",
-        institution: "-",
+        country: "HK",
+        institution: "Hong Kong University of Science and Technology<br>香港科技大学",
         award: "blank",
         disqualified: false,
         links: ""
@@ -499,8 +501,8 @@ const track6data = [
         primary: "0.5098",
         metric1: "0.6259",
         metric2: "57.1201",
-        country: "-",
-        institution: "-",
+        country: "US",
+        institution: "University of California San Diego",
         award: "blank",
         disqualified: false,
         links: ""
@@ -521,8 +523,8 @@ const track6data = [
         primary: "0.5066",
         metric1: "0.6136",
         metric2: "55.6103",
-        country: "-",
-        institution: "-",
+        country: "CN",
+        institution: "University of Science and Technology of China<br>中国科学技术大学",
         award: "blank",
         disqualified: false,
         links: ""
@@ -532,7 +534,7 @@ const track6data = [
         primary: "0.5001",
         metric1: "0.6027",
         metric2: "53.8345",
-        country: "-",
+        country: "CN",
         institution: "-",
         award: "blank",
         disqualified: false,
@@ -543,8 +545,8 @@ const track6data = [
         primary: "0.4952",
         metric1: "0.5490",
         metric2: "57.1039",
-        country: "-",
-        institution: "-",
+        country: "DE",
+        institution: "Technical University of Munich",
         award: "blank",
         disqualified: false,
         links: ""
@@ -554,8 +556,8 @@ const track6data = [
         primary: "0.4920",
         metric1: "0.5865",
         metric2: "52.1285",
-        country: "-",
-        institution: "-",
+        country: "CN",
+        institution: "University of Science and Technology Beijing<br>北京科技大学",
         award: "blank",
         disqualified: false,
         links: ""
@@ -568,7 +570,7 @@ const track6data = [
         country: "-",
         institution: "-",
         award: "blank",
-        disqualified: false,
+        disqualified: true,
         links: ""
     },
     {
@@ -579,7 +581,7 @@ const track6data = [
         country: "-",
         institution: "-",
         award: "blank",
-        disqualified: false,
+        disqualified: true,
         links: ""
     },
     {
@@ -609,8 +611,8 @@ const track6data = [
         primary: "0.3929",
         metric1: "0.1995",
         metric2: "57.5896",
-        country: "-",
-        institution: "-",
+        country: "CN",
+        institution: "Beijing Institute of Technology<br>北京理工大学",
         award: "blank",
         disqualified: false,
         links: ""
@@ -620,8 +622,8 @@ const track6data = [
         primary: "0.3874",
         metric1: "0.1394",
         metric2: "55.1163",
-        country: "-",
-        institution: "-",
+        country: "CN",
+        institution: "Meituan<br>美团",
         award: "blank",
         disqualified: false,
         links: ""
@@ -642,8 +644,8 @@ const track6data = [
         primary: "0.3548",
         metric1: "0.2966",
         metric2: "58.2430",
-        country: "-",
-        institution: "-",
+        country: "GB",
+        institution: "University of Liverpool",
         award: "blank",
         disqualified: false,
         links: ""
@@ -653,8 +655,8 @@ const track6data = [
         primary: "0.3422",
         metric1: "0.0000",
         metric2: "57.4930",
-        country: "-",
-        institution: "-",
+        country: "CN",
+        institution: "Tsinghua University<br>清华大学",
         award: "blank",
         disqualified: false,
         links: ""
@@ -689,7 +691,7 @@ const track6data = [
         country: "-",
         institution: "-",
         award: "blank",
-        disqualified: false,
+        disqualified: true,
         links: ""
     }
 ];
