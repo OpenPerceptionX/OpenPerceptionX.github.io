@@ -37,8 +37,8 @@ const track6data = [
         primary: "0.5706",
         metric1: "0.7464",
         metric2: "59.2303",
-        country: "-",
-        institution: "-",
+        country: "CN",
+        institution: "Institute of Automation, Chinese Academy of Sciences<br>中国科学院自动化研究所",
         award: "blank",
         disqualified: false,
         links: ""
