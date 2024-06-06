@@ -1,10 +1,27 @@
 const track5data = [
     {
-        team: "-",
-        primary: 1,
-        metric1: 1,
-        country: "-",
-        institution: "-",
+        team: "LLM4AD",
+        primary: 6.865,
+        country: "GB",
+        institution: "Wayve / University of Tübingen",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "Tuebingen_AI",
+        primary: 5.183,
+        country: "DE",
+        institution: "University of Tübingen",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
+    {
+        team: "LRM",
+        primary: 0.719,
+        country: "BR",
+        institution: "Universidade de São Paulo",
         award: "blank",
         disqualified: false,
         links: ""
@@ -44,7 +61,6 @@ function track5render() {
             <td><b>${item.primary}</b></td>
             <td>${item.team}</td>
             <td>${item.links}</td>
-            <td>${item.metric1}</td>
         `;
         track5tableBody.appendChild(row);
     });

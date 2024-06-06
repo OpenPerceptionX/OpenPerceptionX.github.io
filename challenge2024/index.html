@@ -19,7 +19,8 @@
     <script src="./track2.js"></script>
     <script src="./track3.js"></script>
     <script src="./track4.js"></script>
-    <!-- <script src="./track5.js"></script> -->
+    <script src="./track5.js"></script>
+    <script src="./track50.js"></script>
     <script src="./track6.js"></script>
     <script src="./track60.js"></script>
     <script src="./track7.js"></script>
@@ -1776,7 +1777,10 @@
 
         <div style="flex-grow: 16;">
 
-            <!-- <h2>Leaderboard</h2>
+            <h2>Leaderboard</h2>
+            <br>
+
+            <h4>SENSORS</h4>
             <br>
             <div class="leaderboard">
                 <div class="leaderboardscroll">
@@ -1789,7 +1793,6 @@
                                 <th class="white track5button" style="width: 55px" onclick="track5sort(0, 'primary')"><b>Driving Score (primary) ▼</b></th>
                                 <th class="white" style="width: 181px"><b>Team Name</b></th>
                                 <th class="white" style="width: 33px"></th>
-                                <th class="white track5button" style="width: 55px" onclick="track5sort(1, 'metric1')"><b>Route Completion &nbsp;&nbsp;&nbsp;</b></th>
                             </tr>
                         </thead>
                         <tbody id="track5table"></tbody>
@@ -1804,7 +1807,38 @@
                         </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
+
+            <br><br>
+
+            <h4>MAP</h4>
+            <br>
+            <div class="leaderboard">
+                <div class="leaderboardscroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="white" style="width: 22px"><b>Rank</b></th>
+                                <th class="white" style="width: 33px"><b>🗺️</b></th>
+                                <th class="white" style="width: 111px"><b>Institution</b></th>
+                                <th class="white track50button" style="width: 55px" onclick="track50sort(0, 'primary')"><b>Driving Score (primary) ▼</b></th>
+                                <th class="white" style="width: 181px"><b>Team Name</b></th>
+                                <th class="white" style="width: 33px"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="track50table"></tbody>
+                    </table>
+                    <div id="track50tablefoot">
+                        <div>
+                            <button onclick="track50previous()"><b>⇤</b></button>
+                            <button onclick="track50next()"><b>⇥</b></button>
+                        </div>
+                        <div>
+                            <button class="nonbutton" id="track50pages"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <!-- <br>
 
@@ -1858,11 +1892,11 @@
 
             <br><br> -->
 
-            <div style="background-color: lightgray; padding: 17px;">
+            <!-- <div style="background-color: lightgray; padding: 17px;">
                 <span>
                     The award decision will be made by the Track Organizer.
                 </span>
-            </div>
+            </div> -->
 
             <br><br>
 
@@ -2554,7 +2588,8 @@
     track2render();
     track3render();
     track4render();
-    // track5render();
+    track5render();
+    track50render();
     track6render();
     track60render();
     track7render();

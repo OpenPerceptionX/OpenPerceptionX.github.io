@@ -88,12 +88,12 @@ const track6data = [
         links: ""
     },
     {
-        team: "StarBurger",
+        team: "CASIA-ISEE",
         primary: "0.5513",
         metric1: "0.7567",
         metric2: "58.5338",
-        country: "-",
-        institution: "-",
+        country: "CN",
+        institution: "Institute of Automation, Chinese Academy of Sciences<br>中国科学院自动化研究所",
         award: "blank",
         disqualified: false,
         links: ""
