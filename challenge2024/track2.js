@@ -4,8 +4,8 @@ const track2data = [
         primary: "0.6615",
         metric1: "0.5448",
         metric2: "0.7878",
-        country: "-",
-        institution: "-",
+        country: "CN",
+        institution: "University of Science and Technology of China / Baidu<br>中国科学技术大学 / 百度",
         award: "blank",
         disqualified: false,
         links: ""
@@ -15,8 +15,8 @@ const track2data = [
         primary: "0.7958",
         metric1: "0.5596",
         metric2: "0.9996",
-        country: "-",
-        institution: "-",
+        country: "CN",
+        institution: "The Chinese University of Hong Kong, Shenzhen / Huawei<br>香港中文大学（深圳）/ 华为",
         award: "blank",
         disqualified: false,
         links: ""
@@ -40,7 +40,7 @@ const track2data = [
         country: "-",
         institution: "-",
         award: "blank",
-        disqualified: false,
+        disqualified: true,
         links: ""
     },
     {
@@ -51,7 +51,7 @@ const track2data = [
         country: "-",
         institution: "-",
         award: "blank",
-        disqualified: false,
+        disqualified: true,
         links: ""
     },
     {
@@ -84,7 +84,7 @@ const track2data = [
         country: "-",
         institution: "-",
         award: "blank",
-        disqualified: false,
+        disqualified: true,
         links: ""
     },
     {
@@ -92,8 +92,8 @@ const track2data = [
         primary: "1.5871",
         metric1: "1.3274",
         metric2: "1.9318",
-        country: "-",
-        institution: "-",
+        country: "HK",
+        institution: "The Hong Kong University of Science and Technology<br>香港科技大学",
         award: "blank",
         disqualified: false,
         links: ""
@@ -117,7 +117,7 @@ const track2data = [
         country: "-",
         institution: "-",
         award: "blank",
-        disqualified: false,
+        disqualified: true,
         links: ""
     },
     {
@@ -158,8 +158,8 @@ const track2data = [
         primary: "22.5286",
         metric1: "22.5762",
         metric2: "22.5172",
-        country: "-",
-        institution: "-",
+        country: "CN",
+        institution: "University of Science and Technology of China<br>中国科学技术大学",
         award: "blank",
         disqualified: false,
         links: ""
