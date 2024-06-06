@@ -1,7 +1,7 @@
 const track50data = [
     {
         team: "Tuebingen_AI",
-        primary: 5.564,
+        primary: "5.564",
         country: "DE",
         institution: "University of Tübingen",
         award: "blank",
@@ -10,7 +10,7 @@ const track50data = [
     },
     {
         team: "LLM4AD",
-        primary: 5.0400,
+        primary: "5.040",
         country: "GB",
         institution: "Wayve / University of Tübingen",
         award: "blank",
@@ -19,7 +19,7 @@ const track50data = [
     },
     {
         team: "Kyber-E2E",
-        primary: 3.471,
+        primary: "3.471",
         country: "CN",
         institution: "Huawei<br>华为",
         award: "blank",
@@ -28,7 +28,7 @@ const track50data = [
     },
     {
         team: "greatone",
-        primary: 2.168,
+        primary: "2.168",
         country: "-",
         institution: "-",
         award: "blank",
@@ -37,7 +37,7 @@ const track50data = [
     },
     {
         team: "LRM",
-        primary:0.707,
+        primary: "0.707",
         country: "BR",
         institution: "Universidade de São Paulo",
         award: "blank",
