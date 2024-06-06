@@ -21,6 +21,7 @@
     <script src="./track4.js"></script>
     <!-- <script src="./track5.js"></script> -->
     <script src="./track6.js"></script>
+    <script src="./track60.js"></script>
     <script src="./track7.js"></script>
 </head>
 
@@ -1349,6 +1350,41 @@
             <br>
             <span>* Not involed in the final official ranking.</span>
 
+            <br><br>
+
+            <h4>Offline Label</h4>
+            <br>
+            <div class="leaderboard">
+                <div class="leaderboardscroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="white" style="width: 22px"><b>Rank</b></th>
+                                <th class="white" style="width: 33px"><b>🗺️</b></th>
+                                <th class="white" style="width: 111px"><b>Institution</b></th>
+                                <th class="white track60button" style="width: 55px" onclick="track60sort(0, 'primary')"><b>final_score (primary) ▼</b></th>
+                                <th class="white" style="width: 181px"><b>Team Name</b></th>
+                                <th class="white" style="width: 33px"></th>
+                                <th class="white track60button" style="width: 55px" onclick="track60sort(1, 'metric1')"><b>accuracy &nbsp;&nbsp;&nbsp;</b></th>
+                                <th class="white track60button" style="width: 55px" onclick="track60sort(2, 'metric2')"><b>chatgpt &nbsp;&nbsp;&nbsp;</b></th>
+                            </tr>
+                        </thead>
+                        <tbody id="track60table"></tbody>
+                    </table>
+                    <div id="track60tablefoot">
+                        <div>
+                            <button onclick="track60previous()"><b>⇤</b></button>
+                            <button onclick="track60next()"><b>⇥</b></button>
+                        </div>
+                        <div>
+                            <button class="nonbutton" id="track60pages"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <span>* Not involed in the final official ranking.</span>
+
             <!-- <br>
 
             <div class="awardwinner" style="background-color: rgb(255, 156, 0, .3);">
@@ -2520,5 +2556,6 @@
     track4render();
     // track5render();
     track6render();
+    track60render();
     track7render();
 </script>
