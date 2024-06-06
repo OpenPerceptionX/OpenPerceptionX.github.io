@@ -1,7 +1,7 @@
 const track5data = [
     {
         team: "LLM4AD",
-        primary: 6.865,
+        primary: "6.865",
         country: "GB",
         institution: "Wayve / University of Tübingen",
         award: "blank",
@@ -10,7 +10,7 @@ const track5data = [
     },
     {
         team: "Tuebingen_AI",
-        primary: 5.183,
+        primary: "5.183",
         country: "DE",
         institution: "University of Tübingen",
         award: "blank",
@@ -19,7 +19,7 @@ const track5data = [
     },
     {
         team: "LRM",
-        primary: 0.719,
+        primary: "0.719",
         country: "BR",
         institution: "Universidade de São Paulo",
         award: "blank",
