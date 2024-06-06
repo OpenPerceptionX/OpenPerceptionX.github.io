@@ -77,3 +77,14 @@
 .inlineimg {
     height: 13px;
 }
+
+
+
+.leaderboardsub div {
+    & table thead {
+        background-color: gray;
+    }
+    & div {
+        background-color: gray;
+    }
+}
