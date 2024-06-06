@@ -458,7 +458,7 @@ const track6data = [
         metric1: "0.5920",
         metric2: "55.6361",
         country: "CN",
-        institution: "Beijing Institute of Technology<br>北京科技大学",
+        institution: "Beijing Institute of Technology<br>北京理工大学",
         award: "blank",
         disqualified: false,
         links: ""

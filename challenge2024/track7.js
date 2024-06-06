@@ -11,12 +11,12 @@ const track7data = [
         links: ""
     },
     {
-        team: "rjwSeekingPhDpos",
+        team: "XIAOMIEV",
         primary: "0.6391",
         metric1: "0.4998",
         metric2: "0.4980",
-        country: "-",
-        institution: "-",
+        country: "CN",
+        institution: "Xiaomi<br>小米",
         award: "blank",
         disqualified: false,
         links: ""
@@ -27,7 +27,7 @@ const track7data = [
         metric1: "0.4994",
         metric2: "0.4638",
         country: "CN",
-        institution: "Beijing Institute of Technology / MEGVII<br>北京科技大学 / 旷视科技",
+        institution: "Beijing Institute of Technology / MEGVII<br>北京理工大学 / 旷视科技",
         award: "blank",
         disqualified: false,
         links: ""
@@ -280,7 +280,7 @@ const track7data = [
         metric1: "0.3667",
         metric2: "0.3788",
         country: "CN",
-        institution: "Beijing Institute of Technology<br>北京科技大学",
+        institution: "Beijing Institute of Technology<br>北京理工大学",
         award: "blank",
         disqualified: false,
         links: ""
