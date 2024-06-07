@@ -6,6 +6,7 @@ const track60data = [
         metric2: "64.8120",
         country: "CN",
         institution: "East China Normal University<br>华东师范大学",
+        // award: "rank01",
         award: "blank",
         disqualified: false,
         links: ""
@@ -17,6 +18,7 @@ const track60data = [
         metric2: "64.7224",
         country: "CN",
         institution: "Chongqing Changan Automobile Co. Ltd / Chongqing University of Posts and Telecommunications<br>长安汽车 / 重庆邮电大学",
+        // award: "bulb",
         award: "blank",
         disqualified: false,
         links: ""

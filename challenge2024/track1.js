@@ -5,6 +5,7 @@ const track1data = [
         country: "US",
         // institution: "NVIDIA, Nankai University, Nanjing University, Fudan University, East China Normal University, Beijing Institute of Technology<br>英伟达、南开大学、南京大学、复旦大学、华东师范大学、北京理工大学",
         institution: "NVIDIA",
+        // award: "blub, rank01",
         award: "blank",
         disqualified: false,
         links: ""
@@ -14,6 +15,7 @@ const track1data = [
         primary: "0.8747",
         country: "CN",
         institution: "ZERON<br>零一汽车",
+        // award: "rank02",
         award: "blank",
         disqualified: false,
         links: ""

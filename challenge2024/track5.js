@@ -4,6 +4,7 @@ const track5data = [
         primary: "6.865",
         country: "GB",
         institution: "Wayve / University of Tübingen",
+        // award: "blub, rank01",
         award: "blank",
         disqualified: false,
         links: ""
@@ -13,6 +14,7 @@ const track5data = [
         primary: "5.183",
         country: "DE",
         institution: "University of Tübingen",
+        // award: "rank02",
         award: "blank",
         disqualified: false,
         links: ""

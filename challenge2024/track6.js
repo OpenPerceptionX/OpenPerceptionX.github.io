@@ -6,6 +6,7 @@ const track6data = [
         metric2: "65.2512",
         country: "CN",
         institution: "Nanjing University<br>南京大学",
+        // award: "rank01",
         award: "blank",
         disqualified: false,
         links: ""
