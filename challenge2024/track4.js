@@ -5,6 +5,7 @@ const track4data = [
         metric1: "0.3472",
         country: "CN",
         institution: "Tsinghua University / Lenovo<br>清华大学 / 联想",
+        // award: "blub, rank01",
         award: "blank",
         disqualified: false,
         links: ""
@@ -25,6 +26,7 @@ const track4data = [
         metric1: "0.2038",
         country: "CN",
         institution: "Xiaomi Robot<br>小米机器人",
+        // award: "rank02",
         award: "blank",
         disqualified: false,
         links: ""

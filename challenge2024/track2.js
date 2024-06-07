@@ -6,6 +6,7 @@ const track2data = [
         metric2: "0.7878",
         country: "CN",
         institution: "University of Science and Technology of China<br>中国科学技术大学",
+        // award: "rank01",
         award: "blank",
         disqualified: false,
         links: ""
@@ -17,6 +18,7 @@ const track2data = [
         metric2: "0.9996",
         country: "CN",
         institution: "Huawei / The Chinese University of Hong Kong, Shenzhen<br>华为 / 香港中文大学（深圳）",
+        // award: "blub, rank02",
         award: "blank",
         disqualified: false,
         links: ""

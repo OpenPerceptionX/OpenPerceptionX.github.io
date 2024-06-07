@@ -6,6 +6,7 @@ const track7data = [
         metric2: "0.5557",
         country: "CN",
         institution: "Langge Technology<br>朗歌科技",
+        // award: "blub, rank01",
         award: "blank",
         disqualified: false,
         links: ""
