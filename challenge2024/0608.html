@@ -1,0 +1,2597 @@
+<head>
+    <title>Challenge 2024 | OpenDriveLab</title>
+    <meta name="keywords" content="OpenDriveLab, CVPR 2024, Challenge, Autonomous Driving, Autonomous Agent, Embodied AI">
+    <meta name="description" content="OpenDriveLab is committed to exploring cutting-edge autonomous driving technology, launching a series of benchmarking work, open source to serve the community, and promote the common development of the industry. Friends who are committed to making influential research are welcome to join!">
+
+    <link rel="icon" type="image/png" href="/assets/icon/D_small.png">
+
+    <link href="/ui2024/css/format.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/ui2024/css/font.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/ui2024/css/sticky.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/ui2024/css/citation.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="./timeline.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="./leaderboard.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="./index.css" rel="stylesheet" type="text/css" media="all"/>
+
+    <script src="/ui2024/js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script src="./track1.js"></script>
+    <script src="./track2.js"></script>
+    <script src="./track3.js"></script>
+    <script src="./track4.js"></script>
+    <script src="./track5.js"></script>
+    <script src="./track50.js"></script>
+    <script src="./track6.js"></script>
+    <script src="./track60.js"></script>
+    <script src="./track7.js"></script>
+</head>
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L7VEDHS6G8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L7VEDHS6G8');
+</script>
+
+
+
+<script>
+    $.get("/ui2024/components/header.html",function(result){
+        $("body").prepend(result)
+    })
+    $.get("/ui2024/components/footer.html",function(result){
+        $("body").append(result)
+    })
+</script>
+
+
+
+<script>
+    window.addEventListener("scroll", function () {
+        if (document.body.clientWidth <= 1024) {
+            sticky_top_img.src = "/assets/icon/top_white.png";
+        };
+        if (sticky.getBoundingClientRect().top <= 64) {
+            sticky.classList.add("sticky_top");
+            sticky_top_img.src = "/assets/icon/top_white.png";
+            header.style.display = "none";
+        } else {
+            sticky.classList.remove("sticky_top");
+            header.style.display = "block";
+            if (document.body.clientWidth > 1024) {
+                sticky_top_img.src = "/assets/icon/top.png";
+            }
+        }
+    })
+</script>
+
+
+
+<body>
+
+    
+
+    <div class="banner">
+        <div class="banner_container">
+
+            <div class="banner_logo">
+                <img loading="lazy" src="/assets/icon/cvpr/cvpr2024_white.png"/>
+                <img loading="lazy" src="/assets/icon/cvpr/ieee_cs_white.png"/>
+            </div>
+            
+            <!-- <div class="banner_title_cn">
+                <img loading="lazy" src="/assets/icon/pujia_white.png"/>
+                <span>自动驾驶<br>挑战赛</span>
+            </div> -->
+
+            <div class="banner_title_en">
+                <h1 class="Owhite">Autonomous Grand Challenge</h1>
+            </div>
+
+            <div class="banner_content Owhite">
+                <h6>
+                    In conjunction with CVPR 2024 Workshop
+                    <br>
+                    <a href="/cvpr2024/workshop/"><b>Foundation Models for Autonomous Systems</b></a>
+                    <br>
+                    June 17, Seattle, USA
+                    <br><br>
+                    <a href="/cvpr2024/" style="text-decoration: underline;">Join other events at CVPR 2024</a>
+                </h6>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <br><br><br>
+
+
+
+    <div class="block_center">
+        <div style="background-color: rgb(83, 194, 240, .3); padding: 17px;">
+            <span>
+                The Autonomous Grand Challenge at the CVPR 2024 Workshop has wrapped up! The Challenge has gained worldwide participation across <b>ALL continents</b>, including Africa and Oceania. The diversity of institutions indicates a big success of the Challenge. This year, we had <code>3,000+</code> submissions made by <code>480+</code> teams from <code>28</code> countries and regions across all continents. The popularity of the Challenge is also testified by <code>30,000+</code> total views on the websites and <code>110,000+</code> total views on posts on social media. All the submissions are carefully reviewed, and the award recipients are finalized by the Award Committee. We want to thank all participants, organizers, volunteers, and webmasters of the Challenge. All of this would not be possible without you.
+                <br><br>
+                We provide certificates for all participants. Please contact us via <a href="mailto:contact@starleague.ai" style="text-decoration: underline;">contact@starleague.ai</a> 
+            </span>
+        </div>
+    </div>
+
+
+
+    <br id="why_these_tracks"><br><br>
+
+
+
+    <div class="block_center">
+
+        <div>
+            <a class="track_title" href="#why_these_tracks">
+                <h2>
+                    Why these tracks?
+                    <img loading="lazy" class="link_img"/>
+                </h2>
+            </a>
+            <br>
+            <span>
+                The field of autonomy is rapidly evolving, and recent advancements from the machine learning community, such as large language models (LLM) and world models, bring great potential. We believe the future lies in explainable, end-to-end models that understand the world and generalize to unvisited environments. In light of this, we propose seven new challenges that push the boundary of existing perception, prediction, and planning pipelines.
+            </span>
+        </div>
+
+
+
+        <br><br>
+
+
+
+        <div class="glance">
+
+            <div class="glance_left">
+                <div class="planning">
+                    <p>
+                        <a href="#end_to_end_driving_at_scale">
+                            <b>End-to-End Driving at Scale</b>
+                        </a>
+                        <br><br><br class="notinmobile">
+                        <a href="#carla">
+                            <b>CARLA Autonomous Driving Challenge</b>
+                        </a>
+                        <br><br><br class="notinmobile">
+                        <a href="#driving_with_language">
+                            <b>Driving with Language</b>
+                        </a>
+                    </p>
+                    <div class="glance_divider" style="background-color: #19327c;"></div>
+                </div>                
+            </div>
+
+            <img loading="lazy" src="./challenge_text.png" id="features"/>
+
+            <div class="glance_right">
+                <div class="perception">
+                    <p>
+                        <a href="#occupancy_and_flow">
+                            <b>Occupancy and Flow</b>
+                        </a>
+                        <br><br><br class="notinmobile">
+                        <a href="#multiview_3d_visual_grounding">
+                            <b>Multi-View 3D Visual Grounding <code style="margin: 0;">Embodied AI</code></b>
+                        </a>
+                        <br><br><br class="notinmobile">
+                        <a href="#mapless_driving">
+                            <b>Mapless Driving</b>
+                        </a>
+                    </p>
+                    <div class="glance_divider" style="background-color: #6fb5dd;"></div>
+                </div>
+                <div class="prediction">
+                    <p>
+                        <a href="#predictive_world_model">
+                            <b>Predictive World Model</b>
+                        </a>
+                    </p>
+                    <div class="glance_divider" style="background-color: #4894d0;"></div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <br><br>
+
+
+
+        <div>
+            <a class="track_title" href="#features">
+                <h2>
+                    Features
+                    <img loading="lazy" class="link_img"/>
+                </h2>
+            </a>
+            <br>
+            <ul class="rules" id="timeline">
+                <li>
+                    A total cash pool of up to USD 100,000, plus an additional USD 20,000 as a flexible bonus.
+                </li>
+                <li>
+                    Over USD 27,000 cash awards for a winner of a single track (Innovation Award + Outstanding Champion).
+                </li>
+                <li>
+                    Winners will be invited to submit to a top-tier Journal Special Issue.
+                </li>
+                <li>
+                    Top-performing teams will be invited to submit to the <a class="Oblur" target="_blank" href="https://www.worldaic.com.cn/activity#q0">SAIL</a> award.
+                </li>
+            </ul>
+        </div>
+
+
+
+        <br><br>
+
+
+
+        <div>
+            <a class="track_title" href="#timeline">
+                <h2>
+                    Timeline
+                    <img loading="lazy" class="link_img"/>
+                </h2>
+            </a>
+            <div class="timeline">
+                <div class="entries">
+                    <div class="entry">
+                        <h3 class="title" style="color: lightgray;">Jan. 31</h3>
+                        <span class="content" style="color: lightgray;">Challenge Announcement</span>
+                    </div>
+                    <div class="entry">
+                        <h3 class="title" style="color: lightgray;">Feb. 10</h3>
+                        <span class="content" style="color: lightgray;">Challenge Setup Ready<br><span>[internal]</span></span>
+                    </div>
+                    <div class="entry">
+                        <h3 class="title" style="color: lightgray;">Mar. 01</h3>
+                        <span class="content" style="color: lightgray;">Challenge DevKit Release</span>
+                    </div>
+                    <div class="entry">
+                        <h3 class="title" style="color: lightgray;">Late March</h3>
+                        <span class="content" style="color: lightgray;">Test Server Open</span>
+                    </div>
+                    <div class="entry">
+                        <h3 class="title" style="color: lightgray;">Late April</h3>
+                        <span class="content" style="color: lightgray;">Sibling Event at <a href="http://www.csig3dv.net/2024/competition.html" target="_blank"><code style="color: lightgray; background-color: transparent;">China3DV</code></a></span>
+                    </div>
+                    <div class="entry">
+                        <h3 class="title" style="color: lightgray;">Jun. 01</h3>
+                        <span class="content" style="color: lightgray;">Test Server Close / Registration Deadline</span>
+                    </div>
+                    <div class="entry">
+                        <h3 class="title" style="color: lightgray;"><del>Jun. 04</del> Jun. 03</h3>
+                        <span class="content" style="color: lightgray;">Technical Report Submission Deadline, via <a href="https://openreview.net/group?id=thecvf.com/CVPR/2024/Workshop/AGC" target="_blank"><code style="color: lightgray; background-color: transparent;">OpenReview</code></a></span>
+                    </div>
+                    <div class="entry">
+                        <h3 class="title" style="color: lightgray;"><del>Jun. 06</del> Jun. 05</h3>
+                        <span class="content" style="color: lightgray;">Award Committee Meeting<br><span  style="color: lightgray;">[internal]</span></span>
+                    </div>
+                    <div class="entry">
+                        <h3 class="title"style="color: lightgray;"><del>Jun. 08</del> Jun. 06</h3>
+                        <span class="content"style="color: lightgray;">Official Winner Notification<br><span style="color: lightgray;">[internal]</span></span>
+                    </div>
+                    <div class="entry">
+                        <h3 class="title" style="color: lightgray;">Jun. 07</h3>
+                        <span class="content" style="color: lightgray;">Technical Report Camera-ready Deadline, via <a href="https://openreview.net/group?id=thecvf.com/CVPR/2024/Workshop/AGC" target="_blank"><code style="color: lightgray; background-color: transparent;">OpenReview</code></a></span>
+                    </div>
+                    <div class="entry">
+                        <h3 class="title">Jun. 08 - Jun. 10</h3>
+                        <span class="content">Sibling Event in Shanghai</span>
+                    </div>
+                    <div class="entry">
+                        <h3 class="title">Jun. 17</h3>
+                        <span class="content"><a href="/cvpr2024/workshop/"><code>Workshop Day</code></a></span>
+                    </div>
+                    <div class="entry">
+                        <h3 class="title">2024 2H</h3>
+                        <span class="content">Journal Special Issue Invitation</span>
+                    </div>
+                </div>
+            </div>
+            <br id="official_partner">
+            <!-- <span >Note: General timeline of the whole challenge. Please check the timeline of each track.</span> -->
+        </div>
+
+
+
+        <br><br><br>
+
+
+
+        <a class="track_title" href="#official_partner">
+            <h2>
+                Official Partner
+                <img loading="lazy" class="link_img"/>
+            </h2>
+        </a>
+        <br>
+        <div style="flex-grow: 1;">
+            <div class="brand_container">
+                <div><a href="https://www.worldaic.com.cn/" target="_blank"><img loading="lazy" src="/assets/brand/WAIC.png" style="height: 99px;"/></a></div>
+                <div><a href="https://www.sae-china.org/" target="_blank"><img class="logo_small" loading="lazy" src="/assets/brand/china_sae.png" style="height: 99px;"/></a></div>
+                <div><a href="https://www.china-icv.cn/" target="_blank"><img class="logo_small" loading="lazy" src="/assets/brand/cicv.png" style="height: 99px;"/></a></div>
+                <div id="hosts"></div>
+            </div>
+        </div> 
+
+
+
+        <br><br>
+
+
+
+        <a class="track_title" href="#hosts">
+            <h2>
+                Host Organizations
+                <img loading="lazy" class="link_img"/>
+            </h2>
+        </a>
+        <br>
+        <div style="flex-grow: 1;">
+            <div class="brand_container">
+                <div><a href="https://www.shlab.org.cn/" target="_blank"><img loading="lazy" src="/assets/brand/shanghai_ai_lab.png"/></a></div>
+                <div><a href="https://starleague.ai/" target="_blank"><img loading="lazy" src="/assets/brand/star_league.png" style="height: 77px;"/></a></div>
+                <div><a href="https://uni-tuebingen.de/" target="_blank"><img loading="lazy" src="/assets/brand/tubingen.png"/></a></div>
+                <div><a href="https://motional.com/" target="_blank"><img class="logo_small" loading="lazy" src="/assets/brand/motional.png"/></a></div>
+                <div class="double_logos">
+                    <div><a href="https://carla.org/" target="_blank"><img loading="lazy" src="/assets/brand/CARLA.png"/></a></div>
+                    <div class="seperator"></div>
+                    <div><a href="https://synkrotron.ai/" target="_blank"><img loading="lazy" src="/assets/brand/synkrotron.png"/></a></div>
+                </div>
+                <!-- <div><a href="https://www.shlab.org.cn/" target="_blank"><img loading="lazy" src="/assets/brand/shanghai_ai_lab.png"/></a></div> -->
+                <div><a href="https://www.hp.com/" target="_blank"><img loading="lazy" src="/assets/brand/zbyhp.png"/></a></div>
+                <div><a href="https://www.meituan.com/" target="_blank"><img loading="lazy" src="/assets/brand/meituan_ad.png"/></a></div>
+                <div><a href="https://www.nvidia.com/" target="_blank"><img class="logo_small" loading="lazy" src="/assets/brand/NVIDIA.png"/></a></div>
+                <div><a href="https://www.tsinghua.edu.cn/" target="_blank"><img loading="lazy" src="/assets/brand/tsinghua.png"/></a></div>
+                <div><a href="https://wayve.ai/" target="_blank"><img loading="lazy" src="/assets/brand/wayve_.png"/></a></div>
+                <div><a href="https://huggingface.co/" target="_blank"><img class="logo_small" loading="lazy" src="/assets/brand/hugging_face_long.png"/></a></div>
+                <div><a href="https://www.jiqizhixin.com/" target="_blank"><img loading="lazy" src="/assets/brand/jiqizhixin_en.png"/></a></div>
+                <div id="participation"></div>
+            </div>
+        </div> 
+
+
+
+        <br>
+
+        
+
+        <div>
+            <!-- <a class="track_title" href="#participation">
+                <h2>
+                    How to participate
+                    <img loading="lazy" class="link_img"/>
+                </h2>
+            </a>
+            <br>
+            <span class="note">
+                <span>
+                    Many of the greatest ideas come from a diverse mix of minds, backgrounds, and experiences. We provide equal opportunities to all participants without regard to nationality, affiliation, race, religion, color, age, disability, or any other restriction. We believe diversity drives innovation. When we say we welcome participation from everyone, we mean everyone.
+                </span>
+            </span>
+            <br>
+            <span class="note" id="contact">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSctm2iipw5r1_wY-kVt7X-4RRynnt3ZzYMzaBVzEpNStoc-rQ/viewform" target="_blank" style="margin-right: 11px;">
+                    <img loading="lazy" src="/assets/icon/google_form.png"/>
+                </a>
+                <span>
+                    For participation in the challenge, it is a <b>strict requirement</b> to register for your team by filling in this <a class="Oblue" href="https://docs.google.com/forms/d/e/1FAIpQLSctm2iipw5r1_wY-kVt7X-4RRynnt3ZzYMzaBVzEpNStoc-rQ/viewform" target="_blank">Google Form</a>. The registration information can be modified till June 01, 2024. For more details, please check the <a class="Oblue" href="#general_rules">general rules</a>.
+                </span>
+            </span>
+
+
+
+            <br><br> -->
+
+
+
+            <a class="track_title" href="#contact">
+                <h2>
+                    Contact
+                    <img loading="lazy" class="link_img"/>
+                </h2>
+            </a>
+            <br>
+            <span class="note">
+                <a href="mailto:contact@starleague.ai" style="margin-right: 11px;">
+                    <img loading="lazy" src="/assets/icon/email.png"/>
+                </a>
+                <span>
+                    Contact us via <code>contact@starleague.ai</code>
+                </span>
+            </span>
+            <br id="end_to_end_driving_at_scale">
+            <span class="note">
+                <a href="https://join.slack.com/t/opendrivelab/shared_invite/zt-2ft3dfjoz-6XErfBts4s_8Fen88wO4Jg" target="_blank" style="margin-right: 11px;">
+                    <img loading="lazy" src="/assets/icon/slack.png"/>
+                </a>
+                <span>
+                    Join Slack to chat with Challenge organizers. Please follow the guidelines in <code>#general</code> and join the track-specific channels.
+                </span>
+            </span>
+            <br>
+            <span class="note">
+                <a href="/assets/qrcode_wechat.jpg" target="_blank" style="margin-right: 11px;">
+                    <img loading="lazy" src="/assets/icon/wechat.png"/>
+                </a>
+                <span>
+                    Join discussions in our <a class="Oblue" href="/assets/qrcode_wechat.jpg" target="_blank">WeChat group</a>: 关于我们 -> 加入社群
+                </span>
+            </span>
+        </div>
+
+
+    
+    </div>
+
+        
+
+    <br><br><br>
+
+
+
+    <div class="block sticky" id="sticky">
+        <div class="sticky_row">
+            <a href="#end_to_end_driving_at_scale">E2E Driving at Scale</a>
+            <a href="#predictive_world_model">Predictive World Model</a>
+            <a href="#occupancy_and_flow">Occupancy and Flow</a>
+            <a href="#multiview_3d_visual_grounding">Multi-View 3D Visual Grounding</a>
+        </div>
+        <div class="navigator"></div>
+        <div class="sticky_row">
+            <a href="#driving_with_language">Driving with Language</a>
+            <a href="#mapless_driving">Mapless Driving</a>
+            <a href="#carla">CARLA</a>
+            <a href="#" class="image"><img src="/assets/icon/top.png" id="sticky_top_img"/></a>
+        </div>
+    </div>
+
+
+
+    <div class="block_left left_right">
+
+        <div style="flex-grow: 7;">
+            <a class="track_title" href="#end_to_end_driving_at_scale">
+                <h2>
+                    Track
+                    <img loading="lazy" class="link_img"/>
+                </h2>
+                <h1>End-to-End Driving at Scale</h1>
+            </a>
+
+            <br><br>
+            
+            <div class="widget_container">
+                <a target="_blank" href="https://huggingface.co/spaces/AGC2024-P/e2e-driving-2024">
+                    <span class="Odarkblue"><b>Test Server @ &nbsp;</b></span>
+                    <img loading="lazy" src="/assets/brand/hugging_face_long.png"/>
+                </a>
+            </div>
+
+            <br><br class="track_fig">
+
+            <img class="track_fig" src="./e2e_driving_at_scale.jpg"/>
+
+            <br>
+
+        </div>
+
+        <div style="flex-grow: 1;"></div>
+
+        <div style="flex-grow: 16;">
+
+            <h2>Leaderboard</h2>
+            <br>
+            <li># Participating Teams: 143</li>
+            <li># Countries and Regions: 13</li>
+            <li># Submissions: 463</li>
+            <br>
+            <div class="leaderboard">
+                <div class="leaderboardscroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="white" style="width: 22px"><b>Rank</b></th>
+                                <th class="white" style="width: 33px"><b>🗺️</b></th>
+                                <th class="white" style="width: 111px"><b>Institution</b></th>
+                                <th class="white track1button" style="width: 55px" onclick="track1sort(0, 'primary')"><b>PDM Score (primary) ▼</b></th>
+                                <th class="white" style="width: 181px"><b>Team Name</b></th>
+                                <th class="white" style="width: 33px"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="track1table"></tbody>
+                    </table>
+                    <div id="track1tablefoot">
+                        <div>
+                            <button onclick="track1previous()"><b>⇤</b></button>
+                            <button onclick="track1next()"><b>⇥</b></button>
+                        </div>
+                        <div>
+                            <button class="nonbutton" id="track1pages"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <span>* Not involed in the final official ranking.</span>
+
+            <!-- <br>
+
+            <div class="awardwinner" style="background-color: rgb(255, 156, 0, .3);">
+                <h4><img src="/assets/icon/bulb.png"/> &nbsp; Innovation Award goes to <b style="text-decoration: underline;">xxxxx</b> for</h4>
+                <span>
+                    xscoixw
+                </span>
+            </div>
+
+            <br>
+
+            <div class="awardwinner" style="background-color: rgb(254, 229, 106, .3);">
+                <h4><img src="/assets/icon/rank01.png"/> &nbsp; Outstanding Champion goes to <b style="text-decoration: underline;">xxxxx</b> for</h4>
+                <span>
+                    xscoixw
+                </span>
+            </div>
+
+            <br>
+
+            <div class="awardwinner" style="background-color: rgb(189, 189, 189, .3);">
+                <h4><img src="/assets/icon/rank02.png"/> &nbsp; Honorable Runner-up goes to <b style="text-decoration: underline;">xxxxx</b> for</h4>
+                <span>
+                    xscoixw
+                </span>
+            </div> -->
+
+            <br><br>
+
+            <!-- <h2>Important Dates</h2>
+            <br>
+            <table class="date_award">
+                <tbody>
+                    <tr>
+                        <td>Test Server Open</td><td class="last_column">March 25, 2024</td>
+                    </tr>
+                    <tr>
+                        <td>Test Server Close</td><td class="last_column">June 01, 2024</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br><br> -->
+
+            <h2>Award</h2>
+            <br>
+            <table class="date_award">
+                <tbody>
+                    <tr>
+                        <td class="first_icon"><img loading="lazy" src='/assets/icon/bulb.png'/></td><td>Innovation Award</td><td class="last_column">USD 18,000</td>
+                    </tr>
+                    <tr>
+                        <td class="first_icon"><img loading="lazy" src='/assets/icon/rank01.png'/></td><td>Outstanding Champion</td><td class="last_column">USD 9,000</td>
+                    </tr>
+                    <tr>
+                        <td class="first_icon"><img loading="lazy" src='/assets/icon/rank02.png'/></td><td>Honorable Runner-up</td><td class="last_column">USD 3,000</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br><br>
+
+            <h2>Citation</h2>
+            <br>
+            <span>
+                Please consider citing our work if the challenge helps your research with the following BibTex:
+            </span>
+            <div class="citation">
+                <span class="citation_red">@inproceedings</span>{<span class="citation_blue">Dauner2023CORL</span>, 
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;title = {Parting with Misconceptions about Learning-based Vehicle Motion Planning},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;author = {Daniel Dauner and Marcel Hallgarten and Andreas Geiger and Kashyap Chitta},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;booktitle = {Conference on Robot Learning (CoRL)},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;year = {2023}
+                    <br>
+                }
+            </div>
+            <div class="citation">
+                <span class="citation_red">@misc</span>{<span class="citation_blue">Contributors2024navsim</span>,
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;title={NAVSim: Data-Driven Non-Reactive Autonomous Vehicle Simulation},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;author={NAVSim Contributors},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;howpublished={\url{https://github.com/autonomousvision/navsim}},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;year={2024}
+                    <br>
+                }
+            </div>
+
+            <br><br>
+
+            <h2>Contact</h2>
+            <br>
+            <ul class="rules">
+                <li>
+                    <!-- Kashyap Chitta (University of Tübingen), <code>kashyap.chitta@uni-tuebingen.de</code> -->
+                    Marcel Hallgarten (University of Tübingen), <code>marcel.hallgarten@uni-tuebingen.de</code>
+                </li>
+                <li>
+                    <a href="https://join.slack.com/t/opendrivelab/shared_invite/zt-2ft3dfjoz-6XErfBts4s_8Fen88wO4Jg" target="_blank">Slack channel: </a><code>#e2e-driving-2024</code>
+                </li>
+            </ul>
+
+            <br><br>
+            
+            <h2>Task Description</h2>
+            <br>
+            <span>
+                Benchmarking sensorimotor driving policies with real data is challenging due to the limited scale of prior datasets and the misalignment between open- and closed-loop metrics. Our NAVSIM framework aims to address these issues for end-to-end driving by unrolling simplified bird's eye view abstractions of scenes for a short simulation horizon.
+                <br><br>
+                The private test set is provided by <a class="Oblue" href="https://www.nuscenes.org/nuplan" target="_blank">nuPlan</a> from <a class="Oblue" href="https://motional.com/" target="_blank">Motional</a>. Details and test server are available at <a class="Oblue" target="_blank" href="https://huggingface.co/spaces/AGC2024-P/e2e-driving-2024">Hugging Face</a>.
+            </span>
+            
+            <br><br>
+
+            <h2 id="predictive_world_model">Related Literature</h2>
+            <br>
+            <ul class="rules">
+                <li>
+                    <a href="https://ieeexplore.ieee.org/abstract/document/9863660" target="_blank">
+                        TransFuser: Imitation With Transformer-Based Sensor Fusion for Autonomous Driving
+                    </a>
+                </li>
+                <li>
+                    <a href="https://openaccess.thecvf.com/content/CVPR2023/html/Hu_Planning-Oriented_Autonomous_Driving_CVPR_2023_paper.html" target="_blank">
+                        Planning-Oriented Autonomous Driving
+                    </a>
+                </li>
+                <li>
+                    <a href="https://arxiv.org/abs/2306.16927" target="_blank">
+                        End-to-end Autonomous Driving: Challenges and Frontiers
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div class="block_right left_right">
+
+        <div style="flex-grow: 7;">
+            <a class="track_title" href="#predictive_world_model">
+                <h2>
+                    Track
+                    <img loading="lazy" class="link_img"/>
+                </h2>
+                <h1>Predictive World Model</h1>
+            </a>
+
+            <br><br>
+            
+            <div class="widget_container">
+                <a target="_blank" href="https://huggingface.co/spaces/AGC2024-P/predictive-world-model-2024">
+                    <span class="Odarkblue"><b>Test Server @ &nbsp;</b></span>
+                    <img loading="lazy" src="/assets/brand/hugging_face_long.png"/>
+                </a>
+            </div>
+
+            <br><br class="track_fig">
+
+            <img class="track_fig" src="./predictive_world_model.jpg"/>
+
+            <br>
+
+        </div>
+
+        <div style="flex-grow: 1;"></div>
+
+        <div style="flex-grow: 16;">
+
+            <h2>Leaderboard</h2>
+            <br>
+            <li># Participating Teams: 69</li>
+            <li># Countries and Regions: 13</li>
+            <li># Submissions: 82</li>
+            <br>
+            <div class="leaderboard">
+                <div class="leaderboardscroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="white" style="width: 22px"><b>Rank</b></th>
+                                <th class="white" style="width: 33px"><b>🗺️</b></th>
+                                <th class="white" style="width: 111px"><b>Institution</b></th>
+                                <th class="white track2button" style="width: 55px" onclick="track2sort(0, 'primary')"><b>CD@overall (primary) ▲</b></th>
+                                <th class="white" style="width: 181px"><b>Team Name</b></th>
+                                <th class="white" style="width: 33px"></th>
+                                <th class="white track2button" style="width: 55px" onclick="track2sort(1, 'metric1')"><b>CD@0.5s &nbsp;&nbsp;&nbsp;</b></th>
+                                <th class="white track2button" style="width: 55px" onclick="track2sort(2, 'metric2')"><b>CD@3.0s &nbsp;&nbsp;&nbsp;</b></th>
+                            </tr>
+                        </thead>
+                        <tbody id="track2table"></tbody>
+                    </table>
+                    <div id="track2tablefoot">
+                        <div>
+                            <button onclick="track2previous()"><b>⇤</b></button>
+                            <button onclick="track2next()"><b>⇥</b></button>
+                        </div>
+                        <div>
+                            <button class="nonbutton" id="track2pages"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <span>* Not involed in the final official ranking.</span>
+            
+            <!-- <br>
+
+            <div class="awardwinner" style="background-color: rgb(255, 156, 0, .3);">
+                <h4><img src="/assets/icon/bulb.png"/> &nbsp; Innovation Award goes to <b style="text-decoration: underline;">xxxxx</b> for</h4>
+                <span>
+                    xscoixw
+                </span>
+            </div>
+
+            <br>
+
+            <div class="awardwinner" style="background-color: rgb(254, 229, 106, .3);">
+                <h4><img src="/assets/icon/rank01.png"/> &nbsp; Outstanding Champion goes to <b style="text-decoration: underline;">xxxxx</b> for</h4>
+                <span>
+                    xscoixw
+                </span>
+            </div>
+
+            <br>
+
+            <div class="awardwinner" style="background-color: rgb(189, 189, 189, .3);">
+                <h4><img src="/assets/icon/rank02.png"/> &nbsp; Honorable Runner-up goes to <b style="text-decoration: underline;">xxxxx</b> for</h4>
+                <span>
+                    xscoixw
+                </span>
+            </div> -->
+
+            <br><br>
+
+            <!-- <h2>Important Dates</h2>
+            <br>
+            <table class="date_award">
+                <tbody>
+                    <tr>
+                        <td>Test Server Open</td><td class="last_column">March 25, 2024</td>
+                    </tr>
+                    <tr>
+                        <td>Test Server Close</td><td class="last_column">June 01, 2024</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br><br> -->
+
+            <h2>Award</h2>
+            <br>
+            <table class="date_award">
+                <tbody>
+                    <tr>
+                        <td class="first_icon"><img loading="lazy" src='/assets/icon/bulb.png'/></td><td>Innovation Award</td><td class="last_column">USD 18,000</td>
+                    </tr>
+                    <tr>
+                        <td class="first_icon"><img loading="lazy" src='/assets/icon/rank01.png'/></td><td>Outstanding Champion</td><td class="last_column">USD 9,000</td>
+                    </tr>
+                    <tr>
+                        <td class="first_icon"><img loading="lazy" src='/assets/icon/rank02.png'/></td><td>Honorable Runner-up</td><td class="last_column">USD 3,000</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br><br>
+
+            <h2>Citation</h2>
+            <br>
+            <span>
+                Please consider citing our work if the challenge helps your research with the following BibTex:
+            </span>
+            <div class="citation">
+                <span class="citation_red">@article</span>{<span class="citation_blue">yang2023visual</span>,
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;title={Visual Point Cloud Forecasting enables Scalable Autonomous Driving},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;author={Yang, Zetong and Chen, Li and Sun, Yanan and Li, Hongyang},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;journal={arXiv preprint arXiv:2312.17655},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;year={2023}
+                    <br>
+                }
+            </div>
+
+            <br><br>
+
+            <h2>Contact</h2>
+            <br>
+            <ul class="rules">
+                <li>
+                    Zetong Yang (OpenDriveLab), <code>yangzetong@pjlab.org.cn</code>
+                </li>
+                <li>
+                    <a href="https://join.slack.com/t/opendrivelab/shared_invite/zt-2ft3dfjoz-6XErfBts4s_8Fen88wO4Jg" target="_blank">Slack channel: </a><code>#predictive-world-model-2024</code>
+                </li>
+            </ul>
+
+            <br><br>
+
+            <h2>Task Description</h2>
+            <br>
+            <span>
+                Serving as an abstract spatio-temporal representation of reality, the world model can predict future states based on the current state. The learning process of world models has the potential to provide a pre-trained foundation model for autonomous driving. Given vision-only inputs, the neural network outputs point clouds in the future to testify its predictive capability of the world.
+                <br><br>
+                The private test set is provided by <a class="Oblue" href="https://www.nuscenes.org/nuplan" target="_blank">nuPlan</a> from <a class="Oblue" href="https://motional.com/" target="_blank">Motional</a>. Details and test server are available at <a class="Oblue" target="_blank" href="https://huggingface.co/spaces/AGC2024-P/predictive-world-model-2024">Hugging Face</a>.
+            </span>
+            
+            <br><br>
+
+            <h2 id="occupancy_and_flow">Related Literature</h2>
+            <br>
+            <ul class="rules">
+                <li>
+                    <a href="https://arxiv.org/abs/2312.17655" target="_blank">
+                        Visual Point Cloud Forecasting enables Scalable Autonomous Driving
+                    </a>
+                </li>
+                <li>
+                    <a href="https://ieeexplore.ieee.org/document/10321736" target="_blank">
+                        Delving Into the Devils of Bird's-Eye-View Perception: A Review, Evaluation and Recipe
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div class="block_left left_right">
+
+        <div style="flex-grow: 7;">
+            <a class="track_title" href="#occupancy_and_flow">
+                <h2>
+                    Track
+                    <img loading="lazy" class="link_img"/>
+                </h2>
+                <h1>Occupancy and Flow</h1>
+            </a>
+
+            <br><br>
+            
+            <div class="widget_container">
+                <a target="_blank" href="https://huggingface.co/spaces/AGC2024-S/occupancy-and-flow-2024">
+                    <span class="Odarkblue"><b>Test Server @ &nbsp;</b></span>
+                    <img loading="lazy" src="/assets/brand/hugging_face_long.png"/>
+                </a>
+            </div>
+
+            <br><br class="track_fig">
+
+            <img class="track_fig" src="./occupancy_and_flow.jpg"/>
+
+            <br>
+
+        </div>
+
+        <div style="flex-grow: 1;"></div>
+
+        <div style="flex-grow: 16;">
+
+            <h2>Leaderboard</h2>
+            <br>
+            <li># Participating Teams: 97</li>
+            <li># Countries and Regions: 17</li>
+            <li># Submissions: 153</li>
+            <br>
+            <div class="leaderboard">
+                <div class="leaderboardscroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="white" style="width: 22px"><b>Rank</b></th>
+                                <th class="white" style="width: 33px"><b>🗺️</b></th>
+                                <th class="white" style="width: 111px"><b>Institution</b></th>
+                                <th class="white track3button" style="width: 55px" onclick="track3sort(0, 'primary')"><b>OccScore (primary) ▼</b></th>
+                                <th class="white" style="width: 181px"><b>Team Name</b></th>
+                                <th class="white" style="width: 33px"></th>
+                                <th class="white track3button" style="width: 55px" onclick="track3sort(1, 'metric1')"><b>RayIoU &nbsp;&nbsp;&nbsp;</b></th>
+                                <th class="white track3button" style="width: 55px" onclick="track3sort(2, 'metric2')"><b>mAVE &nbsp;&nbsp;&nbsp;</b></th>
+                            </tr>
+                        </thead>
+                        <tbody id="track3table"></tbody>
+                    </table>
+                    <div id="track3tablefoot">
+                        <div>
+                            <button onclick="track3previous()"><b>⇤</b></button>
+                            <button onclick="track3next()"><b>⇥</b></button>
+                        </div>
+                        <div>
+                            <button class="nonbutton" id="track3pages"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <span>* Not involed in the final official ranking.</span>
+
+            <!-- <br>
+
+            <div class="awardwinner" style="background-color: rgb(255, 156, 0, .3);">
+                <h4><img src="/assets/icon/bulb.png"/> &nbsp; Innovation Award goes to <b style="text-decoration: underline;">xxxxx</b> for</h4>
+                <span>
+                    xscoixw
+                </span>
+            </div>
+
+            <br>
+
+            <div class="awardwinner" style="background-color: rgb(254, 229, 106, .3);">
+                <h4><img src="/assets/icon/rank01.png"/> &nbsp; Outstanding Champion goes to <b style="text-decoration: underline;">xxxxx</b> for</h4>
+                <span>
+                    xscoixw
+                </span>
+            </div>
+
+            <br>
+
+            <div class="awardwinner" style="background-color: rgb(189, 189, 189, .3);">
+                <h4><img src="/assets/icon/rank02.png"/> &nbsp; Honorable Runner-up goes to <b style="text-decoration: underline;">xxxxx</b> for</h4>
+                <span>
+                    xscoixw
+                </span>
+            </div> -->
+
+            <br><br>
+
+            <!-- <h2>Important Dates</h2>
+            <br>
+            <table class="date_award">
+                <tbody>
+                    <tr>
+                        <td>Test Server Open</td><td class="last_column">March 25, 2024</td>
+                    </tr>
+                    <tr>
+                        <td>Test Server Close</td><td class="last_column">June 01, 2024</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br><br> -->
+
+            <h2>Award</h2>
+            <br>
+            <table class="date_award">
+                <tbody>
+                    <tr>
+                        <td class="first_icon"><img loading="lazy" src='/assets/icon/bulb.png'/></td><td>Innovation Award</td><td class="last_column">USD 18,000</td>
+                    </tr>
+                    <tr>
+                        <td class="first_icon"><img loading="lazy" src='/assets/icon/rank01.png'/></td><td>Outstanding Champion</td><td class="last_column">USD 9,000</td>
+                    </tr>
+                    <tr>
+                        <td class="first_icon"><img loading="lazy" src='/assets/icon/rank02.png'/></td><td>Honorable Runner-up</td><td class="last_column">USD 3,000</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br><br>
+            
+            <h2>Citation</h2>
+            <br>
+            <span>
+                Please consider citing our work if the challenge helps your research with the following BibTex:
+            </span>
+            <div class="citation">
+                <span class="citation_red">@article</span>{<span class="citation_blue">sima2023_occnet</span>,
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;title={Scene as Occupancy},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;author={Chonghao Sima and Wenwen Tong and Tai Wang and Li Chen and Silei Wu and Hanming Deng  and Yi Gu and Lewei Lu and Ping Luo and Dahua Lin and Hongyang Li},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;year={2023}
+                    <br>
+                }
+            </div>
+            <div class="citation">
+                <span class="citation_red">@article</span>{<span class="citation_blue">liu2023fully</span>,
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;title={Fully Sparse 3D Panoptic Occupancy Prediction},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;author={Liu, Haisong and Wang, Haiguang and Chen, Yang and Yang, Zetong and Zeng, Jia and Chen, Li and Wang, Limin},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;journal={arXiv preprint arXiv:2312.17118},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;year={2023}
+                    <br>
+                }
+            </div>
+
+            <br><br>
+
+            <h2>Contact</h2>
+            <br>
+            <ul class="rules">
+                <li>
+                    Yihang Qiu (OpenDriveLab), <code>qiuyihang@opendrivelab.com</code>
+                </li>
+                <li>
+                    <a href="https://join.slack.com/t/opendrivelab/shared_invite/zt-2ft3dfjoz-6XErfBts4s_8Fen88wO4Jg" target="_blank">Slack channel: </a><code>#occupancy-and-flow-2024</code>
+                </li>
+            </ul>
+
+            <br><br>
+
+            <h2>Task Description</h2>
+            <br>
+            <span>
+                The representation of 3D bounding boxes is not enough to describe general objects (obstacles). Instead, inspired by concepts in robotics, we perform general object detection via an occupancy representation to cover more irregularly shaped (e.g., protruding) objects. The goal of this task is to predict the 3D occupancy of the complete scene and the flow of the foreground objects given the input image from six cameras. 
+                <br><br>
+                The private test set is provided by <a class="Oblue" href="https://www.nuscenes.org/nuscenes" target="_blank">nuScenes</a> from <a class="Oblue" href="https://motional.com/" target="_blank">Motional</a>. Details and test server are available at <a class="Oblue" target="_blank" href="https://huggingface.co/spaces/AGC2024-S/occupancy-and-flow-2024">Hugging Face</a>.
+            </span>
+            
+            <br><br>
+
+            <h2 id="multiview_3d_visual_grounding">Related Literature</h2>
+            <br>
+            <ul class="rules">
+                <li>
+                    <a href="https://arxiv.org/abs/2306.02851" target="_blank">
+                        Scene as Occupancy
+                    </a>
+                </li>
+                <li>
+                    <a href="https://arxiv.org/abs/2003.04618" target="_blank">
+                        Convolutional Occupancy Networks
+                    </a>
+                </li>
+                <li>
+                    <a href="https://arxiv.org/abs/2203.03875" target="_blank">
+                        Occupancy Flow Fields for Motion Forecasting in Autonomous Driving
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div class="block_right left_right">
+
+        <div style="flex-grow: 7;">
+            <a class="track_title" href="#multiview_3d_visual_grounding">
+                <h2>
+                    Track
+                    <img loading="lazy" class="link_img"/>
+                </h2>
+                <h1>Multi-View 3D Visual Grounding</h1>
+            </a>
+
+            <br><br>
+            
+            <div class="widget_container">
+                <a target="_blank" href="https://huggingface.co/spaces/AGC2024/visual-grounding-2024">
+                    <span class="Odarkblue"><b>Test Server @ &nbsp;</b></span>
+                    <img loading="lazy" src="/assets/brand/hugging_face_long.png"/>
+                </a>
+            </div>
+
+            <br><br class="track_fig">
+
+            <img class="track_fig" src="./multiview_3d_visual_grounding.jpg"/>
+
+            <br>
+
+        </div>
+
+        <div style="flex-grow: 1;"></div>
+
+        <div style="flex-grow: 16;">
+
+            <h2>Leaderboard</h2>
+            <br>
+            <li># Participating Teams: 64</li>
+            <li># Countries and Regions: 12</li>
+            <li># Submissions: 154</li>
+            <br>
+            <div class="leaderboard">
+                <div class="leaderboardscroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="white" style="width: 22px"><b>Rank</b></th>
+                                <th class="white" style="width: 33px"><b>🗺️</b></th>
+                                <th class="white" style="width: 111px"><b>Institution</b></th>
+                                <th class="white track4button" style="width: 55px" onclick="track4sort(0, 'primary')"><b>Overall@0.25 (primary) ▼</b></th>
+                                <th class="white" style="width: 181px"><b>Team Name</b></th>
+                                <th class="white" style="width: 33px"></th>
+                                <th class="white track4button" style="width: 55px" onclick="track4sort(1, 'metric1')"><b>Overall@0.5 &nbsp;&nbsp;&nbsp;</b></th>
+                            </tr>
+                        </thead>
+                        <tbody id="track4table"></tbody>
+                    </table>
+                    <div id="track4tablefoot">
+                        <div>
+                            <button onclick="track4previous()"><b>⇤</b></button>
+                            <button onclick="track4next()"><b>⇥</b></button>
+                        </div>
+                        <div>
+                            <button class="nonbutton" id="track4pages"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <span>* Not involed in the final official ranking.</span>
+
+            <!-- <br>
+
+            <div class="awardwinner" style="background-color: rgb(255, 156, 0, .3);">
+                <h4><img src="/assets/icon/bulb.png"/> &nbsp; Innovation Award goes to <b style="text-decoration: underline;">xxxxx</b> for</h4>
+                <span>
+                    xscoixw
+                </span>
+            </div>
+
+            <br>
+
+            <div class="awardwinner" style="background-color: rgb(254, 229, 106, .3);">
+                <h4><img src="/assets/icon/rank01.png"/> &nbsp; Outstanding Champion goes to <b style="text-decoration: underline;">xxxxx</b> for</h4>
+                <span>
+                    xscoixw
+                </span>
+            </div>
+
+            <br>
+
+            <div class="awardwinner" style="background-color: rgb(189, 189, 189, .3);">
+                <h4><img src="/assets/icon/rank02.png"/> &nbsp; Honorable Runner-up goes to <b style="text-decoration: underline;">xxxxx</b> for</h4>
+                <span>
+                    xscoixw
+                </span>
+            </div> -->
+
+            <br><br>
+
+            <!-- <h2>Important Dates</h2>
+            <br>
+            <table class="date_award">
+                <tbody>
+                    <tr>
+                        <td>Test Server Open</td><td class="last_column">March 25, 2024</td>
+                    </tr>
+                    <tr>
+                        <td>Test Server Close</td><td class="last_column">June 01, 2024</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br><br> -->
+
+            <h2>Award</h2>
+            <br>
+            <table class="date_award">
+                <tbody>
+                    <tr>
+                        <td class="first_icon"><img loading="lazy" src='/assets/icon/bulb.png'/></td><td>Innovation Award</td><td class="last_column">USD 6,000</td>
+                    </tr>
+                    <tr>
+                        <td class="first_icon"><img loading="lazy" src='/assets/icon/rank01.png'/></td><td>Outstanding Champion</td><td class="last_column">USD 3,000</td>
+                    </tr>
+                    <tr>
+                        <td class="first_icon"><img loading="lazy" src='/assets/icon/rank02.png'/></td><td>Honorable Runner-up</td><td class="last_column">USD 1,000</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br><br>
+
+            <h2>Citation</h2>
+            <br>
+            <span>
+                Please consider citing our work if the challenge helps your research with the following BibTex:
+            </span>
+            <div class="citation">
+                <span class="citation_red">@article</span>{<span class="citation_blue">wang2023embodiedscan</span>,
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;title={EmbodiedScan: A Holistic Multi-Modal 3D Perception Suite Towards Embodied AI},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;author={Wang, Tai and Mao, Xiaohan and Zhu, Chenming and Xu, Runsen and Lyu, Ruiyuan and Li, Peisen and Chen, Xiao and Zhang, Wenwei and Chen, Kai and Xue, Tianfan and Liu, Xihui and Lu, Cewu and Lin, Dahua and Pang, Jiangmiao},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;journal={arXiv preprint arXiv:2312.16170},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;year={2023}
+                    <br>
+                }
+            </div>
+
+            <br><br>
+
+            <h2>Contact</h2>
+            <br>
+            <ul class="rules">
+                <li>
+                    Tai Wang (OpenRobotLab), <code>taiwang.me@gmail.com</code>
+                </li>
+                <li>
+                    <a href="https://join.slack.com/t/opendrivelab/shared_invite/zt-2ft3dfjoz-6XErfBts4s_8Fen88wO4Jg" target="_blank">Slack channel: </a><code>#visual-grounding-2024</code>
+                </li>
+            </ul>
+
+            <br><br>
+
+            <h2>Task Description</h2>
+            <br>
+            <span>
+                Compared to driving scenes, the indoor embodied 3D perception systems face multi-modal input, including language instructions, more complex semantic understanding, diverse object categories and orientations, and different perceptual spaces and needs. Based on this, we construct EmbodiedScan, a holistic multi-modal, ego-centric 3D perception suite. In this track, given language prompts describing specific objects, models are required to detect them in the scene and predict their oriented 3D bounding boxes.
+                <br><br>
+                Details and test server are available at <a class="Oblue" target="_blank" href="https://huggingface.co/spaces/AGC2024/visual-grounding-2024">Hugging Face</a>.
+            </span>
+            
+            <br><br>
+
+            <h2 id="driving_with_language">Related Literature</h2>
+            <br>
+            <ul class="rules">
+                <li>
+                    <a href="https://arxiv.org/abs/2312.16170" target="_blank">
+                        EmbodiedScan: A Holistic Multi-Modal 3D Perception Suite Towards Embodied AI
+                    </a>
+                </li>
+                <li>
+                    <a href="https://arxiv.org/abs/2309.09456" target="_blank">
+                        Object2Scene: Putting Objects in Context for Open-Vocabulary 3D Detection
+                    </a>
+                </li>
+                <li>
+                    <a href="https://link.springer.com/chapter/10.1007/978-3-031-20080-9_28" target="_blank">
+                        FCAF3D: Fully Convolutional Anchor-Free 3D Object Detection
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/open-mmlab/mmdetection3d" target="_blank">
+                        MMDetection3D: OpenMMLab's Next-Generation Platform for General 3D Object Detection
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div class="block_left left_right">
+
+        <div style="flex-grow: 7;">
+            <a class="track_title" href="#driving_with_language">
+                <h2>
+                    Track
+                    <img loading="lazy" class="link_img"/>
+                </h2>
+                <h1>Driving with Language</h1>
+            </a>
+
+            <br><br>
+            
+            <div class="widget_container">
+                <a target="_blank" href="https://huggingface.co/spaces/AGC2024/driving-with-language-2024">
+                    <span class="Odarkblue"><b>Test Server @ &nbsp;</b></span>
+                    <img loading="lazy" src="/assets/brand/hugging_face_long.png"/>
+                </a>
+            </div>
+
+            <br><br class="track_fig">
+
+            <img class="track_fig" src="./driving_with_language.jpg"/>
+
+            <br>
+
+        </div>
+
+        <div style="flex-grow: 1;"></div>
+
+        <div style="flex-grow: 16;">
+
+            <h2>Leaderboard</h2>
+            <br>
+            <li># Participating Teams: 152</li>
+            <li># Countries and Regions: 14</li>
+            <li># Submissions: 978</li>
+            <br>
+            <div class="leaderboard">
+                <div class="leaderboardscroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="white" style="width: 22px"><b>Rank</b></th>
+                                <th class="white" style="width: 33px"><b>🗺️</b></th>
+                                <th class="white" style="width: 111px"><b>Institution</b></th>
+                                <th class="white track6button" style="width: 55px" onclick="track6sort(0, 'primary')"><b>final_score (primary) ▼</b></th>
+                                <th class="white" style="width: 181px"><b>Team Name</b></th>
+                                <th class="white" style="width: 33px"></th>
+                                <th class="white track6button" style="width: 55px" onclick="track6sort(1, 'metric1')"><b>accuracy &nbsp;&nbsp;&nbsp;</b></th>
+                                <th class="white track6button" style="width: 55px" onclick="track6sort(2, 'metric2')"><b>chatgpt &nbsp;&nbsp;&nbsp;</b></th>
+                            </tr>
+                        </thead>
+                        <tbody id="track6table"></tbody>
+                    </table>
+                    <div id="track6tablefoot">
+                        <div>
+                            <button onclick="track6previous()"><b>⇤</b></button>
+                            <button onclick="track6next()"><b>⇥</b></button>
+                        </div>
+                        <div>
+                            <button class="nonbutton" id="track6pages"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <span>* Not involed in the final official ranking.</span>
+
+            <br><br>
+
+            <h4>Submissions with Offline Label</h4>
+            <br>
+            <div class="leaderboard leaderboardsub">
+                <div class="leaderboardscroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="white" style="width: 22px"><b>Rank</b></th>
+                                <th class="white" style="width: 33px"><b>🗺️</b></th>
+                                <th class="white" style="width: 111px"><b>Institution</b></th>
+                                <th class="white track60button" style="width: 55px" onclick="track60sort(0, 'primary')"><b>final_score (primary) ▼</b></th>
+                                <th class="white" style="width: 181px"><b>Team Name</b></th>
+                                <th class="white" style="width: 33px"></th>
+                                <th class="white track60button" style="width: 55px" onclick="track60sort(1, 'metric1')"><b>accuracy &nbsp;&nbsp;&nbsp;</b></th>
+                                <th class="white track60button" style="width: 55px" onclick="track60sort(2, 'metric2')"><b>chatgpt &nbsp;&nbsp;&nbsp;</b></th>
+                            </tr>
+                        </thead>
+                        <tbody id="track60table"></tbody>
+                    </table>
+                    <div id="track60tablefoot">
+                        <div>
+                            <button onclick="track60previous()"><b>⇤</b></button>
+                            <button onclick="track60next()"><b>⇥</b></button>
+                        </div>
+                        <div>
+                            <button class="nonbutton" id="track60pages"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <br>
+
+            <div class="awardwinner" style="background-color: rgb(255, 156, 0, .3);">
+                <h4><img src="/assets/icon/bulb.png"/> &nbsp; Innovation Award goes to <b style="text-decoration: underline;">xxxxx</b> for</h4>
+                <span>
+                    xscoixw
+                </span>
+            </div>
+
+            <br>
+
+            <div class="awardwinner" style="background-color: rgb(254, 229, 106, .3);">
+                <h4><img src="/assets/icon/rank01.png"/> &nbsp; Outstanding Champion goes to <b style="text-decoration: underline;">xxxxx</b> for</h4>
+                <span>
+                    xscoixw
+                </span>
+            </div> -->
+
+            <br><br>
+
+            <!-- <h2>Important Dates</h2>
+            <br>
+            <table class="date_award">
+                <tbody>
+                    <tr>
+                        <td>Test Server Open</td><td class="last_column">March 25, 2024</td>
+                    </tr>
+                    <tr>
+                        <td>Test Server Close</td><td class="last_column">June 01, 2024</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br><br> -->
+
+            <h2>Award</h2>
+            <br>
+            <table class="date_award">
+                <tbody>
+                    <tr>
+                        <td class="first_icon"><img loading="lazy" src='/assets/icon/bulb.png'/></td><td>Innovation Award</td><td class="last_column">USD 1,000</td>
+                    </tr>
+                    <tr>
+                        <td class="first_icon"><img loading="lazy" src='/assets/icon/rank01.png'/></td><td>Outstanding Champion</td><td class="last_column">USD 500</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br><br>
+
+            <h2>Citation</h2>
+            <br>
+            <span>
+                Please consider citing our work if the challenge helps your research with the following BibTex:
+            </span>
+            <div class="citation">
+                <span class="citation_red">@article</span>{<span class="citation_blue">sima2023drivelm</span>,
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;title={DriveLM: Driving with Graph Visual Question Answering},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;author={Sima, Chonghao and Renz, Katrin and Chitta, Kashyap and Chen, Li and Zhang, Hanxue and Xie, Chengen and Luo, Ping and Geiger, Andreas and Li, Hongyang},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;journal={arXiv preprint arXiv:2312.14150},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;year={2023}
+                    <br>
+                }
+            </div>
+            <div class="citation">
+                <span class="citation_red">@misc</span>{<span class="citation_blue">contributors2023drivelmrepo</span>,
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;title={DriveLM: Driving with Graph Visual Question Answering},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;author={DriveLM contributors},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;howpublished={\url{https://github.com/OpenDriveLab/DriveLM}},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;year={2023}
+                    <br>
+                  }
+            </div>
+            <div class="citation">
+                <span class="citation_red">@article</span>{<span class="citation_blue">zhou2024embodied</span>,
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;title={Embodied Understanding of Driving Scenarios},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;author={Zhou, Yunsong and Huang, Linyan and Bu, Qingwen and Zeng, Jia and Li, Tianyu and Qiu, Hang and Zhu, Hongzi and Guo, Minyi and Qiao, Yu and Li, Hongyang},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;journal={arXiv preprint arXiv:2403.04593},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;year={2024}
+                    <br>
+                }
+            </div>
+
+            <br><br>
+
+            <h2>Contact</h2>
+            <br>
+            <ul class="rules">
+                <li>
+                    Chonghao Sima (OpenDriveLab), <code>chonghaosima@gmail.com</code>
+                </li>
+                <li>
+                    <a href="https://join.slack.com/t/opendrivelab/shared_invite/zt-2ft3dfjoz-6XErfBts4s_8Fen88wO4Jg" target="_blank">Slack channel: </a><code>#driving-with-language-2024</code>
+                </li>
+            </ul>
+
+            <br><br>
+
+            <h2>Task Description</h2>
+            <br>
+            <span>
+                Incorporating the language modality, this task connects Vision Language Models (VLMs) and autonomous driving systems. The model will introduce the reasoning ability of LLMs to make decisions, and pursue generalizable and explainable driving behavior. Given multi-view images as inputs, models are required to answer questions covering various aspects of driving.
+                <br><br>
+                Details and test server are available at <a class="Oblue" target="_blank" href="https://huggingface.co/spaces/AGC2024/driving-with-language-2024">Hugging Face</a>.
+            </span>
+            
+            <br><br>
+
+            <h2 id="mapless_driving">Related Literature</h2>
+            <br>
+            <ul class="rules">
+                <li>
+                    <a href="https://arxiv.org/abs/2312.14150" target="_blank">
+                        DriveLM: Driving with Graph Visual Question Answering
+                    </a>
+                </li>
+                <li>
+                    <a href="https://arxiv.org/abs/2403.04593" target="_blank">
+                        Embodied Understanding of Driving Scenarios
+                    </a>
+                </li>
+                <li>
+                    <a href="https://arxiv.org/abs/2311.01043" target="_blank">
+                        LLM4Drive: A Survey of Large Language Models for Autonomous Driving
+                    </a>
+                </li>
+                <li>
+                    <a href="https://arxiv.org/abs/2312.11562" target="_blank">
+                        A Survey of Reasoning with Foundation Models
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div class="block_right left_right">
+
+        <div style="flex-grow: 7;">
+            <a class="track_title" href="#mapless_driving">
+                <h2>
+                    Track
+                    <img loading="lazy" class="link_img"/>
+                </h2>
+                <h1>Mapless Driving</h1>
+            </a>
+
+            <br><br>
+            
+            <div class="widget_container">
+                <a target="_blank" href="https://huggingface.co/spaces/AGC2024/mapless-driving-2024">
+                    <span class="Odarkblue"><b>Test Server @ &nbsp;</b></span>
+                    <img loading="lazy" src="/assets/brand/hugging_face_long.png"/>
+                </a>
+            </div>
+
+            <br><br class="track_fig">
+
+            <img class="track_fig" src="./mapless_driving.jpg"/>
+
+            <br>
+
+        </div>
+
+        <div style="flex-grow: 1;"></div>
+
+        <div style="flex-grow: 16;">
+
+            <h2>Leaderboard</h2>
+            <br>
+            <li># Participating Teams: 120</li>
+            <li># Countries and Regions: 10</li>
+            <li># Submissions: 729</li>
+            <br>
+            <div class="leaderboard">
+                <div class="leaderboardscroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="white" style="width: 22px"><b>Rank</b></th>
+                                <th class="white" style="width: 33px"><b>🗺️</b></th>
+                                <th class="white" style="width: 111px"><b>Institution</b></th>
+                                <th class="white track7button" style="width: 55px" onclick="track7sort(0, 'primary')"><b>UniScore (primary) ▼</b></th>
+                                <th class="white" style="width: 181px"><b>Team Name</b></th>
+                                <th class="white" style="width: 33px"></th>
+                                <th class="white track7button" style="width: 55px" onclick="track7sort(1, 'metric1')"><b>DET_l &nbsp;&nbsp;&nbsp;</b></th>
+                                <th class="white track7button" style="width: 55px" onclick="track7sort(2, 'metric2')"><b>DET_a &nbsp;&nbsp;&nbsp;</b></th>
+                            </tr>
+                        </thead>
+                        <tbody id="track7table"></tbody>
+                    </table>
+                    <div id="track7tablefoot">
+                        <div>
+                            <button onclick="track7previous()"><b>⇤</b></button>
+                            <button onclick="track7next()"><b>⇥</b></button>
+                        </div>
+                        <div>
+                            <button class="nonbutton" id="track7pages"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <span>* Not involed in the final official ranking.</span>
+
+            <!-- <br>
+
+            <div class="awardwinner" style="background-color: rgb(255, 156, 0, .3);">
+                <h4><img src="/assets/icon/bulb.png"/> &nbsp; Innovation Award goes to <b style="text-decoration: underline;">xxxxx</b> for</h4>
+                <span>
+                    xscoixw
+                </span>
+            </div>
+
+            <br>
+
+            <div class="awardwinner" style="background-color: rgb(254, 229, 106, .3);">
+                <h4><img src="/assets/icon/rank01.png"/> &nbsp; Outstanding Champion goes to <b style="text-decoration: underline;">xxxxx</b> for</h4>
+                <span>
+                    xscoixw
+                </span>
+            </div> -->
+
+            <br><br>
+
+            <!-- <h2>Important Dates</h2>
+            <br>
+            <table class="date_award">
+                <tbody>
+                    <tr>
+                        <td>Test Server Open</td><td class="last_column">March 25, 2024</td>
+                    </tr>
+                    <tr>
+                        <td>Test Server Close</td><td class="last_column">June 01, 2024</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br><br> -->
+
+            <h2>Award</h2>
+            <br>
+            <table class="date_award">
+                <tbody>
+                    <tr>
+                        <td class="first_icon"><img loading="lazy" src='/assets/icon/bulb.png'/></td><td>Innovation Award</td><td class="last_column">USD 1,000</td>
+                    </tr>
+                    <tr>
+                        <td class="first_icon"><img loading="lazy" src='/assets/icon/rank01.png'/></td><td>Outstanding Champion</td><td class="last_column">USD 500</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br><br>
+
+            <h2>Citation</h2>
+            <br>
+            <span>
+                Please consider citing our work if the challenge helps your research with the following BibTex:
+            </span>
+            <div class="citation">
+                <span class="citation_red">@inproceedings</span>{<span class="citation_blue">wang2023openlanev2</span>,
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;title={OpenLane-V2: A Topology Reasoning Benchmark for Unified 3D HD Mapping}, 
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;author={Wang, Huijie and Li, Tianyu and Li, Yang and Chen, Li and Sima, Chonghao and Liu, Zhenbo and Wang, Bangjun and Jia, Peijin and Wang, Yuting and Jiang, Shengyin and Wen, Feng and Xu, Hang and Luo, Ping and Yan, Junchi and Zhang, Wei and Li, Hongyang},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;booktitle={NeurIPS},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;year={2023}
+                    <br>
+                }
+            </div>
+            <div class="citation">
+                <span class="citation_red">@inproceedings</span>{<span class="citation_blue">li2023lanesegnet</span>,
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;title={LaneSegNet: Map Learning with Lane Segment Perception for Autonomous Driving},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;author={Li, Tianyu and Jia, Peijin and Wang, Bangjun and Chen, Li and Jiang, Kun and Yan, Junchi and Li, Hongyang},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;booktitle={ICLR},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;year={2024}
+                    <br>
+                }
+            </div>
+
+            <br><br>
+
+            <h2>Contact</h2>
+            <br>
+            <ul class="rules">
+                <li>
+                    Tianyu Li (OpenDriveLab), <code>litianyu@opendrivelab.com</code>
+                </li>
+                <li>
+                    <a href="https://join.slack.com/t/opendrivelab/shared_invite/zt-2ft3dfjoz-6XErfBts4s_8Fen88wO4Jg" target="_blank">Slack channel: </a><code>#mapless-driving-2024</code>
+                </li>
+            </ul>
+
+            <br><br>
+            
+            <h2>Task Description</h2>
+            <br>
+            <span>
+                Driving without High-Definition (HD) maps demands a high level of active scene understanding capacity. This challenge aims to explore the boundaries of scene reasoning. Neural networks take multi-view images and Standard-Definition (SD) Map as input, then provide not only perception results of lanes and traffic elements but also topology relationships among lanes and between lanes and traffic elements simultaneously.
+                <br><br>
+                Details and test server are available at <a class="Oblue" target="_blank" href="https://huggingface.co/spaces/AGC2024/mapless-driving-2024">Hugging Face</a>.
+            </span>
+            
+            <br><br>
+
+            <h2 id="carla">Related Literature</h2>
+            <br>
+            <ul class="rules">
+                <li>
+                    <a href="https://arxiv.org/abs/2304.10440" target="_blank">
+                        OpenLane-V2: A Topology Reasoning Benchmark for Unified 3D HD Mapping
+                    </a>
+                </li>
+                <li>
+                    <a href="https://arxiv.org/abs/2312.16108" target="_blank">
+                        LaneSegNet: Map Learning with Lane Segment Perception for Autonomous Driving
+                    </a>
+                </li>
+                <li>
+                    <a href="https://arxiv.org/abs/2304.05277" target="_blank">
+                        Graph-based Topology Reasoning for Driving Scenes
+                    </a>
+                </li>
+                <li>
+                    <a href="https://arxiv.org/abs/2208.14437" target="_blank">
+                        MapTR: Structured Modeling and Learning for Online Vectorized HD Map Construction
+                    </a>
+                </li>
+                <li>
+                    <a href="https://arxiv.org/abs/2203.11089" target="_blank">
+                        PersFormer: 3D Lane Detection via Perspective Transformer and the OpenLane Benchmark
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div class="block_left left_right">
+
+        <div style="flex-grow: 7;">
+            <a class="track_title" href="#carla">
+                <h2>
+                    Track
+                    <img loading="lazy" class="link_img"/>
+                </h2>
+                <h1>CARLA Autonomous Driving Challenge</h1>
+            </a>
+
+            <br><br>
+            
+            <div class="widget_container">
+                <a href="https://eval.ai/web/challenges/challenge-page/2098/overview" target="_blank">
+                    <span class="Odarkblue"><b>Test Server @ &nbsp;</b></span>
+                    <img loading="lazy" src="/assets/icon/evalai_long.png"/>
+                </a>
+            </div>
+
+            <br><br class="track_fig">
+
+            <img class="track_fig" src="./carla.jpg"/>
+
+            <br>
+
+        </div>
+
+        <div style="flex-grow: 1;"></div>
+
+        <div style="flex-grow: 16;">
+
+            <h2>Leaderboard</h2>
+            <br>
+            <li># Participating Teams: 40</li>
+            <li># Countries and Regions: 14</li>
+            <li># Submissions: 165</li>
+            <br>
+            <h4>SENSORS</h4>
+            <br>
+            <div class="leaderboard">
+                <div class="leaderboardscroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="white" style="width: 22px"><b>Rank</b></th>
+                                <th class="white" style="width: 33px"><b>🗺️</b></th>
+                                <th class="white" style="width: 111px"><b>Institution</b></th>
+                                <th class="white track5button" style="width: 55px" onclick="track5sort(0, 'primary')"><b>Driving Score (primary) ▼</b></th>
+                                <th class="white" style="width: 181px"><b>Team Name</b></th>
+                                <th class="white" style="width: 33px"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="track5table"></tbody>
+                    </table>
+                    <div id="track5tablefoot">
+                        <div>
+                            <button onclick="track5previous()"><b>⇤</b></button>
+                            <button onclick="track5next()"><b>⇥</b></button>
+                        </div>
+                        <div>
+                            <button class="nonbutton" id="track5pages"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br><br>
+
+            <h4>MAP</h4>
+            <br>
+            <div class="leaderboard">
+                <div class="leaderboardscroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="white" style="width: 22px"><b>Rank</b></th>
+                                <th class="white" style="width: 33px"><b>🗺️</b></th>
+                                <th class="white" style="width: 111px"><b>Institution</b></th>
+                                <th class="white track50button" style="width: 55px" onclick="track50sort(0, 'primary')"><b>Driving Score (primary) ▼</b></th>
+                                <th class="white" style="width: 181px"><b>Team Name</b></th>
+                                <th class="white" style="width: 33px"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="track50table"></tbody>
+                    </table>
+                    <div id="track50tablefoot">
+                        <div>
+                            <button onclick="track50previous()"><b>⇤</b></button>
+                            <button onclick="track50next()"><b>⇥</b></button>
+                        </div>
+                        <div>
+                            <button class="nonbutton" id="track50pages"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <br>
+
+            <div class="awardwinner" style="background-color: rgb(255, 156, 0, .3);">
+                <h4><img src="/assets/icon/bulb.png"/> &nbsp; Innovation Award goes to <b style="text-decoration: underline;">xxxxx</b> for</h4>
+                <span>
+                    xscoixw
+                </span>
+            </div>
+
+            <br>
+
+            <div class="awardwinner" style="background-color: rgb(254, 229, 106, .3);">
+                <h4><img src="/assets/icon/rank01.png"/> &nbsp; Outstanding Champion goes to <b style="text-decoration: underline;">xxxxx</b> for</h4>
+                <span>
+                    xscoixw
+                </span>
+            </div>
+
+            <br>
+
+            <div class="awardwinner" style="background-color: rgb(189, 189, 189, .3);">
+                <h4><img src="/assets/icon/rank02.png"/> &nbsp; Honorable Runner-up goes to <b style="text-decoration: underline;">xxxxx</b> for</h4>
+                <span>
+                    xscoixw
+                </span>
+            </div> -->
+
+            <!-- <br><br> -->
+
+            <!-- <h2>Important Dates</h2>
+            <br>
+            <table class="date_award">
+                <tbody>
+                    <tr>
+                        <td>Test Server Open</td><td class="last_column">March 25, 2024</td>
+                    </tr>
+                    <tr>
+                        <td>Test Server Close</td><td class="last_column">June 01, 2024</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br><br> -->
+
+            <!-- <h2>Leaderboard</h2>
+            <br>
+            <span>
+                See <a class="Oblue" href="https://leaderboard.carla.org/leaderboard/" target="_blank">CARLA Leaderboard 2.0</a>.
+            </span>
+
+            <br><br> -->
+
+            <!-- <div style="background-color: lightgray; padding: 17px;">
+                <span>
+                    The award decision will be made by the Track Organizer.
+                </span>
+            </div> -->
+
+            <br><br>
+
+            <h2>Award</h2>
+            <br>
+            <table class="date_award">
+                <tbody>
+                    <tr>
+                        <td class="first_icon"><img loading="lazy" src='/assets/icon/bulb.png'/></td><td>Innovation Award</td><td class="last_column">USD 10,000</td>
+                    </tr>
+                    <tr>
+                        <td class="first_icon"><img loading="lazy" src='/assets/icon/rank01.png'/></td><td>Outstanding Champion</td><td class="last_column">HP Workstation</td>
+                    </tr>
+                    <tr>
+                        <td class="first_icon"><img loading="lazy" src='/assets/icon/rank02.png'/></td><td>Honorable Runner-up</td><td class="last_column">HP Workstation</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br><br>
+
+            <h2>Citation</h2>
+            <br>
+            <span>
+                Please consider citing our work if the challenge helps your research with the following BibTex:
+            </span>
+            <div class="citation">
+                <span class="citation_red">@inproceedings</span>{<span class="citation_blue">dosovitskiy2017carla</span>,
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;title={CARLA: An open urban driving simulator},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;author={Dosovitskiy, Alexey and Ros, German and Codevilla, Felipe and Lopez, Antonio and Koltun, Vladlen},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;booktitle={Conference on robot learning},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;year={2017}
+                    <br>
+                }
+            </div>
+
+            <br><br>
+
+            <h2>Contact</h2>
+            <br>
+            <ul class="rules">
+                <li>
+                    <a href="https://discord.gg/kJM5DhmKHJ" target="_blank">Discord</a>
+                </li>
+                <li>
+                    <a href="https://join.slack.com/t/opendrivelab/shared_invite/zt-2ft3dfjoz-6XErfBts4s_8Fen88wO4Jg" target="_blank">Slack channel: </a><code>#carla-2024</code>
+                </li>
+            </ul>
+
+            <br><br>
+
+            <h2>Task Description</h2>
+            <br>
+            <span>
+                To verify the effectiveness of AD systems, we need an ultimate planning framework with a closed-loop setting. The CARLA AD Leaderboard challenges agents to drive through a set of predefined routes. For each route, agents will be initialized at a starting point and directed to drive to a destination point, provided with a description of the route through GPS style coordinates, map coordinates or route instructions. Routes are defined in a variety of situations, including freeways, urban areas, residential districts and rural settings. The Leaderboard evaluates AD agents in a variety of weather conditions, including daylight scenes, sunset, rain, fog, and night, among others.
+                <br><br>
+                Details and test server are available at <a class="Oblue" target="_blank" href="https://eval.ai/web/challenges/challenge-page/2098/overview">EvalAI</a>.
+            </span>
+            
+            <br><br>
+
+            <h2 id="general_rules">Related Literature</h2>
+            <br>
+            <ul class="rules">
+                <li>
+                    <a href="https://proceedings.mlr.press/v78/dosovitskiy17a.html" target="_blank">
+                        CARLA: An Open Urban Driving Simulator
+                    </a>
+                </li>
+                <li>
+                    <a href="https://openaccess.thecvf.com/content/CVPR2023/html/Shao_ReasonNet_End-to-End_Driving_With_Temporal_and_Global_Reasoning_CVPR_2023_paper.html" target="_blank">
+                        ReasonNet: End-to-End Driving With Temporal and Global Reasoning
+                    </a>
+                </li>
+                <li>
+                    <a href="https://proceedings.mlr.press/v205/shao23a.html" target="_blank">
+                        Safety-Enhanced Autonomous Driving Using Interpretable Sensor Fusion Transformer
+                    </a>
+                </li>
+                <li>
+                    <a href="https://proceedings.neurips.cc/paper_files/paper/2022/hash/286a371d8a0a559281f682f8fbf89834-Abstract-Conference.html" target="_blank">
+                        Trajectory-guided Control Prediction for End-to-end Autonomous Driving: A Simple yet Strong Baseline
+                    </a>
+                </li>
+                <li>
+                    <a href="https://arxiv.org/abs/2306.07957" target="_blank">
+                        Hidden Biases of End-to-End Driving Models
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+    <div class="block" style="margin: 0;">
+        <div class="navigator"></div>
+    </div>
+
+
+
+    <br><br><br>
+
+
+    
+    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;">
+        <div style="flex-grow: 1;">
+            <a class="track_title" href="#general_rules">
+                <h1>
+                    General Rules
+                    <img loading="lazy" class="link_img"/>
+                </h1>
+            </a>
+        </div> 
+    </div>
+    <br>
+    <div class="block_left" style="margin-top: 0; padding-top: 0;">
+        <div style="flex-grow: 10;">
+
+            <h2>Eligibility</h2>
+            <br>
+            <ul class="rules">
+                <li>
+                    A participant must be a member of a team and cannot be a member of multiple teams.
+                </li>
+                <li>
+                    Participants can form teams of up to <b>10</b> people.
+                </li>
+                <li>
+                    A team is limited to one submission account. And a team can participate in multiple tracks . 
+                </li>
+                <li>
+                    A team must be registered for <a href="#participation">participation</a>.
+                </li>
+                <li>
+                    <b>An entity can have multiple teams.</b>
+                </li>
+                <li>
+                    Participants will receive certificates. Winners will be invited to present during the CVPR workshop or sibling event.
+                </li>
+                <li>
+                    Attempting to hack the test set or engaging in similar behaviors will result in disqualification.
+                </li>
+            </ul>
+
+            <br><br>
+
+            <h2>Technical</h2>
+            <br>
+            <ul class="rules">
+                <li>
+                    <b>The use of all publicly available datasets and pretrained weights is allowed.</b> The use of private datasets or pretrained weights is prohibited.
+                </li>
+                <li>
+                    The use of future frames is prohibited except where explicitly stated. 
+                </li>
+                <li>
+                    The use of data must be described explicitly in the technical report. 
+                </li>
+                <li>
+                    All technical reports will be made public after the conclusion of the challenge.
+                </li>
+            </ul>
+
+            <br><br>
+
+            <h2>Awards</h2>
+            <br>
+            <ul class="rules">
+                <li>
+                    To be eligible for awards: 
+                </li>
+                <ul class="ul_li" style="margin-top: 0; margin-bottom: 0;">
+                    <li>
+                        Teams must make their results public on the leaderboard before the submission deadline and continue to keep them public thereafter;
+                    </li>
+                    <li>
+                        Teams must submit a <b>technical report</b> via <a target="_blank" href="https://openreview.net/group?id=thecvf.com/CVPR/2024/Workshop/AGC">OpenReview</a> for each track in PDF format of at most 4 pages (excluding references);
+                    </li>
+                    <li>
+                        If requested, teams must provide their code, docker image, or necessary materials to the award committee for verification;
+                    </li>
+                    <li>
+                        Organizers of a track cannot claim any award of the track. However, they can participate in other tracks since the test data is excluded from them as well.
+                    </li>
+                </ul>
+                <li>
+                    Innovation awards will be decided through a double-blind reviewing process on the technical reports by the award committee. Winners of Innovation awards can overlap with Outstanding Champion and Honorable Runner-up.
+                </li>
+                <li>
+                    The organizers reserve the right to update the rules in response to unforeseen circumstances in order to better serve the mission of the challenge. The organizers reserve the right to disqualify teams that have violated the rules. Organizers reserve all rights for the final explanation.
+                </li>
+            </ul>
+            
+        </div>
+        <div style="flex-grow: 1;"><br><br></div>
+        <div style="flex-grow: 6;">
+
+            <h2>FAQ</h2>
+            <br>
+            <ul class="rules faq">
+                <li>
+                    How do we/I download the data?
+                </li>
+                <ul class="ul_li">
+                    <li>
+                        For each track, we provide links for downloading data in the repository. The repository, which might also contain dataset API, baseline model, and other helpful information, is a good start to begin your participation.
+                    </li>
+                </ul>
+
+                <li>
+                    How many times can we/I make a submission?
+                </li>
+                <ul class="ul_li">
+                    <li>
+                        Each track has its submission limit. Please refer to the test server for each track.
+                    </li>
+                </ul>
+
+                <li>
+                    Should we/I use future frames during inference?
+                </li>
+                <ul class="ul_li">
+                    <li>
+                        No future frame is allowed except that it is noted explicitly.
+                    </li>
+                </ul>
+
+                <li id="organizers">
+                    Which template of a technical report should we/I follow? How to submit the technical report?
+                </li>
+                <ul class="ul_li">
+                    <li>
+                        The format of a technical report is constrained to a PDF file. We recommend using the <a href="https://github.com/cvpr-org/author-kit/releases/tag/CVPR2024-v2" target="_blank">CVPR 2024 template</a>. Submission instructions will be released by June 2024.
+                    </li>
+                </ul>
+
+                <li id="organizers">
+                    Which registration form should we/I fill in regarding multiple forms?
+                </li>
+                <ul class="ul_li">
+                    <li>
+                        It is a strict requirement to register in this <a href="https://docs.google.com/forms/d/e/1FAIpQLSctm2iipw5r1_wY-kVt7X-4RRynnt3ZzYMzaBVzEpNStoc-rQ/viewform" target="_blank">Google Form</a>.
+                    </li>
+                </ul>
+            </ul>
+
+        </div>
+    </div>
+
+
+
+
+    <br><br><br>
+
+
+
+    <div class="block" style="margin: 0;">
+        <div class="navigator"></div>
+    </div>
+
+
+
+    <br><br><br>
+
+
+
+    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;">
+        <div style="flex-grow: 1;">
+            <a class="track_title" href="#organizers">
+                <h1>
+                    Organizers
+                    <img loading="lazy" class="link_img"/>
+                </h1>
+            </a>
+        </div> 
+    </div>
+    <br>
+    <div class="block_left" style="margin-top: 0; padding-top: 0">
+        <div style="flex-grow: 1;">
+
+            <br>
+            <h2>General</h2>
+            <br>
+            <div class="person_container">
+                <div>
+                    <a href="https://faikit.github.io/" target="_blank">
+                        <img loading="lazy" src="/assets/person/huijie_wang.jpg"/>
+                    </a>
+                    <h4>Huijie Wang</h4>
+                    <span>Shanghai AI Lab</span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://scholar.google.com/citations?user=X6vTmEMAAAAJ" target="_blank">
+                        <img loading="lazy" src="/assets/person/tianyu_li.jpg"/>
+                    </a>
+                    <h4>Tianyu Li</h4>
+                    <span>Fudan University</span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://github.com/gihharwtw" target="_blank">
+                        <img loading="lazy" src="/assets/person/yihang_qiu.jpg"/>
+                    </a>
+                    <h4>Yihang Qiu</h4>
+                    <span>Shanghai AI Lab</span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://oceanpang.github.io/" target="_blank">
+                        <img loading="lazy" src="/assets/person/jiangmiao_pang.jpg"/>
+                    </a>
+                    <h4>Jiangmiao Pang</h4>
+                    <span>Shanghai AI Lab</span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://www.linkedin.com/in/feixia586/" target="_blank">
+                        <img loading="lazy" src="/assets/person/fei_xia.jpg"/>
+                    </a>
+                    <h4>Fei Xia</h4>
+                    <span>Meituan</span>
+                    <div></div>
+                </div>
+            </div>
+
+            <div class="person_two_column">
+
+                <div>
+                    <br>
+                    <h2>End-to-End Driving at Scale</h2>
+                    <br>
+                    <div class="person_container">
+                        <div>
+                            <a href="https://kashyap7x.github.io/" target="_blank">
+                                <img loading="lazy" src="/assets/person/kashyap_chitta.jpg"/>
+                            </a>
+                            <h4>Kashyap Chitta</h4>
+                            <span>University of Tübingen</span>
+                            <div></div>
+                        </div>
+                        <div>
+                            <a href="https://danieldauner.github.io/" target="_blank">
+                                <img loading="lazy" src="/assets/person/daniel_dauner.jpg"/>
+                            </a>
+                            <h4>Daniel Dauner</h4>
+                            <span>University of Tübingen</span>
+                            <div></div>
+                        </div>
+                        <div>
+                            <a href="https://mh0797.github.io/" target="_blank">
+                                <img loading="lazy" src="/assets/person/marcel_hallgarten.jpg"/>
+                            </a>
+                            <h4>Marcel Hallgarten</h4>
+                            <span>University of Tübingen</span>
+                            <div></div>
+                        </div>
+                        <div>
+                            <a href="https://www.borisivanovic.com/" target="_blank">
+                                <img loading="lazy" src="/assets/person/boris_ivanovic.jpg"/>
+                            </a>
+                            <h4>Boris Ivanovic</h4>
+                            <span>NVIDIA</span>
+                            <div></div>
+                        </div>
+                        <div>
+                            <a href="https://research.nvidia.com/person/marco-pavone" target="_blank">
+                                <img loading="lazy" src="/assets/person/marco_pavone.jpg"/>
+                            </a>
+                            <h4>Marco Pavone</h4>
+                            <span>NVIDIA</span>
+                            <div></div>
+                        </div>
+                        <div>
+                            <a href="https://tisl.cs.toronto.edu/author/igor-gilitschenski/" target="_blank">
+                                <img loading="lazy" src="/assets/person/igor_gilitschenski.jpg"/>
+                            </a>
+                            <h4>Igor Gilitschenski</h4>
+                            <span>University of Toronto</span>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <br>
+                    <h2>Predictive World Model</h2>
+                    <br>
+                    <div class="person_container">
+                        <div>
+                            <a>
+                                <img loading="lazy" src="/assets/person/zetong_yang.jpg"/>
+                            </a>
+                            <h4>Zetong Yang</h4>
+                            <span>Shanghai AI Lab</span>
+                            <div></div>
+                        </div>
+                        <div>
+                            <a href="https://sg.linkedin.com/in/pat-karn" target="_blank">
+                                <img loading="lazy" src="/assets/person/pat_karnchanachari.jpg"/>
+                            </a>
+                            <h4>Pat Karnchanachari</h4>
+                            <span>Motional</span>
+                            <div></div>
+                        </div>
+                        <div>
+                            <a target="_blank">
+                                <img loading="lazy" src="/assets/person/linyan_huang.jpg"/>
+                            </a>
+                            <h4>Linyan Huang</h4>
+                            <span>Shanghai AI Lab</span>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <br>
+                    <h2>Occupancy and Flow</h2>
+                    <br>
+                    <div class="person_container">
+                        <div>
+                            <a href="https://github.com/gihharwtw" target="_blank">
+                                <img loading="lazy" src="/assets/person/yihang_qiu.jpg"/>
+                            </a>
+                            <h4>Yihang Qiu</h4>
+                            <span>Shanghai AI Lab</span>
+                            <div></div>
+                        </div>
+                        <div>
+                            <a href="https://sg.linkedin.com/in/fongwk" target="_blank">
+                                <img loading="lazy" src="/assets/person/whye_kit_fong.jpg"/>
+                            </a>
+                            <h4>Whye Kit Fong</h4>
+                            <span>Motional</span>
+                            <div></div>
+                        </div>
+                        <div>
+                            <a href="https://github.com/afterthat97" target="_blank">
+                                <img loading="lazy" src="/assets/person/haisong_liu.jpg"/>
+                            </a>
+                            <h4>Haisong Liu</h4>
+                            <span>Nanjing University</span>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <br>
+                    <h2>Multi-View 3D Visual Grounding</h2>
+                    <br>
+                    <div class="person_container">
+                        <div>
+                            <a href="https://tai-wang.github.io/" target="_blank">
+                                <img loading="lazy" src="/assets/person/tai_wang.jpg"/>
+                            </a>
+                            <h4>Tai Wang</h4>
+                            <span>Shanghai AI Lab</span>
+                            <div></div>
+                        </div>
+                        <div>
+                            <a href="https://scholar.google.com/citations?user=-zT1NKwAAAAJ" target="_blank">
+                                <img loading="lazy" src="/assets/person/xiaohan_mao.jpg"/>
+                            </a>
+                            <h4>Xiaohan Mao</h4>
+                            <span>Shanghai AI Lab</span>
+                            <div></div>
+                        </div>
+                        <div>
+                            <a href="https://scholar.google.com/citations?user=QabwS_wAAAAJ" target="_blank">
+                                <img loading="lazy" src="/assets/person/chenming_zhu.jpg"/>
+                            </a>
+                            <h4>Chenming Zhu</h4>
+                            <span>HKU</span>
+                            <div></div>
+                        </div>
+                        <div>
+                            <a target="_blank">
+                                <img loading="lazy" src="/assets/person/ruiyuan_lyu.jpg"/>
+                            </a>
+                            <h4>Ruiyuan Lyu</h4>
+                            <span>Shanghai AI Lab</span>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <br>
+                    <h2>CARLA Autonomous Driving Challenge</h2>
+                    <br>
+                    <div class="person_container">
+                        <div>
+                            <a href="https://germanros.net/" target="_blank">
+                                <img loading="lazy" src="/assets/person/german_ros.jpg"/>
+                            </a>
+                            <h4>German Ros</h4>
+                            <span>NVIDIA</span>
+                            <div></div>
+                        </div>
+                        <div>
+                            <a target="_blank">
+                                <img loading="lazy" src="/assets/person/matt_rowe.jpg"/>
+                            </a>
+                            <h4>Matt Rowe</h4>
+                            <span>CARLA Team</span>
+                            <div></div>
+                        </div>
+                        <div>
+                            <a target="_blank">
+                                <img loading="lazy" src="/assets/person/joel_moriana.jpg"/>
+                            </a>
+                            <h4>Joel Moriana</h4>
+                            <span>CARLA Team</span>
+                            <div></div>
+                        </div>
+                        <div>
+                            <a target="_blank">
+                                <img loading="lazy" src="/assets/person/guillermo_lopez.jpg"/>
+                            </a>
+                            <h4>Guillermo Lopez</h4>
+                            <span>CARLA Team</span>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <br>
+                    <h2>Driving with Language</h2>
+                    <br>
+                    <div class="person_container">
+                        <div>
+                            <a href="https://scholar.google.com/citations?user=dgYJ6esAAAAJ" target="_blank">
+                                <img loading="lazy" src="/assets/person/chonghao_sima.jpg"/>
+                            </a>
+                            <h4>Chonghao Sima</h4>
+                            <span>Shanghai AI Lab & HKU</span>
+                            <div></div>
+                        </div>
+                        <div>
+                            <a href="https://kashyap7x.github.io/" target="_blank">
+                                <img loading="lazy" src="/assets/person/kashyap_chitta.jpg"/>
+                            </a>
+                            <h4>Kashyap Chitta</h4>
+                            <span>University of Tübingen</span>
+                            <div></div>
+                        </div>
+                        <div>
+                            <a>
+                                <img loading="lazy" src="/assets/person/jiajie_xu.jpg"/>
+                            </a>
+                            <h4>Jiajie Xu</h4>
+                            <span>CMU</span>
+                            <div></div>
+                        </div>
+                        <!-- <div>
+                            <a>
+                                <img loading="lazy" src="/assets/person/hanxue_zhang.jpg"/>
+                            </a>
+                            <h4>Hanxue Zhang</h4>
+                            <span>Shanghai AI Lab</span>
+                            <div></div>
+                        </div> -->
+                    </div>
+                </div>
+                
+                <div>
+                    <br>
+                    <h2>Mapless Driving</h2>
+                    <br>
+                    <div class="person_container">
+                        <div>
+                            <a href="https://scholar.google.com/citations?user=X6vTmEMAAAAJ" target="_blank">
+                                <img loading="lazy" src="/assets/person/tianyu_li.jpg"/>
+                            </a>
+                            <h4>Tianyu Li</h4>
+                            <span>Fudan University</span>
+                            <div></div>
+                        </div>
+                        <div>
+                            <a href="https://faikit.github.io/" target="_blank">
+                                <img loading="lazy" src="/assets/person/huijie_wang.jpg"/>
+                            </a>
+                            <h4 id="committee">Huijie Wang</h4>
+                            <span>Shanghai AI Lab</span>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div> 
+    </div>
+
+
+
+    <!-- <br><br><br>
+
+
+
+    <div class="block" style="margin: 0;">
+        <div class="navigator"></div>
+    </div>
+
+
+
+    <br><br><br>
+
+
+
+    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;">
+        <div style="flex-grow: 1;">
+            <a class="track_title" href="#committee">
+                <h1>
+                    Award Committee
+                    <img loading="lazy" class="link_img"/>
+                </h1>
+            </a>
+            <br>
+            <span>In alphabetical order of first names. More to come.</span>
+        </div> 
+    </div>
+    <br><br>
+    <div class="block_left" style="margin-top: 0; padding-top: 0">
+        <div style="flex-grow: 1;">
+            
+            <div class="person_container">
+                <div>
+                    <a href="https://alexgkendall.com" target="_blank">
+                        <img loading="lazy" src="/assets/person/alex_kendall.jpg"/>
+                    </a>
+                    <h4>Alex Kendall</h4>
+                    <span><span><img loading="lazy" src="/assets/brand/wayve.png"/>Wayve</span><i class="gray">Co-Founder & CEO</i></span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://www.cvlibs.net" target="_blank">
+                        <img loading="lazy" src="/assets/person/andreas_geiger.jpg"/>
+                    </a>
+                    <h4>Andreas Geiger</h4>
+                    <span><span><img loading="lazy" src="/assets/brand/tubingen_square.png"/>Univeristy of Tübingen</span><i class="gray">Head of CS & Professor</i></span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://scholar.google.com/citations?user=YCBFupwAAAAJ" target="_blank">
+                        <img loading="lazy" src="/assets/person/huaxia_xia.jpg"/>
+                    </a>
+                    <h4>Huaxia Xia</h4>
+                    <span><span><img loading="lazy" src="/assets/brand/meituan_square.png"/>Meituan</span><i class="gray">Chief Scientist & VP</i></span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://scholar.google.com/citations?user=gFtI-8QAAAAJ" target="_blank">
+                        <img loading="lazy" src="/assets/person/yu_qiao.jpg"/>
+                    </a>
+                    <h4 id="DEI">Yu Qiao</h4>
+                    <span><span><img loading="lazy" src="/assets/brand/shanghai_ai_lab_square.png"/>Shanghai AI Lab</span><i class="gray">Lead Scientist & Professor</i></span>
+                    <div></div>
+                </div>
+
+            </div>
+
+
+        </div> 
+    </div> -->
+
+
+
+    <br>
+
+
+
+
+</body>
+
+
+
+<script>
+    track1render();
+    track2render();
+    track3render();
+    track4render();
+    track5render();
+    track50render();
+    track6render();
+    track60render();
+    track7render();
+</script>
