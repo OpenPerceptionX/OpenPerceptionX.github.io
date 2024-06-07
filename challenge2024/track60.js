@@ -49,7 +49,7 @@ const track60data = [
         metric1: "0.7170",
         metric2: "61.2355",
         country: "CN",
-        institution: "Tsinghua University<br>清华大学",
+        institution: "IEISystem<br>浪潮信息",
         award: "blank",
         disqualified: false,
         links: ""
