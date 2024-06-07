@@ -203,10 +203,10 @@ const track60data = [
         primary: "0.6567",
         metric1: "0.6586",
         metric2: "67.3572",
-        country: "-",
-        institution: "-",
+        country: "CA",
+        institution: "Huawei Canada",
         award: "blank",
-        disqualified: true,
+        disqualified: false,
         links: ""
     },
     {

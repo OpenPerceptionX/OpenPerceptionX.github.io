@@ -395,17 +395,17 @@ const track6data = [
         disqualified: false,
         links: ""
     },
-    {
-        team: "C2AD_DriveLM",
-        primary: "0.2868",
-        metric1: "0.0000",
-        metric2: "58.7814",
-        country: "CA",
-        institution: "Huawei Canada",
-        award: "blank",
-        disqualified: true,
-        links: ""
-    }
+    // {
+    //     team: "C2AD_DriveLM",
+    //     primary: "0.2868",
+    //     metric1: "0.0000",
+    //     metric2: "58.7814",
+    //     country: "CA",
+    //     institution: "Huawei Canada",
+    //     award: "blank",
+    //     disqualified: true,
+    //     links: ""
+    // }
 ];
 
 
