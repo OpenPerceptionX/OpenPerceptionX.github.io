@@ -6,8 +6,7 @@ const track60data = [
         metric2: "64.8120",
         country: "CN",
         institution: "East China Normal University<br>华东师范大学",
-        // award: "rank01",
-        award: "blank",
+        award: "rank01",
         disqualified: false,
         links: ""
     },
@@ -18,8 +17,7 @@ const track60data = [
         metric2: "64.7224",
         country: "CN",
         institution: "Chongqing Changan Automobile Co. Ltd / Chongqing University of Posts and Telecommunications<br>长安汽车 / 重庆邮电大学",
-        // award: "bulb",
-        award: "blank",
+        award: "bulb",
         disqualified: false,
         links: ""
     },
@@ -250,17 +248,6 @@ const track60data = [
         primary: "0.5947",
         metric1: "0.6962",
         metric2: "60.0369",
-        country: "-",
-        institution: "-",
-        award: "blank",
-        disqualified: false,
-        links: ""
-    },
-    {
-        team: "exiawsh",
-        primary: "0.5884",
-        metric1: "0.7746",
-        metric2: "59.8850",
         country: "-",
         institution: "-",
         award: "blank",

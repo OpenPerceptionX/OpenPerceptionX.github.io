@@ -6,8 +6,7 @@ const track6data = [
         metric2: "65.2512",
         country: "CN",
         institution: "Nanjing University<br>南京大学",
-        // award: "rank01",
-        award: "blank",
+        award: "rank01",
         disqualified: false,
         links: ""
     },
@@ -407,6 +406,17 @@ const track6data = [
     //     disqualified: true,
     //     links: ""
     // }
+    {
+        team: "exiawsh",
+        primary: "0.5884",
+        metric1: "0.7746",
+        metric2: "59.8850",
+        country: "US",
+        institution: "NVIDIA",
+        award: "blank",
+        disqualified: false,
+        links: ""
+    },
 ];
 
 

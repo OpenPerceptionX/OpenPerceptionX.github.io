@@ -6,8 +6,7 @@ const track3data = [
         metric2: "0.2541",
         country: "CN",
         institution: "IEIT<br>浪潮信息",
-        // award: "rank01",
-        award: "blank",
+        award: "rank01",
         disqualified: false,
         links: ""
     },
@@ -40,8 +39,7 @@ const track3data = [
         metric2: "0.3092",
         country: "CN",
         institution: "Xi'an Jiaotong University<br>西安交通大学",
-        // award: "rank02",
-        award: "blank",
+        award: "rank02",
         disqualified: false,
         links: ""
     },
