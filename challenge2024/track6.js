@@ -407,7 +407,7 @@ const track6data = [
     //     links: ""
     // }
     {
-        team: "exiawsh",
+        team: "Team NVIDIA",
         primary: "0.5884",
         metric1: "0.7746",
         metric2: "59.8850",
