@@ -149,7 +149,7 @@ const track60data = [
         metric1: "0.6793",
         metric2: "56.4965",
         country: "CH",
-        institution: "Swiss Federal Institute of Technology in Lausanne",
+        institution: "École Polytechnique Fédérale de Lausanne",
         award: "blank",
         disqualified: false,
         links: ""
