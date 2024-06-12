@@ -50,9 +50,9 @@
             width: 33px;
         }
     }
-    &:nth-child(5) {
+    /* &:nth-child(5) {
         display: none;
-    }
+    } */
 }
 
 
