@@ -8,7 +8,7 @@ const track3data = [
         institution: "IEIT<br>浪潮信息",
         award: "rank01",
         disqualified: false,
-        links: ""
+        links: "<a href='technical_report/occ_IEIT-AD.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
     },
     {
         team: "SaicOcc",
@@ -41,7 +41,7 @@ const track3data = [
         institution: "Xi'an Jiaotong University<br>西安交通大学",
         award: "rank02",
         disqualified: false,
-        links: ""
+        links: "<a href='technical_report/occ_Harbour-Chips.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
     },
     {
         team: "GaussianOcc",
@@ -74,7 +74,7 @@ const track3data = [
         institution: "Xiaomi<br>小米",
         award: "blank",
         disqualified: false,
-        links: ""
+        links: "<a href='technical_report/occ_ARM330.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
     },
     {
         team: "CXZN & CUPT",
@@ -250,7 +250,7 @@ const track3data = [
         institution: "University of Macau / Inceptio Technology<br>澳门大学 / 嬴彻科技",
         award: "blank",
         disqualified: false,
-        links: ""
+        links: "<a href='technical_report/occ_UM-IT.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
     }
 ];
 

@@ -8,7 +8,7 @@ const track7data = [
         institution: "Langge Technology<br>朗歌科技",
         award: "blub, rank01",
         disqualified: false,
-        links: ""
+        links: "<a href='technical_report/mapless_LGmap.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
     },
     {
         team: "XIAOMIEV",
@@ -19,7 +19,7 @@ const track7data = [
         institution: "Xiaomi<br>小米",
         award: "blank",
         disqualified: false,
-        links: ""
+        links: "<a href='technical_report/mapless_XIAOMIEV.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
     },
     {
         team: "CrazyFriday",
@@ -30,7 +30,7 @@ const track7data = [
         institution: "Beijing Institute of Technology / MEGVII<br>北京理工大学 / 旷视科技",
         award: "blank",
         disqualified: false,
-        links: ""
+        links: "<a href='technical_report/mapless_CrazyFriday.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
     },
     {
         team: "real_last_time_CR",
@@ -63,7 +63,7 @@ const track7data = [
         institution: "Didi Chuxing<br>滴滴出行",
         award: "blank",
         disqualified: true,
-        links: ""
+        links: "<a href='technical_report/mapless_mapvision.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
     },
     // {
     //     team: "\u3068\u304f\u3081\u3044",

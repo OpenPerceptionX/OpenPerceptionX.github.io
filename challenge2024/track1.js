@@ -7,7 +7,7 @@ const track1data = [
         institution: "NVIDIA",
         award: "blub, rank01",
         disqualified: false,
-        links: ""
+        links: "<a href='technical_report/e2e_Team NVIDIA.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
     },
     {
         team: "ZERON",
@@ -16,7 +16,7 @@ const track1data = [
         institution: "ZERON<br>零一汽车",
         award: "rank02",
         disqualified: false,
-        links: ""
+        links: "<a href='technical_report/e2e_ZERON.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
     },
     {
         team: "abc",
