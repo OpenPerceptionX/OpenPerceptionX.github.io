@@ -19,7 +19,7 @@ const track60data = [
         institution: "Chongqing Changan Automobile Co. Ltd / Chongqing University of Posts and Telecommunications<br>长安汽车 / 重庆邮电大学",
         award: "bulb",
         disqualified: false,
-        links: ""
+        links: "<a href='technical_report/language_ADLM.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
     },
     {
         team: "momo",
@@ -119,7 +119,7 @@ const track60data = [
         institution: "Institute of Software, Chinese Academy of Sciences<br>中国科学院软件研究所",
         award: "blank",
         disqualified: false,
-        links: ""
+        links: "<a href='technical_report/language_Course Assignment.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
     },
     {
         team: "flappy_bird",
