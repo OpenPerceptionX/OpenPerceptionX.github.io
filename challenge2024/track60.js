@@ -8,7 +8,7 @@ const track60data = [
         institution: "East China Normal University<br>华东师范大学",
         award: "rank01",
         disqualified: false,
-        links: ""
+        links: "<a href='technical_report/language_CPS.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
     },
     {
         team: "ADLM",

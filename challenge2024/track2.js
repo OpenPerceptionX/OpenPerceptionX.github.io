@@ -8,7 +8,7 @@ const track2data = [
         institution: "University of Science and Technology of China<br>中国科学技术大学",
         award: "rank01",
         disqualified: false,
-        links: ""
+        links: "<a href='technical_report/predictive_USTC_IAT_United.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
     },
     {
         team: "Huawei-Noah & CUHK-SZ",
@@ -19,7 +19,7 @@ const track2data = [
         institution: "Huawei / The Chinese University of Hong Kong, Shenzhen<br>华为 / 香港中文大学（深圳）",
         award: "blub, rank02",
         disqualified: false,
-        links: ""
+        links: "<a href='technical_report/predictive_Huawei-Noah & CUHK-SZ.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
     },
     {
         team: "mcchi",

@@ -7,7 +7,7 @@ const track4data = [
         institution: "Tsinghua University / Lenovo<br>清华大学 / 联想",
         award: "blub, rank01",
         disqualified: false,
-        links: ""
+        links: "<a href='technical_report/multiview_THU-LenovoAI.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
     },
     {
         team: "chanc101",
@@ -27,7 +27,7 @@ const track4data = [
         institution: "Xiaomi Robot<br>小米机器人",
         award: "rank02",
         disqualified: false,
-        links: ""
+        links: "<a href='technical_report/multiview_Mi-Robot.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
     },
     {
         team: "pku",
