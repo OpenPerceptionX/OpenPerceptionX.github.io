@@ -6,7 +6,7 @@ const track50data = [
         institution: "University of Tübingen",
         award: "rank02",
         disqualified: false,
-        links: ""
+        links: "<a href='technical_report/carla_Tuebingen AI.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
     },
     {
         team: "LLM4AD",
@@ -15,7 +15,7 @@ const track50data = [
         institution: "Wayve / University of Tübingen",
         award: "blub, rank01",
         disqualified: false,
-        links: ""
+        links: "<a href='technical_report/carla_LLM4AD.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
     },
     {
         team: "Kyber-E2E",
@@ -24,7 +24,7 @@ const track50data = [
         institution: "Huawei<br>华为",
         award: "blank",
         disqualified: false,
-        links: ""
+        links: "<a href='technical_report/carla_Kyber-E2E.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
     },
     {
         team: "greatone",
@@ -42,7 +42,7 @@ const track50data = [
         institution: "Universidade de São Paulo",
         award: "blank",
         disqualified: false,
-        links: ""
+        links: "<a href='technical_report/carla_LRM.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
     },
 ];
 
