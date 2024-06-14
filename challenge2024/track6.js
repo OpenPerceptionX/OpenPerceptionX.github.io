@@ -8,7 +8,7 @@ const track6data = [
         institution: "Nanjing University<br>南京大学",
         award: "rank01",
         disqualified: false,
-        links: ""
+        links: "<a href='technical_report/language_NJU-ImagineLab.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
     },
     {
         team: "jhdcm",
