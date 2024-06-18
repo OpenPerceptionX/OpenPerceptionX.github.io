@@ -8,7 +8,7 @@ const track3data = [
         institution: "IEIT<br>浪潮信息",
         award: "rank01",
         disqualified: false,
-        links: "<a href='technical_report/occ_IEIT-AD.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
+        links: "<a href='technical_report/occ_IEIT-AD.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>&nbsp;<a href='https://drive.google.com/file/d/1EDPflhC1rfQTBla3vH-yuadWiIvxPIM3/view?usp=sharing' target='_blank'><img class='inlineimg' src='/assets/icon/video.png'/></a>"
     },
     {
         team: "SaicOcc",
@@ -250,7 +250,7 @@ const track3data = [
         institution: "University of Macau / Inceptio Technology<br>澳门大学 / 嬴彻科技",
         award: "blank",
         disqualified: false,
-        links: "<a href='technical_report/occ_UM-IT.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
+        links: "<a href='technical_report/occ_UM-IT.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>&nbsp;<a href='https://drive.google.com/file/d/1WBHS23poC9iV_I352TfOBa5dN-HrZFjQ/view?usp=sharing' target='_blank'><img class='inlineimg' src='/assets/icon/video.png'/></a>"
     }
 ];
 

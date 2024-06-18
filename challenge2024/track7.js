@@ -8,7 +8,7 @@ const track7data = [
         institution: "Langge Technology<br>朗歌科技",
         award: "blub, rank01",
         disqualified: false,
-        links: "<a href='technical_report/mapless_LGmap.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
+        links: "<a href='technical_report/mapless_LGmap.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>&nbsp;<a href='https://drive.google.com/file/d/18PKeXyIr0WGV8GbeEMzXyGqjU6D56c0y/view?usp=sharing' target='_blank'><img class='inlineimg' src='/assets/icon/video.png'/></a>"
     },
     {
         team: "XIAOMIEV",
