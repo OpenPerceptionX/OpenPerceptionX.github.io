@@ -281,8 +281,8 @@ function track3render() {
     track3data.slice((track3currentPage - 1) * track3pageSize, track3currentPage * track3pageSize).forEach((item, index) => {
         const row = document.createElement("tr");
         row.innerHTML = `
-            <td>${item.rank} <img src="/assets/icon/${item.award}.png" class="inlineimg"/></td>
-            <td><img src="/assets/flags/${item.country}.svg" class="inlineimg"/> ${item.country}</td>
+            <td>${item.rank} <img src="/assets/icon/${item.award}.png" class="inlineflag"/></td>
+            <td><img src="/assets/flags/${item.country}.svg" class="inlineflag"/> ${item.country}</td>
             <td>${item.institution}</td>
             <td><b>${item.primary}</b></td>
             <td>${item.team}</td>

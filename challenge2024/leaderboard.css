@@ -74,8 +74,11 @@
 
 
 
-.inlineimg {
+.inlineflag {
     height: 17px;
+}
+.inlineimg {
+    height: 27px;
 }
 
 
