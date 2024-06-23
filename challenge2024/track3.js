@@ -8,7 +8,7 @@ const track3data = [
         institution: "IEIT<br>浪潮信息",
         award: "rank01",
         disqualified: false,
-        links: "<a href='technical_report/occ_IEIT-AD.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
+        links: "<a href='technical_report/occ_IEIT-AD.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>&nbsp;<a href='https://drive.google.com/file/d/1EDPflhC1rfQTBla3vH-yuadWiIvxPIM3/view?usp=sharing' target='_blank'><img class='inlineimg' src='/assets/icon/video.png'/></a>"
     },
     {
         team: "SaicOcc",
@@ -250,7 +250,7 @@ const track3data = [
         institution: "University of Macau / Inceptio Technology<br>澳门大学 / 嬴彻科技",
         award: "blank",
         disqualified: false,
-        links: "<a href='technical_report/occ_UM-IT.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
+        links: "<a href='technical_report/occ_UM-IT.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>&nbsp;<a href='https://drive.google.com/file/d/1WBHS23poC9iV_I352TfOBa5dN-HrZFjQ/view?usp=sharing' target='_blank'><img class='inlineimg' src='/assets/icon/video.png'/></a>"
     }
 ];
 
@@ -281,8 +281,8 @@ function track3render() {
     track3data.slice((track3currentPage - 1) * track3pageSize, track3currentPage * track3pageSize).forEach((item, index) => {
         const row = document.createElement("tr");
         row.innerHTML = `
-            <td>${item.rank} <img src="/assets/icon/${item.award}.png" class="inlineimg"/></td>
-            <td><img src="/assets/flags/${item.country}.svg" class="inlineimg"/> ${item.country}</td>
+            <td>${item.rank} <img src="/assets/icon/${item.award}.png" class="inlineflag"/></td>
+            <td><img src="/assets/flags/${item.country}.svg" class="inlineflag"/> ${item.country}</td>
             <td>${item.institution}</td>
             <td><b>${item.primary}</b></td>
             <td>${item.team}</td>

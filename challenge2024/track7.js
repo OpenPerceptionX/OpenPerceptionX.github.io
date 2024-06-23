@@ -8,7 +8,7 @@ const track7data = [
         institution: "Langge Technology<br>朗歌科技",
         award: "blub, rank01",
         disqualified: false,
-        links: "<a href='technical_report/mapless_LGmap.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
+        links: "<a href='technical_report/mapless_LGmap.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>&nbsp;<a href='https://drive.google.com/file/d/18PKeXyIr0WGV8GbeEMzXyGqjU6D56c0y/view?usp=sharing' target='_blank'><img class='inlineimg' src='/assets/icon/video.png'/></a>"
     },
     {
         team: "XIAOMIEV",
@@ -534,8 +534,8 @@ function track7render() {
     track7data.slice((track7currentPage - 1) * track7pageSize, track7currentPage * track7pageSize).forEach((item, index) => {
         const row = document.createElement("tr");
         row.innerHTML = `
-            <td>${item.rank} <img src="/assets/icon/${item.award}.png" class="inlineimg"/></td>
-            <td><img src="/assets/flags/${item.country}.svg" class="inlineimg"/> ${item.country}</td>
+            <td>${item.rank} <img src="/assets/icon/${item.award}.png" class="inlineflag"/></td>
+            <td><img src="/assets/flags/${item.country}.svg" class="inlineflag"/> ${item.country}</td>
             <td>${item.institution}</td>
             <td><b>${item.primary}</b></td>
             <td>${item.team}</td>

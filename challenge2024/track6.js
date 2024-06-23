@@ -8,7 +8,7 @@ const track6data = [
         institution: "Nanjing University<br>南京大学",
         award: "rank01",
         disqualified: false,
-        links: ""
+        links: "<a href='technical_report/language_NJU-ImagineLab.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
     },
     {
         team: "jhdcm",
@@ -446,8 +446,8 @@ function track6render() {
     track6data.slice((track6currentPage - 1) * track6pageSize, track6currentPage * track6pageSize).forEach((item, index) => {
         const row = document.createElement("tr");
         row.innerHTML = `
-            <td>${item.rank} <img src="/assets/icon/${item.award}.png" class="inlineimg"/></td>
-            <td><img src="/assets/flags/${item.country}.svg" class="inlineimg"/> ${item.country}</td>
+            <td>${item.rank} <img src="/assets/icon/${item.award}.png" class="inlineflag"/></td>
+            <td><img src="/assets/flags/${item.country}.svg" class="inlineflag"/> ${item.country}</td>
             <td>${item.institution}</td>
             <td><b>${item.primary}</b></td>
             <td>${item.team}</td>

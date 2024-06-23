@@ -74,8 +74,17 @@
 
 
 
-.inlineimg {
+.inlineflag {
     height: 17px;
+    @media screen and (max-width: 1024px) {
+        height: 27px;
+    }
+}
+.inlineimg {
+    height: 27px;
+    @media screen and (max-width: 1024px) {
+        height: 49px;
+    }
 }
 
 

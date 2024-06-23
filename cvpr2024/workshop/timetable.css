@@ -66,3 +66,26 @@
         padding-inline-start: 20px;
     }
 }
+
+
+
+.awardwinner {
+    margin: 33px;
+    margin-bottom: 0;
+    padding: 17px;
+    background-color: rgb(0, 160, 232, .1);
+    & span {
+        margin-top: 17px;
+        margin-left: 11px;
+        padding-left: 23px;
+        border-left: solid 3px gray;
+        margin-bottom: 7px;
+        @media screen and (max-width: 1024px) {
+            padding-left: 30px;
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}

@@ -16,7 +16,7 @@ const track1data = [
         institution: "ZERON<br>零一汽车",
         award: "rank02",
         disqualified: false,
-        links: "<a href='technical_report/e2e_ZERON.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
+        links: "<a href='technical_report/e2e_ZERON.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/>&nbsp;</a><a href='https://drive.google.com/file/d/1y0GTu0wFR4FMLHqnEpJWbAGl27Mn74uQ/view?usp=sharing' target='_blank'><img class='inlineimg' src='/assets/icon/poster.png'/></a>"
     },
     {
         team: "abc",
@@ -731,8 +731,8 @@ function track1render() {
     track1data.slice((track1currentPage - 1) * track1pageSize, track1currentPage * track1pageSize).forEach((item, index) => {
         const row = document.createElement("tr");
         row.innerHTML = `
-            <td>${item.rank} <img src="/assets/icon/${item.award}.png" class="inlineimg"/></td>
-            <td><img src="/assets/flags/${item.country}.svg" class="inlineimg"/> ${item.country}</td>
+            <td>${item.rank} <img src="/assets/icon/${item.award}.png" class="inlineflag"/></td>
+            <td><img src="/assets/flags/${item.country}.svg" class="inlineflag"/> ${item.country}</td>
             <td>${item.institution}</td>
             <td><b>${item.primary}</b></td>
             <td>${item.team}</td>
