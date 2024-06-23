@@ -19,7 +19,7 @@ const track60data = [
         institution: "Chongqing Changan Automobile Co. Ltd / Chongqing University of Posts and Telecommunications<br>长安汽车 / 重庆邮电大学",
         award: "bulb",
         disqualified: false,
-        links: ""
+        links: "<a href='technical_report/language_ADLM.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
     },
     {
         team: "momo",
@@ -119,7 +119,7 @@ const track60data = [
         institution: "Institute of Software, Chinese Academy of Sciences<br>中国科学院软件研究所",
         award: "blank",
         disqualified: false,
-        links: ""
+        links: "<a href='technical_report/language_Course Assignment.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
     },
     {
         team: "flappy_bird",
@@ -283,8 +283,8 @@ function track60render() {
     track60data.slice((track60currentPage - 1) * track60pageSize, track60currentPage * track60pageSize).forEach((item, index) => {
         const row = document.createElement("tr");
         row.innerHTML = `
-            <td>${item.rank} <img src="/assets/icon/${item.award}.png" class="inlineimg"/></td>
-            <td><img src="/assets/flags/${item.country}.svg" class="inlineimg"/> ${item.country}</td>
+            <td>${item.rank} <img src="/assets/icon/${item.award}.png" class="inlineflag"/></td>
+            <td><img src="/assets/flags/${item.country}.svg" class="inlineflag"/> ${item.country}</td>
             <td>${item.institution}</td>
             <td><b>${item.primary}</b></td>
             <td>${item.team}</td>
