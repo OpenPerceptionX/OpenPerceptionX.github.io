@@ -6,7 +6,7 @@ const track5data = [
         institution: "Wayve / University of Tübingen",
         award: "blub, rank01",
         disqualified: false,
-        links: "<a href='technical_report/carla_LLM4AD.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
+        links: "<a href='https://opendrivelab.github.io/Challenge%202024/carla_LLM4AD.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
     },
     {
         team: "Tuebingen_AI",
@@ -15,7 +15,7 @@ const track5data = [
         institution: "University of Tübingen",
         award: "rank02",
         disqualified: false,
-        links: "<a href='technical_report/carla_Tuebingen AI.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
+        links: "<a href='https://opendrivelab.github.io/Challenge%202024/carla_Tuebingen AI.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
     },
     {
         team: "LRM",
@@ -24,7 +24,7 @@ const track5data = [
         institution: "Universidade de São Paulo",
         award: "blank",
         disqualified: false,
-        links: "<a href='technical_report/carla_LRM.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
+        links: "<a href='https://opendrivelab.github.io/Challenge%202024/carla_LRM.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
     },
 ];
 
