@@ -19,7 +19,7 @@ const track2data = [
         institution: "Huawei / The Chinese University of Hong Kong, Shenzhen<br>华为 / 香港中文大学（深圳）",
         award: "blub, rank02",
         disqualified: false,
-        links: "<a href='https://opendrivelab.github.io/Challenge%202024/predictive_Huawei-Noah & CUHK-SZ.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>&nbsp;<a href='https://drive.google.com/file/d/1dXnGy_SHEHm_GWY9MrdJX52X7e3Y_sCb/view?usp=sharing' target='_blank'><img class='inlineimg' src='/assets/icon/video.png'/></a>"
+        links: "<a href='https://opendrivelab.github.io/Challenge%202024/predictive_Huawei-Noah & CUHK-SZ.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>&nbsp;<a href='https://youtu.be/0ldD02RuNLA' target='_blank'><img class='inlineimg' src='/assets/icon/youtube.png'/></a>"
     },
     {
         team: "mcchi",
