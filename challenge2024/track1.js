@@ -16,7 +16,7 @@ const track1data = [
         institution: "ZERON<br>零一汽车",
         award: "rank02",
         disqualified: false,
-        links: "<a href='https://opendrivelab.github.io/Challenge%202024/e2e_ZERON.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/>&nbsp;</a><a href='https://drive.google.com/file/d/1y0GTu0wFR4FMLHqnEpJWbAGl27Mn74uQ/view?usp=sharing' target='_blank'><img class='inlineimg' src='/assets/icon/poster.png'/></a>"
+        links: "<a href='https://opendrivelab.github.io/Challenge%202024/e2e_ZERON.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/>&nbsp;</a><a href='https://opendrivelab.github.io/Challenge%202024/others/e2e_ZERON.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/poster.png'/></a>"
     },
     {
         team: "abc",
