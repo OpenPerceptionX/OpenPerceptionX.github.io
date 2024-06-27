@@ -41,7 +41,7 @@ const track7data = [
         institution: "Bosch / Tsinghua University",
         award: "blank",
         disqualified: true,
-        links: "<a href='https://opendrivelab.github.io/Challenge%202024/mapless_BoschXCASW.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
+        links: ""
     },
     {
         team: "Victoryv2",
@@ -147,11 +147,11 @@ const track7data = [
         primary: "0.5164",
         metric1: "0.3874",
         metric2: "0.2964",
-        country: "-",
-        institution: "-",
+        country: "DE",
+        institution: "Bosch",
         award: "blank",
         disqualified: false,
-        links: ""
+        links: "<a href='https://opendrivelab.github.io/Challenge%202024/mapless_BoschXCASW.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
     },
     {
         team: "superddr",
