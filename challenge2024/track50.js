@@ -15,7 +15,7 @@ const track50data = [
         institution: "Wayve / University of Tübingen",
         award: "blub, rank01",
         disqualified: false,
-        links: "<a href='https://opendrivelab.github.io/Challenge%202024/carla_LLM4AD.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
+        links: "<a href='https://opendrivelab.github.io/Challenge%202024/carla_LLM4AD.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>&nbsp;<a href='https://arxiv.org/abs/2406.10165' target='_blank'><img class='inlineimg' src='/assets/icon/arxiv.png'/></a>"
     },
     {
         team: "Kyber-E2E",
