@@ -63,7 +63,7 @@ const track7data = [
         institution: "Didi Chuxing<br>滴滴出行",
         award: "blank",
         disqualified: true,
-        links: "<a href='https://opendrivelab.github.io/Challenge%202024/mapless_mapvision.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
+        links: "<a href='https://opendrivelab.github.io/Challenge%202024/mapless_mapvision.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>&nbsp;<a href='https://arxiv.org/abs/2406.10125v1' target='_blank'><img class='inlineimg' src='/assets/icon/arxiv.png'/></a>"
     },
     // {
     //     team: "\u3068\u304f\u3081\u3044",
