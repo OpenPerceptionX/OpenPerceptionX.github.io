@@ -7,7 +7,7 @@ const track1data = [
         institution: "NVIDIA",
         award: "blub, rank01",
         disqualified: false,
-        links: "<a href='https://opendrivelab.github.io/Challenge%202024/e2e_Team NVIDIA.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
+        links: "<a href='https://opendrivelab.github.io/Challenge%202024/e2e_Team NVIDIA.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>&nbsp;<a href='https://arxiv.org/abs/2406.06978' target='_blank'><img class='inlineimg' src='/assets/icon/arxiv.png'/>"
     },
     {
         team: "ZERON",
