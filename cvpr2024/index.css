@@ -210,3 +210,37 @@ a .link_img_show {
     width: 20px;
     content: url(/assets/icon/link.png);
 }
+
+
+
+.snapshots_container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, 280px);
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: max(33px, 3%);
+}
+.snapshots_container div {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    border: 1px solid lightgray;
+}
+.snapshots_container div a {
+    display: flex;
+}
+.snapshots_container div a img {
+    height: 210px;
+    width: 280px;
+    background-size: cover; 
+    margin: 3px;
+}
+@media screen and (max-width: 1024px) {
+    .snapshots_container {
+        grid-template-columns: repeat(auto-fill, 45%);
+    }
+    .snapshots_container div a img {
+        width: 100%;
+    }
+}
