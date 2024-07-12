@@ -319,6 +319,17 @@ const track6data = [
         links: ""
     },
     {
+        team: "MTMM†",
+        primary: "0.5974",
+        metric1: "0.7473",
+        metric2: "65.5870",
+        country: "CN",
+        institution: "Sun Yat-sen University / Meituan<br>中山大学 / 美团",
+        award: "blank",
+        disqualified: false,
+        links: "<a href='https://opendrivelab.github.io/Challenge%202024/language_MTMM.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
+    },
+    {
         team: "ft_students_bit",
         primary: "0.3929",
         metric1: "0.1995",
