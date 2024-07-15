@@ -33,17 +33,6 @@ const track60data = [
         links: ""
     },
     {
-        team: "Zoeeeeee",
-        primary: "0.7509",
-        metric1: "0.7511",
-        metric2: "65.9302",
-        country: "CN",
-        institution: "Sun Yat-sen University / Meituan<br>中山大学 / 美团",
-        award: "blank",
-        disqualified: false,
-        links: ""
-    },
-    {
         team: "IEIT-AD",
         primary: "0.7420",
         metric1: "0.7170",
