@@ -326,7 +326,7 @@ const track6data = [
         country: "CN",
         institution: "Sun Yat-sen University / Meituan<br>中山大学 / 美团",
         award: "blank",
-        disqualified: false,
+        disqualified: true,
         links: "<a href='https://opendrivelab.github.io/Challenge%202024/language_MTMM.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
     },
     {
