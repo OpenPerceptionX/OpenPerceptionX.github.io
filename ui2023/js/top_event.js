@@ -1,9 +1,9 @@
 // 插入头部
-$.get("/components/header_event.html?111x",function(result){
+$.get("/ui2023/components/header_event.html?111x",function(result){
   $("body").prepend(result)
 })
 //插入底部
-$.get("/components/footer.html?xx",function(result){
+$.get("/ui2023/components/footer.html?xx",function(result){
   $("body").append(result)
 })
 
