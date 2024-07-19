@@ -1,4 +1,3 @@
-@import url("swiper-bundle.min.css");
 #box {overflow-y: scroll;width: 100vw;height: 100vw;}
 /* banner */
 .t_text {text-shadow: rgba(0,0,0,.3) 2px 2px 0;font-family: "Poppins", Arial, sans-serif;font-size: 100px;font-weight: 900;line-height: 48px;font-family: Georgia, "Times New Roman", Times, serif;line-height: 120%;}
