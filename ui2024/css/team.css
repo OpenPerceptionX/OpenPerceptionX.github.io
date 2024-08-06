@@ -62,3 +62,10 @@
         }
     }
 }
+
+
+
+.passed {
+    padding: 1px;
+    border: 1px solid rgb(33, 33, 33);
+}
