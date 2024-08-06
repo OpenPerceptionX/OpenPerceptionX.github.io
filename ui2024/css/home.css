@@ -144,3 +144,14 @@
 li {
     list-style-type: disc;
 }
+
+
+
+.tag {
+    display: inline-block;
+    text-shadow: none;
+    background-color: rgb(233, 233, 233);
+    border-radius: 13px;
+    padding: 3px 13px;
+    margin-right: 7px;
+}
