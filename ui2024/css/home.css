@@ -16,6 +16,10 @@
 }
 
 
+
+div .event_container a {
+    background-color: white !important;
+}
 @media screen and (min-width: 1024px) {
     .left_right div .event_container {
         grid-template-columns: repeat(auto-fill, 27vw);

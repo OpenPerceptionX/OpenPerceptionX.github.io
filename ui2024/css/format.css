@@ -206,7 +206,7 @@ a:hover .link_img {
 
 
 
-.block_left div .event_container {
+div .event_container {
     display: grid;
     grid-template-columns: repeat(auto-fill, 512px);
     justify-content: space-between;
@@ -216,10 +216,10 @@ a:hover .link_img {
         grid-template-columns: repeat(auto-fill, 100%);
     }
 }
-.block_left div .event_container a {
+div .event_container a {
     background-color: rgb(233, 233, 233);
 }
-.block_left div .event_container a img {
+div .event_container a img {
     height: 288px;
     width: 100%;
     background-size: cover; 
@@ -228,14 +228,14 @@ a:hover .link_img {
         height: 50vw;
     }
 }
-.block_left div .event_container a div {
+div .event_container a div {
     justify-content: space-between;
     height: 224px;
     @media screen and (max-width: 1024px) {
         height: 320px;
     }
 }
-.block_left div .event_container a div div {
+div .event_container a div div {
     padding: 0 33px;
     & h4 {
         text-align: right;
