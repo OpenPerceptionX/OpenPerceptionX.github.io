@@ -20,7 +20,8 @@ li {
 
 
 a:any-link:hover, a:-webkit-any-link:hover {
-    opacity: .67;
+    color: #00a0e8;
+    opacity: .77;
 }
 a .link_img {
     display: none;
