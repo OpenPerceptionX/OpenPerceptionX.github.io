@@ -168,3 +168,10 @@ header.white {
         background-color: white;
     }
 }
+
+
+
+.header_right li a:hover{
+    color: #00a0e8 !important;
+    opacity: 1 !important;
+}
