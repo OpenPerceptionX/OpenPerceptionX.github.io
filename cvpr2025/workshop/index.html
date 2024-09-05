@@ -1,0 +1,119 @@
+<head>
+    <title>Workshop at CVPR 20245 | OpenDriveLab</title>
+    <meta name="keywords" content="OpenDriveLab, CVPR 2025, Workshop, Autonomous Systems, Embodied AI, Autonomous Driving">
+    <meta name="description" content="OpenDriveLab is committed to exploring cutting-edge autonomous driving technology, launching a series of benchmarking work, open source to serve the community, and promote the common development of the industry. Friends who are committed to making influential research are welcome to join!">
+
+    <link rel="icon" type="image/png" href="/assets/icon/D_small.png">
+
+    <link href="/ui2024/css/format.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/ui2024/css/font.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="./timetable.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="./index.css" rel="stylesheet" type="text/css" media="all"/>
+
+    <script src="/ui2024/js/jquery-3.7.1.min.js"  crossorigin="anonymous"></script>
+</head>
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L7VEDHS6G8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L7VEDHS6G8');
+</script>
+
+
+
+<script>
+    $.get("/ui2024/components/header.html",function(result){
+        $("body").prepend(result)
+    })
+    $.get("/ui2024/components/footer.html",function(result){
+        $("body").append(result)
+    })
+</script>
+
+
+
+<script>
+    function convertTimezone(offset) {
+        var selectedOffset = parseInt(offset);
+        var eventTimes = document.querySelectorAll(".itimetable_table_time");
+        eventTimes.forEach(function (eventTime) {
+            var originalTime = new Date(eventTime.getAttribute("data-original-time"));
+            var adjustedTime = new Date(originalTime.getTime() + selectedOffset * 60 * 60 * 1000);
+            var hours = adjustedTime.getHours().toString().padStart(2, "0");
+            var minutes = adjustedTime.getMinutes().toString().padStart(2, "0");
+            var month = adjustedTime.toLocaleString("en-US", { month: "long" });
+            var day = adjustedTime.getDate();
+            var formattedTime = hours + ":" + minutes + ", " + month + " " + day;
+            eventTime.textContent = formattedTime;
+      });
+    }
+    window.addEventListener('load', function() {
+        timezoneSelect.selectedIndex = 5;
+        convertTimezone(timezoneSelect.value);
+    });
+</script>
+
+
+
+
+<body>
+
+    
+
+    <div class="banner">
+        <div class="banner_container">
+
+            <div class="banner_logo">
+                <!-- <img loading="lazy" src="/assets/icon/cvpr/cvpr2024_white.png"/> -->
+                <img loading="lazy" src="/assets/icon/cvpr/ieee_cs_white.png"/>
+            </div>
+            
+            <div>
+                <h1 class="Owhite">General-purpose Autonomous Systems</h1>
+            </div>
+
+            <div class="banner_content Owhite">
+                <h6>
+                    CVPR 2025 Workshop
+                    <!-- <br>
+                    <a href="https://maps.app.goo.gl/EDnizeJZfi5S9Eyt9" target="_blank" style="text-decoration: underline;">Summit 442</a>, June 17, Seattle, USA
+                    <br><br>
+                    <a href="/cvpr2024/" style="text-decoration: underline;">Join other events at CVPR 2024</a> -->
+                </h6>
+            </div>
+            
+        </div>
+    </div>
+    
+
+
+    <br id="challenge"><br id="workshop"><br id="contact">
+
+
+
+    <div class="block_left">
+        <div style="flex-grow: 6;">
+
+            <a class="track_title" href="#workshop">
+                <h2>
+                    TBD
+                    <img loading="lazy" class="link_img"/>
+                </h2>
+            </a>
+            
+        </div>
+    </div>
+
+
+
+    <br><br><br>
+
+
+
+</body>
