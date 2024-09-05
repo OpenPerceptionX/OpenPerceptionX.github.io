@@ -5,7 +5,7 @@
     background-size: cover; 
     background-position: top;
     background-blend-mode: overlay;
-    background-color: rgb(33, 33, 33, .3);
+    background-color: rgb(33, 33, 33, .4);
     @media screen and (max-width: 1024px) {
         background-position: 35%;
     }
