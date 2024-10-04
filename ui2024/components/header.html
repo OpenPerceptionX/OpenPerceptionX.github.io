@@ -16,6 +16,12 @@
 
                 <!-- <li><a href="https://docs.google.com/forms/u/1/d/e/1FAIpQLSdUL2T5QY0-jLY8gr6ViGxkaFaUAfHsfGWpqMJaEOTSrvFJCQ/viewform" target="_blank">Subscribe</a></li> -->
 
+                <li>
+                    <a href="https://starleague.ai/" target="_blank" style="margin-right: 8px;">
+                        <img id="star_league_logo" src="/assets/icon/star_league_white.png"/>
+                    </a>
+                </li>
+
                 <li onclick="drop()">
                     <a>Research</a>
                     <ul class="dropdown">
@@ -70,11 +76,13 @@
         header.classList.remove("nav_scoll");
         header_logo.src = "/assets/icon/OpenDriveLab_white.png";
         nav_button.src = "/assets/icon/nav_white.png";
+        star_league_logo.src = "/assets/icon/star_league_white.png";
     };
     const as_white = () => {
         header.classList.add("nav_scoll");
         header_logo.src = "/assets/icon/OpenDriveLab.png";
         nav_button.src = "/assets/icon/nav.png";
+        star_league_logo.src = "/assets/icon/star_league.png";
     };
 </script>
 
