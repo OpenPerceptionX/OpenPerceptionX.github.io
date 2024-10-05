@@ -44,6 +44,9 @@ a:hover .link_img {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    @media screen and (max-width: 1024px) {
+        height: 95%;
+    }
 }
 .block_left {
     flex-direction: row;
