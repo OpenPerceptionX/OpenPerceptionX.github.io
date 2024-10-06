@@ -40,7 +40,7 @@ a:hover .link_img {
     padding: 0 max(55px, 5%);
 }
 .banner_container {
-    height: 88%;
+    height: 91%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;

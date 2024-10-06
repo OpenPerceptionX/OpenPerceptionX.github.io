@@ -63,7 +63,7 @@ span, p, td, th, li, select, button, input, textarea {
     }
 }
 h6 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: normal;
     margin: 0;
     @media screen and (max-width: 1024px) {
@@ -71,7 +71,7 @@ h6 {
     }
 }
 h5, h4 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     margin: 0;
     @media screen and (max-width: 1024px) {
@@ -95,7 +95,7 @@ h2 {
     }
 }
 h1 {
-    font-size: 64px;
+    font-size: 56px;
     font-weight: bold;
     margin: 0;
     @media screen and (max-width: 1024px) {
