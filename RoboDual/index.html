@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Towards Synergistic, Generalized, and Efficient Dual-System for Robotic Manipulation</title>
+
+  <!-- <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet"> -->
+
+  <!-- <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script> -->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <link rel="icon" href="./favicon.ico?">
+
+
+
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="900" />
+
+</head>
+<body>
+  <section class="hero">
+    <div class="hero-body no-bottom-padding">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Towards Synergistic, Generalized, and Efficient Dual-System for Robotic Manipulation</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                Qingwen Bu<sup>1,4</sup>&nbsp;&nbsp;&nbsp;
+                Hongyang Li<sup>2</sup>&nbsp;&nbsp;&nbsp;  
+                Li Chen<sup>2,4</sup>&nbsp;&nbsp;&nbsp;  
+                Jisong Cai<sup>4</sup>&nbsp;&nbsp;&nbsp;
+                Jia Zeng<sup>4</sup>&nbsp;&nbsp;&nbsp;  
+                Heming Cui<sup>2</sup>&nbsp;&nbsp;&nbsp;  
+                Maoqing Yao<sup>3</sup>&nbsp;&nbsp;&nbsp;
+                Yu Qiao<sup>4</sup>&nbsp;&nbsp;&nbsp;
+
+                <p style="font-size: 18px"><br /><sup>1</sup><strong>Shanghai Jiao Tong University</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sup>2</sup><strong>The University of Hong Kong</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sup>3</sup><strong>AgiBot</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sup>4</sup><strong>Shanghai AI Lab</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </p>
+              </span>
+            </div>
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <!-- <span class="link-block">
+                  <a href=""
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span> -->
+
+                <!-- arXiv Link. -->
+                <span class="link-block">
+                  <a target="_blank" href=""
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+
+                <!-- Video Link. -->
+                <!-- <span class="link-block">
+                  <a target="_blank" href=""
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span> -->
+
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <svg class="svg-inline--fa fa-github fa-w-16" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg><!-- <i class="fab fa-github"></i> Font Awesome fontawesome.com -->
+                    </span>
+                    <span>Code (Coming Soon)</span>
+                  </a>
+                </span>
+
+                <!-- <span class="link-block">
+                  <a href=""
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fa fa-database"></i>
+                    </span>
+                    <span>Dataset</span>
+                  </a>
+                </span> -->
+
+                <!-- Code Link. -->
+
+                <!-- twitter Link. -->
+                <!-- <span class="link-block">
+                  <a target="_blank" href=""
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fab fa-twitter"></i>
+                    </span>
+                    <span>Summary</span>
+                  </a>
+                </span> -->
+              </div>
+  
+            </div>
+            </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <div align="center">
+          <img src="https://opendrivelab.github.io/RoboDual/resources/robodual/teaser_page.png" alt="Image description" width="100%">
+        </div>  
+        <br> 
+        <!-- <h2 class="subtitle has-text-centered"> -->
+        <h2 class="subtitle">
+          <div class="content has-text-justified">
+            <strong> Overview of RoboDual. </strong> Our objective is to develop a synergistic dual-system framework
+            which supplements the generalizability of large-scale pre-trained generalist with the efficient and
+            task-specific adaptation of specialist. <strong>(a)</strong> The fast specialist policy obsesses real-time and accurate
+            control by aid of the slow yet generalized outcome from the generalist one with large-scale data. <strong>(b)</strong>
+            RoboDual exhibits significant improvement in terms of performance and efficiency over a single
+            standalone option and surpasses previous state-of-the-arts in the real-robot setting.
+          </div>
+          <!-- Given a scene, our approach (VRB) learns  <strong> actionable representations </strong> for robot learning. VRB predicts contact points and a post-contact trajectory learned from <strong> human videos </strong>.  -->
+
+        </h2>
+        
+      </div>
+  
+    </div>
+  </section>
+
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container is-two-thirds">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-two-thirds">
+            <h2 class="title is-3">Abstract</h2>
+          </div>
+      </div>
+    
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-two-thirds ">
+          <div class="content has-text-justified">
+            The increasing demand for versatile robotic systems to operate in diverse and
+            dynamic environments has emphasized the importance of a generalist policy, which
+            leverages a large cross-embodiment data corpus to facilitate broad adaptability
+            and high-level reasoning. However, the generalist would struggle with inefficient
+            inference and cost-expensive training. The specialist policy, instead, is curated
+            for specific domain data and excels at task-level precision with efficiency. Yet, it
+            lacks the generalization capacity for a wide range of applications. Inspired by these
+            observations, we introduce RoboDual, a synergistic dual-system that supplements
+            the merits of both generalist and specialist policy. A diffusion transformer-based
+            specialist is devised for multi-step action rollouts, exquisitely conditioned on the
+            high-level task understanding and discretized action output of a vision-language-
+            action (VLA) based generalist. Compared to OpenVLA, RoboDual achieves a 12%
+            improvement on CALVIN and 26.7% in real-world and by adapting the specialist
+            policy with 20M trainable parameters only. It maintains strong performance with
+            merely 5% of demonstration data, and enables a 3.8× higher control frequency in
+            real-world deployment. Code and models would be made publicly available
+          </div>
+        </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h1 class="title is-2" style="text-align: center; padding-bottom: 10px;">Model Overview</h1>
+          <!-- <h2 class="subtitle is-4" style="text-align: center;">Defining Visual Affordances</h2> -->
+          <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths ">
+          <div class="content has-text-justified">
+            
+            <tr>
+              <td>
+                <div class="row">
+                  <div class="col">
+                    <img src="https://opendrivelab.github.io/RoboDual/resources/robodual/arch_page.png" alt="Image description" width="100%">
+                  </div>
+                </div>
+                <div class="columns is-centered has-text-centered">
+                  <div class="column">
+                    <div class="content has-text-justified interpolation-panel">
+                      <p style="font-size: 18px"> <strong>The overall architecture of RoboDual.</strong> (a) Generalist: The generalist takes as inputs RGB images and language prompts, generating conditioning sources for the specialist model, including latent representations and discretized actions. (b) Specialist: Comprising stacked Diffusion Transformer (DiT) blocks, the specialist is conditioned by multiple sensory inputs and the generalist's output through a cross-attention mechanism. It predicts noise injected into ground truth actions, providing fast, precise control by leveraging the slower, high-level guidance of the generalist.</p>
+                    </div>
+                  </div>
+                  <!-- <div class="column">
+                  <div class="content has-text-justified interpolation-panel">
+                      <p style="text-align: left;font-size: 18px"> <strong>The overall architecture of RoboDual.</strong> (a) Generalist: The generalist takes as inputs RGB images and language prompts, generating conditioning sources for the specialist model, including latent representations and discretized actions. (b) Specialist: Comprising stacked Diffusion Transformer (DiT) blocks, the specialist is conditioned by multiple sensory inputs and the generalist's output through a cross-attention mechanism. It predicts noise injected into ground truth actions, providing fast, precise control by leveraging the slower, high-level guidance of the generalist.</p>
+                  </div> -->
+                </div>
+              </div>
+              </td>
+            </tr>
+          </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h1 class="title is-2" style="text-align: center; padding-bottom: 10px;">Real-world Visuomotor Control Tasks</h1>
+          <!-- <h2 class="subtitle is-4" style="text-align: center;">Defining Visual Affordances</h2>  -->
+          <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths ">
+          <div class="content has-text-justified">
+            
+
+            <h2 class="subtitle is-3" style="text-align: center;">Success Rates of Real-World Experiments</h2>
+            <p>
+              All real-world experiments are conducted with an AIRBOT Play robotic arm featuring a 7-DoF action space and a third-view RGB camera. We evaluate different policies on both single-instruction tasks ("Lift the Pod Lid", "Pour Shrimp into Bowl", and "Push the Block Left") and multi-instruction tasks ("Put [object] into Basket" and Knock [object] Over").
+            </p>
+            <div align="center">
+              <img src="https://opendrivelab.github.io/RoboDual/resources/robodual/real_world_exp_page.png" alt="Image description" width="100%">
+            </div>
+
+            <tr>
+              <td>
+                
+                <h2 class="subtitle is-3" style="text-align: center;"> Single-instruction Tasks </h2>
+                <div class="row">
+                  <div class="col">
+                    <video class="center" playsinline autoplay loop muted src="https://opendrivelab.github.io/RoboDual/resources/robodual/visuomotor/single-task/push_block_left.mp4" width="100%" style="border-radius:10px;"></video>
+                    <center>Push block left</center>
+                    <!-- <br> -->
+                  </div>
+                  <div class="col">
+                    <video class="center" playsinline autoplay loop muted src="https://opendrivelab.github.io/RoboDual/resources/robodual/visuomotor/single-task/pour_shrimp/20240905-174112.175-2.mp4" width="100%" style="border-radius:10px;"></video>
+                    <center>Pour shrimp into bowl</center>
+                    <br>
+                  </div>
+                  <div class="col">
+                    <video class="center" playsinline autoplay loop muted src="https://opendrivelab.github.io/RoboDual/resources/robodual/visuomotor/single-task/lift_pod_lid.mp4" width="100%" style="border-radius:10px;"></video>
+                    <center>Lift the pod lid</center>
+                    <!-- <br> -->
+                  </div>
+                </div>
+
+                <!-- <div class="row">
+                  <div class="col">
+                    <video class="center" playsinline autoplay loop muted src="https://opendrivelab.github.io/RoboDual/resources/robodual/move_the_banana_into_drawer.mp4" width="100%" style="border-radius:10px;"></video>
+                  </div>
+                </div> -->
+              </td>
+            </tr>
+          </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h1 class="title is-3" style="text-align: center; padding-bottom: 10px;">Multi-instruction Tasks</h1>
+          <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths ">
+          <div class="content has-text-justified">
+            <div class="columns is-centered has-text-centered">
+              <div class="column">
+                <div class="content has-text-justified interpolation-panel">
+                  <center>Robodual shows strong instruction-following ability and excels at multi-instruction tasks.</center>
+                </div>
+              </div>
+              <!-- <div class="column">
+              <div class="content has-text-justified interpolation-panel">
+                  <p style="text-align: left;font-size: 18px"> <strong>The overall architecture of RoboDual.</strong> (a) Generalist: The generalist takes as inputs RGB images and language prompts, generating conditioning sources for the specialist model, including latent representations and discretized actions. (b) Specialist: Comprising stacked Diffusion Transformer (DiT) blocks, the specialist is conditioned by multiple sensory inputs and the generalist's output through a cross-attention mechanism. It predicts noise injected into ground truth actions, providing fast, precise control by leveraging the slower, high-level guidance of the generalist.</p>
+              </div> -->
+            </div>
+            <tr>
+              <td>
+                <h2 class="subtitle is-4" style="text-align: center;">Task 1: Put [object] into the basket </h2>
+                <div class="row">
+                  <div class="col">
+                    <video class="center" playsinline autoplay loop muted src="https://opendrivelab.github.io/RoboDual/resources/robodual/visuomotor/mul-1/b2-new.mp4" width="100%" style="border-radius:10px;"></video>
+                    <center>Put banana into basket</center>
+                    <!-- <br> -->
+                  </div>
+                  <div class="col">
+                    <video class="center" playsinline autoplay loop muted src="https://opendrivelab.github.io/RoboDual/resources/robodual/visuomotor/mul-1/c2-new.mp4" width="100%" style="border-radius:10px;"></video>
+                    <center>Put carrot into basket</center>
+                    <br>
+                  </div>
+                  <div class="col">
+                    <video class="center" playsinline autoplay loop muted src="https://opendrivelab.github.io/RoboDual/resources/robodual/visuomotor/mul-1/e4.mp4" width="100%" style="border-radius:10px;"></video>
+                    <center>Put eggplant into basket</center>
+                    <!-- <br> -->
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <video class="center" playsinline autoplay loop muted src="https://opendrivelab.github.io/RoboDual/resources/robodual/visuomotor/mul-1/b1.mp4" width="100%" style="border-radius:10px;"></video>
+                    <center>Put banana into basket</center>
+                    <!-- <br> -->
+                  </div>
+                  <div class="col">
+                    <video class="center" playsinline autoplay loop muted src="https://opendrivelab.github.io/RoboDual/resources/robodual/visuomotor/mul-1/carrot-1.mp4" width="100%" style="border-radius:10px;"></video>
+                    <center>Put carrot into basket</center>
+                    <br>
+                  </div>
+                  <div class="col">
+                    <video class="center" playsinline autoplay loop muted src="https://opendrivelab.github.io/RoboDual/resources/robodual/visuomotor/mul-1/e3.mp4" width="100%" style="border-radius:10px;"></video>
+                    <center>Put eggplant into basket</center>
+                    <!-- <br> -->
+                  </div>
+                </div>
+                <h2 class="subtitle is-4" style="text-align: center;">Task 2: Knock the [object] over</h2>
+                <div class="row">
+                  <div class="col">
+                    <video class="center" playsinline autoplay loop muted src="https://opendrivelab.github.io/RoboDual/resources/robodual/visuomotor/mul-2/bear-new.mp4" width="100%" style="border-radius:10px;"></video>
+                    <center>Knock the stuffed bear over</center>
+                    <br>
+                  </div>
+                  <div class="col">
+                    <video class="center" playsinline autoplay loop muted src="https://opendrivelab.github.io/RoboDual/resources/robodual/visuomotor/mul-2/egg-new.mp4" width="100%" style="border-radius:10px;"></video>
+                    <center>Knock the stuffed egg over</center>
+                    <br>
+                  </div>
+                  <div class="col">
+                    <video class="center" playsinline autoplay loop muted src="https://opendrivelab.github.io/RoboDual/resources/robodual/visuomotor/mul-2/kitti-new.mp4" width="100%" style="border-radius:10px;"></video>
+                    <center>Knock the stuffed kitten over</center>
+                    <br>
+                  </div>
+                </div>
+                <!-- <div class="row">
+                  <div class="col">
+                    <video class="center" playsinline autoplay loop muted src="https://opendrivelab.github.io/RoboDual/resources/robodual/move_the_banana_into_drawer.mp4" width="100%" style="border-radius:10px;"></video>
+                  </div>
+                </div> -->
+              </td>
+            </tr>
+
+            <h3 class="subtitle is-2" style="text-align: center;">Generalization Experiment Setting</h3>
+            <div align="center">
+              <img src="https://opendrivelab.github.io/RoboDual/resources/robodual/generalization/gen_setting_page.png" alt="Image description" width="100%">
+            </div>
+
+          </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h1 class="title is-3" style="text-align: center; padding-bottom: 10px;">Generalizability Evaluation in the Real World</h1>
+          <!-- <h2 class="subtitle is-4" style="text-align: center;">Defining Visual Affordances</h2> -->
+          <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths ">
+          <div class="content has-text-justified">
+            <tr>
+              <td>
+                <h2 class="subtitle is-4" style="text-align: center;">Position Variation</h2>
+                <div class="row">
+                  <div class="col">
+                    <center><video class="center" playsinline autoplay loop muted src="https://opendrivelab.github.io/RoboDual/resources/robodual/generalization/put_block/regrasp-2.mp4" width="70%" style="border-radius:10px;"></video></center>
+                    <center><strong>Regrasping</strong> at position #1</center>
+                    <br>
+                  </div>
+                  <div class="col">
+                    <center><video class="center" playsinline autoplay loop muted src="https://opendrivelab.github.io/RoboDual/resources/robodual/generalization/put_block/10demos_ood_regrasp.mp4" width="70%" style="border-radius:10px;"></video></center>
+                    <center><strong>Regrasping</strong> at position #2</center>
+                    <br>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <center><video class="center" playsinline autoplay loop muted src="https://opendrivelab.github.io/RoboDual/resources/robodual/generalization/put_block/s1.mp4" width="70%" style="border-radius:10px;"></video></center>
+                    <center>Position #3</center>
+                    <br>
+                  </div>
+                  <div class="col">
+                    <center><video class="center" playsinline autoplay loop muted src="https://opendrivelab.github.io/RoboDual/resources/robodual/generalization/put_block/s3.mp4" width="70%" style="border-radius:10px;"></video></center>
+                    <center>Position #4</center>
+                    <br>
+                  </div>
+                </div>
+              </div>
+
+                
+                <h2 class="subtitle is-4" style="text-align: center;">Visual Distractor</h2>
+                <div class="row">
+                  <div class="col">
+                    <center><video class="center" playsinline autoplay loop muted src="https://opendrivelab.github.io/RoboDual/resources/robodual/generalization/open_drawer/20240919-184951.mp4" width="70%" style="border-radius:10px;"></video></center>
+                    <center>Original</center>
+                    <br>
+                  </div>
+                  <div class="col">
+                    <center><video class="center" playsinline autoplay loop muted src="https://opendrivelab.github.io/RoboDual/resources/robodual/generalization/open_drawer/20240906-163233.mp4" width="70%" style="border-radius:10px;"></video></center>
+                    <center>Changed</center>
+                    <br>
+                  </div>
+                </div>
+
+
+                <h2 class="subtitle is-4" style="text-align: center;">Unseen Background</h2>
+                <div class="row">
+                  <div class="col">
+                    <center><video class="center" playsinline autoplay loop muted src="https://opendrivelab.github.io/RoboDual/resources/robodual/generalization/push_block/20241001-183400.mp4" width="70%" style="border-radius:10px;"></video></center>
+                    <center>Original</center>
+                    <br>
+                  </div>
+                  <div class="col">
+                    <center><video class="center" playsinline autoplay loop muted src="https://opendrivelab.github.io/RoboDual/resources/robodual/generalization/push_block/push_block_new.mp4" width="70%" style="border-radius:10px;"></video></center>
+                    <center>Changed</center>
+                    <br>
+                  </div>
+                </div>
+
+
+                <h2 class="subtitle is-4" style="text-align: center;">Novel Object</h2>
+                <div class="row">
+                  <div class="col">
+                    <center><video class="center" playsinline autoplay loop muted src="https://opendrivelab.github.io/RoboDual/resources/robodual/generalization/novel_object/put_banana.mp4" width="70%" style="border-radius:10px;"></video></center>
+                    <center>Put banana into plate</center>
+                    <br>
+                  </div>
+                  <div class="col">
+                    <center><video class="center" playsinline autoplay loop muted src="https://opendrivelab.github.io/RoboDual/resources/robodual/generalization/novel_object/put_eggplant.mp4" width="70%" style="border-radius:10px;"></video></center>
+                    <center>Put eggplant into plate</center>
+                    <br>
+                  </div>
+                </div>
+
+
+              </td>
+            </tr>
+          </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h1 class="title is-2" style="text-align: center; padding-bottom: 10px;">Inference Efficiency Comparison with OpenVLA</h1>
+          <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths ">
+          <div class="content has-text-justified">
+            <p>Robodual achieves a control frequency of <strong>15 Hz</strong> in our real-world setup using NVIDIA A5000 Ada GPUs, facilitating deployment in more dexterous tasks. Notably, inference latency is a primary factor contributing to the performance degradation of OpenVLA. Operating at only <strong>3.9 Hz</strong> within our system, it significantly alters the system dynamics compared to the 20 Hz non-blocking controller used in our real-world tasks.</p>
+            <tr>
+              <td>
+                <h2 class="subtitle is-4" style="text-align: center;">Put banana into the basket</h2>
+                <div class="row">
+                  <div class="col">
+                    <center>
+                    <video class="center" width="900" height="400" playsinline controls loop muted src="https://opendrivelab.github.io/RoboDual/resources/robodual/visuomotor/compared_to_openvla_new.mp4" width="70%" style="border-radius:10px;"></video>
+                    </center>
+                    <br>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero is-light">
+    <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h1 class="title is-2" style="text-align: center; padding-bottom: 10px;">Simulation Evaluations on CALVIN</h1>
+          <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths ">
+          <div class="content has-text-justified">
+            <p>
+              We compare the performance of RoboDual with other state-of-the-art methods on CALVIN ABC-D. We yield an improvement from <strong>3.27</strong> to <strong>3.66</strong> on the average length of completed tasks. The success rate of accomplishing consecutive 5 tasks is elevated by <strong>13.2%</strong>. 
+
+              Additionally, we further investigate the robustness to free-form task instructions of various methods. We incorporate RoboFlamingo and LCB, both of which also utilize LLMs (MPT-1B and LLaVA-7B respectively), as our baseline approaches. All methods are trained exclusively on the ABC split using the original language annotations and are evaluated with GPT-4 enriched ones. While the performance of baseline methods decreases significantly compared to their results in default setting, our method exhibits minimal impact and nearly doubles the average length compared to LCB. This improvement can be attributed to both the semantic understanding capability of the generalist and the specialist model's robustness to variations in conditioning latents.
+            </p>
+
+          </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <section class="section body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths ">
+          <div class="content has-text-justified">
+            <tr>
+              <td>
+                <div align="center">
+                  <h1 class="title is-4" style="text-align: center; padding-bottom: 10px;">Language-conditioned visuomotor control on CALVIN ABC→D</h1>
+                  <img src="https://opendrivelab.github.io/RoboDual/resources/robodual/simulation/calvin_result.png" alt="Image description" width="80%">
+                  <h1 class="title is-4" style="text-align: center; padding-bottom: 10px;">Robustness to free-form language instructions</h1>
+                  <img src="https://opendrivelab.github.io/RoboDual/resources/robodual/simulation/calvin_gen_result.png" alt="Image description" width="50%">
+                </div>
+              </td>
+            </tr>
+          </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <br />
+      <p> Template from <a href="https://nerfies.github.io"><span class="dnerf">Nerfies</span></a>.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
+
+
