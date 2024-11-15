@@ -3,7 +3,7 @@
     position: sticky;
     z-index: 900;
     flex-basis: 1;
-    top: 0px;
+    top: 64px;
     flex-direction: column;
     font-weight: bold;
     & .sticky_row {
@@ -30,22 +30,10 @@
         }
     }
     @media screen and (max-width: 1024px) {
-        background-color: #0c318f;
-        /* top: 110px; */
-        & .navigator {
-            border-bottom: 3px solid white;
-        }
-        & .sticky_row a {
-            color: white;
-        }
+        top: 111px;
     }
 }
 .sticky_top {
-    background-color: #0c318f;
-    & .navigator {
-        border-bottom: 3px solid white;
-    }
-    & .sticky_row a {
-        color: white;
-    }
+    background-color: white;
+    box-shadow: 0 0 11px rgb(233, 233, 233);
 }
