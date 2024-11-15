@@ -10,7 +10,9 @@
     <link href="/ui2024/css/format.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="/ui2024/css/font.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="/ui2024/css/banner.css" rel="stylesheet" type="text/css" media="all"/>
+    
     <link href="/ui2024/css/sticky.css" rel="stylesheet" type="text/css" media="all"/>
+    <script src="/ui2024/js/sticky.js"></script>
 
     <script src="/ui2024/js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
@@ -35,20 +37,6 @@
     })
     $.get("/ui2024/components/footer.html",function(result){
         $("body").append(result)
-    })
-</script>
-
-
-
-<script>
-    window.addEventListener("scroll", function () {
-        if (sticky.getBoundingClientRect().top <= 64) {
-            sticky.classList.add("sticky_top");
-            header.style.display = "none";
-        } else {
-            sticky.classList.remove("sticky_top");
-            header.style.display = "block";
-        }
     })
 </script>
 
@@ -186,7 +174,7 @@
             <a href="#editor_pick">Editor's Pick</a>
             <a></a>
             <a></a>
-            <a href="#" class="image"><img src="/assets/icon/top_white.png"/></a>
+            <a href="#" class="image"><img src="/assets/icon/top.png"/></a>
         </div>
         <div class="navigator"></div>
         <div class="sticky_row">
