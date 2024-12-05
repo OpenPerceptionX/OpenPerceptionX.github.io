@@ -8,3 +8,8 @@
 ## Editing in vscode
 - Live Server
 - open in browser
+
+## Tailwind
+```
+npx tailwindcss -i ./ui2025/index.css -o ./ui2025/index_tailwind.css --watch
+```
