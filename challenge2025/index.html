@@ -26,22 +26,14 @@
 
 
 
-<!-- <script>
-    $.get("/ui2024/components/header.html",function(result){
-        $("body").prepend(result)
-    })
-    $.get("/ui2024/components/footer.html",function(result){
-        $("body").append(result)
-    })
-</script> -->
-
-
-
 <body class="h-full">
 
 
 
-    <div>
+    <div id="page">
+
+
+
         <!-- Off-canvas menu for mobile, show/hide based on off-canvas menu state. -->
         <div class="relative z-50 lg:hidden" role="dialog" aria-modal="true">
             <!--
@@ -54,7 +46,7 @@
                 From: "opacity-100"
                 To: "opacity-0"
             -->
-            <div class="fixed inset-0 bg-o-light-blue" aria-hidden="true"></div>
+            <div class="fixed inset-0" aria-hidden="true"></div>
         
             <div class="fixed inset-0 flex">
                 <!--
@@ -67,6 +59,8 @@
                     From: "translate-x-0"
                     To: "-translate-x-full"
                 -->
+
+                <!-- Static sidebar for desktop -->
                 <div class="relative mr-16 flex w-full max-w-xs flex-1" id="to_add_sidebar_content_mobile">
                 <!--
                     Close button, show/hide based on off-canvas menu state.
@@ -96,10 +90,7 @@
     
         <!-- Static sidebar for desktop -->
         <div class="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col"  id="to_add_sidebar_content_desktop">
-
-        <!-- Sidebar component, swap this element with another sidebar if you like -->
-
-        
+            <!-- Sidebar component, swap this element with another sidebar if you like -->
         </div>
     
         <div class="sticky top-0 z-40 flex items-center gap-x-6 bg-white px-4 py-4 shadow-sm sm:px-6 lg:hidden">
@@ -116,6 +107,8 @@
         </a>
         </div>
     
+
+
         <main class="lg:pl-72">
         <div class="xl:pl-96">
             <div class="px-4 py-10 sm:px-6 lg:px-8 lg:py-6">
@@ -124,9 +117,14 @@
         </div>
         </main>
     
+
+
         <aside class="fixed inset-y-0 left-72 hidden w-96 overflow-y-auto border-r border-gray-200 px-4 py-6 sm:px-6 lg:px-8 xl:block">
         <!-- Secondary column (hidden on smaller screens) -->
         </aside>
+
+
+        
     </div>
 
 </body>
@@ -134,37 +132,6 @@
 
 
 <script>
-    // const sidebar_content = document.createTextNode(fetch('/ui2025/components/sidebar_content.html').then(response => {return response.text()}).then((result) => {return result});
-    // console.log(sidebar_content);
-    // document.getElementById("to_add_sidebar_content_mobile").innerHTML = sidebar_content;
-    // document.getElementById("to_add_sidebar_content_desktop").innerHTML = sidebar_content;
-    // fetch('/ui2025/components/sidebar_content.html').then(response => {return response.text()}).then((result) => {document.getElementById("to_add_sidebar_content_mobile").innerHTML = result});
-    // fetch('/ui2025/components/sidebar_content.html').then(response => {return response.text()}).then((result) => {document.getElementById("to_add_sidebar_content_desktop").innerHTML = result});
-    // document.getElementById("to_add_sidebar_content_mobile").innerHTML='<object type="text/html" data="/ui2025/components/sidebar_content.html" ></object>'
-    // document.getElementById("to_add_sidebar_content_desktop").innerHTML='<object type="text/html" data="/ui2025/components/sidebar_content.html" ></object>'
-    // $(document).ready( function() {
-    //     $("#to_add_sidebar_content_desktop").load("/ui2025/components/sidebar_content.html");
-    // });
-    // async function fetchHtmlAsText(url) {
-    //     return await (await fetch(url)).text();
-    // }
-
-    // // this is your `load_home() function`
-    // async function loadHome() {
-    //     const contentDiv = document.getElementById("to_add_sidebar_content_desktop");
-    //     contentDiv.innerHTML = await fetchHtmlAsText("/ui2025/components/sidebar_content.html");
-    // }
-    // loadHome();
-    // $("#to_add_sidebar_content_desktop").load("/ui2025/components/sidebar_content.html");
-    const xhr=new XMLHttpRequest();
-xhr.open("GET", "/ui2025/components/sidebar_content.html", true);
-xhr.send();
-
-xhr.onreadystatechange=function(){
- if(xhr.readyState==4 && xhr.status==200){
-
-    document.querySelectorAll("#to_add_sidebar_content_desktop")[0].innerHTML = xhr.responseText;
-
-    }
-};
+    fetch('/ui2025/components/sidebar_content.html').then(response => {return response.text()}).then((result) => {document.getElementById("to_add_sidebar_content_mobile").innerHTML = result});
+    fetch('/ui2025/components/sidebar_content.html').then(response => {return response.text()}).then((result) => {document.getElementById("to_add_sidebar_content_desktop").innerHTML = result});
 </script>
