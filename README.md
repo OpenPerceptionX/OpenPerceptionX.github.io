@@ -11,5 +11,5 @@
 
 ## Tailwind
 ```
-npx tailwindcss -i ./ui2025/index.css -o ./ui2025/index_tailwind.css --watch
+npx tailwindcss -i ./ui2025/css/index.css -o ./ui2025/css/index_tailwind.css --watch
 ```
