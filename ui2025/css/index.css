@@ -9,6 +9,16 @@
 
 @layer components {
     .sidebar-button {
-        @apply gap-x-3 rounded-md p-2 font-bold hover:bg-gray-50 hover:text-o-dark-blue;
+        user-select: none;
+        @apply flex gap-x-3 rounded-md p-3 font-bold hover:bg-gray-50 hover:text-o-dark-blue;
     }
+}
+
+summary:after {
+    content: "+";
+    @apply text-o-dark-blue;
+}
+   
+details[open] summary:after {
+    content: "-";
 }
