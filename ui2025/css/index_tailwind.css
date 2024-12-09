@@ -2863,6 +2863,10 @@ summary {
   list-style: none;
 }
 
+summary::-webkit-details-marker {
+  display: none;
+}
+
 summary:after {
   content: "+";
   --tw-text-opacity: 1;
