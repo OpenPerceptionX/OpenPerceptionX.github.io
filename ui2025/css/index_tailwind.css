@@ -154,7 +154,7 @@ html,
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: InterVariable, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -773,11 +773,6 @@ video {
   margin-right: -1.5rem;
 }
 
-.mx-3 {
-  margin-left: 0.75rem;
-  margin-right: 0.75rem;
-}
-
 .mr-16 {
   margin-right: 4rem;
 }
@@ -893,14 +888,6 @@ video {
   display: none;
 }
 
-.aspect-square {
-  aspect-ratio: 1 / 1;
-}
-
-.aspect-auto {
-  aspect-ratio: auto;
-}
-
 .size-6 {
   width: 1.5rem;
   height: 1.5rem;
@@ -929,14 +916,6 @@ video {
 
 .h-full {
   height: 100%;
-}
-
-.h-auto {
-  height: auto;
-}
-
-.h-4 {
-  height: 1rem;
 }
 
 .w-1 {
@@ -981,10 +960,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-6 {
-  width: 1.5rem;
 }
 
 .max-w-xs {
@@ -2243,10 +2218,6 @@ video {
   padding: 0.625rem;
 }
 
-.p-3 {
-  padding: 0.75rem;
-}
-
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
@@ -2296,20 +2267,12 @@ video {
   padding-left: 0.25rem;
 }
 
-.pl-8 {
-  padding-left: 2rem;
+.pl-12 {
+  padding-left: 3rem;
 }
 
 .pt-5 {
   padding-top: 1.25rem;
-}
-
-.pl-10 {
-  padding-left: 2.5rem;
-}
-
-.pl-12 {
-  padding-left: 3rem;
 }
 
 .text-left {
@@ -2891,7 +2854,7 @@ video {
 }
 
 * {
-  /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   --tw-text-opacity: 1;
   color: rgb(33 33 33 / var(--tw-text-opacity, 1));
 }
@@ -2922,11 +2885,6 @@ details[open] summary:after {
 .hover\:text-indigo-600:hover {
   --tw-text-opacity: 1;
   color: rgb(79 70 229 / var(--tw-text-opacity, 1));
-}
-
-.hover\:text-o-dark-blue:hover {
-  --tw-text-opacity: 1;
-  color: rgb(12 49 143 / var(--tw-text-opacity, 1));
 }
 
 .before\:hover\:text-center:hover::before {
