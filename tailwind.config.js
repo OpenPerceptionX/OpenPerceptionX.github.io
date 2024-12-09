@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
-const defaultTheme = require('tailwindcss/defaultTheme')
+// const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
     content: ["./**/*.{html,js}"],
@@ -23,9 +23,9 @@ module.exports = {
                 "o-white": "#e9e9e9",
                 "o-black": "#212121",
             },
-            fontFamily: {
-                sans: ['InterVariable', ...defaultTheme.fontFamily.sans],
-            },
+            // fontFamily: {
+            //     sans: ['InterVariable', ...defaultTheme.fontFamily.sans],
+            // },
         },
     },
     plugins: [
