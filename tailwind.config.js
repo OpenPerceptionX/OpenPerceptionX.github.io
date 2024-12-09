@@ -22,6 +22,7 @@ module.exports = {
                 "o-dark-blue": "#0c318f",
                 "o-white": "#e9e9e9",
                 "o-black": "#212121",
+                "o-gray": '#9ca3af',
             },
             // fontFamily: {
             //     sans: ['InterVariable', ...defaultTheme.fontFamily.sans],
