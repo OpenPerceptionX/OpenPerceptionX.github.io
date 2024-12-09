@@ -2900,3 +2900,65 @@ details[open] summary:after {
   --tw-text-opacity: 1;
   color: rgb(0 160 232 / var(--tw-text-opacity, 1));
 }
+
+@media (min-width: 640px) {
+  .tablet\:fixed {
+    position: fixed;
+  }
+
+  .tablet\:inset-y-0 {
+    top: 0px;
+    bottom: 0px;
+  }
+
+  .tablet\:z-50 {
+    z-index: 50;
+  }
+
+  .tablet\:flex {
+    display: flex;
+  }
+
+  .tablet\:hidden {
+    display: none;
+  }
+
+  .tablet\:w-72 {
+    width: 18rem;
+  }
+
+  .tablet\:flex-col {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1024px) {
+  .laptop\:fixed {
+    position: fixed;
+  }
+
+  .laptop\:inset-y-0 {
+    top: 0px;
+    bottom: 0px;
+  }
+
+  .laptop\:z-50 {
+    z-index: 50;
+  }
+
+  .laptop\:flex {
+    display: flex;
+  }
+
+  .laptop\:hidden {
+    display: none;
+  }
+
+  .laptop\:w-72 {
+    width: 18rem;
+  }
+
+  .laptop\:flex-col {
+    flex-direction: column;
+  }
+}
