@@ -72,3 +72,20 @@
     fetch('/ui2025/components/sidebar_content.html').then(response => {return response.text()}).then((result) => {document.getElementById("to_add_sidebar_content_mobile").innerHTML = result});
     fetch('/ui2025/components/sidebar_content.html').then(response => {return response.text()}).then((result) => {document.getElementById("to_add_sidebar_content_desktop").innerHTML = result});
 </script>
+<!-- sidebar open/close mobile -->
+<script>
+    var sidebar_state = false;
+    function changeSidebar() {
+        if (sidebar_state === false) {
+            document.getElementById("sidebar_open").classList.add("hidden");
+            document.getElementById("sidebar_close").classList.remove("hidden");
+            document.getElementById("mobile_sidebar").classList.remove("hidden");
+            sidebar_state = true;
+        } else {
+            document.getElementById("sidebar_open").classList.remove("hidden");
+            document.getElementById("sidebar_close").classList.add("hidden");
+            document.getElementById("mobile_sidebar").classList.add("hidden");
+            sidebar_state = false;
+        }
+    }
+</script>
