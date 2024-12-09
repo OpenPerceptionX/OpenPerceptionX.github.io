@@ -9,6 +9,7 @@
 
 @layer components {
     .sidebar-button {
+        list-style: none;
         user-select: none;
         @apply flex gap-x-3 rounded-md p-3 font-bold hover:bg-gray-50 hover:text-o-dark-blue;
     }

@@ -577,6 +577,7 @@ video {
 }
 
 .sidebar-button {
+  list-style: none;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
