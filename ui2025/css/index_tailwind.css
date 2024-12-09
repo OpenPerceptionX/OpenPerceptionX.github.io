@@ -2895,6 +2895,11 @@ details[open] summary:after {
   color: rgb(79 70 229 / var(--tw-text-opacity, 1));
 }
 
+.hover\:text-o-dark-blue:hover {
+  --tw-text-opacity: 1;
+  color: rgb(12 49 143 / var(--tw-text-opacity, 1));
+}
+
 .before\:hover\:text-center:hover::before {
   content: var(--tw-content);
   text-align: center;
@@ -2921,4 +2926,9 @@ details[open] summary:after {
 .group:hover .group-hover\:text-indigo-600 {
   --tw-text-opacity: 1;
   color: rgb(79 70 229 / var(--tw-text-opacity, 1));
+}
+
+.group:hover .group-hover\:text-o-dark-blue {
+  --tw-text-opacity: 1;
+  color: rgb(12 49 143 / var(--tw-text-opacity, 1));
 }
