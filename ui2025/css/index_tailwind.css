@@ -592,7 +592,7 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
-  color: rgb(12 49 143 / var(--tw-text-opacity, 1));
+  color: rgb(0 160 232 / var(--tw-text-opacity, 1));
 }
 
 .sr-only {
@@ -772,6 +772,14 @@ video {
   margin-bottom: 1rem;
 }
 
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
+.ml-1 {
+  margin-left: 0.25rem;
+}
+
 .mr-16 {
   margin-right: 4rem;
 }
@@ -786,14 +794,6 @@ video {
 
 .mt-auto {
   margin-top: auto;
-}
-
-.mb-6 {
-  margin-bottom: 1.5rem;
-}
-
-.mb-5 {
-  margin-bottom: 1.25rem;
 }
 
 .box-border {
@@ -1383,22 +1383,6 @@ video {
        break-after: column;
 }
 
-.auto-cols-max {
-  grid-auto-columns: max-content;
-}
-
-.auto-cols-fr {
-  grid-auto-columns: minmax(0, 1fr);
-}
-
-.auto-cols-min {
-  grid-auto-columns: min-content;
-}
-
-.auto-cols-auto {
-  grid-auto-columns: auto;
-}
-
 .grid-flow-row {
   grid-auto-flow: row;
 }
@@ -1419,44 +1403,8 @@ video {
   grid-auto-flow: column dense;
 }
 
-.auto-rows-min {
-  grid-auto-rows: min-content;
-}
-
-.auto-rows-max {
-  grid-auto-rows: max-content;
-}
-
-.auto-rows-auto {
-  grid-auto-rows: auto;
-}
-
-.grid-cols-1 {
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-
-.grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.grid-cols-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.grid-cols-5 {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-}
-
 .grid-cols-6 {
   grid-template-columns: repeat(6, minmax(0, 1fr));
-}
-
-.grid-cols-10 {
-  grid-template-columns: repeat(10, minmax(0, 1fr));
-}
-
-.grid-cols-8 {
-  grid-template-columns: repeat(8, minmax(0, 1fr));
 }
 
 .flex-row {
@@ -1641,14 +1589,6 @@ video {
 
 .justify-items-stretch {
   justify-items: stretch;
-}
-
-.gap-3 {
-  gap: 0.75rem;
-}
-
-.gap-4 {
-  gap: 1rem;
 }
 
 .gap-5 {
@@ -2914,7 +2854,7 @@ summary::-webkit-details-marker {
 summary:after {
   content: "+";
   --tw-text-opacity: 1;
-  color: rgb(12 49 143 / var(--tw-text-opacity, 1));
+  color: rgb(0 160 232 / var(--tw-text-opacity, 1));
 }
 
 details[open] summary:after {
@@ -2927,6 +2867,11 @@ details[open] summary:after {
 
 .hover\:font-bold:hover {
   font-weight: 700;
+}
+
+.hover\:text-o-blue:hover {
+  --tw-text-opacity: 1;
+  color: rgb(0 160 232 / var(--tw-text-opacity, 1));
 }
 
 .hover\:opacity-70:hover {
@@ -2951,7 +2896,7 @@ details[open] summary:after {
   text-align: center;
 }
 
-.group:hover .group-hover\:text-o-dark-blue {
+.group:hover .group-hover\:text-o-blue {
   --tw-text-opacity: 1;
-  color: rgb(12 49 143 / var(--tw-text-opacity, 1));
+  color: rgb(0 160 232 / var(--tw-text-opacity, 1));
 }
