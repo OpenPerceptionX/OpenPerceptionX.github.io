@@ -10,6 +10,7 @@
 - open in browser
 
 ## Tailwind
+npm link tailwindcss
 ```
 npx tailwindcss -i ./ui2025/css/index.css -o ./ui2025/css/index_tailwind.css --watch --minify
 ```
