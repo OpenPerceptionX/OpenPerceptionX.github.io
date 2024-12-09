@@ -10,7 +10,7 @@
 @layer components {
     .sidebar-button {
         user-select: none;
-        @apply flex gap-x-3 rounded-md p-3 font-bold hover:bg-gray-50 hover:text-o-dark-blue;
+        @apply flex gap-x-3 rounded-md p-3 font-bold hover:bg-gray-50 hover:text-o-blue;
     }
 }
 
@@ -22,7 +22,7 @@ summary::-webkit-details-marker {
 }
 summary:after {
     content: "+";
-    @apply text-o-dark-blue;
+    @apply text-o-blue;
 }
 details[open] summary:after {
     content: "-";
