@@ -12,6 +12,7 @@
     <!-- <link href="/ui2025/css/daisy.css" rel="stylesheet" type="text/css" /> -->
 
     <script src="/ui2024/js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="/ui2025/js/body-scroll-lock.js"></script>
 
 </head>
 
@@ -33,7 +34,7 @@
     <!-- Header / Sidebar -->
     <header id="to_add_sidebar"></header>
     <!-- Page -->
-    <div class="laptop:ml-72">
+    <div class="laptop:ml-72" id="page">
         <div class="flex w-full flex-col">
 
 
@@ -95,11 +96,13 @@
             document.getElementById("sidebar_open").classList.add("hidden");
             document.getElementById("sidebar_close").classList.remove("hidden");
             document.getElementById("mobile_sidebar").classList.remove("hidden");
+            bodyScrollLock.disableBodyScroll(document.getElementById("page"));
             sidebar_state = true;
         } else {
             document.getElementById("sidebar_open").classList.remove("hidden");
             document.getElementById("sidebar_close").classList.add("hidden");
             document.getElementById("mobile_sidebar").classList.add("hidden");
+            bodyScrollLock.enableBodyScroll(document.getElementById("page"));
             sidebar_state = false;
         }
     }
