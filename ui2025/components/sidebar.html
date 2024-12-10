@@ -1,11 +1,15 @@
 
-<div class="sticky top-0 z-40 flex items-center justify-center gap-x-6 h-14 bg-o-white px-6 laptop:hidden">
+<div id="sidebar_container" class="sticky top-0 z-40 flex items-center justify-center gap-x-6 h-20 bg-o-white px-6 laptop:hidden">
+
+
 
     <div class="flex h-16 shrink-0 items-center">
         <a href="/" class="pl-1">
-            <img class="h-6 w-auto hover:cursor-pointer" src="/assets/icon/OpenDriveLab.png">
+            <img class="h-6 w-auto" src="/assets/icon/OpenDriveLab.png">
         </a>
     </div>
+
+
 
     <button onclick="changeSidebar()" type="button" class="ml-auto text-o-blue">
         <!-- open -->
@@ -17,6 +21,9 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
         </svg>
     </button>
+
+
+
 </div>
 
 
@@ -34,7 +41,6 @@
         To: "opacity-0"
     -->
     <!-- <div class="fixed inset-0 bg-o-light-blue" aria-hidden="true"></div> -->
-
     <div class="fixed inset-0 flex">
         <!--
         Off-canvas menu, show/hide based on off-canvas menu state.
@@ -47,10 +53,15 @@
             To: "-translate-x-full"
         -->
 
+
+
         <!-- Static sidebar for desktop -->
         <div class="relative mr-16 flex w-full max-w-xs flex-1" id="to_add_sidebar_content_mobile">
         <!-- Sidebar component, swap this element with another sidebar if you like -->
         </div>
+
+
+
         
     </div>
 </div>
