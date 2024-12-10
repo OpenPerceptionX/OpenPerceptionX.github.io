@@ -901,10 +901,6 @@ video {
   height: 0.25rem;
 }
 
-.h-14 {
-  height: 3.5rem;
-}
-
 .h-16 {
   height: 4rem;
 }
@@ -919,14 +915,6 @@ video {
 
 .h-full {
   height: 100%;
-}
-
-.h-4 {
-  height: 1rem;
-}
-
-.h-20 {
-  height: 5rem;
 }
 
 .w-1 {
@@ -2808,6 +2796,16 @@ summary:after {
 
 details[open] summary:after {
   content: "-";
+}
+
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }
 
 .hover\:font-bold:hover {
