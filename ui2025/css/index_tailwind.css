@@ -670,6 +670,11 @@ video {
   inset: 0px;
 }
 
+.inset-y-0 {
+  top: 0px;
+  bottom: 0px;
+}
+
 .end-1 {
   inset-inline-end: 0.25rem;
 }
@@ -2883,6 +2888,10 @@ details[open] summary:after {
 
   .laptop\:w-72 {
     width: 18rem;
+  }
+
+  .laptop\:flex-row {
+    flex-direction: row;
   }
 
   .laptop\:flex-col {
