@@ -7,6 +7,10 @@
     @apply text-o-black;
 }
 
+html {
+    scroll-snap-type: y mandatory;
+}
+
 a {
     @apply hover:cursor-pointer;
 }
