@@ -7,6 +7,10 @@
     @apply text-o-black;
 }
 
+a {
+    @apply hover:cursor-pointer;
+}
+
 @layer components {
     .sidebar-button {
         user-select: none;
