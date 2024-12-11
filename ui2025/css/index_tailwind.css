@@ -678,6 +678,10 @@ video {
   top: 0px;
 }
 
+.top-16 {
+  top: 4rem;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -692,6 +696,10 @@ video {
 
 .z-40 {
   z-index: 40;
+}
+
+.z-20 {
+  z-index: 20;
 }
 
 .float-start {
@@ -2077,6 +2085,10 @@ video {
   background-color: rgb(185 28 28 / var(--tw-bg-opacity, 1));
 }
 
+.bg-\[url\(\'\/assets\/background\/2024\.10\.png\'\)\] {
+  background-image: url('/assets/background/2024.10.png');
+}
+
 .decoration-slice {
   -webkit-box-decoration-break: slice;
           box-decoration-break: slice;
@@ -2854,6 +2866,10 @@ details[open] summary:after {
   .laptop\:inset-y-0 {
     top: 0px;
     bottom: 0px;
+  }
+
+  .laptop\:top-0 {
+    top: 0px;
   }
 
   .laptop\:z-50 {

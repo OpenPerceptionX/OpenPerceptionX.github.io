@@ -1,8 +1,9 @@
+<!-- mobile header -->
+<div id="sidebar_container" class="fixed laptop:hidden w-full top-0 z-40 flex items-center justify-center gap-x-6 h-16 bg-o-white px-6">
 
-<div id="sidebar_container" class="fixed w-full top-0 z-40 flex items-center justify-center gap-x-6 h-16 bg-o-white px-6 laptop:hidden">
 
 
-
+    <!-- mobile logo -->
     <div class="flex h-16 shrink-0 items-center">
         <a href="/" class="pl-1">
             <img class="h-6 w-auto" src="/assets/icon/OpenDriveLab.png">
@@ -11,6 +12,7 @@
 
 
 
+    <!-- mobile button -->
     <button onclick="changeSidebar()" type="button" class="ml-auto text-o-blue">
         <!-- open -->
         <svg id="sidebar_open" class="size-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#53c2f0" aria-hidden="true" data-slot="icon">
@@ -28,7 +30,7 @@
 
 
 
-<!-- Off-canvas menu for mobile, show/hide based on off-canvas menu state. -->
+<!-- mobile sidebar -->
 <div id="mobile_sidebar" class="relative laptop:hidden hidden z-30" aria-modal="true">
     <!--
         Off-canvas menu backdrop, show/hide based on off-canvas menu state.
@@ -40,7 +42,7 @@
         From: "opacity-100"
         To: "opacity-0"
     -->
-    <!-- <div class="fixed inset-0 bg-o-light-blue" aria-hidden="true"></div> -->
+    <div class="fixed inset-0 bg-o-light-blue" aria-hidden="true"></div>
     <div class="fixed inset-0 flex">
         <!--
         Off-canvas menu, show/hide based on off-canvas menu state.
@@ -67,8 +69,7 @@
 </div>
 
 
-
-<!-- Static sidebar for desktop -->
+<!-- static sidebar -->
 <div class="hidden laptop:fixed laptop:inset-y-0 laptop:z-50 laptop:flex laptop:w-72 laptop:flex-col"  id="to_add_sidebar_content_desktop">
     <!-- Sidebar component, swap this element with another sidebar if you like -->
 </div>
