@@ -791,6 +791,10 @@ video {
   margin-top: auto;
 }
 
+.mt-16 {
+  margin-top: 4rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -922,6 +926,14 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-96 {
+  height: 24rem;
+}
+
+.h-80 {
+  height: 20rem;
 }
 
 .w-1 {
@@ -1997,6 +2009,14 @@ video {
   border-width: 1px;
 }
 
+.border-4 {
+  border-width: 4px;
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
 .border-x {
   border-left-width: 1px;
   border-right-width: 1px;
@@ -2055,6 +2075,16 @@ video {
   border-style: none;
 }
 
+.border-r-o-gray {
+  --tw-border-opacity: 1;
+  border-right-color: rgb(156 163 175 / var(--tw-border-opacity, 1));
+}
+
+.border-r-o-white {
+  --tw-border-opacity: 1;
+  border-right-color: rgb(233 233 233 / var(--tw-border-opacity, 1));
+}
+
 .bg-\[rgb\(255\2c 0\2c 0\)\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 0 0 / var(--tw-bg-opacity, 1));
@@ -2083,6 +2113,26 @@ video {
 .bg-red-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(185 28 28 / var(--tw-bg-opacity, 1));
+}
+
+.bg-slate-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 41 59 / var(--tw-bg-opacity, 1));
+}
+
+.bg-slate-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 245 249 / var(--tw-bg-opacity, 1));
+}
+
+.bg-red-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity, 1));
+}
+
+.bg-o-gray {
+  --tw-bg-opacity: 1;
+  background-color: rgb(156 163 175 / var(--tw-bg-opacity, 1));
 }
 
 .bg-\[url\(\'\/assets\/background\/2024\.10\.png\'\)\] {
@@ -2136,6 +2186,10 @@ video {
 .bg-clip-text {
   -webkit-background-clip: text;
           background-clip: text;
+}
+
+.bg-top {
+  background-position: top;
 }
 
 .bg-repeat {
@@ -2835,6 +2889,10 @@ details[open] summary:after {
   opacity: 0.7;
 }
 
+.hover\:bg-blend-darken:hover {
+  background-blend-mode: darken;
+}
+
 .before\:hover\:text-center:hover::before {
   content: var(--tw-content);
   text-align: center;
@@ -2880,6 +2938,10 @@ details[open] summary:after {
     margin-left: 18rem;
   }
 
+  .laptop\:mt-0 {
+    margin-top: 0px;
+  }
+
   .laptop\:flex {
     display: flex;
   }
@@ -2892,8 +2954,20 @@ details[open] summary:after {
     height: 100vh;
   }
 
+  .laptop\:h-80 {
+    height: 20rem;
+  }
+
   .laptop\:w-72 {
     width: 18rem;
+  }
+
+  .laptop\:w-96 {
+    width: 24rem;
+  }
+
+  .laptop\:w-80 {
+    width: 20rem;
   }
 
   .laptop\:snap-start {
@@ -2911,5 +2985,9 @@ details[open] summary:after {
   .laptop\:gap-x-7 {
     -moz-column-gap: 1.75rem;
          column-gap: 1.75rem;
+  }
+
+  .laptop\:bg-transparent {
+    background-color: transparent;
   }
 }
