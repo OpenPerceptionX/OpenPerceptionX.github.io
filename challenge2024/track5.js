@@ -15,7 +15,7 @@ const track5data = [
         institution: "University of Tübingen",
         award: "rank02",
         disqualified: false,
-        links: "<a href='https://opendrivelab.github.io/Challenge%202024/carla_Tuebingen AI.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>"
+        links: "<a href='https://opendrivelab.github.io/Challenge%202024/carla_Tuebingen AI.pdf' target='_blank'><img class='inlineimg' src='/assets/icon/article.png'/></a>&nbsp;<a href='https://arxiv.org/abs/2412.09602' target='_blank'><img class='inlineimg' src='/assets/icon/arxiv.png'/></a>"
     },
     {
         team: "LRM",
