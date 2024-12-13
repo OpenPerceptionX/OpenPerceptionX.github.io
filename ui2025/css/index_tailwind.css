@@ -951,8 +951,8 @@ video {
   height: 1.5rem;
 }
 
-.h-96 {
-  height: 24rem;
+.h-80 {
+  height: 20rem;
 }
 
 .h-full {
@@ -995,10 +995,6 @@ video {
   width: auto;
 }
 
-.w-full {
-  width: 100%;
-}
-
 .w-screen {
   width: 100vw;
 }
@@ -1029,14 +1025,6 @@ video {
 
 .grow {
   flex-grow: 1;
-}
-
-.basis-4 {
-  flex-basis: 1rem;
-}
-
-.basis-1 {
-  flex-basis: 0.25rem;
 }
 
 .table-auto {
@@ -2248,10 +2236,6 @@ video {
   padding: 0.5rem;
 }
 
-.p-3 {
-  padding: 0.75rem;
-}
-
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
@@ -2903,46 +2887,78 @@ details[open] summary:after {
   color: rgb(0 160 232 / var(--tw-text-opacity, 1));
 }
 
-@media (min-width: 1024px) {
-  .laptop\:fixed {
+@media (min-width: 640px) {
+  .tablet\:fixed {
     position: fixed;
   }
 
-  .laptop\:inset-y-0 {
+  .tablet\:inset-y-0 {
     top: 0px;
     bottom: 0px;
   }
 
-  .laptop\:top-0 {
+  .tablet\:top-0 {
     top: 0px;
   }
 
-  .laptop\:z-50 {
+  .tablet\:z-50 {
     z-index: 50;
   }
 
-  .laptop\:ml-72 {
+  .tablet\:ml-72 {
     margin-left: 18rem;
   }
 
+  .tablet\:mt-0 {
+    margin-top: 0px;
+  }
+
+  .tablet\:mt-7 {
+    margin-top: 1.75rem;
+  }
+
+  .tablet\:flex {
+    display: flex;
+  }
+
+  .tablet\:hidden {
+    display: none;
+  }
+
+  .tablet\:w-72 {
+    width: 18rem;
+  }
+
+  .tablet\:w-auto {
+    width: auto;
+  }
+
+  .tablet\:snap-start {
+    scroll-snap-align: start;
+  }
+
+  .tablet\:flex-col {
+    flex-direction: column;
+  }
+
+  .tablet\:gap-x-7 {
+    -moz-column-gap: 1.75rem;
+         column-gap: 1.75rem;
+  }
+
+  .tablet\:bg-white {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+  }
+}
+
+@media (min-width: 1024px) {
   .laptop\:mt-0 {
     margin-top: 0px;
   }
 
   .laptop\:mt-7 {
     margin-top: 1.75rem;
-  }
-
-  .laptop\:flex {
-    display: flex;
-  }
-
-  .laptop\:hidden {
-    display: none;
-  }
-
-  .laptop\:h-80 {
-    height: 20rem;
   }
 
   .laptop\:h-screen {
@@ -2953,16 +2969,8 @@ details[open] summary:after {
     width: 18rem;
   }
 
-  .laptop\:w-80 {
-    width: 20rem;
-  }
-
   .laptop\:w-auto {
     width: auto;
-  }
-
-  .laptop\:snap-start {
-    scroll-snap-align: start;
   }
 
   .laptop\:flex-row {
@@ -2973,17 +2981,7 @@ details[open] summary:after {
     flex-direction: column;
   }
 
-  .laptop\:gap-x-7 {
-    -moz-column-gap: 1.75rem;
-         column-gap: 1.75rem;
-  }
-
   .laptop\:bg-transparent {
     background-color: transparent;
-  }
-
-  .laptop\:bg-white {
-    --tw-bg-opacity: 1;
-    background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
   }
 }
