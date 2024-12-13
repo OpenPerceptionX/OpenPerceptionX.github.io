@@ -959,6 +959,10 @@ video {
   height: 100%;
 }
 
+.min-h-16 {
+  min-height: 4rem;
+}
+
 .w-1 {
   width: 0.25rem;
 }
