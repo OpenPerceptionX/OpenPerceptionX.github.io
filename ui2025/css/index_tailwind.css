@@ -558,9 +558,9 @@ video {
   width: 100%;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 1024px) {
   .container {
-    max-width: 640px;
+    max-width: 1024px;
   }
 }
 
@@ -2881,7 +2881,7 @@ details[open] summary:after {
   color: rgb(0 160 232 / var(--tw-text-opacity, 1));
 }
 
-@media (min-width: 640px) {
+@media (min-width: 1024px) {
   .tablet\:fixed {
     position: fixed;
   }
