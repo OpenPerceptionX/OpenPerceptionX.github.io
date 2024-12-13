@@ -23,6 +23,7 @@ module.exports = {
                 "o-white": "#e9e9e9",
                 "o-black": "#212121",
                 "o-gray": '#9ca3af',
+                "o-hover": '#f9fafb',
             },
             // fontFamily: {
             //     sans: ['InterVariable', ...defaultTheme.fontFamily.sans],

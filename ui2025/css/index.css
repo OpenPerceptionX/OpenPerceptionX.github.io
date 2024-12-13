@@ -17,8 +17,13 @@ a, summary {
 
 @layer components {
     .sidebar-button {
-        user-select: none;
-        @apply flex gap-x-3 rounded-md p-3 font-bold hover:bg-gray-50 hover:text-o-blue;
+        @apply flex gap-x-3 rounded-md p-3 font-bold hover:bg-o-hover hover:text-o-blue select-none;
+    }
+    .navigator-button {
+        @apply flex gap-x-3 rounded-md p-3 font-bold hover:bg-o-hover select-none;
+    }
+    .navigator-button-text {
+        @apply laptop:border-l-2 laptop:border-l-o-black laptop:pl-3 laptop:ml-1;
     }
 }
 

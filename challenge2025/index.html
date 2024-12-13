@@ -22,17 +22,17 @@
 
 
 
-<body class="h-full">
+<body class="h-full" id="#">
     <!-- Header / Sidebar -->
     <header id="to_add_sidebar" class="overscroll-none"></header>
     <!-- Page -->
     <div class="laptop:ml-72" id="page">
-        <div class="flex w-full flex-col">
+        <div class="flex w-screen laptop:w-auto flex-col">
 
 
 
             <!-- Landing -->
-            <div class="w-full h-96 laptop:h-80 snap-start bg-[url('/assets/background/2024.10.png')] bg-top">
+            <div class="w-screen laptop:w-auto h-96 laptop:h-80 snap-start bg-[url('/assets/background/2024.10.png')] bg-top">
 
             </div>
 
@@ -45,17 +45,24 @@
 
                 <!-- navigator -->
                 <aside class="laptop:h-screen top-16 laptop:top-0 sticky z-20 flex items-center justify-center w-screen laptop:w-80 shrink-0 bg-o-white laptop:bg-transparent">
-                    <ul class="-mx-2 space-y-1">
+                    <ul class="w-screen laptop:w-auto m-3 flex flex-row flex-wrap laptop:flex-col justify-evenly">
     
                         <li>
-                            <a href="/publications/" class="sidebar-button">                           
-                                Publication
+                            <a href="/publications/" class="navigator-button group">                           
+                                <span class="navigator-button-text">
+                                    xxx
+                                </span>
                             </a>
                         </li>
 
-                        <li>
-                            <a href="/publications/" class="sidebar-button">                           
-                                Publication
+                        <li class="laptop:mt-7">
+                            <a href="#" class="navigator-button">                           
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 18.75 7.5-7.5 7.5 7.5" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 7.5-7.5 7.5 7.5" />
+                                    </svg>
+                                </span>
                             </a>
                         </li>
     
