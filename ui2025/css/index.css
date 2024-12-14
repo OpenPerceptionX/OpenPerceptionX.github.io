@@ -40,6 +40,9 @@
     details[open] summary:after {
         content: "-";
     }
+    code {
+        @apply bg-o-light-blue bg-opacity-30 text-o-blue font-bold pl-1 pr-1 ml-1 mr-1 select-all text-nowrap;
+    }
 }
 
 
@@ -71,4 +74,24 @@
 
 .divider {
     @apply mt-20 border-b-2 border-o-white;
+}
+
+
+
+.citation {
+    background-color: #f6f8fa;
+    font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+    color: #0a3069;
+    & span {
+        display: contents;
+    }
+    & .citation_red {
+        color: #cf222e;
+    }
+    & .citation_blue {
+        color: #6639ba;
+    }
+}
+.citation br {
+    user-select: text;
 }
