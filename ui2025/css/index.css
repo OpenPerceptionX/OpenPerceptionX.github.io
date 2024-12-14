@@ -19,13 +19,13 @@
         @apply text-6xl laptop:text-8xl text-white font-bold;
     }
     h2 {
-        @apply text-4xl laptop:text-6xl font-bold;
+        @apply text-4xl laptop:text-5xl font-bold;
     }
     h3 {
         @apply text-3xl laptop:text-4xl font-bold;
     }
     h4 {
-        @apply text-2xl laptop:text-2xl font-bold;
+        @apply text-xl laptop:text-xl font-bold;
     }
     summary {
         list-style: none;
