@@ -112,7 +112,7 @@
                     <div class="w-full flex flex-col gap-20 laptop:flex-row justify-between pt-10">
 
                         <div class="flex-1">
-                            <h3><a href="#feature" class="hover:text-o-blue scroll-mt-40 laptop:scroll-mt-20" id="feature">Features</a></h3>
+                            <h3><a href="#feature" class="hover:text-o-blue scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20" id="feature">Features</a></h3>
                             <div class="pt-10">
                                 <ul class="space-y-10">
                                     <li class="flex gap-10">
@@ -126,7 +126,7 @@
                                 </ul>
                             </div>
 
-                            <h3 class="mt-20"><a href="#contact" class="hover:text-o-blue scroll-mt-40 laptop:scroll-mt-20" id="contact">Contact</a></h3>
+                            <h3 class="mt-20"><a href="#contact" class="hover:text-o-blue scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20" id="contact">Contact</a></h3>
                             <div class="pt-10">
                                 <ul class="space-y-10">
                                     <li class="flex gap-10">
@@ -146,7 +146,7 @@
                         </div>
 
                         <div class="flex-1">
-                            <h3><a href="#timeline" class="hover:text-o-blue scroll-mt-40 laptop:scroll-mt-20" id="timeline">Timeline</a></h3>
+                            <h3><a href="#timeline" class="hover:text-o-blue scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20" id="timeline">Timeline</a></h3>
                             <div class="pt-10">
                                 <ul>
                                     <li>
@@ -397,7 +397,7 @@
 
 
                     <div class="w-full mt-20">
-                        <h3><a href="#host" class="hover:text-o-blue scroll-mt-40 laptop:scroll-mt-20" id="host">Host Organizations</a></h3>
+                        <h3><a href="#host" class="hover:text-o-blue scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20" id="host">Host Organizations</a></h3>
                         <div class="pt-10">
                             todo
                         </div>
@@ -406,18 +406,150 @@
 
 
                     <div class="w-full mt-20">
-                        <h3><a href="#host" class="hover:text-o-blue scroll-mt-40 laptop:scroll-mt-20" id="rule">General Rules</a></h3>
-                        <div class="w-full flex flex-col gap-20 laptop:flex-row justify-between pt-10">
-                            <div class="flex-1">
-                                todo
+                        <h3><a href="#rule" class="hover:text-o-blue scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20" id="rule">General Rules</a></h3>
+                        <div class="w-full flex-col gap-10 laptop:gap-20 laptop:flex-row justify-between pt-10 hidden laptop:flex">
+                            <div class="flex-1"></div>
+                            <div class="flex-1"><h4>FAQ</h4></div>
+                        </div>
+                        <div class="w-full flex flex-col gap-10 laptop:gap-20 laptop:flex-row justify-between pt-10">
+                            <div class="flex-1 space-y-10">
+                                <details>
+                                    <summary class="flex font-bold hover:text-o-blue justify-between group">
+                                        <h4 class="group-hover:text-o-blue">Eligibility</h4>
+                                    </summary>
+                                    <ul class="ml-6 pt-4 space-y-3 list-outside list-disc">
+                                        <li>
+                                            A participant must be a member of a team and cannot be a member of multiple teams.
+                                        </li>
+                                        <li>
+                                            Participants can form teams of up to <b>10</b> people.
+                                        </li>
+                                        <li>
+                                            A team is limited to one submission account. And a team can participate in multiple tracks.
+                                        </li>
+                                        <li>
+                                            A team must be registered for participation.
+                                        </li>
+                                        <li>
+                                            <b>An entity can have multiple teams.</b>
+                                        </li>
+                                        <li>
+                                            Participants will receive certificates. Winners will be invited to present during the CVPR workshop or sibling event.
+                                        </li>
+                                        <li>
+                                            Attempting to hack the test set or engaging in similar behaviors will result in disqualification.
+                                        </li>
+                                    </ul>
+                                </details>
+                                <details>
+                                    <summary class="flex font-bold hover:text-o-blue justify-between group">
+                                        <h4 class="group-hover:text-o-blue">Technical</h4>
+                                    </summary>
+                                    <ul class="ml-6 pt-4 space-y-3 list-outside list-disc">
+                                        <li>
+                                            <b>The use of all publicly available datasets and pretrained weights is allowed.</b> The use of private datasets or pretrained weights is prohibited.
+                                        </li>
+                                        <li>
+                                            The use of future frames is prohibited except where explicitly stated.
+                                        </li>
+                                        <li>
+                                            The use of data must be described explicitly in the technical report.
+                                        </li>
+                                        <li>
+                                            All technical reports will be made public after the conclusion of the challenge.
+                                        </li>
+                                    </ul>
+                                </details>
+                                <details>
+                                    <summary class="flex font-bold hover:text-o-blue justify-between group">
+                                        <h4 class="group-hover:text-o-blue">Awards</h4>
+                                    </summary>
+                                    <ul class="ml-6 pt-4 space-y-3 list-outside list-disc">
+                                        <li>
+                                            To be eligible for awards:
+                                            <ul class="ml-6 pt-4 space-y-3 list-outside list-disc">
+                                                <li>
+                                                    Teams must make their results public on the leaderboard before the submission deadline and continue to keep them public thereafter;
+                                                </li>
+                                                <li>
+                                                    Teams must submit a <b>technical report</b> via OpenReview for each track in PDF format of at most 4 pages (excluding references);
+                                                </li>
+                                                <li>
+                                                    If requested, teams must provide their code, docker image, or necessary materials to the award committee for verification;
+                                                </li>
+                                                <li>
+                                                    Organizers of a track cannot claim any award of the track. However, they can participate in other tracks since the test data is excluded from them as well.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            Innovation awards will be decided through a double-blind reviewing process on the technical reports by the award committee. Winners of Innovation awards can overlap with Outstanding Champion and Honorable Runner-up.
+                                        </li>
+                                        <li>
+                                            The organizers reserve the right to update the rules in response to unforeseen circumstances in order to better serve the mission of the challenge. The organizers reserve the right to disqualify teams that have violated the rules. Organizers reserve all rights for the final explanation.
+                                        </li>
+                                    </ul>
+                                </details>
                             </div>
                             <div class="flex-1">
-                                todo
+                                <h4 class="laptop:hidden">
+                                    FAQ
+                                </h4>
+                                <div class="w-full flex flex-col gap-20 laptop:flex-row justify-between pt-10 laptop:pt-0">
+                                    <div class="flex-1 space-y-10">
+                                        <details>
+                                            <summary class="flex font-bold hover:text-o-blue justify-between gap-10 group">
+                                                <h4 class="group-hover:text-o-blue">How do we/I download the data?</h4>
+                                            </summary>
+                                            <p class="pt-4">
+                                                For each track, we provide links for downloading data in the repository. The repository, which might also contain dataset API, baseline model, and other helpful information, is a good start to begin your participation.
+                                            </p>
+                                        </details>
+                                        <details>
+                                            <summary class="flex font-bold hover:text-o-blue justify-between gap-10 group">
+                                                <h4 class="group-hover:text-o-blue">How many times can we/I make a submission?</h4>
+                                            </summary>
+                                            <p class="pt-4">
+                                                Each track has its submission limit. Please refer to the test server for each track.
+                                            </p>
+                                        </details>
+                                        <details>
+                                            <summary class="flex font-bold hover:text-o-blue justify-between gap-10 group">
+                                                <h4 class="group-hover:text-o-blue">Should we/I use future frames during inference?</h4>
+                                            </summary>
+                                            <p class="pt-4">
+                                                No future frame is allowed except that it is noted explicitly.
+                                            </p>
+                                        </details>
+                                        <details>
+                                            <summary class="flex font-bold hover:text-o-blue justify-between gap-10 group">
+                                                <h4 class="group-hover:text-o-blue">Which template of a technical report should we/I follow? How to submit the technical report?</h4>
+                                            </summary>
+                                            <p class="pt-4">
+                                                The format of a technical report is constrained to a PDF file. We recommend using the CVPR 2024 template.
+                                            </p>
+                                        </details>
+                                        <details>
+                                            <summary class="flex font-bold hover:text-o-blue justify-between gap-10 group">
+                                                <h4 class="group-hover:text-o-blue">Which registration form should we/I fill in regarding multiple forms?</h4>
+                                            </summary>
+                                            <p class="pt-4">
+                                                It is a strict requirement to register in this Google Form.
+                                            </p>
+                                        </details>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
 
+
+                    <div class="divider"></div>
+
+
+
+                    <div>dwd</div>
 
                 </main>
 
