@@ -73,7 +73,7 @@
 
 
 .divider {
-    @apply mt-20 border-b-2 border-o-white;
+    @apply mt-20 border-b-4 border-o-white;
 }
 
 
