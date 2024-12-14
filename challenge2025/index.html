@@ -43,18 +43,25 @@
 
 
             <!-- Content -->
-            <div class="flex flex-col laptop:flex-row snap-start p-16 tablet:p-10">
+            <div class="flex flex-col laptop:flex-row snap-start p-16 tablet:p-10 tablet:pb-0">
 
 
 
                 <!-- navigator -->
                 <aside class="min-h-16 laptop:h-screen top-16 tablet:top-0 sticky z-20 flex items-center justify-start w-full tablet:w-auto laptop:w-96 shrink-0 bg-white mb-10 laptop:mb-0">
-                    <ul class="w-full laptop:w-auto mt-3 mb-3 flex flex-row flex-wrap laptop:flex-col justify-evenly border-t-2 border-t-o-white border-b-2 border-b-o-white laptop:border-t-0 laptop:border-b-0">
+                    <ul class="w-full laptop:w-auto mt-3 mb-6 flex flex-row flex-wrap laptop:flex-col justify-evenly border-t-2 border-t-o-white border-b-2 border-b-o-white laptop:border-t-0 laptop:border-b-0">
     
                         <li>
-                            <a href="#1x" class="navigator-button group">                           
+                            <a href="#1x-wm" class="navigator-button group">                           
                                 <span class="navigator-button-text">
-                                    1x WM Challenge
+                                    Track: 1X WM
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#e2e-ad" class="navigator-button group">                           
+                                <span class="navigator-button-text">
+                                    Track: E2E Driving
                                 </span>
                             </a>
                         </li>
@@ -111,7 +118,7 @@
 
 
                 <!-- main -->
-                <main class="w-full">
+                <main class="w-full mb-10 tablet:mb-20">
 
 
 
@@ -137,15 +144,15 @@
                                 <ul class="space-y-10">
                                     <li class="flex gap-10">
                                         <img src="/assets/icon/email.png" class="size-8 inline-block mr-2"/>
-                                        <span>Contact us via <a href="mailto:contact@opendrivelab.com" class="text-o-blue hover:text-o-gray">contact@opendrivelab.com</a></span>
+                                        <span>Contact us via <a href="mailto:contact@opendrivelab.com" class="text-o-blue hover:text-o-gray"><code>contact@opendrivelab.com</code></a></span>
                                     </li>
                                     <li class="flex gap-10">
                                         <img src="/assets/icon/slack.png" class="size-8 inline-block mr-2"/>
-                                        <span>Join Slack to chat with Challenge organizers.<br><br>Please follow the guidelines in #general and join the track-specific channels.</span>
+                                        <span><a href="https://join.slack.com/t/opendrivelab/shared_invite/zt-2ft3dfjoz-6XErfBts4s_8Fen88wO4Jg" target="_blank" class="text-o-blue hover:text-o-gray">Join Slack</a> to chat with Challenge organizers.<br><br>Please follow the guidelines in <code>#general</code> and join the track-specific channels.</span>
                                     </li>
                                     <li class="flex gap-10">
                                         <img src="/assets/icon/wechat.png" class="size-8 inline-block mr-2"/>
-                                        <span>Join discussions in our <a href="/assets/qrcode_wechat_group.jpg" class="text-o-blue hover:text-o-gray">WeChat group</a></span>
+                                        <span>Join discussions in our <a href="/assets/qrcode_wechat_group.jpg" target="_blank" class="text-o-blue hover:text-o-gray">WeChat group</a></span>
                                     </li>
                                 </ul>
                             </div>
@@ -559,13 +566,13 @@
 
                         <div class="w-full h-48 mt-20">
                             <div class="w-full h-full rounded-3xl bg-[url('/challenge2025/66e9b7ace6ba1c7833932ec9.jpg')] bg-top bg-cover flex flex-col justify-center p-10">
-                                <h2 class="text-white scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20" id="1x">
-                                    <a href="#1x">1X World Model Challenge</a>
+                                <h2 class="text-white scroll-mt-72 tablet:scroll-mt-56 laptop:scroll-mt-28" id="1x-wm">
+                                    <a href="#1x-wm">1X World Model Challenge</a>
                                 </h2>
                             </div>
                         </div>
 
-                        <div class="w-full h-40 flex flex-col tablet:flex-row justify-between mt-10 gap-10 laptop:gap-20">
+                        <div class="w-full tablet:h-44 flex flex-col tablet:flex-row justify-between mt-10 gap-10 laptop:gap-20">
                             <div class="h-full flex-1 flex flex-col bg-[eee3d5] rounded-3xl p-10 justify-between">
                                 <span class="text-[30201e] font-bold text-nowrap">Test Server @</span>
                                 <a class="group flex-nowrap"><span class="text-[30201e] font-bold text-nowrap group-hover:text-o-blue"><img src="/assets/icon/hugging_face.png" class="size-8 inline-block mr-2 group-hover:opacity-70"/>Hugging face</span></a>
@@ -595,7 +602,195 @@
                             </ul>
                         </div>
 
+                        <div class="mt-12 flex flex-col gap-6">
+                            <h3 class="text-[30201e]">
+                                Task Description
+                            </h3>
+                            <p>
+                                A world model is a computer program that can imagine how the world evolves in response to an agent's behavior. It has the potential to solve general-purpose simulation and evaluation, enabling robots that are safe, reliable, and intelligent in a wide variety of scenarios. To help accelerate progress towards solving world models for robotics, our challenge invites participants to develop a robot world model that can accurately simulate the future interactions of humanoid robots with their surroundings based on past observations and agent actions. Participants will demonstrate the compression rate, efficiency, and evaluation ability of their approaches.
+                            </p>
+                        </div>
+
+                        <div class="mt-12 flex flex-col gap-6">
+                            <h3 class="text-[30201e]">
+                                Contact
+                            </h3>
+                            <ul class="ml-6 space-y-3 list-outside list-disc">
+                                <li>
+                                    Daniel Dauner (University of Tübingen), 
+                                    <a href="mailto:daniel.dauner@uni-tuebingen.de" target="_blank" class="text-o-blue hover:text-o-gray">
+                                        <code>daniel.dauner@uni-tuebingen.de</code>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://ieeexplore.ieee.org/abstract/document/9863660" target="_blank" class="text-o-blue hover:text-o-gray">
+                                        Slack channel:
+                                    </a>
+                                    <code>#e2e-driving-2024</code>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="mt-12 flex flex-col gap-6">
+                            <h3 class="text-[30201e]">
+                                Citation
+                            </h3>
+                            <p>Please consider citing our work if the challenge helps your research with the following BibTex:</p>
+                            <div class="citation p-6 rounded-3xl">
+                                <span class="citation_red">@inproceedings</span>{<span class="citation_blue">Dauner2024ARXIV</span>, 
+                                    <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;title = {NAVSIM: Data-Driven Non-Reactive Autonomous Vehicle Simulation and Benchmarking},
+                                    <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;author = {Daniel Dauner and Marcel Hallgarten and Tianyu Li and Xinshuo Weng and Zhiyu Huang and Zetong Yang and Hongyang Li and Igor Gilitschenski and Boris Ivanovic and Marco Pavone and Andreas Geiger and Kashyap Chitta},
+                                    <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;journal = {arXiv},
+                                    <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;volume = {2406.15349},
+                                    <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;year = {2024}
+                                    <br>
+                                }
+                            </div>
+                        </div>
+
+                        <div class="mt-12 flex flex-col gap-6">
+                            <h3 class="text-[30201e]">
+                                Related Literature
+                            </h3>
+                            <ul class="ml-6 space-y-3 list-outside list-disc">
+                                <li>
+                                    <a href="https://ieeexplore.ieee.org/abstract/document/9863660" target="_blank" class="text-o-blue hover:text-o-gray">
+                                        TransFuser: Imitation With Transformer-Based Sensor Fusion for Autonomous Driving
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://ieeexplore.ieee.org/abstract/document/9863660" target="_blank" class="text-o-blue hover:text-o-gray">
+                                        TransFuser: Imitation With Transformer-Based Sensor Fusion for Autonomous Driving
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
                     </div>
+
+
+
+                    <div class="divider"></div>
+
+
+
+                    <div>
+
+                        <div class="w-full h-48 mt-20">
+                            <div class="w-full h-full rounded-3xl bg-[url('/challenge2024/e2e_driving_at_scale.jpg')] bg-black bg-opacity-30 bg-blend-overlay bg-center bg-cover flex flex-col justify-center p-10">
+                                <h2 class="text-white scroll-mt-72 tablet:scroll-mt-56 laptop:scroll-mt-28" id="e2e-ad">
+                                    <a href="#e2e-ad">End-to-End Driving beyond Regular Scenarios</a>
+                                </h2>
+                            </div>
+                        </div>
+
+                        <div class="w-full tablet:h-44 flex flex-col tablet:flex-row justify-between mt-10 gap-10 laptop:gap-20">
+                            <div class="h-full flex-1 flex flex-col bg-[e0ebec] rounded-3xl p-10 justify-between">
+                                <span class="text-[1d4968] font-bold text-nowrap">Test Server @</span>
+                                <a class="group flex-nowrap"><span class="text-[1d4968] font-bold text-nowrap group-hover:text-o-blue"><img src="/assets/icon/hugging_face.png" class="size-8 inline-block mr-2 group-hover:opacity-70"/>Hugging face</span></a>
+                            </div>
+                            <ul class="h-full flex-1 flex flex-col bg-[e0ebec] rounded-3xl p-10 justify-between">
+                                <li class="flex flex-row justify-between flex-nowrap gap-10">
+                                    <div class="text-nowrap">
+                                        <img class="size-6 inline-block mr-2" src="/assets/icon/bulb.png"/>
+                                        <span class="text-[1d4968] font-bold">Innovation Award</span>
+                                    </div>
+                                    <span class="text-[1d4968] font-bold text-nowrap">USD xxx</span>
+                                </li>
+                                <li class="flex flex-row justify-between flex-nowrap gap-10">
+                                    <div class="text-nowrap">
+                                        <img class="size-6 inline-block mr-2" src="/assets/icon/rank01.png"/>
+                                        <span class="text-[1d4968] font-bold">Outstanding Champion</span>
+                                    </div>
+                                    <span class="text-[1d4968] font-bold text-nowrap">USD xxx</span>
+                                </li>
+                                <li class="flex flex-row justify-between flex-nowrap gap-10">
+                                    <div class="text-nowrap">
+                                        <img class="size-6 inline-block mr-2" src="/assets/icon/rank02.png"/>
+                                        <span class="text-[1d4968] font-bold">Honorable Runner-up</span>
+                                    </div>
+                                    <span class="text-[1d4968] font-bold text-nowrap">USD xxx</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="mt-12 flex flex-col gap-6">
+                            <h3 class="text-[1d4968]">
+                                Task Description
+                            </h3>
+                            <p>
+                                Benchmarking sensorimotor driving policies with real data is challenging due to the limited scale of prior datasets and the misalignment between open- and closed-loop metrics. The NAVSIM framework aims to address these issues for end-to-end driving by unrolling simplified bird's eye view abstractions of scenes for a short simulation horizon. Going beyond evaluating driving systems in standard scenarios, we further include realistic rare safety-critical cases to assess the generalization ability of the system.
+                            </p>
+                        </div>
+
+                        <div class="mt-12 flex flex-col gap-6">
+                            <h3 class="text-[1d4968]">
+                                Contact
+                            </h3>
+                            <ul class="ml-6 space-y-3 list-outside list-disc">
+                                <li>
+                                    Daniel Dauner (University of Tübingen), 
+                                    <a href="mailto:daniel.dauner@uni-tuebingen.de" target="_blank" class="text-o-blue hover:text-o-gray">
+                                        <code>daniel.dauner@uni-tuebingen.de</code>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://ieeexplore.ieee.org/abstract/document/9863660" target="_blank" class="text-o-blue hover:text-o-gray">
+                                        Slack channel:
+                                    </a>
+                                    <code>#e2e-driving-2024</code>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="mt-12 flex flex-col gap-6">
+                            <h3 class="text-[1d4968]">
+                                Citation
+                            </h3>
+                            <p>Please consider citing our work if the challenge helps your research with the following BibTex:</p>
+                            <div class="citation p-6 rounded-3xl">
+                                <span class="citation_red">@inproceedings</span>{<span class="citation_blue">Dauner2024ARXIV</span>, 
+                                    <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;title = {NAVSIM: Data-Driven Non-Reactive Autonomous Vehicle Simulation and Benchmarking},
+                                    <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;author = {Daniel Dauner and Marcel Hallgarten and Tianyu Li and Xinshuo Weng and Zhiyu Huang and Zetong Yang and Hongyang Li and Igor Gilitschenski and Boris Ivanovic and Marco Pavone and Andreas Geiger and Kashyap Chitta},
+                                    <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;journal = {arXiv},
+                                    <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;volume = {2406.15349},
+                                    <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;year = {2024}
+                                    <br>
+                                }
+                            </div>
+                        </div>
+
+                        <div class="mt-12 flex flex-col gap-6">
+                            <h3 class="text-[1d4968]">
+                                Related Literature
+                            </h3>
+                            <ul class="ml-6 space-y-3 list-outside list-disc">
+                                <li>
+                                    <a href="https://ieeexplore.ieee.org/abstract/document/9863660" target="_blank" class="text-o-blue hover:text-o-gray">
+                                        TransFuser: Imitation With Transformer-Based Sensor Fusion for Autonomous Driving
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://ieeexplore.ieee.org/abstract/document/9863660" target="_blank" class="text-o-blue hover:text-o-gray">
+                                        TransFuser: Imitation With Transformer-Based Sensor Fusion for Autonomous Driving
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+
 
                 </main>
 
