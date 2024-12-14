@@ -15,6 +15,13 @@ a, summary {
     @apply hover:cursor-pointer;
 }
 
+h1 {
+    @apply text-6xl laptop:text-8xl text-white font-bold;
+}
+h2 {
+    @apply text-4xl laptop:text-6xl font-bold;
+}
+
 @layer components {
     .sidebar-button {
         @apply flex gap-x-3 rounded-xl p-3 font-bold hover:bg-o-hover hover:text-o-blue select-none;
