@@ -30,7 +30,7 @@ h2 {
         @apply flex gap-x-3 rounded-xl p-3 font-bold hover:bg-o-hover select-none;
     }
     .navigator-button-text {
-        @apply laptop:border-l-2 laptop:border-l-o-black laptop:pl-3 laptop:ml-1;
+        @apply group-hover:text-o-blue laptop:border-l-2 laptop:border-l-o-black laptop:group-hover:border-l-o-blue laptop:pl-3 laptop:ml-1;
     }
 }
 
