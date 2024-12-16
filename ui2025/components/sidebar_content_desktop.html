@@ -215,9 +215,9 @@
                 <label htmlFor="email-address" class="text-o-gray text-xs/6">
                     Subscribe & stay tuned!
                 </label>
-                <form method="post" onsubmit="formSubscribe()" enctype='application/json' id="subscribe_form" class="mb-0">
-                    <input class="w-full mt-1 rounded-xl px-3 py-1 text-xs/6 text-o-gray outline-1 -outline-offset-1  focus:outline-o-gray" id="subscribe_input" oninput="formInputCheck()" placeholder="enter your email" maxlength="128" autoComplete="email" type="email">
-                    <button id="subscribe_button" class="px-3 py-1 rounded-xl text-xs/6 text-o-white hover:underline" disabled onclick="formSubscribeSubmit()">subscribe</button>
+                <form method="post" onsubmit="formSubscribe_desktop()" enctype='application/json' id="subscribe_form_desktop" class="mb-0">
+                    <input class="w-full mt-1 rounded-xl px-3 py-1 text-xs/6 text-o-gray outline-1 -outline-offset-1  focus:outline-o-gray" id="subscribe_input_desktop" oninput="formInputCheck_desktop()" placeholder="enter your email" maxlength="128" autoComplete="email" type="email">
+                    <button id="subscribe_button_desktop" class="px-3 py-1 rounded-xl text-xs/6 text-o-white hover:underline" disabled onclick="formSubscribeSubmit_desktop()">subscribe</button>
                 </form>
             </div>
 
@@ -249,34 +249,30 @@
 
 <!-- subscribe -->
 <script>
-    function formSubscribe() {
+    function formSubscribe_desktop() {
         event.preventDefault()
     }
 
-    function formInputCheck() {
-
-        var elms = document.querySelector("#subscribe_input.des");
-        console.log(elms)
-
-        let val = document.getElementById('subscribe_input').value;
+    function formInputCheck_desktop() {
+        let val = document.getElementById('subscribe_input_desktop').value;
         let empty = val == null || val == "";
         let valid = val.match(
             /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
         );
         if (!empty && valid) {
-            document.getElementById('subscribe_button').disabled = false;
-            document.getElementById('subscribe_button').classList.add("text-o-gray");
-            document.getElementById('subscribe_button').classList.remove("text-o-white");
+            document.getElementById('subscribe_button_desktop').disabled = false;
+            document.getElementById('subscribe_button_desktop').classList.add("text-o-gray");
+            document.getElementById('subscribe_button_desktop').classList.remove("text-o-white");
         } else {
-            document.getElementById('subscribe_button').disabled = true;
-            document.getElementById('subscribe_button').classList.add("text-o-white");
-            document.getElementById('subscribe_button').classList.remove("text-o-gray");
+            document.getElementById('subscribe_button_desktop').disabled = true;
+            document.getElementById('subscribe_button_desktop').classList.add("text-o-white");
+            document.getElementById('subscribe_button_desktop').classList.remove("text-o-gray");
         }
     }
 
-    function formSubscribeSubmit() {
-        var formData = new FormData(document.getElementById('subscribe_form'));
-        formData.append("email", document.getElementById('subscribe_input').value);
+    function formSubscribeSubmit_desktop() {
+        var formData = new FormData(document.getElementById('subscribe_form_desktop'));
+        formData.append("email", document.getElementById('subscribe_input_desktop').value);
         formData.append("message", "");
         formData.append("organization", "");
         formData.append("first_name", "");
@@ -294,10 +290,10 @@
         xhr.onreadystatechange = function () {
             if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
                 alert('Subscribed.');
-                document.getElementById('subscribe_input').value = "";
-                document.getElementById('subscribe_button').disabled = true;
-                document.getElementById('subscribe_button').classList.add("text-o-white");
-                document.getElementById('subscribe_button').classList.remove("text-o-gray");
+                document.getElementById('subscribe_input_desktop').value = "";
+                document.getElementById('subscribe_button_desktop').disabled = true;
+                document.getElementById('subscribe_button_desktop').classList.add("text-o-white");
+                document.getElementById('subscribe_button_desktop').classList.remove("text-o-gray");
             }
         };
         xhr.send(jsonString);
