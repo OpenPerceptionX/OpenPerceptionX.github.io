@@ -255,18 +255,15 @@
 
     function formInputCheck() {
         let val = document.getElementById('subscribe_input').value;
-        console.log(document.getElementById('subscribe_input').value)
         let empty = val == null || val == "";
         let valid = val.match(
             /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
         );
         if (!empty && valid) {
-            console.log('valid')
             document.getElementById('subscribe_button').disabled = false;
             document.getElementById('subscribe_button').classList.add("text-o-gray");
             document.getElementById('subscribe_button').classList.remove("text-o-white");
         } else {
-            console.log('not valid')
             document.getElementById('subscribe_button').disabled = true;
             document.getElementById('subscribe_button').classList.add("text-o-white");
             document.getElementById('subscribe_button').classList.remove("text-o-gray");
@@ -275,7 +272,7 @@
 
     function formSubscribeSubmit() {
         var formData = new FormData(document.getElementById('subscribe_form'));
-        formData.append("email", subscribe_input.value);
+        formData.append("email", document.getElementById('subscribe_input').value);
         formData.append("message", "");
         formData.append("organization", "");
         formData.append("first_name", "");
@@ -293,10 +290,10 @@
         xhr.onreadystatechange = function () {
             if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
                 alert('Subscribed.');
-                subscribe_input.value = "";
+                document.getElementById('subscribe_input').value = "";
                 document.getElementById('subscribe_button').disabled = true;
-                document.getElementById('subscribe_button').classList.add("gray");
-                document.getElementById('subscribe_button').classList.remove("Owhite");
+                document.getElementById('subscribe_button').classList.add("text-o-white");
+                document.getElementById('subscribe_button').classList.remove("text-o-gray");
             }
         };
         xhr.send(jsonString);
