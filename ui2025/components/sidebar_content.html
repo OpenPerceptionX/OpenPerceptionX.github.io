@@ -254,6 +254,10 @@
     }
 
     function formInputCheck() {
+
+        var elms = document.querySelector("#subscribe_input.des");
+        console.log(elms)
+
         let val = document.getElementById('subscribe_input').value;
         let empty = val == null || val == "";
         let valid = val.match(
