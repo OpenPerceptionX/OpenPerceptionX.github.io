@@ -216,8 +216,8 @@
                     Subscribe & stay tuned!
                 </label>
                 <form method="post" onsubmit="formSubscribe()" enctype='application/json' id="subscribe_form" class="mb-0">
-                    <input class="w-full mt-1 rounded-xl px-3 py-1 text-xs/6 text-o-gray outline-1 -outline-offset-1  focus:outline-o-gray" id="subscribe_input" placeholder="enter your email" maxlength="128" autoComplete="email" type="email">
-                    <button id="subscribe_button" class="px-3 py-1 rounded-xl text-xs/6 text-o-gray hover:underline" disabled onclick="formSubscribeSubmit()">subscribe</button>
+                    <input class="w-full mt-1 rounded-xl px-3 py-1 text-xs/6 text-o-gray outline-1 -outline-offset-1  focus:outline-o-gray" id="subscribe_input" oninput="formInputCheck()" placeholder="enter your email" maxlength="128" autoComplete="email" type="email">
+                    <button id="subscribe_button" class="px-3 py-1 rounded-xl text-xs/6 text-o-white hover:underline" disabled onclick="formSubscribeSubmit()">subscribe</button>
                 </form>
             </div>
 
@@ -247,31 +247,34 @@
 
 
 
-<script>
-    subscribe_input.addEventListener("input", () => {
-        let val = subscribe_input.value;
-        let empty = val == null || val == "";
-        let valid = val.match(
-            /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-        );
-        if (!empty && valid) {
-            subscribe_button.disabled = false;
-            subscribe_button.classList.add("Owhite");
-            subscribe_button.classList.remove("gray");
-        } else {
-            subscribe_button.disabled = true;
-            subscribe_button.classList.add("gray");
-            subscribe_button.classList.remove("Owhite");
-        }
-    })
-</script>
+<!-- subscribe -->
 <script>
     function formSubscribe() {
         event.preventDefault()
     }
 
+    function formInputCheck() {
+        let val = document.getElementById('subscribe_input').value;
+        console.log(document.getElementById('subscribe_input').value)
+        let empty = val == null || val == "";
+        let valid = val.match(
+            /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        );
+        if (!empty && valid) {
+            console.log('valid')
+            document.getElementById('subscribe_button').disabled = false;
+            document.getElementById('subscribe_button').classList.add("text-o-gray");
+            document.getElementById('subscribe_button').classList.remove("text-o-white");
+        } else {
+            console.log('not valid')
+            document.getElementById('subscribe_button').disabled = true;
+            document.getElementById('subscribe_button').classList.add("text-o-white");
+            document.getElementById('subscribe_button').classList.remove("text-o-gray");
+        }
+    }
+
     function formSubscribeSubmit() {
-        var formData = new FormData(subscribe_form);
+        var formData = new FormData(document.getElementById('subscribe_form'));
         formData.append("email", subscribe_input.value);
         formData.append("message", "");
         formData.append("organization", "");
@@ -291,9 +294,9 @@
             if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
                 alert('Subscribed.');
                 subscribe_input.value = "";
-                subscribe_button.disabled = true;
-                subscribe_button.classList.add("gray");
-                subscribe_button.classList.remove("Owhite");
+                document.getElementById('subscribe_button').disabled = true;
+                document.getElementById('subscribe_button').classList.add("gray");
+                document.getElementById('subscribe_button').classList.remove("Owhite");
             }
         };
         xhr.send(jsonString);
