@@ -7,6 +7,8 @@
     <meta name="description" content="OpenDriveLab is committed to exploring cutting-edge autonomous driving technology, launching a series of benchmarking work, open source to serve the community, and promote the common development of the industry. Friends who are committed to making influential research are welcome to join!">
 
     <link href="/ui2025/css/index_tailwind.css" rel="stylesheet">
+
+    <script src="/ui2024/js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 
 
@@ -18,6 +20,15 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-L7VEDHS6G8');
+</script>
+
+
+
+<!-- load sidebar -->
+<script>
+    $.get('/ui2025/components/sidebar.html', function(result){
+        $("#to_add_sidebar").append(result);
+    })
 </script>
 
 
@@ -850,32 +861,3 @@
         </div>
     </div>
 </body>
-
-
-
-<!-- load sidebar -->
-<script>
-    fetch('/ui2025/components/sidebar.html').then(response => {return response.text()}).then((result) => {document.getElementById("to_add_sidebar").innerHTML = result});
-</script>
-<!-- load sidebar content -->
-<script>
-    fetch('/ui2025/components/sidebar_content.html').then(response => {return response.text()}).then((result) => {document.getElementById("to_add_sidebar_content_mobile").innerHTML = result});
-    fetch('/ui2025/components/sidebar_content.html').then(response => {return response.text()}).then((result) => {document.getElementById("to_add_sidebar_content_desktop").innerHTML = result});
-</script>
-<!-- sidebar open/close mobile -->
-<script>
-    var sidebar_state = false;
-    function changeSidebar() {
-        if (sidebar_state === false) {
-            document.getElementById("sidebar_open").classList.add("hidden");
-            document.getElementById("sidebar_close").classList.remove("hidden");
-            document.getElementById("mobile_sidebar").classList.remove("hidden");
-            sidebar_state = true;
-        } else {
-            document.getElementById("sidebar_open").classList.remove("hidden");
-            document.getElementById("sidebar_close").classList.add("hidden");
-            document.getElementById("mobile_sidebar").classList.add("hidden");
-            sidebar_state = false;
-        }
-    }
-</script>
