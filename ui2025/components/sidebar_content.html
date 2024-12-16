@@ -249,7 +249,6 @@
 
 <script>
     subscribe_input.addEventListener("input", () => {
-        console.log('dw');
         let val = subscribe_input.value;
         let empty = val == null || val == "";
         let valid = val.match(
@@ -257,12 +256,12 @@
         );
         if (!empty && valid) {
             subscribe_button.disabled = false;
-            // subscribe_button.classList.add("Owhite");
-            // subscribe_button.classList.remove("gray");
+            subscribe_button.classList.add("Owhite");
+            subscribe_button.classList.remove("gray");
         } else {
             subscribe_button.disabled = true;
-            // subscribe_button.classList.add("gray");
-            // subscribe_button.classList.remove("Owhite");
+            subscribe_button.classList.add("gray");
+            subscribe_button.classList.remove("Owhite");
         }
     })
 </script>
