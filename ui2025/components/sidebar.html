@@ -1,35 +1,3 @@
-<!-- load sidebar content -->
-<script>
-    $.get('/ui2025/components/sidebar_content.html', function(result){
-        $("#to_add_sidebar_content_mobile").append(result);
-    })
-    $.get('/ui2025/components/sidebar_content.html', function(result){
-        $("#to_add_sidebar_content_desktop").append(result);
-    })
-</script>
-
-
-
-<!-- sidebar open/close mobile -->
-<script>
-    var sidebar_state = false;
-    function changeSidebar() {
-        if (sidebar_state === false) {
-            document.getElementById("sidebar_open").classList.add("hidden");
-            document.getElementById("sidebar_close").classList.remove("hidden");
-            document.getElementById("mobile_sidebar").classList.remove("hidden");
-            sidebar_state = true;
-        } else {
-            document.getElementById("sidebar_open").classList.remove("hidden");
-            document.getElementById("sidebar_close").classList.add("hidden");
-            document.getElementById("mobile_sidebar").classList.add("hidden");
-            sidebar_state = false;
-        }
-    }
-</script>
-
-
-
 <!-- mobile header -->
 <div id="sidebar_container" class="fixed tablet:hidden w-screen top-0 z-40 flex items-center justify-center gap-x-6 h-16 bg-white px-6">
     <!-- mobile logo -->
@@ -90,3 +58,35 @@
 <div class="hidden tablet:fixed tablet:inset-y-0 tablet:z-50 tablet:flex tablet:w-72 tablet:flex-col"  id="to_add_sidebar_content_desktop">
     <!-- Sidebar component, swap this element with another sidebar if you like -->
 </div>
+
+
+
+<!-- load sidebar content -->
+<script>
+    $.get('/ui2025/components/sidebar_content.html', function(result){
+        $("#to_add_sidebar_content_mobile").append(result);
+    })
+    $.get('/ui2025/components/sidebar_content.html', function(result){
+        $("#to_add_sidebar_content_desktop").append(result);
+    })
+</script>
+
+
+
+<!-- sidebar open/close mobile -->
+<script>
+    var sidebar_state = false;
+    function changeSidebar() {
+        if (sidebar_state === false) {
+            document.getElementById("sidebar_open").classList.add("hidden");
+            document.getElementById("sidebar_close").classList.remove("hidden");
+            document.getElementById("mobile_sidebar").classList.remove("hidden");
+            sidebar_state = true;
+        } else {
+            document.getElementById("sidebar_open").classList.remove("hidden");
+            document.getElementById("sidebar_close").classList.add("hidden");
+            document.getElementById("mobile_sidebar").classList.add("hidden");
+            sidebar_state = false;
+        }
+    }
+</script>
