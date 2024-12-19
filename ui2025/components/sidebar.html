@@ -63,10 +63,10 @@
 
 <!-- load sidebar content -->
 <script>
-    $.get('/ui2025/components/sidebar_content.html', function(result){
+    $.get('/ui2025/components/sidebar_content_mobile.html', function(result){
         $("#to_add_sidebar_content_mobile").append(result);
     })
-    $.get('/ui2025/components/sidebar_content.html', function(result){
+    $.get('/ui2025/components/sidebar_content_desktop.html', function(result){
         $("#to_add_sidebar_content_desktop").append(result);
     })
 </script>
