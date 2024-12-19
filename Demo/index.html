@@ -38,32 +38,53 @@
     <header id="to_add_sidebar" class="overscroll-none"></header>
     <!-- Page -->
     <div class="tablet:ml-72" id="page">
-        <div class="flex w-screen tablet:w-auto flex-col">
+        <div class="flex flex-col">
 
 
 
             <!-- Landing -->
-            <div class="w-screen tablet:w-auto bg-demo-c1 pt-40 pb-40 p-6 tablet:p-10 flex flex-col laptop:flex-row gap-10">
+            <div class="bg-demo-c1 pt-32 pb-32 p-6 tablet:p-10 flex flex-col laptop:flex-row gap-10">
                 <div class="flex-1 flex flex-col justify-center gap-10 w-full p-6 laptop:p-20">
-                    <h1 style="-webkit-background-clip: text;" class="bg-gradient-to-r from-demo-c2 via-demo-c1 text-transparent">
-                        DEMO
+                    <h1 class="text-demo-c2">
+                        Color 2
                     </h1>
-                    <h2 class="text-white">
-                        This is the Title of the Paper
+                    <h2 class="text-demo-c2">
+                        background using color 1
                     </h2>
                     <h3 class="text-white">
                         some bulletpoint / emphasis / etc.<br>some bulletpoint / emphasis / etc.<br>some bulletpoint / emphasis / etc.<br>some bulletpoint / emphasis / etc.<br>some bulletpoint / emphasis / etc.<br>some bulletpoint / emphasis / etc.
                     </h3>
+                    <div></div>
+                    <div class="flex flex-row gap-10 flex-wrap justify-center laptop:justify-start">
+                        <a class="bg-demo-c2 rounded-3xl p-4 pb-3 flex flex-row gap-3 hover:bg-transparent border-4 border-demo-c2" target="_blank" href="/">
+                            <img src="/assets/icon/zhihu_white.png" class="size-6"/>
+                            <h4 class="text-white">
+                                GitHub
+                            </h4>
+                        </a>
+                        <a class="bg-demo-c2 rounded-3xl p-4 pb-3 flex flex-row gap-3 hover:bg-transparent border-4 border-demo-c2" target="_blank" href="/">
+                            <img src="/assets/icon/zhihu_white.png" class="size-6"/>
+                            <h4 class="text-white">
+                                Hugging Face
+                            </h4>
+                        </a>
+                        <a class="bg-demo-c2 rounded-3xl p-4 pb-3 flex flex-row gap-3 hover:bg-transparent border-4 border-demo-c2" target="_blank" href="/">
+                            <img src="/assets/icon/zhihu_white.png" class="size-6"/>
+                            <h4 class="text-white">
+                                Hugging Face
+                            </h4>
+                        </a>
+                    </div>
                 </div>
                 <div class="flex-1 flex flex-col justify-center gap-10 w-full p-6 laptop:p-20">
                     <h3 class="text-white text-center">
                         this is the framework
                     </h3>
-                    <img class="w-full h-96 bg-white rounded-3xl"/>
+                    <div class="w-full h-96 bg-[url('/assets/background/12a4bd91b752125a10a2240dfcb52419.jpg')] bg-center bg-cover rounded-3xl"></div>
                     <h3 class="text-white text-center">
                         this is the visualization
                     </h3>
-                    <img class="w-full h-96 bg-white rounded-3xl"/>
+                    <div class="w-full h-96 bg-[url('/challenge2025/lHlT9joqwXjGv4c4pIGgK1qlJOvwEEtD.jpg')] bg-center bg-cover rounded-3xl"></div>
                 </div>
             </div>
 
@@ -80,36 +101,43 @@
     
                         <li>
                             <a href="#feature" class="navigator-button group">                           
-                                <span class="navigator-button-text group-hover:text-demo-c2 laptop:group-hover:border-l-demo-c2">
+                                <span class="navigator-button-text group-hover:text-demo-c1 laptop:group-hover:border-l-demo-c1">
                                     Core Features
                                 </span>
                             </a>
                         </li>
                         <li>
                             <a href="#result" class="navigator-button group">                           
-                                <span class="navigator-button-text group-hover:text-demo-c2 laptop:group-hover:border-l-demo-c2">
+                                <span class="navigator-button-text group-hover:text-demo-c1 laptop:group-hover:border-l-demo-c1">
                                     Results
                                 </span>
                             </a>
                         </li>
                         <li>
                             <a href="#about" class="navigator-button group">                           
-                                <span class="navigator-button-text group-hover:text-demo-c2 laptop:group-hover:border-l-demo-c2">
+                                <span class="navigator-button-text group-hover:text-demo-c1 laptop:group-hover:border-l-demo-c1">
                                     About
                                 </span>
                             </a>
                         </li>
                         <li>
                             <a href="#faq" class="navigator-button group">                           
-                                <span class="navigator-button-text group-hover:text-demo-c2 laptop:group-hover:border-l-demo-c2">
+                                <span class="navigator-button-text group-hover:text-demo-c1 laptop:group-hover:border-l-demo-c1">
                                     FAQ
                                 </span>
                             </a>
                         </li>
                         <li>
                             <a href="#cite" class="navigator-button group">                           
-                                <span class="navigator-button-text group-hover:text-demo-c2 laptop:group-hover:border-l-demo-c2">
+                                <span class="navigator-button-text group-hover:text-demo-c1 laptop:group-hover:border-l-demo-c1">
                                     Cite
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#related" class="navigator-button group">                           
+                                <span class="navigator-button-text group-hover:text-demo-c1 laptop:group-hover:border-l-demo-c1">
+                                    Related Works
                                 </span>
                             </a>
                         </li>
@@ -135,6 +163,48 @@
 
 
 
+                    <div class="w-full mt-20 flex flex-col gap-16 justify-between">
+                        <div class="felx-1 flex flex-col gap-6">
+                            <p class="text-center">
+                                <a class="text-demo-c1 hover:text-demo-c2 text-xl" target="_blank" href="https://github.com/Little-Podi">Shenyuan Gao</a> <sup>1,2</sup>,
+                                <a class="text-demo-c1 hover:text-demo-c2 text-xl" target="_blank" href="https://github.com/YTEP-ZHI">Jiazhi Yang</a> <sup>2</sup>,
+                                <a class="text-demo-c1 hover:text-demo-c2 text-xl" target="_blank" href="https://scholar.google.com/citations?user=ulZxvY0AAAAJ&hl=en">Li Chen</a><sup>2,5</sup>,
+                                <a class="text-demo-c1 hover:text-demo-c2 text-xl" target="_blank" href="https://kashyap7x.github.io">Kashyap Chitta</a> <sup>3,4</sup>,
+                                <a class="text-demo-c1 hover:text-demo-c2 text-xl" target="_blank" href="https://scholar.google.com/citations?user=qgRUOdIAAAAJ&hl=en">Yihang Qiu</a> <sup>2</sup>,
+                                <br>
+                                <a class="text-demo-c1 hover:text-demo-c2 text-xl" target="_blank" href="https://www.cvlibs.net">Andreas Geiger</a> <sup>3,4,*</sup>,
+                                <a class="text-demo-c1 hover:text-demo-c2 text-xl" target="_blank" href="https://eejzhang.people.ust.hk">Jun Zhang</a> <sup>1,*</sup>,
+                                <a class="text-demo-c1 hover:text-demo-c2 text-xl" target="_blank" href="https://lihongyang.info">Hongyang Li</a> <sup>2,5,*</sup>
+                            </p>
+                            <p class="text-center">
+                                <span><sup>1</sup> Hong Kong University of Science and Technology</span>&nbsp;&nbsp;
+                                <span><sup>2</sup> OpenDriveLab at Shanghai AI Lab</span>&nbsp;&nbsp;
+                                <br>
+                                <span><sup>3</sup> University of T&uuml;bingen</span>&nbsp;&nbsp;
+                                <span><sup>4</sup> T&uuml;bingen AI Center</span>&nbsp;&nbsp;
+                                <span><sup>5</sup> University of Hong Kong</span>
+                            </p>
+                            <p class="text-center">
+                                <span><sup>*</sup> Equal advising.</span>
+                            </p>
+                        </div>
+                        <div class="flex-1 flex flex-row justify-center gap-10">
+                            <div class="flex justify-center">
+                                <img src="/assets/icon/OpenDriveLab.png" class="h-10 laptop:h-12"/>
+                            </div>
+                            <div class="flex justify-center">
+                                <img src="/assets/brand/tubingen.png" class="h-10 laptop:h-12"/>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="divider"></div>
+
+
+
+
                     <div class="w-full mt-20">
                         <h3 style="-webkit-background-clip: text;" class="bg-gradient-to-r from-demo-c2 to-demo-c1 text-transparent">
                             <a href="#feature" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="feature">
@@ -145,7 +215,7 @@
                         <p class="mt-10">
                             here we list some core features of the work
                         </p>
-                        <div class="mt-10 flex flex-col laptop:flex-row gap-6 laptop:gap-10">
+                        <div class="mt-10 flex flex-col laptop:flex-row gap-10">
                             <div class="flex-1 felx flex-col space-y-4 rounded-3xl border-2 border-o-white p-6 laptop:p-10">
                                 <img src="/assets/icon/rank01.png" class="size-8"/>
                                 <h4>
@@ -192,9 +262,9 @@
                         <p class="mt-10">
                             here we list some results of the work
                         </p>
-                        <div class="mt-10 flex flex-col laptop:flex-row gap-6 laptop:gap-10">
+                        <div class="mt-10 flex flex-col laptop:flex-row gap-10">
                             <div class="flex-1 felx flex-col rounded-3xl border-2 border-o-white">
-                                <div class="w-full h-96 bg-[url('/assets/background/12a4bd91b752125a10a2240dfcb52419.jpg')] bg-center rounded-t-3xl"></div>
+                                <div class="w-full h-96 bg-[url('/assets/background/12a4bd91b752125a10a2240dfcb52419.jpg')] bg-center bg-cover rounded-t-3xl"></div>
                                 <div class="felx flex-col space-y-4 p-6 laptop:p-10">
                                     <h4 class="text-center">
                                         This is another feature
@@ -205,7 +275,7 @@
                                 </div>
                             </div>
                             <div class="flex-1 felx flex-col rounded-3xl border-2 border-o-white">
-                                <div class="w-full h-96 bg-[url('/challenge2025/lHlT9joqwXjGv4c4pIGgK1qlJOvwEEtD.jpg')] bg-center rounded-t-3xl"></div>
+                                <div class="w-full h-96 bg-[url('/challenge2025/lHlT9joqwXjGv4c4pIGgK1qlJOvwEEtD.jpg')] bg-center bg-cover rounded-t-3xl"></div>
                                 <div class="felx flex-col space-y-4 p-6 laptop:p-10">
                                     <h4 class="text-center">
                                         This is another feature
@@ -216,9 +286,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="pt-10 flex flex-col laptop:flex-row gap-6 laptop:gap-10">
+                        <div class="pt-10 flex flex-col laptop:flex-row gap-10">
                             <div class="flex-1 felx flex-col rounded-3xl border-2 border-o-white">
-                                <div class="w-full h-96 bg-[url('/assets/background/b96a27798b0c5a0fe630600b8b655b0c.webp')] bg-center rounded-t-3xl"></div>
+                                <div class="w-full h-96 bg-[url('/assets/background/b96a27798b0c5a0fe630600b8b655b0c.webp')] bg-center bg-cover rounded-t-3xl"></div>
                                 <div class="felx flex-col space-y-4 p-6 laptop:p-10">
                                     <h4 class="text-center">
                                         This is another feature
@@ -229,7 +299,7 @@
                                 </div>
                             </div>
                             <div class="flex-1 felx flex-col rounded-3xl border-2 border-o-white">
-                                <div class="w-full h-96 bg-[url('/assets/background/d4e131a9cde06494d048df07b8693e87.jpeg')] bg-center rounded-t-3xl"></div>
+                                <div class="w-full h-96 bg-[url('/assets/background/d4e131a9cde06494d048df07b8693e87.jpeg')] bg-center bg-cover rounded-t-3xl"></div>
                                 <div class="felx flex-col space-y-4 p-6 laptop:p-10">
                                     <h4 class="text-center">
                                         This is another feature
@@ -256,7 +326,46 @@
                             </a>
                         </h3>
                         <div class="flex flex-col gap-10 mt-10">
-                            <h4>Abstract</h4>
+                            <h4>
+                                Introduction
+                            </h4>
+                            <p>
+                                In DriveLM, we study how vision-language models (VLMs) trained on web-scale data can be integrated into end-to-end driving systems to boost generalization and enable interactivity with human users.
+                            </p><p>
+                                Specifically, we aim to facilitate Perception, Prediction, Planning, Behavior, Motion tasks with human-written reasoning logic as a connection. We propose the task of GVQA to connect the QA pairs in a graph-style structure. To support this novel task, we provide the DriveLM-Data.
+                            </p>
+                            <h4>
+                                What is GVQA?
+                            </h4>
+                            <p>
+                                The most exciting aspect of the dataset is that the questions and answers QA pairs are connected in a graph-style structure, with QA pairs as every node and potential logical progression as the edges. The reason for doing this in the AD domain is that AD tasks are well-defined per stage, from raw sensor input to final control action through perception, prediction and planning.
+                            </p><p>
+                                Specifically, we aim to facilitate Perception, Prediction, Planning, Behavior, Motion tasks with human-written reasoning logic as a connection. We propose the task of GVQA to connect the QA pairs in a graph-style structure. To support this novel task, we provide the DriveLM-Data.
+                            </p>
+                            <img src="https://raw.githubusercontent.com/OpenDriveLab/DriveLM/main/assets/images/repo/drivelm_teaser.jpg">
+                            <span class="text-o-gray text-center">
+                                Reasoning for future events that have not yet happened.
+                            </span>
+                            <h4>
+                                How about the annotation process?
+                            </h4>
+                            <p>
+                                For DriveLM-nuScenes, we divide the annotation process into three steps:
+                            </p>
+                            <ul class="space-y-10 list-outside ml-6 list-disc">
+                                <li>
+                                    Keyframe selection. Given all frames in one clip, the annotator selects the keyframes that need annotation. The criterion is that those frames should involve changes in ego-vehicle movement status (lane changes, sudden stops, start after a stop, etc.).
+                                </li>
+                                <li>
+                                    Key objects selection. Given keyframes, the annotator needs to pick up key objects in the six surrounding images. The criterion is that those objects should be able to affect the action of the ego vehicle (traffic signals, pedestrians crossing the road, other vehicles that move in the direction of the ego vehicle, etc.).
+                                </li>
+                                <li>
+                                    Question and answer annotation. Given those key objects, we automatically generate questions regarding single or multiple objects about perception, prediction, and planning. More details can be found in our data.
+                                </li>
+                            </ul>
+                            <p>
+                                We collect data using CARLA 0.9.14 in the Leaderboard 2.0 framework with a privileged rule-based expert. We set up a series of routes in urban, residential, and rural areas and execute the expert on these routes. During this process, we collect the necessary sensor data, generate relevant QAs based on privileged information about objects and the scene, and organize the logical relationships to connect this series of QAs into a graph.
+                            </p>
                         </div>
                     </div>
 
@@ -346,6 +455,35 @@
                                 &nbsp;&nbsp;&nbsp;&nbsp;year = {2024}
                                 <br>
                             }
+                        </div>
+                    </div>
+
+
+
+                    <div class="divider"></div>
+
+
+
+
+                    <div class="w-full mt-20">
+                        <h3 style="-webkit-background-clip: text;" class="bg-gradient-to-r from-demo-c2 to-demo-c1 text-transparent">
+                            <a href="#related" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="related">
+                                Related Works
+                                <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
+                            </a>
+                        </h3>
+                        <div class="mt-10">
+                            <ul class="space-y-10 list-outside ml-6 list-disc">
+                                <li>
+                                    <a class="text-demo-c1 hover:underline">
+                                        Hu, Y., Yang, J., Chen, L., Li, K., Sima, C., Zhu, X., ... & Li, H. (2023). Planning-oriented autonomous driving. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 17853-17862).
+                                    </a>
+                                </li><li>
+                                    <a class="text-demo-c1 hover:underline">
+                                        Hu, Y., Yang, J., Chen, L., Li, K., Sima, C., Zhu, X., ... & Li, H. (2023). Planning-oriented autonomous driving. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 17853-17862).
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
 
