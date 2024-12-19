@@ -24,6 +24,9 @@ module.exports = {
                 "o-black": "#212121",
                 "o-gray": '#9ca3af',
                 "o-hover": '#f9fafb',
+                //
+                "demo-c1": '#00a0e8',
+                "demo-c2": '#d847f0',
             },
             // fontFamily: {
             //     sans: ['InterVariable', ...defaultTheme.fontFamily.sans],
