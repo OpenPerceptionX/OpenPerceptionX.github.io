@@ -168,8 +168,22 @@
 
 
 
+            <!-- newsletter -->
+            <div class="mt-auto flex flex-col">
+                <div></div>
+                <label htmlFor="email-address" class="text-o-gray text-xs/6">
+                    Subscribe & stay tuned!
+                </label>
+                <form method="post" onsubmit="formSubscribe_desktop()" enctype='application/json' id="subscribe_form_desktop" class="mb-0">
+                    <input class="w-full mt-1 rounded-xl px-3 py-1 text-xs/6 text-o-gray outline-1 -outline-offset-1  focus:outline-o-gray" id="subscribe_input_desktop" oninput="formInputCheck_desktop()" placeholder="enter your email" maxlength="128" autoComplete="email" type="email">
+                    <button id="subscribe_button_desktop" class="px-3 py-1 rounded-xl text-xs/6 text-o-white hover:enabled:underline" disabled onclick="formSubscribeSubmit_desktop()">subscribe</button>
+                </form>
+            </div>
+
+
+
             <!-- Bottom -->
-            <div class="mt-auto flex flex-wrap gap-x-6 tablet:gap-x-7 gap-y-5">
+            <div class="flex flex-wrap gap-x-6 tablet:gap-x-7 gap-y-5">
                 <a href="mailto:contact@opendrivelab.com" target="_blank" class="hover:opacity-70">
                     <img src="/assets/icon/email.png" class="size-6"/>
                 </a>
@@ -213,20 +227,7 @@
 
 
 
-            <!-- newsletter -->
-            <div className="flex flex-col">
-                <label htmlFor="email-address" class="text-o-gray text-xs/6">
-                    Subscribe & stay tuned!
-                </label>
-                <form method="post" onsubmit="formSubscribe_desktop()" enctype='application/json' id="subscribe_form_desktop" class="mb-0">
-                    <input class="w-full mt-1 rounded-xl px-3 py-1 text-xs/6 text-o-gray outline-1 -outline-offset-1  focus:outline-o-gray" id="subscribe_input_desktop" oninput="formInputCheck_desktop()" placeholder="enter your email" maxlength="128" autoComplete="email" type="email">
-                    <button id="subscribe_button_desktop" class="px-3 py-1 rounded-xl text-xs/6 text-o-white hover:enabled:underline" disabled onclick="formSubscribeSubmit_desktop()">subscribe</button>
-                </form>
-            </div>
-
-
-
-            <div class="border-b-2 border-o-white -mt-4 -mb-4"></div>
+            <div class="border-b-2 border-o-white mt-1"></div>
 
 
 
