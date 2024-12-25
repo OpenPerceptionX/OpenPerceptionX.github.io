@@ -13,6 +13,8 @@
     <script src="/ui2024/js/swiper-bundle.min.js"></script>
 
     <script src="/ui2024/js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script src="/publications/pick.js"></script>
 </head>
 
 
@@ -306,6 +308,10 @@
                                 <img src="/assets/icon/arrow.png" class="w-6 laptop:w-10 mr-10"/>
                             </a>
                         </div>
+                        <div
+                            class="mt-20 flex flex-col gap-20"
+                            id="home_pub">
+                        </div>
                     </div>
 
 
@@ -426,4 +432,11 @@
             prevEl: ".swiper-button-prev",
         },
     });
+</script>
+
+
+
+<!-- publication -->
+<script>
+    renderhomepage();
 </script>
