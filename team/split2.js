@@ -44,7 +44,7 @@ const split2data = [
     {
         name: "Hanxue Zhang",
         image: "/assets/person/hanxue_zhang.jpg",
-        note: "上海交通大学（24级联培））",
+        note: "上海交通大学（24级联培）",
         icon: [
             {
                 type: "scholar",
