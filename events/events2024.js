@@ -78,7 +78,7 @@ function events2024render() {
             </a>
         `;
         const person = document.createElement("div");
-        person.className = "flex flex-col rounded-3xl border-2 border-o-white w-screen laptop:w-128";
+        person.className = "flex flex-col rounded-3xl border-2 border-o-white w-full laptop:w-128";
         person.innerHTML = innerHTML;
         events2024body.appendChild(person);
     });

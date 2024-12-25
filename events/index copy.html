@@ -11,6 +11,7 @@
     <script src="/ui2024/js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
     <script src="./events2024.js"></script>
+    <script src="./events2023.js"></script>
 </head>
 
 
@@ -116,8 +117,27 @@
                             </a>
                         </h2>
                         <div 
-                            class="mt-10 gap-20 grid grid-cols-[repeat(auto-fill,_minmax(512px,_1fr))" 
+                            class="mt-10 gap-10 grid laptop:grid-cols-[repeat(auto-fill,_minmax(520px,_1fr))]" 
                             id="events2024">
+                        </div>
+                    </div>
+
+
+
+                    <div class="divider"></div>
+
+
+
+                    <div class="w-full mt-20">
+                        <h2>
+                            <a href="#2023" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="2024">
+                                2023
+                                <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
+                            </a>
+                        </h2>
+                        <div 
+                            class="mt-10 gap-10 grid laptop:grid-cols-[repeat(auto-fill,_minmax(520px,_1fr))]" 
+                            id="events2023">
                         </div>
                     </div>
 
@@ -143,4 +163,5 @@
 
 <script>
     events2024render();
+    events2023render();
 </script>
