@@ -400,6 +400,37 @@
                                 <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
                             </a>
                         </h2>
+                        <div class="mt-20 w-full flex flex-col rounded-3xl border-2 border-o-white">
+                            <form class="flex flex-col p-10" method="post" onsubmit="formContact()" enctype='application/json' id="contact_form">
+                                <div class="w-full flex flex-row justify-between gap-10">
+                                    <span class="flex-1 font-bold">First Name</span>
+                                    <span class="flex-1 font-bold">Last Name</span>
+                                </div>
+                                <div class="w-full flex flex-row justify-between gap-10">
+                                    <input class="flex-1 p-3 pl-0 w-full outline-none border-b-2 border-o-white" id="contact_form_first_name" placeholder="name" maxlength="128">
+                                    <input class="flex-1 p-3 pl-0 w-full outline-none border-b-2 border-o-white" id="contact_form_last_name" placeholder="surname" maxlength="128">
+                                </div>
+                                <div class="mt-6 w-full flex flex-row justify-between gap-10">
+                                    <span class="flex-1 font-bold">Email Address</span>
+                                    <span class="flex-1 font-bold">Confirm Email Address</span>
+                                </div>
+                                <div class="w-full flex flex-row justify-between gap-10">
+                                    <input class="flex-1 p-3 pl-0 w-full outline-none border-b-2 border-o-white" id="contact_form_email" placeholder="name.surname@opendrivelab.com" maxlength="128">
+                                    <input class="flex-1 p-3 pl-0 w-full outline-none border-b-2 border-o-white" id="contact_form_email_confirm" placeholder="name.surname@opendrivelab.com" maxlength="128">
+                                </div>
+                                <div class="mt-10 flex flex-col">
+                                    <span class="font-bold">Affiliation</span>
+                                    <input class="p-3 pl-0 w-full outline-none border-b-2 border-o-white" id="contact_form_affiliation" placeholder="OpenDriveLab" maxlength="128">
+                                </div>
+                                <div class="mt-10 flex flex-col">
+                                    <span class="font-bold">Message</span>
+                                    <textarea class="p-3 pl-0 w-full outline-none border-b-2 border-o-white scrollbar-hide" id="contact_form_message" placeholder="Artificial intelligence is..." maxlength="8192"></textarea>
+                                </div>
+                                <div class="mt-10">
+                                    <button id="contact_form_button" class="text-o-white hover:enabled:underline" disabled onclick="formContactSubmit()">Submit</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
 
 
@@ -448,4 +479,76 @@
 <!-- publication -->
 <script>
     renderhomepage();
+</script>
+
+
+
+<!-- contact -->
+<script>
+    function check_contact_form() {
+        let empty = 
+            (contact_form_first_name.value == null || contact_form_first_name.value == "") ||
+            (contact_form_last_name.value == null || contact_form_last_name.value == "") ||
+            (contact_form_email.value == null || contact_form_email.value == "") ||
+            (contact_form_email_confirm.value == null || contact_form_email_confirm.value == "") ||
+            (contact_form_affiliation.value == null || contact_form_affiliation.value == "") ||
+            (contact_form_message.value == null || contact_form_message.value == "");
+        let valid = contact_form_email.value.match(
+            /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        ) && contact_form_email.value == contact_form_email_confirm.value;
+        if (!empty && valid) {
+            contact_form_button.disabled = false;
+            contact_form_button.classList.add("text-o-gray");
+            contact_form_button.classList.remove("text-o-white");
+        } else {
+            contact_form_button.disabled = true;
+            contact_form_button.classList.add("text-o-white");
+            contact_form_button.classList.remove("text-o-gray");
+        }
+    }
+    contact_form_first_name.addEventListener("input", check_contact_form);
+    contact_form_last_name.addEventListener("input", check_contact_form);
+    contact_form_email.addEventListener("input", check_contact_form);
+    contact_form_email_confirm.addEventListener("input", check_contact_form);
+    contact_form_affiliation.addEventListener("input", check_contact_form);
+    contact_form_message.addEventListener("input", check_contact_form);
+</script>
+<script>
+    function formContact() {
+        event.preventDefault()
+    }
+
+    function formContactSubmit() {
+        var formData = new FormData(contact_form);
+        formData.append("email", contact_form_email.value);
+        formData.append("message", contact_form_message.value);
+        formData.append("organization", contact_form_affiliation.value);
+        formData.append("first_name", contact_form_first_name.value);
+        formData.append("last_name", contact_form_last_name.value);
+
+        var jsonObject = {};
+        formData.forEach(function(value, key){
+            jsonObject[key] = value;
+        });
+        var jsonString = JSON.stringify(jsonObject);
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'https://drivelab.openxlab.org.cn/gw/drivelab-register-api-service/signup/', true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                alert('Message sent.');
+                contact_form_email.value = "";
+                contact_form_email_confirm.value = "";
+                contact_form_message.value = "";
+                contact_form_affiliation.value = "";
+                contact_form_first_name.value = "";
+                contact_form_last_name.value = "";
+                contact_form_button.disabled = true;
+                contact_form_button.classList.add("text-o-white");
+                contact_form_button.classList.remove("text-o-gray");
+            }
+        };
+        xhr.send(jsonString);
+    }
 </script>
