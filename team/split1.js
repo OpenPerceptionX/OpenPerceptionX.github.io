@@ -6,15 +6,15 @@ const split1data = [
         icon: [
             {
                 type: "home",
-                link: "https://lihongyang.info/"
+                link: "https://lihongyang.info/",
             },
             {
                 type: "scholar",
-                link: "https://scholar.google.com/citations?user=Hfrih1EAAAAJ"
+                link: "https://scholar.google.com/citations?user=Hfrih1EAAAAJ",
             },
             {
                 type: "email",
-                link: "mailto:hy@opendrivelab.com"
+                link: "mailto:hy@opendrivelab.com",
             },
         ],
     },
@@ -25,19 +25,19 @@ const split1data = [
         icon: [
             {
                 type: "scholar",
-                link: "https://scholar.google.com/citations?user=ulZxvY0AAAAJ"
+                link: "https://scholar.google.com/citations?user=ulZxvY0AAAAJ",
             },
             {
                 type: "email",
-                link: "mailto:lichen@opendrivelab.com"
+                link: "mailto:lichen@opendrivelab.com",
             },
             {
                 type: "github",
-                link: "https://github.com/ilnehc"
+                link: "https://github.com/ilnehc",
             },
             {
                 type: "x",
-                link: "https://twitter.com/ilnehc"
+                link: "https://twitter.com/ilnehc",
             },
         ],
     },
@@ -48,15 +48,15 @@ const split1data = [
         icon: [
             {
                 type: "scholar",
-                link: "https://scholar.google.com/citations?user=oPiZSVYAAAAJ"
+                link: "https://scholar.google.com/citations?user=oPiZSVYAAAAJ",
             },
             {
                 type: "email",
-                link: "mailto:yangzetong@opendrivelab.com"
+                link: "mailto:yangzetong@opendrivelab.com",
             },
             {
                 type: "github",
-                link: "https://github.com/tomztyang"
+                link: "https://github.com/tomztyang",
             },
         ],
     },
@@ -67,23 +67,23 @@ const split1data = [
         icon: [
             {
                 type: "home",
-                link: "https://faikit.github.io/"
+                link: "https://faikit.github.io/",
             },
             {
                 type: "scholar",
-                link: "https://scholar.google.com/citations?user=Xg4cp-EAAAAJ"
+                link: "https://scholar.google.com/citations?user=Xg4cp-EAAAAJ",
             },
             {
                 type: "email",
-                link: "mailto:wanghuijie@opendrivelab.com"
+                link: "mailto:wanghuijie@opendrivelab.com",
             },
             {
                 type: "github",
-                link: "https://github.com/faikit"
+                link: "https://github.com/faikit",
             },
             {
                 type: "x",
-                link: "https://twitter.com/wongfaikit"
+                link: "https://twitter.com/wongfaikit",
             },
         ],
     },
@@ -94,19 +94,19 @@ const split1data = [
         icon: [
             {
                 type: "scholar",
-                link: "https://scholar.google.com/citations?user=dgYJ6esAAAAJ"
+                link: "https://scholar.google.com/citations?user=dgYJ6esAAAAJ",
             },
             {
                 type: "email",
-                link: "mailto:smch@opendrivelab.com"
+                link: "mailto:smch@opendrivelab.com",
             },
             {
                 type: "github",
-                link: "https://github.com/ChonghaoSima"
+                link: "https://github.com/ChonghaoSima",
             },
             {
                 type: "x",
-                link: "https://twitter.com/smch_1127"
+                link: "https://twitter.com/smch_1127",
             },
         ],
     },
