@@ -62,7 +62,7 @@ function events2023render() {
                     <h4>
                         ${item.subheading}
                     </h4>
-                    <h4 class="text-o-blue text-right pr-3 border-r-4 border-o-blue">
+                    <h4 class="text-o-blue">
                         ${item.date}
                     </h4>
                 </div>
