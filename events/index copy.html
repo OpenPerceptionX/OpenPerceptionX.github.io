@@ -1,0 +1,146 @@
+<head>
+    <link rel="icon" type="image/png" href="/assets/icon/D_small.png">
+    <title>Event | OpenDriveLab</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Event, OpenDriveLab, Robotics, Embodied AI, Autonomous Driving">
+    <meta name="description" content="OpenDriveLab is committed to exploring cutting-edge autonomous driving technology, launching a series of benchmarking work, open source to serve the community, and promote the common development of the industry. Friends who are committed to making influential research are welcome to join!">
+
+    <link href="/ui2025/css/index_tailwind.css" rel="stylesheet">
+
+    <script src="/ui2024/js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script src="./events2024.js"></script>
+</head>
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L7VEDHS6G8"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-L7VEDHS6G8');
+</script>
+
+
+
+<!-- load sidebar -->
+<script>
+    $.get('/ui2025/components/sidebar.html', function(result){
+        $("#to_add_sidebar").append(result);
+    })
+</script>
+
+
+
+<body class="h-full" id="#">
+    <!-- Header / Sidebar -->
+    <header id="to_add_sidebar" class="overscroll-none"></header>
+    <!-- Page -->
+    <div class="tablet:ml-72" id="page">
+        <div class="flex w-screen tablet:w-auto flex-col">
+
+
+
+            <!-- Landing -->
+            <div class="w-screen tablet:w-auto snap-start pt-20 p-6 tablet:p-10">
+                <div class="w-full rounded-3xl bg-[url('/assets/background/2024.10.png')] bg-top laptop:bg-top bg-cover flex flex-col justify-end p-6 tablet:p-10 laptop:p-20 gap-6 laptop:gap-10">
+                    <h1 class="text-white">
+                        Event
+                    </h1>
+
+                </div>
+            </div>
+
+
+
+            <!-- Content -->
+            <div class="flex flex-col laptop:flex-row snap-start p-6 tablet:p-10 tablet:pt-0 tablet:pb-0">
+
+
+
+                <!-- navigator -->
+                <aside class="min-h-16 laptop:h-screen top-16 tablet:top-0 sticky z-20 flex items-center justify-start w-full tablet:w-auto laptop:w-96 shrink-0 bg-white">
+                    <ul class="w-full laptop:w-auto mt-3 mb-6 flex flex-row flex-wrap laptop:flex-col justify-evenly border-t-2 border-t-o-white border-b-2 border-b-o-white laptop:border-t-0 laptop:border-b-0">
+    
+                        <li>
+                            <a href="#2024" class="navigator-button group">                           
+                                <span class="navigator-button-text">
+                                    2024
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#2023" class="navigator-button group">                           
+                                <span class="navigator-button-text">
+                                    2023
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#2022" class="navigator-button group">                           
+                                <span class="navigator-button-text">
+                                    2022
+                                </span>
+                            </a>
+                        </li>
+
+                        <li class="laptop:mt-7">
+                            <a href="#" class="flex p-3 laptop:pl-1 select-none">                           
+                                <span>
+                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 18.75 7.5-7.5 7.5 7.5" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 7.5-7.5 7.5 7.5" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+    
+                    </ul>
+                </aside>
+
+
+
+                <!-- main -->
+                <main class="w-full mb-10 tablet:mb-20 mt-10">
+
+
+
+                    <div class="w-full mt-20">
+                        <h2>
+                            <a href="#2024" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="2024">
+                                2024
+                                <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
+                            </a>
+                        </h2>
+                        <div 
+                            class="mt-10 gap-20 flex flex-row flex-wrap" 
+                            id="events2024">
+                        </div>
+                    </div>
+
+
+
+                    <div class="divider"></div>
+
+
+
+                </main>
+
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+</body>
+
+
+
+<script>
+    events2024render();
+</script>

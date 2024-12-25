@@ -16,6 +16,9 @@ module.exports = {
             // => @media (min-width: 1280px) { ... }
         },
         extend: {
+            spacing: {
+                "128": "32rem",
+            },
             colors: {
                 "o-blue": "#00a0e8",
                 "o-light-blue": "#53c2f0",
