@@ -122,7 +122,7 @@ function split2render() {
     split2body.innerHTML = "";
     split2data.forEach((item, _) => {
         var innerHTML = `
-            <img loading="lazy" src="${item.image}" class="size-40 tablet:size-48 rounded-3xl"/>
+            <img loading="lazy" src="${item.image}" class="size-36 tablet:size-48 rounded-3xl"/>
             <h4>${item.name}</h4>
             <span>${item.note}</span>
             <div class="flex flex-row gap-3 flex-wrap">
