@@ -74,10 +74,6 @@ const split3data = [
                 link: "https://scholar.google.com/citations?user=iizqKUsAAAAJ&hl",
             },
             {
-                type: "email",
-                link: "mailto:yangjiazhi@opendrivelab.com",
-            },
-            {
                 type: "github",
                 link: "https://github.com/georgeliu233",
             },

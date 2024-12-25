@@ -1,18 +1,18 @@
 <head>
+    <link rel="icon" type="image/png" href="/assets/icon/D_small.png">
     <title>Team | OpenDriveLab</title>
-    <meta name="keywords" content="Team, OpenDriveLab, Robotics, Autonomous Driving, Embodied AI">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Team, OpenDriveLab, Robotics, Embodied AI, Autonomous Driving">
     <meta name="description" content="OpenDriveLab is committed to exploring cutting-edge autonomous driving technology, launching a series of benchmarking work, open source to serve the community, and promote the common development of the industry. Friends who are committed to making influential research are welcome to join!">
 
-    <link rel="icon" type="image/png" href="/assets/icon/D_small.png">
-
-    <link href="/ui2024/css/header.css" rel="stylesheet" type="text/css" media="all">
-    <link href="/ui2024/css/footer.css" rel="stylesheet" type="text/css" media="all">
-    <link href="/ui2024/css/format.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/ui2024/css/font.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/ui2024/css/banner.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/ui2024/css/team.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/ui2025/css/index_tailwind.css" rel="stylesheet">
 
     <script src="/ui2024/js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script src="./split1.js"></script>
+    <script src="./split2.js"></script>
+    <script src="./split3.js"></script>
 </head>
 
 
@@ -20,657 +20,249 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-L7VEDHS6G8"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-L7VEDHS6G8');
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-L7VEDHS6G8');
 </script>
+
+
+
+<!-- load sidebar -->
+<script>
+    $.get('/ui2025/components/sidebar.html', function(result){
+        $("#to_add_sidebar").append(result);
+    })
+</script>
+
+
+
+<body class="h-full" id="#">
+    <!-- Header / Sidebar -->
+    <header id="to_add_sidebar" class="overscroll-none"></header>
+    <!-- Page -->
+    <div class="tablet:ml-72" id="page">
+        <div class="flex w-screen tablet:w-auto flex-col">
+
+
+
+            <!-- Landing -->
+            <div class="w-screen tablet:w-auto snap-start pt-20 p-6 tablet:p-10">
+                <div class="w-full rounded-3xl bg-[url('/assets/background/2024.10.png')] bg-top laptop:bg-top bg-cover flex flex-col justify-end p-6 tablet:p-10 laptop:p-20 gap-6 laptop:gap-10">
+                    <h1 class="text-white">
+                        Team
+                    </h1>
+                    <h5 class="text-white">
+                        Introducing (some) talents at OpenDriveLab.
+                    </h5>
+                </div>
+            </div>
+
+
+
+            <!-- Content -->
+            <div class="flex flex-col laptop:flex-row snap-start p-6 tablet:p-10 tablet:pt-0 tablet:pb-0">
+
+
+
+                <!-- navigator -->
+                <aside class="min-h-16 laptop:h-screen top-16 tablet:top-0 sticky z-20 flex items-center justify-start w-full tablet:w-auto laptop:w-96 shrink-0 bg-white">
+                    <ul class="w-full laptop:w-auto mt-3 mb-6 flex flex-row flex-wrap laptop:flex-col justify-evenly border-t-2 border-t-o-white border-b-2 border-b-o-white laptop:border-t-0 laptop:border-b-0">
+    
+                        <li>
+                            <a href="#scientist" class="navigator-button group">                           
+                                <span class="navigator-button-text">
+                                    Scientist
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#phd" class="navigator-button group">                           
+                                <span class="navigator-button-text">
+                                    Ph.D.
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#intern" class="navigator-button group">                           
+                                <span class="navigator-button-text">
+                                    Intern
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#alumni" class="navigator-button group">                           
+                                <span class="navigator-button-text">
+                                    Alumni
+                                </span>
+                            </a>
+                        </li>
+
+                        <li class="laptop:mt-7">
+                            <a href="#" class="flex p-3 laptop:pl-1 select-none">                           
+                                <span>
+                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 18.75 7.5-7.5 7.5 7.5" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 7.5-7.5 7.5 7.5" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+    
+                    </ul>
+                </aside>
+
+
+
+                <!-- main -->
+                <main class="w-full mb-10 tablet:mb-20 mt-10">
+
+
+
+                    <div class="w-full mt-20">
+                        <h2>
+                            <a href="#scientist" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="scientist">
+                                Research Scientist
+                                <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
+                            </a>
+                        </h2>
+                        <div 
+                            class="mt-10 gap-10 grid grid-cols-[repeat(auto-fill,_minmax(192px,_1fr))]" 
+                            id="split1">
+                        </div>
+                    </div>
+
+
+
+                    <div class="divider"></div>
+
+
+
+                    <div class="w-full mt-20">
+                        <h2>
+                            <a href="#phd" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="phd">
+                                Joint Ph.D. Program
+                                <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
+                            </a>
+                        </h2>
+                        <div 
+                            class="mt-10 gap-10 grid grid-cols-[repeat(auto-fill,_minmax(192px,_1fr))]" 
+                            id="split2">
+                        </div>
+                    </div>
+
+
+
+                    <div class="divider"></div>
+
+
+
+                    <div class="w-full mt-20">
+                        <h2>
+                            <a href="#intern" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="intern">
+                                Intern
+                                <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
+                            </a>
+                        </h2>
+                        <div 
+                            class="mt-10 gap-10 grid grid-cols-[repeat(auto-fill,_minmax(192px,_1fr))]" 
+                            id="split3">
+                        </div>
+                    </div>
+
+
+
+                    <div class="divider"></div>
+
+
+
+                    <div class="w-full mt-20">
+                        <h2>
+                            <a href="#alumni" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="alumni">
+                                Alumni
+                                <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
+                            </a>
+                        </h2>
+                        <table class="mt-10 table-fixed">
+                            <tbody class="flex flex-col gap-3">
+            
+                                <tr>
+                                    <td class="w-4">-</td>
+                                    <td class="w-40">Kunyao Zhang</td>
+                                    <td class="w-48"><i class="text-o-gray">Engineer</i></td>
+                                    <td class="w-64"><i>NIO</i></td>
+                                </tr>
+                                <tr>
+                                    <td class="w-4">-</td>
+                                    <td class="w-40"><a class="hover:underline" href="https://github.com/ElectronicElephant" target="_blank">Tutian Tang</a></td>
+                                    <td class="w-48"><i class="text-o-gray">Ph.D. Candidate</i></td>
+                                    <td class="w-64"><i>Shanghai Jiao Tong University</i></td>
+                                </tr>
+                                <tr>
+                                    <td class="w-4">-</td>
+                                    <td class="w-40"><a class="hover:underline" href="https://charleshsc.github.io/" target="_blank">Shengchao Hu</a></td>
+                                    <td class="w-48"><i class="text-o-gray">Ph.D. Candidate</i></td>
+                                    <td class="w-64"><i>Shanghai Jiao Tong University</i></td>
+                                </tr>
+                                <tr>
+                                    <td class="w-4">-</td>
+                                    <td class="w-40">Yuting Wang</td>
+                                    <td class="w-48"><i class="text-o-gray">Graduate Student</i></td>
+                                    <td class="w-64"><i>Tsinghua University</i></td>
+                                </tr>
+                                <tr>
+                                    <td class="w-4">-</td>
+                                    <td class="w-40">Xiangwei Geng</td>
+                                    <td class="w-48"><i class="text-o-gray">Engineer</i></td>
+                                    <td class="w-64"><i>NIO</i></td>
+                                </tr>
+                                <tr>
+                                    <td class="w-4">-</td>
+                                    <td class="w-40"><a class="hover:underline" href="https://jiaxiaosong1002.github.io" target="_blank">Xiaosong Jia</a></td>
+                                    <td class="w-48"><i class="text-o-gray">Ph.D. Candidate</i></td>
+                                    <td class="w-64"><i>Shanghai Jiao Tong University</i></td>
+                                </tr>
+                                <tr>
+                                    <td class="w-4">-</td>
+                                    <td class="w-40"><a class="hover:underline" href="https://scholar.google.com/citations?user=9mssd5EAAAAJ" target="_blank">Penghao Wu</a></td>
+                                    <td class="w-48"><i class="text-o-gray">Ph.D. Candidate</i></td>
+                                    <td class="w-64"><i>UC San Diego</i></td>
+                                </tr>
+                                <tr>
+                                    <td class="w-4">-</td>
+                                    <td class="w-40"><a class="hover:underline" href="https://scholar.google.com/citations?user=KQPCplEAAAAJ" target="_blank">Linyan Huang</a></td>
+                                    <td class="w-48"><i class="text-o-gray">Graduate Student</i></td>
+                                    <td class="w-64"><i>Xiamen University</i></td>
+                                </tr>
+                                <tr>
+                                    <td class="w-4">-</td>
+                                    <td class="w-40"><a class="hover:underline" href="https://wbjsamuel.github.io/" target="_blank">Bangjun Wang</a></td>
+                                    <td class="w-48"><i class="text-o-gray">Undergraduate</i></td>
+                                    <td class="w-64"><i>Shanghai Jiao Tong University</i></td>
+                                </tr>
+            
+                            </tbody>
+                        </table>
+                    </div>
+
+
+
+                </main>
+
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+</body>
 
 
 
 <script>
-    $.get("/ui2024/components/header.html",function(result){
-        $("body").prepend(result)
-    })
-    $.get("/ui2024/components/footer.html",function(result){
-        $("body").append(result)
-    })
+    split1render();
+    split2render();
+    split3render();
 </script>
-
-
-
-<body>
-
-    
-
-    <div class="banner">
-        <div class="banner_container">
-            <div class="banner_title_en">
-                <h1 class="Owhite">Team</h1>
-            </div>
-            <div class="banner_subtitle_en">
-                <h6 class="Owhite" id="scientist">Introducing (some) talents at OpenDriveLab.</h6>
-            </div>
-        </div>
-    </div>
-
-
-
-    <br><br><br>
-
-
-
-    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;">
-        <div style="flex-grow: 1;">
-            <a class="h1_title" href="#scientist">
-                <h1>
-                    Research Scientist
-                    <img loading="lazy" class="link_img"/>
-                </h1>
-            </a>
-        </div> 
-    </div>
-    <br><br>
-    <div class="block_left" style="margin-top: 0; padding-top: 0">
-        <div style="flex-grow: 1;">
-            <div class="person_container">
-
-                <div>
-                    <a target="_blank">
-                        <img loading="lazy" src="/assets/person/hongyang_li.jpg"/>
-                    </a>
-                    <h4>Hongyang Li</h4>
-                    <span>Autonomous Driving & Embodied AI</span>
-                    <div class="person_container_icon">
-                        <a href="https://lihongyang.info/" target="_blank"> 
-                            <img src="/assets/icon/home.png"/> 
-                        </a>
-                        <a href="https://scholar.google.com/citations?user=Hfrih1EAAAAJ" target="_blank"> 
-                            <img src="/assets/icon/scholar.png"/> 
-                        </a>
-                        <a href="mailto:hy@opendrivelab.com" target="_blank"> 
-                            <img src="/assets/icon/email.png"/> 
-                        </a>
-                    </div>
-                    <div></div>
-                </div>
-                <div>
-                    <a target="_blank">
-                        <img loading="lazy" src="/assets/person/li_chen.jpg"/>
-                    </a>
-                    <h4>Li Chen</h4>
-                    <span>End-to-end Autonomous Driving & Embodied AI</span>
-                    <div class="person_container_icon">
-                        <a href="https://scholar.google.com/citations?user=ulZxvY0AAAAJ" target="_blank"> 
-                            <img src="/assets/icon/scholar.png"/> 
-                        </a>
-                        <a href="mailto:lichen@opendrivelab.com" target="_blank"> 
-                            <img src="/assets/icon/email.png"/> 
-                        </a>
-                        <a href="https://github.com/ilnehc" target="_blank"> 
-                            <img src="/assets/icon/github.png"/> 
-                        </a>
-                        <a href="https://twitter.com/ilnehc" target="_blank"> 
-                            <img src="/assets/icon/x.png"/> 
-                        </a>
-                    </div>
-                    <div></div>
-                </div>
-                <div>
-                    <a>
-                        <img loading="lazy" src="/assets/person/zetong_yang.jpg"/>
-                    </a>
-                    <h4>Zetong Yang</h4>
-                    <span>Autonomous Driving</span>
-                    <div class="person_container_icon">
-                        <a href="https://scholar.google.com/citations?user=oPiZSVYAAAAJ" target="_blank"> 
-                            <img src="/assets/icon/scholar.png"/> 
-                        </a>
-                        <a href="mailto:yangzetong@opendrivelab.com" target="_blank"> 
-                            <img src="/assets/icon/email.png"/> 
-                        </a>
-                        <a href="https://github.com/tomztyang" target="_blank"> 
-                            <img src="/assets/icon/github.png"/> 
-                        </a>
-                    </div>
-                    <div></div>
-                </div>
-                <div>
-                    <a target="_blank">
-                        <img loading="lazy" src="/assets/person/huijie_wang.jpg"/>
-                    </a>
-                    <h4>Huijie Wang</h4>
-                    <span>Ecosystem</span>
-                    <div class="person_container_icon">
-                        <a href="https://faikit.github.io/" target="_blank"> 
-                            <img src="/assets/icon/home.png"/> 
-                        </a>
-                        <a href="https://scholar.google.com/citations?user=Xg4cp-EAAAAJ" target="_blank"> 
-                            <img src="/assets/icon/scholar.png"/> 
-                        </a>
-                        <a href="mailto:wanghuijie@opendrivelab.com" target="_blank"> 
-                            <img src="/assets/icon/email.png"/> 
-                        </a>
-                        <a href="https://github.com/faikit" target="_blank"> 
-                            <img src="/assets/icon/github.png"/> 
-                        </a>
-                        <a href="https://twitter.com/wongfaikit" target="_blank"> 
-                            <img src="/assets/icon/x.png"/> 
-                        </a>
-                    </div>
-                    <div></div>
-                </div>
-                <div>
-                    <a target="_blank">
-                        <img loading="lazy" src="/assets/person/chonghao_sima.jpg"/>
-                    </a>
-                    <h4>Chonghao Sima</h4>
-                    <span>Autonomous Driving</span>
-                    <div class="person_container_icon">
-                        <a href="https://scholar.google.com/citations?user=dgYJ6esAAAAJ" target="_blank"> 
-                            <img src="/assets/icon/scholar.png"/> 
-                        </a>
-                        <a href="mailto:smch@opendrivelab.com" target="_blank"> 
-                            <img src="/assets/icon/email.png"/> 
-                        </a>
-                        <a href="https://github.com/ChonghaoSima" target="_blank"> 
-                            <img src="/assets/icon/github.png"/> 
-                        </a>
-                        <a href="https://twitter.com/smch_1127" target="_blank"> 
-                            <img src="/assets/icon/x.png"/> 
-                        </a>
-                    </div>
-                    <div></div>
-                </div>
-
-            </div>
-        </div> 
-    </div>
-
-
-
-    <br id="phd">
-
-
-
-    <div class="block" style="margin: 0;">
-        <div class="navigator"></div>
-    </div>
-
-
-
-    <br><br><br>
-
-
-
-    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;">
-        <div style="flex-grow: 1;">
-            <a class="h1_title" href="#phd">
-                <h1>
-                    Joint Ph.D. Program
-                    <img loading="lazy" class="link_img"/>
-                </h1>
-            </a>
-        </div> 
-    </div>
-    <br><br>
-    <div class="block_left" style="margin-top: 0; padding-top: 0">
-        <div style="flex-grow: 1;">
-            <div class="person_container">
-
-                <div>
-                    <a target="_blank">
-                        <img loading="lazy" src="/assets/person/tianyu_li.jpg"/>
-                    </a>
-                    <h4>Tianyu Li</h4>
-                    <span>复旦大学（23级联培）</span>
-                    <div class="person_container_icon">
-                        <a href="https://scholar.google.com/citations?user=X6vTmEMAAAAJ" target="_blank"> 
-                            <img src="/assets/icon/scholar.png"/> 
-                        </a>
-                        <a href="mailto:litianyu@opendrivelab.com" target="_blank"> 
-                            <img src="/assets/icon/email.png"/> 
-                        </a>
-                        <a href="https://github.com/sephyli" target="_blank"> 
-                            <img src="/assets/icon/github.png"/> 
-                        </a>
-                        <a href="https://twitter.com/sephy_li" target="_blank"> 
-                            <img src="/assets/icon/x.png"/> 
-                        </a>
-                    </div>
-                    <div></div>
-                </div>
-                <div>
-                    <a>
-                        <img loading="lazy" src="/assets/person/qingwen_bu.jpg"/>
-                    </a>
-                    <h4>Qingwen Bu</h4>
-                    <span>上海交通大学（23级联培）</span>
-                    <div class="person_container_icon">
-                        <a href="https://scholar.google.com/citations?user=-JCRysgAAAAJ" target="_blank"> 
-                            <img src="/assets/icon/scholar.png"/> 
-                        </a>
-                        <a href="mailto:qwbu01@sjtu.edu.cn" target="_blank"> 
-                            <img src="/assets/icon/email.png"/> 
-                        </a>
-                        <a href="https://github.com/retsuh-bqw" target="_blank"> 
-                            <img src="/assets/icon/github.png"/> 
-                        </a>
-                    </div>
-                    <div></div>
-                </div>
-                <div>
-                    <a>
-                        <img loading="lazy" src="/assets/person/hanxue_zhang.jpg"/>
-                    </a>
-                    <h4>Hanxue Zhang</h4>
-                    <span>上海交通大学（24级联培）</span>
-                    <div class="person_container_icon">
-                        <a href="https://scholar.google.com/citations?user=vy5r8rMAAAAJ" target="_blank"> 
-                            <img src="/assets/icon/scholar.png"/> 
-                        </a>
-                        <a href="mailto:snow@opendrivelab.com" target="_blank"> 
-                            <img src="/assets/icon/email.png"/> 
-                        </a>
-                        <a href="https://github.com/jjxjiaxue" target="_blank"> 
-                            <img src="/assets/icon/github.png"/> 
-                        </a>
-                    </div>
-                    <div></div>
-                </div>
-                <div>
-                    <a target="_blank">
-                        <img loading="lazy" src="/assets/person/chengen_xie.jpg"/>
-                    </a>
-                    <h4>Chengen Xie</h4>
-                    <span>上海交通大学（24级联培）</span>
-                    <div class="person_container_icon">
-                        <a href="https://scholar.google.com/citations?user=-Sk1x_gAAAAJ" target="_blank"> 
-                            <img src="/assets/icon/scholar.png"/> 
-                        </a>
-                        <a href="mailto:xiechengen@opendrivelab.com" target="_blank"> 
-                            <img src="/assets/icon/email.png"/> 
-                        </a>
-                        <a href="https://github.com/ChengenXie" target="_blank"> 
-                            <img src="/assets/icon/github.png"/> 
-                        </a>
-                    </div>
-                    <div></div>
-                </div>
-                <div>
-                    <a>
-                        <img loading="lazy" src="/assets/person/haoran_jiang.jpg"/>
-                    </a>
-                    <h4>Haoran Jiang</h4>
-                    <span>复旦大学（24级联培）</span>
-                    <div class="person_container_icon">
-                        <a href="https://scholar.google.com/citations?user=KYzm-k0AAAAJ" target="_blank"> 
-                            <img src="/assets/icon/scholar.png"/> 
-                        </a>
-                        <a href="mailto:jianghaoran2024@gmail.com" target="_blank"> 
-                            <img src="/assets/icon/email.png"/>
-                        </a>
-                        <a href="https://github.com/HRRiver7" target="_blank"> 
-                            <img src="/assets/icon/github.png"/> 
-                        </a>
-                    </div>
-                    <div></div>
-                </div>
-                <div>
-                    <a>
-                        <img loading="lazy" src="/assets/person/yang_li.jpg"/>
-                    </a>
-                    <h4>Yang Li</h4>
-                    <span>同济大学（24级联培）</span>
-                    <div class="person_container_icon">
-                        <a href="mailto:liyang@opendrivelab.com" target="_blank"> 
-                            <img src="/assets/icon/email.png"/> 
-                        </a>
-                        <a href="https://github.com/RicardLee" target="_blank"> 
-                            <img src="/assets/icon/github.png"/> 
-                        </a>
-                    </div>
-                    <div></div>
-                </div>
-
-            </div>
-        </div> 
-    </div>
-    
-
-
-    <br id="intern">
-
-
-
-    <div class="block" style="margin: 0;">
-        <div class="navigator"></div>
-    </div>
-
-
-
-
-    <br><br><br>
-
-
-
-    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;">
-        <div style="flex-grow: 1;">
-            <a class="h1_title" href="#intern">
-                <h1>
-                    Intern
-                    <img loading="lazy" class="link_img"/>
-                </h1>
-            </a>
-        </div> 
-    </div>
-    <br><br>
-    <div class="block_left" style="margin-top: 0; padding-top: 0">
-        <div style="flex-grow: 1;">
-            <div class="person_container">
-
-                <div>
-                    <a target="_blank">
-                        <img loading="lazy" src="/assets/person/yihang_qiu.jpg"/>
-                    </a>
-                    <h4>Yihang Qiu</h4>
-                    <span>HKU</span>
-                    <div class="person_container_icon">
-                        <a href="https://scholar.google.com/citations?user=qgRUOdIAAAAJ" target="_blank"> 
-                            <img src="/assets/icon/scholar.png"/> 
-                        </a>
-                        <a href="mailto:qiuyihang@opendrivelab.com" target="_blank"> 
-                            <img src="/assets/icon/email.png"/> 
-                        </a>
-                        <a href="https://github.com/GihhArwtw" target="_blank"> 
-                            <img src="/assets/icon/github.png"/> 
-                        </a>
-                    </div>
-                    <div></div>
-                </div>
-                <div>
-                    <a>
-                        <img loading="lazy" src="/assets/person/shenyuan_gao.jpg"/>
-                    </a>
-                    <h4>Shenyuan Gao</h4>
-                    <span>HKUST</span>
-                    <div class="person_container_icon">
-                        <a href="https://github.com/Little-Podi" target="_blank"> 
-                            <img src="/assets/icon/home.png"/> 
-                        </a>
-                        <a href="https://scholar.google.com/citations?user=hZtOnecAAAAJ" target="_blank"> 
-                            <img src="/assets/icon/scholar.png"/> 
-                        </a>
-                        <a href="mailto:sygao@opendrivelab.com" target="_blank"> 
-                            <img src="/assets/icon/email.png"/> 
-                        </a>
-                        <a href="https://github.com/Little-Podi" target="_blank"> 
-                            <img src="/assets/icon/github.png"/> 
-                        </a>
-                    </div>
-                    <div></div>
-                </div>
-                <div>
-                    <a target="_blank">
-                        <img loading="lazy" src="/assets/person/jiazhi_yang.jpg"/>
-                    </a>
-                    <h4>Jiazhi Yang</h4>
-                    <span>CUHK</span>
-                    <div class="person_container_icon">
-                        <a href="https://scholar.google.com/citations?user=Ju7nGX8AAAAJ" target="_blank"> 
-                            <img src="/assets/icon/scholar.png"/> 
-                        </a>
-                        <a href="mailto:yangjiazhi@opendrivelab.com" target="_blank"> 
-                            <img src="/assets/icon/email.png"/> 
-                        </a>
-                        <a href="https://github.com/YTEP-ZHI" target="_blank"> 
-                            <img src="/assets/icon/github.png"/> 
-                        </a>
-                        <a href="https://x.com/jiazhi_yang2024" target="_blank"> 
-                            <img src="/assets/icon/x.png"/> 
-                        </a>
-                    </div>
-                    <div></div>
-                </div>
-                <div>
-                    <a target="_blank">
-                        <img loading="lazy" src="/assets/person/haochen_liu.jpg"/>
-                    </a>
-                    <h4>Haochen Liu</h4>
-                    <span>NTU</span>
-                    <div class="person_container_icon">
-                        <a href="https://georgeliu233.github.io/" target="_blank"> 
-                            <img src="/assets/icon/home.png"/> 
-                        </a>
-                        <a href="https://scholar.google.com/citations?user=iizqKUsAAAAJ&hl" target="_blank"> 
-                            <img src="/assets/icon/scholar.png"/> 
-                        </a>
-                        <a href="https://github.com/georgeliu233" target="_blank"> 
-                            <img src="/assets/icon/github.png"/> 
-                        </a>
-                    </div>
-                    <div></div>
-                </div>
-                <div>
-                    <a target="_blank">
-                        <img loading="lazy" src="/assets/person/shadi_hamdan.jpg"/>
-                    </a>
-                    <h4>Shadi Hamdan</h4>
-                    <span>Koç University</span>
-                    <div class="person_container_icon">
-                        <a href="https://shadihamdan.com/" target="_blank"> 
-                            <img src="/assets/icon/home.png"/> 
-                        </a>
-                        <a href="https://scholar.google.com/citations?user=I6bAD78AAAAJ" target="_blank"> 
-                            <img src="/assets/icon/scholar.png"/> 
-                        </a>
-                        <a href="mailto:shamdan17@ku.edu.tr" target="_blank"> 
-                            <img src="/assets/icon/email.png"/> 
-                        </a>
-                        <a href="https://github.com/Shamdan17" target="_blank"> 
-                            <img src="/assets/icon/github.png"/> 
-                        </a>
-                    </div>
-                    <div></div>
-                </div>
-                <div>
-                    <a target="_blank">
-                        <img loading="lazy" src="/assets/person/yunsong_zhou.jpg"/>
-                    </a>
-                    <h4>Yunsong Zhou</h4>
-                    <span>SJTU</span>
-                    <div class="person_container_icon">
-                        <a href="https://zhouyunsong.github.io/" target="_blank"> 
-                            <img src="/assets/icon/home.png"/> 
-                        </a>
-                        <a href="https://scholar.google.com/citations?user=bTsmnwcAAAAJ" target="_blank"> 
-                            <img src="/assets/icon/scholar.png"/> 
-                        </a>
-                        <a href="mailto:zhouyunsong@opendrivelab.com" target="_blank"> 
-                            <img src="/assets/icon/email.png"/> 
-                        </a>
-                        <a href="https://github.com/ZhouYunsong-SJTU" target="_blank"> 
-                            <img src="/assets/icon/github.png"/> 
-                        </a>
-                    </div>
-                    <div></div>
-                </div>
-                <div>
-                    <a target="_blank">
-                        <img loading="lazy" src="/assets/person/haochen_tian.jpg"/>
-                    </a>
-                    <h4>Haochen Tian</h4>
-                    <span>CASIA</span>
-                    <div class="person_container_icon">
-                        <a href="https://scholar.google.com/citations?user=DoyuNwEAAAAJ" target="_blank"> 
-                            <img src="/assets/icon/scholar.png"/> 
-                        </a>
-                        <a href="mailto:tianhaochen2023@ia.ac.cn" target="_blank"> 
-                            <img src="/assets/icon/email.png"/> 
-                        </a>
-                        <a href="https://github.com/hctian713" target="_blank"> 
-                            <img src="/assets/icon/github.png"/> 
-                        </a>
-                    </div>
-                    <div></div>
-                </div>
-
-            </div>
-        </div> 
-    </div>
-
-
-
-    <br id="alumni">
-
-
-
-    <div class="block" style="margin: 0;">
-        <div class="navigator"></div>
-    </div>
-
-
-
-
-    <br><br><br>
-
-
-
-    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;">
-        <div style="flex-grow: 1;">
-            <a class="h1_title" href="#alumni">
-                <h1>
-                    Alumni
-                    <img loading="lazy" class="link_img"/>
-                </h1>
-            </a>
-        </div> 
-    </div>
-    <br><br>
-    <div class="block_left" style="margin-top: 0; padding-top: 0">
-        <div style="flex-grow: 1;">
-
-            <table class="teamtable">
-                <tbody>
-
-                    <tr>
-                        <td>-</td>
-                        <td>Kunyao Zhang</td>
-                        <td><i class="gray">Engineer</i></td>
-                        <td><i>NIO</i></td>
-                    </tr>
-                    <tr>
-                        <td>-</td>
-                        <td><a href="https://github.com/ElectronicElephant" target="_blank">Tutian Tang</a></td>
-                        <td><i class="gray">Ph.D. Candidate</i></td>
-                        <td><i>Shanghai Jiao Tong University</i></td>
-                    </tr>
-                    <tr>
-                        <td>-</td>
-                        <td><a href="https://charleshsc.github.io/" target="_blank">Shengchao Hu</a></td>
-                        <td><i class="gray">Ph.D. Candidate</i></td>
-                        <td><i>Shanghai Jiao Tong University</i></td>
-                    </tr>
-                    <tr>
-                        <td>-</td>
-                        <td>Yuting Wang</td>
-                        <td><i class="gray">Graduate Student</i></td>
-                        <td><i>Tsinghua University</i></td>
-                    </tr>
-                    <tr>
-                        <td>-</td>
-                        <td>Xiangwei Geng</td>
-                        <td><i class="gray">Engineer</i></td>
-                        <td><i>NIO</i></td>
-                    </tr>
-                    <tr>
-                        <td>-</td>
-                        <td><a href="https://jiaxiaosong1002.github.io" target="_blank">Xiaosong Jia</a></td>
-                        <td><i class="gray">Ph.D. Candidate</i></td>
-                        <td><i>Shanghai Jiao Tong University</i></td>
-                    </tr>
-                    <tr>
-                        <td>-</td>
-                        <td><a href="https://scholar.google.com/citations?user=9mssd5EAAAAJ" target="_blank">Penghao Wu</a></td>
-                        <td><i class="gray">Ph.D. Candidate</i></td>
-                        <td><i>UC San Diego</i></td>
-                    </tr>
-                    <!-- <tr>
-                        <td>-</td>
-                        <td><a href="https://zhouyunsong.github.io/" target="_blank">Yunsong Zhou</a></td>
-                        <td><i class="gray">Ph.D. Candidate</i></td>
-                        <td><i>Shanghai Jiao Tong University</i></td>
-                    </tr> -->
-                    <tr>
-                        <td>-</td>
-                        <td><a href="https://scholar.google.com/citations?user=KQPCplEAAAAJ" target="_blank">Linyan Huang</a></td>
-                        <td><i class="gray">Graduate Student</i></td>
-                        <td><i>Xiamen University</i></td>
-                    </tr>
-                    <tr>
-                        <td>-</td>
-                        <td><a href="https://wbjsamuel.github.io/" target="_blank">Bangjun Wang</a></td>
-                        <td><i class="gray">Undergraduate</i></td>
-                        <td><i>Shanghai Jiao Tong University</i></td>
-                    </tr>
-
-                </tbody>
-            </table>
-
-            <!-- <div class="person_container">
-
-                <div>
-                    <a target="_blank">
-                        <img loading="lazy" src="/assets/person/xiaosong_jia.jpg"/>
-                    </a>
-                    <h4>Xiaosong Jia</h4>
-                    <span>SJTU</span>
-                    <div class="person_container_icon">
-                        <a href="https://jiaxiaosong1002.github.io" target="_blank"> 
-                            <img src="/assets/icon/home.png"/> 
-                        </a>
-                        <a href="https://scholar.google.com/citations?user=JeFQwxUAAAAJ" target="_blank"> 
-                            <img src="/assets/icon/scholar.png"/> 
-                        </a>
-                        <a href="mailto:jiaxiaosong@pjlab.org.cn" target="_blank"> 
-                            <img src="/assets/icon/email.png"/> 
-                        </a>
-                        <a href="https://github.com/jiaxiaosong1002" target="_blank"> 
-                            <img src="/assets/icon/github.png"/> 
-                        </a>
-                    </div>
-                    <div></div>
-                </div>
-                <div>
-                    <a target="_blank">
-                        <img loading="lazy" src="/assets/person/penghao_wu.jpg"/>
-                    </a>
-                    <h4>Penghao Wu</h4>
-                    <span>UCSD</span>
-                    <div class="person_container_icon">
-                        <a href="https://scholar.google.com/citations?user=9mssd5EAAAAJ" target="_blank"> 
-                            <img src="/assets/icon/scholar.png"/> 
-                        </a>
-                        <a href="mailto:wupenghao@pjlab.org.cn" target="_blank"> 
-                            <img src="/assets/icon/email.png"/> 
-                        </a>
-                        <a href="https://github.com/penghao-wu" target="_blank"> 
-                            <img src="/assets/icon/github.png"/> 
-                        </a>
-                    </div>
-                    <div></div>
-                </div>
-
-
-            </div> -->
-        </div> 
-    </div>
-    
-
-
-    <br><br><br>
-
-
-
-</body>
