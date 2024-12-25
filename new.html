@@ -1,0 +1,445 @@
+<head>
+    <link rel="icon" type="image/png" href="/assets/icon/D_small.png">
+    <title>OpenDriveLab | Robotics and Autonomous Driving at HKU, AI Lab, and beyond</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="OpenDriveLab, Robotics, Embodied AI, Autonomous Driving">
+    <meta name="description" content="OpenDriveLab is committed to exploring cutting-edge autonomous driving technology, launching a series of benchmarking work, open source to serve the community, and promote the common development of the industry. Friends who are committed to making influential research are welcome to join!">
+
+    <link href="/ui2025/css/index_tailwind.css" rel="stylesheet">
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="/ui2024/css/swiper-bundle.min.css"/>
+    <script src="/ui2024/js/swiper-bundle.min.js"></script>
+
+    <script src="/ui2024/js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L7VEDHS6G8"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-L7VEDHS6G8');
+</script>
+
+
+
+<!-- load sidebar -->
+<script>
+    $.get('/ui2025/components/sidebar.html', function(result){
+        $("#to_add_sidebar").append(result);
+    })
+</script>
+
+
+
+<body class="h-full" id="#">
+    <!-- Header / Sidebar -->
+    <header id="to_add_sidebar" class="overscroll-none"></header>
+    <!-- Page -->
+    <div class="tablet:ml-72" id="page">
+        <div class="flex w-screen tablet:w-auto flex-col">
+
+
+
+            <!-- Landing -->
+            <div class="w-screen tablet:w-auto h-svh snap-start pt-20 p-6 tablet:p-10">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+        
+                        <!-- slide -->
+                        <div class="swiper-slide" style="background-image: url(/assets/background/2024-10-0618.18.51.jpg); background-position-y: 30%;">
+                            <div class="banner_container">
+                                <div class="banner_container_title Owhite text_shadow">
+                                    <h1>Closed-Loop Visuomotor Control with Generative Expectation for Robotic Manipulation</h1>
+                                </div>
+                                <br>
+                                <div class="banner_container_subtitle Owhite text_shadow">
+                                    <h4><div class="tag Odarkblue">NeurIPS 2024</div>​CLOVER: A closed-loop visuomotor control framework that incorporates feedback mechanisms to improve adaptive robotic control.</h4>
+                                </div>
+                                <div class="banner_container_button Owhite">
+                                    <p>
+                                        <b>
+                                            <a target="_blank" href="https://github.com/OpenDriveLab/CLOVER">GitHub</a> 
+                                            <span>&nbsp; | &nbsp;</span>
+                                            <a target="_blank" href="https://arxiv.org/abs/2409.09016">Paper</a>
+                                            <span>&nbsp; | &nbsp;</span>
+                                            <a target="_blank" href="https://www.bilibili.com/video/BV1rHqZYeECL">Video</a>
+                                        </b>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- slide --> 
+                        <div class="swiper-slide vista_moblie" style="background-image: url(assets/background/time.jpg); background-color: rgb(33, 33, 33, 0.4);">
+                            <div class="banner_container">
+                                <div class="banner_container_title Owhite text_shadow">
+                                    <h1>Vista: A Generalizable Driving World Model with High Fidelity and Versatile Controllability</h1>
+                                </div>
+                                <br>
+                                <div class="banner_container_subtitle Owhite text_shadow">
+                                    <h4><div class="tag Odarkblue">NeurIPS 2024</div>A generalizable driving world model with high-fidelity open-world prediction, continuous long-horizon rollout, and zero-shot action controllability.</h4>
+                                </div>
+                                <div class="banner_container_button Owhite">
+                                    <p>
+                                        <b>
+                                            <a target="_blank" href="https://vista-demo.github.io/">Demo</a>
+                                            <span>&nbsp; | &nbsp;</span>
+                                            <a target="_blank" href="https://github.com/OpenDriveLab/Vista">GitHub</a>
+                                            <span>&nbsp; | &nbsp;</span>
+                                            <a target="_blank" href="https://github.com/OpenDriveLab/DriveAGI/tree/main/opendv">Dataset</a>
+                                            <span>&nbsp; | &nbsp;</span>
+                                            <a target="_blank" href="https://huggingface.co/OpenDriveLab/Vista">Hugging Face</a>
+                                            <span>&nbsp; | &nbsp;</span>
+                                            <a target="_blank" href="https://arxiv.org/abs/2405.17398">Paper</a>
+                                            <span>&nbsp; | &nbsp;</span>
+                                            <a target="_blank" href="https://medium.com/@opendrivelab/towards-next-level-of-autonomous-driving-via-world-models-aff0eb7fee00">Blog</a>
+                                            <span>&nbsp; | &nbsp;</span>
+                                            <a target="_blank" href="https://opendrivelab.github.io/Vista/nips24_vista_poster.png">Poster</a>
+                                        </b>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- slide -->
+                        <div class="swiper-slide" style="background-image: url(/assets/background/b96a27798b0c5a0fe630600b8b655b0c.jpg);">
+                            <div class="banner_container">
+                                <div class="banner_container_title Owhite text_shadow">
+                                    <h1>Reasoning Multi-Agent Behavioral Topology for Interactive Autonomous Driving</h1>
+                                </div>
+                                <br>
+                                <div class="banner_container_subtitle Owhite text_shadow">
+                                    <h4><div class="tag Odarkblue">NeurIPS 2024</div>BeTop: A multi-agent behavior formulation for interactive motion prediction and planning.</h4>
+                                </div>
+                                <div class="banner_container_button Owhite">
+                                    <p>
+                                        <b>
+                                            <a target="_blank" href="https://github.com/OpenDriveLab/BeTop">GitHub</a> 
+                                            <span>&nbsp; | &nbsp;</span>
+                                            <a target="_blank" href="https://arxiv.org/abs/2409.18031">Paper</a>
+                                        </b>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- slide -->
+                        <div class="swiper-slide" style="background-image: url(assets/background/cd0d184b033748b5b5cc8a43c3b9ddc8.jpeg);">
+                            <div class="banner_container">
+                                <div class="banner_container_title Owhite text_shadow">
+                                    <h1>DriveLM: Driving with Graph Visual Question Answering</h1>
+                                </div>
+                                <br>
+                                <div class="banner_container_subtitle Owhite text_shadow">
+                                    <h4><div class="tag Odarkblue">ECCV 2024 Oral</div>Unlocking the future where autonomous driving meets the unlimited potential of language.</h4>
+                                </div>
+                                <div class="banner_container_button Owhite">
+                                    <p>
+                                        <b>
+                                            <a target="_blank" href="https://github.com/OpenDriveLab/DriveLM">GitHub</a>
+                                            <span>&nbsp; | &nbsp;</span>
+                                            <a target="_blank" href="https://github.com/OpenDriveLab/DriveLM">Dataset</a>
+                                            <span>&nbsp; | &nbsp;</span>
+                                            <a target="_blank" href="/DriveLM/">Page</a>
+                                            <span>&nbsp; | &nbsp;</span>
+                                            <a target="_blank" href="https://huggingface.co/datasets/OpenDriveLab/DriveLM">Hugging Face</a>
+                                            <span>&nbsp; | &nbsp;</span>
+                                            <a target="_blank" href="https://arxiv.org/abs/2312.14150">Paper</a>
+                                        </b>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- slide -->
+                        <div class="swiper-slide uniad_mobile" style="background-image: url(/assets/background/890e373a8bca0b4f0df9701fa09cf131.png);">
+                            <div class="banner_container">
+                                <div class="banner_container_title Owhite text_shadow">
+                                    <h1>Planning-oriented Autonomous Driving</h1>
+                                </div>
+                                <br>
+                                <div class="banner_container_subtitle Owhite text_shadow">
+                                    <h4><div class="tag Odarkblue">CVPR 2023 Best Paper Award</div>UniAD: The first comprehensive framework that incorporates full-stack driving tasks.</h4>
+                                </div>
+                                <div class="banner_container_button Owhite">
+                                    <p>
+                                        <b>
+                                            <a target="_blank" href="https://github.com/OpenDriveLab/UniAD">GitHub</a>
+                                            <span>&nbsp; | &nbsp;</span>
+                                            <a target="_blank" href="https://openaccess.thecvf.com/content/CVPR2023/html/Hu_Planning-Oriented_Autonomous_Driving_CVPR_2023_paper.html">Paper</a>
+                                            <span>&nbsp; | &nbsp;</span>
+                                            <a target="_blank" href="https://www.youtube.com/watch?v=cyrxJJ_nnaQ">Video</a>
+                                            <span>&nbsp; | &nbsp;</span>
+                                            <a target="_blank" href="/e2ead/UniAD_plenary_talk_slides.pdf">Slides</a>
+                                        </b>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+        
+                    </div>
+                    <!-- <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div> -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+
+
+
+            <!-- Content -->
+            <div class="flex flex-col laptop:flex-row snap-start p-6 tablet:p-10 tablet:pt-0 tablet:pb-0">
+
+
+
+                <!-- navigator -->
+                <aside class="min-h-16 laptop:h-screen top-16 tablet:top-0 sticky z-20 flex items-center justify-start w-full tablet:w-auto laptop:w-96 shrink-0 bg-white">
+                    <ul class="w-full laptop:w-auto mt-3 mb-6 flex flex-row flex-wrap laptop:flex-col justify-evenly border-t-2 border-t-o-white border-b-2 border-b-o-white laptop:border-t-0 laptop:border-b-0">
+    
+                        <li>
+                            <a href="#schedule" class="navigator-button group">                           
+                                <span class="navigator-button-text">
+                                    Schedule
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#speaker" class="navigator-button group">                           
+                                <span class="navigator-button-text">
+                                    Speakers
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#organizer" class="navigator-button group">                           
+                                <span class="navigator-button-text">
+                                    Organizers
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#dei" class="navigator-button group">                           
+                                <span class="navigator-button-text">
+                                    DEI
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#edition" class="navigator-button group">                           
+                                <span class="navigator-button-text">
+                                    Past Edition
+                                </span>
+                            </a>
+                        </li>
+
+                        <li class="laptop:mt-7">
+                            <a href="#" class="flex p-3 laptop:pl-1 select-none">                           
+                                <span>
+                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 18.75 7.5-7.5 7.5 7.5" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 7.5-7.5 7.5 7.5" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+    
+                    </ul>
+                </aside>
+
+
+
+                <!-- main -->
+                <main class="w-full mb-10 tablet:mb-20 mt-10">
+
+
+
+                    <div class="w-full mt-20">
+                        <h2>
+                            <a href="#schedule" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="schedule">
+                                Schedule
+                                <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
+                            </a>
+                        </h2>
+                        <p class="mt-10">To be announced.</p>
+                    </div>
+
+
+
+                    <div class="divider"></div>
+
+
+
+
+                    <div class="w-full mt-20">
+                        <h2>
+                            <a href="#speaker" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="speaker">
+                                Speakers
+                                <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
+                            </a>
+                        </h2>
+                        <p class="mt-10">To be announced.</p>
+                    </div>
+
+
+
+                    <div class="divider"></div>
+
+
+
+
+                    <div class="w-full mt-20">
+                        <h2>
+                            <a href="#organizer" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="organizer">
+                                Organizers
+                                <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
+                            </a>
+                        </h2>
+                        <div class="pt-10 gap-10 grid grid-cols-[repeat(auto-fill,_minmax(144px,_1fr))] tablet:grid-cols-[repeat(auto-fill,_minmax(192px,_1fr))]">
+                            <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
+                                <a href="https://lihongyang.info" target="_blank" class="hover:opacity-70">
+                                    <img src="/assets/person/hongyang_li.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
+                                </a>
+                                <h4>Hongyang Li</h4>
+                                <span>HKU</span>
+                                <div class="border-b-2 border-o-white"></div>
+                            </div>
+                            <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
+                                <a href="https://kashyap7x.github.io/" target="_blank" class="hover:opacity-70">
+                                    <img src="/assets/person/kashyap_chitta.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
+                                </a>
+                                <h4>Kashyap Chitta</h4>
+                                <span>University of Tübingen</span>
+                                <div class="border-b-2 border-o-white"></div>
+                            </div>
+                            <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
+                                <a href="https://abursuc.github.io/" target="_blank" class="hover:opacity-70">
+                                    <img src="/assets/person/andrei_bursuc.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
+                                </a>
+                                <h4>Andrei Bursuc</h4>
+                                <span>Valeo</span>
+                                <div class="border-b-2 border-o-white"></div>
+                            </div>
+                            <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
+                                <a href="https://people.ee.ethz.ch/~csakarid/" target="_blank" class="hover:opacity-70">
+                                    <img src="/assets/person/christos_sakaridis.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
+                                </a>
+                                <h4>Christos Sakaridis</h4>
+                                <span>ETH Zürich</span>
+                                <div class="border-b-2 border-o-white"></div>
+                            </div>
+                            <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
+                                <a href="https://www.cs.toronto.edu/~jphilion/" target="_blank" class="hover:opacity-70">
+                                    <img src="/assets/person/jonah_philion.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
+                                </a>
+                                <h4>Jonah Philion</h4>
+                                <span>University of Toronto</span>
+                                <div class="border-b-2 border-o-white"></div>
+                            </div>
+                            <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
+                                <a href="https://f-barto.github.io/" target="_blank" class="hover:opacity-70">
+                                    <img src="/assets/person/florent_bartoccioni.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
+                                </a>
+                                <h4>Florent Bartoccioni</h4>
+                                <span>Valeo</span>
+                                <div class="border-b-2 border-o-white"></div>
+                            </div>
+                            <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
+                                <a href="https://amm272.github.io/" target="_blank" class="hover:opacity-70">
+                                    <img src="/assets/person/ana-maria_marcu.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
+                                </a>
+                                <h4>Ana-Maria Marcu</h4>
+                                <span>Wayve</span>
+                                <div class="border-b-2 border-o-white"></div>
+                            </div>
+                            <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
+                                <a href="https://faikit.github.io/" target="_blank" class="hover:opacity-70">
+                                    <img src="/assets/person/huijie_wang.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
+                                </a>
+                                <h4>Huijie Wang</h4>
+                                <span>OpenDriveLab</span>
+                                <div class="border-b-2 border-o-white"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="divider"></div>
+
+
+
+                    <div class="w-full mt-20">
+                        <h2>
+                            <a href="#dei" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="dei">
+                                Diversity, Equity, and Inclusion
+                                <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
+                            </a>
+                        </h2>
+                        <div class="pt-10">
+                            Organizers, speakers, and committee members of our events, encompassing the workshop, challenge, and tutorial, curated a wide variety of researchers from both academia and industry, with different backgrounds, regions, genders, and ages.
+                            <br><br>
+                            Many of the greatest ideas come from a diverse mix of minds, backgrounds, and experiences. We provide equal opportunities to all participants without regard to nationality, affiliation, race, religion, color, age, disability, or any other restriction. We believe diversity drives innovation. When we say we welcome participation from everyone, we mean everyone.
+                        </div>
+                    </div>
+
+
+                    
+                    <div class="divider"></div>
+
+
+
+                    <div class="w-full mt-20">
+                        <h2>
+                            <a href="#edition" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="edition">
+                                Past Edition
+                                <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
+                            </a>
+                        </h2>
+                        <div class="pt-20 laptop:pt-10 flex flex-col laptop:flex-row gap-20">
+                            <a class="hover:opacity-70 w-full h-60 laptop:h-72 rounded-3xl bg-[url('/assets/background/seattle.jpg')] bg-top bg-cover p-6 laptop:p-10 flex flex-col justify-evenly bg-black bg-opacity-30 bg-blend-overlay" href="/cvpr2024/workshop/">
+                                <h3 class="text-white">Foundation Models for Autonomous Systems</h3>
+                                <br>
+                                <h4 class="text-white">CVPR 2024</h4>
+                            </a>
+                            <a class="hover:opacity-70 w-full h-60 laptop:h-72 rounded-3xl bg-[url('/ui2023/cvpr2023/img/workshop/banner.jpg')] bg-top bg-cover p-6 laptop:p-10 flex flex-col justify-evenly bg-black bg-opacity-30 bg-blend-overlay" href="/e2ead/cvpr23.html">
+                                <h3 class="text-white">End-to-End Autonomous Driving: Emerging Tasks and Challenges</h3>
+                                <br>
+                                <h4 class="text-white">CVPR 2023</h4>
+                            </a>
+                        </div>
+                    </div>
+
+                </main>
+
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+</body>
+
+
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 3,
+        centeredSlides: true,
+        autoplay: {
+            delay: 3333,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
