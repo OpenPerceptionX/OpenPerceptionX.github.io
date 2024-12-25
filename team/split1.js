@@ -75,7 +75,7 @@ const split1data = [
             },
             {
                 type: "email",
-                link: "mailto:wanghuijie@opendrivelab.com",
+                link: "mailto:huijie.wang@opendrivelab.com",
             },
             {
                 type: "github",
