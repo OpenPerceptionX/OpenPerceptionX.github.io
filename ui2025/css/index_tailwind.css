@@ -1663,6 +1663,18 @@ code {
   background-image: url('/assets/event/waymo2022.jpg');
 }
 
+.bg-\[url\(\'\/assets\/events\/lHlT9joqwXjGv4c4pIGgK1qlJOvwEEtD\.jpg\'\)\] {
+  background-image: url('/assets/events/lHlT9joqwXjGv4c4pIGgK1qlJOvwEEtD.jpg');
+}
+
+.bg-\[url\(\'\/assets\/event\/lHlT9joqwXjGv4c4pIGgK1qlJOvwEEtD\.jpg\'\)\] {
+  background-image: url('/assets/event/lHlT9joqwXjGv4c4pIGgK1qlJOvwEEtD.jpg');
+}
+
+.bg-\[url\(\'\/assets\/event\/nashville_night\.jpg\'\)\] {
+  background-image: url('/assets/event/nashville_night.jpg');
+}
+
 .from-demo-c2 {
   --tw-gradient-from: #d847f0 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(216 71 240 / 0) var(--tw-gradient-to-position);

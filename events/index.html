@@ -10,6 +10,7 @@
 
     <script src="/ui2024/js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
+    <script src="./events2025.js"></script>
     <script src="./events2024.js"></script>
     <script src="./events2023.js"></script>
     <script src="./events2022.js"></script>
@@ -65,7 +66,14 @@
                 <!-- navigator -->
                 <aside class="min-h-16 laptop:h-screen top-16 tablet:top-0 sticky z-20 flex items-center justify-start w-full tablet:w-auto laptop:w-96 shrink-0 bg-white">
                     <ul class="w-full laptop:w-auto mt-3 mb-6 flex flex-row flex-wrap laptop:flex-col justify-evenly border-t-2 border-t-o-white border-b-2 border-b-o-white laptop:border-t-0 laptop:border-b-0">
-    
+                        
+                        <li>
+                            <a href="#2025" class="navigator-button group">                           
+                                <span class="navigator-button-text">
+                                    2025
+                                </span>
+                            </a>
+                        </li>
                         <li>
                             <a href="#2024" class="navigator-button group">                           
                                 <span class="navigator-button-text">
@@ -106,6 +114,25 @@
 
                 <!-- main -->
                 <main class="w-full mb-10 tablet:mb-32 mt-10">
+
+
+
+                    <div class="w-full mt-20">
+                        <h2>
+                            <a href="#2025" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="2025">
+                                2025
+                                <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
+                            </a>
+                        </h2>
+                        <div 
+                            class="mt-20 gap-20 grid laptop:grid-cols-[repeat(auto-fill,_minmax(520px,_1fr))]" 
+                            id="events2025">
+                        </div>
+                    </div>
+
+
+
+                    <div class="divider"></div>
 
 
 
@@ -177,6 +204,7 @@
 
 
 <script>
+    events2025render();
     events2024render();
     events2023render();
     events2022render();
