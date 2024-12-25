@@ -1,17 +1,18 @@
 <head>
+    <link rel="icon" type="image/png" href="/assets/icon/D_small.png">
     <title>Event | OpenDriveLab</title>
-    <meta name="keywords" content="Event, OpenDriveLab, Robotics, Autonomous Driving, Embodied AI">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Event, OpenDriveLab, Robotics, Embodied AI, Autonomous Driving">
     <meta name="description" content="OpenDriveLab is committed to exploring cutting-edge autonomous driving technology, launching a series of benchmarking work, open source to serve the community, and promote the common development of the industry. Friends who are committed to making influential research are welcome to join!">
 
-    <link rel="icon" type="image/png" href="/assets/icon/D_small.png">
-
-    <link href="/ui2024/css/header.css" rel="stylesheet" type="text/css" media="all">
-    <link href="/ui2024/css/footer.css" rel="stylesheet" type="text/css" media="all">
-    <link href="/ui2024/css/format.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/ui2024/css/font.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/ui2024/css/banner.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/ui2025/css/index_tailwind.css" rel="stylesheet">
 
     <script src="/ui2024/js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script src="./events2024.js"></script>
+    <script src="./events2023.js"></script>
+    <script src="./events2022.js"></script>
 </head>
 
 
@@ -19,335 +20,165 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-L7VEDHS6G8"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-L7VEDHS6G8');
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-L7VEDHS6G8');
 </script>
+
+
+
+<!-- load sidebar -->
+<script>
+    $.get('/ui2025/components/sidebar.html', function(result){
+        $("#to_add_sidebar").append(result);
+    })
+</script>
+
+
+
+<body class="h-full" id="#">
+    <!-- Header / Sidebar -->
+    <header id="to_add_sidebar" class="overscroll-none"></header>
+    <!-- Page -->
+    <div class="tablet:ml-72" id="page">
+        <div class="flex w-screen tablet:w-auto flex-col">
+
+
+
+            <!-- Landing -->
+            <div class="w-screen tablet:w-auto snap-start pt-20 p-6 tablet:p-10">
+                <div class="w-full rounded-3xl bg-[url('/assets/background/2024.10.png')] bg-top laptop:bg-top bg-cover flex flex-col justify-end p-6 tablet:p-10 laptop:p-20 gap-6 laptop:gap-10">
+                    <h1 class="text-white">
+                        Event
+                    </h1>
+
+                </div>
+            </div>
+
+
+
+            <!-- Content -->
+            <div class="flex flex-col laptop:flex-row snap-start p-6 tablet:p-10 tablet:pt-0 tablet:pb-0">
+
+
+
+                <!-- navigator -->
+                <aside class="min-h-16 laptop:h-screen top-16 tablet:top-0 sticky z-20 flex items-center justify-start w-full tablet:w-auto laptop:w-96 shrink-0 bg-white">
+                    <ul class="w-full laptop:w-auto mt-3 mb-6 flex flex-row flex-wrap laptop:flex-col justify-evenly border-t-2 border-t-o-white border-b-2 border-b-o-white laptop:border-t-0 laptop:border-b-0">
+    
+                        <li>
+                            <a href="#2024" class="navigator-button group">                           
+                                <span class="navigator-button-text">
+                                    2024
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#2023" class="navigator-button group">                           
+                                <span class="navigator-button-text">
+                                    2023
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#2022" class="navigator-button group">                           
+                                <span class="navigator-button-text">
+                                    2022
+                                </span>
+                            </a>
+                        </li>
+
+                        <li class="laptop:mt-7">
+                            <a href="#" class="flex p-3 laptop:pl-1 select-none">                           
+                                <span>
+                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 18.75 7.5-7.5 7.5 7.5" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 7.5-7.5 7.5 7.5" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+    
+                    </ul>
+                </aside>
+
+
+
+                <!-- main -->
+                <main class="w-full mb-10 tablet:mb-20 mt-10">
+
+
+
+                    <div class="w-full mt-20">
+                        <h2>
+                            <a href="#2024" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="2024">
+                                2024
+                                <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
+                            </a>
+                        </h2>
+                        <div 
+                            class="mt-10 gap-10 grid laptop:grid-cols-[repeat(auto-fill,_minmax(520px,_1fr))]" 
+                            id="events2024">
+                        </div>
+                    </div>
+
+
+
+                    <div class="divider"></div>
+
+
+
+                    <div class="w-full mt-20">
+                        <h2>
+                            <a href="#2023" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="2023">
+                                2023
+                                <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
+                            </a>
+                        </h2>
+                        <div 
+                            class="mt-10 gap-10 grid laptop:grid-cols-[repeat(auto-fill,_minmax(520px,_1fr))]" 
+                            id="events2023">
+                        </div>
+                    </div>
+
+
+
+                    <div class="divider"></div>
+
+
+
+                    <div class="w-full mt-20">
+                        <h2>
+                            <a href="#2022" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="2022">
+                                2022
+                                <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
+                            </a>
+                        </h2>
+                        <div 
+                            class="mt-10 gap-10 grid laptop:grid-cols-[repeat(auto-fill,_minmax(520px,_1fr))]" 
+                            id="events2022">
+                        </div>
+                    </div>
+
+
+
+                </main>
+
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+</body>
 
 
 
 <script>
-    $.get("/ui2024/components/header.html",function(result){
-        $("body").prepend(result)
-    })
-    $.get("/ui2024/components/footer.html",function(result){
-        $("body").append(result)
-    })
+    events2024render();
+    events2023render();
+    events2022render();
 </script>
-
-
-
-<body>
-
-    
-
-    <div class="banner">
-        <div class="banner_container">
-            <div class="banner_title_en">
-                <h1 class="Owhite" id="2024">Event</h1>
-            </div>
-        </div>
-    </div>
-
-
-
-    <br><br><br>
-
-
-
-    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;">
-        <div style="flex-grow: 1;">
-            <a class="h1_title" href="#2024">
-                <h1>
-                    2024
-                    <img loading="lazy" class="link_img"/>
-                </h1>
-            </a>
-        </div> 
-    </div>
-    <br><br>
-    <div class="block_left" style="margin-top: 0; padding-top: 0">
-        <div style="flex-grow: 1;">
-
-            <div class="event_container">
-
-                <a href="https://sagroups.ieee.org/3474/" target="_blank">
-                    <img loading="lazy" style="background-image: url(/assets/event/ieeesa.jpg); background-position: right;"/>
-                    <div>
-                        <div>
-                            <br><br class="mobilevisible">
-                            <h2>IEEE Standard P3474</h2>
-                            <br>
-                            <h3>Human Intentions and AI Alignment</h3>
-                        </div>
-                        <div>
-                            <!-- <h4 class="Oblue">September 03 - Ongoing</h4> -->
-                        </div>
-                    </div>
-                </a>
-
-                <a href="http://www.prcv.cn/?competition_130/" target="_blank">
-                    <img loading="lazy" style="background-image: url(/assets/event/Urumqi.jpg);"/>
-                    <div>
-                        <div>
-                            <br><br class="mobilevisible">
-                            <h2>PRCV 2024 Challenge</h2>
-                            <br>
-                            <h3>行车场景下认知与决策</h3>
-                        </div>
-                        <div>
-                            <h4 class="Oblue">October 18 - 20</h4>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="/cvpr2024/">
-                    <img loading="lazy" style="background-image: url(/assets/event/cvpr2024.jpg);"/>
-                    <div>
-                        <div>
-                            <br><br class="mobilevisible">
-                            <h2>Events at CVPR 2024</h2>
-                            <br class="mobilevisible">
-                        </div>
-                        <div>
-                            <h4 class="Oblue">June 17 - 21</h4>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="/challenge2024/">
-                    <img loading="lazy" style="background-image: url(/assets/event/cvpr2024_challenge.jpg);"/>
-                    <div>
-                        <div>
-                            <br><br class="mobilevisible">
-                            <h2>Challenge 2024</h2>
-                            <br>
-                            <h3>Autonomous Grand Challenge</h3>
-                        </div>
-                        <div>
-                            <h4 class="Oblue">June 17</h4>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="https://starleague.ai/event2024/" target="_blank">
-                    <img loading="lazy" style="background-image: url(/assets/event/shanghai2024.jpg);"/>
-                    <div>
-                        <div>
-                            <br><br class="mobilevisible">
-                            <h2>端到端具身智能体</h2>
-                            <br>
-                            <h3>技术研讨会 & 讲习班</h3>
-                        </div>
-                        <div>
-                            <h4 class="Oblue">June 08 - 10</h4>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="/valse2024/">
-                    <img loading="lazy" style="background-image: url(/assets/event/valse2024_workshop.jpg);"/>
-                    <div>
-                        <div>
-                            <br><br class="mobilevisible">
-                            <h2>VALSE 2024 Workshop</h2>
-                            <br>
-                            <h3>端到端自动驾驶论坛</h3>
-                        </div>
-                        <div>
-                            <h4 class="Oblue">May 07</h4>
-                        </div>
-                    </div>
-                </a>
-
-            </div>
-
-        </div> 
-    </div>
-
-
-
-    <br id="2023">
-
-
-
-    <div class="block" style="margin: 0;">
-        <div class="navigator"></div>
-    </div>
-
-
-
-    <br><br><br>
-
-
-
-    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;">
-        <div style="flex-grow: 1;">
-            <a class="h1_title" href="#2023">
-                <h1>
-                    2023
-                    <img loading="lazy" class="link_img"/>
-                </h1>
-            </a>
-        </div> 
-    </div>
-    <br><br>
-    <div class="block_left" style="margin-top: 0; padding-top: 0">
-        <div style="flex-grow: 1;">
-
-            <div class="event_container">
-
-                <a href="/e2ead/cvpr23.html">
-                    <img loading="lazy" style="background-image: url(/assets/event/cvpr2023_workshop.jpg);"/>
-                    <div>
-                        <div>
-                            <br><br class="mobilevisible">
-                            <h2>CVPR 2023 Workshop</h2>
-                            <br>
-                            <h3>End-to-End Autonomous Driving: Emerging Tasks and Challenges</h3>
-                        </div>
-                        <div>
-                            <h4 class="Oblue">June 18</h4>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="/challenge2023/">
-                    <img loading="lazy" style="background-image: url(/assets/event/cvpr2023_challenge.jpg);"/>
-                    <div>
-                        <div>
-                            <br><br class="mobilevisible">
-                            <h2>CVPR 2023 Challenge</h2>
-                            <br>
-                            <h3>Autonomous Driving Challenge</h3>
-                        </div>
-                        <div>
-                            <h4 class="Oblue">June 18</h4>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="/e2ead/cvpr23_CN.html">
-                    <img loading="lazy" style="background-image: url(/assets/event/beijing_618.jpg);"/>
-                    <div>
-                        <div>
-                            <br><br class="mobilevisible">
-                            <h2>行业大模型论坛<br>暨<br>自动驾驶国际挑战赛分享会</h2>
-                        </div>
-                        <div>
-                            <h4 class="Oblue">June 18</h4>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="/sr4ad/iclr23.html">
-                    <img loading="lazy" style="background-image: url(/assets/event/iclr2024_workshop.jpg);"/>
-                    <div>
-                        <div>
-                            <br><br class="mobilevisible">
-                            <h2>ICLR 2023 Workshop</h2>
-                            <br>
-                            <h3>Scene Representations for Autonomous Driving</h3>
-                        </div>
-                        <div>
-                            <h4 class="Oblue">May 05</h4>
-                        </div>
-                    </div>
-                </a>
-                
-                <!-- <a href="https://mp.weixin.qq.com/s/BQUFVXFyIOp7yE7gWVUGcA" target="_blank"> -->
-                <a href="https://mp.weixin.qq.com/s/hr4WxKO-9ZOJ-zea98-E3A" target="_blank">
-                    <img loading="lazy" style="background-image: url(/assets/event/gaidc2023.jpg);"/>
-                    <div>
-                        <div>
-                            <br><br class="mobilevisible">
-                            <h2>GAIDC 2023</h2>
-                            <br>
-                            <h3>数联新出行 开源新发展</h3>
-                        </div>
-                        <div>
-                            <h4 class="Oblue">February 26</h4>
-                        </div>
-                    </div>
-                </a>
-
-            </div>
-
-        </div> 
-    </div>
-
-
-
-    <br id="2022">
-
-    
-
-    <div class="block" style="margin: 0;">
-        <div class="navigator"></div>
-    </div>
-
-
-
-
-    <br><br><br>
-
-
-
-    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;">
-        <div style="flex-grow: 1;">
-            <a class="h1_title" href="#2022">
-                <h1>
-                    2022
-                    <img loading="lazy" class="link_img"/>
-                </h1>
-            </a>
-        </div> 
-    </div>
-    <br><br>
-    <div class="block_left" style="margin-top: 0; padding-top: 0">
-        <div style="flex-grow: 1;">
-
-            <div class="event_container">
-
-                <a href="https://zhuanlan.zhihu.com/p/596218293" target="_blank">
-                    <img loading="lazy" style="background-image: url(/assets/event/prcv2022.jpg);"/>
-                    <div>
-                        <div>
-                            <br><br class="mobilevisible">
-                            <h2>PRCV 2022 Workshop</h2>
-                            <br>
-                            <h3>自动驾驶感知技术发展趋势与探索</h3>
-                        </div>
-                        <div>
-                            <h4 class="Oblue">December 24</h4>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="https://zhuanlan.zhihu.com/p/531987378" target="_blank">
-                    <img loading="lazy" style="background-image: url(/assets/event/waymo2022.jpg);"/>
-                    <div>
-                        <div>
-                            <br><br class="mobilevisible">
-                            <h2>Waymo Global Challenge at CVPR 2022</h2>
-                            <br>
-                            <h3>Top First Place</h3>
-                        </div>
-                        <div>
-                            <h4 class="Oblue">June 20</h4>
-                        </div>
-                    </div>
-                </a>
-
-            </div>
-
-        </div> 
-    </div>
-
-
-
-    <br>
-
-</body>
