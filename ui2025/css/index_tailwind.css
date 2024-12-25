@@ -963,6 +963,11 @@ code {
   height: 2rem;
 }
 
+.size-10 {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
 .h-1 {
   height: 0.25rem;
 }
@@ -1009,6 +1014,10 @@ code {
 
 .h-svh {
   height: 100svh;
+}
+
+.h-8 {
+  height: 2rem;
 }
 
 .min-h-16 {
