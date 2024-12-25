@@ -121,7 +121,7 @@ const split3data = [
             },
             {
                 type: "github",
-                link: "https://github.com/ZhouYunsong-SJTU",
+                link: "https://github.com/ZhouYunsong",
             },
         ],
     },
