@@ -1,6 +1,6 @@
 const events2023data = [
     {
-        heading: "CVPR 2023 Workshop",
+        heading: "Workshop at CVPR 2023",
         subheading: "End-to-End Autonomous Driving: Emerging Tasks and Challenges",
         link: "/e2ead/cvpr23.html",
         linkoption: '',
@@ -9,7 +9,7 @@ const events2023data = [
         date: "June 18",
     },
     {
-        heading: "CVPR 2023 Challenge",
+        heading: "Challenge 2023",
         subheading: "Autonomous Driving Challenge",
         link: "/challenge2023/",
         linkoption: '',
@@ -27,7 +27,7 @@ const events2023data = [
         date: "June 18",
     },
     {
-        heading: "ICLR 2023 Workshop",
+        heading: "Workshop at ICLR 2023",
         subheading: "Scene Representations for Autonomous Driving",
         link: "/sr4ad/iclr23.html",
         linkoption: '',

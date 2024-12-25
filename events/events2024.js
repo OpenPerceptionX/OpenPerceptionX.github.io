@@ -45,7 +45,7 @@ const events2024data = [
         date: "June 08 - 10",
     },
     {
-        heading: "VALSE 2024 Workshop",
+        heading: "Workshop at VALSE 2024",
         subheading: "端到端自动驾驶论坛",
         link: "/valse2024/",
         linkoption: '',
