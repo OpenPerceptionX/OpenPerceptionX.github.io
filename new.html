@@ -196,37 +196,37 @@
                     <ul class="w-full laptop:w-auto mt-3 mb-6 flex flex-row flex-wrap laptop:flex-col justify-evenly border-t-2 border-t-o-white border-b-2 border-b-o-white laptop:border-t-0 laptop:border-b-0">
     
                         <li>
-                            <a href="#schedule" class="navigator-button group">                           
+                            <a href="#research" class="navigator-button group">                           
                                 <span class="navigator-button-text">
-                                    Schedule
+                                    Research
                                 </span>
                             </a>
                         </li>
                         <li>
-                            <a href="#speaker" class="navigator-button group">                           
+                            <a href="#recruit" class="navigator-button group">                           
                                 <span class="navigator-button-text">
-                                    Speakers
+                                    Recruit
                                 </span>
                             </a>
                         </li>
                         <li>
-                            <a href="#organizer" class="navigator-button group">                           
+                            <a href="#publications" class="navigator-button group">                           
                                 <span class="navigator-button-text">
-                                    Organizers
+                                    Publication
                                 </span>
                             </a>
                         </li>
                         <li>
-                            <a href="#dei" class="navigator-button group">                           
+                            <a href="#events" class="navigator-button group">                           
                                 <span class="navigator-button-text">
-                                    DEI
+                                    Event
                                 </span>
                             </a>
                         </li>
                         <li>
-                            <a href="#edition" class="navigator-button group">                           
+                            <a href="#contact" class="navigator-button group">                           
                                 <span class="navigator-button-text">
-                                    Past Edition
+                                    Contact
                                 </span>
                             </a>
                         </li>
@@ -248,18 +248,25 @@
 
 
                 <!-- main -->
-                <main class="w-full mb-10 tablet:mb-20 mt-10">
+                <main class="w-full mb-10 tablet:mb-32 mt-10">
 
 
 
                     <div class="w-full mt-20">
                         <h2>
-                            <a href="#schedule" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="schedule">
-                                Schedule
+                            <a href="#research" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="research">
+                                Research
                                 <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
                             </a>
                         </h2>
-                        <p class="mt-10">To be announced.</p>
+                        <div class="mt-20 gap-20 flex flex-col laptop:flex-row">
+                            <a class="hover:opacity-70 w-full h-48 laptop:h-72 rounded-3xl bg-[url('/assets/background/50b968a4c9773f405f914c9b1d857398.jpg')] bg-center bg-cover p-6 laptop:p-10 flex flex-col justify-evenly bg-black bg-opacity-30 bg-blend-overlay" href="https://github.com/OpenDriveLab/MPI">
+                                <h2 class="text-white">Embodied AI</h2>
+                            </a>
+                            <a class="hover:opacity-70 w-full h-48 laptop:h-72 rounded-3xl bg-[url('/assets/background/34dafb773a94a108af741cd955ac9ba2.jpg')] bg-center bg-cover p-6 laptop:p-10 flex flex-col justify-evenly" href="/challenge2023/">
+                                <h2 class="text-white">End-to-End Autonomous Driving</h2>
+                            </a>
+                        </div>
                     </div>
 
 
@@ -268,15 +275,13 @@
 
 
 
-
                     <div class="w-full mt-20">
                         <h2>
-                            <a href="#speaker" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="speaker">
-                                Speakers
+                            <a href="#recruit" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="recruit">
+                                Recruit
                                 <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
                             </a>
                         </h2>
-                        <p class="mt-10">To be announced.</p>
                     </div>
 
 
@@ -285,78 +290,80 @@
 
 
 
+                    <div class="w-full mt-20">
+                        <div class="flex flex-row justify-between">
+                            <h2>
+                                <a href="#publications" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="publications">
+                                    Publication
+                                    <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
+                                </a>
+                            </h2>
+                            <a href="/publications/" class="hover:opacity-70">
+                                <img src="/assets/icon/arrow.png" class="w-6 laptop:w-10 mr-10"/>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                    <div class="divider"></div>
+
+
 
                     <div class="w-full mt-20">
-                        <h2>
-                            <a href="#organizer" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="organizer">
-                                Organizers
-                                <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
+                        <div class="flex flex-row justify-between">
+                            <h2>
+                                <a href="#events" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="events">
+                                    Event
+                                    <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
+                                </a>
+                            </h2>
+                            <a href="/events/" class="hover:opacity-70">
+                                <img src="/assets/icon/arrow.png" class="w-6 laptop:w-10 mr-10"/>
                             </a>
-                        </h2>
-                        <div class="pt-10 gap-10 grid grid-cols-[repeat(auto-fill,_minmax(144px,_1fr))] tablet:grid-cols-[repeat(auto-fill,_minmax(192px,_1fr))]">
-                            <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
-                                <a href="https://lihongyang.info" target="_blank" class="hover:opacity-70">
-                                    <img src="/assets/person/hongyang_li.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
+                        </div>
+                        <div class="mt-20 gap-20 grid laptop:grid-cols-[repeat(auto-fill,_minmax(520px,_1fr))]">
+                            <div class="flex flex-col rounded-3xl border-2 border-o-white w-full laptop:w-128">
+                                <a>
+                                    <div class="w-full h-72 bg-[url('/challenge2025/lHlT9joqwXjGv4c4pIGgK1qlJOvwEEtD.jpg')] bg-center bg-cover rounded-t-3xl"></div>
+                                    <div class="felx flex-col space-y-6 p-10">
+                                        <h3>
+                                            Challenge 2025
+                                        </h3>
+                                        <h4>
+                                            Coming Soon
+                                        </h4>
+                                    </div>
                                 </a>
-                                <h4>Hongyang Li</h4>
-                                <span>HKU</span>
-                                <div class="border-b-2 border-o-white"></div>
                             </div>
-                            <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
-                                <a href="https://kashyap7x.github.io/" target="_blank" class="hover:opacity-70">
-                                    <img src="/assets/person/kashyap_chitta.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
+                            <div class="flex flex-col rounded-3xl border-2 border-o-white w-full laptop:w-128">
+                                <a target="_blank" href="https://sagroups.ieee.org/3474/" class="hover:opacity-70">
+                                    <div class="w-full h-72 bg-[url('/assets/event/ieeesa.jpg')] bg-center bg-cover rounded-t-3xl"></div>
+                                    <div class="felx flex-col space-y-6 p-10">
+                                        <h3>
+                                            IEEE Standard P3474
+                                        </h3>
+                                        <h4>
+                                            Human Intentions and AI Alignment
+                                        </h4>
+                                    </div>
                                 </a>
-                                <h4>Kashyap Chitta</h4>
-                                <span>University of Tübingen</span>
-                                <div class="border-b-2 border-o-white"></div>
                             </div>
-                            <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
-                                <a href="https://abursuc.github.io/" target="_blank" class="hover:opacity-70">
-                                    <img src="/assets/person/andrei_bursuc.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
+                            <div class="flex flex-col rounded-3xl border-2 border-o-white w-full laptop:w-128">
+                                <a href="/challenge2024/" class="hover:opacity-70">
+                                    <div class="w-full h-72 bg-[url('/assets/background/seattle_space_needle.jpg')] bg-center bg-cover rounded-t-3xl"></div>
+                                    <div class="felx flex-col space-y-6 p-10">
+                                        <h3>
+                                            Challenge 2024
+                                        </h3>
+                                        <h4>
+                                            Autonomous Grand Challenge
+                                        </h4>
+                                        <h4 class="text-o-blue">
+                                            June 17
+                                        </h4>
+                                    </div>
                                 </a>
-                                <h4>Andrei Bursuc</h4>
-                                <span>Valeo</span>
-                                <div class="border-b-2 border-o-white"></div>
-                            </div>
-                            <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
-                                <a href="https://people.ee.ethz.ch/~csakarid/" target="_blank" class="hover:opacity-70">
-                                    <img src="/assets/person/christos_sakaridis.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
-                                </a>
-                                <h4>Christos Sakaridis</h4>
-                                <span>ETH Zürich</span>
-                                <div class="border-b-2 border-o-white"></div>
-                            </div>
-                            <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
-                                <a href="https://www.cs.toronto.edu/~jphilion/" target="_blank" class="hover:opacity-70">
-                                    <img src="/assets/person/jonah_philion.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
-                                </a>
-                                <h4>Jonah Philion</h4>
-                                <span>University of Toronto</span>
-                                <div class="border-b-2 border-o-white"></div>
-                            </div>
-                            <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
-                                <a href="https://f-barto.github.io/" target="_blank" class="hover:opacity-70">
-                                    <img src="/assets/person/florent_bartoccioni.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
-                                </a>
-                                <h4>Florent Bartoccioni</h4>
-                                <span>Valeo</span>
-                                <div class="border-b-2 border-o-white"></div>
-                            </div>
-                            <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
-                                <a href="https://amm272.github.io/" target="_blank" class="hover:opacity-70">
-                                    <img src="/assets/person/ana-maria_marcu.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
-                                </a>
-                                <h4>Ana-Maria Marcu</h4>
-                                <span>Wayve</span>
-                                <div class="border-b-2 border-o-white"></div>
-                            </div>
-                            <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
-                                <a href="https://faikit.github.io/" target="_blank" class="hover:opacity-70">
-                                    <img src="/assets/person/huijie_wang.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
-                                </a>
-                                <h4>Huijie Wang</h4>
-                                <span>OpenDriveLab</span>
-                                <div class="border-b-2 border-o-white"></div>
                             </div>
                         </div>
                     </div>
@@ -369,44 +376,19 @@
 
                     <div class="w-full mt-20">
                         <h2>
-                            <a href="#dei" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="dei">
-                                Diversity, Equity, and Inclusion
+                            <a href="#contact" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="contact">
+                                Contact
                                 <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
                             </a>
                         </h2>
-                        <div class="pt-10">
-                            Organizers, speakers, and committee members of our events, encompassing the workshop, challenge, and tutorial, curated a wide variety of researchers from both academia and industry, with different backgrounds, regions, genders, and ages.
-                            <br><br>
-                            Many of the greatest ideas come from a diverse mix of minds, backgrounds, and experiences. We provide equal opportunities to all participants without regard to nationality, affiliation, race, religion, color, age, disability, or any other restriction. We believe diversity drives innovation. When we say we welcome participation from everyone, we mean everyone.
-                        </div>
                     </div>
 
 
-                    
+
                     <div class="divider"></div>
 
 
 
-                    <div class="w-full mt-20">
-                        <h2>
-                            <a href="#edition" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="edition">
-                                Past Edition
-                                <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
-                            </a>
-                        </h2>
-                        <div class="pt-20 laptop:pt-10 flex flex-col laptop:flex-row gap-20">
-                            <a class="hover:opacity-70 w-full h-60 laptop:h-72 rounded-3xl bg-[url('/assets/background/seattle.jpg')] bg-top bg-cover p-6 laptop:p-10 flex flex-col justify-evenly bg-black bg-opacity-30 bg-blend-overlay" href="/cvpr2024/workshop/">
-                                <h3 class="text-white">Foundation Models for Autonomous Systems</h3>
-                                <br>
-                                <h4 class="text-white">CVPR 2024</h4>
-                            </a>
-                            <a class="hover:opacity-70 w-full h-60 laptop:h-72 rounded-3xl bg-[url('/ui2023/cvpr2023/img/workshop/banner.jpg')] bg-top bg-cover p-6 laptop:p-10 flex flex-col justify-evenly bg-black bg-opacity-30 bg-blend-overlay" href="/e2ead/cvpr23.html">
-                                <h3 class="text-white">End-to-End Autonomous Driving: Emerging Tasks and Challenges</h3>
-                                <br>
-                                <h4 class="text-white">CVPR 2023</h4>
-                            </a>
-                        </div>
-                    </div>
 
                 </main>
 
