@@ -401,42 +401,41 @@
                             </a>
                         </h2>
                         <div class="mt-20 w-full flex flex-col rounded-3xl border-2 border-o-white">
-                            <form class="flex flex-col p-10" method="post" onsubmit="formContact()" enctype='application/json' id="contact_form">
-                                <div class="w-full flex flex-row justify-between gap-10">
-                                    <span class="flex-1 font-bold">First Name</span>
-                                    <span class="flex-1 font-bold">Last Name</span>
+                            <form class="flex flex-col p-10 gap-6  laptop:gap-10" method="post" onsubmit="formContact()" enctype='application/json' id="contact_form">
+                                <div class="flex flex-col laptop:flex-row gap-6 laptop:gap-10">
+                                    <div class="flex-1">
+                                        <span class="flex-1 font-bold">First Name</span>
+                                        <input class="flex-1 p-3 pl-0 w-full outline-none border-b-2 border-o-white" id="contact_form_first_name" placeholder="name" maxlength="128">
+                                    </div>
+                                    <div class="flex-1">
+                                        <span class="flex-1 font-bold">Last Name</span>
+                                        <input class="flex-1 p-3 pl-0 w-full outline-none border-b-2 border-o-white" id="contact_form_last_name" placeholder="surname" maxlength="128">
+                                    </div>
                                 </div>
-                                <div class="w-full flex flex-row justify-between gap-10">
-                                    <input class="flex-1 p-3 pl-0 w-full outline-none border-b-2 border-o-white" id="contact_form_first_name" placeholder="name" maxlength="128">
-                                    <input class="flex-1 p-3 pl-0 w-full outline-none border-b-2 border-o-white" id="contact_form_last_name" placeholder="surname" maxlength="128">
+                                <div class="flex flex-col laptop:flex-row gap-6 laptop:gap-10">
+                                    <div class="flex-1">
+                                        <span class="flex-1 font-bold">Email Address</span>
+                                        <input class="flex-1 p-3 pl-0 w-full outline-none border-b-2 border-o-white" id="contact_form_email" placeholder="name.surname@opendrivelab.com" maxlength="128">
+                                    </div>
+                                    <div class="flex-1">
+                                        <span class="flex-1 font-bold">Confirm Email Address</span>
+                                        <input class="flex-1 p-3 pl-0 w-full outline-none border-b-2 border-o-white" id="contact_form_email_confirm" placeholder="name.surname@opendrivelab.com" maxlength="128">
+                                    </div>
                                 </div>
-                                <div class="mt-6 w-full flex flex-row justify-between gap-10">
-                                    <span class="flex-1 font-bold">Email Address</span>
-                                    <span class="flex-1 font-bold">Confirm Email Address</span>
-                                </div>
-                                <div class="w-full flex flex-row justify-between gap-10">
-                                    <input class="flex-1 p-3 pl-0 w-full outline-none border-b-2 border-o-white" id="contact_form_email" placeholder="name.surname@opendrivelab.com" maxlength="128">
-                                    <input class="flex-1 p-3 pl-0 w-full outline-none border-b-2 border-o-white" id="contact_form_email_confirm" placeholder="name.surname@opendrivelab.com" maxlength="128">
-                                </div>
-                                <div class="mt-10 flex flex-col">
+                                <div class="flex flex-col">
                                     <span class="font-bold">Affiliation</span>
                                     <input class="p-3 pl-0 w-full outline-none border-b-2 border-o-white" id="contact_form_affiliation" placeholder="OpenDriveLab" maxlength="128">
                                 </div>
-                                <div class="mt-10 flex flex-col">
+                                <div class="flex flex-col">
                                     <span class="font-bold">Message</span>
-                                    <textarea class="p-3 pl-0 w-full outline-none border-b-2 border-o-white scrollbar-hide" id="contact_form_message" placeholder="Artificial intelligence is..." maxlength="8192"></textarea>
+                                    <textarea rows="3" class="p-3 pl-0 w-full outline-none border-b-2 border-o-white scrollbar-hide" id="contact_form_message" placeholder="artificial intelligence is..." maxlength="8192"></textarea>
                                 </div>
-                                <div class="mt-10">
-                                    <button id="contact_form_button" class="text-o-white hover:enabled:underline" disabled onclick="formContactSubmit()">Submit</button>
+                                <div>
+                                    <button id="contact_form_button" class="text-o-white hover:enabled:underline" disabled onclick="formContactSubmit()">submit</button>
                                 </div>
                             </form>
                         </div>
                     </div>
-
-
-
-                    <div class="divider"></div>
-
 
 
 
