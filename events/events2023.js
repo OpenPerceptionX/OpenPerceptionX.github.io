@@ -54,7 +54,7 @@ function events2023render() {
     events2023data.forEach((item, _) => {
         var innerHTML = `
             <a ${item.linkoption} href="${item.link}" class="hover:opacity-70">
-                <div class="w-full h-72 bg-[url('${item.background}')] ${item.backgroundoption} bg-cover rounded-t-3xl"></div>
+                <img loading="lazy" src='${item.background}' class="w-full h-72 object-cover object-center rounded-t-3xl"/>
                 <div class="felx flex-col space-y-6 p-10">
                     <h3>
                         ${item.heading}
