@@ -119,7 +119,7 @@ function split1render() {
     split1body.innerHTML = "";
     split1data.forEach((item, _) => {
         var innerHTML = `
-            <img src="${item.image}" class="size-40 tablet:size-48 rounded-3xl"/>
+            <img loading="lazy" src="${item.image}" class="size-40 tablet:size-48 rounded-3xl"/>
             <h4>${item.name}</h4>
             <span>${item.note}</span>
             <div class="flex flex-row gap-3 flex-wrap">
@@ -127,7 +127,7 @@ function split1render() {
         item.icon.forEach((i, _) => {
             innerHTML += `                
             <a href="${i.link}" target="_blank"> 
-                <img src="/assets/icon/${i.type}.png" class="size-6 hover:opacity-70"/> 
+                <img loading="lazy" src="/assets/icon/${i.type}.png" class="size-6 hover:opacity-70"/> 
             </a>
         `;
         });
