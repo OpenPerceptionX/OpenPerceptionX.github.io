@@ -1635,6 +1635,34 @@ code {
   background-image: url('/assets/event/chongqing.jpg');
 }
 
+.bg-\[url\(\'\/assets\/event\/cvpr2023_challenge\.jpg\'\)\] {
+  background-image: url('/assets/event/cvpr2023_challenge.jpg');
+}
+
+.bg-\[url\(\'\/assets\/event\/cvpr2023workshop\.jpg\'\)\] {
+  background-image: url('/assets/event/cvpr2023workshop.jpg');
+}
+
+.bg-\[url\(\'\/assets\/event\/beijing\.jpg\'\)\] {
+  background-image: url('/assets/event/beijing.jpg');
+}
+
+.bg-\[url\(\'\/assets\/event\/iclr2023workshop\.jpg\'\)\] {
+  background-image: url('/assets/event/iclr2023workshop.jpg');
+}
+
+.bg-\[url\(\'\/assets\/event\/gaidc2023\.jpg\'\)\] {
+  background-image: url('/assets/event/gaidc2023.jpg');
+}
+
+.bg-\[url\(\'\/assets\/event\/prcv2022\.jpg\'\)\] {
+  background-image: url('/assets/event/prcv2022.jpg');
+}
+
+.bg-\[url\(\'\/assets\/event\/waymo2022\.jpg\'\)\] {
+  background-image: url('/assets/event/waymo2022.jpg');
+}
+
 .from-demo-c2 {
   --tw-gradient-from: #d847f0 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(216 71 240 / 0) var(--tw-gradient-to-position);
