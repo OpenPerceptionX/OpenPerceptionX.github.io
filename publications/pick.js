@@ -115,7 +115,7 @@ const pick = [
         icon: [
             {
                 type: "dataset",
-                link: "ttps://github.com/OpenDriveLab/DriveLM",
+                link: "https://github.com/OpenDriveLab/DriveLM",
             },
             {
                 type: "github",
