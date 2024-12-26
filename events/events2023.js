@@ -2,7 +2,7 @@ const events2023data = [
     {
         heading: "Workshop at CVPR 2023",
         subheading: "End-to-End Autonomous Driving: Emerging Tasks and Challenges",
-        link: "/e2ead/cvpr23.html",
+        link: "/cvpr2023/workshop/",
         linkoption: '',
         background: "/assets/event/cvpr2023workshop.jpg",
         backgroundoption: "bg-center",
@@ -20,7 +20,7 @@ const events2023data = [
     {
         heading: "行业大模型论坛<br>暨<br>国际挑战赛分享会",
         subheading: "",
-        link: "/e2ead/cvpr23_CN.html",
+        link: "/event2023/",
         linkoption: '',
         background: "/assets/event/beijing.jpg",
         backgroundoption: "bg-center",
@@ -29,7 +29,7 @@ const events2023data = [
     {
         heading: "Workshop at ICLR 2023",
         subheading: "Scene Representations for Autonomous Driving",
-        link: "/iclr2023/",
+        link: "/iclr2023/workshop/",
         linkoption: '',
         background: "/assets/event/iclr2023workshop.jpg",
         backgroundoption: "bg-center",
