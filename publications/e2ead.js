@@ -58,12 +58,16 @@ const e2ead = [
                 link: "https://www.youtube.com/watch?v=a4H6Jj-7IC0",
             },
             {
+                type: "bilibili",
+                link: "https://www.bilibili.com/video/BV1gXCGYMEYV/",
+            },
+            {
                 type: "medium",
                 link: "https://medium.com/@opendrivelab/towards-next-level-of-autonomous-driving-via-world-models-aff0eb7fee00",
             },
             {
                 type: "slides",
-                link: "ttps://opendrivelab.github.io/content/GenAD_slides_with_vista.pdf",
+                link: "https://opendrivelab.github.io/content/GenAD_slides_with_vista.pdf",
             },
         ],
         description: "We aim to establish a generalized video prediction paradigm for autonomous driving by presenting the largest multimodal driving video dataset to date, OpenDV-2K, and a generative model that predicts the future given past visual and textual input, GenAD.",
@@ -230,7 +234,7 @@ const e2ead = [
         tag: ["[Carla First Place]"],
     },
     {
-        title: "ST-P3: End-to-end Vision-based Autonomous Driving via Spatial-Temporal Feature Learning",
+        title: "ST-P3: End-to-End Vision-Based Autonomous Driving via Spatial-Temporal Feature Learning",
         link: "https://link.springer.com/chapter/10.1007/978-3-031-19839-7_31",
         image: "/assets/publication/stp3.jpg",
         author: "Shengchao Hu, Li Chen, Penghao Wu, Hongyang Li, Junchi Yan, Dacheng Tao",
