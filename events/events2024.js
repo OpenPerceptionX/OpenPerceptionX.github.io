@@ -47,7 +47,7 @@ const events2024data = [
     {
         heading: "Workshop at VALSE 2024",
         subheading: "端到端自动驾驶论坛",
-        link: "/valse2024/",
+        link: "/valse2024/workshop/",
         linkoption: '',
         background: "/assets/event/chongqing.jpg",
         backgroundoption: "bg-center",
