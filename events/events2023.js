@@ -29,7 +29,7 @@ const events2023data = [
     {
         heading: "Workshop at ICLR 2023",
         subheading: "Scene Representations for Autonomous Driving",
-        link: "/sr4ad/iclr23.html",
+        link: "/iclr2023/",
         linkoption: '',
         background: "/assets/event/iclr2023workshop.jpg",
         backgroundoption: "bg-center",
