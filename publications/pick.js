@@ -19,7 +19,7 @@ const pick = [
             },
             {
                 type: "slides",
-                link: "/e2ead/UniAD_plenary_talk_slides.pdf",
+                link: "https://opendrivelab.github.io/UniAD_plenary_talk_slides.pdf",
             },
             {
                 type: "zhihu",
