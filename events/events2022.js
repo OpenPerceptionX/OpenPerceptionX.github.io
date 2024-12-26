@@ -1,7 +1,7 @@
 const events2022data = [
     {
         heading: "Workshop at PRCV 2022",
-        subheading: "自动驾驶感知技术发展趋势与探索",
+        subheading: "自动驾驶感知技术发展趋势与探索<br><br>",
         link: "https://zhuanlan.zhihu.com/p/596218293",
         linkoption: 'target="_blank"',
         background: "/assets/event/prcv2022.jpg",

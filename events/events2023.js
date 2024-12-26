@@ -10,7 +10,7 @@ const events2023data = [
     },
     {
         heading: "Challenge 2023",
-        subheading: "Autonomous Driving Challenge",
+        subheading: "Autonomous Driving Challenge<br><br>",
         link: "/challenge2023/",
         linkoption: '',
         background: "/assets/event/cvpr2023_challenge.jpg",
