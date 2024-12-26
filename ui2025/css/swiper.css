@@ -1,10 +1,11 @@
 .swiper-pagination {
-    bottom: 68px !important;
+    bottom: 80px !important;
     left: 404px !important;
     text-align: left !important;
+    width: auto !important;
     @media screen and (max-width: 1024px) {
         left: 44px !important;
-        bottom: 40px !important;
+        bottom: 56px !important;
     }
     @media screen and (min-width:1025px) and (max-width: 1536px) {
         left: 348px !important;
