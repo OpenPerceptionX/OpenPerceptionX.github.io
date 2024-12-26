@@ -49,7 +49,7 @@ function embodiedrender() {
     embodied.forEach((item, _) => {
         var innerHTML = `
             <a href="${item.link}" target="_blank" class="hover:opacity-70 flex flex-row laptop:flex-col justify-center">
-                <img loading="lazy" src="${item.image}" class="w-5/6 laptop:w-96"/>
+                <img loading="lazy" src="${item.image}" class="w-fulls laptop:w-96"/>
             </a>
             <div class="flex flex-col justify-center flex-1">
                 <h3>
@@ -98,7 +98,7 @@ function embodiedrender() {
             </div>
         `;
         const pub = document.createElement("div");
-        pub.className = "flex flex-col laptop:flex-row gap-20";
+        pub.className = "flex flex-col laptop:flex-row gap-6 laptop:gap-20";
         pub.innerHTML = innerHTML;
         homepubbody.appendChild(pub);
     });
