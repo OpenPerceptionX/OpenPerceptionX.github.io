@@ -9,7 +9,7 @@ const events2024data = [
         date: "",
     },
     {
-        heading: "PRCV 2024 Challenge",
+        heading: "Challenge at PRCV 2024",
         subheading: "行车场景下认知与决策",
         link: "http://www.prcv.cn/?competition_130/",
         linkoption: 'target="_blank"',
