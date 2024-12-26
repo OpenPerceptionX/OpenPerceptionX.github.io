@@ -33,7 +33,7 @@ const pick = [
         description: "A comprehensive framework up-to-date that incorporates full-stack driving tasks in one network.",
     },
     {
-        title: "End-to-end Autonomous Driving: Challenges and Frontiers",
+        title: "End-to-End Autonomous Driving: Challenges and Frontiers",
         link: "https://ieeexplore.ieee.org/abstract/document/10614862/",
         image: "/assets/publication/e2esurvey.jpg",
         author: "Li Chen, Penghao Wu, Kashyap Chitta, Bernhard Jaeger, Andreas Geiger, Hongyang Li",
