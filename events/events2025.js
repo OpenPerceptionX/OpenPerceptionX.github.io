@@ -6,7 +6,7 @@ const events2025data = [
         linkoption: '',
         background: "/assets/event/lHlT9joqwXjGv4c4pIGgK1qlJOvwEEtD.jpg",
         backgroundoption: "bg-center",
-        date: "",
+        date: "2025",
     },
     {
         heading: "Events at CVPR 2025",
@@ -15,7 +15,7 @@ const events2025data = [
         linkoption: '',
         background: "/assets/event/nashville_night.jpg",
         backgroundoption: "bg-left",
-        date: "June 11 -15",
+        date: "June 11 -15, 2025",
     },
 ];
 

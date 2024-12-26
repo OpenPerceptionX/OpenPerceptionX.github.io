@@ -6,7 +6,7 @@ const events2022data = [
         linkoption: 'target="_blank"',
         background: "/assets/event/prcv2022.jpg",
         backgroundoption: "bg-center",
-        date: "December 24",
+        date: "December 24, 2022",
     },
     {
         heading: "Waymo Global Challenge at CVPR 2022",
@@ -15,7 +15,7 @@ const events2022data = [
         linkoption: 'target="_blank"',
         background: "/assets/event/waymo2022.jpg",
         backgroundoption: "bg-center",
-        date: "June 20",
+        date: "June 20, 2022",
     },
 ];
 
