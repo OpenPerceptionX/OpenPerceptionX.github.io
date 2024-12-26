@@ -178,8 +178,8 @@ function pickrender() {
     homepubbody.innerHTML = "";
     pick.forEach((item, _) => {
         var innerHTML = `
-            <a href="${item.link}" target="_blank" class="hover:opacity-70 flex flex-col justify-center">
-                <img loading="lazy" src="${item.image}" class="w-full laptop:w-96"/>
+            <a href="${item.link}" target="_blank" class="hover:opacity-70 flex flex-row laptop:flex-col justify-center">
+                <img loading="lazy" src="${item.image}" class="w-5/6 laptop:w-96"/>
             </a>
             <div class="flex flex-col justify-center flex-1">
                 <h3>
@@ -187,7 +187,7 @@ function pickrender() {
                         ${item.title}
                     </a>
                 </h3>
-                <p class="mt-1">
+                <p class="mt-3 authors">
                     ${item.author}
                 </p>
                 <div class="flex flex-row gap-6 flex-wrap justify-items-center mt-6">
@@ -222,7 +222,7 @@ function pickrender() {
             </div>
         `;
         const pub = document.createElement("div");
-        pub.className = "flex flex-col laptop:flex-row gap-10";
+        pub.className = "flex flex-col laptop:flex-row gap-20";
         pub.innerHTML = innerHTML;
         homepubbody.appendChild(pub);
     });
