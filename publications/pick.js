@@ -85,6 +85,10 @@ const pick = [
                 link: "https://github.com/OpenDriveLab/DriveAGI/tree/main/opendv",
             },
             {
+                type: "webpage",
+                link: "/Vista/",
+            },
+            {
                 type: "github",
                 link: "https://github.com/OpenDriveLab/Vista",
             },
@@ -108,7 +112,7 @@ const pick = [
         link: "https://arxiv.org/abs/2312.14150",
         image: "/assets/publication/drivelm.jpg",
         author: "Chonghao Sima, Katrin Renz, Kashyap Chitta, Li Chen, Hanxue Zhang, Chengen Xie, Ping Luo, Andreas Geiger, Hongyang Li",
-        note: "ECCV 2024 (Oral)",
+        note: "ECCV 2024 Oral",
         noteoption: '',
         star: "https://img.shields.io/github/stars/OpenDriveLab/DriveLM?style=social",
         starlink: "https://github.com/OpenDriveLab/DriveLM",
@@ -118,12 +122,12 @@ const pick = [
                 link: "https://github.com/OpenDriveLab/DriveLM",
             },
             {
-                type: "github",
-                link: "https://github.com/OpenDriveLab/DriveLM",
-            },
-            {
                 type: "webpage",
                 link: "/DriveLM/",
+            },
+            {
+                type: "github",
+                link: "https://github.com/OpenDriveLab/DriveLM",
             },
             {
                 type: "hugging_face",
