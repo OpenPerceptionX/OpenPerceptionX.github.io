@@ -317,7 +317,7 @@ function adrender() {
     ad.forEach((item, _) => {
         var innerHTML = `
             <a href="${item.link}" target="_blank" class="hover:opacity-70 flex flex-row laptop:flex-col justify-center">
-                <img loading="lazy" src="${item.image}" class="w-fulls laptop:w-96"/>
+                <img loading="lazy" src="${item.image}" class="w-full laptop:w-96"/>
             </a>
             <div class="flex flex-col justify-center flex-1">
                 <h3>
