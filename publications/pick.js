@@ -100,6 +100,10 @@ const pick = [
                 link: "https://huggingface.co/OpenDriveLab/Vista",
             },
             {
+                type: "bilibili",
+                link: "https://www.bilibili.com/video/BV1gXCGYMEYV/",
+            },
+            {
                 type: "medium",
                 link: "https://medium.com/@opendrivelab/towards-next-level-of-autonomous-driving-via-world-models-aff0eb7fee00",
             },

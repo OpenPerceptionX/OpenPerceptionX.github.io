@@ -55,7 +55,7 @@ const ad = [
     },
     {
         title: "OpenLane-V2: A Topology Reasoning Benchmark for Unified 3D HD Mapping",
-        link: "https://openreview.net/forum?id=OMOOO3ls6g",
+        link: "https://proceedings.neurips.cc/paper_files/paper/2023/hash/3c0a4c8c236144f1b99b7e1531debe9c-Abstract-Datasets_and_Benchmarks.html",
         image: "/assets/publication/openlanev2.jpg",
         author: "Huijie Wang, Tianyu Li, Yang Li, Li Chen, Chonghao Sima, Zhenbo Liu, Bangjun Wang, Peijin Jia, Yuting Wang, Shengyin Jiang, Feng Wen, Hang Xu, Ping Luo, Junchi Yan, Wei Zhang, Hongyang Li",
         note: "NeurIPS 2023 Track Datasets and Benchmarks",
@@ -130,7 +130,7 @@ const ad = [
         tag: "",
     },
     {
-        title: "HDGT: Heterogeneous driving graph transformer for multi-agent trajectory prediction via scene encoding",
+        title: "HDGT: Heterogeneous Driving Graph Transformer for Multi-Agent Trajectory Prediction via Scene Encoding",
         link: "https://arxiv.org/abs/2205.09753",
         image: "/assets/publication/hdgt.jpg",
         author: "Xiaosong Jia, Penghao Wu, Li Chen, Hongyang Li, Yu Liu, Junchi Yan",
