@@ -1,16 +1,12 @@
 <head>
+    <link rel="icon" type="image/png" href="/assets/icon/D_small.png">
     <title>Recruit | OpenDriveLab</title>
-    <meta name="keywords" content="Recruit, OpenDriveLab, Robotics, Autonomous Driving, Embodied AI">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Recruit, OpenDriveLab, Robotics, Embodied AI, Autonomous Driving">
     <meta name="description" content="OpenDriveLab is committed to exploring cutting-edge autonomous driving technology, launching a series of benchmarking work, open source to serve the community, and promote the common development of the industry. Friends who are committed to making influential research are welcome to join!">
 
-    <link rel="icon" type="image/png" href="/assets/icon/D_small.png">
-
-    <link href="/ui2024/css/header.css" rel="stylesheet" type="text/css" media="all">
-    <link href="/ui2024/css/footer.css" rel="stylesheet" type="text/css" media="all">
-    <link href="/ui2024/css/format.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/ui2024/css/font.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/ui2024/css/banner.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/ui2024/css/team.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/ui2025/css/index_tailwind.css" rel="stylesheet">
 
     <script src="/ui2024/js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
@@ -20,423 +16,399 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-L7VEDHS6G8"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-L7VEDHS6G8');
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-L7VEDHS6G8');
 </script>
 
 
 
+<!-- load sidebar -->
 <script>
-    $.get("/ui2024/components/header.html",function(result){
-        $("body").prepend(result)
-    })
-    $.get("/ui2024/components/footer.html",function(result){
-        $("body").append(result)
+    $.get('/ui2025/components/sidebar.html', function(result){
+        $("#to_add_sidebar").append(result);
     })
 </script>
 
 
-<style>
-    .navigator {
-        border-bottom: 3px solid rgb(233, 233, 233) !important; 
-        flex-grow: 1 !important;
-    }
-</style>
+
+<body class="h-full" id="#">
+    <!-- Header / Sidebar -->
+    <header id="to_add_sidebar" class="overscroll-none"></header>
+    <!-- Page -->
+    <div class="tablet:ml-72" id="page">
+        <div class="flex w-screen tablet:w-auto flex-col">
 
 
-<body>
 
-    
-
-    <div class="banner">
-        <div class="banner_container" style="align-items: center;">
-            <div class="banner_title_en">
-                <h1 class="Owhite">团队招聘需求</h1>
+            <!-- Landing -->
+            <div class="w-screen tablet:w-auto snap-start h-80 laptop:h-96">
+                <div class="w-full h-full bg-[url('/assets/background/2024.10.png')] bg-top laptop:bg-top bg-cover flex flex-col justify-end p-6 tablet:p-10 laptop:p-20 gap-6 laptop:gap-10">
+                    <h1 class="text-white">
+                        团队招聘需求
+                    </h1>
+                    <h5 class="text-white select-none">
+                        &nbsp;
+                    </h5>
+                </div>
             </div>
+
+
+
+            <!-- Content -->
+            <div class="flex flex-col laptop:flex-row snap-start p-6 tablet:p-10 tablet:pt-0 tablet:pb-0">
+
+
+
+                <!-- navigator -->
+                <aside class="min-h-16 laptop:h-screen top-16 tablet:top-0 sticky z-20 flex items-center justify-start w-full tablet:w-auto laptop:w-96 shrink-0 bg-white">
+                    <ul class="w-full laptop:w-auto mt-3 mb-6 flex flex-row flex-wrap laptop:flex-col justify-evenly border-t-2 border-t-o-white border-b-2 border-b-o-white laptop:border-t-0 laptop:border-b-0">
+                        
+                        <li>
+                            <a href="#embodied" class="navigator-button group">                           
+                                <span class="navigator-button-text">
+                                    具身智能
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#driving" class="navigator-button group">                           
+                                <span class="navigator-button-text">
+                                    自动驾驶
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#ecosystem" class="navigator-button group">                           
+                                <span class="navigator-button-text">
+                                    生态合作
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#introduction" class="navigator-button group">                           
+                                <span class="navigator-button-text">
+                                    团队介绍
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#apply" class="navigator-button group">                           
+                                <span class="navigator-button-text">
+                                    申请方式
+                                </span>
+                            </a>
+                        </li>
+
+                        <li class="laptop:mt-7">
+                            <a href="#" class="flex p-3 laptop:pl-1 select-none">                           
+                                <span>
+                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 18.75 7.5-7.5 7.5 7.5" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 7.5-7.5 7.5 7.5" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+    
+                    </ul>
+                </aside>
+
+
+
+                <!-- main -->
+                <main class="w-full mb-10 tablet:mb-32 mt-10">
+
+
+
+                    <p class="w-full mt-20">
+                        OpenDriveLab长期深耕具身智能与自动驾驶领域。团队端到端自动驾驶项目UniAD，获得 <a class="text-o-blue hover:underline" href="https://cvpr2023.thecvf.com/Conferences/2023/Awards" target="_blank">IEEE CVPR 2023最佳论文奖</a>。团队俯视图感知工作BEVFormer，获得 <a class="text-o-blue hover:underline" href="https://www.zeta-alpha.com/post/must-read-the-100-most-cited-ai-papers-in-2022" target="_blank">2022年百强影响力人工智能论文荣誉</a>。团队积极参与社区建设，举办国际挑战赛，并推进IEEE国际标准建设。
+                        <br><br>
+                        合作团队包括上海人工智能实验室通用视觉团队（乔宇老师）、香港大学（马毅老师、罗平老师）、上海交通大学（严骏驰老师）等等。
+                    </p>
+
+
+
+                    <div class="divider"></div>
+
+
+
+                    <div class="w-full mt-20">
+                        <h3>
+                            <a href="#embodied" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="embodied">
+                                具身智能研究员
+                                <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
+                            </a>
+                        </h3>
+                        <div class="mt-6">
+                            <ul class="ml-6 pt-4 space-y-3 list-outside list-disc">
+                                <li>
+                                    岗位性质：校招 / 社招 / 实习 / Postdoc / Research Assistant
+                                </li>
+                                <li>
+                                    工作地点：上海 / 香港 / 深圳
+                                </li>
+                            </ul>
+                            <h4 class="mt-6">
+                                岗位要求
+                            </h4>
+                            <ul class="ml-6 pt-4 space-y-3 list-outside list-disc">
+                                <li>
+                                    探索机器学习在具身智能领域运用，产出有影响力的工作
+                                </li>
+                                <li>
+                                    计算机科学、人工智能、机器人、电子工程、自动化、应用数学等相关专业优先，有相关研究或工作经验者优先
+                                </li>
+                                <li>
+                                    扎实的编程实现能力，熟练使用 Python 等编程语言
+                                </li>
+                                <li>
+                                    拥有强大的动手能力与丰富的工程落地经验，了解并热爱具身智能领域
+                                </li>
+                                <li>
+                                    具有饱满的科研热情，热衷探索前沿技术，想要做有影响力的工作
+                                </li>
+                                <li>
+                                    熟悉最新具身智能相关工作（如 HumanPlus、RDT、UMI 等）
+                                </li>
+                                <li>
+                                    具备有机器人等平台硬件开发能力者优先
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+                    <div class="w-full mt-20">
+                        <h3>
+                            机器人硬件工程师
+                        </h3>
+                        <div class="mt-6">
+                            <ul class="ml-6 pt-4 space-y-3 list-outside list-disc">
+                                <li>
+                                    岗位性质：校招 / 社招 / 实习 / Postdoc / Research Assistant
+                                </li>
+                                <li>
+                                    工作地点：上海 / 香港 / 深圳
+                                </li>
+                            </ul>
+                            <h4 class="mt-6">
+                                岗位要求
+                            </h4>
+                            <ul class="ml-6 pt-4 space-y-3 list-outside list-disc">
+                                <li>
+                                    负责具身智能领域相关开发，包括但不限于 Humanoid、DexHand、Manipulation 等
+                                </li>
+                                <li>
+                                    计算机科学、人工智能、机器人、电子工程、自动化、应用数学等相关专业优先，有相关研究或工作经验者优先
+                                </li>
+                                <li>
+                                    扎实的编程实现能力，熟练使用C++，Python等编程语言
+                                </li>
+                                <li>
+                                    拥有强大的动手能力与丰富的工程落地经验，了解并热爱具身智能领域
+                                </li>
+                                <li>
+                                    熟练使用机器人操作系统及仿真平台，有机器人相关领域的算法研发以及项目落地经验
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+                    <div class="divider"></div>
+
+
+
+                    <div class="w-full mt-20">
+                        <h3>
+                            <a href="#driving" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="driving">
+                                自动驾驶研究员
+                                <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
+                            </a>
+                        </h3>
+                        <div class="mt-6">
+                            <ul class="ml-6 pt-4 space-y-3 list-outside list-disc">
+                                <li>
+                                    岗位性质：校招 / 社招 / 实习 / Postdoc / Research Assistant
+                                </li>
+                                <li>
+                                    工作地点：上海 / 香港 / 深圳
+                                </li>
+                            </ul>
+                            <h4 class="mt-6">
+                                岗位要求
+                            </h4>
+                            <ul class="ml-6 pt-4 space-y-3 list-outside list-disc">
+                                <li>
+                                    探索机器学习在自动驾驶领域运用，产出有影响力的工作
+                                </li>
+                                <li>
+                                    计算机科学、人工智能、机器人、电子工程、自动化、应用数学等相关专业优先，有相关研究或工作经验者优先
+                                </li>
+                                <li>
+                                    扎实的编程实现能力，熟练使用 Python 等编程语言
+                                </li>
+                                <li>
+                                    拥有强大的动手能力与丰富的工程落地经验，了解并热爱自动驾驶领域
+                                </li>
+                                <li>
+                                    具有饱满的科研热情，热衷探索前沿技术，想要做有影响力的工作
+                                </li>
+                                <li>
+                                    熟悉最新自动驾驶相关工作
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+                    <div class="divider"></div>
+
+
+
+                    <div class="w-full mt-20">
+                        <h3>
+                            <a href="#ecosystem" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="ecosystem">
+                                科研助理 / 生态合作助理
+                                <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
+                            </a>
+                        </h3>
+                        <div class="mt-6">
+                            <ul class="ml-6 pt-4 space-y-3 list-outside list-disc">
+                                <li>
+                                    岗位性质：校招 / 社招 / 实习
+                                </li>
+                                <li>
+                                    工作地点：上海 / 香港 / 深圳
+                                </li>
+                            </ul>
+                            <h4 class="mt-6">
+                                岗位要求
+                            </h4>
+                            <ul class="ml-6 pt-4 space-y-3 list-outside list-disc">
+                                <li>
+                                    有相关研究或工作经验者优先
+                                </li>
+                                <li>
+                                   了解并热爱深度学习领域，了解最新深度学习相关工作
+                                </li>
+                                <li>
+                                    具有饱满的热情，热衷探索前沿技术，想要做有影响力的工作
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+                    <div class="divider"></div>
+
+
+
+                    <div class="w-full mt-20">
+                        <h3>
+                            <a href="#introduction" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="introduction">
+                                往期工作
+                                <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
+                            </a>
+                        </h3>
+                        <div class="mt-6">
+                            <span>团队最新工作详见：<a href="https://opendrivelab.com/publications/" class="text-o-blue hover:underline">opendrivelab.com/publications/</a></span>
+                        </div>
+                        <h4 class="mt-6">
+                            端到端自动驾驶
+                        </h4>
+                        <ul class="ml-6 pt-4 space-y-3 list-outside list-disc">
+                            <li>
+                                Planning-Oriented Autonomous Driving，CVPR 2023 Best Paper Award，近十年中国学术机构作为第一单位首次获CVPR最佳论文奖。<a href="https://arxiv.org/abs/2212.10156" target="_blank" class="text-o-blue hover:underline">arXiv:2212.10156</a>
+                           </li>
+                        </ul>
+                        <h4 class="mt-6">
+                            自动驾驶世界模型等原创技术
+                        </h4>
+                        <ul class="ml-6 pt-4 space-y-3 list-outside list-disc">
+                            <li>
+                                Vista: A Generalizable Driving World Model with High Fidelity and Versatile Controllability，NeurIPS 2024，高质量、可泛化的驾驶视频生成模型。<a href="https://arxiv.org/abs/2405.17398" target="_blank" class="text-o-blue hover:underline">arXiv:2405.17398</a>
+                            </li>
+                            <li>
+                                BEVFormer: Learning Bird's-Eye-View Representation from Multi-Camera Images via Spatiotemporal Transformers，ECCV 2022，2022年百强影响力人工智能论文。<a href="https://arxiv.org/abs/2203.17270" target="_blank" class="text-o-blue hover:underline">arXiv:2203.17270</a>
+                            </li>
+                        </ul>
+                        <h4 class="mt-6">
+                            具身智能 - Manipulation、Humanoid、灵巧手
+                        </h4>
+                        <ul class="ml-6 pt-4 space-y-3 list-outside list-disc">
+                            <li>
+                                MPI (Learning Manipulation by Predicting Interaction)，RSS 2024，机器人领域国际顶级会议。<a href="https://arxiv.org/abs/2406.00439" target="_blank" class="text-o-blue hover:underline">arXiv:2406.00439</a>
+                            </li>
+                            <li>
+                                CLOVER (Closed-Loop Visuomotor Control with Generative Expectation for Robotic Manipulation)，NeurIPS 2024。<a href="https://arxiv.org/abs/2409.09016" target="_blank" class="text-o-blue hover:underline">arXiv:2409.09016</a>
+                            </li>
+                            <li>
+                                RoboDual (Towards Synergistic, Generalized, and Efficient Dual-System for Robotic Manipulation)，团队最新工作。<a href="https://arxiv.org/abs/2410.08001" target="_blank" class="text-o-blue hover:underline">arXiv:2410.08001</a>
+                            </li>
+                            <li>
+                                硬件条件包括最新移动式双臂机器人、通用人形机器人等。与众多知名机器人公司（如智元机器人等）均有长期、稳定合作。
+                            </li>
+                        </ul>
+                    </div>
+
+
+
+                    <div class="w-full mt-20">
+                        <h3>
+                            团队资源
+                        </h3>
+                        <div class="mt-6">
+                            <ul class="ml-6 pt-4 space-y-3 list-outside list-disc">
+                                <li>
+                                    丰富的顶级计算资源，先进的机器人硬件设备
+                                </li>
+                                <li>
+                                    与世界顶级研究人员合作机会
+                                </li>
+                                <li>
+                                    优秀的团队工作氛围
+                                </li>
+                                <li>
+                                    学习能力强，能够快速根据项目需要掌握其他技能
+                                </li>
+                            </ul>
+                        </div>
+
+
+
+                    <div class="divider"></div>
+
+
+
+                    <div class="w-full mt-20">
+                        <h3>
+                            <a href="#apply" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="apply">
+                                申请方式
+                                <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
+                            </a>
+                        </h3>
+                        <p class="mt-6">
+                            简历投递请发送至 <a class="text-o-blue hover:underline" href="mailto:recruit@opendrivelab.com">recruit@opendrivelab.com</a> 
+                        </p>
+                    </div>
+
+
+
+                </main>
+
+
+
+            </div>
+
+
+
         </div>
     </div>
-
-
-
-    <br><br><br>
-
-
-
-    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0; display: flex; justify-content: center;">
-        <div style="flex-grow: 1; max-width: 1280px;">
-
-
-
-            <p>
-                OpenDriveLab长期深耕具身智能与自动驾驶领域。团队端到端自动驾驶项目UniAD，获得<a class="Oblue" href="https://cvpr2023.thecvf.com/Conferences/2023/Awards" target="_blank">IEEE CVPR 2023最佳论文奖</a>。团队俯视图感知工作BEVFormer，获得<a class="Oblue" href="https://www.zeta-alpha.com/post/must-read-the-100-most-cited-ai-papers-in-2022" target="_blank">2022年百强影响力人工智能论文荣誉</a>。团队积极参与社区建设，举办国际挑战赛，并推进IEEE国际标准建设。
-                <br><br>
-                合作团队包括上海人工智能实验室通用视觉团队（乔宇老师）、香港大学（马毅老师、罗平老师）、上海交通大学（严骏驰老师）等等。
-            </p>
-
-
-
-            <br><br>
-            <div style="margin: 0;">
-                <div class="navigator"></div>
-            </div>
-            <br><br><br>
-
-
-
-            <h3>
-                具身智能研究员
-            </h3>
-            <ul>
-                <li>
-                    岗位性质：校招 / 社招 / 实习 / Postdoc / Research Assistant
-                </li>
-                <li>
-                    工作地点：上海 / 香港 / 深圳
-                </li>
-            </ul>
-            <!-- <span><b>岗位职责</b></span>
-            <ul>
-                <li>
-                    负责具身智能领域相关研究，包括但不限于 Humanoid、DexHand、Manipulation 等
-                </li>
-                <li>
-                    对接行业领先机器人合作伙伴，搭建硬件平台、开源数据集等
-                </li>
-                <li>
-                    探索机器学习在具身智能领域运用，产出有影响力的工作
-                </li>
-            </ul> -->
-            <span><b>岗位要求</b></span>
-            <ul>
-                <li>
-                    探索机器学习在具身智能领域运用，产出有影响力的工作
-                </li>
-                <li>
-                    计算机科学、人工智能、机器人、电子工程、自动化、应用数学等相关专业优先，有相关研究或工作经验者优先
-                </li>
-                <li>
-                    扎实的编程实现能力，熟练使用 Python 等编程语言
-                </li>
-                <li>
-                    拥有强大的动手能力与丰富的工程落地经验，了解并热爱具身智能领域
-                </li>
-                <li>
-                    具有饱满的科研热情，热衷探索前沿技术，想要做有影响力的工作
-                </li>
-                <li>
-                    熟悉最新具身智能相关工作（如 HumanPlus、RDT、UMI 等）
-                </li>
-                <li>
-                    具备有机器人等平台硬件开发能力者优先
-                </li>
-            </ul>
-
-
-
-            <br><br>
-
-
-
-            <h3>
-                机器人硬件工程师
-            </h3>
-            <ul>
-                <li>
-                    岗位性质：校招 / 社招 / 实习 / Postdoc / Research Assistant
-                </li>
-                <li>
-                    工作地点：上海 / 香港 / 深圳
-                </li>
-            </ul>
-            <span><b>岗位要求</b></span>
-            <ul>
-                <li>
-                    负责具身智能领域相关开发，包括但不限于 Humanoid、DexHand、Manipulation 等
-                </li>
-                <li>
-                    计算机科学、人工智能、机器人、电子工程、自动化、应用数学等相关专业优先，有相关研究或工作经验者优先
-                </li>
-                <li>
-                    扎实的编程实现能力，熟练使用C++，Python等编程语言
-                </li>
-                <li>
-                    拥有强大的动手能力与丰富的工程落地经验，了解并热爱具身智能领域
-                </li>
-                <li>
-                    熟练使用机器人操作系统及仿真平台，有机器人相关领域的算法研发以及项目落地经验
-                </li>
-            </ul>
-
-
-            <br><br>
-            <div style="margin: 0;">
-                <div class="navigator"></div>
-            </div>
-            <br><br><br>
-
-
-
-            <h3>
-                自动驾驶研究员
-            </h3>
-            <ul>
-                <li>
-                    岗位性质：校招 / 社招 / 实习 / Postdoc / Research Assistant
-                </li>
-                <li>
-                    工作地点：上海 / 香港 / 深圳
-                </li>
-            </ul>
-            <span><b>岗位要求</b></span>
-            <ul>
-                <li>
-                    探索机器学习在自动驾驶领域运用，产出有影响力的工作
-                </li>
-                <li>
-                    计算机科学、人工智能、机器人、电子工程、自动化、应用数学等相关专业优先，有相关研究或工作经验者优先
-                </li>
-                <li>
-                    扎实的编程实现能力，熟练使用 Python 等编程语言
-                </li>
-                <li>
-                    拥有强大的动手能力与丰富的工程落地经验，了解并热爱自动驾驶领域
-                </li>
-                <li>
-                    具有饱满的科研热情，热衷探索前沿技术，想要做有影响力的工作
-                </li>
-                <li>
-                    熟悉最新自动驾驶相关工作
-                </li>
-            </ul>
-
-
-
-            <br><br>
-            <div style="margin: 0;">
-                <div class="navigator"></div>
-            </div>
-            <br><br><br>
-            
-
-
-            <h3>
-                科研助理 / 生态合作助理
-            </h3>
-            <ul>
-                <li>
-                    岗位性质：校招 / 社招 / 实习
-                </li>
-                <li>
-                    工作地点：上海 / 香港 / 深圳
-                </li>
-            </ul>
-            <span><b>岗位要求</b></span>
-            <ul>
-                <li>
-                    有相关研究或工作经验者优先
-                </li>
-                <li>
-                   了解并热爱深度学习领域，了解最新深度学习相关工作
-                </li>
-                <li>
-                    具有饱满的热情，热衷探索前沿技术，想要做有影响力的工作
-                </li>
-            </ul>
-
-
-
-            <br><br>
-            <div style="margin: 0;">
-                <div class="navigator"></div>
-            </div>
-            <br><br><br>
-
-
-
-            <h3>
-                团队往期工作
-            </h3>
-
-            <br>
-
-            <span>团队最新工作详见：<a href="https://opendrivelab.com/publications/" target="_blank" class="Oblue">opendrivelab.com/publications</a></span>
-
-            <br>
-
-            <span><b>端到端自动驾驶</b></span>
-            <ul>
-                <li>
-                    Planning-Oriented Autonomous Driving，CVPR 2023 Best Paper Award，近十年中国学术机构作为第一单位首次获CVPR最佳论文奖。arXiv：<a href="https://arxiv.org/abs/2212.10156" target="_blank" class="Oblue">2212.10156</a>
-               </li>
-            </ul>
-
-            <span><b>自动驾驶世界模型等原创技术</b></span>
-            <ul>
-                <li>
-                    Vista: A Generalizable Driving World Model with High Fidelity and Versatile Controllability，NeurIPS 2024，高质量、可泛化的驾驶视频生成模型。arXiv：<a href="https://arxiv.org/abs/2405.17398" target="_blank" class="Oblue">2405.17398</a>
-                </li>
-                <li>
-                    BEVFormer: Learning Bird's-Eye-View Representation from Multi-Camera Images via Spatiotemporal Transformers，ECCV 2022，2022年百强影响力人工智能论文。arXiv：<a href="https://arxiv.org/abs/2203.17270" target="_blank" class="Oblue">2203.17270</a>
-                </li>
-            </ul>
-
-            <span><b>具身智能 - Manipulation、Humanoid、灵巧手</b></span>
-            <ul>
-                <li>
-                    MPI (Learning Manipulation by Predicting Interaction)，RSS 2024，机器人领域国际顶级会议。arXiv：<a href="https://arxiv.org/abs/2406.00439" target="_blank" class="Oblue">2406.00439</a>
-                </li>
-                <li>
-                    CLOVER (Closed-Loop Visuomotor Control with Generative Expectation for Robotic Manipulation)，NeurIPS 2024。arXiv：<a href="https://arxiv.org/abs/2409.09016" target="_blank" class="Oblue">2409.09016</a>
-                </li>
-                <li>
-                    RoboDual (Towards Synergistic, Generalized, and Efficient Dual-System for Robotic Manipulation)，团队最新工作。arXiv：<a href="https://arxiv.org/abs/2410.08001" target="_blank" class="Oblue">2410.08001</a>
-                </li>
-                <li>
-                    硬件条件包括最新移动式双臂机器人、通用人形机器人等。与众多知名机器人公司（如智元机器人等）均有长期、稳定合作。
-                </li>
-            </ul>
-
-            <br><br>
-
-            <h3>
-                团队资源
-            </h3>
-            <ul>
-                <li>
-                    丰富的顶级计算资源，先进的机器人硬件设备
-                </li>
-                <li>
-                    与世界顶级研究人员合作机会
-                </li>
-                <li>
-                    优秀的团队工作氛围
-                </li>
-                <li>
-                    学习能力强，能够快速根据项目需要掌握其他技能
-                </li>
-            </ul>
-
-
-
-
-            <!-- <h3>
-                实习生（工作地点：上海 / 香港 / 深圳）
-            </h3>
-            <br>
-            <span><b>研发实习生（具身智能 / 自动驾驶）</b></span>
-            <ul>
-                <li>
-                    能连续开展6个月以上的科研工作
-                </li>
-                <li>
-                    具有饱满的科研热情，热衷探索前沿技术，想要做有影响力的工作
-                </li>
-                <li>
-                    在具身智能、自动驾驶等领域发表过高水平论文
-                </li>
-                <li>
-                    国内双一流大学或国外知名大学计算机科学、人工智能、机器人、电子工程、自动化、应用数学等相关领域在读博士/硕士
-                </li>
-                <li>
-                    扎实的编程实现能力，熟练使用Python等编程语言
-                </li>
-                <li>
-                    英语水平优秀
-                </li>
-            </ul>
-            <span><b>运营实习生</b></span>
-            <ul>
-                <li>
-                    本科以上在校生，能够实习4个月及以上（最好6个月）
-                </li>
-                <li>
-                    对AI行业有宏观认识和自己的理解，了解AI相关技术名词与概念
-                </li>
-                <li>
-                    具备较强责任意识，思维敏捷，逻辑清晰，执行力强，抗压能力强
-                </li>
-                <li>
-                    具备良好的沟通能力及跨团队合作能力
-                </li>
-                <li>
-                    学习能力强，能够快速根据项目需要掌握其他技能
-                </li>
-            </ul>
-
-
-
-            <br><br>
-
-
-
-            <h3>
-                2025年校招（工作地点：上海）
-            </h3>
-            <br>
-            <span><b>算法研究员（具身智能 / 自动驾驶）</b></span>
-            <ul>
-                <li>
-                    具有饱满的科研热情，热衷探索前沿技术，想要做有影响力的工作
-                </li>
-                <li>
-                    2025年9月前取得国内双一流大学或国外知名大学计算机科学、人工智能、机器人、电子工程、自动化、应用数学等相关领域硕士/博士学位
-                </li>
-                <li>
-                    以第一作者身份在具身智能、自动驾驶等领域发表过高水平论文
-                </li>
-                <li>
-                    具备领域知识和研发经验，有项目实践经历
-                </li>
-                <li>
-                    扎实的编程实现能力，熟练使用Python等编程语言
-                </li>
-                <li>
-                    英语水平优秀
-                </li>
-            </ul>
-
-
-
-            <br><br> -->
-
-
-
-
-
-
-
-
-            <br><br>
-            <div style="margin: 0;">
-                <div class="navigator"></div>
-            </div>
-            <br><br><br>
-
-
-
-            <h3>
-                申请方式
-            </h3>
-            <!-- <p>
-                简历投递请访问<a href="https://aicarrier.jobs.feishu.cn/s/ihMJKS7G" target="_blank" class="Oblue">此链接</a>（内推码: FV7FDA1）或扫描下方二维码，并忽略岗位名称
-            </p>
-            <img src="./qrcode.png" style="width: 200px; height: 200px;"/> -->
-            <p>
-                简历投递请发送至 <a class="Oblue" href="mailto:recruit@opendrivelab.com">recruit@opendrivelab.com</a> 
-                <!-- ，and / or cc李弘扬博士（<a class="Oblue" href="mailto:hy@opendrivelab.com" target="_blank">hy@opendrivelab.com</a>）。 -->
-            </p>
-
-
-        </div> 
-    </div>
-
-    <br><br>
-
-    <br><br><br><br><br><br>
-
-
-
 </body>
