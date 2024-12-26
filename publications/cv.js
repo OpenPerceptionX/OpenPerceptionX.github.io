@@ -1,46 +1,48 @@
-const pick = [
+const cv = [
     {
-        title: "Planning-oriented Autonomous Driving",
-        link: "https://openaccess.thecvf.com/content/CVPR2023/html/Hu_Planning-Oriented_Autonomous_Driving_CVPR_2023_paper.html",
-        image: "/assets/publication/uniad.jpg",
-        author: "Yihan Hu, Jiazhi Yang, Li Chen, Keyu Li, Chonghao Sima, Xizhou Zhu, Siqi Chai, Senyao Du, Tianwei Lin, Wenhai Wang, Lewei Lu, Xiaosong Jia, Qiang Liu, Jifeng Dai, Yu Qiao, Hongyang Li",
-        note: "CVPR 2023 Best Paper Award",
+        title: "Stare at What You See: Masked Image Modeling without Reconstruction",
+        link: "https://openaccess.thecvf.com/content/CVPR2023/html/Xue_Stare_at_What_You_See_Masked_Image_Modeling_Without_Reconstruction_CVPR_2023_paper.html",
+        image: "/assets/publication/maskalign.jpg",
+        author: "Hongwei Xue, Peng Gao, Hongyang Li, Yu Qiao, Hao Sun, Houqiang Li, Jiebo Luo",
+        note: "CVPR 2023",
         noteoption: '',
-        star: "https://img.shields.io/github/stars/OpenDriveLab/UniAD?style=social",
-        starlink: "https://github.com/OpenDriveLab/UniAD",
+        star: "https://img.shields.io/github/stars/OpenDriveLab/maskalign?style=social",
+        starlink: "https://github.com/OpenDriveLab/maskalign",
         icon: [
             {
                 type: "github",
-                link: "https://github.com/OpenDriveLab/UniAD",
-            },
-            {
-                type: "youtube",
-                link: "https://www.youtube.com/watch?v=cyrxJJ_nnaQ",
-            },
-            {
-                type: "slides",
-                link: "/e2ead/UniAD_plenary_talk_slides.pdf",
-            },
-            {
-                type: "zhihu",
-                link: "https://zhuanlan.zhihu.com/p/638780421",
-            },
-            {
-                type: "wechat",
-                link: "https://mp.weixin.qq.com/s?__biz=MzkyMDUzMDE2Mw==&mid=2247485809&idx=1&sn=5dbd00380bcf80cc32d11b6e15e93829",
+                link: "https://github.com/OpenDriveLab/maskalign",
             },
         ],
-        description: "A comprehensive framework up-to-date that incorporates full-stack driving tasks in one network.",
+        description: "An efficient MIM paradigm MaskAlign and a Dynamic Alignment module to apply learnable alignment to tackle the problem of input inconsistency.",
+        tag: "",
+    },
+    {
+        title: "Mimic before Reconstruct: Enhancing Masked Autoencoders with Feature Mimicking",
+        link: "https://link.springer.com/article/10.1007/s11263-023-01898-4",
+        image: "/assets/publication/mimic.jpg",
+        author: "Peng Gao, Renrui Zhang, Rongyao Fang, Ziyi Lin, Hongyang Li, Hongsheng Li, Qiao Yu",
+        note: "IJCV 2023",
+        noteoption: '',
+        star: "https://img.shields.io/github/stars/Alpha-VL/ConvMAE?style=social",
+        starlink: "https://github.com/Alpha-VL/ConvMAE",
+        icon: [
+            {
+                type: "github",
+                link: "https://github.com/Alpha-VL/ConvMAE",
+            },
+        ],
+        description: "Introducing high-level and low-level representations to MAE without interference during pre-training.",
         tag: "",
     },
 ];
 
 
 
-function pickrender() {
-    const homepubbody = document.getElementById("pub_embodied_ai");
+function cvrender() {
+    const homepubbody = document.getElementById("pub_cv_at_scale");
     homepubbody.innerHTML = "";
-    pick.forEach((item, _) => {
+    cv.forEach((item, _) => {
         var innerHTML = `
             <a href="${item.link}" target="_blank" class="hover:opacity-70 flex flex-row laptop:flex-col justify-center">
                 <img loading="lazy" src="${item.image}" class="w-5/6 laptop:w-96"/>
