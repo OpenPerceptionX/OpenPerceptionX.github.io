@@ -1,5 +1,41 @@
 const cv = [
     {
+        title: "FastMAC: Stochastic Spectral Sampling of Correspondence Graph",
+        link: "https://arxiv.org/abs/2403.08770",
+        image: "/assets/publication/FastMAC.jpg",
+        author: "Yifei Zhang, Hao Zhao, Hongyang Li, Siheng Chen",
+        note: "CVPR 2024",
+        noteoption: '',
+        star: "https://img.shields.io/github/stars/Forrest-110/FastMAC?style=social",
+        starlink: "https://github.com/Forrest-110/FastMAC",
+        icon: [
+            {
+                type: "github",
+                link: "https://github.com/Forrest-110/FastMAC",
+            },
+        ],
+        description: "",
+        tag: "",
+    },
+    {
+        title: "Referred by Multi-Modality: A Unified Temporal Transformer for Video Object Segmentation",
+        link: "https://arxiv.org/abs/2305.16318",
+        image: "/assets/publication/mutr.jpg",
+        author: "Shilin Yan, Renrui Zhang, Ziyu Guo, Wenchao Chen, Wei Zhang, Hongyang Li, Yu Qiao, Zhongjiang He, Peng Gao",
+        note: "AAAI 2024",
+        noteoption: '',
+        star: "https://img.shields.io/github/stars/OpenGVLab/MUTR?style=social",
+        starlink: "https://github.com/OpenGVLab/MUTR",
+        icon: [
+            {
+                type: "github",
+                link: "https://github.com/OpenGVLab/MUTR",
+            },
+        ],
+        description: "",
+        tag: "",
+    },
+    {
         title: "Stare at What You See: Masked Image Modeling without Reconstruction",
         link: "https://openaccess.thecvf.com/content/CVPR2023/html/Xue_Stare_at_What_You_See_Masked_Image_Modeling_Without_Reconstruction_CVPR_2023_paper.html",
         image: "/assets/publication/maskalign.jpg",
@@ -33,6 +69,24 @@ const cv = [
             },
         ],
         description: "Introducing high-level and low-level representations to MAE without interference during pre-training.",
+        tag: "",
+    },
+    {
+        title: "Align Representations With Base: A New Approach to Self-Supervised Learning",
+        link: "https://openaccess.thecvf.com/content/CVPR2022/html/Zhang_Align_Representations_With_Base_A_New_Approach_to_Self-Supervised_Learning_CVPR_2022_paper.html",
+        image: "/assets/publication/arb.jpg",
+        author: "Shaofeng Zhang, Lyn Qiu, Feng Zhu, Junchi Yan, Hengrui Zhang, Rui Zhao, Hongyang Li, Xiaokang Yang",
+        note: "CVPR 2022",
+        noteoption: '',
+        star: "",
+        starlink: "",
+        icon: [
+            {
+                type: "github",
+                link: "",
+            },
+        ],
+        description: "",
         tag: "",
     },
 ];
