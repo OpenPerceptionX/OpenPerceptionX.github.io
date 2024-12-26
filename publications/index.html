@@ -1,20 +1,21 @@
 <head>
+    <link rel="icon" type="image/png" href="/assets/icon/D_small.png">
     <title>Publication | OpenDriveLab</title>
-    <meta name="keywords" content="Publication, OpenDriveLab, Robotics, Autonomous Driving, Embodied AI">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Publication, OpenDriveLab, Robotics, Embodied AI, Autonomous Driving">
     <meta name="description" content="OpenDriveLab is committed to exploring cutting-edge autonomous driving technology, launching a series of benchmarking work, open source to serve the community, and promote the common development of the industry. Friends who are committed to making influential research are welcome to join!">
 
-    <link rel="icon" type="image/png" href="/assets/icon/D_small.png">
-
-    <link href="/ui2024/css/header.css" rel="stylesheet" type="text/css" media="all">
-    <link href="/ui2024/css/footer.css" rel="stylesheet" type="text/css" media="all">
-    <link href="/ui2024/css/format.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/ui2024/css/font.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/ui2024/css/banner.css" rel="stylesheet" type="text/css" media="all"/>
-    
-    <link href="/ui2024/css/sticky.css" rel="stylesheet" type="text/css" media="all"/>
-    <script src="/ui2024/js/sticky.js"></script>
+    <link href="/ui2025/css/index_tailwind.css" rel="stylesheet">
 
     <script src="/ui2024/js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script src="./pick.js"></script>
+    <script src="./embodied.js"></script>
+    <script src="./e2ead.js"></script>
+    <script src="./ad.js"></script>
+    <script src="./cv.js"></script>
+    <script src="./scholar.js"></script>
 </head>
 
 
@@ -22,1042 +23,221 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-L7VEDHS6G8"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-L7VEDHS6G8');
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-L7VEDHS6G8');
 </script>
 
 
 
+<!-- load sidebar -->
 <script>
-    $.get("/ui2024/components/header.html",function(result){
-        $("body").prepend(result)
-    })
-    $.get("/ui2024/components/footer.html",function(result){
-        $("body").append(result)
+    $.get('/ui2025/components/sidebar.html', function(result){
+        $("#to_add_sidebar").append(result);
     })
 </script>
 
 
 
-<script>
-    var url_list = [{
-        name: 'Li Chen',
-        url: 'https://scholar.google.com/citations?user=ulZxvY0AAAAJ'
-    }, {
-        name: 'Penghao Wu',
-        url: 'https://scholar.google.com/citations?user=9mssd5EAAAAJ'
-    }, {
-        name: 'Chonghao Sima',
-        url: 'https://scholar.google.com/citations?user=dgYJ6esAAAAJ'
-    }, {
-        name: 'Hongyang Li',
-        url: 'https://scholar.google.com/citations?user=Hfrih1EAAAAJ'
-    }, {
-        name: 'Xiaosong Jia',
-        url: 'https://scholar.google.com/citations?user=JeFQwxUAAAAJ'
-    }, {
-        name: 'Junchi Yan',
-        url: 'https://scholar.google.com/citations?user=ga230VoAAAAJ'
-    }, {
-        name: 'Andreas Geiger',
-        url: 'https://scholar.google.com/citations?user=SrVnrPcAAAAJ'
-    }, {
-        name: 'Yu Qiao',
-        url: 'https://scholar.google.com/citations?user=gFtI-8QAAAAJ'
-    }, {
-        name: 'Huijie Wang',
-        url: 'https://scholar.google.com/citations?user=Xg4cp-EAAAAJ'
-    }, {
-        name: 'Jiazhi Yang',
-        url: 'https://scholar.google.com/citations?user=Ju7nGX8AAAAJ'
-    }, {
-        name: 'Zetong Yang',
-        url: 'https://scholar.google.com/citations?user=oPiZSVYAAAAJ'
-    }, {
-        name: 'Bangjun Wang',
-        url: 'https://scholar.google.com/citations?user=_LeSlzUAAAAJ'
-    }, {
-        name: 'Kashyap Chitta',
-        url: 'https://scholar.google.com/citations?user=vX5i2CcAAAAJ'
-    }, {
-        name: 'Ping Luo',
-        url: 'https://scholar.google.com/citations?user=aXdjxb4AAAAJ'
-    }, {
-        name: 'Jia Zeng',
-        url: 'https://scholar.google.com/citations?user=kYrUfMoAAAAJ'
-    }, {
-        name: 'Yunsong Zhou',
-        url: 'https://scholar.google.com/citations?user=bTsmnwcAAAAJ'
-    }, {
-        name: 'Shenyuan Gao',
-        url: 'https://scholar.google.com/citations?user=hZtOnecAAAAJ'
-    }, {
-        name: 'Chengen Xie',
-        url: 'https://scholar.google.com/citations?user=-Sk1x_gAAAAJ'
-    }, {
-        name: 'Hanxue Zhang',
-        url: 'https://scholar.google.com/citations?user=vy5r8rMAAAAJ'
-    }, {
-        name: 'Yihang Qiu',
-        url: 'https://scholar.google.com/citations?user=qgRUOdIAAAAJ'
-    }, {
-        name: 'Qingwen Bu',
-        url: 'https://scholar.google.com/citations?user=-JCRysgAAAAJ'
-    }, {
-        name: 'Haochen Liu',
-        url: 'https://scholar.google.com/citations?user=iizqKUsAAAAJ'
-    }, {
-        name: 'Tianyu Li',
-        url: 'https://scholar.google.com/citations?user=X6vTmEMAAAAJ'
-    },];
-    function add_url(a) {
-        var len = url_list.length;
-
-        var h = a.toString();
-        for (var i = 0; i < len; i++) {
-        if (url_list[i]["name"] == h) {
-            var htm = '<a href="' + url_list[i]["url"] + '" target="_blank" class="Odarkblue">' + h + '</a>';
-            var h = htm;
-        }
-        if (h == "et al.") {
-            var htm = '<i>et al.</i>';
-            var h = htm;
-        }
-        }
-        return h
-    }
-  
-    function cur(a) {
-        var h = a.split(",")
-        var len = h.length;
-        var htm = ""
-        for (var i = 0; i < len; i++) {
-            var fh = (i == 0) ? "" : ", "
-            htm += fh + add_url(h[i].replace(/^\s+|\s+$/g, ""))
-        }
-        return htm
-    }
-
-    addEventListener("load", () => {
-        var authors_lists = document.getElementsByClassName("authors");
-        for (var i = 0; i < authors_lists.length; i++) {
-            authors_list = authors_lists[i];
-            authors_list.innerHTML = cur(authors_list.textContent);
-        }
-    })
-</script>
+<body class="h-full" id="#">
+    <!-- Header / Sidebar -->
+    <header id="to_add_sidebar" class="overscroll-none"></header>
+    <!-- Page -->
+    <div class="tablet:ml-72" id="page">
+        <div class="flex w-screen tablet:w-auto flex-col">
 
 
 
-<body>
+            <!-- Landing -->
+            <div class="w-screen tablet:w-auto snap-start h-80 laptop:h-96">
+                <div class="w-full h-full bg-[url('/assets/background/2024.10.png')] bg-top laptop:bg-top bg-cover flex flex-col justify-end p-6 tablet:p-10 laptop:p-20 gap-6 laptop:gap-10">
+                    <h1 class="text-white">
+                        Publication
+                    </h1>
+                    <h5 class="text-white select-none">
+                        We position OpenDriveLab as one of the most top research teams around globe, since we've got talented people and published work at top venues.
+                    </h5>
+                </div>
+            </div>
 
+
+
+            <!-- Content -->
+            <div class="flex flex-col laptop:flex-row snap-start p-6 tablet:p-10 tablet:pt-0 tablet:pb-0">
+
+
+
+                <!-- navigator -->
+                <aside class="min-h-16 laptop:h-screen top-16 tablet:top-0 sticky z-20 flex items-center justify-start w-full tablet:w-auto laptop:w-96 shrink-0 bg-white">
+                    <ul class="w-full laptop:w-auto mt-3 mb-6 flex flex-row flex-wrap laptop:flex-col justify-evenly border-t-2 border-t-o-white border-b-2 border-b-o-white laptop:border-t-0 laptop:border-b-0">
+                        
+                        <li>
+                            <a href="#editor_pick" class="navigator-button group">                           
+                                <span class="navigator-button-text">
+                                    Editor's Pick
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#embodied_ai" class="navigator-button group">                           
+                                <span class="navigator-button-text">
+                                    Embodied AI
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#end_to_end_ad" class="navigator-button group">                           
+                                <span class="navigator-button-text">
+                                    E2E AD
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#ad_algorithm" class="navigator-button group">                           
+                                <span class="navigator-button-text">
+                                    AD Algorithm
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#cv_at_scale" class="navigator-button group">                           
+                                <span class="navigator-button-text">
+                                    CV at Scale
+                                </span>
+                            </a>
+                        </li>
+
+                        <li class="laptop:mt-7">
+                            <a href="#" class="flex p-3 laptop:pl-1 select-none">                           
+                                <span>
+                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 18.75 7.5-7.5 7.5 7.5" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 7.5-7.5 7.5 7.5" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
     
+                    </ul>
+                </aside>
 
-    <div class="banner">
-        <div class="banner_container">
-            <div class="banner_title_en">
-                <h1 class="Owhite">Publication</h1>
+
+
+                <!-- main -->
+                <main class="w-full mb-16 tablet:mb-32 mt-10">
+
+
+
+                    <div class="w-full mt-20">
+                        <h2>
+                            <a href="#editor_pick" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="editor_pick">
+                                Editor's Pick
+                                <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
+                            </a>
+                        </h2>
+                        <div 
+                            class="mt-20 gap-20 flex flex-col" 
+                            id="pub_editor_pick">
+                        </div>
+                    </div>
+
+
+
+                    <div class="divider"></div>
+
+
+
+                    <div class="w-full mt-20">
+                        <h2>
+                            <a href="#embodied_ai" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="embodied_ai">
+                                Embodied AI
+                                <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
+                            </a>
+                        </h2>
+                        <div 
+                            class="mt-20 gap-20 flex flex-col" 
+                            id="pub_embodied_ai">
+                        </div>
+                    </div>
+
+
+
+                    <div class="divider"></div>
+
+
+
+                    <div class="w-full mt-20">
+                        <h2>
+                            <a href="#end_to_end_ad" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="end_to_end_ad">
+                                End-to-End Autonomous Driving
+                                <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
+                            </a>
+                        </h2>
+                        <div 
+                            class="mt-20 gap-20 flex flex-col" 
+                            id="pub_end_to_end_ad">
+                        </div>
+                    </div>
+
+
+
+                    <div class="divider"></div>
+
+
+
+                    <div class="w-full mt-20">
+                        <h2>
+                            <a href="#ad_algorithm" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="ad_algorithm">
+                                Autonomous Driving Algorithm
+                                <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
+                            </a>
+                        </h2>
+                        <div 
+                            class="mt-20 gap-20 flex flex-col" 
+                            id="pub_ad_algorithm">
+                        </div>
+                    </div>
+
+
+
+                    <div class="divider"></div>
+
+
+
+                    <div class="w-full mt-20">
+                        <h2>
+                            <a href="#cv_at_scale" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="cv_at_scale">
+                                Computer Vision at Scale
+                                <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
+                            </a>
+                        </h2>
+                        <div 
+                            class="mt-20 gap-20 flex flex-col" 
+                            id="pub_cv_at_scale">
+                        </div>
+                    </div>
+
+
+
+                </main>
+
+
+
             </div>
-            <div class="banner_subtitle_en">
-                <h6 class="Owhite" id="editor_pick">We position OpenDriveLab as one of the most top research teams around globe, since we've got talented people and published work at top venues.</h6>
-            </div>
+
+
+
         </div>
     </div>
-
-
-
-    <div class="block sticky" id="sticky">
-        <div class="sticky_row">
-            <a href="#editor_pick">Editor's Pick</a>
-            <a></a>
-            <a></a>
-            <a href="#" class="image"><img src="/assets/icon/top.png"/></a>
-        </div>
-        <div class="navigator"></div>
-        <div class="sticky_row">
-            <a href="#end_to_end_ad">End-to-End AD</a>
-            <a href="#ad_algorithm">AD Algorithm</a>
-            <a href="#embodied_ai">Embodied AI</a>
-            <a href="#cv_at_scale">CV at Scale</a>
-        </div>
-    </div>
-
-
-
-    <br><br><br>
-
-
-
-    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;">
-        <div style="flex-grow: 1;">
-            <a class="h1_title" href="#editor_pick">
-                <h1>
-                    Editor's Pick
-                    <img loading="lazy" class="link_img"/>
-                </h1>
-            </a>
-        </div> 
-    </div>
-    <br><br>
-    <div class="block_left" style="margin-top: 0; padding-top: 0">
-        <div style="flex-grow: 1;">
-
-            <div class="publication_container">
-
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://openaccess.thecvf.com/content/CVPR2023/html/Hu_Planning-Oriented_Autonomous_Driving_CVPR_2023_paper.html" target="_blank"><img loading="lazy" src="/assets/publication/uniad.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://openaccess.thecvf.com/content/CVPR2023/html/Hu_Planning-Oriented_Autonomous_Driving_CVPR_2023_paper.html" target="_blank">Planning-oriented Autonomous Driving</a></h2>
-                        <span class="authors">Yihan Hu, Jiazhi Yang, Li Chen, Keyu Li, Chonghao Sima, Xizhou Zhu, Siqi Chai, Senyao Du, Tianwei Lin, Wenhai Wang, Lewei Lu, Xiaosong Jia, Qiang Liu, Jifeng Dai, Yu Qiao, Hongyang Li</span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue"><a href="https://cvpr2023.thecvf.com/Conferences/2023/Awards" target="_blank" style="text-decoration: underline;">CVPR 2023 Best Paper Award</a></span>
-                            </div>
-                            <div>
-                                <a href="https://github.com/OpenDriveLab/UniAD" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/OpenDriveLab/UniAD?style=social"/></a>
-                                <a href="https://www.youtube.com/watch?v=cyrxJJ_nnaQ" target="_blank"><img loading="lazy" src="/assets/icon/youtube.png"/></a>
-                                <a href="/e2ead/UniAD_plenary_talk_slides.pdf" target="_blank"><img loading="lazy" src="/assets/icon/slides.png"/></a>
-                                <a href="https://zhuanlan.zhihu.com/p/638780421" target="_blank"><img loading="lazy" src="/assets/icon/zhihu.png"/></a>
-                                <a href="https://mp.weixin.qq.com/s?__biz=MzkyMDUzMDE2Mw==&mid=2247485809&idx=1&sn=5dbd00380bcf80cc32d11b6e15e93829" target="_blank"><img loading="lazy" src="/assets/icon/wechat.png"/></a>
-                            </div>
-                        </div>
-                        <span class="gray"><i>A comprehensive framework up-to-date that incorporates full-stack driving tasks in one network.</i></span>
-                    </div>
-                </div>
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://ieeexplore.ieee.org/abstract/document/10614862/" target="_blank"><img loading="lazy" src="/assets/publication/e2esurvey.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://ieeexplore.ieee.org/abstract/document/10614862/" target="_blank">End-to-end Autonomous Driving: Challenges and Frontiers</a></h2>
-                        <span class="authors">Li Chen, Penghao Wu, Kashyap Chitta, Bernhard Jaeger, Andreas Geiger, Hongyang Li</span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">TPAMI 2024</span>
-                            </div>
-                            <div>
-                                <a href="https://github.com/OpenDriveLab/End-to-end-Autonomous-Driving" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/OpenDriveLab/End-to-end-Autonomous-Driving?style=social"/></a>
-                            </div>
-                        </div>
-                        <span class="gray"><i>In this survey, we provide a comprehensive analysis of more than 270 papers on the motivation, roadmap, methodology, challenges, and future trends in end-to-end autonomous driving.</i></span>
-                    </div>
-                </div>
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://arxiv.org/abs/2409.09016" target="_blank"><img loading="lazy" src="/assets/publication/clover.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://arxiv.org/abs/2409.09016" target="_blank">Closed-Loop Visuomotor Control with Generative Expectation for Robotic Manipulation</a></h2>
-                        <span class="authors">Qingwen Bu, Jia Zeng, Li Chen, Yanchao Yang, Guyue Zhou, Junchi Yan, Ping Luo, Heming Cui, Yi Ma, Hongyang Li</span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">NeurIPS 2024</span>
-                            </div>
-                            <div>
-                                <a href="https://github.com/OpenDriveLab/CLOVER" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/OpenDriveLab/CLOVER?style=social"/></a>
-                                <a href="https://www.bilibili.com/video/BV1rHqZYeECL" target="_blank"><img src="/assets//icon/bilibili.png"></a>
-                            </div>
-                        </div>
-                        <span class="gray"><i>​CLOVER employs a text-conditioned video diffusion model for generating visual plans as reference inputs, then these sub-goals guide the feedback-driven policy to generate actions with an error measurement strategy.</i></span>
-                    </div>
-                </div>
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://arxiv.org/abs/2405.17398" target="_blank"><img loading="lazy" src="/assets/publication/vista.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://arxiv.org/abs/2405.17398" target="_blank">Vista: A Generalizable Driving World Model with High Fidelity and Versatile Controllability</a></h2>
-                        <span class="authors">Shenyuan Gao, Jiazhi Yang, Li Chen, Kashyap Chitta, Yihang Qiu, Andreas Geiger, Jun Zhang, Hongyang Li</span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">NeurIPS 2024</span>
-                            </div>
-                            <div>
-                                <a href="https://github.com/OpenDriveLab/Vista" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/OpenDriveLab/Vista?style=social"/></a>
-                                <a href="https://github.com/OpenDriveLab/DriveAGI/tree/main/opendv" target="_blank"><img loading="lazy" src="/assets/icon/dataset.png"/></a>
-                                <a href="https://github.com/OpenDriveLab/Vista" target="_blank"><img loading="lazy" src="/assets/icon/webpage.png"/></a>
-                                <a href="https://huggingface.co/OpenDriveLab/Vista" target="_blank"><img loading="lazy" src="/assets/icon/hugging_face.png"/></a>
-                                <a href="https://medium.com/@opendrivelab/towards-next-level-of-autonomous-driving-via-world-models-aff0eb7fee00" target="_blank"><img loading="lazy" src="/assets/icon/medium.png"/></a>
-                                <a href="https://opendrivelab.github.io/Vista/nips24_vista_poster.png" target="_blank"><img loading="lazy" src="/assets/icon/poster.png"/></a>
-                            </div>
-                        </div>
-                        <span class="gray"><i>A generalizable driving world model with high-fidelity open-world prediction, continuous long-horizon rollout, and zero-shot action controllability.</i></span>
-                    </div>
-                </div>
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://arxiv.org/abs/2312.14150" target="_blank"><img loading="lazy" src="/assets/publication/drivelm.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://arxiv.org/abs/2312.14150" target="_blank">DriveLM: Driving with Graph Visual Question Answering</a></h2>
-                        <span class="authors">Chonghao Sima, Katrin Renz, Kashyap Chitta, Li Chen, Hanxue Zhang, Chengen Xie, Ping Luo, Andreas Geiger, Hongyang Li</span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">ECCV 2024 (Oral)</span>
-                            </div>
-                            <div id="end_to_end_ad">
-                                <a href="https://github.com/OpenDriveLab/DriveLM" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/OpenDriveLab/DriveLM?style=social"/></a>
-                                <a href="https://github.com/OpenDriveLab/DriveLM" target="_blank"><img loading="lazy" src="/assets/icon/dataset.png"/></a>
-                                <a href="/DriveLM/" target="_blank"><img loading="lazy" src="/assets/icon/webpage.png"/></a>
-                                <a href="https://huggingface.co/datasets/OpenDriveLab-org/DriveLM" target="_blank"><img loading="lazy" src="/assets/icon/hugging_face.png"/></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div> 
-    </div>
-
-
-
-    <br>
-    <div class="block" style="margin: 0;">
-        <div class="navigator"></div>
-    </div>
-    <br><br><br>
-
-
-
-    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;">
-        <div style="flex-grow: 1;">
-            <a class="h1_title" href="#end_to_end_ad">
-                <h1>
-                    End-to-End Autonomous Driving
-                    <img loading="lazy" class="link_img"/>
-                </h1>
-            </a>
-        </div> 
-    </div>
-    <br><br>
-    <div class="block_left" style="margin-top: 0; padding-top: 0">
-        <div style="flex-grow: 1;">
-            <div class="publication_container">
-
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://arxiv.org/abs/2409.18031" target="_blank"><img loading="lazy" src="/assets/publication/betop.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://arxiv.org/abs/2409.18031" target="_blank">Reasoning Multi-Agent Behavioral Topology for Interactive Autonomous Driving</a></h2>
-                        <span class="authors">Haochen Liu, Li Chen, Yu Qiao, Chen Lv, Hongyang Li</span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">NeurIPS 2024</span>
-                            </div>
-                            <div>
-                                <a href="https://github.com/OpenDriveLab/BeTop" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/OpenDriveLab/BeTop?style=social"/></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://arxiv.org/abs/2406.15349" target="_blank"><img loading="lazy" src="/assets/publication/navsim.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://arxiv.org/abs/2406.15349" target="_blank">NAVSIM: Data-Driven Non-Reactive Autonomous Vehicle Simulation and Benchmarking</a></h2>
-                        <span class="authors">Daniel Dauner, Marcel Hallgarten, Tianyu Li, Xinshuo Weng, Zhiyu Huang, Zetong Yang, Hongyang Li, Igor Gilitschenski, Boris Ivanovic, Marco Pavone, Andreas Geiger, Kashyap Chitta</span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">NeurIPS 2024 Track Datasets and Benchmarks</span>
-                            </div>
-                            <div>
-                                <a href="https://github.com/autonomousvision/navsim" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/autonomousvision/navsim?style=social"/></a>
-                            </div>
-                        </div>
-                        <span class="gray"><i>Data-Driven Non-Reactive Autonomous Vehicle Simulation and Benchmarking.</i></span>
-                    </div>
-                </div>
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://openaccess.thecvf.com/content/CVPR2024/html/Yang_Generalized_Predictive_Model_for_Autonomous_Driving_CVPR_2024_paper.html" target="_blank"><img loading="lazy" src="/assets/publication/genad.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://openaccess.thecvf.com/content/CVPR2024/html/Yang_Generalized_Predictive_Model_for_Autonomous_Driving_CVPR_2024_paper.html" target="_blank">Generalized Predictive Model for Autonomous Driving</a></h2>
-                        <span class="authors">Jiazhi Yang, Shenyuan Gao, Yihang Qiu, Li Chen, Tianyu Li, Bo Dai, Kashyap Chitta, Penghao Wu, Jia Zeng, Ping Luo, Jun Zhang, Andreas Geiger, Yu Qiao, Hongyang Li</span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">CVPR 2024 (Highlight)</span>
-                            </div>
-                            <div>
-                                <a href="https://github.com/OpenDriveLab/DriveAGI" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/OpenDriveLab/DriveAGI?style=social"/></a>
-                                <a href="https://github.com/OpenDriveLab/DriveAGI/tree/main/opendv" target="_blank"><img loading="lazy" src="/assets/icon/dataset.png"/></a>
-                                <a href="https://www.youtube.com/watch?v=a4H6Jj-7IC0" target="_blank"><img loading="lazy" src="/assets/icon/youtube.png"/></a>
-                                <a href="https://medium.com/@opendrivelab/towards-next-level-of-autonomous-driving-via-world-models-aff0eb7fee00" target="_blank"><img loading="lazy" src="/assets/icon/medium.png"/></a>
-                                <a href="https://opendrivelab.github.io/content/GenAD_slides_with_vista.pdf" target="_blank"><img loading="lazy" src="/assets/icon/slides.png"/></a>
-                            </div>
-                        </div>
-                        <span class="gray"><i>We aim to establish a generalized video prediction paradigm for autonomous driving by presenting the largest multimodal driving video dataset to date, OpenDV-2K, and a generative model that predicts the future given past visual and textual input, GenAD.</i></span>
-                    </div>
-                </div>
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://openaccess.thecvf.com/content/CVPR2024/html/Yang_Visual_Point_Cloud_Forecasting_enables_Scalable_Autonomous_Driving_CVPR_2024_paper.html" target="_blank"><img loading="lazy" src="/assets/publication/vidar.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://openaccess.thecvf.com/content/CVPR2024/html/Yang_Visual_Point_Cloud_Forecasting_enables_Scalable_Autonomous_Driving_CVPR_2024_paper.html" target="_blank">Visual Point Cloud Forecasting enables Scalable Autonomous Driving</a></h2>
-                        <span class="authors">Zetong Yang, Li Chen, Yanan Sun, Hongyang Li</span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">CVPR 2024 (Highlight)</span>
-                            </div>
-                            <div>
-                                <a href="https://github.com/OpenDriveLab/ViDAR" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/OpenDriveLab/ViDAR?style=social"/></a>
-                            </div>
-                        </div>
-                        <span class="gray"><i>A new self-supervised pre-training task for end-to-end autonomous driving, predicting future point clouds from historical visual inputs, joint modeling the 3D geometry and temporal dynamics for simultaneous perception, prediction, and planning.</i></span>
-                    </div>
-                </div>
-                <div>
-                    <div class="publication_container_first">
-                        <a href="http://engine.scichina.com/doi/10.1360/SSI-2023-0313" target="_blank"><img loading="lazy" src="/assets/publication/datasurvey.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="http://engine.scichina.com/doi/10.1360/SSI-2023-0313" target="_blank">自动驾驶开源数据体系：现状与未来</a></h2>
-                        <span class="authors">Hongyang Li, Yang Li, Huijie Wang, Jia Zeng, Huilin Xu, Pinlong Cai, Li Chen, Junchi Yan, Feng Xu, Lu Xiong, Jingdong Wang, Futang Zhu, Kai Yan, Chunjing Xu, Tiancai Wang, Fei Xia, Beipeng Mu, Zhihui Peng, Dahua Lin, Yu Qiao</span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">中国科学：信息科学</span>
-                            </div>
-                            <div>
-                                <a href="https://github.com/OpenDriveLab/DriveAGI" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/OpenDriveLab/DriveAGI?style=social"/></a>
-                                <a href="https://www.researchgate.net/publication/375331218_Open-sourced_Data_Ecosystem_in_Autonomous_Driving_the_Present_and_Future?channel=doi&linkId=65467b44ce88b87031c4ceab&showFulltext=true" target="_blank"><img src="/assets/icon/researchgate.png"/></a>
-                                <a href="https://arxiv.org/abs/2312.03408" target="_blank"><img loading="lazy" src="/assets/icon/arxiv.png"/></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://arxiv.org/abs/2403.04593" target="_blank"><img loading="lazy" src="/assets/publication/elm.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://arxiv.org/abs/2403.04593" target="_blank">Embodied Understanding of Driving Scenarios</a></h2>
-                        <span class="authors">Yunsong Zhou, Linyan Huang, Qingwen Bu, Jia Zeng, Tianyu Li, Hang Qiu, Hongzi Zhu, Minyi Guo, Yu Qiao, Hongyang Li</span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">ECCV 2024</span>
-                            </div>
-                            <div>
-                                <a href="https://github.com/OpenDriveLab/ELM" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/OpenDriveLab/ELM?style=social"/></a>
-                            </div>
-                        </div>
-                        <span class="gray"><i>Revive driving scene understanding by delving into the embodiment philosophy.</i></span>
-                    </div>
-                </div>
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://openaccess.thecvf.com/content/ICCV2023/html/Jia_DriveAdapter_Breaking_the_Coupling_Barrier_of_Perception_and_Planning_in_ICCV_2023_paper.html" target="_blank"><img loading="lazy" src="/assets/publication/driveadapted.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://openaccess.thecvf.com/content/ICCV2023/html/Jia_DriveAdapter_Breaking_the_Coupling_Barrier_of_Perception_and_Planning_in_ICCV_2023_paper.html" target="_blank">DriveAdapter: Breaking the Coupling Barrier of Perception and Planning in End-to-End Autonomous Driving</a></h2>
-                        <span class="authors">Xiaosong Jia, Yulu Gao, Li Chen, Junchi Yan, Patrick Langechuan Liu, Hongyang Li</span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">ICCV 2023 (Oral)</span>
-                            </div>
-                            <div>
-                                <a href="https://github.com/OpenDriveLab/DriveAdapter" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/OpenDriveLab/DriveAdapter?style=social"/></a>
-                            </div>
-                        </div>
-                        <span class="gray"><i>A new paradigm for end-to-end autonomous driving without causal confusion issue.</i></span>
-                    </div>
-                </div>
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://openaccess.thecvf.com/content/CVPR2023/html/Jia_Think_Twice_Before_Driving_Towards_Scalable_Decoders_for_End-to-End_Autonomous_CVPR_2023_paper.html" target="_blank"><img loading="lazy" src="/assets/publication/thinktwice.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://openaccess.thecvf.com/content/CVPR2023/html/Jia_Think_Twice_Before_Driving_Towards_Scalable_Decoders_for_End-to-End_Autonomous_CVPR_2023_paper.html" target="_blank">Think Twice before Driving: Towards Scalable Decoders for End-to-End Autonomous Driving</a></h2>
-                        <span class="authors">Xiaosong Jia, Penghao Wu, Li Chen, Jiangwei Xie, Conghui He, Junchi Yan, Hongyang Li</span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">CVPR 2023</span>
-                            </div>
-                            <div>
-                                <a href="https://github.com/OpenDriveLab/ThinkTwice" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/opendrivelab/thinktwice?style=social"/></a>
-                            </div>
-                        </div>
-                        <span class="gray"><i>A scalable decoder paradigm that generates the future trajectory and action of the ego vehicle for end-to-end autonomous driving.</i></span>
-                    </div>
-                </div>
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://arxiv.org/abs/2311.01043" target="_blank"><img loading="lazy" src="/assets/publication/llm4drive.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://arxiv.org/abs/2311.01043" target="_blank">LLM4Drive: A Survey of Large Language Models for Autonomous Driving</a></h2>
-                        <span class="authors">Zhenjie Yang, Xiaosong Jia, Hongyang Li, Junchi Yan</span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">arXiv 2023</span>
-                            </div>
-                            <div>
-                                <a href="https://github.com/Thinklab-SJTU/Awesome-LLM4AD" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/Thinklab-SJTU/Awesome-LLM4AD?style=social"/></a>
-                            </div>
-                        </div>
-                        <span class="gray"><i>A collection of research papers about LLM-for-Autonomous-Driving (LLM4AD).</i></span>
-                    </div>
-                </div>
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://arxiv.org/abs/2301.01006" target="_blank"><img loading="lazy" src="/assets/publication/ppgeo.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://arxiv.org/abs/2301.01006" target="_blank">Policy Pre-Training for End-to-End Autonomous Driving via Self-Supervised Geometric Modeling</a></h2>
-                        <span class="authors">Penghao Wu, Li Chen, Hongyang Li, Xiaosong Jia, Junchi Yan, Yu Qiao</span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">ICLR 2023</span>
-                            </div>
-                            <div>
-                                <a href="https://github.com/opendrivelab/ppgeo" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/opendrivelab/ppgeo?style=social"/></a>
-                                <a href="https://docs.google.com/presentation/d/1d0MGh3XCxuZujtYgZ0sr6xsAKZ4uS50p/edit?usp=sharing&ouid=118212253182146260973&rtpof=true&sd=true" target="_blank"><img loading="lazy" src="/assets/icon/slides.png"/></a>
-                            </div>
-                        </div>
-                        <span class="gray"><i>An intuitive and straightforward fully self-supervised framework curated for the policy pre-training in visuomotor driving.</i></span>
-                    </div>
-                </div>
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://proceedings.neurips.cc/paper_files/paper/2022/hash/286a371d8a0a559281f682f8fbf89834-Abstract-Conference.html" target="_blank"><img loading="lazy" src="/assets/publication/tcp.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://proceedings.neurips.cc/paper_files/paper/2022/hash/286a371d8a0a559281f682f8fbf89834-Abstract-Conference.html" target="_blank">Trajectory-guided Control Prediction for End-to-end Autonomous Driving: A Simple yet Strong Baseline</a></h2>
-                        <span class="authors">Penghao Wu, Xiaosong Jia, Li Chen, Junchi Yan, Hongyang Li, Yu Qiao</span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">NeurIPS 2022 <code>[Carla First Place]</code></span>
-                            </div>
-                            <div>
-                                <a href="https://github.com/OpenDriveLab/TCP" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/OpenDriveLab/TCP?style=social"/></a>
-                                <a href="https://zhuanlan.zhihu.com/p/532665469" target="_blank"><img loading="lazy" src="/assets/icon/zhihu.png"/></a>
-                            </div>
-                        </div>
-                        <span class="gray"><i>Take the initiative to explore the combination of controller based on a planned trajectory and perform control prediction.</i></span>
-                    </div>
-                </div>
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://link.springer.com/chapter/10.1007/978-3-031-19839-7_31" target="_blank"><img loading="lazy" src="/assets/publication/stp3.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://link.springer.com/chapter/10.1007/978-3-031-19839-7_31" target="_blank">ST-P3: End-to-end Vision-based Autonomous Driving via Spatial-Temporal Feature Learning</a></h2>
-                        <span class="authors">Shengchao Hu, Li Chen, Penghao Wu, Hongyang Li, Junchi Yan, Dacheng Tao</span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">ECCV 2022</span>
-                            </div>
-                            <div id="ad_algorithm">
-                                <a href="https://github.com/OpenDriveLab/st-p3" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/OpenDriveLab/st-p3?style=social"/></a>
-                                <a href="https://zhuanlan.zhihu.com/p/544387122" target="_blank"><img loading="lazy" src="/assets/icon/zhihu.png"/></a>
-                            </div>
-                        </div>
-                        <span class="gray"><i>A spatial-temporal feature learning scheme towards a set of more representative features for perception, prediction and planning tasks simultaneously.</i></span>
-                    </div>
-                </div>
-
-            </div>
-        </div> 
-    </div>
-
-
-
-    <br>
-    <div class="block" style="margin: 0;">
-        <div class="navigator"></div>
-    </div>
-    <br><br><br>
-
-
-
-    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;">
-        <div style="flex-grow: 1;">
-            <a class="h1_title" href="#ad_algorithm">
-                <h1>
-                    AD Algorithm
-                    <img loading="lazy" class="link_img"/>
-                </h1>
-            </a>
-        </div> 
-    </div>
-    <br><br>
-    <div class="block_left" style="margin-top: 0; padding-top: 0">
-        <div style="flex-grow: 1;">
-            <div class="publication_container">
-
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://arxiv.org/abs/2312.16108" target="_blank"><img loading="lazy" src="/assets/publication/lanesegnet.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://arxiv.org/abs/2312.16108" target="_blank">LaneSegNet: Map Learning with Lane Segment Perception for Autonomous Driving</a></h2>
-                        <span class="authors">Tianyu Li, Peijin Jia, Bangjun Wang, Li Chen, Kun Jiang, Junchi Yan, Hongyang Li</span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">ICLR 2024</span>
-                            </div>
-                            <div>
-                                <a href="https://github.com/OpenDriveLab/LaneSegNet" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/opendrivelab/LaneSegNet?style=social"/></a>
-                            </div>
-                        </div>
-                        <span class="gray"><i>We advocate Lane Segment as a map learning paradigm that seamlessly incorporates both map geometry and topology information.</i></span>
-                    </div>
-                </div>
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://arxiv.org/abs/2312.17118" target="_blank"><img loading="lazy" src="/assets/publication/sparseocc.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://arxiv.org/abs/2312.17118" target="_blank">Fully Sparse 3D Occupancy Prediction</a></h2>
-                        <span class="authors">Haisong Liu, Yang Chen, Haiguang Wang, Zetong Yang, Tianyu Li, Jia Zeng, Li Chen, Hongyang Li, Limin Wang</span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">ECCV 2024</span>
-                            </div>
-                            <div>
-                                <a href="https://github.com/MCG-NJU/SparseOcc" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/MCG-NJU/SparseOcc?style=social"/></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://arxiv.org/abs/2310.15670" target="_blank"><img loading="lazy" src="/assets/publication/vcd.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://arxiv.org/abs/2310.15670" target="_blank">Leveraging Vision-Centric Multi-Modal Expertise for 3D Object Detection</a></h2>
-                        <span class="authors">Linyan Huang, Zhiqi Li, Chonghao Sima, Wenhai Wang, Jingdong Wang, Yu Qiao, Hongyang Li</span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">NeurIPS 2023</span>
-                            </div>
-                            <div>
-                                <a href="https://github.com/OpenDriveLab/Birds-eye-view-Perception" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/opendrivelab/Birds-eye-view-Perception?style=social"/></a>
-                            </div>
-                        </div>
-                        <span class="gray"><i>The unified framework to enhance 3D object detection by uniting a multi-modal expert model with a trajectory distillation module.</i></span>
-                    </div>
-                </div>
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://openreview.net/forum?id=OMOOO3ls6g" target="_blank"><img loading="lazy" src="/assets/publication/openlanev2.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://openreview.net/forum?id=OMOOO3ls6g" target="_blank">OpenLane-V2: A Topology Reasoning Benchmark for Unified 3D HD Mapping</a></h2>
-                        <span class="authors">Huijie Wang, Tianyu Li, Yang Li, Li Chen, Chonghao Sima, Zhenbo Liu, Bangjun Wang, Peijin Jia, Yuting Wang, Shengyin Jiang, Feng Wen, Hang Xu, Ping Luo, Junchi Yan, Wei Zhang, Hongyang Li</span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">NeurIPS 2023 Track Datasets and Benchmarks</span>
-                            </div>
-                            <div>
-                                <a href="https://github.com/OpenDriveLab/OpenLane-V2" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/opendrivelab/OpenLane-V2?style=social"/></a>
-                                <a href="https://github.com/OpenDriveLab/OpenLane-V2" target="_blank"><img loading="lazy" src="/assets/icon/dataset.png"/></a>
-
-                            </div>
-                        </div>
-                        <span class="gray"><i>The world's first perception and reasoning benchmark for scene structure in autonomous driving.</i></span>
-                    </div>
-                </div>
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://ieeexplore.ieee.org/document/10321736" target="_blank"><img loading="lazy" src="/assets/publication/bevsurvey.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://ieeexplore.ieee.org/document/10321736" target="_blank">Delving into the Devils of Bird's-Eye-View Perception: A Review, Evaluation and Recipe</a></h2>
-                        <span class="authors">Hongyang Li, Chonghao Sima, Jifeng Dai, Wenhai Wang, Lewei Lu, Huijie Wang, Jia Zeng, Zhiqi Li, Jiazhi Yang, Hanming Deng, Hao Tian, Enze Xie, Jiangwei Xie, Li Chen, Tianyu Li, Yang Li, Yulu Gao, Xiaosong Jia, Si Liu, Jianping Shi, Dahua Lin, Yu Qiao</span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">TPAMI 2023 <code>[Setup the Table]</code></span>
-                            </div>
-                            <div>
-                                <a href="https://github.com/opendrivelab/bevperception-survey-recipe" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/opendrivelab/bevperception-survey-recipe?style=social"/></a>
-                            </div>
-                        </div>
-                        <span class="gray"><i>We review the most recent work on BEV perception and provide analysis of different solutions.</i></span>
-                    </div>
-                </div>
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://arxiv.org/abs/2306.02851" target="_blank"><img loading="lazy" src="/assets/publication/occnet.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://arxiv.org/abs/2306.02851" target="_blank">Scene as Occupancy</a></h2>
-                        <span class="authors">Chonghao Sima, Wenwen Tong, Tai Wang, Li Chen, Silei Wu, Hanming Deng, Yi Gu, Lewei Lu, Ping Luo, Dahua Lin, Hongyang Li</span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">ICCV 2023</span>
-                            </div>
-                            <div>
-                                <a href="https://github.com/OpenDriveLab/OccNet" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/opendrivelab/OccNet?style=social"/></a>
-                            </div>
-                        </div>
-                        <span class="gray"><i>Occupancy serves as a general representation of the scene and could facilitate perception and planning in the full-stack of autonomous driving.</i></span>
-                    </div>
-                </div>
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://arxiv.org/abs/2304.04179" target="_blank"><img loading="lazy" src="/assets/publication/sparse_yulu.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://arxiv.org/abs/2304.04179" target="_blank">Sparse Dense Fusion for 3D Object Detection</a></h2>
-                        <span class="authors">Yulu Gao, Chonghao Sima, Shaoshuai Shi, Shangzhe Di, Si Liu, Hongyang Li</i></span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">IROS 2023</span>
-                            </div>
-                        </div>
-                        <span class="gray"><i>We propose Sparse Dense Fusion (SDF), a complementary framework that incorporates both sparse-fusion and dense-fusion modules via the Transformer architecture.</i></span>
-                    </div>
-                </div>
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://arxiv.org/abs/2205.09753" target="_blank"><img loading="lazy" src="/assets/publication/hdgt.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://arxiv.org/abs/2205.09753" target="_blank">HDGT: Heterogeneous driving graph transformer for multi-agent trajectory prediction via scene encoding</a></h2>
-                        <span class="authors">Xiaosong Jia, Penghao Wu, Li Chen, Hongyang Li, Yu Liu, Junchi Yan</i></span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">TPAMI 2023</span>
-                            </div>
-                            <div>
-                                <a href="https://github.com/OpenPerceptionX/HDGT" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/OpenPerceptionX/HDGT?style=social"/></a>
-                            </div>
-                        </div>
-                        <span class="gray"><i>HDGT formulates the driving scene as a heterogeneous graph with different types of nodes and edges.</i></span>
-                    </div>
-                </div>
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://openaccess.thecvf.com/content/CVPR2023/html/Zeng_Distilling_Focal_Knowledge_From_Imperfect_Expert_for_3D_Object_Detection_CVPR_2023_paper.html" target="_blank"><img loading="lazy" src="/assets/publication/fd3d.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://openaccess.thecvf.com/content/CVPR2023/html/Zeng_Distilling_Focal_Knowledge_From_Imperfect_Expert_for_3D_Object_Detection_CVPR_2023_paper.html" target="_blank">Distilling Focal Knowledge from Imperfect Expert for 3D Object Detection</a></h2>
-                        <span class="authors">Jia Zeng, Li Chen, Hanming Deng, Lewei Lu, Junchi Yan, Yu Qiao, Hongyang Li</span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">CVPR 2023</span>
-                            </div>
-                        </div>
-                        <span class="gray"><i>We investigate on how to distill the knowledge from an imperfect expert. We propose FD3D, a Focal Distiller for 3D object detection.</i></span>
-                    </div>
-                </div>
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://openaccess.thecvf.com/content/CVPR2023/html/Yang_BEVFormer_v2_Adapting_Modern_Image_Backbones_to_Birds-Eye-View_Recognition_via_CVPR_2023_paper.html" target="_blank"><img loading="lazy" src="/assets/publication/bevformerv2.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://openaccess.thecvf.com/content/CVPR2023/html/Yang_BEVFormer_v2_Adapting_Modern_Image_Backbones_to_Birds-Eye-View_Recognition_via_CVPR_2023_paper.html" target="_blank">BEVFormer v2: Adapting Modern Image Backbones to Bird's-Eye-View Recognition via Perspective Supervision</a></h2>
-                        <span class="authors">Chenyu Yang, Yuntao Chen, Hao Tian, Chenxin Tao, Xizhou Zhu, Zhaoxiang Zhang, Gao Huang, Hongyang Li, Yu Qiao, Lewei Lu, Jie Zhou, Jifeng Dai</span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">CVPR 2023 Highlight</span>
-                            </div>
-                        </div>
-                        <span class="gray"><i>A novel bird's-eye-view (BEV) detector with perspective supervision, which converges faster and better suits modern image backbones.</i></span>
-                    </div>
-                </div>
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://arxiv.org/abs/2304.05277" target="_blank"><img loading="lazy" src="/assets/publication/toponet.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://arxiv.org/abs/2304.05277" target="_blank">Graph-based Topology Reasoning for Driving Scenes</a></h2>
-                        <span class="authors">Tianyu Li, Li Chen, Huijie Wang, Yang Li, Jiazhi Yang, Xiangwei Geng, Shengyin Jiang, Yuting Wang, Hang Xu, Chunjing Xu, Junchi Yan, Ping Luo, Hongyang Li</span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">arXiv 2023</span>
-                            </div>
-                            <div>
-                                <a href="https://github.com/OpenDriveLab/TopoNet" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/opendrivelab/TopoNet?style=social"/></a>
-                            </div>
-                        </div>
-                        <span class="gray"><i>A new baseline for scene topology reasoning, which unifies heterogeneous feature learning and enhances feature interactions via the graph neural network architecture and the knowledge graph design.</i></span>
-                    </div>
-                </div>
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://arxiv.org/abs/2304.03105" target="_blank"><img loading="lazy" src="/assets/publication/gapretrain.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://arxiv.org/abs/2304.03105" target="_blank">Geometric-aware Pretraining for Vision-centric 3D Object Detection</a></h2>
-                        <span class="authors">Linyan Huang, Huijie Wang, Jia Zeng, Shengchuan Zhang, Liujuan Cao, Rongrong Ji, Junchi Yan, Hongyang Li</i></span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">arXiv 2023</span>
-                            </div>
-                        </div>
-                        <span class="gray"><i>We propose GAPretrain, a plug-and-play framework that boosts 3D detection by pretraining with spatial-structural cues and BEV representation.</i></span>
-                    </div>
-                </div>
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://arxiv.org/abs/2303.10340" target="_blank"><img loading="lazy" src="/assets/publication/3daug.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://arxiv.org/abs/2303.10340" target="_blank">3D Data Augmentation for Driving Scenes on Camera</a></h2>
-                        <span class="authors">Wenwen Tong, Jiangwei Xie, Tianyu Li, Hanming Deng, Xiangwei Geng, Ruoyi Zhou, Dingchen Yang, Bo Dai, Lewei Lu, Hongyang Li</i></span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">arXiv 2023</span>
-                            </div>
-                        </div>
-                        <span class="gray"><i>We propose a 3D data augmentation approach termed Drive-3DAug to augment the driving scenes on camera in the 3D space.</i></span>
-                    </div>
-                </div>
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://proceedings.mlr.press/v205/jia23a.html" target="_blank"><img loading="lazy" src="/assets/publication/traj_xiaosong.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://proceedings.mlr.press/v205/jia23a.html" target="_blank">Towards Capturing the Temporal Dynamics for Trajectory Prediction: a Coarse-to-Fine Approach</a></h2>
-                        <span class="authors">Xiaosong Jia, Li Chen, Penghao Wu, Jia Zeng, Junchi Yan, Hongyang Li, Yu Qiao</span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">CoRL 2022</span>
-                            </div>
-                        </div>
-                        <span class="gray"><i>We find taking scratch trajectories generated by MLP as input, a refinement module based on structures with temporal prior, could  boost the accuracy.</i></span>
-                    </div>
-                </div>
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://link.springer.com/chapter/10.1007/978-3-031-20077-9_1" target="_blank"><img loading="lazy" src="/assets/publication/bevformer.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://link.springer.com/chapter/10.1007/978-3-031-20077-9_1" target="_blank">BEVFormer: Learning Bird's-Eye-View Representation from Multi-Camera Images via Spatiotemporal Transformers</a></h2>
-                        <span class="authors">Zhiqi Li, Wenhai Wang, Hongyang Li, Enze Xie, Chonghao Sima, Tong Lu, Yu Qiao, Jifeng Dai</span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">ECCV 2022 <code>[nuScenes First Place]</code> <code>[Waymo Challenge 2022 First Place]</code></span>
-                            </div>
-                            <div>
-                                <a href="https://github.com/fundamentalvision/BEVFormer" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/fundamentalvision/BEVFormer?style=social"/></a>
-                                <a href="https://zhuanlan.zhihu.com/p/564295059" target="_blank"><img loading="lazy" src="/assets/icon/zhihu.png"/></a>
-                            </div>
-                        </div>
-                        <span class="gray"><i>A paradigm for autonomous driving that applies both Transformer and Temporal structure to generate BEV features.</i></span>
-                    </div>
-                </div>
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://link.springer.com/chapter/10.1007/978-3-031-19839-7_32" target="_blank"><img loading="lazy" src="/assets/publication/persformer.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://link.springer.com/chapter/10.1007/978-3-031-19839-7_32" target="_blank">PersFormer: 3D Lane Detection via Perspective Transformer and the OpenLane Benchmark</a></h2>
-                        <span class="authors">Li Chen, Chonghao Sima, Yang Li, Zehan Zheng, Jiajie Xu, Xiangwei Geng, Hongyang Li, Conghui He, Jianping Shi, Yu Qiao, Junchi Yan</span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">ECCV 2022 (Oral) <code>[Redefine the Community]</code></span>
-                            </div>
-                            <div id="embodied_ai">
-                                <a href="https://github.com/OpenDriveLab/PersFormer_3DLane" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/OpenDriveLab/PersFormer_3DLane?style=social"/></a>
-                                <a href="https://github.com/OpenDriveLab/OpenLane" target="_blank"><img loading="lazy" src="/assets/icon/dataset.png"/></a>
-                                <a href="https://patrick-llgc.github.io/Learning-Deep-Learning/paper_notes/persformer.html" target="_blank"><img loading="lazy" src="/assets/icon/article.png"/></a>
-                                <a href="https://zhuanlan.zhihu.com/p/552908337" target="_blank"><img loading="lazy" src="/assets/icon/zhihu.png"/></a>
-                            </div>
-                        </div>
-                        <span class="gray"><i>PersFormer adopts a unified 2D/3D anchor design and an auxiliary task to detect 2D/3D lanes; we release one of the first large-scale real-world 3D lane datasets, OpenLane.</i></span>
-                    </div>
-                </div>
-
-            </div>
-        </div> 
-    </div>
-
-
-
-    <br>
-    <div class="block" style="margin: 0;">
-        <div class="navigator"></div>
-    </div>
-    <br><br><br>
-
-
-
-    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;">
-        <div style="flex-grow: 1;">
-            <a class="h1_title" href="#embodied_ai">
-                <h1>
-                    Embodied AI
-                    <img loading="lazy" class="link_img"/>
-                </h1>
-            </a>
-        </div> 
-    </div>
-    <br><br>
-    <div class="block_left" style="margin-top: 0; padding-top: 0">
-        <div style="flex-grow: 1;">
-            <div class="publication_container">
-                
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://arxiv.org/abs/2410.08001" target="_blank"><img loading="lazy" src="/assets/publication/robodual.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://arxiv.org/abs/2410.08001" target="_blank">Towards Synergistic, Generalized, and Efficient Dual-System for Robotic Manipulation</a></h2>
-                        <span class="authors">Qingwen Bu, Hongyang Li, Li Chen, Jisong Cai, Jia Zeng, Heming Cui, Maoqing Yao, Yu Qiao</span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">arXiv 2024</span>
-                            </div>
-                            <div id="cv_at_scale">
-                                <!-- <a href="https://github.com/OpenDriveLab/MPI" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/OpenDriveLab/MPI?style=social"/></a> -->
-                                <a href="/RoboDual/" target="_blank"><img loading="lazy" src="/assets/icon/webpage.png"/></a>
-                            </div>
-                        </div>
-                        <span class="gray"><i>Our objective is to develop a synergistic dual-system framework which supplements the generalizability of large-scale pre-trained generalist with the efficient and task-specific adaptation of specialist.</i></span>
-                    </div>
-                </div>
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://arxiv.org/abs/2406.00439" target="_blank"><img loading="lazy" src="/assets/publication/mpi.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://arxiv.org/abs/2406.00439" target="_blank">Learning Manipulation by Predicting Interaction</a></h2>
-                        <span class="authors">Jia Zeng, Qingwen Bu, Bangjun Wang, Wenke Xia, Li Chen, Hao Dong, Haoming Song, Dong Wang, Di Hu, Ping Luo, Heming Cui, Bin Zhao, Xuelong Li, Yu Qiao, Hongyang Li</span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">RSS 2024</span>
-                            </div>
-                            <div id="cv_at_scale">
-                                <a href="https://github.com/OpenDriveLab/MPI" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/OpenDriveLab/MPI?style=social"/></a>
-                                <a href="/MPI/" target="_blank"><img loading="lazy" src="/assets/icon/webpage.png"/></a>
-                            </div>
-                        </div>
-                        <span class="gray"><i>We propose a general pre-training pipeline that learns Manipulation by Predicting the Interaction (MPI).</i></span>
-                    </div>
-                </div>
-
-            </div>
-        </div> 
-    </div>
-
-
-
-    <br>
-    <div class="block" style="margin: 0;">
-        <div class="navigator"></div>
-    </div>
-    <br><br><br>
-
-
-
-    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;">
-        <div style="flex-grow: 1;">
-            <a class="h1_title" href="#cv_at_scale">
-                <h1>
-                    Computer Vision at Scale
-                    <img loading="lazy" class="link_img"/>
-                </h1>
-            </a>
-        </div> 
-    </div>
-    <br><br>
-    <div class="block_left" style="margin-top: 0; padding-top: 0">
-        <div style="flex-grow: 1;">
-
-            <div class="publication_container">
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://arxiv.org/abs/2403.08770" target="_blank"><img loading="lazy" src="/assets/publication/FastMAC.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://arxiv.org/abs/2403.08770" target="_blank">FastMAC: Stochastic Spectral Sampling of Correspondence Grap</a></h2>
-                        <span class="authors">Yifei Zhang, Hao Zhao, Hongyang Li, Siheng Chen</span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">CVPR 2024</span>
-                            </div>
-                            <div>
-                                <a href="https://github.com/Forrest-110/FastMAC" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/Forrest-110/FastMAC?style=social"/></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://arxiv.org/abs/2305.16318" target="_blank"><img loading="lazy" src="/assets/publication/mutr.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://arxiv.org/abs/2305.16318" target="_blank">Referred by Multi-Modality: A Unified Temporal Transformer for Video Object Segmentation</a></h2>
-                        <span class="authors">Shilin Yan, Renrui Zhang, Ziyu Guo, Wenchao Chen, Wei Zhang, Hongyang Li, Yu Qiao, Zhongjiang He, Peng Gao</span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">AAAI 2024</span>
-                            </div>
-                            <div>
-                                <a href="https://github.com/OpenGVLab/MUTR" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/OpenGVLab/MUTR?style=social"/></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://openaccess.thecvf.com/content/CVPR2023/html/Xue_Stare_at_What_You_See_Masked_Image_Modeling_Without_Reconstruction_CVPR_2023_paper.html" target="_blank"><img loading="lazy" src="/assets/publication/maskalign.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://openaccess.thecvf.com/content/CVPR2023/html/Xue_Stare_at_What_You_See_Masked_Image_Modeling_Without_Reconstruction_CVPR_2023_paper.html" target="_blank">Stare at What You See: Masked Image Modeling without Reconstruction</a></h2>
-                        <span class="authors">Hongwei Xue, Peng Gao, Hongyang Li, Yu Qiao, Hao Sun, Houqiang Li, Jiebo Luo</span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">CVPR 2023</span>
-                            </div>
-                            <div>
-                                <a href="https://github.com/OpenDriveLab/maskalign" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/OpenDriveLab/maskalign?style=social"/></a>
-                            </div>
-                        </div>
-                        <span class="gray"><i>An efficient MIM paradigm MaskAlign and a Dynamic Alignment module to apply learnable alignment to tackle the problem of input inconsistency.</i></span>
-                    </div>
-                </div>
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://link.springer.com/article/10.1007/s11263-023-01898-4" target="_blank"><img loading="lazy" src="/assets/publication/mimic.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://link.springer.com/article/10.1007/s11263-023-01898-4" target="_blank">Mimic before Reconstruct: Enhancing Masked Autoencoders with Feature Mimicking</a></h2>
-                        <span class="authors">Peng Gao, Renrui Zhang, Rongyao Fang, Ziyi Lin, Hongyang Li, Hongsheng Li, Qiao Yu</span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">IJCV 2023</span>
-                            </div>
-                            <div>
-                                <a href="https://github.com/Alpha-VL/ConvMAE" target="_blank"><img loading="lazy" src="https://img.shields.io/github/stars/Alpha-VL/ConvMAE?style=social"/></a>
-                            </div>
-                        </div>
-                        <span class="gray"><i>Introducing high-level and low-level representations to MAE without interference during pre-training.</i></span>
-                    </div>
-                </div>
-                <div>
-                    <div class="publication_container_first">
-                        <a href="https://openaccess.thecvf.com/content/CVPR2022/html/Zhang_Align_Representations_With_Base_A_New_Approach_to_Self-Supervised_Learning_CVPR_2022_paper.html" target="_blank"><img loading="lazy" src="/assets/publication/arb.jpg"/></a>
-                    </div>
-                    <div class="publication_container_second">
-                        <h2><a href="https://openaccess.thecvf.com/content/CVPR2022/html/Zhang_Align_Representations_With_Base_A_New_Approach_to_Self-Supervised_Learning_CVPR_2022_paper.html" target="_blank">Align Representations With Base: A New Approach to Self-Supervised Learning</a></h2>
-                        <span class="authors">Shaofeng Zhang, Lyn Qiu, Feng Zhu, Junchi Yan, Hengrui Zhang, Rui Zhao, Hongyang Li, Xiaokang Yang</span>
-                        <div>
-                            <div>
-                                <span class="Odarkblue">CVPR 2022</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div> 
-    </div>
-
-
-
-    <br>
-
-
-
 </body>
+
+
+
+<script>
+    pickrender();
+    embodiedrender();
+    e2eadrender();
+    adrender();
+    cvrender();
+</script>
