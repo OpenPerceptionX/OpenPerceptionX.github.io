@@ -141,13 +141,13 @@ function renderhomepage() {
     homepubbody.innerHTML = "";
     pick.forEach((item, _) => {
         var innerHTML = `
-            <h3><a class="hover:text-o-blue">${item.title}</a></h3>
+            <h3><a class="hover:text-o-blue" href=${item.link} target="_blank">${item.title}</a></h3>
             <div class="flex flex-row gap-6 flex-wrap justify-items-center">
                 <h5 class="bg-o-blue text-white p-1 pl-3 pr-3 rounded-3xl font-bold"><a ${item.noteoption}>${item.note}</a></h5>
         `;
         item.icon.forEach((i, _) => {
             innerHTML += `                
-                <a href="${i.link}" target="_blank"> 
+                <a href=${i.link} target="_blank"> 
                     <img loading="lazy" src="/assets/icon/${i.type}.png" class="h-8 hover:opacity-70"/> 
                 </a>
             `;
