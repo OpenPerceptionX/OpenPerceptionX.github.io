@@ -227,7 +227,7 @@ const e2ead = [
             },
         ],
         description: "Take the initiative to explore the combination of controller based on a planned trajectory and perform control prediction.",
-        tag: "[Carla First Place]",
+        tag: ["[Carla First Place]"],
     },
     {
         title: "ST-P3: End-to-end Vision-based Autonomous Driving via Spatial-Temporal Feature Learning",
@@ -278,8 +278,12 @@ function e2eadrender() {
                     </p>
                 </div>
                 <div class="flex flex-row gap-6 flex-wrap justify-items-center mt-6">
-                    <a href="${item.starlink}" target="_blank"><img loading="lazy" src="${item.star}" class="h-8 hover:opacity-70"/></a>
         `;
+        if (item.star != "") {
+            innerHTML += `
+                    <a href="${item.starlink}" target="_blank"><img loading="lazy" src="${item.star}" class="h-8 hover:opacity-70"/></a>
+            `;
+        }
         item.icon.forEach((i, _) => {
             if (i.type != "github") {
                 innerHTML += `                
@@ -294,9 +298,11 @@ function e2eadrender() {
                 <i class="mt-6 text-o-gray">
         `;
         if (item.tag != "") {
-            innerHTML += `
-                <code>${item.tag}</code>
-            `;
+            item.tag.forEach((i, _) => {
+                innerHTML += `
+                <code>${i}</code>
+                `;
+            });
         };
         innerHTML += `
                     ${item.description}

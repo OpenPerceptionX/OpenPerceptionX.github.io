@@ -86,9 +86,11 @@ function embodiedrender() {
                 <i class="mt-6 text-o-gray">
         `;
         if (item.tag != "") {
-            innerHTML += `
-                <code>${item.tag}</code>
-            `;
+            item.tag.forEach((i, _) => {
+                innerHTML += `
+                <code>${i}</code>
+                `;
+            });
         };
         innerHTML += `
                     ${item.description}

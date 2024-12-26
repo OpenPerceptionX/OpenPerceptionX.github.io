@@ -60,8 +60,12 @@ function pickrender() {
                     </p>
                 </div>
                 <div class="flex flex-row gap-6 flex-wrap justify-items-center mt-6">
-                    <a href="${item.starlink}" target="_blank"><img loading="lazy" src="${item.star}" class="h-8 hover:opacity-70"/></a>
         `;
+        if (item.star != "") {
+            innerHTML += `
+                    <a href="${item.starlink}" target="_blank"><img loading="lazy" src="${item.star}" class="h-8 hover:opacity-70"/></a>
+            `;
+        }
         item.icon.forEach((i, _) => {
             if (i.type != "github") {
                 innerHTML += `                
@@ -76,9 +80,11 @@ function pickrender() {
                 <i class="mt-6 text-o-gray">
         `;
         if (item.tag != "") {
-            innerHTML += `
-                <code>${item.tag}</code>
-            `;
+            item.tag.forEach((i, _) => {
+                innerHTML += `
+                <code>${i}</code>
+                `;
+            });
         };
         innerHTML += `
                     ${item.description}
