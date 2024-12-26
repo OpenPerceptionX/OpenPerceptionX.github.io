@@ -31,6 +31,7 @@ const pick = [
             },
         ],
         description: "A comprehensive framework up-to-date that incorporates full-stack driving tasks in one network.",
+        tag: "",
     },
     {
         title: "End-to-End Autonomous Driving: Challenges and Frontiers",
@@ -48,6 +49,7 @@ const pick = [
             },
         ],
         description: "In this survey, we provide a comprehensive analysis of more than 270 papers on the motivation, roadmap, methodology, challenges, and future trends in end-to-end autonomous driving.",
+        tag: "",
     },
     {
         title: "Closed-Loop Visuomotor Control with Generative Expectation for Robotic Manipulation",
@@ -69,6 +71,7 @@ const pick = [
             },
         ],
         description: "CLOVER employs a text-conditioned video diffusion model for generating visual plans as reference inputs, then these sub-goals guide the feedback-driven policy to generate actions with an error measurement strategy.",
+        tag: "",
     },
     {
         title: "Vista: A Generalizable Driving World Model with High Fidelity and Versatile Controllability",
@@ -106,6 +109,7 @@ const pick = [
             },
         ],
         description: "A generalizable driving world model with high-fidelity open-world prediction, continuous long-horizon rollout, and zero-shot action controllability.",
+        tag: "",
     },
     {
         title: "DriveLM: Driving with Graph Visual Question Answering",
@@ -134,7 +138,8 @@ const pick = [
                 link: "https://huggingface.co/datasets/OpenDriveLab-org/DriveLM",
             },
         ],
-        description: ".",
+        description: "",
+        tag: "",
     },
 ];
 
@@ -173,22 +178,51 @@ function pickrender() {
     homepubbody.innerHTML = "";
     pick.forEach((item, _) => {
         var innerHTML = `
-            <h3><a class="hover:text-o-blue" href=${item.link} target="_blank">${item.title}</a></h3>
-            <div class="flex flex-row gap-6 flex-wrap justify-items-center">
-                <h5 class="bg-o-blue text-white p-1 pl-3 pr-3 rounded-3xl font-bold"><a ${item.noteoption}>${item.note}</a></h5>
+            <a href="${item.link}" target="_blank" class="hover:opacity-70 flex flex-col justify-center">
+                <img loading="lazy" src="${item.image}" class="w-full laptop:w-96"/>
+            </a>
+            <div class="flex flex-col justify-center flex-1">
+                <h3>
+                    <a class="hover:text-o-blue" href=${item.link} target="_blank">
+                        ${item.title}
+                    </a>
+                </h3>
+                <p class="mt-1">
+                    ${item.author}
+                </p>
+                <div class="flex flex-row gap-6 flex-wrap justify-items-center mt-6">
+                    <p class="bg-o-blue text-white p-1 pl-3 pr-3 rounded-3xl">
+                        <a ${item.noteoption}>${item.note}</a>
+                    </p>
+                </div>
+                <div class="flex flex-row gap-6 flex-wrap justify-items-center mt-6">
+                    <a href="${item.starlink}" target="_blank"><img loading="lazy" src="${item.star}" class="h-8 hover:opacity-70"/></a>
         `;
         item.icon.forEach((i, _) => {
-            innerHTML += `                
-                <a href=${i.link} target="_blank"> 
-                    <img loading="lazy" src="/assets/icon/${i.type}.png" class="h-8 hover:opacity-70"/> 
-                </a>
-            `;
+            if (i.type != "github") {
+                innerHTML += `                
+                    <a href=${i.link} target="_blank"> 
+                        <img loading="lazy" src="/assets/icon/${i.type}.png" class="h-8 hover:opacity-70"/> 
+                    </a>
+                `;
+            };
         });
         innerHTML += `
+                </div>
+                <i class="mt-6 text-o-gray">
+        `;
+        if (item.tag != "") {
+            innerHTML += `
+                <code>${item.tag}</code>
+            `;
+        };
+        innerHTML += `
+                    ${item.description}
+                </i>
             </div>
         `;
         const pub = document.createElement("div");
-        pub.className = "flex flex-col gap-6";
+        pub.className = "flex flex-col laptop:flex-row gap-10";
         pub.innerHTML = innerHTML;
         homepubbody.appendChild(pub);
     });
