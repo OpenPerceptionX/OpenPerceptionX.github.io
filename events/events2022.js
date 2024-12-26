@@ -28,7 +28,7 @@ function events2022render() {
         var innerHTML = `
             <a ${item.linkoption} href="${item.link}" class="hover:opacity-70">
                 <img loading="lazy" src='${item.background}' class="w-full h-72 object-cover object-center rounded-t-3xl"/>
-                <div class="felx flex-col space-y-6 p-10">
+                <div class="felx flex-col space-y-6 p-6 laptop:p-10">
                     <h3>
                         ${item.heading}
                     </h3>
