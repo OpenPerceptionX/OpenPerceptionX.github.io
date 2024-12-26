@@ -5,7 +5,7 @@ const pick = [
         image: "/assets/publication/uniad.jpg",
         author: "Yihan Hu, Jiazhi Yang, Li Chen, Keyu Li, Chonghao Sima, Xizhou Zhu, Siqi Chai, Senyao Du, Tianwei Lin, Wenhai Wang, Lewei Lu, Xiaosong Jia, Qiang Liu, Jifeng Dai, Yu Qiao, Hongyang Li",
         note: "CVPR 2023 Best Paper Award",
-        noteoption: 'href="https://cvpr2023.thecvf.com/Conferences/2023/Awards" target="_blank"',
+        noteoption: '',
         star: "https://img.shields.io/github/stars/OpenDriveLab/UniAD?style=social",
         starlink: "https://github.com/OpenDriveLab/UniAD",
         icon: [
