@@ -6,7 +6,7 @@ const events2023data = [
         linkoption: '',
         background: "/assets/event/cvpr2023workshop.jpg",
         backgroundoption: "bg-center",
-        date: "June 18",
+        date: "June 18, 2023",
     },
     {
         heading: "Challenge 2023",
@@ -15,7 +15,7 @@ const events2023data = [
         linkoption: '',
         background: "/assets/event/cvpr2023_challenge.jpg",
         backgroundoption: "bg-center",
-        date: "June 18",
+        date: "June 18, 2023",
     },
     {
         heading: "行业大模型论坛<br>暨<br>国际挑战赛分享会",
@@ -24,7 +24,7 @@ const events2023data = [
         linkoption: '',
         background: "/assets/event/beijing.jpg",
         backgroundoption: "bg-center",
-        date: "June 18",
+        date: "June 18, 2023",
     },
     {
         heading: "Workshop at ICLR 2023",
@@ -33,7 +33,7 @@ const events2023data = [
         linkoption: '',
         background: "/assets/event/iclr2023workshop.jpg",
         backgroundoption: "bg-center",
-        date: "May 05",
+        date: "May 05, 2023",
     },
     {
         heading: "GAIDC 2023",
@@ -42,7 +42,7 @@ const events2023data = [
         linkoption: 'target="_blank"',
         background: "/assets/event/gaidc2023.jpg",
         backgroundoption: "bg-center",
-        date: "February 26",
+        date: "February 26, 2023",
     },
 ];
 

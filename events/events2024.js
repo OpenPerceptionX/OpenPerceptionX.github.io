@@ -6,7 +6,7 @@ const events2024data = [
         linkoption: 'target="_blank"',
         background: "/assets/event/ieeesa.jpg",
         backgroundoption: "bg-center",
-        date: "",
+        date: "2024 - ongoing",
     },
     {
         heading: "Challenge at PRCV 2024",
@@ -15,7 +15,7 @@ const events2024data = [
         linkoption: 'target="_blank"',
         background: "/assets/event/Urumqi.jpg",
         backgroundoption: "bg-center",
-        date: "October 18 - 20",
+        date: "October 18 - 20, 2024",
     },
     {
         heading: "Events at CVPR 2024",
@@ -24,7 +24,7 @@ const events2024data = [
         linkoption: '',
         background: "/assets/event/cvpr2024.jpg",
         backgroundoption: "bg-center",
-        date: "June 17 - 21",
+        date: "June 17 - 21, 2024",
     },
     {
         heading: "Challenge 2024",
@@ -33,7 +33,7 @@ const events2024data = [
         linkoption: '',
         background: "/assets/event/seattle_space_needle.jpg",
         backgroundoption: "bg-center",
-        date: "June 17",
+        date: "June 17, 2024",
     },
     {
         heading: "端到端具身智能体",
@@ -42,7 +42,7 @@ const events2024data = [
         linkoption: 'target="_blank"',
         background: "/assets/event/shanghai_xuhuibinjiang.jpg",
         backgroundoption: "bg-center",
-        date: "June 08 - 10",
+        date: "June 08 - 10, 2024",
     },
     {
         heading: "Workshop at VALSE 2024",
@@ -51,7 +51,7 @@ const events2024data = [
         linkoption: '',
         background: "/assets/event/chongqing.jpg",
         backgroundoption: "bg-center",
-        date: "May 07",
+        date: "May 07, 2024",
     },
 ];
 
