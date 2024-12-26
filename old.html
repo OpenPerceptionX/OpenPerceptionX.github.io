@@ -1,0 +1,579 @@
+<head>
+    <title>OpenDriveLab | Robotics and Autonomous Driving at HKU, AI Lab, and beyond</title>
+    <meta name="keywords" content="OpenDriveLab, Robotics, Autonomous Driving, Embodied AI">
+    <meta name="description" content="OpenDriveLab is committed to exploring cutting-edge autonomous driving technology, launching a series of benchmarking work, open source to serve the community, and promote the common development of the industry. Friends who are committed to making influential research are welcome to join!">
+
+    <link rel="icon" type="image/png" href="/assets/icon/D_small.png">
+
+    <link href="/ui2024/css/header.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/ui2024/css/footer.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/ui2024/css/format.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/ui2024/css/font.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/ui2024/css/home.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/ui2024/css/swiper.css" rel="stylesheet" type="text/css" media="all"/>
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="/ui2024/css/swiper-bundle.min.css"/>
+    <script src="/ui2024/js/swiper-bundle.min.js"></script>
+
+    <script src="/ui2024/js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L7VEDHS6G8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L7VEDHS6G8');
+</script>
+
+
+
+<script>
+    $.get("/ui2024/components/header.html",function(result){
+        $("body").prepend(result)
+    })
+    $.get("/ui2024/components/footer.html",function(result){
+        $("body").append(result)
+    })
+</script>
+
+
+
+<body>
+
+    
+
+    <div class="banner">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+
+                <!-- slide -->
+                <div class="swiper-slide" style="background-image: url(/assets/background/2024-10-0618.18.51.jpg); background-position-y: 30%;">
+                    <div class="banner_container">
+                        <div class="banner_container_title Owhite text_shadow">
+                            <h1>Closed-Loop Visuomotor Control with Generative Expectation for Robotic Manipulation</h1>
+                        </div>
+                        <br>
+                        <div class="banner_container_subtitle Owhite text_shadow">
+                            <h4><div class="tag Odarkblue">NeurIPS 2024</div>​CLOVER: A closed-loop visuomotor control framework that incorporates feedback mechanisms to improve adaptive robotic control.</h4>
+                        </div>
+                        <div class="banner_container_button Owhite">
+                            <p>
+                                <b>
+                                    <a target="_blank" href="https://github.com/OpenDriveLab/CLOVER">GitHub</a> 
+                                    <span>&nbsp; | &nbsp;</span>
+                                    <a target="_blank" href="https://arxiv.org/abs/2409.09016">Paper</a>
+                                    <span>&nbsp; | &nbsp;</span>
+                                    <a target="_blank" href="https://www.bilibili.com/video/BV1rHqZYeECL">Video</a>
+                                </b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- slide --> 
+                <div class="swiper-slide vista_moblie" style="background-image: url(assets/background/time.jpg); background-color: rgb(33, 33, 33, 0.4);">
+                    <div class="banner_container">
+                        <div class="banner_container_title Owhite text_shadow">
+                            <h1>Vista: A Generalizable Driving World Model with High Fidelity and Versatile Controllability</h1>
+                        </div>
+                        <br>
+                        <div class="banner_container_subtitle Owhite text_shadow">
+                            <h4><div class="tag Odarkblue">NeurIPS 2024</div>A generalizable driving world model with high-fidelity open-world prediction, continuous long-horizon rollout, and zero-shot action controllability.</h4>
+                        </div>
+                        <div class="banner_container_button Owhite">
+                            <p>
+                                <b>
+                                    <a target="_blank" href="https://vista-demo.github.io/">Demo</a>
+                                    <span>&nbsp; | &nbsp;</span>
+                                    <a target="_blank" href="https://github.com/OpenDriveLab/Vista">GitHub</a>
+                                    <span>&nbsp; | &nbsp;</span>
+                                    <a target="_blank" href="https://github.com/OpenDriveLab/DriveAGI/tree/main/opendv">Dataset</a>
+                                    <span>&nbsp; | &nbsp;</span>
+                                    <a target="_blank" href="https://huggingface.co/OpenDriveLab/Vista">Hugging Face</a>
+                                    <span>&nbsp; | &nbsp;</span>
+                                    <a target="_blank" href="https://arxiv.org/abs/2405.17398">Paper</a>
+                                    <span>&nbsp; | &nbsp;</span>
+                                    <a target="_blank" href="https://medium.com/@opendrivelab/towards-next-level-of-autonomous-driving-via-world-models-aff0eb7fee00">Blog</a>
+                                    <span>&nbsp; | &nbsp;</span>
+                                    <a target="_blank" href="https://opendrivelab.github.io/Vista/nips24_vista_poster.png">Poster</a>
+                                </b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- slide -->
+                <div class="swiper-slide" style="background-image: url(/assets/background/b96a27798b0c5a0fe630600b8b655b0c.jpg);">
+                    <div class="banner_container">
+                        <div class="banner_container_title Owhite text_shadow">
+                            <h1>Reasoning Multi-Agent Behavioral Topology for Interactive Autonomous Driving</h1>
+                        </div>
+                        <br>
+                        <div class="banner_container_subtitle Owhite text_shadow">
+                            <h4><div class="tag Odarkblue">NeurIPS 2024</div>BeTop: A multi-agent behavior formulation for interactive motion prediction and planning.</h4>
+                        </div>
+                        <div class="banner_container_button Owhite">
+                            <p>
+                                <b>
+                                    <a target="_blank" href="https://github.com/OpenDriveLab/BeTop">GitHub</a> 
+                                    <span>&nbsp; | &nbsp;</span>
+                                    <a target="_blank" href="https://arxiv.org/abs/2409.18031">Paper</a>
+                                </b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- slide -->
+                <div class="swiper-slide" style="background-image: url(assets/background/cd0d184b033748b5b5cc8a43c3b9ddc8.jpeg);">
+                    <div class="banner_container">
+                        <div class="banner_container_title Owhite text_shadow">
+                            <h1>DriveLM: Driving with Graph Visual Question Answering</h1>
+                        </div>
+                        <br>
+                        <div class="banner_container_subtitle Owhite text_shadow">
+                            <h4><div class="tag Odarkblue">ECCV 2024 Oral</div>Unlocking the future where autonomous driving meets the unlimited potential of language.</h4>
+                        </div>
+                        <div class="banner_container_button Owhite">
+                            <p>
+                                <b>
+                                    <a target="_blank" href="https://github.com/OpenDriveLab/DriveLM">GitHub</a>
+                                    <span>&nbsp; | &nbsp;</span>
+                                    <a target="_blank" href="https://github.com/OpenDriveLab/DriveLM">Dataset</a>
+                                    <span>&nbsp; | &nbsp;</span>
+                                    <a target="_blank" href="/DriveLM/">Page</a>
+                                    <span>&nbsp; | &nbsp;</span>
+                                    <a target="_blank" href="https://huggingface.co/datasets/OpenDriveLab/DriveLM">Hugging Face</a>
+                                    <span>&nbsp; | &nbsp;</span>
+                                    <a target="_blank" href="https://arxiv.org/abs/2312.14150">Paper</a>
+                                </b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- slide -->
+                <div class="swiper-slide uniad_mobile" style="background-image: url(/assets/background/890e373a8bca0b4f0df9701fa09cf131.png);">
+                    <div class="banner_container">
+                        <div class="banner_container_title Owhite text_shadow">
+                            <h1>Planning-oriented Autonomous Driving</h1>
+                        </div>
+                        <br>
+                        <div class="banner_container_subtitle Owhite text_shadow">
+                            <h4><div class="tag Odarkblue">CVPR 2023 Best Paper Award</div>UniAD: The first comprehensive framework that incorporates full-stack driving tasks.</h4>
+                        </div>
+                        <div class="banner_container_button Owhite">
+                            <p>
+                                <b>
+                                    <a target="_blank" href="https://github.com/OpenDriveLab/UniAD">GitHub</a>
+                                    <span>&nbsp; | &nbsp;</span>
+                                    <a target="_blank" href="https://openaccess.thecvf.com/content/CVPR2023/html/Hu_Planning-Oriented_Autonomous_Driving_CVPR_2023_paper.html">Paper</a>
+                                    <span>&nbsp; | &nbsp;</span>
+                                    <a target="_blank" href="https://www.youtube.com/watch?v=cyrxJJ_nnaQ">Video</a>
+                                    <span>&nbsp; | &nbsp;</span>
+                                    <a target="_blank" href="/e2ead/UniAD_plenary_talk_slides.pdf">Slides</a>
+                                </b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div> -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+
+
+    <!-- <div class="block_right left_right">
+
+        <div style="flex-grow: 7;">
+            <a class="block_title">
+                <h1>
+                    News
+                </h1>
+            </a>
+        </div>
+
+        <br><br>
+
+        <div style="flex-grow: 1;"></div>
+
+        <div style="flex-grow: 16;">
+            
+            <span>
+                2024年春季学期，李弘扬博士在上海交通大学开展关于自动驾驶前沿技术的课程，欢迎各位老师同学参加交流！课程相关材料如录像，将于近期公开，敬请关注。
+                <br><br>
+                地点: 上海交通大学闵行校区 东上院211
+                <br>
+                时间: 每周三10:00到12:45
+            </span>
+            <br><br>
+            <img class="class_img" src="/assets/event/20240305-204139.jpeg">
+        </div>
+
+    </div> -->
+
+    
+
+    <div class="block_left left_right">
+
+        <div style="flex-grow: 7;">
+            <a class="block_title">
+                <h1>
+                    Research
+                </h1>
+            </a>
+        </div>
+
+        <br><br>
+
+        <div style="flex-grow: 1;"></div>
+
+        <div style="flex-grow: 16;">
+            <div class="research_container">
+                <a href="https://github.com/OpenDriveLab/DriveAGI" target="_blank" style="background-image: url(/assets/background/34dafb773a94a108af741cd955ac9ba2.jpg); background-position-y: 60%;">
+                    <h2 class="Owhite text_shadow">End-to-End Autonomous Driving</h2>
+                </a>
+                <a href="https://github.com/OpenDriveLab/MPI" target="_blank" style="background-image: url(assets/background/50b968a4c9773f405f914c9b1d857398.jpg);" >
+                    <h2 class="Owhite text_shadow">Embodied AI</h2>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="block_right left_right">
+
+        <div style="flex-grow: 7;">
+            <a class="block_title">
+                <h1>
+                    Recruitment
+                </h1>
+            </a>
+        </div>
+
+        <br><br>
+
+        <div style="flex-grow: 1;"></div>
+
+        <div style="flex-grow: 16;">
+            <span>
+                We are searching for talents from all over the world. Are you looking for opportunities? Don't hesitate to contact us via <i class="fas fa-envelope"></i> <a class="Oblue" href="mailto:contact@opendrivelab.com">contact@opendrivelab.com</a> or <a class="Oblue" href="https://lihongyang.info" target="_blank">Dr. Hongyang Li</a>.
+                <br><br>
+                <li>具身智能研究员 / 自动驾驶研究员 / 机器人硬件工程师 / 科研助理 / 生态合作助理 <a class="Oblue" href="/recruit/">[更多详情]</a>
+                <li>Ph.D. student / Research Assistant / Postdoc / <i>etc.</i> in Hong Kong and Shanghai</li>
+                <li>Full-time employee and Intern (international are welcome) at Shanghai AI Lab</li>
+                <li>上海人工智能实验室联培博士 <a class="Oblue" href="https://mp.weixin.qq.com/s/UP3DpV592bsVN6PI3OhwSQ" target="_blank">[2024年上海人工智能实验室官方报道]</a></li>
+            </span>
+        </div>
+
+    </div>
+
+
+
+    <div class="block_left left_right">
+
+        <div style="flex-grow: 7;">
+            <a class="block_title" href="/publications/">
+                <div>
+                    <h1>
+                        Publication
+                    </h1>
+                    <h6>Representative work published at top-tiered venues.</h6>
+                </div>
+                <div>
+                    <img src="/assets/icon/arrow.png"/>
+                </div>
+            </a>
+        </div>
+
+        <br><br>
+
+        <div style="flex-grow: 1;"></div>
+
+        <div style="flex-grow: 16;">
+            <div class="publication_container">
+
+                <div>
+                    <div class="publication_container_second">
+                        <h2 id="contact"><a href="https://openaccess.thecvf.com/content/CVPR2023/html/Hu_Planning-Oriented_Autonomous_Driving_CVPR_2023_paper.html" target="_blank">Planning-Oriented Autonomous Driving</a></h2>
+                        <div>
+                            <div>
+                                <span><a href="https://cvpr2023.thecvf.com/Conferences/2023/Awards" target="_blank"><code>CVPR 2023 Best Paper Award</code></a></span>
+                                <a href="https://github.com/OpenDriveLab/UniAD" target="_blank"><img loading="lazy" src="/assets/icon/github.png"/></a>
+                                <a href="https://www.youtube.com/watch?v=cyrxJJ_nnaQ" target="_blank"><img loading="lazy" src="/assets/icon/youtube.png"/></a>
+                                <a href="/e2ead/UniAD_plenary_talk_slides.pdf" target="_blank"><img loading="lazy" src="/assets/icon/slides.png"/></a>
+                                <a href="https://zhuanlan.zhihu.com/p/638780421" target="_blank"><img loading="lazy" src="/assets/icon/zhihu.png"/></a>
+                                <a href="https://mp.weixin.qq.com/s?__biz=MzkyMDUzMDE2Mw==&mid=2247485809&idx=1&sn=5dbd00380bcf80cc32d11b6e15e93829" target="_blank"><img loading="lazy" src="/assets/icon/wechat.png"/></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="publication_container_second">
+                        <h2><a href="https://ieeexplore.ieee.org/abstract/document/10614862/" target="_blank">End-to-end Autonomous Driving: Challenges and Frontiers</a></h2>
+                        <div>
+                            <div>
+                                <span><a><code>TPAMI 2024</code></a></span>
+                                <a href="https://github.com/OpenDriveLab/End-to-end-Autonomous-Driving" target="_blank"><img loading="lazy" src="/assets/icon/github.png"/></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="publication_container_second">
+                        <h2><a href="https://arxiv.org/abs/2409.09016" target="_blank">Closed-Loop Visuomotor Control with Generative Expectation for Robotic Manipulation</a></h2>
+                        <div>
+                            <div>
+                                <span><a><code>NeurIPS 2024</code></a></span>
+                                <a href="https://github.com/OpenDriveLab/CLOVER" target="_blank"><img loading="lazy" src="/assets/icon/github.png"/></a>
+                                <a href="https://www.bilibili.com/video/BV1rHqZYeECL" target="_blank"><img src="/assets//icon/bilibili.png"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="publication_container_second">
+                        <h2 id="contact"><a href="https://arxiv.org/abs/2405.17398" target="_blank">Vista: A Generalizable Driving World Model with High Fidelity and Versatile Controllability</a></h2>
+                        <div>
+                            <div>
+                                <span><a><code>NeurIPS 2024</code></a></span>
+                                <a href="https://github.com/OpenDriveLab/Vista" target="_blank"><img loading="lazy" src="/assets/icon/github.png"/></a>
+                                <a href="https://github.com/OpenDriveLab/DriveAGI/tree/main/opendv" target="_blank"><img loading="lazy" src="/assets/icon/dataset.png"/></a>
+                                <a href="https://vista-demo.github.io/" target="_blank"><img loading="lazy" src="/assets/icon/webpage.png"/></a>
+                                <a href="https://huggingface.co/OpenDriveLab/Vista" target="_blank"><img loading="lazy" src="/assets/icon/hugging_face.png"/></a>
+                                <a href="https://medium.com/@opendrivelab/towards-next-level-of-autonomous-driving-via-world-models-aff0eb7fee00" target="_blank"><img loading="lazy" src="/assets/icon/medium.png"/></a>
+                                <a href="https://opendrivelab.github.io/Vista/nips24_vista_poster.png" target="_blank"><img loading="lazy" src="/assets/icon/poster.png"/></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="publication_container_second">
+                        <h2><a href="https://arxiv.org/abs/2312.14150" target="_blank">DriveLM: Driving with Graph Visual Question Answering</a></h2>
+                        <div>
+                            <div>
+                                <span><a><code>ECCV 2024 Oral</code></a></span>
+                                <a href="https://github.com/OpenDriveLab/DriveLM" target="_blank"><img loading="lazy" src="/assets/icon/github.png"/></a>
+                                <a href="https://github.com/OpenDriveLab/DriveLM" target="_blank"><img loading="lazy" src="/assets/icon/dataset.png"/></a>
+                                <a href="/DriveLM/" target="_blank"><img src="/assets/icon/webpage.png"/></a>
+                                <a href="https://huggingface.co/datasets/OpenDriveLab-org/DriveLM" target="_blank"><img loading="lazy" src="/assets/icon/hugging_face.png"/></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="block_right left_right">
+
+        <div style="flex-grow: 7;">
+            <a class="block_title" href="/events/">
+                <h1>
+                    Event
+                </h1>
+                <div>
+                    <img src="/assets/icon/arrow.png"/>
+                </div>
+            </a>
+        </div>
+
+        <br><br>
+
+        <div style="flex-grow: 1;"></div>
+
+        <div style="flex-grow: 16;">
+            <div class="event_container">
+
+                <a href="https://sagroups.ieee.org/3474/" target="_blank">
+                    <img loading="lazy" style="background-image: url(/assets/event/ieeesa.jpg); background-position: right;"/>
+                    <div>
+                        <div>
+                            <br><br class="mobilevisible">
+                            <h2>IEEE Standard P3474</h2>
+                            <br>
+                            <h3>Human Intentions and AI Alignment</h3>
+                        </div>
+                        <div>
+                            <!-- <h4 class="Oblue">September 03 - Ongoing</h4> -->
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/challenge2024/">
+                    <img loading="lazy" style="background-image: url(/assets/event/cvpr2024_challenge.jpg);"/>
+                    <div>
+                        <div>
+                            <br><br class="mobilevisible">
+                            <h2>Challenge 2024</h2>
+                            <br>
+                            <h3>Autonomous Grand Challenge</h3>
+                        </div>
+                        <div>
+                            <h4 class="Oblue">June 17</h4>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="block_left left_right feedback_form">
+
+        <div style="flex-grow: 7;">
+            <a class="block_title">
+                <h1 class="Owhite">
+                    Contact
+                </h1>
+            </a>
+        </div>
+
+        <br><br>
+
+        <div style="flex-grow: 1;"></div>
+
+        <div style="flex-grow: 16;">
+            <form method="post" onsubmit="formContact()" enctype='application/json' id="contact_form">
+                <div class="form_double">
+                    <span class="Owhite">First Name</span>
+                    <span class="Owhite">Last Name</span>
+                    <input class="Owhite" id="contact_form_first_name" placeholder="name" maxlength="128">
+                    <input class="Owhite" id="contact_form_last_name" placeholder="surname" maxlength="128">
+                </div>
+                <div class="form_double">
+                    <span class="Owhite">Email Address</span>
+                    <span class="Owhite">Confirm Email Address</span>
+                    <input class="Owhite" id="contact_form_email" placeholder="name.surname@opendrivelab.com" maxlength="128">
+                    <input class="Owhite" id="contact_form_email_confirm" placeholder="name.surname@opendrivelab.com" maxlength="128">
+                </div>
+                <div>
+                    <span class="Owhite">Affiliation</span>
+                    <input class="Owhite" id="contact_form_affiliation" placeholder="OpenDriveLab" maxlength="128">
+                </div>
+                <div>
+                    <span class="Owhite">Message</span>
+                    <textarea class="Owhite" id="contact_form_message" placeholder="Artificial intelligence is..." maxlength="8192"></textarea>
+                </div>
+                <div class="form_button">
+                    <button id="contact_form_button" class="gray" disabled onclick="formContactSubmit()">Submit</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+
+
+</body>
+
+
+
+<script>
+    function check_contact_form() {
+        let empty = 
+            (contact_form_first_name.value == null || contact_form_first_name.value == "") ||
+            (contact_form_last_name.value == null || contact_form_last_name.value == "") ||
+            (contact_form_email.value == null || contact_form_email.value == "") ||
+            (contact_form_email_confirm.value == null || contact_form_email_confirm.value == "") ||
+            (contact_form_affiliation.value == null || contact_form_affiliation.value == "") ||
+            (contact_form_message.value == null || contact_form_message.value == "");
+        let valid = contact_form_email.value.match(
+            /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        ) && contact_form_email.value == contact_form_email_confirm.value;
+        if (!empty && valid) {
+            contact_form_button.disabled = false;
+            contact_form_button.classList.add("Owhite");
+            contact_form_button.classList.remove("gray");
+        } else {
+            contact_form_button.disabled = true;
+            contact_form_button.classList.add("gray");
+            contact_form_button.classList.remove("Owhite");
+        }
+    }
+    contact_form_first_name.addEventListener("input", check_contact_form);
+    contact_form_last_name.addEventListener("input", check_contact_form);
+    contact_form_email.addEventListener("input", check_contact_form);
+    contact_form_email_confirm.addEventListener("input", check_contact_form);
+    contact_form_affiliation.addEventListener("input", check_contact_form);
+    contact_form_message.addEventListener("input", check_contact_form);
+</script>
+
+
+
+<script>
+    function formContact() {
+        event.preventDefault()
+    }
+
+    function formContactSubmit() {
+        var formData = new FormData(contact_form);
+        formData.append("email", contact_form_email.value);
+        formData.append("message", contact_form_message.value);
+        formData.append("organization", contact_form_affiliation.value);
+        formData.append("first_name", contact_form_first_name.value);
+        formData.append("last_name", contact_form_last_name.value);
+
+        var jsonObject = {};
+        formData.forEach(function(value, key){
+            jsonObject[key] = value;
+        });
+        var jsonString = JSON.stringify(jsonObject);
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'https://drivelab.openxlab.org.cn/gw/drivelab-register-api-service/signup/', true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                alert('Message sent.');
+                contact_form_email.value = "";
+                contact_form_email_confirm.value = "";
+                contact_form_message.value = "";
+                contact_form_affiliation.value = "";
+                contact_form_first_name.value = "";
+                contact_form_last_name.value = "";
+                contact_form_button.disabled = true;
+                contact_form_button.classList.add("gray");
+                contact_form_button.classList.remove("Owhite");
+            }
+        };
+        xhr.send(jsonString);
+    }
+</script>
+
+
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 3,
+        centeredSlides: true,
+        autoplay: {
+            delay: 3333,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
