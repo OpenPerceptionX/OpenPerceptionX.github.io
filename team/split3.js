@@ -24,6 +24,10 @@ const split3data = [
         note: "HKUST",
         icon: [
             {
+                type: "home",
+                link: "https://gsy00517.github.io/",
+            },
+            {
                 type: "scholar",
                 link: "https://scholar.google.com/citations?user=hZtOnecAAAAJ",
             },
