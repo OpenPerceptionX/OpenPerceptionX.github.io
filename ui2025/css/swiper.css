@@ -7,7 +7,7 @@
         left: 44px !important;
         bottom: 56px !important;
     }
-    @media screen and (min-width:1025px) and (max-width: 1536px) {
+    @media screen and (min-width:1025px) and (max-width: 1280px) {
         left: 348px !important;
         bottom: 72px !important;
     }
