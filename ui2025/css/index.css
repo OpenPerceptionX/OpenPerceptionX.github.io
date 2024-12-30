@@ -19,10 +19,10 @@
         @apply text-5xl laptop:text-8xl font-bold;
     }
     h2 {
-        @apply text-3xl laptop:text-6xl font-bold;
+        @apply text-3xl laptop:text-5xl font-bold;
     }
     h3 {
-        @apply text-2xl laptop:text-4xl font-bold;
+        @apply text-2xl laptop:text-3xl font-bold;
     }
     h4 {
         @apply text-lg laptop:text-lg font-bold;
