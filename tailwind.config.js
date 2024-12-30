@@ -9,7 +9,7 @@ module.exports = {
             'tablet': '1024px',
             // => @media (min-width: 640px) { ... }
     
-            'laptop': '1536px',
+            'laptop': '1280px',
             // => @media (min-width: 1024px) { ... }
     
             // 'desktop': '1280px',
