@@ -23,14 +23,26 @@
 
 <script>
     switch (new URL(document.URL).pathname) {
+        case "/vista": 
+            window.location = "/Vista/";
+            break
         case "/vista/": 
             window.location = "/Vista/";
+            break
+        case "/drivelm": 
+            window.location = "/DriveLM/";
             break
         case "/drivelm/": 
             window.location = "/DriveLM/";
             break
+        case "/mpi": 
+            window.location = "/MPI/";
+            break
         case "/mpi/": 
             window.location = "/MPI/";
+            break
+        case "/robodual": 
+            window.location = "/RoboDual/";
             break
         case "/robodual/": 
             window.location = "/RoboDual/";
@@ -41,12 +53,6 @@
         case "/lihongyang.html": 
             window.location = "https://lihongyang.info/";
             break
-        case "/challenge": 
-            window.location = "/challenge2024/";
-            break
-        case "/challenge/": 
-            window.location = "/challenge2024/";
-            break
         case "/publication": 
             window.location = "/publications/";
             break
@@ -54,9 +60,6 @@
             window.location = "/publications/";
             break
         case "/event": 
-            window.location = "/events/";
-            break
-        case "/event/": 
             window.location = "/events/";
             break
         case "/event/": 
