@@ -227,7 +227,7 @@ const split3data = [
     // {
     //     name: "Jiacheng Qiu",
     //     image: "/assets/person/jiacheng_qiu.jpg",
-    //     note: "",
+    //     note: "ETH",
     //     icon: [
     //         {
     //             type: "email",
