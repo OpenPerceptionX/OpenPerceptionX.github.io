@@ -24,7 +24,7 @@ const split3data = [
         note: "HKUST",
         icon: [
             {
-                type: "home",
+                type: "webpage",
                 link: "https://gsy00517.github.io/",
             },
             {
@@ -70,7 +70,7 @@ const split3data = [
         note: "NTU",
         icon: [
             {
-                type: "home",
+                type: "webpage",
                 link: "https://georgeliu233.github.io/",
             },
             {
@@ -89,7 +89,7 @@ const split3data = [
         note: "Koç University",
         icon: [
             {
-                type: "home",
+                type: "webpage",
                 link: "https://shadihamdan.com/",
             },
             {
@@ -112,7 +112,7 @@ const split3data = [
         note: "SJTU",
         icon: [
             {
-                type: "home",
+                type: "webpage",
                 link: "https://zhouyunsong.github.io/",
             },
             {
@@ -148,6 +148,97 @@ const split3data = [
             },
         ],
     },
+    // {
+    //     name: "Yixuan Pan",
+    //     image: "/assets/person/yixuan_pan.jpg",
+    //     note: "HKU",
+    //     icon: [
+    //         {
+    //             type: "scholar",
+    //             link: "https://scholar.google.com/citations?user=DoyuNwEAAAAJ",
+    //         },
+    //         {
+    //             type: "email",
+    //             link: "mailto:tianhaochen2023@ia.ac.cn",
+    //         },
+    //         {
+    //             type: "github",
+    //             link: "https://github.com/hctian713",
+    //         },
+    //     ],
+    // },
+    // {
+    //     name: "Zhuoheng Li",
+    //     image: "/assets/person/zhuoheng_li.jpg",
+    //     note: "HKU",
+    //     icon: [
+    //         {
+    //             type: "email",
+    //             link: "mailto:lizhuoheng@opendrivelab.com",
+    //         },
+    //         {
+    //             type: "github",
+    //             link: "https://github.com/StarCycle/StarCycle",
+    //         },
+    //         {
+    //             type: "linkedin",
+    //             link: "https://www.linkedin.com/in/lizhuoheng/",
+    //         },
+    //         {
+    //             type: "hugging_face",
+    //             link: "https://huggingface.co/StarCycle",
+    //         },
+    //         {
+    //             type: "youtube",
+    //             link: "https://www.youtube.com/@starcycle5482",
+    //         },
+    //         {
+    //             type: "bilibili",
+    //             link: "https://space.bilibili.com/11471629",
+    //         },
+    //     ],
+    // },
+    // {
+    //     name: "Longyan Wu",
+    //     image: "/assets/person/longyan_wu.jpg",
+    //     note: "",
+    //     icon: [
+    //         {
+    //             type: "scholar",
+    //             link: "https://scholar.google.com/citations?user=DoyuNwEAAAAJ",
+    //         },
+    //     ],
+    // },
+    // {
+    //     name: "Modi Shi",
+    //     image: "/assets/person/modi_shi.jpg",
+    //     note: "BUAA",
+    //     icon: [
+    //         {
+    //             type: "email",
+    //             link: "mailto:modishi@buaa.edu.cn",
+    //         },
+    //         {
+    //             type: "github",
+    //             link: "https://github.com/ModiShi",
+    //         },
+    //     ],
+    // },
+    // {
+    //     name: "Jiacheng Qiu",
+    //     image: "/assets/person/jiacheng_qiu.jpg",
+    //     note: "",
+    //     icon: [
+    //         {
+    //             type: "email",
+    //             link: "mailto:bobchiu001@gmail.com",
+    //         },
+    //         {
+    //             type: "github",
+    //             link: "https://github.com/BBBBBBob",
+    //         },
+    //     ],
+    // },
 ];
 
 
