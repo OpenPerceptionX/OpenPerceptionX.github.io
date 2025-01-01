@@ -5,7 +5,7 @@ const split1data = [
         note: "Autonomous Driving & Embodied AI",
         icon: [
             {
-                type: "home",
+                type: "webpage",
                 link: "https://lihongyang.info/",
             },
             {
@@ -66,7 +66,7 @@ const split1data = [
         note: "Ecosystem",
         icon: [
             {
-                type: "home",
+                type: "webpage",
                 link: "https://faikit.github.io/",
             },
             {

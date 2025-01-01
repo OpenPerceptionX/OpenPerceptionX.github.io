@@ -113,6 +113,63 @@ const split2data = [
             },
         ],
     },
+    // {
+    //     name: "Jin Chen",
+    //     image: "/assets/person/jin_chen.jpg",
+    //     note: "同济大学（24级联培）",
+    //     icon: [
+    //         {
+    //             type: "email",
+    //             link: "mailto:cj65000816081@gmail.com",
+    //         },
+    //         {
+    //             type: "scholar",
+    //             link: "https://scholar.google.com/citations?user=4FqHXOsAAAAJ",
+    //         },
+    //         {
+    //             type: "github",
+    //             link: "https://github.com/dunknsabsw",
+    //         },
+    //         {
+    //             type: "zhihu",
+    //             link: "https://www.zhihu.com/people/lu-kou-5-68",
+    //         },
+    //         {
+    //             type: "xiaohongshu",
+    //             link: "https://www.xiaohongshu.com/user/profile/609cbe510000000001002922",
+    //         },
+    //     ],
+    // },
+    // {
+    //     name: "Jison Cai",
+    //     image: "/assets/person/jison_cai.jpg",
+    //     note: "同济大学（24级联培）",
+    //     icon: [
+    //         {
+    //             type: "email",
+    //             link: "mailto:liyang@opendrivelab.com",
+    //         },
+    //         {
+    //             type: "github",
+    //             link: "https://github.com/RicardLee",
+    //         },
+    //     ],
+    // },
+    // {
+    //     name: "Naisheng Ye",
+    //     image: "/assets/person/naisheng_ye.jpg",
+    //     note: "复旦大学",
+    //     icon: [
+    //         {
+    //             type: "email",
+    //             link: "mailto:yns.victory@gmail.com",
+    //         },
+    //         {
+    //             type: "github",
+    //             link: "https://github.com/Y-vic",
+    //         },
+    //     ],
+    // },
 ];
 
 
