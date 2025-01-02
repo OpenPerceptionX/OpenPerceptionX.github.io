@@ -19,6 +19,48 @@ const split3data = [
         ],
     },
     {
+        name: "Yixuan Pan",
+        image: "/assets/person/yixuan_pan.jpg",
+        note: "HKU",
+        icon: [
+            {
+                type: "webpage",
+                link: "https://lzpyx.github.io/",
+            },
+            {
+                type: "email",
+                link: "mailto:yixuanpan2024@gmail.com",
+            },
+            {
+                type: "github",
+                link: "https://github.com/lzpyx",
+            },
+        ],
+    },
+    {
+        name: "Zhuoheng Li",
+        image: "/assets/person/zhuoheng_li.jpg",
+        note: "HKU",
+        icon: [
+            {
+                type: "email",
+                link: "mailto:lizhuoheng@opendrivelab.com",
+            },
+            {
+                type: "github",
+                link: "https://github.com/StarCycle/StarCycle",
+            },
+            {
+                type: "linkedin",
+                link: "https://www.linkedin.com/in/lizhuoheng/",
+            },
+            {
+                type: "hugging_face",
+                link: "https://huggingface.co/StarCycle",
+            },
+        ],
+    },
+    {
         name: "Shenyuan Gao",
         image: "/assets/person/shenyuan_gao.jpg",
         note: "HKUST",
@@ -61,6 +103,21 @@ const split3data = [
             {
                 type: "x",
                 link: "https://x.com/jiazhi_yang2024",
+            },
+        ],
+    },
+    {
+        name: "Jiacheng Qiu",
+        image: "/assets/person/jiacheng_qiu.jpg",
+        note: "ETH",
+        icon: [
+            {
+                type: "email",
+                link: "mailto:bobchiu001@gmail.com",
+            },
+            {
+                type: "github",
+                link: "https://github.com/BBBBBBob",
             },
         ],
     },
@@ -130,6 +187,21 @@ const split3data = [
         ],
     },
     {
+        name: "Longyan Wu",
+        image: "/assets/person/longyan_wu.jpg",
+        note: "Fudan University",
+        icon: [
+            {
+                type: "email",
+                link: "mailto:im.longyanwu@gmail.com",
+            },
+            {
+                type: "github",
+                link: "https://github.com/wly-Lilie",
+            },
+        ],
+    },
+    {
         name: "Haochen Tian",
         image: "/assets/person/haochen_tian.jpg",
         note: "CASIA",
@@ -148,101 +220,85 @@ const split3data = [
             },
         ],
     },
-    // {
-    //     name: "Yixuan Pan",
-    //     image: "/assets/person/yixuan_pan.jpg",
-    //     note: "HKU",
-    //     icon: [
-    //         {
-    //             type: "webpage",
-    //             link: "https://lzpyx.github.io/",
-    //         },
-    //         {
-    //             type: "email",
-    //             link: "mailto:yixuanpan2024@gmail.com",
-    //         },
-    //         {
-    //             type: "github",
-    //             link: "https://github.com/lzpyx",
-    //         },
-    //     ],
-    // },
-    // {
-    //     name: "Zhuoheng Li",
-    //     image: "/assets/person/zhuoheng_li.jpg",
-    //     note: "HKU",
-    //     icon: [
-    //         {
-    //             type: "email",
-    //             link: "mailto:lizhuoheng@opendrivelab.com",
-    //         },
-    //         {
-    //             type: "github",
-    //             link: "https://github.com/StarCycle/StarCycle",
-    //         },
-    //         {
-    //             type: "linkedin",
-    //             link: "https://www.linkedin.com/in/lizhuoheng/",
-    //         },
-    //         {
-    //             type: "hugging_face",
-    //             link: "https://huggingface.co/StarCycle",
-    //         },
-    //         {
-    //             type: "youtube",
-    //             link: "https://www.youtube.com/@starcycle5482",
-    //         },
-    //         {
-    //             type: "bilibili",
-    //             link: "https://space.bilibili.com/11471629",
-    //         },
-    //     ],
-    // },
-    // {
-    //     name: "Longyan Wu",
-    //     image: "/assets/person/longyan_wu.jpg",
-    //     note: "Fudan University",
-    //     icon: [
-    //         {
-    //             type: "email",
-    //             link: "mailto:im.longyanwu@gmail.com",
-    //         },
-    //         {
-    //             type: "github",
-    //             link: "https://github.com/wly-Lilie",
-    //         },
-    //     ],
-    // },
-    // {
-    //     name: "Modi Shi",
-    //     image: "/assets/person/modi_shi.jpg",
-    //     note: "BUAA",
-    //     icon: [
-    //         {
-    //             type: "email",
-    //             link: "mailto:modishi@buaa.edu.cn",
-    //         },
-    //         {
-    //             type: "github",
-    //             link: "https://github.com/ModiShi",
-    //         },
-    //     ],
-    // },
-    // {
-    //     name: "Jiacheng Qiu",
-    //     image: "/assets/person/jiacheng_qiu.jpg",
-    //     note: "ETH",
-    //     icon: [
-    //         {
-    //             type: "email",
-    //             link: "mailto:bobchiu001@gmail.com",
-    //         },
-    //         {
-    //             type: "github",
-    //             link: "https://github.com/BBBBBBob",
-    //         },
-    //     ],
-    // },
+    {
+        name: "Modi Shi",
+        image: "/assets/person/modi_shi.jpg",
+        note: "BUAA",
+        icon: [
+            {
+                type: "email",
+                link: "mailto:modishi@buaa.edu.cn",
+            },
+            {
+                type: "github",
+                link: "https://github.com/ModiShi",
+            },
+        ],
+    },
+    {
+        name: "Jin Chen",
+        image: "/assets/person/jin_chen.jpg",
+        note: "XJTU",
+        // note: "复旦大学（25级联培）",
+        icon: [
+            {
+                type: "email",
+                link: "mailto:cj65000816081@gmail.com",
+            },
+            {
+                type: "scholar",
+                link: "https://scholar.google.com/citations?user=4FqHXOsAAAAJ",
+            },
+            {
+                type: "github",
+                link: "https://github.com/dunknsabsw",
+            },
+            {
+                type: "zhihu",
+                link: "https://www.zhihu.com/people/lu-kou-5-68",
+            },
+            {
+                type: "xiaohongshu",
+                link: "https://www.xiaohongshu.com/user/profile/609cbe510000000001002922",
+            },
+        ],
+    },
+    {
+        name: "Jison Cai",
+        image: "/assets/person/jisong_cai.jpg",
+        note: "Wuhan University",
+        // note: "上海交通大学（25级联培）",
+        icon: [
+            {
+                type: "scholar",
+                link: "https://scholar.google.com/citations?user=dTrpq94AAAAJ",
+            },
+            {
+                type: "email",
+                link: "mailto:serene.js.cai@gmail.com",
+            },
+            {
+                type: "github",
+                link: "https://github.com/serene-sivy",
+            },
+        ],
+    },
+    {
+        name: "Naisheng Ye",
+        image: "/assets/person/naisheng_ye.jpg",
+        note: "Zhejiang University",
+        // note: "复旦大学（25级联培）",
+        icon: [
+            {
+                type: "email",
+                link: "mailto:yns.victory@gmail.com",
+            },
+            {
+                type: "github",
+                link: "https://github.com/Y-vic",
+            },
+        ],
+    },
 ];
 
 
