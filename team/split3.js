@@ -264,7 +264,7 @@ const split3data = [
         ],
     },
     {
-        name: "Jison Cai",
+        name: "Jisong Cai",
         image: "/assets/person/jisong_cai.jpg",
         note: "Wuhan University",
         // note: "上海交通大学（25级联培）",
