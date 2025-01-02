@@ -154,16 +154,16 @@ const split3data = [
     //     note: "HKU",
     //     icon: [
     //         {
-    //             type: "scholar",
-    //             link: "https://scholar.google.com/citations?user=DoyuNwEAAAAJ",
+    //             type: "webpage",
+    //             link: "https://lzpyx.github.io/",
     //         },
     //         {
     //             type: "email",
-    //             link: "mailto:tianhaochen2023@ia.ac.cn",
+    //             link: "mailto:yixuanpan2024@gmail.com",
     //         },
     //         {
     //             type: "github",
-    //             link: "https://github.com/hctian713",
+    //             link: "https://github.com/lzpyx",
     //         },
     //     ],
     // },
@@ -201,11 +201,15 @@ const split3data = [
     // {
     //     name: "Longyan Wu",
     //     image: "/assets/person/longyan_wu.jpg",
-    //     note: "",
+    //     note: "Fudan University",
     //     icon: [
     //         {
-    //             type: "scholar",
-    //             link: "https://scholar.google.com/citations?user=DoyuNwEAAAAJ",
+    //             type: "email",
+    //             link: "mailto:im.longyanwu@gmail.com",
+    //         },
+    //         {
+    //             type: "github",
+    //             link: "https://github.com/wly-Lilie",
     //         },
     //     ],
     // },
