@@ -44,7 +44,7 @@
         content: "-";
     }
     code {
-        @apply bg-o-light-blue bg-opacity-30 text-o-blue font-bold pl-1 pr-1 ml-1 mr-1 select-all text-nowrap;
+        @apply bg-o-light-blue bg-opacity-30 text-o-blue font-bold pl-1 pr-1 ml-1 mr-1 select-all;
     }
 }
 
