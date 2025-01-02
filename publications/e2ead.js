@@ -128,6 +128,10 @@ const e2ead = [
         starlink: "https://github.com/OpenDriveLab/ELM",
         icon: [
             {
+                type: "webpage",
+                link: "https://opendrivelab.github.io/elm.github.io/",
+            },
+            {
                 type: "github",
                 link: "https://github.com/OpenDriveLab/ELM",
             },
