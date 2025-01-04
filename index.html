@@ -41,11 +41,41 @@
 
 
 <body class="h-full" id="#">
+
+    
     <!-- Header / Sidebar -->
     <header id="to_add_sidebar" class="overscroll-none"></header>
     <!-- Page -->
     <div class="tablet:ml-72" id="page">
         <div class="flex w-screen tablet:w-auto flex-col">
+
+
+
+            <!-- Embodied AI -->
+            <!-- <div id="popup_embodied" class="relative z-50">
+                <div class="fixed inset-0 bg-gray-300/80"></div>
+                <div class="fixed inset-0">
+                    <div class="flex h-svh items-center justify-center p-6 laptop:p-72">
+                        <div class="relative rounded-3xl bg-white p-6 pt-10 pb-10 laptop:p-10">
+                            <div class="absolute right-0 top-0 pr-6 pt-10 laptop:pr-10">
+                                <button onclick="closeEmbodied()">
+                                    <svg class="size-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div>
+                                <h3>
+                                    Embodied AI
+                                </h3>
+                                <p class="mt-3 laptop:mt-6">
+                                    c nweacso ncoianco snvancoweanc ovowoco nvoanc wicn kn knocnonocckcj cooods iecock dokac cmecicsic mei
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
 
 
 
@@ -559,5 +589,24 @@
             }
         };
         xhr.send(jsonString);
+    }
+</script>
+
+
+<!-- popup -->
+<script>
+    function openEmbodied() {
+        document.getElementById("popup_embodied").classList.remove("hidden");
+    }
+    function closeEmbodied() {
+        document.getElementById("popup_embodied").classList.add("hidden");
+    }
+</script>
+<script>
+    function openE2E() {
+        document.getElementById("popup_e2e").classList.remove("hidden");
+    }
+    function closeE2E() {
+        document.getElementById("popup_e2e").classList.add("hidden");
     }
 </script>
