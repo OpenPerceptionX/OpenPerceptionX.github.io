@@ -597,6 +597,11 @@
 <script>
     function openEmbodied() {
         document.getElementById("popup_embodied").classList.remove("hidden");
+
+        // document.body.addEventListener('mousewheel', preventScroll, { passive: false });
+        // document.body.addEventListener('touchmove', preventScroll, { passive: false });
+        // document.body.removeEventListener('mousewheel', preventScroll);
+        // document.body.removeEventListener('touchmove', preventScroll);
     }
     function closeEmbodied() {
         document.getElementById("popup_embodied").classList.add("hidden");
