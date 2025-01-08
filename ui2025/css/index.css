@@ -82,6 +82,7 @@
 
 
 .citation {
+    @apply text-sm;
     background-color: #f6f8fa;
     font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
     color: #0a3069;
