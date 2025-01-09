@@ -3,14 +3,14 @@
     left: 404px !important;
     text-align: left !important;
     width: auto !important;
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1280px) {
         left: 44px !important;
         bottom: 56px !important;
     }
-    @media screen and (min-width:1025px) and (max-width: 1280px) {
+    /* @media screen and (min-width:1025px) and (max-width: 1280px) {
         left: 348px !important;
         bottom: 72px !important;
-    }
+    } */
 }
 
 .swiper-pagination-bullet {
