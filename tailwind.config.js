@@ -6,7 +6,7 @@ module.exports = {
     content: ["./**/*.{html,js}"],
     theme: {
         screens: {
-            'tablet': '1024px',
+            'tablet': '1280px',
             // => @media (min-width: 640px) { ... }
     
             'laptop': '1280px',
