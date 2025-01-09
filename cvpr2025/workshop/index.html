@@ -35,16 +35,16 @@
 
 <body class="h-full" id="#">
     <!-- Header / Sidebar -->
-    <header id="to_add_sidebar" class="overscroll-none"></header>
+    <header id="to_add_sidebar" class="overscroll-none laptop:hidden"></header>
     <!-- Page -->
-    <div class="tablet:ml-72" id="page">
+    <div id="page">
         <div class="flex w-screen tablet:w-auto flex-col">
 
 
 
             <!-- Landing -->
             <div class="w-screen tablet:w-auto h-svh snap-start pt-20 p-6 tablet:p-10">
-                <div class="w-full h-full rounded-3xl bg-[url('/assets/background/nashville_night.jpg')] bg-center laptop:bg-right bg-cover flex flex-col justify-end p-6 tablet:p-10 laptop:p-20 gap-6 laptop:gap-10 bg-black bg-opacity-30 bg-blend-overlay">
+                <div class="w-full h-full rounded-3xl bg-[url('/assets/background/nashville_night.jpg')] bg-center laptop:bg-right bg-cover flex flex-col justify-end p-6 laptop:p-20 gap-6 laptop:gap-10 bg-black bg-opacity-30 bg-blend-overlay">
                     <div class="flex flex-row gap-6 laptop:gap-10">
                         <img src="/assets/icon/cvpr/cvpr2025_white.svg" class="h-10 laptop:h-24"/>
                         <img src="/assets/icon/cvpr/ieee_cs_white.png" class="h-10 laptop:h-24"/>
@@ -83,7 +83,10 @@
 
 
                 <!-- navigator -->
-                <aside class="min-h-16 laptop:h-screen top-16 tablet:top-0 sticky z-20 flex items-center justify-start w-full tablet:w-auto laptop:w-1/5 shrink-0 bg-white">
+                <aside class="min-h-16 laptop:h-screen top-16 tablet:top-0 sticky z-20 flex flex-col items-start justify-evenly w-full laptop:w-1/5 shrink-0 bg-white">
+                    <a class="hidden laptop:block pl-6" href="/">
+                        <img class="h-6 w-auto" src="/assets/icon/OpenDriveLab.png">
+                    </a>
                     <ul class="w-full laptop:w-auto mt-3 mb-6 flex flex-row flex-wrap laptop:flex-col justify-evenly border-t-2 border-t-o-white border-b-2 border-b-o-white laptop:border-t-0 laptop:border-b-0">
     
                         <li>
