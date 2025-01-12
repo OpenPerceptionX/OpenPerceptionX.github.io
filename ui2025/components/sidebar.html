@@ -33,7 +33,7 @@
         From: "opacity-100"
         To: "opacity-0"
     -->
-    <div class="fixed inset-0 bg-o-light-blue" aria-hidden="true"></div>
+    <div class="fixed inset-0 bg-gray-300/80" aria-hidden="true"></div>
     <div class="fixed inset-0 flex">
         <!--
         Off-canvas menu, show/hide based on off-canvas menu state.
@@ -112,7 +112,7 @@
     <div class="fixed inset-0 bg-gray-300/80"></div>
     <div class="fixed inset-0">
         <div class="flex h-svh items-center justify-center p-6 laptop:p-72">
-            <div class="relative rounded-3xl bg-white p-6 pt-10 pb-10 laptop:p-10">
+            <div class="relative rounded-3xl bg-white p-6 pt-10 pb-10 laptop:p-10 max-h-full overflow-scroll scrollbar-hide">
                 <div class="absolute right-0 top-0 pr-6 pt-10 laptop:pr-10">
                     <button onclick="closeE2E()">
                         <svg class="size-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -162,17 +162,25 @@
 <script>
     function openEmbodied() {
         document.getElementById("popup_embodied").classList.remove("hidden");
+        document.querySelector('body').classList.add('overflow-hidden');
     }
     function closeEmbodied() {
         document.getElementById("popup_embodied").classList.add("hidden");
+        if (sidebar_state != true) {
+            document.querySelector('body').classList.remove('overflow-hidden');
+        };
     }
 </script>
 <script>
     function openE2E() {
         document.getElementById("popup_e2e").classList.remove("hidden");
+        document.querySelector('body').classList.add('overflow-hidden');
     }
     function closeE2E() {
         document.getElementById("popup_e2e").classList.add("hidden");
+        if (sidebar_state != true) {
+            document.querySelector('body').classList.remove('overflow-hidden');
+        };
     }
 </script>
 
@@ -199,11 +207,13 @@
             document.getElementById("sidebar_close").classList.remove("hidden");
             document.getElementById("mobile_sidebar").classList.remove("hidden");
             sidebar_state = true;
+            document.querySelector('body').classList.add('overflow-hidden');
         } else {
             document.getElementById("sidebar_open").classList.remove("hidden");
             document.getElementById("sidebar_close").classList.add("hidden");
             document.getElementById("mobile_sidebar").classList.add("hidden");
             sidebar_state = false;
+            document.querySelector('body').classList.remove('overflow-hidden');
         }
     }
 </script>
