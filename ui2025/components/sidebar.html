@@ -61,6 +61,123 @@
 
 
 
+
+<!-- Embodied AI -->
+<div id="popup_embodied" class="relative z-50 hidden">
+    <div class="fixed inset-0 bg-gray-300/80"></div>
+    <div class="fixed inset-0">
+        <div class="flex h-svh items-center justify-center p-6 laptop:p-72">
+            <div class="relative rounded-3xl bg-white p-6 pt-10 pb-10 laptop:p-10">
+                <div class="absolute right-0 top-0 pr-6 pt-10 laptop:pr-10">
+                    <button onclick="closeEmbodied()">
+                        <svg class="size-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div>
+                    <h3>
+                        Embodied AI
+                    </h3>
+                    <p class="mt-6">
+                        Embodied AI is the integration of artificial intelligence with the physical world, enabling robots to interact with and learn from the real world. We focus on the most critical areas of embodied AI, including humanoid, robot manipulation, and dexterous hand. Our goal is to explore the scaling law for robots, develop general world models, and unveil the power of reinforcement learning to achieve general-purpose embodied agents.
+                    </p>
+                    <div class="mt-6 flex flex-col gap-3">
+                        <a class="p-1 border-l-4 border-o-black pl-6 hover:border-o-blue flex flex-col gap-1 group" href="https://github.com/OpenDriveLab/CLOVER" target="_blank">
+                            <span class="group-hover:text-o-blue">Closed-Loop Visuomotor Control with Generative Expectation for Robotic Manipulation</span>
+                            <i class="text-o-gray">NeurIPS 2024</i>
+                        </a>
+                    </div>
+                    <div class="mt-6 flex flex-col gap-3">
+                        <a class="p-1 border-l-4 border-o-black pl-6 hover:border-o-blue flex flex-col gap-1 group" href="/MPI/" target="_blank">
+                            <span class="group-hover:text-o-blue">Learning Manipulation by Predicting Interaction</span>
+                            <i class="text-o-gray">RSS 2024</i>
+                        </a>
+                    </div>
+                    <div class="mt-6 flex flex-col gap-3">
+                        <a class="p-1 border-l-4 border-o-black pl-6 hover:border-o-blue flex flex-col gap-1 group" href="/publications/">
+                            <span class="group-hover:text-o-blue">More ...</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- AD -->
+<div id="popup_e2e" class="relative z-50 hidden">
+    <div class="fixed inset-0 bg-gray-300/80"></div>
+    <div class="fixed inset-0">
+        <div class="flex h-svh items-center justify-center p-6 laptop:p-72">
+            <div class="relative rounded-3xl bg-white p-6 pt-10 pb-10 laptop:p-10">
+                <div class="absolute right-0 top-0 pr-6 pt-10 laptop:pr-10">
+                    <button onclick="closeE2E()">
+                        <svg class="size-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div>
+                    <h3>
+                        End-to-End<br>Autonomous Driving
+                    </h3>
+                    <p class="mt-6">
+                        Autonomous Driving stands at the intersection of intelligence, world modeling, and safety alignment, enabling vehicles to respond to the surroundings effectively for both comfort and safety. We target the crucial areas of autonomous driving, including whole-scene perception systems, critical data generation, and end-to-end decision-making. Our mission is to establish a comprehensive pipeline by leveraging massive real-world driving data and building efficient world representation for safe and generalizable autonomy.
+                    </p>
+                    <div class="mt-6 flex flex-col gap-3">
+                        <a class="p-1 border-l-4 border-o-black pl-6 hover:border-o-blue flex flex-col gap-1 group" href="https://github.com/OpenDriveLab/UniAD" target="_blank">
+                            <span class="group-hover:text-o-blue">Planning-oriented Autonomous Driving</span>
+                            <i class="text-o-gray">CVPR 2023 Best Paper Award</i>
+                        </a>
+                    </div>
+                    <div class="mt-6 flex flex-col gap-3">
+                        <a class="p-1 border-l-4 border-o-black pl-6 hover:border-o-blue flex flex-col gap-1 group" href="https://github.com/OpenDriveLab/End-to-end-Autonomous-Driving" target="_blank">
+                            <span class="group-hover:text-o-blue">End-to-End Autonomous Driving: Challenges and Frontiers</span>
+                            <i class="text-o-gray">TPAMI 2024</i>
+                        </a>
+                    </div>
+                    <div class="mt-6 flex flex-col gap-3">
+                        <a class="p-1 border-l-4 border-o-black pl-6 hover:border-o-blue flex flex-col gap-1 group" href="/Vista/" target="_blank">
+                            <span class="group-hover:text-o-blue">Vista: A Generalizable Driving World Model with High Fidelity and Versatile Controllability</span>
+                            <i class="text-o-gray">NeurIPS 2024</i>
+                        </a>
+                    </div>
+                    <div class="mt-6 flex flex-col gap-3">
+                        <a class="p-1 border-l-4 border-o-black pl-6 hover:border-o-blue flex flex-col gap-1 group" href="/publications/">
+                            <span class="group-hover:text-o-blue">More ...</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- popup -->
+<script>
+    function openEmbodied() {
+        document.getElementById("popup_embodied").classList.remove("hidden");
+    }
+    function closeEmbodied() {
+        document.getElementById("popup_embodied").classList.add("hidden");
+    }
+</script>
+<script>
+    function openE2E() {
+        document.getElementById("popup_e2e").classList.remove("hidden");
+    }
+    function closeE2E() {
+        document.getElementById("popup_e2e").classList.add("hidden");
+    }
+</script>
+
+
+
 <!-- load sidebar content -->
 <script>
     $.get('/ui2025/components/sidebar_content_mobile.html', function(result){
