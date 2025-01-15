@@ -33,6 +33,47 @@
 
 
 
+<!-- WeChat Public Group -->
+<div id="popup_wechat_group" class="relative z-50 hidden">
+    <div class="fixed inset-0 bg-gray-300/80"></div>
+    <div class="fixed inset-0">
+        <div class="flex h-svh items-center justify-center p-6 laptop:p-72">
+            <div class="relative rounded-3xl bg-white p-6 pt-10 pb-10 laptop:p-10">
+                <div class="absolute right-0 top-0 pr-6 pt-10 laptop:pr-10">
+                    <button onclick="closeWeChatGroup()">
+                        <svg class="size-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-col mt-12 justify-items-center w-full justify-center" style="max-width: 768px;">
+                    <div class="flex flex-row justify-items-center w-full justify-center">
+                        <img src="/assets/qrcode_wechat_group.png" style="max-width: 512px;"/>
+                    </div>
+                    <span class="text-center mt-6">
+                        Join WeChat Group
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- popup -->
+<script>
+    function openWeChatGroup() {
+        document.getElementById("popup_wechat_group").classList.remove("hidden");
+        document.querySelector('body').classList.add('overflow-hidden');
+    }
+    function closeWeChatGroup() {
+        document.getElementById("popup_wechat_group").classList.add("hidden");
+        if (sidebar_state != true) {
+            document.querySelector('body').classList.remove('overflow-hidden');
+        };
+    }
+</script>
+
+
+
 <body class="h-full" id="#">
     <!-- Header / Sidebar -->
     <header id="to_add_sidebar" class="overscroll-none laptop:hidden"></header>
@@ -240,7 +281,7 @@
                                     </li>
                                     <li class="flex gap-6 laptop:gap-10">
                                         <img src="/assets/icon/wechat.png" class="size-8 inline-block mr-2"/>
-                                        <span>Join discussions in our <a href="/assets/qrcode_wechat_group.jpg" target="_blank" class="text-o-blue hover:underline">WeChat group</a></span>
+                                        <span>Join discussions in our <a onclick="openWeChatGroup()" class="text-o-blue hover:underline">WeChat group</a></span>
                                     </li>
                                 </ul>
                             </div>
