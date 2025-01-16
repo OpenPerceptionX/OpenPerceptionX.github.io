@@ -17,6 +17,7 @@ const split1data = [
                 link: "mailto:hy@opendrivelab.com",
             },
         ],
+        tag: "test sxtdc",
     },
     {
         name: "Li Chen",
@@ -40,6 +41,7 @@ const split1data = [
                 link: "https://twitter.com/ilnehc",
             },
         ],
+        tag: "test sxtdc",
     },
     {
         name: "Zetong Yang",
@@ -59,6 +61,7 @@ const split1data = [
                 link: "https://github.com/tomztyang",
             },
         ],
+        tag: "test sxtdc",
     },
     {
         name: "Huijie Wang",
@@ -86,6 +89,7 @@ const split1data = [
                 link: "https://twitter.com/wongfaikit",
             },
         ],
+        tag: "test sxtdc",
     },
     {
         name: "Chonghao Sima",
@@ -109,6 +113,7 @@ const split1data = [
                 link: "https://twitter.com/smch_1127",
             },
         ],
+        tag: "",
     },
 ];
 
@@ -135,6 +140,16 @@ function split1render() {
             </div>
             <div class="border-b-2 border-o-white"></div>
         `;
+        // tag
+        // if (item.tag != "") {
+        //     innerHTML += `
+        //     <div class="absolute size-36 tablet:size-48 flex flex-col justify-end">
+        //         <div class="flex flex-row justify-end">
+        //             <span class="m-2 p-1 pl-2 pr-2 rounded-xl bg-o-blue text-white select-none text-sm">${item.tag}</span>
+        //          </div>
+        //     </div>
+        // `;
+        // }
         const person = document.createElement("div");
         person.className = "flex flex-col gap-3 pb-3 w-36 tablet:w-48";
         person.innerHTML = innerHTML;
