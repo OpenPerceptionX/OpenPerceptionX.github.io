@@ -3,6 +3,8 @@ const split3data = [
         name: "Yihang Qiu",
         image: "/assets/person/yihang_qiu.jpg",
         note: "HKU",
+        image_s: "/assets/person/yihang_qiu_s.jpg",
+        page: "https://scholar.google.com/citations?user=qgRUOdIAAAAJ",
         icon: [
             {
                 type: "scholar",
@@ -22,6 +24,8 @@ const split3data = [
         name: "Yixuan Pan",
         image: "/assets/person/yixuan_pan.jpg",
         note: "HKU",
+        image_s: "/assets/person/yixuan_pan_s.jpg",
+        page: "https://lzpyx.github.io/",
         icon: [
             {
                 type: "webpage",
@@ -41,6 +45,8 @@ const split3data = [
         name: "Zhuoheng Li",
         image: "/assets/person/zhuoheng_li.jpg",
         note: "HKU",
+        image_s: "/assets/person/zhuoheng_li_s.jpg",
+        page: "https://github.com/StarCycle/StarCycle",
         icon: [
             {
                 type: "email",
@@ -64,11 +70,9 @@ const split3data = [
         name: "Shenyuan Gao",
         image: "/assets/person/shenyuan_gao.jpg",
         note: "HKUST",
+        image_s: "/assets/person/shenyuan_gao_s.jpg",
+        page: "https://scholar.google.com/citations?user=hZtOnecAAAAJ",
         icon: [
-            {
-                type: "webpage",
-                link: "https://gsy00517.github.io/",
-            },
             {
                 type: "scholar",
                 link: "https://scholar.google.com/citations?user=hZtOnecAAAAJ",
@@ -87,6 +91,8 @@ const split3data = [
         name: "Jiazhi Yang",
         image: "/assets/person/jiazhi_yang.jpg",
         note: "CUHK",
+        image_s: "/assets/person/jiazhi_yang_s.jpg",
+        page: "https://scholar.google.com/citations?user=Ju7nGX8AAAAJ",
         icon: [
             {
                 type: "scholar",
@@ -110,6 +116,8 @@ const split3data = [
         name: "Jiacheng Qiu",
         image: "/assets/person/jiacheng_qiu.jpg",
         note: "ETH",
+        image_s: "/assets/person/jiacheng_qiu_s.jpg",
+        page: "https://github.com/BBBBBBob",
         icon: [
             {
                 type: "email",
@@ -125,6 +133,8 @@ const split3data = [
         name: "Haochen Liu",
         image: "/assets/person/haochen_liu.jpg",
         note: "NTU",
+        image_s: "/assets/person/haochen_liu_s.jpg",
+        page: "https://georgeliu233.github.io/",
         icon: [
             {
                 type: "webpage",
@@ -144,6 +154,8 @@ const split3data = [
         name: "Shadi Hamdan",
         image: "/assets/person/shadi_hamdan.jpg",
         note: "Koç University",
+        image_s: "/assets/person/shadi_hamdan_s.jpg",
+        page: "https://shadihamdan.com/",
         icon: [
             {
                 type: "webpage",
@@ -167,6 +179,8 @@ const split3data = [
         name: "Yunsong Zhou",
         image: "/assets/person/yunsong_zhou.jpg",
         note: "SJTU",
+        image_s: "/assets/person/yunsong_zhou_s.jpg",
+        page: "https://zhouyunsong.github.io/",
         icon: [
             {
                 type: "webpage",
@@ -190,6 +204,8 @@ const split3data = [
         name: "Longyan Wu",
         image: "/assets/person/longyan_wu.jpg",
         note: "Fudan University",
+        image_s: "/assets/person/longyan_wu_s.jpg",
+        page: "https://github.com/wly-Lilie",
         icon: [
             {
                 type: "email",
@@ -205,6 +221,8 @@ const split3data = [
         name: "Haochen Tian",
         image: "/assets/person/haochen_tian.jpg",
         note: "CASIA",
+        image_s: "/assets/person/haochen_tian_s.jpg",
+        page: "https://scholar.google.com/citations?user=DoyuNwEAAAAJ",
         icon: [
             {
                 type: "scholar",
@@ -224,6 +242,8 @@ const split3data = [
         name: "Modi Shi",
         image: "/assets/person/modi_shi.jpg",
         note: "BUAA",
+        image_s: "/assets/person/modi_shi_s.jpg",
+        page: "https://github.com/ModiShi",
         icon: [
             {
                 type: "email",
@@ -239,6 +259,8 @@ const split3data = [
         name: "Jin Chen",
         image: "/assets/person/jin_chen.jpg",
         note: "XJTU",
+        image_s: "/assets/person/jin_chen_s.jpg",
+        page: "https://scholar.google.com/citations?user=4FqHXOsAAAAJ",
         // note: "复旦大学（25级联培）",
         icon: [
             {
@@ -267,6 +289,8 @@ const split3data = [
         name: "Jisong Cai",
         image: "/assets/person/jisong_cai.jpg",
         note: "Wuhan University",
+        image_s: "/assets/person/jisong_cai_s.jpg",
+        page: "https://scholar.google.com/citations?user=dTrpq94AAAAJ",
         // note: "上海交通大学（25级联培）",
         icon: [
             {
@@ -287,6 +311,8 @@ const split3data = [
         name: "Naisheng Ye",
         image: "/assets/person/naisheng_ye.jpg",
         note: "Zhejiang University",
+        image_s: "/assets/person/naisheng_ye_s.jpg",
+        page: "https://github.com/Y-vic",
         // note: "复旦大学（25级联培）",
         icon: [
             {
@@ -308,7 +334,10 @@ function split3render() {
     split3body.innerHTML = "";
     split3data.forEach((item, _) => {
         var innerHTML = `
-            <img loading="lazy" src="${item.image}" class="size-36 tablet:size-48 rounded-3xl"/>
+            <a class="group" href="${item.page}" target="_blank">
+                <img loading="lazy" src="${item.image_s}" class="size-36 tablet:size-48 rounded-3xl hidden group-hover:block group-hover:absolute"/>
+                <img loading="lazy" src="${item.image}" class="size-36 tablet:size-48 rounded-3xl"/>
+            </a>
             <h4>${item.name}</h4>
             <span>${item.note}</span>
             <div class="flex flex-row gap-3 flex-wrap">

@@ -3,6 +3,8 @@ const split2data = [
         name: "Tianyu Li",
         image: "/assets/person/tianyu_li.jpg",
         note: "复旦大学（23级联培）",
+        image_s: "/assets/person/tianyu_li_s.jpg",
+        page: "https://scholar.google.com/citations?user=X6vTmEMAAAAJ",
         icon: [
             {
                 type: "scholar",
@@ -26,6 +28,8 @@ const split2data = [
         name: "Qingwen Bu",
         image: "/assets/person/qingwen_bu.jpg",
         note: "上海交通大学（23级联培）",
+        image_s: "/assets/person/qingwen_bu_s.jpg",
+        page: "https://scholar.google.com/citations?user=-JCRysgAAAAJ",
         icon: [
             {
                 type: "scholar",
@@ -45,6 +49,8 @@ const split2data = [
         name: "Hanxue Zhang",
         image: "/assets/person/hanxue_zhang.jpg",
         note: "上海交通大学（24级联培）",
+        image_s: "/assets/person/hanxue_zhang_s.jpg",
+        page: "https://scholar.google.com/citations?user=vy5r8rMAAAAJ",
         icon: [
             {
                 type: "scholar",
@@ -64,18 +70,20 @@ const split2data = [
         name: "Chengen Xie",
         image: "/assets/person/chengen_xie.jpg",
         note: "上海交通大学（24级联培）",
+        image_s: "/assets/person/chengen_xie_s.jpg",
+        page: "https://scholar.google.com/citations?user=-Sk1x_gAAAAJ",
         icon: [
             {
                 type: "scholar",
-                link: "https://scholar.google.com/citations?user=-Sk1x_gAAAAJ"
+                link: "https://scholar.google.com/citations?user=-Sk1x_gAAAAJ",
             },
             {
                 type: "email",
-                link: "mailto:xiechengen@opendrivelab.com"
+                link: "mailto:xiechengen@opendrivelab.com",
             },
             {
                 type: "github",
-                link: "https://github.com/ChengenXie"
+                link: "https://github.com/ChengenXie",
             },
         ],
     },
@@ -83,6 +91,8 @@ const split2data = [
         name: "Haoran Jiang",
         image: "/assets/person/haoran_jiang.jpg",
         note: "复旦大学（24级联培）",
+        image_s: "/assets/person/haoran_jiang_s.jpg",
+        page: "https://scholar.google.com/citations?user=KYzm-k0AAAAJ",
         icon: [
             {
                 type: "scholar",
@@ -102,6 +112,8 @@ const split2data = [
         name: "Yang Li",
         image: "/assets/person/yang_li.jpg",
         note: "同济大学（24级联培）",
+        image_s: "/assets/person/yang_li_s.jpg",
+        page: "https://github.com/RicardLee",
         icon: [
             {
                 type: "email",
@@ -122,7 +134,10 @@ function split2render() {
     split2body.innerHTML = "";
     split2data.forEach((item, _) => {
         var innerHTML = `
-            <img loading="lazy" src="${item.image}" class="size-36 tablet:size-48 rounded-3xl"/>
+            <a class="group" href="${item.page}" target="_blank">
+                <img loading="lazy" src="${item.image_s}" class="size-36 tablet:size-48 rounded-3xl hidden group-hover:block group-hover:absolute"/>
+                <img loading="lazy" src="${item.image}" class="size-36 tablet:size-48 rounded-3xl"/>
+            </a>
             <h4>${item.name}</h4>
             <span>${item.note}</span>
             <div class="flex flex-row gap-3 flex-wrap">
