@@ -1,75 +1,8 @@
 const split3data = [
     {
-        name: "Yihang Qiu",
-        image: "/assets/person/yihang_qiu.jpg",
-        note: "HKU",
-        image_s: "/assets/person/yihang_qiu_s.jpg",
-        page: "https://scholar.google.com/citations?user=qgRUOdIAAAAJ",
-        icon: [
-            {
-                type: "scholar",
-                link: "https://scholar.google.com/citations?user=qgRUOdIAAAAJ",
-            },
-            {
-                type: "email",
-                link: "mailto:qiuyihang@opendrivelab.com",
-            },
-            {
-                type: "github",
-                link: "https://github.com/GihhArwtw",
-            },
-        ],
-    },
-    {
-        name: "Yixuan Pan",
-        image: "/assets/person/yixuan_pan.jpg",
-        note: "HKU",
-        image_s: "/assets/person/yixuan_pan_s.jpg",
-        page: "https://lzpyx.github.io/",
-        icon: [
-            {
-                type: "webpage",
-                link: "https://lzpyx.github.io/",
-            },
-            {
-                type: "email",
-                link: "mailto:yixuanpan2024@gmail.com",
-            },
-            {
-                type: "github",
-                link: "https://github.com/lzpyx",
-            },
-        ],
-    },
-    {
-        name: "Zhuoheng Li",
-        image: "/assets/person/zhuoheng_li.jpg",
-        note: "HKU",
-        image_s: "/assets/person/zhuoheng_li_s.jpg",
-        page: "https://github.com/StarCycle/StarCycle",
-        icon: [
-            {
-                type: "email",
-                link: "mailto:lizhuoheng@opendrivelab.com",
-            },
-            {
-                type: "github",
-                link: "https://github.com/StarCycle/StarCycle",
-            },
-            {
-                type: "linkedin",
-                link: "https://www.linkedin.com/in/lizhuoheng/",
-            },
-            {
-                type: "hugging_face",
-                link: "https://huggingface.co/StarCycle",
-            },
-        ],
-    },
-    {
         name: "Shenyuan Gao",
         image: "/assets/person/shenyuan_gao.jpg",
-        note: "HKUST",
+        note: "The Hong Kong University of Science and Technology (HKUST)",
         image_s: "/assets/person/shenyuan_gao_s.jpg",
         page: "https://scholar.google.com/citations?user=hZtOnecAAAAJ",
         icon: [
@@ -90,7 +23,7 @@ const split3data = [
     {
         name: "Jiazhi Yang",
         image: "/assets/person/jiazhi_yang.jpg",
-        note: "CUHK",
+        note: "The Chinese University of Hong Kong (CUHK)",
         image_s: "/assets/person/jiazhi_yang_s.jpg",
         page: "https://scholar.google.com/citations?user=Ju7nGX8AAAAJ",
         icon: [
@@ -115,7 +48,7 @@ const split3data = [
     {
         name: "Jiacheng Qiu",
         image: "/assets/person/jiacheng_qiu.jpg",
-        note: "ETH",
+        note: "Eidgenössische Technische Hochschule Zürich (ETH Zürich)",
         image_s: "/assets/person/jiacheng_qiu_s.jpg",
         page: "https://github.com/BBBBBBob",
         icon: [
@@ -130,55 +63,9 @@ const split3data = [
         ],
     },
     {
-        name: "Haochen Liu",
-        image: "/assets/person/haochen_liu.jpg",
-        note: "NTU",
-        image_s: "/assets/person/haochen_liu_s.jpg",
-        page: "https://georgeliu233.github.io/",
-        icon: [
-            {
-                type: "webpage",
-                link: "https://georgeliu233.github.io/",
-            },
-            {
-                type: "scholar",
-                link: "https://scholar.google.com/citations?user=iizqKUsAAAAJ&hl",
-            },
-            {
-                type: "github",
-                link: "https://github.com/georgeliu233",
-            },
-        ],
-    },
-    {
-        name: "Shadi Hamdan",
-        image: "/assets/person/shadi_hamdan.jpg",
-        note: "Koç University",
-        image_s: "/assets/person/shadi_hamdan_s.jpg",
-        page: "https://shadihamdan.com/",
-        icon: [
-            {
-                type: "webpage",
-                link: "https://shadihamdan.com/",
-            },
-            {
-                type: "scholar",
-                link: "https://scholar.google.com/citations?user=I6bAD78AAAAJ",
-            },
-            {
-                type: "email",
-                link: "mailto:shamdan17@ku.edu.tr",
-            },
-            {
-                type: "github",
-                link: "https://github.com/Shamdan17",
-            },
-        ],
-    },
-    {
         name: "Yunsong Zhou",
         image: "/assets/person/yunsong_zhou.jpg",
-        note: "SJTU",
+        note: "Shanghai Jiao Tong University (SJTU)",
         image_s: "/assets/person/yunsong_zhou_s.jpg",
         page: "https://zhouyunsong.github.io/",
         icon: [
@@ -220,7 +107,7 @@ const split3data = [
     {
         name: "Haochen Tian",
         image: "/assets/person/haochen_tian.jpg",
-        note: "CASIA",
+        note: "Institute of Automation, Chinese Academy of Sciences (CASIA)",
         image_s: "/assets/person/haochen_tian_s.jpg",
         page: "https://scholar.google.com/citations?user=DoyuNwEAAAAJ",
         icon: [
@@ -241,7 +128,7 @@ const split3data = [
     {
         name: "Modi Shi",
         image: "/assets/person/modi_shi.jpg",
-        note: "BUAA",
+        note: "Beijing University of Aeronautics and Astronautics (BUAA)",
         image_s: "/assets/person/modi_shi_s.jpg",
         page: "https://github.com/ModiShi",
         icon: [
@@ -258,7 +145,7 @@ const split3data = [
     {
         name: "Jin Chen",
         image: "/assets/person/jin_chen.jpg",
-        note: "XJTU",
+        note: "Xi'an Jiaotong University (XJTU)",
         image_s: "/assets/person/jin_chen_s.jpg",
         page: "https://scholar.google.com/citations?user=4FqHXOsAAAAJ",
         // note: "复旦大学（25级联培）",
@@ -322,6 +209,119 @@ const split3data = [
             {
                 type: "github",
                 link: "https://github.com/Y-vic",
+            },
+        ],
+    },
+    {
+        name: "Yihang Qiu",
+        image: "/assets/person/yihang_qiu.jpg",
+        note: "The University of Hong Kong (HKU)",
+        image_s: "/assets/person/yihang_qiu_s.jpg",
+        page: "https://scholar.google.com/citations?user=qgRUOdIAAAAJ",
+        icon: [
+            {
+                type: "scholar",
+                link: "https://scholar.google.com/citations?user=qgRUOdIAAAAJ",
+            },
+            {
+                type: "email",
+                link: "mailto:qiuyihang@opendrivelab.com",
+            },
+            {
+                type: "github",
+                link: "https://github.com/GihhArwtw",
+            },
+        ],
+    },
+    {
+        name: "Yixuan Pan",
+        image: "/assets/person/yixuan_pan.jpg",
+        note: "The University of Hong Kong (HKU)",
+        image_s: "/assets/person/yixuan_pan_s.jpg",
+        page: "https://lzpyx.github.io/",
+        icon: [
+            {
+                type: "webpage",
+                link: "https://lzpyx.github.io/",
+            },
+            {
+                type: "email",
+                link: "mailto:yixuanpan2024@gmail.com",
+            },
+            {
+                type: "github",
+                link: "https://github.com/lzpyx",
+            },
+        ],
+    },
+    {
+        name: "Zhuoheng Li",
+        image: "/assets/person/zhuoheng_li.jpg",
+        note: "The University of Hong Kong (HKU)",
+        image_s: "/assets/person/zhuoheng_li_s.jpg",
+        page: "https://github.com/StarCycle/StarCycle",
+        icon: [
+            {
+                type: "email",
+                link: "mailto:lizhuoheng@opendrivelab.com",
+            },
+            {
+                type: "github",
+                link: "https://github.com/StarCycle/StarCycle",
+            },
+            {
+                type: "linkedin",
+                link: "https://www.linkedin.com/in/lizhuoheng/",
+            },
+            {
+                type: "hugging_face",
+                link: "https://huggingface.co/StarCycle",
+            },
+        ],
+    },
+    {
+        name: "Haochen Liu",
+        image: "/assets/person/haochen_liu.jpg",
+        note: "Nanyang Technological University (NTU)",
+        image_s: "/assets/person/haochen_liu_s.jpg",
+        page: "https://georgeliu233.github.io/",
+        icon: [
+            {
+                type: "webpage",
+                link: "https://georgeliu233.github.io/",
+            },
+            {
+                type: "scholar",
+                link: "https://scholar.google.com/citations?user=iizqKUsAAAAJ&hl",
+            },
+            {
+                type: "github",
+                link: "https://github.com/georgeliu233",
+            },
+        ],
+    },
+    {
+        name: "Shadi Hamdan",
+        image: "/assets/person/shadi_hamdan.jpg",
+        note: "Koç University",
+        image_s: "/assets/person/shadi_hamdan_s.jpg",
+        page: "https://shadihamdan.com/",
+        icon: [
+            {
+                type: "webpage",
+                link: "https://shadihamdan.com/",
+            },
+            {
+                type: "scholar",
+                link: "https://scholar.google.com/citations?user=I6bAD78AAAAJ",
+            },
+            {
+                type: "email",
+                link: "mailto:shamdan17@ku.edu.tr",
+            },
+            {
+                type: "github",
+                link: "https://github.com/Shamdan17",
             },
         ],
     },

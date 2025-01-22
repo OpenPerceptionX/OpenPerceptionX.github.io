@@ -48,28 +48,6 @@ const split1data = [
         tag: "test sxtdc",
     },
     {
-        name: "Zetong Yang",
-        image: "/assets/person/zetong_yang.jpg",
-        note: "Autonomous Driving",
-        image_s: "/assets/person/zetong_yang_s.jpg",
-        page: "https://scholar.google.com/citations?user=oPiZSVYAAAAJ",
-        icon: [
-            {
-                type: "scholar",
-                link: "https://scholar.google.com/citations?user=oPiZSVYAAAAJ",
-            },
-            {
-                type: "email",
-                link: "mailto:yangzetong@opendrivelab.com",
-            },
-            {
-                type: "github",
-                link: "https://github.com/tomztyang",
-            },
-        ],
-        tag: "test sxtdc",
-    },
-    {
         name: "Huijie Wang",
         image: "/assets/person/huijie_wang.jpg",
         note: "Ecosystem",

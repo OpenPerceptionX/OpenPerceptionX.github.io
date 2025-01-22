@@ -108,23 +108,6 @@ const split2data = [
             },
         ],
     },
-    {
-        name: "Yang Li",
-        image: "/assets/person/yang_li.jpg",
-        note: "同济大学（24级联培）",
-        image_s: "/assets/person/yang_li_s.jpg",
-        page: "https://github.com/RicardLee",
-        icon: [
-            {
-                type: "email",
-                link: "mailto:liyang@opendrivelab.com",
-            },
-            {
-                type: "github",
-                link: "https://github.com/RicardLee",
-            },
-        ],
-    },
 ];
 
 
