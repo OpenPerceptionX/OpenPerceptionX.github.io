@@ -3,6 +3,8 @@ const split1data = [
         name: "Hongyang Li",
         image: "/assets/person/hongyang_li.jpg",
         note: "Autonomous Driving & Embodied AI",
+        image_s: "/assets/person/hongyang_li_s.jpg",
+        page: "https://lihongyang.info/",
         icon: [
             {
                 type: "webpage",
@@ -23,6 +25,8 @@ const split1data = [
         name: "Li Chen",
         image: "/assets/person/li_chen.jpg",
         note: "End-to-end Autonomous Driving & Embodied AI",
+        image_s: "/assets/person/li_chen_s.jpg",
+        page: "https://scholar.google.com/citations?user=ulZxvY0AAAAJ",
         icon: [
             {
                 type: "scholar",
@@ -47,6 +51,8 @@ const split1data = [
         name: "Zetong Yang",
         image: "/assets/person/zetong_yang.jpg",
         note: "Autonomous Driving",
+        image_s: "/assets/person/zetong_yang_s.jpg",
+        page: "https://scholar.google.com/citations?user=oPiZSVYAAAAJ",
         icon: [
             {
                 type: "scholar",
@@ -67,6 +73,8 @@ const split1data = [
         name: "Huijie Wang",
         image: "/assets/person/huijie_wang.jpg",
         note: "Ecosystem",
+        image_s: "/assets/person/huijie_wang_s.jpg",
+        page: "https://faikit.github.io/",
         icon: [
             {
                 type: "webpage",
@@ -95,6 +103,8 @@ const split1data = [
         name: "Chonghao Sima",
         image: "/assets/person/chonghao_sima.jpg",
         note: "Autonomous Driving",
+        image_s: "/assets/person/chonghao_sima_s.jpg",
+        page: "https://scholar.google.com/citations?user=dgYJ6esAAAAJ",
         icon: [
             {
                 type: "scholar",
@@ -124,7 +134,10 @@ function split1render() {
     split1body.innerHTML = "";
     split1data.forEach((item, _) => {
         var innerHTML = `
-            <img loading="lazy" src="${item.image}" class="size-36 tablet:size-48 rounded-3xl"/>
+            <a class="group" href="${item.page}" target="_blank">
+                <img loading="lazy" src="${item.image_s}" class="size-36 tablet:size-48 rounded-3xl hidden group-hover:block group-hover:absolute"/>
+                <img loading="lazy" src="${item.image}" class="size-36 tablet:size-48 rounded-3xl"/>
+            </a>
             <h4>${item.name}</h4>
             <span>${item.note}</span>
             <div class="flex flex-row gap-3 flex-wrap">
