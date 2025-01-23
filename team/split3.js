@@ -213,6 +213,23 @@ const split3data = [
         ],
     },
     {
+        name: "Shijia Peng",
+        image: "/assets/person/shijia_peng.jpg",
+        note: "Shenzhen University",
+        image_s: "/assets/person/shijia_peng_s.jpg",
+        page: "https://shijiapeng03.github.io/",
+        icon: [
+            {
+                type: "email",
+                link: "mailto:jiagedainifei@gmail.com",
+            },
+            {
+                type: "github",
+                link: "https://shijiapeng03.github.io/",
+            },
+        ],
+    },
+    {
         name: "Yihang Qiu",
         image: "/assets/person/yihang_qiu.jpg",
         note: "The University of Hong Kong (HKU)",
