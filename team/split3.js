@@ -220,12 +220,24 @@ const split3data = [
         page: "https://shijiapeng03.github.io/",
         icon: [
             {
+                type: "webpage",
+                link: "https://shijiapeng03.github.io/",
+            },
+            {
                 type: "email",
                 link: "mailto:jiagedainifei@gmail.com",
             },
             {
+                type: "scholar",
+                link: "https://scholar.google.com/citations?hl=en&user=T3lq19kAAAAJ",
+            },
+            {
                 type: "github",
-                link: "https://shijiapeng03.github.io/",
+                link: "https://github.com/YudeZou",
+            },
+            {
+                type: "xiaohongshu",
+                link: "https://www.xiaohongshu.com/user/profile/5d2ff1090000000012035ac6",
             },
         ],
     },
