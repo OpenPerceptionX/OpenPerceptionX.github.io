@@ -1,8 +1,8 @@
 const events2025data = [
     {
         heading: "Challenge 2025",
-        subheading: "Coming Soon",
-        link: "",
+        subheading: "Autonomous Grand Challenge",
+        link: "/challenge2025/",
         linkoption: '',
         background: "/assets/event/lHlT9joqwXjGv4c4pIGgK1qlJOvwEEtD.jpg",
         backgroundoption: "bg-center",
@@ -10,8 +10,8 @@ const events2025data = [
     },
     {
         heading: "Events at CVPR 2025",
-        subheading: "Coming Soon",
-        link: "",
+        subheading: "&nbsp;",
+        link: "/cvpr2025/workshop/",
         linkoption: '',
         background: "/assets/event/nashville_night.jpg",
         backgroundoption: "bg-left",
