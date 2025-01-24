@@ -233,7 +233,7 @@ const split3data = [
             },
             {
                 type: "github",
-                link: "https://github.com/YudeZou",
+                link: "https://github.com/ShijiaPeng03",
             },
             {
                 type: "xiaohongshu",
