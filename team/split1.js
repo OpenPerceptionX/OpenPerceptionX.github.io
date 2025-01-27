@@ -132,15 +132,15 @@ function split1render() {
             <div class="border-b-2 border-o-white"></div>
         `;
         // tag
-        if (item.tag != "") {
-            innerHTML += `
-            <div class="absolute size-36 tablet:size-48 flex flex-col justify-end">
-                <div class="flex flex-row justify-end">
-                    <span class=" m-2 p-1 pl-2 pr-2 rounded-xl bg-o-blue text-white select-none text-xs">${item.tag}</span>
-                 </div>
-            </div>
-        `;
-        }
+        // if (item.tag != "") {
+        //     innerHTML += `
+        //     <div class="absolute size-36 tablet:size-48 flex flex-col justify-end">
+        //         <div class="flex flex-row justify-end">
+        //             <span class=" m-2 p-1 pl-2 pr-2 rounded-xl bg-o-blue text-white select-none text-xs">${item.tag}</span>
+        //          </div>
+        //     </div>
+        // `;
+        // }
         const person = document.createElement("div");
         person.className = "flex flex-col gap-3 pb-3 w-36 tablet:w-48";
         person.innerHTML = innerHTML;
