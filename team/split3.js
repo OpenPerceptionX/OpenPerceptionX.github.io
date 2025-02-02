@@ -131,8 +131,7 @@ const split3data = [
                 link: "https://github.com/hctian713",
             },
         ],
-        tag: "Outstanding Wingman<br><br>杰出协作奖",
-        tagshort: "Outstanding Wingman",
+        tag: "",
     },
     {
         name: "Modi Shi",
@@ -345,7 +344,8 @@ const split3data = [
                 link: "https://github.com/georgeliu233",
             },
         ],
-        tag: "",
+        tag: "Outstanding Wingman<br><br>杰出协作奖",
+        tagshort: "Outstanding Wingman",
     },
     {
         name: "Shadi Hamdan",
