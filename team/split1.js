@@ -24,7 +24,7 @@ const split1data = [
     {
         name: "Li Chen",
         image: "/assets/person/li_chen.jpg",
-        note: "End-to-end Autonomous Driving & Embodied AI",
+        note: "End-to-End Autonomous Driving & Embodied AI",
         image_s: "/assets/person/li_chen_s.jpg",
         page: "https://scholar.google.com/citations?user=ulZxvY0AAAAJ",
         icon: [
@@ -45,7 +45,8 @@ const split1data = [
                 link: "https://twitter.com/ilnehc",
             },
         ],
-        tag: "Excellent Scholarship",
+        tag: "HKU-OpenDriveLab Excellent Scholarship endowed by HP Inc.<br><br>惠普卓越学者",
+        tagshort: "Excellent Scholarship"
     },
     {
         name: "Huijie Wang",
@@ -75,7 +76,8 @@ const split1data = [
                 link: "https://twitter.com/wongfaikit",
             },
         ],
-        tag: "",
+        tag: "Best Long Service and Branding<br><br>最佳长期服务与品牌建设奖",
+        tagshort: "Best Service & Branding"
     },
     {
         name: "Chonghao Sima",
@@ -112,7 +114,7 @@ function split1render() {
     split1body.innerHTML = "";
     split1data.forEach((item, _) => {
         var innerHTML = `
-            <a class="group" href="${item.page}" target="_blank">
+            <a href="${item.page}" target="_blank">
                 <img loading="lazy" src="${item.image_s}" class="size-36 tablet:size-48 rounded-3xl hidden group-hover:block group-hover:absolute"/>
                 <img loading="lazy" src="${item.image}" class="size-36 tablet:size-48 rounded-3xl"/>
             </a>
@@ -132,17 +134,18 @@ function split1render() {
             <div class="border-b-2 border-o-white"></div>
         `;
         // tag
-        // if (item.tag != "") {
-        //     innerHTML += `
-        //     <div class="absolute size-36 tablet:size-48 flex flex-col justify-end">
-        //         <div class="flex flex-row justify-end">
-        //             <span class=" m-2 p-1 pl-2 pr-2 rounded-xl bg-o-blue text-white select-none text-xs">${item.tag}</span>
-        //          </div>
-        //     </div>
-        // `;
-        // }
+        if (item.tag != "") {
+            innerHTML += `
+            <a class="absolute size-36 tablet:size-48 flex flex-col justify-end" href="${item.page}" target="_blank">
+                <div class="flex flex-row justify-end">
+                    <span class="m-2 p-1 pl-2 pr-2 rounded-xl bg-o-blue text-white select-none text-xs group-hover:hidden">${item.tagshort}</span>
+                    <span class="m-2 p-2 rounded-xl bg-o-blue text-white select-none text-xs hidden group-hover:block">${item.tag}</span>
+                 </div>
+            </a>
+            `;
+        }
         const person = document.createElement("div");
-        person.className = "flex flex-col gap-3 pb-3 w-36 tablet:w-48";
+        person.className = "flex flex-col gap-3 pb-3 w-36 tablet:w-48 group";
         person.innerHTML = innerHTML;
         split1body.appendChild(person);
     });

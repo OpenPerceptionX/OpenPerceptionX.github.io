@@ -23,6 +23,8 @@ const split2data = [
                 link: "https://twitter.com/sephy_li",
             },
         ],
+        tag: "Best Mentor and Connection<br><br>最佳指导与外部连接奖",
+        tagshort: "Best Mentor & Connection",
     },
     {
         name: "Qingwen Bu",
@@ -44,6 +46,8 @@ const split2data = [
                 link: "https://github.com/retsuh-bqw",
             },
         ],
+        tag: "Best Research<br><br>最佳科研奖",
+        tagshort: "Best Research",
     },
     {
         name: "Hanxue Zhang",
@@ -65,6 +69,7 @@ const split2data = [
                 link: "https://github.com/jjxjiaxue",
             },
         ],
+        tag: "",
     },
     {
         name: "Chengen Xie",
@@ -86,6 +91,8 @@ const split2data = [
                 link: "https://github.com/ChengenXie",
             },
         ],
+        tag: "Outstanding Servant<br><br>杰出服务奖",
+        tagshort: "Outstanding Servant",
     },
     {
         name: "Haoran Jiang",
@@ -107,6 +114,7 @@ const split2data = [
                 link: "https://github.com/HRRiver7",
             },
         ],
+        tag: "",
     },
 ];
 
@@ -117,7 +125,7 @@ function split2render() {
     split2body.innerHTML = "";
     split2data.forEach((item, _) => {
         var innerHTML = `
-            <a class="group" href="${item.page}" target="_blank">
+            <a href="${item.page}" target="_blank">
                 <img loading="lazy" src="${item.image_s}" class="size-36 tablet:size-48 rounded-3xl hidden group-hover:block group-hover:absolute"/>
                 <img loading="lazy" src="${item.image}" class="size-36 tablet:size-48 rounded-3xl"/>
             </a>
@@ -136,8 +144,19 @@ function split2render() {
             </div>
             <div class="border-b-2 border-o-white"></div>
         `;
+        // tag
+        if (item.tag != "") {
+            innerHTML += `
+            <a class="absolute size-36 tablet:size-48 flex flex-col justify-end" href="${item.page}" target="_blank">
+                <div class="flex flex-row justify-end">
+                    <span class="m-2 p-1 pl-2 pr-2 rounded-xl bg-o-blue text-white select-none text-xs group-hover:hidden">${item.tagshort}</span>
+                    <span class="m-2 p-2 rounded-xl bg-o-blue text-white select-none text-xs hidden group-hover:block">${item.tag}</span>
+                    </div>
+            </a>
+            `;
+        }
         const person = document.createElement("div");
-        person.className = "flex flex-col gap-3 pb-3 w-36 tablet:w-48";
+        person.className = "flex flex-col gap-3 pb-3 w-36 tablet:w-48 group";
         person.innerHTML = innerHTML;
         split2body.appendChild(person);
     });
