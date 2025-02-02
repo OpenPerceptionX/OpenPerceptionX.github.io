@@ -19,6 +19,8 @@ const split3data = [
                 link: "https://github.com/Little-Podi",
             },
         ],
+        tag: "Outstanding Commentator<br><br>杰出评论奖",
+        tagshort: "Outstanding Commentator",
     },
     {
         name: "Jiazhi Yang",
@@ -44,6 +46,8 @@ const split3data = [
                 link: "https://x.com/jiazhi_yang2024",
             },
         ],
+        tag: "Outstanding Research<br><br>杰出科研奖",
+        tagshort: "Outstanding Research",
     },
     {
         name: "Jiacheng Qiu",
@@ -61,6 +65,7 @@ const split3data = [
                 link: "https://github.com/BBBBBBob",
             },
         ],
+        tag: "",
     },
     {
         name: "Yunsong Zhou",
@@ -86,6 +91,7 @@ const split3data = [
                 link: "https://github.com/ZhouYunsong",
             },
         ],
+        tag: "",
     },
     {
         name: "Longyan Wu",
@@ -103,6 +109,7 @@ const split3data = [
                 link: "https://github.com/wly-Lilie",
             },
         ],
+        tag: "",
     },
     {
         name: "Haochen Tian",
@@ -124,6 +131,8 @@ const split3data = [
                 link: "https://github.com/hctian713",
             },
         ],
+        tag: "Outstanding Wingman<br><br>杰出协作奖",
+        tagshort: "Outstanding Wingman",
     },
     {
         name: "Modi Shi",
@@ -141,6 +150,7 @@ const split3data = [
                 link: "https://github.com/ModiShi",
             },
         ],
+        tag: "",
     },
     {
         name: "Jin Chen",
@@ -171,6 +181,7 @@ const split3data = [
                 link: "https://www.xiaohongshu.com/user/profile/609cbe510000000001002922",
             },
         ],
+        tag: "",
     },
     {
         name: "Jisong Cai",
@@ -193,6 +204,7 @@ const split3data = [
                 link: "https://github.com/serene-sivy",
             },
         ],
+        tag: "",
     },
     {
         name: "Naisheng Ye",
@@ -211,6 +223,7 @@ const split3data = [
                 link: "https://github.com/Y-vic",
             },
         ],
+        tag: "",
     },
     {
         name: "Shijia Peng",
@@ -240,6 +253,7 @@ const split3data = [
                 link: "https://www.xiaohongshu.com/user/profile/5d2ff1090000000012035ac6",
             },
         ],
+        tag: "",
     },
     {
         name: "Yihang Qiu",
@@ -261,6 +275,7 @@ const split3data = [
                 link: "https://github.com/GihhArwtw",
             },
         ],
+        tag: "",
     },
     {
         name: "Yixuan Pan",
@@ -282,6 +297,7 @@ const split3data = [
                 link: "https://github.com/lzpyx",
             },
         ],
+        tag: "",
     },
     {
         name: "Zhuoheng Li",
@@ -307,6 +323,7 @@ const split3data = [
                 link: "https://huggingface.co/StarCycle",
             },
         ],
+        tag: "",
     },
     {
         name: "Haochen Liu",
@@ -328,6 +345,7 @@ const split3data = [
                 link: "https://github.com/georgeliu233",
             },
         ],
+        tag: "",
     },
     {
         name: "Shadi Hamdan",
@@ -353,6 +371,7 @@ const split3data = [
                 link: "https://github.com/Shamdan17",
             },
         ],
+        tag: "",
     },
 ];
 
@@ -363,7 +382,7 @@ function split3render() {
     split3body.innerHTML = "";
     split3data.forEach((item, _) => {
         var innerHTML = `
-            <a class="group" href="${item.page}" target="_blank">
+            <a href="${item.page}" target="_blank">
                 <img loading="lazy" src="${item.image_s}" class="size-36 tablet:size-48 rounded-3xl hidden group-hover:block group-hover:absolute"/>
                 <img loading="lazy" src="${item.image}" class="size-36 tablet:size-48 rounded-3xl"/>
             </a>
@@ -382,8 +401,19 @@ function split3render() {
             </div>
             <div class="border-b-2 border-o-white"></div>
         `;
+        // tag
+        if (item.tag != "") {
+            innerHTML += `
+            <a class="absolute size-36 tablet:size-48 flex flex-col justify-end" href="${item.page}" target="_blank">
+                <div class="flex flex-row justify-end">
+                    <span class="m-2 p-1 pl-2 pr-2 rounded-xl bg-o-blue text-white select-none text-xs group-hover:hidden">${item.tagshort}</span>
+                    <span class="m-2 p-2 rounded-xl bg-o-blue text-white select-none text-xs hidden group-hover:block">${item.tag}</span>
+                    </div>
+            </a>
+            `;
+        }
         const person = document.createElement("div");
-        person.className = "flex flex-col gap-3 pb-3 w-36 tablet:w-48";
+        person.className = "flex flex-col gap-3 pb-3 w-36 tablet:w-48 group";
         person.innerHTML = innerHTML;
         split3body.appendChild(person);
     });
