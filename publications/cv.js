@@ -1,5 +1,23 @@
 const cv = [
     {
+        title: "Test-time Correction with Human Feedback: An Online 3D Detection System via Visual Prompting",
+        link: "https://arxiv.org/abs/2412.07768",
+        image: "/assets/publication/ttc.jpg",
+        author: "Zetong Yang, Hanxue Zhang, Yanan Sun, Li Chen, Fei Xia, Fatma Güney, Hongyang Li",
+        note: "arXiv 2024",
+        noteoption: '',
+        star: "",
+        starlink: "",
+        icon: [
+            {
+                type: "github",
+                link: "",
+            },
+        ],
+        description: "",
+        tag: "",
+    },
+    {
         title: "FastMAC: Stochastic Spectral Sampling of Correspondence Graph",
         link: "https://arxiv.org/abs/2403.08770",
         image: "/assets/publication/FastMAC.jpg",
