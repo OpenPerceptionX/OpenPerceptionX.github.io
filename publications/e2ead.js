@@ -92,11 +92,11 @@ const e2ead = [
         tag: "",
     },
     {
-        title: "自动驾驶开源数据体系：现状与未来",
+        title: "自動駕駛開源數據體系：現狀與未來",
         link: "http://engine.scichina.com/doi/10.1360/SSI-2023-0313",
         image: "/assets/publication/datasurvey.jpg",
         author: "Hongyang Li, Yang Li, Huijie Wang, Jia Zeng, Huilin Xu, Pinlong Cai, Li Chen, Junchi Yan, Feng Xu, Lu Xiong, Jingdong Wang, Futang Zhu, Kai Yan, Chunjing Xu, Tiancai Wang, Fei Xia, Beipeng Mu, Zhihui Peng, Dahua Lin, Yu Qiao",
-        note: "中国科学：信息科学",
+        note: "中國科學：信息科學",
         noteoption: '',
         star: "https://img.shields.io/github/stars/OpenDriveLab/DriveAGI?style=social",
         starlink: "https://github.com/OpenDriveLab/DriveAGI",

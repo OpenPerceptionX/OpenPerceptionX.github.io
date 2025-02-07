@@ -18,7 +18,7 @@ const events2023data = [
         date: "June 18, 2023",
     },
     {
-        heading: "行业大模型论坛<br>暨<br>国际挑战赛分享会",
+        heading: "行業大模型論壇<br>暨<br>國際挑戰賽分享會",
         subheading: "",
         link: "/event2023/",
         linkoption: '',
@@ -37,7 +37,7 @@ const events2023data = [
     },
     {
         heading: "GAIDC 2023",
-        subheading: "数联新出行 开源新发展",
+        subheading: "數聯新出行 開源新發展",
         link: "https://mp.weixin.qq.com/s/hr4WxKO-9ZOJ-zea98-E3A",
         linkoption: 'target="_blank"',
         background: "/assets/event/gaidc2023.jpg",

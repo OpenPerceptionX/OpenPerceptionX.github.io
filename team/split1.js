@@ -45,7 +45,7 @@ const split1data = [
                 link: "https://twitter.com/ilnehc",
             },
         ],
-        tag: "HKU-OpenDriveLab Excellent Scholarship endowed by HP Inc.<br><br>惠普卓越学者",
+        tag: "HKU-OpenDriveLab Excellent Scholarship endowed by HP Inc.<br><br>惠普卓越學者",
         tagshort: "Excellent Scholarship"
     },
     {
@@ -76,7 +76,7 @@ const split1data = [
                 link: "https://twitter.com/wongfaikit",
             },
         ],
-        tag: "Best Long Service and Branding<br><br>最佳长期服务与品牌建设奖",
+        tag: "Best Long Service and Branding<br><br>最佳長期服務與品牌建設獎",
         tagshort: "Best Service & Branding"
     },
     {
