@@ -19,7 +19,7 @@ const split3data = [
                 link: "https://github.com/Little-Podi",
             },
         ],
-        tag: "Outstanding Commentator<br><br>杰出评论奖",
+        tag: "Outstanding Commentator<br><br>傑出評論獎",
         tagshort: "Outstanding Commentator",
     },
     {
@@ -46,7 +46,7 @@ const split3data = [
                 link: "https://x.com/jiazhi_yang2024",
             },
         ],
-        tag: "Outstanding Research<br><br>杰出科研奖",
+        tag: "Outstanding Research<br><br>傑出科研獎",
         tagshort: "Outstanding Research",
     },
     {
@@ -344,7 +344,7 @@ const split3data = [
                 link: "https://github.com/georgeliu233",
             },
         ],
-        tag: "Outstanding Wingman<br><br>杰出协作奖",
+        tag: "Outstanding Wingman<br><br>傑出協作獎",
         tagshort: "Outstanding Wingman",
     },
     {

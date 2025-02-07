@@ -10,7 +10,7 @@ const events2024data = [
     },
     {
         heading: "Challenge at PRCV 2024",
-        subheading: "行车场景下认知与决策",
+        subheading: "行車場景下認知與決策",
         link: "http://www.prcv.cn/?competition_130/",
         linkoption: 'target="_blank"',
         background: "/assets/event/Urumqi.jpg",
@@ -36,8 +36,8 @@ const events2024data = [
         date: "June 17, 2024",
     },
     {
-        heading: "端到端具身智能体",
-        subheading: "技术研讨会 & 讲习班",
+        heading: "端到端具身智能體",
+        subheading: "技術研討會 & 講習班",
         link: "https://starleague.ai/event2024/",
         linkoption: 'target="_blank"',
         background: "/assets/event/shanghai_xuhuibinjiang.jpg",
@@ -46,7 +46,7 @@ const events2024data = [
     },
     {
         heading: "Workshop at VALSE 2024",
-        subheading: "端到端自动驾驶论坛",
+        subheading: "端到端自動駕駛論壇",
         link: "/valse2024/workshop/",
         linkoption: '',
         background: "/assets/event/chongqing.jpg",

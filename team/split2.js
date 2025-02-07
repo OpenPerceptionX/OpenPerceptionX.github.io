@@ -2,7 +2,7 @@ const split2data = [
     {
         name: "Tianyu Li",
         image: "/assets/person/tianyu_li.jpg",
-        note: "复旦大学（23级联培）",
+        note: "復旦大學（23級聯培）",
         image_s: "/assets/person/tianyu_li_s.jpg",
         page: "https://scholar.google.com/citations?user=X6vTmEMAAAAJ",
         icon: [
@@ -23,13 +23,13 @@ const split2data = [
                 link: "https://twitter.com/sephy_li",
             },
         ],
-        tag: "Best Mentor and Connection<br><br>最佳指导与外部连接奖",
+        tag: "Best Mentor and Connection<br><br>最佳指導與外部連接獎",
         tagshort: "Best Mentor & Connection",
     },
     {
         name: "Qingwen Bu",
         image: "/assets/person/qingwen_bu.jpg",
-        note: "上海交通大学（23级联培）",
+        note: "上海交通大學（23級聯培）",
         image_s: "/assets/person/qingwen_bu_s.jpg",
         page: "https://scholar.google.com/citations?user=-JCRysgAAAAJ",
         icon: [
@@ -46,13 +46,13 @@ const split2data = [
                 link: "https://github.com/retsuh-bqw",
             },
         ],
-        tag: "Best Research<br><br>最佳科研奖",
+        tag: "Best Research<br><br>最佳科研獎",
         tagshort: "Best Research",
     },
     {
         name: "Hanxue Zhang",
         image: "/assets/person/hanxue_zhang.jpg",
-        note: "上海交通大学（24级联培）",
+        note: "上海交通大學（24級聯培）",
         image_s: "/assets/person/hanxue_zhang_s.jpg",
         page: "https://scholar.google.com/citations?user=vy5r8rMAAAAJ",
         icon: [
@@ -74,7 +74,7 @@ const split2data = [
     {
         name: "Chengen Xie",
         image: "/assets/person/chengen_xie.jpg",
-        note: "上海交通大学（24级联培）",
+        note: "上海交通大學（24級聯培）",
         image_s: "/assets/person/chengen_xie_s.jpg",
         page: "https://scholar.google.com/citations?user=-Sk1x_gAAAAJ",
         icon: [
@@ -91,13 +91,13 @@ const split2data = [
                 link: "https://github.com/ChengenXie",
             },
         ],
-        tag: "Outstanding Servant<br><br>杰出服务奖",
+        tag: "Outstanding Servant<br><br>傑出服務獎",
         tagshort: "Outstanding Servant",
     },
     {
         name: "Haoran Jiang",
         image: "/assets/person/haoran_jiang.jpg",
-        note: "复旦大学（24级联培）",
+        note: "復旦大學（24級聯培）",
         image_s: "/assets/person/haoran_jiang_s.jpg",
         page: "https://scholar.google.com/citations?user=KYzm-k0AAAAJ",
         icon: [
