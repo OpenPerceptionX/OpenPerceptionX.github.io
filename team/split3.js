@@ -1,5 +1,27 @@
 const split3data = [
     {
+        name: "Yihang Qiu",
+        image: "/assets/person/yihang_qiu.jpg",
+        note: "The University of Hong Kong (HKU)",
+        image_s: "/assets/person/yihang_qiu_s.jpg",
+        page: "https://scholar.google.com/citations?user=qgRUOdIAAAAJ",
+        icon: [
+            {
+                type: "scholar",
+                link: "https://scholar.google.com/citations?user=qgRUOdIAAAAJ",
+            },
+            {
+                type: "email",
+                link: "mailto:qiuyihang@opendrivelab.com",
+            },
+            {
+                type: "github",
+                link: "https://github.com/GihhArwtw",
+            },
+        ],
+        tag: "",
+    },
+    {
         name: "Shenyuan Gao",
         image: "/assets/person/shenyuan_gao.jpg",
         note: "The Hong Kong University of Science and Technology (HKUST)",
@@ -250,28 +272,6 @@ const split3data = [
             {
                 type: "xiaohongshu",
                 link: "https://www.xiaohongshu.com/user/profile/5d2ff1090000000012035ac6",
-            },
-        ],
-        tag: "",
-    },
-    {
-        name: "Yihang Qiu",
-        image: "/assets/person/yihang_qiu.jpg",
-        note: "The University of Hong Kong (HKU)",
-        image_s: "/assets/person/yihang_qiu_s.jpg",
-        page: "https://scholar.google.com/citations?user=qgRUOdIAAAAJ",
-        icon: [
-            {
-                type: "scholar",
-                link: "https://scholar.google.com/citations?user=qgRUOdIAAAAJ",
-            },
-            {
-                type: "email",
-                link: "mailto:qiuyihang@opendrivelab.com",
-            },
-            {
-                type: "github",
-                link: "https://github.com/GihhArwtw",
             },
         ],
         tag: "",
