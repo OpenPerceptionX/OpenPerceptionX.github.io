@@ -26,8 +26,12 @@ const split1data = [
         image: "/assets/person/li_chen.jpg",
         note: "End-to-End Autonomous Driving & Embodied AI",
         image_s: "/assets/person/li_chen_s.jpg",
-        page: "https://scholar.google.com/citations?user=ulZxvY0AAAAJ",
+        page: "https://ilnehc.github.io/",
         icon: [
+            {
+                type: "webpage",
+                link: "https://ilnehc.github.io/",
+            },
             {
                 type: "scholar",
                 link: "https://scholar.google.com/citations?user=ulZxvY0AAAAJ",
