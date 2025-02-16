@@ -11,7 +11,7 @@ const events2025data = [
     {
         heading: "Events at CVPR 2025",
         subheading: "&nbsp;",
-        link: "/cvpr2025/workshop/",
+        link: "/cvpr2025/",
         linkoption: '',
         background: "/assets/event/nashville_river.jpg",
         backgroundoption: "bg-left",
