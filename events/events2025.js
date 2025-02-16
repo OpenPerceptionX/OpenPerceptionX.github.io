@@ -13,7 +13,7 @@ const events2025data = [
         subheading: "&nbsp;",
         link: "/cvpr2025/workshop/",
         linkoption: '',
-        background: "/assets/event/nashville_night.jpg",
+        background: "/assets/event/nashville_river.jpg",
         backgroundoption: "bg-left",
         date: "June 11 -15, 2025",
     },
