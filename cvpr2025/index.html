@@ -33,6 +33,18 @@
 
 
 
+<style>
+    .type {
+        width: fit-content;
+        background-image: linear-gradient(to right, #0c318f, #53c2f0, #00a0e8);
+        -webkit-background-clip: text;
+        color: transparent;
+        user-select: none;
+    }
+</style>
+
+
+
 <!-- WeChat Public Group -->
 <div id="popup_wechat_group" class="relative z-50 hidden">
     <div class="fixed inset-0 bg-gray-300/80"></div>
@@ -85,7 +97,7 @@
 
             <!-- Landing -->
             <div class="w-screen tablet:w-auto h-svh snap-start pt-20 p-6 tablet:p-10">
-                <div class="w-full h-full rounded-3xl bg-[url('/assets/background/nashville_river.jpg')] bg-center laptop:bg-right bg-cover flex flex-col justify-end p-6 laptop:p-20 gap-6 laptop:gap-10 bg-black bg-opacity-30 bg-blend-overlay">
+                <div class="w-full h-full rounded-3xl bg-[url('/assets/background/nashville_river.jpg')] bg-center bg-cover flex flex-col justify-end p-6 laptop:p-20 gap-6 laptop:gap-10 bg-black bg-opacity-30 bg-blend-overlay">
                     <div class="flex flex-row gap-6 laptop:gap-10">
                         <img src="/assets/icon/cvpr/cvpr2025_white.svg" class="h-10 laptop:h-24"/>
                         <img src="/assets/icon/cvpr/ieee_cs_white.png" class="h-10 laptop:h-24"/>
@@ -98,19 +110,6 @@
                     </h5>
                 </div>
             </div>
-
-
-
-            <!-- <div class="w-screen tablet:w-auto snap-start pt-10 p-6 tablet:p-10">
-                <a class="hover:opacity-70 ww-full h-96 rounded-3xl bg-[url('/challenge2025/lHlT9joqwXjGv4c4pIGgK1qlJOvwEEtD.jpg')] bg-center laptop:bg-right bg-cover flex flex-col justify-center p-6 tablet:p-10 laptop:p-20 gap-6 laptop:gap-10" href="/challenge2025/">
-                    <h1 class="text-white">
-                        Autonomous Grand Challenge 2025
-                    </h1>
-                    <h5 class="text-white">
-                        In conjunction with CVPR 2025 Workshop
-                    </h5>
-                </a>
-            </div> -->
 
 
 
@@ -190,8 +189,128 @@
                                 <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
                             </a>
                         </h2>
-                        <div class="mt-10">
-
+                        <div class="mt-20 gap-32 laptop:gap-20 flex flex-col">
+                            <div class="flex flex-col laptop:flex-row gap-6 laptop:gap-20">
+                                <a href="/challenge2025/" class="hover:opacity-70 flex flex-row laptop:flex-col justify-center bg-[url('/assets/event/lHlT9joqwXjGv4c4pIGgK1qlJOvwEEtD.jpg')] h-56 w-full laptop:w-96 bg-center bg-cover rounded-3xl"></a>
+                                <div class="flex flex-col justify-center flex-1 space-y-6">
+                                    <h4 class="type">
+                                        Challenge
+                                    </h4>
+                                    <h3>
+                                        <a class="hover:text-o-blue" href="/challenge2025/">
+                                            Autonomous Grand Challenge 2025
+                                        </a>
+                                    </h3>
+                                    <ul class="ml-6 mt-6 space-y-3 list-outside list-disc">
+                                        <li>
+                                            World Model Challenge by 1X
+                                        </li>
+                                        <li>
+                                            NAVSIM v2 End-to-End Driving Challenge
+                                        </li>
+                                        <li>
+                                            Fabric Manipulation Challenge
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>    
+                            <div class="flex flex-col laptop:flex-row gap-6 laptop:gap-20">
+                                <a href="/cvpr2025/workshop/" class="hover:opacity-70 flex flex-row laptop:flex-col justify-center bg-[url('/assets/event/nashville_night.jpg')] h-56 w-full laptop:w-96 bg-center bg-cover rounded-3xl"></a>
+                                <div class="flex flex-col justify-center flex-1 space-y-6">
+                                    <h4 class="type">
+                                        Workshop
+                                    </h4>
+                                    <h3>
+                                        <a class="hover:text-o-blue" href="/cvpr2025/workshop/">
+                                            Embodied Intelligence for Autonomous Systems on the Horizon
+                                        </a>
+                                    </h3>
+                                    <p>
+                                        Autonomous systems, such as robots and self-driving cars, have rapidly evolved over the past decades. Despite this, several problems remain. Attempts have been made to develop more capable autonomous systems, such as integrating foundation models and utilizing large-scale data. However, the challenging problems have yet to be solved. The motivation behind this workshop is to explore potential solutions, and discuss the challenges and opportunities associated with these approaches. We believe that this workshop serves as a brand-new perspective on the present and future of autonomous systems, and is necessary for both the robotics and computer vision communities.
+                                    </p>
+                                    <div class="gap-6 grid grid-cols-[repeat(auto-fill,_minmax(256px,_1fr))]">
+                                        <div class="flex items-center gap-3 w-64">
+                                            <a class="hover:opacity-70" href="https://people.eecs.berkeley.edu/~malik/" target="_blank">
+                                                <img class="size-16 rounded-full" src="/assets/person/jitendra_malik.jpg"/> 
+                                            </a>
+                                            <div class="flex flex-col">
+                                                <b>Jitendra Malik</b>
+                                                <i class="text-o-gray">UC Berkeley</i>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-3 w-64">
+                                            <a class="hover:opacity-70" href="https://www.cs.cmu.edu/~abhinavg/" target="_blank">
+                                                <img class="size-16 rounded-full" src="/assets/person/abhinav_gupta.jpg"/> 
+                                            </a>
+                                            <div class="flex flex-col">
+                                                <b>Abhinav Gupta</b>
+                                                <i class="text-o-gray">CMU</i>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-3 w-64">
+                                            <a class="hover:opacity-70" href="https://www.cs.princeton.edu/~fheide/" target="_blank">
+                                                <img class="size-16 rounded-full" src="/assets/person/felix_heide.jpg"/> 
+                                            </a>
+                                            <div class="flex flex-col">
+                                                <b>Felix Heide</b>
+                                                <i class="text-o-gray">Princeton University</i>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-3 w-64">
+                                            <a class="hover:opacity-70" href="https://homes.luddy.indiana.edu/djcran/" target="_blank">
+                                                <img class="size-16 rounded-full" src="/assets/person/david_crandall.jpg"/> 
+                                            </a>
+                                            <div class="flex flex-col">
+                                                <b>David Crandall</b>
+                                                <i class="text-o-gray">Indiana University</i>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-3 w-64">
+                                            <a class="hover:opacity-70" href="https://vincent.vanhoucke.com/" target="_blank">
+                                                <img class="size-16 rounded-full" src="/assets/person/vincent_vanhoucke.jpg"/> 
+                                            </a>
+                                            <div class="flex flex-col">
+                                                <b>Vincent Vanhoucke</b>
+                                                <i class="text-o-gray">Waymo</i>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-3 w-64">
+                                            <a class="hover:opacity-70" href="https://antonilo.github.io/" target="_blank">
+                                                <img class="size-16 rounded-full" src="/assets/person/antonio_loquercio.jpg"/> 
+                                            </a>
+                                            <div class="flex flex-col">
+                                                <b>Antonio Loquercio</b>
+                                                <i class="text-o-gray">UPenn</i>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-3 w-64">
+                                            <a class="hover:opacity-70" href="https://mysite.ku.edu.tr/fguney/" target="_blank">
+                                                <img class="size-16 rounded-full" src="/assets/person/fatma_güney.jpg"/> 
+                                            </a>
+                                            <div class="flex flex-col">
+                                                <b>Fatma Güney</b>
+                                                <i class="text-o-gray">Koç University</i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col laptop:flex-row gap-6 laptop:gap-20">
+                                <a href="/cvpr2025/tutorial/" class="hover:opacity-70 flex flex-row laptop:flex-col justify-center bg-[url('/assets/background/nashville_stadium.jpg')] h-56 w-full laptop:w-96 bg-center bg-cover rounded-3xl"></a>
+                                <div class="flex flex-col justify-center flex-1 space-y-6">
+                                    <h4 class="type">
+                                        Tutorial
+                                    </h4>
+                                    <h3>
+                                        <a class="hover:text-o-blue" href="/cvpr2025/tutorial/">
+                                            Robotics 101: An Odyssey from A Vision Perspective
+                                        </a>
+                                    </h3>
+                                    <p>
+                                        In recent years, there has been a growing interest in robotics in the vision community. Getting started in robotics research is challenging since it requires a wide range of knowledge. This comprehensive full-day tutorial covers all aspects of robotics. We will provide the necessary background to understand the different aspects of robotics. We will also explore technical advancements, key challenges, and potential avenues for future research.
+                                    </p>
+                                </div>
+                            </div>                
                         </div>
                     </div>
 
@@ -208,8 +327,160 @@
                                 <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
                             </a>
                         </h2>
-                        <div class="mt-10">
-
+                        <div class="mt-20 gap-32 laptop:gap-20 flex flex-col"> 
+                            <div class="flex flex-col justify-center flex-1 space-y-6">
+                                <h3>
+                                    <a class="hover:text-o-blue" href="https://coop-intelligence.github.io/" target="_blank">
+                                        Multi-Agent Embodied Intelligent Systems Meet Generative-AI Era: Opportunities, Challenges and Futures
+                                    </a>
+                                </h3>
+                                <p>
+                                    This workshop focuses on cooperative intelligence within multi-agent embodied intelligent systems. Artificial intelligence has propelled the development of embodied AI, particularly in autonomous vehicles, robotics, and drones. However, achieving full autonomy in complex and dynamic environments remains a formidable challenge for individual agents. Cooperative intelligence offers a transformative approach that allows agents to collaborate and interact with the infrastructure to handle a wide range of tasks more efficiently.
+                                </p>
+                                <div class="gap-6 grid grid-cols-[repeat(auto-fill,_minmax(256px,_1fr))]">
+                                    <div class="flex items-center gap-3 w-64">
+                                        <a class="hover:opacity-70" href="https://web.stanford.edu/~pavone/" target="_blank">
+                                            <img class="size-16 rounded-full" src="/assets/person/marco_pavone.jpg"/> 
+                                        </a>
+                                        <div class="flex flex-col">
+                                            <b>Marco Pavone</b>
+                                            <i class="text-o-gray">Stanford</i>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-3 w-64">
+                                        <a class="hover:opacity-70" href="https://lihongyang.info/" target="_blank">
+                                            <img class="size-16 rounded-full" src="/assets/person/hongyang_li.jpg"/> 
+                                        </a>
+                                        <div class="flex flex-col">
+                                            <b>Hongyang Li</b>
+                                            <i class="text-o-gray">HKU</i>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-3 w-64">
+                                        <a class="hover:opacity-70" href="https://web.stanford.edu/~bohg/" target="_blank">
+                                            <img class="size-16 rounded-full" src="/assets/person/jeannette_bohg.jpg"/> 
+                                        </a>
+                                        <div class="flex flex-col">
+                                            <b>Jeannette Bohg</b>
+                                            <i class="text-o-gray">Stanford</i>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-3 w-64">
+                                        <a class="hover:opacity-70" href="https://www.cs.cmu.edu/~dpathak/" target="_blank">
+                                            <img class="size-16 rounded-full" src="/assets/person/deepak_pathak.jpg"/> 
+                                        </a>
+                                        <div class="flex flex-col">
+                                            <b>Deepak Pathak</b>
+                                            <i class="text-o-gray">CMU</i>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-3 w-64">
+                                        <a class="hover:opacity-70" href="https://people.eecs.berkeley.edu/~svlevine/" target="_blank">
+                                            <img class="size-16 rounded-full" src="/assets/person/sergey_levine.jpg"/> 
+                                        </a>
+                                        <div class="flex flex-col">
+                                            <b>Sergey Levine</b>
+                                            <i class="text-o-gray">UC Berkeley</i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col justify-center flex-1 space-y-6">
+                                <h3>
+                                    <a class="hover:text-o-blue" href="https://cvpr2025.wad.vision/" target="_blank">
+                                        Workshop on Autonomous Driving
+                                    </a>
+                                </h3>
+                                <p>
+                                    The CVPR 2025 Workshop on Autonomous Driving (WAD) brings together leading researchers and engineers from academia and industry to discuss the latest advances in autonomous driving. Now in its 8th year, the workshop has been continuously evolving with this rapidly changing field and now covers all areas of autonomy, including perception, behavior prediction and motion planning. In this full-day workshop, our keynote speakers will provide insights into the ongoing commercialization of autonomous vehicles, as well as progress in related fundamental research areas. Furthermore, we will host a series of technical benchmark challenges to help quantify recent advances in the field, and invite authors of accepted workshop papers to present their work.
+                                </p>
+                                <div class="gap-6 grid grid-cols-[repeat(auto-fill,_minmax(256px,_1fr))]">
+                                    <div class="flex items-center gap-3 w-64">
+                                        <a class="hover:opacity-70" href="https://www.cs.cmu.edu/~deva/" target="_blank">
+                                            <img class="size-16 rounded-full" src="/assets/person/deva_ramanan.jpg"/> 
+                                        </a>
+                                        <div class="flex flex-col">
+                                            <b>Deva Ramanan</b>
+                                            <i class="text-o-gray">CMU</i>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-3 w-64">
+                                        <a class="hover:opacity-70" href="https://lihongyang.info/" target="_blank">
+                                            <img class="size-16 rounded-full" src="/assets/person/hongyang_li.jpg"/> 
+                                        </a>
+                                        <div class="flex flex-col">
+                                            <b>Hongyang Li</b>
+                                            <i class="text-o-gray">HKU</i>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-3 w-64">
+                                        <a class="hover:opacity-70" href="https://dvl.in.tum.de/team/lealtaixe/" target="_blank">
+                                            <img class="size-16 rounded-full" src="/assets/person/laura_leal_taixe.jpg"/> 
+                                        </a>
+                                        <div class="flex flex-col">
+                                            <b>Laura Leal-Taixé</b>
+                                            <i class="text-o-gray">TUM</i>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-3 w-64">
+                                        <a class="hover:opacity-70" href="https://www.cs.toronto.edu/~urtasun/" target="_blank">
+                                            <img class="size-16 rounded-full" src="/assets/person/raquel_urtasun.jpg"/> 
+                                        </a>
+                                        <div class="flex flex-col">
+                                            <b>Raquel Urtasun</b>
+                                            <i class="text-o-gray">Waabi</i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col justify-center flex-1 space-y-6">
+                                <h3>
+                                    <a class="hover:text-o-blue" href="https://wdfm-ad.github.io/" target="_blank">
+                                        Distillation of Foundation Models for Autonomous Driving
+                                    </a>
+                                </h3>
+                                <p>
+                                    The Workshop on Distillation of Foundation Models for Autonomous Driving (WDFM-AD) focuses on advancing the state of the art in deploying large foundation models—such as vision-language models (VLMs) and generative AI (GenAI) models—into autonomous vehicles through efficient distillation techniques. Building on the success of our previous workshops on large language and vision models for autonomous driving, WDFM-AD aims to bring together researchers and industry professionals to explore innovative approaches that accelerate the safe, efficient, and scalable adoption of cutting-edge AI technologies in autonomous vehicles.
+                                </p>
+                                <div class="gap-6 grid grid-cols-[repeat(auto-fill,_minmax(256px,_1fr))]">
+                                    <div class="flex items-center gap-3 w-64">
+                                        <a class="hover:opacity-70" href="https://www.cs.toronto.edu/~urtasun/" target="_blank">
+                                            <img class="size-16 rounded-full" src="/assets/person/raquel_urtasun.jpg"/> 
+                                        </a>
+                                        <div class="flex flex-col">
+                                            <b>Raquel Urtasun</b>
+                                            <i class="text-o-gray">Waabi</i>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-3 w-64">
+                                        <a class="hover:opacity-70" href="https://www.pmolchanov.com/" target="_blank">
+                                            <img class="size-16 rounded-full" src="/assets/person/pavlo_molchanov.jpg"/> 
+                                        </a>
+                                        <div class="flex flex-col">
+                                            <b>Pavlo Molchanov</b>
+                                            <i class="text-o-gray">NVIDIA</i>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-3 w-64">
+                                        <a class="hover:opacity-70" href="https://www.linkedin.com/in/gianluca-corrado-617a6167/" target="_blank">
+                                            <img class="size-16 rounded-full" src="/assets/person/gianluca_corrado.jpg"/> 
+                                        </a>
+                                        <div class="flex flex-col">
+                                            <b>Gianluca Corrado</b>
+                                            <i class="text-o-gray">Wayve</i>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-3 w-64">
+                                        <a class="hover:opacity-70" href="https://lihongyang.info/" target="_blank">
+                                            <img class="size-16 rounded-full" src="/assets/person/hongyang_li.jpg"/> 
+                                        </a>
+                                        <div class="flex flex-col">
+                                            <b>Hongyang Li</b>
+                                            <i class="text-o-gray">HKU</i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -253,8 +524,8 @@
                                 Ping Luo and Hongyang Li
                             </li> -->
                             <li>
-                                <code>Reviewer:</code>
-                                Li Chen, Chonghao Sima, Yihang Qiu
+                                <code>Reviewer</code>
+                                Li Chen, Chonghao Sima, Yihang Qiu, Shenyuan Gao, Haochen Tian
                             </li>
                         </ul>
                     </div>
@@ -269,7 +540,7 @@
                     <div class="w-full mt-20">
                         <h2>
                             <a href="#dei" class="scroll-mt-48 laptop:scroll-mt-20 group" id="dei">
-                                Diversity, Equity, and Inclusion
+                                Diversity, equity, and inclusion
                                 <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
                             </a>
                         </h2>
@@ -290,7 +561,7 @@
                     <div class="w-full mt-20">
                         <h2>
                             <a href="#edition" class="scroll-mt-48 laptop:scroll-mt-20 group" id="edition">
-                                Past Editions
+                                Past editions
                                 <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
                             </a>
                         </h2>
