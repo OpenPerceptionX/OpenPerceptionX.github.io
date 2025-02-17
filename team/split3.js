@@ -22,6 +22,28 @@ const split3data = [
         tag: "",
     },
     {
+        name: "Yixuan Pan",
+        image: "/assets/person/yixuan_pan.jpg",
+        note: "The University of Hong Kong (HKU)",
+        image_s: "/assets/person/yixuan_pan_s.jpg",
+        page: "https://lzpyx.github.io/",
+        icon: [
+            {
+                type: "webpage",
+                link: "https://lzpyx.github.io/",
+            },
+            {
+                type: "email",
+                link: "mailto:yixuanpan2024@gmail.com",
+            },
+            {
+                type: "github",
+                link: "https://github.com/lzpyx",
+            },
+        ],
+        tag: "",
+    },
+    {
         name: "Shenyuan Gao",
         image: "/assets/person/shenyuan_gao.jpg",
         note: "The Hong Kong University of Science and Technology (HKUST)",
@@ -272,28 +294,6 @@ const split3data = [
             {
                 type: "xiaohongshu",
                 link: "https://www.xiaohongshu.com/user/profile/5d2ff1090000000012035ac6",
-            },
-        ],
-        tag: "",
-    },
-    {
-        name: "Yixuan Pan",
-        image: "/assets/person/yixuan_pan.jpg",
-        note: "The University of Hong Kong (HKU)",
-        image_s: "/assets/person/yixuan_pan_s.jpg",
-        page: "https://lzpyx.github.io/",
-        icon: [
-            {
-                type: "webpage",
-                link: "https://lzpyx.github.io/",
-            },
-            {
-                type: "email",
-                link: "mailto:yixuanpan2024@gmail.com",
-            },
-            {
-                type: "github",
-                link: "https://github.com/lzpyx",
             },
         ],
         tag: "",
