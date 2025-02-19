@@ -86,21 +86,25 @@
             <!-- Landing -->
             <div class="w-screen tablet:w-auto h-svh snap-start pt-20 p-6 tablet:p-10">
                 <div class="w-full h-full rounded-3xl bg-[url('/challenge2025/lHlT9joqwXjGv4c4pIGgK1qlJOvwEEtD.jpg')] bg-center laptop:bg-right bg-cover flex flex-col justify-end p-6 laptop:p-20 gap-6 laptop:gap-10">
-                    <!-- <div class="flex flex-row gap-10">
-                        <img src="/assets/icon/cvpr/cvpr2025_white.svg" class="h-10 laptop:h-24"/>
+                    <div class="flex flex-row gap-10">
                         <img src="/assets/icon/cvpr/ieee_cs_white.png" class="h-10 laptop:h-24"/>
-                    </div> -->
+                    </div>
                     <h1 class="text-white">
                         Autonomous Grand Challenge 2025
                     </h1>
                     <h5 class="text-white">
-                        In conjunction with <a href="/cvpr2025/workshop/" class="underline hover:opacity-70">CVPR Workshop</a> (confirmed) / ICCV Workshop (tentative)
-                        <!-- <br>
-                        <b><a href="/cvpr2025/workshop/" class="text-white">Embodied Intelligence for Autonomous Systems on the Horizon</a></b>
-                        <br>
-                        Nashville, USA -->
-                        <!-- <br><br>
-                        <a href="/cvpr2025/" style="text-decoration: underline;">Join other events at CVPR 2025</a> -->
+                        In conjunction with
+                        <ul class="ml-6 pt-4 space-y-3 list-outside list-disc">
+                            <li class="text-white">
+                                <a href="/cvpr2025/" class="underline hover:opacity-70">CVPR 2025</a>
+                                <a href="/cvpr2025/workshop/" class="underline hover:opacity-70">Workshop</a>
+                                [confirmed]
+                            </li>
+                            <li class="text-white">
+                                ICCV 2025
+                                Workshop [tentative]
+                            </li>
+                        </ul>
                     </h5>
                 </div>
             </div>
@@ -134,9 +138,9 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#fabric-manipulation" class="navigator-button group">                           
+                            <a href="#manipulation" class="navigator-button group">                           
                                 <span class="navigator-button-text">
-                                    Track: Fabric Manipulation
+                                    Track: Manipulation
                                 </span>
                             </a>
                         </li>
@@ -161,13 +165,13 @@
                                 </span>
                             </a>
                         </li>
-                        <!-- <li class="hidden laptop:inline">
+                        <li class="hidden laptop:inline">
                             <a href="#timeline" class="navigator-button group">                           
                                 <span class="navigator-button-text">
                                     Timeline
                                 </span>
                             </a>
-                        </li> -->
+                        </li>
                         <!-- <li class="hidden laptop:inline">
                             <a href="#host" class="navigator-button group">                           
                                 <span class="navigator-button-text">
@@ -222,7 +226,7 @@
 
                         <div class="flex-1">
                             <h3>
-                                <a href="#feature" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="feature">
+                                <a href="#feature" class="scroll-mt-48 laptop:scroll-mt-20 group" id="feature">
                                     Features
                                     <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
                                 </a>
@@ -249,7 +253,7 @@
                             </div>
 
                             <h3 class="mt-20">
-                                <a href="#participate" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="participate">
+                                <a href="#participate" class="scroll-mt-48 laptop:scroll-mt-20 group" id="participate">
                                     Participate
                                     <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
                                 </a>
@@ -258,15 +262,15 @@
                                 <ul class="space-y-10">
                                     <li class="flex gap-6 laptop:gap-10">
                                         <img src="/assets/icon/google_form.png" class="size-8 inline-block mr-2"/>
-                                        <span>For participation in the challenge, registering for your team is a <code>strict requirement</code> by filling out this <a class="text-o-blue hover:underline" target="_blank">Google Form (TBD)</a>.
-                                            <!-- The registration information can be modified until <code>May 10, 2025</code>. -->
+                                        <span>For participation in the challenge, registering for your team is a <code>strict requirement</code> by filling out this <a class="text-o-blue hover:underline" href="https://docs.google.com/forms/d/e/1FAIpQLScOfEG2b_VQYAydCjdA_etiCD1PvR8KX5Jui3oFy28a-J8yKA/viewform" target="_blank">Google Form</a>.
+                                            The registration information can be modified until <code>[CVPR 2025] May 10, 2025</code>.
                                             For more details, please check the <a class="text-o-blue hover:underline" href="#rule">general rules</a>.</span>
                                     </li>
                                 </ul>
                             </div>
 
                             <h3 class="mt-20">
-                                <a href="#contact" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="contact">
+                                <a href="#contact" class="scroll-mt-48 laptop:scroll-mt-20 group" id="contact">
                                     Contact
                                     <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
                                 </a>
@@ -287,15 +291,25 @@
                                     </li>
                                     <li class="flex gap-6 laptop:gap-10">
                                         <img src="/assets/icon/news.png" class="size-8 inline-block mr-2"/>
-                                        <span>Announcements will be made in Discord and via <code>challenge2025@opendrivelab.com</code></span>
+                                        <span>
+                                            Announcements will be made
+                                            <ul class="ml-6 pt-4 space-y-3 list-outside list-disc">
+                                                <li>
+                                                    in Discord <a href="https://discord.gg/HV3R8J2vcv" target="_blank" class="text-o-blue hover:underline"><code>📢-challenge-information</code></a>
+                                                </li>
+                                                <li>
+                                                    via <code>challenge@opendrivelab.com</code>
+                                                </li>
+                                            </ul>
+                                        </span>
                                     </li>
                                 </ul>
                             </div>
                         </div>
 
-                        <!-- <div class="flex-1">
+                        <div class="flex-1">
                             <h3>
-                                <a href="#timeline" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="timeline">
+                                <a href="#timeline" class="scroll-mt-48 laptop:scroll-mt-20 group" id="timeline">
                                     Timeline
                                     <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
                                 </a>
@@ -320,7 +334,7 @@
                                                         </p>
                                                     </div>
                                                     <div class="whitespace-nowrap text-right ">
-                                                        <time class="text-o-gray">February  10, 2025</time>
+                                                        <time class="text-o-gray">February  20, 2025</time>
                                                     </div>
                                                 </div>
                                             </div>
@@ -344,7 +358,7 @@
                                                         </p>
                                                     </div>
                                                     <div class="whitespace-nowrap text-right ">
-                                                        <time class="text-o-gray">February 20, 2025</time>
+                                                        <time class="text-o-gray">March 01, 2025</time>
                                                     </div>
                                                 </div>
                                             </div>
@@ -368,7 +382,7 @@
                                                         </p>
                                                     </div>
                                                     <div class="whitespace-nowrap text-right ">
-                                                        <time class="text-o-gray">March 01, 2025</time>
+                                                        <time class="text-o-gray">March 10, 2025</time>
                                                     </div>
                                                 </div>
                                             </div>
@@ -388,7 +402,7 @@
                                                 <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
                                                     <div>
                                                         <p>
-                                                            Test Server Close / Registration Deadline
+                                                            [CVPR 2025] Submission Deadline
                                                         </p>
                                                     </div>
                                                     <div class="whitespace-nowrap text-right ">
@@ -412,7 +426,7 @@
                                                 <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
                                                     <div>
                                                         <p>
-                                                            Technical Report Submission Deadline
+                                                            [CVPR 2025] Technical Report Submission Deadline
                                                         </p>
                                                     </div>
                                                     <div class="whitespace-nowrap text-right ">
@@ -436,7 +450,7 @@
                                                 <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
                                                     <div>
                                                         <p>
-                                                            Travel Grant Receiver Notification
+                                                            [CVPR 2025] Travel Grant Receiver Notification
                                                         </p>
                                                     </div>
                                                     <div class="whitespace-nowrap text-right ">
@@ -460,31 +474,7 @@
                                                 <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
                                                     <div>
                                                         <p>
-                                                            Award Committee Meeting
-                                                        </p>
-                                                    </div>
-                                                    <div class="whitespace-nowrap text-right ">
-                                                        <time class="text-o-gray">May 31, 2025</time>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="relative pb-8">
-                                            <span class="absolute left-4 top-4 -ml-px h-full w-0.5 bg-o-gray " aria-hidden="true"></span>
-                                            <div class="relative flex space-x-3">
-                                                <div>
-                                                    <span class="flex size-8 items-center justify-center rounded-full bg-white ring-8 ring-white">
-                                                        <svg class="size-5 text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-                                                            <circle cx="10" cy="10" r="9" stroke="#9ca3af" stroke-width="2" fill="none"/>
-                                                        </svg>
-                                                    </span>
-                                                </div>
-                                                <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
-                                                    <div>
-                                                        <p>
-                                                            Winner Notification
+                                                            [CVPR 2025] Winner Notification
                                                         </p>
                                                     </div>
                                                     <div class="whitespace-nowrap text-right ">
@@ -508,7 +498,127 @@
                                                 <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
                                                     <div>
                                                         <p>
-                                                            Winner Presentation at Sibling Event in China
+                                                            [CVPR 2025] Winner Presentation at <a href="/cvpr2025/workshop/" class="text-o-blue hover:underline">Workshop on Embodied Intelligence for Autonomous Systems on the Horizon</a>
+                                                        </p>
+                                                    </div>
+                                                    <div class="whitespace-nowrap text-right ">
+                                                        <time class="text-o-gray">TBD</time>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="relative pb-8">
+                                            <span class="absolute left-4 top-4 -ml-px h-full w-0.5 bg-o-gray " aria-hidden="true"></span>
+                                            <div class="relative flex space-x-3">
+                                                <div>
+                                                    <span class="flex size-8 items-center justify-center rounded-full bg-red-400 ring-8 ring-white">
+                                                        <svg  fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="size-5">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5m-13.5-9L12 3m0 0 4.5 4.5M12 3v13.5" />
+                                                          </svg>
+                                                    </span>
+                                                </div>
+                                                <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
+                                                    <div>
+                                                        <p>
+                                                            [ICCV 2025] Test Server Close / Submission Deadline
+                                                        </p>
+                                                    </div>
+                                                    <div class="whitespace-nowrap text-right ">
+                                                        <time class="text-o-gray">TBD</time>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="relative pb-8">
+                                            <span class="absolute left-4 top-4 -ml-px h-full w-0.5 bg-o-gray " aria-hidden="true"></span>
+                                            <div class="relative flex space-x-3">
+                                                <div>
+                                                    <span class="flex size-8 items-center justify-center rounded-full bg-red-400 ring-8 ring-white">
+                                                        <svg  fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="size-5">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5m-13.5-9L12 3m0 0 4.5 4.5M12 3v13.5" />
+                                                          </svg>
+                                                    </span>
+                                                </div>
+                                                <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
+                                                    <div>
+                                                        <p>
+                                                            [ICCV 2025] Technical Report Submission Deadline
+                                                        </p>
+                                                    </div>
+                                                    <div class="whitespace-nowrap text-right ">
+                                                        <time class="text-o-gray">TBD</time>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="relative pb-8">
+                                            <span class="absolute left-4 top-4 -ml-px h-full w-0.5 bg-o-gray " aria-hidden="true"></span>
+                                            <div class="relative flex space-x-3">
+                                                <div>
+                                                    <span class="flex size-8 items-center justify-center rounded-full bg-white ring-8 ring-white">
+                                                        <svg class="size-5 text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                                                            <circle cx="10" cy="10" r="9" stroke="#9ca3af" stroke-width="2" fill="none"/>
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                                <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
+                                                    <div>
+                                                        <p>
+                                                            [ICCV 2025] Travel Grant Receiver Notification
+                                                        </p>
+                                                    </div>
+                                                    <div class="whitespace-nowrap text-right ">
+                                                        <time class="text-o-gray">TBD</time>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="relative pb-8">
+                                            <span class="absolute left-4 top-4 -ml-px h-full w-0.5 bg-o-gray " aria-hidden="true"></span>
+                                            <div class="relative flex space-x-3">
+                                                <div>
+                                                    <span class="flex size-8 items-center justify-center rounded-full bg-white ring-8 ring-white">
+                                                        <svg class="size-5 text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                                                            <circle cx="10" cy="10" r="9" stroke="#9ca3af" stroke-width="2" fill="none"/>
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                                <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
+                                                    <div>
+                                                        <p>
+                                                            [ICCV 2025] Winner Notification
+                                                        </p>
+                                                    </div>
+                                                    <div class="whitespace-nowrap text-right ">
+                                                        <time class="text-o-gray">TBD</time>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="relative pb-8">
+                                            <span class="absolute left-4 top-4 -ml-px h-full w-0.5 bg-o-gray " aria-hidden="true"></span>
+                                            <div class="relative flex space-x-3">
+                                                <div>
+                                                    <span class="flex size-8 items-center justify-center rounded-full bg-blue-400 ring-8 ring-white">
+                                                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="size-5">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
+                                                          </svg>
+                                                    </span>
+                                                </div>
+                                                <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
+                                                    <div>
+                                                        <p>
+                                                            [ICCV 2025] Winner Presentation
                                                         </p>
                                                     </div>
                                                     <div class="whitespace-nowrap text-right ">
@@ -531,7 +641,7 @@
                                                 <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
                                                     <div>
                                                         <p>
-                                                            Winner Presentation at Workshop Day
+                                                            Winner Presentation at Sibling Event in China
                                                         </p>
                                                     </div>
                                                     <div class="whitespace-nowrap text-right">
@@ -543,7 +653,7 @@
                                     </li>
                                 </ul>
                               </div>
-                        </div> -->
+                        </div>
 
                     </div>
 
@@ -551,7 +661,7 @@
 
                     <!-- <div class="w-full mt-20">
                         <h3>
-                            <a href="#host" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="host">
+                            <a href="#host" class="scroll-mt-48 laptop:scroll-mt-20 group" id="host">
                                 Host Organizations
                                 <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
                             </a>
@@ -565,7 +675,7 @@
 
                     <div class="w-full mt-20">
                         <h3>
-                            <a href="#rule" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="rule">
+                            <a href="#rule" class="scroll-mt-48 laptop:scroll-mt-20 group" id="rule">
                                 General Rules
                                 <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
                             </a>
@@ -652,7 +762,7 @@
                                             Innovation awards will be decided through a double-blind reviewing process on the technical reports by the award committee. Winners of Innovation awards can overlap with Outstanding Champion and Honorable Runner-up.
                                         </li>
                                         <li>
-                                            Winners will be invited to present during the workshop or sibling event.
+                                            Winners will be invited to present during the workshops or sibling event.
                                         </li>
                                         <li>
                                             The organizers reserve the right to update the rules in response to unforeseen circumstances in order to better serve the mission of the challenge. The organizers reserve the right to disqualify teams that have violated the rules. Organizers reserve all rights for the final explanation.
@@ -695,8 +805,7 @@
                                                 <h4 class="group-hover:text-o-blue">Which template of a technical report should we/I follow? How to submit the technical report?</h4>
                                             </summary>
                                             <p class="pt-4">
-                                                The format of a technical report is constrained to a PDF file.
-                                                <!-- We recommend using the CVPR 2025 template. -->
+                                                The format of a technical report is constrained to a PDF file. We recommend using the <a href="https://github.com/cvpr-org/author-kit/releases" target="_blank" class="text-o-blue hover:underline">CVPR 2025 template</a>.
                                             </p>
                                         </details>
                                     </div>
@@ -715,7 +824,7 @@
 
                         <div class="w-full h-48 mt-20">
                             <div class="w-full h-full rounded-3xl bg-[url('/challenge2025/66e9b7ace6ba1c7833932ec9.jpg')] bg-top bg-cover flex flex-col justify-center p-6 laptop:p-10">
-                                <h2 class="text-white scroll-mt-72 tablet:scroll-mt-56 laptop:scroll-mt-28" id="1x-wm">
+                                <h2 class="text-white scroll-mt-72 laptop:scroll-mt-28" id="1x-wm">
                                     <a href="#1x-wm" class="group">
                                         World Model Challenge by 1X
                                         <img src="/assets/icon/link_white.png" class="hidden group-hover:inline-block size-8"/>
@@ -724,34 +833,51 @@
                             </div>
                         </div>
 
-                        <div class="w-full laptop:h-44 flex flex-col laptop:flex-row justify-between mt-10 gap-10 laptop:gap-20">
-                            <div class="h-full flex-1 flex flex-col bg-[eee3d5] rounded-3xl p-6 laptop:p-10 justify-center space-y-3">
-                                <span class="text-[30201e] font-bold text-nowrap">Test Server TBD</span>
-                                <!-- <a class="group flex-nowrap"><span class="text-[30201e] font-bold text-nowrap group-hover:text-o-blue"><img src="/assets/icon/hugging_face.png" class="size-8 inline-block mr-2 group-hover:opacity-70"/>Hugging face</span></a> -->
-                            </div>
-                            <ul class="h-full flex-1 flex flex-col bg-[eee3d5] rounded-3xl p-6 laptop:p-10 justify-between">
-                                <li class="flex flex-row justify-between flex-nowrap gap-10">
-                                    <div class="text-nowrap">
-                                        <img class="size-6 inline-block mr-2" src="/assets/icon/bulb.png"/>
-                                        <span class="text-[30201e] font-bold">Innovation Award</span>
-                                    </div>
-                                    <span class="text-[30201e] font-bold text-nowrap">TBD</span>
+                        <div class="w-full flex flex-col laptop:flex-row justify-between mt-10 gap-10 laptop:gap-20">
+                            <ul class="h-full flex-1 flex flex-col bg-[eee3d5] rounded-3xl p-6 laptop:p-10 gap-6">
+                                <li class="text-[30201e] font-bold">
+                                    [CVPR 2025]
                                 </li>
                                 <li class="flex flex-row justify-between flex-nowrap gap-10">
                                     <div class="text-nowrap">
                                         <img class="size-6 inline-block mr-2" src="/assets/icon/rank01.png"/>
-                                        <span class="text-[30201e] font-bold">Outstanding Champion</span>
+                                        <span class="text-[30201e]">Outstanding Champion</span>
                                     </div>
-                                    <span class="text-[30201e] font-bold text-nowrap">TBD</span>
+                                    <span class="text-[30201e] text-nowrap">USD 3,000</span>
+                                </li>
+                            </ul>
+                            <ul class="h-full flex-1 flex flex-col bg-[eee3d5] rounded-3xl p-6 laptop:p-10 gap-6">
+                                <li class="text-[30201e] font-bold">
+                                    [ICCV 2025]
                                 </li>
                                 <li class="flex flex-row justify-between flex-nowrap gap-10">
                                     <div class="text-nowrap">
-                                        <img class="size-6 inline-block mr-2" src="/assets/icon/rank02.png"/>
-                                        <span class="text-[30201e] font-bold">Honorable Runner-up</span>
+                                        <img class="size-6 inline-block mr-2" src="/assets/icon/bulb.png"/>
+                                        <span class="text-[30201e]">Innovation Award</span>
                                     </div>
-                                    <span class="text-[30201e] font-bold text-nowrap">TBD</span>
+                                    <span class="text-[30201e] text-nowrap">USD 9,000</span>
+                                </li>
+                                <li class="flex flex-row justify-between flex-nowrap gap-10">
+                                    <div class="text-nowrap">
+                                        <img class="size-6 inline-block mr-2" src="/assets/icon/rank01.png"/>
+                                        <span class="text-[30201e]">Outstanding Champion</span>
+                                    </div>
+                                    <span class="text-[30201e] text-nowrap">USD 6,000</span>
                                 </li>
                             </ul>
+                        </div>
+
+                        <div class="mt-12 flex flex-col gap-6">
+                            <h3 class="text-[30201e]">
+                                Test Server
+                            </h3>
+                            <p>
+                                Test Server TBD
+                                <!-- <a class="group flex-nowrap select-none">
+                                    <img src="/assets/icon/hugging_face.png" class="size-10 inline-block ml-1 mr-1 group-hover:opacity-70"/>
+                                    <span class="text-[30201e] group-hover:text-o-blue font-bold">Hugging face</span>
+                                </a> -->
+                            </p>
                         </div>
 
                         <div class="mt-12 flex flex-col gap-6">
@@ -760,9 +886,6 @@
                             </h3>
                             <p>
                                 A world model is a computer program that can imagine how the world evolves in response to an agent's behavior. It has the potential to solve general-purpose simulation and evaluation, enabling robots that are safe, reliable, and intelligent in a wide variety of scenarios. To help accelerate progress towards solving world models for robotics, our challenge invites participants to develop a robot world model that can accurately simulate the future interactions of humanoid robots with their surroundings based on past observations and agent actions. Participants will demonstrate the compression rate, efficiency, and evaluation ability of their approaches.
-                            </p>
-                            <p>
-                                <a href="https://forms.gle/trnjP7Wg57mGqfPc8" class="text-o-blue hover:underline" target="_blank">Feedback Form</a>. For more details, please refer to <a href="https://github.com/1x-technologies/1xgpt" class="text-o-blue hover:underline" target="_blank">this page</a>.
                             </p>
                         </div>
 
@@ -843,7 +966,7 @@
 
                         <div class="w-full h-48 mt-20">
                             <div class="w-full h-full rounded-3xl bg-[url('/challenge2024/e2e_driving_at_scale.jpg')] bg-black bg-opacity-30 bg-blend-overlay bg-center bg-cover flex flex-col justify-center p-6 laptop:p-10">
-                                <h2 class="text-white scroll-mt-72 tablet:scroll-mt-56 laptop:scroll-mt-28" id="navsim-e2e-driving">
+                                <h2 class="text-white scroll-mt-72 laptop:scroll-mt-28" id="navsim-e2e-driving">
                                     <a href="#navsim-e2e-driving" class="group">
                                         NAVSIM v2 End-to-End Driving Challenge
                                         <img src="/assets/icon/link_white.png" class="hidden group-hover:inline-block size-8"/>
@@ -852,34 +975,51 @@
                             </div>
                         </div>
 
-                        <div class="w-full laptop:h-44 flex flex-col laptop:flex-row justify-between mt-10 gap-10 laptop:gap-20">
-                            <div class="h-full flex-1 flex flex-col bg-[e0ebec] rounded-3xl p-6 laptop:p-10 justify-center space-y-3">
-                                <span class="text-[1d4968] font-bold text-nowrap">Test Server TBD</span>
-                                <!-- <a class="group flex-nowrap"><span class="text-[1d4968] font-bold text-nowrap group-hover:text-o-blue"><img src="/assets/icon/hugging_face.png" class="size-8 inline-block mr-2 group-hover:opacity-70"/>Hugging face</span></a> -->
-                            </div>
-                            <ul class="h-full flex-1 flex flex-col bg-[e0ebec] rounded-3xl p-6 laptop:p-10 justify-between">
-                                <li class="flex flex-row justify-between flex-nowrap gap-10">
-                                    <div class="text-nowrap">
-                                        <img class="size-6 inline-block mr-2" src="/assets/icon/bulb.png"/>
-                                        <span class="text-[1d4968] font-bold">Innovation Award</span>
-                                    </div>
-                                    <span class="text-[1d4968] font-bold text-nowrap">TBD</span>
+                        <div class="w-full flex flex-col laptop:flex-row justify-between mt-10 gap-10 laptop:gap-20">
+                            <ul class="h-full flex-1 flex flex-col bg-[e0ebec] rounded-3xl p-6 laptop:p-10 gap-6">
+                                <li class="text-[1d4968] font-bold">
+                                    [CVPR 2025]
                                 </li>
                                 <li class="flex flex-row justify-between flex-nowrap gap-10">
                                     <div class="text-nowrap">
                                         <img class="size-6 inline-block mr-2" src="/assets/icon/rank01.png"/>
-                                        <span class="text-[1d4968] font-bold">Outstanding Champion</span>
+                                        <span class="text-[1d4968]">Outstanding Champion</span>
                                     </div>
-                                    <span class="text-[1d4968] font-bold text-nowrap">TBD</span>
+                                    <span class="text-[1d4968] text-nowrap">USD 3,000</span>
+                                </li>
+                            </ul>
+                            <ul class="h-full flex-1 flex flex-col bg-[e0ebec] rounded-3xl p-6 laptop:p-10 gap-6">
+                                <li class="text-[1d4968] font-bold">
+                                    [ICCV 2025]
                                 </li>
                                 <li class="flex flex-row justify-between flex-nowrap gap-10">
                                     <div class="text-nowrap">
-                                        <img class="size-6 inline-block mr-2" src="/assets/icon/rank02.png"/>
-                                        <span class="text-[1d4968] font-bold">Honorable Runner-up</span>
+                                        <img class="size-6 inline-block mr-2" src="/assets/icon/bulb.png"/>
+                                        <span class="text-[1d4968]">Innovation Award</span>
                                     </div>
-                                    <span class="text-[1d4968] font-bold text-nowrap">TBD</span>
+                                    <span class="text-[1d4968] text-nowrap">USD 9,000</span>
+                                </li>
+                                <li class="flex flex-row justify-between flex-nowrap gap-10">
+                                    <div class="text-nowrap">
+                                        <img class="size-6 inline-block mr-2" src="/assets/icon/rank01.png"/>
+                                        <span class="text-[1d4968]">Outstanding Champion</span>
+                                    </div>
+                                    <span class="text-[1d4968] text-nowrap">USD 6,000</span>
                                 </li>
                             </ul>
+                        </div>
+
+                        <div class="mt-12 flex flex-col gap-6">
+                            <h3 class="text-[1d4968]">
+                                Test Server
+                            </h3>
+                            <p>
+                                Test Server TBD
+                                <!-- <a class="group flex-nowrap select-none">
+                                    <img src="/assets/icon/hugging_face.png" class="size-10 inline-block ml-1 mr-1 group-hover:opacity-70"/>
+                                    <span class="text-[1d4968] group-hover:text-o-blue font-bold">Hugging face</span>
+                                </a> -->
+                            </p>
                         </div>
 
                         <div class="mt-12 flex flex-col gap-6">
@@ -892,9 +1032,9 @@
                             <p>
                                 The private test set is provided by <a href="https://www.nuscenes.org/nuplan" target="_blank" class="text-o-blue hover:underline">nuPlan</a> from <a href="https://motional.com/" target="_blank" class="text-o-blue hover:underline">Motional</a>.
                             </p>
-                            <p>
-                                <a href="https://forms.gle/trnjP7Wg57mGqfPc8" class="text-o-blue hover:underline" target="_blank">Feedback Form</a>. For more details, please refer to <a href="/challenge2024/#end_to_end_driving_at_scale" class="text-o-blue hover:underline" target="_blank">2024 edition</a>.
-                            </p>
+                            <div class="flex flex-row gap-10">
+                                <a href="https://motional.com/" target="_blank" class="group"><img src="/assets/brand/motional.png" class="h-6 laptop:h-12 group-hover:opacity-70"/></a>
+                            </div>
                         </div>
 
                         <div class="mt-12 flex flex-col gap-6">
@@ -909,9 +1049,8 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://discord.gg/qxRt2Wskh4" target="_blank" class="text-o-blue hover:underline">
-                                        Discord channel</a>: 
-                                    <code>#🏟️-navsim-e2e-driving-2025</code>
+                                    Discord: 
+                                    <a href="https://discord.gg/qxRt2Wskh4" target="_blank" class="text-o-blue hover:underline"><code>#🏟️-navsim-e2e-driving-2025</code></a>
                                 </li>
                             </ul>
                         </div>
@@ -978,41 +1117,37 @@
 
                         <div class="w-full h-48 mt-20">
                             <div class="w-full h-full rounded-3xl bg-[url('/challenge2025/fabric.jpg')] bg-black bg-opacity-30 bg-blend-overlay bg-center bg-cover flex flex-col justify-center p-6 laptop:p-10">
-                                <h2 class="text-white scroll-mt-72 tablet:scroll-mt-56 laptop:scroll-mt-28" id="fabric-manipulation">
-                                    <a href="#fabric-manipulation" class="group">
-                                        Fabric Manipulation Challenge
+                                <h2 class="text-white scroll-mt-72 laptop:scroll-mt-28" id="manipulation">
+                                    <a href="#manipulation" class="group">
+                                        Manipulation Challenge
                                         <img src="/assets/icon/link_white.png" class="hidden group-hover:inline-block size-8"/>
                                     </a>
                                 </h2>
                             </div>
                         </div>
 
-                        <div class="w-full laptop:h-44 flex flex-col laptop:flex-row justify-between mt-10 gap-10 laptop:gap-20">
-                            <div class="h-full flex-1 flex flex-col bg-[89f5ff] rounded-3xl p-6 laptop:p-10 justify-center space-y-3">
-                                <span class="text-[0b3d44] font-bold text-nowrap">Test Server TBD</span>
-                                <!-- <a class="group flex-nowrap"><span class="text-[0b3d44] font-bold text-nowrap group-hover:text-o-blue"><img src="/assets/icon/hugging_face.png" class="size-8 inline-block mr-2 group-hover:opacity-70"/>Hugging face</span></a> -->
-                            </div>
-                            <ul class="h-full flex-1 flex flex-col bg-[89f5ff] rounded-3xl p-6 laptop:p-10 justify-between">
+                        <div class="w-full flex flex-col laptop:flex-row justify-between mt-10 gap-10 laptop:gap-20">
+                            <ul class="h-full flex-1 flex flex-col bg-[89f5ff] rounded-3xl p-6 laptop:p-10 gap-6">
                                 <li class="flex flex-row justify-between flex-nowrap gap-10">
                                     <div class="text-nowrap">
                                         <img class="size-6 inline-block mr-2" src="/assets/icon/bulb.png"/>
-                                        <span class="text-[0b3d44] font-bold">Innovation Award</span>
+                                        <span class="text-[0b3d44]">Innovation Award</span>
                                     </div>
-                                    <span class="text-[0b3d44] font-bold text-nowrap">TBD</span>
+                                    <span class="text-[0b3d44] text-nowrap">TBD</span>
                                 </li>
                                 <li class="flex flex-row justify-between flex-nowrap gap-10">
                                     <div class="text-nowrap">
                                         <img class="size-6 inline-block mr-2" src="/assets/icon/rank01.png"/>
-                                        <span class="text-[0b3d44] font-bold">Outstanding Champion</span>
+                                        <span class="text-[0b3d44]">Outstanding Champion</span>
                                     </div>
-                                    <span class="text-[0b3d44] font-bold text-nowrap">TBD</span>
+                                    <span class="text-[0b3d44] text-nowrap">TBD</span>
                                 </li>
                                 <li class="flex flex-row justify-between flex-nowrap gap-10">
                                     <div class="text-nowrap">
                                         <img class="size-6 inline-block mr-2" src="/assets/icon/rank02.png"/>
-                                        <span class="text-[0b3d44] font-bold">Honorable Runner-up</span>
+                                        <span class="text-[0b3d44]">Honorable Runner-up</span>
                                     </div>
-                                    <span class="text-[0b3d44] font-bold text-nowrap">TBD</span>
+                                    <span class="text-[0b3d44] text-nowrap">TBD</span>
                                 </li>
                             </ul>
                         </div>
@@ -1022,65 +1157,8 @@
                                 Task Description
                             </h3>
                             <p>
-                                The task of fabric manipulation poses a significant challenge in the field of robotic manipulation. Due to the flexibility of fabrics, the initial states of the task are nearly infinite. Consequently, such tasks require models with sufficient generalization capabilities. Our challenge invites participants to develop dual-arm robotic strategies capable of accurately manipulating fabric products. We will provide comprehensive datasets for teams to train their strategies and evaluate their generalization and task success rates.
+                                To be announced. Please stay tuned!
                             </p>
-                            <p>
-                                <a href="https://forms.gle/trnjP7Wg57mGqfPc8" class="text-o-blue hover:underline" target="_blank">Feedback Form</a>
-                            </p>
-                        </div>
-
-                        <div class="mt-12 flex flex-col gap-6">
-                            <h3 class="text-[0b3d44]">
-                                Contact
-                            </h3>
-                            <ul class="ml-6 space-y-3 list-outside list-disc">
-                                <li>
-                                    Shijia Peng (OpenDriveLab / Shenzhen University), 
-                                    <a href="mailto:jiagedainifei@gmail.com" target="_blank" class="text-o-blue hover:underline">
-                                        <code>jiagedainifei@gmail.com</code>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://discord.gg/38962FzKVw" target="_blank" class="text-o-blue hover:underline">
-                                        Discord channel</a>: 
-                                    <code>#🏟️-fabric-manipulation-2025</code>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- <div class="mt-12 flex flex-col gap-6">
-                            <h3 class="text-[0b3d44]">
-                                Citation
-                            </h3>
-                            <p>Please consider citing our work if the challenge helps your research with the following BibTex:</p>
-                            <div class="citation p-6 rounded-3xl">
-                                <span class="citation_red">@inproceedings</span>{<span class="citation_blue">Dauner2024ARXIV</span>, 
-                                    <br>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;title = {NAVSIM: Data-Driven Non-Reactive Autonomous Vehicle Simulation and Benchmarking},
-                                    <br>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;author = {Daniel Dauner and Marcel Hallgarten and Tianyu Li and Xinshuo Weng and Zhiyu Huang and Zetong Yang and Hongyang Li and Igor Gilitschenski and Boris Ivanovic and Marco Pavone and Andreas Geiger and Kashyap Chitta},
-                                    <br>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;journal = {arXiv},
-                                    <br>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;volume = {2406.15349},
-                                    <br>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;year = {2024}
-                                    <br>
-                                }
-                            </div>
-                        </div> -->
-
-                        <div class="mt-12 flex flex-col gap-6">
-                            <h3 class="text-[0b3d44]">
-                                Related Material
-                            </h3>
-                            <ul class="ml-6 space-y-3 list-outside list-disc">
-                                <li>
-                                    <a href="https://github.com/huggingface/lerobot" target="_blank" class="text-o-blue hover:underline">
-                                        LeRobot: Making AI for Robotics more accessible with end-to-end learning
-                                    </a>
-                                </li>
-                            </ul>
                         </div>
 
                     </div>
@@ -1093,13 +1171,13 @@
 
                     <div class="w-full mt-20">
                         <h3>
-                            <a href="#organizer" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="organizer">
+                            <a href="#organizer" class="scroll-mt-48 laptop:scroll-mt-20 group" id="organizer">
                                 Organizers
                                 <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
                             </a>
                         </h3>
                         <div class="pt-10 flex gap-10 laptop:gap-20 flex-col laptop:flex-row w-full laptop:flex-wrap">
-                            <div style="min-width: 45%;">
+                            <div style="min-width: 90%;">
                                 <h4>General</h4>
                                 <div class="mt-10 gap-10 grid grid-cols-[repeat(auto-fill,_minmax(144px,_1fr))] tablet:grid-cols-[repeat(auto-fill,_minmax(192px,_1fr))]">
                                     <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
@@ -1128,7 +1206,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div style="min-width: 45%;">
+                        </div>
+                        <div class="pt-10 flex gap-10 laptop:gap-20 flex-col laptop:flex-row w-full laptop:flex-wrap">
+                            <div style="min-width: 90%;">
                                 <h4>World Model Challenge by 1X</h4>
                                 <div class="mt-10 gap-10 grid grid-cols-[repeat(auto-fill,_minmax(144px,_1fr))] tablet:grid-cols-[repeat(auto-fill,_minmax(192px,_1fr))]">
                                     <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
@@ -1157,7 +1237,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div style="min-width: 45%;">
+                        </div>
+                        <div class="pt-10 flex gap-10 laptop:gap-20 flex-col laptop:flex-row w-full laptop:flex-wrap">
+                            <div style="min-width: 90%;">
                                 <h4>NAVSIM v2 End-to-End Driving Challenge</h4>
                                 <div class="mt-10 gap-10 grid grid-cols-[repeat(auto-fill,_minmax(144px,_1fr))] tablet:grid-cols-[repeat(auto-fill,_minmax(192px,_1fr))]">
                                     <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
@@ -1210,7 +1292,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div style="min-width: 45%;">
+                            <!-- <div style="min-width: 45%;">
                                 <h4>Fabric Manipulation Challenge</h4>
                                 <div class="mt-10 gap-10 grid grid-cols-[repeat(auto-fill,_minmax(144px,_1fr))] tablet:grid-cols-[repeat(auto-fill,_minmax(192px,_1fr))]">
                                     <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
@@ -1230,7 +1312,7 @@
                                         <div class="border-b-2 border-o-white"></div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
 
@@ -1242,7 +1324,7 @@
 
                     <div class="w-full mt-20">
                         <h3>
-                            <a href="#edition" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="edition">
+                            <a href="#edition" class="scroll-mt-48 laptop:scroll-mt-20 group" id="edition">
                                 Past Editions
                                 <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
                             </a>
