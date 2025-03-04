@@ -18,6 +18,9 @@ module.exports = {
         extend: {
             spacing: {
                 "128": "32rem",
+                "high": "50rem",
+                "wide": "60rem",
+                "wider": "73rem",
             },
             colors: {
                 "o-blue": "#00a0e8",
@@ -30,6 +33,9 @@ module.exports = {
                 //
                 "demo-c1": '#00a0e8',
                 "demo-c2": '#d847f0',
+                //
+                "drama-white": "ffffff",
+                "drama-black": "0d0d0d",
             },
             // fontFamily: {
             //     sans: ['InterVariable', ...defaultTheme.fontFamily.sans],
