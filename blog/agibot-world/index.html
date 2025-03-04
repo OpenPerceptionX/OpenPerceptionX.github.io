@@ -140,22 +140,27 @@
 
 
 
-            <div class="text-white w-full  leading-loose overflow-visible">
+            <div class="w-full max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6">
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <figure class="w-full max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6">
-                                <video src="https://videos.ctfassets.net/qx5k8y1u9drj/2a4YQTPs9dnzYKWZQ6c2ni/78812ae00c3232d684e6e5e7ef748a36/VLA_Full_Quality_MASTER_21925A.mp4" autoplay></video>
+                            <figure>
+                                <img class="w-full" src="https://images.ctfassets.net/qx5k8y1u9drj/3iC6I99o9zVebi4YAct58Z/c0f52b7200aee4c9638fe9fb1d9a5788/NEW_SCALING_LAWS.png?fm=webp&w=1920&q=70"/>
                             </figure>
                         </div>
                         <div class="swiper-slide">
-                            <figure class="w-full max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6">
-                                <video src="https://videos.ctfassets.net/qx5k8y1u9drj/2a4YQTPs9dnzYKWZQ6c2ni/78812ae00c3232d684e6e5e7ef748a36/VLA_Full_Quality_MASTER_21925A.mp4" autoplay></video>
+                            <figure>
+                                <img class="w-full" src="https://images.ctfassets.net/qx5k8y1u9drj/3iC6I99o9zVebi4YAct58Z/c0f52b7200aee4c9638fe9fb1d9a5788/NEW_SCALING_LAWS.png?fm=webp&w=1920&q=70"/>
                             </figure>
                         </div>
                         <div class="swiper-slide">
-                            <figure class="w-full max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6">
-                                <video src="https://videos.ctfassets.net/qx5k8y1u9drj/2a4YQTPs9dnzYKWZQ6c2ni/78812ae00c3232d684e6e5e7ef748a36/VLA_Full_Quality_MASTER_21925A.mp4" autoplay></video>
+                            <figure>
+                                <img class="w-full" src="https://images.ctfassets.net/qx5k8y1u9drj/3iC6I99o9zVebi4YAct58Z/c0f52b7200aee4c9638fe9fb1d9a5788/NEW_SCALING_LAWS.png?fm=webp&w=1920&q=70"/>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure>
+                                <img class="w-full" src="https://images.ctfassets.net/qx5k8y1u9drj/3iC6I99o9zVebi4YAct58Z/c0f52b7200aee4c9638fe9fb1d9a5788/NEW_SCALING_LAWS.png?fm=webp&w=1920&q=70"/>
                             </figure>
                         </div>
                     </div>
@@ -176,54 +181,8 @@
 
 <!-- Initialize Swiper -->
 <script>
-        var swiper = new Swiper(".mySwiper", {
-        spaceBetween: 60,
-        slidesPerView: 3,
-        centeredSlides: true,
-        pagination: {
-            el: ".swiper-pagination",
-            type: "fraction",
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        });
-
-        var appendNumber = 4;
-        var prependNumber = 1;
-        document
-        .querySelector(".prepend-2-slides")
-        .addEventListener("click", function (e) {
-            e.preventDefault();
-            swiper.prependSlide([
-            '<div class="swiper-slide">Slide ' + --prependNumber + "</div>",
-            '<div class="swiper-slide">Slide ' + --prependNumber + "</div>",
-            ]);
-        });
-        document
-        .querySelector(".prepend-slide")
-        .addEventListener("click", function (e) {
-            e.preventDefault();
-            swiper.prependSlide(
-            '<div class="swiper-slide">Slide ' + --prependNumber + "</div>"
-            );
-        });
-        document
-        .querySelector(".append-slide")
-        .addEventListener("click", function (e) {
-            e.preventDefault();
-            swiper.appendSlide(
-            '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>"
-            );
-        });
-        document
-        .querySelector(".append-2-slides")
-        .addEventListener("click", function (e) {
-            e.preventDefault();
-            swiper.appendSlide([
-            '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>",
-            '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>",
-            ]);
-        });
+    var swiper = new Swiper(".mySwiper", {
+        effect: "cards",
+        grabCursor: true,
+    });
 </script>
