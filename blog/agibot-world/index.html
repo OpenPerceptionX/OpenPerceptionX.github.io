@@ -8,6 +8,10 @@
 
     <link href="/ui2025/css/index_tailwind.css" rel="stylesheet">
 
+    <!-- Swiper -->
+    <link rel="stylesheet" href="/ui2024/css/swiper-bundle.min.css"/>
+    <script src="/ui2024/js/swiper-bundle.min.js"></script>
+
     <script src="/ui2024/js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 
@@ -74,7 +78,7 @@
 
 
 
-            <h3 class="text-white w-full max-w-wide leading-loose ">
+            <h3 class="text-white w-full max-w-wide leading-loose">
                 Introducing Helix
             </h3>
 
@@ -136,8 +140,27 @@
 
 
 
-            <div class="w-full">
-
+            <div class="text-white w-full  leading-loose overflow-visible">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <figure class="w-full max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6">
+                                <video src="https://videos.ctfassets.net/qx5k8y1u9drj/2a4YQTPs9dnzYKWZQ6c2ni/78812ae00c3232d684e6e5e7ef748a36/VLA_Full_Quality_MASTER_21925A.mp4" autoplay></video>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="w-full max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6">
+                                <video src="https://videos.ctfassets.net/qx5k8y1u9drj/2a4YQTPs9dnzYKWZQ6c2ni/78812ae00c3232d684e6e5e7ef748a36/VLA_Full_Quality_MASTER_21925A.mp4" autoplay></video>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="w-full max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6">
+                                <video src="https://videos.ctfassets.net/qx5k8y1u9drj/2a4YQTPs9dnzYKWZQ6c2ni/78812ae00c3232d684e6e5e7ef748a36/VLA_Full_Quality_MASTER_21925A.mp4" autoplay></video>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
             </div>
 
 
@@ -148,3 +171,59 @@
 
     </main>
 </body>
+
+
+
+<!-- Initialize Swiper -->
+<script>
+        var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 60,
+        slidesPerView: 3,
+        centeredSlides: true,
+        pagination: {
+            el: ".swiper-pagination",
+            type: "fraction",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        });
+
+        var appendNumber = 4;
+        var prependNumber = 1;
+        document
+        .querySelector(".prepend-2-slides")
+        .addEventListener("click", function (e) {
+            e.preventDefault();
+            swiper.prependSlide([
+            '<div class="swiper-slide">Slide ' + --prependNumber + "</div>",
+            '<div class="swiper-slide">Slide ' + --prependNumber + "</div>",
+            ]);
+        });
+        document
+        .querySelector(".prepend-slide")
+        .addEventListener("click", function (e) {
+            e.preventDefault();
+            swiper.prependSlide(
+            '<div class="swiper-slide">Slide ' + --prependNumber + "</div>"
+            );
+        });
+        document
+        .querySelector(".append-slide")
+        .addEventListener("click", function (e) {
+            e.preventDefault();
+            swiper.appendSlide(
+            '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>"
+            );
+        });
+        document
+        .querySelector(".append-2-slides")
+        .addEventListener("click", function (e) {
+            e.preventDefault();
+            swiper.appendSlide([
+            '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>",
+            '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>",
+            ]);
+        });
+</script>
