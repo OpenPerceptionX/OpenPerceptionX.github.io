@@ -55,14 +55,14 @@
 
 
         <!-- Landing -->
-        <div class="h-svh laptop:h-high p-6 flex flex-col justify-end items-center bg-[url('https://images.ctfassets.net/qx5k8y1u9drj/5oyDQLWvikx57X39RDWDT9/1c9325e597b345f473a24104fffd9d54/BMW_Factory_View_Website.jpg?fm=webp&w=3000&q=70')] bg-center bg-cover bg-black bg-opacity-30 bg-blend-overlay">
+        <div class="h-svh laptop:h-high p-6 flex flex-col justify-end items-center bg-[url('/blog/agibot-world/robot.jpg')] bg-center bg-cover bg-black bg-opacity-10 bg-blend-overlay">
 
             <h1 class="text-white w-full max-w-wider mb-12">
-                Helix: A Vision-Language-Action Model for Generalist Humanoid Control
+                Agibot World Colosseo: Dmocratizing Access to Large-Scale, High-Quality Robot Data, Advancing the Pursuit of Scalable, General-Purpose Intelligence
             </h1>
 
             <h5 class="text-white w-full max-w-wider mb-24 laptop:mb-12">
-                February 20, 2025
+                March 10, 2025
             </h5>
 
         </div>
@@ -74,15 +74,65 @@
 
 
 
-            <h3 class="text-white w-full max-w-wide leading-loose">
-                Introducing Helix
+            <p class="text-white w-full max-w-wide leading-loose">
+                Introducing AgiBot World, a large-scale platform comprising over 1 million trajectories across 217 tasks in five deployment scenarios,we achieve an order-of-magnitude increase in data scale compared to existing datasets. Accelerated by a standardized collection pipeline with human-in-the-loop verification, AgiBot World guarantees high-quality and diverse data distribution. It is extensible from grippers to dexterous hands and visuo-tactile sensors for fine-grained skill acquisition. Building on top of data, we introduce Genie Operator-1 (GO-1), a novel generalist policy that leverages latent action representations to maximize data utilization, demonstrating predictable performance scaling with increased data volume. Policies pre-trained on our dataset achieve an average performance improvement of 30% over those trained on Open X-Embodiment, both in in-domain and out-of-distribution scenarios. GO-1 exhibits exceptional capability in real-world dexterous and long-horizon tasks, achieving over 60% success rate on complex tasks and outperforming prior RDT approach by 32%.
+            </p>
+
+
+
+            <h3 class="text-white w-full max-w-wide leading-loose ">
+                Data
             </h3>
 
 
 
             <p class="text-white w-full max-w-wide leading-loose">
-                We're introducing Helix, a generalist Vision-Language-Action (VLA) model that unifies perception, language understanding, and learned control to overcome multiple longstanding challenges in robotics. Helix is a series of firsts:
+                AgiBot World is a full-stack and open-source embodied intelligence ecosystem. Based on the hardware platform developed by us, AgiBot G1, we construct AgiBot World—an open-source robot manipulation dataset collected by more than 100 homogeneous robots, providing high-quality data for challenging tasks spanning a wide spectrum of real-life scenarios. The latest version contains 1,001,552 trajectories, with a total duration of 2976.4 hours, covering 217 specific tasks, 87 skills, and 106 scenes. We go beyond basic tabletop tasks such as pick-and-place in lab environments; instead, concentrate on real-world scenarios involving dual-arm manipulation, dexterous hands, and collaborative tasks. AgiBot World aims to provide an inclusive benchmark to drive the future development of advanced and robust algorithms.
             </p>
+
+
+
+            <figure class="w-full max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6">
+                <img class="w-full" src="./pipeline.jpg"/>
+                <figcaption class="text-white text-xs mt-3 leading-loose">
+                    Figure 1: xxx
+                </figcaption>
+            </figure>
+
+
+
+            <p class="text-white w-full max-w-wide leading-loose">
+                Concurrent with feedback collection from data annotators, we adopt a human-in-the-loop approach to assess and refine data quality. This process involves an iterative cycle of collecting a small set of demonstrations, training a policy, and deploying the resulting policy to evaluate data availability. Based on the policy’s performance, we iteratively refine the data collection pipeline to address identified gaps or inefficiencies. For instance, during real-world deployment, the model exhibits prolonged pauses at the onset of actions, aligning with data annotator feedback highlighting inconsistent transitions and excessive idle time in the collected data. In response, we revise the data collection protocols and introduce a post-processing step to eliminate idle frames, thereby enhancing the dataset’s overall utility for policy learning. This feedback-driven methodology ensures continuous improvement in data quality.
+            </p>
+
+
+
+            <h3 class="text-white w-full max-w-wide leading-loose ">
+                Model
+            </h3>
+
+
+
+            <figure class="w-full max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6">
+                <img class="w-full" src="./model.jpg"/>
+                <figcaption class="text-white text-xs mt-3 leading-loose">
+                    Figure 2: xxx
+                </figcaption>
+            </figure>
+
+
+
+            <p class="text-white w-full max-w-wide leading-loose">
+                To effectively utilize our high-quality AgiBot World dataset and enhance the policy’s generalizability, we propose a hierarchical Vision-Language-Latent-Action (ViLLA) framework with three training stages. Compared to Vision-Language-Action (VLA) model where action is vision-language conditioned, the ViLLA model predicts latent action tokens, conditioned on the generation of subsequent robot control actions. In Stage 1, we project consecutive images into a latent action space by training an encoder-decoder latent action model(LAM) on internet-scale heterogeneous data. This allows the latent action to serve as an intermediate representation, bridging the gap between general image-text inputs and robotic actions. In Stage 2, these latent actions act as pseudolabels for the latent planner, facilitating embodiment-agnostic long-horizon planning and leveraging the generalizability of the pre-trained VLM. Finally, in Stage 3, we introduce the action expert and jointly train it with the latent planner to support the learning of dexterous manipulation.
+            </p>
+
+
+
+
+            <h3 class="text-white w-full max-w-wide leading-loose ">
+                xxx todo
+            </h3>
+
 
 
 
