@@ -80,7 +80,19 @@
 
 
             <p class="text-white w-full max-w-wide leading-loose">
-                Introducing AgiBot World, a large-scale platform comprising over 1 million trajectories across 217 tasks in five deployment scenarios,we achieve an order-of-magnitude increase in data scale compared to existing datasets. Accelerated by a standardized collection pipeline with human-in-the-loop verification, AgiBot World guarantees high-quality and diverse data distribution. It is extensible from grippers to dexterous hands and visuo-tactile sensors for fine-grained skill acquisition. Building on top of data, we introduce Genie Operator-1 (GO-1), a novel generalist policy that leverages latent action representations to maximize data utilization, demonstrating predictable performance scaling with increased data volume. Policies pre-trained on our dataset achieve an average performance improvement of 30% over those trained on Open X-Embodiment, both in in-domain and out-of-distribution scenarios. GO-1 exhibits exceptional capability in real-world dexterous and long-horizon tasks, achieving over 60% success rate on complex tasks and outperforming prior RDT approach by 32%.
+                We explore how <b class="text-white">scalable robot data</b> can address real-world challenges for generalized robotic manipulation. Introducing AgiBot World, a large-scale platform comprising over 1 million trajectories across 217 tasks in five deployment scenarios. Accelerated by <b class="text-white">a standardized collection pipeline with human-in-the-loop verification</b>, AgiBot World guarantees high-quality and diverse data distribution.
+            </p>
+
+
+
+            <p class="text-white w-full max-w-wide leading-loose">
+                Building on top of AgiBot World, we introduce <b class="text-white">Genie Operator-1 (GO-1)</b>, a novel generalist policy that leverages latent action representations to <b class="text-white">maximize data utilization, demonstrating predictable performance scaling with increased data volume</b>. 
+            </p>
+
+
+
+            <p class="text-white w-full max-w-wide leading-loose">
+                Policies pre-trained on our dataset achieve an average performance improvement of 30% over those trained on Open X-Embodiment, GO-1 exhibits exceptional capability in real-world dexterous and long-horizon tasks, achieving over 60% success rate on complex tasks and outperforming prior RDT approach by 32%.
             </p>
 
 
@@ -91,8 +103,20 @@
 
 
 
+            <figure class="w-full max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6">
+                <video src="https://opendrivelab.github.io/AgiBotWorld/Teleoperation.mp4" controls autoplay></video>
+            </figure>
+
+
+
             <p class="text-white w-full max-w-wide leading-loose">
-                AgiBot World is a full-stack and open-source embodied intelligence ecosystem. Based on the hardware platform developed by us, AgiBot G1, we construct AgiBot World—an open-source robot manipulation dataset collected by more than 100 homogeneous robots, providing high-quality data for challenging tasks spanning a wide spectrum of real-life scenarios. The latest version contains 1,001,552 trajectories, with a total duration of 2976.4 hours, covering 217 specific tasks, 87 skills, and 106 scenes. We go beyond basic tabletop tasks such as pick-and-place in lab environments; instead, concentrate on real-world scenarios involving dual-arm manipulation, dexterous hands, and collaborative tasks. AgiBot World aims to provide an inclusive benchmark to drive the future development of advanced and robust algorithms.
+                AgiBot World is a full-stack and open-source embodied intelligence ecosystem. Based on the hardware platform developed by us, AgiBot G1, we construct AgiBot World—an open-source robot manipulation dataset collected by more than <b class="text-white">100 homogeneous robots</b>, providing high-quality data for challenging tasks spanning a wide spectrum of real-life scenarios. 
+            </p>
+
+
+
+            <p class="text-white w-full max-w-wide leading-loose">
+                We go beyond basic tabletop tasks such as pick-and-place in lab environments; instead, <b class="text-white">concentrate on real-world scenarios</b> involving dual-arm manipulation, dexterous hands, and collaborative tasks. AgiBot World aims to provide an inclusive benchmark to drive the future development of advanced and robust algorithms. 
             </p>
 
 
@@ -100,30 +124,54 @@
             <figure class="w-full max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6">
                 <img loading="lazy" class="w-full" src="./pipeline.jpg"/>
                 <figcaption class="text-white text-xs mt-3 leading-loose">
-                    Figure 1: xxx
+                    Figure 1: Data collection pipeline. AgiBot World embraces a human-in-the-loop framework to ensure high quality, enriched with detailed annotations and error recovery behaviors.
                 </figcaption>
             </figure>
 
 
 
             <p class="text-white w-full max-w-wide leading-loose">
-                Concurrent with feedback collection from data annotators, we adopt a human-in-the-loop approach to assess and refine data quality. This process involves an iterative cycle of collecting a small set of demonstrations, training a policy, and deploying the resulting policy to evaluate data availability. Based on the policy’s performance, we iteratively refine the data collection pipeline to address identified gaps or inefficiencies. For instance, during real-world deployment, the model exhibits prolonged pauses at the onset of actions, aligning with data annotator feedback highlighting inconsistent transitions and excessive idle time in the collected data. In response, we revise the data collection protocols and introduce a post-processing step to eliminate idle frames, thereby enhancing the dataset’s overall utility for policy learning. This feedback-driven methodology ensures continuous improvement in data quality.
+                Concurrent with feedback collection from data annotators, we adopt a <b class="text-white">human-in-the-loop</b> approach to assess and refine data quality. This process involves an iterative cycle of collecting a small set of demonstrations, training a policy, and deploying the resulting policy to evaluate data availability. Based on the policy's performance, we iteratively refine the data collection pipeline to address identified gaps or inefficiencies. This feedback-driven methodology ensures continuous improvement in data quality.
             </p>
 
 
 
             <h3 class="text-white w-full max-w-wide leading-loose ">
-                Model
+                GO-1: a scalable robot foundation policy featuring general reasoning and long-horizon planning capabilities
             </h3>
 
 
 
             <figure class="w-full max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6">
-                <img loading="lazy" class="w-full" src="./20250306-184718.jpeg"/>
+                <img loading="lazy" class="w-full" src="./model.png"/>
                 <figcaption class="text-white text-xs mt-3 leading-loose">
-                    Figure 2: xxx
+                    Figure 2: GO-1 is a robot foundation policy using latent action representations to unlock web-scale pre-training on heterogeneous data.
                 </figcaption>
             </figure>
+
+
+
+            <p class="text-white w-full max-w-wide leading-loose">
+                To effectively utilize web-scale heterogeneous videos alongside our high-quality AgiBot World dataset and enhance the policy's generalizability, we propose a hierarchical Vision-Language-Latent-Action (ViLLA) framework. Compared to Vision-Language-Action (VLA) model where action is vision-language conditioned, the ViLLA model predicts latent action tokens, bridging the gap between image-text inputs and robot actions generated by the action expert. 
+            </p>
+
+
+
+            <h5 class="text-white w-full max-w-wide leading-loose ">
+                Latent Action Model
+            </h5>
+
+
+
+            <p class="text-white w-full max-w-wide leading-loose">
+                Despite considerable advancements in gathering diverse robot demonstrations, the volume of action-labeled robot data remains limited relative to web-scale datasets. To broaden the data pool by <b class="text-white">incorporating internet-scale human videos lacking action labels and cross-embodiment robot data</b>, we employ latent actions to model the inverse dynamics of consecutive frames. This approach enables the transfer of real-world dynamics from heterogeneous data sources into universal manipulation knowledge.
+            </p>
+
+
+
+            <p class="text-white w-full max-w-wide leading-loose">
+                To extract latent actions from video frames, the latent action model is constructed around an inverse dynamics model-based encoder and a forward dynamics model-based decoder. The encoder employs a spatial-temporal transformer with casual temporal masks, while the decoder is a spatial transformer that takes the initial frame and discretized latent action tokens as input. The latent action tokens are quantized using a VQ-VAE objective.
+            </p>
 
 
             <figure class="w-full max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6">
