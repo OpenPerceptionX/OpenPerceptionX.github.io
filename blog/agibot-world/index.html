@@ -1,6 +1,6 @@
 <head>
     <link rel="icon" type="image/png" href="/assets/icon/D_small.png">
-    <title>AgiBot World | OpenDriveLab</title>
+    <title>AgiBot World Colosseo | OpenDriveLab</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="AgiBot World, OpenDriveLab, Robotics, Embodied AI, Autonomous Driving">
@@ -32,17 +32,17 @@
 
 
 
-    <header class="sticky top-6 laptop:top-12 flex ml-6 gap-2 h-0">
+    <header class="z-10 sticky top-6 laptop:top-12 flex ml-6 gap-2 h-0">
 
-        <a href="/" class="h-8 flex justify-center items-center bg-white hover:bg-o-light-blue transition delay-100 duration-200 rounded-md p-2">
-            <img loading="lazy" class="h-4 w-auto" src="/assets/icon/D.svg">
+        <a href="/" class="h-10 flex justify-center items-center bg-white hover:bg-o-light-blue transition delay-100 duration-200 rounded-md p-2">
+            <img loading="lazy" class="h-5 w-auto" src="/assets/icon/D.svg">
         </a>
 
-        <a href="/publications/" class="h-8 flex justify-center items-center bg-white text-drama-black hover:bg-o-light-blue transition delay-100 duration-200 rounded-md p-4">
+        <a href="/publications/" class="h-10 flex justify-center items-center bg-white text-drama-black hover:bg-o-light-blue transition delay-100 duration-200 rounded-md p-4">
             <b class="font-mono">Publication</b>
         </a>
 
-        <a href="/events/" class="h-8 flex justify-center items-center bg-white text-drama-black hover:bg-o-light-blue transition delay-100 duration-200 rounded-md p-4">
+        <a href="/events/" class="h-10 flex justify-center items-center bg-white text-drama-black hover:bg-o-light-blue transition delay-100 duration-200 rounded-md p-4">
             <b class="font-mono">Event</b>
         </a>
 
@@ -55,7 +55,32 @@
 
 
         <!-- Landing -->
-        <div class="h-svh laptop:h-high p-6 flex flex-col justify-end items-center bg-[url('/blog/agibot-world/robot.jpg')] bg-center bg-cover bg-black bg-opacity-30 bg-blend-overlay">
+        <div class="relative h-svh laptop:h-high">
+            <div class="absolute w-full h-full">
+                <video autoplay loop muted class="w-full h-full absolute object-cover">
+                    <source src="/blog/agibot-world/background.mp4"/>
+                </video>
+            </div>
+
+            <div class="relative w-full h-full flex flex-col justify-end items-center p-6">
+    
+                <h1 class="text-white w-full max-w-wider mb-12">
+                    AgiBot World Colosseo:<br>Large-scale Manipulation Platform for Scalable and Intelligent Embodied Systems
+                </h1>
+    
+                <div class="flex flex-row w-full max-w-wider mb-12 gap-12">
+                    <img loading="lazy" src="/assets/brand/shanghai_ai_lab_white_.png" class="h-6"/>
+                    <img loading="lazy" src="/assets/brand/agibot_white.png" class="h-6"/>
+                </div>
+    
+                <h5 class="text-white w-full max-w-wider mb-24 laptop:mb-12">
+                    March 10, 2025
+                </h5>
+    
+            </div>
+        </div>
+
+        <!-- <div class="h-svh laptop:h-high p-6 flex flex-col justify-end items-center bg-[url('/blog/agibot-world/robot.jpg')] bg-center bg-cover bg-black bg-opacity-30 bg-blend-overlay">
 
             <h1 class="text-white w-full max-w-wider mb-12">
                 AgiBot World Colosseo: Dmocratizing Access to Large-Scale, High-Quality Robot Data, Advancing the Pursuit of Scalable, General-Purpose Intelligence
@@ -70,7 +95,9 @@
                 March 10, 2025
             </h5>
 
-        </div>
+        </div> -->
+
+
 
 
 
@@ -122,7 +149,7 @@
 
 
             <figure class="w-full max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6">
-                <img loading="lazy" class="w-full" src="./pipeline.jpg"/>
+                <img loading="lazy" class="w-full" src="./pipeline.gif"/>
                 <figcaption class="text-white text-xs mt-3 leading-loose">
                     Figure 1: Data collection pipeline. AgiBot World embraces a human-in-the-loop framework to ensure high quality, enriched with detailed annotations and error recovery behaviors.
                 </figcaption>
