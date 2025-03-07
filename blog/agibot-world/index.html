@@ -13,6 +13,8 @@
     <script src="/ui2024/js/swiper-bundle.min.js"></script>
 
     <script src="/ui2024/js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script src="/ui2025/js/plotly.js" charset="utf-8"></script>
 </head>
 
 
@@ -237,10 +239,21 @@
 
 
 
-            <figure class="w-full max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6">
+            <!-- <figure class="w-full max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6">
                 <img loading="lazy" class="w-full" src="./fig3.png"/>
                 <figcaption class="text-white text-xs mt-3 leading-loose">
                     Figure 3: Policies pre-trained on our dataset outperform those trained on OXE in both seen (0.77 v.s. 0.47) and out-of-distribution scenarios (0.67 v.s. 0.38).
+                </figcaption>
+            </figure> -->
+
+
+
+            <figure class="w-full max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6">
+                <div id="fig3-1"></div>
+                <div id="fig3-2"></div>
+                <figcaption class="text-white text-xs mt-3 leading-loose">
+                    Figure 3: Policies pre-trained on our dataset outperform those trained on OXE in both seen (0.77
+                    v.s. 0.47) and out-of-distribution scenarios (0.67 v.s. 0.38).
                 </figcaption>
             </figure>
 
@@ -258,8 +271,17 @@
 
 
 
-            <figure class="w-full max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6">
+            <!-- <figure class="w-full max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6">
                 <img loading="lazy" class="w-full" src="./fig4.png"/>
+                <figcaption class="text-white text-xs mt-3 leading-loose">
+                    Figure 4: We evaluate different models pre-trained on the AgiBot World dataset, where GO-1 significantly outperforms previous SOTA policy RDT.
+                </figcaption>
+            </figure> -->
+
+
+
+            <figure class="w-full max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6">
+                <div id="fig4"></div>
                 <figcaption class="text-white text-xs mt-3 leading-loose">
                     Figure 4: We evaluate different models pre-trained on the AgiBot World dataset, where GO-1 significantly outperforms previous SOTA policy RDT.
                 </figcaption>
@@ -475,4 +497,401 @@
         effect: "cards",
         grabCursor: true,
     });
+</script>
+
+
+
+<!-- Figure 3 -->
+<script>
+    var xValue = ['Restock Bag', 'Table Bussing', 'Wipe Table', '<b>Average</b>'];
+    var yValue = [[0.70, 0.20, 0.50, 0.47], [0.77, 0.65, 0.63, 0.68], [0.93, 0.60, 0.78, 0.77]];
+    var trace1 = {
+        x: xValue,
+        y: yValue[0],
+        name: '<b>Open X-Embodiment</b> (OXE)',
+        marker: { color: 'rgba(229, 179, 55, 0.9)' },
+        type: 'bar',
+        textposition: 'outside',
+        outsidetextfont: { size: 18, color: 'rgb(255, 255, 255)' },
+        hoverinfo: 'none',
+        width: 0.2
+    };
+    var trace2 = {
+        x: xValue,
+        y: yValue[1],
+        name: '<b>AgiBot World</b> (Alpha)',
+        marker: { color: 'rgba(83, 194, 240, 0.9)' },
+        type: 'bar',
+        textposition: 'outside',
+        outsidetextfont: { size: 18, color: 'rgb(255, 255, 255)' },
+        hoverinfo: 'none',
+        width: 0.2
+    };
+    var trace3 = {
+        x: xValue,
+        y: yValue[2],
+        name: '<b>AgiBot World</b> (Beta)',
+        marker: { color: 'rgba(12, 49, 143, 0.9)' },
+        type: 'bar',
+        textposition: 'outside',
+        outsidetextfont: { size: 18, color: 'rgb(255, 255, 255)' },
+        hoverinfo: 'none',
+        width: 0.2
+    };
+    var data = [trace1, trace2, trace3];
+    var layout = {
+        height: 350,
+        margin: {
+            l: 50,
+            r: 50,
+            b: 50,
+            t: 30,
+        },
+        title: {
+            text: "<b>(a) In-distribution Performance</b>",
+            font: {
+                size: 16,
+                color: 'rgb(255, 255, 255)'
+            },
+            yref: "paper",
+            y: 1.01,
+            yanchor: "bottom"
+        },
+        paper_bgcolor: 'rgba(0, 0, 0, 0)',
+        plot_bgcolor: 'rgba(0, 0, 0, 0)',
+        xaxis: {
+            tickfont: {
+                size: 15,
+                color: 'rgb(255, 255, 255)'
+            },
+            fixedrange: true,
+            automargin: true,
+            categoryorder: "array",
+            categoryarray: xValue
+        },
+        yaxis: {
+            title: {
+                text: 'Score',
+                font: {
+                    size: 15,
+                    color: 'rgb(255, 255, 255)'
+                }
+            },
+            tickfont: {
+                size: 14,
+                color: 'rgb(255, 255, 255)'
+            },
+            tickformat: '.1f',
+            range: [0, 1.01],
+            fixedrange: true,
+            gridcolor: 'rgba(255, 255, 255, 0.5)',
+        },
+        showlegend: false,
+        barmode: 'group',
+        bargap: 0.15,
+        bargroupgap: 0.1,
+        shapes: [
+            {
+                type: 'rect',
+                xref: 'x',
+                yref: 'container',
+                x0: 2.5,
+                x1: 3.5,
+                y0: 0,
+                y1: 1,
+                fillcolor: 'rgba(255, 255, 255, 0.15)', // adjust opacity and color as needed
+                line: { width: 0 },
+                layer: 'below'
+            }
+        ]
+    };
+
+    var config = {
+        displayModeBar: false,
+        responsive: true,
+    }
+    Plotly.newPlot('fig3-1', data, layout, config);
+
+    var fig31 = document.getElementById('fig3-1');
+    fig31.on('plotly_hover', function (dataa) {
+        dataa.points.map(function (d) {
+            var trace = fig31.data.find(t => t.name === d.data.name);
+            var index = trace.x.indexOf(d.x);
+            trace.text = trace.y.map((y, i) => i === index ? `<b>${y.toFixed(2)}</b>` : '');
+            Plotly.redraw('fig3-1');
+        });
+    })
+        .on('plotly_unhover', function (dataa) {
+            dataa.points.map(function (d) {
+                var trace = fig31.data.find(t => t.name === d.data.name);
+                trace.text = trace.y.map(y => '');
+                Plotly.redraw('fig3-1');
+            });
+        });
+</script>
+<script>
+    var xValue = ['Restock Bag', 'Table Bussing', 'Wipe Table', '<b>Average</b>'];
+    var yValue = [[0.55, 0.15, 0.43, 0.38], [0.68, 0.43, 0.58, 0.56], [0.80, 0.51, 0.69, 0.67]];
+    var trace1 = {
+        x: xValue,
+        y: yValue[0],
+        name: '<b>Open X-Embodiment</b> (OXE)',
+        marker: { color: 'rgba(229, 179, 55, 0.9)' },
+        type: 'bar',
+        textposition: 'outside',
+        outsidetextfont: { size: 18, color: 'rgb(255, 255, 255)' },
+        hoverinfo: 'none',
+        width: 0.2
+    };
+    var trace2 = {
+        x: xValue,
+        y: yValue[1],
+        name: '<b>AgiBot World</b> (Alpha)',
+        marker: { color: 'rgba(83, 194, 240, 0.9)' },
+        type: 'bar',
+        textposition: 'outside',
+        outsidetextfont: { size: 18, color: 'rgb(255, 255, 255)' },
+        hoverinfo: 'none',
+        width: 0.2
+    };
+    var trace3 = {
+        x: xValue,
+        y: yValue[2],
+        name: '<b>AgiBot World</b> (Beta)',
+        marker: { color: 'rgba(12, 49, 143, 0.9)' },
+        type: 'bar',
+        textposition: 'outside',
+        outsidetextfont: { size: 18, color: 'rgb(255, 255, 255)' },
+        hoverinfo: 'none',
+        width: 0.2
+    };
+    var data = [trace1, trace2, trace3];
+    var layout = {
+        height: 350,
+        margin: {
+            l: 50,
+            r: 50,
+            b: 0,
+            t: 30,
+        },
+        title: {
+            text: "<b>(b) Out-of-distribution Performance</b>",
+            font: {
+                size: 16,
+                color: 'rgb(255, 255, 255)'
+            },
+            yref: "paper",
+            y: 1.01,
+            yanchor: "bottom"
+        },
+        paper_bgcolor: 'rgba(0, 0, 0, 0)',
+        plot_bgcolor: 'rgba(0, 0, 0, 0)',
+        xaxis: {
+            tickfont: {
+                size: 15,
+                color: 'rgb(255, 255, 255)'
+            },
+            fixedrange: true,
+            automargin: true,
+            categoryorder: "array",
+            categoryarray: xValue
+        },
+        yaxis: {
+            title: {
+                text: 'Score',
+                font: {
+                    size: 15,
+                    color: 'rgb(255, 255, 255)'
+                }
+            },
+            tickfont: {
+                size: 14,
+                color: 'rgb(255, 255, 255)'
+            },
+            tickformat: '.1f',
+            range: [0, 1.01],
+            fixedrange: true,
+            gridcolor: 'rgba(255, 255, 255, 0.5)',
+        },
+        legend: {
+            x: 0.5,
+            y: 0,
+            xanchor: 'center',
+            yref: "container",
+            font: {
+                size: 16,
+                color: 'rgb(255, 255, 255)'
+            },
+            orientation: "h"
+
+        },
+        barmode: 'group',
+        bargap: 0.15,
+        bargroupgap: 0.1,
+        shapes: [
+            {
+                type: 'rect',
+                xref: 'x',
+                yref: 'container',
+                x0: 2.5,
+                x1: 3.5,
+                y0: 0,
+                y1: 1,
+                fillcolor: 'rgba(255, 255, 255, 0.15)', // adjust opacity and color as needed
+                line: { width: 0 },
+                layer: 'below'
+            }
+        ]
+    };
+
+    var config = {
+        displayModeBar: false,
+        responsive: true,
+    }
+    Plotly.newPlot('fig3-2', data, layout, config);
+
+    var fig32 = document.getElementById('fig3-2');
+    fig32.on('plotly_hover', function (dataa) {
+        dataa.points.map(function (d) {
+            var trace = fig32.data.find(t => t.name === d.data.name);
+            var index = trace.x.indexOf(d.x);
+            trace.text = trace.y.map((y, i) => i === index ? `<b>${y.toFixed(2)}</b>` : '');
+            Plotly.redraw('fig3-2');
+        });
+    })
+        .on('plotly_unhover', function (dataa) {
+            dataa.points.map(function (d) {
+                var trace = fig32.data.find(t => t.name === d.data.name);
+                trace.text = trace.y.map(y => '');
+                Plotly.redraw('fig3-2');
+            });
+        });
+</script>
+
+
+
+<!-- Figure 4 -->
+<script>
+    var xValue = ['Restock Bag', 'Table Bussing', 'Pour Water', 'Restock Beverage', 'Fold Shorts', '<b>Average</b>'];
+    var yValue = [[0.84, 0.54, 0.13, 0.36, 0.42, 0.46], [0.93, 0.87, 0.42, 0.49, 0.60, 0.66], [0.98, 1.00, 0.67, 0.60, 0.66, 0.78]];
+    var trace1 = {
+        x: xValue,
+        y: yValue[0],
+        name: '<b>RDT-1B</b>',
+        marker: { color: 'rgba(255, 99, 132, 0.9)' },
+        type: 'bar',
+        textposition: 'outside',
+        outsidetextfont: { size: 18, color: 'rgb(255, 255, 255)' },
+        hoverinfo: 'none',
+    };
+    var trace2 = {
+        x: xValue,
+        y: yValue[1],
+        name: '<b>GO-1 w/o Latent Planner</b>',
+        marker: { color: 'rgba(83, 194, 240, 0.9)' },
+        type: 'bar',
+        textposition: 'outside',
+        outsidetextfont: { size: 18, color: 'rgb(255, 255, 255)' },
+        hoverinfo: 'none',
+    };
+    var trace3 = {
+        x: xValue,
+        y: yValue[2],
+        name: '<b>GO-1</b>',
+        marker: { color: 'rgba(12, 49, 143, 0.9)' },
+        type: 'bar',
+        textposition: 'outside',
+        outsidetextfont: { size: 18, color: 'rgb(255, 255, 255)' },
+        hoverinfo: 'none',
+    };
+    var data = [trace1, trace2, trace3];
+    var layout = {
+        height: 400,
+        margin: {
+            l: 50,
+            r: 50,
+            b: 0,
+            t: 0,
+        },
+        paper_bgcolor: 'rgba(0, 0, 0, 0)',
+        plot_bgcolor: 'rgba(0, 0, 0, 0)',
+        xaxis: {
+            tickfont: {
+                size: 15,
+                color: 'rgb(255, 255, 255)'
+            },
+            fixedrange: true,
+            automargin: true,
+            categoryorder: "array",
+            categoryarray: xValue
+        },
+        yaxis: {
+            title: {
+                text: 'Score',
+                font: {
+                    size: 15,
+                    color: 'rgb(255, 255, 255)'
+                }
+            },
+            tickfont: {
+                size: 14,
+                color: 'rgb(255, 255, 255)'
+            },
+            tickformat: '.1f',
+            range: [0, 1.1],
+            fixedrange: true,
+            gridcolor: 'rgba(255, 255, 255, 0.5)',
+        },
+        legend: {
+            x: 0.5,
+            y: 0,
+            xanchor: 'center',
+            yref: "container",
+            font: {
+                size: 16,
+                color: 'rgb(255, 255, 255)'
+            },
+            orientation: "h"
+
+        },
+        barmode: 'group',
+        bargap: 0.15,
+        bargroupgap: 0.1,
+        shapes: [
+            {
+                type: 'rect',
+                xref: 'x',
+                yref: 'container',
+                x0: 4.5,
+                x1: 5.5,
+                y0: 0,
+                y1: 1,
+                fillcolor: 'rgba(255, 255, 255, 0.15)', // adjust opacity and color as needed
+                line: { width: 0 },
+                layer: 'below'
+            }
+        ]
+    };
+
+    var config = {
+        displayModeBar: false,
+        responsive: true,
+    }
+    Plotly.newPlot('fig4', data, layout, config);
+
+    var fig4 = document.getElementById('fig4');
+    fig4.on('plotly_hover', function (dataa) {
+        dataa.points.map(function (d) {
+            var trace = data.find(t => t.name === d.data.name);
+            var index = trace.x.indexOf(d.x);
+            trace.text = trace.y.map((y, i) => i === index ? `<b>${y.toFixed(2)}</b>` : '');
+            Plotly.redraw('fig4');
+        });
+    })
+        .on('plotly_unhover', function (dataa) {
+            data.map(function (trace) {
+                trace.text = trace.y.map(y => '');
+            });
+            Plotly.redraw('fig4');
+        });
 </script>
