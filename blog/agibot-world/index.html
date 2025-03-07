@@ -87,18 +87,18 @@
 
 
         <!-- Content -->
-        <div class="flex flex-col items-center gap-6 p-6 pt-12 pb-24 laptop:pb-36">
+        <div class="flex flex-col items-center gap-6 p-6 pt-12 pb-12">
 
 
 
             <p class="text-white w-full max-w-wide leading-loose">
-                We explore how <i class="text-white underline">scalable robot data</i> can address real-world challenges for generalized robotic manipulation. Introducing AgiBot World, a large-scale platform comprising over 1 million trajectories across 217 tasks in five deployment scenarios. Accelerated by <i class="text-white underline">a standardized collection pipeline with human-in-the-loop verification</i>, AgiBot World guarantees high-quality and diverse data distribution.
+                We explore how <b class="text-white">scalable robot data</b> can address real-world challenges for generalized robotic manipulation. Introducing AgiBot World, a large-scale platform comprising over 1 million trajectories across 217 tasks in five deployment scenarios. Accelerated by <b class="text-white">a standardized collection pipeline with human-in-the-loop verification</b>, AgiBot World guarantees high-quality and diverse data distribution.
             </p>
 
 
 
             <p class="text-white w-full max-w-wide leading-loose">
-                Building on top of AgiBot World, we introduce <i class="text-white underline">Genie Operator-1 (GO-1)</i>, a novel generalist policy that leverages latent action representations to <i class="text-white underline">maximize data utilization, demonstrating predictable performance scaling with increased data volume</i>. 
+                Building on top of AgiBot World, we introduce <b class="text-white">Genie Operator-1 (GO-1)</b>, a novel generalist policy that leverages latent action representations to <b class="text-white">maximize data utilization, demonstrating predictable performance scaling with increased data volume</b>. 
             </p>
 
 
@@ -124,18 +124,18 @@
 
 
             <p class="text-white w-full max-w-wide leading-loose">
-                AgiBot World Colosseo  is a full-stack and open-source embodied intelligence ecosystem. Based on our hardware platform AgiBot G1, we construct AgiBot World—an open-source robot manipulation dataset collected by more than <i class="text-white underline">100 homogeneous robots</i>, providing high-quality data for challenging tasks spanning a wide spectrum of real-life scenarios. 
+                AgiBot World Colosseo  is a full-stack and open-source embodied intelligence ecosystem. Based on our hardware platform AgiBot G1, we construct AgiBot World—an open-source robot manipulation dataset collected by more than <b class="text-white">100 homogeneous robots</b>, providing high-quality data for challenging tasks spanning a wide spectrum of real-life scenarios. 
             </p>
 
 
 
             <p class="text-white w-full max-w-wide leading-loose">
-                We go beyond basic tabletop tasks such as pick-and-place in lab environments; instead, <i class="text-white underline">concentrate on real-world scenarios</i> involving dual-arm manipulation, dexterous hands, and collaborative tasks. AgiBot World aims to provide an inclusive benchmark to drive the future development of advanced and robust algorithms. 
+                We go beyond basic tabletop tasks such as pick-and-place in lab environments; instead, <b class="text-white">concentrate on real-world scenarios</b> involving dual-arm manipulation, dexterous hands, and collaborative tasks. AgiBot World aims to provide an inclusive benchmark to drive the future development of advanced and robust algorithms. 
             </p>
 
 
 
-            <figure class="w-full max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6">
+            <figure class="w-full max-w-wider mt-3 mb-3 laptop:mt-6 laptop:mb-6">
                 <img loading="lazy" class="w-full" src="./pipeline.gif"/>
                 <figcaption class="text-white text-xs mt-3 leading-loose">
                     Figure 1: Data collection pipeline. AgiBot World embraces a human-in-the-loop framework to ensure high quality, enriched with detailed annotations and error recovery behaviors.
@@ -145,7 +145,7 @@
 
 
             <p class="text-white w-full max-w-wide leading-loose">
-                Concurrent with feedback collection from data annotators, we adopt a <i class="text-white underline">human-in-the-loop</i> approach to assess and refine data quality. This process involves an iterative cycle of collecting a small set of demonstrations, training a policy, and deploying the resulting policy to evaluate data availability. Based on the policy's performance, we iteratively refine the data collection pipeline to address identified gaps or inefficiencies. This feedback-driven methodology ensures continuous improvement in data quality.
+                Concurrent with feedback collection from data annotators, we adopt a <b class="text-white">human-in-the-loop</b> approach to assess and refine data quality. This process involves an iterative cycle of collecting a small set of demonstrations, training a policy, and deploying the resulting policy to evaluate data availability. Based on the policy's performance, we iteratively refine the data collection pipeline to address identified gaps or inefficiencies. This feedback-driven methodology ensures continuous improvement in data quality.
             </p>
 
 
@@ -158,7 +158,7 @@
 
 
 
-            <figure class="w-full max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6">
+            <figure class="w-full max-w-wider mt-3 mb-3 laptop:mt-6 laptop:mb-6">
                 <img loading="lazy" class="w-full" src="./model.png"/>
                 <figcaption class="text-white text-xs mt-3 leading-loose">
                     Figure 2: GO-1 is a robot foundation policy using latent action representations to unlock web-scale pre-training on heterogeneous data.
@@ -180,7 +180,7 @@
 
 
             <p class="text-white w-full max-w-wide leading-loose">
-                Despite considerable advancements in gathering diverse robot demonstrations, the volume of action-labeled robot data remains limited relative to web-scale datasets. To broaden the data pool by <i class="text-white underline">incorporating internet-scale human videos lacking action labels and cross-embodiment robot data</i>, we employ latent actions to model the inverse dynamics of consecutive frames. This approach enables the transfer of real-world dynamics from heterogeneous data sources into universal manipulation knowledge.
+                Despite considerable advancements in gathering diverse robot demonstrations, the volume of action-labeled robot data remains limited relative to web-scale datasets. To broaden the data pool by <b class="text-white">incorporating internet-scale human videos lacking action labels and cross-embodiment robot data</b>, we employ latent actions to model the inverse dynamics of consecutive frames. This approach enables the transfer of real-world dynamics from heterogeneous data sources into universal manipulation knowledge.
             </p>
 
 
@@ -198,7 +198,7 @@
 
 
             <p class="text-white w-full max-w-wide leading-loose">
-                With the aim of establishing a solid foundation for scene and object understanding and general reasoning ability, the ViLLA model harnesses a VLM pre-trained on web-scale vision-language data and incorporates <i class="text-white underline">a latent planner for embodiment-agnostic planning within the latent action space</i>. We use InternVL2.5-2B as the VLM backbone due to its strong transfer learning capabilities. Multiview image observations are first encoded using InternViT before being projected into the language space. The latent planner consists of 24 transformer layers, which enable layer-by-layer conditioning from the VLM backbone with full bidirectional attention.
+                With the aim of establishing a solid foundation for scene and object understanding and general reasoning ability, the ViLLA model harnesses a VLM pre-trained on web-scale vision-language data and incorporates <b class="text-white">a latent planner for embodiment-agnostic planning within the latent action space</b>. We use InternVL2.5-2B as the VLM backbone due to its strong transfer learning capabilities. Multiview image observations are first encoded using InternViT before being projected into the language space. The latent planner consists of 24 transformer layers, which enable layer-by-layer conditioning from the VLM backbone with full bidirectional attention.
             </p>
 
 
@@ -216,7 +216,7 @@
 
 
             <p class="text-white w-full max-w-wide leading-loose">
-                To achieve <i class="text-white underline">high-frequency and dexterous manipulation</i>, we integrate an action expert that utilizes a diffusion objective to model the continuous distribution of low-level actions. Although the action expert shares the same architectural framework as the latent planner, their objectives diverge: the latent planner generates discretized latent action tokens through masked language modeling, while the action expert regresses low-level actions via an iterative denoising process. Both expert modules are conditioned hierarchically on preceding modules, including the action expert itself, ensuring coherent integration and information flow within the dual-expert system.
+                To achieve <b class="text-white">high-frequency and dexterous manipulation</b>, we integrate an action expert that utilizes a diffusion objective to model the continuous distribution of low-level actions. Although the action expert shares the same architectural framework as the latent planner, their objectives diverge: the latent planner generates discretized latent action tokens through masked language modeling, while the action expert regresses low-level actions via an iterative denoising process. Both expert modules are conditioned hierarchically on preceding modules, including the action expert itself, ensuring coherent integration and information flow within the dual-expert system.
             </p>
 
 
@@ -241,7 +241,7 @@
 
 
 
-            <figure class="w-full max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6">
+            <figure class="w-full max-w-wider mt-3 mb-3 laptop:mt-6 laptop:mb-6">
                 <img loading="lazy" class="w-full" src="./fig3.png"/>
                 <figcaption class="text-white text-xs mt-3 leading-loose">
                     Figure 3: Policies pre-trained on our dataset outperform those trained on OXE in both seen (0.77 v.s. 0.47) and out-of-distribution scenarios (0.67 v.s. 0.38).
@@ -262,7 +262,7 @@
 
 
 
-            <figure class="w-full max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6">
+            <figure class="w-full max-w-wider mt-3 mb-3 laptop:mt-6 laptop:mb-6">
                 <img loading="lazy" class="w-full" src="./fig4.png"/>
                 <figcaption class="text-white text-xs mt-3 leading-loose">
                     Figure 4: We evaluate different models pre-trained on the AgiBot World dataset, where GO-1 significantly outperforms previous SOTA policy RDT.
@@ -455,6 +455,17 @@
         
 
     </main>
+
+
+
+    <footer class="w-full bg-drama-black overflow-x-hidden">
+        <div class="flex flex-col items-center p-6 pb-24">
+            <p class="text-o-gray text-xs/6 select-none w-full max-w-wide leading-loose">
+                OpenDriveLab © 2021 - 2025 All Rights Reserved
+            </p>
+        </div>
+    </footer>
+    
 </body>
 
 
