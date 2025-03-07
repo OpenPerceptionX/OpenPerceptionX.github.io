@@ -301,7 +301,7 @@
 
 
 
-            <figure class="w-full flex flex-col laptop:flex-row justify-between gap-12 laptop:gap-0 max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6">
+            <figure class="w-full flex flex-col laptop:hidden justify-between gap-12 laptop:gap-0 max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6">
                 <video class="laptop:max-w-widequater" preload="none" src="https://opendrivelab.github.io/AgiBotWorld/TableBussing.mp4"  autoplay loop muted></video>
                 <video class="laptop:max-w-widequater" preload="none" src="https://opendrivelab.github.io/AgiBotWorld/WipeTable.mp4"  autoplay loop muted></video>
                 <video class="laptop:max-w-widequater" preload="none" src="https://opendrivelab.github.io/AgiBotWorld/FoldShorts.mp4"  autoplay loop muted></video>
@@ -329,7 +329,7 @@
 
 
 
-            <!-- <div class="w-full max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6">
+            <div class="w-full mt-3 mb-3 laptop:mt-6 laptop:mb-6 hidden laptop:block">
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
@@ -353,9 +353,9 @@
                             </figure>
                         </div>
                     </div>
-                    <div class="swiper-pagination"></div>
+                    <!-- <div class="swiper-pagination"></div> -->
                   </div>
-            </div> -->
+            </div>
 
 
 
@@ -497,10 +497,15 @@
 <!-- Initialize Swiper -->
 <script>
     var swiper = new Swiper(".mySwiper", {
-        effect: "cards",
-        grabCursor: true,
+      slidesPerView: 4,
+      spaceBetween: 30,
+      centeredSlides: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
     });
-</script>
+  </script>
 
 
 
