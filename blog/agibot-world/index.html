@@ -110,7 +110,7 @@
 
             <h3 class="text-white hover:underline w-full max-w-wide leading-loose">
                 <a href="#agibot-world" class="scroll-mt-48 laptop:scroll-mt-20 group" id="agibot-world">
-                    AgiBot World: A Large-Scale High-Fidelity Robot Manipulation Dataset
+                    AgiBot World: A Large-Scale High-Fidelity Robot Dataset
                 </a>
             </h3>
 
@@ -298,16 +298,16 @@
 
 
 
-            <!-- <h4 class="text-white w-full max-w-wide leading-loose ">
+            <h4 class="text-white w-full max-w-wide leading-loose ">
                 Does GO-1's ability scale with data size?
             </h4>
 
 
 
             <figure class="w-full max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6">
-                <div id="fig4"></div>
+                <div id="fig5"></div>
                 <figcaption class="text-white text-xs mt-3 leading-loose">
-                    Figure 5: We evaluate how model performance scales with data size. To investigate whether a power-law scaling relationship exists between the 
+                    Figure 5: We evaluate how model performance scales with data size.
                 </figcaption>
             </figure>
 
@@ -316,7 +316,7 @@
 
             <p class="text-white w-full max-w-wide leading-loose">
                 To investigate whether a power-law scaling relationship exists between the size of pre-training data and policy capability, we conduct an analysis using 10% subsets of the alpha, 100% alpha, and beta dataset, where the number of training trajectories are ranged from 9.2k to 1M. We evaluate the out-of-the-box performance of resulting policies on four seen tasks in pre-training the. As shown in fig. 5, the performance of GO-1 exhibits a predictable power-law scaling relationship with the number of trajectories, supported by a Pearson correlation coefficient of r = 0.97.
-            </p> -->
+            </p>
 
 
 
@@ -946,16 +946,99 @@
 
 
 
-<!-- authors -->
+<!-- Figure 5 -->
 <script>
-    authorlist_state = false;
-    function switchAuthor() {
-        if (authorlist_state != true) {
-            document.getElementById("authorlist").classList.remove("hidden");
-            authorlist_state = true;
-        } else {
-            document.getElementById("authorlist").classList.add("hidden");
-            authorlist_state = false;
-        }
+    var xLine = [];
+    var yLine = [];
+    for (var i = 3.9; i < 6.2; i += 0.2) {
+        var x = Math.pow(10, i);
+        xLine.push(x);
+        yLine.push(0.1224 * Math.pow(x, 0.11));
     }
+    var trace1 = {
+        x: xLine,
+        y: yLine,
+        name: '<b>Power-law Fit</b>', 
+        // : y=0.1224x^0.11 Pearson r=0.97
+        marker: { color: 'rgba(12, 49, 143, 0.9)' },
+        line: { width: 5 },
+        mode: 'lines',
+        type: 'scatter',
+        hovertemplate: '%{x:.0s},%{y:.2f}<extra></extra>',
+    };
+    var trace2 = {
+        x: [9200, 92000, 1000000],
+        y: [0.34, 0.41, 0.56],
+        marker: { color: 'rgba(83, 194, 240, 1)', size: 20, symbol: 'triangle-up' },
+        mode: 'markers',
+        type: 'scatter',
+        hovertemplate: '%{x},%{y:.2f}<extra></extra>',
+        showlegend: false,
+    };
+    var data = [trace1, trace2];
+    var layout = {
+        height: 400,
+        margin: {
+            l: 50,
+            r: 50,
+            b: 0,
+            t: 0,
+        },
+        paper_bgcolor: 'rgba(0, 0, 0, 0)',
+        plot_bgcolor: 'rgba(0, 0, 0, 0)',
+        xaxis: {
+            tickfont: {
+                size: 15,
+                color: 'rgb(255, 255, 255)'
+            },
+            type: 'log',
+            tickmode: 'array',
+            tickvals: [1e4, 1e5, 1e6],
+            ticktext: ['10k', '100k', '1M'],
+            fixedrange: true,
+            automargin: true,
+            gridcolor: 'rgba(255, 255, 255, 0.5)',
+        },
+        yaxis: {
+            title: {
+                text: 'Score',
+                font: {
+                    size: 15,
+                    color: 'rgb(255, 255, 255)'
+                }
+            },
+            tickfont: {
+                size: 14,
+                color: 'rgb(255, 255, 255)'
+            },
+            tickformat: '.1f',
+            range: [0.29, 0.59],
+            fixedrange: true,
+            gridcolor: 'rgba(255, 255, 255, 0.5)',
+        },
+        legend: {
+            x: 0.5,
+            y: 0,
+            xanchor: 'center',
+            yref: "container",
+            font: {
+                size: 16,
+                color: 'rgb(255, 255, 255)'
+            },
+            orientation: "h"
+        },
+        hoverlabel: {
+            font: {
+                size: 18,
+                color: 'rgb(255, 255, 255)'
+            },
+            bordercolor: 'rgba(0, 0, 0, 0)',
+        },
+    };
+
+    var config = {
+        displayModeBar: false,
+        responsive: true,
+    }
+    Plotly.newPlot('fig5', data, layout, config);
 </script>
