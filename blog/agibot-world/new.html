@@ -1,0 +1,468 @@
+<head>
+    <link rel="icon" type="image/png" href="./colosseo.png">
+    <title>AgiBot World Colosseo | OpenDriveLab</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="AgiBot World, OpenDriveLab, Robotics, Embodied AI, Autonomous Driving">
+    <meta name="description" content="OpenDriveLab is committed to exploring cutting-edge embodied AI technology, launching a series of benchmarking work, open source to serve the community, and promote the common development of the industry. Friends who are committed to making influential research are welcome to join!">
+
+    <link href="/ui2025/css/index_tailwind.css" rel="stylesheet">
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="/ui2024/css/swiper-bundle.min.css"/>
+    <script src="/ui2024/js/swiper-bundle.min.js"></script>
+
+    <script src="/ui2024/js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script src="/ui2025/js/plotly.js" charset="utf-8"></script>
+</head>
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L7VEDHS6G8"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-L7VEDHS6G8');
+</script>
+
+
+
+<body class="h-full" id="#" class="bg-drama-black">
+    <!-- Header / Sidebar -->
+    <header class="z-10 fixed top-6 laptop:top-12 flex ml-6 gap-2 h-0">
+
+        <a href="/" class="h-10 flex justify-center items-center bg-white hover:bg-o-light-blue transition delay-100 duration-200 rounded-md p-2">
+            <img loading="lazy" class="h-5 w-auto" src="/assets/icon/D.svg">
+        </a>
+
+        <a href="/publications/" class="h-10 flex justify-center items-center bg-white text-drama-black hover:bg-o-light-blue transition delay-100 duration-200 rounded-md p-4">
+            <b class="font-mono">Publication</b>
+        </a>
+
+        <a href="/events/" class="h-10 flex justify-center items-center bg-white text-drama-black hover:bg-o-light-blue transition delay-100 duration-200 rounded-md p-4">
+            <b class="font-mono">Event</b>
+        </a>
+
+    </header>
+    <!-- Page -->
+    <div id="page" class="bg-drama-black">
+        <div class="flex w-screen tablet:w-auto flex-col">
+
+
+
+            <!-- Landing -->
+            <div class="relative h-svh laptop:h-high">
+                <div class="absolute w-full h-full ">
+                    <video preload="none" autoplay loop muted class="w-full h-full absolute object-cover bg-[url('/blog/agibot-world/landing.jpeg')] bg-center bg-cover bg-black bg-opacity-30 bg-blend-overlay">
+                        <source src="https://agibot-world.com/videos/banner_model_video.mp4"/>
+                    </video>
+                </div>
+
+                <div class="relative w-full h-full flex flex-col justify-end items-center p-6">
+        
+                    <h2 class="text-white w-full max-w-wider mb-12">
+                        Introducing AgiBot World Colosseo:<br>A Large-scale Manipulation Platform for Scalable and Intelligent Embodied Systems
+                    </h2>
+        
+                    <div class="flex flex-row w-full max-w-wider mb-12 gap-6 laptop:gap-x-16">
+                        <img loading="lazy" src="/assets/brand/shanghai_ai_lab_white_.png" class="h-3 laptop:h-8 select-none"/>
+                        <img loading="lazy" src="/assets/brand/agibot_white.png" class="h-3 laptop:h-8 select-none"/>
+                        <img loading="lazy" src="/assets/brand/shanghai_innovation_institute_white.png" class="h-3 laptop:h-8 select-none"/>
+                    </div>
+        
+                    <p class="text-white w-full max-w-wider mb-12">
+                        March 10, 2025
+                    </p>
+        
+                </div>
+            </div>
+
+
+
+            <!-- Content -->
+            <div class="flex flex-col laptop:flex-row snap-start p-6 tablet:p-10 tablet:pt-0 tablet:pb-0">
+
+
+
+                <!-- navigator -->
+                <aside class="min-h-16 laptop:h-screen top-16 tablet:top-0 sticky z-20 flex flex-col items-start justify-evenly w-full laptop:w-1/5 shrink-0">
+                    <ul class="w-full laptop:w-auto mt-3 mb-6 flex flex-row flex-wrap laptop:flex-col justify-evenly border-t-2 border-t-o-white border-b-2 border-b-o-white laptop:border-t-0 laptop:border-b-0">
+    
+                        <li>
+                            <a href="#schedule" class="navigator-button group text-white">                           
+                                <span class="navigator-button-text">
+                                    Schedule
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#speaker" class="navigator-button group text-white">                           
+                                <span class="navigator-button-text">
+                                    Speakers
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#organizer" class="navigator-button group text-white">                             
+                                <span class="navigator-button-text">
+                                    Organizers
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#edition" class="navigator-button group text-white">                             
+                                <span class="navigator-button-text">
+                                    Past Editions
+                                </span>
+                            </a>
+                        </li>
+
+                        <li class="laptop:mt-7">
+                            <a href="#" class="flex p-3 laptop:pl-1 select-none">                           
+                                <span>
+                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 18.75 7.5-7.5 7.5 7.5" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 7.5-7.5 7.5 7.5" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+    
+                    </ul>
+                </aside>
+
+
+
+                <!-- main -->
+                <main class="w-full mb-16 tablet:mb-32 mt-10">
+
+
+
+                    <div class="mt-10 w-full flex flex-col gap-20 laptop:flex-row justify-between">
+
+                        <div class="flex-1">
+
+                            <h3>
+                                Introduction
+                            </h3>
+                            <p class="pt-10">
+                                Autonomous systems, such as robots and self-driving cars, have rapidly evolved over the past decades. Despite this, several problems remain. Attempts have been made to develop more capable autonomous systems, such as integrating foundation models and utilizing large-scale data. However, the challenging problems have yet to be solved.
+                                <br><br>
+                                The motivation behind this workshop is to explore potential solutions, and discuss the challenges and opportunities associated with these approaches. We believe that this workshop serves as a brand-new perspective on <b>the present and future of autonomous systems</b>, and is necessary for both the robotics and computer vision communities.
+                            </p>
+
+                            <h3 class="mt-10">
+                                Join
+                            </h3>
+                            <p class="pt-10">
+                                If you are interested in our workshop, please <code>mark the workshop in your CVPR registration</code>, to have enough space for the workshop room.
+                            </p>
+
+                        </div>
+
+                        <div class="flex-1">
+                            <h3>
+                                Contact
+                            </h3>
+                            <div class="pt-10">
+                                <ul class="space-y-10">
+                                    <li class="flex gap-6 laptop:gap-10">
+                                        <img src="/assets/icon/email.png" class="size-8 inline-block mr-2"/>
+                                        <span>Contact us via <a href="mailto:contact@opendrivelab.com" class="text-o-blue hover:underline"><code>contact@opendrivelab.com</code></a></span>
+                                    </li>
+                                    <li class="flex gap-6 laptop:gap-10">
+                                        <img src="/assets/icon/discord.png" class="size-8 inline-block mr-2"/>
+                                        <span><a href="https://discord.gg/BmXRvwgjgf" target="_blank" class="text-o-blue hover:underline">Join Discord</a> to chat with the organizers</span>
+                                    </li>
+                                    <li class="flex gap-6 laptop:gap-10">
+                                        <img src="/assets/icon/wechat.png" class="size-8 inline-block mr-2"/>
+                                        <span>Join discussions in our <a onclick="openWeChatGroup()" class="text-o-blue hover:underline">WeChat group</a></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="divider"></div>
+
+
+
+                    <div class="w-full mt-20">
+                        <h2>
+                            <a href="#schedule" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="schedule">
+                                Schedule
+                                <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
+                            </a>
+                        </h2>
+                        <p class="mt-10">
+                            Full-day workshop. The schedule is to be announced.
+                        </p>
+                    </div>
+
+
+
+                    <div class="divider"></div>
+
+
+
+
+                    <div class="w-full mt-20">
+                        <h2>
+                            <a href="#speaker" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="speaker">
+                                Speakers
+                                <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
+                            </a>
+                        </h2>
+                        <div class="mt-20 gap-10 grid grid-cols-[repeat(auto-fill,_minmax(144px,_1fr))] tablet:grid-cols-[repeat(auto-fill,_minmax(192px,_1fr))]">
+                            <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
+                                <a href="https://people.eecs.berkeley.edu/~malik/" target="_blank" class="hover:opacity-70">
+                                    <img src="/assets/person/jitendra_malik.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
+                                </a>
+                                <h4>Jitendra Malik</h4>
+                                <div class="flex flex-col">
+                                    <i class="text-o-gray">Professor</i>
+                                    <span>UC Berkeley</span>
+                                </div>
+                                <div class="border-b-2 border-o-white"></div>
+                            </div>
+                            <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
+                                <a href="https://www.cs.cmu.edu/~abhinavg/" target="_blank" class="hover:opacity-70">
+                                    <img src="/assets/person/abhinav_gupta.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
+                                </a>
+                                <h4>Abhinav Gupta</h4>
+                                <div class="flex flex-col">
+                                    <i class="text-o-gray">Professor</i>
+                                    <span>CMU</span>
+                                </div>
+                                <div class="border-b-2 border-o-white"></div>
+                            </div>
+                            <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
+                                <a href="https://www.cs.princeton.edu/~fheide/" target="_blank" class="hover:opacity-70">
+                                    <img src="/assets/person/felix_heide.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
+                                </a>
+                                <h4>Felix Heide</h4>
+                                <div class="flex flex-col">
+                                    <i class="text-o-gray">Professor</i>
+                                    <span>Princeton</span>
+                                </div>
+                                <div class="border-b-2 border-o-white"></div>
+                            </div>
+                            <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
+                                <a href="https://homes.luddy.indiana.edu/djcran/" target="_blank" class="hover:opacity-70">
+                                    <img src="/assets/person/david_crandall.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
+                                </a>
+                                <h4>David Crandall</h4>
+                                <div class="flex flex-col">
+                                    <i class="text-o-gray">Professor</i>
+                                    <span>Indiana University</span>
+                                </div>
+                                <div class="border-b-2 border-o-white"></div>
+                            </div>
+                            <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
+                                <a href="https://vincent.vanhoucke.com/" target="_blank" class="hover:opacity-70">
+                                    <img src="/assets/person/vincent_vanhoucke.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
+                                </a>
+                                <h4>Vincent Vanhoucke</h4>
+                                <div class="flex flex-col">
+                                    <i class="text-o-gray">Distinguished Engineer</i>
+                                    <span>Waymo</span>
+                                </div>
+                                <div class="border-b-2 border-o-white"></div>
+                            </div>
+                            <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
+                                <a href="https://antonilo.github.io/" target="_blank" class="hover:opacity-70">
+                                    <img src="/assets/person/antonio_loquercio.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
+                                </a>
+                                <h4>Antonio Loquercio</h4>
+                                <div class="flex flex-col">
+                                    <i class="text-o-gray">Assistant Professor</i>
+                                    <span>UPenn</span>
+                                </div>
+                                <div class="border-b-2 border-o-white"></div>
+                            </div>
+                            <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
+                                <a href="https://mysite.ku.edu.tr/fguney/" target="_blank" class="hover:opacity-70">
+                                    <img src="/assets/person/fatma_güney.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
+                                </a>
+                                <h4>Fatma Güney</h4>
+                                <div class="flex flex-col">
+                                    <i class="text-o-gray">Assistant Professor</i>
+                                    <span>Koç University</span>
+                                </div>
+                                <div class="border-b-2 border-o-white"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="divider"></div>
+
+
+
+
+                    <div class="w-full mt-20">
+                        <h2>
+                            <a href="#organizer" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="organizer">
+                                Organizers
+                                <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
+                            </a>
+                        </h2>
+                        <table class="mt-20 table-fixed">
+                            <tbody class="flex flex-col gap-3">
+            
+                                <tr>
+                                    <td class="w-4">-</td>
+                                    <td class="w-48"><a class="text-o-blue hover:underline" href="https://lihongyang.info/" target="_blank">Hongyang Li</a></td>
+                                    <td class="w-64"><i>The University of Hong Kong</i></td>
+                                </tr>
+                                <tr>
+                                    <td class="w-4">-</td>
+                                    <td class="w-48"><a class="text-o-blue hover:underline" href="https://kashyap7x.github.io/" target="_blank">Kashyap Chitta</a></td>
+                                    <td class="w-64"><i>University of Tübingen</i></td>
+                                </tr>
+                                <tr>
+                                    <td class="w-4">-</td>
+                                    <td class="w-48"><a class="text-o-blue hover:underline" href="https://abursuc.github.io/" target="_blank">Andrei Bursuc</a></td>
+                                    <td class="w-64"><i>Valeo</i></td>
+                                </tr>
+                                <tr>
+                                    <td class="w-4">-</td>
+                                    <td class="w-48"><a class="text-o-blue hover:underline" href="https://people.ee.ethz.ch/~csakarid/" target="_blank">Christos Sakaridis</a></td>
+                                    <td class="w-64"><i>ETH Zürich</i></td>
+                                </tr>
+                                <tr>
+                                    <td class="w-4">-</td>
+                                    <td class="w-48"><a class="text-o-blue hover:underline" href="https://www.cs.toronto.edu/~jphilion/" target="_blank">Jonah Philion</a></td>
+                                    <td class="w-64"><i>University of Toronto</i></td>
+                                </tr>
+                                <tr>
+                                    <td class="w-4">-</td>
+                                    <td class="w-48"><a class="text-o-blue hover:underline" href="https://f-barto.github.io/" target="_blank">Florent Bartoccioni</a></td>
+                                    <td class="w-64"><i>Valeo</i></td>
+                                </tr>
+                                <tr>
+                                    <td class="w-4">-</td>
+                                    <td class="w-48"><a class="text-o-blue hover:underline" href="https://amm272.github.io/" target="_blank">Ana-Maria Marcu</a></td>
+                                    <td class="w-64"><i>Wayve</i></td>
+                                </tr>
+                                <tr>
+                                    <td class="w-4">-</td>
+                                    <td class="w-48"><a class="text-o-blue hover:underline" href="https://faikit.github.io/" target="_blank">Huijie Wang</a></td>
+                                    <td class="w-64"><i>OpenDriveLab</i></td>
+                                </tr>
+            
+                            </tbody>
+                        </table>
+                        <!-- <div class="mt-20 gap-10 grid grid-cols-[repeat(auto-fill,_minmax(144px,_1fr))] tablet:grid-cols-[repeat(auto-fill,_minmax(192px,_1fr))]">
+                            <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
+                                <a href="https://lihongyang.info" target="_blank" class="hover:opacity-70">
+                                    <img src="/assets/person/hongyang_li.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
+                                </a>
+                                <h4>Hongyang Li</h4>
+                                <span>The University of Hong Kong</span>
+                                <div class="border-b-2 border-o-white"></div>
+                            </div>
+                            <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
+                                <a href="https://kashyap7x.github.io/" target="_blank" class="hover:opacity-70">
+                                    <img src="/assets/person/kashyap_chitta.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
+                                </a>
+                                <h4>Kashyap Chitta</h4>
+                                <span>University of Tübingen</span>
+                                <div class="border-b-2 border-o-white"></div>
+                            </div>
+                            <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
+                                <a href="https://abursuc.github.io/" target="_blank" class="hover:opacity-70">
+                                    <img src="/assets/person/andrei_bursuc.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
+                                </a>
+                                <h4>Andrei Bursuc</h4>
+                                <span>Valeo</span>
+                                <div class="border-b-2 border-o-white"></div>
+                            </div>
+                            <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
+                                <a href="https://people.ee.ethz.ch/~csakarid/" target="_blank" class="hover:opacity-70">
+                                    <img src="/assets/person/christos_sakaridis.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
+                                </a>
+                                <h4>Christos Sakaridis</h4>
+                                <span>ETH Zürich</span>
+                                <div class="border-b-2 border-o-white"></div>
+                            </div>
+                            <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
+                                <a href="https://www.cs.toronto.edu/~jphilion/" target="_blank" class="hover:opacity-70">
+                                    <img src="/assets/person/jonah_philion.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
+                                </a>
+                                <h4>Jonah Philion</h4>
+                                <span>University of Toronto</span>
+                                <div class="border-b-2 border-o-white"></div>
+                            </div>
+                            <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
+                                <a href="https://f-barto.github.io/" target="_blank" class="hover:opacity-70">
+                                    <img src="/assets/person/florent_bartoccioni.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
+                                </a>
+                                <h4>Florent Bartoccioni</h4>
+                                <span>Valeo</span>
+                                <div class="border-b-2 border-o-white"></div>
+                            </div>
+                            <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
+                                <a href="https://amm272.github.io/" target="_blank" class="hover:opacity-70">
+                                    <img src="/assets/person/ana-maria_marcu.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
+                                </a>
+                                <h4>Ana-Maria Marcu</h4>
+                                <span>Wayve</span>
+                                <div class="border-b-2 border-o-white"></div>
+                            </div>
+                            <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
+                                <a href="https://faikit.github.io/" target="_blank" class="hover:opacity-70">
+                                    <img src="/assets/person/huijie_wang.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
+                                </a>
+                                <h4>Huijie Wang</h4>
+                                <span>OpenDriveLab</span>
+                                <div class="border-b-2 border-o-white"></div>
+                            </div>
+                        </div> -->
+                    </div>
+
+
+                    
+                    <div class="divider"></div>
+
+
+
+                    <div class="w-full mt-20">
+                        <h2>
+                            <a href="#edition" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="edition">
+                                Past Editions
+                                <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
+                            </a>
+                        </h2>
+                        <div class="mt-20 gap-20 flex flex-col laptop:flex-row">
+                            <a class="hover:opacity-70 w-full h-60 laptop:h-72 rounded-3xl bg-[url('/assets/background/seattle.jpg')] bg-top bg-cover p-6 laptop:p-10 flex flex-col justify-evenly bg-black bg-opacity-30 bg-blend-overlay" href="/cvpr2024/workshop/">
+                                <h3 class="text-white">Foundation Models for Autonomous Systems</h3>
+                                <br>
+                                <h4 class="text-white">CVPR 2024</h4>
+                            </a>
+                            <a class="hover:opacity-70 w-full h-60 laptop:h-72 rounded-3xl bg-[url('/ui2023/cvpr2023/img/workshop/banner.jpg')] bg-top bg-cover p-6 laptop:p-10 flex flex-col justify-evenly bg-black bg-opacity-30 bg-blend-overlay" href="/cvpr2023/workshop/">
+                                <h3 class="text-white">End-to-End Autonomous Driving: Emerging Tasks and Challenges</h3>
+                                <br>
+                                <h4 class="text-white">CVPR 2023</h4>
+                            </a>
+                        </div>
+                    </div>
+
+                </main>
+
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+</body>
