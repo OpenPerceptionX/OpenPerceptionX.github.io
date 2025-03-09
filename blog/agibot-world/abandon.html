@@ -1,0 +1,1044 @@
+<head>
+    <link rel="icon" type="image/png" href="./colosseo.png">
+    <title>AgiBot World Colosseo | OpenDriveLab</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="AgiBot World, OpenDriveLab, Robotics, Embodied AI, Autonomous Driving">
+    <meta name="description" content="OpenDriveLab is committed to exploring cutting-edge embodied AI technology, launching a series of benchmarking work, open source to serve the community, and promote the common development of the industry. Friends who are committed to making influential research are welcome to join!">
+
+    <link href="/ui2025/css/index_tailwind.css" rel="stylesheet">
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="/ui2024/css/swiper-bundle.min.css"/>
+    <script src="/ui2024/js/swiper-bundle.min.js"></script>
+
+    <script src="/ui2024/js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script src="/ui2025/js/plotly.js" charset="utf-8"></script>
+</head>
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L7VEDHS6G8"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-L7VEDHS6G8');
+</script>
+
+
+
+<body id="#" class="bg-drama-black">
+
+
+
+    <header class="z-10 sticky top-6 laptop:top-12 flex ml-6 gap-2 h-0">
+
+        <a href="/" class="h-10 flex justify-center items-center bg-white hover:bg-o-light-blue transition delay-100 duration-200 rounded-md p-2">
+            <img loading="lazy" class="h-5 w-auto" src="/assets/icon/D.svg">
+        </a>
+
+        <a href="/publications/" class="h-10 flex justify-center items-center bg-white text-drama-black hover:bg-o-light-blue transition delay-100 duration-200 rounded-md p-4">
+            <b class="font-mono">Publication</b>
+        </a>
+
+        <a href="/events/" class="h-10 flex justify-center items-center bg-white text-drama-black hover:bg-o-light-blue transition delay-100 duration-200 rounded-md p-4">
+            <b class="font-mono">Event</b>
+        </a>
+
+    </header>
+
+
+
+    <main id="page" class="w-full bg-drama-black overflow-x-hidden">
+
+
+
+        <!-- Landing -->
+        <div class="relative h-svh laptop:h-high">
+            <div class="absolute w-full h-full ">
+                <video preload="none" autoplay loop muted class="w-full h-full absolute object-cover bg-[url('/blog/agibot-world/landing.jpeg')] bg-center bg-cover bg-black bg-opacity-30 bg-blend-overlay">
+                    <source src="https://agibot-world.com/videos/banner_model_video.mp4"/>
+                </video>
+            </div>
+
+            <div class="relative w-full h-full flex flex-col justify-end items-center p-6">
+    
+                <h2 class="text-white w-full max-w-wider mb-12">
+                    Introducing AgiBot World Colosseo:<br>A Large-scale Manipulation Platform for Scalable and Intelligent Embodied Systems
+                </h2>
+    
+                <div class="flex flex-row w-full max-w-wider mb-12 gap-6 laptop:gap-x-16">
+                    <img loading="lazy" src="/assets/brand/shanghai_ai_lab_white_.png" class="h-3 laptop:h-8 select-none"/>
+                    <img loading="lazy" src="/assets/brand/agibot_white.png" class="h-3 laptop:h-8 select-none"/>
+                    <img loading="lazy" src="/assets/brand/shanghai_innovation_institute_white.png" class="h-3 laptop:h-8 select-none"/>
+                </div>
+    
+                <p class="text-white w-full max-w-wider mb-12">
+                    March 10, 2025
+                </p>
+    
+            </div>
+        </div>
+
+
+
+        <!-- Content -->
+        <div class="flex flex-col items-center gap-6 p-6 pt-12 pb-12">
+
+
+
+            <p class="text-white w-full max-w-wide leading-loose">
+                We explore how <a class="text-white font-bold underline hover:text-o-blue" href="#agibot-world">scalable robot data</a> can address real-world challenges for generalized robotic manipulation. Introducing AgiBot World, a large-scale platform comprising over 1 million trajectories across 217 tasks in five deployment scenarios. Accelerated by <b class="text-white">a standardized collection pipeline with human-in-the-loop verification</b>, AgiBot World guarantees high-quality and diverse data distribution.
+            </p>
+
+
+
+            <p class="text-white w-full max-w-wide leading-loose">
+                Building on top of AgiBot World, we introduce <a class="text-white font-bold underline hover:text-o-blue" href="#go-1">Genie Operator-1 (GO-1)</a>, a novel generalist policy that leverages latent action representations to <b class="text-white">maximize data utilization, demonstrating predictable performance scaling with increased data volume</b>. 
+            </p>
+
+
+
+            <p class="text-white w-full max-w-wide leading-loose">
+                Policies pre-trained on our dataset achieve an average performance improvement of 30% over those trained on Open X-Embodiment, GO-1 exhibits exceptional capability in real-world dexterous and long-horizon tasks, achieving over 60% success rate on complex tasks and outperforming prior SOTA policy RDT by 32%.
+            </p>
+
+
+
+            <h3 class="text-white hover:underline w-full max-w-wide leading-loose">
+                <a href="#agibot-world" class="scroll-mt-48 laptop:scroll-mt-20 group" id="agibot-world">
+                    AgiBot World: A Large-Scale High-Fidelity Robot Dataset
+                </a>
+            </h3>
+
+
+
+            <figure class="w-full max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6">
+                <video preload="none" autoplay loop muted class="w-full bg-[url('/blog/agibot-world/Teleoperation.jpg')] bg-center bg-cover">
+                    <source src="https://opendrivelab.github.io/AgiBotWorld/Teleoperation.mp4"/>
+                </video>
+            </figure>
+
+
+
+            <p class="text-white w-full max-w-wide leading-loose">
+                AgiBot World Colosseo  is a full-stack and open-source embodied intelligence ecosystem. Based on our hardware platform AgiBot G1, we construct AgiBot World—an open-source robot manipulation dataset collected by more than <b class="text-white">100 homogeneous robots</b>, providing high-quality data for challenging tasks spanning a wide spectrum of real-life scenarios. 
+            </p>
+
+
+
+            <p class="text-white w-full max-w-wide leading-loose">
+                We go beyond basic tabletop tasks such as pick-and-place in lab environments; instead, <b class="text-white">concentrate on real-world scenarios</b> involving dual-arm manipulation, dexterous hands, and collaborative tasks. AgiBot World aims to provide an inclusive benchmark to drive the future development of advanced and robust algorithms. 
+            </p>
+
+
+
+            <figure class="w-full max-w-wider mt-3 mb-3 laptop:mt-6 laptop:mb-6">
+                <img loading="lazy" class="w-full" src="./pipeline.gif"/>
+                <figcaption class="text-white text-xs mt-3 leading-loose">
+                    Figure 1: Data collection pipeline. AgiBot World embraces a human-in-the-loop framework to ensure high quality, enriched with detailed annotations and error recovery behaviors.
+                </figcaption>
+            </figure>
+
+
+
+            <p class="text-white w-full max-w-wide leading-loose">
+                Concurrent with feedback collection from data annotators, we adopt a <b class="text-white">human-in-the-loop</b> approach to assess and refine data quality. This process involves an iterative cycle of collecting a small set of demonstrations, training a policy, and deploying the resulting policy to evaluate data availability. Based on the policy's performance, we iteratively refine the data collection pipeline to address identified gaps or inefficiencies. This feedback-driven methodology ensures continuous improvement in data quality.
+            </p>
+
+
+
+            <h3 class="text-white hover:underline w-full max-w-wide leading-loose">
+                <a href="#go-1" class="scroll-mt-48 laptop:scroll-mt-20 group" id="go-1">
+                    GO-1: A Scalable Robot Foundation Policy
+                </a>
+            </h3>
+
+
+
+            <figure class="w-full max-w-wider mt-3 mb-3 laptop:mt-6 laptop:mb-6">
+                <img loading="lazy" class="w-full" src="./model.jpg"/>
+                <figcaption class="text-white text-xs mt-3 leading-loose">
+                    Figure 2: GO-1 is a robot foundation policy using latent action representations to unlock web-scale pre-training on heterogeneous data.
+                </figcaption>
+            </figure>
+
+
+
+            <p class="text-white w-full max-w-wide leading-loose">
+                To effectively utilize web-scale heterogeneous videos alongside our high-quality AgiBot World dataset and enhance the policy's generalizability, we propose a hierarchical Vision-Language-Latent-Action (ViLLA) framework. Compared to Vision-Language-Action (VLA) model where action is vision-language conditioned, the ViLLA model predicts latent action tokens, bridging the gap between image-text inputs and robot actions generated by the action expert. 
+            </p>
+
+
+
+            <h4 class="text-white w-full max-w-wide leading-loose ">
+                Latent Action Model
+            </h4>
+
+
+
+            <p class="text-white w-full max-w-wide leading-loose">
+                Despite considerable advancements in gathering diverse robot demonstrations, the volume of action-labeled robot data remains limited relative to web-scale datasets. To broaden the data pool by <b class="text-white">incorporating internet-scale human videos lacking action labels and cross-embodiment robot data</b>, we employ latent actions to model the inverse dynamics of consecutive frames. This approach enables the transfer of real-world dynamics from heterogeneous data sources into universal manipulation knowledge.
+            </p>
+
+
+
+            <p class="text-white w-full max-w-wide leading-loose">
+                To extract latent actions from video frames, the latent action model is constructed around an inverse dynamics model-based encoder and a forward dynamics model-based decoder. The encoder employs a spatial-temporal transformer with casual temporal masks, while the decoder is a spatial transformer that takes the initial frame and discretized latent action tokens as input. The latent action tokens are quantized using a VQ-VAE objective.
+            </p>
+
+
+
+            <h4 class="text-white w-full max-w-wide leading-loose ">
+                Latent Planner
+            </h4>
+
+
+
+            <p class="text-white w-full max-w-wide leading-loose">
+                With the aim of establishing a solid foundation for scene and object understanding and general reasoning ability, the ViLLA model harnesses a VLM pre-trained on web-scale vision-language data and incorporates <b class="text-white">a latent planner for embodiment-agnostic planning within the latent action space</b>. We use InternVL2.5-2B as the VLM backbone due to its strong transfer learning capabilities. Multiview image observations are first encoded using InternViT before being projected into the language space. The latent planner consists of 24 transformer layers, which enable layer-by-layer conditioning from the VLM backbone with full bidirectional attention.
+            </p>
+
+
+
+            <p class="text-white w-full max-w-wide leading-loose">
+                Specifically, given multiview input images (typically from the head, left wrist, and right wrist) along with a language instruction describing the ongoing task, the latent planner predicts latent action tokens, with supervision produced by the LAM encoder. Since the latent action space is orders of magnitude smaller than the discretized low-level actions used in OpenVLA, this approach also facilitates the efficient adaptation of general purpose VLMs into robot policies.
+            </p>
+
+
+
+            <h4 class="text-white w-full max-w-wide leading-loose ">
+                Action Expert
+            </h4>
+
+
+
+            <p class="text-white w-full max-w-wide leading-loose">
+                To achieve <b class="text-white">high-frequency and dexterous manipulation</b>, we integrate an action expert that utilizes a diffusion objective to model the continuous distribution of low-level actions. Although the action expert shares the same architectural framework as the latent planner, their objectives diverge: the latent planner generates discretized latent action tokens through masked language modeling, while the action expert regresses low-level actions via an iterative denoising process. Both expert modules are conditioned hierarchically on preceding modules, including the action expert itself, ensuring coherent integration and information flow within the dual-expert system.
+            </p>
+
+
+
+            <p class="text-white w-full max-w-wide leading-loose">
+                During inference, the VLM, latent planner, and action expert are synergistically combined within the generalist policy GO-1, which initially predicts k latent action tokens and subsequently conditions the denoising process to produce the final control signals.
+            </p>
+
+
+            
+            <h3 class="text-white hover:underline w-full max-w-wide leading-loose">
+                <a href="#experiment" class="scroll-mt-48 laptop:scroll-mt-20 group" id="experiment">
+                    Experiment
+                </a>
+            </h3>
+
+
+
+            <h4 class="text-white w-full max-w-wide leading-loose ">
+                Does AgiBot World boost policy learning at scale?
+            </h4>
+
+
+
+            <!-- <figure class="w-full max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6">
+                <img loading="lazy" class="w-full" src="./fig3.png"/>
+                <figcaption class="text-white text-xs mt-3 leading-loose">
+                    Figure 3: Policies pre-trained on our dataset outperform those trained on OXE in both seen (0.77 v.s. 0.47) and out-of-distribution scenarios (0.67 v.s. 0.38).
+                </figcaption>
+            </figure> -->
+
+
+
+            <figure class="w-full max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6">
+                <div id="fig3-1"></div>
+                <div id="fig3-2"></div>
+                <figcaption class="text-white text-xs mt-3 leading-loose">
+                    Figure 3: Policies pre-trained on our dataset outperform those trained on OXE in both seen (0.77
+                    v.s. 0.47) and out-of-distribution scenarios (0.67 v.s. 0.38).
+                </figcaption>
+            </figure>
+
+
+
+            <p class="text-white w-full max-w-wide leading-loose">
+                We choose the open-source RDT model to study how much the AgiBot World dataset can help policy learning. Models pre-trained on the AgiBot World dataset demonstrate a significant improvement in the “Table Bussing” task, nearly tripling performance. On average, the completion score increases by 0.30 and 0.29 for in-distribution and out-of-distribution setups, respectively. Notably, the AgiBot World alpha dataset, despite having a significantly smaller data volume than OXE (e.g., 236h compared to ~2000h), achieves a higher success rate, underscoring the exceptional data quality of our dataset.
+            </p>
+
+
+
+            <h4 class="text-white w-full max-w-wide leading-loose ">
+                Is GO-1 a more capable generalist policy?
+            </h4>
+
+
+
+            <!-- <figure class="w-full max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6">
+                <img loading="lazy" class="w-full" src="./fig4.png"/>
+                <figcaption class="text-white text-xs mt-3 leading-loose">
+                    Figure 4: We evaluate different models pre-trained on the AgiBot World dataset, where GO-1 significantly outperforms previous SOTA policy RDT.
+                </figcaption>
+            </figure> -->
+
+
+
+            <figure class="w-full max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6">
+                <div id="fig4"></div>
+                <figcaption class="text-white text-xs mt-3 leading-loose">
+                    Figure 4: We evaluate different models pre-trained on the AgiBot World dataset, where GO-1 significantly outperforms previous SOTA policy RDT.
+                </figcaption>
+            </figure>
+
+
+
+            <p class="text-white w-full max-w-wide leading-loose">
+                We evaluate GO-1 on five tasks of varying complexity, categorized by their visual richness and task horizon. The results are averaged over 30 trials per task, with 10 trials conducted in a seen setup and 20 trials under variations or distractions. GO-1 significantly outperforms RDT, particularly in tasks such as “Pour Water”, which demands robustness to object positions, and “Restock Beverage”, which requires visual robustness and instruction following capabilities. The inclusion of the latent planner in the ViLLA model further improves performance, resulting in an average improvement of 0.12 task completion score.
+            </p>
+
+
+
+            <h4 class="text-white w-full max-w-wide leading-loose ">
+                Does GO-1's ability scale with data size?
+            </h4>
+
+
+
+            <figure class="w-full max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6">
+                <div id="fig5"></div>
+                <figcaption class="text-white text-xs mt-3 leading-loose">
+                    Figure 5: We evaluate how model performance scales with data size.
+                </figcaption>
+            </figure>
+
+
+
+
+            <p class="text-white w-full max-w-wide leading-loose">
+                To investigate whether a power-law scaling relationship exists between the size of pre-training data and policy capability, we conduct an analysis using 10% subsets of the alpha, 100% alpha, and beta dataset, where the number of training trajectories are ranged from 9.2k to 1M. We evaluate the out-of-the-box performance of resulting policies on four seen tasks in pre-training the. As shown in fig. 5, the performance of GO-1 exhibits a predictable power-law scaling relationship with the number of trajectories, supported by a Pearson correlation coefficient of r = 0.97.
+            </p>
+
+
+
+            <h4 class="text-white w-full max-w-wide leading-loose ">
+                Demos on AgiBot G1 robots with GO-1
+            </h4>
+
+
+
+            <figure class="w-full flex flex-col laptop:flex-row justify-between gap-12 laptop:gap-0 max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6">
+                <video class="w-full h-full object-cover bg-[url('/blog/agibot-world/landing.jpeg')] bg-center bg-cover bg-black bg-opacity-30 bg-blend-overlay laptop:max-w-widequater" preload="none" autoplay loop muted>
+                    <source src="https://opendrivelab.github.io/AgiBotWorld/TableBussing.mp4"/>
+                </video>
+                <video class="w-full h-full object-cover bg-[url('/blog/agibot-world/landing.jpeg')] bg-center bg-cover bg-black bg-opacity-30 bg-blend-overlay laptop:max-w-widequater" preload="none" autoplay loop muted>
+                    <source src="https://opendrivelab.github.io/AgiBotWorld/WipeTable.mp4"/>
+                </video>
+                <video class="w-full h-full object-cover bg-[url('/blog/agibot-world/landing.jpeg')] bg-center bg-cover bg-black bg-opacity-30 bg-blend-overlay laptop:max-w-widequater" preload="none" autoplay loop muted>
+                    <source src="https://opendrivelab.github.io/AgiBotWorld/FoldShorts.mp4"/>
+                </video>
+                <video class="w-full h-full object-cover bg-[url('/blog/agibot-world/landing.jpeg')] bg-center bg-cover bg-black bg-opacity-30 bg-blend-overlay laptop:max-w-widequater" preload="none" autoplay loop muted>
+                    <source src="https://opendrivelab.github.io/AgiBotWorld/PourWater.mp4"/>
+                </video>
+            </figure>
+
+
+
+            <!-- <figure class="w-full max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6">
+                
+            </figure> -->
+
+
+
+
+            <!-- <div class="w-full mt-3 mb-3 laptop:mt-6 laptop:mb-6 hidden laptop:block">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <figure class="w-full max-w-wide">
+                                <video class="w-full h-full object-cover bg-[url('/blog/agibot-world/landing.jpeg')] bg-center bg-cover bg-black bg-opacity-30 bg-blend-overlay" preload="none" autoplay loop muted>
+                                    <source src="https://opendrivelab.github.io/AgiBotWorld/TableBussing.mp4"/>
+                                </video>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="w-full max-w-wide">
+                                <video class="w-full h-full object-cover bg-[url('/blog/agibot-world/landing.jpeg')] bg-center bg-cover bg-black bg-opacity-30 bg-blend-overlay" preload="none" autoplay loop muted>
+                                    <source src="https://opendrivelab.github.io/AgiBotWorld/WipeTable.mp4"/>
+                                </video>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="w-full max-w-wide">
+                                <video class="w-full h-full object-cover bg-[url('/blog/agibot-world/landing.jpeg')] bg-center bg-cover bg-black bg-opacity-30 bg-blend-overlay" preload="none" autoplay loop muted>
+                                    <source src="https://opendrivelab.github.io/AgiBotWorld/FoldShorts.mp4"/>
+                                </video>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="w-full max-w-wide">
+                                <video class="w-full h-full object-cover bg-[url('/blog/agibot-world/landing.jpeg')] bg-center bg-cover bg-black bg-opacity-30 bg-blend-overlay" preload="none" autoplay loop muted>
+                                    <source src="https://opendrivelab.github.io/AgiBotWorld/PourWater.mp4"/>
+                                </video>
+                            </figure>
+                        </div>
+                    </div>
+                  </div>
+            </div> -->
+
+
+
+            <h3 class="text-white hover:underline w-full max-w-wide leading-loose">
+                <a href="#bottom-line" class="scroll-mt-48 laptop:scroll-mt-20 group" id="bottom-line">
+                    Bottom Line
+                </a>
+            </h3>
+
+
+
+            <p class="text-white w-full max-w-wide leading-loose">
+                We introduce AgiBot World, an open-source ecosystem aimed at democratizing access to large-scale, high-quality robot learning datasets. It is complete with toolchains and foundation models to advance embodied general intelligence through community collaboration. Our dataset distinguishes itself through unparalleled scale, diversity, and quality, underpinned by carefully crafted tasks. 
+            </p>
+
+
+
+            <p class="text-white w-full max-w-wide leading-loose">
+                Policy learning evaluations confirm AgiBot World’s value in enhancing performance and generalizability. To further explore its impact, we develop GO-1, a generalist policy utilizing latent actions for webscale pre-training. GO-1 excels in real-world complex tasks, outperforming existing generalist policies and demonstrating scalable performance with increased data volume. 
+            </p>
+
+
+
+            <p class="text-white w-full max-w-wide leading-loose">
+                We invite the broader community to collaborate in fostering an ecosystem and maximizing the potential of our extensive dataset.
+            </p>
+
+
+
+            <ul class="list-outside list-disc space-y-6 w-full max-w-wide leading-loose">
+                <li class="text-white ml-6">
+                    arXiv: <a class="text-white italic underline hover:text-o-blue">to be released</a>
+                </li>
+                <li class="text-white ml-6">
+                    Code: <a href="https://github.com/OpenDriveLab/agibot-world" target="_blank" class="text-white italic underline hover:text-o-blue">github.com/OpenDriveLab/agibot-world</a>
+                </li>
+                <li class="text-white ml-6">
+                    Dataset: <a href="https://huggingface.co/agibot-world" target="_blank" class="text-white italic underline hover:text-o-blue">huggingface.co/agibot-world</a>
+                </li>
+                <li class="text-white ml-6">
+                    Project Page: <a href="https://agibot-world.com/" target="_blank" class="text-white italic underline hover:text-o-blue">agibot-world.com</a>
+                </li>
+            </ul>
+
+
+
+            <p class="text-o-gray w-full max-w-wide leading-loose italic">
+                This article is written by Modi Shi, Yuxiang Lu, Huijie Wang, Chengen Xie, Qingwen Bu.
+                <br>
+                This project is accomplished by <a class="underline hover:text-o-blue" href="https://github.com/OpenDriveLab/AgiBot-World/blob/main/CONTRIBUTING.md" target="_blank">48 authors</a>.
+            </p>
+
+
+
+            <!-- <figure class="w-full max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6">
+                <img loading="lazy" class="w-full" src="./20250306-184722.jpeg"/>
+                <figcaption class="text-white text-xs mt-3 leading-loose">
+                    Figure 2: xxx
+                </figcaption>
+            </figure>
+
+
+            <figure class="w-full max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6">
+                <img loading="lazy" class="w-full" src="./model.jpg"/>
+                <figcaption class="text-white text-xs mt-3 leading-loose">
+                    Figure 2: xxx
+                </figcaption>
+            </figure>
+
+
+
+            <p class="text-white w-full max-w-wide leading-loose">
+                To effectively utilize our high-quality AgiBot World dataset and enhance the policy’s generalizability, we propose a hierarchical Vision-Language-Latent-Action (ViLLA) framework with three training stages. Compared to Vision-Language-Action (VLA) model where action is vision-language conditioned, the ViLLA model predicts latent action tokens, conditioned on the generation of subsequent robot control actions. In Stage 1, we project consecutive images into a latent action space by training an encoder-decoder latent action model(LAM) on internet-scale heterogeneous data. This allows the latent action to serve as an intermediate representation, bridging the gap between general image-text inputs and robotic actions. In Stage 2, these latent actions act as pseudolabels for the latent planner, facilitating embodiment-agnostic long-horizon planning and leveraging the generalizability of the pre-trained VLM. Finally, in Stage 3, we introduce the action expert and jointly train it with the latent planner to support the learning of dexterous manipulation.
+            </p>
+
+
+
+
+            <h3 class="text-white w-full max-w-wide leading-loose ">
+                xxx todo
+            </h3>
+
+
+
+
+
+
+
+
+            <figure class="w-full max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6">
+                <video src="https://videos.ctfassets.net/qx5k8y1u9drj/2a4YQTPs9dnzYKWZQ6c2ni/78812ae00c3232d684e6e5e7ef748a36/VLA_Full_Quality_MASTER_21925A.mp4" controls autoplay></video>
+                <iframe height="450" class="w-full" src="https://www.youtube.com/embed/ZnX9SIBTxk4?si=1aqU_IYHxm-r7vYe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <figcaption class="text-white text-xs mt-3 leading-loose">
+                    Video 1: Collaborative grocery storage. A single set of Helix neural network weights runs simultaneously on two robots as they work together to put away groceries neither robot has ever seen before
+                    <br>
+                    Source: <a class="hover:underline" target="_blank">YouTube</a> <a class="hover:underline" target="_blank">bilibili</a>
+                </figcaption>
+            </figure>
+
+
+
+            <h4 class="text-white w-full max-w-wide leading-loose ">
+                New Scaling for Humanoid Robotics
+            </h4>
+
+
+
+            <p class="text-white w-full max-w-wide leading-loose">
+                The home presents robotics' greatest challenge. Unlike controlled industrial settings, homes are filled with countless objects–delicate glassware, crumpled clothing, scattered toys–each with unpredictable shapes, sizes, colors, and textures. For robots to be useful in households, they will need to be capable of generating intelligent new behaviors on-demand, especially for objects they've never seen before.
+            </p>
+
+
+
+            <p class="text-white w-full max-w-wide leading-loose">
+                The current state of robotics will not scale to the home without a step change. Teaching robots even a single new behavior currently requires substantial human effort: either hours of PhD-level expert manual programming or thousands of demonstrations. Both are prohibitively expensive when we consider how vast the problem of the home truly is.
+            </p>
+
+
+
+            <figure class="w-full max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6">
+                <img loading="lazy" class="w-full" src="https://images.ctfassets.net/qx5k8y1u9drj/3iC6I99o9zVebi4YAct58Z/c0f52b7200aee4c9638fe9fb1d9a5788/NEW_SCALING_LAWS.png?fm=webp&w=1920&q=70"/>
+                <figcaption class="text-white text-xs mt-3 leading-loose">
+                    Figure 1: Scaling curves for different approaches to acquiring new robot skills. In conventional heuristic manipulation, skills grow with PhDs who manually script them. In conventional robot imitation learning, skills scale with data collected. With Helix, new skills can be specified on the fly with language.
+                </figcaption>
+            </figure> -->
+
+
+
+
+
+        </div>
+
+        
+
+    </main>
+
+
+
+    <footer class="w-full bg-drama-black overflow-x-hidden">
+        <div class="flex flex-col items-center p-6 pb-24">
+            <p class="text-o-gray text-xs/6 select-none w-full max-w-wide leading-loose">
+                OpenDriveLab © 2021 - 2025 All Rights Reserved
+            </p>
+        </div>
+    </footer>
+    
+</body>
+
+
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 4,
+      spaceBetween: 30,
+      centeredSlides: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+
+
+
+<!-- Figure 3 -->
+<script>
+    var xValue = ['Restock Bag', 'Table Bussing', 'Wipe Table', '<b>Average</b>'];
+    var yValue = [[0.70, 0.20, 0.50, 0.47], [0.77, 0.65, 0.63, 0.68], [0.93, 0.60, 0.78, 0.77]];
+    var trace1 = {
+        x: xValue,
+        y: yValue[0],
+        name: '<b>Open X-Embodiment</b> (OXE)',
+        marker: { color: 'rgba(255, 255, 255, .5)' },
+        type: 'bar',
+        textposition: 'outside',
+        outsidetextfont: { size: 18, color: 'rgb(255, 255, 255)' },
+        hoverinfo: 'none',
+        width: 0.2
+    };
+    var trace2 = {
+        x: xValue,
+        y: yValue[1],
+        name: '<b>AgiBot World</b> (Alpha)',
+        marker: { color: 'rgba(83, 194, 240, 0.7)' },
+        type: 'bar',
+        textposition: 'outside',
+        outsidetextfont: { size: 18, color: 'rgb(255, 255, 255)' },
+        hoverinfo: 'none',
+        width: 0.2
+    };
+    var trace3 = {
+        x: xValue,
+        y: yValue[2],
+        name: '<b>AgiBot World</b> (Beta)',
+        marker: { color: 'rgba(12, 49, 143, 0.7)' },
+        type: 'bar',
+        textposition: 'outside',
+        outsidetextfont: { size: 18, color: 'rgb(255, 255, 255)' },
+        hoverinfo: 'none',
+        width: 0.2
+    };
+    var data = [trace1, trace2, trace3];
+    var layout = {
+        height: 350,
+        margin: {
+            l: 50,
+            r: 50,
+            b: 50,
+            t: 30,
+        },
+        title: {
+            text: "<b>(a) In-distribution Performance</b>",
+            font: {
+                size: 16,
+                color: 'rgb(255, 255, 255)'
+            },
+            yref: "paper",
+            y: 1.01,
+            yanchor: "bottom"
+        },
+        paper_bgcolor: 'rgba(0, 0, 0, 0)',
+        plot_bgcolor: 'rgba(0, 0, 0, 0)',
+        xaxis: {
+            tickfont: {
+                size: 15,
+                color: 'rgb(255, 255, 255)'
+            },
+            fixedrange: true,
+            automargin: true,
+            categoryorder: "array",
+            categoryarray: xValue
+        },
+        yaxis: {
+            title: {
+                text: 'Score',
+                font: {
+                    size: 15,
+                    color: 'rgb(255, 255, 255)'
+                }
+            },
+            tickfont: {
+                size: 14,
+                color: 'rgb(255, 255, 255)'
+            },
+            tickformat: '.1f',
+            range: [0, 1.01],
+            fixedrange: true,
+            gridcolor: 'rgba(255, 255, 255, 0.5)',
+        },
+        showlegend: false,
+        barmode: 'group',
+        bargap: 0.15,
+        bargroupgap: 0.1,
+        shapes: [
+            {
+                type: 'rect',
+                xref: 'x',
+                yref: 'container',
+                x0: 2.5,
+                x1: 3.5,
+                y0: 0,
+                y1: 1,
+                fillcolor: 'rgba(255, 255, 255, 0.07)', // adjust opacity and color as needed
+                line: { width: 0 },
+                layer: 'below'
+            }
+        ]
+    };
+
+    var config = {
+        displayModeBar: false,
+        responsive: true,
+    }
+    Plotly.newPlot('fig3-1', data, layout, config);
+
+    var fig31 = document.getElementById('fig3-1');
+    fig31.on('plotly_hover', function (dataa) {
+        dataa.points.map(function (d) {
+            var trace = fig31.data.find(t => t.name === d.data.name);
+            var index = trace.x.indexOf(d.x);
+            trace.text = trace.y.map((y, i) => i === index ? `<b>${y.toFixed(2)}</b>` : '');
+            Plotly.redraw('fig3-1');
+        });
+    })
+        .on('plotly_unhover', function (dataa) {
+            dataa.points.map(function (d) {
+                var trace = fig31.data.find(t => t.name === d.data.name);
+                trace.text = trace.y.map(y => '');
+                Plotly.redraw('fig3-1');
+            });
+        });
+</script>
+<script>
+    var xValue = ['Restock Bag', 'Table Bussing', 'Wipe Table', '<b>Average</b>'];
+    var yValue = [[0.55, 0.15, 0.43, 0.38], [0.68, 0.43, 0.58, 0.56], [0.80, 0.51, 0.69, 0.67]];
+    var trace1 = {
+        x: xValue,
+        y: yValue[0],
+        name: '<b>Open X-Embodiment</b> (OXE)',
+        marker: { color: 'rgba(255, 255, 255, .5)' },
+        type: 'bar',
+        textposition: 'outside',
+        outsidetextfont: { size: 18, color: 'rgb(255, 255, 255)' },
+        hoverinfo: 'none',
+        width: 0.2
+    };
+    var trace2 = {
+        x: xValue,
+        y: yValue[1],
+        name: '<b>AgiBot World</b> (Alpha)',
+        marker: { color: 'rgba(83, 194, 240, 0.7)' },
+        type: 'bar',
+        textposition: 'outside',
+        outsidetextfont: { size: 18, color: 'rgb(255, 255, 255)' },
+        hoverinfo: 'none',
+        width: 0.2
+    };
+    var trace3 = {
+        x: xValue,
+        y: yValue[2],
+        name: '<b>AgiBot World</b> (Beta)',
+        marker: { color: 'rgba(12, 49, 143, 0.7)' },
+        type: 'bar',
+        textposition: 'outside',
+        outsidetextfont: { size: 18, color: 'rgb(255, 255, 255)' },
+        hoverinfo: 'none',
+        width: 0.2
+    };
+    var data = [trace1, trace2, trace3];
+    var layout = {
+        height: 350,
+        margin: {
+            l: 50,
+            r: 50,
+            b: 0,
+            t: 30,
+        },
+        title: {
+            text: "<b>(b) Out-of-distribution Performance</b>",
+            font: {
+                size: 16,
+                color: 'rgb(255, 255, 255)'
+            },
+            yref: "paper",
+            y: 1.01,
+            yanchor: "bottom"
+        },
+        paper_bgcolor: 'rgba(0, 0, 0, 0)',
+        plot_bgcolor: 'rgba(0, 0, 0, 0)',
+        xaxis: {
+            tickfont: {
+                size: 15,
+                color: 'rgb(255, 255, 255)'
+            },
+            fixedrange: true,
+            automargin: true,
+            categoryorder: "array",
+            categoryarray: xValue
+        },
+        yaxis: {
+            title: {
+                text: 'Score',
+                font: {
+                    size: 15,
+                    color: 'rgb(255, 255, 255)'
+                }
+            },
+            tickfont: {
+                size: 14,
+                color: 'rgb(255, 255, 255)'
+            },
+            tickformat: '.1f',
+            range: [0, 1.01],
+            fixedrange: true,
+            gridcolor: 'rgba(255, 255, 255, 0.5)',
+        },
+        legend: {
+            x: 0.5,
+            y: 0,
+            xanchor: 'center',
+            yref: "container",
+            font: {
+                size: 16,
+                color: 'rgb(255, 255, 255)'
+            },
+            orientation: "h"
+
+        },
+        barmode: 'group',
+        bargap: 0.15,
+        bargroupgap: 0.1,
+        shapes: [
+            {
+                type: 'rect',
+                xref: 'x',
+                yref: 'container',
+                x0: 2.5,
+                x1: 3.5,
+                y0: 0,
+                y1: 1,
+                fillcolor: 'rgba(255, 255, 255, 0.07)', // adjust opacity and color as needed
+                line: { width: 0 },
+                layer: 'below'
+            }
+        ]
+    };
+
+    var config = {
+        displayModeBar: false,
+        responsive: true,
+    }
+    Plotly.newPlot('fig3-2', data, layout, config);
+
+    var fig32 = document.getElementById('fig3-2');
+    fig32.on('plotly_hover', function (dataa) {
+        dataa.points.map(function (d) {
+            var trace = fig32.data.find(t => t.name === d.data.name);
+            var index = trace.x.indexOf(d.x);
+            trace.text = trace.y.map((y, i) => i === index ? `<b>${y.toFixed(2)}</b>` : '');
+            Plotly.redraw('fig3-2');
+        });
+    })
+        .on('plotly_unhover', function (dataa) {
+            dataa.points.map(function (d) {
+                var trace = fig32.data.find(t => t.name === d.data.name);
+                trace.text = trace.y.map(y => '');
+                Plotly.redraw('fig3-2');
+            });
+        });
+</script>
+
+
+
+<!-- Figure 4 -->
+<script>
+    var xValue = ['Restock Bag', 'Table Bussing', 'Pour Water', 'Restock Beverage', 'Fold Shorts', '<b>Average</b>'];
+    var yValue = [[0.84, 0.54, 0.13, 0.36, 0.42, 0.46], [0.93, 0.87, 0.42, 0.49, 0.60, 0.66], [0.98, 1.00, 0.67, 0.60, 0.66, 0.78]];
+    var trace1 = {
+        x: xValue,
+        y: yValue[0],
+        name: '<b>RDT-1B</b>',
+        marker: { color: 'rgba(255, 255, 255, .5)' },
+        type: 'bar',
+        textposition: 'outside',
+        outsidetextfont: { size: 18, color: 'rgb(255, 255, 255)' },
+        hoverinfo: 'none',
+    };
+    var trace2 = {
+        x: xValue,
+        y: yValue[1],
+        name: '<b>GO-1 w/o Latent Planner</b>',
+        marker: { color: 'rgba(83, 194, 240, 0.7)' },
+        type: 'bar',
+        textposition: 'outside',
+        outsidetextfont: { size: 18, color: 'rgb(255, 255, 255)' },
+        hoverinfo: 'none',
+    };
+    var trace3 = {
+        x: xValue,
+        y: yValue[2],
+        name: '<b>GO-1</b>',
+        marker: { color: 'rgba(12, 49, 143, 0.7)' },
+        type: 'bar',
+        textposition: 'outside',
+        outsidetextfont: { size: 18, color: 'rgb(255, 255, 255)' },
+        hoverinfo: 'none',
+    };
+    var data = [trace1, trace2, trace3];
+    var layout = {
+        height: 400,
+        margin: {
+            l: 50,
+            r: 50,
+            b: 0,
+            t: 0,
+        },
+        paper_bgcolor: 'rgba(0, 0, 0, 0)',
+        plot_bgcolor: 'rgba(0, 0, 0, 0)',
+        xaxis: {
+            tickfont: {
+                size: 15,
+                color: 'rgb(255, 255, 255)'
+            },
+            fixedrange: true,
+            automargin: true,
+            categoryorder: "array",
+            categoryarray: xValue
+        },
+        yaxis: {
+            title: {
+                text: 'Score',
+                font: {
+                    size: 15,
+                    color: 'rgb(255, 255, 255)'
+                }
+            },
+            tickfont: {
+                size: 14,
+                color: 'rgb(255, 255, 255)'
+            },
+            tickformat: '.1f',
+            range: [0, 1.1],
+            fixedrange: true,
+            gridcolor: 'rgba(255, 255, 255, 0.5)',
+        },
+        legend: {
+            x: 0.5,
+            y: 0,
+            xanchor: 'center',
+            yref: "container",
+            font: {
+                size: 16,
+                color: 'rgb(255, 255, 255)'
+            },
+            orientation: "h"
+
+        },
+        barmode: 'group',
+        bargap: 0.15,
+        bargroupgap: 0.1,
+        shapes: [
+            {
+                type: 'rect',
+                xref: 'x',
+                yref: 'container',
+                x0: 4.5,
+                x1: 5.5,
+                y0: 0,
+                y1: 1,
+                fillcolor: 'rgba(255, 255, 255, 0.07)', // adjust opacity and color as needed
+                line: { width: 0 },
+                layer: 'below'
+            }
+        ]
+    };
+
+    var config = {
+        displayModeBar: false,
+        responsive: true,
+    }
+    Plotly.newPlot('fig4', data, layout, config);
+
+    var fig4 = document.getElementById('fig4');
+    fig4.on('plotly_hover', function (dataa) {
+        dataa.points.map(function (d) {
+            var trace = data.find(t => t.name === d.data.name);
+            var index = trace.x.indexOf(d.x);
+            trace.text = trace.y.map((y, i) => i === index ? `<b>${y.toFixed(2)}</b>` : '');
+            Plotly.redraw('fig4');
+        });
+    })
+        .on('plotly_unhover', function (dataa) {
+            data.map(function (trace) {
+                trace.text = trace.y.map(y => '');
+            });
+            Plotly.redraw('fig4');
+        });
+</script>
+
+
+
+<!-- Figure 5 -->
+<script>
+    var xLine = [];
+    var yLine = [];
+    for (var i = 3.9; i < 6.2; i += 0.2) {
+        var x = Math.pow(10, i);
+        xLine.push(x);
+        yLine.push(0.1224 * Math.pow(x, 0.11));
+    }
+    var trace1 = {
+        x: xLine,
+        y: yLine,
+        name: '<b>Power-law Fit</b>', 
+        // : y=0.1224x^0.11 Pearson r=0.97
+        marker: { color: 'rgba(12, 49, 143, 0.9)' },
+        line: { width: 5 },
+        mode: 'lines',
+        type: 'scatter',
+        hovertemplate: '%{x:.0s},%{y:.2f}<extra></extra>',
+    };
+    var trace2 = {
+        x: [9200, 92000, 1000000],
+        y: [0.34, 0.41, 0.56],
+        marker: { color: 'rgba(83, 194, 240, 1)', size: 20, symbol: 'triangle-up' },
+        mode: 'markers',
+        type: 'scatter',
+        hovertemplate: '%{x},%{y:.2f}<extra></extra>',
+        showlegend: false,
+    };
+    var data = [trace1, trace2];
+    var layout = {
+        height: 400,
+        margin: {
+            l: 50,
+            r: 50,
+            b: 0,
+            t: 0,
+        },
+        paper_bgcolor: 'rgba(0, 0, 0, 0)',
+        plot_bgcolor: 'rgba(0, 0, 0, 0)',
+        xaxis: {
+            tickfont: {
+                size: 15,
+                color: 'rgb(255, 255, 255)'
+            },
+            type: 'log',
+            tickmode: 'array',
+            tickvals: [1e4, 1e5, 1e6],
+            ticktext: ['10k', '100k', '1M'],
+            fixedrange: true,
+            automargin: true,
+            gridcolor: 'rgba(255, 255, 255, 0.5)',
+        },
+        yaxis: {
+            title: {
+                text: 'Score',
+                font: {
+                    size: 15,
+                    color: 'rgb(255, 255, 255)'
+                }
+            },
+            tickfont: {
+                size: 14,
+                color: 'rgb(255, 255, 255)'
+            },
+            tickformat: '.1f',
+            range: [0.29, 0.59],
+            fixedrange: true,
+            gridcolor: 'rgba(255, 255, 255, 0.5)',
+        },
+        legend: {
+            x: 0.5,
+            y: 0,
+            xanchor: 'center',
+            yref: "container",
+            font: {
+                size: 16,
+                color: 'rgb(255, 255, 255)'
+            },
+            orientation: "h"
+        },
+        hoverlabel: {
+            font: {
+                size: 18,
+                color: 'rgb(255, 255, 255)'
+            },
+            bordercolor: 'rgba(0, 0, 0, 0)',
+        },
+    };
+
+    var config = {
+        displayModeBar: false,
+        responsive: true,
+    }
+    Plotly.newPlot('fig5', data, layout, config);
+</script>
