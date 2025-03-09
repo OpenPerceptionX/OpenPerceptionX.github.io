@@ -22,6 +22,7 @@ module.exports = {
                 "widequater": "14rem",
                 "wide": "60rem",
                 "wider": "73rem",
+                "landing": "88rem",
             },
             colors: {
                 "o-blue": "#00a0e8",
