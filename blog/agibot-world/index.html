@@ -846,20 +846,21 @@
     Plotly.newPlot('fig4', data, layout, config);
 
     var fig4 = document.getElementById('fig4');
-    fig4.on('plotly_hover', function (dataa) {
+fig4.on('plotly_hover', function (dataa) {
+    dataa.points.map(function (d) {
+        var trace = fig4.data.find(t => t.name === d.data.name);
+        var index = trace.x.indexOf(d.x);
+        trace.text = trace.y.map((y, i) => i === index ? `<b>${y.toFixed(2)}</b>` : '');
+        Plotly.redraw('fig4');
+    });
+})
+    .on('plotly_unhover', function (dataa) {
         dataa.points.map(function (d) {
-            var trace = data.find(t => t.name === d.data.name);
-            var index = trace.x.indexOf(d.x);
-            trace.text = trace.y.map((y, i) => i === index ? `<b>${y.toFixed(2)}</b>` : '');
+            var trace = fig4.data.find(t => t.name === d.data.name);
+            trace.text = trace.y.map(y => '');
             Plotly.redraw('fig4');
         });
-    })
-        .on('plotly_unhover', function (dataa) {
-            data.map(function (trace) {
-                trace.text = trace.y.map(y => '');
-            });
-            Plotly.redraw('fig4');
-        });
+    });
 </script>
 
 
