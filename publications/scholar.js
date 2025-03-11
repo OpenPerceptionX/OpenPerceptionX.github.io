@@ -65,6 +65,12 @@ var url_list = [{
     name: 'Haochen Liu',
     url: 'https://scholar.google.com/citations?user=iizqKUsAAAAJ'
 }, {
+    name: 'Jisong Cai',
+    url: 'https://scholar.google.com/citations?user=dTrpq94AAAAJ'
+}, {
+    name: 'Yuxiang Lu',
+    url: 'https://scholar.google.com/citations?user=7m-TOp8AAAAJ'
+}, {
     name: 'Tianyu Li',
     url: 'https://scholar.google.com/citations?user=X6vTmEMAAAAJ'
 },];
