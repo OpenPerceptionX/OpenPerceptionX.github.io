@@ -34,24 +34,6 @@ const pick = [
         tag: "",
     },
     {
-        title: "End-to-End Autonomous Driving: Challenges and Frontiers",
-        link: "https://ieeexplore.ieee.org/abstract/document/10614862/",
-        image: "/assets/publication/e2esurvey.jpg",
-        author: "Li Chen, Penghao Wu, Kashyap Chitta, Bernhard Jaeger, Andreas Geiger, Hongyang Li",
-        note: "TPAMI 2024",
-        noteoption: '',
-        star: "https://img.shields.io/github/stars/OpenDriveLab/End-to-end-Autonomous-Driving?style=social",
-        starlink: "https://github.com/OpenDriveLab/End-to-end-Autonomous-Driving",
-        icon: [
-            {
-                type: "github",
-                link: "https://github.com/OpenDriveLab/End-to-end-Autonomous-Driving",
-            },
-        ],
-        description: "In this survey, we provide a comprehensive analysis of more than 270 papers on the motivation, roadmap, methodology, challenges, and future trends in end-to-end autonomous driving.",
-        tag: "",
-    },
-    {
         title: "AgiBot World Colosseo: A Large-scale Manipulation Platform for Scalable and Intelligent Embodied Systems",
         link: "https://arxiv.org/abs/2503.06669",
         image: "/assets/publication/go-1.jpg",
@@ -79,6 +61,24 @@ const pick = [
             },
         ],
         description: "A novel generalist policy that leverages latent action representations to maximize data utilization, demonstrating predictable performance scaling with increased data volume.",
+        tag: "",
+    },
+    {
+        title: "End-to-End Autonomous Driving: Challenges and Frontiers",
+        link: "https://ieeexplore.ieee.org/abstract/document/10614862/",
+        image: "/assets/publication/e2esurvey.jpg",
+        author: "Li Chen, Penghao Wu, Kashyap Chitta, Bernhard Jaeger, Andreas Geiger, Hongyang Li",
+        note: "TPAMI 2024",
+        noteoption: '',
+        star: "https://img.shields.io/github/stars/OpenDriveLab/End-to-end-Autonomous-Driving?style=social",
+        starlink: "https://github.com/OpenDriveLab/End-to-end-Autonomous-Driving",
+        icon: [
+            {
+                type: "github",
+                link: "https://github.com/OpenDriveLab/End-to-end-Autonomous-Driving",
+            },
+        ],
+        description: "In this survey, we provide a comprehensive analysis of more than 270 papers on the motivation, roadmap, methodology, challenges, and future trends in end-to-end autonomous driving.",
         tag: "",
     },
     {
