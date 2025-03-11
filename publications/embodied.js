@@ -18,6 +18,28 @@ const embodied = [
         tag: "",
     },
     {
+        title: "Closed-Loop Visuomotor Control with Generative Expectation for Robotic Manipulation",
+        link: "https://arxiv.org/abs/2409.09016",
+        image: "/assets/publication/clover.jpg",
+        author: "Qingwen Bu, Jia Zeng, Li Chen, Yanchao Yang, Guyue Zhou, Junchi Yan, Ping Luo, Heming Cui, Yi Ma, Hongyang Li",
+        note: "NeurIPS 2024",
+        noteoption: '',
+        star: "https://img.shields.io/github/stars/OpenDriveLab/CLOVER?style=social",
+        starlink: "https://github.com/OpenDriveLab/CLOVER",
+        icon: [
+            {
+                type: "github",
+                link: "https://github.com/OpenDriveLab/CLOVER",
+            },
+            {
+                type: "bilibili",
+                link: "https://www.bilibili.com/video/BV1rHqZYeECL",
+            },
+        ],
+        description: "CLOVER employs a text-conditioned video diffusion model for generating visual plans as reference inputs, then these sub-goals guide the feedback-driven policy to generate actions with an error measurement strategy.",
+        tag: "",
+    },
+    {
         title: "Learning Manipulation by Predicting Interaction",
         link: "https://arxiv.org/abs/2406.00439",
         image: "/assets/publication/mpi.jpg",
