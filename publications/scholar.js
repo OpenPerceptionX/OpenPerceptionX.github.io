@@ -41,9 +41,6 @@ var url_list = [{
     name: 'Ping Luo',
     url: 'https://scholar.google.com/citations?user=aXdjxb4AAAAJ'
 }, {
-    name: 'Jia Zeng',
-    url: 'https://scholar.google.com/citations?user=kYrUfMoAAAAJ'
-}, {
     name: 'Yunsong Zhou',
     url: 'https://scholar.google.com/citations?user=bTsmnwcAAAAJ'
 }, {
