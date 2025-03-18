@@ -153,6 +153,20 @@ const pick = [
         description: "",
         tag: "",
     },
+    {
+        title: "MTGS: Multi-Traversal Gaussian Splatting",
+        link: "https://arxiv.org/abs/2503.12552",
+        image: "/assets/publication/mtgs.jpg",
+        author: "Tianyu Li, Yihang Qiu, Zhenhua Wu, Carl Lindström, Peng Su, Matthias Nießner, Hongyang Li",
+        note: "arXiv 2025",
+        noteoption: '',
+        star: "",
+        starlink: "",
+        icon: [
+        ],
+        description: "",
+        tag: "",
+    },
 ];
 
 

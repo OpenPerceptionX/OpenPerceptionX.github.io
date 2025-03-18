@@ -1,5 +1,19 @@
 const e2ead = [
     {
+        title: "Centaur: Robust End-to-End Autonomous Driving with Test-Time Training",
+        link: "https://arxiv.org/abs/2503.11650",
+        image: "/assets/publication/centaur.jpg",
+        author: "Chonghao Sima, Kashyap Chitta, Zhiding Yu, Shiyi Lan, Ping Luo, Andreas Geiger, Hongyang Li, Jose M. Alvarez",
+        note: "arXiv 2025",
+        noteoption: '',
+        star: "",
+        starlink: "",
+        icon: [
+        ],
+        description: "",
+        tag: "",
+    },
+    {
         title: "Reasoning Multi-Agent Behavioral Topology for Interactive Autonomous Driving",
         link: "https://arxiv.org/abs/2409.18031",
         image: "/assets/publication/betop.jpg",
