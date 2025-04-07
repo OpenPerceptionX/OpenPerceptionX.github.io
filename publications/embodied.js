@@ -10,6 +10,10 @@ const embodied = [
         starlink: "",
         icon: [
             {
+                type: "github",
+                link: "https://github.com/OpenDriveLab/RoboDual",
+            },
+            {
                 type: "webpage",
                 link: "/RoboDual/",
             },
