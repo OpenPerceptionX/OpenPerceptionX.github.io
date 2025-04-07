@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nexus</title>
+
+  <!-- <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet"> -->
+
+  <!-- <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script> -->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <link rel="icon" type="image/png" href="/assets/icon/D_small.png">
+
+
+
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="900" />
+
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L7VEDHS6G8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L7VEDHS6G8');
+</script>
+
+
+<body>
+
+  <section class="hero teaser" style="margin-top: 64px;">
+    <div class="container is-max-desktop">
+        <div align="center">
+          <img src="https://opendrivelab.github.io/Nexus/resources/NEXUS-text.gif" alt="Image description" width="50%">
+        </div>  
+    </div>
+  </section>
+
+  <section class="hero">
+    <div class="hero-body no-bottom-padding">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Decoupled Diffusion Sparks Adaptive Scene Generation</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <!-- Author Names Omitted for Anonymous Review. -->
+                <!-- <a target="_blank" href="https://shikharbahl.github.io/">Jia Zeng</a><sup>*</sup><sup>1,2</sup>&nbsp;&nbsp;&nbsp;
+                <a target="_blank" href="https://russellmendonca.github.io/">Qingwen Bu</a><sup>*</sup><sup>1</sup>&nbsp;&nbsp;&nbsp;
+                <a target="_blank" href="http://www.lilichen.me/">Bangjun Wang</a><sup>2</sup>&nbsp;&nbsp;&nbsp;
+                <a target="_blank" href="https://unnat.github.io/">Unnat Jain</a><sup>1,2</sup>&nbsp;&nbsp;&nbsp;
+                <a target="_blank" href="https://www.cs.cmu.edu/~dpathak/">Deepak Pathak</a><sup>1</sup> -->
+                <a target="_blank" href="https://zhouyunsong.github.io">Yunsong Zhou</a><sup>1,2</sup><sup>*</sup>&nbsp;&nbsp;&nbsp;
+                Naisheng Ye</a><sup>1</sup><sup>*</sup>&nbsp;&nbsp;&nbsp;
+                <a target="_blank" href="https://ljungbergh.com/">William Ljungbergh</a><sup>3,4</sup>&nbsp;&nbsp;&nbsp;
+                <a target="_blank" href="https://github.com/sephyli">Tianyu Li</a><sup>1</sup>&nbsp;&nbsp;&nbsp;
+                <a target="_blank" href="https://scholar.google.com.hk/citations?hl=zh-CN&user=Ju7nGX8AAAAJ">Jiazhi Yang</a><sup>1</sup>&nbsp;&nbsp;&nbsp;
+                <br>
+                <a target="_blank" href="https://scholar.google.com.hk/citations?hl=zh-CN&user=oPiZSVYAAAAJ">Zetong Yang</a><sup>5</sup>&nbsp;&nbsp;&nbsp;
+                Hongzi Zhu</a><sup>1</sup>&nbsp;&nbsp;&nbsp;
+                <a target="_blank" href="https://scholar.google.com.hk/citations?hl=zh-CN&user=SeRMUJwAAAAJ">Christoffer Petersson</a><sup>3</sup>&nbsp;&nbsp;&nbsp;
+                <a target="_blank" href="https://scholar.google.com.hk/citations?hl=zh-CN&user=Hfrih1EAAAAJ">Hongyang Li</a><sup>1</sup>&nbsp;&nbsp;&nbsp;
+                <br /><sup>1</sup>OpenDriveLab and Shanghai AI Lab&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sup>2</sup>Shanghai Jiao Tong University&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sup>3</sup>Zenseact
+                <br /><sup>4</sup> Linköping University&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sup>5</sup>GAC R&D Center
+                <span class="brmod" style="color:rgb(183, 0, 0)"><b>arXiv 2025</b></span>
+              </span>
+            </div>
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <!-- <span class="link-block">
+                  <a href="https://arxiv.org/abs/2406.00439"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span> -->
+
+                <!-- arXiv Link. -->
+                <!-- <span class="link-block">
+                  <a target="_blank" href=""
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span> -->
+                <!-- Video Link. -->
+                <!-- <span class="link-block">
+                  <a target="_blank" href="https://www.youtube.com/embed/gYEEMNHo5Lc"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span> -->
+
+                <!-- <span class="link-block">
+                  <a href="https://github.com/OpenDriveLab/Nexus" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <svg class="svg-inline--fa fa-github fa-w-16" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span> -->
+
+                <!-- <span class="link-block">
+                  <a href=""
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fa fa-database"></i>
+                    </span>
+                    <span>Dataset</span>
+                  </a>
+                </span> -->
+
+                <!-- Code Link. -->
+
+                <!-- twitter Link. -->
+                <!-- <span class="link-block">
+                  <a target="_blank" href=""
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fab fa-twitter"></i>
+                    </span>
+                    <span>Summary</span>
+                  </a>
+                </span> -->
+              </div>
+  
+            </div>
+            </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <div align="center">
+          <img src="https://opendrivelab.github.io/Nexus/resources/teaser.png" alt="Image description" width="70%">
+        </div>  
+        <br> 
+        <!-- <h2 class="subtitle has-text-centered"> -->
+        <h2 class="subtitle">
+          <!-- Given a scene, our approach (VRB) learns  <strong> actionable representations </strong> for robot learning. VRB predicts contact points and a post-contact trajectory learned from <strong> human videos </strong>.  -->
+          <strong> Nexus </strong> is a <strong>noise-decoupled</strong> prediction pipeline designed for adaptive driving scene generation, ensuring both timely reaction and goal-directed control. Unlike prior approaches that use (a) full-sequence denoising or (b) next-token prediction, (c) Nexus introduces <strong>independent</strong> yet structured noise states, enabling more controlled and interactive scene generation. It leverages low-noise goals to steer generation while incorporating environmental updates dynamically, which are captured in subsequent denoising.
+        </h2>
+        
+      </div>
+  
+    </div>
+  </section>
+
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container is-two-thirds">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-two-thirds">
+            <h2 class="title is-3">Abstract</h2>
+          </div>
+      </div>
+    
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-two-thirds ">
+          <div class="content has-text-justified">
+            Controllable scene generation could reduce the cost of diverse data collection substantially for autonomous driving.
+            Prior works formulate the traffic layout generation as predictive progress, either by denoising entire sequences at once or by iteratively predicting the next frame.
+            However, full sequence denoising hinders online reaction, while the latter's short-sighted next-frame prediction lacks precise goal-state guidance.
+            Further, the learned model struggles to generate complex or challenging scenarios due to a large number of safe and ordinal driving behaviors from open datasets.
+            To overcome these, we introduce Nexus, a decoupled scene generation framework that improves reactivity and goal conditioning by simulating both ordinal and challenging scenarios from fine-grained tokens with independent noise states.
+            At the core of the decoupled pipeline is the integration of a partial noise-masking training strategy and a noise-aware schedule that ensures timely environmental updates throughout the denoising process.
+            To complement challenging scenario generation, we collect a dataset consisting of complex corner cases. It covers 540 hours of simulated data, including high-risk interactions such as cut-in, sudden braking, and collision.
+            Nexus achieves superior generation realism while preserving reactivity and goal orientation, with a 40% reduction in displacement error.
+            We further demonstrate that Nexus improves closed-loop planning by 20% through data augmentation and showcase its capability in safety-critical data generation.
+          </div>
+        </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h1 class="title is-2" style="text-align: center; padding-bottom: 10px;">Model Overview</h1>
+          <!-- <h2 class="subtitle is-4" style="text-align: center;">Defining Visual Affordances</h2> -->
+          <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths ">
+          <div class="content has-text-justified">
+            
+            <tr>
+              <td>
+                <div class="row">
+                  <div class="col">
+                    <img src="https://opendrivelab.github.io/Nexus/resources/pipeline.png" alt="Image description" width="100%">
+                  </div>
+                </div>
+                <div class="columns is-centered has-text-centered">
+                  <div class="column">
+                  <div class="content has-text-justified interpolation-panel">
+                      <p style="text-align: center;font-size: 18px"> 
+                        (a) Nexus learns from realistic and safety-critical driving logs and encodes agents and maps separately before feeding them into a diffusion transformer. 
+                        The model is trained to restore sequences from partially masked agent tokens guided by low-noise ones.
+                        (b) Agent tokens are encoded with time and denoising steps, then interact with the maps and dynamics via attention.
+                        (c) Tokens with varying noise are scheduled within a chunk for a timely reaction.
+                        Each denoising step updates and pops zero-noise tokens, replacing them with next-frame tokens to iteratively generate the scene.</p>
+                  </div>
+                </div>
+              </div>
+              </td>
+            </tr>
+          </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h1 class="title is-2" style="text-align: center; padding-bottom: 10px;">Controllable World Generator</h1>
+          <!-- <h2 class="subtitle is-4" style="text-align: center;">Defining Visual Affordances</h2> -->
+          <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths ">
+          <div class="content has-text-justified">
+            
+            <tr>
+              <td>
+                <div class="row">
+                  <div class="col">
+                    <img class="center" src="https://opendrivelab.github.io/Nexus/resources/main_vis1.gif" width="100%" style="border-radius:10px;"></img>
+                    <!-- <center>Take the spatula off the shelf (2x speed)</center> -->
+                    <br>
+                  </div>
+                  <div class="col">
+                    <img class="center" src="https://opendrivelab.github.io/Nexus/resources/main_vis2.gif" width="100%" style="border-radius:10px;"></img>
+                    <!-- <center>Take the spatula off the shelf (2x speed)</center> -->
+                    <br>
+                  </div>
+                  <div class="col">
+                    <img class="center" src="https://opendrivelab.github.io/Nexus/resources/main_vis3.gif" width="100%" style="border-radius:10px;"></img>
+                    <!-- <center>Take the spatula off the shelf (2x speed)</center> -->
+                    <br>
+                  </div>
+                
+                <div class="row">
+                  <div class="col">
+                    <img class="center" src="https://opendrivelab.github.io/Nexus/resources/main_vis4.gif" width="100%" style="border-radius:10px;"></img>
+                    <!-- <center>Take the spatula off the shelf (2x speed)</center> -->
+                    <br>
+                  </div>
+                  <div class="col">
+                    <img class="center" src="https://opendrivelab.github.io/Nexus/resources/main_vis5.gif" width="100%" style="border-radius:10px;"></img>
+                    <!-- <center>Take the spatula off the shelf (2x speed)</center> -->
+                    <br>
+                  </div>
+                  <div class="col">
+                    <img class="center" src="https://opendrivelab.github.io/Nexus/resources/main_vis6.gif" width="100%" style="border-radius:10px;"></img>
+                    <!-- <center>Take the spatula off the shelf (2x speed)</center> -->
+                    <br>
+                  </div>
+                </div>
+                <!-- <div class="row">
+                  <div class="col">
+                    <video class="center" playsinline autoplay loop muted src="./https://opendrivelab.github.io/MPI/resources/mpi/move_the_banana_into_drawer.mp4" width="100%" style="border-radius:10px;"></video>
+                  </div>
+                </div> -->
+              </td>
+            </tr>
+
+            <h2 class="subtitle is-3" style="text-align: center;"> Safety-critical Scenario Creator</h2>
+
+
+            <tr>
+              <td>
+                <div class="row">
+                  <div class="col">
+                    <img class="center" src="https://opendrivelab.github.io/Nexus/resources/nerf 1.gif" width="100%" style="border-radius:10px;"></img>
+                    <center>Cut-in</center>
+                    <br>
+                  </div>
+                  <div class="col">
+                    <img class="center" src="https://opendrivelab.github.io/Nexus/resources/nerf 2.gif" width="100%" style="border-radius:10px;"></img>
+                    <center>Cut-in</center>
+                    <br>
+                  </div>
+                  <div class="col">
+                    <img class="center" src="https://opendrivelab.github.io/Nexus/resources/nerf 3.gif" width="100%" style="border-radius:10px;"></img>
+                    <center>Rear-end Collision</center>
+                    <br>
+                  </div>
+                </div>
+                <!-- <h2 class="subtitle is-3" style="text-align: center;"></h2> -->
+                <div class="row">
+                  <div class="col">
+                    <img class="center" src="https://opendrivelab.github.io/Nexus/resources/nerf 4.gif" width="100%" style="border-radius:10px;"></img>
+                    <center>Lane Chaning</center>
+                    <br>
+                  </div>
+                  <div class="col">
+                    <img class="center" src="https://opendrivelab.github.io/Nexus/resources/nerf 5.gif" width="100%" style="border-radius:10px;"></img>
+                    <center>Rear-end Collision</center>
+                    <br>
+                  </div>
+                  <div class="col">
+                    <img class="center" src="https://opendrivelab.github.io/Nexus/resources/nerf 7.gif" width="100%" style="border-radius:10px;"></img>
+                    <center>Merging</center>
+                    <br>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <h2 class="subtitle is-3" style="text-align: center;"> Comparison to State-of-the-arts</h2>
+            <p>
+              Generation controllability, interactivity, and kinematics compared to nuPlan experts. The tasks predict 8-second futures from 2-second history, with or without a goal.
+            </p>
+            <div align="center">
+              <img src="https://opendrivelab.github.io/Nexus/resources/main_tab.png" alt="Image description" width="80%">
+            </div>
+            <h2 class="subtitle is-3" style="text-align: center;">Visualization</h2>
+            <p>
+              (a) Free exploration generates diverse future scenarios from initialized history, while conditioned generation synthesizes scenes based on predefined goal points. (b) Setting the attacker's goal as the ego's waypoint enables adversarial scenarios.
+            </p>
+            <div align="center">
+              <img src="https://opendrivelab.github.io/Nexus/resources/main_vis.png" alt="Image description" width="100%">
+            </div>
+            <h2 class="subtitle is-3" style="text-align: center;">Analysis: Nexus as World Model and Data Engine</h2>
+            <p>
+              Evaluation of a generation model as a world generator. The scene generator serves as the interactive world model response to the baseline planner's actions, with nuPlan closed-loop metrics reflecting its realism
+            </p>
+            <div align="center">
+              <img src="https://opendrivelab.github.io/Nexus/resources/main_ablation1.png" alt="Image description" width="100%">
+            </div>
+            <p>
+              Comparison involving data augmentation using synthetic data. Nexus serves as a data engine, expanding sampled scenes to train the planner at varying scales. The nuPlan closed-loop evaluation demonstrates the performance gains from data augmentation
+            </p>
+            <div align="center">
+              <img src="https://opendrivelab.github.io/Nexus/resources/main_ablation2.png" alt="Image description" width="100%">
+            </div>
+          </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h1 class="title is-2" style="text-align: center; padding-bottom: 10px;">Ecosystem</h1>
+          <!-- <h2 class="subtitle is-4" style="text-align: center;">Defining Visual Affordances</h2> -->
+          <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths ">
+          <div class="content has-text-justified">
+            
+            <p>
+              The code has been open-sourced. you can now try generating new scenes from the original nuPlan data on GitHub! 
+            </p>
+
+            <p>
+              Please stay tuned for more work from <a target="_blank" href="https://opendrivelab.com/">OpenDriveLab</a>: <a target="_blank" href="https://arxiv.org/html/2503.12552v1">MTGS</a>, <a target="_blank" href="https://arxiv.org/abs/2503.11650">Centaur</a> and <a target="_blank" href="https://opendrivelab.com/Vista/">Vista</a>.
+            </p>
+
+
+            
+          </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="titile">BibTeX</h2>
+      If you find the project helpful for your research, please consider citing our paper:
+      <pre><code>@article{zhou2025nexus,
+        title={Decoupled Diffusion Sparks Adaptive Scene Generation},
+        author={Yunsong, Zhou and Naisheng, Ye and William, Ljungbergh and Tianyu, Li and Jiazhi, Yang and Zetong, Yang and Hongzi, Zhu and Christoffer, Petersson and Hongyang, Li},
+        journal={arXiv preprint arXiv:2505.xxxxx},
+        year={2025}
+      }</code></pre>
+    </div>
+  </section>
+  
+  <br><br><br>
+
+<!-- <footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <br />
+      <p> Template from <a href="https://nerfies.github.io"><span class="dnerf">Nerfies</span></a>.</p>
+    </div>
+  </div>
+</footer> -->
+
+</body>
+</html>
+
+
