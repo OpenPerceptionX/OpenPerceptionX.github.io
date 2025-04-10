@@ -59,6 +59,10 @@ const pick = [
                 type: "hugging_face",
                 link: "https://huggingface.co/agibot-world",
             },
+            {
+                type: "bilibili",
+                link: "https://www.bilibili.com/video/BV1sNdGYWEBY",
+            }
         ],
         description: "A novel generalist policy that leverages latent action representations to maximize data utilization, demonstrating predictable performance scaling with increased data volume.",
         tag: "",
