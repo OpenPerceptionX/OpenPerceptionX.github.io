@@ -6,8 +6,8 @@ const embodied = [
         author: "Qingwen Bu, Hongyang Li, Li Chen, Jisong Cai, Jia Zeng, Heming Cui, Maoqing Yao, Yu Qiao",
         note: "arXiv 2024",
         noteoption: '',
-        star: "",
-        starlink: "",
+        star: "https://img.shields.io/github/stars/OpenDriveLab/RoboDual?style=social",
+        starlink: "https://github.com/OpenDriveLab/RoboDual",
         icon: [
             {
                 type: "github",
