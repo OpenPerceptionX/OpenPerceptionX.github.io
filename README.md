@@ -6,8 +6,7 @@
 - [https://github.com/OpenDriveLab/opendrivelab.github.io](https://github.com/OpenDriveLab/opendrivelab.github.io)
 
 ## Editing in vscode
-- Live Server
-- open in browser
+- Live Preview
 
 ## Tailwind
 npm link tailwindcss
