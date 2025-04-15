@@ -1,5 +1,23 @@
 const e2ead = [
     {
+        title: "Decoupled Diffusion Sparks Adaptive Scene Generation",
+        link: "https://arxiv.org/abs/2504.10485",
+        image: "/assets/publication/nexus.jpg",
+        author: "Yunsong Zhou, Naisheng Ye, William Ljungbergh, Tianyu Li, Jiazhi Yang, Zetong Yang, Hongzi Zhu, Christoffer Petersson, Hongyang Li",
+        note: "arXiv 2025",
+        noteoption: '',
+        star: "https://img.shields.io/github/stars/OpenDriveLab/Nexus?style=social",
+        starlink: "https://github.com/OpenDriveLab/Nexus",
+        icon: [
+            {
+                type: "webpage",
+                link: "/Nexus",
+            },
+        ],
+        description: "",
+        tag: "",
+    },
+    {
         title: "Centaur: Robust End-to-End Autonomous Driving with Test-Time Training",
         link: "https://arxiv.org/abs/2503.11650",
         image: "/assets/publication/centaur.jpg",
