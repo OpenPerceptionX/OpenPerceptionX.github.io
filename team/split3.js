@@ -44,29 +44,6 @@ const split3data = [
         tag: "",
     },
     {
-        name: "Shenyuan Gao",
-        image: "/assets/person/shenyuan_gao.jpg",
-        note: "The Hong Kong University of Science and Technology (HKUST)",
-        image_s: "/assets/person/shenyuan_gao_s.jpg",
-        page: "https://scholar.google.com/citations?user=hZtOnecAAAAJ",
-        icon: [
-            {
-                type: "scholar",
-                link: "https://scholar.google.com/citations?user=hZtOnecAAAAJ",
-            },
-            {
-                type: "email",
-                link: "mailto:sygao@opendrivelab.com",
-            },
-            {
-                type: "github",
-                link: "https://github.com/Little-Podi",
-            },
-        ],
-        tag: "Outstanding Commentator<br><br>傑出評論獎",
-        tagshort: "Outstanding Commentator",
-    },
-    {
         name: "Jiazhi Yang",
         image: "/assets/person/jiazhi_yang.jpg",
         note: "The Chinese University of Hong Kong (CUHK)",
@@ -92,24 +69,6 @@ const split3data = [
         ],
         tag: "Outstanding Research<br><br>傑出科研獎",
         tagshort: "Outstanding Research",
-    },
-    {
-        name: "Jiacheng Qiu",
-        image: "/assets/person/jiacheng_qiu.jpg",
-        note: "Eidgenössische Technische Hochschule Zürich (ETH Zürich)",
-        image_s: "/assets/person/jiacheng_qiu_s.jpg",
-        page: "https://github.com/BBBBBBob",
-        icon: [
-            {
-                type: "email",
-                link: "mailto:bobchiu001@gmail.com",
-            },
-            {
-                type: "github",
-                link: "https://github.com/BBBBBBob",
-            },
-        ],
-        tag: "",
     },
     {
         name: "Yunsong Zhou",
