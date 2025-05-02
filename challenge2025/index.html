@@ -125,7 +125,13 @@
                         <img class="h-6 w-auto" src="/assets/icon/OpenDriveLab.png">
                     </a>
                     <ul class="w-full laptop:w-auto mt-3 mb-6 flex flex-row flex-wrap laptop:flex-col justify-evenly border-t-2 border-t-o-white border-b-2 border-b-o-white laptop:border-t-0 laptop:border-b-0">
-    
+                        <li>
+                            <a href="#agibot-world" class="navigator-button group">                           
+                                <span class="navigator-button-text">
+                                    Track: AgiBot World
+                                </span>
+                            </a>
+                        </li>
                         <li>
                             <a href="#1x-wm" class="navigator-button group">                           
                                 <span class="navigator-button-text">
@@ -137,13 +143,6 @@
                             <a href="#navsim-e2e-driving" class="navigator-button group">                           
                                 <span class="navigator-button-text">
                                     Track: E2E Driving
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#agibot-world" class="navigator-button group">                           
-                                <span class="navigator-button-text">
-                                    Track: AgiBot World
                                 </span>
                             </a>
                         </li>
@@ -434,6 +433,151 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+
+                    <div class="divider"></div>
+
+
+
+                    <div>
+
+                        <div class="w-full h-64 mt-20">
+                            <div class="w-full h-full rounded-3xl bg-[url('/challenge2025/fabric.jpg')] bg-black bg-opacity-30 bg-blend-overlay bg-center bg-cover flex flex-col justify-center p-6 laptop:p-10">
+                                <h2 class="text-white scroll-mt-72 laptop:scroll-mt-28 flex flex-col gap-y-6" id="agibot-world">
+                                    <div class="flex flex-row gap-3 laptop:gap-16 items-center">
+                                        <img src="/assets/icon/iros2025_white.png" class="h-8 laptop:h-16"/>
+                                    </div>
+                                    <a href="#agibot-world" class="group">
+                                        AgiBot World Challenge
+                                        <img src="/assets/icon/link_white.png" class="hidden group-hover:inline-block size-8"/>
+                                    </a>
+                                </h2>
+                            </div>
+                        </div>
+
+                        <div class="w-full flex flex-col laptop:flex-row justify-between mt-10 gap-10 laptop:gap-20">
+                            <ul class="h-full flex-1 flex flex-col bg-[89f5ff] rounded-3xl p-6 laptop:p-10 gap-6">
+                                <li class="text-[0b3d44] font-bold">
+                                    [IROS 2025]
+                                </li>
+                                <li class="flex flex-row justify-between flex-nowrap gap-10">
+                                    <div class="text-nowrap">
+                                        <img class="size-6 inline-block mr-2" src="/assets/icon/rank01.png"/>
+                                        <span class="text-[0b3d44]">First Prize</span>
+                                    </div>
+                                    <span class="text-[0b3d44] text-nowrap">USD 10,000</span>
+                                </li>
+                                <li class="flex flex-row justify-between flex-nowrap gap-10">
+                                    <div class="text-nowrap">
+                                        <img class="size-6 inline-block mr-2" src="/assets/icon/rank02.png"/>
+                                        <span class="text-[0b3d44]">Second Prize</span>
+                                    </div>
+                                    <span class="text-[0b3d44] text-nowrap">USD 5,000</span>
+                                </li>
+                                <li class="flex flex-row justify-between flex-nowrap gap-10">
+                                    <div class="text-nowrap">
+                                        <img class="size-6 inline-block mr-2" src="/assets/icon/rank03.png"/>
+                                        <span class="text-[0b3d44]">Third Prize</span>
+                                    </div>
+                                    <span class="text-[0b3d44] text-nowrap">USD 3,000</span>
+                                </li>
+                                <!-- <li class="text-[0b3d44] font-bold">
+                                    Timeline
+                                </li> -->
+                            </ul>
+                        </div>
+
+                        <div class="mt-12 flex flex-col gap-6">
+                            <h3 class="text-[0b3d44]">
+                                Test Server
+                            </h3>
+                            <p>
+                                <!-- <a class="group flex-nowrap select-none" href="https://huggingface.co/spaces/AGC2025/e2e-driving-warmup" target="_blank">
+                                    <img src="/assets/icon/hugging_face.png" class="size-8 inline-block ml-1 mr-1 group-hover:opacity-70"/>
+                                    <span class="text-[0b3d44] group-hover:text-o-blue font-bold">Hugging face</span>
+                                </a> -->
+                                To be released.
+                            </p>
+                        </div>
+
+                        <div class="mt-12 flex flex-col gap-8">
+                            <h3 class="text-[0b3d44]">
+                                Participate
+                            </h3>
+                            <div>
+                                <ul class="space-y-10">
+                                    <li class="flex gap-6 laptop:gap-3">
+                                        <img src="/assets/icon/google_form.png" class="size-8 inline-block mr-2"/>
+                                        <span>
+                                            For participation in the challenge, registering for your team is a <code>strict requirement</code> by filling out this <a class="text-o-blue hover:underline" href="https://forms.gle/XMbe6YG9UyFPyZEGA" target="_blank">Google Form</a>.
+                                            For more details, please check the <a class="text-o-blue hover:underline" href="#rule">general rules</a>.
+                                            <br><br>
+                                            The registration information can be modified until <code>Sep. 01</code>.
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="mt-12 flex flex-col gap-6">
+                            <h3 class="text-[0b3d44]">
+                                Task Description
+                            </h3>
+                            <p>
+                                Most existing robot learning benchmarks fall short when it comes to addressing real-world challenges, particularly those arising from low-quality data and limited sensing capabilities. In contrast, this competition offers a brand-new perspective to discuss broad areas of humanoid robots. The challenge aims to thoroughly evaluate and further advance the core capabilities of robots equipped with dexterous hands with tactile sensors in the realm of embodied intelligence. Through a diverse set of tasks within multi-agent real-world scenarios, the competition explores the instruction comprehension, manipulation, and generalization capabilities of robotic systems. 
+                                <br><br>
+                                This track will be hosted on <b>IROS 2025</b>. Please stay tuned for more details!
+                            </p>
+                        </div>
+
+                        <!-- <div class="mt-12 flex flex-col gap-6">
+                            <h3 class="text-[0b3d44]">
+                                Contact
+                            </h3>
+                            <ul class="ml-6 space-y-3 list-outside list-disc">
+                                <li>
+                                    Discord: 
+                                    <a href="https://discord.gg/CwqHxDCeDr" target="_blank" class="text-o-blue hover:underline"><code>#🏟️-navsim-e2e-driving-2025</code></a>
+                                </li>
+                            </ul>
+                        </div> -->
+
+                        <div class="mt-12 flex flex-col gap-6">
+                            <h3 class="text-[0b3d44]">
+                                Citation
+                            </h3>
+                            <p>Please consider citing our work if the challenge helps your research with the following BibTex:</p>
+                            <div class="citation p-6 rounded-3xl">
+                                <span class="citation_red">@inproceedings</span>{<span class="citation_blue">contributors2025agibotworld</span>, 
+                                    <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;title = {AgiBot World Colosseo: A Large-scale Manipulation Platform for Scalable and Intelligent Embodied Systems},
+                                    <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;author = {AgiBot-World-Contributors and Bu, Qingwen and Cai, Jisong and Chen, Li and Cui, Xiuqi and Ding, Yan and Feng, Siyuan and Gao, Shenyuan and He, Xindong and Hu, Xuan and Huang, Xu and Jiang, Shu and Jiang, Yuxin and Jing, Cheng and Li, Hongyang and Li, Jialu and Liu, Chiming and Liu, Yi and Lu, Yuxiang and Luo, Jianlan and Luo, Ping and Mu, Yao and Niu, Yuehan and Pan, Yixuan and Pang, Jiangmiao and Qiao, Yu and Ren, Guanghui and Ruan, Cheng and Shan, Jiaqi and Shen, Yongjian and Shi, Chengshi and Shi, Mingkang and Shi, Modi and Sima, Chonghao and Song, Jianheng and Wang, Huijie and Wang, Wenhao and Wei, Dafeng and Xie, Chengen and Xu, Guo and Yan, Junchi and Yang, Cunbiao and Yang, Lei and Yang, Shukai and Yao, Maoqing and Zeng, Jia and Zhang, Chi and Zhang, Qinglin and Zhao, Bin and Zhao, Chengyue and Zhao, Jiaqi and Zhu, Jianchao},
+                                    <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;journal = {arXiv},
+                                    <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;volume = {2503.06669},
+                                    <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;year = {2025}
+                                    <br>
+                                }
+                            </div>
+                        </div>
+
+                        <div class="mt-12 flex flex-col gap-6">
+                            <h3 class="text-[0b3d44]">
+                                Related Material
+                            </h3>
+                            <ul class="ml-6 space-y-3 list-outside list-disc">
+                                <li>
+                                    <a href="/blog/agibot-world/" class="text-o-blue hover:underline">
+                                        Introducing AgiBot World Colosseo: A Large-scale Manipulation Platform for Scalable and Intelligent Embodied Systems
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
                     </div>
 
 
@@ -1273,153 +1417,6 @@
 
 
 
-                    <div>
-
-                        <div class="w-full h-64 mt-20">
-                            <div class="w-full h-full rounded-3xl bg-[url('/challenge2025/fabric.jpg')] bg-black bg-opacity-30 bg-blend-overlay bg-center bg-cover flex flex-col justify-center p-6 laptop:p-10">
-                                <h2 class="text-white scroll-mt-72 laptop:scroll-mt-28 flex flex-col gap-y-6" id="agibot-world">
-                                    <div class="flex flex-row gap-3 laptop:gap-16 items-center">
-                                        <img src="/assets/icon/iros2025_white.png" class="h-8 laptop:h-16"/>
-                                    </div>
-                                    <a href="#agibot-world" class="group">
-                                        AgiBot World Challenge
-                                        <img src="/assets/icon/link_white.png" class="hidden group-hover:inline-block size-8"/>
-                                    </a>
-                                </h2>
-                            </div>
-                        </div>
-
-                        <div class="w-full flex flex-col laptop:flex-row justify-between mt-10 gap-10 laptop:gap-20">
-                            <ul class="h-full flex-1 flex flex-col bg-[89f5ff] rounded-3xl p-6 laptop:p-10 gap-6">
-                                <li class="text-[0b3d44] font-bold">
-                                    [IROS 2025]
-                                </li>
-                                <li class="flex flex-row justify-between flex-nowrap gap-10">
-                                    <div class="text-nowrap">
-                                        <img class="size-6 inline-block mr-2" src="/assets/icon/rank01.png"/>
-                                        <span class="text-[0b3d44]">First Prize</span>
-                                    </div>
-                                    <span class="text-[0b3d44] text-nowrap">USD 10,000</span>
-                                </li>
-                                <li class="flex flex-row justify-between flex-nowrap gap-10">
-                                    <div class="text-nowrap">
-                                        <img class="size-6 inline-block mr-2" src="/assets/icon/rank02.png"/>
-                                        <span class="text-[0b3d44]">Second Prize</span>
-                                    </div>
-                                    <span class="text-[0b3d44] text-nowrap">USD 5,000</span>
-                                </li>
-                                <li class="flex flex-row justify-between flex-nowrap gap-10">
-                                    <div class="text-nowrap">
-                                        <img class="size-6 inline-block mr-2" src="/assets/icon/rank03.png"/>
-                                        <span class="text-[0b3d44]">Third Prize</span>
-                                    </div>
-                                    <span class="text-[0b3d44] text-nowrap">USD 3,000</span>
-                                </li>
-                                <!-- <li class="text-[0b3d44] font-bold">
-                                    Timeline
-                                </li> -->
-                            </ul>
-                        </div>
-
-                        <div class="mt-12 flex flex-col gap-6">
-                            <h3 class="text-[0b3d44]">
-                                Test Server
-                            </h3>
-                            <p>
-                                <!-- <a class="group flex-nowrap select-none" href="https://huggingface.co/spaces/AGC2025/e2e-driving-warmup" target="_blank">
-                                    <img src="/assets/icon/hugging_face.png" class="size-8 inline-block ml-1 mr-1 group-hover:opacity-70"/>
-                                    <span class="text-[0b3d44] group-hover:text-o-blue font-bold">Hugging face</span>
-                                </a> -->
-                                To be released.
-                            </p>
-                        </div>
-
-                        <div class="mt-12 flex flex-col gap-8">
-                            <h3 class="text-[0b3d44]">
-                                Participate
-                            </h3>
-                            To be released.
-                            <!-- <div>
-                                <ul class="space-y-10">
-                                    <li class="flex gap-6 laptop:gap-3">
-                                        <img src="/assets/icon/google_form.png" class="size-8 inline-block mr-2"/>
-                                        <span>
-                                            For participation in the challenge, registering for your team is a <code>strict requirement</code> by filling out this <a class="text-o-blue hover:underline" href="https://docs.google.com/forms/d/e/1FAIpQLScOfEG2b_VQYAydCjdA_etiCD1PvR8KX5Jui3oFy28a-J8yKA/viewform" target="_blank">Google Form</a>.
-                                            For more details, please check the <a class="text-o-blue hover:underline" href="#rule">general rules</a>.
-                                            <br><br>
-                                            The registration information can be modified until <code>[CVPR 2025] May 10</code>.
-                                        </span>
-                                    </li>
-                                </ul>
-                            </div> -->
-                        </div>
-
-                        <div class="mt-12 flex flex-col gap-6">
-                            <h3 class="text-[0b3d44]">
-                                Task Description
-                            </h3>
-                            <p>
-                                Most existing robot learning benchmarks fall short when it comes to addressing real-world challenges, particularly those arising from low-quality data and limited sensing capabilities. In contrast, this competition offers a brand-new perspective to discuss broad areas of humanoid robots. The challenge aims to thoroughly evaluate and further advance the core capabilities of robots equipped with dexterous hands with tactile sensors in the realm of embodied intelligence. Through a diverse set of tasks within multi-agent real-world scenarios, the competition explores the instruction comprehension, manipulation, and generalization capabilities of robotic systems. 
-                                <br><br>
-                                This track will be hosted on <b>IROS 2025</b>. Please stay tuned for more details!
-                            </p>
-                        </div>
-
-                        <!-- <div class="mt-12 flex flex-col gap-6">
-                            <h3 class="text-[0b3d44]">
-                                Contact
-                            </h3>
-                            <ul class="ml-6 space-y-3 list-outside list-disc">
-                                <li>
-                                    Discord: 
-                                    <a href="https://discord.gg/CwqHxDCeDr" target="_blank" class="text-o-blue hover:underline"><code>#🏟️-navsim-e2e-driving-2025</code></a>
-                                </li>
-                            </ul>
-                        </div> -->
-
-                        <div class="mt-12 flex flex-col gap-6">
-                            <h3 class="text-[0b3d44]">
-                                Citation
-                            </h3>
-                            <p>Please consider citing our work if the challenge helps your research with the following BibTex:</p>
-                            <div class="citation p-6 rounded-3xl">
-                                <span class="citation_red">@inproceedings</span>{<span class="citation_blue">contributors2025agibotworld</span>, 
-                                    <br>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;title = {AgiBot World Colosseo: A Large-scale Manipulation Platform for Scalable and Intelligent Embodied Systems},
-                                    <br>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;author = {AgiBot-World-Contributors and Bu, Qingwen and Cai, Jisong and Chen, Li and Cui, Xiuqi and Ding, Yan and Feng, Siyuan and Gao, Shenyuan and He, Xindong and Hu, Xuan and Huang, Xu and Jiang, Shu and Jiang, Yuxin and Jing, Cheng and Li, Hongyang and Li, Jialu and Liu, Chiming and Liu, Yi and Lu, Yuxiang and Luo, Jianlan and Luo, Ping and Mu, Yao and Niu, Yuehan and Pan, Yixuan and Pang, Jiangmiao and Qiao, Yu and Ren, Guanghui and Ruan, Cheng and Shan, Jiaqi and Shen, Yongjian and Shi, Chengshi and Shi, Mingkang and Shi, Modi and Sima, Chonghao and Song, Jianheng and Wang, Huijie and Wang, Wenhao and Wei, Dafeng and Xie, Chengen and Xu, Guo and Yan, Junchi and Yang, Cunbiao and Yang, Lei and Yang, Shukai and Yao, Maoqing and Zeng, Jia and Zhang, Chi and Zhang, Qinglin and Zhao, Bin and Zhao, Chengyue and Zhao, Jiaqi and Zhu, Jianchao},
-                                    <br>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;journal = {arXiv},
-                                    <br>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;volume = {2503.06669},
-                                    <br>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;year = {2025}
-                                    <br>
-                                }
-                            </div>
-                        </div>
-
-                        <div class="mt-12 flex flex-col gap-6">
-                            <h3 class="text-[0b3d44]">
-                                Related Material
-                            </h3>
-                            <ul class="ml-6 space-y-3 list-outside list-disc">
-                                <li>
-                                    <a href="/blog/agibot-world/" class="text-o-blue hover:underline">
-                                        Introducing AgiBot World Colosseo: A Large-scale Manipulation Platform for Scalable and Intelligent Embodied Systems
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-
-                    </div>
-
-
-
-                    <div class="divider"></div>
-
-
-
                     <div class="w-full mt-20">
                         <h3>
                             <a href="#organizer" class="scroll-mt-48 laptop:scroll-mt-20 group" id="organizer">
@@ -1430,7 +1427,22 @@
                         <div class="pt-10 flex gap-10 laptop:gap-20 flex-col laptop:flex-row w-full laptop:flex-wrap">
                             <div style="min-width: 90%;">
                                 <h4>General</h4>
-                                <div class="mt-10 gap-10 grid grid-cols-[repeat(auto-fill,_minmax(144px,_1fr))] tablet:grid-cols-[repeat(auto-fill,_minmax(192px,_1fr))]">
+                                <table class="mt-6 table-fixed">
+                                    <tbody class="flex flex-col gap-3">
+                    
+                                        <tr>
+                                            <td class="w-4">-</td>
+                                            <td class="w-48"><a class="text-o-blue hover:underline" href="https://faikit.github.io/" target="_blank">Huijie Wang</a></td>
+                                            <td class="w-64"><i>OpenDriveLab</i></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="w-4">-</td>
+                                            <td class="w-48"><a class="text-o-blue hover:underline" href="https://github.com/gihharwtw" target="_blank">Yihang Qiu</a></td>
+                                            <td class="w-64"><i>The University of Hong Kong</i></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!-- <div class="mt-10 gap-10 grid grid-cols-[repeat(auto-fill,_minmax(144px,_1fr))] tablet:grid-cols-[repeat(auto-fill,_minmax(192px,_1fr))]">
                                     <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
                                         <a href="https://faikit.github.io/" target="_blank" class="hover:opacity-70">
                                             <img src="/assets/person/huijie_wang.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
@@ -1455,13 +1467,82 @@
                                         <span>The Hong Kong University of Science and Technology</span>
                                         <div class="border-b-2 border-o-white"></div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <div class="pt-10 flex gap-10 laptop:gap-20 flex-col laptop:flex-row w-full laptop:flex-wrap">
                             <div style="min-width: 90%;">
+                                <h4>AgiBot World Challenge</h4>
+                                <table class="mt-6 table-fixed">
+                                    <tbody class="flex flex-col gap-3">
+                                        <tr>
+                                            <td class="w-4">-</td>
+                                            <td class="w-48"><a class="text-o-blue hover:underline">Maoqing Yao</a></td>
+                                            <td class="w-64"><i>AgiBot</i></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="w-4">-</td>
+                                            <td class="w-48"><a class="text-o-blue hover:underline" href="https://lihongyang.info/" target="_blank">Hongyang Li</a></td>
+                                            <td class="w-64"><i>The University of Hong Kong</i></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="w-4">-</td>
+                                            <td class="w-48"><a class="text-o-blue hover:underline" href="https://faikit.github.io/" target="_blank">Huijie Wang</a></td>
+                                            <td class="w-64"><i>OpenDriveLab</i></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="w-4">-</td>
+                                            <td class="w-48"><a class="text-o-blue hover:underline">Shukai Yang</a></td>
+                                            <td class="w-64"><i>AgiBot</i></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="w-4">-</td>
+                                            <td class="w-48"><a class="text-o-blue hover:underline" href="http://shijiapeng03.github.io" target="_blank">Shijia Peng</a></td>
+                                            <td class="w-64"><i>OpenDriveLab</i></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="w-4">-</td>
+                                            <td class="w-48"><a class="text-o-blue hover:underline">Liliang Chen</a></td>
+                                            <td class="w-64"><i>AgiBot</i></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="w-4">-</td>
+                                            <td class="w-48"><a class="text-o-blue hover:underline" href="https://scholar.google.com/citations?user=4FqHXOsAAAAJ" target="_blank">Jin Chen</a></td>
+                                            <td class="w-64"><i>OpenDriveLab</i></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="w-4">-</td>
+                                            <td class="w-48"><a class="text-o-blue hover:underline">Chengyue Zhao</a></td>
+                                            <td class="w-64"><i>AgiBot</i></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                        <div class="pt-10 flex gap-10 laptop:gap-20 flex-col laptop:flex-row w-full laptop:flex-wrap">
+                            <div style="min-width: 90%;">
                                 <h4>World Model Challenge by 1X</h4>
-                                <div class="mt-10 gap-10 grid grid-cols-[repeat(auto-fill,_minmax(144px,_1fr))] tablet:grid-cols-[repeat(auto-fill,_minmax(192px,_1fr))]">
+                                <table class="mt-6 table-fixed">
+                                    <tbody class="flex flex-col gap-3">
+                                        <tr>
+                                            <td class="w-4">-</td>
+                                            <td class="w-48"><a class="text-o-blue hover:underline" href="https://x.com/ericjang11" target="_blank">Eric Jang</a></td>
+                                            <td class="w-64"><i>1X</i></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="w-4">-</td>
+                                            <td class="w-48"><a class="text-o-blue hover:underline" href="https://x.com/JackMonas" target="_blank">Jack Monas</a></td>
+                                            <td class="w-64"><i>1X</i></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="w-4">-</td>
+                                            <td class="w-48"><a class="text-o-blue hover:underline" href="https://www.linkedin.com/in/daniel-ho-ml/" target="_blank">Daniel Ho</a></td>
+                                            <td class="w-64"><i>1X</i></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!-- <div class="mt-10 gap-10 grid grid-cols-[repeat(auto-fill,_minmax(144px,_1fr))] tablet:grid-cols-[repeat(auto-fill,_minmax(192px,_1fr))]">
                                     <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
                                         <a href="https://x.com/ericjang11" target="_blank" class="hover:opacity-70">
                                             <img src="/assets/person/eric_jang.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
@@ -1486,13 +1567,47 @@
                                         <span>1X</span>
                                         <div class="border-b-2 border-o-white"></div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <div class="pt-10 flex gap-10 laptop:gap-20 flex-col laptop:flex-row w-full laptop:flex-wrap">
                             <div style="min-width: 90%;">
                                 <h4>NAVSIM v2 End-to-End Driving Challenge</h4>
-                                <div class="mt-10 gap-10 grid grid-cols-[repeat(auto-fill,_minmax(144px,_1fr))] tablet:grid-cols-[repeat(auto-fill,_minmax(192px,_1fr))]">
+                                <table class="mt-6 table-fixed">
+                                    <tbody class="flex flex-col gap-3">
+                                        <tr>
+                                            <td class="w-4">-</td>
+                                            <td class="w-48"><a class="text-o-blue hover:underline" href="https://mh0797.github.io/" target="_blank">Marcel Hallgarten</a></td>
+                                            <td class="w-64"><i>University of Tübingen</i></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="w-4">-</td>
+                                            <td class="w-48"><a class="text-o-blue hover:underline" href="https://kashyap7x.github.io/" target="_blank">Kashyap Chitta</a></td>
+                                            <td class="w-64"><i>University of Tübingen</i></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="w-4">-</td>
+                                            <td class="w-48"><a class="text-o-blue hover:underline" href="https://danieldauner.github.io/" target="_blank">Daniel Dauner</a></td>
+                                            <td class="w-64"><i>University of Tübingen</i></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="w-4">-</td>
+                                            <td class="w-48"><a class="text-o-blue hover:underline" href="https://scholar.google.com/citations?user=X6vTmEMAAAAJ" target="_blank">Tianyu Li</a></td>
+                                            <td class="w-64"><i>OpenDriveLab</i></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="w-4">-</td>
+                                            <td class="w-48"><a class="text-o-blue hover:underline" href="https://vveicao.github.io/" target="_blank">Wei Cao</a></td>
+                                            <td class="w-64"><i>Bosch</i></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="w-4">-</td>
+                                            <td class="w-48"><a class="text-o-blue hover:underline" href="https://www.linkedin.com/in/pat-karn/" target="_blank">Pat Karnchanachari</a></td>
+                                            <td class="w-64"><i>Motional</i></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!-- <div class="mt-10 gap-10 grid grid-cols-[repeat(auto-fill,_minmax(144px,_1fr))] tablet:grid-cols-[repeat(auto-fill,_minmax(192px,_1fr))]">
                                     <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
                                         <a href="https://mh0797.github.io/" target="_blank" class="hover:opacity-70">
                                             <img src="/assets/person/marcel_hallgarten.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
@@ -1541,29 +1656,9 @@
                                         <span>Motional</span>
                                         <div class="border-b-2 border-o-white"></div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
-                            <!-- <div style="min-width: 45%;">
-                                <h4>Fabric Manipulation Challenge</h4>
-                                <div class="mt-10 gap-10 grid grid-cols-[repeat(auto-fill,_minmax(144px,_1fr))] tablet:grid-cols-[repeat(auto-fill,_minmax(192px,_1fr))]">
-                                    <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
-                                        <a href="https://shijiapeng03.github.io/" target="_blank" class="hover:opacity-70">
-                                            <img src="/assets/person/shijia_peng.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
-                                        </a>
-                                        <h4>Shijia Peng</h4>
-                                        <span>OpenDriveLab / Shenzhen University</span>
-                                        <div class="border-b-2 border-o-white"></div>
-                                    </div>
-                                    <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
-                                        <a href="https://scholar.google.com/citations?user=KYzm-k0AAAAJ" target="_blank" class="hover:opacity-70">
-                                            <img src="/assets/person/haoran_jiang.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
-                                        </a>
-                                        <h4>Haoran Jiang</h4>
-                                        <span>OpenDriveLab</span>
-                                        <div class="border-b-2 border-o-white"></div>
-                                    </div>
-                                </div>
-                            </div> -->
+
                         </div>
                     </div>
 
