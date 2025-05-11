@@ -1,9 +1,9 @@
 <head>
     <link rel="icon" type="image/png" href="/assets/icon/D_small.png">
-    <title>Tutorial at CVPR 2025 | OpenDriveLab</title>
+    <title>Workshop at ICCV 2025 | OpenDriveLab</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Tutorial, CVPR 2025, OpenDriveLab, Robotics, Embodied AI, Autonomous Driving">
+    <meta name="keywords" content="Workshop, ICCV 2025, OpenDriveLab, Robotics, Embodied AI, Autonomous Driving">
     <meta name="description" content="OpenDriveLab is committed to exploring cutting-edge embodied AI technology, launching a series of benchmarking work, open source to serve the community, and promote the common development of the industry. Friends who are committed to making influential research are welcome to join!">
 
     <link href="/ui2025/css/index_tailwind.css" rel="stylesheet">
@@ -85,22 +85,30 @@
 
             <!-- Landing -->
             <div class="w-screen tablet:w-auto h-svh snap-start pt-20 p-6 tablet:p-10">
-                <div class="w-full h-full rounded-3xl bg-[url('/assets/background/nashville_stadium.jpg')] bg-center laptop:bg-right bg-cover flex flex-col justify-end p-6 laptop:p-20 gap-6 laptop:gap-10 bg-black bg-opacity-40 bg-blend-overlay">
+                <div class="w-full h-full rounded-3xl bg-[url('/assets/background/honolulu.jpg')] bg-center laptop:bg-right bg-cover flex flex-col justify-end p-6 laptop:p-20 gap-6 laptop:gap-10 bg-black bg-opacity-40 bg-blend-overlay">
                     <div class="flex flex-row gap-6 laptop:gap-10">
-                        <img src="/assets/icon/cvpr/cvpr2025_white.svg" class="h-10 laptop:h-24"/>
+                        <img src="/assets/icon/iccv2025_white.png" class="h-10 laptop:h-24"/>
                         <img src="/assets/icon/cvpr/ieee_cs_white.png" class="h-10 laptop:h-24"/>
                     </div>
                     <h1 class="text-white">
-                        Robotics 101:<br>An Odyssey from A Vision Perspective
+                        Learning to See:<br>Advancing Spatial Understanding for Embodied Intelligence
                     </h1>
                     <h5 class="text-white">
-                        CVPR 2025 Tutorial
+                        ICCV 2025 Workshop
                         <br>
-                        Nashville, USA
-                        <br><br>
-                        <a href="/cvpr2025/" style="text-decoration: underline;">Join other events at CVPR 2025</a>
+                        Honolulu, USA
                     </h5>
                 </div>
+            </div>
+
+
+
+            <div class="w-screen tablet:w-auto snap-start pt-10 p-6 tablet:p-10">
+                <a class="hover:opacity-70 ww-full h-96 rounded-3xl bg-[url('/challenge2025/lHlT9joqwXjGv4c4pIGgK1qlJOvwEEtD.jpg')] bg-center laptop:bg-right bg-cover flex flex-col justify-center p-6 laptop:p-20 gap-6 laptop:gap-10" href="/challenge2025/">
+                    <h1 class="text-white">
+                        Autonomous Grand Challenge 2025
+                    </h1>
+                </a>
             </div>
 
 
@@ -168,7 +176,9 @@
                                 Introduction
                             </h3>
                             <p class="pt-10">
-                                In recent years, there has been a growing interest in robotics in the vision community. Getting started in robotics research is challenging since it requires a wide range of knowledge. This comprehensive full-day tutorial covers all aspects of robotics. We will provide the necessary background to understand the different aspects of robotics. We will also explore technical advancements, key challenges, and potential avenues for future research.
+                                The world is three-dimensional. This fact was first seen by trilobites, the first organisms capable of sensing light. From that moment, nervous systems began to evolve, gradually transforming mere sight into insight, understanding, and action. All these combined gives rise to intelligence.
+                                <br><br>
+                                Despite remarkable technological advancements in recent decades, modern embodied systems remain far from achieving full intelligence. They fall short in several key aspects: (i) contain information necessary for physical interaction, such as temporal dynamics of the scene; (ii) have a prior over semantic relevance, and should focus on task-relevant features like objects and their relationships; and (iii) be compact, avoiding the inclusion of irrelevant details, such as background elements. Attempts have been made, including integrating foundational models and utilizing large-scale data. Yet, the path to true intelligence remains long, with significant progress still required.
                             </p>
 
                         </div>
@@ -205,7 +215,7 @@
 
                     <div class="w-full mt-20">
                         <h2>
-                            <a href="#schedule" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="schedule">
+                            <a href="#schedule" class="scroll-mt-48 laptop:scroll-mt-20 group" id="schedule">
                                 Schedule
                                 <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
                             </a>
@@ -224,7 +234,7 @@
 
                     <div class="w-full mt-20">
                         <h2>
-                            <a href="#speaker" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="speaker">
+                            <a href="#speaker" class="scroll-mt-48 laptop:scroll-mt-20 group" id="speaker">
                                 Speakers
                                 <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
                             </a>
@@ -243,7 +253,7 @@
 
                     <div class="w-full mt-20">
                         <h2>
-                            <a href="#organizer" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="organizer">
+                            <a href="#organizer" class="scroll-mt-48 laptop:scroll-mt-20 group" id="organizer">
                                 Organizers
                                 <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
                             </a>
@@ -253,61 +263,32 @@
 
                                 <tr>
                                     <td class="w-4">-</td>
+                                    <td class="w-48"><a class="text-o-blue hover:underline" href="https://lihongyang.info/" target="_blank">Hongyang Li</a></td>
+                                    <td class="w-64"><i>HKU</i></td>
+                                </tr>
+                                <tr>
+                                    <td class="w-4">-</td>
+                                    <td class="w-48"><a class="text-o-blue hover:underline" href="https://www.philkr.net/" target="_blank">Philipp Krähenbühl</a></td>
+                                    <td class="w-64"><i>UT Austin</i></td>
+                                </tr>
+                                <tr>
+                                    <td class="w-4">-</td>
+                                    <td class="w-48"><a class="text-o-blue hover:underline" href="https://kashyap7x.github.io/" target="_blank">Kashyap Chitta</a></td>
+                                    <td class="w-64"><i>NVIDIA</i></td>
+                                </tr>
+                                <tr>
+                                    <td class="w-4">-</td>
+                                    <td class="w-48"><a class="text-o-blue hover:underline" href="https://evjang.com/" target="_blank">Eric Jang</a></td>
+                                    <td class="w-64"><i>1X Technologies</i></td>
+                                </tr>
+                                <tr>
+                                    <td class="w-4">-</td>
                                     <td class="w-48"><a class="text-o-blue hover:underline" href="https://faikit.github.io/" target="_blank">Huijie Wang</a></td>
                                     <td class="w-64"><i>OpenDriveLab</i></td>
-                                </tr>
-                                <tr>
-                                    <td class="w-4">-</td>
-                                    <td class="w-48"><a class="text-o-blue hover:underline" href="https://people.ee.ethz.ch/~csakarid/" target="_blank">Christos Sakaridis</a></td>
-                                    <td class="w-64"><i>ETH Zürich</i></td>
-                                </tr>
-                                <tr>
-                                    <td class="w-4">-</td>
-                                    <td class="w-48"><a class="text-o-blue hover:underline" href="https://www.cs.cmu.edu/~jeanoh/" target="_blank">Jean Oh</a></td>
-                                    <td class="w-64"><i>CMU</i></td>
-                                </tr>
-                                <tr>
-                                    <td class="w-4">-</td>
-                                    <td class="w-48"><a class="text-o-blue hover:underline" href="https://ariannaliu.github.io/" target="_blank">Zhixuan Liu</a></td>
-                                    <td class="w-64"><i>CMU</i></td>
                                 </tr>
 
                             </tbody>
                         </table>
-                        <!-- <div class="mt-20 gap-10 grid grid-cols-[repeat(auto-fill,_minmax(144px,_1fr))] tablet:grid-cols-[repeat(auto-fill,_minmax(192px,_1fr))]">
-                            <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
-                                <a href="https://faikit.github.io/" target="_blank" class="hover:opacity-70">
-                                    <img src="/assets/person/huijie_wang.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
-                                </a>
-                                <h4>Huijie Wang</h4>
-                                <span>OpenDriveLab</span>
-                                <div class="border-b-2 border-o-white"></div>
-                            </div>
-                            <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
-                                <a href="https://people.ee.ethz.ch/~csakarid/" target="_blank" class="hover:opacity-70">
-                                    <img src="/assets/person/christos_sakaridis.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
-                                </a>
-                                <h4>Christos Sakaridis</h4>
-                                <span>ETH Zürich</span>
-                                <div class="border-b-2 border-o-white"></div>
-                            </div>
-                            <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
-                                <a href="https://www.cs.cmu.edu/~jeanoh/" target="_blank" class="hover:opacity-70">
-                                    <img src="/assets/person/jean_oh.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
-                                </a>
-                                <h4>Jean Oh</h4>
-                                <span>CMU</span>
-                                <div class="border-b-2 border-o-white"></div>
-                            </div>
-                            <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
-                                <a href="https://ariannaliu.github.io/" target="_blank" class="hover:opacity-70">
-                                    <img src="/assets/person/zhixuan_Liu.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
-                                </a>
-                                <h4>Zhixuan Liu</h4>
-                                <span>CMU</span>
-                                <div class="border-b-2 border-o-white"></div>
-                            </div>
-                        </div> -->
                     </div>
 
 
