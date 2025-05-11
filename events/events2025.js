@@ -1,5 +1,14 @@
 const events2025data = [
     {
+        heading: "Workshop at ICCV 2025",
+        subheading: "&nbsp;",
+        link: "/iccv2025/workshop/",
+        linkoption: '',
+        background: "/assets/event/honolulu.jpg",
+        backgroundoption: "bg-left",
+        date: "October, 2025",
+    },
+    {
         heading: "Challenge 2025",
         subheading: "Autonomous Grand Challenge",
         link: "/challenge2025/",
