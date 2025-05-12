@@ -1,5 +1,23 @@
 const pick = [
     {
+        title: "Learning to Act Anywhere with Task-centric Latent Actions",
+        link: "https://arxiv.org/abs/2505.06111",
+        image: "/assets/publication/univla.jpg",
+        author: "Qingwen Bu, Yanting Yang, Jisong Cai, Shenyuan Gao, Guanghui Ren, Maoqing Yao, Ping Luo, Hongyang Li",
+        note: "RSS 2025",
+        noteoption: '',
+        star: "https://img.shields.io/github/stars/OpenDriveLab/UniVLA?style=social",
+        starlink: "https://github.com/OpenDriveLab/UniVLA",
+        icon: [
+            {
+                type: "github",
+                link: "https://github.com/OpenDriveLab/UniVLA",
+            },
+        ],
+        description: "A unified vision-language-action framework that enables policy learning across different environments.",
+        tag: "",
+    },
+    {
         title: "Planning-oriented Autonomous Driving",
         link: "https://openaccess.thecvf.com/content/CVPR2023/html/Hu_Planning-Oriented_Autonomous_Driving_CVPR_2023_paper.html",
         image: "/assets/publication/uniad.jpg",
@@ -86,48 +104,6 @@ const pick = [
         tag: "",
     },
     {
-        title: "Vista: A Generalizable Driving World Model with High Fidelity and Versatile Controllability",
-        link: "https://arxiv.org/abs/2405.17398",
-        image: "/assets/publication/vista.jpg",
-        author: "Shenyuan Gao, Jiazhi Yang, Li Chen, Kashyap Chitta, Yihang Qiu, Andreas Geiger, Jun Zhang, Hongyang Li",
-        note: "NeurIPS 2024",
-        noteoption: '',
-        star: "https://img.shields.io/github/stars/OpenDriveLab/Vista?style=social",
-        starlink: "https://github.com/OpenDriveLab/Vista",
-        icon: [
-            {
-                type: "dataset",
-                link: "https://github.com/OpenDriveLab/DriveAGI/tree/main/opendv",
-            },
-            {
-                type: "webpage",
-                link: "/Vista/",
-            },
-            {
-                type: "github",
-                link: "https://github.com/OpenDriveLab/Vista",
-            },
-            {
-                type: "hugging_face",
-                link: "https://huggingface.co/OpenDriveLab/Vista",
-            },
-            {
-                type: "bilibili",
-                link: "https://www.bilibili.com/video/BV1gXCGYMEYV/",
-            },
-            {
-                type: "medium",
-                link: "https://medium.com/@opendrivelab/towards-next-level-of-autonomous-driving-via-world-models-aff0eb7fee00",
-            },
-            {
-                type: "poster",
-                link: "https://opendrivelab.github.io/Vista/nips24_vista_poster.png",
-            },
-        ],
-        description: "A generalizable driving world model with high-fidelity open-world prediction, continuous long-horizon rollout, and zero-shot action controllability.",
-        tag: "",
-    },
-    {
         title: "DriveLM: Driving with Graph Visual Question Answering",
         link: "https://arxiv.org/abs/2312.14150",
         image: "/assets/publication/drivelm.jpg",
@@ -153,20 +129,6 @@ const pick = [
                 type: "hugging_face",
                 link: "https://huggingface.co/datasets/OpenDriveLab-org/DriveLM",
             },
-        ],
-        description: "",
-        tag: "",
-    },
-    {
-        title: "MTGS: Multi-Traversal Gaussian Splatting",
-        link: "https://arxiv.org/abs/2503.12552",
-        image: "/assets/publication/mtgs.jpg",
-        author: "Tianyu Li, Yihang Qiu, Zhenhua Wu, Carl Lindström, Peng Su, Matthias Nießner, Hongyang Li",
-        note: "arXiv 2025",
-        noteoption: '',
-        star: "",
-        starlink: "",
-        icon: [
         ],
         description: "",
         tag: "",

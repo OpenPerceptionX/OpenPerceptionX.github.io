@@ -1,5 +1,47 @@
 const e2ead = [
     {
+        title: "Vista: A Generalizable Driving World Model with High Fidelity and Versatile Controllability",
+        link: "https://arxiv.org/abs/2405.17398",
+        image: "/assets/publication/vista.jpg",
+        author: "Shenyuan Gao, Jiazhi Yang, Li Chen, Kashyap Chitta, Yihang Qiu, Andreas Geiger, Jun Zhang, Hongyang Li",
+        note: "NeurIPS 2024",
+        noteoption: '',
+        star: "https://img.shields.io/github/stars/OpenDriveLab/Vista?style=social",
+        starlink: "https://github.com/OpenDriveLab/Vista",
+        icon: [
+            {
+                type: "dataset",
+                link: "https://github.com/OpenDriveLab/DriveAGI/tree/main/opendv",
+            },
+            {
+                type: "webpage",
+                link: "/Vista/",
+            },
+            {
+                type: "github",
+                link: "https://github.com/OpenDriveLab/Vista",
+            },
+            {
+                type: "hugging_face",
+                link: "https://huggingface.co/OpenDriveLab/Vista",
+            },
+            {
+                type: "bilibili",
+                link: "https://www.bilibili.com/video/BV1gXCGYMEYV/",
+            },
+            {
+                type: "medium",
+                link: "https://medium.com/@opendrivelab/towards-next-level-of-autonomous-driving-via-world-models-aff0eb7fee00",
+            },
+            {
+                type: "poster",
+                link: "https://opendrivelab.github.io/Vista/nips24_vista_poster.png",
+            },
+        ],
+        description: "A generalizable driving world model with high-fidelity open-world prediction, continuous long-horizon rollout, and zero-shot action controllability.",
+        tag: "",
+    },
+    {
         title: "Decoupled Diffusion Sparks Adaptive Scene Generation",
         link: "https://arxiv.org/abs/2504.10485",
         image: "/assets/publication/nexus.jpg",
