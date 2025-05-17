@@ -1,4 +1,4 @@
-const track1data = [
+const track2data = [
     {
         team: "-",
         primary: "-",
@@ -11,10 +11,10 @@ const track1data = [
 ];
 
 
-let track1sortDirection = "asc";
-track1data.sort((a, b) => b.primary - a.primary);
+let track2sortDirection = "desc";
+track2data.sort((a, b) => - b.primary + a.primary);
 index = 0
-track1data.forEach((item, xxx) => {
+track2data.forEach((item, xxx) => {
     if (item.disqualified) {
         item.rank = "*";
     } else {
@@ -25,16 +25,16 @@ track1data.forEach((item, xxx) => {
 
 
 
-let track1currentPage = 1;
-let track1pageSize = 10;
-let track1sortColumn = null;
+let track2currentPage = 1;
+let track2pageSize = 10;
+let track2sortColumn = null;
 
 
 
-function track1render() {
-    const track1tableBody = document.getElementById("track1table");
-    track1tableBody.innerHTML = "";
-    track1data.slice((track1currentPage - 1) * track1pageSize, track1currentPage * track1pageSize).forEach((item, index) => {
+function track2render() {
+    const track2tableBody = document.getElementById("track2table");
+    track2tableBody.innerHTML = "";
+    track2data.slice((track2currentPage - 1) * track2pageSize, track2currentPage * track2pageSize).forEach((item, index) => {
         const row = document.createElement("tr");
         row.innerHTML = `
             <td>
@@ -49,43 +49,43 @@ function track1render() {
             <td>${item.team}</td>
             <td class="flex gap-3">${item.links}</td>
         `;
-        track1tableBody.appendChild(row);
+        track2tableBody.appendChild(row);
     });
-    document.getElementById("track1pages").innerHTML = `<b>${track1currentPage} / ${Math.ceil(track1data.length / track1pageSize)}</b>`;
+    document.getElementById("track2pages").innerHTML = `<b>${track2currentPage} / ${Math.ceil(track2data.length / track2pageSize)}</b>`;
 
     if (window.innerWidth < 1024) {
-        document.getElementById("track1tablefoot").style.width = document.getElementById("track1table").offsetWidth;
+        document.getElementById("track2tablefoot").style.width = document.getElementById("track2table").offsetWidth;
     }
 }
 
 
 
-function track1sort(columnIndex, columnKey) {
-    if (track1sortColumn === columnKey) {
-        track1sortDirection = track1sortDirection === "asc" ? "desc" : "asc";
+function track2sort(columnIndex, columnKey) {
+    if (track2sortColumn === columnKey) {
+        track2sortDirection = track2sortDirection === "desc" ? "asc" : "desc";
     } else {
-        track1sortColumn = columnKey;
-        track1sortDirection = "asc";
+        track2sortColumn = columnKey;
+        track2sortDirection = "desc";
     }
-    track1updateSortIcons(columnIndex);
-    track1data.sort((a, b) => {
-        if (track1sortDirection === "asc") {
+    track2updateSortIcons(columnIndex);
+    track2data.sort((a, b) => {
+        if (track2sortDirection === "asc") {
             return a[columnKey] - b[columnKey];
         } else {
             return b[columnKey] - a[columnKey];
         }
     });
-    track1currentPage = 1;
-    track1render();
+    track2currentPage = 1;
+    track2render();
 }
 
 
 
-function track1updateSortIcons(columnIndex) {
-    const sortIcons = document.querySelectorAll(".track1button");
+function track2updateSortIcons(columnIndex) {
+    const sortIcons = document.querySelectorAll(".track2button");
     sortIcons.forEach((icon, index) => {
         if (index === columnIndex) {
-            if (track1sortDirection === "asc") {
+            if (track2sortDirection === "asc") {
                 icon.innerHTML = icon.innerHTML.replace("&nbsp;&nbsp;&nbsp;", "▲");
                 icon.innerHTML = icon.innerHTML.replace("▼", "▲");
             } else {
@@ -101,18 +101,18 @@ function track1updateSortIcons(columnIndex) {
 
 
 
-function track1previous() {
-    if (track1currentPage > 1) {
-        track1currentPage--;
-        track1render();
+function track2previous() {
+    if (track2currentPage > 1) {
+        track2currentPage--;
+        track2render();
     }
 }
 
 
 
-function track1next() {
-    if (track1currentPage < Math.ceil(track1data.length / track1pageSize)) {
-        track1currentPage++;
-        track1render();
+function track2next() {
+    if (track2currentPage < Math.ceil(track2data.length / track2pageSize)) {
+        track2currentPage++;
+        track2render();
     }
 }
