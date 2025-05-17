@@ -9,6 +9,7 @@
     <link href="/ui2025/css/index_tailwind.css" rel="stylesheet">
     <link href="./leaderboard.css" rel="stylesheet" type="text/css" media="all"/>
     <script src="./track1.js"></script>
+    <script src="./track2.js"></script>
 
     <script src="/ui2024/js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
@@ -1252,6 +1253,49 @@
                             </p>
                         </div>
 
+                        <div class="mt-20 flex flex-col gap-6">
+                            <h3 class="text-[1d4968]">
+                                Leaderboard
+                            </h3>
+                            <div class="leaderboard">
+                                <div class="leaderboardscroll">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th class="text-white font-bold w-1/12 min-w-24">
+                                                    Rank
+                                                </th>
+                                                <th class="text-white font-bold w-1/12 min-w-24">
+                                                    🗺️
+                                                </th>
+                                                <th class="text-white font-bold w-1/2  min-w-48">
+                                                    Institution
+                                                </th>
+                                                <th class="text-white font-bold track2button w-1/6 min-w-24" onclick="track2sort(0, 'primary')">
+                                                    Score ▼
+                                                </th>
+                                                <th class="text-white font-bold w-1/6 min-w-24">
+                                                    Team Name
+                                                </th>
+                                                <th class="text-white font-bold w-1/6 min-w-24"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="track2table"></tbody>
+                                    </table>
+                                    <div id="track2tablefoot">
+                                        <div>
+                                            <button onclick="track2previous()"><b>⇤</b></button>
+                                            <button onclick="track2next()"><b>⇥</b></button>
+                                        </div>
+                                        <div>
+                                            <button class="nonbutton" id="track2pages"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <span>* Not involed in the final official ranking.</span>
+                        </div>
+
                         <div class="mt-12 flex flex-col gap-6">
                             <h3 class="text-[30201e]">
                                 Contact
@@ -1917,4 +1961,5 @@
 
 <script>
     track1render();
+    track2render();
 </script>
