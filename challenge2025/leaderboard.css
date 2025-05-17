@@ -1,0 +1,101 @@
+@media screen and (max-width: 1024px) {
+    .leaderboard {
+        width: 100%;
+        display: block !important;
+        & div {
+            width: 100%;
+        }
+        & .leaderboardscroll {
+            overflow-x: scroll !important;
+        }
+    }
+}
+
+
+
+.leaderboard div table {
+    border-collapse: collapse;
+    & thead {
+        user-select: none;
+    }
+    & .button:hover {
+        cursor: pointer;
+    }
+}
+.leaderboard div table thead {
+    background-color: #0c318f;
+    text-wrap: nowrap;
+    & tr th {
+        line-height: 33px;
+    }
+}
+.leaderboard div table tbody tr {
+    background-color: rgb(255, 255, 255);
+    &:nth-child(2n) {
+        background-color: rgb(233, 233, 233);
+    }
+    & td div {
+        background-color: inherit;
+    }
+}
+.leaderboard div table thead tr th, .leaderboard div table tbody tr td {
+    text-align: left;
+    padding: 11px;
+    &:nth-child(1) {
+        text-wrap: nowrap;
+    }
+}
+
+
+
+.leaderboard div div {
+    background-color: #0c318f;
+    display: flex;
+    flex-direction: row;
+    user-select: none;
+    & button {
+        margin: 11px 0px 11px 22px;
+        padding: 3px 0 3px 0;
+        width: 66px;
+        border: 0px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 13px;
+        color: #0c318f;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    & .nonbutton {
+        margin: 11px 22px;
+        padding: 5px 0 3px 0;
+        &:hover {
+            cursor: default;
+        }
+    }
+}
+
+
+
+.inlineflag {
+    height: 17px;
+    @media screen and (max-width: 1024px) {
+        height: 27px;
+    }
+}
+.inlineimg {
+    height: 27px;
+    @media screen and (max-width: 1024px) {
+        height: 49px;
+    }
+}
+
+
+
+.leaderboardsub div {
+    & table thead {
+        background-color: gray;
+    }
+    & div {
+        background-color: gray;
+    }
+}
