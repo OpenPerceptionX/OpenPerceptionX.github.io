@@ -7,6 +7,8 @@
     <meta name="description" content="OpenDriveLab is committed to exploring cutting-edge embodied AI technology, launching a series of benchmarking work, open source to serve the community, and promote the common development of the industry. Friends who are committed to making influential research are welcome to join!">
 
     <link href="/ui2025/css/index_tailwind.css" rel="stylesheet">
+    <link href="./leaderboard.css" rel="stylesheet" type="text/css" media="all"/>
+    <script src="./track1.js"></script>
 
     <script src="/ui2024/js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
@@ -794,6 +796,49 @@
                             <div class="flex flex-row gap-10">
                                 <a href="https://motional.com/" target="_blank" class="group"><img src="/assets/brand/motional.png" class="h-6 laptop:h-12 group-hover:opacity-70"/></a>
                             </div>
+                        </div>
+
+                        <div class="mt-20 flex flex-col gap-6">
+                            <h3 class="text-[1d4968]">
+                                Leaderboard
+                            </h3>
+                            <div class="leaderboard">
+                                <div class="leaderboardscroll">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th class="text-white font-bold w-1/12 min-w-24">
+                                                    Rank
+                                                </th>
+                                                <th class="text-white font-bold w-1/12 min-w-24">
+                                                    🗺️
+                                                </th>
+                                                <th class="text-white font-bold w-1/2  min-w-48">
+                                                    Institution
+                                                </th>
+                                                <th class="text-white font-bold track1button w-1/6 min-w-24" onclick="track1sort(0, 'primary')">
+                                                    Score ▼
+                                                </th>
+                                                <th class="text-white font-bold w-1/6 min-w-24">
+                                                    Team Name
+                                                </th>
+                                                <th class="text-white font-bold w-1/6 min-w-24"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="track1table"></tbody>
+                                    </table>
+                                    <div id="track1tablefoot">
+                                        <div>
+                                            <button onclick="track1previous()"><b>⇤</b></button>
+                                            <button onclick="track1next()"><b>⇥</b></button>
+                                        </div>
+                                        <div>
+                                            <button class="nonbutton" id="track1pages"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <span>* Not involed in the final official ranking.</span>
                         </div>
 
                         <div class="mt-12 flex flex-col gap-6">
@@ -1867,3 +1912,9 @@
         </div>
     </div>
 </body>
+
+
+
+<script>
+    track1render();
+</script>
