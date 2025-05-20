@@ -1,5 +1,37 @@
 const e2ead = [
     {
+        title: "Decoupled Diffusion Sparks Adaptive Scene Generation",
+        link: "https://arxiv.org/abs/2504.10485",
+        image: "/assets/publication/nexus.jpg",
+        author: "Yunsong Zhou, Naisheng Ye, William Ljungbergh, Tianyu Li, Jiazhi Yang, Zetong Yang, Hongzi Zhu, Christoffer Petersson, Hongyang Li",
+        note: "arXiv 2025",
+        noteoption: '',
+        star: "https://img.shields.io/github/stars/OpenDriveLab/Nexus?style=social",
+        starlink: "https://github.com/OpenDriveLab/Nexus",
+        icon: [
+            {
+                type: "webpage",
+                link: "/Nexus",
+            },
+        ],
+        description: "",
+        tag: "",
+    },
+    {
+        title: "Centaur: Robust End-to-End Autonomous Driving with Test-Time Training",
+        link: "https://arxiv.org/abs/2503.11650",
+        image: "/assets/publication/centaur.jpg",
+        author: "Chonghao Sima, Kashyap Chitta, Zhiding Yu, Shiyi Lan, Ping Luo, Andreas Geiger, Hongyang Li, Jose M. Alvarez",
+        note: "arXiv 2025",
+        noteoption: '',
+        star: "",
+        starlink: "",
+        icon: [
+        ],
+        description: "",
+        tag: "",
+    },
+        {
         title: "Vista: A Generalizable Driving World Model with High Fidelity and Versatile Controllability",
         link: "https://arxiv.org/abs/2405.17398",
         image: "/assets/publication/vista.jpg",
@@ -39,38 +71,6 @@ const e2ead = [
             },
         ],
         description: "A generalizable driving world model with high-fidelity open-world prediction, continuous long-horizon rollout, and zero-shot action controllability.",
-        tag: "",
-    },
-    {
-        title: "Decoupled Diffusion Sparks Adaptive Scene Generation",
-        link: "https://arxiv.org/abs/2504.10485",
-        image: "/assets/publication/nexus.jpg",
-        author: "Yunsong Zhou, Naisheng Ye, William Ljungbergh, Tianyu Li, Jiazhi Yang, Zetong Yang, Hongzi Zhu, Christoffer Petersson, Hongyang Li",
-        note: "arXiv 2025",
-        noteoption: '',
-        star: "https://img.shields.io/github/stars/OpenDriveLab/Nexus?style=social",
-        starlink: "https://github.com/OpenDriveLab/Nexus",
-        icon: [
-            {
-                type: "webpage",
-                link: "/Nexus",
-            },
-        ],
-        description: "",
-        tag: "",
-    },
-    {
-        title: "Centaur: Robust End-to-End Autonomous Driving with Test-Time Training",
-        link: "https://arxiv.org/abs/2503.11650",
-        image: "/assets/publication/centaur.jpg",
-        author: "Chonghao Sima, Kashyap Chitta, Zhiding Yu, Shiyi Lan, Ping Luo, Andreas Geiger, Hongyang Li, Jose M. Alvarez",
-        note: "arXiv 2025",
-        noteoption: '',
-        star: "",
-        starlink: "",
-        icon: [
-        ],
-        description: "",
         tag: "",
     },
     {
