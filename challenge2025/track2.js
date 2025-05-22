@@ -1,13 +1,48 @@
 const track2data = [
-    {
-        team: "-",
-        primary: "-",
+    { 
+        team: "Duke", 
+        Compression: "7.4976",
+        Sampling: "21.5578",
+        Point: "20",
+        award: "rank01", 
+        disqualified: false,
+        links: "-",
         country: "",
         institution: "-",
-        award: "",
-        disqualified: false,
-        links: "-"
     },
+    { 
+        team: "WaterlooVipLab", 
+        Compression: "7.9869",
+        Sampling: "18.0394",
+        Point: "12",
+        award: "-", 
+        disqualified: false,
+        links: "-",
+        country: "",
+        institution: "-",
+    },
+    { 
+        team: "Micheal", 
+        Compression: "-",
+        Sampling: "18.3428",
+        Point: "7",
+        award: "-", 
+        disqualified: false,
+        links: "-",
+        country: "",
+        institution: "-",
+    },
+    { 
+        team: "Shortnapse", 
+        Compression: "8.2723",
+        Sampling: "-",
+        Point: "5",
+        award: "-", 
+        disqualified: false,
+        links: "-",
+        country: "",
+        institution: "-",
+    }
 ];
 
 
