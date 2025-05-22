@@ -4,32 +4,33 @@ const track2data = [
         Compression: "7.4976",
         Sampling: "21.5578",
         Point: "20",
-        award: "rank01", 
+        award: "blank",
+        // award: "rank01", 
         disqualified: false,
         links: "-",
-        country: "",
-        institution: "-",
+        country: "US",
+        institution: "Duke University",
     },
     { 
         team: "WaterlooVipLab", 
         Compression: "7.9869",
         Sampling: "18.0394",
         Point: "12",
-        award: "-", 
+        award: "blank", 
         disqualified: false,
         links: "-",
-        country: "",
-        institution: "-",
+        country: "CA",
+        institution: "University of Waterloo",
     },
     { 
         team: "Micheal", 
         Compression: "-",
         Sampling: "18.3428",
         Point: "7",
-        award: "-", 
+        award: "blank", 
         disqualified: false,
         links: "-",
-        country: "",
+        country: "-",
         institution: "-",
     },
     { 
@@ -37,11 +38,11 @@ const track2data = [
         Compression: "8.2723",
         Sampling: "-",
         Point: "5",
-        award: "-", 
+        award: "blank", 
         disqualified: false,
         links: "-",
-        country: "",
-        institution: "-",
+        country: "KR",
+        institution: "CJ Corporation",
     }
 ];
 
@@ -78,9 +79,11 @@ function track2render() {
                     <img src="/assets/icon/${item.award}.png" class="inlineflag"/>
                 </div>
             </td>
-            <td><img src="/assets/flags/${item.country}.svg" class="inlineflag"/> ${item.country}</td>
+            <td><img src="/assets/flags/${item.country}.svg" class="inlineflag"/></td>
             <td>${item.institution}</td>
-            <td><b>${item.primary}</b></td>
+            <td><b>${item.Point}</b></td>
+            <td>${item.Compression}</td>
+            <td>${item.Sampling}</td>
             <td>${item.team}</td>
             <td class="flex gap-3">${item.links}</td>
         `;
