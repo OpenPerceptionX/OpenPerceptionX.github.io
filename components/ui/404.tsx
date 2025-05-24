@@ -7,10 +7,6 @@ import { redirect, usePathname } from 'next/navigation'
 
 
 
-import { FadeIn } from "@/components/animation/fade-in"
-
-
-
 export default function NotFound404() {
 
 
@@ -234,18 +230,17 @@ export default function NotFound404() {
 
     return (
         <main className='w-full'>
-            <div className="w-full h-svh flex flex-row justify-center items-center bg-gradient-landing">
-                <div className="w-full max-w-7xl px-6 flex flex-col gap-6 select-none">
-                    <FadeIn>
-                        <h1 className="font-bold text-t0 text-white">
-                            404
-                        </h1>
-                    </FadeIn>
-                    <FadeIn>
-                        <h1 className="font-bold text-t0 text-white">
-                            Not Found
-                        </h1>
-                    </FadeIn>
+            <div className="w-full h-svh flex flex-row justify-center items-center">
+                <div className='w-full md:w-3/4 h-full md:h-3/4 md:rounded-sm bg-gradient-landing flex flex-row justify-center items-center'>
+                    <div className="md:w-full max-w-3xl px-6 flex flex-col gap-6 select-none ">
+                            <h1 className="font-bold text-t1 text-white">
+                                404
+                            </h1>
+
+                            <h1 className="font-bold text-t1 text-white">
+                                Not Found
+                            </h1>
+                    </div>
                 </div>
             </div>
         </main>
