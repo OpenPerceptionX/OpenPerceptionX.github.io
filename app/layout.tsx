@@ -103,7 +103,7 @@ export default function RootLayout({
 
 
 
-                    <main>
+                    <main className="w-full">
                         {children}
                     </main>
 
