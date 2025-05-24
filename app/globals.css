@@ -152,9 +152,6 @@
 .bg-gradient-landing {
     @apply bg-gradient-to-br from-o-dark-blue via-o-light-blue to-o-blue;
 }
-.bg-gradient-loading {
-    @apply bg-gradient-to-br from-o-dark-blue via-o-light-blue to-o-blue;
-}
 
 
 
