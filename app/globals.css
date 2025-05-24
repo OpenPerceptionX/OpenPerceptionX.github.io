@@ -137,6 +137,14 @@
         @apply transition delay-100 duration-200;
     }
 }
+/* link underline */
+.animated-underline {
+    border-bottom: 1px solid transparent;
+    @apply transition delay-100 duration-200;
+}
+.animated-underline:hover {
+    @apply border-b-inherit;
+}
 
 
 
@@ -157,12 +165,6 @@
 .text-t1 {
     @apply text-5xl md:text-6xl;
 }
-.color-text-1 {
-    width: fit-content;
-    background-image: linear-gradient(to right, #4ec6df, #ee2e69, #f9a61a);
-    -webkit-background-clip: text;
-    color: transparent;
-}
 
 
 
@@ -170,28 +172,7 @@
 .fade-in {
     transition: opacity 1.5s ease;
 }
-
 .fade-out {
     opacity: 0;
     transition: opacity 1.5s ease;
-}
-
-
-
-/* link underline */
-.animated-underline {
-    border-bottom: 1px solid transparent;
-    @apply transition delay-100 duration-200;
-}
-.animated-underline:hover {
-    @apply border-b-inherit;
-}
-.member_bio {
-    & a{
-        border-bottom: 1px solid transparent;
-        @apply text-o-dark-blue transition delay-100 duration-200;
-    }
-    & a:hover {
-        @apply border-b-inherit;
-    }
 }
