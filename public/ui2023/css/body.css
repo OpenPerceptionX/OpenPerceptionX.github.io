@@ -1,0 +1,31 @@
+/* 共用文件 */
+::-webkit-scrollbar{border-radius:10px;width:10px;background:#f1f1f1;}
+::-webkit-scrollbar-track{border-radius:10px;background-color:#f1f1f1;}
+::-webkit-scrollbar-thumb{border-radius:10px;background:#c1c1c1;}
+
+body{color: #333; line-height:21px;}
+body,html,dl,dt,dd,ul,li{padding:0; margin:0; }
+body, input, textarea, select ,code,topic { font-size: 14px;
+    font-family: Verdana, Geneva, sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 20px 0;
+    font-size: 1.4rem;
+    line-height: normal;
+    font-weight: normal;
+    text-transform: capitalize;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+a{text-decoration: none;}
+/* a,a:link,a:active{color: #DC8E47;  }
+a:hover{color: #c0392b;} */
+dl,dt,dd,ul,li{list-style:none;}
+img{max-width:100%; vertical-align: middle;}
+.bg{ max-width: 1100px; margin: 0 auto;}
+
+@media screen and (max-device-width:1024px){
+.bg{ padding: 20px;}
+}
+
+ 
+.loadings{ opacity: 0;}

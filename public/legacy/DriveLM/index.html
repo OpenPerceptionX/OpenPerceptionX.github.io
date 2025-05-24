@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <title>DriveLM</title>
+  <!-- <meta name="description"
+    content="Most of the influential and interesting publications published by OpenDriveLab come from top conferences and journals in the computer field, such as ICML, ECCV, ICCV, NeurIPS, ICLR, CVPR."> -->
+  <meta name="keywords"
+    content="DriveLM, OpenDriveLab, Robotics, Autonomous Driving, Embodied AI">
+  <link rel="icon" type="image/png" href="/logo/OpenDriveLab/D_small.png">
+  <link href="/ui2023/css/body.css" rel="stylesheet" type="text/css" media="all">
+  <link href="/ui2023/css/head.css" rel="stylesheet" type="text/css" media="all">
+  <link href="/ui2023/css/dataset.css" rel="stylesheet" type="text/css" media="all">
+
+<!-- Libs CSS -->
+<link rel="stylesheet" href="./libs.bundle.css"/>
+<link rel="stylesheet" href="./all.css">
+<!-- Main CSS -->
+<link rel="stylesheet" href="./index.bundle.css"/>
+
+<link href="./drivelm.css" rel="stylesheet" type="text/css" media="all">
+<link href="/ui2023/css/footer.css?1" rel="stylesheet" type="text/css" media="all">
+
+
+  <!-- latex support -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+  <link href="/ui2023/css/footer.css?11" rel="stylesheet" type="text/css" media="all">
+  <!-- <link href="/ui2023/css/head_event.css" rel="stylesheet" type="text/css" media="all"> -->
+  <style>
+    .r_ul a {
+      padding: 0px 0px;
+    }
+
+    @media screen and (min-width:1024px) {
+      .r_ul.r_ul_this {
+        position: fixed;
+        top: 0;
+        bottom: auto;
+      }
+    }
+
+    li {
+        color:  black !important;
+    }
+
+    .drivelmp {
+        text-align: justify;
+    }
+
+    .title {
+        font-weight: bold;
+        font-size: 180%;
+    }
+
+
+  </style>
+</head>
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L7VEDHS6G8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L7VEDHS6G8');
+</script>
+
+
+
+<body class="loadings">
+
+  <!-- <div id="content" class="content"></div> -->
+
+
+
+
+  <!-- dataset -->
+
+  <div class="section_even">
+    <div class="bg">
+
+        <div class="drivelmbanner">
+
+            <img src="./drivelm.png" class="drivelmbannerimg">
+
+            <br>
+
+            <span>Driving with <b>G</b>raph <b>V</b>isual <b>Q</b>uestion <b>A</b>nswering</span>
+
+            <br>
+
+            <p style="margin-bottom: 3px;"><a href="https://scholar.google.com/citations?user=dgYJ6esAAAAJ" target="_blank">Chonghao Sima*</a>, <a href="https://www.katrinrenz.de/" target="_blank">Katrin Renz*</a>, <a href="https://kashyap7x.github.io/" target="_blank">Kashyap Chitta</a>, <a href="https://scholar.google.com/citations?user=ulZxvY0AAAAJ" target="_blank">Li Chen</a>,<br>Hanxue Zhang, Chengen Xie, <a href="http://luoping.me/" target="_blank">Ping Luo</a>, <a href="https://www.cvlibs.net/" target="_blank">Andreas Geiger<sup>†</sup></a>, <a href="https://lihongyang.info/" target="_blank">Hongyang Li<sup>†</sup></a></p>
+            <p style="font-size: 100%;">* Equal contribution.&nbsp;&nbsp;<sup>†</sup> Equal co-advising.</p>
+            
+            <p class="drivelmp">
+            <div class="drivelmbrand">
+                <img src="/ui2023/img/team_logo_long.png"/>
+                <img src="/ui2023/img/utubingen.png"/>
+            </div>
+        </p>
+
+            <br>
+
+            <div class="divelmwidget">
+                <a href="https://github.com/OpenDriveLab/DriveLM#license-and-citation-" target="_blank">
+                    <img src="https://img.shields.io/badge/license-Apache%202.0-blue.svg"/>
+                </a>
+                <a href="https://arxiv.org/abs/2312.14150" target="_blank">
+                    <img src="https://img.shields.io/badge/arXiv-2312.14150-b31b1b.svg"/>
+                </a>
+                <a href="https://github.com/OpenDriveLab/DriveLM#gettingstarted" target="_blank">
+                    <img alt="Github Page" src="https://img.shields.io/badge/Latest%20release-v1.0-yellow" />
+                  </a>
+                <a href="https://huggingface.co/datasets/OpenDrive/DriveLM" target="_blank">
+                    <img alt="Hugging Face" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-DriveLM-ffc107?color=ffc107&logoColor=white" />
+                  </a>
+            </div>
+
+        </div>
+
+
+
+        <div class="drivelmvideo">
+            <iframe width="100%" height="617" src="https://www.youtube.com/embed/r6azXZ-axBE" title="DriveLM nuScenes demo v2.1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+
+        <br>
+
+        <img src="https://github.com/OpenDriveLab/DriveLM/raw/main/assets/images/repo/drivelm_teaser.jpg" width="100%"/>
+
+
+
+        <br><br>
+
+        <br><br>
+        <div style="height: 2px; background-color: lightgray;"></div>
+        <br><br>
+
+
+        <div class="drivelmintro" id="introduction">
+            <h2 class="title">
+                <a href="#introduction">
+                  Introduction
+                  <img src="/ui2023/img/icon/link.png" class="title_link" />
+                </a>
+              </h2>
+            <p class="drivelmp">
+            In DriveLM, we study how vision-language models (VLMs) trained on web-scale data can be integrated into end-to-end driving systems to boost generalization and enable interactivity with human users.
+            <br><br>
+            Specifically, we aim to facilitate <code class="drivelmcode">Perception, Prediction, Planning, Behavior, Motion</code> tasks with human-written reasoning logic as a connection. We propose the task of GVQA to connect the QA pairs in a graph-style structure. To support this novel task, we provide the DriveLM-Data.
+            </p>
+        </div>
+
+
+
+        <br><br>
+
+
+
+        <div class="drivelmtriple">
+            <div>
+                <div class="drivelmicon"><i class="fa-regular fa-share-nodes fs-1 text-blue"></i></div>
+                <br>
+                <div>
+                    <h5>Graph-of-Thought</h5>
+                    <p class="drivelmp">In the DriveLM dataset, QAs are connected in a graph-style structure, with QA pairs as every node, and objects' relationships as the edges.</p>
+                </div>
+            </div>
+            <div>
+                <div class="drivelmicon"><i class="fa-duotone fa-cars fs-1 text-blue"></i></div>
+                <br>
+                <div>
+                    <h5>Perception, Prediction, Planning</h5>
+                    <p class="drivelmp">The most central element of DriveLM is frame-wise P3 QA, where P3 stands for Perception, Prediction, and Planning. This allows us to achieve complete functionality in full-stack autonomous driving.</p>
+                </div>
+            </div>
+            <div>
+                <div class="drivelmicon"><i class="fa-regular fa-thought-bubble fs-1 text-blue"></i></div>
+                <br>
+                <div>
+                    <h5>What if</h5>
+                    <p class="drivelmp">We try to reason about future events that have not yet happened. The way we do this is to ask many "What if"-style questions, which is a common way for humans to imagine the future by language.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row justify-content-center">
+            <iframe src="./sample.html" width="800" height="700"></iframe>
+        </div>
+
+
+        <br><br>
+        <div style="height: 2px; background-color: lightgray;"></div>
+        <br><br>
+
+
+        <div id="what_is_gvqa">
+            <h2 class="title">
+                <a href="#what_is_gvqa">
+                    What is GVQA?
+                    <img src="/ui2023/img/icon/link.png" class="title_link" />
+                </a>
+                </h2>
+            <p class="drivelmp">
+                The most exciting aspect of the dataset is that the questions and answers <code class="drivelmcode">QA pairs</code> are connected in a graph-style structure, with QA pairs as every node and potential logical progression as the edges. The reason for doing this in the AD domain is that AD tasks are well-defined per stage, from raw sensor input to final control action through perception, prediction and planning.
+            <br><br>
+            Its key difference to prior VQA tasks for AD is the availability of logical dependencies between QAs, which can be used to guide the answering process. Below is a demo video illustrating the idea.
+            </p>
+        </div>
+
+        <br>
+
+        <iframe width="100%" height="617" src="https://www.youtube.com/embed/qqwmYGOboOE" title="drivelm gvqa demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+
+        <br><br>
+
+
+
+        <br><br>
+        <div style="height: 2px; background-color: lightgray;"></div>
+        <br><br>
+
+
+        <div id="features">
+            <h2 class="title">
+                <a href="#features">
+                    Features of the DriveLM-Data
+                    <img src="/ui2023/img/icon/link.png" class="title_link" />
+                </a>
+                </h2>
+                <ul>
+                    <li style="list-style-type:disc;">🛣 Completeness in functionality (covering <b>Perception</b>, <b>Prediction</b>, and <b>Planning</b> QA pairs).</li>
+                    <br>
+                    <div style="display: flex; justify-content: center;">
+                        <img src="https://github.com/OpenDriveLab/DriveLM/raw/main/assets/images/repo/point_1.png" width="70%"/>
+                    </div>
+                    <br><br>
+                    <li style="list-style-type:disc;">🔜 Reasoning for future events that have not yet happened.</li>
+                    <ul>
+                        <li style="list-style-type:disc;">Many "<b>What If</b>"-style questions: imagine the future by language.</li>
+                    </ul>
+                    <br>
+                    <div style="display: flex; justify-content: center;">
+                    <img src="https://github.com/OpenDriveLab/DriveLM/raw/main/assets/images/repo/point_2.png" width="70%"/>
+                </div>
+                    <br><br>
+                    <li style="list-style-type:disc;">♻ Task-driven decomposition.</li>
+                    <ul>
+                        <li style="list-style-type:disc;"><b>One</b> scene-level description into <b>many</b> frame-level trajectories & planning QA pairs.</li>
+                    </ul>
+                    <br>
+                    <div style="display: flex; justify-content: center;">
+                    <img src="https://github.com/OpenDriveLab/DriveLM/raw/main/assets/images/repo/point_3.png" width="70%"/>
+                </div>
+                </ul>
+            
+        </div>
+
+
+
+
+        <br><br>
+
+
+
+        <br><br>
+        <div style="height: 2px; background-color: lightgray;"></div>
+        <br><br>
+
+
+
+        
+        <div id="annotation">
+            <h2 class="title">
+                <a href="#annotation">
+                    How about the annotation process?
+                    <img src="/ui2023/img/icon/link.png" class="title_link" />
+                </a>
+                </h2>
+            <p class="drivelmp">
+                The annotation process is different for DriveLM-nuScenes and DriveLM-CARLA.
+            </p>
+            <br>
+            <img src="https://github.com/OpenDriveLab/DriveLM/raw/main/assets/images/repo/paper_data.jpg" width="100%"/>
+            <br><br><br>
+            <p class="drivelmp">
+                <b>For DriveLM-nuScenes</b>, we divide the annotation process into three steps:
+                <br><br>
+                1️⃣ Keyframe selection. Given all frames in one clip, the annotator selects the keyframes that need annotation. The criterion is that those frames should involve changes in ego-vehicle movement status (lane changes, sudden stops, start after a stop, etc.).
+                <br><br>
+                2️⃣ Key objects selection. Given keyframes, the annotator needs to pick up key objects in the six surrounding images. The criterion is that those objects should be able to affect the action of the ego vehicle (traffic signals, pedestrians crossing the road, other vehicles that move in the direction of the ego vehicle, etc.).
+                <br><br>
+                3️⃣ Question and answer annotation. Given those key objects, we automatically generate questions regarding single or multiple objects about perception, prediction, and planning. More details can be found in our data.
+                <br><br>
+                <b>For DriveLM-CARLA</b>, we employ an automated annotation approach:
+                <br><br>
+                We collect data using CARLA 0.9.14 in the Leaderboard 2.0 framework with a privileged rule-based expert. We set up a series of routes in urban, residential, and rural areas and execute the expert on these routes. During this process, we collect the necessary sensor data, generate relevant QAs based on privileged information about objects and the scene, and organize the logical relationships to connect this series of QAs into a graph.
+            </p>
+        </div>
+
+
+
+        <br>
+
+
+        <br><br>
+        <div style="height: 2px; background-color: lightgray;"></div>
+        <br><br>
+
+
+        <div id="citation">
+            <h2 class="title">
+                <a href="#citation">
+                    Citation
+                    <img src="/ui2023/img/icon/link.png" class="title_link" />
+                </a>
+                </h2>
+                <p class="drivelmp">Please consider citing our project if it helps your research.</p>
+                <div class="citation">
+                    @article{sima2023drivelm,
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;title={DriveLM: Driving with Graph Visual Question Answering},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;author={Sima, Chonghao and Renz, Katrin and Chitta, Kashyap and Chen, Li and Zhang, Hanxue and Xie, Chengen and Luo, Ping and Geiger, Andreas and Li, Hongyang},            
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;journal={arXiv preprint arXiv:2312.14150},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;year={2023}
+                    <br>
+                    }
+                </div>
+                <div class="citation">
+                    @misc{contributors2023drivelmrepo,
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;title={DriveLM: Driving with Graph Visual Question Answering},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;author={DriveLM contributors},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;howpublished={\url{https://github.com/OpenDriveLab/DriveLM}},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;year={2023}
+                    <br>
+                    }
+                </div>
+        </div>
+
+        <br><br>
+
+  </div>
+<br>
+
+</body>
+
+
+<script src="/ui2023/js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    // 插入头部
+// $.get("/components/header.html?1x",function(result){
+//   $("body").prepend(result)
+// })
+//插入底部
+// $.get("/components/footer.html?xx",function(result){
+//   $("body").append(result)
+// })
+
+// 插入banner
+  $("body").removeClass("loadings");
+
+ $(document).ready(function () {
+ //首页导航高亮
+
+
+
+
+
+
+
+        $(document).on("click", "[data-hd2]", function () {
+        var hhh = $(this).attr("data-hd2")
+        $('html,body').animate({scrollTop: $(hhh).offset().top - 60}, 800);
+    });
+
+
+        var l_daohang =$("body");
+        var nt2 = !1;
+        $(window).bind("scroll",
+            function() {
+                var st2 = $(document).scrollTop();//往下滚的高度
+                nt2 = nt2 ? nt2: 40;
+                // console.log(nt2)
+                if(st2>nt2){
+                  l_daohang.addClass("header_this");
+              }
+              else{
+                l_daohang.removeClass("header_this");
+              }
+            });
+      //打开菜单
+      $(document).on("click", ".rnav", function () {
+        $("body").toggleClass('rnav_this')
+        });
+
+
+
+
+
+
+//手机版
+      $(document).on("click", ".r_ul2i li a", function (e) {
+        var j = $(this).next(".submenu").length
+      if(j == 1){
+        $(this).parent().toggleClass("this2").siblings("li").removeClass("this2")
+      return false
+      }
+      });
+    });
+
+//join&people
+//转换模板
+function template(tem,obj){
+  let reg =/{{(\w*)}}/;
+  let arr =[];
+  while(arr =reg.exec(tem) ){
+  tem = tem.replace(arr[0],(obj[arr[1]]==undefined?"":obj[arr[1]]));
+  }
+  return tem
+}
+//替换替换列表
+function template2(tem,obj){
+let reg =/<list(\w*)>/;
+  let arr =[];
+    tem = tem.replace(reg,obj);
+  return tem
+}
+
+
+
+function start(){
+//not('[data-isLoaded]')选中已加载的图片不需要重新加载
+$('#content img').not('[data-isLoaded]').each(function(){
+var $node=$(this)
+if(isShow($node)){
+  loadImg($node)
+}
+})
+}
+//判断图片是否在视野中
+function isShow($node){
+return $node.offset().top<=$(window).height()+$(window).scrollTop()
+}
+//判断图片是否加载
+function loadImg($img){
+$img.attr('src',$img.attr('data-src'))//把data-src的值 赋值给src
+$img.attr('data-isLoaded',1)//区别图片是否被加载过，防止重新加载
+} 
+</script>
+<script src="./vendor.bundle.js" height="300" width="500"></script>
+<script src="./index.bundle.js"  height="300" width="500"></script>
+
+
+</html>
