@@ -209,7 +209,6 @@ export default function NotFound404() {
     ) {
         redirect('https://lihongyang.info/')
     }
-
     if (
         pathname.toLowerCase() == '/e2ead/UniAD_plenary_talk_slides.pdf'
     ) {
@@ -235,8 +234,8 @@ export default function NotFound404() {
 
     return (
         <main>
-            <div className="w-full h-svh flex flex-row justify-center items-center pl-6 pr-6 bg-gradient-loading">
-                <div className="w-full max-w-7xl flex flex-col gap-6 select-none">
+            <div className="w-full h-svh flex flex-row justify-center items-center bg-gradient-landing">
+                <div className="w-full max-w-7xl px-6 flex flex-col gap-6 select-none">
                     <FadeIn>
                         <h1 className="font-bold text-t0 text-white">
                             404
@@ -247,9 +246,6 @@ export default function NotFound404() {
                             Not Found
                         </h1>
                     </FadeIn>
-                    {/* <Link href="/" className='font-bold text-white animated-underline'>
-                        return home
-                    </Link> */}
                 </div>
             </div>
         </main>
