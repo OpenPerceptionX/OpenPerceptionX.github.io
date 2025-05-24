@@ -55,11 +55,11 @@ export function AppSidebar() {
                         </Link>
                     </Button>
                 </div>
-                <SidebarMenu className="mt-24 mb-12 px-8 text-sm overflow-y-scroll no-scrollbar">
+                <SidebarMenu className="mt-24 mb-12 px-8 text-xs overflow-y-scroll no-scrollbar">
 
 
 
-                    <Collapsible defaultOpen className="group/collapsible flex flex-col gap-6">
+                    <Collapsible  className="group/collapsible flex flex-col gap-6">
                         <SidebarMenuItem>
                             <CollapsibleTrigger className="w-full flex flex-row justify-between items-center p-2 rounded-sm hover:bg-o-blue/3 select-none">
                                 Project
@@ -86,7 +86,7 @@ export function AppSidebar() {
 
 
 
-                    <Collapsible defaultOpen className="group/collapsible flex flex-col gap-6">
+                    <Collapsible  className="group/collapsible flex flex-col gap-6">
                         <SidebarMenuItem>
                             <CollapsibleTrigger className="w-full flex flex-row justify-between items-center p-2 rounded-sm hover:bg-o-blue/3 select-none">
                                 Publication
@@ -113,7 +113,7 @@ export function AppSidebar() {
 
 
 
-                    <Collapsible defaultOpen className="group/collapsible flex flex-col gap-6">
+                    <Collapsible  className="group/collapsible flex flex-col gap-6">
                         <SidebarMenuItem>
                             <CollapsibleTrigger className="w-full flex flex-row justify-between items-center p-2 rounded-sm hover:bg-o-blue/3 select-none">
                                 Event
