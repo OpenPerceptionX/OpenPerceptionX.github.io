@@ -22,6 +22,7 @@ import {
 import { ChevronDown  } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import Image from 'next/image'
 
 
 import { FadeIn } from "@/components/animation/fade-in"
@@ -41,6 +42,19 @@ export function AppSidebar() {
     return (
         <FadeIn>
             <Sidebar>
+                <div className="fixed flex flex-row gap-3 m-6 z-20 flex-wrap">
+                    <Button asChild className="bg-background text-foreground hover:bg-white group">
+                        <Link href="/" className="select-none">
+                            <Image
+                                src="/logo/OpenDriveLab/D.png"
+                                alt="OpenDriveLab"
+                                width={24}
+                                height={24}
+                            className="group-hover:scale-125 transition delay-100 duration-200"
+                            />
+                        </Link>
+                    </Button>
+                </div>
                 <SidebarMenu className="mt-24 mb-12 px-8 text-sm overflow-y-scroll no-scrollbar">
 
 
