@@ -227,7 +227,7 @@ export default function NotFound404() {
     }
 
 
-    redirect('/404')
+    // redirect('/404')
     return (
         <main className='w-full'></main>
     )
