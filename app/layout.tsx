@@ -6,8 +6,9 @@ import Image from 'next/image'
 
 
 import { Button } from "@/components/ui/button"
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
+import { SidebarProvider } from "@/components/ui/sidebar"
 import { AppSidebar } from "@/components/app-sidebar"
+import { CustomTrigger } from "@/components/ui/sidebartrigger"
 
 
 
@@ -80,7 +81,7 @@ export default function RootLayout({
                                 </Link>
                             </Button>
 
-                            <SidebarTrigger />
+                            <CustomTrigger />
 
                         </div>
 
@@ -103,9 +104,7 @@ export default function RootLayout({
 
 
 
-                    <main className="w-full">
-                        {children}
-                    </main>
+                    {children}
 
 
 
