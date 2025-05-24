@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "FreeTacMan",
+    title: "FreeTacMan | OpenDriveLab",
+    description: "FreeTacMan",
+    keywords: ["FreeTacMan", "OpenDriveLab", "HKU", "SII"],
 };
 
 import Link from "next/link";
