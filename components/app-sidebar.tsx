@@ -41,7 +41,7 @@ export function AppSidebar() {
     return (
         <FadeIn>
             <Sidebar>
-                <SidebarMenu className="mt-24 px-8 text-sm">
+                <SidebarMenu className="mt-24 mb-12 px-8 text-sm overflow-y-scroll no-scrollbar">
 
 
 
