@@ -233,7 +233,6 @@ export default function NotFound404() {
 
 
     return (
-        <main>
             <div className="w-full h-svh flex flex-row justify-center items-center bg-gradient-landing">
                 <div className="w-full max-w-7xl px-6 flex flex-col gap-6 select-none">
                     <FadeIn>
@@ -248,6 +247,5 @@ export default function NotFound404() {
                     </FadeIn>
                 </div>
             </div>
-        </main>
     )
 }
