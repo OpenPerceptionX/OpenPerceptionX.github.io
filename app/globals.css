@@ -123,10 +123,14 @@
 }
 
 
+
 @theme {
     --breakpoint-3xl: 120rem;
 }
 @layer base {
+    * {
+        @apply border-border outline-ring/50;
+    }
     html {
         @apply scroll-smooth;
     }
