@@ -1,0 +1,909 @@
+<head>
+    <title>CVPR 2024 | OpenDriveLab</title>
+    <meta name="keywords" content="CVPR 2024, OpenDriveLab, Robotics, Autonomous Driving, Embodied AI">
+    <meta name="description" content="OpenDriveLab is committed to exploring cutting-edge embodied AI technology, launching a series of benchmarking work, open source to serve the community, and promote the common development of the industry. Friends who are committed to making influential research are welcome to join!">
+
+    <link rel="icon" type="image/png" href="/logo/OpenDriveLab/D_small.png">
+
+    <link href="/ui2024/css/header.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/ui2024/css/footer.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/ui2024/css/format.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/ui2024/css/font.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="./index.css" rel="stylesheet" type="text/css" media="all"/>
+
+    <script src="/ui2024/js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+</head>
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L7VEDHS6G8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L7VEDHS6G8');
+</script>
+
+
+
+<script>
+    $.get("/ui2024/components/header.html",function(result){
+        $("body").prepend(result)
+    })
+    $.get("/ui2024/components/footer.html",function(result){
+        $("body").append(result)
+    })
+</script>
+
+
+
+<script>
+    window.addEventListener("scroll", function () {
+        if (document.body.clientWidth <= 1024) {
+            sticky_top_img.src = "/assets/icon/top_white.png";
+        };
+        if (sticky.getBoundingClientRect().top <= 64) {
+            sticky.classList.add("sticky_top");
+            sticky_top_img.src = "/assets/icon/top_white.png";
+            header.style.display = "none";
+        } else {
+            sticky.classList.remove("sticky_top");
+            header.style.display = "block";
+            if (document.body.clientWidth > 1024) {
+                sticky_top_img.src = "/assets/icon/top.png";
+            }
+        }
+    })
+</script>
+
+
+
+<body>
+
+    <div class="banner">
+        <div class="banner_container">
+
+            <div class="banner_logo">
+                <img loading="lazy" src="/assets/icon/cvpr/cvpr2024_white.png"/>
+                <img loading="lazy" src="/assets/icon/cvpr/ieee_cs_white.png"/>
+            </div>
+
+            <div class="banner_title_en">
+                <h1 class="Owhite">OpenDriveLab at CVPR 2024</h1>
+            </div>
+
+            <div class="banner_content Owhite">
+                <h6>
+                    <a href="https://cvpr.thecvf.com/" target="_blank" style="text-decoration: underline;">June 17 - 21, Seattle, USA</a>
+                </h6>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <br id="events"><br><br><br>
+
+
+    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;">
+        <div style="flex-grow: 1;">
+            <a href="#events">
+                <h1 style="user-select: none;">
+                    Enjoy our hosted events
+                    <img loading="lazy" class="link_img"/>
+                </h1>
+            </a>
+        </div> 
+    </div>
+
+    <br>
+
+
+    <div class="block_right left_right sevent spad">
+
+        <div style="flex-grow: 7;">
+            <a href="/challenge2024/"><div class="img img_challenge"> </div></a>
+        </div>
+
+        <!-- <div style="flex-grow: 1;"></div> -->
+
+        <div style="flex-grow: 16;">
+
+            <h4>Challenge</h4>
+            <br>
+            <h2><a href="/challenge2024/">Autonomous Grand Challenge <img loading="lazy" class="link_img_show"/></a></h2>
+            <br>
+            <span class="desc" style="text-align: left;">
+                The field of autonomy is rapidly evolving, and recent advancements from the machine learning community, such as large language models (LLM) and world models, bring great potential. We believe the future lies in explainable, end-to-end models that understand the world and generalize to unvisited environments. In light of this, we propose seven new challenges that push the boundary of existing perception, prediction, and planning pipelines.
+            </span>
+            <!-- <br>
+            <span><a href="/challenge2024/">More</a></span> -->
+            <br>
+            <div>
+                <li>Congratulations to the winners! Results <a href="/challenge2024/">here</a></li>
+                <br>
+                <li><code>3,000+</code> submissions made by <code>480+</code> teams from <code>28</code> countries and regions across <b>ALL continents</b></li>
+                <br>
+                <li>Participants come from renowned research institutes, including Harvard, Oxford, TTUM, NUS, Tsinghua, <i>etc.</i>, and top-tier enterprises, including NVIDIA, AMD, Bosch, Wayve, SAMSUNG, Huawei, <i>etc.</i></li>
+                <br>
+                <li><code>30,000+</code> total views on the Challenge websites and <code>110,000+</code> total views on posts on social media</li>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="block_left left_right sevent spad">
+
+        <div style="flex-grow: 7;">
+            <a href="/cvpr2024/workshop/"><div class="img img_workshop"></div></a>
+        </div>
+
+        <!-- <div style="flex-grow: 1;"></div> -->
+
+        <div style="flex-grow: 16;">
+
+            <h4>Workshop</h4>
+            <br>
+            <h2><a href="/cvpr2024/workshop/">Foundation Models for Autonomous Systems <img loading="lazy" class="link_img_show"/></a></h2>
+            <br>
+            <span class="desc" style="text-align: left;">
+                Autonomous systems, such as robots and self-driving cars, have rapidly evolved over the past decades. Recently, foundation models have emerged as a promising approach to building more generalist autonomous systems due to their ability to learn from vast amounts of data and generalize to new tasks. The motivation behind this workshop is to explore the potential of foundation models for autonomous agents and discuss the challenges and opportunities associated with this approach.
+            </span>
+            <br>
+            <span><a href="https://calndr.link/event/F3sIPaZGai" target="_blank">Summit 442, June 17</a></span>
+            <br><br>
+            <div class="event_speaker">
+                <div>
+                    <a href="https://people.eecs.berkeley.edu/~svlevine/" target="_blank"><img src="/assets/person/sergey_levine.jpg"/></a>
+                    <div>
+                        <span><b>Sergey Levine</b></span>
+                        <span><i class="gray">UC Berkeley</i></span>
+                    </div>
+                </div>
+                <div>
+                    <a href="https://alexgkendall.com/" target="_blank"><img src="/assets/person/alex_kendall.jpg"/></a>
+                    <div>
+                        <span><b>Alex Kendall</b></span>
+                        <span><i class="gray">Wayve</i></span>
+                    </div>
+                </div>
+                <div>
+                    <a href="https://abursuc.github.io/" target="_blank"><img src="/assets/person/andrei_bursuc.jpg"/></a>
+                    <div>
+                        <span><b>Andrei Bursuc</b></span>
+                        <span><i class="gray">Valeo</i></span>
+                    </div>
+                </div>
+                <div>
+                    <a href="https://scholar.google.com.hk/citations?user=2xjjS3oAAAAJ" target="_blank"><img src="/assets/person/rares_ambrus.jpg"/></a>
+                    <div>
+                        <span><b>Rares Ambrus</b></span>
+                        <span><i class="gray">TRI</i></span>
+                    </div>
+                </div>
+                <div>
+                    <a href="https://tedxiao.me/" target="_blank"><img src="/assets/person/ted_xiao.jpg"/></a>
+                    <div>
+                        <span><b>Ted Xiao</b></span>
+                        <span><i class="gray">Google DeepMind</i></span>
+                    </div>
+                </div>
+                <div>
+                    <a href="https://sherryy.github.io/" target="_blank"><img src="/assets/person/sherry_yang.jpg"/></a>
+                    <div>
+                        <span><b>Sherry Yang</b></span>
+                        <span><i class="gray">Google DeepMind</i></span>
+                    </div>
+                </div>
+                <div>
+                    <a href="https://scholar.google.com/citations?user=ulZxvY0AAAAJ" target="_blank"><img src="/assets/person/li_chen.jpg"/></a>
+                    <div>
+                        <span><b>Li Chen</b></span>
+                        <span><i class="gray">Shanghai AI Lab</i></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="block_right left_right sevent spad">
+
+        <div style="flex-grow: 7;">
+            <a href="/cvpr2024/tutorial/"><div class="img img_tutorial"></div></a>
+        </div>
+
+        <!-- <div style="flex-grow: 1;"></div> -->
+
+        <div style="flex-grow: 16;">
+
+            <h4>Tutorial</h4>
+            <br>
+            <h2><a href="/cvpr2024/tutorial/">Towards Building AGI in Autonomy and Robotics <img loading="lazy" class="link_img_show"/></a></h2>
+            <br>
+            <span class="desc" style="text-align: left;">
+                In this tutorial, we explore the intersection of AGI technologies and the advancement of autonomous systems, specifically in the field of robotics. We invite participants to embark on an investigative journey that covers essential concepts, frameworks, and challenges. Through discussion, we aim to shed light on the crucial role of fundamental models in enhancing the cognitive abilities of autonomous agents. Through cooperation, we aim to chart a path for the future of robotics, where the integration of AGI enables autonomous systems to push the limits of their capabilities and intelligence, ushering in a new era of intelligent autonomy.
+            </span>
+            <br>
+            <span><a href="https://calndr.link/event/gyckovXHfp" target="_blank">Summit 447, June 18 Morning</a></span>
+            <br><br>
+            <div class="event_speaker">
+                <div>
+                    <a href="https://www.cs.utexas.edu/users/grauman/" target="_blank"><img src="/assets/person/kristen_grauman.jpg"/></a>
+                    <div>
+                        <span><b>Kristen Grauman</b></span>
+                        <span><i class="gray">UT Austin</i></span>
+                    </div>
+                </div>
+                <div>
+                    <a href="https://www.cs.cmu.edu/~deva/" target="_blank"><img src="/assets/person/deva_ramanan.jpg"/></a>
+                    <div>
+                        <span><b>Deva Ramanan</b></span>
+                        <span><i class="gray">CMU</i></span>
+                    </div>
+                </div>
+                <div>
+                    <a href="https://ai.stanford.edu/~cbfinn/" target="_blank"><img src="/assets/person/chelsea_finn.jpg"/></a>
+                    <div>
+                        <span><b>Chelsea Finn</b></span>
+                        <span><i class="gray">Stanford</i></span>
+                    </div>
+                </div>
+                <div>
+                    <a href="https://kashyap7x.github.io/" target="_blank"><img src="/assets/person/kashyap_chitta.jpg"/></a>
+                    <div>
+                        <span><b>Kashyap Chitta</b></span>
+                        <span><i class="gray">Univeristy of Tübingen</i></span>
+                    </div>
+                </div>
+                <div>
+                    <a href="https://scholar.google.com/citations?user=dgYJ6esAAAAJ" target="_blank"><img src="/assets/person/chonghao_sima.jpg"/></a>
+                    <div>
+                        <span><b>Chonghao Sima</b></span>
+                        <span><i class="gray">Shanghai AI Lab</i></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="block_left left_right sevent spad">
+
+        <div style="flex-grow: 7;">
+            <a href="https://lu.ma/exj1scqx" target="_blank"><div class="img img_social"></div></a>
+        </div>
+
+        <!-- <div style="flex-grow: 1;"></div> -->
+
+        <div style="flex-grow: 16;">
+
+            <h4>Social</h4>
+            <br>
+            <h2><a href="https://lu.ma/exj1scqx" target="_blank">How to Balance Academic Roles and Interest amidst the Wave of Emerging Technologies? <img loading="lazy" class="link_img_show"/></a></h2>
+            <br>
+            <span class="desc" style="text-align: left;">
+                Although the past century witnessed an unprecedented expansion of scientific and technological knowledge, there are concerns that innovative activity is slowing. It is not uncommon for individuals to compromise their personal research interests in order to fulfill academic obligations, such as funding, service, etc. Nevertheless, preserving one's research interests is crucial for fostering diversity in research.
+            </span>
+            <br>
+            <span><a href="https://calndr.link/event/MSM23eKnnM" target="_blank">Summit Elliott Bay, June 19 17:00 - 19:00</a></span>
+            <br>
+            <span><a href="https://lu.ma/exj1scqx" target="_blank">Register here</a></span>
+
+
+        </div>
+    </div>
+
+
+
+    <br><br><br>
+
+    <div class="block" style="margin: 0;">
+        <div class="navigator"></div>
+    </div>
+
+    <br id="talks"><br><br>
+
+
+
+    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;">
+        <div style="flex-grow: 1;">
+            <a href="#talks">
+                <h1 style="user-select: none;">
+                    Explore our participating talks
+                    <img loading="lazy" class="link_img"/>
+                </h1>
+            </a>
+        </div> 
+    </div>
+
+    <br>
+
+
+    <div class="block_left left_right sevent spad">
+
+        <div style="flex-grow: 1;">
+            <h2><a href="https://agents4ad.github.io/" target="_blank">Workshop on Data-Driven Autonomous Driving Simulation <img loading="lazy" class="link_img_show"/></a></h2>
+            <br>
+            <span class="desc" style="text-align: left;">
+                Real-world on-road testing of autonomous vehicles can be expensive or dangerous, making simulation a crucial tool to accelerate the development of safe autonomous driving (AD), a technology with enormous real-world impact. However, to minimise the sim-to-real gap, good agent behaviour models and sensor/perception imitation are paramount. A recent surge in published papers in this fast-growing field has led to a lot of progress, but several fundamental questions remain unanswered, for example regarding the fidelity and diversity of generative behaviour and perception models, generation of realistic controllable scenes at scale and the safety assessment of the simulation toolchain. In this workshop, our goal is to bring together practitioners and researchers from all areas of AD simulation and to discuss pressing challenges, recent breakthroughs and future directions.
+            </span>
+            <br>
+            <span><a href="https://calndr.link/event/xdNNqdbkHT" target="_blank">Summit 342, June 18</a></span>
+            <br>
+            <br>
+            <div class="event_speaker">
+                <div>
+                    <a href="https://www.cs.princeton.edu/~fheide/" target="_blank"><img src="/assets/person/felix_heide.jpg"/></a>
+                    <div>
+                        <span><b>Felix Heide</b></span>
+                        <span><i class="gray">Torc Robotics & Princeton</i></span>
+                    </div>
+                </div>
+                <div>
+                    <a href="https://scholar.google.com/citations?user=T04c3fwAAAAJ" target="_blank"><img src="/assets/person/dragomir_anguelov.jpg"/></a>
+                    <div>
+                        <span><b>Dragomir Anguelov</b></span>
+                        <span><i class="gray">Waymo</i></span>
+                    </div>
+                </div>
+                <div>
+                    <a href="https://scholar.google.com/citations?user=dgYJ6esAAAAJ" target="_blank"><img src="/assets/person/chonghao_sima.jpg"/></a>
+                    <div>
+                        <span><b>Chonghao Sima</b></span>
+                        <span><i class="gray">Shanghai AI Lab</i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br><br><br><br><br><br><br><br>
+
+        <div style="flex-grow: 1;">
+            <h2><a href="https://vision-language-adr.github.io/" target="_blank">VLADR: Vision and Language for Autonomous Driving and Robotics <img loading="lazy" class="link_img_show"/></a></h2>
+            <br>
+            <span class="desc" style="text-align: left;">
+                The contemporary discourse in technological advancement underscores the increasingly intertwined roles of vision and language processing, especially within the realms of autonomous driving and robotics. The necessity for this symbiosis is apparent when considering the multifaceted dynamics of real-world environments.
+            </span>
+            <br>
+            <span><a href="https://calndr.link/event/WATHsSiXfz" target="_blank">Summit 345-346, June 18</a></span>
+            <br>
+            <br>
+            <div class="event_speaker">
+                <div>
+                    <a href="https://people.eecs.berkeley.edu/~malik/" target="_blank"><img src="/assets/person/jitendra_malik.jpg"/></a>
+                    <div>
+                        <span><b>Jitendra Malik</b></span>
+                        <span><i class="gray">UC Berkeley</i></span>
+                    </div>
+                </div>
+                <div>
+                    <a href="https://people.eecs.berkeley.edu/~trevor/" target="_blank"><img src="/assets/person/trevor_darrell.jpg"/></a>
+                    <div>
+                        <span><b>Trevor Darrell</b></span>
+                        <span><i class="gray">UC Berkeley</i></span>
+                    </div>
+                </div>
+                <div>
+                    <a href="https://scholar.google.com/citations?user=dgYJ6esAAAAJ" target="_blank"><img src="/assets/person/chonghao_sima.jpg"/></a>
+                    <div>
+                        <span><b>Chonghao Sima</b></span>
+                        <span><i class="gray">Shanghai AI Lab</i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <br>
+    <div class="block_left left_right sevent spad">
+
+        <div style="flex-grow: 1;">
+            <h2><a href="https://wayve.ai/cvpr-e2ead-tutorial/" target="_blank">End-to-End Autonomy: A New Era  of Self-Driving <img loading="lazy" class="link_img_show"/></a></h2>
+            <br>
+            <span class="desc" style="text-align: left;">
+                This tutorial aims to dissect the complexities and nuances of end-to-end autonomy, covering theoretical foundations, practical implementations and challenges, and future directions of this evolving technology.
+            </span>
+            <br>
+            <span><a href="https://calndr.link/event/yIrXwHBJXH" target="_blank">Summit 444, June 18 Afternoon</a></span>
+            <br>
+            <br>
+            <div class="event_speaker">
+                <div>
+                    <a href="https://jamie.shotton.org/" target="_blank"><img src="/assets/person/jamie_shotton.jpg"/></a>
+                    <div>
+                        <span><b>Jamie Shotton</b></span>
+                        <span><i class="gray">Wayve</i></span>
+                    </div>
+                </div>
+                <div>
+                    <a href="https://long.ooo/" target="_blank"><img src="/assets/person/long_chen.jpg"/></a>
+                    <div>
+                        <span><b>Long Chen</b></span>
+                        <span><i class="gray">Wayve</i></span>
+                    </div>
+                </div>
+                <div>
+                    <a href="https://lihongyang.info" target="_blank"><img src="/assets/person/hongyang_li.jpg"/></a>
+                    <div>
+                        <span><b>Hongyang Li</b></span>
+                        <span><i class="gray">Shanghai AI Lab</i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br><br><br><br><br><br><br><br>
+
+        <div style="flex-grow: 1;">
+            <h2><a href="https://sites.google.com/view/ieeecvf-cvpr2024-precognition" target="_blank">The Sixth Workshop on Precognition: Seeing Through the Future <img loading="lazy" class="link_img_show"/></a></h2>
+            <br>
+            <span class="desc" style="text-align: left;">
+                The workshop will discuss recent approaches and research trends not only in anticipating human behavior from videos, but also precognition in multiple other visual applications, such as medical imaging, health-care, human face aging prediction, early event prediction, autonomous driving forecasting, and so on.
+            </span>
+            <br>
+            <span><a href="https://calndr.link/event/hE706XDy5b" target="_blank">Summit Elliott Bay, June 18 Afternoon</a></span>
+            <br>
+            <br>
+            <div class="event_speaker">
+                <div>
+                    <a href="about:blank" target="_blank"><img src="/assets/person/louis_foucard.jpg"/></a>
+                    <div>
+                        <span><b>Louis Foucard</b></span>
+                        <span><i class="gray">Figure.ai</i></span>
+                    </div>
+                </div>
+                <div>
+                    <a href="https://me.stanford.edu/people/monroe-kennedy" target="_blank"><img src="/assets/person/monroe_kennedy_III.jpg"/></a>
+                    <div>
+                        <span><b>Monroe Kennedy III</b></span>
+                        <span><i class="gray">Stanford</i></span>
+                    </div>
+                </div>
+                <div>
+                    <a href="https://lihongyang.info" target="_blank"><img src="/assets/person/hongyang_li.jpg"/></a>
+                    <div>
+                        <span><b>Hongyang Li</b></span>
+                        <span><i class="gray">Shanghai AI Lab</i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <br><br>
+
+    <div class="block" style="margin: 0;">
+        <div class="navigator"></div>
+    </div>
+
+    <br id="papers"><br><br>
+
+
+
+    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;">
+        <div style="flex-grow: 1;">
+            <a href="#papers">
+                <h1 style="user-select: none;">
+                    Meet our team
+                    <img loading="lazy" class="link_img"/>
+                </h1>
+            </a>
+        </div> 
+    </div>
+
+    <br><br>
+
+    <div class="block_left left_right spad spub">
+
+        <div style="flex-grow: 7;">
+            <a href="https://openaccess.thecvf.com/content/CVPR2024/html/Yang_Generalized_Predictive_Model_for_Autonomous_Driving_CVPR_2024_paper.html" target="_blank"><img src="/assets/publication/genad.jpg"/></a>
+        </div>
+        <br><br>
+        <div style="flex-grow: 16;">
+
+            <h4>Highlight</h4>
+            <br>
+            <h2><a href="https://openaccess.thecvf.com/content/CVPR2024/html/Yang_Generalized_Predictive_Model_for_Autonomous_Driving_CVPR_2024_paper.html" target="_blank">Generalized Predictive Model for Autonomous Driving <img loading="lazy" class="link_img_show"/></a></h2>
+            <br>
+            <span class="desc" style="text-align: left;">
+                GenAD is the first large-scale <b>video world model</b> in the autonomous driving discipline. To empower the generalization ability of our model, we acquire over <b>2000 hours</b> of driving videos from the web, spanning areas all over the world with diverse weather conditions and traffic scenarios. Inheriting the merits of recent latent diffusion models, GenAD handles the challenging dynamics in driving scenes with novel temporal reasoning blocks. We showcase that it can generalize to various unseen driving datasets in a zero-shot manner. GenAD can be adapted into an action-conditioned prediction model or a motion planner, holding great potential for real-world driving applications. The <b>OpenDV-YouTube Dataset</b> is hosted <a href="https://github.com/opendrivelab/driveagi?tab=readme-ov-file#genad-dataset-opendv-youtube" target="_blank">here</a>.
+            </span>
+            <br>
+            <span><a href="https://calndr.link/event/sYm0w5Zfmo" target="_blank">Venue: Poster Session 4 & Exhibit Hall (Arch 4A-E), June 20 17:15 - 18:45</a></span>
+            
+        </div>
+        
+    </div>
+
+    <br><br><br><br>
+
+    <div class="block_left left_right spad spub">
+
+        <div style="flex-grow: 7;">
+            <a href="https://openaccess.thecvf.com/content/CVPR2024/html/Yang_Visual_Point_Cloud_Forecasting_enables_Scalable_Autonomous_Driving_CVPR_2024_paper.html" target="_blank"><img src="/assets/publication/vidar.jpg"/></a>
+        </div>
+        <br><br>
+        <div style="flex-grow: 16;">
+
+            <h4>Highlight</h4>
+            <br>
+            <h2><a href="https://openaccess.thecvf.com/content/CVPR2024/html/Yang_Visual_Point_Cloud_Forecasting_enables_Scalable_Autonomous_Driving_CVPR_2024_paper.html" target="_blank">Visual Point Cloud Forecasting enables Scalable Autonomous Driving <img loading="lazy" class="link_img_show"/></a></h2>
+            <br>
+            <span class="desc" style="text-align: left;">
+                ViDAR is a pioneering <b>multi-modal world model</b> designed for autonomous driving. It is capable of predicting future point clouds from historical visual input by understanding the 3D structures and temporal dynamics, and eventually benefits downstream tasks. ViDAR is a pioneering general world model designed for autonomous driving. It is capable of predicting future point clouds from historical visual input by understanding the 3D structures and temporal dynamics, and eventually benefits downstream tasks. All codes, pre-trained models, and fine-tuned models are released <a href="https://github.com/OpenDriveLab/ViDAR" target="_blank">here</a>.
+            </span>
+            <br>
+            <span><a href="https://calndr.link/event/sYm0w5Zfmo" target="_blank">Venue: Poster Session 4 & Exhibit Hall (Arch 4A-E), June 20 17:15 - 18:45</a></span>
+            
+        </div>
+        
+    </div>
+
+    <br><br><br><br>
+
+    <div class="block_left left_right spad spub">
+
+        <div style="flex-grow: 7;">
+            <a href="https://arxiv.org/abs/2312.14150" target="_blank"><img src="/assets/publication/drivelm.jpg"/></a>
+        </div>
+        <br><br>
+        <div style="flex-grow: 16;">
+
+            <h4>Workshop Oral</h4>
+            <br>
+            <h2><a href="https://arxiv.org/abs/2312.14150" target="_blank">DriveLM: Driving with Graph Visual Question Answering <img loading="lazy" class="link_img_show"/></a></h2>
+            <br>
+            <span class="desc" style="text-align: left;">
+                In DriveLM, we study how vision-language models (VLMs) trained on web-scale data can be integrated into end-to-end driving systems to boost generalization and enable interactivity with human users.Specifically, we aim to facilitate <b>Perception, Prediction, Planning, Behavior, Motion</b> tasks with human-written reasoning logic as a connection. We propose the task of GVQA to connect the QA pairs in a graph-style structure. To support this novel task, we provide the DriveLM-Data. All codes are released <a href="https://github.com/OpenDriveLab/DriveLM" target="_blank">here</a>.
+            </span>
+            <br>
+            <span><a href="https://vision-language-adr.github.io/#call4paper" target="_blank">Summit 345-346, June 18</a></span>
+            
+        </div>
+        
+    </div>
+
+    <!-- <br><br><br><br>
+
+    <div class="block_left left_right spad spub">
+
+        <div style="flex-grow: 7;">
+            <a href="https://arxiv.org/abs/2403.08770" target="_blank"><img src="/assets/publication/FastMAC.jpg"/></a>
+        </div>
+        <br><br>
+        <div style="flex-grow: 16;">
+
+            <h4>Poster</h4>
+            <br>
+            <h2><a href="https://arxiv.org/abs/2403.08770" target="_blank" style="text-decoration: none !important">FastMAC: Stochastic Spectral Sampling of Correspondence Grap</a></h2>
+            <br>
+            <span class="desc" style="text-align: left;">
+                FastMAC is a complete 3D registration algorithm, introduces graph signal processing into the domain of correspondence graph. It works for both indoor and outdoor benchmarks. Experimentally, an 80 times acceleration on MAC can be achieved on KITTI. Code and model checkpoints is hosted <a href="https://github.com/Forrest-110/FastMAC" target="_blank">here</a>.
+            </span>
+            <br>
+            <span><a>Venue: TBD</a></span>
+            
+        </div>
+        
+    </div> -->
+
+    <br><br><br><br>
+
+    <div class="block" style="margin: 0;">
+        <div class="navigator"></div>
+    </div>
+
+    <br id="service"><br><br>
+
+    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;">
+        <div style="flex-grow: 1;">
+            <a href="#service">
+                <h1 style="user-select: none;">
+                    Acknowledge our members for professional service
+                    <img loading="lazy" class="link_img"/>
+                </h1>
+            </a>
+        </div> 
+    </div>
+    <br><br><br>
+    <div class="block_left spad" style="margin-top: 0; padding-top: 0">
+        <div style="flex-grow: 1;">
+            <span>
+                Many team members make their contribution to CVPR 2024, altogether we are building a more professional community to shape the future of AI. We sincerely thank all for their service:
+                <br><br>
+                <li><code>Area Chair:</code> Ping Luo and Hongyang Li</li>
+                <li><code>Reviewer:</code> Li Chen, Chonghao Sima, Jiazhi Yang, Huijie Wang, Jia Zeng, Zetong Yang, Tianyu Li, Shenyuan Gao, Qingwen Bu, Bangjun Wang, Linyan Huang, and Yunsong Zhou</li>
+            </span>
+        </div>
+    </div>
+
+
+    <br><br><br><br>
+
+    <div class="block" style="margin: 0;">
+        <div class="navigator"></div>
+    </div>
+
+    <br id="sponsors"><br><br>
+
+
+
+    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;">
+        <div style="flex-grow: 1;">
+            <a href="#sponsors">
+                <h1 style="user-select: none;">
+                    Great thanks to our sponsors
+                    <img loading="lazy" class="link_img"/>
+                </h1>
+            </a>
+        </div> 
+    </div>
+    <br><br><br>
+    <div class="block_left" style="margin-top: 0; padding-top: 0">
+        <div style="flex-grow: 1;" class="spad">
+
+            <div class="person_container">
+                <div>
+                    <a href="https://www.hp.com/" target="_blank">
+                        <img loading="lazy" src="/assets/brand/zbyhp_square.png"/>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.meituan.com/" target="_blank">
+                        <img loading="lazy" src="/assets/brand/meituan_square_.png"/>
+                    </a>
+                </div>
+            </div>
+
+
+        </div> 
+    </div>
+
+
+    
+    <div class="block" style="margin: 0;">
+        <div class="navigator"></div>
+    </div>
+
+    <br id="DEI"><br><br>
+
+
+
+    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;">
+        <div style="flex-grow: 1;">
+            <a href="#DEI">
+                <h1 style="user-select: none;">
+                    Diversity, equity, and inclusion
+                    <img loading="lazy" class="link_img"/>
+                </h1>
+            </a>
+        </div> 
+    </div>
+    <br><br><br>
+    <div class="block_left spad" style="margin-top: 0; padding-top: 0">
+        <div style="flex-grow: 1;">
+            <span style="text-align: left;">
+                Respecting the <a style="text-decoration: underline;" href="https://cvpr.thecvf.com/Conferences/2024/DEI" target="_blank">CVPR 2024 DEI statement</a>, organizers, speakers, and committee members of our events, encompassing the workshop, challenge, and tutorial, curated a wide variety of researchers from both academia and industry, with different backgrounds, regions, genders, and ages.
+                <br><br>
+                Many of the greatest ideas come from a diverse mix of minds, backgrounds, and experiences. We provide equal opportunities to all participants without regard to nationality, affiliation, race, religion, color, age, disability, or any other restriction. We believe diversity drives innovation. When we say we welcome participation from everyone, we mean everyone.
+            </span>
+        </div>
+    </div>
+
+
+
+    <br><br><br><br>
+
+    <div class="block" style="margin: 0;">
+        <div class="navigator"></div>
+    </div>
+
+    <br id="snapshots"><br><br>
+
+
+
+    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;">
+        <div style="flex-grow: 1;">
+            <a href="#snapshots">
+                <h1 style="user-select: none;">
+                    Snapshots
+                    <img loading="lazy" class="link_img"/>
+                </h1>
+            </a>
+        </div> 
+    </div>
+    <br><br><br>
+    <div class="block_left spad" style="margin-top: 0; padding-top: 0">
+        <div style="flex-grow: 1;">
+            <div class="snapshots_container">
+                <div>
+                    <a href="https://opendrivelab.github.io/CVPR%202024/snapshots/IMG_0237.jpg" target="_blank">
+                        <img loading="lazy" style="background-image: url(https://opendrivelab.github.io/CVPR%202024/snapshots_compressed/IMG_0237.jpg);"/>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://opendrivelab.github.io/CVPR%202024/snapshots/IMG_0326.jpg" target="_blank">
+                        <img loading="lazy" style="background-image: url(https://opendrivelab.github.io/CVPR%202024/snapshots_compressed/IMG_0326.jpg);"/>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://opendrivelab.github.io/CVPR%202024/snapshots/IMG_0372.jpg" target="_blank">
+                        <img loading="lazy" style="background-image: url(https://opendrivelab.github.io/CVPR%202024/snapshots_compressed/IMG_0372.jpg);"/>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://opendrivelab.github.io/CVPR%202024/snapshots/IMG_0397.jpg" target="_blank">
+                        <img loading="lazy" style="background-image: url(https://opendrivelab.github.io/CVPR%202024/snapshots_compressed/IMG_0397.jpg);"/>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://opendrivelab.github.io/CVPR%202024/snapshots/IMG_0433.jpg" target="_blank">
+                        <img loading="lazy" style="background-image: url(https://opendrivelab.github.io/CVPR%202024/snapshots_compressed/IMG_0433.jpg);"/>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://opendrivelab.github.io/CVPR%202024/snapshots/IMG_0459.jpg" target="_blank">
+                        <img loading="lazy" style="background-image: url(https://opendrivelab.github.io/CVPR%202024/snapshots_compressed/IMG_0459.jpg);"/>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://opendrivelab.github.io/CVPR%202024/snapshots/IMG_0533.jpg" target="_blank">
+                        <img loading="lazy" style="background-image: url(https://opendrivelab.github.io/CVPR%202024/snapshots_compressed/IMG_0533.jpg);"/>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://opendrivelab.github.io/CVPR%202024/snapshots/IMG_0608.jpg" target="_blank">
+                        <img loading="lazy" style="background-image: url(https://opendrivelab.github.io/CVPR%202024/snapshots_compressed/IMG_0608.jpg);"/>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://opendrivelab.github.io/CVPR%202024/snapshots/IMG_1728.jpg" target="_blank">
+                        <img loading="lazy" style="background-image: url(https://opendrivelab.github.io/CVPR%202024/snapshots_compressed/IMG_1728.jpg);"/>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://opendrivelab.github.io/CVPR%202024/snapshots/IMG_1729.jpg" target="_blank">
+                        <img loading="lazy" style="background-image: url(https://opendrivelab.github.io/CVPR%202024/snapshots_compressed/IMG_1729.jpg);"/>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://opendrivelab.github.io/CVPR%202024/snapshots/IMG_1730.jpg" target="_blank">
+                        <img loading="lazy" style="background-image: url(https://opendrivelab.github.io/CVPR%202024/snapshots_compressed/IMG_1730.jpg);"/>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://opendrivelab.github.io/CVPR%202024/snapshots/IMG_1731.jpg" target="_blank">
+                        <img loading="lazy" style="background-image: url(https://opendrivelab.github.io/CVPR%202024/snapshots_compressed/IMG_1731.jpg);"/>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://opendrivelab.github.io/CVPR%202024/snapshots/IMG_1734.jpg" target="_blank">
+                        <img loading="lazy" style="background-image: url(https://opendrivelab.github.io/CVPR%202024/snapshots_compressed/IMG_1734.jpg);"/>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://opendrivelab.github.io/CVPR%202024/snapshots/IMG_1740.jpg" target="_blank">
+                        <img loading="lazy" style="background-image: url(https://opendrivelab.github.io/CVPR%202024/snapshots_compressed/IMG_1740.jpg);"/>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://opendrivelab.github.io/CVPR%202024/snapshots/IMG_1741.jpg" target="_blank">
+                        <img loading="lazy" style="background-image: url(https://opendrivelab.github.io/CVPR%202024/snapshots_compressed/IMG_1741.jpg);"/>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://opendrivelab.github.io/CVPR%202024/snapshots/IMG_1742.jpg" target="_blank">
+                        <img loading="lazy" style="background-image: url(https://opendrivelab.github.io/CVPR%202024/snapshots_compressed/IMG_1742.jpg);"/>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://opendrivelab.github.io/CVPR%202024/snapshots/IMG_1743.jpg" target="_blank">
+                        <img loading="lazy" style="background-image: url(https://opendrivelab.github.io/CVPR%202024/snapshots_compressed/IMG_1743.jpg);"/>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://opendrivelab.github.io/CVPR%202024/snapshots/IMG_1751.jpg" target="_blank">
+                        <img loading="lazy" style="background-image: url(https://opendrivelab.github.io/CVPR%202024/snapshots_compressed/IMG_1751.jpg);"/>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://opendrivelab.github.io/CVPR%202024/snapshots/IMG_1754.jpg" target="_blank">
+                        <img loading="lazy" style="background-image: url(https://opendrivelab.github.io/CVPR%202024/snapshots_compressed/IMG_1754.jpg);"/>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://opendrivelab.github.io/CVPR%202024/snapshots/IMG_1755.jpg" target="_blank">
+                        <img loading="lazy" style="background-image: url(https://opendrivelab.github.io/CVPR%202024/snapshots_compressed/IMG_1755.jpg);"/>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://opendrivelab.github.io/CVPR%202024/snapshots/IMG_1756.jpg" target="_blank">
+                        <img loading="lazy" style="background-image: url(https://opendrivelab.github.io/CVPR%202024/snapshots_compressed/IMG_1756.jpg);"/>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://opendrivelab.github.io/CVPR%202024/snapshots/IMG_1757.jpg" target="_blank">
+                        <img loading="lazy" style="background-image: url(https://opendrivelab.github.io/CVPR%202024/snapshots_compressed/IMG_1757.jpg);"/>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://opendrivelab.github.io/CVPR%202024/snapshots/IMG_4926.jpg" target="_blank">
+                        <img loading="lazy" style="background-image: url(https://opendrivelab.github.io/CVPR%202024/snapshots_compressed/IMG_4926.jpg);"/>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://opendrivelab.github.io/CVPR%202024/snapshots/IMG_7170.jpg" target="_blank">
+                        <img loading="lazy" style="background-image: url(https://opendrivelab.github.io/CVPR%202024/snapshots_compressed/IMG_7170.jpg);"/>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://opendrivelab.github.io/CVPR%202024/snapshots/IMG_7171.jpg" target="_blank">
+                        <img loading="lazy" style="background-image: url(https://opendrivelab.github.io/CVPR%202024/snapshots_compressed/IMG_7171.jpg);"/>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://opendrivelab.github.io/CVPR%202024/snapshots/IMG_7174.jpg" target="_blank">
+                        <img loading="lazy" style="background-image: url(https://opendrivelab.github.io/CVPR%202024/snapshots_compressed/IMG_7174.jpg);"/>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://opendrivelab.github.io/CVPR%202024/snapshots/IMG_7179.jpg" target="_blank">
+                        <img loading="lazy" style="background-image: url(https://opendrivelab.github.io/CVPR%202024/snapshots_compressed/IMG_7179.jpg);"/>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://opendrivelab.github.io/CVPR%202024/snapshots/IMG_7249.jpg" target="_blank">
+                        <img loading="lazy" style="background-image: url(https://opendrivelab.github.io/CVPR%202024/snapshots_compressed/IMG_7249.jpg);"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <br><br>
+
+
+
+    <!-- <div class="srecruit">
+
+        <br><br><br>
+
+        <div class="block_left joinus" style="margin-bottom: 0; padding-bottom: 0;">
+            <div style="flex-grow: 4;">
+                <h1 class="Owhite" style="user-select: none;">
+                    Join us
+                </h1>
+            </div> 
+            <br><br>
+            <div style="flex-grow: 1;"></div>
+            <div style="flex-grow: 16;">
+                <span class="Owhite">
+                    Looking for opportunities in <b>Shanghai / Hong Kong</b>?
+                    <br><br>
+                    We are searching for talents from all over the world. Are you looking for opportunities as Postdoc, full-time employee, intern, <i>etc.</i>? Don't hesitate to contact us via <i class="fas fa-envelope"></i> <a href="mailto:contact@opendrivelab.com" style="text-decoration: underline;">contact@opendrivelab.com</a> or <a href="https://lihongyang.info" target="_blank" style="text-decoration: underline;">Dr. Hongyang Li</a>.
+                </span>
+            </div> 
+        </div>
+
+        <br><br><br><br><br>
+    </div> -->
+
+
+</body>
+

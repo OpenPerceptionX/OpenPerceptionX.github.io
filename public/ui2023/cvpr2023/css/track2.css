@@ -1,0 +1,56 @@
+.table_list_2 th{
+    background-color: rgb(1, 126, 126); 
+    cursor: pointer;
+}
+.table_list_2 tr th.asc{
+    box-sizing: border-box;
+    border-top:5px solid blue;
+}
+.table_list_2 tr th.desc{
+    box-sizing: border-box;
+    border-bottom:5px solid blue;
+}
+.table_list_2 tr.page{
+    background-color: #fff!important;
+}
+.table_list_2 tbody tr.item{
+    background-color:#f7f7f7 ;
+    cursor: pointer;
+}
+/* .table_list_2 tbody tr.item td{
+    transition: all 0.5s linear;
+}
+.table_list_2 tbody tr.item td.jt{
+    transform: rotate(90deg);
+    transition: all 0.3s linear;
+} */
+.table_list_2 tbody tr:hover{
+    /* background-color: #f2f2f2; */
+    cursor: default;}
+/* 分页 */
+.page_2{
+    /* width: 100%; */
+    height: 50px;
+    /* background-color: red; */
+}
+.page_2 button{
+    width: 90%;
+    height: 2.5rem;
+    border: 0;
+    border-radius: 5px;
+    display: inline-block;
+    background-color: #e5e5e5;
+    cursor: pointer;
+}
+.page_2 button:hover{
+    background-color: #b2b2b2;
+    color: #fff;
+}
+#curpage_2{
+    outline: none;
+    border-radius:3px;
+    width: 2.5rem;
+    padding-left: .5rem;
+    text-align: center;
+    border: 1px solid #ccc;
+}

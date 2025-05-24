@@ -1,0 +1,87 @@
+.table_list th{
+    background-color: rgb(14, 104, 14); 
+    cursor: pointer;
+}
+.table_list tr th.asc{
+    box-sizing: border-box;
+    border-top:5px solid blue;
+}
+.table_list tr th.desc{
+    box-sizing: border-box;
+    border-bottom:5px solid blue;
+}
+.table_list tr.page{
+    background-color: #fff!important;
+}
+.table_list tbody tr.item{
+    background-color:#f7f7f7 ;
+    cursor: pointer;
+}
+/* .table_list tbody tr.item td{
+    transition: all 0.5s linear;
+}
+.table_list tbody tr.item td.jt{
+    transform: rotate(90deg);
+    transition: all 0.3s linear;
+} */
+.table_list tbody tr:hover{
+    /* background-color: #f2f2f2; */
+    cursor: default;}
+/* 分页 */
+.page{
+    /* width: 100%; */
+    height: 50px;
+    background-color: red;
+}
+.page button{
+    width: 90%;
+    height: 2.5rem;
+    border: 0;
+    border-radius: 5px;
+    display: inline-block;
+    background-color: #e5e5e5;
+    cursor: pointer;
+}
+.page button:hover{
+    background-color: #b2b2b2;
+    color: #fff;
+}
+#curpage{
+    outline: none;
+    border-radius:3px;
+    width: 2.5rem;
+    padding-left: .5rem;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+#opt1,#opt2{
+    display: inline-block;
+    width: 4rem;
+    height: 1.5rem;
+    border: 1px solid #ccc;
+    outline: none;
+}
+.info{
+    height: 240px;
+    display: none;
+}
+.info div{
+    display: flex;
+    align-items: flex-start;
+    margin: 0rem 1.5rem;
+    text-align: left;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    /* padding-right: 2rem; */
+}
+.info div h3{
+    font-size: .9rem;
+    margin: 0px;
+    width: 10%;
+}
+.info div p{
+    width: 85%;
+    margin: 0px;
+    font-size: .8rem;
+}

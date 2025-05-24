@@ -1,0 +1,763 @@
+<head>
+    <link rel="icon" type="image/png" href="/logo/OpenDriveLab/D_small.png">
+    <title>Tutorial at CVPR 2025 | OpenDriveLab</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Tutorial, CVPR 2025, OpenDriveLab, Robotics, Embodied AI, Autonomous Driving">
+    <meta name="description" content="OpenDriveLab is committed to exploring cutting-edge embodied AI technology, launching a series of benchmarking work, open source to serve the community, and promote the common development of the industry. Friends who are committed to making influential research are welcome to join!">
+
+    <link href="/ui2025/css/index_tailwind.css" rel="stylesheet">
+
+    <script src="/ui2024/js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L7VEDHS6G8"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-L7VEDHS6G8');
+</script>
+
+
+
+<!-- load sidebar -->
+<script>
+    $.get('/ui2025/components/sidebar.html', function(result){
+        $("#to_add_sidebar").append(result);
+    })
+</script>
+
+
+
+<!-- WeChat Public Group -->
+<div id="popup_wechat_group" class="relative z-50 hidden">
+    <div class="fixed inset-0 bg-gray-300/80"></div>
+    <div class="fixed inset-0">
+        <div class="flex h-svh items-center justify-center p-6 laptop:p-72">
+            <div class="relative rounded-3xl bg-white p-6 pt-10 pb-10 laptop:p-10">
+                <div class="absolute right-0 top-0 pr-6 pt-10 laptop:pr-10">
+                    <button onclick="closeWeChatGroup()">
+                        <svg class="size-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-col mt-12 justify-items-center w-full justify-center" style="max-width: 768px;">
+                    <div class="flex flex-row justify-items-center w-full justify-center">
+                        <img src="/assets/qrcode_wechat_group.png" style="max-width: 256px;"/>
+                    </div>
+                    <span class="text-center mt-6">
+                        Join WeChat Group<br>加入微信羣組
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- popup -->
+<script>
+    function openWeChatGroup() {
+        document.getElementById("popup_wechat_group").classList.remove("hidden");
+        document.querySelector('body').classList.add('overflow-hidden');
+    }
+    function closeWeChatGroup() {
+        document.getElementById("popup_wechat_group").classList.add("hidden");
+        if (sidebar_state != true) {
+            document.querySelector('body').classList.remove('overflow-hidden');
+        };
+    }
+</script>
+
+
+
+<body class="h-full" id="#">
+    <!-- Header / Sidebar -->
+    <header id="to_add_sidebar" class="overscroll-none laptop:hidden"></header>
+    <!-- Page -->
+    <div id="page">
+        <div class="flex w-screen tablet:w-auto flex-col">
+
+
+
+            <!-- Landing -->
+            <div class="w-screen tablet:w-auto h-svh snap-start pt-20 p-6 tablet:p-10">
+                <div class="w-full h-full rounded-3xl bg-[url('/assets/background/nashville_stadium.jpg')] bg-center laptop:bg-right bg-cover flex flex-col justify-end p-6 laptop:p-20 gap-6 laptop:gap-10 bg-black bg-opacity-40 bg-blend-overlay">
+                    <div class="flex flex-row gap-6 laptop:gap-10">
+                        <img src="/assets/icon/cvpr/cvpr2025_white.svg" class="h-10 laptop:h-24"/>
+                        <img src="/assets/icon/cvpr/ieee_cs_white.png" class="h-10 laptop:h-24"/>
+                    </div>
+                    <h1 class="text-white">
+                        Robotics 101:<br>An Odyssey from A Vision Perspective
+                    </h1>
+                    <h5 class="text-white">
+                        CVPR 2025 Tutorial
+                        <br>
+                        <a href="https://maps.app.goo.gl/7YSynr8ff8pVyF1b6" target="_blank" style="text-decoration: underline;">202B</a>, June 12, Nashville, USA
+                        <br><br>
+                        <a href="/cvpr2025/" style="text-decoration: underline;">Join other events at CVPR 2025</a>
+                    </h5>
+                </div>
+            </div>
+
+
+
+            <!-- Content -->
+            <div class="flex flex-col laptop:flex-row snap-start p-6 tablet:p-10 tablet:pt-0 tablet:pb-0">
+
+
+
+                <!-- navigator -->
+                <aside class="min-h-16 laptop:h-screen top-16 tablet:top-0 sticky z-20 flex flex-col items-start justify-evenly w-full laptop:w-1/5 shrink-0 bg-white">
+                    <a class="hidden laptop:block pl-6" href="/">
+                        <img class="h-6 w-auto" src="/assets/icon/OpenDriveLab.png">
+                    </a>
+                    <ul class="w-full laptop:w-auto mt-3 mb-6 flex flex-row flex-wrap laptop:flex-col justify-evenly border-t-2 border-t-o-white border-b-2 border-b-o-white laptop:border-t-0 laptop:border-b-0">
+    
+                        <li>
+                            <a href="#schedule" class="navigator-button group">                           
+                                <span class="navigator-button-text">
+                                    Schedule
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#speaker" class="navigator-button group">                           
+                                <span class="navigator-button-text">
+                                    Speakers
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#organizer" class="navigator-button group">                           
+                                <span class="navigator-button-text">
+                                    Organizers
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#edition" class="navigator-button group">                           
+                                <span class="navigator-button-text">
+                                    Past Editions
+                                </span>
+                            </a>
+                        </li>
+
+                        <li class="laptop:mt-7">
+                            <a href="#" class="flex p-3 laptop:pl-1 select-none">                           
+                                <span>
+                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 18.75 7.5-7.5 7.5 7.5" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 7.5-7.5 7.5 7.5" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+    
+                    </ul>
+                </aside>
+
+
+
+                <!-- main -->
+                <main class="w-full mb-16 tablet:mb-32 mt-10">
+
+
+
+                    <div class="mt-10 w-full flex flex-col gap-20 laptop:flex-row justify-between">
+
+                        <div class="flex-1">
+
+                            <h3>
+                                Introduction
+                            </h3>
+                            <p class="pt-10">
+                                In recent years, there has been a growing interest in robotics in the vision community. Getting started in robotics research is challenging since it requires a wide range of knowledge. This comprehensive full-day tutorial covers all aspects of robotics. We will provide the necessary background to understand the different aspects of robotics. We will also explore technical advancements, key challenges, and potential avenues for future research.
+                            </p>
+
+                        </div>
+
+                        <div class="flex-1">
+                            <h3>
+                                Contact
+                            </h3>
+                            <div class="pt-10">
+                                <ul class="space-y-10">
+                                    <li class="flex gap-6 laptop:gap-10">
+                                        <img src="/assets/icon/email.png" class="size-8 inline-block mr-2"/>
+                                        <span>Contact us via <a href="mailto:contact@opendrivelab.com" class="text-o-blue hover:underline"><code>contact@opendrivelab.com</code></a></span>
+                                    </li>
+                                    <li class="flex gap-6 laptop:gap-10">
+                                        <img src="/assets/icon/discord.png" class="size-8 inline-block mr-2"/>
+                                        <span><a href="https://discord.gg/BmXRvwgjgf" target="_blank" class="text-o-blue hover:underline">Join Discord</a> to chat with the organizers</span>
+                                    </li>
+                                    <li class="flex gap-6 laptop:gap-10">
+                                        <img src="/assets/icon/wechat.png" class="size-8 inline-block mr-2"/>
+                                        <span>Join discussions in our <a onclick="openWeChatGroup()" class="text-o-blue hover:underline">WeChat group</a></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="divider"></div>
+
+
+
+                    <div class="w-full mt-20">
+                        <h2>
+                            <a href="#schedule" class="scroll-mt-48 laptop:scroll-mt-20 group" id="schedule">
+                                Tentative Schedule
+                                <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
+                            </a>
+                        </h2>
+                        <div class="mt-20 flex gap-6">
+                            <span>
+                                Time zone:
+                            </span>
+                            <select id="timezoneSelect" onchange="convertTimezone(this.value)" class="bg-o-white rounded-3xl pl-3 pr-3" style="-webkit-appearance: none; -moz-appearance: none; appearance: none;">
+                                <option value="-12">UTC-12</option>
+                                <option value="-11">UTC-11</option>
+                                <option value="-10">UTC-10</option>
+                                <option value="-9">UTC-9</option>
+                                <option value="-8">UTC-8</option>
+                                <option value="-7">UTC-7</option>
+                                <option value="-6">UTC-6</option>
+                                <option value="-5">UTC-5 / Nashville</option>
+                                <option value="-4">UTC-4</option>
+                                <option value="-3">UTC-3</option>
+                                <option value="-2">UTC-2</option>
+                                <option value="-1">UTC-1</option>
+                                <option value="0">UTC+0</option>
+                                <option value="1">UTC+1</option>
+                                <option value="2">UTC+2</option>
+                                <option value="3">UTC+3</option>
+                                <option value="4">UTC+4</option>
+                                <option value="5">UTC+5</option>
+                                <option value="6">UTC+6</option>
+                                <option value="7">UTC+7</option>
+                                <option value="8">UTC+8</option>
+                                <option value="9">UTC+9</option>
+                                <option value="10">UTC+10</option>
+                                <option value="11">UTC+11</option>
+                                <option value="12">UTC+12</option>
+                                <option value="13">UTC+13</option>
+                                <option value="14">UTC+14</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mt-10 max-w-wider">
+                        <ul>
+                            <li>
+                                <div class="relative pb-8">
+                                    <span class="absolute left-5 top-5 -ml-px h-full w-0.5 bg-o-white" aria-hidden="true"></span>
+                                    <div class="relative flex items-start space-x-3">
+                                        <div class="relative px-1">
+                                            <div class="flex size-8 items-center justify-center rounded-full bg-white">
+                                                <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col w-full gap-3">
+                                            <div class="flex justify-between">
+                                                <div>
+                                                    <a href="https://lihongyang.info/" target="_blank" class="font-bold hover:underline">Hongyang Li</a>
+                                                    <br class="laptop:hidden">
+                                                    <i class="laptop:ml-6 text-o-gray">The University of Hong Kong, China</i>
+                                                </div>
+                                                <span class="itimetable_table_time" data-original-time="2025-06-12T14:00:00"></span>
+                                            </div>
+                                            <span>
+                                                Opening Remarks
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="relative pb-8">
+                                    <span class="absolute left-5 top-5 -ml-px h-full w-0.5 bg-o-white" aria-hidden="true"></span>
+                                    <div class="relative flex items-start space-x-3">
+                                        <div class="relative">
+                                            <img class="flex size-10 items-center justify-center bg-white " src="/assets/icon/D.svg" alt="">
+                                        </div>
+                                        <div class="flex flex-col w-full gap-3">
+                                            <div class="flex justify-between">
+                                                <div>
+                                                    <a href="https://scholar.google.com/citations?user=dgYJ6esAAAAJ" target="_blank" class="font-bold hover:underline">Chonghao Sima</a>
+                                                    <br class="laptop:hidden">
+                                                    <i class="laptop:ml-6 text-o-gray">OpenDriveLab, China</i>
+                                                </div>
+                                                <span class="itimetable_table_time" data-original-time="2025-06-12T14:10:00"></span>
+                                            </div>
+                                            <span>
+                                                When Autonomous Driving meets Test-time Computing
+                                            </span>
+                                            <details class="text-xs">
+                                                <summary class="content-none">
+                                                    Biography
+                                                </summary>
+                                                <p class="mt-3">
+                                                    Chonghao Sima, a second-year Ph.D. student at The University of Hong Kong, has published 10+ first-author/co-first-author papers in top-tier conferences and journals including NeurIPS, CVPR, ICCV, ECCV, and PAMI. His collaborative work on end-to-end autonomous driving, UniAD, received the Best Paper Award at IEEE CVPR 2023. His contribution to BEVFormer was recognized in the 2022 Top 100 Most Influential AI Papers list. Honored as an Outstanding Reviewer for CVPR 2023, he led two award-winning projects: PersFormer (2022) and DriveLM (2024), both selected for oral presentations at ECCV. DriveLM ranked #9 on the most influential papers of ECCV 2024. His publications have accumulated 3,400+ citations with 4,000+ GitHub stars across repositories. Research interests focus on 3D perception, multimodal models, end-to-end autonomous driving systems and upper-body humanoid.
+                                                </p>
+                                            </details>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="relative pb-8">
+                                    <span class="absolute left-5 top-5 -ml-px h-full w-0.5 bg-o-white" aria-hidden="true"></span>
+                                    <div class="relative flex items-start space-x-3">
+                                        <div class="relative">
+                                            <img class="flex size-10 items-center justify-center bg-white " src="/assets/brand/google_deepmind.png" alt="">
+                                        </div>
+                                        <div class="flex flex-col w-full gap-3">
+                                            <div class="flex justify-between">
+                                                <div>
+                                                    <a href="https://robodhruv.github.io/" target="_blank" class="font-bold hover:underline">Dhruv Shah</a>
+                                                    <br class="laptop:hidden">
+                                                    <i class="laptop:ml-6 text-o-gray">Google DeepMind, USA</i>
+                                                </div>
+                                                <span class="itimetable_table_time" data-original-time="2025-06-12T15:00:00"></span>
+                                            </div>
+                                            <span>
+                                                Theme TBD
+                                            </span>
+                                            <details class="text-xs">
+                                                <summary class="content-none">
+                                                    Biography
+                                                </summary>
+                                                <p class="mt-3">
+                                                    Dhruv Shah is a Senior Research Scientist at Google DeepMind, working foundation models of and for robotics. Previously, he obtained his PhD in EECS at UC Berkeley, where he was advised by Sergey Levine. His research was supported by the Berkeley Fellowship for Graduate Study, and has been nominated for (and received) several Best Paper Awards at leading robotics conferences, including RSS and ICRA.
+                                                    <br><br>
+                                                    Earlier, he graduated with honors from IIT Bombay, where he received the Undergraduate Research Award and the Institute Academic Prize. He have also been fortunate to spend time at Meta AI (FAIR), Google DeepMind (Brain Robotics), Carnegie Mellon University, Imperial College London and the University of Sydney.
+                                                </p>
+                                            </details>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="relative pb-8">
+                                    <span class="absolute left-5 top-5 -ml-px h-full w-0.5 bg-o-white" aria-hidden="true"></span>
+                                    <div class="relative flex items-start space-x-3">
+                                        <div class="relative px-1">
+                                            <div class="flex size-8 items-center justify-center rounded-full bg-white">
+                                                <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                                  </svg>                                                  
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col w-full gap-3">
+                                            <div class="flex justify-between pt-1">
+                                                <div>
+                                                    <span class="text-o-gray">Coffee Break</span>
+                                                </div>
+                                                <span class="itimetable_table_time text-o-gray" data-original-time="2025-06-12T15:50:00"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="relative pb-8">
+                                    <span class="absolute left-5 top-5 -ml-px h-full w-0.5 bg-o-white" aria-hidden="true"></span>
+                                    <div class="relative flex items-start space-x-3">
+                                        <div class="relative">
+                                            <img class="flex size-10 items-center justify-center bg-white" src="/assets/brand/cmu.png" alt="">
+                                        </div>
+                                        <div class="flex flex-col w-full gap-3">
+                                            <div class="flex justify-between">
+                                                <div>
+                                                    <a href="https://www.gshi.me/" target="_blank" class="font-bold hover:underline">Guanya Shi</a>
+                                                    <br class="laptop:hidden">
+                                                    <i class="laptop:ml-6 text-o-gray">CMU, USA</i>
+                                                </div>
+                                                <span class="itimetable_table_time" data-original-time="2025-06-12T16:00:00"></span>
+                                            </div>
+                                            <span>
+                                                Theme TBD
+                                            </span>
+                                            <details class="text-xs">
+                                                <summary class="content-none">
+                                                    Biography
+                                                </summary>
+                                                <p class="mt-3">
+                                                    Guanya Shi is an Assistant Professor in the Robotics Institute and the School of Computer Science at Carnegie Mellon University (CMU). He lead the LeCAR (Learning and Control for Agile Robotics) Lab. He also have courtesy faculty positions in the Electrical and Computer Engineering and Mechanical Engineering Departments.
+                                                    <br><br>
+                                                    He completed his Ph.D. in 2022 from Caltech, advised by Soon-Jo Chung and Yisong Yue. He received a B.E. from Tsinghua University in 2017. From 2022 to 2023, he was a postdoctoral scholar in the Paul G. Allen School of Computer Science and Engineering at the University of Washington with Byron Boots.
+                                                </p>
+                                            </details>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="relative pb-8">
+                                    <span class="absolute left-5 top-5 -ml-px h-full w-0.5 bg-o-white" aria-hidden="true"></span>
+                                    <div class="relative flex items-start space-x-3">
+                                        <div class="relative px-1">
+                                            <div class="flex size-8 items-center justify-center rounded-full bg-white">
+                                                <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                                  </svg>                                                  
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col w-full gap-3">
+                                            <div class="flex justify-between pt-1">
+                                                <div>
+                                                    <span class="text-o-gray">Lunch Break</span>
+                                                </div>
+                                                <span class="itimetable_table_time text-o-gray" data-original-time="2025-06-12T16:50:00"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="relative pb-8">
+                                    <span class="absolute left-5 top-5 -ml-px h-full w-0.5 bg-o-white" aria-hidden="true"></span>
+                                    <div class="relative flex items-start space-x-3">
+                                        <div class="relative">
+                                            <img class="flex size-10 items-center justify-center bg-white" src="/assets/brand/UofZurich.png" alt="">
+                                        </div>
+                                        <div class="flex flex-col w-full gap-3">
+                                            <div class="flex justify-between">
+                                                <div>
+                                                    <a href="https://rpg.ifi.uzh.ch/people_scaramuzza.html" target="_blank" class="font-bold hover:underline">Davide Scaramuzza</a>
+                                                    <br class="laptop:hidden">
+                                                    <i class="laptop:ml-6 text-o-gray">University of Zurich, Switzerland</i>
+                                                </div>
+                                                <span class="itimetable_table_time" data-original-time="2025-06-12T18:00:00"></span>
+                                            </div>
+                                            <span>
+                                                Theme TBD
+                                            </span>
+                                            <details class="text-xs">
+                                                <summary class="content-none">
+                                                    Biography
+                                                </summary>
+                                                <p class="mt-3">
+                                                    Davide Scaramuzza is a Professor of Robotics and Perception at the University of Zurich. He did his Ph.D. at ETH Zurich, a postdoc at the University of Pennsylvania, and was a visiting professor at Stanford University. His research focuses on autonomous, agile navigation of micro drones using standard and event-based cameras. He pioneered autonomous, vision-based navigation of micro drones, which inspired the navigation algorithm of the NASA Mars helicopter and many drone companies. In 2022, his team demonstrated that an AI-powered drone could outperform the world champions of drone racing, a result published in Nature and featured on the magazine cover. His result marks the first time an AI defeated a human in the physical world (previous AI wins against humans at chess, Go, StanrCraft, and Gran Turismo were done on board games or video games). His research contributed significantly to visual-inertial state estimation, vision-based agile navigation of microdrones, and low-latency, robust perception with event cameras. His results have been transferred to many products, from drones to automobiles, cameras, AR/VR headsets, and mobile devices. He counts several entrepreneurial achievements: In 2015, he co-founded Zurich-Eye, which became Facebook-Meta Zurich and developed the world-leading virtual-reality headset Meta Quest. In 2020, he co-founded SUIND, which builds autonomous drones for precision agriculture. For his research contributions and tech transfer, he has won many awards, including a Kiyo-Tomiyasu IEEE Technical Field Award (won only by two other roboticists in the 20 years of existence of this award), an IEEE Robotics and Automation Society Early Career Award, a European Research Council Consolidator Grant, and many paper awards, including the 2023 IROS Best Paper Award, the 2022 IEEE Robotics and Automation Letters Best Paper Award, and the 2018 IEEE Transactions on Robotics Best Paper Award. He co-authored the book "Introduction to Autonomous Mobile Robots," published by MIT Press, which has sold over 10 thousand copies worldwide and is among the most used textbooks for teaching mobile robotics. He has been consulting the United Nations on disaster response, the Fukushima Action Plan, disarmament, and AI for good. Many aspects of his research have been featured in the media, such as The New York Times, The Economist, The Guardian, and Forbes.
+                                                </p>
+                                            </details>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="relative pb-8">
+                                    <span class="absolute left-5 top-5 -ml-px h-full w-0.5 bg-o-white" aria-hidden="true"></span>
+                                    <div class="relative flex items-start space-x-3">
+                                        <div class="relative">
+                                            <img class="flex size-10 items-center justify-center bg-white" src="/assets/brand/NVIDIA_square.png" alt="">
+                                        </div>
+                                        <div class="flex flex-col w-full gap-3">
+                                            <div class="flex justify-between">
+                                                <div>
+                                                    <a href="https://www.borisivanovic.com/" target="_blank" class="font-bold hover:underline">Boris Ivanovic</a>
+                                                    <br class="laptop:hidden">
+                                                    <i class="laptop:ml-6 text-o-gray">NVIDIA, USA</i>
+                                                </div>
+                                                <span class="itimetable_table_time" data-original-time="2025-06-12T18:50:00"></span>
+                                            </div>
+                                            <span>
+                                                Theme TBD
+                                            </span>
+                                            <details class="text-xs">
+                                                <summary class="content-none">
+                                                    Biography
+                                                </summary>
+                                                <p class="mt-3">
+                                                    Boris is currently a Senior Research Scientist and Manager in NVIDIA's Autonomous Vehicle Research Group. His research interests include novel end-to-end AV architectures, sensor and traffic simulation, AI safety, and the thoughtful integration of foundation models in AV development. Prior to joining NVIDIA, he received his Ph.D. in Aeronautics and Astronautics under the supervision of Marco Pavone in 2021 and an M.S. in Computer Science in 2018, both from Stanford University. He received his B.A.Sc. in Engineering Science from the University of Toronto in 2016.
+                                                </p>
+                                            </details>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="relative pb-8">
+                                    <span class="absolute left-5 top-5 -ml-px h-full w-0.5 bg-o-white" aria-hidden="true"></span>
+                                    <div class="relative flex items-start space-x-3">
+                                        <div class="relative">
+                                            <img class="flex size-10 items-center justify-center bg-white" src="/assets/brand/cmu.png" alt="">
+                                        </div>
+                                        <div class="flex flex-col w-full gap-3">
+                                            <div class="flex justify-between">
+                                                <div>
+                                                    <a href="https://www.cs.cmu.edu/~dpathak/" target="_blank" class="font-bold hover:underline">Deepak Pathak</a>
+                                                    <br class="laptop:hidden">
+                                                    <i class="laptop:ml-6 text-o-gray">CMU, USA</i>
+                                                </div>
+                                                <span class="itimetable_table_time" data-original-time="2025-06-12T19:40:00"></span>
+                                            </div>
+                                            <span>
+                                                Theme TBD
+                                            </span>
+                                            <details class="text-xs">
+                                                <summary class="content-none">
+                                                    Biography
+                                                </summary>
+                                                <p class="mt-3">
+                                                    Deepak Pathak is Raj Reddy Assistant Professor at Carnegie Mellon University in the School of Computer Science. He is a member of the Robotics Institute and affiliated to Machine Learning Department. He works in Artificial Intelligence at the intersection of Computer Vision, Machine Learning & Robotics.
+                                                    <br><br>
+                                                    Previously, he spent a year as researcher at Meta AI Research collaborating with Jitendra Malik and visiting PostDoc at UC Berkeley with Pieter Abbeel. He received my PhD from UC Berkeley advised by Alyosha Efros & Trevor Darrell, and his Bachelors in Computer Science from IIT Kanpur.
+                                                </p>
+                                            </details>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="relative pb-8">
+                                    <div class="relative flex items-start space-x-3">
+                                        <div class="relative px-1">
+                                            <div class="flex size-8 items-center justify-center rounded-full bg-white">
+                                                <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col w-full gap-3">
+                                            <div class="flex justify-between pt-1">
+                                                <div>
+                                                    <span>Closing Remarks</span>
+                                                </div>
+                                                <span class="itimetable_table_time" data-original-time="2025-06-12T20:30:00"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                        
+
+
+
+                    <div class="divider"></div>
+
+
+
+
+                    <div class="w-full mt-20">
+                        <h2>
+                            <a href="#speaker" class="scroll-mt-48  laptop:scroll-mt-20 group" id="speaker">
+                                Speakers
+                                <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
+                            </a>
+                        </h2>
+                        <div class="mt-20 gap-10 grid grid-cols-[repeat(auto-fill,_minmax(144px,_1fr))] tablet:grid-cols-[repeat(auto-fill,_minmax(192px,_1fr))]">
+                            <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
+                                <a href="https://rpg.ifi.uzh.ch/people_scaramuzza.html" target="_blank" class="hover:opacity-70">
+                                    <img src="/assets/person/davide_scaramuzza.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
+                                </a>
+                                <h4>Davide Scaramuzza</h4>
+                                <div class="flex flex-col">
+                                    <i class="text-o-gray">Professor</i>
+                                    <span>University of Zurich</span>
+                                </div>
+                                <div class="border-b-2 border-o-white"></div>
+                            </div>
+                            <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
+                                <a href="https://www.cs.cmu.edu/~dpathak/" target="_blank" class="hover:opacity-70">
+                                    <img src="/assets/person/deepak_pathak.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
+                                </a>
+                                <h4>Deepak Pathak</h4>
+                                <div class="flex flex-col">
+                                    <i class="text-o-gray">Assistant Professor</i>
+                                    <span>CMU</span>
+                                </div>
+                                <div class="border-b-2 border-o-white"></div>
+                            </div>
+                            <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
+                                <a href="https://www.gshi.me/" target="_blank" class="hover:opacity-70">
+                                    <img src="/assets/person/guanya_shi.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
+                                </a>
+                                <h4>Guanya Shi</h4>
+                                <div class="flex flex-col">
+                                    <i class="text-o-gray">Assistant Professor</i>
+                                    <span>CMU</span>
+                                </div>
+                                <div class="border-b-2 border-o-white"></div>
+                            </div>
+                            <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
+                                <a href="https://www.borisivanovic.com/" target="_blank" class="hover:opacity-70">
+                                    <img src="/assets/person/boris_ivanovic.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
+                                </a>
+                                <h4>Boris Ivanovic</h4>
+                                <div class="flex flex-col">
+                                    <i class="text-o-gray">Senior Research Scientist</i>
+                                    <span>NVIDIA</span>
+                                </div>
+                                <div class="border-b-2 border-o-white"></div>
+                            </div>
+                            <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
+                                <a href="https://robodhruv.github.io/" target="_blank" class="hover:opacity-70">
+                                    <img src="/assets/person/dhruv_shah.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
+                                </a>
+                                <h4>Dhruv Shah</h4>
+                                <div class="flex flex-col">
+                                    <i class="text-o-gray">Senior Research Scientist</i>
+                                    <span>Google DeepMind</span>
+                                </div>
+                                <div class="border-b-2 border-o-white"></div>
+                            </div>
+                            <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
+                                <a href="https://scholar.google.com/citations?user=dgYJ6esAAAAJ" target="_blank" class="hover:opacity-70">
+                                    <img src="/assets/person/chonghao_sima.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
+                                </a>
+                                <h4>Chonghao Sima</h4>
+                                <div class="flex flex-col">
+                                    <i class="text-o-gray">Research Scientist</i>
+                                    <span>OpenDriveLab</span>
+                                </div>
+                                <div class="border-b-2 border-o-white"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="divider"></div>
+
+
+
+
+                    <div class="w-full mt-20">
+                        <h2>
+                            <a href="#organizer" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="organizer">
+                                Organizers
+                                <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
+                            </a>
+                        </h2>
+                        <table class="mt-20 table-fixed">
+                            <tbody class="flex flex-col gap-3">
+
+                                <tr>
+                                    <td class="w-4">-</td>
+                                    <td class="w-48"><a class="text-o-blue hover:underline" href="https://faikit.github.io/" target="_blank">Huijie Wang</a></td>
+                                    <td class="w-64"><i>OpenDriveLab</i></td>
+                                </tr>
+                                <tr>
+                                    <td class="w-4">-</td>
+                                    <td class="w-48"><a class="text-o-blue hover:underline" href="https://people.ee.ethz.ch/~csakarid/" target="_blank">Christos Sakaridis</a></td>
+                                    <td class="w-64"><i>ETH Zürich</i></td>
+                                </tr>
+                                <tr>
+                                    <td class="w-4">-</td>
+                                    <td class="w-48"><a class="text-o-blue hover:underline" href="https://www.cs.cmu.edu/~jeanoh/" target="_blank">Jean Oh</a></td>
+                                    <td class="w-64"><i>CMU</i></td>
+                                </tr>
+                                <tr>
+                                    <td class="w-4">-</td>
+                                    <td class="w-48"><a class="text-o-blue hover:underline" href="https://ariannaliu.github.io/" target="_blank">Zhixuan Liu</a></td>
+                                    <td class="w-64"><i>CMU</i></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <!-- <div class="mt-20 gap-10 grid grid-cols-[repeat(auto-fill,_minmax(144px,_1fr))] tablet:grid-cols-[repeat(auto-fill,_minmax(192px,_1fr))]">
+                            <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
+                                <a href="https://faikit.github.io/" target="_blank" class="hover:opacity-70">
+                                    <img src="/assets/person/huijie_wang.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
+                                </a>
+                                <h4>Huijie Wang</h4>
+                                <span>OpenDriveLab</span>
+                                <div class="border-b-2 border-o-white"></div>
+                            </div>
+                            <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
+                                <a href="https://people.ee.ethz.ch/~csakarid/" target="_blank" class="hover:opacity-70">
+                                    <img src="/assets/person/christos_sakaridis.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
+                                </a>
+                                <h4>Christos Sakaridis</h4>
+                                <span>ETH Zürich</span>
+                                <div class="border-b-2 border-o-white"></div>
+                            </div>
+                            <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
+                                <a href="https://www.cs.cmu.edu/~jeanoh/" target="_blank" class="hover:opacity-70">
+                                    <img src="/assets/person/jean_oh.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
+                                </a>
+                                <h4>Jean Oh</h4>
+                                <span>CMU</span>
+                                <div class="border-b-2 border-o-white"></div>
+                            </div>
+                            <div class="flex flex-col gap-3 pb-3 w-36 tablet:w-48">
+                                <a href="https://ariannaliu.github.io/" target="_blank" class="hover:opacity-70">
+                                    <img src="/assets/person/zhixuan_Liu.jpg" class="size-36 tablet:size-48 rounded-3xl"/>
+                                </a>
+                                <h4>Zhixuan Liu</h4>
+                                <span>CMU</span>
+                                <div class="border-b-2 border-o-white"></div>
+                            </div>
+                        </div> -->
+                    </div>
+
+
+
+
+                    
+                    <div class="divider"></div>
+
+
+
+                    <div class="w-full mt-20">
+                        <h2>
+                            <a href="#edition" class="scroll-mt-48 laptop:scroll-mt-20 group" id="edition">
+                                Past Editions
+                                <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
+                            </a>
+                        </h2>
+                        <div class="mt-20 gap-20 flex flex-col laptop:flex-row">
+                            <a class="hover:opacity-70 w-full h-60 laptop:h-72 rounded-3xl bg-[url('/assets/background/seattle_gen.jpg')] bg-top bg-cover p-6 laptop:p-10 flex flex-col justify-evenly bg-black bg-opacity-30 bg-blend-overlay" href="/cvpr2024/tutorial/">
+                                <h3 class="text-white">Towards Building AGI in Autonomy and Robotics</h3>
+                                <br>
+                                <h4 class="text-white">CVPR 2024</h4>
+                            </a>
+                        </div>
+                    </div>
+
+
+                </main>
+
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+</body>
+
+
+
+<script>
+    function convertTimezone(offset) {
+        var selectedOffset = parseInt(offset);
+        var eventTimes = document.querySelectorAll(".itimetable_table_time");
+        eventTimes.forEach(function (eventTime) {
+            var originalTime = new Date(eventTime.getAttribute("data-original-time"));
+            var adjustedTime = new Date(originalTime.getTime() + selectedOffset * 60 * 60 * 1000);
+            var hours = adjustedTime.getHours().toString().padStart(2, "0");
+            var minutes = adjustedTime.getMinutes().toString().padStart(2, "0");
+            var month = adjustedTime.toLocaleString("en-US", { month: "long" });
+            var day = adjustedTime.getDate();
+            var formattedTime = hours + ":" + minutes + ", " + month + " " + day;
+            eventTime.textContent = formattedTime;
+      });
+    }
+    window.addEventListener('load', function() {
+        timezoneSelect.selectedIndex = 7;
+        convertTimezone(timezoneSelect.value);
+    });
+</script>
