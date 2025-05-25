@@ -1,5 +1,8 @@
 "use client"
 
+import { usePathname } from 'next/navigation'
+import { pageNavigator } from '@/data/pagenavigator'
+
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { VariantProps, cva } from "class-variance-authority"
@@ -114,7 +117,8 @@ function SidebarProvider({
   // This makes it easier to style the sidebar with Tailwind classes.
   const state = open ? "expanded" : "collapsed"
 
-  const content = null
+  const pathname = usePathname()
+  const content = pathname.toLowerCase() in pageNavigator ? pageNavigator[pathname.toLowerCase()] : null
 
   const contextValue = React.useMemo<SidebarContextProps>(
     () => ({
