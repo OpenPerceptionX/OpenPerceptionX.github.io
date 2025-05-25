@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = {
-    title: "FreeTacMan | OpenDriveLab",
-    description: "FreeTacMan",
-    keywords: ["FreeTacMan", "OpenDriveLab", "HKU", "SII"],
+  title: "FreeTacMan | OpenDriveLab",
+  description: "FreeTacMan",
+  keywords: ["FreeTacMan", "OpenDriveLab", "HKU", "SII"],
 };
 
 import Link from "next/link";
@@ -16,7 +16,12 @@ import {
   CardTitle,
 } from "@/components/project/freetacman/ui/card";
 import { Separator } from "@/components/project/freetacman/ui/separator";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/project/freetacman/ui/tabs";
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@/components/project/freetacman/ui/tabs";
 import {
   Carousel,
   CarouselContent,
@@ -69,7 +74,7 @@ const policy_rollouts: { id: string; title: string; color: string }[] = [
 
 export default function Home() {
   return (
-    <main>
+    <main className="w-full">
       {/* Landing Section with Gray Background */}
       <div className="w-full min-h-screen flex flex-col items-center px-6 bg-[#eaeaea]">
         <div className="flex flex-col py-20 gap-6 w-full h-full max-w-[1792px] justify-around items-center">
@@ -114,53 +119,11 @@ export default function Home() {
 
       {/* Main Content Section with Table of Contents */}
       <div className="flex w-full">
-        {/* Table of Contents */}
-        <div className="w-64 h-screen sticky top-0 p-6 bg-white/90 backdrop-blur-sm shadow-lg hidden md:block">
-          <h3 className="text-2xl font-bold mb-6 mt-12 text-[#174BE5]">Contents</h3>
-          <nav className="flex flex-col gap-4">
-            <Link
-              href="#highlights"
-              className="hover:text-[#174BE5] transition-colors text-lg font-medium group flex items-center"
-            >
-              <span className="w-2 h-2 bg-[#174BE5] rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity"></span>
-              Highlights
-            </Link>
-            <Link
-              href="#model"
-              className="hover:text-[#174BE5] transition-colors text-lg font-medium group flex items-center"
-            >
-              <span className="w-2 h-2 bg-[#174BE5] rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity"></span>
-              3D Model
-            </Link>
-            <Link
-              href="#applications"
-              className="hover:text-[#174BE5] transition-colors text-lg font-medium group flex items-center"
-            >
-              <span className="w-2 h-2 bg-[#174BE5] rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity"></span>
-              Applications
-            </Link>
-            <Link
-              href="#policy-rollouts"
-              className="hover:text-[#174BE5] transition-colors text-lg font-medium group flex items-center"
-            >
-              <span className="w-2 h-2 bg-[#174BE5] rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity"></span>
-              Policy Rollouts
-            </Link>
-            <Link
-              href="#user-study"
-              className="hover:text-[#174BE5] transition-colors text-lg font-medium group flex items-center"
-            >
-              <span className="w-2 h-2 bg-[#174BE5] rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity"></span>
-              User Study
-            </Link>
-          </nav>
-        </div>
-
         {/* Mobile Navigation */}
         <MobileNav />
 
         {/* Main Content */}
-        <div className="flex-1 flex flex-col">
+        <div className="flex-1 w-full flex flex-col">
           {/* Highlights */}
           <div
             className="w-full pl-6 pr-6 flex flex-col items-center"
@@ -201,22 +164,24 @@ export default function Home() {
                 <div className="w-full max-w-5xl flex flex-row justify-between">
                   <div className="flex flex-col gap-6">
                     <p className="text-base text-left w-full">
-                    Enabling robots with contact-rich manipulation remains a pivotal challenge in robot learning, 
-                    which is substantially hindered by the data collection gap, 
-                    including its <b className="text-[#004cee]">inefficiency</b> and <b className="text-[#004cee]">limited sensor setup</b>. 
+                      Enabling robots with contact-rich manipulation remains a
+                      pivotal challenge in robot learning, which is
+                      substantially hindered by the data collection gap,
+                      including its{" "}
+                      <b className="text-[#004cee]">inefficiency</b> and{" "}
+                      <b className="text-[#004cee]">limited sensor setup</b>.
                     </p>
                     <p className="text-base text-left w-full">
-                    Motivated by the dexterity and force feedback of human motion, 
-                    we introduce <b className="text-[#004cee]">FreeTacMan</b>,
-                      a robot-free and human-centric visuo-tactile data
-                      collection system to acquire robot manipulation data
-                      accurately and efficiently. Our main contributions are:
+                      Motivated by the dexterity and force feedback of human
+                      motion, we introduce{" "}
+                      <b className="text-[#004cee]">FreeTacMan</b>, a robot-free
+                      and human-centric visuo-tactile data collection system to
+                      acquire robot manipulation data accurately and
+                      efficiently. Our main contributions are:
                     </p>
                     <p className="text-base text-left w-full">
                       1. A portable, high-resolution, low-cost{" "}
-                      <b className="text-[#004cee]">
-                        visuo-tactile sensor
-                      </b>{" "}
+                      <b className="text-[#004cee]">visuo-tactile sensor</b>{" "}
                       designed for rapid adaptation across multiple robotic
                       end-effectors.
                     </p>
@@ -227,9 +192,8 @@ export default function Home() {
                       sensor to excel at diverse contact-rich tasks efficiently.
                     </p>
                     <p className="text-base text-left w-full">
-                      3. Experimental validation shows that imitation
-                      policies trained with our visuo-tactile data achieve an
-                      average{" "}
+                      3. Experimental validation shows that imitation policies
+                      trained with our visuo-tactile data achieve an average{" "}
                       <b className="text-[#004cee]">50% higher success rate</b>{" "}
                       than vision-only approaches in a wide spectrum of
                       contact-rich manipulation tasks.
@@ -359,11 +323,16 @@ export default function Home() {
                       Interactive Modal Viewer
                     </span>
                     <p className="text-base text-center max-w-7xl">
-                    Dive into our 💡<b className="text-[#004cee]">interactive</b> 3D model viewer and explore the most popular native 3D formats with ease.
+                      Dive into our 💡
+                      <b className="text-[#004cee]">interactive</b> 3D model
+                      viewer and explore the most popular native 3D formats with
+                      ease.
                       <br />
-                      Try out the 🖱️<b className="text-[#004cee]">move</b> command to inspect internal structures.
+                      Try out the 🖱️<b className="text-[#004cee]">move</b>{" "}
+                      command to inspect internal structures.
                       <br />
-                      It's more than just viewing — it's a hands-on exploration. Start 💫<b className="text-[#004cee]">discovering</b> now!
+                      It's more than just viewing — it's a hands-on exploration.
+                      Start 💫<b className="text-[#004cee]">discovering</b> now!
                     </p>
                     <iframe
                       src="https://opendrivelab.github.io/FreeTacMan/3d_model/FreeTacMan_Model_simple.html"
@@ -386,11 +355,17 @@ export default function Home() {
                       <div className="w-full flex justify-center">
                         <div className="max-w-5xl">
                           <p className="text-base text-left w-full">
-                            FreeTacMan features a universal gripper interface with quick-swap mounts compatible with various robots, 
-                            such as Piper and Franka, with support for more platforms coming soon. 
-                            It also includes a camera scaffold designed for precise alignment with the wrist-mounted camera, ensuring a consistent perspective. 
-                            These components demonstrate the plug-and-play modularity of FreeTacMan, 
-                            enabling seamless integration across diverse robotic platforms without requiring hardware-specific modifications. 
+                            FreeTacMan features a universal gripper interface
+                            with quick-swap mounts compatible with various
+                            robots, such as Piper and Franka, with support for
+                            more platforms coming soon. It also includes a
+                            camera scaffold designed for precise alignment with
+                            the wrist-mounted camera, ensuring a consistent
+                            perspective. These components demonstrate the
+                            plug-and-play modularity of FreeTacMan, enabling
+                            seamless integration across diverse robotic
+                            platforms without requiring hardware-specific
+                            modifications.
                           </p>
                         </div>
                       </div>
@@ -606,19 +581,28 @@ export default function Home() {
               <div className="w-full flex flex-col items-center mt-20">
                 <div className="w-full max-w-5xl flex flex-row justify-between">
                   <p className="text-base text-left w-full">
-                  We integrate <b className="text-[#004cee]">tactile feedback</b> to assess its impact on policy performance, 
-                  observing a substantial improvement that highlights its dynamic value in contact-rich tasks. 
-                  <b className="text-[#004cee]">Temporal-aware pretraining</b> further enhances performance by aligning visual and tactile embeddings 
-                  while capturing temporal dynamics. Across five evaluated tasks, imitation policies trained with our visuo-tactile data 
-                  achieve an average success rate that is <b className="text-[#004cee]">50% higher</b> than vision-only counterparts.
+                    We integrate{" "}
+                    <b className="text-[#004cee]">tactile feedback</b> to assess
+                    its impact on policy performance, observing a substantial
+                    improvement that highlights its dynamic value in
+                    contact-rich tasks.
+                    <b className="text-[#004cee]">
+                      Temporal-aware pretraining
+                    </b>{" "}
+                    further enhances performance by aligning visual and tactile
+                    embeddings while capturing temporal dynamics. Across five
+                    evaluated tasks, imitation policies trained with our
+                    visuo-tactile data achieve an average success rate that is{" "}
+                    <b className="text-[#004cee]">50% higher</b> than
+                    vision-only counterparts.
                   </p>
                 </div>
                 <div className="w-full flex justify-center mt-10">
-                  <img 
+                  <img
                     src="https://opendrivelab.github.io/FreeTacMan/policy_rollouts/policy rollouts_results.png"
                     alt="Policy Rollouts Results"
                     className="max-w-5xl w-full"
-                  /> 
+                  />
                 </div>
               </div>
             </div>
@@ -646,8 +630,8 @@ export default function Home() {
                 <TabsContent value="01" key="01" className="w-full">
                   <Card className="xl:h-[750px] border-[#174BE5]/50 bg-[#eaeaea]/50 border-6 flex flex-col gap-0 justify-around">
                     <p className="text-base text-[#174BE5] text-center mt-10 px-10">
-                      The robot grasps a plastic cup and places it{" "}
-                      <b>stably</b> on a tray without causing <b>damage</b>.
+                      The robot grasps a plastic cup and places it <b>stably</b>{" "}
+                      on a tray without causing <b>damage</b>.
                     </p>
                     <CardContent className="flex flex-col xl:flex-row gap-6 justify-between h-full items-center">
                       <div className="flex flex-col flex-3/5 gap-3">
@@ -688,9 +672,9 @@ export default function Home() {
                 <TabsContent value="02" key="02" className="w-full">
                   <Card className="xl:h-[750px] border-[#43C9C1]/50 bg-[#eaeaea]/50 border-6 flex flex-col gap-0 justify-around">
                     <p className="text-base text-[#43C9C1] text-center mt-10 px-10">
-                    The robot must grasp and identify one of two{" "}
-                      <b>visually indistinguishable</b> cylindrical objects
-                      with distinct textures and sort it into the correct bin.
+                      The robot must grasp and identify one of two{" "}
+                      <b>visually indistinguishable</b> cylindrical objects with
+                      distinct textures and sort it into the correct bin.
                     </p>
                     <CardContent className="flex flex-col xl:flex-row gap-6 justify-between h-full items-center">
                       <div className="flex-3/5 flex flex-row gap-3">
@@ -819,9 +803,8 @@ export default function Home() {
                 <TabsContent value="05" key="05" className="w-full">
                   <Card className="xl:h-[750px] border-[#8E73E6]/50 bg-[#eaeaea]/50 border-6 flex flex-col gap-0 justify-around">
                     <p className="text-base text-[#8E73E6] text-center mt-10 px-10">
-                      The robot needs to <b>securely</b> plug a pre-grasped
-                      USB into a socket.
-                      brush.
+                      The robot needs to <b>securely</b> plug a pre-grasped USB
+                      into a socket. brush.
                     </p>
                     <CardContent className="flex flex-col xl:flex-row gap-6 justify-between h-full items-center">
                       <div className="flex flex-col flex-3/5 gap-3">
@@ -906,16 +889,25 @@ export default function Home() {
               <div className="w-full flex flex-col items-center mt-20">
                 <div className="w-full max-w-5xl flex flex-row justify-between">
                   <p className="text-base text-left w-full">
-                  We evaluate the usability of FreeTacMan through a user study involving 12 human participants 
-                  with varying levels of experience, each collecting demonstrations across 8 tasks. 
-                  Compared to previous setups, FreeTacMan consistently achieves the <b className="text-[#004cee]">highest completion rates and efficiency</b>, 
-                  and is perceived as <b className="text-[#004cee]">the most user-friendly and reliable</b> data collection system.
+                    We evaluate the usability of FreeTacMan through a user study
+                    involving 12 human participants with varying levels of
+                    experience, each collecting demonstrations across 8 tasks.
+                    Compared to previous setups, FreeTacMan consistently
+                    achieves the{" "}
+                    <b className="text-[#004cee]">
+                      highest completion rates and efficiency
+                    </b>
+                    , and is perceived as{" "}
+                    <b className="text-[#004cee]">
+                      the most user-friendly and reliable
+                    </b>{" "}
+                    data collection system.
                   </p>
                 </div>
               </div>
             </div>
             <div className="w-full flex justify-center mt-10">
-              <img 
+              <img
                 src="https://opendrivelab.github.io/FreeTacMan/user_study/userstudy_results.png"
                 alt="User Study Results"
                 className="max-w-7xl w-full rounded-xl"
@@ -1122,6 +1114,16 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      <footer className="w-full mb-32 flex flex-col gab-10">
+        <div className="w-full pl-6 pr-6 flex flex-row justify-center mt-32">
+          <div className="max-w-7xl w-full flex flex-row justify-between">
+            <div className="flex-1 flex flex-col justify-start">
+              <span className="select-none">FreeTacMan © 2025</span>
+            </div>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }
