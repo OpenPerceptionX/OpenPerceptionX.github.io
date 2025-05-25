@@ -76,7 +76,7 @@ export default function Home() {
   return (
     <main className="w-full">
       {/* Landing Section with Gray Background */}
-      <div className="w-full min-h-screen flex flex-col items-center px-6 bg-[#eaeaea]">
+      <div className="m-20 flex flex-col rounded-sm items-center px-6 bg-[#eaeaea]">
         <div className="flex flex-col py-20 gap-6 w-full h-full max-w-[1792px] justify-around items-center">
           <div className="color-text-1">
             <h1 className="text-8xl lg:text-8xl font-bold text-center">
@@ -1110,13 +1110,13 @@ export default function Home() {
           </div>
 
           <div className="w-full pl-6 pr-6 flex flex-col items-center">
-            <Separator className="max-w-7xl mt-48" />
+            <Separator className="max-w-7xl mt-32" />
           </div>
         </div>
       </div>
 
-      <footer className="w-full mb-32 flex flex-col gab-10">
-        <div className="w-full pl-6 pr-6 flex flex-row justify-center mt-32">
+      <footer className="w-full mb-24 flex flex-col gab-10">
+        <div className="w-full pl-6 pr-6 flex flex-row justify-center mt-24">
           <div className="max-w-7xl w-full flex flex-row justify-between">
             <div className="flex-1 flex flex-col justify-start">
               <span className="select-none">FreeTacMan © 2025</span>
