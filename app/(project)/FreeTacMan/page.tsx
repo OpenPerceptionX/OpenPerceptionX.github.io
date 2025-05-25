@@ -76,13 +76,13 @@ export default function Home() {
   return (
     <main className="w-full">
       {/* Landing Section with Gray Background */}
-      <div className="m-20 flex flex-col rounded-sm items-center px-6 bg-[#eaeaea]">
+      <div className="lg:m-20 flex flex-col rounded-sm items-center px-6 bg-[#eaeaea]">
         <div className="flex flex-col py-20 gap-6 w-full h-full max-w-[1792px] justify-around items-center">
           <div className="color-text-1">
-            <h1 className="text-8xl lg:text-8xl font-bold text-center">
+            <h1 className="text-t0 font-bold text-center">
               FreeTacMan
             </h1>
-            <h1 className="text-3xl lg:text-3xl font-bold text-center">
+            <h1 className="text-2xl lg:text-3xl font-bold text-center">
               Robot-free Visuo-Tactile Data Collection System<br></br>for
               Contact-rich Manipulation
             </h1>
@@ -120,7 +120,7 @@ export default function Home() {
       {/* Main Content Section with Table of Contents */}
       <div className="flex w-full">
         {/* Mobile Navigation */}
-        <MobileNav />
+        {/* <MobileNav /> */}
 
         {/* Main Content */}
         <div className="flex-1 w-full flex flex-col">
