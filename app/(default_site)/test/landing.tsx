@@ -131,7 +131,7 @@ const landings: {
 export function Landing() {
 
     const plugin = React.useRef(
-        Autoplay({ delay: 5000, stopOnInteraction: true, stopOnMouseEnter: true,  stopOnFocusIn: true })
+        Autoplay({ delay: 1000 })
     )
 
     return (
