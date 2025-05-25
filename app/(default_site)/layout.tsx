@@ -116,8 +116,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" className={inter.className}>
-            <body id="#">
+            <main className='w-full'>
 
 
 
@@ -331,7 +330,6 @@ export default function RootLayout({
                 
 
 
-            </body>
-        </html>
+            </main>
     );
 }
