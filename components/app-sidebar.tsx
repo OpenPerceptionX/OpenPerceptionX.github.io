@@ -2,10 +2,6 @@
 
 
 
-import * as React from "react"
-
-
-
 import {
     Sidebar,
     SidebarContent,
@@ -17,8 +13,8 @@ import {
     SidebarMenuButton,
     SidebarMenuSubItem,
     SidebarMenuSub,
-    SidebarGroupLabel,
 } from "@/components/ui/sidebar"
+import { useSidebar } from "@/components/ui/sidebar"
 import {
   Collapsible,
   CollapsibleContent,
@@ -35,26 +31,10 @@ import { FadeIn } from "@/components/animation/fade-in"
 
 
 
-type NavigatorContextProps = {
-    content: { text: string; id: string }[] | null
-}
-const  NavigatorContext = React.createContext< NavigatorContextProps | null>(null)
-function usePageSidebar() {
-    return NavigatorContext
-}
-
-
-function PageSidebarProvider() {
-    const content = null
-    const contextValue = React.useMemo<NavigatorContextProps>(
-        () => ({
-            content
-        }),
-        [content]
-      )
+function PageSidebar() {
+    const { content } = useSidebar()
     if (content != null) {
         return (
-            <NavigatorContext.Provider value={contextValue}>
                 <SidebarMenu className="mb-12 px-8 text-xs overflow-y-scroll no-scrollbar">
                     <span className="font-bold p-2 select-none text-foreground/50">
                         This Page
@@ -66,16 +46,14 @@ function PageSidebarProvider() {
                     ))}
 
                 </SidebarMenu>
-            </NavigatorContext.Provider>
         )
     } else {
-        return (<NavigatorContext.Provider value={contextValue}></NavigatorContext.Provider>)
+        return <SidebarMenu/>
     }
 }
 
-
-
 export function AppSidebar() {
+
     return (
         <FadeIn>
             <Sidebar>
@@ -206,7 +184,7 @@ export function AppSidebar() {
 
 
 
-                <PageSidebarProvider/>
+                <PageSidebar/>
 
 
 
