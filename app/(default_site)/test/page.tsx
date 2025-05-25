@@ -6,7 +6,8 @@ export const metadata: Metadata = {
 };
 
 
-
+import Image from 'next/image'
+import Link from "next/link"
 import {
     Carousel,
     CarouselContent,
@@ -14,6 +15,7 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from "@/components/ui/carousel"
+import { AspectRatio } from "@/components/ui/aspect-ratio"
 
 
 
@@ -138,14 +140,43 @@ export default function Home() {
                         align: "start",
                         loop: true,
                     }}
-                    className="w-full h-full"
+                    className="w-full h-full px-6"
                 >
-                    <CarouselContent  className="w-full h-full bg-amber-600">
+                    <CarouselContent  className="w-full h-svh">
                         {landings.map((landing, index) => (
-                            <CarouselItem key={index}>
-                                {landing.title}
+
+                            <CarouselItem key={index} className="w-full h-full flex flex-col lg:flex-row gap-10 lg:gap-20 justify-center items-center px-20">
+                                
+                                <div className="flex-1/2 w-full h-full flex flex-col justify-center select-none">
+                                    <AspectRatio ratio={16/9}>
+                                        <Image
+                                            src={landing.image}
+                                            alt={landing.title}
+                                            fill
+                                            className="rounded-sm object-cover bg-gradient-landing"
+                                        />
+                                    </AspectRatio>
+                                </div>
+
+
+                                <div className="flex-1/2 flex flex-col gap-10 justify-around select-none">
+                                    <div className="flex flex-row justify-end font-bold">
+                                        {index + 1} / {landings.length}
+                                    </div>
+                                    <div className="flex flex-col gap-10">
+                                        <h1 className="text-t1 font-bold">
+                                            {landing.title}
+                                        </h1>
+                                        <h2>
+                                            {landing.description}
+                                        </h2>
+                                    </div>
+                                </div>
+
+                                
 
                             </CarouselItem>
+
                         ))}
                     </CarouselContent>
                 </Carousel>
