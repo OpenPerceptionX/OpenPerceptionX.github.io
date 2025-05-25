@@ -1,6 +1,11 @@
 "use client"
 
 
+
+import * as React from "react"
+
+
+
 import {
     Sidebar,
     SidebarContent,
@@ -12,8 +17,8 @@ import {
     SidebarMenuButton,
     SidebarMenuSubItem,
     SidebarMenuSub,
+    SidebarGroupLabel,
 } from "@/components/ui/sidebar"
-import { useSidebar } from "@/components/ui/sidebar"
 import {
   Collapsible,
   CollapsibleContent,
@@ -25,20 +30,38 @@ import { Button } from "@/components/ui/button"
 import Image from 'next/image'
 
 
+
 import { FadeIn } from "@/components/animation/fade-in"
 
 
 
+type NavigatorContextProps = {
+    content: { text: string; id: string }[] | null
+}
+const  NavigatorContext = React.createContext< NavigatorContextProps | null>(null)
+function usePageSidebar() {
+    return NavigatorContext
+}
+
+
+function PageSidebarProvider() {
+    const content = [{ text: "dw", id: "dwd"}]
+    const contextValue = React.useMemo<NavigatorContextProps>(
+        () => ({
+            content
+        }),
+        [content]
+      )
+    return (
+        <NavigatorContext.Provider value={contextValue}>
+            
+        </NavigatorContext.Provider>
+  )
+}
+
+
+
 export function AppSidebar() {
-    const {
-        state,
-        open,
-        setOpen,
-        openMobile,
-        setOpenMobile,
-        isMobile,
-        toggleSidebar,
-    } = useSidebar()
     return (
         <FadeIn>
             <Sidebar>
@@ -55,7 +78,14 @@ export function AppSidebar() {
                         </Link>
                     </Button>
                 </div>
+                
                 <SidebarMenu className="mt-24 mb-12 px-8 text-xs overflow-y-scroll no-scrollbar">
+
+
+
+                    <span className="font-bold p-2 select-none text-foreground/50">
+                        OpenDriveLab
+                    </span>
 
 
 
@@ -159,6 +189,13 @@ export function AppSidebar() {
 
 
                 </SidebarMenu>
+
+
+
+                <PageSidebarProvider/>
+
+
+
             </Sidebar>
         </FadeIn>
     )
