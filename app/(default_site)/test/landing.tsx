@@ -163,7 +163,7 @@ export function Landing() {
 
 
                             <div className="flex-1/2 flex flex-col gap-10 justify-around select-none">
-                                <div className="flex flex-row justify-end font-bold">
+                                <div className="flex flex-row font-bold">
                                     {index + 1} / {landings.length}
                                 </div>
                                 <div className="flex flex-col gap-10 w-full">
