@@ -1,7 +1,16 @@
 const events2025data = [
     {
+        heading: "Workshop at IROS 2025",
+        subheading: "FAST: Fully Autonomy Emerges from Situational CogniTion",
+        link: "https://sites.google.com/view/iros2025fastworkshop/home",
+        linkoption: '',
+        background: "/assets/event/iros2025workshop.jpg",
+        backgroundoption: "bg-left",
+        date: "October 19, 2025",
+    },
+    {
         heading: "Workshop at ICCV 2025",
-        subheading: "&nbsp;",
+        subheading: "Learning to See: Advancing Spatial Understanding for Embodied Intelligence",
         link: "/iccv2025/workshop/",
         linkoption: '',
         background: "/assets/event/honolulu.jpg",
