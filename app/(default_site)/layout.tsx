@@ -116,14 +116,14 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-            <main className='w-full'>
+        <main className='w-full overflow-hidden'>
 
 
 
-                {children}
+            {children}
 
 
 
-            </main>
+        </main>
     );
 }

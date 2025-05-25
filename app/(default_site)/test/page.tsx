@@ -140,14 +140,14 @@ export default function Home() {
                         align: "start",
                         loop: true,
                     }}
-                    className="w-full h-full px-6 max-w-3/4"
+                    className="w-full px-6"
                 >
-                    <CarouselContent  className="w-full h-svh">
+                    <CarouselContent  className="w-full">
                         {landings.map((landing, index) => (
 
-                            <CarouselItem key={index} className="w-full h-full flex flex-col  gap-10  justify-center items-center px-20 bg-amber-400 ">
+                            <CarouselItem key={index} className="w-full h-full flex flex-col lg:flex-row gap-10 lg:gap-20 justify-center items-center p-20">
                                 
-                                <div className="flex-1/3 max-w-1/3 h-full flex flex-col justify-center select-none">
+                                <div className="flex-1/2  h-full flex flex-col justify-center select-none">
                                     <AspectRatio ratio={16/9}>
                                         <Image
                                             src={landing.image}
@@ -159,26 +159,31 @@ export default function Home() {
                                 </div>
 
 
-                                <div className="flex-1/2 max-w-1/2 flex flex-col gap-10 justify-around select-none overflow-hidden">
-                                    <div className="flex flex-row justify-end font-bold overflow-hidden">
+                                <div className="flex-1/2 max-w-1/2 flex flex-col gap-10 justify-around select-none">
+                                    <div className="flex flex-row justify-end font-bold">
                                         {index + 1} / {landings.length}
                                     </div>
-                                    <div className="flex flex-col gap-10 w-full overflow-hidden">
+                                    <div className="flex flex-col gap-10 w-full">
                                         <h1 className="text-t1 font-bold w-full">
                                             {landing.title}
                                         </h1>
-                                        <h2 className="w-full overflow-hidden">
+                                        <h2 className="w-full">
                                             {landing.description}
                                         </h2>
-                                        {/* <div className="max-w-2/3 overflow-hidden">
-                                            <div className="max-w-2/3 flex flex-row gap-3 overflow-hidden">
+                                        <div >
+                                            <div className="flex flex-row items-center">
                                                 {landing.links.map((link, index) => (
-                                                    <Link key={index} href={link.url} target="_self" className="animated-underline">
-                                                        {link.link}
-                                                    </Link>
+                                                    <div key={index} className="flex items-center">
+                                                        <Link href={link.url} target="_self" className="animated-underline mr-3">
+                                                            {link.link}
+                                                        </Link>
+                                                        {index < landing.links.length - 1 && (
+                                                            <span className="text-xs mr-3"> | </span>
+                                                        )}
+                                                    </div>
                                             ))} 
                                             </div>
-                                        </div> */}
+                                        </div>
                                     </div>
                                 </div>
 

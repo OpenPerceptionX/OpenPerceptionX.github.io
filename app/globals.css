@@ -147,7 +147,7 @@
     @apply transition delay-100 duration-200;
 }
 .animated-underline:hover {
-    @apply border-b-inherit;
+    @apply border-b-o-blue;
 }
 
 
