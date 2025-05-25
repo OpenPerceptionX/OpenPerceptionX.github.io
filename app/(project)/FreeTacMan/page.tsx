@@ -118,17 +118,15 @@ export default function Home() {
       </div>
 
       {/* Main Content Section with Table of Contents */}
-      <div className="flex w-full">
         {/* Mobile Navigation */}
         {/* <MobileNav /> */}
 
         {/* Main Content */}
-        <div className="flex-1 w-full flex flex-col">
           {/* Highlights */}
-          <div
-            className="w-full pl-6 pr-6 flex flex-col items-center"
-            id="highlights"
-          >
+
+
+
+          <div className="w-full pl-6 pr-6 flex flex-col items-center" id="highlights">
             <div className="w-full flex flex-col items-center mt-16">
               <div className="w-full max-w-7xl flex flex-row justify-between">
                 <h2 className="text-3xl font-bold">
@@ -159,6 +157,11 @@ export default function Home() {
                 </h2>
               </div>
             </div>
+          </div>
+
+
+
+          <div className="w-full pl-6 pr-6 flex flex-col items-center">
             <div className="w-full pl-6 pr-6 flex flex-col items-center">
               <div className="w-full flex flex-col items-center mt-20">
                 <div className="w-full max-w-5xl flex flex-row justify-between">
@@ -202,6 +205,11 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
+
+
+
+          <div className="w-full pl-6 pr-6 flex flex-col items-center">
             <div className="w-full pl-6 pr-6 flex flex-col items-center">
               <div className="w-full max-w-7xl mt-20">
                 <Tabs
@@ -274,17 +282,22 @@ export default function Home() {
                 </Tabs>
               </div>
             </div>
+          </div>
 
+
+
+
+          <div className="w-full pl-6 pr-6 flex flex-col items-center">
             <div className="w-full pl-6 pr-6 flex flex-col items-center">
               <Separator className="max-w-7xl mt-28" />
             </div>
           </div>
 
+
+
+
           {/* FreeTacMan 3D Model  */}
-          <div
-            className="w-full pl-6 pr-6 flex flex-col items-center"
-            id="model"
-          >
+          <div className="w-full pl-6 pr-6 flex flex-col items-center" id="model">
             <div className="w-full flex flex-col items-center mt-16">
               <div className="w-full max-w-7xl flex flex-row justify-between">
                 <h2 className="text-3xl font-bold">
@@ -315,6 +328,12 @@ export default function Home() {
                 </h2>
               </div>
             </div>
+          </div>
+
+
+
+
+          <div className="w-full pl-6 pr-6 flex flex-col items-center">
             <div className="my-10 flex flex-col items-center pl-6 pr-6 inset-0 w-full">
               <div className="w-full max-w-7xl my-5">
                 <div className="flex flex-col gap-5 h-full">
@@ -376,15 +395,18 @@ export default function Home() {
             </div>
           </div>
 
+
+
+
           <div className="w-full pl-6 pr-6 flex flex-col items-center">
             <Separator className="max-w-7xl mt-68" />
           </div>
 
+
+
+
           {/* Application  */}
-          <div
-            className="w-full pl-6 pr-6 flex flex-col items-center"
-            id="applications"
-          >
+          <div className="w-full pl-6 pr-6 flex flex-col items-center" id="applications">
             <div className="w-full flex flex-col items-center mt-16">
               <div className="w-full max-w-7xl flex flex-row justify-between">
                 <h2 className="text-3xl font-bold">
@@ -415,6 +437,9 @@ export default function Home() {
                 </h2>
               </div>
             </div>
+          </div>
+
+          <div className="w-full pl-6 pr-6 flex flex-col items-center">
             <div className="w-full pl-6 pr-6 flex flex-col items-center">
               <div className="w-full flex flex-col items-center mt-20">
                 <div className="w-full max-w-5xl flex flex-row justify-between">
@@ -426,6 +451,12 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
+
+
+
+
+          <div className="w-full pl-6 pr-6 flex flex-col items-center">
             <div className="w-full pl-6 pr-6 flex flex-col items-center">
               <div className="w-full max-w-7xl mt-20">
                 {/* <div className="bg-[#98AEF3] mt-20 p-10">
@@ -537,15 +568,18 @@ export default function Home() {
             </div>
           </div>
 
+
+
+
           <div className="w-full pl-6 pr-6 flex flex-col items-center">
             <Separator className="max-w-7xl mt-24" />
           </div>
 
+
+
+
           {/* Policy Rollouts */}
-          <div
-            className="w-full pl-6 pr-6 flex flex-col items-center"
-            id="policy-rollouts"
-          >
+          <div className="w-full pl-6 pr-6 flex flex-col items-center" id="policy-rollouts" >
             <div className="w-full flex flex-col items-center mt-16">
               <div className="w-full max-w-7xl flex flex-row justify-between gap-20 items-center">
                 <h2 className="text-3xl font-bold">
@@ -576,7 +610,12 @@ export default function Home() {
                 </h2>
               </div>
             </div>
+          </div>
 
+
+
+
+          <div className="w-full pl-6 pr-6 flex flex-col items-center">
             <div className="w-full pl-6 pr-6 flex flex-col items-center">
               <div className="w-full flex flex-col items-center mt-20">
                 <div className="w-full max-w-5xl flex flex-row justify-between">
@@ -606,6 +645,12 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
+
+
+
+
+          <div className="w-full pl-6 pr-6 flex flex-col items-center">
             <div className="w-full max-w-7xl mt-20">
               <Tabs
                 defaultValue={policy_rollouts[0].id}
@@ -845,15 +890,20 @@ export default function Home() {
             </div>
           </div>
 
+
+
+
+
           <div className="w-full pl-6 pr-6 flex flex-col items-center">
             <Separator className="max-w-7xl mt-28" />
           </div>
 
+
+
+
+
           {/* User Study */}
-          <div
-            className="w-full pl-6 pr-6 flex flex-col items-center"
-            id="user-study"
-          >
+          <div className="w-full pl-6 pr-6 flex flex-col items-center" id="user-study" >
             <div className="w-full flex flex-col items-center mt-16">
               <div className="w-full max-w-7xl flex flex-row justify-between items-center gap-20">
                 <h2 className="text-3xl font-bold">
@@ -884,7 +934,12 @@ export default function Home() {
                 </h2>
               </div>
             </div>
+          </div>
 
+
+
+
+          <div className="w-full pl-6 pr-6 flex flex-col items-center">
             <div className="w-full pl-6 pr-6 flex flex-col items-center">
               <div className="w-full flex flex-col items-center mt-20">
                 <div className="w-full max-w-5xl flex flex-row justify-between">
@@ -906,6 +961,11 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
+
+
+
+          <div className="w-full pl-6 pr-6 flex flex-col items-center">
             <div className="w-full flex justify-center mt-10">
               <img
                 src="https://opendrivelab.github.io/FreeTacMan/user_study/userstudy_results.png"
@@ -1109,11 +1169,15 @@ export default function Home() {
             </div>
           </div>
 
+
+
+
           <div className="w-full pl-6 pr-6 flex flex-col items-center">
             <Separator className="max-w-7xl mt-32" />
           </div>
-        </div>
-      </div>
+
+
+
 
       <footer className="w-full mb-24 flex flex-col gab-10">
         <div className="w-full pl-6 pr-6 flex flex-row justify-center mt-24">
