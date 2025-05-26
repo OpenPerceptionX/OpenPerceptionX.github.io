@@ -75,8 +75,9 @@ const policy_rollouts: { id: string; title: string; color: string }[] = [
 export default function Home() {
   return (
     <main className="w-full overflow-hidden">
+      tes
       {/* Landing Section with Gray Background */}
-      <div className="lg:m-20 flex flex-col rounded-sm items-center px-6 bg-[#eaeaea]">
+      {/* <div className="lg:m-20 flex flex-col rounded-sm items-center px-6 bg-[#eaeaea]">
         <div className="flex flex-col py-20 gap-6 w-full h-full max-w-[1792px] justify-around items-center">
           <div className="color-text-1">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center">
@@ -115,7 +116,7 @@ export default function Home() {
             </span>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Main Content Section with Table of Contents */}
         {/* Mobile Navigation */}
