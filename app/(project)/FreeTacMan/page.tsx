@@ -1089,7 +1089,7 @@ export default function Home() {
                 className="w-full"
               >
                 <CarouselContent>
-                  <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <CarouselItem className=" 2xl:basis-1/3">
                     <Card className="border-[#174BE5]/50 bg-[#eaeaea]/50 border-0">
                       <CardContent className="flex flex-col aspect-square items-center justify-center p-6 gap-10">
                         <p className="text-xl font-bold text-[#174BE5]">
@@ -1101,7 +1101,7 @@ export default function Home() {
                           loop
                           muted
                           playsInline
-                          className="border-6 border-[#174BE5]/50 rounded-xl object-fit"
+                          className="border-6 border-[#174BE5]/50 rounded-xl object-fit "
                         >
                           <source src="https://opendrivelab.github.io/FreeTacMan/user_study/FragileCupManipulation.mp4" />
                         </video>
