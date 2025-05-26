@@ -94,17 +94,19 @@ export default function Home() {
               your patience! Best viewed in Chrome on a desktop.
             </span>
           </div>
-          <div className="flex justify-center items-center flex-col gap-6 max-w-[1024px]">
+          <div className="flex justify-center items-center flex-col gap-6 max-w-7xl">
             <video
               preload="none"
               autoPlay
               loop
               muted
               playsInline
-              className="w-full object-fit max-w-[1024px]"
+              className="w-full object-fit"
             >
               <source src="https://opendrivelab.github.io/FreeTacMan/landing/FreeTacMan_teaser_gray.mp4" />
             </video>
+          </div>
+          <div className="flex justify-center items-center flex-col gap-6 max-w-4xl">
             <span className="text-base italic text-gray-400 text-left w-full">
               FreeTacMan is a robot-free, human-centric visuo-tactile data
               collection system, featuring low-cost, high-resolution tactile
@@ -127,7 +129,7 @@ export default function Home() {
 
 
           <div className="w-full pl-6 pr-6 flex flex-col items-center" id="highlights">
-            <div className="w-full flex flex-col items-center mt-16">
+            <div className="w-full flex flex-col items-center mt-4">
               <div className="w-full max-w-4xl flex flex-row justify-between">
                 <h2 className="text-3xl font-bold">
                   <Link
@@ -163,7 +165,7 @@ export default function Home() {
 
           <div className="w-full pl-6 pr-6 flex flex-col items-center">
             <div className="w-full pl-6 pr-6 flex flex-col items-center">
-              <div className="w-full flex flex-col items-center mt-20">
+              <div className="w-full flex flex-col items-center mt-12">
                 <div className="w-full max-w-4xl flex flex-row justify-between">
                   <div className="flex flex-col gap-6">
                     <p className="text-base text-left w-full">
@@ -211,19 +213,19 @@ export default function Home() {
 
           <div className="w-full pl-6 pr-6 flex flex-col items-center">
             <div className="w-full pl-6 pr-6 flex flex-col items-center">
-              <div className="w-full max-w-6xl mt-20">
+              <div className="w-full max-w-7xl mt-16">
                 <Tabs
                   defaultValue="01"
-                  className="flex flex-row w-full gap-6 h-[576px]"
+                  className="flex flex-row w-full gap-6 h-[410px]"
                 >
                   <TabsList className="flex flex-col justify-between gap-6 h-full">
                     <TabsTrigger
                       value="01"
                       key="01"
-                      className="data-[state=active]:text-[#174BE5] disabled:pointer-events-none flex flex-col py-6 px-3 justify-around rounded-xl text-background font-bold bg-[url('https://opendrivelab.github.io/FreeTacMan/highlights/01.png')] bg-center bg-cover bg-black bg-opacity-50 bg-blend-overlay w-80 flex-1/3"
+                      className="data-[state=active]:text-[#174BE5] disabled:pointer-events-none flex flex-col py-6 px-3 justify-around rounded-xl text-background font-bold bg-[url('https://opendrivelab.github.io/FreeTacMan/highlights/01.png')] bg-center bg-cover bg-black bg-opacity-50 bg-blend-overlay w-60 flex-1/3"
                     >
-                      <h2 className="text-5xl">01</h2>
-                      <p className="text-base">
+                      <h2 className="text-4xl">01</h2>
+                      <p className="text-xs font-semibold">
                         Portable, High-resolution, Low-cost<br></br>
                         Visuo-Tactile Hardware Sensor
                       </p>
@@ -231,10 +233,10 @@ export default function Home() {
                     <TabsTrigger
                       value="02"
                       key="02"
-                      className="data-[state=active]:text-[#174BE5] disabled:pointer-events-none flex flex-col py-6 px-3 justify-around rounded-xl text-background font-bold bg-[url('https://opendrivelab.github.io/FreeTacMan/highlights/02.png')] bg-center bg-cover bg-black bg-opacity-50 bg-blend-overlay w-80 flex-1/3"
+                      className="data-[state=active]:text-[#174BE5] disabled:pointer-events-none flex flex-col py-6 px-3 justify-around rounded-xl text-background font-bold bg-[url('https://opendrivelab.github.io/FreeTacMan/highlights/02.png')] bg-center bg-cover bg-black bg-opacity-50 bg-blend-overlay w-60 flex-1/3"
                     >
-                      <h2 className="text-5xl">02</h2>
-                      <p className="text-base">
+                      <h2 className="text-4xl">02</h2>
+                      <p className="text-xs font-semibold">
                         In-situ, Robot-free, Real-time Tactile<br></br>
                         Data-collection System
                       </p>
@@ -242,10 +244,10 @@ export default function Home() {
                     <TabsTrigger
                       value="03"
                       key="03"
-                      className="data-[state=active]:text-[#174BE5] disabled:pointer-events-none flex flex-col py-6 px-3 justify-around rounded-xl text-background font-bold bg-[url('https://opendrivelab.github.io/FreeTacMan/highlights/03.png')] bg-center bg-cover bg-black bg-opacity-50 bg-blend-overlay w-80 flex-1/3"
+                      className="data-[state=active]:text-[#174BE5] disabled:pointer-events-none flex flex-col py-6 px-3 justify-around rounded-xl text-background font-bold bg-[url('https://opendrivelab.github.io/FreeTacMan/highlights/03.png')] bg-center bg-cover bg-black bg-opacity-50 bg-blend-overlay w-60 flex-1/3"
                     >
-                      <h2 className="text-5xl">03</h2>
-                      <p className="text-base">
+                      <h2 className="text-4xl">03</h2>
+                      <p className="text-xs font-semibold">
                         Visuo-Tactile Policy Learning <br></br> Tactile
                         Pretraining
                       </p>
@@ -255,7 +257,7 @@ export default function Home() {
                   <TabsContent value="01" key="01" className="w-full h-full">
                     <Card className="border-8 border-[#98AEF3] h-full">
                       <CardContent className="h-full flex justify-center items-center">
-                        <video preload="none" autoPlay loop muted playsInline>
+                        <video preload="none" autoPlay loop muted playsInline className="max-h-[380px]">
                           <source src="https://opendrivelab.github.io/FreeTacMan/highlights/highlight01.mp4" />
                         </video>
                       </CardContent>
@@ -264,7 +266,7 @@ export default function Home() {
                   <TabsContent value="02" key="02" className="w-full">
                     <Card className="border-8 border-[#98AEF3] h-full">
                       <CardContent className="h-full flex justify-center items-center">
-                        <video preload="none" autoPlay loop muted playsInline>
+                        <video preload="none" autoPlay loop muted playsInline className="max-h-[380px]">
                           <source src="https://opendrivelab.github.io/FreeTacMan/highlights/highlight2_9_16.mp4" />
                         </video>
                       </CardContent>
@@ -273,7 +275,7 @@ export default function Home() {
                   <TabsContent value="03" key="03" className="w-full">
                     <Card className="border-8 border-[#98AEF3] h-full">
                       <CardContent className="h-full flex justify-center items-center">
-                        <video preload="none" autoPlay loop muted playsInline>
+                        <video preload="none" autoPlay loop muted playsInline className="max-h-[380px]">
                           <source src="https://opendrivelab.github.io/FreeTacMan/highlights/20250508-062620.mp4" />
                         </video>
                       </CardContent>
@@ -289,7 +291,7 @@ export default function Home() {
 
           <div className="w-full pl-6 pr-6 flex flex-col items-center">
             <div className="w-full pl-6 pr-6 flex flex-col items-center">
-              <Separator className="max-w-4xl mt-28" />
+              <Separator className="max-w-4xl mt-24" />
             </div>
           </div>
 
@@ -298,7 +300,7 @@ export default function Home() {
 
           {/* FreeTacMan 3D Model  */}
           <div className="w-full pl-6 pr-6 flex flex-col items-center" id="model">
-            <div className="w-full flex flex-col items-center mt-16">
+            <div className="w-full flex flex-col items-center mt-24">
               <div className="w-full max-w-4xl flex flex-row justify-between">
                 <h2 className="text-3xl font-bold">
                   <Link
@@ -334,14 +336,14 @@ export default function Home() {
 
 
           <div className="w-full pl-6 pr-6 flex flex-col items-center">
-            <div className="my-10 flex flex-col items-center pl-6 pr-6 inset-0 w-full">
-              <div className="w-full max-w-4xl my-5">
+            <div className="mt-12 flex flex-col items-center pl-6 pr-6 inset-0 w-full">
+              <div className="w-full max-w-4xl">
                 <div className="flex flex-col gap-5 h-full">
                   <div className="flex flex-col justify-center gap-5">
                     <span className="font-bold text-2xl text-center">
                       Interactive Modal Viewer
                     </span>
-                    <p className="text-base text-center max-w-6xl">
+                    <p className="text-base text-center max-w-7xl">
                       Dive into our 💡
                       <b className="text-[#004cee]">interactive</b> 3D model
                       viewer and explore the most popular native 3D formats with
@@ -358,7 +360,7 @@ export default function Home() {
                       className="h-[640px] border-4 border-white hover:border-[#174BE5] transition-colors duration-300 rounded-lg"
                     ></iframe>
                   </div>
-                  <div className="w-full object-fit bg-white flex flex-row gap-10 p-10  h-[640px] justify-center">
+                  <div className="w-full object-fit bg-white flex flex-row gap-10 mt-12  h-[720px] justify-center">
                     <div className="flex flex-col gap-5 justify-around">
                       <div className="flex flex-row justify-around">
                         <span className="font-bold text-2xl">
@@ -373,7 +375,7 @@ export default function Home() {
                       </video>
                       <div className="w-full flex justify-center">
                         <div className="max-w-4xl">
-                          <p className="text-base text-left w-full">
+                          <p className="text-base text-left w-full mt-3">
                             FreeTacMan features a universal gripper interface
                             with quick-swap mounts compatible with various
                             robots, such as Piper and Franka, with support for
@@ -399,7 +401,7 @@ export default function Home() {
 
 
           <div className="w-full pl-6 pr-6 flex flex-col items-center">
-            <Separator className="max-w-4xl mt-68" />
+            <Separator className="max-w-4xl mt-24" />
           </div>
 
 
@@ -407,7 +409,7 @@ export default function Home() {
 
           {/* Application  */}
           <div className="w-full pl-6 pr-6 flex flex-col items-center" id="applications">
-            <div className="w-full flex flex-col items-center mt-16">
+            <div className="w-full flex flex-col items-center mt-24">
               <div className="w-full max-w-4xl flex flex-row justify-between">
                 <h2 className="text-3xl font-bold">
                   <Link
@@ -458,7 +460,7 @@ export default function Home() {
 
           <div className="w-full pl-6 pr-6 flex flex-col items-center">
             <div className="w-full pl-6 pr-6 flex flex-col items-center">
-              <div className="w-full max-w-6xl mt-20">
+              <div className="w-full max-w-7xl mt-20">
                 {/* <div className="bg-[#98AEF3] mt-20 p-10">
                                 <div className="flex w-full justify-center border-8 bg-[#eaeaea]">
                                     <span className="text-3xl font-bold text-center p-10  select-none">FreeTacMan</span>
@@ -647,7 +649,7 @@ export default function Home() {
                   <img
                     src="https://opendrivelab.github.io/FreeTacMan/policy_rollouts/policy rollouts_results.png"
                     alt="Policy Rollouts Results"
-                    className="max-w-6xl w-full"
+                    className="max-w-7xl w-full"
                   />
                 </div>
               </div>
@@ -977,7 +979,7 @@ export default function Home() {
               <img
                 src="https://opendrivelab.github.io/FreeTacMan/user_study/userstudy_results.png"
                 alt="User Study Results"
-                className="max-w-6xl w-full rounded-xl"
+                className="max-w-7xl w-full rounded-xl"
               />
             </div>
             <div className="w-full max-w-[1400px] px-20 3xl:px-64 mt-10 p-6 overflow-hidden">
@@ -1180,7 +1182,7 @@ export default function Home() {
 
 
           <div className="w-full pl-6 pr-6 flex flex-col items-center">
-            <Separator className="max-w-4xl mt-32" />
+            <Separator className="max-w-4xl mt-24" />
           </div>
 
 
