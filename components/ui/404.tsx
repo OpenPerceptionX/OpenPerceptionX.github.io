@@ -97,7 +97,7 @@ export default function NotFound404() {
         redirect('/legacy/RoboDual/index.html')
     }
     if (
-        pathname.toLowerCase().startsWith('/freetacman')
+        pathname.toLowerCase().startsWith('/freetacman') && pathname != '/FreeTacMan'
     ) {
         redirect('/FreeTacMan')
     }
