@@ -129,7 +129,7 @@ export default function Home() {
 
 
           <div className="w-full pl-6 pr-6 flex flex-col items-center" id="highlights">
-            <div className="w-full flex flex-col items-center mt-4">
+            <div className="w-full flex flex-col items-center mt-24 lg:mt-4">
               <div className="w-full max-w-4xl flex flex-row justify-between">
                 <h2 className="text-3xl font-bold">
                   <Link
@@ -163,7 +163,6 @@ export default function Home() {
 
 
 
-          <div className="w-full pl-6 pr-6 flex flex-col items-center">
             <div className="w-full pl-6 pr-6 flex flex-col items-center">
               <div className="w-full flex flex-col items-center mt-12">
                 <div className="w-full max-w-4xl flex flex-row justify-between">
@@ -207,11 +206,9 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
 
 
 
-          <div className="w-full pl-6 pr-6 flex flex-col items-center">
             <div className="w-full pl-6 pr-6 flex flex-col items-center">
               <div className="w-full max-w-7xl mt-16">
                 <Tabs
@@ -284,16 +281,13 @@ export default function Home() {
                 </Tabs>
               </div>
             </div>
-          </div>
 
 
 
 
-          <div className="w-full pl-6 pr-6 flex flex-col items-center">
             <div className="w-full pl-6 pr-6 flex flex-col items-center">
               <Separator className="max-w-4xl mt-24" />
             </div>
-          </div>
 
 
 
@@ -336,7 +330,7 @@ export default function Home() {
 
 
           <div className="w-full pl-6 pr-6 flex flex-col items-center">
-            <div className="mt-12 flex flex-col items-center pl-6 pr-6 inset-0 w-full">
+            <div className="mt-12 flex flex-col items-center inset-0 w-full">
               <div className="w-full max-w-4xl">
                 <div className="flex flex-col gap-5 h-full">
                   <div className="flex flex-col justify-center gap-5">
@@ -442,7 +436,6 @@ export default function Home() {
           </div>
 
           <div className="w-full pl-6 pr-6 flex flex-col items-center">
-            <div className="w-full pl-6 pr-6 flex flex-col items-center">
               <div className="w-full flex flex-col items-center mt-12">
                 <div className="w-full max-w-4xl flex flex-row justify-between">
                   <p className="text-base text-left w-full">
@@ -452,13 +445,11 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-            </div>
           </div>
 
 
 
 
-          <div className="w-full pl-6 pr-6 flex flex-col items-center">
             <div className="w-full pl-6 pr-6 flex flex-col items-center">
               <div className="w-full max-w-7xl mt-12">
                 {/* <div className="bg-[#98AEF3] mt-20 p-10">
@@ -568,7 +559,6 @@ export default function Home() {
                             </p> */}
               </div>
             </div>
-          </div>
 
 
 
@@ -617,7 +607,6 @@ export default function Home() {
 
 
 
-          <div className="w-full pl-6 pr-6 flex flex-col items-center">
             <div className="w-full pl-6 pr-6 flex flex-col items-center">
               <div className="w-full flex flex-col items-center mt-12">
                 <div className="w-full max-w-4xl flex flex-row justify-between">
@@ -640,9 +629,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
 
-          <div className="w-full pl-6 pr-6 flex flex-col items-center">
             <div className="w-full pl-6 pr-6 flex flex-col items-center">
               <div className="w-full flex flex-col items-center mt-6">
                 <div className="w-full flex justify-center">
@@ -654,7 +641,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
 
 
 
@@ -948,7 +934,6 @@ export default function Home() {
 
 
 
-          <div className="w-full pl-6 pr-6 flex flex-col items-center">
             <div className="w-full pl-6 pr-6 flex flex-col items-center">
               <div className="w-full flex flex-col items-center mt-12">
                 <div className="w-full max-w-4xl flex flex-row justify-between">
@@ -970,7 +955,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
 
 
 
