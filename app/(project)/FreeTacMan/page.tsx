@@ -443,7 +443,7 @@ export default function Home() {
 
           <div className="w-full pl-6 pr-6 flex flex-col items-center">
             <div className="w-full pl-6 pr-6 flex flex-col items-center">
-              <div className="w-full flex flex-col items-center mt-20">
+              <div className="w-full flex flex-col items-center mt-12">
                 <div className="w-full max-w-4xl flex flex-row justify-between">
                   <p className="text-base text-left w-full">
                     We evaluate the effectiveness of FreeTacMan system and the
@@ -460,7 +460,7 @@ export default function Home() {
 
           <div className="w-full pl-6 pr-6 flex flex-col items-center">
             <div className="w-full pl-6 pr-6 flex flex-col items-center">
-              <div className="w-full max-w-7xl mt-20">
+              <div className="w-full max-w-7xl mt-12">
                 {/* <div className="bg-[#98AEF3] mt-20 p-10">
                                 <div className="flex w-full justify-center border-8 bg-[#eaeaea]">
                                     <span className="text-3xl font-bold text-center p-10  select-none">FreeTacMan</span>
@@ -582,7 +582,7 @@ export default function Home() {
 
           {/* Policy Rollouts */}
           <div className="w-full pl-6 pr-6 flex flex-col items-center" id="policy-rollouts" >
-            <div className="w-full flex flex-col items-center mt-16">
+            <div className="w-full flex flex-col items-center mt-24">
               <div className="w-full max-w-4xl flex flex-row justify-between gap-20 items-center">
                 <h2 className="text-3xl font-bold">
                   <Link
@@ -619,7 +619,7 @@ export default function Home() {
 
           <div className="w-full pl-6 pr-6 flex flex-col items-center">
             <div className="w-full pl-6 pr-6 flex flex-col items-center">
-              <div className="w-full flex flex-col items-center mt-20">
+              <div className="w-full flex flex-col items-center mt-12">
                 <div className="w-full max-w-4xl flex flex-row justify-between">
                   <p className="text-base text-left w-full">
                     We integrate{" "}
@@ -644,8 +644,8 @@ export default function Home() {
 
           <div className="w-full pl-6 pr-6 flex flex-col items-center">
             <div className="w-full pl-6 pr-6 flex flex-col items-center">
-              <div className="w-full flex flex-col items-center mt-20">
-                <div className="w-full flex justify-center mt-10">
+              <div className="w-full flex flex-col items-center mt-6">
+                <div className="w-full flex justify-center">
                   <img
                     src="https://opendrivelab.github.io/FreeTacMan/policy_rollouts/policy rollouts_results.png"
                     alt="Policy Rollouts Results"
@@ -660,7 +660,7 @@ export default function Home() {
 
 
           <div className="w-full pl-6 pr-6 flex flex-col items-center">
-            <div className="w-full max-w-4xl mt-20">
+            <div className="w-full max-w-4xl mt-12">
               <Tabs
                 defaultValue={policy_rollouts[0].id}
                 className="flex flex-col w-full"
@@ -904,7 +904,7 @@ export default function Home() {
 
 
           <div className="w-full pl-6 pr-6 flex flex-col items-center">
-            <Separator className="max-w-4xl mt-28" />
+            <Separator className="max-w-4xl mt-24" />
           </div>
 
 
@@ -913,7 +913,7 @@ export default function Home() {
 
           {/* User Study */}
           <div className="w-full pl-6 pr-6 flex flex-col items-center" id="user-study" >
-            <div className="w-full flex flex-col items-center mt-16">
+            <div className="w-full flex flex-col items-center mt-24">
               <div className="w-full max-w-4xl flex flex-row justify-between items-center gap-20">
                 <h2 className="text-3xl font-bold">
                   <Link
@@ -950,7 +950,7 @@ export default function Home() {
 
           <div className="w-full pl-6 pr-6 flex flex-col items-center">
             <div className="w-full pl-6 pr-6 flex flex-col items-center">
-              <div className="w-full flex flex-col items-center mt-20">
+              <div className="w-full flex flex-col items-center mt-12">
                 <div className="w-full max-w-4xl flex flex-row justify-between">
                   <p className="text-base text-left w-full">
                     We evaluate the usability of FreeTacMan through a user study
@@ -982,7 +982,7 @@ export default function Home() {
                 className="max-w-7xl w-full rounded-xl"
               />
             </div>
-            <div className="w-full max-w-[1400px] px-20 3xl:px-64 mt-10 p-6 overflow-hidden">
+            <div className="w-full max-w-[1400px] px-20 3xl:px-64 mt-10  overflow-hidden">
               <Carousel
                 opts={{
                   align: "start",
