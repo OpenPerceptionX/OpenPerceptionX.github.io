@@ -450,7 +450,7 @@ export default function Home() {
 
 
 
-            <div className="w-full pl-6 pr-6 flex flex-col items-center">
+            <div className="w-full pl-6 pr-6  flex-col items-center hidden lg:flex">
               <div className="w-full max-w-7xl mt-12">
                 {/* <div className="bg-[#98AEF3] mt-20 p-10">
                                 <div className="flex w-full justify-center border-8 bg-[#eaeaea]">
@@ -560,6 +560,120 @@ export default function Home() {
               </div>
             </div>
 
+
+            <div className="w-full pl-6 pr-6 flex flex-col items-center lg:hidden">
+              <div className="w-full max-w-7xl mt-12">
+                {/* <div className="bg-[#98AEF3] mt-20 p-10">
+                                <div className="flex w-full justify-center border-8 bg-[#eaeaea]">
+                                    <span className="text-3xl font-bold text-center p-10  select-none">FreeTacMan</span>
+                                </div>
+                            </div>
+                            <div className="flex justify-center">
+                                <img src="/3d_model/arrowdown.png" className="max-h-48 select-none"/>
+                            </div> */}
+                <div className="border-8 border-[#98AEF3] ">
+                  <div className="p-10 flex flex-row gap-10 justify-around">
+                    <div className="flex flex-col gap-6 max-w-32">
+                      <span className="font-bold text-base text-center">
+                        Fragile Cup Manipulation
+                      </span>
+                      <div className="flex justify-center items-center">
+                        <img
+                          src="https://opendrivelab.github.io/FreeTacMan/task/FragileCupManipulation.png"
+                          className="h-24 select-none"
+                        />
+                      </div>
+                    </div>
+                    <div className="flex flex-col gap-6 max-w-32">
+                      <span className="font-bold text text-center">
+                        USB Plugging
+                      </span>
+                      <div className="flex justify-center items-center">
+                        <img
+                          src="https://opendrivelab.github.io/FreeTacMan/task/USBPlugging.png"
+                          className="h-24 select-none"
+                        />
+                      </div>
+                    </div>
+                    </div>
+                    <div className="p-10 flex flex-row gap-10 justify-around">
+                    <div className="flex flex-col gap-6 max-w-32">
+                      <span className="font-bold text-base text-center">
+                        Texture Classification
+                      </span>
+                      <div className="flex justify-center items-center">
+                        <img
+                          src="https://opendrivelab.github.io/FreeTacMan/task/TextureClassification.png"
+                          className="h-24 select-none"
+                        />
+                      </div>
+                    </div>
+                    <div className="flex flex-col gap-6 max-w-32">
+                      <span className="font-bold text-base text-center">
+                        Stamp Pressing
+                      </span>
+                      <div className="flex justify-center items-center">
+                        <img
+                          src="https://opendrivelab.github.io/FreeTacMan/task/StampPressing.png"
+                          className="h-24 select-none"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="p-10 flex flex-row gap-10 justify-around">
+                    <div className="flex flex-col gap-6 max-w-32">
+                      <span className="font-bold text-base text-center">
+                        Calligraphy Writing
+                      </span>
+                      <div className="flex justify-center items-center">
+                        <img
+                          src="https://opendrivelab.github.io/FreeTacMan/task/CalligraphyWriting.png"
+                          className="h-24 select-none"
+                        />
+                      </div>
+                    </div>
+                    <div className="flex flex-col gap-6 max-w-32">
+                      <span className="font-bold text-base text-center">
+                        Toothpaste Extrusion
+                      </span>
+                      <div className="flex justify-center items-center">
+                        <img
+                          src="https://opendrivelab.github.io/FreeTacMan/task/ToothpasteExtrusion.png"
+                          className="h-24 select-none"
+                        />
+                      </div>
+                    </div>
+                    </div>
+                    <div className="p-10 flex flex-row gap-10 justify-around">
+                    <div className="flex flex-col gap-6 max-w-32">
+                      <span className="font-bold text-base text-center">
+                        Tissue Grasping
+                      </span>
+                      <div className="flex justify-center items-center">
+                        <img
+                          src="https://opendrivelab.github.io/FreeTacMan/task/TissueGrasping.png"
+                          className="h-24 select-none"
+                        />
+                      </div>
+                    </div>
+                    <div className="flex flex-col gap-6 max-w-32">
+                      <span className="font-bold text-base text-center">
+                        Potato Chip Grasping
+                      </span>
+                      <div className="flex justify-center items-center">
+                        <img
+                          src="https://opendrivelab.github.io/FreeTacMan/task/PotatoChipGrasping.png"
+                          className="h-24 select-none"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {/* <p className="text-base text-center mt-10">
+                                We evaluate the effectiveness of FreeTacMan system and the quality of the collected visuo-tactile demonstration through a diverse set of contact-rich manipulation tasks.
+                            </p> */}
+              </div>
+            </div>
 
 
 
