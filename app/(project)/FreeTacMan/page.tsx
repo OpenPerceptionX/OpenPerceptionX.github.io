@@ -1190,7 +1190,7 @@ export default function Home() {
         <div className="w-full pl-6 pr-6 flex flex-row justify-center mt-24">
           <div className="max-w-4xl w-full flex flex-row justify-between">
             <div className="flex-1 flex flex-col justify-start">
-              <span className="select-none">FreeTacMan © 2025</span>
+              <span className="select-none">OpenDriveLab © 2025</span>
             </div>
           </div>
         </div>
