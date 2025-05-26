@@ -771,7 +771,7 @@ export default function Home() {
                       value={policy_rollout.id}
                       key={policy_rollout.id}
                       className={
-                        "shadow-sm rounded-xl w-full  px-1 lg:px-10 py-3 bg-[#eaeaea] font-bold text-background " +
+                        "shadow-sm rounded-xl w-full  px-1 xl:px-10 py-3 bg-[#eaeaea] text-xs lg:text-base font-bold text-background " +
                         policy_rollout.color
                       }
                     >
@@ -807,7 +807,7 @@ export default function Home() {
                             loop
                             muted
                             playsInline
-                            className="border-6 border-[#174BE5]/50 rounded-xl object-fit"
+                            className="border-6 border-[#174BE5]/50 rounded-xl object-fit max-w-[500px]"
                           >
                             <source src="https://opendrivelab.github.io/FreeTacMan/policy_rollouts/FragileCupManipulation.mov" />
                           </video>
@@ -816,7 +816,7 @@ export default function Home() {
                           The videos are played at normal speed.
                         </p>
                       </div>
-                      <div className="flex-2/5 w-full">
+                      <div className="flex-2/5 w-full  max-w-[500px]">
                         <PolicyRollouts1 />
                       </div>
                     </CardContent>
@@ -861,7 +861,7 @@ export default function Home() {
                           </p>
                         </div>
                       </div>
-                      <div className="flex-2/5 w-full">
+                      <div className="flex-2/5 w-full max-w-[500px]">
                         <PolicyRollouts2 />
                       </div>
                     </CardContent>
@@ -894,7 +894,7 @@ export default function Home() {
                             loop
                             muted
                             playsInline
-                            className="border-6 border-[#FFC53D]/50 rounded-xl object-fit"
+                            className="border-6 border-[#FFC53D]/50 rounded-xl object-fit max-w-[500px]"
                           >
                             <source src="https://opendrivelab.github.io/FreeTacMan/policy_rollouts/StampPressing.mov" />
                           </video>
@@ -903,7 +903,7 @@ export default function Home() {
                           The videos are played at normal speed.
                         </p>
                       </div>
-                      <div className="flex-2/5 w-full">
+                      <div className="flex-2/5 w-full max-w-[500px]">
                         <PolicyRollouts3 />
                       </div>
                     </CardContent>
@@ -947,7 +947,7 @@ export default function Home() {
                           </p>
                         </div>
                       </div>
-                      <div className="flex-2/5 w-full">
+                      <div className="flex-2/5 w-full max-w-[500px]">
                         <PolicyRollouts4 />
                       </div>
                     </CardContent>
@@ -980,7 +980,7 @@ export default function Home() {
                             loop
                             muted
                             playsInline
-                            className="border-6 border-[#8E73E6]/50 rounded-xl object-fit"
+                            className="border-6 border-[#8E73E6]/50 rounded-xl object-fit max-w-[500px]"
                           >
                             <source src="https://opendrivelab.github.io/FreeTacMan/policy_rollouts/USBPlugging.mov" />
                           </video>
@@ -989,7 +989,7 @@ export default function Home() {
                           The videos are played at normal speed.
                         </p>
                       </div>
-                      <div className="flex-2/5 w-full">
+                      <div className="flex-2/5 w-full max-w-[500px]">
                         <PolicyRollouts5 />
                       </div>
                     </CardContent>
