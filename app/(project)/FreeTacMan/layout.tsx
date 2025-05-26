@@ -4,12 +4,7 @@ import Link from "next/link";
 
 import "./globals.css";
 
-// font
-import { Inter } from "next/font/google";
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-});
+
 
 export default function RootLayout({
   children,
@@ -17,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.className}>
+    <html lang="en">
       <body id="#">
 
         {children}
