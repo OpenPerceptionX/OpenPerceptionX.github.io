@@ -1089,7 +1089,7 @@ export default function Home() {
                 className="w-full"
               >
                 <CarouselContent>
-                  <CarouselItem className=" 2xl:basis-1/3">
+                  <CarouselItem className=" lg:basis-1/2">
                     <Card className="border-[#174BE5]/50 bg-[#eaeaea]/50 border-0">
                       <CardContent className="flex flex-col aspect-square items-center justify-center p-6 gap-10">
                         <p className="text-xl font-bold text-[#174BE5]">
@@ -1111,7 +1111,7 @@ export default function Home() {
                       </CardContent>
                     </Card>
                   </CarouselItem>
-                  <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <CarouselItem className="lg:basis-1/2">
                     <Card className="border-[#43C9C1]/50 bg-[#eaeaea]/50 border-0">
                       <CardContent className="flex flex-col aspect-square items-center justify-center p-6 gap-10">
                         <p className="text-xl font-bold text-[#43C9C1]">
@@ -1133,7 +1133,7 @@ export default function Home() {
                       </CardContent>
                     </Card>
                   </CarouselItem>
-                  <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <CarouselItem className="lg:basis-1/2">
                     <Card className="border-[#FFC53D]/50 bg-[#eaeaea]/50 border-0">
                       <CardContent className="flex flex-col aspect-square items-center justify-center p-6 gap-10">
                         <p className="text-xl font-bold text-[#FFC53D]">
@@ -1155,7 +1155,7 @@ export default function Home() {
                       </CardContent>
                     </Card>
                   </CarouselItem>
-                  <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <CarouselItem className="lg:basis-1/2">
                     <Card className="border-[#FF668C]/50 bg-[#eaeaea]/50 border-0">
                       <CardContent className="flex flex-col aspect-square items-center justify-center p-6 gap-10">
                         <p className="text-xl font-bold text-[#FF668C]">
@@ -1177,7 +1177,7 @@ export default function Home() {
                       </CardContent>
                     </Card>
                   </CarouselItem>
-                  <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <CarouselItem className="lg:basis-1/2">
                     <Card className="border-[#8E73E6]/50 bg-[#eaeaea]/50 border-0">
                       <CardContent className="flex flex-col aspect-square items-center justify-center p-6 gap-10">
                         <p className="text-xl font-bold text-[#8E73E6]">
@@ -1199,7 +1199,7 @@ export default function Home() {
                       </CardContent>
                     </Card>
                   </CarouselItem>
-                  <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <CarouselItem className="lg:basis-1/2">
                     <Card className="border-[#d20000]/50 bg-[#eaeaea]/50 border-0">
                       <CardContent className="flex flex-col aspect-square items-center justify-center p-6 gap-10">
                         <p className="text-xl font-bold text-[#d20000]">
@@ -1221,7 +1221,7 @@ export default function Home() {
                       </CardContent>
                     </Card>
                   </CarouselItem>
-                  <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <CarouselItem className="lg:basis-1/2">
                     <Card className="border-[#7ed233]/50 bg-[#eaeaea]/50 border-0">
                       <CardContent className="flex flex-col aspect-square items-center justify-center p-6 gap-10">
                         <p className="text-xl font-bold text-[#7ed233]">
@@ -1243,7 +1243,7 @@ export default function Home() {
                       </CardContent>
                     </Card>
                   </CarouselItem>
-                  <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <CarouselItem className="lg:basis-1/2">
                     <Card className="border-[#ff7b00]/50 bg-[#eaeaea]/50 border-0">
                       <CardContent className="flex flex-col aspect-square items-center justify-center p-6 gap-10">
                         <p className="text-xl font-bold text-[#ff7b00]">
