@@ -2,6 +2,17 @@
 
 
 
+import Image from 'next/image'
+import Link from "next/link"
+import { ChevronDown  } from "lucide-react"
+
+
+
+import {
+    Collapsible,
+    CollapsibleContent,
+    CollapsibleTrigger,
+} from "@/components/ui/collapsible"
 import {
     Sidebar,
     SidebarContent,
@@ -15,18 +26,7 @@ import {
     SidebarMenuSub,
 } from "@/components/ui/sidebar"
 import { useSidebar } from "@/components/ui/sidebar"
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible"
-import { ChevronDown  } from "lucide-react"
-import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import Image from 'next/image'
-
-
-
 import { FadeIn } from "@/components/animation/fade-in"
 
 
@@ -52,6 +52,8 @@ function PageSidebar() {
     }
 }
 
+
+
 export function AppSidebar() {
 
     return (
@@ -72,7 +74,7 @@ export function AppSidebar() {
                 </div>
 
 
-                <div className="mt-24  overflow-y-scroll no-scrollbar">
+                <div className="mt-24 overflow-y-scroll no-scrollbar">
                 
                     <SidebarMenu className="mb-12 px-8 text-xs overflow-y-scroll no-scrollbar">
 
@@ -188,6 +190,7 @@ export function AppSidebar() {
 
 
                     <PageSidebar/>
+
 
 
                 </div>
