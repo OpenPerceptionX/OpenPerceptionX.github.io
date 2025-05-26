@@ -134,7 +134,7 @@ export default function Home() {
                     href="#highlights"
                     className="scroll-mt-32 group flex items-center"
                   >
-                    Highlights
+                    {/* Highlights
                     <span className="ml-6 hidden group-hover:inline-block size-10 text-foreground">
                       <svg
                         viewBox="0 0 24 24"
@@ -152,7 +152,7 @@ export default function Home() {
                           strokeLinecap="round"
                         />
                       </svg>
-                    </span>
+                    </span> */}
                   </Link>
                 </h2>
               </div>
@@ -305,7 +305,7 @@ export default function Home() {
                     href="#model"
                     className="scroll-mt-32 group flex items-center"
                   >
-                    3D Model
+                    {/* 3D Model
                     <span className="ml-6 hidden group-hover:inline-block size-10 text-foreground">
                       <svg
                         viewBox="0 0 24 24"
@@ -323,7 +323,7 @@ export default function Home() {
                           strokeLinecap="round"
                         />
                       </svg>
-                    </span>
+                    </span> */}
                   </Link>
                 </h2>
               </div>
@@ -414,7 +414,7 @@ export default function Home() {
                     href="#applications"
                     className="scroll-mt-32 group flex items-center"
                   >
-                    Applications
+                    {/* Applications
                     <span className="ml-6 hidden group-hover:inline-block size-10 text-foreground">
                       <svg
                         viewBox="0 0 24 24"
@@ -432,7 +432,7 @@ export default function Home() {
                           strokeLinecap="round"
                         />
                       </svg>
-                    </span>
+                    </span> */}
                   </Link>
                 </h2>
               </div>
@@ -587,7 +587,7 @@ export default function Home() {
                     href="#policy-rollouts"
                     className="scroll-mt-32 group flex items-center"
                   >
-                    Policy Rollouts
+                    {/* Policy Rollouts
                     <span className="ml-6 hidden group-hover:inline-block size-10 text-foreground">
                       <svg
                         viewBox="0 0 24 24"
@@ -605,7 +605,7 @@ export default function Home() {
                           strokeLinecap="round"
                         />
                       </svg>
-                    </span>
+                    </span> */}
                   </Link>
                 </h2>
               </div>
@@ -918,7 +918,7 @@ export default function Home() {
                     href="#user-study"
                     className="scroll-mt-32 group flex items-center"
                   >
-                    User Study
+                    {/* User Study
                     <span className="ml-6 hidden group-hover:inline-block size-10 text-foreground">
                       <svg
                         viewBox="0 0 24 24"
@@ -936,7 +936,7 @@ export default function Home() {
                           strokeLinecap="round"
                         />
                       </svg>
-                    </span>
+                    </span> */}
                   </Link>
                 </h2>
               </div>
