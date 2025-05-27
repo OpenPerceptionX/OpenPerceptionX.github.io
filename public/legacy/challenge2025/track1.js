@@ -1,9 +1,83 @@
 const track1data = [
     {
-        team: "-",
-        primary: "-",
-        country: "",
+        team: "NVIDIA",
+        primary: "49.1124",
+        country: "US",
+        institution: "NVIDIA, Fudan University",
+        award: "",
+        //award: "rank01"
+        disqualified: false,
+        links: "-"
+    },
+    {
+        team: "RB",
+        primary: "45.0070",
+        country: "CN",
+        institution: "Bosch CR",
+        award: "",
+        disqualified: false,
+        links: "-"
+    },
+    {
+        team: "HAOMO.AI",
+        primary: "44.5438",
+        country: "CN",
         institution: "-",
+        award: "",
+        disqualified: false,
+        links: "-"
+    },
+    {
+        team: "NoName",
+        primary: "43.9254",
+        country: "CN",
+        institution: "Institute of Automation, Chinese Academy of Sciences",
+        award: "",
+        disqualified: false,
+        links: "-"
+    },
+    {
+        team: "test__",
+        primary: "43.2231",
+        country: "CN",
+        institution: "-",
+        award: "",
+        disqualified: false,
+        links: "-"
+    },
+    {
+        team: "AHHH",
+        primary: "42.7971",
+        country: "CN",
+        institution: "-",
+        award: "",
+        disqualified: false,
+        links: "-"
+    },
+    {
+        team: "SPA",
+        primary: "42.5207",
+        country: "KR",
+        institution: "Seoul National University",
+        award: "",
+        // award: tracel grant
+        disqualified: false,
+        links: "-"
+    },
+    {
+        team: "NoName",
+        primary: "41.7187",
+        country: "CN",
+        institution: "-",
+        award: "",
+        disqualified: false,
+        links: "-"
+    },
+    {
+        team: "Simple",
+        primary: "41.5534",
+        country: "CN",
+        institution: "IEIT",
         award: "",
         disqualified: false,
         links: "-"
@@ -43,7 +117,7 @@ function track1render() {
                     <img src="/assets/icon/${item.award}.png" class="inlineflag"/>
                 </div>
             </td>
-            <td><img src="/assets/flags/${item.country}.svg" class="inlineflag"/> ${item.country}</td>
+            <td><img src="/assets/flags/${item.country}.svg" class="inlineflag"/></td>
             <td>${item.institution}</td>
             <td><b>${item.primary}</b></td>
             <td>${item.team}</td>
