@@ -67,7 +67,7 @@ export default function RootLayout({
 
 
 
-                        <div className="w-full fixed flex flex-row gap-3 p-6 z-20 flex-wrap justify-between md:justify-start">
+                        <div className="fixed flex flex-row gap-3 p-6 z-20 flex-wrap justify-between md:justify-start">
 
                             <Button asChild className="bg-background text-foreground hover:bg-white group">
                                 <Link href="/" className="select-none">

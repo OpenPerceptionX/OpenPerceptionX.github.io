@@ -137,7 +137,7 @@ export default function Home() {
                     className="scroll-mt-32 group flex items-center"
                   >
                     Highlights
-                    <span className="ml-6 hidden group-hover:inline-block size-10 text-foreground">
+                    <span className="ml-6 hidden group-hover:inline-block size-6 text-foreground">
                       <svg
                         viewBox="0 0 24 24"
                         fill="none"
@@ -302,7 +302,7 @@ export default function Home() {
                     className="scroll-mt-32 group flex items-center"
                   >
                     3D Model
-                    <span className="ml-6 hidden group-hover:inline-block size-10 text-foreground">
+                    <span className="ml-6 hidden group-hover:inline-block size-6 text-foreground">
                       <svg
                         viewBox="0 0 24 24"
                         fill="none"
@@ -411,7 +411,7 @@ export default function Home() {
                     className="scroll-mt-32 group flex items-center"
                   >
                     Applications
-                    <span className="ml-6 hidden group-hover:inline-block size-10 text-foreground">
+                    <span className="ml-6 hidden group-hover:inline-block size-6 text-foreground">
                       <svg
                         viewBox="0 0 24 24"
                         fill="none"
@@ -694,7 +694,7 @@ export default function Home() {
                     className="scroll-mt-32 group flex items-center"
                   >
                     Policy Rollouts
-                    <span className="ml-6 hidden group-hover:inline-block size-10 text-foreground">
+                    <span className="ml-6 hidden group-hover:inline-block size-6 text-foreground">
                       <svg
                         viewBox="0 0 24 24"
                         fill="none"
@@ -1021,7 +1021,7 @@ export default function Home() {
                     className="scroll-mt-32 group flex items-center"
                   >
                     User Study
-                    <span className="ml-6 hidden group-hover:inline-block size-10 text-foreground">
+                    <span className="ml-6 hidden group-hover:inline-block size-6 text-foreground">
                       <svg
                         viewBox="0 0 24 24"
                         fill="none"
