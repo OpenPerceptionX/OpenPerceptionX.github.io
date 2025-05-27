@@ -6,9 +6,13 @@ const ad = [
         author: "Tianyu Li, Yihang Qiu, Zhenhua Wu, Carl Lindström, Peng Su, Matthias Nießner, Hongyang Li",
         note: "arXiv 2025",
         noteoption: '',
-        star: "",
-        starlink: "",
+        star: "https://img.shields.io/github/stars/opendrivelab/MTGS?style=social",
+        starlink: "https://github.com/OpenDriveLab/MTGS",
         icon: [
+            {
+                type: "github",
+                link: "https://github.com/OpenDriveLab/MTGS",
+            }
         ],
         description: "",
         tag: "",
