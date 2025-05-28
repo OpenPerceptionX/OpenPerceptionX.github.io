@@ -22,7 +22,7 @@ const track1data = [
         team: "HAOMO.AI",
         primary: "44.5438",
         country: "CN",
-        institution: "-",
+        institution: "HAOMO.AI Technology Co., Ltd, Tsinghua University",
         award: "blank", 
         disqualified: false,
         links: "-"
