@@ -55,7 +55,7 @@ const track1data = [
         links: "-"
     },
     {
-        team: "SPA",
+        team: "SNU SPA Lab",
         primary: "42.5207",
         country: "KR",
         institution: "Seoul National University",
