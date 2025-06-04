@@ -1,5 +1,31 @@
 const embodied = [
     {
+        title: "FreeTacMan: Robot-free Visuo-Tactile Data Collection System for Contact-rich Manipulation",
+        link: "http://arxiv.org/abs/2506.01941",
+        image: "/assets/publication/freetacman.jpg",
+        author: "Longyan Wu, Checheng Yu, Jieji Ren, Li Chen, Ran Huang, Guoying Gu, Hongyang Li",
+        note: "arXiv 2025",
+        noteoption: '',
+        star: "https://img.shields.io/github/stars/OpenDriveLab/FreeTacMan?style=social",
+        starlink: "https://github.com/OpenDriveLab/FreeTacMan",
+        icon: [
+            {
+                type: "github",
+                link: "https://github.com/OpenDriveLab/FreeTacMan",
+            },
+            {
+                type: "webpage",
+                link: "/freetacman/",
+            },
+            {
+                type: "article",
+                link: "https://docs.google.com/document/d/1Hhi2stn_goXUHdYi7461w10AJbzQDC0fdYaSxMdMVXM/edit?usp=sharing",
+            },
+        ],
+        description: "A human-centric and robot-free visuo-tactile data collection system for high-quality and efficient robot manipulation.",
+        tag: "",
+    },
+    {
         title: "Towards Synergistic, Generalized, and Efficient Dual-System for Robotic Manipulation",
         link: "https://arxiv.org/abs/2410.08001",
         image: "/assets/publication/robodual.jpg",
