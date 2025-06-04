@@ -1,6 +1,6 @@
 const pick = [
     {
-        title: "Learning to Act Anywhere with Task-centric Latent Actions",
+        title: "UniVLA: Learning to Act Anywhere with Task-centric Latent Actions",
         link: "https://arxiv.org/abs/2505.06111",
         image: "/assets/publication/univla.jpg",
         author: "Qingwen Bu, Yanting Yang, Jisong Cai, Shenyuan Gao, Guanghui Ren, Maoqing Yao, Ping Luo, Hongyang Li",
@@ -18,7 +18,7 @@ const pick = [
         tag: "",
     },
     {
-        title: "Planning-oriented Autonomous Driving",
+        title: "UniAD: Planning-oriented Autonomous Driving",
         link: "https://openaccess.thecvf.com/content/CVPR2023/html/Hu_Planning-Oriented_Autonomous_Driving_CVPR_2023_paper.html",
         image: "/assets/publication/uniad.jpg",
         author: "Yihan Hu, Jiazhi Yang, Li Chen, Keyu Li, Chonghao Sima, Xizhou Zhu, Siqi Chai, Senyao Du, Tianwei Lin, Wenhai Wang, Lewei Lu, Xiaosong Jia, Qiang Liu, Jifeng Dai, Yu Qiao, Hongyang Li",
