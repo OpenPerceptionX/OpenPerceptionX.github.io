@@ -1,5 +1,19 @@
 const e2ead = [
     {
+        title: "ETA: Efficiency through Thinking Ahead, A Dual Approach to Self-Driving with Large Models",
+        link: "https://arxiv.org/abs/2506.07725",
+        image: "/assets/publication/eta.jpg",
+        author: "Shadi Hamdan, Chonghao Sima, Zetong Yang, Hongyang Li, Fatma Güney",
+        note: "arXiv 2025",
+        noteoption: '',
+        star: "https://img.shields.io/github/stars/OpenDriveLab/ETA?style=social",
+        starlink: "https://github.com/OpenDriveLab/ETA",
+        icon: [
+        ],
+        description: "",
+        tag: "",
+    },
+    {
         title: "Decoupled Diffusion Sparks Adaptive Scene Generation",
         link: "https://arxiv.org/abs/2504.10485",
         image: "/assets/publication/nexus.jpg",
