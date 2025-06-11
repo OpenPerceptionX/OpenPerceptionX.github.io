@@ -4,8 +4,7 @@ const track1data = [
         primary: "49.1124",
         country: "US",
         institution: "NVIDIA, Fudan University",
-        award: "blank", 
-        //award: "rank01"
+        award: "rank01",
         disqualified: false,
         links: "-"
     },
@@ -59,8 +58,7 @@ const track1data = [
         primary: "42.5207",
         country: "KR",
         institution: "Seoul National University",
-        award: "blank", 
-        // award: tracel grant
+        award: "bulb", 
         disqualified: false,
         links: "-"
     },
