@@ -6,7 +6,7 @@ const track1data = [
         institution: "NVIDIA, Fudan University",
         award: "rank01",
         disqualified: false,
-        links: "-"
+        links: ""
     },
     {
         team: "RB",
@@ -15,7 +15,7 @@ const track1data = [
         institution: "Bosch CR,  Tsinghua University",
         award: "blank", 
         disqualified: false,
-        links: "-"
+        links: ""
     },
     {
         team: "HAOMO.AI",
@@ -24,7 +24,7 @@ const track1data = [
         institution: "HAOMO.AI Technology Co., Ltd, Tsinghua University",
         award: "blank", 
         disqualified: false,
-        links: "-"
+        links: ""
     },
     {
         team: "NoName",
@@ -33,7 +33,7 @@ const track1data = [
         institution: "Institute of Automation, Chinese Academy of Sciences",
         award: "blank", 
         disqualified: false,
-        links: "-"
+        links: ""
     },
     {
         team: "test__",
@@ -42,7 +42,7 @@ const track1data = [
         institution: "-",
         award: "blank", 
         disqualified: false,
-        links: "-"
+        links: ""
     },
     {
         team: "AHHH",
@@ -51,7 +51,7 @@ const track1data = [
         institution: "-",
         award: "blank", 
         disqualified: false,
-        links: "-"
+        links: ""
     },
     {
         team: "SNU SPA Lab",
@@ -60,7 +60,7 @@ const track1data = [
         institution: "Seoul National University",
         award: "bulb", 
         disqualified: false,
-        links: "-"
+        links: ""
     },
     {
         team: "NoName",
@@ -69,7 +69,7 @@ const track1data = [
         institution: "-",
         award: "blank", 
         disqualified: false,
-        links: "-"
+        links: ""
     },
     {
         team: "Simple",
@@ -78,7 +78,7 @@ const track1data = [
         institution: "IEIT",
         award: "blank", 
         disqualified: false,
-        links: "-"
+        links: ""
     },
 ];
 
