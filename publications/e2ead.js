@@ -1,5 +1,23 @@
 const e2ead = [
     {
+        title: "ReSim: Reliable World Simulation for Autonomous Driving",
+        link: "https://arxiv.org/abs/2506.09981",
+        image: "/assets/publication/resim.jpg",
+        author: "Jiazhi Yang, Kashyap Chitta, Shenyuan Gao, Long Chen, Yuqian Shao, Xiaosong Jia, Hongyang Li, Andreas Geiger, Xiangyu Yue, Li Chen",
+        note: "arXiv 2025",
+        noteoption: '',
+        star: "https://img.shields.io/github/stars/OpenDriveLab/ReSim?style=social",
+        starlink: "https://github.com/OpenDriveLab/ReSim",
+        icon: [
+            {
+                type: "webpage",
+                link: "/ReSim",
+            },
+        ],
+        description: "ReSim is a driving world model that enables Reliable Simulation of diverse open-world driving scenarios under various actions, including hazardous non-expert ones. A Video2Reward model estimates the reward from ReSim's simulated future.",
+        tag: "",
+    },
+    {
         title: "ETA: Efficiency through Thinking Ahead, A Dual Approach to Self-Driving with Large Models",
         link: "https://arxiv.org/abs/2506.07725",
         image: "/assets/publication/eta.jpg",
