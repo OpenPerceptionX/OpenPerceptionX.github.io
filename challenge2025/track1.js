@@ -4,10 +4,9 @@ const track1data = [
         primary: "49.1124",
         country: "US",
         institution: "NVIDIA, Fudan University",
-        award: "blank", 
-        //award: "rank01"
+        award: "rank01",
         disqualified: false,
-        links: "-"
+        links: ""
     },
     {
         team: "RB",
@@ -16,7 +15,7 @@ const track1data = [
         institution: "Bosch CR,  Tsinghua University",
         award: "blank", 
         disqualified: false,
-        links: "-"
+        links: ""
     },
     {
         team: "HAOMO.AI",
@@ -25,7 +24,7 @@ const track1data = [
         institution: "HAOMO.AI Technology Co., Ltd, Tsinghua University",
         award: "blank", 
         disqualified: false,
-        links: "-"
+        links: ""
     },
     {
         team: "NoName",
@@ -34,7 +33,7 @@ const track1data = [
         institution: "Institute of Automation, Chinese Academy of Sciences",
         award: "blank", 
         disqualified: false,
-        links: "-"
+        links: ""
     },
     {
         team: "test__",
@@ -43,7 +42,7 @@ const track1data = [
         institution: "-",
         award: "blank", 
         disqualified: false,
-        links: "-"
+        links: ""
     },
     {
         team: "AHHH",
@@ -52,17 +51,16 @@ const track1data = [
         institution: "-",
         award: "blank", 
         disqualified: false,
-        links: "-"
+        links: ""
     },
     {
         team: "SNU SPA Lab",
         primary: "42.5207",
         country: "KR",
         institution: "Seoul National University",
-        award: "blank", 
-        // award: tracel grant
+        award: "bulb", 
         disqualified: false,
-        links: "-"
+        links: ""
     },
     {
         team: "NoName",
@@ -71,7 +69,7 @@ const track1data = [
         institution: "-",
         award: "blank", 
         disqualified: false,
-        links: "-"
+        links: ""
     },
     {
         team: "Simple",
@@ -80,7 +78,7 @@ const track1data = [
         institution: "IEIT",
         award: "blank", 
         disqualified: false,
-        links: "-"
+        links: ""
     },
 ];
 
