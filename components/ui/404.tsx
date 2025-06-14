@@ -54,7 +54,7 @@ export default function NotFound404() {
     }
     // project
     if (
-        pathname.toLowerCase().startsWith('/blog/agibot') || 
+        pathname.toLowerCase().startsWith('/blog/agibot-world') || 
         pathname.toLowerCase().startsWith('/agibot-world')
     ) {
         redirect('/legacy/AgiBot-World/index.html')
