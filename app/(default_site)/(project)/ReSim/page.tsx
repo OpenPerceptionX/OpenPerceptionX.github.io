@@ -16,7 +16,7 @@ import { AspectRatio } from "@/components/ui/aspect-ratio"
 
 export default function Home() {
     return (
-        <main className="w-full h-screen overflow-x-hidden">
+        <div className="w-full overflow-x-hidden">
 
 
 
@@ -356,14 +356,6 @@ export default function Home() {
 
 
 
-            <footer className="w-full mb-24 flex flex-col gab-10  mt-32">
-                <div className="w-full pl-6 pr-6 flex flex-row justify-center">
-                    <div className="max-w-4xl w-full flex flex-row justify-between">
-                        <div className="flex-1 flex flex-col justify-start">
-                        </div>
-                    </div>
-                </div>
-            </footer>
-        </main>
+        </div>
     );
 }
