@@ -12,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-      <div className="w-full overflow-hidden">
+      <div className="w-full overflow-hidden"  id="#">
 
         {children}
       </div>
