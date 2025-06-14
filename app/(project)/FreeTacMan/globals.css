@@ -1,0 +1,37 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+
+@theme {
+    --breakpoint-3xl: 120rem;
+}
+
+
+.animated-underline {
+    border-bottom: 1px solid transparent;
+    @apply transition delay-100 duration-200;
+}
+.animated-underline:hover {
+    @apply border-b-inherit;
+}
+.loading {
+    @apply bg-gradient-to-br from-[#FF668C] via-[#FF668C] to-[#FF668C];
+}
+.color-text-1 {
+    width: fit-content;
+    background-image: linear-gradient(to right, #FF668C, #ff7b00, #8E73E6);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+.fade-in {
+    transition: opacity 1.5s ease;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
