@@ -103,7 +103,7 @@ export default function NotFound404() {
     if (
         pathname.toLowerCase().startsWith('/resim')
     ) {
-        redirect('https://resim-world-model.github.io/')
+        redirect('/ReSim')
     }
     if (
         pathname.toLowerCase().startsWith('/elm')

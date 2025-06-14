@@ -26,4 +26,26 @@ export const pageNavigator: {
             id: "user-study",
         },
     ],
+    "/resim": [
+        {
+            text: "Overview",
+            id: "overview",
+        },
+        {
+            text: "Action-Controlled / Waymo",
+            id: "action_control_waymo",
+        },
+        {
+            text: "Action-Controlled / nuScenes",
+            id: "action_control_nuscenes",
+        },
+        {
+            text: "Comparison of Action Controllability",
+            id: "comparison",
+        },
+        {
+            text: "Action-free",
+            id: "action_free",
+        },
+    ],
 };
