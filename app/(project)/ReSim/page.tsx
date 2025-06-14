@@ -6,7 +6,6 @@ export const metadata: Metadata = {
 };
 
 
-
 import Image from 'next/image'
 import Link from "next/link"
 
@@ -34,16 +33,16 @@ export default function Home() {
                     </AspectRatio>
                 </div>
                 <div className="flex-1/2 flex flex-col gap-3 xl:justify-around">
-                    <div className="flex flex-col gap-8 w-full">
+                    <div className="flex flex-col w-full">
                         <div className="flex flex-col gap-3">
-                            <h1 className="text-7xl 3xl:text-8xl font-bold w-full color-text-1">
+                            <h1 className="text-7xl 3xl:text-8xl font-bold w-full fg-gradient-blue">
                                 ReSim
                             </h1>
-                            <h1 className="text-4xl 3xl:text-5xl font-bold w-full  color-text-1">
+                            <h1 className="text-4xl 3xl:text-5xl font-bold w-full  fg-gradient-blue pb-3">
                                 Reliable World Simulation for Autonomous Driving
                             </h1>
                         </div>
-                        <div className="flex flex-col gap-2">
+                        <div className="flex flex-col gap-2 pb-3">
                             <h2 className="w-full leading-loose">
                                 <a href="https://github.com/YTEP-ZHI" className="text-o-blue hover:underline text-nowrap">Jiazhi Yang</a><sup className="align-super text-sm">1,3</sup>,{' '}
                                 <a href="https://kashyap7x.github.io/" className="text-o-blue hover:underline text-nowrap">Kashyap Chitta</a><sup className="align-super text-sm">4,7</sup>,{' '}
