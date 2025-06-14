@@ -169,6 +169,16 @@
 
 
 
+/* font color */
+.fg-gradient-blue {
+    width: fit-content;
+    background-image: linear-gradient(to right, #0c318f, #53c2f0, #00a0e8);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+
 /* fade in / out */
 .fade-in {
     transition: opacity 1.5s ease;
