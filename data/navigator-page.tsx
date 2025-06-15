@@ -4,7 +4,7 @@ export const NavigatorPage: {
         id: string;
     }[]
 } = {
-    "/team": [
+    "/tttt": [
         {
             text: "Scholar",
             id: "scholar",
