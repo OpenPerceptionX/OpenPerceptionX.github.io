@@ -32,14 +32,18 @@ import { FadeIn } from "@/components/animation/fade-in"
 
 
 function PageSidebar() {
-    const { content } = useSidebar()
-    if (content != null) {
+    const { content_projecct, content_page } = useSidebar()
+    if (content_projecct != null) {
         return (
                 <SidebarMenu className="mb-12 px-8 text-xs overflow-y-scroll no-scrollbar">
-                    <span className="font-bold p-2 select-none text-foreground/50">
-                        This Page
-                    </span>
-                    {content.map((item) => (
+                    {
+                        content_page != null && (
+                            <span className="font-bold p-2 select-none text-foreground/50">
+                                This Page
+                            </span>
+                        )
+                    }
+                    {content_projecct.map((item) => (
                         <Link key={item.text} href={"#" + item.id}  className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
                             {item.text}
                         </Link>
@@ -56,7 +60,7 @@ function PageSidebar() {
 
 export function AppSidebar() {
 
-    const { content } = useSidebar()
+    const { content_page } = useSidebar()
 
     return (
         <FadeIn>
@@ -80,7 +84,7 @@ export function AppSidebar() {
 
 
                     {
-                        content == null && (
+                        content_page != null && (
 
                             <SidebarMenu className="mb-12 px-8 text-xs overflow-y-scroll no-scrollbar">
 
