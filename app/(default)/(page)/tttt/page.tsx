@@ -28,7 +28,7 @@ export default function Home() {
 
 
 
-            <div className="w-full relative xl:mt-24 h-72 xl:h-96">
+            <div className="w-full relative md:mt-24 h-72 xl:h-96">
                 <Image
                     src="/assets/background/2024.10.png"
                     alt="background"
@@ -37,7 +37,7 @@ export default function Home() {
                 />
                 <div className="absolute flex flex-row w-full h-full justify-between">
                     <div className="flex-1 h-full bg-background"></div>
-                    <div className="flex-grow h-full w-full max-w-7xl mx-6 xl:mx-12 3xl:mx-24 flex flex-col gap-6 text-white pb-12 xl:pb-0 justify-end xl:justify-center">
+                    <div className="flex-grow h-full w-full max-w-7xl mx-6 xl:mx-12 3xl:mx-24 flex flex-col gap-6 text-white pb-12 md:pb-0 justify-end md:justify-center">
                         <h1 className="text-t0 font-bold">
                             Team
                         </h1>
