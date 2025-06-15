@@ -72,14 +72,6 @@ const links: {
         icon: 'discord',
         url: 'https://discord.gg/vCw2PjR2B8',
     },
-    // {
-    //     icon: 'wechat',
-    //     url: '2025.06',
-    // },
-    // {
-    //     icon: 'wechatgroup',
-    //     url: '2025.06',
-    // },
 ];
 
 
