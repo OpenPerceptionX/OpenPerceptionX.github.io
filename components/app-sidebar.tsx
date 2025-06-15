@@ -152,9 +152,6 @@ export function AppSidebar() {
                                                 <Link href="https://github.com/OpenDriveLab/UniVLA" target="_blank" className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
                                                     UniVLA
                                                 </Link>
-                                                <Link href="https://www.computer.org/csdl/journal/tp/2025/03/10791908/22ABgP6PlUQ" target="_blank" className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
-                                                    BEVFormer
-                                                </Link>
                                                 <Link href="/publications"  className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
                                                     more
                                                 </Link>
