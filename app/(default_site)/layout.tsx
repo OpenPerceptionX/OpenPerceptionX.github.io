@@ -25,7 +25,7 @@ export default function RootLayout({
 
             {children}
 
-            <footer className="w-full px-6 my-16 flex flex-row justify-center select-none">
+            <footer className="w-full px-6 my-24 flex flex-row justify-center select-none">
                 <div className="w-full max-w-7xl text-xs">
                     OpenDriveLab © 2021 - 2025
                 </div>
