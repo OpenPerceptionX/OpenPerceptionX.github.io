@@ -259,7 +259,7 @@ export const members: {
                 url: "https://github.com/lzpyx",
             },
         ],
-        keys: ["intern"],
+        keys: ["phd"],
     },
     {
         name: "Jiazhi Yang",
@@ -307,6 +307,82 @@ export const members: {
             {
                 icon: "github",
                 url: "https://github.com/ZhouYunsong",
+            },
+        ],
+        keys: ["intern"],
+    },
+    {
+        name: "Checheng Yu",
+        image: "/assets/person/checheng_yu.jpg",
+        desc: "",
+        image_s: "/assets/person/checheng_yu_s.jpg",
+        links: [
+            {
+                icon: "homepage",
+                url: "https://tradewindycc.github.io/"
+            },
+            {
+                icon: "email",
+                url: "mailto:ycc2366582449@outlook.com",
+            },
+            {
+                icon: "github",
+                url: "https://github.com/Tradewindycc",
+            },
+        ],
+        keys: ["intern"],
+    },
+    {
+        name: "Caojun Wang",
+        image: "/assets/person/caojun_wang.jpg",
+        desc: "",
+        image_s: "/assets/person/caojun_wang_s.jpg",
+        links: [
+            {
+                icon: "scholar",
+                url: "https://scholar.google.com/citations?user=35xHlDUAAAAJ&hl"
+            },
+            {
+                icon: "email",
+                url: "mailto:wangcaojunsos4@gmail.com",
+            },
+            {
+                icon: "github",
+                url: "https://github.com/WCJ-BERT",
+            },
+        ],
+        keys: ["intern"],
+    },
+    {
+        name: "Zhenhua Wu",
+        image: "/assets/person/zhenhua_wu.jpg",
+        desc: "",
+        image_s: "/assets/person/zhenhua_wu_s.jpg",
+        links: [
+            {
+                icon: "email",
+                url: "mailto:wuzhenhua1122@gmail.com",
+            },
+            {
+                icon: "github",
+                url: "https://github.com/ArthurWuzh",
+            },
+        ],
+        keys: ["intern"],
+    },
+    {
+        name: "Hongchen Li",
+        image: "/assets/person/hongchen_li.jpg",
+        desc: "",
+        image_s: "/assets/person/hongchen_li_s.jpg",
+        links: [
+            {
+                icon: "email",
+                url: "mailto:lhchen0531@gmail.com",
+            },
+            {
+                icon: "github",
+                url: "https://github.com/lhcstation",
             },
         ],
         keys: ["intern"],
@@ -488,7 +564,7 @@ export const members: {
                 url: "https://huggingface.co/StarCycle",
             },
         ],
-        keys: ["intern"],
+        keys: ["phd"],
     },
     {
         name: "Haochen Liu",
