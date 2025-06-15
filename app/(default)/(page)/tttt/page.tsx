@@ -91,9 +91,9 @@ export default function Home() {
                                     className="h-full w-full rounded-sm object-cover bg-gradient-landing hidden group-hover/image:block"
                                 />
                             </AspectRatio>
-                            <b className="text-xl">
+                            <span className="text-xl">
                                 {member.name}
-                            </b>
+                            </span>
                             <span className="text-xs">
                                 {member.desc}
                             </span>
@@ -160,9 +160,9 @@ export default function Home() {
                                     className="h-full w-full rounded-sm object-cover bg-gradient-landing hidden group-hover/image:block"
                                 />
                             </AspectRatio>
-                            <b className="text-xl">
+                            <span className="text-xl">
                                 {member.name}
-                            </b>
+                            </span>
                             <span className="text-xs">
                                 {member.desc}
                             </span>
@@ -229,9 +229,9 @@ export default function Home() {
                                     className="h-full w-full rounded-sm object-cover bg-gradient-landing hidden group-hover/image:block"
                                 />
                             </AspectRatio>
-                            <b className="text-xl">
+                            <span className="text-xl">
                                 {member.name}
-                            </b>
+                            </span>
                             <span className="text-xs">
                                 {member.desc}
                             </span>
