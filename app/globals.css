@@ -124,7 +124,7 @@
 
 
 @theme {
-    --breakpoint-3xl: 120rem;
+    --breakpoint-3xl: 112rem;
 }
 @layer base {
     * {
