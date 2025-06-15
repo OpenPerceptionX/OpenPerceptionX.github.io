@@ -47,7 +47,7 @@ export default function Home() {
                             src="/assets/background/v2025.jpg"
                             alt="team"
                             fill
-                            className="object-cover object-center rounded-sm bg-gradient-landing hover:scale-101 transition duration-200"
+                            className="object-cover object-center rounded-sm bg-gradient-landing hover:scale-101 transition delay-100 duration-200"
                         />
                     </div>
                 </div>
@@ -105,7 +105,7 @@ export default function Home() {
                                                 src={"/icon/" + link.icon + ".svg"}
                                                 alt={link.icon}
                                                 fill
-                                                className="group-hover/icon:scale-125 transition duration-200"
+                                                className="group-hover/icon:scale-125 transition delay-100 duration-200"
                                             />
                                         </AspectRatio>
                                     </Link>
@@ -174,7 +174,7 @@ export default function Home() {
                                                 src={"/icon/" + link.icon + ".svg"}
                                                 alt={link.icon}
                                                 fill
-                                                className="group-hover/icon:scale-125 transition duration-200"
+                                                className="group-hover/icon:scale-125 transition delay-100 duration-200"
                                             />
                                         </AspectRatio>
                                     </Link>
@@ -243,7 +243,7 @@ export default function Home() {
                                                 src={"/icon/" + link.icon + ".svg"}
                                                 alt={link.icon}
                                                 fill
-                                                className="group-hover/icon:scale-125 transition duration-200"
+                                                className="group-hover/icon:scale-125 transition delay-100 duration-200"
                                             />
                                         </AspectRatio>
                                     </Link>
