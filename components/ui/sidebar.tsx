@@ -1,7 +1,8 @@
 "use client"
 
 import { usePathname } from 'next/navigation'
-import { pageNavigator } from '@/data/pagenavigator'
+import { NavigatorProject } from '@/data/navigator-project'
+import { NavigatorPage } from '@/data/navigator-page'
 
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
@@ -43,7 +44,8 @@ type SidebarContextProps = {
   setOpenMobile: (open: boolean) => void
   isMobile: boolean
   toggleSidebar: () => void
-  content: { text: string; id: string }[] | null
+  content_projecct: { text: string; id: string }[] | null
+  content_page: { text: string; id: string }[] | null
 }
 
 const SidebarContext = React.createContext<SidebarContextProps | null>(null)
@@ -118,7 +120,9 @@ function SidebarProvider({
   const state = open ? "expanded" : "collapsed"
 
   const pathname = usePathname()
-  const content = pathname.toLowerCase() in pageNavigator ? pageNavigator[pathname.toLowerCase()] : null
+  const content_projecct = pathname.toLowerCase() in NavigatorProject ? NavigatorProject[pathname.toLowerCase()] : null
+  const content_page = pathname.toLowerCase() in NavigatorPage ? NavigatorPage[pathname.toLowerCase()] : null
+
 
   const contextValue = React.useMemo<SidebarContextProps>(
     () => ({
@@ -129,7 +133,8 @@ function SidebarProvider({
       openMobile,
       setOpenMobile,
       toggleSidebar,
-      content,
+      content_projecct,
+      content_page,
     }),
     [state, open, setOpen, isMobile, openMobile, setOpenMobile, toggleSidebar]
   )

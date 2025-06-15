@@ -1,4 +1,4 @@
-export const pageNavigator: {
+export const NavigatorProject: {
     [page: string]: {
         text: string;
         id: string;
