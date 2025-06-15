@@ -160,17 +160,16 @@
 
 /* font */
 .text-t0 {
-    @apply text-6xl md:text-7xl xl:text-8xl 3xl:text-9xl;
+    @apply text-5xl xl:text-6xl 3xl:text-7xl;
 }
 .text-t1 {
-    @apply text-5xl md:text-6xl;
+    @apply text-3xl xl:text-4xl 3xl:text-5xl;
 }
 
 
 
 /* font color */
 .fg-gradient-blue {
-    width: fit-content;
     background-image: linear-gradient(to right, #0c318f, #53c2f0, #00a0e8);
     -webkit-background-clip: text;
     color: transparent;
