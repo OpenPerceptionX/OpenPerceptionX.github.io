@@ -4,8 +4,24 @@ import * as React from "react"
 
 import Link from "next/link"
 import Image from 'next/image'
-import { AspectRatio } from "@/components/ui/aspect-ratio"
 
+
+
+import { AspectRatio } from "@/components/ui/aspect-ratio"
+import {
+    Drawer,
+    DrawerClose,
+    DrawerContent,
+    DrawerDescription,
+    DrawerFooter,
+    DrawerHeader,
+    DrawerTitle,
+    DrawerTrigger,
+} from "@/components/ui/drawer"
+
+
+
+import { WeChat, WeChatGroup } from "@/components/app-drawer"
 
 
 const links: {
@@ -82,7 +98,7 @@ export default function RootLayout({
 
                 <div className="w-full max-w-7xl flex gap-6 flex-wrap">
                     {links.map((link) => (
-                        <Link href={link.url} target="_blank" key={link.icon}  className="size-4 md:size-5 group">
+                        <Link href={link.url} target="_blank" key={link.icon} className="size-4 md:size-5 group">
                             <AspectRatio ratio={1/1}>
                                 <Image
                                     src={"/icon/" + link.icon + ".svg"}
@@ -93,6 +109,39 @@ export default function RootLayout({
                             </AspectRatio>
                         </Link>
                     ))}
+
+                    <Drawer>
+                        <DrawerTrigger asChild>
+                            <div className="size-4 md:size-5 group cursor-pointer">
+                                <AspectRatio ratio={1/1}>
+                                    <Image
+                                        src="/icon/wechat.svg"
+                                        alt="wechat"
+                                        fill
+                                        className="group-hover:scale-125 transition delay-100 duration-200"
+                                    />
+                                </AspectRatio>
+                            </div>
+                        </DrawerTrigger>
+                        <WeChat/>
+                    </Drawer>
+                    
+                    <Drawer>
+                        <DrawerTrigger asChild>
+                            <div className="size-4 md:size-5 group cursor-pointer">
+                                <AspectRatio ratio={1/1}>
+                                    <Image
+                                        src="/icon/wechatgroup.svg"
+                                        alt="wechat"
+                                        fill
+                                        className="group-hover:scale-125 transition delay-100 duration-200"
+                                    />
+                                </AspectRatio>
+                            </div>
+                        </DrawerTrigger>
+                        <WeChatGroup/>
+                    </Drawer>
+
                 </div>
 
                 <div className="w-full max-w-7xl text-xs">
