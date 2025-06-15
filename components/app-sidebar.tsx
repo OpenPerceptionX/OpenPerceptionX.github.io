@@ -157,11 +157,8 @@ export function AppSidebar() {
                                                 <Link href="/challenge2025" className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
                                                     Challenge 2025
                                                 </Link>
-                                                <Link href="/cvpr2025" className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
-                                                    Events at CVPR 2025
-                                                </Link>
-                                                <Link href="https://sagroups.ieee.org/3474/" target="_blank" className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
-                                                    IEEE Standard P3474
+                                                <Link href="/iccv2025" target="_blank" className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
+                                                    Workshop at ICCV 2025
                                                 </Link>
                                                 <Link href="/events"  className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
                                                     more
