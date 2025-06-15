@@ -114,7 +114,7 @@ export const members: {
         name: "Tianyu Li",
         image: "/assets/person/tianyu_li.jpg",
         image_s: "/assets/person/tianyu_li_s.jpg",
-        desc: "復旦大學（23級聯培）",
+        desc: "Fudan University",
         links: [
             {
                 icon: "scholar",
@@ -139,7 +139,7 @@ export const members: {
         name: "Qingwen Bu",
         image: "/assets/person/qingwen_bu.jpg",
         image_s: "/assets/person/qingwen_bu_s.jpg",
-        desc: "上海交通大學（23級聯培）",
+        desc: "SJTU (Shanghai Jiao Tong University)",
         links: [
             {
                 icon: "scholar",
@@ -160,7 +160,7 @@ export const members: {
         name: "Hanxue Zhang",
         image: "/assets/person/hanxue_zhang.jpg",
         image_s: "/assets/person/hanxue_zhang_s.jpg",
-        desc: "上海交通大學（24級聯培）",
+        desc: "SJTU (Shanghai Jiao Tong University)",
         links: [
             {
                 icon: "scholar",
@@ -181,7 +181,7 @@ export const members: {
         name: "Chengen Xie",
         image: "/assets/person/chengen_xie.jpg",
         image_s: "/assets/person/chengen_xie_s.jpg",
-        desc: "上海交通大學（24級聯培）",
+        desc: "SJTU (Shanghai Jiao Tong University)",
         links: [
             {
                 icon: "scholar",
@@ -202,7 +202,7 @@ export const members: {
         name: "Haoran Jiang",
         image: "/assets/person/haoran_jiang.jpg",
         image_s: "/assets/person/haoran_jiang_s.jpg",
-        desc: "復旦大學（24級聯培）",
+        desc: "Fudan University",
         links: [
             {
                 icon: "scholar",
@@ -222,7 +222,7 @@ export const members: {
     {
         name: "Yihang Qiu",
         image: "/assets/person/yihang_qiu.jpg",
-        desc: "The University of Hong Kong (HKU)",
+        desc: "HKU (The University of Hong Kong)",
         image_s: "/assets/person/yihang_qiu_s.jpg",
         links: [
             {
@@ -243,7 +243,7 @@ export const members: {
     {
         name: "Yixuan Pan",
         image: "/assets/person/yixuan_pan.jpg",
-        desc: "The University of Hong Kong (HKU)",
+        desc: "HKU (The University of Hong Kong)",
         image_s: "/assets/person/yixuan_pan_s.jpg",
         links: [
             {
@@ -264,7 +264,7 @@ export const members: {
     {
         name: "Jiazhi Yang",
         image: "/assets/person/jiazhi_yang.jpg",
-        desc: "The Chinese University of Hong Kong (CUHK)",
+        desc: "CUHK (The Chinese University of Hong Kong)",
         image_s: "/assets/person/jiazhi_yang_s.jpg",
         links: [
             {
@@ -289,7 +289,7 @@ export const members: {
     {
         name: "Yunsong Zhou",
         image: "/assets/person/yunsong_zhou.jpg",
-        desc: "Shanghai Jiao Tong University (SJTU)",
+        desc: "SJTU (Shanghai Jiao Tong University)",
         image_s: "/assets/person/yunsong_zhou_s.jpg",
         links: [
             {
@@ -331,7 +331,7 @@ export const members: {
     {
         name: "Haochen Tian",
         image: "/assets/person/haochen_tian.jpg",
-        desc: "Institute of Automation, Chinese Academy of Sciences (CASIA)",
+        desc: "CASIA (Institute of Automation, Chinese Academy of Sciences)",
         image_s: "/assets/person/haochen_tian_s.jpg",
         links: [
             {
@@ -352,7 +352,7 @@ export const members: {
     {
         name: "Modi Shi",
         image: "/assets/person/modi_shi.jpg",
-        desc: "Beijing University of Aeronautics and Astronautics (BUAA)",
+        desc: "BUAA (Beijing University of Aeronautics and Astronautics)",
         image_s: "/assets/person/modi_shi_s.jpg",
         links: [
             {
@@ -369,7 +369,7 @@ export const members: {
     {
         name: "Jin Chen",
         image: "/assets/person/jin_chen.jpg",
-        desc: "Xi'an Jiaotong University (XJTU)",
+        desc: "XJTU (Xi'an Jiaotong University)",
         image_s: "/assets/person/jin_chen_s.jpg",
         // desc: "复旦大学（25级联培）",
         links: [
@@ -468,7 +468,7 @@ export const members: {
     {
         name: "Zhuoheng Li",
         image: "/assets/person/zhuoheng_li.jpg",
-        desc: "The University of Hong Kong (HKU)",
+        desc: "HKU (The University of Hong Kong)",
         image_s: "/assets/person/zhuoheng_li_s.jpg",
         links: [
             {
@@ -493,7 +493,7 @@ export const members: {
     {
         name: "Haochen Liu",
         image: "/assets/person/haochen_liu.jpg",
-        desc: "Nanyang Technological University (NTU)",
+        desc: "NTU (Nanyang Technological University)",
         image_s: "/assets/person/haochen_liu_s.jpg",
         links: [
             {
@@ -535,5 +535,161 @@ export const members: {
             },
         ],
         keys: ["intern"],
+    },
+    {
+        name: "Shenyuan Gao",
+        image: "",
+        image_s: "",
+        desc: "The Hong Kong University of Science and Technology",
+        links: [
+            {
+                icon: "dummy",
+                url: "",
+            },
+        ],
+        keys: ["alumni"],
+    },
+    {
+        name: "Jiacheng Qiu",
+        image: "",
+        image_s: "",
+        desc: "ETH Zürich (Eidgenössische Technische Hochschule Zürich)",
+        links: [
+            {
+                icon: "dummy",
+                url: "",
+            },
+        ],
+        keys: ["alumni"],
+    },
+    {
+        name: "Zetong Yang",
+        image: "",
+        image_s: "",
+        desc: "GAC Group",
+        links: [
+            {
+                icon: "dummy",
+                url: "https://scholar.google.com/citations?user=oPiZSVYAAAAJ",
+            },
+        ],
+        keys: ["alumni"],
+    },
+    {
+        name: "Bangjun Wang",
+        image: "",
+        image_s: "",
+        desc: "SJTU (Shanghai Jiao Tong University)",
+        links: [
+            {
+                icon: "dummy",
+                url: "https://www.bangjunwang.com/",
+            },
+        ],
+        keys: ["alumni"],
+    },
+    {
+        name: "Linyan Huang",
+        image: "",
+        image_s: "",
+        desc: "Xiamen University",
+        links: [
+            {
+                icon: "dummy",
+                url: "https://scholar.google.com/citations?user=KQPCplEAAAAJ",
+            },
+        ],
+        keys: ["alumni"],
+    },
+    {
+        name: "Penghao Wu",
+        image: "",
+        image_s: "",
+        desc: "UC San Diego",
+        links: [
+            {
+                icon: "dummy",
+                url: "https://scholar.google.com/citations?user=9mssd5EAAAAJ",
+            },
+        ],
+        keys: ["alumni"],
+    },
+    {
+        name: "Xiaosong Jia",
+        image: "",
+        image_s: "",
+        desc: "SJTU (Shanghai Jiao Tong University)",
+        links: [
+            {
+                icon: "dummy",
+                url: "https://jiaxiaosong1002.github.io/",
+            },
+        ],
+        keys: ["alumni"],
+    },
+    {
+        name: "Xiangwei Geng",
+        image: "",
+        image_s: "",
+        desc: "NIO",
+        links: [
+            {
+                icon: "dummy",
+                url: "",
+            },
+        ],
+        keys: ["alumni"],
+    },
+    {
+        name: "Yuting Wang",
+        image: "",
+        image_s: "",
+        desc: "Tsinghua University",
+        links: [
+            {
+                icon: "dummy",
+                url: "",
+            },
+        ],
+        keys: ["alumni"],
+    },
+    {
+        name: "Shengchao Hu",
+        image: "",
+        image_s: "",
+        desc: "SJTU (Shanghai Jiao Tong University)",
+        links: [
+            {
+                icon: "dummy",
+                url: "https://charleshsc.github.io/",
+            },
+        ],
+        keys: ["alumni"],
+    },
+    {
+        name: "Tutian Tang",
+        image: "",
+        image_s: "",
+        desc: "SJTU (Shanghai Jiao Tong University)",
+        links: [
+            {
+                icon: "dummy",
+                url: "https://github.com/ElectronicElephant",
+            },
+        ],
+        keys: ["alumni"],
+    },
+    {
+        name: "Kunyao Zhang",
+        image: "",
+        image_s: "",
+        desc: "NIO",
+        links: [
+            {
+                icon: "dummy",
+                url: "",
+            },
+        ],
+        keys: ["alumni"],
     },
 ];

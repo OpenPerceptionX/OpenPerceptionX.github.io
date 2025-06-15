@@ -84,7 +84,6 @@ export default function Home() {
                                     </Link>
                                 ))}
                             </div>
-
                         </div>
                     ))}
                 </div>
@@ -154,7 +153,6 @@ export default function Home() {
                                     </Link>
                                 ))}
                             </div>
-
                         </div>
                     ))}
                 </div>
@@ -224,7 +222,6 @@ export default function Home() {
                                     </Link>
                                 ))}
                             </div>
-
                         </div>
                     ))}
                 </div>
@@ -251,6 +248,36 @@ export default function Home() {
                             </span>
                         </Link>
                     </h2>
+                </div>
+            </div>
+
+
+
+            <div className="w-full px-6 flex justify-center mt-24">
+                <div className="w-full max-w-7xl">
+                    <div className="w-full max-w-3xl flex flex-col gap-6">
+                        {[...members.values()].filter(member => member.keys.includes("alumni")).map((member) => (
+                            <div className="flex gap-6" key={member.name}>
+                                {
+                                    member.links[0].url == "" && (
+                                        <span className="flex-1/3">
+                                            {member.name}
+                                        </span>
+                                    )
+                                }
+                                {
+                                    member.links[0].url != "" && (
+                                        <Link href={member.links[0].url} target="_blank" className="flex-1/3 hover:text-o-blue">
+                                            {member.name}
+                                        </Link>
+                                    )
+                                }
+                                <i className="flex-2/3">
+                                    {member.desc}
+                                </i>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
 
