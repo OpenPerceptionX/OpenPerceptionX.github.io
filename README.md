@@ -13,6 +13,7 @@
 - note in website ```text-xs```
 - ```rounded-sm```
 - breakpoint: ```md``` / ```xl``` / ```3xl```
+- black color: ```#0d0d0d```
 
 ### Note
 - use ```<Link>``` instead of ```<a>```
