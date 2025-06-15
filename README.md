@@ -1,10 +1,29 @@
 # 网站技术方案 
 - React
 - Next.js
-- Tailwind CSS -> shadcn
 - Typescript
+- Tailwind CSS / shadcn
 
-# 开发相关
+
+# General
+
+### Style
+- ```m-``` & ```p-``` use 6 / 12 /24
+- ```scroll-mt32```
+- note in website ```text-xs```
+- ```rounded-sm```
+- breakpoint: ```md``` / ```xl``` / ```3xl```
+
+### Note
+- use ```<Link>``` instead of ```<a>```
+- use ```<Image>``` instead of ```<img>```
+- use ```<div><Image></div>``` instead of ```<div className='background-image'></div>```
+- <FadeIn> for animation of all foreground elements, note that it could probabilistically change layout, check everytime when add this
+
+
+
+# dev
+
 ### Setup
 - install ```npm```
 - ```npm install``` to install or update all dependencies
@@ -15,19 +34,9 @@
 ### Deploy
 - Simply push the code to the GitHub and it will be done automatically.
 
-### Note
-- use ```<Link>``` instead of ```<a>```
-- use ```<Image>``` instead of ```<img>```
-- use ```<div><Image></div>``` instead of ```<div className='background-image'></div>```
-- <FadeIn> for animation of all foreground elements, note that it could probabilistically change layout, check everytime when add this
-
-### Style
-- ```m-``` & ```p-``` use 6 / 12 /24
-- ```scroll-mt32```
 
 
-
-## 图像要求
+# 图像要求
 - upload to corresponding folder in [https://github.com/MMLABassets/MMLABassets.github.io](https://github.com/MMLABassets/MMLABassets.github.io) / access via ```https://mmlabassets.github.io/*```
 - reduce image size -> use [https://www.photopea.com/](https://www.photopea.com/) to reduce image quality, normally 90%
 
