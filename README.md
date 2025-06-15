@@ -14,6 +14,7 @@
 - ```rounded-sm```
 - breakpoint: ```md``` / ```xl``` / ```3xl```
 - black color: ```#0d0d0d```
+- max width: ```max-w-5xl``` / ```max-w-7xl```
 
 ### Note
 - use ```<Link>``` instead of ```<a>```

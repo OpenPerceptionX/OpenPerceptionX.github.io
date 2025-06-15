@@ -31,31 +31,6 @@ export default function Home() {
             {/* landing */}
             <Landing />
 
-<div className="w-full flex flex-col items-center">
-                            <div className="w-full max-w-2xl text-xs bg-amber-700 mt-20">
-                    2
-                </div>
-
-                            <div className="w-full max-w-3xl text-xs bg-amber-700 mt-20">
-                    3
-                </div>
-
-                                            <div className="w-full max-w-4xl text-xs bg-amber-700 mt-20">
-                    4
-                </div>
-
-                                            <div className="w-full max-w-5xl text-xs bg-amber-700 mt-20">
-                    5
-                </div>
-
-                                            <div className="w-full max-w-6xl text-xs bg-amber-700 mt-20">
-                    6
-                </div>
-
-                                            <div className="w-full max-w-7xl text-xs bg-amber-700 mt-20">
-                    7
-                </div>
-</div>
 
 
         </div>
