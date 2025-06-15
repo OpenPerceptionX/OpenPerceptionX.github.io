@@ -86,7 +86,7 @@ export default function RootLayout({
 
             {children}
 
-            <footer className="w-full px-6 mt-24 mb-12 gap-6 flex flex-col items-center select-none">
+            <footer className="w-full px-6 my-24 gap-6 flex flex-col items-center select-none">
 
                 <div className="w-full max-w-7xl flex gap-6 flex-wrap">
                     {links.map((link) => (
