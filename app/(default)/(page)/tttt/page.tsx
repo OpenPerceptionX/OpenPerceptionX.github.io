@@ -287,16 +287,20 @@ export default function Home() {
                             <div className="flex gap-6" key={member.name}>
                                 {
                                     member.links[0].url == "" && (
-                                        <span className="flex-1/3">
-                                            {member.name}
-                                        </span>
+                                        <div className="flex-1/3">
+                                            <span>
+                                                {member.name}
+                                            </span>
+                                        </div>
                                     )
                                 }
                                 {
                                     member.links[0].url != "" && (
-                                        <Link href={member.links[0].url} target="_blank" className="flex-1/3 hover:text-o-blue">
-                                            {member.name}
-                                        </Link>
+                                        <div className="flex-1/3">
+                                            <Link href={member.links[0].url} target="_blank" className="hover:text-o-blue">
+                                                {member.name}
+                                            </Link>
+                                        </div>
                                     )
                                 }
                                 <i className="flex-2/3">
