@@ -9,7 +9,7 @@
 
 ### Style
 - ```m-``` & ```p-``` use 6 / 12 /24
-- ```scroll-mt32```
+- ```scroll-mt-32```
 - note in website ```text-xs```
 - ```rounded-sm```
 - breakpoint: ```md``` / ```xl``` / ```3xl```

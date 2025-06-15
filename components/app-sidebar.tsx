@@ -51,7 +51,22 @@ function PageSidebar() {
 
                 </SidebarMenu>
         )
-    } else {
+    } else if (content_page != null) {
+        return (
+                <SidebarMenu className="mb-12 px-8 text-xs overflow-y-scroll no-scrollbar">
+                    <span className="font-bold p-2 select-none text-foreground/50">
+                        This Page
+                    </span>
+                    {content_page.map((item) => (
+                        <Link key={item.text} href={"#" + item.id}  className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
+                            {item.text}
+                        </Link>
+                    ))}
+
+                </SidebarMenu>
+        )
+    } 
+    else {
         return <SidebarMenu/>
     }
 }
