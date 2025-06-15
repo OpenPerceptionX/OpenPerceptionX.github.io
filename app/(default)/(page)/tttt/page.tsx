@@ -28,6 +28,29 @@ export default function Home() {
 
 
 
+            <div className="w-full relative xl:mt-24 h-72 xl:h-96">
+                <Image
+                    src="/assets/background/2024.10.png"
+                    alt="background"
+                    fill
+                    className="object-cover object-center bg-gradient-landing select-none h-full"
+                />
+                <div className="absolute flex flex-row w-full h-full justify-between">
+                    <div className="flex-1 h-full bg-background"></div>
+                    <div className="flex-grow h-full w-full max-w-7xl mx-6 xl:mx-12 3xl:mx-24 flex flex-col gap-6 text-white pb-12 xl:pb-0 justify-end xl:justify-center">
+                        <h1 className="text-t0 font-bold">
+                            Team
+                        </h1>
+                        <span className="text-xl">
+                            Introducing (some) talents at OpenDriveLab.
+                        </span>
+                    </div>
+                    <div className="flex-1 h-full"></div>
+                </div>
+            </div>
+
+
+
             <div className="w-full px-6 flex justify-center mt-24">
                 <div className="w-full max-w-7xl flex">
                     <h2 className="text-t1 font-bold"> 
