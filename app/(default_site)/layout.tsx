@@ -88,7 +88,7 @@ export default function RootLayout({
                                     src={"/icon/" + link.icon + ".svg"}
                                     alt={link.icon}
                                     fill
-                                    className="group-hover:scale-125 transition duration-200"
+                                    className="group-hover:scale-125 transition delay-100 duration-200"
                                 />
                             </AspectRatio>
                         </Link>
