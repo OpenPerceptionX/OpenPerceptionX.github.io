@@ -1,8 +1,8 @@
 'use client'
 
 
-
-import { redirect, usePathname } from 'next/navigation'
+import { useEffect, useState } from 'react';
+import { redirect, usePathname, useRouter } from 'next/navigation'
 
 
 
@@ -11,6 +11,20 @@ export default function NotFound404() {
 
 
     const pathname = usePathname()
+    const router = useRouter()
+    const [ready, setReady] = useState(false)
+
+    useEffect(() => {
+        if (pathname.toLowerCase().startsWith('/team') && pathname !== '/team') {
+            router.replace('/team');
+        } else {
+            setReady(true);
+        }
+    }, [pathname]);
+    
+      
+
+
     if (
         pathname.toLowerCase() == '/'
     ) {
@@ -246,7 +260,5 @@ export default function NotFound404() {
 
 
     redirect('/missing')
-    return (
-        <main className='w-full'></main>
-    )
+    return null;
 }
