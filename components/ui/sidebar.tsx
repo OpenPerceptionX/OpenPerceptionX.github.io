@@ -138,7 +138,7 @@ function SidebarProvider({
       content_page,
       pathname,
     }),
-    [state, open, setOpen, isMobile, openMobile, setOpenMobile, toggleSidebar]
+    [state, open, setOpen, isMobile, openMobile, setOpenMobile, toggleSidebar, content_projecct, content_page, pathname]
   )
 
   return (
