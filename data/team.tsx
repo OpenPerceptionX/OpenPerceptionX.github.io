@@ -312,65 +312,6 @@ export const members: {
         keys: ["intern"],
     },
     {
-        name: "Checheng Yu",
-        image: "/assets/person/checheng_yu.jpg",
-        desc: "",
-        image_s: "/assets/person/checheng_yu_s.jpg",
-        links: [
-            {
-                icon: "homepage",
-                url: "https://tradewindycc.github.io/"
-            },
-            {
-                icon: "email",
-                url: "mailto:ycc2366582449@outlook.com",
-            },
-            {
-                icon: "github",
-                url: "https://github.com/Tradewindycc",
-            },
-        ],
-        keys: ["intern"],
-    },
-    {
-        name: "Caojun Wang",
-        image: "/assets/person/caojun_wang.jpg",
-        desc: "",
-        image_s: "/assets/person/caojun_wang_s.jpg",
-        links: [
-            {
-                icon: "scholar",
-                url: "https://scholar.google.com/citations?user=35xHlDUAAAAJ&hl"
-            },
-            {
-                icon: "email",
-                url: "mailto:wangcaojunsos4@gmail.com",
-            },
-            {
-                icon: "github",
-                url: "https://github.com/WCJ-BERT",
-            },
-        ],
-        keys: ["intern"],
-    },
-    {
-        name: "Zhenhua Wu",
-        image: "/assets/person/zhenhua_wu.jpg",
-        desc: "",
-        image_s: "/assets/person/zhenhua_wu_s.jpg",
-        links: [
-            {
-                icon: "email",
-                url: "mailto:wuzhenhua1122@gmail.com",
-            },
-            {
-                icon: "github",
-                url: "https://github.com/ArthurWuzh",
-            },
-        ],
-        keys: ["intern"],
-    },
-    {
         name: "Hongchen Li",
         image: "/assets/person/hongchen_li.jpg",
         desc: "",
@@ -400,6 +341,27 @@ export const members: {
             {
                 icon: "github",
                 url: "https://github.com/wly-Lilie",
+            },
+        ],
+        keys: ["intern"],
+    },
+    {
+        name: "Caojun Wang",
+        image: "/assets/person/caojun_wang.jpg",
+        desc: "Tongji University",
+        image_s: "/assets/person/caojun_wang_s.jpg",
+        links: [
+            {
+                icon: "scholar",
+                url: "https://scholar.google.com/citations?user=35xHlDUAAAAJ&hl"
+            },
+            {
+                icon: "email",
+                url: "mailto:wangcaojunsos4@gmail.com",
+            },
+            {
+                icon: "github",
+                url: "https://github.com/WCJ-BERT",
             },
         ],
         keys: ["intern"],
@@ -508,6 +470,44 @@ export const members: {
             {
                 icon: "github",
                 url: "https://github.com/Y-vic",
+            },
+        ],
+        keys: ["intern"],
+    },
+    {
+        name: "Checheng Yu",
+        image: "/assets/person/checheng_yu.jpg",
+        desc: "Nanjing University",
+        image_s: "/assets/person/checheng_yu_s.jpg",
+        links: [
+            {
+                icon: "homepage",
+                url: "https://tradewindycc.github.io/"
+            },
+            {
+                icon: "email",
+                url: "mailto:ycc2366582449@outlook.com",
+            },
+            {
+                icon: "github",
+                url: "https://github.com/Tradewindycc",
+            },
+        ],
+        keys: ["intern"],
+    },
+    {
+        name: "Zhenhua Wu",
+        image: "/assets/person/zhenhua_wu.jpg",
+        desc: "Sun Yat-sen University",
+        image_s: "/assets/person/zhenhua_wu_s.jpg",
+        links: [
+            {
+                icon: "email",
+                url: "mailto:wuzhenhua1122@gmail.com",
+            },
+            {
+                icon: "github",
+                url: "https://github.com/ArthurWuzh",
             },
         ],
         keys: ["intern"],
