@@ -125,7 +125,7 @@ export default function RootLayout({
                                 <AspectRatio ratio={1/1}>
                                     <Image
                                         src="/icon/wechatgroup.svg"
-                                        alt="WeChatGroup"
+                                        alt="WeChat Group"
                                         fill
                                         className="group-hover:scale-125 transition delay-100 duration-200"
                                     />
