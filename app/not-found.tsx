@@ -5,7 +5,7 @@ export const metadata: Metadata = {
 
 
 
-import NotFound404 from '@/components/ui/404'
+import NotFound404 from '@/components/404'
 
 
 

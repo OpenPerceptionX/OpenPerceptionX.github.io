@@ -119,13 +119,13 @@ export function AppSidebar() {
                                         </CollapsibleTrigger>
                                         <CollapsibleContent>
                                             <SidebarMenuSub>
-                                                <Link href="/blog/agibot-world" className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
+                                                <Link href="/AgiBot-World" className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
                                                     AgiBot World
                                                 </Link>
-                                                <Link href="/vista" target="_blank" className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
-                                                    OpenDV
+                                                <Link href="/ReSim" className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
+                                                    ReSim
                                                 </Link>
-                                                <Link href="/drivelm" target="_blank" className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
+                                                <Link href="/DriveLM" className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
                                                     DriveLM
                                                 </Link>
                                                 <Link href="/dataset"  className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
@@ -146,7 +146,7 @@ export function AppSidebar() {
                                         </CollapsibleTrigger>
                                         <CollapsibleContent>
                                             <SidebarMenuSub>
-                                                <Link href="https://github.com/OpenDriveLab/UniAD" className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
+                                                <Link href="https://github.com/OpenDriveLab/UniAD" target="_blank" className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
                                                     UniAD
                                                 </Link>
                                                 <Link href="https://github.com/OpenDriveLab/UniVLA" target="_blank" className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
@@ -173,7 +173,7 @@ export function AppSidebar() {
                                                 <Link href="/challenge2025" className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
                                                     Challenge 2025
                                                 </Link>
-                                                <Link href="/iccv2025" target="_blank" className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
+                                                <Link href="/iccv2025" className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
                                                     Workshop at ICCV 2025
                                                 </Link>
                                                 <Link href="/events"  className="p-2 rounded-sm hover:bg-o-blue/3 select-none">

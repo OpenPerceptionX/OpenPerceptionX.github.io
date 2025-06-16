@@ -17,10 +17,9 @@ export default function NotFound404() {
         redirect('/legacy/index.html')
     }
     if (
-        pathname.toLowerCase() == '/team' ||
-        pathname.toLowerCase() == '/team/'
+        pathname.toLowerCase().startsWith('/team')
     ) {
-        redirect('/legacy/team/index.html')
+        redirect('/team')
     }
     if (
         pathname.toLowerCase() == '/recruit' ||
