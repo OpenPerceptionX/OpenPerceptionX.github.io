@@ -5,12 +5,12 @@ export const metadata: Metadata = {
 
 
 
-import NotFound404 from '@/components/404'
+import Redirect from '@/components/redirect'
 
 
 
 export default function NotFound() {
     return (
-        <NotFound404/>
+        <Redirect/>
     )
 }
