@@ -6,7 +6,7 @@ import { redirect, usePathname } from 'next/navigation'
 
 
 
-export default function NotFound404() {
+export default function Redirect() {
 
 
 
