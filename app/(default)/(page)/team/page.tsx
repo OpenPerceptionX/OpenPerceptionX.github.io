@@ -73,7 +73,7 @@ export default function Home() {
 
 
 
-            <div className="w-full px-6 flex justify-center mt-24">
+            <div className="w-full px-6 flex justify-center mt-12">
                 <div className="w-full max-w-7xl grid gap-12 grid-cols-2 md:grid-cols-3 xl:grid-cols-4 3xl:grid-cols-5">
                     {[...members.values()].filter(member => member.keys.includes("scholar")).map((member) => (
                         <div className="flex flex-col gap-3 group/image" key={member.name}>
@@ -119,12 +119,6 @@ export default function Home() {
 
 
             <div className="w-full px-6 flex justify-center mt-24">
-                <Separator className="max-w-7xl"/>
-            </div>
-
-
-
-            <div className="w-full px-6 flex justify-center mt-24">
                 <div className="w-full max-w-7xl flex">
                     <h2 className="text-t1"> 
                         <Link href="#phd" className="scroll-mt-32 group flex items-center" id="phd">
@@ -142,7 +136,7 @@ export default function Home() {
 
 
 
-            <div className="w-full px-6 flex justify-center mt-24">
+            <div className="w-full px-6 flex justify-center mt-12">
                 <div className="w-full max-w-7xl grid gap-12 grid-cols-2 md:grid-cols-3 xl:grid-cols-4 3xl:grid-cols-5">
                     {[...members.values()].filter(member => member.keys.includes("phd")).map((member) => (
                         <div className="flex flex-col gap-3 group/image" key={member.name}>
@@ -188,12 +182,6 @@ export default function Home() {
 
 
             <div className="w-full px-6 flex justify-center mt-24">
-                <Separator className="max-w-7xl"/>
-            </div>
-
-
-
-            <div className="w-full px-6 flex justify-center mt-24">
                 <div className="w-full max-w-7xl flex">
                     <h2 className="text-t1"> 
                         <Link href="#intern" className="scroll-mt-32 group flex items-center" id="intern">
@@ -211,7 +199,7 @@ export default function Home() {
 
 
 
-            <div className="w-full px-6 flex justify-center mt-24">
+            <div className="w-full px-6 flex justify-center mt-12">
                 <div className="w-full max-w-7xl grid gap-12 grid-cols-2 md:grid-cols-3 xl:grid-cols-4 3xl:grid-cols-5">
                     {[...members.values()].filter(member => member.keys.includes("intern")).map((member) => (
                         <div className="flex flex-col gap-3 group/image" key={member.name}>
@@ -257,12 +245,6 @@ export default function Home() {
 
 
             <div className="w-full px-6 flex justify-center mt-24">
-                <Separator className="max-w-7xl"/>
-            </div>
-
-
-
-            <div className="w-full px-6 flex justify-center mt-24">
                 <div className="w-full max-w-7xl flex">
                     <h2 className="text-t1"> 
                         <Link href="#alumni" className="scroll-mt-32 group flex items-center" id="alumni">
@@ -280,7 +262,7 @@ export default function Home() {
 
 
 
-            <div className="w-full px-6 flex justify-center mt-24">
+            <div className="w-full px-6 flex justify-center mt-12">
                 <div className="w-full max-w-7xl">
                     <div className="w-full max-w-5xl flex flex-col gap-6">
                         {[...members.values()].filter(member => member.keys.includes("alumni")).map((member) => (
@@ -310,12 +292,6 @@ export default function Home() {
                         ))}
                     </div>
                 </div>
-            </div>
-
-
-
-            <div className="w-full px-6 flex justify-center mt-24">
-                <Separator className="max-w-7xl"/>
             </div>
 
 
