@@ -46,6 +46,7 @@ type SidebarContextProps = {
   toggleSidebar: () => void
   content_projecct: { text: string; id: string }[] | null
   content_page: { text: string; id: string }[] | null
+  pathname: string
 }
 
 const SidebarContext = React.createContext<SidebarContextProps | null>(null)
@@ -135,6 +136,7 @@ function SidebarProvider({
       toggleSidebar,
       content_projecct,
       content_page,
+      pathname,
     }),
     [state, open, setOpen, isMobile, openMobile, setOpenMobile, toggleSidebar]
   )
