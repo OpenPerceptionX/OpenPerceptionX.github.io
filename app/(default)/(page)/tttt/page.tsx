@@ -282,12 +282,12 @@ export default function Home() {
 
             <div className="w-full px-6 flex justify-center mt-24">
                 <div className="w-full max-w-7xl">
-                    <div className="w-full max-w-3xl flex flex-col gap-6">
+                    <div className="w-full max-w-5xl flex flex-col gap-6">
                         {[...members.values()].filter(member => member.keys.includes("alumni")).map((member) => (
                             <div className="flex gap-6" key={member.name}>
                                 {
                                     member.links[0].url == "" && (
-                                        <div className="flex-1/3">
+                                        <div className="flex-1/2">
                                             <span>
                                                 {member.name}
                                             </span>
@@ -296,14 +296,14 @@ export default function Home() {
                                 }
                                 {
                                     member.links[0].url != "" && (
-                                        <div className="flex-1/3">
+                                        <div className="flex-1/2">
                                             <Link href={member.links[0].url} target="_blank" className="hover:text-o-blue">
                                                 {member.name}
                                             </Link>
                                         </div>
                                     )
                                 }
-                                <i className="flex-2/3">
+                                <i className="flex-1/2">
                                     {member.desc}
                                 </i>
                             </div>
