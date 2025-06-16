@@ -1,12 +1,13 @@
 "use client"
 
 
+
 import { useSidebar } from "@/components/ui/sidebar"
 import { Button } from "@/components/ui/button"
 
 
 
-export function CustomTrigger() {
+export function NavigatorTrigger() {
     const { toggleSidebar } = useSidebar()
     return (
         <Button className="bg-background text-foreground hover:bg-white group" onClick={toggleSidebar}>

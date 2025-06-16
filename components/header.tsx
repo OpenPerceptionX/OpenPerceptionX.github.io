@@ -10,11 +10,11 @@ import { usePathname } from 'next/navigation';
 
 
 import { Button } from "@/components/ui/button"
-import { CustomTrigger } from "@/components/ui/sidebartrigger"
 
 
 
 import { AppSidebar } from "@/components/app-sidebar"
+import { NavigatorTrigger } from "@/components/navigator-trigger"
 
 
 
@@ -37,6 +37,8 @@ export function Header() {
 
             <div className="fixed flex flex-row gap-3 p-6 z-20 flex-wrap w-full justify-between md:w-fit md:justify-start">
 
+
+
                 <Button asChild className="bg-background text-foreground hover:bg-white group">
                     <Link href="/" className="select-none">
                         <Image
@@ -49,7 +51,11 @@ export function Header() {
                     </Link>
                 </Button>
 
-                <CustomTrigger />
+
+
+                <NavigatorTrigger />
+
+
 
             </div>
 

@@ -35,43 +35,49 @@ import { FadeIn } from "@/components/animation/fade-in"
 
 
 function PageSidebar() {
+
     const { content_projecct, content_page } = useSidebar()
+
     if (content_projecct != null) {
         return (
-                <SidebarMenu className="mb-12 px-8 text-xs overflow-y-scroll no-scrollbar">
-                    {
-                        content_page == null && (
-                            <div className="md:h-[23vh] select-none"></div>
-                        )
-                    }
-                    {
-                        content_page != null && (
-                            <span className="font-bold p-2 select-none text-foreground/50">
-                                This Page
-                            </span>
-                        )
-                    }
-                    {content_projecct.map((item) => (
+            <SidebarMenu className="mb-12 px-8 text-xs overflow-y-scroll no-scrollbar">
+
+                {
+                    content_page == null && (
+                        <div className="md:h-[23vh] select-none"></div>
+                    )
+                } {
+                    content_page != null && (
+                        <span className="font-bold p-2 select-none text-foreground/50">
+                            This Page
+                        </span>
+                    )
+                }
+
+                {
+                    content_projecct.map((item) => (
                         <Link key={item.text} href={"#" + item.id}  className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
                             {item.text}
                         </Link>
-                    ))}
+                    ))
+                }
 
-                </SidebarMenu>
+            </SidebarMenu>
         )
     } else if (content_page != null) {
         return (
-                <SidebarMenu className="mb-12 px-8 text-xs overflow-y-scroll no-scrollbar">
-                    <span className="font-bold p-2 select-none text-foreground/50">
-                        This Page
-                    </span>
-                    {content_page.map((item) => (
+            <SidebarMenu className="mb-12 px-8 text-xs overflow-y-scroll no-scrollbar">
+                <span className="font-bold p-2 select-none text-foreground/50">
+                    This Page
+                </span>
+                {
+                    content_page.map((item) => (
                         <Link key={item.text} href={"#" + item.id}  className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
                             {item.text}
                         </Link>
-                    ))}
-
-                </SidebarMenu>
+                    ))
+                }
+            </SidebarMenu>
         )
     } 
     else {
@@ -109,6 +115,8 @@ export function AppSidebar() {
                     {
                         content_page != null && (
 
+
+                            
                             <SidebarMenu className="mb-12 px-8 text-xs overflow-y-scroll no-scrollbar">
 
 
@@ -214,11 +222,11 @@ export function AppSidebar() {
 
                             </SidebarMenu>
 
+
+
                         )
                     }
                 
-
-
 
 
                     <PageSidebar/>
