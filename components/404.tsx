@@ -51,6 +51,9 @@ export default function NotFound404() {
     ) {
         redirect('/legacy/events/index.html')
     }
+
+
+    
     // project
     if (
         pathname.toLowerCase().startsWith('/blog/agibot-world') || 
@@ -109,6 +112,9 @@ export default function NotFound404() {
     ) {
         redirect('https://opendrivelab.github.io/elm.github.io/')
     }
+
+
+
     // event 2025
     if (
         pathname.toLowerCase() =='/cvpr2025' ||
@@ -141,6 +147,9 @@ export default function NotFound404() {
     ) {
         redirect('/legacy/challenge2025/index.html')
     }
+
+
+
     // event 2024
     if (
         pathname.toLowerCase().startsWith('/cvpr2024/workshop')
@@ -174,6 +183,10 @@ export default function NotFound404() {
     ) {
         redirect('https://starleague.ai/event2024/')
     }
+
+
+
+
     // event 2023
     if (
         pathname.toLowerCase().startsWith('/AD23Challenge') || 
@@ -201,6 +214,9 @@ export default function NotFound404() {
     ) {
         redirect('/legacy/event2023/index.html')
     }
+
+
+
     // misc.
     if (
         pathname.toLowerCase().startsWith('/lihongyang')
