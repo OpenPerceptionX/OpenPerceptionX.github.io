@@ -312,23 +312,6 @@ export const members: {
         keys: ["intern"],
     },
     {
-        name: "Hongchen Li",
-        image: "/assets/person/hongchen_li.jpg",
-        desc: "",
-        image_s: "/assets/person/hongchen_li_s.jpg",
-        links: [
-            {
-                icon: "email",
-                url: "mailto:lhchen0531@gmail.com",
-            },
-            {
-                icon: "github",
-                url: "https://github.com/lhcstation",
-            },
-        ],
-        keys: ["intern"],
-    },
-    {
         name: "Longyan Wu",
         image: "/assets/person/longyan_wu.jpg",
         desc: "Fudan University",
@@ -362,6 +345,23 @@ export const members: {
             {
                 icon: "github",
                 url: "https://github.com/WCJ-BERT",
+            },
+        ],
+        keys: ["intern"],
+    },
+    {
+        name: "Hongchen Li",
+        image: "/assets/person/hongchen_li.jpg",
+        desc: "Tongji University",
+        image_s: "/assets/person/hongchen_li_s.jpg",
+        links: [
+            {
+                icon: "email",
+                url: "mailto:lhchen0531@gmail.com",
+            },
+            {
+                icon: "github",
+                url: "https://github.com/lhcstation",
             },
         ],
         keys: ["intern"],
