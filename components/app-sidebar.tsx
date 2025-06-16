@@ -80,7 +80,7 @@ export function AppSidebar() {
     return (
         <FadeIn>
             <Sidebar>
-                <div className="fixed flex flex-row gap-3 m-6 z-20 flex-wrap">
+                <div className="fixed flex md:hidden flex-row gap-3 m-6 z-20 flex-wrap">
                     <Button asChild className="bg-background text-foreground hover:bg-white group">
                         <Link href="/" className="select-none">
                             <Image
