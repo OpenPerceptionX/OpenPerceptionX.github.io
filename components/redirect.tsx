@@ -11,6 +11,9 @@ export default function Redirect() {
 
 
     const pathname = usePathname()
+
+
+    
     if (
         pathname.toLowerCase() == '/'
     ) {
