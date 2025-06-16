@@ -17,7 +17,7 @@ export default function NotFound404() {
         redirect('/legacy/index.html')
     }
     if (
-        pathname.toLowerCase().startsWith('/team')
+        pathname.toLowerCase() == '/team/'
     ) {
         redirect('/team')
     }
