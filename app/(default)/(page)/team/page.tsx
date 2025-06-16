@@ -34,7 +34,7 @@ export default function Home() {
                         Team
                     </h1>
                     <span className="text-xl">
-                        Introducing (some) talents at OpenDriveLab.
+                        Introducing (some) talents at OpenDriveLab
                     </span>
                 </div>
             </div>
