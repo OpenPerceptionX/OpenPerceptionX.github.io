@@ -14,6 +14,8 @@ export default function NotFound404() {
     const router = useRouter()
     const [ready, setReady] = useState(false)
 
+
+    
     useEffect(() => {
         if (pathname.toLowerCase().startsWith('/team') && pathname !== '/team') {
             router.replace('/team');
@@ -29,11 +31,6 @@ export default function NotFound404() {
         pathname.toLowerCase() == '/'
     ) {
         redirect('/legacy/index.html')
-    }
-    if (
-        pathname.toLowerCase().startsWith('/team')
-    ) {
-        redirect('/team')
     }
     if (
         pathname.toLowerCase() == '/recruit' ||
