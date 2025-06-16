@@ -2,9 +2,9 @@
 
 
 
+import { ChevronDown } from "lucide-react"
 import Image from 'next/image'
 import Link from "next/link"
-import { ChevronDown  } from "lucide-react"
 
 
 
@@ -27,6 +27,9 @@ import {
 } from "@/components/ui/sidebar"
 import { useSidebar } from "@/components/ui/sidebar"
 import { Button } from "@/components/ui/button"
+
+
+
 import { FadeIn } from "@/components/animation/fade-in"
 
 

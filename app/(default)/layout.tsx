@@ -24,6 +24,7 @@ import {
 import { WeChat, WeChatGroup } from "@/components/app-drawer"
 
 
+
 const links: {
     icon: string;
     url: string;
@@ -108,7 +109,7 @@ export default function RootLayout({
                                 <AspectRatio ratio={1/1}>
                                     <Image
                                         src="/icon/wechat.svg"
-                                        alt="wechat"
+                                        alt="WeChat"
                                         fill
                                         className="group-hover:scale-125 transition delay-100 duration-200"
                                     />
@@ -124,7 +125,7 @@ export default function RootLayout({
                                 <AspectRatio ratio={1/1}>
                                     <Image
                                         src="/icon/wechatgroup.svg"
-                                        alt="wechat"
+                                        alt="WeChatGroup"
                                         fill
                                         className="group-hover:scale-125 transition delay-100 duration-200"
                                     />

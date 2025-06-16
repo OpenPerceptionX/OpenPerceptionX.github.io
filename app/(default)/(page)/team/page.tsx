@@ -13,7 +13,6 @@ import Link from "next/link"
 
 
 import { AspectRatio } from "@/components/ui/aspect-ratio"
-import { Separator } from "@/components/ui/separator"
 
 
 
@@ -22,7 +21,6 @@ import { members } from "@/data/team"
 
 
 export default function Home() {
-
     return (
         <div className="w-full">
 
