@@ -40,6 +40,11 @@ function PageSidebar() {
         return (
                 <SidebarMenu className="mb-12 px-8 text-xs overflow-y-scroll no-scrollbar">
                     {
+                        content_page == null && (
+                            <div className="md:h-[23vh] select-none"></div>
+                        )
+                    }
+                    {
                         content_page != null && (
                             <span className="font-bold p-2 select-none text-foreground/50">
                                 This Page
