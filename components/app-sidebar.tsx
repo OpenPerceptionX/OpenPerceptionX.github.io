@@ -149,7 +149,7 @@ export function AppSidebar() {
                                         </CollapsibleTrigger>
                                         <CollapsibleContent>
                                             <SidebarMenuSub>
-                                                <Drawer>
+                                                <Drawer direction="top">
                                                     <DrawerTrigger asChild>
                                                         <div className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
                                                             Embodied AI
@@ -157,7 +157,7 @@ export function AppSidebar() {
                                                     </DrawerTrigger>
                                                     <Embodied/>
                                                 </Drawer>
-                                                <Drawer>
+                                                <Drawer direction="top">
                                                     <DrawerTrigger asChild>
                                                         <div className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
                                                             End-to-End AD
