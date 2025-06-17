@@ -25,6 +25,11 @@ export default function Redirect() {
         redirect('/team')
     }
     if (
+        pathname.toLowerCase().startsWith('/publication')
+    ) {
+        redirect('/publications')
+    }
+    if (
         pathname.toLowerCase() == '/recruit' ||
         pathname.toLowerCase() == '/recruit/'
     ) {
@@ -37,14 +42,6 @@ export default function Redirect() {
         pathname.toLowerCase() == '/datasets/'
     ) {
         redirect('/legacy/datasets/index.html')
-    }
-    if (
-        pathname.toLowerCase() == '/publication' || 
-        pathname.toLowerCase() == '/publication/' ||
-        pathname.toLowerCase() == '/publications' ||
-        pathname.toLowerCase() == '/publications/'
-    ) {
-        redirect('/legacy/publications/index.html')
     }
     if (
         pathname.toLowerCase() == '/event' || 
