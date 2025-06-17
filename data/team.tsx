@@ -309,7 +309,7 @@ export const members: {
                 url: "https://github.com/ZhouYunsong",
             },
         ],
-        keys: ["intern"],
+        keys: ["alumni"],
     },
     {
         name: "Longyan Wu",
