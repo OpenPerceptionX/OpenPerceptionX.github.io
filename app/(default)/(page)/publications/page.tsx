@@ -114,26 +114,22 @@ export default function Home() {
                                                     </Link>
                                                 )
                                             }
-                                            <div className="flex gap-3 flex-wrap">
-                                                {
-                                                    publication.icon.map((link) => (
-                                                        link.type != 'github' &&
-                                                        <Link href={link.link} target={link.link.startsWith('http') ? '_blank' : '_self'} key={link.type} className="size-4 md:size-5 group/icon">
-                                                            <AspectRatio ratio={1/1}>
-                                                                <Image
-                                                                    src={"/icon/" + link.type + ".svg"}
-                                                                    alt={link.type}
-                                                                    fill
-                                                                    className="group-hover/icon:scale-125 transition delay-100 duration-200"
-                                                                />
-                                                            </AspectRatio>
-                                                        </Link>
-                                                    ))
-                                                }
-                                            </div>
+                                            {
+                                                publication.icon.map((link) => (
+                                                    link.type != 'github' &&
+                                                    <Link href={link.link} target={link.link.startsWith('http') ? '_blank' : '_self'} key={link.type} className="size-4 md:size-5 group/icon">
+                                                        <AspectRatio ratio={1/1}>
+                                                            <Image
+                                                                src={"/icon/" + link.type + ".svg"}
+                                                                alt={link.type}
+                                                                fill
+                                                                className="group-hover/icon:scale-125 transition delay-100 duration-200"
+                                                            />
+                                                        </AspectRatio>
+                                                    </Link>
+                                                ))
+                                            }
                                         </div>
-
-
 
                                         <i className="text-sm text-o-gray">
                                             {publication.description}
@@ -150,13 +146,8 @@ export default function Home() {
 
 
 
-
                 </div>
             ))}
-
-
-
-
 
 
 
