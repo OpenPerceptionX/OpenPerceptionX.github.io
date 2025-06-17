@@ -55,10 +55,10 @@ export const publications: {
             },
         ],
         description: "A unified vision-language-action framework that enables policy learning across different environments.",
-        keys: ['editor_pick'],
+        keys: ['editor_pick', 'drawer_embodied'],
     },
     {
-        title: "UniAD: Planning-oriented Autonomous Driving",
+        title: "Planning-oriented Autonomous Driving",
         link: "https://openaccess.thecvf.com/content/CVPR2023/html/Hu_Planning-Oriented_Autonomous_Driving_CVPR_2023_paper.html",
         image: "/assets/publication/uniad.jpg",
         author: "Yihan Hu, Jiazhi Yang, Li Chen, Keyu Li, Chonghao Sima, Xizhou Zhu, Siqi Chai, Senyao Du, Tianwei Lin, Wenhai Wang, Lewei Lu, Xiaosong Jia, Qiang Liu, Jifeng Dai, Yu Qiao, Hongyang Li",
@@ -89,7 +89,7 @@ export const publications: {
             },
         ],
         description: "A comprehensive framework up-to-date that incorporates full-stack driving tasks in one network.",
-        keys: ['editor_pick'],
+        keys: ['editor_pick', 'drawer_e2e'],
     },
     {
         title: "AgiBot World Colosseo: A Large-scale Manipulation Platform for Scalable and Intelligent Embodied Systems",
@@ -137,7 +137,7 @@ export const publications: {
             },
         ],
         description: "In this survey, we provide a comprehensive analysis of more than 270 papers on the motivation, roadmap, methodology, challenges, and future trends in end-to-end autonomous driving.",
-        keys: ['editor_pick'],
+        keys: ['editor_pick', 'drawer_e2e'],
     },
     {
         title: "DriveLM: Driving with Graph Visual Question Answering",
@@ -259,7 +259,7 @@ export const publications: {
             },
         ],
         description: "We propose a general pre-training pipeline that learns Manipulation by Predicting the Interaction (MPI).",
-        keys: ['embodied_ai'],
+        keys: ['embodied_ai', 'drawer_embodied'],
     },
     {
         title: "MTGS: Multi-Traversal Gaussian Splatting",
@@ -603,7 +603,7 @@ export const publications: {
             },
         ],
         description: "ReSim is a driving world model that enables Reliable Simulation of diverse open-world driving scenarios under various actions, including hazardous non-expert ones. A Video2Reward model estimates the reward from ReSim's simulated future.",
-        keys: ['end_to_end_ad'],
+        keys: ['end_to_end_ad', 'drawer_e2e'],
     },
     {
         title: "ETA: Efficiency through Thinking Ahead, A Dual Approach to Self-Driving with Large Models",
