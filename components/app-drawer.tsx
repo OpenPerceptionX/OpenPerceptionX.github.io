@@ -21,7 +21,7 @@ import {
 
 export function WeChat() {
     return (
-        <DrawerContent>
+        <DrawerContent className='pt-12 pb-6'>
             <DrawerHeader>
                 <DrawerTitle>
                     Subscribe to WeChat Public Account
@@ -48,7 +48,7 @@ export function WeChat() {
 
 export function WeChatGroup() {
     return (
-        <DrawerContent>
+        <DrawerContent className='pt-12 pb-6'>
             <DrawerHeader>
                 <DrawerTitle>
                     Join WeChat Group
@@ -76,7 +76,7 @@ export function WeChatGroup() {
 
 export function Embodied() {
     return (
-        <DrawerContent>
+        <DrawerContent className='pt-12 pb-6'>
             <DrawerHeader>
                 <DrawerTitle className='text-xl'>
                     Embodied AI
@@ -119,7 +119,7 @@ export function Embodied() {
 
 export function E2EAD() {
     return (
-        <DrawerContent>
+        <DrawerContent className='pt-12 pb-6'>
             <DrawerHeader>
                 <DrawerTitle className='text-xl'>
                     End-to-End Autonomous Driving

@@ -103,7 +103,7 @@ export default function RootLayout({
                         </Link>
                     ))}
 
-                    <Drawer>
+                    <Drawer direction="top">
                         <DrawerTrigger asChild>
                             <div className="size-4 md:size-5 group cursor-pointer">
                                 <AspectRatio ratio={1/1}>
@@ -119,7 +119,7 @@ export default function RootLayout({
                         <WeChat/>
                     </Drawer>
                     
-                    <Drawer>
+                    <Drawer direction="top">
                         <DrawerTrigger asChild>
                             <div className="size-4 md:size-5 group cursor-pointer">
                                 <AspectRatio ratio={1/1}>
