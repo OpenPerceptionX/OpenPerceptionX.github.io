@@ -62,4 +62,26 @@ export const NavigatorPage: {
             id: "2022",
         },
     ],
+    "/recruit": [
+        {
+            text: "具身智能",
+            id: "embodied",
+        },
+        {
+            text: "自動駕駛",
+            id: "driving",
+        },
+        {
+            text: "生態合作",
+            id: "ecosystem",
+        },
+        {
+            text: "團隊介紹",
+            id: "introduction",
+        },
+        {
+            text: "申請方式",
+            id: "apply",
+        },
+    ],
 };

@@ -30,10 +30,9 @@ export default function Redirect() {
         redirect('/publications')
     }
     if (
-        pathname.toLowerCase() == '/recruit' ||
-        pathname.toLowerCase() == '/recruit/'
+        pathname.toLowerCase().startsWith('/recruit')
     ) {
-        redirect('/legacy/recruit/index.html')
+        redirect('/recruit')
     }
     if (
         pathname.toLowerCase() == '/dataset' || 
