@@ -32,11 +32,11 @@ export const NavigatorProject: {
             id: "overview",
         },
         {
-            text: "Action-Controlled / Waymo",
+            text: "Action-controlled / Waymo",
             id: "action_control_waymo",
         },
         {
-            text: "Action-Controlled / nuScenes",
+            text: "Action-controlled / nuScenes",
             id: "action_control_nuscenes",
         },
         {
