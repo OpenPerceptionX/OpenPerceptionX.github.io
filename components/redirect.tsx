@@ -150,12 +150,12 @@ export default function Redirect() {
     if (
         pathname.toLowerCase().startsWith('/cvpr2024/workshop')
     ) {
-        redirect('/cvpr2024/workshop/')
+        redirect('/legacy/cvpr2024/workshop/')
     }
     if (
         pathname.toLowerCase().startsWith('/cvpr2024/tutorial')
     ) {
-        redirect('/(legacy)/cvpr2024/tutorial/')
+        redirect('/legacy/cvpr2024/tutorial/')
     }
     if (
         pathname.toLowerCase().startsWith('/cvpr2024/challenge') || 
