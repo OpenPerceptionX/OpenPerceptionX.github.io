@@ -35,12 +35,10 @@ export default function Redirect() {
         redirect('/recruit')
     }
     if (
-        pathname.toLowerCase() == '/dataset' || 
-        pathname.toLowerCase() == '/dataset/' ||
-        pathname.toLowerCase() == '/datasets' ||
-        pathname.toLowerCase() == '/datasets/'
+        pathname.toLowerCase().startsWith('/dataset') || 
+        pathname.toLowerCase().startsWith('/project')
     ) {
-        redirect('/legacy/datasets/index.html')
+        redirect('/projects')
     }
     if (
         pathname.toLowerCase() == '/event' || 

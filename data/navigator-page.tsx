@@ -84,4 +84,14 @@ export const NavigatorPage: {
             id: "apply",
         },
     ],
+    "/projects": [
+        {
+            text: "Embodied AI",
+            id: "embodied",
+        },
+        {
+            text: "Autonomous Driving",
+            id: "driving",
+        },
+    ],
 };
