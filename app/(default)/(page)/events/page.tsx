@@ -63,7 +63,7 @@ export default function Home() {
                         <div className="w-full max-w-7xl grid gap-12 grid-cols-1 xl:grid-cols-2">
                             {[...events.values()].filter(event => event.keys.includes(year)).map((event) => (
                                 <div className="flex flex-col gap-6" key={event.title}>
-                                    <Link className="w-full h-64 relative rounded-sm shadow-sm overflow-hidden group" href={event.url} target={event.url.startsWith('http') ? '_blank' : '_self'}>
+                                    <Link className="w-full h-80 relative rounded-sm shadow-sm overflow-hidden group" href={event.url} target={event.url.startsWith('http') ? '_blank' : '_self'}>
                                         <Image
                                             src={event.image}
                                             alt={event.location}
