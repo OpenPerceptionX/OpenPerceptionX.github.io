@@ -16,6 +16,7 @@
 - black color: ```#0d0d0d```
 - max width: ```max-w-5xl``` / ```max-w-7xl```
 - ```Link```: ```target={xxx.startsWith('http') ? '_blank' : '_self'}```
+- text: ```leading-relaxed```
 
 ### Note
 - use ```<Link>``` instead of ```<a>```
