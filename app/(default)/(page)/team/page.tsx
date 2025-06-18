@@ -45,7 +45,7 @@ export default function Home() {
                             src="/assets/background/v2025.jpg"
                             alt="team"
                             fill
-                            className="object-cover object-center rounded-sm bg-gradient-landing hover:scale-101 transition delay-100 duration-200"
+                            className="object-cover object-center rounded-sm bg-gradient-landing"
                         />
                     </div>
                 </div>
