@@ -12,7 +12,16 @@ import Link from "next/link"
 
 
 
-import { AspectRatio } from "@/components/ui/aspect-ratio"
+import {
+    Timeline,
+    TimelineConnector,
+    TimelineContent,
+    TimelineDescription,
+    TimelineDot,
+    TimelineItem,
+    TimelineSeparator,
+    TimelineTitle,
+} from "@/components/junwen-k/timeline";
 
 
 
@@ -31,6 +40,130 @@ export default function Home() {
                     <h1 className="text-t0 font-bold">
                         Event
                     </h1>
+                </div>
+            </div>
+
+
+
+            <div className="w-full px-6 flex justify-center mt-24">
+                <div className="w-full max-w-7xl">
+                    <Timeline>
+                        <TimelineItem>
+                            <TimelineSeparator>
+                                <TimelineDot />
+                                <TimelineConnector />
+                            </TimelineSeparator>
+                            <TimelineContent className="flex flex-col gap-3">
+                                <TimelineTitle className="flex gap-6">
+                                    <span>CVPR 2025 @ Nashville, USA</span>
+                                    <span className="text-o-gray italic">June 11 - 15, 2025</span>
+                                </TimelineTitle>
+                                <TimelineDescription className="text-sm">
+                                    <Link href="/challenge2025/#1x-wm" className="text-o-blue animated-underline">
+                                        [Challenge] World Model Challenge by 1X
+                                    </Link>
+                                </TimelineDescription>
+                                <TimelineDescription className="text-sm">
+                                    <Link href="/challenge2025/#navsim-e2e-driving" className="text-o-blue animated-underline">
+                                        [Challenge] NAVSIM v2 End-to-End Driving Challenge
+                                    </Link>
+                                </TimelineDescription>
+                                <TimelineDescription className="text-sm">
+                                    <Link href="/cvpr2025/workshop/" className="text-o-blue animated-underline">
+                                        [Workshop] Embodied Intelligence for Autonomous Systems on the Horizon
+                                    </Link>
+                                </TimelineDescription>
+                                <TimelineDescription className="text-sm">
+                                    <Link href="/cvpr2025/tutorial/" className="text-o-blue animated-underline">
+                                        [Tutorial] Robotics 101: An Odyssey from A Vision Perspective
+                                    </Link>
+                                </TimelineDescription>
+                            </TimelineContent>
+                        </TimelineItem>
+                        <TimelineItem>
+                            <TimelineSeparator>
+                                <TimelineDot />
+                                <TimelineConnector />
+                            </TimelineSeparator>
+                            <TimelineContent className="flex flex-col gap-3">
+                                <TimelineTitle className="flex gap-6">
+                                    <span>CoRL 2025 @ Seoul, Korea</span>
+                                    <span className="text-o-gray italic">September 27 - 30, 2025</span>
+                                </TimelineTitle>
+                                <TimelineDescription className="text-sm">
+                                    <span>
+                                        [Workshop] To be announced
+                                    </span>
+                                </TimelineDescription>
+                            </TimelineContent>
+                        </TimelineItem>
+                        <TimelineItem>
+                            <TimelineSeparator>
+                                <TimelineDot />
+                                <TimelineConnector />
+                            </TimelineSeparator>
+                            <TimelineContent className="flex flex-col gap-3">
+                                <TimelineTitle className="flex gap-6">
+                                    <span>ICCV 2025 @ Honolulu, USA</span>
+                                    <span className="text-o-gray italic">October 19 - 23, 2025</span>
+                                </TimelineTitle>
+                                <TimelineDescription className="text-sm">
+                                    <Link href="/challenge2025/#1x-wm" className="text-o-blue animated-underline">
+                                        [Challenge] World Model Challenge by 1X
+                                    </Link>
+                                </TimelineDescription>
+                                <TimelineDescription className="text-sm">
+                                    <Link href="/challenge2025/#navsim-e2e-driving" className="text-o-blue animated-underline">
+                                        [Challenge] NAVSIM v2 End-to-End Driving Challenge
+                                    </Link>
+                                </TimelineDescription>
+                                <TimelineDescription className="text-sm">
+                                    <Link href="/iccv2025/workshop/" className="text-o-blue animated-underline">
+                                        [Workshop] Learning to See: Advancing Spatial Understanding for Embodied Intelligence
+                                    </Link>
+                                </TimelineDescription>
+                            </TimelineContent>
+                        </TimelineItem>
+                        <TimelineItem>
+                            <TimelineSeparator>
+                                <TimelineDot />
+                                <TimelineConnector />
+                            </TimelineSeparator>
+                            <TimelineContent className="flex flex-col gap-3">
+                                <TimelineTitle className="flex gap-6">
+                                    <span>IROS 2025 @ Hangzhou, China</span>
+                                    <span className="text-o-gray italic">October 19 - 25, 2025</span>
+                                </TimelineTitle>
+                                <TimelineDescription className="text-sm">
+                                    <Link href="/challenge2025/#agibot-world" className="text-o-blue animated-underline">
+                                        [Challenge] AgiBot World Challenge
+                                    </Link>
+                                </TimelineDescription>
+                                <TimelineDescription className="text-sm">
+                                    <Link href="https://sites.google.com/view/iros2025fastworkshop/home" target="_blank" className="text-o-blue animated-underline">
+                                        [Workshop] FAST: Fully Autonomy Emerges from Situational CogniTion
+                                    </Link>
+                                </TimelineDescription>
+                            </TimelineContent>
+                        </TimelineItem>
+                        <TimelineItem>
+                            <TimelineSeparator>
+                                <TimelineDot />
+                                <TimelineConnector />
+                            </TimelineSeparator>
+                            <TimelineContent className="flex flex-col gap-3">
+                                <TimelineTitle className="flex gap-6">
+                                    <span>Events @ Shenzhen, China</span>
+                                    <span className="text-o-gray italic">October, 2025</span>
+                                </TimelineTitle>
+                                <TimelineDescription className="text-sm">
+                                    <span>
+                                        To be announced
+                                    </span>
+                                </TimelineDescription>
+                            </TimelineContent>
+                        </TimelineItem>
+                    </Timeline>
                 </div>
             </div>
 
