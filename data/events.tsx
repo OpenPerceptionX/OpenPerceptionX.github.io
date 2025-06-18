@@ -73,7 +73,7 @@ export const events: {
         url: "http://www.prcv.cn/?competition_130/",
         image: "/assets/event/Urumqi.jpg",
         imageoption: "object-center",
-        date: "October 18 - 20, 2024",
+        date: "",
         location: "烏魯木齊",
         keys: ['2024'],
     },
