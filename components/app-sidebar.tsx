@@ -183,13 +183,10 @@ export function AppSidebar() {
                                                 <Link href="/AgiBot-World" className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
                                                     AgiBot World
                                                 </Link>
-                                                <Link href="/ReSim" className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
-                                                    ReSim
-                                                </Link>
                                                 <Link href="/DriveLM" className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
                                                     DriveLM
                                                 </Link>
-                                                <Link href="/dataset"  className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
+                                                <Link href="/projects"  className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
                                                     more
                                                 </Link>
                                             </SidebarMenuSub>
