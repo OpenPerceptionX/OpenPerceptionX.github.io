@@ -70,7 +70,7 @@ export default function Home() {
 
 
                                     <div className="flex-1/3 w-full flex justify-center items-center relative">
-                                        <Link href={publication.link} target="_blank">
+                                        <Link href={publication.link} target={publication.link.startsWith('http') ? '_blank' : '_self'}>
                                             <Image
                                                 src={publication.image}
                                                 alt={publication.title}
@@ -87,7 +87,7 @@ export default function Home() {
 
                                         <div className="flex flex-col gap-3">
                                             <div>
-                                                <Link href={publication.link} target="_blank" className="text-xl hover:text-o-blue">
+                                                <Link href={publication.link} target={publication.link.startsWith('http') ? '_blank' : '_self'} className="text-xl hover:text-o-blue">
                                                     {publication.title}
                                                 </Link>
                                             </div>
@@ -99,7 +99,7 @@ export default function Home() {
                                         <div className="flex gap-3 flex-wrap items-center">
                                             {
                                                 publication.noteoption ?
-                                                    <Link href={publication.noteoption} target="_blank" className="text-xs text-white bg-gradient-to-br from-o-light-blue via-o-blue to-o-light-blue rounded-sm px-2 py-1.5 hover:scale-105 transition delay-100 duration-200">
+                                                    <Link href={publication.noteoption} target={publication.noteoption.startsWith('http') ? '_blank' : '_self'} className="text-xs text-white bg-gradient-to-br from-o-light-blue via-o-blue to-o-light-blue rounded-sm px-2 py-1.5 hover:scale-105 transition delay-100 duration-200">
                                                         {publication.note}
                                                     </Link>
                                                 :
@@ -109,7 +109,7 @@ export default function Home() {
                                             }
                                             {
                                                 publication.star && (
-                                                    <Link href={publication.starlink} target="_blank">
+                                                    <Link href={publication.starlink} target={publication.starlink.startsWith('http') ? '_blank' : '_self'}>
                                                         <img loading="lazy" src={publication.star} className="h-6 hover:scale-105 transition delay-100 duration-200"/>
                                                     </Link>
                                                 )

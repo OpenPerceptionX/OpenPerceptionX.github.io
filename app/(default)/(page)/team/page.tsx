@@ -97,7 +97,7 @@ export default function Home() {
                             </span>
                             <div className="flex gap-3 flex-wrap">
                                 {member.links.map((link) => (
-                                    <Link href={link.url} target="_blank" key={link.icon} className="size-4 md:size-5 group/icon">
+                                    <Link href={link.url} target={link.url.startsWith('http') ? '_blank' : '_self'} key={link.icon} className="size-4 md:size-5 group/icon">
                                         <AspectRatio ratio={1/1}>
                                             <Image
                                                 src={"/icon/" + link.icon + ".svg"}
@@ -160,7 +160,7 @@ export default function Home() {
                             </span>
                             <div className="flex gap-3 flex-wrap">
                                 {member.links.map((link) => (
-                                    <Link href={link.url} target="_blank" key={link.icon} className="size-4 md:size-5 group/icon">
+                                    <Link href={link.url} target={link.url.startsWith('http') ? '_blank' : '_self'} key={link.icon} className="size-4 md:size-5 group/icon">
                                         <AspectRatio ratio={1/1}>
                                             <Image
                                                 src={"/icon/" + link.icon + ".svg"}
@@ -223,7 +223,7 @@ export default function Home() {
                             </span>
                             <div className="flex gap-3 flex-wrap">
                                 {member.links.map((link) => (
-                                    <Link href={link.url} target="_blank" key={link.icon} className="size-4 md:size-5 group/icon">
+                                    <Link href={link.url} target={link.url.startsWith('http') ? '_blank' : '_self'} key={link.icon} className="size-4 md:size-5 group/icon">
                                         <AspectRatio ratio={1/1}>
                                             <Image
                                                 src={"/icon/" + link.icon + ".svg"}
@@ -277,7 +277,7 @@ export default function Home() {
                                 {
                                     member.links[0].url != "" && (
                                         <div className="flex-1/2">
-                                            <Link href={member.links[0].url} target="_blank" className="hover:text-o-blue">
+                                            <Link href={member.links[0].url} target={member.links[0].url.startsWith('http') ? '_blank' : '_self'} className="hover:text-o-blue">
                                                 {member.name}
                                             </Link>
                                         </div>
