@@ -55,7 +55,7 @@ export default function Redirect() {
         pathname.toLowerCase().startsWith('/blog/agibot-world') || 
         pathname.toLowerCase().startsWith('/agibot-world')
     ) {
-        redirect('/legacy/AgiBot-World/index.html')
+        redirect('/legacy/AgiBot-World/')
     }
     if (
         pathname.toLowerCase().startsWith('/agibotworld_paper.pdf') || 
@@ -71,27 +71,27 @@ export default function Redirect() {
     if (
         pathname.toLowerCase().startsWith('/mpi')
     ) {
-        redirect('/legacy/MPI/index.html')
+        redirect('/legacy/MPI/')
     }
     if (
         pathname.toLowerCase().startsWith('/vista')
     ) {
-        redirect('/legacy/Vista/index.html')
+        redirect('/legacy/Vista/')
     }
     if (
         pathname.toLowerCase().startsWith('/drivelm')
     ) {
-        redirect('/legacy/DriveLM/index.html')
+        redirect('/legacy/DriveLM/')
     }
     if (
         pathname.toLowerCase().startsWith('/nexus')
     ) {
-        redirect('/legacy/Nexus/index.html')
+        redirect('/legacy/Nexus/')
     }
     if (
         pathname.toLowerCase().startsWith('/robodual')
     ) {
-        redirect('/legacy/RoboDual/index.html')
+        redirect('/legacy/RoboDual/')
     }
     if (
         pathname.toLowerCase().startsWith('/freetacman')
@@ -116,32 +116,32 @@ export default function Redirect() {
         pathname.toLowerCase() =='/cvpr2025' ||
         pathname.toLowerCase() =='/cvpr2025/'
     ) {
-        redirect('/legacy/cvpr2025/index.html')
+        redirect('/legacy/cvpr2025/')
     }
     if (
         pathname.toLowerCase().startsWith('/corl2025')
     ) {
-        redirect('/legacy/corl2025/workshop/index.html')
+        redirect('/legacy/corl2025/workshop/')
     }
     if (
         pathname.toLowerCase().startsWith('/iccv2025')
     ) {
-        redirect('/legacy/iccv2025/workshop/index.html')
+        redirect('/legacy/iccv2025/workshop/')
     }
     if (
         pathname.toLowerCase().startsWith('/cvpr2025/workshop')
     ) {
-        redirect('/legacy/cvpr2025/workshop/index.html')
+        redirect('/legacy/cvpr2025/workshop/')
     }
     if (
         pathname.toLowerCase().startsWith('/cvpr2025/tutorial')
     ) {
-        redirect('/legacy/cvpr2025/tutorial/index.html')
+        redirect('/legacy/cvpr2025/tutorial/')
     }
     if (
         pathname.toLowerCase().startsWith('/challenge2025')
     ) {
-        redirect('/legacy/challenge2025/index.html')
+        redirect('/legacy/challenge2025/')
     }
 
 
@@ -150,29 +150,29 @@ export default function Redirect() {
     if (
         pathname.toLowerCase().startsWith('/cvpr2024/workshop')
     ) {
-        redirect('/legacy/cvpr2024/workshop/index.html')
+        redirect('/legacy/cvpr2024/workshop/')
     }
     if (
         pathname.toLowerCase().startsWith('/cvpr2024/tutorial')
     ) {
-        redirect('/legacy/cvpr2024/tutorial/index.html')
+        redirect('/legacy/cvpr2024/tutorial/')
     }
     if (
         pathname.toLowerCase().startsWith('/cvpr2024/challenge') || 
         pathname.toLowerCase().startsWith('/challenge2024')
     ) {
-        redirect('/legacy/challenge2024/index.html')
+        redirect('/legacy/challenge2024/')
     }
     if (
         pathname.toLowerCase().startsWith('/valse2024')
     ) {
-        redirect('/legacy/valse2024/workshop/index.html')
+        redirect('/legacy/valse2024/workshop/')
     }
     if (
         pathname.toLowerCase() =='/cvpr2024' ||
         pathname.toLowerCase() =='/cvpr2024/'
     ) {
-        redirect('/legacy/cvpr2024/index.html')
+        redirect('/legacy/cvpr2024/')
     }
     if (
         pathname.toLowerCase().startsWith('/event2024')
