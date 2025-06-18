@@ -44,4 +44,22 @@ export const NavigatorPage: {
             id: "cv_at_scale",
         },
     ],
+    "/events": [
+        {
+            text: "2025",
+            id: "2025",
+        },
+        {
+            text: "2024",
+            id: "2024",
+        },
+        {
+            text: "2023",
+            id: "2023",
+        },
+        {
+            text: "2022",
+            id: "2022",
+        },
+    ],
 };

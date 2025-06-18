@@ -46,10 +46,9 @@ export default function Redirect() {
     if (
         pathname.toLowerCase() == '/event' || 
         pathname.toLowerCase() == '/event/' ||
-        pathname.toLowerCase() == '/events' ||
-        pathname.toLowerCase() == '/events/'
+        pathname.toLowerCase().startsWith('/events')
     ) {
-        redirect('/legacy/events/index.html')
+        redirect('/events')
     }
 
 
