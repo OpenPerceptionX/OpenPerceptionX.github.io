@@ -17,116 +17,13 @@ import {
     CarouselItem,
 } from "@/components/ui/homecarousel"
 import { AspectRatio } from "@/components/ui/aspect-ratio"
-import Autoplay from "embla-carousel-autoplay"
 
 
 
-const landings: { 
-    title: string;
-    description: string;
-    proccedings: string;
-    links: { link: string; url: string; }[];
-    image: string;
-}[] = [
-    {
-        title: "Learning to Act Anywhere with Task-centric Latent Actions",
-        description: "UniVLA: A unified vision-language-action framework that enables policy learning across different environments.",
-        proccedings: "RSS 2025",
-        links: [
-            {
-                link: "GitHub",
-                url: "https://github.com/OpenDriveLab/UniVLA",
-            },
-            {
-                link: "Paper",
-                url: "https://arxiv.org/abs/2505.06111",
-            },
-        ],
-        image: "https://ik.imagekit.io/opendrivelab/univla",
-    },
-    {
-        title: "AgiBot World",
-        description: "World's First Large-scale High-quality Robotic Manipulation Benchmark.",
-        proccedings: "",
-        links: [
-            {
-                link: "Challenge",
-                url: "/challenge2025/#agibot-world",
-            },
-            {
-                link: "Blog",
-                url: "/blog/agibot-world/",
-            },
-            {
-                link: "Paper",
-                url: "https://arxiv.org/abs/2503.06669",
-            },
-            {
-                link: "GitHub",
-                url: "https://github.com/OpenDriveLab/AgiBot-World",
-            },
-            {
-                link: "Hugging Face",
-                url: "https://huggingface.co/agibot-world",
-            },
-        ],
-        image: "/assets/background/agibot_world.jpg",
-    },
-    {
-        title: "DriveLM: Driving with Graph Visual Question Answering",
-        description: "Unlocking the future where autonomous driving meets the unlimited potential of language.",
-        proccedings: "ECCV 2024 Oral ",
-        links: [
-            {
-                link: "Page",
-                url: "/DriveLM/",
-            },
-            {
-                link: "Dataset",
-                url: "https://github.com/OpenDriveLab/DriveLM",
-            },
-            {
-                link: "GitHub",
-                url: "https://github.com/OpenDriveLab/DriveLM",
-            },
-            {
-                link: "Hugging Face",
-                url: "https://huggingface.co/datasets/OpenDriveLab/DriveLM",
-            },
-            {
-                link: "Paper",
-                url: "https://arxiv.org/abs/2312.14150",
-            },
-        ],
-        image: "/assets/background/cd0d184b033748b5b5cc8a43c3b9ddc8.jpeg",
-    },
-    {
-        title: "Planning-oriented Autonomous Driving",
-        description: "UniAD: The first comprehensive framework that incorporates full-stack driving tasks.",
-        proccedings: "CVPR 2023 Best Paper Award ",
-        links: [
-            {
-                link: "GitHub",
-                url: "https://github.com/OpenDriveLab/UniAD",
-            },
-            {
-                link: "Paper",
-                url: "https://openaccess.thecvf.com/content/CVPR2023/html/Hu_Planning-Oriented_Autonomous_Driving_CVPR_2023_paper.html",
-            },
-            {
-                link: "Video",
-                url: "https://www.youtube.com/watch?v=cyrxJJ_nnaQ",
-            },
-            {
-                link: "Slides",
-                url: "https://opendrivelab.github.io/UniAD_plenary_talk_slides.pdf",
-            },
-        ],
-        image: "/assets/background/890e373a8bca0b4f0df9701fa09cf131.png",
-    },
-]
+import { publications } from "@/data/publications"
+const landings = [5,4,0,2,3,1].map(index => [...publications.values()].filter(publication => publication.keys.includes('home_sliding'))[index])
 
-
+console.log(landings)
 
 export function Landing() {
     return (
@@ -143,7 +40,7 @@ export function Landing() {
                         <CarouselItem key={index} className="w-full h-full flex flex-col lg:flex-row gap-12 lg:gap-24 justify-center items-center lg:p-12">
                             
 
-                            <div className="flex-1/2 w-full lg:h-full flex flex-col justify-center">
+                            <div className="flex-1/2 w-full lg:h-full flex flex-col justify-center select-none">
                                 <AspectRatio ratio={16/9}>
                                     <Image
                                         src={landing.image}
@@ -156,25 +53,34 @@ export function Landing() {
 
 
 
-                            <div className="flex-1/2 w-full flex flex-col gap-12">
+                            <div className="flex-1/2 w-full flex flex-col gap-12 select-none">
                                 <div className="flex flex-row text-o-gray">
                                     {index + 1} / {landings.length}
                                 </div>
                                 <div className="w-full flex flex-col gap-6">
-                                    <h1 className="text-t0 font-bold fg-gradient-blue pb-6 -mb-6"> 
+                                    <div>
+                                        {
+                                            !landing.note.startsWith('arXiv') && (
+                                                <span className="text-xs text-white bg-gradient-to-br from-o-light-blue via-o-blue to-o-light-blue rounded-sm px-2 py-1.5">
+                                                    {landing.note}
+                                                </span>
+                                            )
+                                        }
+                                    </div>
+                                    <h1 className="text-t1 font-bold fg-gradient-blue pb-6 -mb-6"> 
                                         {landing.title}
                                     </h1>
                                     <h2>
                                         {landing.description}
                                     </h2>
-                                    <div >
+                                    <div>
                                         <div className="flex flex-row items-center flex-wrap">
-                                            {landing.links.map((link, index) => (
+                                            {landing.icon.map((icon, index) => (
                                                 <div key={index} className="flex items-center">
-                                                    <Link href={link.url} target="_self" className="animated-underline-gray mr-3 text-nowrap">
-                                                        {link.link}
+                                                    <Link href={icon.link} target="_self" className="animated-underline-gray mr-3 text-nowrap">
+                                                        {icon.type}
                                                     </Link>
-                                                    {index < landing.links.length - 1 && (
+                                                    {index < landing.icon.length - 1 && (
                                                         <span className="text-xs mr-3"> | </span>
                                                     )}
                                                 </div>

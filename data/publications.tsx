@@ -55,7 +55,7 @@ export const publications: {
             },
         ],
         description: "A unified vision-language-action framework that enables policy learning across different environments.",
-        keys: ['editor_pick', 'drawer_embodied'],
+        keys: ['editor_pick', 'drawer_embodied', 'home_sliding'],
     },
     {
         title: "Planning-oriented Autonomous Driving",
@@ -89,7 +89,7 @@ export const publications: {
             },
         ],
         description: "A comprehensive framework up-to-date that incorporates full-stack driving tasks in one network.",
-        keys: ['editor_pick', 'drawer_e2e'],
+        keys: ['editor_pick', 'drawer_e2e', 'home_sliding'],
     },
     {
         title: "AgiBot World Colosseo: A Large-scale Manipulation Platform for Scalable and Intelligent Embodied Systems",
@@ -119,7 +119,7 @@ export const publications: {
             }
         ],
         description: "A novel generalist policy that leverages latent action representations to maximize data utilization, demonstrating predictable performance scaling with increased data volume.",
-        keys: ['editor_pick'],
+        keys: ['editor_pick', 'home_sliding', 'home_sliding'],
     },
     {
         title: "End-to-End Autonomous Driving: Challenges and Frontiers",
@@ -167,7 +167,7 @@ export const publications: {
             },
         ],
         description: "",
-        keys: ['editor_pick'],
+        keys: ['editor_pick', 'home_sliding'],
     },
     {
         title: "FreeTacMan: Robot-free Visuo-Tactile Data Collection System for Contact-rich Manipulation",
@@ -193,7 +193,7 @@ export const publications: {
             },
         ],
         description: "A human-centric and robot-free visuo-tactile data collection system for high-quality and efficient robot manipulation.",
-        keys: ['embodied_ai'],
+        keys: ['embodied_ai', 'home_sliding'],
     },
     {
         title: "Towards Synergistic, Generalized, and Efficient Dual-System for Robotic Manipulation",
@@ -603,7 +603,7 @@ export const publications: {
             },
         ],
         description: "ReSim is a driving world model that enables Reliable Simulation of diverse open-world driving scenarios under various actions, including hazardous non-expert ones. A Video2Reward model estimates the reward from ReSim's simulated future.",
-        keys: ['end_to_end_ad', 'drawer_e2e'],
+        keys: ['end_to_end_ad', 'drawer_e2e', 'home_sliding'],
     },
     {
         title: "ETA: Efficiency through Thinking Ahead, A Dual Approach to Self-Driving with Large Models",
