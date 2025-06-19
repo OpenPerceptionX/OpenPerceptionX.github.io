@@ -1,5 +1,7 @@
 "use client"
 
+import Autoplay from "embla-carousel-autoplay"
+
 import * as React from "react"
 import useEmblaCarousel, {
   type UseEmblaCarouselType,
@@ -51,12 +53,15 @@ function Carousel({
   children,
   ...props
 }: React.ComponentProps<"div"> & CarouselProps) {
+  const autoplay = React.useRef(
+    Autoplay({ delay: 3333 })
+  )
   const [carouselRef, api] = useEmblaCarousel(
     {
       ...opts,
       axis: orientation === "horizontal" ? "x" : "y",
     },
-    plugins
+    [...(plugins ?? []), autoplay.current]
   )
   const [canScrollPrev, setCanScrollPrev] = React.useState(false)
   const [canScrollNext, setCanScrollNext] = React.useState(false)
@@ -103,6 +108,31 @@ function Carousel({
       api?.off("select", onSelect)
     }
   }, [api, onSelect])
+
+  React.useEffect(() => {
+  if (!api) return
+
+  let resumeTimeout: ReturnType<typeof setTimeout>
+
+  const resetAutoplay = () => {
+    autoplay.current.stop()
+    clearTimeout(resumeTimeout)
+    resumeTimeout = setTimeout(() => {
+      autoplay.current.play()
+    }, 3333)
+  }
+
+  api.on("pointerDown", resetAutoplay)
+  api.on("pointerUp", resetAutoplay)
+  api.on("select", resetAutoplay)
+
+  return () => {
+    api.off("pointerDown", resetAutoplay)
+    api.off("pointerUp", resetAutoplay)
+    api.off("select", resetAutoplay)
+    clearTimeout(resumeTimeout)
+  }
+}, [api])
 
   return (
     <CarouselContext.Provider
