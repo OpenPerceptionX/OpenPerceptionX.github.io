@@ -48,6 +48,10 @@ import { Embodied, E2EAD } from "@/components/app-drawer"
 
 
 
+import { events } from "@/data/events"
+
+
+
 function PageSidebar() {
 
     const { content_projecct, content_page } = useSidebar()
@@ -228,12 +232,11 @@ export function AppSidebar() {
                                         </CollapsibleTrigger>
                                         <CollapsibleContent>
                                             <SidebarMenuSub>
-                                                <Link href="/challenge2025" className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
-                                                    Challenge 2025
-                                                </Link>
-                                                <Link href="/iccv2025" className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
-                                                    Workshop at ICCV 2025
-                                                </Link>
+                                                {[...events.values()].filter(event => event.keys.includes('editor_pick')).map((event) => (
+                                                    <Link href={event.url} target={event.url.startsWith('http') ? '_blank' : '_self'} className="p-2 rounded-sm hover:bg-o-blue/3 select-none" key={event.title}>
+                                                        {event.title}
+                                                    </Link>
+                                                ))}   
                                                 <Link href="/events"  className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
                                                     more
                                                 </Link>
