@@ -148,6 +148,13 @@
 .animated-underline:hover {
     @apply border-b-o-blue;
 }
+.animated-underline-gray {
+    border-bottom: 1px solid transparent;
+    @apply transition delay-100 duration-200;
+}
+.animated-underline-gray:hover {
+    @apply border-b-o-gray;
+}
 
 
 
