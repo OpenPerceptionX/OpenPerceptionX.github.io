@@ -140,38 +140,38 @@ export function Landing() {
             >
                 <CarouselContent  className="w-full">
                     {landings.map((landing, index) => (
-                        <CarouselItem key={index} className="w-full h-full flex flex-col lg:flex-row gap-10 lg:gap-20 justify-center items-center p-20">
+                        <CarouselItem key={index} className="w-full h-full flex flex-col lg:flex-row gap-12 lg:gap-24 justify-center items-center lg:p-12">
                             
 
-                            <div className="flex-1/2  h-full flex flex-col justify-center select-none">
+                            <div className="flex-1/2 w-full lg:h-full flex flex-col justify-center">
                                 <AspectRatio ratio={16/9}>
                                     <Image
                                         src={landing.image}
                                         alt={landing.title}
                                         fill
-                                        className="rounded-sm object-cover bg-gradient-landing"
+                                        className="object-cover object-center rounded-sm bg-gradient-landing hover:scale-103 transition delay-100 duration-200"
                                     />
                                 </AspectRatio>
                             </div>
 
 
 
-                            <div className="flex-1/2 flex flex-col gap-10 justify-around select-none">
-                                <div className="flex flex-row font-bold">
+                            <div className="flex-1/2 w-full flex flex-col gap-12">
+                                <div className="flex flex-row text-o-gray">
                                     {index + 1} / {landings.length}
                                 </div>
-                                <div className="flex flex-col gap-10 w-full">
-                                    <h1 className="text-t1 font-bold w-full">
+                                <div className="w-full flex flex-col gap-6">
+                                    <h1 className="text-t0 font-bold fg-gradient-blue pb-6 -mb-6"> 
                                         {landing.title}
                                     </h1>
-                                    <h2 className="w-full">
+                                    <h2>
                                         {landing.description}
                                     </h2>
                                     <div >
-                                        <div className="flex flex-row items-center">
+                                        <div className="flex flex-row items-center flex-wrap">
                                             {landing.links.map((link, index) => (
                                                 <div key={index} className="flex items-center">
-                                                    <Link href={link.url} target="_self" className="animated-underline mr-3">
+                                                    <Link href={link.url} target="_self" className="animated-underline-gray mr-3 text-nowrap">
                                                         {link.link}
                                                     </Link>
                                                     {index < landing.links.length - 1 && (
