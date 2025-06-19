@@ -91,7 +91,7 @@ export function Embodied() {
                 <div className='w-full max-w-5xl flex flex-col gap-6'>
                     {[...publications.values()].filter(publication => publication.keys.includes('drawer_embodied')).map((publication) => (
                         <div className="hidden md:flex flex-col gap-3" key={publication.title}>
-                            <a className="border-l-3 border-o-gray pl-6 hover:border-o-blue flex flex-col gap-1 group" href={publication.starlink} target="_blank">
+                            <a className="border-l-3 border-o-gray pl-6 hover:border-o-blue flex flex-col gap-1 group" href={publication.starlink} target={publication.starlink.startsWith('http') ? '_blank' : '_self'}>
                                 <span className="group-hover:text-o-blue">
                                     {publication.title}
                                 </span>
@@ -134,7 +134,7 @@ export function E2EAD() {
                 <div className='w-full max-w-5xl flex flex-col gap-6'>
                     {[...publications.values()].filter(publication => publication.keys.includes('drawer_e2e')).map((publication) => (
                         <div className="hidden md:flex flex-col gap-3" key={publication.title}>
-                            <a className="border-l-3 border-o-gray pl-6 hover:border-o-blue flex flex-col gap-1 group" href={publication.starlink} target="_blank">
+                            <a className="border-l-3 border-o-gray pl-6 hover:border-o-blue flex flex-col gap-1 group" href={publication.starlink} target={publication.starlink.startsWith('http') ? '_blank' : '_self'}>
                                 <span className="group-hover:text-o-blue">
                                     {publication.title}
                                 </span>
