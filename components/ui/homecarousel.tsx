@@ -119,7 +119,7 @@ function Carousel({
     clearTimeout(resumeTimeout)
     resumeTimeout = setTimeout(() => {
       autoplay.current.play()
-    }, 3333)
+    }, 111)
   }
 
   api.on("pointerDown", resetAutoplay)
