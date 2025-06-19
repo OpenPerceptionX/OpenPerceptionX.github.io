@@ -131,9 +131,13 @@ export default function Home() {
                                             }
                                         </div>
 
-                                        <i className="text-sm text-o-gray">
-                                            {publication.description}
-                                        </i>
+                                        {
+                                            publication.description && (
+                                                <i className="text-sm text-o-gray">
+                                                    {publication.description}
+                                                </i>
+                                            )
+                                        }
 
                                     </div>
 
