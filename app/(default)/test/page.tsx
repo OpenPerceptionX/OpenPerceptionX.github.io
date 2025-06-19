@@ -9,13 +9,6 @@ export const metadata: Metadata = {
 
 import Image from 'next/image'
 import Link from "next/link"
-import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
-} from "@/components/ui/carousel"
 import { AspectRatio } from "@/components/ui/aspect-ratio"
 import {
     Drawer,
