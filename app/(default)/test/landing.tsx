@@ -72,88 +72,90 @@ export function Landing() {
 
 
 
-                            <div className="flex-1/2 w-full flex flex-col gap-12 select-none">
+                            <div className="flex-1/2 w-full flex flex-col gap-3 lg:gap-6 select-none">
+
+
+                            
                                 <div className="flex flex-row text-o-gray">
                                     {index + 1} / {landings.length}
                                 </div>
-                                <div className="w-full flex flex-col gap-6">
 
 
 
-                                    <div>
-                                        {
-                                            !landing.note.startsWith('arXiv') && (
-                                                <span className="text-xs text-white bg-gradient-to-br from-o-light-blue via-o-blue to-o-light-blue rounded-sm px-2 py-1.5">
-                                                    {landing.note}
-                                                </span>
-                                            )
-                                        }
-                                    </div>
-
-
-
-                                    <h1 className="text-t1 font-bold fg-gradient-blue pb-6 -mb-6"> 
-                                        {
-                                            landing.title.startsWith('AgiBot') ? (
-                                                "AgiBot World"
-                                            ) : (
-                                                landing.title
-                                            )
-                                        }
-                                    </h1>
-
-
-
-                                    <h2>
-                                        {
-                                            landing.title.startsWith('AgiBot') ? (
-                                                "World's First Large-scale High-quality Robotic Manipulation Benchmark."
-                                            ) : (
-                                                landing.description
-                                            )
-                                        }
-                                    </h2>
-
-
-
-                                    <div>
-                                        <div className="flex flex-row items-center flex-wrap">
-                                            <Link href={landing.link} target={landing.link.startsWith('http') ? '_blank' : '_self'} className="animated-underline-gray mr-3 text-nowrap">
-                                                Paper
-                                            </Link>
-                                            <span className="text-xs mr-3"> | </span>
-                                            {
-                                                landing.icon.map((icon, index) => (
-                                                    icon.type != 'zhihu' && (
-                                                        <div key={index} className="flex items-center">
-                                                            <Link href={icon.link} target={icon.link.startsWith('http') ? '_blank' : '_self'} className="animated-underline-gray mr-3 text-nowrap">
-                                                                {
-                                                                    landing.title.startsWith('FreeTacMan') && icon.type =='blog' ? (
-                                                                        'Hareware Guide'
-                                                                    ) : (
-                                                                        type_mapping[icon.type] ?? "XXX"
-                                                                    )
-                                                                }
-                                                            </Link>
-                                                            {index < landing.icon.length - 1 && (
-                                                                <span className="text-xs mr-3"> | </span>
-                                                            )}
-                                                        </div>
-                                                    )
-                                                ))
-                                            } 
-                                            {
-                                                landing.title.startsWith('AgiBot') && (
-                                                    <span className="text-xs mr-3"> | </span>
-                                                )
-                                            } {
-                                                landing.title.startsWith('AgiBot') && (
-                                                    <Link href='/challenge2025/#agibot-world' className="animated-underline-gray mr-3 text-nowrap">
-                                                        Challenge
-                                                    </Link>
-                                                )
-                                            }
+                                
+                                {
+                                    !landing.note.startsWith('arXiv') && (
+                                        <div>
+                                            <span className="text-xs text-white bg-gradient-to-br from-o-light-blue via-o-blue to-o-light-blue rounded-sm px-2 py-1.5">
+                                                {landing.note}
+                                            </span>
                                         </div>
+                                    )
+                                }
+
+
+
+                                <h1 className="text-t1 font-bold fg-gradient-blue pb-6 -mb-6"> 
+                                    {
+                                        landing.title.startsWith('AgiBot') ? (
+                                            "AgiBot World"
+                                        ) : (
+                                            landing.title
+                                        )
+                                    }
+                                </h1>
+
+
+
+                                <h2>
+                                    {
+                                        landing.title.startsWith('AgiBot') ? (
+                                            "World's First Large-scale High-quality Robotic Manipulation Benchmark."
+                                        ) : (
+                                            landing.description
+                                        )
+                                    }
+                                </h2>
+
+
+
+                                <div>
+                                    <div className="flex flex-row items-center flex-wrap">
+                                        <Link href={landing.link} target={landing.link.startsWith('http') ? '_blank' : '_self'} className="animated-underline-gray mr-3 text-nowrap">
+                                            Paper
+                                        </Link>
+                                        <span className="text-xs mr-3"> | </span>
+                                        {
+                                            landing.icon.map((icon, index) => (
+                                                icon.type != 'zhihu' && (
+                                                    <div key={index} className="flex items-center">
+                                                        <Link href={icon.link} target={icon.link.startsWith('http') ? '_blank' : '_self'} className="animated-underline-gray mr-3 text-nowrap">
+                                                            {
+                                                                landing.title.startsWith('FreeTacMan') && icon.type =='blog' ? (
+                                                                    'Hareware Guide'
+                                                                ) : (
+                                                                    type_mapping[icon.type] ?? "XXX"
+                                                                )
+                                                            }
+                                                        </Link>
+                                                        {index < landing.icon.length - 1 && (
+                                                            <span className="text-xs mr-3"> | </span>
+                                                        )}
+                                                    </div>
+                                                )
+                                            ))
+                                        } 
+                                        {
+                                            landing.title.startsWith('AgiBot') && (
+                                                <span className="text-xs mr-3"> | </span>
+                                            )
+                                        } {
+                                            landing.title.startsWith('AgiBot') && (
+                                                <Link href='/challenge2025/#agibot-world' className="animated-underline-gray mr-3 text-nowrap">
+                                                    Challenge
+                                                </Link>
+                                            )
+                                        }
                                     </div>
                                 </div>
                             </div>
