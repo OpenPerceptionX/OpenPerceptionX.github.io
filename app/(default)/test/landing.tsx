@@ -15,7 +15,7 @@ import {
     Carousel,
     CarouselContent,
     CarouselItem,
-} from "@/components/ui/carousel"
+} from "@/components/ui/homecarousel"
 import { AspectRatio } from "@/components/ui/aspect-ratio"
 import Autoplay from "embla-carousel-autoplay"
 
@@ -129,28 +129,20 @@ const landings: {
 
 
 export function Landing() {
-
-    const plugin = React.useRef(
-        Autoplay({ delay: 1000 })
-    )
-
     return (
-
-
         <div className="w-full h-svh flex justify-center items-center">
             <Carousel
                 opts={{
                     align: "start",
                     loop: true,
                 }}
-                plugins={[plugin.current as unknown as any]}
                 className="w-full px-6"
             >
                 <CarouselContent  className="w-full">
                     {landings.map((landing, index) => (
-
                         <CarouselItem key={index} className="w-full h-full flex flex-col lg:flex-row gap-10 lg:gap-20 justify-center items-center p-20">
                             
+
                             <div className="flex-1/2  h-full flex flex-col justify-center select-none">
                                 <AspectRatio ratio={16/9}>
                                     <Image
@@ -161,6 +153,7 @@ export function Landing() {
                                     />
                                 </AspectRatio>
                             </div>
+
 
 
                             <div className="flex-1/2 flex flex-col gap-10 justify-around select-none">
@@ -185,7 +178,7 @@ export function Landing() {
                                                         <span className="text-xs mr-3"> | </span>
                                                     )}
                                                 </div>
-                                        ))} 
+                                            ))} 
                                         </div>
                                     </div>
                                 </div>
@@ -194,12 +187,9 @@ export function Landing() {
                             
 
                         </CarouselItem>
-
                     ))}
                 </CarouselContent>
             </Carousel>
         </div>
-
-
     )
 }
