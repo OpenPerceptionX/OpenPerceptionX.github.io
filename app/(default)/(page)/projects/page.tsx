@@ -54,7 +54,7 @@ export default function Home() {
 
                         <Link className="lg:flex-1/2 w-full lg:max-w-128 h-64 relative rounded-sm overflow-hidden group" href="https://github.com/OpenDriveLab/AgiBot-World" target="_blank">
                             <Image
-                                src="/assets/dataset/agibotworld.jpg"
+                                src="https://ik.imagekit.io/opendrivelab/agibotworld.jpg"
                                 alt="AgiBot World"
                                 fill
                                 className="object-cover object-center bg-gradient-landing hover:scale-103 transition delay-100 duration-200"
