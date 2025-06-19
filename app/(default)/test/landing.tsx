@@ -143,7 +143,6 @@ export function Landing() {
                     align: "start",
                     loop: true,
                 }}
-                plugins={[plugin.current]}
                 className="w-full px-6"
             >
                 <CarouselContent  className="w-full">
