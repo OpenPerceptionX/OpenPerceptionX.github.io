@@ -56,7 +56,7 @@ export function Landing() {
             >
                 <CarouselContent  className="w-full">
                     {landings.map((landing, index) => (
-                        <CarouselItem key={index} className="w-full h-full flex flex-col lg:flex-row gap-12 lg:gap-24 justify-center items-center lg:p-12">
+                        <CarouselItem key={index} className="w-full h-full flex flex-col lg:flex-row gap-6 lg:gap-24 justify-center items-center lg:p-12">
                             
 
                             <div className="flex-1/2 w-full lg:h-full flex flex-col justify-center select-none">
@@ -76,7 +76,7 @@ export function Landing() {
 
 
                             
-                                <div className="flex flex-row text-o-gray">
+                                <div className="flex flex-row text-o-gray text-sm lg:text-base">
                                     {index + 1} / {landings.length}
                                 </div>
 
@@ -107,7 +107,7 @@ export function Landing() {
 
 
 
-                                <h2>
+                                <h2 className="text-sm lg:text-base">
                                     {
                                         landing.title.startsWith('AgiBot') ? (
                                             "World's First Large-scale High-quality Robotic Manipulation Benchmark."
@@ -120,7 +120,7 @@ export function Landing() {
 
 
                                 <div>
-                                    <div className="flex flex-row items-center flex-wrap">
+                                    <div className="flex flex-row items-center flex-wrap text-sm lg:text-base">
                                         <Link href={landing.link} target={landing.link.startsWith('http') ? '_blank' : '_self'} className="animated-underline-gray mr-3 text-nowrap">
                                             Paper
                                         </Link>
