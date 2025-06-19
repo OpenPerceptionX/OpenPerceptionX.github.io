@@ -22,8 +22,27 @@ import { AspectRatio } from "@/components/ui/aspect-ratio"
 
 import { publications } from "@/data/publications"
 const landings = [5,4,0,2,3,1].map(index => [...publications.values()].filter(publication => publication.keys.includes('home_sliding'))[index])
+const type_mapping: Record<string, string> = {
+    "page": "Page",
+    "huggingface": "Hugging Face",
+    "slides": "Slides",
+    "github": "GitHub",
+    "youtube": "Video",
+    "wechat": "解读",
+    "bilibili": "Video",
+    "blog": "Blog",
+    "dataset": "Dataset",
+}
+const image_mapping: Record<string, string> = {
+    "UniVLA: Learning to Act Anywhere with Task-centric Latent Actions": "https://ik.imagekit.io/opendrivelab/univla",
+    "Planning-oriented Autonomous Driving": "/assets/background/890e373a8bca0b4f0df9701fa09cf131.png",
+    "AgiBot World Colosseo: A Large-scale Manipulation Platform for Scalable and Intelligent Embodied Systems": "https://ik.imagekit.io/opendrivelab/agibotworld.jpg",
+    "DriveLM: Driving with Graph Visual Question Answering": "/assets/background/cd0d184b033748b5b5cc8a43c3b9ddc8.jpeg",
+    "FreeTacMan: Robot-free Visuo-Tactile Data Collection System for Contact-rich Manipulation": "https://ik.imagekit.io/opendrivelab/freetacman.png",
+    "ReSim: Reliable World Simulation for Autonomous Driving": "https://ik.imagekit.io/opendrivelab/resim.jpg",
+}
 
-console.log(landings)
+
 
 export function Landing() {
     return (
@@ -43,7 +62,7 @@ export function Landing() {
                             <div className="flex-1/2 w-full lg:h-full flex flex-col justify-center select-none">
                                 <AspectRatio ratio={16/9}>
                                     <Image
-                                        src={landing.image}
+                                        src={image_mapping[landing.title] ?? ""}
                                         alt={landing.title}
                                         fill
                                         className="object-cover object-center rounded-sm bg-gradient-landing hover:scale-103 transition delay-100 duration-200"
@@ -58,6 +77,9 @@ export function Landing() {
                                     {index + 1} / {landings.length}
                                 </div>
                                 <div className="w-full flex flex-col gap-6">
+
+
+
                                     <div>
                                         {
                                             !landing.note.startsWith('arXiv') && (
@@ -67,24 +89,70 @@ export function Landing() {
                                             )
                                         }
                                     </div>
+
+
+
                                     <h1 className="text-t1 font-bold fg-gradient-blue pb-6 -mb-6"> 
-                                        {landing.title}
+                                        {
+                                            landing.title.startsWith('AgiBot') ? (
+                                                "AgiBot World"
+                                            ) : (
+                                                landing.title
+                                            )
+                                        }
                                     </h1>
+
+
+
                                     <h2>
-                                        {landing.description}
+                                        {
+                                            landing.title.startsWith('AgiBot') ? (
+                                                "World's First Large-scale High-quality Robotic Manipulation Benchmark."
+                                            ) : (
+                                                landing.description
+                                            )
+                                        }
                                     </h2>
+
+
+
                                     <div>
                                         <div className="flex flex-row items-center flex-wrap">
-                                            {landing.icon.map((icon, index) => (
-                                                <div key={index} className="flex items-center">
-                                                    <Link href={icon.link} target="_self" className="animated-underline-gray mr-3 text-nowrap">
-                                                        {icon.type}
+                                            <Link href={landing.link} target={landing.link.startsWith('http') ? '_blank' : '_self'} className="animated-underline-gray mr-3 text-nowrap">
+                                                Paper
+                                            </Link>
+                                            <span className="text-xs mr-3"> | </span>
+                                            {
+                                                landing.icon.map((icon, index) => (
+                                                    icon.type != 'zhihu' && (
+                                                        <div key={index} className="flex items-center">
+                                                            <Link href={icon.link} target={icon.link.startsWith('http') ? '_blank' : '_self'} className="animated-underline-gray mr-3 text-nowrap">
+                                                                {
+                                                                    landing.title.startsWith('FreeTacMan') && icon.type =='blog' ? (
+                                                                        'Hareware Guide'
+                                                                    ) : (
+                                                                        type_mapping[icon.type] ?? "XXX"
+                                                                    )
+                                                                }
+                                                            </Link>
+                                                            {index < landing.icon.length - 1 && (
+                                                                <span className="text-xs mr-3"> | </span>
+                                                            )}
+                                                        </div>
+                                                    )
+                                                ))
+                                            } 
+                                            {
+                                                landing.title.startsWith('AgiBot') && (
+                                                    <span className="text-xs mr-3"> | </span>
+                                                )
+                                            } {
+                                                landing.title.startsWith('AgiBot') && (
+                                                    <Link href='/challenge2025/#agibot-world' className="animated-underline-gray mr-3 text-nowrap">
+                                                        Challenge
                                                     </Link>
-                                                    {index < landing.icon.length - 1 && (
-                                                        <span className="text-xs mr-3"> | </span>
-                                                    )}
-                                                </div>
-                                            ))} 
+                                                )
+                                            }
                                         </div>
                                     </div>
                                 </div>

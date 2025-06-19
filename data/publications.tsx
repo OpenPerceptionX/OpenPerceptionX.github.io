@@ -88,7 +88,7 @@ export const publications: {
                 link: "https://mp.weixin.qq.com/s?__biz=MzkyMDUzMDE2Mw==&mid=2247485809&idx=1&sn=5dbd00380bcf80cc32d11b6e15e93829",
             },
         ],
-        description: "A comprehensive framework up-to-date that incorporates full-stack driving tasks in one network.",
+        description: "UniAD: The first comprehensive framework that incorporates full-stack driving tasks.",
         keys: ['editor_pick', 'drawer_e2e', 'home_sliding'],
     },
     {
@@ -107,7 +107,7 @@ export const publications: {
             },
             {
                 type: "blog",
-                link: "/blog/agibot-world/",
+                link: "/AgiBot-World/",
             },
             {
                 type: "huggingface",
@@ -119,7 +119,7 @@ export const publications: {
             }
         ],
         description: "A novel generalist policy that leverages latent action representations to maximize data utilization, demonstrating predictable performance scaling with increased data volume.",
-        keys: ['editor_pick', 'home_sliding', 'home_sliding'],
+        keys: ['editor_pick', 'home_sliding'],
     },
     {
         title: "End-to-End Autonomous Driving: Challenges and Frontiers",
@@ -166,7 +166,7 @@ export const publications: {
                 link: "https://huggingface.co/datasets/OpenDriveLab-org/DriveLM",
             },
         ],
-        description: "",
+        description: "Unlocking the future where autonomous driving meets the unlimited potential of language.",
         keys: ['editor_pick', 'home_sliding'],
     },
     {
@@ -185,7 +185,7 @@ export const publications: {
             },
             {
                 type: "page",
-                link: "/FreeTacMan/",
+                link: "/FreeTacMan",
             },
             {
                 type: "blog",
