@@ -15,11 +15,6 @@ export default function Redirect() {
 
     
     if (
-        pathname.toLowerCase() == '/'
-    ) {
-        redirect('/legacy/index.html')
-    }
-    if (
         pathname.toLowerCase().startsWith('/team')
     ) {
         redirect('/team')
@@ -241,7 +236,8 @@ export default function Redirect() {
     }
 
 
-    redirect('/missing')
+    
+    redirect('')
     return (
         <main className='w-full'></main>
     )
