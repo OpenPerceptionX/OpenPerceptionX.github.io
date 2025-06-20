@@ -151,7 +151,7 @@ export function Landing() {
                                             )
                                         } {
                                             landing.title.startsWith('AgiBot') && (
-                                                <Link href='/challenge2025/#agibot-world' className="animated-underline-gray mr-3 text-nowrap">
+                                                <Link href='/challenge2025//#agibot-world' className="animated-underline-gray mr-3 text-nowrap">
                                                     Challenge
                                                 </Link>
                                             )

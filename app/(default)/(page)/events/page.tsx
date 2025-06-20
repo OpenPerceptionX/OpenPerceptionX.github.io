@@ -59,12 +59,12 @@ export default function Home() {
                                     <span className="text-o-gray italic">June 11 - 15, 2025</span>
                                 </TimelineTitle>
                                 <TimelineDescription className="text-sm">
-                                    <Link href="/challenge2025/#1x-wm" className="text-o-blue animated-underline">
+                                    <Link href="/challenge2025//#1x-wm" className="text-o-blue animated-underline">
                                         [Challenge] World Model Challenge by 1X
                                     </Link>
                                 </TimelineDescription>
                                 <TimelineDescription className="text-sm">
-                                    <Link href="/challenge2025/#navsim-e2e-driving" className="text-o-blue animated-underline">
+                                    <Link href="/challenge2025//#navsim-e2e-driving" className="text-o-blue animated-underline">
                                         [Challenge] NAVSIM v2 End-to-End Driving Challenge
                                     </Link>
                                 </TimelineDescription>
@@ -108,12 +108,12 @@ export default function Home() {
                                     <span className="text-o-gray italic">October 19 - 23, 2025</span>
                                 </TimelineTitle>
                                 <TimelineDescription className="text-sm">
-                                    <Link href="/challenge2025/#1x-wm" className="text-o-blue animated-underline">
+                                    <Link href="/challenge2025//#1x-wm" className="text-o-blue animated-underline">
                                         [Challenge] World Model Challenge by 1X
                                     </Link>
                                 </TimelineDescription>
                                 <TimelineDescription className="text-sm">
-                                    <Link href="/challenge2025/#navsim-e2e-driving" className="text-o-blue animated-underline">
+                                    <Link href="/challenge2025//#navsim-e2e-driving" className="text-o-blue animated-underline">
                                         [Challenge] NAVSIM v2 End-to-End Driving Challenge
                                     </Link>
                                 </TimelineDescription>
@@ -135,7 +135,7 @@ export default function Home() {
                                     <span className="text-o-gray italic">October 19 - 25, 2025</span>
                                 </TimelineTitle>
                                 <TimelineDescription className="text-sm">
-                                    <Link href="/challenge2025/#agibot-world" className="text-o-blue animated-underline">
+                                    <Link href="/challenge2025//#agibot-world" className="text-o-blue animated-underline">
                                         [Challenge] AgiBot World Challenge
                                     </Link>
                                 </TimelineDescription>
