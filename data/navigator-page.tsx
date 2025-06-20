@@ -4,6 +4,28 @@ export const NavigatorPage: {
         id: string;
     }[]
 } = {
+    "/": [
+        {
+            text: "Recruit",
+            id: "recruit",
+        },
+        {
+            text: "Research",
+            id: "research",
+        },
+        {
+            text: "Project",
+            id: "project",
+        },
+        {
+            text: "Publication",
+            id: "publication",
+        },
+        {
+            text: "Event",
+            id: "event",
+        },
+    ],
     "/team": [
         {
             text: "Scholar",
