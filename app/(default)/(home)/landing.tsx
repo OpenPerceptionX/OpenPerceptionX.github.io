@@ -52,7 +52,7 @@ export function Landing() {
                     align: "start",
                     loop: true,
                 }}
-                className="w-full pl-6 pr-2 md:pr-0"
+                className="w-full pl-6 pr-2 md:pr-0" /* some magic padding */
             >
                 <CarouselContent  className="w-full">
                     {landings.map((landing, index) => (
