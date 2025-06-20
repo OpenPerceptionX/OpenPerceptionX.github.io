@@ -42,7 +42,7 @@ export function Header() {
                 <Button asChild className="bg-background text-foreground hover:bg-white group">
                     <Link href="/" className="select-none">
                         <Image
-                            src="/logo/OpenDriveLab/D.png"
+                            src="/resources/logo/OpenDriveLab/D.png"
                             alt="OpenDriveLab"
                             width={24}
                             height={24}

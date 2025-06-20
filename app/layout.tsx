@@ -20,8 +20,8 @@ export const metadata: Metadata = {
     icons: {
         icon: [
             {
-                url: "/logo/OpenDriveLab/D.png",
-                href: "/logo/OpenDriveLab/D.png",
+                url: "/resources/logo/OpenDriveLab/D.png",
+                href: "/resources/logo/OpenDriveLab/D.png",
             },
         ],
     },

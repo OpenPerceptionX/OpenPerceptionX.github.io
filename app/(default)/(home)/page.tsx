@@ -399,7 +399,7 @@ export default function Home() {
                                         <Link href={link.link} target={link.link.startsWith('http') ? '_blank' : '_self'} key={link.type} className="size-4 md:size-5 group/icon">
                                             <AspectRatio ratio={1/1}>
                                                 <Image
-                                                    src={"/icon/" + link.type + ".svg"}
+                                                    src={"/resources/icon/" + link.type + ".svg"}
                                                     alt={link.type}
                                                     fill
                                                     className="group-hover/icon:scale-125 transition delay-100 duration-200"
