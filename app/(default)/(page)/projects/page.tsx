@@ -202,7 +202,7 @@ export default function Home() {
                                         Facilitating the <b>Perception, Prediction, Planning, Behavior, Motion</b> tasks with human-written reasoning logic as a connection in between.
                                     </li>
                                     <li>
-                                        <a className="text-o-blue animated-underline" href="/legacy/challenge2024/#driving_with_language">
+                                        <a className="text-o-blue animated-underline" href="/challenge2024/#driving_with_language">
                                             Autonomous Grand Challenge @ CVPR 2024
                                         </a> with 152 teams from 14 countries and regions participating.
                                     </li>
@@ -296,12 +296,12 @@ export default function Home() {
                                         The world's first perception and reasoning benchmark for scene structure in autonomous driving.
                                     </li>
                                     <li>
-                                        <a className="text-o-blue animated-underline" href="/legacy/challenge2024/#mapless_driving">
+                                        <a className="text-o-blue animated-underline" href="/challenge2024/#mapless_driving">
                                             Autonomous Grand Challenge @ CVPR 2024
                                         </a> with 120 teams from 10 countries and regions participating.
                                     </li>
                                     <li>
-                                        <a className="text-o-blue animated-underline" href="/legacy/challenge2023/#openlane_topology">
+                                        <a className="text-o-blue animated-underline" href="/challenge2023/#openlane_topology">
                                             Autonomous Driving Challenge @ CVPR 2023
                                         </a> with 34 teams from 4 countries and regions participating.
                                     </li>

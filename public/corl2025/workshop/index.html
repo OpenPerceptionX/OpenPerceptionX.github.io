@@ -1,0 +1,105 @@
+<head>
+    <link rel="icon" type="image/png" href="/assets/icon/D_small.png">
+    <title>Workshop at CoRL 2025 | OpenDriveLab</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Workshop, CoRL 2025, OpenDriveLab, Robotics, Embodied AI, Autonomous Driving">
+    <meta name="description" content="OpenDriveLab is committed to exploring cutting-edge embodied AI technology, launching a series of benchmarking work, open source to serve the community, and promote the common development of the industry. Friends who are committed to making influential research are welcome to join!">
+
+    <link href="/ui2025/css/index_tailwind.css" rel="stylesheet">
+
+    <script src="/ui2024/js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L7VEDHS6G8"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-L7VEDHS6G8');
+</script>
+
+
+
+<!-- load sidebar -->
+<script>
+    $.get('/ui2025/components/sidebar.html', function(result){
+        $("#to_add_sidebar").append(result);
+    })
+</script>
+
+
+
+<!-- WeChat Public Group -->
+<div id="popup_wechat_group" class="relative z-50 hidden">
+    <div class="fixed inset-0 bg-gray-300/80"></div>
+    <div class="fixed inset-0">
+        <div class="flex h-svh items-center justify-center p-6 laptop:p-72">
+            <div class="relative rounded-3xl bg-white p-6 pt-10 pb-10 laptop:p-10">
+                <div class="absolute right-0 top-0 pr-6 pt-10 laptop:pr-10">
+                    <button onclick="closeWeChatGroup()">
+                        <svg class="size-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-col mt-12 justify-items-center w-full justify-center" style="max-width: 768px;">
+                    <div class="flex flex-row justify-items-center w-full justify-center">
+                        <img src="/assets/qrcode_wechat_group.png" style="max-width: 256px;"/>
+                    </div>
+                    <span class="text-center mt-6">
+                        Join WeChat Group<br>加入微信羣組
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- popup -->
+<script>
+    function openWeChatGroup() {
+        document.getElementById("popup_wechat_group").classList.remove("hidden");
+        document.querySelector('body').classList.add('overflow-hidden');
+    }
+    function closeWeChatGroup() {
+        document.getElementById("popup_wechat_group").classList.add("hidden");
+        if (sidebar_state != true) {
+            document.querySelector('body').classList.remove('overflow-hidden');
+        };
+    }
+</script>
+
+
+
+<body class="h-full" id="#">
+    <!-- Header / Sidebar -->
+    <header id="to_add_sidebar" class="overscroll-none laptop:hidden"></header>
+    <!-- Page -->
+    <div id="page">
+        <div class="flex w-screen tablet:w-auto flex-col">
+
+
+
+            <!-- Landing -->
+            <div class="w-screen tablet:w-auto h-svh snap-start pt-20 p-6 tablet:p-10">
+                <div class="w-full h-full rounded-3xl bg-[url('https://ik.imagekit.io/opendrivelab/p_D5pbQG5TE.jpg')] bg-center laptop:bg-right bg-cover flex flex-col justify-end p-6 laptop:p-20 gap-6 laptop:gap-10 bg-black bg-opacity-50 bg-blend-overlay">
+                    <div class="flex flex-row gap-6 laptop:gap-10">
+                        <img src="/assets/icon/corl2025_white.png" class="h-10 laptop:h-20"/>
+                    </div>
+                    <h1 class="text-white">
+                        Beyond Scaling:<br>Towards Truly Generalizable and Intelligent Embodied Systems
+                    </h1>
+                    <h5 class="text-white">
+                        This is a placeholder for the ongoing CoRL 2025 Workshop proposal.
+                    </h5>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</body>
