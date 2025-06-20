@@ -52,7 +52,7 @@ export function Landing() {
                     align: "start",
                     loop: true,
                 }}
-                className="w-full px-6"
+                className="w-full pl-6"
             >
                 <CarouselContent  className="w-full">
                     {landings.map((landing, index) => (
