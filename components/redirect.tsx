@@ -236,8 +236,8 @@ export default function Redirect() {
     }
 
 
-    
-    redirect('')
+
+    redirect('/')
     return (
         <main className='w-full'></main>
     )
