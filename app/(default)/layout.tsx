@@ -94,7 +94,7 @@ export default function RootLayout({
                         <Link href={link.url} target="_blank" key={link.icon} className="size-4 md:size-5 group">
                             <AspectRatio ratio={1/1}>
                                 <Image
-                                    src={"/icon/" + link.icon + ".svg"}
+                                    src={"/resources/icon/" + link.icon + ".svg"}
                                     alt={link.icon}
                                     fill
                                     className="group-hover:scale-125 transition delay-100 duration-200"
@@ -108,7 +108,7 @@ export default function RootLayout({
                             <div className="size-4 md:size-5 group cursor-pointer">
                                 <AspectRatio ratio={1/1}>
                                     <Image
-                                        src="/icon/wechat.svg"
+                                        src="/resources/icon/wechat.svg"
                                         alt="WeChat"
                                         fill
                                         className="group-hover:scale-125 transition delay-100 duration-200"
@@ -124,7 +124,7 @@ export default function RootLayout({
                             <div className="size-4 md:size-5 group cursor-pointer">
                                 <AspectRatio ratio={1/1}>
                                     <Image
-                                        src="/icon/wechatgroup.svg"
+                                        src="/resources/icon/wechatgroup.svg"
                                         alt="WeChat Group"
                                         fill
                                         className="group-hover:scale-125 transition delay-100 duration-200"

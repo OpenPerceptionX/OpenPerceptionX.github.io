@@ -100,7 +100,7 @@ export default function Home() {
                                     <Link href={link.url} target={link.url.startsWith('http') ? '_blank' : '_self'} key={link.icon} className="size-4 md:size-5 group/icon">
                                         <AspectRatio ratio={1/1}>
                                             <Image
-                                                src={"/icon/" + link.icon + ".svg"}
+                                                src={"/resources/icon/" + link.icon + ".svg"}
                                                 alt={link.icon}
                                                 fill
                                                 className="group-hover/icon:scale-125 transition delay-100 duration-200"
@@ -163,7 +163,7 @@ export default function Home() {
                                     <Link href={link.url} target={link.url.startsWith('http') ? '_blank' : '_self'} key={link.icon} className="size-4 md:size-5 group/icon">
                                         <AspectRatio ratio={1/1}>
                                             <Image
-                                                src={"/icon/" + link.icon + ".svg"}
+                                                src={"/resources/icon/" + link.icon + ".svg"}
                                                 alt={link.icon}
                                                 fill
                                                 className="group-hover/icon:scale-125 transition delay-100 duration-200"
@@ -226,7 +226,7 @@ export default function Home() {
                                     <Link href={link.url} target={link.url.startsWith('http') ? '_blank' : '_self'} key={link.icon} className="size-4 md:size-5 group/icon">
                                         <AspectRatio ratio={1/1}>
                                             <Image
-                                                src={"/icon/" + link.icon + ".svg"}
+                                                src={"/resources/icon/" + link.icon + ".svg"}
                                                 alt={link.icon}
                                                 fill
                                                 className="group-hover/icon:scale-125 transition delay-100 duration-200"
