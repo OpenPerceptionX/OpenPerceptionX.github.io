@@ -16,7 +16,7 @@ import { AspectRatio } from "@/components/ui/aspect-ratio"
 
 
 
-import { categories, publications } from "@/data/publications"
+import { categories, publications, scholar } from "@/data/publications"
 
 
 
@@ -91,8 +91,29 @@ export default function Home() {
                                                     {publication.title}
                                                 </Link>
                                             </div>
-                                            <span className="text-sm">
-                                                {publication.author}
+                                            <span className="text-sm flex flex-wrap">
+                                                {
+                                                    publication.author.split(', ').map((author, index) => (
+                                                        <div key={author}>
+                                                            {
+                                                                author in scholar ? (
+                                                                    <Link className="text-o-blue animated-underline" href={scholar[author]} target={scholar[author].startsWith('http') ? '_blank' : '_self'}>
+                                                                        {author}
+                                                                    </Link>
+                                                                ) : (
+                                                                    <span>
+                                                                        {author}
+                                                                    </span>
+                                                                )
+                                                            }
+                                                            {
+                                                                index < publication.author.split(', ').length - 1 && (
+                                                                    <span>,&nbsp;</span>
+                                                                )
+                                                            }
+                                                        </div>
+                                                    ))
+                                                }
                                             </span>
                                         </div>
 

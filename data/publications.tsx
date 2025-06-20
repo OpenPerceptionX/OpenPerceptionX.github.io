@@ -26,6 +26,28 @@ export const categories: {
 
 
 
+export const scholar: Record<string, string> = {
+    "Junchi Yan": "https://scholar.google.com/citations?user=ga230VoAAAAJ",
+    "Andreas Geiger": "https://scholar.google.com/citations?user=SrVnrPcAAAAJ",
+    "Yu Qiao": "https://scholar.google.com/citations?user=gFtI-8QAAAAJ",
+    "Kashyap Chitta": "https://scholar.google.com/citations?user=vX5i2CcAAAAJ",
+    "Ping Luo": "https://scholar.google.com/citations?user=aXdjxb4AAAAJ",
+    "Yi Ma": "https://scholar.google.com/citations?user=XqLiBQMAAAAJ",
+    "Fatma Güney": "https://scholar.google.com/citations?user=g3UitywAAAAJ",
+    "Zhiqi Li": "https://scholar.google.com/citations?user=H2fJLqEAAAAJ",
+    "Wenhai Wang": "https://scholar.google.com/citations?user=WM0OglcAAAAJ0",
+    "Hongwei Xue": "https://scholar.google.com/citations?user=k5CJa5YAAAAJ",
+}
+import { members } from "@/data/team"
+members.forEach((member) => {
+    const scholarlink = member.links.find(link => link.icon === 'scholar');
+    if (scholarlink) {
+        scholar[member.name] = scholarlink.url;
+    }
+});
+
+
+
 export const publications: {
     title: string;
     link: string;

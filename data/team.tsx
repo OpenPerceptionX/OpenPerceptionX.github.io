@@ -7,6 +7,32 @@ export const members: {
     keys: string[];
 }[] = [
     {
+        name: "Yuxiang Lu",
+        image: "",
+        image_s: "",
+        desc: "",
+        links: [
+            {
+                icon: "scholar",
+                url: "https://scholar.google.com/citations?user=7m-TOp8AAAAJ",
+            },
+        ],
+        keys: [],
+    },
+    {
+        name: "Yanting Yang",
+        image: "",
+        image_s: "",
+        desc: "",
+        links: [
+            {
+                icon: "scholar",
+                url: "https://scholar.google.com/citations?user=UXRnnz8AAAAJ",
+            },
+        ],
+        keys: [],
+    },
+    {
         name: "Hongyang Li",
         image: "/assets/person/hongyang_li.jpg",
         image_s: "/assets/person/hongyang_li_s.jpg",
@@ -384,6 +410,27 @@ export const members: {
         keys: ["phd"],
     },
     {
+        name: "Haochen Liu",
+        image: "/assets/person/haochen_liu.jpg",
+        desc: "NTU (Nanyang Technological University)",
+        image_s: "/assets/person/haochen_liu_s.jpg",
+        links: [
+            {
+                icon: "homepage",
+                url: "https://georgeliu233.github.io/",
+            },
+            {
+                icon: "scholar",
+                url: "https://scholar.google.com/citations?user=iizqKUsAAAAJ&hl",
+            },
+            {
+                icon: "github",
+                url: "https://github.com/georgeliu233",
+            },
+        ],
+        keys: ["intern"],
+    },
+    {
         name: "Haochen Tian",
         image: "/assets/person/haochen_tian.jpg",
         desc: "CASIA (Institute of Automation, Chinese Academy of Sciences)",
@@ -510,6 +557,10 @@ export const members: {
                 url: "mailto:yns.victory@gmail.com",
             },
             {
+                icon: "scholar",
+                url: "https://scholar.google.com/citations?user=VO0yYFcAAAAJ",
+            },
+            {
                 icon: "github",
                 url: "https://github.com/Y-vic",
             },
@@ -529,6 +580,10 @@ export const members: {
             {
                 icon: "email",
                 url: "mailto:ycc2366582449@outlook.com",
+            },
+            {
+                icon: "scholar",
+                url: "https://scholar.google.com/citations?user=9yWZWaIAAAAJ",
             },
             {
                 icon: "github",
@@ -567,27 +622,6 @@ export const members: {
         keys: ["intern"],
     },
     {
-        name: "Haochen Liu",
-        image: "/assets/person/haochen_liu.jpg",
-        desc: "NTU (Nanyang Technological University)",
-        image_s: "/assets/person/haochen_liu_s.jpg",
-        links: [
-            {
-                icon: "homepage",
-                url: "https://georgeliu233.github.io/",
-            },
-            {
-                icon: "scholar",
-                url: "https://scholar.google.com/citations?user=iizqKUsAAAAJ&hl",
-            },
-            {
-                icon: "github",
-                url: "https://github.com/georgeliu233",
-            },
-        ],
-        keys: ["intern"],
-    },
-    {
         name: "Shadi Hamdan",
         image: "/assets/person/shadi_hamdan.jpg",
         desc: "Koç University",
@@ -610,19 +644,6 @@ export const members: {
                 url: "https://github.com/Shamdan17",
             },
         ],
-        keys: ["intern"],
-    },
-    {
-        name: "Shenyuan Gao",
-        image: "",
-        image_s: "",
-        desc: "The Hong Kong University of Science and Technology",
-        links: [
-            {
-                icon: "dummy",
-                url: "",
-            },
-        ],
         keys: ["alumni"],
     },
     {
@@ -639,53 +660,40 @@ export const members: {
         keys: ["alumni"],
     },
     {
+        name: "Shenyuan Gao",
+        image: "",
+        image_s: "",
+        desc: "The Hong Kong University of Science and Technology",
+        links: [
+            {
+                icon: "scholar",
+                url: "https://scholar.google.com/citations?user=hZtOnecAAAAJ",
+            },
+        ],
+        keys: ["alumni"],
+    },
+    {
         name: "Zetong Yang",
         image: "",
         image_s: "",
         desc: "GAC Group",
         links: [
             {
-                icon: "dummy",
+                icon: "scholar",
                 url: "https://scholar.google.com/citations?user=oPiZSVYAAAAJ",
             },
         ],
         keys: ["alumni"],
     },
     {
-        name: "Bangjun Wang",
+        name: "Weijie Dong",
         image: "",
         image_s: "",
         desc: "SJTU (Shanghai Jiao Tong University)",
         links: [
             {
-                icon: "dummy",
-                url: "https://www.bangjunwang.com/",
-            },
-        ],
-        keys: ["alumni"],
-    },
-    {
-        name: "Linyan Huang",
-        image: "",
-        image_s: "",
-        desc: "Xiamen University",
-        links: [
-            {
-                icon: "dummy",
-                url: "https://scholar.google.com/citations?user=KQPCplEAAAAJ",
-            },
-        ],
-        keys: ["alumni"],
-    },
-    {
-        name: "Penghao Wu",
-        image: "",
-        image_s: "",
-        desc: "UC San Diego",
-        links: [
-            {
-                icon: "dummy",
-                url: "https://scholar.google.com/citations?user=9mssd5EAAAAJ",
+                icon: "scholar",
+                url: "https://scholar.google.com/citations?user=fMdi9_0AAAAJ",
             },
         ],
         keys: ["alumni"],
@@ -700,14 +708,104 @@ export const members: {
                 icon: "dummy",
                 url: "https://jiaxiaosong1002.github.io/",
             },
+            {
+                icon: "scholar",
+                url: "https://scholar.google.com/citations?user=JeFQwxUAAAAJ",
+            },
         ],
         keys: ["alumni"],
     },
     {
-        name: "Xiangwei Geng",
+        name: "Penghao Wu",
         image: "",
         image_s: "",
-        desc: "NIO",
+        desc: "UC San Diego",
+        links: [
+            {
+                icon: "scholar",
+                url: "https://scholar.google.com/citations?user=9mssd5EAAAAJ",
+            },
+        ],
+        keys: ["alumni"],
+    },
+    {
+        name: "Shengchao Hu",
+        image: "",
+        image_s: "",
+        desc: "SJTU (Shanghai Jiao Tong University)",
+        links: [
+            {
+                icon: "dummy",
+                url: "https://charleshsc.github.io/",
+            },
+            {
+                icon: "scholar",
+                url: "https://scholar.google.com/citations?user=dOsBnNkAAAAJ",
+            },
+        ],
+        keys: ["alumni"],
+    },
+    {
+        name: "Tutian Tang",
+        image: "",
+        image_s: "",
+        desc: "SJTU (Shanghai Jiao Tong University)",
+        links: [
+            {
+                icon: "dummy",
+                url: "https://github.com/ElectronicElephant",
+            },
+        ],
+        keys: ["alumni"],
+    },
+    {
+        name: "Jiajie Xu",
+        image: "",
+        image_s: "",
+        desc: "CMU",
+        links: [
+            {
+                icon: "scholar",
+                url: "https://scholar.google.com/citations?user=4IPkoa4AAAAJ",
+            },
+        ],
+        keys: ["alumni"],
+    },
+    {
+        name: "Bangjun Wang",
+        image: "",
+        image_s: "",
+        desc: "SJTU (Shanghai Jiao Tong University)",
+        links: [
+            {
+                icon: "dummy",
+                url: "https://www.bangjunwang.com/",
+            },
+            {
+                icon: "scholar",
+                url: "https://scholar.google.com/citations?user=_LeSlzUAAAAJ",
+            },
+        ],
+        keys: ["alumni"],
+    },
+    {
+        name: "Linyan Huang",
+        image: "",
+        image_s: "",
+        desc: "Xiamen University",
+        links: [
+            {
+                icon: "scholar",
+                url: "https://scholar.google.com/citations?user=KQPCplEAAAAJ",
+            },
+        ],
+        keys: ["alumni"],
+    },
+    {
+        name: "Peijin Jia",
+        image: "",
+        image_s: "",
+        desc: "Tsinghua University",
         links: [
             {
                 icon: "dummy",
@@ -730,27 +828,28 @@ export const members: {
         keys: ["alumni"],
     },
     {
-        name: "Shengchao Hu",
+        name: "Yulu Gao",
         image: "",
         image_s: "",
-        desc: "SJTU (Shanghai Jiao Tong University)",
+        desc: "BUAA (Beijing University of Aeronautics and Astronautics)",
         links: [
             {
-                icon: "dummy",
-                url: "https://charleshsc.github.io/",
+                icon: "scholar",
+                url: "https://scholar.google.com/citations?user=s3u33VAAAAAJ",
             },
         ],
         keys: ["alumni"],
     },
+
     {
-        name: "Tutian Tang",
+        name: "Xiangwei Geng",
         image: "",
         image_s: "",
-        desc: "SJTU (Shanghai Jiao Tong University)",
+        desc: "NIO",
         links: [
             {
-                icon: "dummy",
-                url: "https://github.com/ElectronicElephant",
+                icon: "scholar",
+                url: "https://scholar.google.com/citations?user=GqOe2s0AAAAJ",
             },
         ],
         keys: ["alumni"],
