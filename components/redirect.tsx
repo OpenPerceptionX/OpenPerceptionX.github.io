@@ -59,7 +59,7 @@ export default function Redirect() {
         redirect('https://arxiv.org/pdf/2503.06669')
     }
     if (
-        pathname.toLowerCase().startsWith('/DriveAGI')
+        pathname.toLowerCase().startsWith('/driveagi')
     ) {
         redirect('https://github.com/OpenDriveLab/DriveAGI')
     }
@@ -114,16 +114,6 @@ export default function Redirect() {
         redirect('/cvpr2025/')
     }
     if (
-        pathname.toLowerCase().startsWith('/corl2025')
-    ) {
-        redirect('/corl2025/workshop/')
-    }
-    if (
-        pathname.toLowerCase().startsWith('/iccv2025')
-    ) {
-        redirect('/iccv2025/workshop/')
-    }
-    if (
         pathname.toLowerCase().startsWith('/cvpr2025/workshop')
     ) {
         redirect('/cvpr2025/workshop/')
@@ -134,6 +124,16 @@ export default function Redirect() {
         redirect('/cvpr2025/tutorial/')
     }
     if (
+        pathname.toLowerCase().startsWith('/corl2025')
+    ) {
+        redirect('/corl2025/workshop/')
+    }
+    if (
+        pathname.toLowerCase().startsWith('/iccv2025')
+    ) {
+        redirect('/iccv2025/workshop/')
+    }
+    if (
         pathname.toLowerCase().startsWith('/challenge2025')
     ) {
         redirect('/challenge2025/')
@@ -142,6 +142,12 @@ export default function Redirect() {
 
 
     // event 2024
+    if (
+        pathname.toLowerCase() =='/cvpr2024' ||
+        pathname.toLowerCase() =='/cvpr2024/'
+    ) {
+        redirect('/cvpr2024/')
+    }
     if (
         pathname.toLowerCase().startsWith('/cvpr2024/workshop')
     ) {
@@ -162,12 +168,6 @@ export default function Redirect() {
         pathname.toLowerCase().startsWith('/valse2024')
     ) {
         redirect('/valse2024/workshop/')
-    }
-    if (
-        pathname.toLowerCase() =='/cvpr2024' ||
-        pathname.toLowerCase() =='/cvpr2024/'
-    ) {
-        redirect('/cvpr2024/')
     }
     if (
         pathname.toLowerCase().startsWith('/event2024')
@@ -215,22 +215,22 @@ export default function Redirect() {
         redirect('https://lihongyang.info/')
     }
     if (
-        pathname.toLowerCase() == '/e2ead/UniAD_plenary_talk_slides.pdf'
+        pathname == '/e2ead/UniAD_plenary_talk_slides.pdf'
     ) {
         redirect('https://opendrivelab.github.io/UniAD_plenary_talk_slides.pdf')
     }
     if (
-        pathname.toLowerCase() == '/Dataset_Survey_Chinese_V2.pdf'
+        pathname == '/Dataset_Survey_Chinese_V2.pdf'
     ) {
         redirect('http://engine.scichina.com/doi/10.1360/SSI-2023-0313')
     }    
     if (
-        pathname.toLowerCase() == '/ICCV23_towards_general_ai_in_ad.pdf'
+        pathname == '/ICCV23_towards_general_ai_in_ad.pdf'
     ) {
         redirect('/assets/file/ICCV23_towards_general_ai_in_ad.pdf')
     }
     if (
-        pathname.toLowerCase() == '/ICCV23_oral_DriveAdapter.pdf'
+        pathname == '/ICCV23_oral_DriveAdapter.pdf'
     ) {
         redirect('/assets/file/ICCV23_oral_DriveAdapter.pdf')
     }
