@@ -97,7 +97,7 @@ export default function Home() {
                                                         <div key={author}>
                                                             {
                                                                 author in scholar ? (
-                                                                    <Link className="text-o-blue animated-underline" href={scholar[author]} target={scholar[author].startsWith('http') ? '_blank' : '_self'}>
+                                                                    <Link className="text-o-dark-blue animated-underline-gray" href={scholar[author]} target={scholar[author].startsWith('http') ? '_blank' : '_self'}>
                                                                         {author}
                                                                     </Link>
                                                                 ) : (
