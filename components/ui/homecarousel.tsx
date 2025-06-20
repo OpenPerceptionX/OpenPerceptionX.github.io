@@ -54,7 +54,7 @@ function Carousel({
   ...props
 }: React.ComponentProps<"div"> & CarouselProps) {
   const autoplay = React.useRef(
-    Autoplay({ delay: 3333 })
+    Autoplay({ delay: 6666 })
   )
   const [carouselRef, api] = useEmblaCarousel(
     {
