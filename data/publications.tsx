@@ -40,6 +40,20 @@ export const publications: {
     keys: string[];
 }[] = [
     {
+        title: "Reinforced Refinement with Self-Aware Expansion for End-to-End Autonomous Driving",
+        link: "https://arxiv.org/abs/2506.09800",
+        image: "/assets/publication/e2eads.jpg",
+        author: "Haochen Liu, Tianyu Li, Haohan Yang, Li Chen, Caojun Wang, Ke Guo, Haochen Tian, Hongchen Li, Hongyang Li, Chen Lv",
+        note: "arXiv 2025",
+        noteoption: '',
+        star: "",
+        starlink: "",
+        icon: [
+        ],
+        description: "",
+        keys: ['end_to_end_ad'],
+    },
+    {
         title: "UniVLA: Learning to Act Anywhere with Task-centric Latent Actions",
         link: "https://arxiv.org/abs/2505.06111",
         image: "/assets/publication/univla.jpg",
