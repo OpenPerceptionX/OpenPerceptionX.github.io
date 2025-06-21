@@ -125,11 +125,6 @@ export default function Redirect() {
         redirect('/cvpr2025/tutorial/')
     }
     if (
-        pathname.toLowerCase().startsWith('/corl2025')
-    ) {
-        redirect('/corl2025/workshop/')
-    }
-    if (
         pathname.toLowerCase().startsWith('/iccv2025')
     ) {
         redirect('/iccv2025/workshop/')

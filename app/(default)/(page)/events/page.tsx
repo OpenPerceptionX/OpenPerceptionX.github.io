@@ -87,23 +87,6 @@ export default function Home() {
                             </TimelineSeparator>
                             <TimelineContent className="flex flex-col gap-3">
                                 <TimelineTitle className="flex gap-6">
-                                    <span>CoRL 2025 @ Seoul, Korea</span>
-                                    <span className="text-o-gray italic">September 27 - 30, 2025</span>
-                                </TimelineTitle>
-                                <TimelineDescription className="text-sm">
-                                    <span>
-                                        [Workshop] To be announced
-                                    </span>
-                                </TimelineDescription>
-                            </TimelineContent>
-                        </TimelineItem>
-                        <TimelineItem>
-                            <TimelineSeparator>
-                                <TimelineDot />
-                                <TimelineConnector />
-                            </TimelineSeparator>
-                            <TimelineContent className="flex flex-col gap-3">
-                                <TimelineTitle className="flex gap-6">
                                     <span>ICCV 2025 @ Honolulu, USA</span>
                                     <span className="text-o-gray italic">October 19 - 23, 2025</span>
                                 </TimelineTitle>
