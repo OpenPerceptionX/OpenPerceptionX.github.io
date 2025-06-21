@@ -89,9 +89,10 @@ export default function Redirect() {
         redirect('/RoboDual/')
     }
     if (
-        pathname.toLowerCase().startsWith('/freetacman')
+        pathname.toLowerCase().startsWith('/freetacman') ||
+        pathname.toLowerCase().startsWith('/blog/freetacman')
     ) {
-        redirect('https://freetacmanblog.github.io/')
+        redirect('http://opendrivelab.com/blog/freetacman');
     }
     if (
         pathname.toLowerCase().startsWith('/resim')
