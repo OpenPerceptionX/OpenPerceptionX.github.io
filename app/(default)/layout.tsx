@@ -22,6 +22,7 @@ import {
 
 
 import { WeChat, WeChatGroup } from "@/components/app-drawer"
+import { EmailSubscribe } from "@/components/mailing"
 
 
 
@@ -135,6 +136,10 @@ export default function RootLayout({
                         <WeChatGroup/>
                     </Drawer>
 
+                </div>
+
+                <div className="w-full max-w-7xl text-xs">
+                    <EmailSubscribe />
                 </div>
 
                 <div className="w-full max-w-7xl text-xs">

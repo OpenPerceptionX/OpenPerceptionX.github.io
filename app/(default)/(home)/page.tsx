@@ -22,10 +22,16 @@ import {
 } from "@/components/ui/drawer"
 
 
+
 import { Landing } from "./landing"
 import { Embodied, E2EAD } from "@/components/app-drawer"
+
+
+
 import { publications } from "@/data/publications"
 import { events } from "@/data/events"
+
+
 
 export default function Home() {
 
