@@ -62,6 +62,24 @@ export const publications: {
     keys: string[];
 }[] = [
     {
+        title: "Detect Anything 3D in the Wild",
+        link: "https://arxiv.org/abs/2504.07958",
+        image: "/assets/publication/detany3d.jpg",
+        author: "Hanxue Zhang, Haoran Jiang, Qingsong Yao, Yanan Sun, Renrui Zhang, Hao Zhao, Hongyang Li, Hongzi Zhu, Zetong Yang",
+        note: "ICCV 2025",
+        noteoption: '',
+        star: "https://img.shields.io/github/stars/OpenDriveLab/DetAny3D?style=social",
+        starlink: "https://github.com/OpenDriveLab/DetAny3D",
+        icon: [
+            {
+                type: "github",
+                link: "https://github.com/OpenDriveLab/DetAny3D",
+            },
+        ],
+        description: "",
+        keys: ['cv_at_scale'],
+    },
+    {
         title: "Reinforced Refinement with Self-Aware Expansion for End-to-End Autonomous Driving",
         link: "https://arxiv.org/abs/2506.09800",
         image: "/assets/publication/e2eads.jpg",
