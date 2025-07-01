@@ -393,6 +393,13 @@ export default function Home() {
                                         </span>
                                 }
                                 {
+                                    publication.keys.includes('survey') && (
+                                        <span className="text-xs text-white bg-black rounded-sm px-2 py-1.5">
+                                            Survey
+                                        </span>
+                                    )
+                                }
+                                {
                                     publication.star && (
                                         <Link href={publication.starlink} target={publication.starlink.startsWith('http') ? '_blank' : '_self'}>
                                             <img loading="lazy" src={publication.star} className="h-6 hover:scale-105 transition delay-100 duration-200"/>
