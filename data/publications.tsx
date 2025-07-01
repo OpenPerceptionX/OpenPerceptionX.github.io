@@ -191,7 +191,7 @@ export const publications: {
             },
         ],
         description: "In this survey, we provide a comprehensive analysis of more than 270 papers on the motivation, roadmap, methodology, challenges, and future trends in end-to-end autonomous driving.",
-        keys: ['editor_pick', 'drawer_e2e'],
+        keys: ['editor_pick', 'drawer_e2e', 'survey'],
     },
     {
         title: "DriveLM: Driving with Graph Visual Question Answering",
@@ -425,7 +425,7 @@ export const publications: {
             },
         ],
         description: "We review the most recent work on BEV perception and provide analysis of different solutions.",
-        keys: ['ad_algorithm'],
+        keys: ['ad_algorithm', 'survey'],
     },
     {
         title: "Scene as Occupancy",
@@ -859,7 +859,7 @@ export const publications: {
             },
         ],
         description: "",
-        keys: ['end_to_end_ad'],
+        keys: ['end_to_end_ad', 'survey'],
     },
     {
         title: "Embodied Understanding of Driving Scenarios",
@@ -935,7 +935,7 @@ export const publications: {
             },
         ],
         description: "A collection of research papers about LLM-for-Autonomous-Driving (LLM4AD).",
-        keys: ['end_to_end_ad'],
+        keys: ['end_to_end_ad', 'survey'],
     },
     {
         title: "Policy Pre-Training for End-to-End Autonomous Driving via Self-Supervised Geometric Modeling",
