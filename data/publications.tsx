@@ -76,7 +76,7 @@ export const publications: {
                 link: "https://github.com/OpenDriveLab/DetAny3D",
             },
         ],
-        description: "",
+        description: "DetAny3D is a promptable 3D detection foundation model that leverages 2D foundation knowledge to enable zero-shot 3D object detection from monocular images across novel categories and camera settings.",
         keys: ['cv_at_scale'],
     },
     {
