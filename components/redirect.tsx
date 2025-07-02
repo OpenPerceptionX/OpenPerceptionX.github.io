@@ -129,11 +129,11 @@ export default function Redirect() {
     ) {
         redirect('/iccv2025/workshop/')
     }
-    // if (
-    //     pathname.toLowerCase().startsWith('/challenge2025')
-    // ) {
-    //     redirect('/challenge2025/')
-    // }
+    if (
+        pathname.toLowerCase().startsWith('/challenge2025')
+    ) {
+        redirect('/challenge2025/')
+    }
 
 
 
