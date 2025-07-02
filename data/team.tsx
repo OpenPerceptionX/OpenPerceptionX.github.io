@@ -229,6 +229,31 @@ export const members: {
         keys: ["phd"],
     },
     {
+        name: "Ziye_wang",
+        image: "/assets/person/ziye_wang.jpg",
+        desc: "HKU (The University of Hong Kong)",
+        image_s: "/assets/person/ziye_wang_s.jpg",
+        links: [
+            {
+                icon: "homepage",
+                url: "https://ziyeeee.github.io/",
+            },
+            {
+                icon: "scholar",
+                url: "https://scholar.google.com/citations?user=C9IGdzYAAAAJ",
+            },
+            {
+                icon: "email",
+                url: "mailto:ziyewang@connect.hku.hk",
+            },
+            {
+                icon: "github",
+                url: "https://github.com/Ziyeeee",
+            },
+        ],
+        keys: ["phd"],
+    },
+    {
         name: "Hanxue Zhang",
         image: "/assets/person/hanxue_zhang.jpg",
         image_s: "/assets/person/hanxue_zhang_s.jpg",
