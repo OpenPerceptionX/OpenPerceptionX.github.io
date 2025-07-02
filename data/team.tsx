@@ -229,7 +229,36 @@ export const members: {
         keys: ["phd"],
     },
     {
-        name: "Ziye_wang",
+        name: "Hai Zhang",
+        image: "/assets/person/hai_zhang.jpg",
+        desc: "HKU (The University of Hong Kong)",
+        image_s: "/assets/person/hai_zhang_s.jpg",
+        links: [
+            {
+                icon: "homepage",
+                url: "https://betray12138.github.io/resume/",
+            },
+            {
+                icon: "scholar",
+                url: "https://scholar.google.com/citations?user=YHqAzxUAAAAJ",
+            },
+            {
+                icon: "email",
+                url: "mailto:hhhz12138@connect.hku.hk",
+            },
+            {
+                icon: "github",
+                url: "https://github.com/betray12138",
+            },
+            {
+                icon: "zhihu",
+                url: "https://www.zhihu.com/people/betray12138",
+            },
+        ],
+        keys: ["phd"],
+    },
+    {
+        name: "Ziye Wang",
         image: "/assets/person/ziye_wang.jpg",
         desc: "HKU (The University of Hong Kong)",
         image_s: "/assets/person/ziye_wang_s.jpg",
