@@ -19,7 +19,7 @@ export function News() {
                         <Badge variant="outline">
                             2025.07.01
                         </Badge>
-                        DetAny3D is open-sourced! Check more on 
+                        DetAny3D is now open source. Check it out on: 
                         <Link className="text-o-blue animated-underline" href="https://github.com/OpenDriveLab/DetAny3D" target="_blank">github.com/OpenDriveLab/DetAny3D</Link>
                         .
                     </li>
