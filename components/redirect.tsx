@@ -107,56 +107,9 @@ export default function Redirect() {
 
 
 
-    // event 2025
-    if (
-        pathname.toLowerCase() =='/cvpr2025' ||
-        pathname.toLowerCase() =='/cvpr2025/'
-    ) {
-        redirect('/cvpr2025/')
-    }
-    if (
-        pathname.toLowerCase().startsWith('/cvpr2025/workshop')
-    ) {
-        redirect('/cvpr2025/workshop/')
-    }
-    if (
-        pathname.toLowerCase().startsWith('/cvpr2025/tutorial')
-    ) {
-        redirect('/cvpr2025/tutorial/')
-    }
-    if (
-        pathname.toLowerCase().startsWith('/iccv2025')
-    ) {
-        redirect('/iccv2025/workshop/')
-    }
-    if (
-        pathname.toLowerCase().startsWith('/challenge2025')
-    ) {
-        redirect('/challenge2025/')
-    }
-
-
-
     // event 2024
     if (
-        pathname.toLowerCase() =='/cvpr2024' ||
-        pathname.toLowerCase() =='/cvpr2024/'
-    ) {
-        redirect('/cvpr2024/')
-    }
-    if (
-        pathname.toLowerCase().startsWith('/cvpr2024/workshop')
-    ) {
-        redirect('/cvpr2024/workshop/')
-    }
-    if (
-        pathname.toLowerCase().startsWith('/cvpr2024/tutorial')
-    ) {
-        redirect('/cvpr2024/tutorial/')
-    }
-    if (
-        pathname.toLowerCase().startsWith('/cvpr2024/challenge') || 
-        pathname.toLowerCase().startsWith('/challenge2024')
+        pathname.toLowerCase().startsWith('/cvpr2024/challenge')
     ) {
         redirect('/challenge2024/')
     }
@@ -176,8 +129,7 @@ export default function Redirect() {
 
     // event 2023
     if (
-        pathname.toLowerCase().startsWith('/AD23Challenge') || 
-        pathname.toLowerCase().startsWith('/challenge2023')
+        pathname.toLowerCase().startsWith('/AD23Challenge')
     ) {
         redirect('/challenge2023/')
     }
