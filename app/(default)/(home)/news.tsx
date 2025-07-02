@@ -29,9 +29,9 @@ export function News() {
                         </Badge>
                         <Link className="text-o-blue animated-underline" href="/challenge2025">[AGC 2025]</Link>
                         The ICCV phase is ON! Explore the
-                        <Link className="text-o-blue animated-underline" href="/challenge2025/#navsim-e2e-driving">NAVSIM v2 End-to-End Driving Challenge</Link>
+                        <Link className="text-o-blue animated-underline" href="/challenge2025//#navsim-e2e-driving">NAVSIM v2 End-to-End Driving Challenge</Link>
                         and the
-                        <Link className="text-o-blue animated-underline" href="/challenge2025/#1x-wm">World Model Challenge by 1X</Link>
+                        <Link className="text-o-blue animated-underline" href="/challenge2025//#1x-wm">World Model Challenge by 1X</Link>
                         .
                     </li>
                     <li className="flex items-center gap-1 flex-wrap">
@@ -40,7 +40,7 @@ export function News() {
                         </Badge>
                         <Link className="text-o-blue animated-underline" href="/challenge2025">[AGC 2025]</Link>
                         The IROS phase is ON! Explore the
-                        <Link className="text-o-blue animated-underline" href="/challenge2025/#agibot-world">AgiBot World Challenge</Link>
+                        <Link className="text-o-blue animated-underline" href="/challenge2025//#agibot-world">AgiBot World Challenge</Link>
                     </li>
                 </ul>
             </div>
