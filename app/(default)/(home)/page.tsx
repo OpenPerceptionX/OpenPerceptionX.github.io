@@ -45,7 +45,7 @@ export default function Home() {
 
 
 
-            <div className="w-full px-6 flex justify-center mt-36">
+            <div className="w-full px-6 flex justify-center mt-24">
                 <div className="w-full max-w-7xl flex">
                     <h2 className="text-t1"> 
                         <Link href="#news" className="scroll-mt-32 group flex items-center" id="news">
@@ -67,7 +67,8 @@ export default function Home() {
 
 
 
-            <div className="w-full px-6 flex justify-center mt-24">
+
+            <div className="w-full px-6 flex justify-center mt-36">
                 <div className="w-full max-w-7xl flex">
                     <div className="w-full flex justify-between items-center">
                         <h2 className="text-t1"> 
