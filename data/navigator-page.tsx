@@ -6,6 +6,10 @@ export const NavigatorPage: {
 } = {
     "/": [
         {
+            text: "News",
+            id: "news",
+        },
+        {
             text: "Recruit",
             id: "recruit",
         },
