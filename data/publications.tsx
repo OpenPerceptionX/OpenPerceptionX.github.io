@@ -245,6 +245,10 @@ export const publications: {
                 type: "blog",
                 link: "https://docs.google.com/document/d/1Hhi2stn_goXUHdYi7461w10AJbzQDC0fdYaSxMdMVXM/edit?usp=sharing",
             },
+            {
+                type: "youtube",
+                link: "https://www.youtube.com/watch?v=Ah-xYnST0yw",
+            },
         ],
         description: "A human-centric and robot-free visuo-tactile data collection system for high-quality and efficient robot manipulation.",
         keys: ['embodied_ai', 'home_sliding'],
