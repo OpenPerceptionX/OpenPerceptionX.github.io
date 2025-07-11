@@ -109,7 +109,7 @@ export const publications: {
             },
         ],
         description: "A unified vision-language-action framework that enables policy learning across different environments.",
-        keys: ['editor_pick', 'drawer_embodied', 'home_sliding'],
+        keys: ['editor_pick', 'home_sliding', 'drawer_embodied'],
     },
     {
         title: "Planning-oriented Autonomous Driving",
@@ -143,7 +143,7 @@ export const publications: {
             },
         ],
         description: "UniAD: The first comprehensive framework that incorporates full-stack driving tasks.",
-        keys: ['editor_pick', 'drawer_e2e', 'home_sliding'],
+        keys: ['editor_pick', 'home_sliding', 'drawer_e2e'],
     },
     {
         title: "AgiBot World Colosseo: A Large-scale Manipulation Platform for Scalable and Intelligent Embodied Systems",
@@ -173,7 +173,7 @@ export const publications: {
             }
         ],
         description: "A novel generalist policy that leverages latent action representations to maximize data utilization, demonstrating predictable performance scaling with increased data volume.",
-        keys: ['editor_pick', 'home_sliding'],
+        keys: ['editor_pick', 'home_sliding', 'drawer_embodied'],
     },
     {
         title: "End-to-End Autonomous Driving: Challenges and Frontiers",
@@ -191,7 +191,7 @@ export const publications: {
             },
         ],
         description: "In this survey, we provide a comprehensive analysis of more than 270 papers on the motivation, roadmap, methodology, challenges, and future trends in end-to-end autonomous driving.",
-        keys: ['editor_pick', 'drawer_e2e', 'survey'],
+        keys: ['editor_pick', 'survey', 'drawer_e2e'],
     },
     {
         title: "DriveLM: Driving with Graph Visual Question Answering",
@@ -221,7 +221,7 @@ export const publications: {
             },
         ],
         description: "Unlocking the future where autonomous driving meets the unlimited potential of language.",
-        keys: ['editor_pick', 'home_sliding'],
+        keys: ['editor_pick', 'home_sliding', 'drawer_e2e'],
     },
     {
         title: "FreeTacMan: Robot-free Visuo-Tactile Data Collection System for Contact-rich Manipulation",
@@ -317,7 +317,7 @@ export const publications: {
             },
         ],
         description: "We propose a general pre-training pipeline that learns Manipulation by Predicting the Interaction (MPI).",
-        keys: ['embodied_ai', 'drawer_embodied'],
+        keys: ['embodied_ai'],
     },
     {
         title: "MTGS: Multi-Traversal Gaussian Splatting",
@@ -661,7 +661,7 @@ export const publications: {
             },
         ],
         description: "ReSim is a driving world model that enables Reliable Simulation of diverse open-world driving scenarios under various actions, including hazardous non-expert ones. A Video2Reward model estimates the reward from ReSim's simulated future.",
-        keys: ['end_to_end_ad', 'drawer_e2e', 'home_sliding'],
+        keys: ['end_to_end_ad', 'home_sliding'],
     },
     {
         title: "ETA: Efficiency through Thinking Ahead, A Dual Approach to Self-Driving with Large Models",

@@ -176,7 +176,10 @@ export function AppSidebar() {
 
 
 
-                                <Collapsible className="group/collapsible flex flex-col gap-6">
+                                <Link href="/projects" className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
+                                    Project
+                                </Link>
+                                {/* <Collapsible className="group/collapsible flex flex-col gap-6">
                                     <SidebarMenuItem>
                                         <CollapsibleTrigger className="w-full flex flex-row justify-between items-center p-2 rounded-sm hover:bg-o-blue/3 select-none">
                                             Project
@@ -193,11 +196,13 @@ export function AppSidebar() {
                                             </SidebarMenuSub>
                                         </CollapsibleContent>
                                     </SidebarMenuItem>
-                                </Collapsible>
+                                </Collapsible> */}
 
 
-
-                                <Collapsible className="group/collapsible flex flex-col gap-6">
+                                <Link href="/publications" className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
+                                    Publication
+                                </Link>
+                                {/* <Collapsible className="group/collapsible flex flex-col gap-6">
                                     <SidebarMenuItem>
                                         <CollapsibleTrigger className="w-full flex flex-row justify-between items-center p-2 rounded-sm hover:bg-o-blue/3 select-none">
                                             Publication
@@ -217,7 +222,7 @@ export function AppSidebar() {
                                             </SidebarMenuSub>
                                         </CollapsibleContent>
                                     </SidebarMenuItem>
-                                </Collapsible>
+                                </Collapsible> */}
 
 
 
