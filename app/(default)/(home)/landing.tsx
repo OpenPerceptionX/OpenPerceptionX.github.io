@@ -15,6 +15,7 @@ import {
     Carousel,
     CarouselContent,
     CarouselItem,
+    CarouselDots,
 } from "@/components/ui/homecarousel"
 import { AspectRatio } from "@/components/ui/aspect-ratio"
 
@@ -45,6 +46,38 @@ const image_mapping: Record<string, string> = {
 
 
 export function Landing() {
+    // 获取当前轮播图的API引用
+    const [api, setApi] = React.useState<any>(null)
+    const [currentIndex, setCurrentIndex] = React.useState(0)
+    
+    // 当API更新或轮播图切换时更新当前索引
+    React.useEffect(() => {
+        if (!api) return
+        
+        const onSelect = () => {
+            try {
+                const index = api.selectedScrollSnap()
+                setCurrentIndex(index)
+            } catch (error) {
+                console.error("Error updating carousel index:", error)
+            }
+        }
+        
+        api.on("select", onSelect)
+        // 初始化
+        onSelect()
+        
+        return () => {
+            api.off("select", onSelect)
+        }
+    }, [api])
+
+    // 手动切换轮播图
+    const scrollTo = React.useCallback((index: number) => {
+        if (!api) return
+        api.scrollTo(index)
+    }, [api])
+
     return (
         <div className="w-full h-svh flex justify-center items-center">
             <Carousel
@@ -52,9 +85,10 @@ export function Landing() {
                     align: "start",
                     loop: true,
                 }}
-                className="w-full pl-6 pr-2 md:pr-0" /* some magic padding */
+                className="w-full pl-6 pr-2 md:pr-0 relative" /* some magic padding */
+                setApi={setApi}
             >
-                <CarouselContent  className="w-full">
+                <CarouselContent className="w-full">
                     {landings.map((landing, index) => (
                         <CarouselItem key={index} className="w-full h-full flex flex-col lg:flex-row gap-6 lg:gap-24 justify-center items-center lg:p-12">
                             
@@ -165,6 +199,26 @@ export function Landing() {
                         </CarouselItem>
                     ))}
                 </CarouselContent>
+                
+                {/* 自定义小圆点导航 (不使用CarouselDots组件) */}
+                {landings.length > 1 && (
+                    <div className="absolute bottom-6 left-0 right-0 mx-auto z-10 flex justify-center items-center gap-3">
+                        {landings.map((_, index) => (
+                            <button
+                                key={index}
+                                type="button"
+                                className={`
+                                    w-3 h-3 rounded-full transition-all duration-300 border border-white/30
+                                    ${currentIndex === index 
+                                        ? "bg-gradient-to-br from-o-light-blue via-o-blue to-o-light-blue scale-110" 
+                                        : "bg-gray-200/70 hover:bg-gray-300"}
+                                `}
+                                onClick={() => scrollTo(index)}
+                                aria-label={`转到第 ${index + 1} 个轮播图项目`}
+                            />
+                        ))}
+                    </div>
+                )}
             </Carousel>
         </div>
     )

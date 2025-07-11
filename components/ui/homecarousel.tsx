@@ -261,6 +261,98 @@ function CarouselNext({
   )
 }
 
+// 新增：小圆点指示器组件
+function CarouselDots({
+  className,
+  count,
+  ...props
+}: React.ComponentProps<"div"> & { count: number }) {
+  const { api } = useCarousel()
+  const [selectedIndex, setSelectedIndex] = React.useState(0)
+
+  // 使用 useCallback 优化事件处理函数
+  const onSelect = React.useCallback(() => {
+    try {
+      if (api && typeof api.selectedScrollSnap === 'function') {
+        const currentIndex = api.selectedScrollSnap()
+        if (typeof currentIndex === 'number' && !isNaN(currentIndex)) {
+          setSelectedIndex(currentIndex)
+        }
+      }
+    } catch (err) {
+      console.error('Error getting carousel selected index:', err)
+    }
+  }, [api]);
+
+  // 监听轮播图的选择事件来更新当前选中的索引
+  React.useEffect(() => {
+    if (!api || typeof api.on !== 'function' || typeof api.off !== 'function') return
+    
+    // 初始化时设置当前索引
+    try {
+      onSelect()
+    } catch (err) {
+      console.error('Error initializing carousel dots:', err)
+    }
+    
+    // 添加事件监听器
+    try {
+      api.on("select", onSelect)
+    } catch (err) {
+      console.error('Error adding carousel event listener:', err)
+    }
+
+    return () => {
+      try {
+        api.off("select", onSelect)
+      } catch (err) {
+        console.error('Error removing carousel event listener:', err)
+      }
+    }
+  }, [api, onSelect]) // 将优化后的 onSelect 添加到依赖项
+
+  // 点击圆点时切换到对应的轮播图
+  const scrollTo = React.useCallback((index: number) => {
+    if (!api || typeof api.scrollTo !== 'function') return
+    
+    try {
+      api.scrollTo(index)
+    } catch (err) {
+      console.error('Error scrolling carousel:', err)
+    }
+  }, [api])
+
+  // 防止不必要的渲染
+  if (count <= 1) return null
+
+  // 使用 memo 优化按钮数组渲染
+  const dots = React.useMemo(() => {
+    return Array.from({ length: count }).map((_, index) => (
+      <button
+        key={index}
+        type="button"
+        className={cn(
+          "w-3 h-3 rounded-full transition-all duration-300 border border-white/30",
+          selectedIndex === index 
+            ? "bg-gradient-to-br from-o-light-blue via-o-blue to-o-light-blue scale-110" 
+            : "bg-gray-200/70 hover:bg-gray-300"
+        )}
+        onClick={() => scrollTo(index)}
+        aria-label={`转到第 ${index + 1} 个轮播图项目`}
+      />
+    ))
+  }, [count, selectedIndex, scrollTo])
+
+  return (
+    <div 
+      className={cn("flex justify-center items-center gap-3", className)} 
+      {...props}
+    >
+      {dots}
+    </div>
+  )
+}
+
 export {
   type CarouselApi,
   Carousel,
@@ -268,4 +360,5 @@ export {
   CarouselItem,
   CarouselPrevious,
   CarouselNext,
+  CarouselDots,
 }
