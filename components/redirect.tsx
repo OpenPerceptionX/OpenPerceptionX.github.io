@@ -92,7 +92,8 @@ export default function Redirect() {
         pathname.toLowerCase().startsWith('/freetacman') ||
         pathname.toLowerCase().startsWith('/blog/freetacman')
     ) {
-        redirect('https://freetacmanblog.github.io/')
+        // redirect('https://freetacmanblog.github.io/')
+        redirect('/FreeTacMan')
     }
     if (
         pathname.toLowerCase().startsWith('/resim')
