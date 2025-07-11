@@ -22,6 +22,16 @@ const nextConfig: NextConfig = {
         ],
         dangerouslyAllowSVG: true,
     },
+    // 添加重定向配置
+    async redirects() {
+        return [
+            {
+                source: '/FreeTacMan',
+                destination: '/freetacman',
+                permanent: true,
+            },
+        ];
+    },
 };
 
 export default nextConfig;
