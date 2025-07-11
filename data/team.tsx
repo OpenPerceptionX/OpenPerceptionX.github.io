@@ -244,7 +244,7 @@ export const members: {
             },
             {
                 icon: "email",
-                url: "mailto:hhhz12138@connect.hku.hk",
+                url: "mailto:hai.zhang@connect.hku.hk",
             },
             {
                 icon: "github",
