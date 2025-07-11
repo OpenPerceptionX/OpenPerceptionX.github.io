@@ -1,7 +1,5 @@
 "use client"
 
-import Autoplay from "embla-carousel-autoplay"
-
 import * as React from "react"
 import useEmblaCarousel, {
   type UseEmblaCarouselType,
@@ -30,9 +28,6 @@ type CarouselContextProps = {
   scrollNext: () => void
   canScrollPrev: boolean
   canScrollNext: boolean
-  selectedIndex: number
-  scrollSnaps: number[]
-  scrollTo: (index: number) => void
 } & CarouselProps
 
 const CarouselContext = React.createContext<CarouselContextProps | null>(null)
@@ -56,30 +51,20 @@ function Carousel({
   children,
   ...props
 }: React.ComponentProps<"div"> & CarouselProps) {
-  const autoplay = React.useRef(
-    Autoplay({ delay: 6666 })
-  )
   const [carouselRef, api] = useEmblaCarousel(
     {
       ...opts,
       axis: orientation === "horizontal" ? "x" : "y",
     },
-    [...(plugins ?? []), autoplay.current]
+    plugins
   )
   const [canScrollPrev, setCanScrollPrev] = React.useState(false)
   const [canScrollNext, setCanScrollNext] = React.useState(false)
-  const [selectedIndex, setSelectedIndex] = React.useState(0)
-  const [scrollSnaps, setScrollSnaps] = React.useState<number[]>([])
-
-  const scrollTo = React.useCallback((index: number) => {
-    api?.scrollTo(index)
-  }, [api])
 
   const onSelect = React.useCallback((api: CarouselApi) => {
     if (!api) return
     setCanScrollPrev(api.canScrollPrev())
     setCanScrollNext(api.canScrollNext())
-    setSelectedIndex(api.selectedScrollSnap())
   }, [])
 
   const scrollPrev = React.useCallback(() => {
@@ -111,40 +96,13 @@ function Carousel({
   React.useEffect(() => {
     if (!api) return
     onSelect(api)
-    setScrollSnaps(api.scrollSnapList())
     api.on("reInit", onSelect)
-    api.on("reInit", () => setScrollSnaps(api.scrollSnapList()))
     api.on("select", onSelect)
 
     return () => {
       api?.off("select", onSelect)
     }
   }, [api, onSelect])
-
-  React.useEffect(() => {
-  if (!api) return
-
-  let resumeTimeout: ReturnType<typeof setTimeout>
-
-  const resetAutoplay = () => {
-    autoplay.current.stop()
-    clearTimeout(resumeTimeout)
-    resumeTimeout = setTimeout(() => {
-      autoplay.current.play()
-    }, 111)
-  }
-
-  api.on("pointerDown", resetAutoplay)
-  api.on("pointerUp", resetAutoplay)
-  api.on("select", resetAutoplay)
-
-  return () => {
-    api.off("pointerDown", resetAutoplay)
-    api.off("pointerUp", resetAutoplay)
-    api.off("select", resetAutoplay)
-    clearTimeout(resumeTimeout)
-  }
-}, [api])
 
   return (
     <CarouselContext.Provider
@@ -158,9 +116,6 @@ function Carousel({
         scrollNext,
         canScrollPrev,
         canScrollNext,
-        selectedIndex,
-        scrollSnaps,
-        scrollTo,
       }}
     >
       <div
@@ -230,7 +185,7 @@ function CarouselPrevious({
       variant={variant}
       size={size}
       className={cn(
-        "absolute size-8 rounded-full",
+        "absolute size-16 rounded-full",
         orientation === "horizontal"
           ? "top-1/2 -left-12 -translate-y-1/2"
           : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
@@ -240,7 +195,7 @@ function CarouselPrevious({
       onClick={scrollPrev}
       {...props}
     >
-      <ArrowLeft />
+      <ArrowLeft className="size-12"/>
       <span className="sr-only">Previous slide</span>
     </Button>
   )
@@ -260,7 +215,7 @@ function CarouselNext({
       variant={variant}
       size={size}
       className={cn(
-        "absolute size-8 rounded-full",
+        "absolute size-16 rounded-full",
         orientation === "horizontal"
           ? "top-1/2 -right-12 -translate-y-1/2"
           : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
@@ -270,34 +225,9 @@ function CarouselNext({
       onClick={scrollNext}
       {...props}
     >
-      <ArrowRight />
+      <ArrowRight  className="size-12" />
       <span className="sr-only">Next slide</span>
     </Button>
-  )
-}
-
-function CarouselDots({ className, ...props }: React.ComponentProps<"div">) {
-  const { scrollSnaps, scrollTo, selectedIndex } = useCarousel()
-
-  return (
-    <div 
-      className={cn("flex justify-center gap-2 mt-4", className)} 
-      {...props}
-    >
-      {scrollSnaps.map((_, index) => (
-        <button
-          key={index}
-          className={cn(
-            "w-2 h-2 rounded-full transition-all duration-300",
-            selectedIndex === index 
-              ? "bg-o-blue w-4" 
-              : "bg-gray-300 hover:bg-gray-400"
-          )}
-          onClick={() => scrollTo(index)}
-          aria-label={`Go to slide ${index + 1}`}
-        />
-      ))}
-    </div>
   )
 }
 
@@ -308,5 +238,4 @@ export {
   CarouselItem,
   CarouselPrevious,
   CarouselNext,
-  CarouselDots,
 }

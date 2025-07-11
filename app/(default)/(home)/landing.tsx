@@ -15,6 +15,7 @@ import {
     Carousel,
     CarouselContent,
     CarouselItem,
+    CarouselDots,
 } from "@/components/ui/homecarousel"
 import { AspectRatio } from "@/components/ui/aspect-ratio"
 
@@ -46,7 +47,7 @@ const image_mapping: Record<string, string> = {
 
 export function Landing() {
     return (
-        <div className="w-full h-svh flex justify-center items-center">
+        <div className="w-full h-svh flex flex-col justify-center items-center">
             <Carousel
                 opts={{
                     align: "start",
@@ -165,6 +166,7 @@ export function Landing() {
                         </CarouselItem>
                     ))}
                 </CarouselContent>
+                <CarouselDots className="pt-8" />
             </Carousel>
         </div>
     )
