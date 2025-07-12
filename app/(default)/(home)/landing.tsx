@@ -85,7 +85,7 @@ export function Landing() {
                     align: "start",
                     loop: true,
                 }}
-                className="w-full pl-6 pr-2 md:pr-0 relative" /* some magic padding */
+                className="w-full pl-6 pr-2 md:pr-0" /* some magic padding */
                 setApi={setApi}
             >
                 <CarouselContent className="w-full">
@@ -110,7 +110,7 @@ export function Landing() {
 
 
                             
-                                <div className="flex flex-row text-o-gray text-sm lg:text-base">
+                                <div className="hidden md:flex flex-row text-o-gray text-sm lg:text-base">
                                     {index + 1} / {landings.length}
                                 </div>
 
@@ -192,33 +192,39 @@ export function Landing() {
                                         }
                                     </div>
                                 </div>
+
+
+
                             </div>
 
-                            
+ 
 
                         </CarouselItem>
                     ))}
                 </CarouselContent>
+
+
                 
-                {/* 自定义小圆点导航 (不使用CarouselDots组件) */}
                 {landings.length > 1 && (
-                    <div className="absolute bottom-6 left-0 right-0 mx-auto z-10 flex justify-center items-center gap-3">
+                    <div className="z-10 flex md:justify-center gap-3 mt-6 md:-ml-6">
                         {landings.map((_, index) => (
                             <button
                                 key={index}
                                 type="button"
                                 className={`
-                                    w-3 h-3 rounded-full transition-all duration-300 border border-white/30
+                                    w-1.5 h-1.5 rounded-full transition-all duration-300
                                     ${currentIndex === index 
-                                        ? "bg-gradient-to-br from-o-light-blue via-o-blue to-o-light-blue scale-110" 
-                                        : "bg-gray-200/70 hover:bg-gray-300"}
+                                        ? "bg-o-blue scale-110" 
+                                        : "bg-gray-300/70 hover:bg-gray-300"}
                                 `}
                                 onClick={() => scrollTo(index)}
-                                aria-label={`转到第 ${index + 1} 个轮播图项目`}
                             />
                         ))}
                     </div>
                 )}
+
+
+                
             </Carousel>
         </div>
     )
