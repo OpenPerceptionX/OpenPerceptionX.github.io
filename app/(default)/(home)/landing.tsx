@@ -134,7 +134,11 @@ export function Landing() {
                                         landing.title.startsWith('AgiBot') ? (
                                             "AgiBot World"
                                         ) : (
-                                            landing.title
+                                            landing.title.startsWith('FreeTacMan') ? (
+                                                "FreeTacMan: Robot-free Visuo-Tactile Data Collection System"
+                                            ) : (
+                                                landing.title
+                                            )
                                         )
                                     }
                                 </h1>
