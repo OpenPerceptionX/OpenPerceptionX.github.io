@@ -1192,23 +1192,9 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="w-full px-4 md:px-6 flex flex-col items-center">
-            <Separator className="max-w-7xl mt-24 md:mt-48" />
-          </div>
         </div>
       </div>
 
-      <footer className="w-full mb-16 md:mb-32 flex flex-col gab-5 md:gap-10">
-        <div className="w-full px-4 md:px-6 flex flex-row justify-center mt-16 md:mt-32">
-          <div className="max-w-7xl w-full flex flex-row justify-between">
-            <div className="flex-1 flex flex-col justify-start">
-              <span className="text-xs sm:text-sm md:text-base select-none text-center">
-                FreeTacMan © 2025
-              </span>
-            </div>
-          </div>
-        </div>
-      </footer>
     </main>
   );
 }
