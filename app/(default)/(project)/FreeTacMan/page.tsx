@@ -70,7 +70,7 @@ const policy_rollouts: { id: string; title: string; color: string }[] = [
 
 export default function Home() {
   return (
-    <main className="w-full overflow-hidden">
+    <div className="w-full overflow-hidden">
       {/* Landing Section with Gray Background */}
       <div className="w-full min-h-screen flex flex-col items-center px-4 md:px-6 bg-[#eaeaea]">
         <div className="flex flex-col py-10 md:py-20 gap-4 md:gap-6 w-full h-full max-w-[1792px] justify-around items-center">
@@ -1188,6 +1188,6 @@ export default function Home() {
         </div>
       </div>
 
-    </main>
+    </div>
   );
 }

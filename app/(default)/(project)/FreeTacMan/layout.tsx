@@ -24,8 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.className}>
-      <body id="#">
+      <div>
         <header>
           <div className="fixed right-0 bottom-0 m-6 z-20">
             <Link
@@ -57,7 +56,6 @@ export default function RootLayout({
         </header>
 
         {children}
-      </body>
-    </html>
+      </div>
   );
 }
