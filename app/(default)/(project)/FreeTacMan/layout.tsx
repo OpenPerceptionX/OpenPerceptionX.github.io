@@ -2,6 +2,13 @@ import type { Metadata } from "next";
 import * as React from "react";
 import Link from "next/link";
 
+export const metadata: Metadata = {
+  title: "FreeTacMan | OpenDriveLab",
+  description: "FreeTacMan",
+  keywords: ["FreeTacMan", "OpenDriveLab", "HKU", "SII"],
+  viewport: "width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes",
+};
+
 import "./globals.css";
 
 // font

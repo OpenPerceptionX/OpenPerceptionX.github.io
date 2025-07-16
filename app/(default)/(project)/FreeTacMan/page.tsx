@@ -1,11 +1,4 @@
-import type { Metadata } from "next";
-export const metadata: Metadata = {
-  title: "FreeTacMan | OpenDriveLab",
-  description: "FreeTacMan",
-  keywords: ["FreeTacMan", "OpenDriveLab", "HKU", "SII"],
-  viewport:
-    "width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes",
-};
+"use client";
 
 import Link from "next/link";
 import {
