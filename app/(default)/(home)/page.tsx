@@ -200,11 +200,130 @@ export default function Home() {
 
 
             <div className="w-full px-6 flex justify-center mt-36">
+                <div className="w-full max-w-7xl flex flex-col gap-3">
+                    <div className="w-full flex justify-between items-center">
+                        <h2 className="text-t1"> 
+                            <Link href="#publication" className="scroll-mt-32 group flex items-center" id="publication">
+                                Publication
+                                <span className="ml-6 hidden group-hover:inline-block size-6 text-foreground">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <path d="M15.197 3.35462C16.8703 1.67483 19.4476 1.53865 20.9536 3.05046C22.4596 4.56228 22.3239 7.14956 20.6506 8.82935L18.2268 11.2626M10.0464 14C8.54044 12.4882 8.67609 9.90087 10.3494 8.22108L12.5 6.06212" strokeWidth="2.5" strokeLinecap="round"/>
+                                        <path d="M13.9536 10C15.4596 11.5118 15.3239 14.0991 13.6506 15.7789L11.2268 18.2121L8.80299 20.6454C7.12969 22.3252 4.55237 22.4613 3.0464 20.9495C1.54043 19.4377 1.67609 16.8504 3.34939 15.1706L5.77323 12.7373" strokeWidth="2.5" strokeLinecap="round"/>
+                                    </svg>
+                                </span>
+                            </Link>
+                        </h2>
+                        <Link href='/publications' className="w-16 xl:w-24 group flex ">
+                            <AspectRatio ratio={3/1}>
+                                <Image
+                                    src="/assets/icon/arrow.png"
+                                    alt="Publications"
+                                    fill
+                                    className="group-hover:scale-125 transition delay-100 duration-200"
+                                />
+                            </AspectRatio>
+                            <AspectRatio ratio={3/1}>
+                                <Image
+                                    src="/assets/icon/arrow.png"
+                                    alt="Publications"
+                                    fill
+                                    className="group-hover:scale-125 transition delay-100 duration-200"
+                                />
+                            </AspectRatio>
+                            <AspectRatio ratio={3/1}>
+                                <Image
+                                    src="/assets/icon/arrow.png"
+                                    alt="Publications"
+                                    fill
+                                    className="group-hover:scale-125 transition delay-100 duration-200"
+                                />
+                            </AspectRatio>
+                        </Link>
+                    </div>
+                    <span>
+                        Representative work published at top-tiered venues.
+                    </span>
+                </div>
+            </div>
+
+
+
+            <div className="w-full px-6 flex justify-center mt-12">
+                <div className="w-full max-w-7xl flex flex-col gap-12">
+                    {[...publications.values()].filter(publication => publication.keys.includes('editor_pick')).map((publication) => (
+                        <div className="flex flex-col gap-3" key={publication.title}>
+
+                            <div>
+                                <Link href={publication.link} target={publication.link.startsWith('http') ? '_blank' : '_self'} className="text-xl hover:text-o-blue">
+                                    {publication.title}
+                                </Link>
+                            </div>
+
+                            {
+                                publication.description && (
+                                    <i className="text-sm text-o-gray">
+                                        {publication.description}
+                                    </i>
+                                )
+                            }
+
+                            <div className="flex gap-3 flex-wrap items-center">
+                                {
+                                    publication.noteoption ?
+                                        <Link href={publication.noteoption} target={publication.noteoption.startsWith('http') ? '_blank' : '_self'} className="text-xs text-white bg-gradient-to-br from-o-light-blue via-o-blue to-o-light-blue rounded-sm px-2 py-1.5 hover:scale-105 transition delay-100 duration-200">
+                                            {publication.note}
+                                        </Link>
+                                    :
+                                        <span className="text-xs text-white bg-gradient-to-br from-o-light-blue via-o-blue to-o-light-blue rounded-sm px-2 py-1.5">
+                                            {publication.note}
+                                        </span>
+                                }
+                                {
+                                    publication.keys.includes('survey') && (
+                                        <span className="text-xs text-white bg-black rounded-sm px-2 py-1.5">
+                                            Survey
+                                        </span>
+                                    )
+                                }
+                                {
+                                    publication.star && (
+                                        <Link href={publication.starlink} target={publication.starlink.startsWith('http') ? '_blank' : '_self'}>
+                                            <img loading="lazy" src={publication.star} className="h-6 hover:scale-105 transition delay-100 duration-200"/>
+                                        </Link>
+                                    )
+                                }
+                                {
+                                    publication.icon.map((link) => (
+                                        link.type != 'github' &&
+                                        <Link href={link.link} target={link.link.startsWith('http') ? '_blank' : '_self'} key={link.type} className="size-4 md:size-5 group/icon">
+                                            <AspectRatio ratio={1/1}>
+                                                <Image
+                                                    src={"/resources/icon/" + link.type + ".svg"}
+                                                    alt={link.type}
+                                                    fill
+                                                    className="group-hover/icon:scale-125 transition delay-100 duration-200"
+                                                />
+                                            </AspectRatio>
+                                        </Link>
+                                    ))
+                                }
+                            </div>
+
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+
+
+
+
+            <div className="w-full px-6 flex justify-center mt-36">
                 <div className="w-full max-w-7xl flex">
                     <div className="w-full flex justify-between items-center">
                         <h2 className="text-t1"> 
-                            <Link href="#project" className="scroll-mt-32 group flex items-center" id="project">
-                                Project
+                            <Link href="#dataset" className="scroll-mt-32 group flex items-center" id="dataset">
+                                Dataset
                                 <span className="ml-6 hidden group-hover:inline-block size-6 text-foreground">
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                                         <path d="M15.197 3.35462C16.8703 1.67483 19.4476 1.53865 20.9536 3.05046C22.4596 4.56228 22.3239 7.14956 20.6506 8.82935L18.2268 11.2626M10.0464 14C8.54044 12.4882 8.67609 9.90087 10.3494 8.22108L12.5 6.06212" strokeWidth="2.5" strokeLinecap="round"/>
@@ -331,124 +450,6 @@ export default function Home() {
                         </div>
                     </div>
 
-                </div>
-            </div>
-                    
-
-
-
-            <div className="w-full px-6 flex justify-center mt-36">
-                <div className="w-full max-w-7xl flex flex-col gap-3">
-                    <div className="w-full flex justify-between items-center">
-                        <h2 className="text-t1"> 
-                            <Link href="#publication" className="scroll-mt-32 group flex items-center" id="publication">
-                                Publication
-                                <span className="ml-6 hidden group-hover:inline-block size-6 text-foreground">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M15.197 3.35462C16.8703 1.67483 19.4476 1.53865 20.9536 3.05046C22.4596 4.56228 22.3239 7.14956 20.6506 8.82935L18.2268 11.2626M10.0464 14C8.54044 12.4882 8.67609 9.90087 10.3494 8.22108L12.5 6.06212" strokeWidth="2.5" strokeLinecap="round"/>
-                                        <path d="M13.9536 10C15.4596 11.5118 15.3239 14.0991 13.6506 15.7789L11.2268 18.2121L8.80299 20.6454C7.12969 22.3252 4.55237 22.4613 3.0464 20.9495C1.54043 19.4377 1.67609 16.8504 3.34939 15.1706L5.77323 12.7373" strokeWidth="2.5" strokeLinecap="round"/>
-                                    </svg>
-                                </span>
-                            </Link>
-                        </h2>
-                        <Link href='/publications' className="w-16 xl:w-24 group flex ">
-                            <AspectRatio ratio={3/1}>
-                                <Image
-                                    src="/assets/icon/arrow.png"
-                                    alt="Publications"
-                                    fill
-                                    className="group-hover:scale-125 transition delay-100 duration-200"
-                                />
-                            </AspectRatio>
-                            <AspectRatio ratio={3/1}>
-                                <Image
-                                    src="/assets/icon/arrow.png"
-                                    alt="Publications"
-                                    fill
-                                    className="group-hover:scale-125 transition delay-100 duration-200"
-                                />
-                            </AspectRatio>
-                            <AspectRatio ratio={3/1}>
-                                <Image
-                                    src="/assets/icon/arrow.png"
-                                    alt="Publications"
-                                    fill
-                                    className="group-hover:scale-125 transition delay-100 duration-200"
-                                />
-                            </AspectRatio>
-                        </Link>
-                    </div>
-                    <span>
-                        Representative work published at top-tiered venues.
-                    </span>
-                </div>
-            </div>
-
-
-
-            <div className="w-full px-6 flex justify-center mt-12">
-                <div className="w-full max-w-7xl flex flex-col gap-12">
-                    {[...publications.values()].filter(publication => publication.keys.includes('editor_pick')).map((publication) => (
-                        <div className="flex flex-col gap-3" key={publication.title}>
-
-                            <div>
-                                <Link href={publication.link} target={publication.link.startsWith('http') ? '_blank' : '_self'} className="text-xl hover:text-o-blue">
-                                    {publication.title}
-                                </Link>
-                            </div>
-
-                            {
-                                publication.description && (
-                                    <i className="text-sm text-o-gray">
-                                        {publication.description}
-                                    </i>
-                                )
-                            }
-
-                            <div className="flex gap-3 flex-wrap items-center">
-                                {
-                                    publication.noteoption ?
-                                        <Link href={publication.noteoption} target={publication.noteoption.startsWith('http') ? '_blank' : '_self'} className="text-xs text-white bg-gradient-to-br from-o-light-blue via-o-blue to-o-light-blue rounded-sm px-2 py-1.5 hover:scale-105 transition delay-100 duration-200">
-                                            {publication.note}
-                                        </Link>
-                                    :
-                                        <span className="text-xs text-white bg-gradient-to-br from-o-light-blue via-o-blue to-o-light-blue rounded-sm px-2 py-1.5">
-                                            {publication.note}
-                                        </span>
-                                }
-                                {
-                                    publication.keys.includes('survey') && (
-                                        <span className="text-xs text-white bg-black rounded-sm px-2 py-1.5">
-                                            Survey
-                                        </span>
-                                    )
-                                }
-                                {
-                                    publication.star && (
-                                        <Link href={publication.starlink} target={publication.starlink.startsWith('http') ? '_blank' : '_self'}>
-                                            <img loading="lazy" src={publication.star} className="h-6 hover:scale-105 transition delay-100 duration-200"/>
-                                        </Link>
-                                    )
-                                }
-                                {
-                                    publication.icon.map((link) => (
-                                        link.type != 'github' &&
-                                        <Link href={link.link} target={link.link.startsWith('http') ? '_blank' : '_self'} key={link.type} className="size-4 md:size-5 group/icon">
-                                            <AspectRatio ratio={1/1}>
-                                                <Image
-                                                    src={"/resources/icon/" + link.type + ".svg"}
-                                                    alt={link.type}
-                                                    fill
-                                                    className="group-hover/icon:scale-125 transition delay-100 duration-200"
-                                                />
-                                            </AspectRatio>
-                                        </Link>
-                                    ))
-                                }
-                            </div>
-
-                        </div>
-                    ))}
                 </div>
             </div>
 
