@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = {
-    title: "Project | OpenDriveLab",
+    title: "Dataset | OpenDriveLab",
     description: "OpenDriveLab is committed to exploring cutting-edge embodied AI technology, launching a series of benchmarking work, open source to serve the community, and promote the common development of the industry. Friends who are committed to making influential research are welcome to join!",
-    keywords: ["Project", "OpenDriveLab", "Robotics", "Embodied AI", "Autonomous Driving", "HKU", "SII"],
+    keywords: ["Dataset", "OpenDriveLab", "Robotics", "Embodied AI", "Autonomous Driving", "HKU", "SII"],
 };
 
 
@@ -21,7 +21,7 @@ export default function Home() {
                 <div className="w-full max-w-7xl flex flex-col gap-6 fg-gradient-blue">
                     {/* pb-24 for fading color */}
                     <h1 className="text-t0 font-bold pb-24">
-                        Project
+                        Dataset
                     </h1>
                 </div>
             </div>

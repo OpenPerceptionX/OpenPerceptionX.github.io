@@ -213,11 +213,11 @@ export default function Home() {
                                 </span>
                             </Link>
                         </h2>
-                        <Link href='/projects' className="w-16 xl:w-24 group flex ">
+                        <Link href='/datasets' className="w-16 xl:w-24 group flex ">
                             <AspectRatio ratio={3/1}>
                                 <Image
                                     src="/assets/icon/arrow.png"
-                                    alt="Projects"
+                                    alt="datasets"
                                     fill
                                     className="group-hover:scale-125 transition delay-100 duration-200"
                                 />
@@ -225,7 +225,7 @@ export default function Home() {
                             <AspectRatio ratio={3/1}>
                                 <Image
                                     src="/assets/icon/arrow.png"
-                                    alt="Projects"
+                                    alt="datasets"
                                     fill
                                     className="group-hover:scale-125 transition delay-100 duration-200"
                                 />
@@ -233,7 +233,7 @@ export default function Home() {
                             <AspectRatio ratio={3/1}>
                                 <Image
                                     src="/assets/icon/arrow.png"
-                                    alt="Projects"
+                                    alt="datasets"
                                     fill
                                     className="group-hover:scale-125 transition delay-100 duration-200"
                                 />

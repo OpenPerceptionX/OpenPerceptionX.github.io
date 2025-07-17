@@ -176,8 +176,8 @@ export function AppSidebar() {
 
 
 
-                                <Link href="/projects" className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
-                                    Project
+                                <Link href="/datasets" className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
+                                    Dataset
                                 </Link>
                                 {/* <Collapsible className="group/collapsible flex flex-col gap-6">
                                     <SidebarMenuItem>
@@ -190,7 +190,7 @@ export function AppSidebar() {
                                                 <Link href="/AgiBot-World" className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
                                                     AgiBot World
                                                 </Link>
-                                                <Link href="/projects"  className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
+                                                <Link href="/datasets"  className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
                                                     more
                                                 </Link>
                                             </SidebarMenuSub>

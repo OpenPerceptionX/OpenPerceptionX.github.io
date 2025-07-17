@@ -110,7 +110,7 @@ export const NavigatorPage: {
             id: "apply",
         },
     ],
-    "/projects": [
+    "/datasets": [
         {
             text: "Embodied AI",
             id: "embodied",
