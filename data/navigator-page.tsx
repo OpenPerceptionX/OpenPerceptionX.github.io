@@ -18,12 +18,12 @@ export const NavigatorPage: {
             id: "research",
         },
         {
-            text: "Project",
-            id: "project",
-        },
-        {
             text: "Publication",
             id: "publication",
+        },
+        {
+            text: "Dataset",
+            id: "dataset",
         },
         {
             text: "Event",
@@ -110,7 +110,7 @@ export const NavigatorPage: {
             id: "apply",
         },
     ],
-    "/projects": [
+    "/datasets": [
         {
             text: "Embodied AI",
             id: "embodied",

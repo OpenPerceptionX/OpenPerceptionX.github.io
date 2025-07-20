@@ -172,7 +172,7 @@ export default function Home() {
               </div>
             </div>
             <span className="text-xs sm:text-sm md:text-base text-center italic text-gray-400">
-              Temporary page. Permanent address:{" "}
+              {/* Temporary page. Permanent address:{" "}
               <Link
                 href="http://opendrivelab.com/blog/freetacman"
                 className="text-blue-500 hover:text-blue-700 underline"
@@ -182,7 +182,7 @@ export default function Home() {
                 http://opendrivelab.com/blog/freetacman
               </Link>
               <br />
-              <br />
+              <br /> */}
               Good things take time... and so does loading this page! Thanks for
               your patience! Best viewed in Chrome on a desktop.
             </span>
@@ -301,7 +301,7 @@ export default function Home() {
                   defaultValue="01"
                   className="flex flex-col md:flex-row w-full gap-4 md:gap-6 h-auto md:h-[576px]"
                 >
-                  <TabsList className="flex flex-row md:flex-col justify-between gap-2 md:gap-6 h-auto md:h-full w-full md:w-[30%]">
+                  <TabsList className="flex flex-row md:flex-col justify-between gap-2 md:gap-6 h-auto md:h-full w-full md:w-[30%] bg-white">
                     <TabsTrigger
                       value="01"
                       key="01"

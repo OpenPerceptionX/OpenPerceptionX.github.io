@@ -176,29 +176,6 @@ export function AppSidebar() {
 
 
 
-                                <Link href="/projects" className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
-                                    Project
-                                </Link>
-                                {/* <Collapsible className="group/collapsible flex flex-col gap-6">
-                                    <SidebarMenuItem>
-                                        <CollapsibleTrigger className="w-full flex flex-row justify-between items-center p-2 rounded-sm hover:bg-o-blue/3 select-none">
-                                            Project
-                                            <ChevronDown className="size-4 transition-transform group-data-[state=closed]/collapsible:rotate-270 group-data-[state=open]/collapsible:rotate-0" />
-                                        </CollapsibleTrigger>
-                                        <CollapsibleContent>
-                                            <SidebarMenuSub>
-                                                <Link href="/AgiBot-World" className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
-                                                    AgiBot World
-                                                </Link>
-                                                <Link href="/projects"  className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
-                                                    more
-                                                </Link>
-                                            </SidebarMenuSub>
-                                        </CollapsibleContent>
-                                    </SidebarMenuItem>
-                                </Collapsible> */}
-
-
                                 <Link href="/publications" className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
                                     Publication
                                 </Link>
@@ -217,6 +194,30 @@ export function AppSidebar() {
                                                     UniAD
                                                 </Link>
                                                 <Link href="/publications"  className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
+                                                    more
+                                                </Link>
+                                            </SidebarMenuSub>
+                                        </CollapsibleContent>
+                                    </SidebarMenuItem>
+                                </Collapsible> */}
+
+
+
+                                <Link href="/datasets" className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
+                                    Dataset
+                                </Link>
+                                {/* <Collapsible className="group/collapsible flex flex-col gap-6">
+                                    <SidebarMenuItem>
+                                        <CollapsibleTrigger className="w-full flex flex-row justify-between items-center p-2 rounded-sm hover:bg-o-blue/3 select-none">
+                                            Project
+                                            <ChevronDown className="size-4 transition-transform group-data-[state=closed]/collapsible:rotate-270 group-data-[state=open]/collapsible:rotate-0" />
+                                        </CollapsibleTrigger>
+                                        <CollapsibleContent>
+                                            <SidebarMenuSub>
+                                                <Link href="/AgiBot-World" className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
+                                                    AgiBot World
+                                                </Link>
+                                                <Link href="/datasets"  className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
                                                     more
                                                 </Link>
                                             </SidebarMenuSub>

@@ -33,7 +33,7 @@ export default function Redirect() {
         pathname.toLowerCase().startsWith('/dataset') || 
         pathname.toLowerCase().startsWith('/project')
     ) {
-        redirect('/projects')
+        redirect('/datasets')
     }
     if (
         pathname.toLowerCase() == '/event' || 

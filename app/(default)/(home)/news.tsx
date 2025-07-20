@@ -45,6 +45,7 @@ export function News() {
                         <Link className="text-o-blue animated-underline" href="/challenge2025">[AGC 2025]</Link>
                         The IROS phase is ON! Explore the
                         <Link className="text-o-blue animated-underline" href="/challenge2025//#agibot-world">AgiBot World Challenge</Link>
+                        .
                     </li>
                 </ul>
             </div>

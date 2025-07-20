@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-      <div>
+      <div className="freetacman-root">
         <header>
           <div className="fixed right-0 bottom-0 m-6 z-20">
             <Link
