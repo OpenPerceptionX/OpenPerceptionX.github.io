@@ -220,16 +220,461 @@
 
 
 
-                    <div class="w-full mt-20">
+<div class="w-full mt-20">
                         <h2>
-                            <a href="#schedule" class="scroll-mt-48 laptop:scroll-mt-20 group" id="schedule">
+                            <a href="#schedule" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="schedule">
                                 Schedule
                                 <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
                             </a>
                         </h2>
-                        <p class="mt-10">
-                            Full-day workshop. The schedule is to be announced.
-                        </p>
+                        <div class="mt-10 flex gap-6">
+                            <span>
+                                Time zone:
+                            </span>
+                            <select id="timezoneSelect" onchange="convertTimezone(this.value)" class="bg-o-white rounded-3xl pl-3 pr-3" style="-webkit-appearance: none; -moz-appearance: none; appearance: none;">
+                                <option value="-12">UTC-12</option>
+                                <option value="-11">UTC-11</option>
+                                <option value="-10">UTC-10 / Hawaii</option>
+                                <option value="-9">UTC-9</option>
+                                <option value="-8">UTC-8</option>
+                                <option value="-7">UTC-7</option>
+                                <option value="-6">UTC-6</option>
+                                <option value="-5">UTC-5</option>
+                                <option value="-4">UTC-4</option>
+                                <option value="-3">UTC-3</option>
+                                <option value="-2">UTC-2</option>
+                                <option value="-1">UTC-1</option>
+                                <option value="0">UTC+0</option>
+                                <option value="1">UTC+1</option>
+                                <option value="2">UTC+2</option>
+                                <option value="3">UTC+3</option>
+                                <option value="4">UTC+4</option>
+                                <option value="5">UTC+5</option>
+                                <option value="6">UTC+6</option>
+                                <option value="7">UTC+7</option>
+                                <option value="8">UTC+8</option>
+                                <option value="9">UTC+9</option>
+                                <option value="10">UTC+10</option>
+                                <option value="11">UTC+11</option>
+                                <option value="12">UTC+12</option>
+                                <option value="13">UTC+13</option>
+                                <option value="14">UTC+14</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mt-10 max-w-wider">
+                        <ul>
+                            <li>
+                                <div class="relative pb-8">
+                                    <span class="absolute left-5 top-5 -ml-px h-full w-0.5 bg-o-white" aria-hidden="true"></span>
+                                    <div class="relative flex items-start space-x-3">
+                                        <div class="relative px-1">
+                                            <div class="flex size-8 items-center justify-center rounded-full bg-white">
+                                                <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col w-full gap-3">
+                                            <div class="flex justify-between">
+                                                <div>
+                                                    <a href="https://lihongyang.info/" target="_blank" class="font-bold hover:underline">Chonghao Sima</a>
+                                                    <br class="laptop:hidden">
+                                                    <i class="laptop:ml-6 text-o-gray">OpenDriveLab, China</i>
+                                                </div>
+                                                <span class="itimetable_table_time" data-original-time="2025-10-19T14:00:00"></span>
+                                            </div>
+                                            <span>
+                                                Opening Remarks
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="relative pb-8">
+                                    <span class="absolute left-5 top-5 -ml-px h-full w-0.5 bg-o-white" aria-hidden="true"></span>
+                                    <div class="relative flex items-start space-x-3">
+                                        <div class="relative">
+                                            <img class="flex size-10 items-center justify-center bg-white " src="/assets/brand/nvidia_square.png" alt="">
+                                        </div>
+                                        <div class="flex flex-col w-full gap-3">
+                                            <div class="flex justify-between">
+                                                <div>
+                                                    <a href="https://imankgoyal.github.io/" target="_blank" class="font-bold hover:underline">Ankit Goyal</a>
+                                                    <br class="laptop:hidden">
+                                                    <i class="laptop:ml-6 text-o-gray">NVIDIA, USA</i>
+                                                </div>
+                                                <span class="itimetable_table_time" data-original-time="2025-10-19T14:10:00"></span>
+                                            </div>
+                                            <span>
+                                                Topic TBD
+                                            </span>
+                                            <details class="text-xs">
+                                                <summary class="content-none">
+                                                    Biography
+                                                </summary>
+                                                <p class="mt-3">
+                                                    Ankit Goyal is a Research Scientist in Robotics at NVIDIA working with Dieter Fox. He did his Ph.D. in Computer Science at Princeton University, where he was advised by Prof. Jia Deng. He completed Masters from University of Michigan and Bachelors from IIT Kanpur.
+                                                </p>
+                                            </details>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="relative pb-8">
+                                    <span class="absolute left-5 top-5 -ml-px h-full w-0.5 bg-o-white" aria-hidden="true"></span>
+                                    <div class="relative flex items-start space-x-3">
+                                        <div class="relative">
+                                            <img class="flex size-10 items-center justify-center bg-white " src="/assets/icon/D.svg" alt="">
+                                        </div>
+                                        <div class="flex flex-col w-full gap-3">
+                                            <div class="flex justify-between">
+                                                <div>
+                                                    <span class="font-bold">Track Organizer and Winners</span>
+                                                </div>
+                                                <span class="itimetable_table_time" data-original-time="2025-10-19T14:50:00"></span>
+                                            </div>
+                                            <span>
+                                                NAVSIM v2 End-to-End Driving Challenge
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="relative pb-8">
+                                    <span class="absolute left-5 top-5 -ml-px h-full w-0.5 bg-o-white" aria-hidden="true"></span>
+                                    <div class="relative flex items-start space-x-3">
+                                        <div class="relative px-1">
+                                            <div class="flex size-8 items-center justify-center rounded-full bg-white">
+                                                <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                                  </svg>                                                  
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col w-full gap-3">
+                                            <div class="flex justify-between pt-1">
+                                                <div>
+                                                    <span class="text-o-gray">Coffee Break</span>
+                                                </div>
+                                                <span class="itimetable_table_time text-o-gray" data-original-time="2025-10-19T15:10:00"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="relative pb-8">
+                                    <span class="absolute left-5 top-5 -ml-px h-full w-0.5 bg-o-white" aria-hidden="true"></span>
+                                    <div class="relative flex items-start space-x-3">
+                                        <div class="relative">
+                                            <img class="flex size-10 items-center justify-center bg-white " src="/assets/brand/columbia.png" alt="">
+                                        </div>
+                                        <div class="flex flex-col w-full gap-3">
+                                            <div class="flex justify-between">
+                                                <div>
+                                                    <a href="https://yunzhuli.github.io/" target="_blank" class="font-bold hover:underline">Yunzhu Li</a>
+                                                    <br class="laptop:hidden">
+                                                    <i class="laptop:ml-6 text-o-gray">Columbia, USA</i>
+                                                </div>
+                                                <span class="itimetable_table_time" data-original-time="2025-10-19T15:20:00"></span>
+                                            </div>
+                                            <span>
+                                                Topic TBD
+                                            </span>
+                                            <details class="text-xs">
+                                                <summary class="content-none">
+                                                    Biography
+                                                </summary>
+                                                <p class="mt-3">
+                                                    Yunzhu Li is an Assistant Professor of Computer Science at Columbia University.
+                                                    <br><br>
+                                                    Before joining Columbia, he was an Assistant Professor at UIUC CS. He also spent time as a Postdoc at the Stanford Vision and Learning Lab (SVL), working with Fei-Fei Li and Jiajun Wu. He received his PhD from the Computer Science and Artificial Intelligence Laboratory (CSAIL) at MIT, where he was advised by Antonio Torralba and Russ Tedrake, and he obtained his bachelor's degree from Peking University.
+                                                </p>
+                                            </details>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="relative pb-8">
+                                    <span class="absolute left-5 top-5 -ml-px h-full w-0.5 bg-o-white" aria-hidden="true"></span>
+                                    <div class="relative flex items-start space-x-3">
+                                        <div class="relative">
+                                            <img class="flex size-10 items-center justify-center bg-white" src="/assets/brand/tum.png" alt="">
+                                        </div>
+                                        <div class="flex flex-col w-full gap-3">
+                                            <div class="flex justify-between">
+                                                <div>
+                                                    <a href="https://www.niessnerlab.org/members/matthias_niessner/profile.html" target="_blank" class="font-bold hover:underline">Matthias Nießner</a>
+                                                    <br class="laptop:hidden">
+                                                    <i class="laptop:ml-6 text-o-gray">TUM, Germany</i>
+                                                </div>
+                                                <span class="itimetable_table_time" data-original-time="2025-10-19T16:00:00"></span>
+                                            </div>
+                                            <span>
+                                                Topic TBD
+                                            </span>
+                                            <details class="text-xs">
+                                                <summary class="content-none">
+                                                    Biography
+                                                </summary>
+                                                <p class="mt-3">
+                                                    Matthias Nießner is a Professor at the Technical University of Munich, where he leads the Visual Computing Lab. Before, he was a Visiting Assistant Professor at Stanford University. Prof. Nießner's research lies at the intersection of computer vision, graphics, and machine learning, where he is particularly interested in cutting-edge techniques for 3D reconstruction, semantic 3D scene understanding, video editing, and AI-driven video synthesis. In total, he has published over 150 academic publications, including 25 papers at the prestigious ACM Transactions on Graphics (SIGGRAPH / SIGGRAPH Asia) journal and 55 works at the leading vision conferences (CVPR, ECCV, ICCV); several of these works won best paper awards, including at SIGCHI'14, HPG'15, SPG'18, and the SIGGRAPH'16 Emerging Technologies Award for the best Live Demo.
+                                                    <br><br>
+                                                    Prof. Nießner's work enjoys wide media coverage, with many articles featured in main-stream media including the New York Times, Wall Street Journal, Spiegel, MIT Technological Review, and many more, and his was work led to several TV appearances such as on Jimmy Kimmel Live, where Prof. Nießner demonstrated the popular Face2Face technique; Prof. Nießner's academic Youtube channel currently has over 5 million views.
+                                                    <br><br>
+                                                    For his work, Prof. Nießner received several awards: he is a TUM-IAS Rudolph Moessbauer Fellow (2017 - ongoing), he won the Google Faculty Award for Machine Perception (2017), the Nvidia Professor Partnership Award (2018), as well as the prestigious ERC Starting Grant 2018 which comes with 1.5 million Euro in research funding; in 2019, he received the Eurographics Young Researcher Award honoring the best upcoming graphics researcher in Europe.
+                                                    <br><br>
+                                                    In addition to his academic impact, Prof. Nießner is a co-founder and director of Synthesia Inc., a leading startup dedicated to democratize synthetic media generation with cutting-edge AI-driven video synthesis technology.
+                                                </p>
+                                            </details>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="relative pb-8">
+                                    <span class="absolute left-5 top-5 -ml-px h-full w-0.5 bg-o-white" aria-hidden="true"></span>
+                                    <div class="relative flex items-start space-x-3">
+                                        <div class="relative px-1">
+                                            <div class="flex size-8 items-center justify-center rounded-full bg-white">
+                                                <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                                  </svg>                                                  
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col w-full gap-3">
+                                            <div class="flex justify-between pt-1">
+                                                <div>
+                                                    <span class="text-o-gray">Lunch Break</span>
+                                                </div>
+                                                <span class="itimetable_table_time text-o-gray" data-original-time="2025-10-19T16:40:00"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="relative pb-8">
+                                    <span class="absolute left-5 top-5 -ml-px h-full w-0.5 bg-o-white" aria-hidden="true"></span>
+                                    <div class="relative flex items-start space-x-3">
+                                        <div class="relative">
+                                            <img class="flex size-10 items-center justify-center bg-white" src="/assets/brand/HKU_square.png" alt="">
+                                        </div>
+                                        <div class="flex flex-col w-full gap-3">
+                                            <div class="flex justify-between">
+                                                <div>
+                                                    <a href="https://ilnehc.github.io/" target="_blank" class="font-bold hover:underline">Li Chen</a>
+                                                    <br class="laptop:hidden">
+                                                    <i class="laptop:ml-6 text-o-gray">HKU, China</i>
+                                                </div>
+                                                <span class="itimetable_table_time" data-original-time="2025-10-19T18:00:00"></span>
+                                            </div>
+                                            <span>
+                                                Topic TBD
+                                            </span>
+                                            <details class="text-xs">
+                                                <summary class="content-none">
+                                                    Biography
+                                                </summary>
+                                                <p class="mt-3">
+                                                    Li Chen am currently pursuing a PhD at the University of Hong Kong (HKU), while also conducting research at OpenDriveLab. He workw under the supervision of Prof. Ping LUO and Prof. Hongyang LI. He earned his Master's in Robotics from the Robotics Institute at the University of Michigan, Ann Arbor, in 2020, after a Bachelor's degree in Mechanical Engineering from Shanghai Jiao Tong University in 2019.
+                                                    <br><br>
+                                                    His research interests primarily focus on robotics, encompassing areas such as autonomous driving, robot learning, and robotic systems. Representative projects are highlighted below.
+                                                </p>
+                                            </details>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="relative pb-8">
+                                    <span class="absolute left-5 top-5 -ml-px h-full w-0.5 bg-o-white" aria-hidden="true"></span>
+                                    <div class="relative flex items-start space-x-3">
+                                        <div class="relative">
+                                            <img class="flex size-10 items-center justify-center bg-white" src="/assets/brand/mit.png" alt="">
+                                        </div>
+                                        <div class="flex flex-col w-full gap-3">
+                                            <div class="flex justify-between">
+                                                <div>
+                                                    <a href="https://people.csail.mit.edu/pulkitag/" target="_blank" class="font-bold hover:underline">Pulkit Agrawal</a>
+                                                    <br class="laptop:hidden">
+                                                    <i class="laptop:ml-6 text-o-gray">MIT, USA</i>
+                                                </div>
+                                                <span class="itimetable_table_time" data-original-time="2025-10-19T18:40:00"></span>
+                                            </div>
+                                            <span>
+                                                Topic TBD
+                                            </span>
+                                            <details class="text-xs">
+                                                <summary class="content-none">
+                                                    Biography
+                                                </summary>
+                                                <p class="mt-3">
+                                                    Pulkit Agrawal is an Associate Professor in the department of Electrical Engineering and Computer Science (EECS) at MIT. His lab is a part of the Computer Science and Artificial Intelligence Lab (CSAIL), is affiliated with the Laboratory for Information and Decision Systems (LIDS) and involved with NSF AI Institute for Artificial Intelligence and Fundamental Interactions ( IAIFI ).
+                                                    <br><br>
+                                                    He completed his Ph.D. at UC Berkeley; undergraduate studies from IIT Kanpur. Co-founded SafelyYou Inc. that builds fall prevention technology. Advisor to Tutor Intelligence, Lab0 Inc., and Common Sense Machines.
+                                                </p>
+                                            </details>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="relative pb-8">
+                                    <span class="absolute left-5 top-5 -ml-px h-full w-0.5 bg-o-white" aria-hidden="true"></span>
+                                    <div class="relative flex items-start space-x-3">
+                                        <div class="relative">
+                                            <img class="flex size-10 items-center justify-center bg-white " src="/assets/icon/D.svg" alt="">
+                                        </div>
+                                        <div class="flex flex-col w-full gap-3">
+                                            <div class="flex justify-between">
+                                                <div>
+                                                    <span class="font-bold">Track Organizer and Winners</span>
+                                                </div>
+                                                <span class="itimetable_table_time" data-original-time="2025-10-19T19:20:00"></span>
+                                            </div>
+                                            <span>
+                                                World Model Challenge by 1X
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="relative pb-8">
+                                    <span class="absolute left-5 top-5 -ml-px h-full w-0.5 bg-o-white" aria-hidden="true"></span>
+                                    <div class="relative flex items-start space-x-3">
+                                        <div class="relative">
+                                            <img class="flex size-10 items-center justify-center bg-white" src="/assets/brand/cmu.png" alt="">
+                                        </div>
+                                        <div class="flex flex-col w-full gap-3">
+                                            <div class="flex justify-between">
+                                                <div>
+                                                    <a href="https://www.cs.cmu.edu/~katef/" target="_blank" class="font-bold hover:underline">Katerina Fragkiadaki</a>
+                                                    <br class="laptop:hidden">
+                                                    <i class="laptop:ml-6 text-o-gray">CMU, USA</i>
+                                                </div>
+                                                <span class="itimetable_table_time" data-original-time="2025-10-19T19:40:00"></span>
+                                            </div>
+                                            <span>
+                                                Topic TBD
+                                            </span>
+                                            <details class="text-xs">
+                                                <summary class="content-none">
+                                                    Biography
+                                                </summary>
+                                                <p class="mt-3">
+                                                    Katerina Fragkiadaki is a JPMorgan Chase Associate Professor of Computer Science in the Machine Learning Department at Carnegie Mellon University. She works in Artificial Intelligence at the intersection of Computer Vision, Machine Learning, Language Understanding and Robotics. Prior to joining MLD's faculty she spent three wonderful years as a post doctoral researcher first at UC Berkeley working with Jitendra Malik and then at Google Research in Mountain View working with the video group. She completed her Ph.D. in GRASP, UPenn with Jianbo Shi . She did her undergraduate studies at the National Technical University of Athens and before that she was in Crete. 
+                                                </p>
+                                            </details>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="relative pb-8">
+                                    <span class="absolute left-5 top-5 -ml-px h-full w-0.5 bg-o-white" aria-hidden="true"></span>
+                                    <div class="relative flex items-start space-x-3">
+                                        <div class="relative px-1">
+                                            <div class="flex size-8 items-center justify-center rounded-full bg-white">
+                                                <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                                  </svg>                                                  
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col w-full gap-3">
+                                            <div class="flex justify-between pt-1">
+                                                <div>
+                                                    <span class="text-o-gray">Coffee Break</span>
+                                                </div>
+                                                <span class="itimetable_table_time text-o-gray" data-original-time="2025-10-19T20:20:00"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="relative pb-8">
+                                    <span class="absolute left-5 top-5 -ml-px h-full w-0.5 bg-o-white" aria-hidden="true"></span>
+                                    <div class="relative flex items-start space-x-3">
+                                        <div class="relative">
+                                            <img class="flex size-10 items-center justify-center bg-white" src="/assets/brand/princeton.png" alt="">
+                                        </div>
+                                        <div class="flex flex-col w-full gap-3">
+                                            <div class="flex justify-between">
+                                                <div>
+                                                    <a href="https://www.cs.princeton.edu/~jiadeng/" target="_blank" class="font-bold hover:underline">Jia Deng</a>
+                                                    <br class="laptop:hidden">
+                                                    <i class="laptop:ml-6 text-o-gray">Princeton, USA</i>
+                                                </div>
+                                                <span class="itimetable_table_time" data-original-time="2025-10-19T20:30:00"></span>
+                                            </div>
+                                            <span>
+                                                Topic TBD
+                                            </span>
+                                            <details class="text-xs">
+                                                <summary class="content-none">
+                                                    Biography
+                                                </summary>
+                                                <p class="mt-3">
+                                                    Jia Deng is a Professor of Computer Science at Princeton University. His research focuses on computer vision and machine learning. He received his Ph.D. from Princeton University and his B.Eng. from Tsinghua University, both in computer science. He is a recipient of the Sloan Research Fellowship, the NSF CAREER award, the ONR Young Investigator award, an ICCV Marr Prize, a CVPR test-of-time award and two ECCV Best Paper Awards.
+                                                </p>
+                                            </details>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="relative pb-8">
+                                    <span class="absolute left-5 top-5 -ml-px h-full w-0.5 bg-o-white" aria-hidden="true"></span>
+                                    <div class="relative flex items-start space-x-3">
+                                        <div class="relative px-1">
+                                            <div class="flex size-8 items-center justify-center rounded-full bg-white">
+                                                <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
+                                                  </svg>   
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col w-full gap-3">
+                                            <div class="flex justify-between">
+                                                <div>
+                                                    <span class="font-bold">Speakers and Organizers</span>
+                                                </div>
+                                                <span class="itimetable_table_time" data-original-time="2025-10-19T21:10:00"></span>
+                                            </div>
+                                            <span>
+                                                Topic TBD
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="relative pb-8">
+                                    <div class="relative flex items-start space-x-3">
+                                        <div class="relative px-1">
+                                            <div class="flex size-8 items-center justify-center rounded-full bg-white">
+                                                <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col w-full gap-3">
+                                            <div class="flex justify-between pt-1">
+                                                <div>
+                                                    <span>Closing Remarks</span>
+                                                </div>
+                                                <span class="itimetable_table_time" data-original-time="2025-10-19T22:10:00"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
 
 
@@ -414,3 +859,24 @@
         </div>
     </div>
 </body>
+
+<script>
+    function convertTimezone(offset) {
+        var selectedOffset = parseInt(offset);
+        var eventTimes = document.querySelectorAll(".itimetable_table_time");
+        eventTimes.forEach(function (eventTime) {
+            var originalTime = new Date(eventTime.getAttribute("data-original-time"));
+            var adjustedTime = new Date(originalTime.getTime() + selectedOffset * 60 * 60 * 1000);
+            var hours = adjustedTime.getHours().toString().padStart(2, "0");
+            var minutes = adjustedTime.getMinutes().toString().padStart(2, "0");
+            var month = adjustedTime.toLocaleString("en-US", { month: "long" });
+            var day = adjustedTime.getDate();
+            var formattedTime = hours + ":" + minutes + ", " + month + " " + day;
+            eventTime.textContent = formattedTime;
+      });
+    }
+    window.addEventListener('load', function() {
+        timezoneSelect.selectedIndex = 2;
+        convertTimezone(timezoneSelect.value);
+    });
+</script>
