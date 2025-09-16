@@ -1,0 +1,929 @@
+<head>
+    <link rel="icon" type="image/png" href="./colosseo.png">
+    <title>AgiBot World Colosseo | OpenDriveLab</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="AgiBot World, OpenDriveLab, Robotics, Embodied AI, Autonomous Driving">
+    <meta name="description" content="OpenDriveLab is committed to exploring cutting-edge embodied AI technology, launching a series of benchmarking work, open source to serve the community, and promote the common development of the industry. Friends who are committed to making influential research are welcome to join!">
+
+    <link href="/ui2025/css/index_tailwind.css" rel="stylesheet">
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="/ui2024/css/swiper-bundle.min.css"/>
+    <script src="/ui2024/js/swiper-bundle.min.js"></script>
+
+    <script src="/ui2024/js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script src="/ui2025/js/plotly.js" charset="utf-8"></script>
+</head>
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L7VEDHS6G8"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-L7VEDHS6G8');
+</script>
+
+
+
+<body class="h-full bg-drama-black" id="#">
+    <!-- Header / Sidebar -->
+    <header class="z-30 fixed top-6 laptop:top-12 flex ml-6 gap-2 h-0">
+
+        <a href="/" class="h-10 flex justify-center items-center bg-white hover:bg-o-light-blue transition delay-100 duration-200 rounded-md p-2 select-none">
+            <img loading="lazy" class="h-5 w-auto" src="/assets/icon/D.svg">
+        </a>
+
+        <a href="/publications/" class="h-10 flex justify-center items-center bg-white text-drama-black hover:bg-o-light-blue transition delay-100 duration-200 rounded-md p-4 select-none">
+            <b class="font-mono">Publication</b>
+        </a>
+
+        <!-- <a href="/datasets/" class="h-10 hidden laptop:flex justify-center items-center bg-white text-drama-black hover:bg-o-light-blue transition delay-100 duration-200 rounded-md p-4 select-none">
+            <b class="font-mono">Dataset</b>
+        </a> -->
+
+        <!-- <a href="/team" class="h-10 hidden laptop:flex justify-center items-center bg-white text-drama-black hover:bg-o-light-blue transition delay-100 duration-200 rounded-md p-4 select-none">
+            <b class="font-mono">Team</b>
+        </a> -->
+
+
+        <a href="/events/" class="h-10 flex justify-center items-center bg-white text-drama-black hover:bg-o-light-blue transition delay-100 duration-200 rounded-md p-4 select-none">
+            <b class="font-mono">Event</b>
+        </a>
+
+        <a href="/recruit/" class="h-10 hidden laptop:flex justify-center items-center bg-white text-drama-black hover:bg-o-light-blue transition delay-100 duration-200 rounded-md p-4 select-none">
+            <b class="font-mono">Recruit</b>
+        </a>
+    </header>
+    <!-- Page -->
+    <div id="page" class="bg-drama-black">
+        <div class="flex w-screen tablet:w-auto flex-col bg-drama-black">
+
+
+
+            <!-- Landing -->
+            <div class="relative h-svh laptop:h-high bg-drama-black">
+                <div class="absolute w-full h-full bg-drama-black">
+                    <video preload="none" autoplay loop muted class="w-full h-full absolute object-cover bg-[url('/OpenGO1/landing.jpeg')] bg-center bg-cover bg-black bg-opacity-30 bg-blend-overlay">
+                        <source src="https://agibot-world.com/videos/banner_model_video.mp4"/>
+                    </video>
+                </div>
+
+                <div class="relative w-full h-full flex flex-col justify-end items-center p-6">
+        
+                    <h2 class="text-white w-full max-w-landing mb-12">
+                        How to Build up a VLA System on Scale?
+                    </h2>
+        
+                    <div class="flex flex-row w-full max-w-landing mb-12 gap-6 laptop:gap-x-16 flex-wrap items-center">
+                        <img loading="lazy" src="/assets/brand/hku.png" class="h-5 laptop:h-10 select-none"/>
+                        <img loading="lazy" src="/assets/brand/agibot_white.png" class="h-4 laptop:h-8 select-none"/>
+                        <img loading="lazy" src="/assets/brand/shanghai_innovation_institute_white.png" class="h-4 laptop:h-8 select-none"/>
+                        <img loading="lazy" src="/assets/brand/shanghai_ai_lab_white_.png" class="h-4 laptop:h-8 select-none"/>
+                    </div>                       
+                    
+                    <p class="text-white w-full max-w-landing mb-6 select-none">
+                        <a class="text-white underline hover:text-o-blue" href="https://arxiv.org/abs/2503.06669" target="_blank">Technical Report</a>
+                        <span class="select-none text-white">&nbsp;|&nbsp;</span>
+                        <a class="text-white underline hover:text-o-blue" href="https://youtu.be/foTDYU1lIPE" target="_blank">Video</a>
+                        <span class="select-none text-white">&nbsp;|&nbsp;</span>
+                        <a class="text-white underline hover:text-o-blue" href="https://opendrivelab.github.io/content/poster_AgiBot_World_Colosseo.pdf" target="_blank">Poster</a>
+                    </p>
+        
+                    <p class="text-white w-full max-w-landing mb-12 select-none">
+                        September 19, 2025
+                    </p>
+        
+                </div>
+            </div>
+
+
+
+            <!-- Content -->
+            <div class="flex flex-col laptop:flex-row snap-start bg-drama-black">
+
+
+
+                <!-- navigator -->
+                <aside class="min-h-16 laptop:h-screen ml-6 top-16 tablet:top-0 sticky z-20 hidden laptop:flex flex-col items-start justify-evenly w-full laptop:w-1/5 shrink-0">
+                    <ul class="w-full laptop:w-auto mt-3 mb-6 flex flex-row flex-wrap laptop:flex-col justify-evenly border-t-2 border-t-o-white border-b-2 border-b-o-white laptop:border-t-0 laptop:border-b-0">
+    
+                        <li>
+                            <a href="#data-quality" class="flex gap-x-3 rounded-md p-3 font-bold hover:bg-o-hover select-none; group text-white select-none">                           
+                                <span class="group-hover:text-o-blue laptop:border-l-2 laptop:border-l-white laptop:group-hover:border-l-o-blue laptop:pl-3 laptop:ml-1 text-white">
+                                    Data
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#model-training" class="flex gap-x-3 rounded-md p-3 font-bold hover:bg-o-hover select-none; group text-white select-none">                           
+                                <span class="group-hover:text-o-blue laptop:border-l-2 laptop:border-l-white laptop:group-hover:border-l-o-blue laptop:pl-3 laptop:ml-1 text-white">
+                                    Training
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#model-evaluation" class="flex gap-x-3 rounded-md p-3 font-bold hover:bg-o-hover select-none; group text-white select-none">                             
+                                <span class="group-hover:text-o-blue laptop:border-l-2 laptop:border-l-white laptop:group-hover:border-l-o-blue laptop:pl-3 laptop:ml-1 text-white">
+                                    Evaluation
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#bottom-line" class="flex gap-x-3 rounded-xl p-3 font-bold hover:bg-o-hover select-none; group text-white select-none">                             
+                                <span class="group-hover:text-o-blue laptop:border-l-2 laptop:border-l-white laptop:group-hover:border-l-o-blue laptop:pl-3 laptop:ml-1 text-white">
+                                    Bottom Line
+                                </span>
+                            </a>
+                        </li>
+
+                        <li class="laptop:mt-7 text-white">
+                            <a href="#" class="flex p-3 laptop:pl-1 select-none text-white select-none">                           
+                                <span>
+                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 18.75 7.5-7.5 7.5 7.5" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 7.5-7.5 7.5 7.5" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+    
+                    </ul>
+                </aside>
+
+
+
+                <!-- main -->
+                <main class="flex flex-col items-center gap-6 p-6 pt-12 pb-12">
+
+                    <p class="text-white w-full max-w-wide leading-loose">
+                        We are open-sourcing our generalist robotic foundation model, GO-1. Beyond the dataset and model innovations we shared in our previous blog, this time we’d like to talk about the bitter lessons we learned along the way.
+                    </p>
+
+                    <p class="text-white w-full max-w-wide leading-loose">
+                        One of the hardest lessons in robotics comes from the end-to-end pipeline: from hardware setup to data collection, from model training to real-world deployment. In deep learning, when accuracy issues arise, the natural instinct is to blame the model. This of course makes sense for embodied AI as well. If the predicted actions are not accurate enough, it seems obvious that robots would struggle to execute tasks reliably.
+                    </p>
+
+                    <p class="text-white w-full max-w-wide leading-loose">
+                        However, once these models are deployed as the robots' “brain,” the reality looks different. Prediction accuracy only influences how well an action might succeed, a matter of percentages. The pipeline itself, especially the parts beyond algorithms or model design that are often overlooked by researchers, determines whether an action succeeds at all. This is a strict zero-or-one outcome.
+                    </p>
+
+                    <p class="text-white w-full max-w-wide leading-loose">
+                        Even if a team manages to squeeze out a 5% or 10% gain in model accuracy, the entire system can still fail if any part of the pipeline is broken. This is the bucket effect. A wrong coordinate frame, inconsistencies between data collection and execution, or even a minor hardware failure can cause the robot’s actions to collapse completely. When scaling up data collection to more than a hundred robots, even more factors need to be considered.
+                    </p>
+
+                    <p class="text-white w-full max-w-wide leading-loose">
+                        In the rest of this blog, we will share what we have learned from building this large-scale end-to-end system for our GO-1 model.
+                    </p>
+        
+        
+        
+                    <h3 class="text-white hover:underline w-full max-w-wide leading-loose">
+                        <a href="#data-quality" class="scroll-mt-48 laptop:scroll-mt-20 group" id="data-quality">
+                            The Anatomy of Manipulation Data Quality
+                        </a>
+                    </h3>
+
+                    <h4 class="text-white w-full max-w-wide leading-loose ">
+                        From Demonstration to Execution: Measuring Data Consistency
+                    </h4>
+                    
+        
+        
+        
+                    <!-- <figure class="w-full max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6">
+                        <video preload="none" autoplay loop muted class="w-full bg-[url('/OpenGO1/Teleoperation.jpg')] bg-center bg-cover">
+                            <source src="https://opendrivelab.github.io/AgiBotWorld/Teleoperation.mp4"/>
+                        </video>
+                    </figure> -->
+
+                    <figure class="w-full max-w-auto mt-3 mb-3 laptop:mt-6 laptop:mb-6" style="max-width: 360px;">
+                        <video preload="none" autoplay loop muted controls class="w-full bg-[url('/OpenGO1/data_consistency.png')] bg-center bg-cover">
+                            <source src="https://opendrivelab.github.io/OpenGO1/data_consistency.mp4"/>
+                        </video>
+                    </figure>
+        
+        
+        
+                    <p class="text-white w-full max-w-wide leading-loose">
+                        When collecting manipulation data, our key goal is to make sure the demonstrations are reliable. But how do we actually check the quality of the data? The first point is to replay it on the robot with the same initial setup—same robot state, same objects, and same environment—and see if the execution matches the demonstration. We call this collection-execution consistency.
+                    </p>
+
+                    <p class="text-white w-full max-w-wide leading-loose">
+                        Take a simple example: a screw placed on top of a water bottle. Using teleoperation, we can control the robot arm to pick up the screw. Once this is recorded, we replay the actions while keeping the screw and bottle in the same position to test whether the robot can consistently complete the task.
+                    </p>
+
+                    <p class="text-white w-full max-w-wide leading-loose">
+                        Of course, robots aren’t perfect. Because of differences in their built-in controllers and software, the arm might show grasping errors anywhere from 1 mm to 10 mm. You’ll notice this if the robot drops the screw or if the screw ends up off-center in the gripper. These errors highlight the gap between what you demonstrated and what the robot actually executes. And if you train a VLA model with data that has these kinds of errors, it will likely struggle to perform the task, even if the model itself is strong and well trained.
+                    </p>
+
+                    <p class="text-white w-full max-w-wide leading-loose">
+                        Now, things get even trickier when you scale up. Imagine collecting data with dozens or even hundreds of robots at the same time, like we do in our data collection factory. In this case, it’s not enough for data to work on the robot it was collected from, you also need it to work across different robots. That way, all the data can be treated as one big, unified dataset, rather than being tied to a specific machine. This cross-robot consistency not only boosts scalability but also makes it possible to evaluate models on any robot in the fleet.
+                    </p>
+
+                    <h4 class="text-white w-full max-w-wide leading-loose ">
+                        Data Quality Issues in VLA Training: A Case Study 
+                    </h4>
+
+                    <figure class="w-full max-w-auto mt-3 mb-3 laptop:mt-6 laptop:mb-6" style="max-width: 360px;">
+                        <video preload="none" autoplay loop muted controls class="w-full bg-[url('/OpenGO1/data_quality.png')] bg-center bg-cover">
+                            <source src="https://opendrivelab.github.io/OpenGO1/data_quality.mp4"/>
+                        </video>
+                    </figure>
+
+                    <p class="text-white w-full max-w-wide leading-loose">
+                        Successful data collection doesn't guarantee effective model performance. The video above demonstrates a seemingly successful data collection scenario from a supermarket checkout scanning task that contains two critical flaws impacting model performance. First, static frames at trajectory beginnings teach the model to remain motionless at task initiation, causing it to get "stuck" in the initial state during inference. Second, temporal state ambiguity occurs when the robot receives identical visual feedback after scanning different objects, creating a state aliasing problem where the model cannot track task progress or distinguish which objects have been processed. These issues exemplify how raw demonstration data, even from successful completions, requires careful preprocessing to avoid learning undesirable behaviors that lead to deployment failures.
+                    </p>
+
+                    <h4 class="text-white w-full max-w-wide leading-loose ">
+                        A Better Data Collection Paradigm
+                    </h4>
+                    
+                    <figure class="w-full max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6">
+                        <video preload="none" autoplay loop muted controls class="w-full bg-[url('/OpenGO1/adc.png')] bg-center bg-cover">
+                            <source src="https://opendrivelab.github.io/OpenGO1/adc.mp4"/>
+                        </video>
+                    </figure>
+
+                    <p class="text-white w-full max-w-wide leading-loose">
+                        We discover a powerful approach that dramatically improves training data efficiency through human-in-the-loop collaboration. Here's the problem we notice: traditional robotic data collection is incredibly wasteful. When you record a 30-second "pick-and-place" task, you end up with hundreds of nearly identical frames where the robot is barely moving, creating training samples that teach the model very little. It's like having a textbook where every page says almost the same thing.
+                    </p>
+
+                    <p class="text-white w-full max-w-wide leading-loose">
+                        Our solution is called Adversarial Data Collection (ADC), and it works like this: instead of one person quietly demonstrating a task, we get two people working together. As shown in the video, one person operates the robot as usual, while a second "adversarial" operator actively tries to make things harder by moving objects around, changing lighting, or even switching the task instruction mid-demonstration (imagine going from "grasp the kiwi" to "pick up the orange" halfway through). This forces the main operator to constantly adapt and recover, packing way more useful learning experiences into each single demonstration. The result? Every frame becomes meaningful, and our models learn to handle real-world chaos much better.
+                    </p>
+
+                    <h3 class="text-white hover:underline w-full max-w-wide leading-loose">
+                        <a href="#model-training" class="scroll-mt-48 laptop:scroll-mt-20 group" id="model-training">
+                            Best Practices for Training Vision-Language-Action Models
+                        </a>
+                    </h3>
+
+                    <h4 class="text-white w-full max-w-wide leading-loose ">
+                        Cross-Embodiment Transfer: Do We Really Need Multi-Embodiment Pre-Training Data? 
+                    </h4>
+
+                    <figure class="w-full flex flex-col laptop:flex-row justify-center gap-12 laptop:gap-6 max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6">
+                        <video class="h-full object-cover bg-[url('/OpenGO1/franka_fold.png')] bg-center bg-cover bg-black bg-opacity-30 bg-blend-overlay" style="width: 30%; max-width: 30%;" preload="none" autoplay loop muted>
+                            <source src="https://opendrivelab.github.io/OpenGO1/franka_fold.mp4"/>
+                        </video>
+                        <video class="h-full object-cover bg-[url('/OpenGO1/g1_fold.png')] bg-center bg-cover bg-black bg-opacity-30 bg-blend-overlay" style="width: 30%; max-width: 30%;" preload="none" autoplay loop muted>
+                            <source src="https://opendrivelab.github.io/OpenGO1/g1_fold.mp4"/>
+                        </video>
+                        <video class="h-full object-cover bg-[url('/OpenGO1/agilex_fold.png')] bg-center bg-cover bg-black bg-opacity-30 bg-blend-overlay" style="width: 30%; max-width: 30%;" preload="none" autoplay loop muted>
+                            <source src="https://opendrivelab.github.io/OpenGO1/agilex_fold.mp4"/>
+                        </video>
+                    </figure>
+
+                    <p class="text-white w-full max-w-wide leading-loose">
+                        Building truly foundational robotic models means they should work across different robot bodies, but do we really need to train on multiple robot types from the start? The robotics community typically assumes yes, but we had a different hypothesis. Since robots with different shapes can often produce similar behaviors when their end-effectors follow the same path in space, we wonder: what if a model trained on just one robot could easily transfer to others? To test this, we train our model exclusively on the AgiBot G1 and then evaluate it across various simulated and real-world platforms. The results are remarkable, our single-embodiment model adapts well and even shows better scaling properties during fine-tuning than models pre-trained on diverse robot datasets. The videos below demonstrate this with one of robotics' most challenging tasks: cloth folding. Using fewer than 200 folding demonstrations, our pre-trained model successfully transfers to entirely new robot embodiments, proving that single-embodiment pre-training can be a viable path to cross-embodiment generalization without the complexity of multi-robot training.
+                    </p>
+
+                    <h4 class="text-white w-full max-w-wide leading-loose ">
+                        Action Space Design for Vision-Language-Action Models
+                    </h4>
+
+                    <p class="text-white w-full max-w-wide leading-loose">
+                        The action space defines the coordinates in which robots operate. Traditional robot controllers often use the end-effector (EEF) pose, measured relative to the robot’s chest or base and compared to the previous frame. In the VLA era, however, a more direct approach is to control the arm motors through their joint angles. There are also multiple ways to design the learning objectives for a model. For example, predicting actions relative to the last frame, or relative to the first frame in an action chunk (as in pi0). From our experiments, we’ve seen that strong models can easily adapt to different action spaces, even for dexterous manipulation tasks like cloth folding. In fact, they can learn effectively even when the pre-training and fine-tuning stages use different action spaces. To keep things simple for users, we choose to adopt absolute joint space in our open-source model. The key takeaway here is that the robot must execute the actions predicted by the model correctly. Since some robot controllers operate in different coordinate systems, a coordinate transformation may be needed to ensure everything lines up properly.
+                    </p>
+
+                    <h4 class="text-white w-full max-w-wide leading-loose ">
+                        The Hidden Challenge of Expert Diversity 
+                    </h4>
+
+                    <div class="w-full flex flex-col laptop:flex-row justify-center gap-12 laptop:gap-6 max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6">
+                        <figure class="w-full">
+                            <img loading="lazy" class="w-full" src="/OpenGO1/spatial_dis.gif"/>
+                            <figcaption class="text-white text-center text-L mt-3 leading-loose">
+                                Spatial multi-modality in expert demonstrations
+                            </figcaption>
+                        </figure>
+                        <figure class="w-full">
+                            <img loading="lazy" class="w-full" src="/OpenGO1/velocity_dis.gif"/>
+                            <figcaption class="text-white text-center text-L mt-3 leading-loose">
+                                Velocity multi-modality in expert demonstrations
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <p class="text-white w-full max-w-wide leading-loose">
+                        Here's something most people don't think about when collecting robot training data: different human operators have completely different styles. Unlike text or image datasets scraped from the internet, robotic demonstrations are incredibly sensitive to who's controlling the robot. Some operators move fast, others move slowly; some take direct paths, others take roundabout routes. We call this "expert diversity," and it creates a fascinating problem. As shown in the figure above, this diversity shows up in two ways: spatial multimodality (different trajectory paths) and velocity multimodality (different execution speeds). Here's the key insight—these two types of variation have opposite effects on learning. Spatial variations are actually good because they represent different valid strategies for completing tasks, but velocity variations are just noise that makes training harder. So we developed a velocity model in our improved GO-1-Pro model that acts like a smart filter: it removes the unhelpful speed variations while keeping the useful path variations. This simple insight led to significant performance improvements, highlighting that sometimes the biggest breakthroughs come from understanding your data better, not just building bigger models.
+                    </p>
+
+
+                    <h3 class="text-white hover:underline w-full max-w-wide leading-loose">
+                        <a href="#model-evaluation" class="scroll-mt-48 laptop:scroll-mt-20 group" id="model-evaluation">
+                            Establishing Standards for Reliable Manipulation Evaluation
+                        </a>
+                    </h3>
+
+                    <h4 class="text-white w-full max-w-wide leading-loose ">
+                        Step-by-Step VLA Model Validation
+                    </h4>
+
+                    <p class="text-white w-full max-w-wide leading-loose">
+                        Now that we have a trained VLA model, it’s time for evaluation. But don’t rush straight into deploying it on a real robot. A good first step is to run an open-loop test, which validates whether the model has properly fit the fine-tuning data. If the model fails here, it usually points to issues in your pipeline, such as problems with the dataset, dataloader, or training process. Fix them before moving forward.
+                    </p>
+
+                    <p class="text-white w-full max-w-wide leading-loose">
+                        Once the model passes the open-loop test, you can deploy it to the robot and begin real-world testing. As an extra precaution, it’s also a good idea to first replay previously collected data on the robot to confirm that all hardware is functioning as expected.
+                    </p>
+
+                    <h4 class="text-white w-full max-w-wide leading-loose ">
+                        The Critical Need for Standardized Testing
+                    </h4>
+
+                    <figure class="w-full max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6", style="max-width: 420px;">
+                        <img loading="lazy" class="w-full" src="/OpenGO1/test_env.png"/>
+                    </figure>
+
+                    <p class="text-white w-full max-w-wide leading-loose">
+                        Here's a problem that keeps robotics researchers up at night: the random noise in your testing setup is often larger than the actual improvements you're trying to measure. You spend weeks developing what you think is a breakthrough, but when you test it on real hardware, the measurement uncertainty is so high that you can't tell if your method actually works. The same model tested in the morning versus afternoon can show completely different success rates just because the lighting changed or someone moved an object slight
+                    </p>
+
+                    <p class="text-white w-full max-w-wide leading-loose">
+                        To combat this, we've become obsessive about standardization. As you can see in our setup, we use precise rulers to measure exact object placement, ensuring every strawberry, orange, and carrot sits in the same spot for every trial. We've installed controlled lighting to eliminate natural variations throughout the day. It might look like overkill, but when your testing noise is 5% and your algorithmic improvement is only 2%, this level of precision becomes critical for drawing any meaningful conclusions.
+                    </p>
+        
+        
+        
+        
+        
+        
+                    <!-- <figure class="w-full max-w-wider mt-3 mb-3 laptop:mt-6 laptop:mb-6">
+                        <img loading="lazy" class="w-full" src="./pipeline.gif"/>
+                        <figcaption class="text-white text-xs mt-3 leading-loose">
+                            Figure 1: Data collection pipeline. AgiBot World embraces a human-in-the-loop framework to ensure high quality, enriched with detailed annotations and error recovery behaviors.
+                        </figcaption>
+                    </figure> -->
+        
+        
+        
+        
+        
+        
+
+        
+        
+                    <h3 class="text-white hover:underline w-full max-w-wide leading-loose">
+                        <a href="#bottom-line" class="scroll-mt-48 laptop:scroll-mt-20 group" id="bottom-line">
+                            Bottom Line
+                        </a>
+                    </h3>
+        
+        
+        
+                    <p class="text-white w-full max-w-wide leading-loose">
+                        Building GO-1 has been a journey filled with unexpected challenges and hard-won insights. While the robotics community often focuses on algorithmic breakthroughs, we've learned that the devil truly lies in the details—from data quality and pipeline consistency to evaluation standardization. These "bitter lessons" might not make for flashy conference papers, but they're the foundation upon which reliable robotic systems are built. As we open-source GO-1, we hope these practical insights help other researchers avoid the pitfalls we encountered and accelerate progress toward truly capable robotic foundation models.
+                    </p>
+        
+        
+        
+                    <ul class="list-outside list-disc space-y-6 w-full max-w-wide leading-loose">
+                        <li class="text-white ml-6">
+                            Code: <a href="https://github.com/OpenDriveLab/agibot-world" target="_blank" class="text-white italic underline hover:text-o-blue">github.com/OpenDriveLab/agibot-world</a>
+                        </li>
+                        <li class="text-white ml-6">
+                            Model: <a href="https://huggingface.co/agibot-world/GO-1" target="_blank" class="text-white italic underline hover:text-o-blue">huggingface.co/agibot-world</a>
+                        </li>
+                        <li class="text-white ml-6">
+                            <span class="font-semibold text-white">Papers:</span>
+                            <div class="flex flex-wrap gap-6 mt-2">
+                                <a class="text-white bg-gray-800 hover:bg-gray-700 px-3 py-1 rounded-md text-sm transition-colors duration-200 border border-gray-600 hover:border-o-blue" href="https://arxiv.org/abs/2503.06669" target="_blank">arXiv:2503.06669</a>
+                                <a class="text-white bg-gray-800 hover:bg-gray-700 px-3 py-1 rounded-md text-sm transition-colors duration-200 border border-gray-600 hover:border-o-blue" href="https://arxiv.org/abs/2503.11646" target="_blank">arXiv:2503.11646</a>
+                                <a class="text-white bg-gray-800 hover:bg-gray-700 px-3 py-1 rounded-md text-sm transition-colors duration-200 border border-gray-600 hover:border-o-blue" href="https://arxiv.org/abs/2507.06219" target="_blank">arXiv:2507.06219</a>
+                            </div>
+                        </li>
+                    </ul>
+        
+        
+        
+                    <p class="text-o-gray w-full max-w-wide leading-loose italic">
+                        This article is written by Modi Shi, Yuxiang Lu, Huijie Wang, Shaoze Yang.
+                        <br>
+                        This project is accomplished by <a class="underline hover:text-o-blue" href="https://github.com/OpenDriveLab/AgiBot-World/blob/main/CONTRIBUTING.md" target="_blank">these contributors</a>.
+                    </p>
+        
+                    <footer class="w-full bg-drama-black overflow-x-hidden">
+                        <div class="flex flex-col items-center pt-12 pb-12">
+                            <p class="text-o-gray text-xs/6 select-none w-full max-w-wide leading-loose">
+                                OpenDriveLab © 2021 - 2025 All Rights Reserved
+                            </p>
+                        </div>
+                    </footer>
+
+                </main>
+
+
+
+            </div>
+
+
+            
+
+
+
+        </div>
+    </div>
+</body>
+
+
+
+<!-- Figure 3 -->
+<script>
+    var xValue = ['Restock Bag', 'Table Bussing', 'Wipe Table', '<b>Average</b>'];
+    var yValue = [[0.70, 0.20, 0.50, 0.47], [0.77, 0.65, 0.63, 0.68], [0.93, 0.60, 0.78, 0.77]];
+    var trace1 = {
+        x: xValue,
+        y: yValue[0],
+        name: '<b>Open X-Embodiment</b> (OXE)',
+        marker: { color: 'rgba(255, 255, 255, .5)' },
+        type: 'bar',
+        textposition: 'outside',
+        outsidetextfont: { size: 18, color: 'rgb(255, 255, 255)' },
+        hoverinfo: 'none',
+        width: 0.2
+    };
+    var trace2 = {
+        x: xValue,
+        y: yValue[1],
+        name: '<b>AgiBot World</b> (Alpha)',
+        marker: { color: 'rgba(83, 194, 240, 0.7)' },
+        type: 'bar',
+        textposition: 'outside',
+        outsidetextfont: { size: 18, color: 'rgb(255, 255, 255)' },
+        hoverinfo: 'none',
+        width: 0.2
+    };
+    var trace3 = {
+        x: xValue,
+        y: yValue[2],
+        name: '<b>AgiBot World</b> (Beta)',
+        marker: { color: 'rgba(12, 49, 143, 0.7)' },
+        type: 'bar',
+        textposition: 'outside',
+        outsidetextfont: { size: 18, color: 'rgb(255, 255, 255)' },
+        hoverinfo: 'none',
+        width: 0.2
+    };
+    var data = [trace1, trace2, trace3];
+    var layout = {
+        height: 350,
+        margin: {
+            l: 50,
+            r: 50,
+            b: 50,
+            t: 30,
+        },
+        title: {
+            text: "<b>(a) In-distribution Performance</b>",
+            font: {
+                size: 16,
+                color: 'rgb(255, 255, 255)'
+            },
+            yref: "paper",
+            y: 1.01,
+            yanchor: "bottom"
+        },
+        paper_bgcolor: 'rgba(0, 0, 0, 0)',
+        plot_bgcolor: 'rgba(0, 0, 0, 0)',
+        xaxis: {
+            tickfont: {
+                size: 15,
+                color: 'rgb(255, 255, 255)'
+            },
+            fixedrange: true,
+            automargin: true,
+            categoryorder: "array",
+            categoryarray: xValue
+        },
+        yaxis: {
+            title: {
+                text: 'Score',
+                font: {
+                    size: 15,
+                    color: 'rgb(255, 255, 255)'
+                }
+            },
+            tickfont: {
+                size: 14,
+                color: 'rgb(255, 255, 255)'
+            },
+            tickformat: '.1f',
+            range: [0, 1.01],
+            fixedrange: true,
+            gridcolor: 'rgba(255, 255, 255, 0.5)',
+        },
+        showlegend: false,
+        barmode: 'group',
+        bargap: 0.15,
+        bargroupgap: 0.1,
+        shapes: [
+            {
+                type: 'rect',
+                xref: 'x',
+                yref: 'container',
+                x0: 2.5,
+                x1: 3.5,
+                y0: 0,
+                y1: 1,
+                fillcolor: 'rgba(255, 255, 255, 0.07)', // adjust opacity and color as needed
+                line: { width: 0 },
+                layer: 'below'
+            }
+        ]
+    };
+
+    var config = {
+        displayModeBar: false,
+        responsive: true,
+    }
+    Plotly.newPlot('fig3-1', data, layout, config);
+
+    var fig31 = document.getElementById('fig3-1');
+    fig31.on('plotly_hover', function (dataa) {
+        dataa.points.map(function (d) {
+            var trace = fig31.data.find(t => t.name === d.data.name);
+            var index = trace.x.indexOf(d.x);
+            trace.text = trace.y.map((y, i) => i === index ? `<b>${y.toFixed(2)}</b>` : '');
+            Plotly.redraw('fig3-1');
+        });
+    })
+        .on('plotly_unhover', function (dataa) {
+            dataa.points.map(function (d) {
+                var trace = fig31.data.find(t => t.name === d.data.name);
+                trace.text = trace.y.map(y => '');
+                Plotly.redraw('fig3-1');
+            });
+        });
+</script>
+<script>
+    var xValue = ['Restock Bag', 'Table Bussing', 'Wipe Table', '<b>Average</b>'];
+    var yValue = [[0.55, 0.15, 0.43, 0.38], [0.68, 0.43, 0.58, 0.56], [0.80, 0.51, 0.69, 0.67]];
+    var trace1 = {
+        x: xValue,
+        y: yValue[0],
+        name: '<b>Open X-Embodiment</b> (OXE)',
+        marker: { color: 'rgba(255, 255, 255, .5)' },
+        type: 'bar',
+        textposition: 'outside',
+        outsidetextfont: { size: 18, color: 'rgb(255, 255, 255)' },
+        hoverinfo: 'none',
+        width: 0.2
+    };
+    var trace2 = {
+        x: xValue,
+        y: yValue[1],
+        name: '<b>AgiBot World</b> (Alpha)',
+        marker: { color: 'rgba(83, 194, 240, 0.7)' },
+        type: 'bar',
+        textposition: 'outside',
+        outsidetextfont: { size: 18, color: 'rgb(255, 255, 255)' },
+        hoverinfo: 'none',
+        width: 0.2
+    };
+    var trace3 = {
+        x: xValue,
+        y: yValue[2],
+        name: '<b>AgiBot World</b> (Beta)',
+        marker: { color: 'rgba(12, 49, 143, 0.7)' },
+        type: 'bar',
+        textposition: 'outside',
+        outsidetextfont: { size: 18, color: 'rgb(255, 255, 255)' },
+        hoverinfo: 'none',
+        width: 0.2
+    };
+    var data = [trace1, trace2, trace3];
+    var layout = {
+        height: 350,
+        margin: {
+            l: 50,
+            r: 50,
+            b: 0,
+            t: 30,
+        },
+        title: {
+            text: "<b>(b) Out-of-distribution Performance</b>",
+            font: {
+                size: 16,
+                color: 'rgb(255, 255, 255)'
+            },
+            yref: "paper",
+            y: 1.01,
+            yanchor: "bottom"
+        },
+        paper_bgcolor: 'rgba(0, 0, 0, 0)',
+        plot_bgcolor: 'rgba(0, 0, 0, 0)',
+        xaxis: {
+            tickfont: {
+                size: 15,
+                color: 'rgb(255, 255, 255)'
+            },
+            fixedrange: true,
+            automargin: true,
+            categoryorder: "array",
+            categoryarray: xValue
+        },
+        yaxis: {
+            title: {
+                text: 'Score',
+                font: {
+                    size: 15,
+                    color: 'rgb(255, 255, 255)'
+                }
+            },
+            tickfont: {
+                size: 14,
+                color: 'rgb(255, 255, 255)'
+            },
+            tickformat: '.1f',
+            range: [0, 1.01],
+            fixedrange: true,
+            gridcolor: 'rgba(255, 255, 255, 0.5)',
+        },
+        legend: {
+            x: 0.5,
+            y: 0,
+            xanchor: 'center',
+            yref: "container",
+            font: {
+                size: 16,
+                color: 'rgb(255, 255, 255)'
+            },
+            orientation: "h"
+
+        },
+        barmode: 'group',
+        bargap: 0.15,
+        bargroupgap: 0.1,
+        shapes: [
+            {
+                type: 'rect',
+                xref: 'x',
+                yref: 'container',
+                x0: 2.5,
+                x1: 3.5,
+                y0: 0,
+                y1: 1,
+                fillcolor: 'rgba(255, 255, 255, 0.07)', // adjust opacity and color as needed
+                line: { width: 0 },
+                layer: 'below'
+            }
+        ]
+    };
+
+    var config = {
+        displayModeBar: false,
+        responsive: true,
+    }
+    Plotly.newPlot('fig3-2', data, layout, config);
+
+    var fig32 = document.getElementById('fig3-2');
+    fig32.on('plotly_hover', function (dataa) {
+        dataa.points.map(function (d) {
+            var trace = fig32.data.find(t => t.name === d.data.name);
+            var index = trace.x.indexOf(d.x);
+            trace.text = trace.y.map((y, i) => i === index ? `<b>${y.toFixed(2)}</b>` : '');
+            Plotly.redraw('fig3-2');
+        });
+    })
+        .on('plotly_unhover', function (dataa) {
+            dataa.points.map(function (d) {
+                var trace = fig32.data.find(t => t.name === d.data.name);
+                trace.text = trace.y.map(y => '');
+                Plotly.redraw('fig3-2');
+            });
+        });
+</script>
+
+
+
+<!-- Figure 4 -->
+<script>
+    var xValue = ['Restock Bag', 'Table Bussing', 'Pour Water', 'Restock Beverage', 'Fold Shorts', '<b>Average</b>'];
+    var yValue = [[0.84, 0.54, 0.13, 0.36, 0.42, 0.46], [0.93, 0.87, 0.42, 0.49, 0.60, 0.66], [0.98, 1.00, 0.67, 0.60, 0.66, 0.78]];
+    var trace1 = {
+        x: xValue,
+        y: yValue[0],
+        name: '<b>RDT-1B</b>',
+        marker: { color: 'rgba(255, 255, 255, .5)' },
+        type: 'bar',
+        textposition: 'outside',
+        outsidetextfont: { size: 18, color: 'rgb(255, 255, 255)' },
+        hoverinfo: 'none',
+    };
+    var trace2 = {
+        x: xValue,
+        y: yValue[1],
+        name: '<b>GO-1 w/o Latent Planner</b>',
+        marker: { color: 'rgba(83, 194, 240, 0.7)' },
+        type: 'bar',
+        textposition: 'outside',
+        outsidetextfont: { size: 18, color: 'rgb(255, 255, 255)' },
+        hoverinfo: 'none',
+    };
+    var trace3 = {
+        x: xValue,
+        y: yValue[2],
+        name: '<b>GO-1</b>',
+        marker: { color: 'rgba(12, 49, 143, 0.7)' },
+        type: 'bar',
+        textposition: 'outside',
+        outsidetextfont: { size: 18, color: 'rgb(255, 255, 255)' },
+        hoverinfo: 'none',
+    };
+    var data = [trace1, trace2, trace3];
+    var layout = {
+        height: 400,
+        margin: {
+            l: 50,
+            r: 50,
+            b: 0,
+            t: 0,
+        },
+        paper_bgcolor: 'rgba(0, 0, 0, 0)',
+        plot_bgcolor: 'rgba(0, 0, 0, 0)',
+        xaxis: {
+            tickfont: {
+                size: 15,
+                color: 'rgb(255, 255, 255)'
+            },
+            fixedrange: true,
+            automargin: true,
+            categoryorder: "array",
+            categoryarray: xValue
+        },
+        yaxis: {
+            title: {
+                text: 'Score',
+                font: {
+                    size: 15,
+                    color: 'rgb(255, 255, 255)'
+                }
+            },
+            tickfont: {
+                size: 14,
+                color: 'rgb(255, 255, 255)'
+            },
+            tickformat: '.1f',
+            range: [0, 1.1],
+            fixedrange: true,
+            gridcolor: 'rgba(255, 255, 255, 0.5)',
+        },
+        legend: {
+            x: 0.5,
+            y: 0,
+            xanchor: 'center',
+            yref: "container",
+            font: {
+                size: 16,
+                color: 'rgb(255, 255, 255)'
+            },
+            orientation: "h"
+
+        },
+        barmode: 'group',
+        bargap: 0.15,
+        bargroupgap: 0.1,
+        shapes: [
+            {
+                type: 'rect',
+                xref: 'x',
+                yref: 'container',
+                x0: 4.5,
+                x1: 5.5,
+                y0: 0,
+                y1: 1,
+                fillcolor: 'rgba(255, 255, 255, 0.07)', // adjust opacity and color as needed
+                line: { width: 0 },
+                layer: 'below'
+            }
+        ]
+    };
+
+    var config = {
+        displayModeBar: false,
+        responsive: true,
+    }
+    Plotly.newPlot('fig4', data, layout, config);
+
+    var fig4 = document.getElementById('fig4');
+fig4.on('plotly_hover', function (dataa) {
+    dataa.points.map(function (d) {
+        var trace = fig4.data.find(t => t.name === d.data.name);
+        var index = trace.x.indexOf(d.x);
+        trace.text = trace.y.map((y, i) => i === index ? `<b>${y.toFixed(2)}</b>` : '');
+        Plotly.redraw('fig4');
+    });
+})
+    .on('plotly_unhover', function (dataa) {
+        dataa.points.map(function (d) {
+            var trace = fig4.data.find(t => t.name === d.data.name);
+            trace.text = trace.y.map(y => '');
+            Plotly.redraw('fig4');
+        });
+    });
+</script>
+
+
+
+<!-- Figure 5 -->
+<script>
+    var xLine = [];
+    var yLine = [];
+    for (var i = 3.9; i < 6.2; i += 0.2) {
+        var x = Math.pow(10, i);
+        xLine.push(x);
+        yLine.push(0.1224 * Math.pow(x, 0.11));
+    }
+    var trace1 = {
+        x: xLine,
+        y: yLine,
+        name: '<b>Power-law Fit</b>', 
+        // : y=0.1224x^0.11 Pearson r=0.97
+        marker: { color: 'rgba(12, 49, 143, 0.9)' },
+        line: { width: 5 },
+        mode: 'lines',
+        type: 'scatter',
+        hovertemplate: '%{x:.0s},%{y:.2f}<extra></extra>',
+    };
+    var trace2 = {
+        x: [9200, 92000, 1000000],
+        y: [0.34, 0.41, 0.56],
+        marker: { color: 'rgba(83, 194, 240, 1)', size: 20, symbol: 'triangle-up' },
+        mode: 'markers',
+        type: 'scatter',
+        hovertemplate: '%{x},%{y:.2f}<extra></extra>',
+        showlegend: false,
+    };
+    var data = [trace1, trace2];
+    var layout = {
+        height: 400,
+        margin: {
+            l: 50,
+            r: 50,
+            b: 0,
+            t: 0,
+        },
+        paper_bgcolor: 'rgba(0, 0, 0, 0)',
+        plot_bgcolor: 'rgba(0, 0, 0, 0)',
+        xaxis: {
+            tickfont: {
+                size: 15,
+                color: 'rgb(255, 255, 255)'
+            },
+            type: 'log',
+            tickmode: 'array',
+            tickvals: [1e4, 1e5, 1e6],
+            ticktext: ['10k', '100k', '1M'],
+            fixedrange: true,
+            automargin: true,
+            gridcolor: 'rgba(255, 255, 255, 0.5)',
+        },
+        yaxis: {
+            title: {
+                text: 'Score',
+                font: {
+                    size: 15,
+                    color: 'rgb(255, 255, 255)'
+                }
+            },
+            tickfont: {
+                size: 14,
+                color: 'rgb(255, 255, 255)'
+            },
+            tickformat: '.1f',
+            range: [0.29, 0.59],
+            fixedrange: true,
+            gridcolor: 'rgba(255, 255, 255, 0.5)',
+        },
+        legend: {
+            x: 0.5,
+            y: 0,
+            xanchor: 'center',
+            yref: "container",
+            font: {
+                size: 16,
+                color: 'rgb(255, 255, 255)'
+            },
+            orientation: "h"
+        },
+        hoverlabel: {
+            font: {
+                size: 18,
+                color: 'rgb(255, 255, 255)'
+            },
+            bordercolor: 'rgba(0, 0, 0, 0)',
+        },
+    };
+
+    var config = {
+        displayModeBar: false,
+        responsive: true,
+    }
+    Plotly.newPlot('fig5', data, layout, config);
+</script>
