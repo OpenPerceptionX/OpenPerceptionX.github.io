@@ -263,17 +263,35 @@
                         Cross-Embodiment Transfer: Do We Really Need Multi-Embodiment Pre-Training Data? 
                     </h4>
 
-                    <figure class="w-full flex flex-col laptop:flex-row justify-center gap-12 laptop:gap-6 max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6", style="max-width: 1152px;">
-                        <video class="h-full object-cover bg-[url('/OpenGO1/franka_fold.png')] bg-center bg-cover bg-black bg-opacity-30 bg-blend-overlay" style="width: 30%; max-width: 30%;" preload="none" autoplay loop muted>
+                    <style>
+                        @media (min-width: 1024px) {
+                            .video-30 {
+                                width: 30% !important;
+                                max-width: 30% !important;
+                            }
+                        }
+                    </style>
+                    
+                    <figure class="w-full flex flex-col laptop:flex-row justify-center gap-4 laptop:gap-6 max-w-wide mt-3 mb-3 laptop:mt-6 laptop:mb-6 mx-auto" style="max-width: 1152px;">
+                        <video class="video-30 w-full h-auto laptop:h-full object-cover bg-[url('/OpenGO1/franka_fold.png')] bg-center bg-cover bg-black bg-opacity-30 bg-blend-overlay" preload="none" autoplay loop muted>
                             <source src="https://opendrivelab.github.io/OpenGO1/franka_fold.mp4"/>
                         </video>
-                        <video class="h-full object-cover bg-[url('/OpenGO1/g1_fold.png')] bg-center bg-cover bg-black bg-opacity-30 bg-blend-overlay" style="width: 30%; max-width: 30%;" preload="none" autoplay loop muted>
+                        <video class="video-30 w-full h-auto laptop:h-full object-cover bg-[url('/OpenGO1/g1_fold.png')] bg-center bg-cover bg-black bg-opacity-30 bg-blend-overlay" preload="none" autoplay loop muted>
                             <source src="https://opendrivelab.github.io/OpenGO1/g1_fold.mp4"/>
                         </video>
-                        <video class="h-full object-cover bg-[url('/OpenGO1/agilex_fold.png')] bg-center bg-cover bg-black bg-opacity-30 bg-blend-overlay" style="width: 30%; max-width: 30%;" preload="none" autoplay loop muted>
+                        <video class="video-30 w-full h-auto laptop:h-full object-cover bg-[url('/OpenGO1/agilex_fold.png')] bg-center bg-cover bg-black bg-opacity-30 bg-blend-overlay" preload="none" autoplay loop muted>
                             <source src="https://opendrivelab.github.io/OpenGO1/agilex_fold.mp4"/>
                         </video>
                     </figure>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
 
                     <p class="text-white w-full max-w-wide leading-loose">
                         Building truly foundational robotic models means they should work across different robot bodies, but do we really need to train on multiple robot types from the start? The robotics community typically assumes yes, but we had a different hypothesis. Since robots with different shapes can often produce similar behaviors when their end-effectors follow the same path in space, we wonder: what if a model trained on just one robot could easily transfer to others? To test this, we train our model exclusively on the AgiBot G1 and then evaluate it across various simulated and real-world platforms. The results are remarkable, our <b class="text-white font-black">single-embodiment pretrained model adapts well</b> and even shows better scaling properties during fine-tuning than models pre-trained on diverse robot datasets. The videos below demonstrate this with one of robotics' most challenging tasks: cloth folding. Using fewer than 200 folding demonstrations, our pre-trained model successfully transfers to entirely new robot embodiments, proving that single-embodiment pre-training can be a viable path to cross-embodiment generalization without the complexity of multi-robot training.
