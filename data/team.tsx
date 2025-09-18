@@ -294,7 +294,7 @@ export const members: {
             },
             {
                 icon: "email",
-                url: "yichao.zhong@connect.hku.hk",
+                url: "mailto:yichao.zhong@connect.hku.hk",
             },
             {
                 icon: "github",
