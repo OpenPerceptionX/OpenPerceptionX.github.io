@@ -62,6 +62,32 @@ export const publications: {
     keys: string[];
 }[] = [
     {
+        title: "GO-1-Pro: Is Diversity All You Need for Scalable Robotic Manipulation?",
+        link: "https://arxiv.org/abs/2507.06219",
+        image: "/assets/publication/GO-1-Pro.jpg",
+        author: "Chonghao Sima, Katrin Renz, Kashyap Chitta, Li Chen, Hanxue Zhang, Chengen Xie, Ping Luo, Andreas Geiger, Hongyang Li",
+        note: "arXiv 2025",
+        noteoption: '',
+        star: "https://img.shields.io/github/stars/OpenDriveLab/DriveLM?style=social",
+        starlink: "https://github.com/OpenDriveLab/DriveLM",
+        icon: [
+            {
+                type: "blog",
+                link: "https://opendrivelab.com/OpenGO1/",
+            },
+            {
+                type: "github",
+                link: "https://github.com/OpenDriveLab/AgiBot-World",
+            },
+            {
+                type: "huggingface",
+                link: "huggingface.co/agibot-world/GO-1",
+            },
+        ],
+        description: "The first comprehensive analysis of data diversity principles revealing optimal scaling strategies for large-scale robotic manipulation training.",
+        keys: ['editor_pick', 'home_sliding', 'drawer_e2e'],
+    },
+    {
         title: "Detect Anything 3D in the Wild",
         link: "https://arxiv.org/abs/2504.07958",
         image: "/assets/publication/detany3d.jpg",

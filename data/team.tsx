@@ -283,6 +283,23 @@ export const members: {
         keys: ["phd"],
     },
     {
+        name: "Yichao Zhong",
+        image: "/assets/person/yichao_zhong.jpg",
+        image_s: "/assets/person/yichao_zhong_s.jpg",
+        desc: "HKU (The University of Hong Kong)",
+        links: [
+            {
+                icon: "email",
+                url: "peterzychhh@gmail.com",
+            },
+            {
+                icon: "github",
+                url: "z-taylcr7.github.io",
+            },
+        ],
+        keys: ["phd"],
+    },
+    {
         name: "Hanxue Zhang",
         image: "/assets/person/hanxue_zhang.jpg",
         image_s: "/assets/person/hanxue_zhang_s.jpg",
@@ -671,6 +688,61 @@ export const members: {
             {
                 icon: "xiaohongshu",
                 url: "https://www.xiaohongshu.com/user/profile/5d2ff1090000000012035ac6",
+            },
+        ],
+        keys: ["intern"],
+    },
+    {
+        name: "Hugo Mak",
+        image: "/assets/person/haoguang_mai.jpg",
+        desc: "HKU (The University of Hong Kong)",
+        image_s: "/assets/person/haoguang_mai_s.jpg",
+        links: [
+            {
+                icon: "email",
+                url: "hugologymai@connect.hku.hk",
+            },
+        ],
+        keys: ["intern"],
+    },
+    {
+        name: "Jiaheng Wang",
+        image: "/assets/person/jiaheng_wang.jpg",
+        desc: "University College London",
+        image_s: "/assets/person/jiaheng_wang_s.jpg",
+        links: [
+            {
+                icon: "email",
+                url: "jiaheng.wang.ucl@gmail.com",
+            },
+            {
+                icon: "github",
+                url: "https://github.com/Jiaheng-Wang-kcl",
+            },
+        ],
+        keys: ["intern"],
+    },
+    {
+        name: "Yuhang Lu",
+        image: "/assets/person/yuhang_lu.jpg",
+        desc: "HKU (The University of Hong Kong)",
+        image_s: "/assets/person/yuhang_lu_s.jpg",
+        links: [
+            {
+                icon: "homepage",
+                url: "https://yuhanglu2000.github.io/",
+            },
+            {
+                icon: "email",
+                url: "lu.yuhang2000@outlook.com",
+            },
+            {
+                icon: "scholar",
+                url: "https://scholar.google.com/citations?user=HiwDOksAAAAJ",
+            },
+            {
+                icon: "github",
+                url: "https://github.com/yuhanglu2000",
             },
         ],
         keys: ["intern"],

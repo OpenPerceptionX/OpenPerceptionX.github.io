@@ -22,7 +22,7 @@ import { AspectRatio } from "@/components/ui/aspect-ratio"
 
 
 import { publications } from "@/data/publications"
-const landings = [5,4,0,2,3,1].map(index => [...publications.values()].filter(publication => publication.keys.includes('home_sliding'))[index])
+const landings = [0,1,5,4,2,3].map(index => [...publications.values()].filter(publication => publication.keys.includes('home_sliding'))[index])
 const type_mapping: Record<string, string> = {
     "page": "Page",
     "huggingface": "Hugging Face",
@@ -35,6 +35,7 @@ const type_mapping: Record<string, string> = {
     "dataset": "Dataset",
 }
 const image_mapping: Record<string, string> = {
+    "GO-1-Pro: Is Diversity All You Need for Scalable Robotic Manipulation?": "/assets/publication/GO-1-Pro.jpg",
     "UniVLA: Learning to Act Anywhere with Task-centric Latent Actions": "https://ik.imagekit.io/opendrivelab/univla",
     "Planning-oriented Autonomous Driving": "/assets/background/890e373a8bca0b4f0df9701fa09cf131.png",
     "AgiBot World Colosseo: A Large-scale Manipulation Platform for Scalable and Intelligent Embodied Systems": "https://ik.imagekit.io/opendrivelab/agibotworld.jpg",

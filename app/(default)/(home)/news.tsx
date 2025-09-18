@@ -20,7 +20,19 @@ export function News() {
             <div className="w-full max-w-7xl flex flex-col gap-6 leading-relaxed">
                 <ul className="space-y-6">
                     <li className="flex items-center gap-1 flex-wrap">
-                        <Badge variant="outline">
+                        {/* <Badge variant="outline"> */}
+                        <Badge variant="default">
+                            2025.09.19
+                        </Badge>
+                        GO-1 is now open source on
+                        <Link className="text-o-blue animated-underline" href="https://github.com/OpenDriveLab/AgiBot-World" target="_blank">[GitHub]</Link>
+                        with our technical blog available at 
+                        <Link className="text-o-blue animated-underline" href="[opendrivelab.com/OpenGO1]" target="_blank">OpenGO1</Link>
+                        .
+                    </li>
+                    <li className="flex items-center gap-1 flex-wrap">
+                        {/* <Badge variant="outline"> */}
+                        <Badge variant="default">
                             2025.07.01
                         </Badge>
                         DetAny3D is now open source. Check it out on: 
