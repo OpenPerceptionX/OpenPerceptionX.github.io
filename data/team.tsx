@@ -289,12 +289,20 @@ export const members: {
         desc: "HKU (The University of Hong Kong)",
         links: [
             {
+                icon: "homepage",
+                url: "https://z-taylcr7.github.io",
+            },
+            {
                 icon: "email",
-                url: "peterzychhh@gmail.com",
+                url: "yichao.zhong@connect.hku.hk",
             },
             {
                 icon: "github",
-                url: "z-taylcr7.github.io",
+                url: "https://github.com/z-taylcr7",
+            },
+            {
+                icon: "x",
+                url: "https://x.com/PeterYChong",
             },
         ],
         keys: ["phd"],
