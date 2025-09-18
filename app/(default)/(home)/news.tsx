@@ -27,7 +27,7 @@ export function News() {
                         GO-1 is now open source on
                         <Link className="text-o-blue animated-underline" href="https://github.com/OpenDriveLab/AgiBot-World" target="_blank">[GitHub]</Link>
                         with our technical blog available at 
-                        <Link className="text-o-blue animated-underline" href="[opendrivelab.com/OpenGO1]" target="_blank">OpenGO1</Link>
+                        <Link className="text-o-blue animated-underline" href="https://opendrivelab.com/OpenGO1" target="_blank">OpenGO1</Link>
                         .
                     </li>
                     <li className="flex items-center gap-1 flex-wrap">
