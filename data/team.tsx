@@ -745,7 +745,7 @@ export const members: {
                 url: "https://github.com/yuhanglu2000",
             },
         ],
-        keys: ["intern"],
+        keys: ["phd"],
     },
     {
         name: "Shadi Hamdan",
