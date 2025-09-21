@@ -647,7 +647,7 @@ export const members: {
                 url: "https://github.com/serene-sivy",
             },
         ],
-        keys: ["intern"],
+        keys: ["phd"],
     },
     {
         name: "Naisheng Ye",
@@ -669,7 +669,7 @@ export const members: {
                 url: "https://github.com/Y-vic",
             },
         ],
-        keys: ["intern"],
+        keys: ["phd"],
     },
     {
         name: "Checheng Yu",
@@ -694,7 +694,7 @@ export const members: {
                 url: "https://github.com/Tradewindycc",
             },
         ],
-        keys: ["intern"],
+        keys: ["phd"],
     },
     {
         name: "Shijia Peng",
