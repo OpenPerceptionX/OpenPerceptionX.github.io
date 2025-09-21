@@ -165,7 +165,7 @@ export const members: {
         name: "Qingwen Bu",
         image: "/assets/person/qingwen_bu.jpg",
         image_s: "/assets/person/qingwen_bu_s.jpg",
-        desc: "SJTU (Shanghai Jiao Tong University)",
+        desc: "HKU (The University of Hong Kong)",
         links: [
             {
                 icon: "scholar",
@@ -605,7 +605,7 @@ export const members: {
     {
         name: "Jisong Cai",
         image: "/assets/person/jisong_cai.jpg",
-        desc: "Wuhan University",
+        desc: "SJTU (Shanghai Jiao Tong University)",
         image_s: "/assets/person/jisong_cai_s.jpg",
         // desc: "上海交通大学（25级联培）",
         links: [
@@ -627,7 +627,7 @@ export const members: {
     {
         name: "Naisheng Ye",
         image: "/assets/person/naisheng_ye.jpg",
-        desc: "Zhejiang University",
+        desc: "HKU (The University of Hong Kong)",
         image_s: "/assets/person/naisheng_ye_s.jpg",
         // desc: "复旦大学（25级联培）",
         links: [
@@ -649,7 +649,7 @@ export const members: {
     {
         name: "Checheng Yu",
         image: "/assets/person/checheng_yu.jpg",
-        desc: "Nanjing University",
+        desc: "HKU (The University of Hong Kong)",
         image_s: "/assets/person/checheng_yu_s.jpg",
         links: [
             {
