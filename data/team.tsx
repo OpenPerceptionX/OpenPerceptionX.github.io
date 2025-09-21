@@ -308,6 +308,31 @@ export const members: {
         keys: ["phd"],
     },
     {
+        name: "Yuhang Lu",
+        image: "/assets/person/yuhang_lu.jpg",
+        desc: "HKU (The University of Hong Kong)",
+        image_s: "/assets/person/yuhang_lu_s.jpg",
+        links: [
+            {
+                icon: "homepage",
+                url: "https://yuhanglu2000.github.io/",
+            },
+            {
+                icon: "email",
+                url: "lu.yuhang2000@outlook.com",
+            },
+            {
+                icon: "scholar",
+                url: "https://scholar.google.com/citations?user=HiwDOksAAAAJ",
+            },
+            {
+                icon: "github",
+                url: "https://github.com/yuhanglu2000",
+            },
+        ],
+        keys: ["phd"],
+    },
+    {
         name: "Hanxue Zhang",
         image: "/assets/person/hanxue_zhang.jpg",
         image_s: "/assets/person/hanxue_zhang_s.jpg",
@@ -729,31 +754,6 @@ export const members: {
             },
         ],
         keys: ["intern"],
-    },
-    {
-        name: "Yuhang Lu",
-        image: "/assets/person/yuhang_lu.jpg",
-        desc: "HKU (The University of Hong Kong)",
-        image_s: "/assets/person/yuhang_lu_s.jpg",
-        links: [
-            {
-                icon: "homepage",
-                url: "https://yuhanglu2000.github.io/",
-            },
-            {
-                icon: "email",
-                url: "lu.yuhang2000@outlook.com",
-            },
-            {
-                icon: "scholar",
-                url: "https://scholar.google.com/citations?user=HiwDOksAAAAJ",
-            },
-            {
-                icon: "github",
-                url: "https://github.com/yuhanglu2000",
-            },
-        ],
-        keys: ["phd"],
     },
     {
         name: "Shadi Hamdan",
