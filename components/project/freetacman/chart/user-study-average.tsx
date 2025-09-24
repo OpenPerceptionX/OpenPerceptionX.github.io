@@ -18,17 +18,7 @@ import {
   ChartTooltipContent,
 } from "@/components/project/freetacman/ui/chart"
 
-const chartData = [
-  { category: "1", value1: 0.044, value2: 0.235 , value3: 0.286 , fill1: "var(--color-1)", fill2: "var(--color-2)", fill3: "var(--color-3)" },
-  { category: "2", value1: 0.048 , value2: 0.030 , value3: 0.227 , fill1: "var(--color-1)", fill2: "var(--color-2)", fill3: "var(--color-3)" },
-  { category: "3", value1: 0.049 , value2: 0.306 , value3: 0.317 , fill1: "var(--color-1)", fill2: "var(--color-2)", fill3: "var(--color-3)" },
-  { category: "4", value1: 0.090 , value2: 0.123 , value3: 0.350 , fill1: "var(--color-1)", fill2: "var(--color-2)", fill3: "var(--color-3)" },
-  { category: "5", value1: 0.046 , value2: 0.212 , value3: 0.254 , fill1: "var(--color-1)", fill2: "var(--color-2)", fill3: "var(--color-3)" },
-  { category: "6", value1: 0.065 , value2: 0.031 , value3: 0.175 , fill1: "var(--color-1)", fill2: "var(--color-2)", fill3: "var(--color-3)" },
-  { category: "7", value1: 0.135  , value2: 0.284  , value3: 0.410 , fill1: "var(--color-1)", fill2: "var(--color-2)", fill3: "var(--color-3)" },
-  { category: "8", value1: 0.041 , value2: 0.246 , value3: 0.262 , fill1: "var(--color-1)", fill2: "var(--color-2)", fill3: "var(--color-3)" },
-  { category: "9", value1: 0.065 , value2: 0.183 , value3: 0.285 , fill1: "var(--color-1)", fill2: "var(--color-2)", fill3: "var(--color-3)" },
-]
+import { userStudyAverageData as chartData } from "@/data/user-study"
 
 const chartConfig = {
   value1: {
@@ -60,19 +50,19 @@ const chartConfig = {
     label: "Calligraphy",
     color: "#FFC107",
   },
+  // 6: {
+  //   label: "Toothpaste Extrusion",
+  //   color: "#FF5722",
+  // },
+  // 7: {
+  //   label: "Tissue Grasping",
+  //   color: "#FF5722",
+  // },
+  // 8: {
+  //   label: "Chip Grasping",
+  //   color: "#FF5722",
+  // },
   6: {
-    label: "Toothpaste Extrusion",
-    color: "#FF5722",
-  },
-  7: {
-    label: "Tissue Grasping",
-    color: "#FF5722",
-  },
-  8: {
-    label: "Chip Grasping",
-    color: "#FF5722",
-  },
-  9: {
     label: "Avg.",
     color: "#9C27B0",
   },

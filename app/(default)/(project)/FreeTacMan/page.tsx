@@ -1,6 +1,7 @@
-"use client";
+import type { Metadata } from "next";
 
 import Link from "next/link";
+import { SidebarInset } from "@/components/ui/sidebar";
 import {
   Card,
   CardContent,
@@ -48,17 +49,17 @@ const policy_rollouts: { id: string; title: string; color: string }[] = [
   },
   {
     id: "02",
-    title: "Texture  Classification",
+    title: "Calligraphy",
     color: "data-[state=active]:bg-[#43C9C1]",
   },
   {
     id: "03",
-    title: "Stamp Pressing",
+    title: "Texture  Classification",
     color: "data-[state=active]:bg-[#FFC53D]",
   },
   {
     id: "04",
-    title: "Calligraphy",
+    title: "Stamp Pressing",
     color: "data-[state=active]:bg-[#FF668C]",
   },
   {
@@ -70,7 +71,7 @@ const policy_rollouts: { id: string; title: string; color: string }[] = [
 
 export default function Home() {
   return (
-    <div className="w-full overflow-hidden">
+    <main className="w-full overflow-hidden">
       {/* Landing Section with Gray Background */}
       <div className="w-full min-h-screen flex flex-col items-center px-4 md:px-6 bg-[#eaeaea]">
         <div className="flex flex-col py-10 md:py-20 gap-4 md:gap-6 w-full h-full max-w-[1792px] justify-around items-center">
@@ -89,11 +90,13 @@ export default function Home() {
                 <span>Longyan Wu</span>
                 <sup>1,4*</sup> &nbsp;
                 <span>Checheng Yu</span>
-                <sup>1,5*</sup> &nbsp;
+                <sup>2*</sup> &nbsp;
                 <span>Jieji Ren</span>
                 <sup>3*</sup> &nbsp;
                 <span>Li Chen</span>
-                <sup>2</sup>
+                <sup>2</sup> &nbsp;
+                {/* <span>Yufei Jiang</span>
+                <sup>3</sup> */}
               </div>
               <div className="mb-2">
                 <span>Ran Huang</span>
@@ -120,10 +123,10 @@ export default function Home() {
                   <sup className="mr-1">4</sup>
                   <img src="https://opendrivelab.github.io/FreeTacMan/logo/FDU.png" alt="Fudan" className="h-8 md:h-12 object-contain" />
                 </div>
-                <div className="flex items-center">
+                {/* <div className="flex items-center">
                   <sup className="mr-1">5</sup>
                   <img src="https://opendrivelab.github.io/FreeTacMan/logo/NJU.png" alt="NJU" className="h-8 md:h-12 object-contain" />
-                </div>
+                </div> */}
               </div>
               <div className="mb-2">
                 <span className="text-red-600 font-semibold">arXiv 2025</span>
@@ -172,17 +175,7 @@ export default function Home() {
               </div>
             </div>
             <span className="text-xs sm:text-sm md:text-base text-center italic text-gray-400">
-              {/* Temporary page. Permanent address:{" "}
-              <Link
-                href="http://opendrivelab.com/blog/freetacman"
-                className="text-blue-500 hover:text-blue-700 underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                http://opendrivelab.com/blog/freetacman
-              </Link>
               <br />
-              <br /> */}
               Good things take time... and so does loading this page! Thanks for
               your patience! Best viewed in Chrome on a desktop.
             </span>
@@ -199,24 +192,20 @@ export default function Home() {
               <source src="https://opendrivelab.github.io/FreeTacMan/landing/FreeTacMan_teaser_gray.mp4" />
             </video>
             <span className="text-xs sm:text-sm md:text-base italic text-gray-400 text-left w-full">
-              FreeTacMan is a robot-free, human-centric visuo-tactile data
-              collection system, featuring low-cost, high-resolution tactile
-              sensors and a portable, cross-embodiment modular design.
-              FreeTacMan transfers human visual perception, tactile sensing, and
-              motion control skills to robots efficiently by integrating visual
-              and tactile data.
+            FreeTacMan is a robot-free, human-centric visuo-tactile data collection system 
+            that enables the efficient transfer of human visual, tactile
+            , and motor skills to robots. It facilitates the collection of 
+            large-scale, contact-rich manipulation datasets.
             </span>
           </div>
         </div>
       </div>
 
-      {/* Main Content Section with Table of Contents */}
+      {/* Main Content Section with App Sidebar */}
       <div className="flex w-full">
-        {/* Mobile Navigation */}
-        {/* <MobileNav /> */}
-
-        {/* Main Content */}
-        <div className="flex-1 w-full flex flex-col">
+        <SidebarInset>
+          {/* Main Content */}
+          <div className="flex-1 w-full flex flex-col">
           {/* Highlights */}
           <div
             className="w-full px-4 md:px-6 flex flex-col items-center"
@@ -273,16 +262,15 @@ export default function Home() {
                       efficiently. Our main contributions are:
                     </p>
                     <p className="text-xs sm:text-sm md:text-base text-left w-full">
-                      1. A portable, high-resolution, low-cost{" "}
-                      <b className="text-[#004cee]">visuo-tactile sensor</b>{" "}
-                      designed for rapid adaptation across multiple robotic
-                      end-effectors.
+                      1. An in-situ, robot-free, real-time tactile{" "}
+                      <b className="text-[#004cee]">data-collection system</b>{" "}
+                      that leverages a handheld gripper with modular visuo-tactile 
+                      sensors to excel at diverse contact-rich tasks efficiently.
                     </p>
                     <p className="text-xs sm:text-sm md:text-base text-left w-full">
-                      2. An in-situ, robot-free, real-time tactile{" "}
-                      <b className="text-[#004cee]">data-collection system</b>{" "}
-                      that leverages a handheld end effector and the proposed
-                      sensor to excel at diverse contact-rich tasks efficiently.
+                      2. A large-scale, high-precision (sub-millimeter){" "}
+                      <b className="text-[#004cee]">visuo-tactile manipulation dataset</b>{" "}
+                      with over 3000k visuo-tactile image pairs, more than 10k trajectories across 50 tasks.
                     </p>
                     <p className="text-xs sm:text-sm md:text-base text-left w-full">
                       3. Experimental validation shows that imitation policies
@@ -301,7 +289,7 @@ export default function Home() {
                   defaultValue="01"
                   className="flex flex-col md:flex-row w-full gap-4 md:gap-6 h-auto md:h-[576px]"
                 >
-                  <TabsList className="flex flex-row md:flex-col justify-between gap-2 md:gap-6 h-auto md:h-full w-full md:w-[30%] bg-white">
+                  <TabsList className="flex flex-row md:flex-col justify-between gap-2 md:gap-6 h-auto md:h-full w-full md:w-[30%]">
                     <TabsTrigger
                       value="01"
                       key="01"
@@ -311,8 +299,8 @@ export default function Home() {
                         01
                       </h2>
                       <p className="text-xs sm:text-sm lg:text-base xl:text-lg">
-                        Portable, High-resolution, Low-cost<br></br>
-                        Visuo-Tactile Hardware Sensor
+                        Modular Visuo-Tactile<br></br>
+                        Hardware Sensor
                       </p>
                     </TabsTrigger>
                     <TabsTrigger
@@ -373,7 +361,6 @@ export default function Home() {
                 </Tabs>
               </div>
             </div>
-
             <div className="w-full px-4 md:px-6 flex flex-col items-center">
               <Separator className="max-w-7xl mt-14 md:mt-28" />
             </div>
@@ -498,7 +485,7 @@ export default function Home() {
                     href="#applications"
                     className="scroll-mt-32 group flex items-center "
                   >
-                    Applications
+                    Dataset
                     <span className="ml-2 md:ml-6 hidden group-hover:inline-block size-6 md:size-10 text-foreground">
                       <svg
                         viewBox="0 0 24 24"
@@ -524,112 +511,26 @@ export default function Home() {
             <div className="w-full px-4 md:px-6 flex flex-col items-center">
               <div className="w-full flex flex-col items-center mt-10 ">
                 <div className="w-full max-w-5xl flex flex-row justify-between">
-                  <p className="text-xs sm:text-sm md:text-base text-left w-full ">
-                    We evaluate the effectiveness of FreeTacMan system and the
-                    quality of the collected visuo-tactile demonstration through
-                    a diverse set of contact-rich manipulation tasks.
+                  <p className="text-xs sm:text-sm md:text-base text-left w-full mb-6">
+
+                  Enabled by the efficient, precise, and fidelity tactile data collection system, we curate a diverse dataset of manipulation tasks spanning vision, touch, and proprioception modalities. 
+                  The dataset spans <b className="text-[#004cee]">50 tasks</b>, comprising more than
+                  <b className="text-[#004cee]"> 10k</b> manipulation trajectories which contains over 
+                  <b className="text-[#004cee]"> 3 million</b> visuo-tactile image pairs.
                   </p>
                 </div>
               </div>
             </div>
-            <div className="w-full px-4 md:px-6 flex flex-col items-center">
-              <div className="w-full max-w-7xl mt-10 md:mt-20">
-                <div className="border-4 md:border-8 border-[#98AEF3] p-2 ">
-                  <div className="flex-dings">
-                    <div className="flex flex-col gap-3 md:gap-6 max-w-24 md:max-w-32">
-                      <span className="font-bold text-xs sm:text-sm md:text-base text-center">
-                        Fragile Cup Manipulation
-                      </span>
-                      <div className="flex justify-center items-center">
-                        <img
-                          src="https://opendrivelab.github.io/FreeTacMan/task/FragileCupManipulation.png"
-                          className="h-16 md:h-24 select-none"
-                        />
-                      </div>
-                    </div>
-                    <div className="flex flex-col gap-3 md:gap-6 max-w-24 md:max-w-32">
-                      <span className="font-bold text-xs sm:text-sm md:text-base text-center">
-                        USB Plugging
-                      </span>
-                      <div className="flex justify-center items-center">
-                        <img
-                          src="https://opendrivelab.github.io/FreeTacMan/task/USBPlugging.png"
-                          className="h-16 md:h-24 select-none"
-                        />
-                      </div>
-                    </div>
-                    <div className="flex flex-col gap-3 md:gap-6 max-w-24 md:max-w-32">
-                      <span className="font-bold text-xs sm:text-sm md:text-base text-center">
-                        Texture Classification
-                      </span>
-                      <div className="flex justify-center items-center">
-                        <img
-                          src="https://opendrivelab.github.io/FreeTacMan/task/TextureClassification.png"
-                          className="h-16 md:h-24 select-none"
-                        />
-                      </div>
-                    </div>
-                    <div className="flex flex-col gap-3 md:gap-6 max-w-24 md:max-w-32">
-                      <span className="font-bold text-xs sm:text-sm md:text-base text-center">
-                        Stamp Pressing
-                      </span>
-                      <div className="flex justify-center items-center">
-                        <img
-                          src="https://opendrivelab.github.io/FreeTacMan/task/StampPressing.png"
-                          className="h-16 md:h-24 select-none"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex-dings">
-                    <div className="flex flex-col gap-3 md:gap-6 max-w-24 md:max-w-32">
-                      <span className="font-bold text-xs sm:text-sm md:text-base text-center">
-                        Calligraphy Writing
-                      </span>
-                      <div className="flex justify-center items-center">
-                        <img
-                          src="https://opendrivelab.github.io/FreeTacMan/task/CalligraphyWriting.png"
-                          className="h-16 md:h-24 select-none"
-                        />
-                      </div>
-                    </div>
-                    <div className="flex flex-col gap-3 md:gap-6 max-w-24 md:max-w-32">
-                      <span className="font-bold text-xs sm:text-sm md:text-base text-center">
-                        Toothpaste Extrusion
-                      </span>
-                      <div className="flex justify-center items-center">
-                        <img
-                          src="https://opendrivelab.github.io/FreeTacMan/task/ToothpasteExtrusion.png"
-                          className="h-16 md:h-24 select-none"
-                        />
-                      </div>
-                    </div>
-                    <div className="flex flex-col gap-3 md:gap-6 max-w-24 md:max-w-32">
-                      <span className="font-bold text-xs sm:text-sm md:text-base text-center">
-                        Tissue Grasping
-                      </span>
-                      <div className="flex justify-center items-center">
-                        <img
-                          src="https://opendrivelab.github.io/FreeTacMan/task/TissueGrasping.png"
-                          className="h-16 md:h-24 select-none"
-                        />
-                      </div>
-                    </div>
-                    <div className="flex flex-col gap-3 md:gap-6 max-w-24 md:max-w-32">
-                      <span className="font-bold text-xs sm:text-sm md:text-base text-center">
-                        Potato Chip Grasping
-                      </span>
-                      <div className="flex justify-center items-center">
-                        <img
-                          src="https://opendrivelab.github.io/FreeTacMan/task/PotatoChipGrasping.png"
-                          className="h-16 md:h-24 select-none"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+
+            <div className="flex justify-center items-center">
+                      <img
+                src="https://opendrivelab.github.io/FreeTacMan/task/datasetweb.png"
+                className="w-full max-w-4xl md:max-w-5xl lg:max-w-6xl xl:max-w-7xl h-auto select-none"
+                alt="Task dataset"
+              />
             </div>
+
+
           </div>
 
           <div className="w-full px-4 md:px-6 flex flex-col items-center">
@@ -676,6 +577,9 @@ export default function Home() {
               <div className="w-full flex flex-col items-center mt-10 md:mt-20">
                 <div className="w-full max-w-5xl flex flex-row justify-between">
                   <p className="text-xs sm:text-sm md:text-base text-left w-full">
+                    We evaluate <b className="text-[#004cee]">the effectiveness of FreeTacMan system </b> 
+                    and <b className="text-[#004cee]">the quality of the dataset </b>
+                    through a diverse set of contact-rich manipulation tasks.
                     We integrate{" "}
                     <b className="text-[#004cee]">tactile feedback</b> to assess
                     its impact on policy performance, observing a substantial
@@ -711,7 +615,7 @@ export default function Home() {
                 defaultValue={policy_rollouts[0].id}
                 className="flex flex-col w-full"
               >
-                <TabsList className="flex flex-wrap md:flex-row justify-between gap-2 md:gap-6 mb-5 md:mb-10">
+                <TabsList className="flex flex-wrap md:flex-row justify-center gap-2 md:gap-6 mb-5 md:mb-10">
                   {policy_rollouts.map((policy_rollout) => (
                     <TabsTrigger
                       value={policy_rollout.id}
@@ -762,13 +666,12 @@ export default function Home() {
                 <TabsContent value="02" key="02" className="w-full">
                   <Card className="h-auto xl:h-[750px] border-[#43C9C1]/50 bg-[#eaeaea]/50 border-4 md:border-6 flex flex-col gap-0 justify-around">
                     <p className="text-xs sm:text-sm md:text-base text-[#43C9C1] text-center mt-5 md:mt-10 px-4 md:px-10">
-                      The robot must grasp and identify one of two{" "}
-                      <b>visually indistinguishable</b> cylindrical objects with
-                      distinct textures and sort it into the correct bin.
+                    The robot traces the <b>recognizable</b> digit "5"
+                    following a guide labeled "202" with a calligraphy brush.
                     </p>
                     <CardContent className="flex flex-col xl:flex-row gap-3 md:gap-6 justify-between h-full items-center p-2 md:p-6">
                       <div className="flex-3/5 flex flex-col md:flex-row gap-3 w-full xl:w-auto">
-                        <div className="flex flex-col gap-2 md:gap-3 w-full md:w-3/4">
+                        <div className="video-inner">
                           <video
                             preload="none"
                             autoPlay
@@ -777,7 +680,7 @@ export default function Home() {
                             playsInline
                             className="border-2 md:border-6 border-[#43C9C1]/50 rounded-xl object-fit"
                           >
-                            <source src="https://opendrivelab.github.io/FreeTacMan/policy_rollouts/TextureClassification.mp4" />
+                            <source src="https://opendrivelab.github.io/FreeTacMan/policy_rollouts/CalligraphyWriting.mp4" />
                           </video>
                           <p className="text-xs sm:text-sm md:text-base text-center italic text-muted-foreground">
                             The videos are played at normal speed.
@@ -795,12 +698,13 @@ export default function Home() {
                 <TabsContent value="03" key="03" className="w-full">
                   <Card className="h-auto xl:h-[750px] border-[#FFC53D]/50 bg-[#eaeaea]/50 border-4 md:border-6 flex flex-col gap-0 justify-around">
                     <p className="text-xs sm:text-sm md:text-base text-[#FFC53D] text-center mt-5 md:mt-10 px-4 md:px-10">
-                      The robot presses a stamp onto paper to produce a{" "}
-                      <b>clear</b> imprint.
+                      The robot must grasp and identify one of two{" "}
+                      <b>visually indistinguishable</b> cylindrical objects with
+                      distinct textures and sort it into the correct bin.                    
                     </p>
-                    <CardContent className="flex flex-col xl:flex-row gap-3 md:gap-6 justify-between h-full items-center p-2 md:p-6">
+                    <CardContent className="flex flex-col xl:flex-row gap-3 md:gap-6 justify之间 h-full items-center p-2 md:p-6">
                       <div className="flex flex-col flex-3/5 gap-2 md:gap-3 w-full xl:w-auto">
-                        <div className="flex flex-col gap-2 md:gap-3">
+                        <div className="flex flex-col gap-2 md:gap-3 w-full md:w-3/4">
                           <video
                             preload="none"
                             autoPlay
@@ -809,7 +713,7 @@ export default function Home() {
                             playsInline
                             className="border-2 md:border-6 border-[#FFC53D]/50 rounded-xl object-fit"
                           >
-                            <source src="https://opendrivelab.github.io/FreeTacMan/policy_rollouts/StampPressing.mp4" />
+                            <source src="https://opendrivelab.github.io/FreeTacMan/policy_rollouts/TextureClassification.mp4" />
                           </video>
                         </div>
                         <p className="text-xs sm:text-sm md:text-base text-center italic text-muted-foreground">
@@ -827,12 +731,12 @@ export default function Home() {
                 <TabsContent value="04" key="04" className="w-full">
                   <Card className="h-auto xl:h-[750px] border-[#FF668C]/50 bg-[#eaeaea]/50 border-4 md:border-6 flex flex-col gap-0 justify-around">
                     <p className="text-xs sm:text-sm md:text-base text-[#FF668C] text-center mt-5 md:mt-10 px-4 md:px-10">
-                      The robot traces the <b>recognizable</b> digit "5"
-                      following a guide labeled "202" with a calligraphy brush.
+                    The robot presses a stamp onto paper to produce a{" "}
+                    <b>clear</b> imprint.
                     </p>
-                    <CardContent className="flex flex-col xl:flex-row gap-3 md:gap-6 justify-between h-full items-center p-2 md:p-6">
+                    <CardContent className="flex flex-col xl:flex-row gap-3 md:gap-6 justify之间 h-full items-center p-2 md:p-6">
                       <div className="flex-3/5 flex flex-col md:flex-row gap-3 w-full xl:w-auto">
-                        <div className="video-inner">
+                        <div className="flex flex-col gap-2 md:gap-3">
                           <video
                             preload="none"
                             autoPlay
@@ -841,7 +745,7 @@ export default function Home() {
                             playsInline
                             className="border-2 md:border-6 border-[#FF668C]/50 rounded-xl object-fit"
                           >
-                            <source src="https://opendrivelab.github.io/FreeTacMan/policy_rollouts/CalligraphyWriting.mp4" />
+                            <source src="https://opendrivelab.github.io/FreeTacMan/policy_rollouts/StampPressing.mp4" />
                           </video>
                           <p className="inner-m text-xs sm:text-sm md:text-base text-center italic text-muted-foreground">
                             The videos are played at normal speed.
@@ -863,8 +767,8 @@ export default function Home() {
                       into a socket.
                     </p>
                     <CardContent className="flex flex-col xl:flex-row gap-3 md:gap-6 justify-between h-full items-center p-2 md:p-6">
-                      <div className="flex flex-col flex-3/5 gap-2 md:gap-3 w-full xl:w-auto">
-                        <div className="flex flex-col gap-2 md:gap-3">
+                      <div className="flex-3/5 flex flex-col md:flex-row gap-3 w-full xl:w-auto">
+                        <div className="video-inner">
                           <video
                             preload="none"
                             autoPlay
@@ -875,10 +779,10 @@ export default function Home() {
                           >
                             <source src="https://opendrivelab.github.io/FreeTacMan/policy_rollouts/USBPlugging.mp4" />
                           </video>
+                          <p className="inner-m text-xs sm:text-sm md:text-base text-center italic text-muted-foreground">
+                            The videos are played at normal speed.
+                          </p>
                         </div>
-                        <p className="text-xs sm:text-sm md:text-base text-center italic text-muted-foreground">
-                          The videos are played at normal speed.
-                        </p>
                       </div>
                       <div className="flex-2/5 w-full">
                         <PolicyRollouts5 />
@@ -936,7 +840,7 @@ export default function Home() {
                   <p className="text-xs sm:text-sm md:text-base text-left w-full">
                     We evaluate the usability of FreeTacMan through a user study
                     involving 12 human participants with varying levels of
-                    experience, each collecting demonstrations across 8 tasks.
+                    experience, each collecting demonstrations across 5 tasks.
                     Compared to previous setups, FreeTacMan consistently
                     achieves the{" "}
                     <b className="text-[#004cee]">
@@ -985,7 +889,7 @@ export default function Home() {
                   <CarouselItem className="carouselItem basis-full md:basis-1/2 lg:basis-1/3 pl-2 md:pl-4">
                     <Card className="border-[#174BE5]/50 bg-[#eaeaea]/50 border-0 card">
                       <CardContent className="cardContent flex flex-col aspect-square items-center justify-center p-2 md:p-6 gap-1 md:gap-1">
-                        <video
+                      <video
                           preload="none"
                           autoPlay
                           loop
@@ -1017,11 +921,11 @@ export default function Home() {
                           playsInline
                           className="border-2 md:border-6 border-[#43C9C1]/50 rounded-xl object-fit"
                         >
-                          <source src="https://opendrivelab.github.io/FreeTacMan/user_study/USBPlugging.mp4" />
+                          <source src="https://opendrivelab.github.io/FreeTacMan/user_study/USBPlugging2.mp4" />
                         </video>
                         <div className="w-full text-center bg-white p-1 rounded-lg shadow-md">
                           <p className="text-base md:text-xl font-bold text-[#43C9C1] whitespace-nowrap">
-                            USB Plugging
+                            USB Plug
                           </p>
                         </div>
                         <div className="w-full">
@@ -1067,9 +971,9 @@ export default function Home() {
                         >
                           <source src="https://opendrivelab.github.io/FreeTacMan/user_study/StampPressing.mp4" />
                         </video>
-                        <div className="w-full text-center bg-white p-1 rounded-lg shadow-md">
+                        <div className="w-full text-center bg白 p-1 rounded-lg shadow-md">
                           <p className="text-base md:text-xl font-bold text-[#FF668C] whitespace-nowrap">
-                            Stamp Pressing
+                            Stamp Press
                           </p>
                         </div>
                         <div className="w-full">
@@ -1102,78 +1006,7 @@ export default function Home() {
                       </CardContent>
                     </Card>
                   </CarouselItem>
-                  <CarouselItem className="carouselItem basis-full md:basis-1/2 lg:basis-1/3 pl-2 md:pl-4">
-                    <Card className="card border-[#d20000]/50 bg-[#eaeaea]/50 border-0">
-                      <CardContent className="cardContent flex flex-col aspect-square items-center justify-center p-2 md:p-6 gap-1 md:gap-1">
-                        <video
-                          preload="none"
-                          autoPlay
-                          loop
-                          muted
-                          playsInline
-                          className="border-2 md:border-6 border-[#d20000]/50 rounded-xl object-fit"
-                        >
-                          <source src="https://opendrivelab.github.io/FreeTacMan/user_study/ToothpasteExtrusion.mp4" />
-                        </video>
-                        <div className="w-full text-center bg-white p-1 rounded-lg shadow-md">
-                          <p className="text-base md:text-xl font-bold text-[#d20000] whitespace-nowrap">
-                            Toothpaste Extrusion
-                          </p>
-                        </div>
-                        <div className="w-full">
-                          <UserStudy6 />
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </CarouselItem>
-                  <CarouselItem className="carouselItem basis-full md:basis-1/2 lg:basis-1/3 pl-2 md:pl-4">
-                    <Card className="card border-[#7ed233]/50 bg-[#eaeaea]/50 border-0">
-                      <CardContent className="cardContent flex flex-col aspect-square items-center justify-center p-2 md:p-6 gap-1 md:gap-1">
-                        <video
-                          preload="none"
-                          autoPlay
-                          loop
-                          muted
-                          playsInline
-                          className="border-2 md:border-6 border-[#7ed233]/50 rounded-xl object-fit"
-                        >
-                          <source src="https://opendrivelab.github.io/FreeTacMan/user_study/TissueGrasping.mp4" />
-                        </video>
-                        <div className="w-full text-center bg-white p-1 rounded-lg shadow-md">
-                          <p className="text-base md:text-xl font-bold text-[#7ed233] whitespace-nowrap">
-                            Tissue Grasping
-                          </p>
-                        </div>
-                        <div className="w-full">
-                          <UserStudy7 />
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </CarouselItem>
-                  <CarouselItem className="carouselItem basis-full md:basis-1/2 lg:basis-1/3 pl-2 md:pl-4">
-                    <Card className="card border-[#ff7b00]/50 bg-[#eaeaea]/50 border-0">
-                      <CardContent className="cardContent flex flex-col aspect-square items-center justify-center p-2 md:p-6 gap-1 md:gap-1">
-                        <video
-                          preload="none"
-                          autoPlay
-                          loop
-                          muted
-                          playsInline
-                          className="border-2 md:border-6 border-[#ff7b00]/50 rounded-xl object-fit"
-                        >
-                          <source src="https://opendrivelab.github.io/FreeTacMan/user_study/PotatoChipGrasping.mp4" />
-                        </video>
-                        <div className="w-full text-center bg-white p-1 rounded-lg shadow-md">
-                          <p className="text-base md:text-xl font-bold text-[#ff7b00] whitespace-nowrap">
-                            Chip Grasping
-                          </p>
-                        </div>
-                        <div className="w-full">
-                          <UserStudy8 />
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </CarouselItem>
+                  {/* Optional hidden items retained for future use */}
                 </CarouselContent>
                 <CarouselPrevious className="border-0 left-1 md:left-4 size-8 md:size-10" />
                 <CarouselNext className="border-0 right-1 md:right-4 size-8 md:size-10" />
@@ -1185,9 +1018,27 @@ export default function Home() {
             </div>
           </div>
 
+          <div className="w-full px-4 md:px-6 flex flex-col items-center">
+            <Separator className="max-w-7xl mt-24 md:mt-48" />
+          </div>
+            </div>
+          </SidebarInset>
         </div>
-      </div>
 
-    </div>
+      <footer className="w-full mb-16 md:mb-32 flex flex-col gab-5 md:gap-10">
+        <div className="w-full px-4 md:px-6 flex flex-row justify-center mt-16 md:mt-32">
+          <div className="max-w-7xl w-full flex flex-row justify-between">
+            <div className="flex-1 flex flex-col justify-start">
+              <span className="text-xs sm:text-sm md:text-base select-none text-center">
+                FreeTacMan © 2025
+              </span>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
   );
 }
+
+
+

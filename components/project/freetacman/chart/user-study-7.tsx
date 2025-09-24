@@ -17,11 +17,9 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/project/freetacman/ui/chart"
-const chartData = [
-  { browser: "1", visitors: 0.135, fill: "var(--color-1)" },
-  { browser: "2", visitors: 0.284, fill: "var(--color-2)" },
-  { browser: "3", visitors: 0.410, fill: "var(--color-3)" },
-]
+import { getUserStudySingleData } from "@/data/user-study"
+
+const chartData = getUserStudySingleData("7")
 
 const chartConfig = {
   visitors: {

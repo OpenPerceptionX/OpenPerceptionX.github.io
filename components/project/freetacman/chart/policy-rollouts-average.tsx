@@ -42,15 +42,15 @@ const chartConfig = {
     color: "#98AEF3",
   },
   2: {
-    label: "Texture Cls.",
+    label: "Calligraphy",
     color: "#174BE5",
   },
   3: {
-    label: "Stamp Press",
+    label: "Texture Cls.",
     color: "#4CAF50",
   },
   4: {
-    label: "Calligraphy",
+    label: "Stamp Press",
     color: "#FFC107",
   },
   5: {
