@@ -90,9 +90,9 @@ export default function Redirect() {
     }
     if (
         pathname.toLowerCase().startsWith('/freetacman') ||
-        pathname.toLowerCase().startsWith('/blog/freetacman')
+        // pathname.toLowerCase().startsWith('/blog/freetacman')
     ) {
-        redirect('/FreeTacMan')
+        redirect('https://opendrivelab.com/FreeTacMan')
     }
     if (
         pathname.toLowerCase().startsWith('/resim')
