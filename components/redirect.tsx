@@ -172,7 +172,7 @@ export default function Redirect() {
     }
     // 
     if (
-        pathname.toLowerCase() =='zoom'
+        pathname.toLowerCase() =='/zoom'
     ) {
         redirect('https://us06web.zoom.us/j/86046877909?pwd=Tyt3WiQ3bNcI8KTNcW9E6Kztj1Hd5u.1')
     }
