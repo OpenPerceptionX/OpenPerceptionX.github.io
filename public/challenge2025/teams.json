@@ -1,0 +1,1110 @@
+{
+    "fcd721dd-9384-4652-b7ae-01a423aff3ec": {
+        "id": "fcd721dd-9384-4652-b7ae-01a423aff3ec",
+        "name": "Praise the Sun",
+        "members": [
+            "67f381fa0dad3893b2e384d8"
+        ],
+        "leader": "67f381fa0dad3893b2e384d8",
+        "other_data": {
+            "team_name": "Praise the Sun",
+            "team_members": [
+                {
+                    "name": "Yinzhe Shen",
+                    "email": "yinzhe.shen@kit.edu",
+                    "institution": "KIT",
+                    "is_student": true,
+                    "majar": "-",
+                    "degree": "PhD",
+                    "advising_professor": "Christoph Stiller",
+                    "grade": "-",
+                    "expected_graduation_year": "2027"
+                }
+            ]
+        }
+    },
+    "380a2445-c071-47d2-849d-35e296de8bbd": {
+        "id": "380a2445-c071-47d2-849d-35e296de8bbd",
+        "name": "Simple",
+        "members": [
+            "6583e0f26418847968599f16"
+        ],
+        "leader": "6583e0f26418847968599f16",
+        "other_data": {
+            "team_name": "Simple",
+            "team_members": [
+                {
+                    "name": "Yun Zhao",
+                    "email": "zhaoyun02@ieisystem.com",
+                    "institution": "IEIT",
+                    "is_student": false,
+                    "majar": null,
+                    "degree": null,
+                    "advising_professor": null,
+                    "grade": null,
+                    "expected_graduation_year": null
+                },
+                {
+                    "name": "Peiru Zheng",
+                    "email": "zhengpeiru@ieisystem.com",
+                    "institution": "IEIT",
+                    "is_student": false,
+                    "majar": null,
+                    "degree": null,
+                    "advising_professor": null,
+                    "grade": null,
+                    "expected_graduation_year": null
+                },
+                {
+                    "name": "Zhan Gong",
+                    "email": "gongzhan01@ieisystem.com",
+                    "institution": "IEIT",
+                    "is_student": false,
+                    "majar": null,
+                    "degree": null,
+                    "advising_professor": null,
+                    "grade": null,
+                    "expected_graduation_year": null
+                }
+            ]
+        }
+    },
+    "6d16d438-a59e-4d31-a8a0-d61a9a8f4deb": {
+        "id": "6d16d438-a59e-4d31-a8a0-d61a9a8f4deb",
+        "name": "TJU-SmartIOT",
+        "members": [
+            "685a465f62691c64ef63284b"
+        ],
+        "leader": "685a465f62691c64ef63284b",
+        "other_data": {
+            "team_name": "happyyyy",
+            "team_members": [
+                {
+                    "name": "tian yu hong",
+                    "email": "tianyu_hong@tju.edu.cn",
+                    "institution": "Tian Jin University",
+                    "is_student": true,
+                    "majar": "Computer Science and Technology",
+                    "degree": "Master",
+                    "advising_professor": "xiao bo zhou",
+                    "grade": "3.85",
+                    "expected_graduation_year": "2026"
+                },
+                {
+                    "name": "wen kai hu",
+                    "email": "wenkai_hu@tju.edu.cn",
+                    "institution": "Tian Jin University",
+                    "is_student": true,
+                    "majar": "Computer Science and Technology",
+                    "degree": "Master",
+                    "advising_professor": "xiao bo zhou",
+                    "grade": "3.77",
+                    "expected_graduation_year": "2027"
+                },
+                {
+                    "name": "jing zhang",
+                    "email": "j_zhang@tju.edu.cn",
+                    "institution": "Tian Jin University",
+                    "is_student": true,
+                    "majar": "Computer Science and Technology",
+                    "degree": "Bachelor",
+                    "advising_professor": "xiao bo zhou",
+                    "grade": "3.67",
+                    "expected_graduation_year": "2028"
+                }
+            ]
+        }
+    },
+    "c1a67315-538b-4359-8ab3-8c9a5778acc5": {
+        "id": "c1a67315-538b-4359-8ab3-8c9a5778acc5",
+        "name": "IA-TU",
+        "members": [
+            "6462eb262a83863b97c0a37e"
+        ],
+        "leader": "6462eb262a83863b97c0a37e",
+        "other_data": {
+            "team_name": "IA-TU",
+            "team_members": [
+                {
+                    "name": "Farros Alferro",
+                    "email": "farros.alferro.t3@dc.tohoku.ac.jp",
+                    "institution": "Tohoku University",
+                    "is_student": true,
+                    "majar": "Information Sciences",
+                    "degree": "Master",
+                    "advising_professor": "Takayuki Okatani",
+                    "grade": "2nd year",
+                    "expected_graduation_year": "2026"
+                }
+            ]
+        }
+    },
+    "190de713-2165-426d-a0db-0c2a94a00adf": {
+        "id": "190de713-2165-426d-a0db-0c2a94a00adf",
+        "name": "DiffVLA++",
+        "members": [
+            "681f2ca7f74ae6948d50e84a"
+        ],
+        "leader": "681f2ca7f74ae6948d50e84a",
+        "other_data": {
+            "team_name": "RobertBosch",
+            "team_members": [
+                {
+                    "name": "Jiang Anqing",
+                    "email": "Anqing.jiang@cn.bosch.com",
+                    "institution": "Bosch",
+                    "is_student": false,
+                    "majar": null,
+                    "degree": null,
+                    "advising_professor": null,
+                    "grade": null,
+                    "expected_graduation_year": null
+                }
+            ]
+        }
+    },
+    "dda83c6a-c450-4683-a3a6-6601011f0f75": {
+        "id": "dda83c6a-c450-4683-a3a6-6601011f0f75",
+        "name": "baseline_constant_velocity",
+        "members": [
+            "64e57309b78bc92221ce3b70"
+        ],
+        "leader": "64e57309b78bc92221ce3b70",
+        "other_data": {
+            "team_name": "test",
+            "team_members": [
+                {
+                    "name": "Qiu Yihang",
+                    "email": "qiuyihang@connect.hku.hk",
+                    "institution": "HKU",
+                    "is_student": false,
+                    "majar": null,
+                    "degree": null,
+                    "advising_professor": null,
+                    "grade": null,
+                    "expected_graduation_year": null
+                }
+            ]
+        }
+    },
+    "07752ecc-479d-4e45-98e4-e3e2950af17e": {
+        "id": "07752ecc-479d-4e45-98e4-e3e2950af17e",
+        "name": "NYCU_CSSP917_Lab",
+        "members": [
+            "6811e55833558457e1c60fd7"
+        ],
+        "leader": "6811e55833558457e1c60fd7",
+        "other_data": {
+            "team_name": "NYCU_CSSP_LAB",
+            "team_members": [
+                {
+                    "name": "Chih-Wei Tseng",
+                    "email": "chihweig01553@nycu.edu.tw",
+                    "institution": "National Yang Ming Chiao Tung University",
+                    "is_student": false,
+                    "majar": null,
+                    "degree": null,
+                    "advising_professor": null,
+                    "grade": null,
+                    "expected_graduation_year": null
+                },
+                {
+                    "name": "Chien-Wen Sun",
+                    "email": "cwsun.ee12@nycu.edu.tw",
+                    "institution": "National Yang Ming Chiao Tung University",
+                    "is_student": true,
+                    "majar": "Electrical and Control Engineering",
+                    "degree": "PhD",
+                    "advising_professor": "Bing-Fei Wu",
+                    "grade": "3",
+                    "expected_graduation_year": "2027"
+                }
+            ]
+        }
+    },
+    "f751b74c-98f1-4df1-8e40-dc035ccad9b3": {
+        "id": "f751b74c-98f1-4df1-8e40-dc035ccad9b3",
+        "name": "xrHumanLab",
+        "members": [
+            "64be57ec4d2052b1aa3979e2"
+        ],
+        "leader": "64be57ec4d2052b1aa3979e2",
+        "other_data": {
+            "team_name": "xrHumanlab",
+            "team_members": [
+                {
+                    "name": "Joochan Kim",
+                    "email": "joochan.k@kist.re.kr",
+                    "institution": "Korea Institute of Science and Technology",
+                    "is_student": false,
+                    "majar": null,
+                    "degree": null,
+                    "advising_professor": null,
+                    "grade": null,
+                    "expected_graduation_year": null
+                },
+                {
+                    "name": "Taekgeun You",
+                    "email": "tackgeun.you@kist.re.kr",
+                    "institution": "Korea Institute of Science and Technology",
+                    "is_student": false,
+                    "majar": null,
+                    "degree": null,
+                    "advising_professor": null,
+                    "grade": null,
+                    "expected_graduation_year": null
+                }
+            ]
+        }
+    },
+    "13ff089e-f24f-4087-9d98-d99cc23f509e": {
+        "id": "13ff089e-f24f-4087-9d98-d99cc23f509e",
+        "name": "hawaiidriver",
+        "members": [
+            "641862440956be7233a1788f"
+        ],
+        "leader": "641862440956be7233a1788f",
+        "other_data": {
+            "team_name": "hawaiidriver",
+            "team_members": [
+                {
+                    "name": "Maciej Wozniak",
+                    "email": "maciejw@kth.se",
+                    "institution": "KTH Royal Institute of Technology",
+                    "is_student": true,
+                    "majar": "Robotics, Perception and Learning",
+                    "degree": "PhD",
+                    "advising_professor": "Patric Jensfelt ",
+                    "grade": "PhD",
+                    "expected_graduation_year": "2026"
+                },
+                {
+                    "name": "Adam Lilja",
+                    "email": "adam.lilja@zenseact.com",
+                    "institution": "zenseact/Chalmers",
+                    "is_student": true,
+                    "majar": "Autonomous Driving ",
+                    "degree": "PhD",
+                    "advising_professor": "Lars Hammarstrand",
+                    "grade": "PhD",
+                    "expected_graduation_year": "2027"
+                },
+                {
+                    "name": "Arvid Laveno Ling",
+                    "email": "arvid.laveno.ling@zenseact.com",
+                    "institution": "zenseact/Chalmers",
+                    "is_student": true,
+                    "majar": "Autonomous Driving",
+                    "degree": "PhD",
+                    "advising_professor": "Paolo Falcone",
+                    "grade": "PhD",
+                    "expected_graduation_year": "2028"
+                }
+            ]
+        }
+    },
+    "b2946b26-49aa-4cba-aea4-6a5bd7e2787a": {
+        "id": "b2946b26-49aa-4cba-aea4-6a5bd7e2787a",
+        "name": "IRCV",
+        "members": [
+            "662414346fdded6f22ceb171"
+        ],
+        "leader": "662414346fdded6f22ceb171",
+        "other_data": {
+            "team_name": "IRCV",
+            "team_members": [
+                {
+                    "name": "Jaeha Song",
+                    "email": "archiiive99@hanyang.ac.kr",
+                    "institution": "Hanyang University",
+                    "is_student": true,
+                    "majar": "Automotive Engineering",
+                    "degree": "Master",
+                    "advising_professor": "Soonmin Hwang",
+                    "grade": "2nd Year",
+                    "expected_graduation_year": "2026"
+                },
+                {
+                    "name": "Geonyeong Park",
+                    "email": "dsa3515@hanyang.ac.kr",
+                    "institution": "Hanyang University",
+                    "is_student": true,
+                    "majar": "Automotive Engineering",
+                    "degree": "PhD",
+                    "advising_professor": "Soonmin Hwang",
+                    "grade": "2nd Year",
+                    "expected_graduation_year": "2028"
+                },
+                {
+                    "name": "Kyungmin Kim",
+                    "email": "tnrud17@hanyang.ac.kr",
+                    "institution": "Hanyang University",
+                    "is_student": true,
+                    "majar": "Automotive Engineering",
+                    "degree": "PhD",
+                    "advising_professor": "Soonmin Hwang",
+                    "grade": "1st Year",
+                    "expected_graduation_year": "2029"
+                },
+                {
+                    "name": "Nayoung Kim",
+                    "email": "nadine03@hanyang.ac.kr",
+                    "institution": "Hanyang University",
+                    "is_student": true,
+                    "majar": "Automotive Engineering",
+                    "degree": "Bachelor",
+                    "advising_professor": "Soonmin Hwang",
+                    "grade": "4th Year",
+                    "expected_graduation_year": "2026"
+                },
+                {
+                    "name": "Soonmin Hwang",
+                    "email": "soonminh@hanyang.ac.kr",
+                    "institution": "Hanyang University",
+                    "is_student": false,
+                    "majar": null,
+                    "degree": null,
+                    "advising_professor": null,
+                    "grade": null,
+                    "expected_graduation_year": null
+                }
+            ]
+        }
+    },
+    "9f42da12-0709-41d5-bec4-c5f351275be9": {
+        "id": "9f42da12-0709-41d5-bec4-c5f351275be9",
+        "name": "CVML",
+        "members": [
+            "677785bd296ec8eeb62a9c12"
+        ],
+        "leader": "677785bd296ec8eeb62a9c12",
+        "other_data": {
+            "team_name": "CVML",
+            "team_members": [
+                {
+                    "name": "WonjeongRyu",
+                    "email": "petac@kaist.ac.kr",
+                    "institution": "KAIST",
+                    "is_student": true,
+                    "majar": "AI",
+                    "degree": "PhD",
+                    "advising_professor": "Hyunjung Shim",
+                    "grade": "1",
+                    "expected_graduation_year": "2030"
+                }
+            ]
+        }
+    },
+    "0249b515-2316-43b8-a80d-6d43855249de": {
+        "id": "0249b515-2316-43b8-a80d-6d43855249de",
+        "name": "PDT",
+        "members": [
+            "663fd3b69cb0add00be66729"
+        ],
+        "leader": "663fd3b69cb0add00be66729",
+        "other_data": {
+            "team_name": "PDT",
+            "team_members": [
+                {
+                    "name": "Zichong Yang",
+                    "email": "zichong@purdue.edu",
+                    "institution": "Purdue University",
+                    "is_student": true,
+                    "majar": "Mechanical Engineering",
+                    "degree": "PhD",
+                    "advising_professor": "Ziran Wang",
+                    "grade": "N/A",
+                    "expected_graduation_year": "2027"
+                }
+            ]
+        }
+    },
+    "189480d5-7b76-4de8-aea0-33a241e21566": {
+        "id": "189480d5-7b76-4de8-aea0-33a241e21566",
+        "name": "DRL_CASIA&XIAOMI",
+        "members": [
+            "665b2ac6e0e2374ca24ba000"
+        ],
+        "leader": "665b2ac6e0e2374ca24ba000",
+        "other_data": {
+            "team_name": "MilkLoong",
+            "team_members": [
+                {
+                    "name": "Zebin Xing",
+                    "email": "xzebin@bupt.edu.cn",
+                    "institution": "CASIA",
+                    "is_student": true,
+                    "majar": "Computer Science",
+                    "degree": "Master",
+                    "advising_professor": "Qichao Zhang",
+                    "grade": "second year",
+                    "expected_graduation_year": "2027"
+                }
+            ]
+        }
+    },
+    "90c8edba-17be-44d5-bab6-599514470300": {
+        "id": "90c8edba-17be-44d5-bab6-599514470300",
+        "name": "bjtu_jia_team&qcraft",
+        "members": [
+            "68be49556ac5c06cbb36d12e"
+        ],
+        "leader": "68be49556ac5c06cbb36d12e",
+        "other_data": {
+            "team_name": "bjtu_liulin",
+            "team_members": [
+                {
+                    "name": "liulin",
+                    "email": "23120379@bjtu.edu.cn",
+                    "institution": "beijing jiaotong university",
+                    "is_student": false,
+                    "majar": null,
+                    "degree": null,
+                    "advising_professor": null,
+                    "grade": null,
+                    "expected_graduation_year": null
+                }
+            ]
+        }
+    },
+    "41fe3ac7-815b-4bfa-9dc0-0f2408450315": {
+        "id": "41fe3ac7-815b-4bfa-9dc0-0f2408450315",
+        "name": "Westwell",
+        "members": [
+            "669a33a9a8b62d051563256c"
+        ],
+        "leader": "669a33a9a8b62d051563256c",
+        "other_data": {
+            "team_name": "westwell",
+            "team_members": [
+                {
+                    "name": "Yaohan Lu",
+                    "email": "yaohan.lu@westwell-lab.com",
+                    "institution": "westwell",
+                    "is_student": false,
+                    "majar": null,
+                    "degree": null,
+                    "advising_professor": null,
+                    "grade": null,
+                    "expected_graduation_year": null
+                },
+                {
+                    "name": "Chu Yang",
+                    "email": "chu.yang@westwell-lab.com",
+                    "institution": "westwell",
+                    "is_student": false,
+                    "majar": null,
+                    "degree": null,
+                    "advising_professor": null,
+                    "grade": null,
+                    "expected_graduation_year": null
+                },
+                {
+                    "name": "Peigen Liu",
+                    "email": "peigen.liu@westwell-lab.com",
+                    "institution": "westwell",
+                    "is_student": false,
+                    "majar": null,
+                    "degree": null,
+                    "advising_professor": null,
+                    "grade": null,
+                    "expected_graduation_year": null
+                },
+                {
+                    "name": "lanjun",
+                    "email": "lanjun.liang@westwell-lab.com",
+                    "institution": "westwell",
+                    "is_student": false,
+                    "majar": null,
+                    "degree": null,
+                    "advising_professor": null,
+                    "grade": null,
+                    "expected_graduation_year": null
+                }
+            ]
+        }
+    },
+    "0853e0a1-dca3-4446-8c62-30dd66b2531b": {
+        "id": "0853e0a1-dca3-4446-8c62-30dd66b2531b",
+        "name": "west",
+        "members": [
+            "68bfd92390288c0adf7d420b"
+        ],
+        "leader": "68bfd92390288c0adf7d420b",
+        "other_data": {
+            "team_name": "west",
+            "team_members": [
+                {
+                    "name": "lanjun",
+                    "email": "lanjun.liang@westwell-lab.com",
+                    "institution": "westwell",
+                    "is_student": false,
+                    "majar": null,
+                    "degree": null,
+                    "advising_professor": null,
+                    "grade": null,
+                    "expected_graduation_year": null
+                }
+            ]
+        }
+    },
+    "50322b5f-dd84-467e-9397-4aae7351b6df": {
+        "id": "50322b5f-dd84-467e-9397-4aae7351b6df",
+        "name": "Tongji-GEAI",
+        "members": [
+            "67ca7727be3d04582080ee33"
+        ],
+        "leader": "67ca7727be3d04582080ee33",
+        "other_data": {
+            "team_name": "Tongji-GEAI",
+            "team_members": [
+                {
+                    "name": "Yi Lin",
+                    "email": "1519732736@qq.com",
+                    "institution": "Tongji University",
+                    "is_student": true,
+                    "majar": "Automobile",
+                    "degree": "Master",
+                    "advising_professor": "Guang Chen",
+                    "grade": "2",
+                    "expected_graduation_year": "2026"
+                }
+            ]
+        }
+    },
+    "188e9ccc-e91c-46aa-9458-822b8600c129": {
+        "id": "188e9ccc-e91c-46aa-9458-822b8600c129",
+        "name": "258",
+        "members": [
+            "68c25949f4c4215214e03ba9"
+        ],
+        "leader": "68c25949f4c4215214e03ba9",
+        "other_data": {
+            "team_name": "258",
+            "team_members": [
+                {
+                    "name": "john",
+                    "email": "swordswll@outlook.com",
+                    "institution": "sword",
+                    "is_student": false,
+                    "majar": null,
+                    "degree": null,
+                    "advising_professor": null,
+                    "grade": null,
+                    "expected_graduation_year": null
+                }
+            ]
+        }
+    },
+    "e1245b80-3209-494e-ade6-9d30ec259ab5": {
+        "id": "e1245b80-3209-494e-ade6-9d30ec259ab5",
+        "name": "ACM Lab",
+        "members": [
+            "68bd8dd87bcabff61a0d2fc8"
+        ],
+        "leader": "68bd8dd87bcabff61a0d2fc8",
+        "other_data": {
+            "team_name": "ACM Lab",
+            "team_members": [
+                {
+                    "name": "Chen, Tao-Ting",
+                    "email": "dowchen.en13@nycu.edu.tw",
+                    "institution": "National Yang Ming Chiao Tung University",
+                    "is_student": false,
+                    "majar": null,
+                    "degree": null,
+                    "advising_professor": null,
+                    "grade": null,
+                    "expected_graduation_year": null
+                }
+            ]
+        }
+    },
+    "67a4060e-2a34-4db6-b25f-3b0ae80017e7": {
+        "id": "67a4060e-2a34-4db6-b25f-3b0ae80017e7",
+        "name": "ONE",
+        "members": [
+            "6657ebba3b2fcd02551e4a40"
+        ],
+        "leader": "6657ebba3b2fcd02551e4a40",
+        "other_data": {
+            "team_name": "ONE",
+            "team_members": [
+                {
+                    "name": "David Li",
+                    "email": "yangpengxuan2024@ia.ac.cn",
+                    "institution": "UCAS",
+                    "is_student": false,
+                    "majar": null,
+                    "degree": null,
+                    "advising_professor": null,
+                    "grade": null,
+                    "expected_graduation_year": null
+                }
+            ]
+        }
+    },
+    "b52bc84e-e267-42f6-a77c-edf4f8d8ec85": {
+        "id": "b52bc84e-e267-42f6-a77c-edf4f8d8ec85",
+        "name": "aduiduidui",
+        "members": [
+            "67d83958594bde6138e51620"
+        ],
+        "leader": "67d83958594bde6138e51620",
+        "other_data": {
+            "team_name": "aduiduidui",
+            "team_members": [
+                {
+                    "name": "Xing Yi",
+                    "email": "2022141450045@stu.scu.edu.cn",
+                    "institution": "SiChuan University",
+                    "is_student": true,
+                    "majar": "Electronic Engineering",
+                    "degree": "Bachelor",
+                    "advising_professor": "Gang Hong",
+                    "grade": "2022",
+                    "expected_graduation_year": "2026"
+                }
+            ]
+        }
+    },
+    "3981d2b2-1e87-49d4-a0e4-c235f204de55": {
+        "id": "3981d2b2-1e87-49d4-a0e4-c235f204de55",
+        "name": "QAQ",
+        "members": [
+            "6344051c73b4f9cedab372c3"
+        ],
+        "leader": "6344051c73b4f9cedab372c3",
+        "other_data": {
+            "team_name": "QAQ",
+            "team_members": [
+                {
+                    "name": "MA YUE",
+                    "email": "my@stu.scu.edu.cn",
+                    "institution": "Sichuan University",
+                    "is_student": true,
+                    "majar": "Computer Science and Technology",
+                    "degree": "Bachelor",
+                    "advising_professor": "None",
+                    "grade": "undergraduate",
+                    "expected_graduation_year": "2026"
+                }
+            ]
+        }
+    },
+    "729c926d-9519-47c3-998f-e61a5ff65e2b": {
+        "id": "729c926d-9519-47c3-998f-e61a5ff65e2b",
+        "name": "Gongdadrive",
+        "members": [
+            "68c3f23017f9576b97735d74"
+        ],
+        "leader": "68c3f23017f9576b97735d74",
+        "other_data": {
+            "team_name": "Gongdadrive",
+            "team_members": [
+                {
+                    "name": "heronli",
+                    "email": "2025010142@mail.hfut.edu.cn",
+                    "institution": "HFUT,193 Tunxi Road,Hefei,Anhui,P.R.China,230009",
+                    "is_student": false,
+                    "majar": null,
+                    "degree": null,
+                    "advising_professor": null,
+                    "grade": null,
+                    "expected_graduation_year": null
+                }
+            ]
+        }
+    },
+    "df480865-136e-4a9e-ab29-cf7f2a351a40": {
+        "id": "df480865-136e-4a9e-ab29-cf7f2a351a40",
+        "name": "KRS-Drive",
+        "members": [
+            "67aef349ce5e4da911252112"
+        ],
+        "leader": "67aef349ce5e4da911252112",
+        "other_data": {
+            "team_name": "KRS-D",
+            "team_members": [
+                {
+                    "name": "Jingxian Wei",
+                    "email": "weijingxian@sanechips.com.cn",
+                    "institution": "SANECHIPS",
+                    "is_student": false,
+                    "majar": null,
+                    "degree": null,
+                    "advising_professor": null,
+                    "grade": null,
+                    "expected_graduation_year": null
+                }
+            ]
+        }
+    },
+    "77e4dd87-369d-46a8-aa03-9971eca6eca8": {
+        "id": "77e4dd87-369d-46a8-aa03-9971eca6eca8",
+        "name": "wtf",
+        "members": [
+            "68c911b72767786789e7dae2"
+        ],
+        "leader": "68c911b72767786789e7dae2",
+        "other_data": {
+            "team_name": "wtf",
+            "team_members": [
+                {
+                    "name": "Linbo Wang",
+                    "email": "Jinhsi555@gmail.com",
+                    "institution": "BNU",
+                    "is_student": false,
+                    "majar": null,
+                    "degree": null,
+                    "advising_professor": null,
+                    "grade": null,
+                    "expected_graduation_year": null
+                }
+            ]
+        }
+    },
+    "f79aea14-a40e-4a4f-b33e-a25206671fba": {
+        "id": "f79aea14-a40e-4a4f-b33e-a25206671fba",
+        "name": "Genshin, launch!",
+        "members": [
+            "6816304ad8559a1e6e140551"
+        ],
+        "leader": "6816304ad8559a1e6e140551",
+        "other_data": {
+            "team_name": "Genshin, launch!",
+            "team_members": [
+                {
+                    "name": "Mengli Liu",
+                    "email": "mengliliu@std.uestc.edu.cn",
+                    "institution": "University of Electronic Science and Technology of China",
+                    "is_student": true,
+                    "majar": "Software Engineering",
+                    "degree": "Master",
+                    "advising_professor": "Tianrui Jiang",
+                    "grade": "2",
+                    "expected_graduation_year": "2026"
+                },
+                {
+                    "name": "Mingjian Zheng",
+                    "email": "2022091203003@std.uestc.edu.cn",
+                    "institution": "University of Electronic Science and Technology of China",
+                    "is_student": true,
+                    "majar": "Software Engineering",
+                    "degree": "Bachelor",
+                    "advising_professor": "Tianrui Jiang",
+                    "grade": "4",
+                    "expected_graduation_year": "2026"
+                },
+                {
+                    "name": "Yuewen Zheng",
+                    "email": "2022091203028@std.uestc.edu.cn",
+                    "institution": "University of Electronic Science and Technology of China",
+                    "is_student": true,
+                    "majar": "Software Engineering",
+                    "degree": "Bachelor",
+                    "advising_professor": "Tianrui Jiang",
+                    "grade": "4",
+                    "expected_graduation_year": "2026"
+                },
+                {
+                    "name": "Yihang Dong",
+                    "email": "2022190901025@std.uestc.edu.cn",
+                    "institution": "University of Electronic Science and Technology of China",
+                    "is_student": true,
+                    "majar": "Communication Engineering",
+                    "degree": "Bachelor",
+                    "advising_professor": "Tianrui Jiang",
+                    "grade": "4",
+                    "expected_graduation_year": "2026"
+                }
+            ]
+        }
+    },
+    "5ef501ad-6c18-4b71-a32d-52f7756ed087": {
+        "id": "5ef501ad-6c18-4b71-a32d-52f7756ed087",
+        "name": "asdf",
+        "members": [
+            "68ca7e6f9bcd3a31758a0b81"
+        ],
+        "leader": "68ca7e6f9bcd3a31758a0b81",
+        "other_data": {
+            "team_name": "asdf",
+            "team_members": [
+                {
+                    "name": "Xinghan Liu",
+                    "email": "liuxy@mail.nwpu.edu.cn",
+                    "institution": "NWPU",
+                    "is_student": false,
+                    "majar": null,
+                    "degree": null,
+                    "advising_professor": null,
+                    "grade": null,
+                    "expected_graduation_year": null
+                },
+                {
+                    "name": "yiming Wang",
+                    "email": "yiming@mail.nwpu.edu.cn",
+                    "institution": "NWPU",
+                    "is_student": false,
+                    "majar": null,
+                    "degree": null,
+                    "advising_professor": null,
+                    "grade": null,
+                    "expected_graduation_year": null
+                },
+                {
+                    "name": "wenming zhang",
+                    "email": "17338292003@qq.com",
+                    "institution": "NWPU",
+                    "is_student": false,
+                    "majar": null,
+                    "degree": null,
+                    "advising_professor": null,
+                    "grade": null,
+                    "expected_graduation_year": null
+                }
+            ]
+        }
+    },
+    "2072a12b-fcdf-4b08-8245-fa3e818ba68c": {
+        "id": "2072a12b-fcdf-4b08-8245-fa3e818ba68c",
+        "name": "PFTW",
+        "members": [
+            "67279ae42b2929e833f287c7"
+        ],
+        "leader": "67279ae42b2929e833f287c7",
+        "other_data": {
+            "team_name": "PFTW",
+            "team_members": [
+                {
+                    "name": "Rodrigue de Schaetzen",
+                    "email": "rodrigue.deschaetzen@mila.quebec",
+                    "institution": "Mila, UdeM",
+                    "is_student": true,
+                    "majar": "Computer Science",
+                    "degree": "PhD",
+                    "advising_professor": "Liam Paull",
+                    "grade": "A+",
+                    "expected_graduation_year": "2028"
+                }
+            ]
+        }
+    },
+    "cb75e223-cb8f-40d7-83a3-9a47f4b9d086": {
+        "id": "cb75e223-cb8f-40d7-83a3-9a47f4b9d086",
+        "name": "Nonname",
+        "members": [
+            "6855210647ffb9bc49228d31"
+        ],
+        "leader": "6855210647ffb9bc49228d31",
+        "other_data": {
+            "team_name": "Nonname",
+            "team_members": [
+                {
+                    "name": "Shiwei Li",
+                    "email": "3006250069@cugb.edu.cn",
+                    "institution": "China University of Geosciences",
+                    "is_student": false,
+                    "majar": null,
+                    "degree": null,
+                    "advising_professor": null,
+                    "grade": null,
+                    "expected_graduation_year": null
+                }
+            ]
+        }
+    },
+    "172e09a9-3adc-4f67-b82a-4f933a2617af": {
+        "id": "172e09a9-3adc-4f67-b82a-4f933a2617af",
+        "name": "XCH",
+        "members": [
+            "6448baa3e780dbfc89058bc3"
+        ],
+        "leader": "6448baa3e780dbfc89058bc3",
+        "other_data": {
+            "team_name": "XCH",
+            "team_members": [
+                {
+                    "name": "tianhaocehn",
+                    "email": "tianhaochen2023@ia.ac.cn",
+                    "institution": "casia,xiaomi",
+                    "is_student": true,
+                    "majar": "CS",
+                    "degree": "PhD",
+                    "advising_professor": "Tieniu Tan",
+                    "grade": "3",
+                    "expected_graduation_year": "2028"
+                }
+            ]
+        }
+    },
+    "5a08ee64-3810-486c-b984-f7dbaca02227": {
+        "id": "5a08ee64-3810-486c-b984-f7dbaca02227",
+        "name": "GG Bone",
+        "members": [
+            "6642d3683f7c03e9bedabd2c"
+        ],
+        "leader": "6642d3683f7c03e9bedabd2c",
+        "other_data": {
+            "team_name": "GG Bone",
+            "team_members": [
+                {
+                    "name": "Junli Wang",
+                    "email": "wangjunli2022@ia.ac.cn",
+                    "institution": "Institute of Automation, Chinese Academy of Sciences",
+                    "is_student": true,
+                    "majar": "Pattern Recognition and Intelligent Systems",
+                    "degree": "Master",
+                    "advising_professor": "Qichao Zhang",
+                    "grade": "3",
+                    "expected_graduation_year": "2026"
+                }
+            ]
+        }
+    },
+    "8c77eb82-087a-4177-bf94-326a5e4556ac": {
+        "id": "8c77eb82-087a-4177-bf94-326a5e4556ac",
+        "name": "Qinshihuang",
+        "members": [
+            "6722532a42067b213af4bc18"
+        ],
+        "leader": "6722532a42067b213af4bc18",
+        "other_data": {
+            "team_name": "Qinshihuang",
+            "team_members": [
+                {
+                    "name": "Yaochen Zhang",
+                    "email": "zhangyaocheng2023@ia.a.cn",
+                    "institution": "Institute of Automation\uff0cChinese Academy of Sciences",
+                    "is_student": false,
+                    "majar": null,
+                    "degree": null,
+                    "advising_professor": null,
+                    "grade": null,
+                    "expected_graduation_year": null
+                }
+            ]
+        }
+    },
+    "ed4eb0f0-df83-40ab-88fe-5c23108e35ed": {
+        "id": "ed4eb0f0-df83-40ab-88fe-5c23108e35ed",
+        "name": "Simple_2",
+        "members": [
+            "64ec6055f827684f65731320"
+        ],
+        "leader": "64ec6055f827684f65731320",
+        "other_data": {
+            "team_name": "Simple_2",
+            "team_members": [
+                {
+                    "name": "Wei zhang",
+                    "email": "24S008138@stu.hit.edu.cn",
+                    "institution": "Harbin Institute of Technology",
+                    "is_student": false,
+                    "majar": null,
+                    "degree": null,
+                    "advising_professor": null,
+                    "grade": null,
+                    "expected_graduation_year": null
+                }
+            ]
+        }
+    },
+    "ed58579f-1587-41e6-9f90-344058ea8aeb": {
+        "id": "ed58579f-1587-41e6-9f90-344058ea8aeb",
+        "name": "Belgium",
+        "members": [
+            "68cd3c0b9e0f05d7a0795b54"
+        ],
+        "leader": "68cd3c0b9e0f05d7a0795b54",
+        "other_data": {
+            "team_name": "Belgium",
+            "team_members": [
+                {
+                    "name": "Shuo Shao",
+                    "email": "sure318@mail.ustc.edu.cn",
+                    "institution": "University of Science and Technology of China",
+                    "is_student": false,
+                    "majar": null,
+                    "degree": null,
+                    "advising_professor": null,
+                    "grade": null,
+                    "expected_graduation_year": null
+                }
+            ]
+        }
+    },
+    "68409f2c-10a7-4680-99c1-928c7e40831b": {
+        "id": "68409f2c-10a7-4680-99c1-928c7e40831b",
+        "name": "unknown 666",
+        "members": [
+            "6613a2e09ef83c1509d6adc5"
+        ],
+        "leader": "6613a2e09ef83c1509d6adc5",
+        "other_data": {
+            "team_name": "unknown 666",
+            "team_members": [
+                {
+                    "name": "PA Liu",
+                    "email": "2482976548@qq.com",
+                    "institution": "ABC",
+                    "is_student": false,
+                    "majar": null,
+                    "degree": null,
+                    "advising_professor": null,
+                    "grade": null,
+                    "expected_graduation_year": null
+                }
+            ]
+        }
+    },
+    "3a9f3c43-7acc-4170-adc5-b340fb6ddf25": {
+        "id": "3a9f3c43-7acc-4170-adc5-b340fb6ddf25",
+        "name": "3D fact",
+        "members": [
+            "658e8954a6567cb93c186888"
+        ],
+        "leader": "658e8954a6567cb93c186888",
+        "other_data": {
+            "team_name": "3D fact",
+            "team_members": [
+                {
+                    "name": "Peilin Tao",
+                    "email": "taopeilin2023@ia.ac.cn",
+                    "institution": "UCAS",
+                    "is_student": false,
+                    "majar": null,
+                    "degree": null,
+                    "advising_professor": null,
+                    "grade": null,
+                    "expected_graduation_year": null
+                }
+            ]
+        }
+    },
+    "8575bd98-d1d4-4789-a42b-2318f362754b": {
+        "id": "8575bd98-d1d4-4789-a42b-2318f362754b",
+        "name": "rd",
+        "members": [
+            "68ce9770adcf88719260a132"
+        ],
+        "leader": "68ce9770adcf88719260a132",
+        "other_data": {
+            "team_name": "rd",
+            "team_members": [
+                {
+                    "name": "cls",
+                    "email": "chengleishen9@ruc.edu.cn",
+                    "institution": "ruc",
+                    "is_student": false,
+                    "majar": null,
+                    "degree": null,
+                    "advising_professor": null,
+                    "grade": null,
+                    "expected_graduation_year": null
+                }
+            ]
+        }
+    }
+}

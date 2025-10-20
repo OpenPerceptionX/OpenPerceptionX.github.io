@@ -1,0 +1,27 @@
+[
+    { 
+        "team": "Revontuli", 
+        "primary": "Compression: 6.6386 (1st place) | Sampling: 23.0434 (1st place) => Total points: 20 ", 
+        "award": "champion","innovation" 
+        "disqualified": false
+    },
+    
+    { 
+        "team": "Duke", 
+        "primary": "Compression: 7.4976 (2nd place) | Sampling: 21.5578 (2nd place) => Total points: 14 ", 
+        "award": "N/A", 
+        "disqualified": false
+    },
+    { 
+        "team": "WaterlooVipLab", 
+        "primary": "Compression: 7.9869 (3rd place) | Sampling: 18.0394 (N/A) => Total points: 5 ", 
+        "award": "N/A", 
+        "disqualified": false
+    },
+    { 
+        "team": "Micheal", 
+        "primary": "Compression (N/A) | Sampling: 18.3428 (3rd place) => Total points: 5 ", 
+        "award": "N/A", 
+        "disqualified": false
+    }
+]

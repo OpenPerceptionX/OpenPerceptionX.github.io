@@ -8,8 +8,10 @@
 
     <link href="/ui2025/css/index_tailwind.css" rel="stylesheet">
     <link href="./leaderboard.css" rel="stylesheet" type="text/css" media="all"/>
+    <script src="./track0.js"></script>
     <script src="./track1.js"></script>
     <script src="./track2.js"></script>
+    <script src="./track3.js"></script>
 
     <script src="/ui2024/js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
@@ -782,6 +784,62 @@
 
                         <div class="mt-12 flex flex-col gap-6">
                             <h3 class="text-[1d4968]">
+                                Leaderboard [ICCV]
+                            </h3>
+                            <div class="leaderboard">
+                                <div class="leaderboardscroll">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th class="text-white font-bold w-1/12 min-w-24">
+                                                    Rank
+                                                </th>
+                                                <th class="text-white font-bold w-1/12 min-w-24">
+                                                    🗺️
+                                                </th>
+                                                <th class="text-white font-bold w-1/2  min-w-48">
+                                                    Institution
+                                                </th>
+                                                <th class="text-white font-bold track0button w-1/6 min-w-24" onclick="track0sort(0, 'primary')">
+                                                    EPDMS ▼
+                                                </th>
+                                                <th class="text-white font-bold w-1/6 min-w-24">
+                                                    Team Name
+                                                </th>
+                                                <th class="text-white font-bold w-1/6 min-w-24"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="track0table"></tbody>
+                                    </table>
+                                    <div id="track0tablefoot">
+                                        <div>
+                                            <button onclick="track0previous()"><b>⇤</b></button>
+                                            <button onclick="track0next()"><b>⇥</b></button>
+                                        </div>
+                                        <div>
+                                            <button class="nonbutton" id="track0pages"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="space-y-3">
+                                <li class="flex gap-6 laptop:gap-3">
+                                    <img src="/assets/icon/rank01.png" class="size-6 inline-block mr-2"/>
+                                    <span class="">
+                                        The outstanding Champion goes to team <b>Simple</b> with a score of 53.0582.
+                                    </span>
+                                </li>
+                                <li class="flex gap-6 laptop:gap-3">
+                                    <img src="/assets/icon/bulb.png" class="size-6 inline-block mr-2"/>
+                                    <span class="">
+                                        Innovation Award (Shared) goes to teams <b>bjtu_jia_team&qcraft</b> (2nd) and <b>NYCU_CSSP917_Lab</b> (14th).
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="mt-12 flex flex-col gap-6">
+                            <h3 class="text-[1d4968]">
                                 Leaderboard [CVPR]
                             </h3>
                             <div class="leaderboard">
@@ -1213,6 +1271,69 @@
                             <p>
                                 A world model is a computer program that can imagine how the world evolves in response to an agent's behavior. It has the potential to solve general-purpose simulation and evaluation, enabling robots that are safe, reliable, and intelligent in a wide variety of scenarios. To help accelerate progress towards solving world models for robotics, our challenge invites participants to develop a robot world model that can accurately simulate the future interactions of humanoid robots with their surroundings based on past observations and agent actions. Participants will demonstrate the compression rate, efficiency, and evaluation ability of their approaches.
                             </p>
+                        </div>
+
+                        <div class="mt-12 flex flex-col gap-6">
+                            <h3 class="text-[30201e]">
+                                Leaderboard [ICCV]
+                            </h3>
+                            <div class="leaderboard">
+                                <div class="leaderboardscroll">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th class="text-white font-bold w-1/12 min-w-24">
+                                                    Rank
+                                                </th>
+                                                <th class="text-white font-bold w-1/12 min-w-24">
+                                                    🗺️
+                                                </th>
+                                                <th class="text-white font-bold w-1/4  min-w-48">
+                                                    Institution
+                                                </th>
+                                                <th class="text-white font-bold track3button w-1/6 min-w-24" onclick="track3sort(0, 'Point')">
+                                                    Total Point ▼
+                                                </th>
+                                                <th class="text-white font-bold w-1/12 min-w-24">
+                                                    Compression
+                                                </th>
+                                                <th class="text-white font-bold w-1/12 min-w-24">
+                                                    Sampling
+                                                </th>
+                                                <th class="text-white font-bold w-1/4 min-w-24">
+                                                    Team Name
+                                                </th>
+                                                <th class="text-white font-bold w-1/6 min-w-24"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="track3table"></tbody>
+                                    </table>
+                                    <div id="track3tablefoot">
+                                        <div>
+                                            <button onclick="track3previous()"><b>⇤</b></button>
+                                            <button onclick="track3next()"><b>⇥</b></button>
+                                        </div>
+                                        <div>
+                                            <button class="nonbutton" id="track3pages"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <span>* Scores combine points from both the Compression and Sampling Challenges. Final rankings are based on <a href="https://huggingface.co/spaces/1x-technologies/1X_World_Model_Challenge_Home#scoring" class="text-o-blue hover:underline" target="_blank">total points</a>.</span>
+                            <ul class="space-y-3">
+                                <li class="flex gap-6 laptop:gap-3">
+                                    <img src="/assets/icon/rank01.png" class="size-6 inline-block mr-2"/>
+                                    <span class="">
+                                        The outstanding Champion goes to team <b>Revontuli</b> with a total score of 20.00 points.
+                                    </span>
+                                </li>
+                                <li class="flex gap-6 laptop:gap-3">
+                                    <img src="/assets/icon/bulb.png" class="size-6 inline-block mr-2"/>
+                                    <span class="">
+                                        Innovation Award goes to team <b>Revontuli</b> (also the Champion).
+                                    </span>
+                                </li>
+                            </ul>
                         </div>
 
                         <div class="mt-12 flex flex-col gap-6">
@@ -1965,6 +2086,8 @@
 
 
 <script>
+    track0render();
     track1render();
     track2render();
+    track3render();
 </script>
