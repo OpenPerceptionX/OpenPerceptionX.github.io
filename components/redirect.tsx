@@ -103,6 +103,11 @@ export default function Redirect() {
     ) {
         redirect('https://opendrivelab.github.io/elm.github.io/')
     }
+    if (
+        pathname.toLowerCase().startsWith('/ams')
+    ) {
+        redirect('/AMS')
+    }
 
 
 
