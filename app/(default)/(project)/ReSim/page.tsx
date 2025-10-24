@@ -91,7 +91,7 @@ export default function Home() {
                                 width={25}
                                 height={10}
                                 />
-                                Code in July
+                                Code coming soon
                             </a>
                         </div>
                     </div>
