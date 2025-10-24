@@ -45,7 +45,7 @@ export default function Home() {
 
 
 
-            <div className="w-full px-6 flex justify-center mt-24">
+            {/* <div className="w-full px-6 flex justify-center mt-24">
                 <div className="w-full max-w-7xl">
                     <Timeline>
                         <TimelineItem>
@@ -148,7 +148,7 @@ export default function Home() {
                         </TimelineItem>
                     </Timeline>
                 </div>
-            </div>
+            </div> */}
 
 
 
