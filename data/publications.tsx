@@ -268,6 +268,10 @@ export const publications: {
                 link: "/FreeTacMan",
             },
             {
+                type: "dataset",
+                link: "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan",
+            },
+            {
                 type: "blog",
                 link: "https://docs.google.com/document/d/1Hhi2stn_goXUHdYi7461w10AJbzQDC0fdYaSxMdMVXM/edit?usp=sharing",
             },
