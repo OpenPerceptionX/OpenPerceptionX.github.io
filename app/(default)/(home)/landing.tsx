@@ -171,7 +171,7 @@ export function Landing() {
                                                         <Link href={icon.link} target={icon.link.startsWith('http') ? '_blank' : '_self'} className="animated-underline-gray mr-3 text-nowrap">
                                                             {
                                                                 landing.title.startsWith('FreeTacMan') && icon.type =='blog' ? (
-                                                                    'Hareware Guide'
+                                                                    'Hardware Guide'
                                                                 ) : (
                                                                     type_mapping[icon.type] ?? "XXX"
                                                                 )
