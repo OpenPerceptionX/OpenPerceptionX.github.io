@@ -1,0 +1,350 @@
+<head>
+    <link rel="icon" type="image/png" href="/assets/icon/D_small.png">
+    <title>Workshop at CVPR 2025 | OpenDriveLab</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Workshop, CVPR 2025, OpenDriveLab, Robotics, Embodied AI, Autonomous Driving">
+    <meta name="description" content="OpenDriveLab is committed to exploring cutting-edge embodied AI technology, launching a series of benchmarking work, open source to serve the community, and promote the common development of the industry. Friends who are committed to making influential research are welcome to join!">
+
+    <link href="/ui2025/css/index_tailwind.css" rel="stylesheet">
+
+    <script src="/ui2024/js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L7VEDHS6G8"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-L7VEDHS6G8');
+</script>
+
+
+
+<!-- load sidebar -->
+<script>
+    $.get('/ui2025/components/sidebar.html', function(result){
+        $("#to_add_sidebar").append(result);
+    })
+</script>
+
+
+
+<!-- WeChat Public Group -->
+<div id="popup_wechat_group" class="relative z-50 hidden">
+    <div class="fixed inset-0 bg-gray-300/80"></div>
+    <div class="fixed inset-0">
+        <div class="flex h-svh items-center justify-center p-6 laptop:p-72">
+            <div class="relative rounded-3xl bg-white p-6 pt-10 pb-10 laptop:p-10">
+                <div class="absolute right-0 top-0 pr-6 pt-10 laptop:pr-10">
+                    <button onclick="closeWeChatGroup()">
+                        <svg class="size-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-col mt-12 justify-items-center w-full justify-center" style="max-width: 768px;">
+                    <div class="flex flex-row justify-items-center w-full justify-center">
+                        <img src="/assets/qrcode_wechat_group.png" style="max-width: 256px;"/>
+                    </div>
+                    <span class="text-center mt-6">
+                        Join WeChat Group<br>加入微信羣組
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- popup -->
+<script>
+    function openWeChatGroup() {
+        document.getElementById("popup_wechat_group").classList.remove("hidden");
+        document.querySelector('body').classList.add('overflow-hidden');
+    }
+    function closeWeChatGroup() {
+        document.getElementById("popup_wechat_group").classList.add("hidden");
+        if (sidebar_state != true) {
+            document.querySelector('body').classList.remove('overflow-hidden');
+        };
+    }
+</script>
+
+
+
+<body class="h-full" id="#">
+    <!-- Header / Sidebar -->
+    <header id="to_add_sidebar" class="overscroll-none laptop:hidden"></header>
+    <!-- Page -->
+    <div id="page">
+        <div class="flex w-screen tablet:w-auto flex-col">
+
+
+
+            <!-- Landing -->
+            <div class="w-screen tablet:w-auto h-svh snap-start pt-20 p-6 tablet:p-10">
+                <div class="w-full h-full rounded-3xl bg-[url('/assets/background/denver.jpg')] bg-center laptop:bg-right bg-cover flex flex-col justify-end p-6 laptop:p-20 gap-6 laptop:gap-10 bg-black bg-opacity-30 bg-blend-overlay">
+                    <div class="flex flex-row gap-6 laptop:gap-10">
+                        <img src="/assets/icon/cvpr/cvpr2026_white.svg" class="h-10 laptop:h-24"/>
+                        <img src="/assets/icon/cvpr/ieee_cs_white.png" class="h-10 laptop:h-24"/>
+                    </div>
+                    <h1 class="text-white">
+                        From Labs to Life: Embodied Intelligence in the Wild
+                    </h1>
+                    <h5 class="text-white">
+                        CVPR 2026 Workshop
+                        <br>
+                        <!-- <a href="https://maps.app.goo.gl/7YSynr8ff8pVyF1b6" target="_blank" style="text-decoration: underline;">Grand B1</a>, June 11,  -->
+                        Denver, USA
+                        <!-- <br><br>
+                        Recodrings: <a style="text-decoration: underline;" href="https://youtube.com/playlist?list=PL3N9otbGBVLe99-5D6_LdUmKfoa6LkDVX&si=DB4E_-JsOqdY9nz9" target="_blank">YouTube</a> | <a style="text-decoration: underline;" href="https://space.bilibili.com/503310953/lists/5865124" target="_blank">bilibili</a>
+                        <br><br>
+                        <a href="/cvpr2025/" style="text-decoration: underline;">Join other events at CVPR 2025</a> -->
+                    </h5>
+                </div>
+            </div>
+
+
+
+            <!-- Content -->
+            <div class="flex flex-col laptop:flex-row snap-start p-6 tablet:p-10 tablet:pt-0 tablet:pb-0">
+
+
+
+                <!-- navigator -->
+                <aside class="min-h-16 laptop:h-screen top-16 tablet:top-0 sticky z-20 flex flex-col items-start justify-evenly w-full laptop:w-1/5 shrink-0 bg-white">
+                    <a class="hidden laptop:block pl-6" href="/">
+                        <img class="h-6 w-auto" src="/assets/icon/OpenDriveLab.png">
+                    </a>
+                    <ul class="w-full laptop:w-auto mt-3 mb-6 flex flex-row flex-wrap laptop:flex-col justify-evenly border-t-2 border-t-o-white border-b-2 border-b-o-white laptop:border-t-0 laptop:border-b-0">
+    
+                        <li>
+                            <a href="#schedule" class="navigator-button group">                           
+                                <span class="navigator-button-text">
+                                    Schedule
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#speaker" class="navigator-button group">                           
+                                <span class="navigator-button-text">
+                                    Speakers
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#organizer" class="navigator-button group">                           
+                                <span class="navigator-button-text">
+                                    Organizers
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#edition" class="navigator-button group">                           
+                                <span class="navigator-button-text">
+                                    Past Editions
+                                </span>
+                            </a>
+                        </li>
+
+                        <li class="laptop:mt-7">
+                            <a href="#" class="flex p-3 laptop:pl-1 select-none">                           
+                                <span>
+                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 18.75 7.5-7.5 7.5 7.5" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 7.5-7.5 7.5 7.5" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+    
+                    </ul>
+                </aside>
+
+
+
+                <!-- main -->
+                <main class="w-full mb-16 tablet:mb-32 mt-10">
+
+
+
+                    <div class="mt-10 w-full flex flex-col gap-20 laptop:flex-row justify-between">
+
+                        <div class="flex-1">
+
+                            <h3>
+                                Introduction
+                            </h3>
+                            <p class="pt-10">
+                                Autonomous systems, such as robots and self-driving cars, have rapidly evolved over the past decades. Despite this, several problems remain. Attempts have been made to develop more capable autonomous systems, such as integrating foundation models and utilizing large-scale data. However, the challenging problems have yet to be solved.
+                                <br><br>
+                                The motivation behind this workshop is to explore potential solutions, and discuss the challenges and opportunities associated with these approaches. We believe that this workshop serves as a brand-new perspective on <b>the present and future of autonomous systems</b>, and is necessary for both the robotics and computer vision communities.
+                            </p>
+
+                            <h3 class="mt-10">
+                                Join
+                            </h3>
+                            <p class="pt-10">
+                                If you are interested in our workshop, please <code>mark the workshop in your CVPR registration</code>, to have enough space for the workshop room.
+                            </p>
+
+                        </div>
+
+                        <div class="flex-1">
+                            <h3>
+                                Contact
+                            </h3>
+                            <div class="pt-10">
+                                <ul class="space-y-10">
+                                    <li class="flex gap-6 laptop:gap-10">
+                                        <img src="/assets/icon/email.png" class="size-8 inline-block mr-2"/>
+                                        <span>Contact us via <a href="mailto:contact@opendrivelab.com" class="text-o-blue hover:underline"><code>contact@opendrivelab.com</code></a></span>
+                                    </li>
+                                    <!-- <li class="flex gap-6 laptop:gap-10">
+                                        <img src="/assets/icon/discord.png" class="size-8 inline-block mr-2"/>
+                                        <span><a href="https://discord.gg/BmXRvwgjgf" target="_blank" class="text-o-blue hover:underline">Join Discord</a> to chat with the organizers</span>
+                                    </li> -->
+                                    <li class="flex gap-6 laptop:gap-10">
+                                        <img src="/assets/icon/wechat.png" class="size-8 inline-block mr-2"/>
+                                        <span>Join discussions in our <a onclick="openWeChatGroup()" class="text-o-blue hover:underline">WeChat group</a></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="divider"></div>
+
+
+
+                    <div class="w-full mt-20">
+                        <h2>
+                            <a href="#schedule" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="schedule">
+                                Schedule
+                                <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
+                            </a>
+                        </h2>
+                        <div class="mt-10 flex gap-6">
+                            <span>
+                                To be announced.
+                            </span>
+                        </div>
+                    </div>
+
+
+
+                    <div class="divider"></div>
+
+
+
+
+                    <div class="w-full mt-20">
+                        <h2>
+                            <a href="#speaker" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="speaker">
+                                Speakers
+                                <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
+                            </a>
+                        </h2>
+                        <div class="mt-10 flex gap-6">
+                            <span>
+                                To be announced.
+                            </span>
+                        </div>
+                    </div>
+
+
+
+                    <div class="divider"></div>
+
+
+
+
+                    <div class="w-full mt-20">
+                        <h2>
+                            <a href="#organizer" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="organizer">
+                                Organizers
+                                <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
+                            </a>
+                        </h2>
+                        <div class="mt-10 flex gap-6">
+                            <span>
+                                To be announced.
+                            </span>
+                        </div>
+                    </div>
+
+
+                    
+                    <div class="divider"></div>
+
+
+
+                    <div class="w-full mt-20">
+                        <h2>
+                            <a href="#edition" class="scroll-mt-48 tablet:scroll-mt-40 laptop:scroll-mt-20 group" id="edition">
+                                Past Editions
+                                <img src="/assets/icon/link.png" class="hidden group-hover:inline-block size-6"/>
+                            </a>
+                        </h2>
+                        <div class="mt-20 gap-20 flex flex-col laptop:flex-row">
+                            <a class="hover:opacity-70 w-full h-60 laptop:h-72 rounded-3xl bg-[url('/assets/background/nashville_night.jpg')] bg-top bg-cover p-6 laptop:p-10 flex flex-col justify-evenly bg-black bg-opacity-30 bg-blend-overlay" href="/cvpr2025/workshop/">
+                                <h3 class="text-white">Foundation Models for Autonomous Systems</h3>
+                                <br>
+                                <h4 class="text-white">CVPR 2025</h4>
+                            </a>
+                            <a class="hover:opacity-70 w-full h-60 laptop:h-72 rounded-3xl bg-[url('/assets/background/seattle.jpg')] bg-top bg-cover p-6 laptop:p-10 flex flex-col justify-evenly bg-black bg-opacity-30 bg-blend-overlay" href="/cvpr2024/workshop/">
+                                <h3 class="text-white">Embodied Intelligence for Autonomous Systems on the Horizon</h3>
+                                <br>
+                                <h4 class="text-white">CVPR 2024</h4>
+                            </a>
+                        </div>
+                        <div class="mt-20 gap-20 flex flex-col laptop:flex-row">
+
+                            <a class="hover:opacity-70 w-full h-60 laptop:h-72 rounded-3xl bg-[url('/ui2023/cvpr2023/img/workshop/banner.jpg')] bg-top bg-cover p-6 laptop:p-10 flex flex-col justify-evenly bg-black bg-opacity-30 bg-blend-overlay" href="/cvpr2023/workshop/">
+                                <h3 class="text-white">End-to-End Autonomous Driving: Emerging Tasks and Challenges</h3>
+                                <br>
+                                <h4 class="text-white">CVPR 2023</h4>
+                            </a>
+                            <a class="w-full h-60 laptop:h-72 rounded-3xl bg-background p-6 laptop:p-10 flex-col justify-evenly select-none hidden laptop:flex"></a>
+                        </div>
+                    </div>
+
+                </main>
+
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+</body>
+
+
+
+<script>
+    function convertTimezone(offset) {
+        var selectedOffset = parseInt(offset);
+        var eventTimes = document.querySelectorAll(".itimetable_table_time");
+        eventTimes.forEach(function (eventTime) {
+            var originalTime = new Date(eventTime.getAttribute("data-original-time"));
+            var adjustedTime = new Date(originalTime.getTime() + selectedOffset * 60 * 60 * 1000);
+            var hours = adjustedTime.getHours().toString().padStart(2, "0");
+            var minutes = adjustedTime.getMinutes().toString().padStart(2, "0");
+            var month = adjustedTime.toLocaleString("en-US", { month: "long" });
+            var day = adjustedTime.getDate();
+            var formattedTime = hours + ":" + minutes + ", " + month + " " + day;
+            eventTime.textContent = formattedTime;
+      });
+    }
+    window.addEventListener('load', function() {
+        timezoneSelect.selectedIndex = 7;
+        convertTimezone(timezoneSelect.value);
+    });
+</script>
