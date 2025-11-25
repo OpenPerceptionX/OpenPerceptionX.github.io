@@ -250,37 +250,29 @@ export const publications: {
         keys: ['editor_pick', 'home_sliding', 'drawer_e2e'],
     },
     {
-        title: "FreeTacMan: Robot-free Visuo-Tactile Data Collection System for Contact-rich Manipulation",
-        link: "http://arxiv.org/abs/2506.01941",
-        image: "/assets/publication/freetacman.jpg",
-        author: "Longyan Wu, Checheng Yu, Jieji Ren, Li Chen, Ran Huang, Guoying Gu, Hongyang Li",
+        title: "Agility Meets Stability: Versatile Humanoid Control with Heterogeneous Data",
+        link: "https://arxiv.org/abs/2511.17373",
+        image: "/assets/publication/amspub.jpg",
+        author: "Yixuan Pan, Ruoyi Qiao, Li Chen, Kashyap Chitta, Liang Pan, Haoguang Mai, Qingwen Bu, Hao Zhao, Cunyuan Zheng, Ping Luo, Hongyang Li",
         note: "arXiv 2025",
         noteoption: '',
-        star: "https://img.shields.io/github/stars/OpenDriveLab/FreeTacMan?style=social",
-        starlink: "https://github.com/OpenDriveLab/FreeTacMan",
+        star: "https://img.shields.io/github/stars/OpenDriveLab/AMS?style=social",
+        starlink: "https://github.com/OpenDriveLab/AMS",
         icon: [
             {
-                type: "github",
-                link: "https://github.com/OpenDriveLab/FreeTacMan",
-            },
-            {
                 type: "page",
-                link: "/FreeTacMan",
-            },
-            {
-                type: "dataset",
-                link: "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan",
-            },
-            {
-                type: "blog",
-                link: "https://docs.google.com/document/d/1Hhi2stn_goXUHdYi7461w10AJbzQDC0fdYaSxMdMVXM/edit?usp=sharing",
+                link: "https://opendrivelab.com/AMS/",
             },
             {
                 type: "youtube",
-                link: "https://www.youtube.com/watch?v=Ah-xYnST0yw",
+                link: "https://www.youtube.com/watch?v=vrYhegnX7m0",
+            },
+            {
+                type: "github",
+                link: "https://github.com/OpenDriveLab/AMS",
             },
         ],
-        description: "A human-centric and robot-free visuo-tactile data collection system for high-quality and efficient robot manipulation.",
+        description: "A unified whole-body control policy for humanoid robots that enables zero-shot execution of diverse motions, including Ip Man'squat, dancing, running and real-time teleoperation.",
         keys: ['embodied_ai', 'home_sliding'],
     },
     {
@@ -326,6 +318,40 @@ export const publications: {
         ],
         description: "CLOVER employs a text-conditioned video diffusion model for generating visual plans as reference inputs, then these sub-goals guide the feedback-driven policy to generate actions with an error measurement strategy.",
         keys: ['embodied_ai'],
+    },
+    {
+        title: "FreeTacMan: Robot-free Visuo-Tactile Data Collection System for Contact-rich Manipulation",
+        link: "http://arxiv.org/abs/2506.01941",
+        image: "/assets/publication/freetacman.jpg",
+        author: "Longyan Wu, Checheng Yu, Jieji Ren, Li Chen, Ran Huang, Guoying Gu, Hongyang Li",
+        note: "arXiv 2025",
+        noteoption: '',
+        star: "https://img.shields.io/github/stars/OpenDriveLab/FreeTacMan?style=social",
+        starlink: "https://github.com/OpenDriveLab/FreeTacMan",
+        icon: [
+            {
+                type: "github",
+                link: "https://github.com/OpenDriveLab/FreeTacMan",
+            },
+            {
+                type: "page",
+                link: "/FreeTacMan",
+            },
+            {
+                type: "dataset",
+                link: "https://huggingface.co/datasets/OpenDriveLab/FreeTacMan",
+            },
+            {
+                type: "blog",
+                link: "https://docs.google.com/document/d/1Hhi2stn_goXUHdYi7461w10AJbzQDC0fdYaSxMdMVXM/edit?usp=sharing",
+            },
+            {
+                type: "youtube",
+                link: "https://www.youtube.com/watch?v=Ah-xYnST0yw",
+            },
+        ],
+        description: "A human-centric and robot-free visuo-tactile data collection system for high-quality and efficient robot manipulation.",
+        keys: ['embodied_ai', 'home_sliding'],
     },
     {
         title: "Learning Manipulation by Predicting Interaction",
