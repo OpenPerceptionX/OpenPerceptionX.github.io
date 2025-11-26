@@ -42,7 +42,7 @@ const image_mapping: Record<string, string> = {
     "DriveLM: Driving with Graph Visual Question Answering": "/assets/background/cd0d184b033748b5b5cc8a43c3b9ddc8.jpeg",
     "FreeTacMan: Robot-free Visuo-Tactile Data Collection System for Contact-rich Manipulation": "https://ik.imagekit.io/opendrivelab/freetacman.png",
     "ReSim: Reliable World Simulation for Autonomous Driving": "https://ik.imagekit.io/opendrivelab/resim.jpg",
-    "Agility Meets Stability: Versatile Humanoid Control with Heterogeneous Data": "/assets/publication/ams.jpeg",
+    "Agility Meets Stability: Versatile Humanoid Control with Heterogeneous Data": "/assets/publication/ams.gif",
 }
 
 
