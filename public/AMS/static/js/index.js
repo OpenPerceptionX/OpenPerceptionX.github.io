@@ -20,7 +20,59 @@ function setInterpolationImage(i) {
 }
 
 
+function initWeixinVideo() {
+    var videos = document.querySelectorAll('video');
+    
+    function isWeixin() {
+        return /micromessenger/i.test(navigator.userAgent);
+    }
+    
+    if (isWeixin()) {
+        if (typeof WeixinJSBridge !== 'undefined') {
+            WeixinJSBridge.invoke('getNetworkType', {}, function() {
+                videos.forEach(function(video) {
+                    if (video.autoplay) {
+                        video.play().catch(function(e) {
+                            console.log('Video autoplay failed:', e);
+                        });
+                    }
+                });
+            });
+        } else {
+            document.addEventListener('WeixinJSBridgeReady', function() {
+                videos.forEach(function(video) {
+                    if (video.autoplay) {
+                        video.play().catch(function(e) {
+                            console.log('Video autoplay failed:', e);
+                        });
+                    }
+                });
+            }, false);
+        }
+        
+        document.addEventListener('touchstart', function() {
+            videos.forEach(function(video) {
+                if (video.paused && video.autoplay) {
+                    video.play().catch(function(e) {
+                        console.log('Video play failed:', e);
+                    });
+                }
+            });
+        }, { once: true });
+    } else {
+        videos.forEach(function(video) {
+            if (video.autoplay) {
+                video.play().catch(function(e) {
+                    console.log('Video autoplay failed:', e);
+                });
+            }
+        });
+    }
+}
+
 $(document).ready(function() {
+    initWeixinVideo();
+    
     // Check for click events on the navbar burger icon
     $(".navbar-burger").click(function() {
       // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
