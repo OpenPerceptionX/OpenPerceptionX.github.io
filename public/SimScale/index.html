@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SimScale</title>
+
+  <!-- <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet"> -->
+
+  <!-- <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script> -->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <link rel="icon" type="image/png" href="/assets/icon/D_small.png">
+
+
+
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="900" />
+
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L7VEDHS6G8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L7VEDHS6G8');
+</script>
+
+
+<body>
+
+  <section class="hero teaser" style="margin-top: 64px;">
+    <div class="container is-max-desktop">
+        <div align="center">
+          <!-- <video src="https://ik.imagekit.io/StarBurger/imgs/title_1080p.mov" autoplay loop muted playsinline width="90%"></video> -->
+          <img src="https://ik.imagekit.io/StarBurger/SimScale/title_2k.gif"  width="90%"> 
+        </div>  
+    </div>
+  </section>
+
+  <section class="hero" style="margin-top: -20px;">
+    <div class="hero-body no-bottom-padding">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Learning to Drive via Real-World Simulation at Scale</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <!-- Author Names Omitted for Anonymous Review. -->
+                <a target="_blank" href="https://github.com/hctian713">Haochen Tian</a><sup>1,2,3</sup><sup>†</sup>&nbsp;&nbsp;&nbsp;
+                <a target="_blank" href="https://github.com/sephyli">Tianyu Li</a><sup>2</sup>&nbsp;&nbsp;&nbsp;
+                <a target="_blank" href="https://georgeliu233.github.io/">Haochen Liu</a><sup>3</sup>&nbsp;&nbsp;&nbsp;
+                <a target="_blank" href="https://github.com/YTEP-ZHI">Jiazhi Yang</a><sup>2</sup>&nbsp;&nbsp;&nbsp;
+                <a target="_blank" href="https://github.com/gihharwtw">Yihang Qiu</a><sup>2</sup><sup>†</sup>
+                <br>
+                Guang Li</a><sup>3</sup>&nbsp;&nbsp;&nbsp;
+                Junli Wang</a><sup>1,3</sup>&nbsp;&nbsp;&nbsp;
+                <a target="_blank" href="https://scholar.google.com/citations?user=VTn0hqIAAAAJ&hl=en">Yinfeng Gao</a><sup>1,3</sup>&nbsp;&nbsp;&nbsp;
+                <a target="_blank" href="https://scholar.google.com/citations?user=rnRNwEMAAAAJ&hl=en">Zhang Zhang</a><sup>1</sup>&nbsp;&nbsp;&nbsp;
+                <a target="_blank" href="https://scholar.google.com/citations?user=8kzzUboAAAAJ&hl=en">Liang Wang</a><sup>1</sup>&nbsp;&nbsp;&nbsp;
+                Hangjun Ye</a><sup>3</sup>
+                <br>
+                <a target="_blank" href="https://scholar.google.com/citations?user=W-FGd_UAAAAJ&hl=en">Tieniu Tan</a><sup>1</sup>&nbsp;&nbsp;&nbsp;
+                <a target="_blank" href="https://long.ooo/">Long Chen</a><sup>3</sup>&nbsp;&nbsp;&nbsp;
+                <a target="_blank" href="https://lihongyang.info/">Hongyang Li</a><sup>2</sup>
+                <br><sup>1 </sup>MAIS, Institute of Automation, Chinese Academy of Sciences&nbsp;
+                <br><sup>2 </sup>OpenDriveLab at The University of HongKong&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <sup>3 </sup>Xiaomi EV
+
+                <br><span style="font-size: 15px;">
+                    <sup>†</sup>Work done while interning at Xiaomi Embodied Intelligence Team
+                </span>
+                <!-- <span class="brmod" style="color:rgb(183, 0, 0)"><b>ICCV 2025</b></span> -->
+              </span>
+            </div>
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href=""
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                <!-- arXiv Link. -->
+                <span class="link-block">
+                  <a target="_blank" href=""
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+                <!-- <span class="link-block">
+                  <a target="_blank" href="https://www.youtube.com/embed/gYEEMNHo5Lc"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span> -->
+
+                <span class="link-block">
+                  <a href="https://github.com/OpenDriveLab/SimScale" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <svg class="svg-inline--fa fa-github fa-w-16" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+                    </span>
+                    <span>Code (Dec. 2025)</span>
+                  </a>
+                </span>
+
+                <span class="link-block">
+                  <a href=""
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fa fa-database"></i>
+                    </span>
+                    <span>Dataset (Dec. 2025)</span>
+                  </a>
+                </span>
+
+                <!-- Code Link. -->
+
+                <!-- twitter Link. -->
+                <!-- <span class="link-block">
+                  <a target="_blank" href=""
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fab fa-twitter"></i>
+                    </span>
+                    <span>Summary</span>
+                  </a>
+                </span> -->
+              </div>
+  
+            </div>
+            </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+
+  <section class="hero teaser" style="margin-top: -20px;">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <div align="center">
+          <img src="https://ik.imagekit.io/StarBurger/SimScale/teaser.svg" alt="Image description" width="100%">
+        </div>  
+        <br> 
+        <!-- <h2 class="subtitle has-text-centered " style="font-size: 3px"> -->
+        <!-- <h2 class="subtitle"> -->
+          <!-- Given a scene, our approach (VRB) learns  <strong> actionable representations </strong> for robot learning. VRB predicts contact points and a post-contact trajectory learned from <strong> human videos </strong>.  -->
+        <!-- <h2 class="subtitle"
+            style="white-space: normal; word-wrap: break-word; overflow-wrap: break-word;"> -->
+      <!-- <article class="message"
+        style="border-left:5px solid #c084fc; text-align:left;"> -->
+<article class="message"
+    style="
+        text-align: left; border: none; border-left: 5px solid #865ab3; background-color: #fdf9ff; color: #3a0361; font-size: 18px;">
+    <div class="message-body"
+        style=" background-color: transparent; color: inherit; border: none !important;; ">
+        
+        <strong>Scaling Up End-to-End Planners by Simulation.</strong> <br>
+        (a) We construct large-scale simulation data by perturbing ego trajectories, generating corresponding pseudo-expert demonstrations, and rendering multi-view observations in reactive environments. 
+        Combined with real-world data, this enables broad coverage of out-of-distribution states and supports sim–real co-training for any end-to-end planner.<br>
+        (b) Across three representative planner families, including regression, diffusion, and vocabulary scoring, 
+        sim-real co-training consistently produces synergistic improvements in robustness and generalization, demonstrating clear and predictable simulation scaling trends.
+    </div>
+</article>
+      <!-- </h2> -->
+      </div>
+    </div>
+  </section>
+
+  <section class="hero is-light is-small">
+    <div class="hero-body ">
+      <div class="container is-two-thirds">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-two-thirds">
+            <h2 class="title is-2">Abstract</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section body">
+    <div class="container">
+      <!-- <div class="container is-two-thirds"> -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths  is-full-width">
+            <div class="content has-text-justified" style="font-size: 18px">
+              Achieving fully autonomous driving systems requires learning rational decisions in a wide span of scenarios, including safety-critical and out-of-distribution ones.
+              However, such cases are underrepresented in real-world corpus collected by human experts.
+              To complement for the lack of data diversity, we introduce a novel and scalable simulation framework capable of synthesizing massive unseen
+              states upon existing driving logs.
+              Our pipeline utilizes advanced <strong>neural rendering with a reactive environment</strong> to generate high-fidelity multi-view observations controlled by the perturbed ego trajectory.
+              Furthermore, we develop a <strong>pseudo-expert trajectory generation</strong> mechanism for these newly simulated states to provide action supervision.
+              Upon the synthesized data, we find that a simple <strong>co-training strategy on both real-world and simulated samples</strong> can lead to significant improvements in both robustness and generalization for various planning methods on challenging real-world benchmarks, up to <strong>+6.8 EPDMS on navhard and +2.9 on navtest</strong>.
+              More importantly, such policy improvement scales smoothly by increasing simulation data only, even without extra real-world data streaming in.
+              We further reveal several crucial findings of such a sim-real learning system, which we term SimScale, including the design of pseudo-experts and the scaling properties for different policy architectures.
+            </div>
+          </div>
+        </div>
+      <!-- </div> -->
+    </div>
+  </section>
+
+  <section class="hero is-light is-small">
+    <div class="hero-body ">
+      <div class="container">
+        <div class="columns is-centered has-text-centered">
+          <div class="column">
+            <h2 class="title is-2">Simulation Data Pipeline</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <!-- <h1 class="title is-2" style="text-align: center; padding-bottom: 10px;">Simulation Data Pipeline</h1> -->
+          <!-- <h2 class="subtitle is-4" style="text-align: center;">Defining Visual Affordances</h2> -->
+          <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths ">
+          <div class="content has-text-justified">
+            <tr>
+              <td>
+                <div class="row">
+                  <div class="col">
+                    <div align="center">
+                      <img src="https://ik.imagekit.io/StarBurger/SimScale/pipeline.svg" alt="Image description" width="100%">
+                    </div> 
+                  </div>
+                </div>
+                <div class="columns is-centered has-text-centered">
+                  <div class="column">
+                  <!-- <div class="content has-text-justified interpolation-panel"> -->
+                  <div class="content has-text-justified ">
+
+                      <p style="font-size: 18px;margin-top: 10px;"> 
+                          <strong>Pseudo-Expert Scene Simulation. </strong> (a) Trajectory perturbation on T to T + H, (b) reactive environment rollout, and
+                          pseudo-expert trajectory generation from T + H to T + 2H under recovery-based and planner-based strategies.
+                      </p>
+                  </div>
+                </div>
+              </div>
+              </td>
+            </tr>
+          </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero is-light is-small">
+    <div class="hero-body ">
+      <div class="container is-two-thirds">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-two-thirds">
+            <h2 class="title is-2">Leaderboard Results</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <!-- <h1 class="title is-2" style="text-align: center; padding-bottom: 10px;">Simulation Data Pipeline</h1> -->
+          <!-- <h2 class="subtitle is-4" style="text-align: center;">Defining Visual Affordances</h2> -->
+          <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths ">
+          <div class="content has-text-justified">
+          <h2 class="subtitle is-3" style="text-align: left;margin-bottom: 15px">&nbspNAVSIMv2 navhard</h2>
+            <tr>
+              <td>
+                <div class="row">
+                  <div class="col">
+                    <div align="center">
+                      <img src="https://ik.imagekit.io/StarBurger/SimScale/navhard.png" alt="Image description" width="100%">
+                    </div> 
+                  </div>
+                </div>
+                <div class="columns is-centered has-text-centered">
+                  <div class="column">
+                  <!-- <div class="content has-text-justified interpolation-panel"> -->
+                  <div class="content has-text-justified ">
+
+                      <p style="font-size: 18px"> 
+                        *: pseudo-expert supervision; †: reward scoring; S.: per-stage EPDM score.
+                      </p>
+                  </div>
+                  </div>
+                </div>
+
+          <h2 class="subtitle is-3" style="text-align: left; margin-bottom: 15px;margin-top: -10px">&nbspNAVSIMv2 navtest</h2>
+
+                <div class="row">
+                  <div class="col">
+                    <div align="center">
+                      <img src="https://ik.imagekit.io/StarBurger/SimScale/navtest.png" alt="Image description" width="100%">
+                    </div> 
+                  </div>
+                </div>
+                <div class="columns is-centered has-text-centered">
+                  <div class="column">
+                  <div class="content has-text-justified ">
+
+                      <p style="font-size: 18px"> 
+                          *: pseudo-expert supervision; †: reward scoring.
+                      </p>
+                  </div>
+                </div>
+              </div>
+              </td>
+            </tr>
+          </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero is-light is-small">
+    <div class="hero-body ">
+      <div class="container is-two-thirds">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-two-thirds">
+            <h2 class="title is-2">Scaling Property Analysis</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths ">
+          <div class="content has-text-justified">
+            <tr>
+              <td>
+                <div class="row">
+                  <div class="col">
+                    <div align="center">
+                      <img src="https://ik.imagekit.io/StarBurger/SimScale/curve_scaling.svg" alt="Image description" width="100%">
+                    </div> 
+                  </div>
+                </div>
+                <div class="columns is-centered has-text-centered">
+                  <div class="column">
+                  <div class="content has-text-justified ">
+
+                      <p style="font-size: 18px; margin-top: 10px;"> 
+                        <strong>Scaling Dynamics with Different Planners and Pseudo-Expert Trajectories.</strong>
+                          Visualization how simulation data scale and supervision signals influence the driving performance of various planners, where the infection point indicates learning plateau
+                      </p>
+                  </div>
+                </div>
+              </div>
+              </td>
+            </tr>
+          </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero is-light is-small">
+    <div class="hero-body ">
+      <div class="container is-two-thirds">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-two-thirds">
+            <h2 class="title is-2">Qaulitative Results</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <!-- <h1 class="title is-2" style="text-align: center; padding-bottom: 10px;">Simulation Data Pipeline</h1> -->
+          <!-- <h2 class="subtitle is-4" style="text-align: center;">Defining Visual Affordances</h2> -->
+          <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths ">
+          <div class="content has-text-justified">
+          <h2 class="subtitle is-3" style="text-align: left;margin-bottom: 15px">&nbspPseudo-Expert Scene Simulation</h2>
+            <tr>
+              <td>
+                <div class="row">
+                  <div class="col">
+                    <div align="center">
+                      <img src="https://ik.imagekit.io/StarBurger/SimScale/vis_expert_planner.svg" alt="Image description" width="100%">
+                    </div> 
+                  </div>
+                </div>
+            <tr>
+              <td>
+                <div class="row">
+                  <div class="col">
+                    <p style="font-size: 18px; font-weight: bold; text-align: center; margin-bottom: -2px;">Sim. 1</p>
+                    <img class="center" src="https://ik.imagekit.io/StarBurger/SimScale/data gif/ simulation planner-based expert 1.gif" width="100%" style="border-radius:5px;"></img>
+                    <!-- <center>Take the spatula off the shelf (2x speed)</center> -->
+                    <br>
+                  </div>
+                  <div class="col">
+                    <p style="font-size: 18px; font-weight: bold; text-align: center; margin-bottom: -2px;">Sim. 2</p>
+                    <img class="center" src="https://ik.imagekit.io/StarBurger/SimScale/data gif/ simulation planner-based expert 2.gif" width="100%" style="border-radius:5px;"></img>
+                    <!-- <center>Take the spatula off the shelf (2x speed)</center> -->
+                    <br>
+                  </div>
+                  <div class="col">
+                    <p style="font-size: 18px; font-weight: bold; text-align: center; margin-bottom: -2px;">Sim. 3</p>
+                    <img class="center" src="https://ik.imagekit.io/StarBurger/SimScale/data gif/ simulation planner-based expert 3.gif" width="100%" style="border-radius:5px;"></img>
+                    <!-- <center>Take the spatula off the shelf (2x speed)</center> -->
+                    <br>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+          <h2 class="subtitle is-3" style="text-align: left; margin-bottom: 15px;margin-top: px">&nbspSimulated OOD Scenes</h2>
+
+                <div class="row">
+                  <div class="col">
+                    <div align="center">
+                      <img src="https://ik.imagekit.io/StarBurger/SimScale/vis_scene.svg" alt="Image description" width="100%">
+                    </div> 
+                  </div>
+                </div>
+
+          <details style="margin-bottom: 1.5rem;">
+            <summary style="font-size:1.5rem; font-weight:700; cursor:pointer;">
+              More Results
+            </summary>
+
+            <div style="margin-top:1rem;">
+              <div class="row">
+                <div class="col">
+                  <div align="center">
+                    <img src="https://ik.imagekit.io/StarBurger/SimScale/vis_scene_add.svg" alt="Image description" width="100%">
+                  </div> 
+                </div>
+              </div>
+            </div>
+
+          </details>
+         
+              </td>
+            </tr>
+          </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="hero is-light is-small">
+    <div class="hero-body ">
+      <div class="container">
+        <div class="columns is-centered has-text-centered">
+          <div class="column">
+            <h2 class="title is-2">Ecosystem</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <!-- <h1 class="title is-2" style="text-align: center; padding-bottom: 10px;">Ecosystem</h1> -->
+          <!-- <h2 class="subtitle is-4" style="text-align: center;">Defining Visual Affordances</h2> -->
+          <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths ">
+          <div class="content has-text-justified">
+            
+            <p>
+              The code and simulation data would be open-souced before 2026! 
+            </p>
+            <p>
+              Please stay tuned for more work from <a target="_blank" href="https://opendrivelab.com/">OpenDriveLab</a>:<a target="_blank" href="https://opendrivelab.com/ReSim">ReSim</a>, <a target="_blank" href="https://arxiv.org/html/2503.12552v1">MTGS</a>, <a target="_blank" href="https://arxiv.org/abs/2503.11650">Centaur</a> .
+            </p>
+
+          </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="titile">BibTeX</h2>
+      If you find the project helpful for your research, please consider citing our paper:
+      <pre><code>@article{tian2025SimScale,
+        title={SimScale: Learning to Drive via Real-World Simulation at Scale},
+        author={xxxx},
+        journal={arXiv preprint arXiv:xxx},
+        year={2025}
+      }</code></pre>
+    </div>
+  </section>
+  
+  <br><br><br>
+
+<!-- <footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <br />
+      <p> Template from <a href="https://nerfies.github.io"><span class="dnerf">Nerfies</span></a>.</p>
+    </div>
+  </div>
+</footer> -->
+
+</body>
+</html>
+
+
