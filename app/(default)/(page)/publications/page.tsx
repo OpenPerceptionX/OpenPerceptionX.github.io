@@ -93,26 +93,29 @@ export default function Home() {
                                             </div>
                                             <span className="text-sm flex flex-wrap">
                                                 {
-                                                    publication.author.split(', ').map((author, index) => (
-                                                        <div key={author}>
-                                                            {
-                                                                author in scholar ? (
-                                                                    <Link className="text-o-dark-blue animated-underline-gray" href={scholar[author]} target={scholar[author].startsWith('http') ? '_blank' : '_self'}>
-                                                                        {author}
-                                                                    </Link>
-                                                                ) : (
-                                                                    <span>
-                                                                        {author}
-                                                                    </span>
-                                                                )
-                                                            }
-                                                            {
-                                                                index < publication.author.split(', ').length - 1 && (
-                                                                    <span>,&nbsp;</span>
-                                                                )
-                                                            }
-                                                        </div>
-                                                    ))
+                                                    publication.author.split(', ').map((author, index) => {
+                                                        const trimmedAuthor = author.trim();
+                                                        return (
+                                                            <div key={author}>
+                                                                {
+                                                                    trimmedAuthor in scholar ? (
+                                                                        <Link className="text-o-dark-blue animated-underline-gray" href={scholar[trimmedAuthor]} target={scholar[trimmedAuthor].startsWith('http') ? '_blank' : '_self'}>
+                                                                            {trimmedAuthor}
+                                                                        </Link>
+                                                                    ) : (
+                                                                        <span>
+                                                                            {trimmedAuthor}
+                                                                        </span>
+                                                                    )
+                                                                }
+                                                                {
+                                                                    index < publication.author.split(', ').length - 1 && (
+                                                                        <span>,&nbsp;</span>
+                                                                    )
+                                                                }
+                                                            </div>
+                                                        );
+                                                    })
                                                 }
                                             </span>
                                         </div>
@@ -161,7 +164,7 @@ export default function Home() {
 
                                         {
                                             publication.description && (
-                                                <i className="text-sm text-o-gray">
+                                                <i className="text-sm text-o-gray whitespace-pre-line">
                                                     {publication.description}
                                                 </i>
                                             )

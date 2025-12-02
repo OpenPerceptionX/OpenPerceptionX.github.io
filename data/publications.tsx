@@ -109,14 +109,22 @@ export const publications: {
         title: "SimScale: Learning to Drive via Real-World Simulation at Scale",
         link: "https://arxiv.org/pdf/2511.23369",
         image: "/assets/publication/SimScale.png",
-        author: "Haochen Tian, Tianyu Li, Haochen Liu, Jiazhi Yang,  Yihang Qiu, Guang Li, Junli Wang,  Yinfeng Gao, Zhang Zhang, Liang Wang, Hangjun Ye, Tieniu Tan, Long Chen, Hongyang Li",
+        author: "Haochen Tian, Tianyu Li, Haochen Liu, Jiazhi Yang, Yihang Qiu, Guang Li, Junli Wang, Yinfeng Gao, Zhang Zhang, Liang Wang, Hangjun Ye, Tieniu Tan, Long Chen, Hongyang Li",
         note: "arXiv 2025",
         noteoption: '',
         star: "https://img.shields.io/github/stars/OpenDriveLab/SimScale?style=social",
         starlink: "https://github.com/OpenDriveLab/SimScale",
         icon: [
+            {
+                type: "page",
+                link: "https://opendrivelab.com/SimScale/",
+            },
+            {
+                type: "github",
+                link: "https://github.com/OpenDriveLab/SimScale",
+            },
         ],
-        description: "",
+        description: `🏗️ A scalable simulation pipeline that synthesizes diverse and high-fidelity reactive driving scenarios with pseudo-expert.\n🚀 An effective sim-real co-training strategy that improves robustness and generalization across end-to-end planners.\n🔬 A comprehensive recipe that reveals crucial insights into the underlying scaling properties of sim-real learning systems.`,
         keys: ['end_to_end_ad'],
     },
     {
