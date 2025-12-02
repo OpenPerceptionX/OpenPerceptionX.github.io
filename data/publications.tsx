@@ -106,6 +106,20 @@ export const publications: {
         keys: ['cv_at_scale'],
     },
     {
+        title: "SimScale: Learning to Drive via Real-World Simulation at Scale",
+        link: "https://arxiv.org/pdf/2511.23369",
+        image: "/assets/publication/SimScale.png",
+        author: "Haochen Tian, Tianyu Li, Haochen Liu, Jiazhi Yang,  Yihang Qiu, Guang Li, Junli Wang,  Yinfeng Gao, Zhang Zhang, Liang Wang, Hangjun Ye, Tieniu Tan, Long Chen, Hongyang Li",
+        note: "arXiv 2025",
+        noteoption: '',
+        star: "https://img.shields.io/github/stars/OpenDriveLab/SimScale?style=social",
+        starlink: "https://github.com/OpenDriveLab/SimScale",
+        icon: [
+        ],
+        description: "",
+        keys: ['end_to_end_ad'],
+    },
+    {
         title: "Reinforced Refinement with Self-Aware Expansion for End-to-End Autonomous Driving",
         link: "https://arxiv.org/abs/2506.09800",
         image: "/assets/publication/e2eads.jpg",
