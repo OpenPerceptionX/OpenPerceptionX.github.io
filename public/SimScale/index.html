@@ -93,8 +93,8 @@
                 <a target="_blank" href="https://scholar.google.com/citations?user=W-FGd_UAAAAJ&hl=en">Tieniu Tan</a><sup>1</sup>&nbsp;&nbsp;&nbsp;
                 <a target="_blank" href="https://long.ooo/">Long Chen</a><sup>3</sup>&nbsp;&nbsp;&nbsp;
                 <a target="_blank" href="https://lihongyang.info/">Hongyang Li</a><sup>2</sup>
-                <br><sup>1 </sup>MAIS, Institute of Automation, Chinese Academy of Sciences&nbsp;
-                <br><sup>2 </sup>OpenDriveLab at The University of HongKong&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <br><sup>1 </sup>MAIS, Institute of Automation, Chinese Academy of Sciences
+                <br><sup>2 </sup>OpenDriveLab at The University of HongKong&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <sup>3 </sup>Xiaomi EV
 
                 <br><span style="font-size: 15px;">
@@ -119,7 +119,7 @@
               <div class="publication-links">
                 <!-- PDF Link. -->
                 <span class="link-block">
-                  <a href=""
+                  <a href="https://arxiv.org/pdf/2511.23369"
                      class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                         <i class="fas fa-file-pdf"></i>
@@ -130,7 +130,7 @@
 
                 <!-- arXiv Link. -->
                 <span class="link-block">
-                  <a target="_blank" href=""
+                  <a target="_blank" href="https://arxiv.org/abs/2511.23369"
                      class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                         <i class="ai ai-arxiv"></i>
@@ -215,11 +215,14 @@
     <div class="message-body"
         style=" background-color: transparent; color: inherit; border: none !important;; ">
         
-        <strong>Scaling Up End-to-End Planners by Simulation.</strong> <br>
-        (a) We construct large-scale simulation data by perturbing ego trajectories, generating corresponding pseudo-expert demonstrations, and rendering multi-view observations in reactive environments. 
+        <h4><strong>TL;DR: Scaling Up End-to-End Planners by Simulation.</strong></h3>
+        🏗️ A scalable simulation pipeline that synthesizes diverse and high-fidelity reactive driving scenarios with pseudo-expert. <br>
+        🚀 An effective sim-real co-training strategy that improves robustness and generalization across end-to-end planners. <br>
+        🔬 A comprehensive recipe that reveals crucial insights into the underlying scaling properties of sim-real learning systems.<br>
+        <!-- (a) We construct large-scale simulation data by perturbing ego trajectories, generating corresponding pseudo-expert demonstrations, and rendering multi-view observations in reactive environments. 
         Combined with real-world data, this enables broad coverage of out-of-distribution states and supports sim–real co-training for any end-to-end planner.<br>
         (b) Across three representative planner families, including regression, diffusion, and vocabulary scoring, 
-        sim-real co-training consistently produces synergistic improvements in robustness and generalization, demonstrating clear and predictable simulation scaling trends.
+        sim-real co-training consistently produces synergistic improvements in robustness and generalization, demonstrating clear and predictable simulation scaling trends. -->
     </div>
 </article>
       <!-- </h2> -->
@@ -334,9 +337,20 @@
           <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths ">
           <div class="content has-text-justified">
+
           <h2 class="subtitle is-3" style="text-align: left;margin-bottom: 15px">&nbspNAVSIMv2 navhard</h2>
-            <tr>
-              <td>
+
+              <div class="columns is-centered has-text-centered">
+                <div class="column">
+                <div class="content has-text-justified ">
+
+                    <p style="font-size: 18px; margin-top: -10px; margin-bottom: -15px;"> 
+                         &nbsp*: pseudo-expert supervision; †: reward scoring; S.: per-stage EPDM score.
+                    </p>
+                </div>
+                </div>
+              </div>
+
                 <div class="row">
                   <div class="col">
                     <div align="center">
@@ -344,37 +358,123 @@
                     </div> 
                   </div>
                 </div>
+
+
+          <h2 class="subtitle is-3" style="text-align: left; margin-bottom: 15px">&nbspNAVSIMv2 navtest</h2>
+        
+              <div class="columns is-centered has-text-centered">
+                <div class="column">
+                <div class="content has-text-justified ">
+
+                    <p style="font-size: 18px; margin-top: -10px; margin-bottom: -15px;"> 
+                        &nbsp*: pseudo-expert supervision; †: reward scoring.
+                    </p>
+                </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <div align="center">
+                    <img src="https://ik.imagekit.io/StarBurger/SimScale/navtest.png" alt="Image description" width="100%">
+                  </div> 
+                </div>
+              </div>
+
+
+          <details style="margin-bottom: 1.5rem;">
+            <summary class="subtitle is-3" style="text-align: left; margin-bottom: 15px;margin-top: 20px; font-weight:600">🏆 #1 NAVSIMv2 Official Leaderboard</summary> 
+
                 <div class="columns is-centered has-text-centered">
                   <div class="column">
-                  <!-- <div class="content has-text-justified interpolation-panel"> -->
                   <div class="content has-text-justified ">
 
                       <p style="font-size: 18px"> 
-                        *: pseudo-expert supervision; †: reward scoring; S.: per-stage EPDM score.
+                          <a target="_blank" href="https://huggingface.co/spaces/AGC2025/e2e-driving-navhard">NAVSIMv2 Official Leaderboard</a>
                       </p>
                   </div>
                   </div>
                 </div>
-
-          <h2 class="subtitle is-3" style="text-align: left; margin-bottom: 15px;margin-top: -10px">&nbspNAVSIMv2 navtest</h2>
 
                 <div class="row">
                   <div class="col">
                     <div align="center">
-                      <img src="https://ik.imagekit.io/StarBurger/SimScale/navtest.png" alt="Image description" width="100%">
+                      <img src="https://ik.imagekit.io/StarBurger/SimScale/leaderboard.png" style="margin-top: -30px;" alt="Image description" width="100%">
                     </div> 
                   </div>
                 </div>
-                <div class="columns is-centered has-text-centered">
-                  <div class="column">
-                  <div class="content has-text-justified ">
 
-                      <p style="font-size: 18px"> 
-                          *: pseudo-expert supervision; †: reward scoring.
-                      </p>
-                  </div>
+          </details>
+
+
+          <details style="margin-bottom: 1.5rem;">
+            <summary class="subtitle is-3" style="text-align: left; margin-bottom: 15px;margin-top: -10px; font-weight:600">More Results</summary>
+
+              <h2 class="subtitle is-4" style="text-align: left; margin-bottom: 0px;margin-top:20px">&nbspThe Effect of Multi-Expert Ensemble</h2>
+
+              <div class="columns is-centered has-text-centered">
+                <div class="column">
+                <div class="content has-text-justified ">
+                    <p style="font-size: 18px;"> 
+                      &nbspS1/2: Per-stage score; recovery/planner: recovery-based/planner-based expert; reward: reward scoring only; *: ensemble
+                    </p>
+                </div>
                 </div>
               </div>
+              
+                <div class="row">
+                  <div class="col">
+                    <div align="center">
+                      <img src="https://ik.imagekit.io/StarBurger/SimScale/ensemble.png" style="margin-top: -30px;" alt="Image description" width="50%">
+                    </div> 
+                  </div>
+                </div>
+
+
+              <h2 class="subtitle is-4" style="text-align: left; margin-bottom: 0px;margin-top:20px">&nbspThe Effect of Simulated Reward Scoring</h2>
+
+              <div class="columns is-centered has-text-centered">
+                <div class="column">
+                <div class="content has-text-justified ">
+                    <p style="font-size: 18px;"> 
+                      &nbspS1/2: per-stage score.
+                    </p>
+                </div>
+                </div>
+              </div>
+
+                <div class="row">
+                  <div class="col">
+                    <div align="center">
+                      <img src="https://ik.imagekit.io/StarBurger/SimScale/scoring.png" style="margin-top: -30px;" alt="Image description" width="50%">
+                    </div> 
+                  </div>
+                </div>
+
+              <h2 class="subtitle is-4" style="text-align: left; margin-bottom: 0px;margin-top:20px">&nbspThe Effect between Non-reactive vs. Reactive Data Simualtion</h2>
+
+                
+              <div class="columns is-centered has-text-centered">
+                <div class="column">
+                <div class="content has-text-justified ">
+                    <p style="font-size: 18px; "> 
+                         &nbsp#Round: sampling rounds; #Sim.: simulation data number.
+                    </p>
+                </div>
+                </div>
+              </div>
+
+                <div class="row">
+                  <div class="col">
+                    <div align="center">
+                      <img src="https://ik.imagekit.io/StarBurger/SimScale/reaction.png" style="margin-top: -30px;" alt="Image description" width="50%">
+                    </div> 
+                  </div>
+                </div>
+
+          </details>
+
+
               </td>
             </tr>
           </div>
@@ -406,24 +506,86 @@
           <div class="content has-text-justified">
             <tr>
               <td>
+              <h2 class="subtitle is-3" style="text-align: left;margin-bottom: 0px">&nbspScaling Simulation with Fixed Real-World Corpus</h2>
+                
+              <div class="columns is-centered has-text-centered">
+                  <div class="column">
+                  <div class="content has-text-justified ">
+
+                      <p style="font-size: 18px; margin-top: 0px;margin-bottom: -10px;"> 
+                        &nbspScaling Dynamics with Varying Simulation Data aross End-to-End Planners and Pseudo-Experts. 
+                      </p>
+                  </div>
+                  </div>
+                </div>
+
                 <div class="row">
                   <div class="col">
                     <div align="center">
-                      <img src="https://ik.imagekit.io/StarBurger/SimScale/curve_scaling.svg" alt="Image description" width="100%">
+                      <img src="https://ik.imagekit.io/StarBurger/SimScale/curve_scaling.svg" style="margin-bottom: 20px" alt="Image description" width="100%">
                     </div> 
                   </div>
                 </div>
+               
+
+                <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+
+                  <div class="content has-text-justified interpolation-panel" 
+                      style="display: inline-block; margin: 5px 0;padding: 10px 7px;">
+                    <p style="text-align: center; font-size: 18px; margin: 0;"> 
+                      <strong>💡 Pseudo-Expert Should Be Exploratory.</strong> 
+                    </p>
+                  </div>
+
+                  <div class="content has-text-justified interpolation-panel" 
+                      style="display: inline-block; margin: 5px 0; padding: 10px 7px;">
+                    <p style="text-align: center; font-size: 18px; margin: 0;"> 
+                      <strong>💡 Multi-Modality Modeling Sparks Scaling.</strong> 
+                    </p>
+                  </div>
+
+                  <div class="content has-text-justified interpolation-panel" 
+                      style="display: inline-block; margin: 5px 0; padding: 10px 7px;">
+                    <p style="text-align: center; font-size: 18px; margin: 0;"> 
+                      <strong>💡 Reward is All You Need.</strong> 
+                    </p>
+                  </div>
+
+                </div>
+
+
+
+              <h2 class="subtitle is-3" style="text-align: left; margin-bottom: 0px; margin-top: 40px">&nbspScaling Simulation with Fixed Sim-Real Ratio</h2>
                 <div class="columns is-centered has-text-centered">
                   <div class="column">
                   <div class="content has-text-justified ">
 
-                      <p style="font-size: 18px; margin-top: 10px;"> 
-                        <strong>Scaling Dynamics with Different Planners and Pseudo-Expert Trajectories.</strong>
-                          Visualization how simulation data scale and supervision signals influence the driving performance of various planners, where the infection point indicates learning plateau
+                      <p style="font-size: 18px; margin-top: 0px;margin-bottom: -10px;"> 
+                        &nbspScaling Dynamics with Varying Real-World Data across End-to-End Planners.
                       </p>
                   </div>
+                  </div>
                 </div>
-              </div>
+
+                <div class="row">
+                  <div class="col">
+                    <div align="center">
+                      <img src="https://ik.imagekit.io/StarBurger/SimScale/curve_scaling_real.svg" alt="Image description" width="50%">
+                    </div> 
+                  </div>
+                </div>
+
+                <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+
+                  <div class="content has-text-justified interpolation-panel" 
+                      style="display: inline-block; margin: 5px 0;padding: 10px 7px;">
+                    <p style="text-align: center; font-size: 18px; margin: 0;"> 
+                      <strong>💡  Sustained Simulation Gains Across Real Data Scales.</strong> 
+                    </p>
+                  </div>
+
+                </div>
+
               </td>
             </tr>
           </div>
@@ -455,7 +617,7 @@
           <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths ">
           <div class="content has-text-justified">
-          <h2 class="subtitle is-3" style="text-align: left;margin-bottom: 15px">&nbspPseudo-Expert Scene Simulation</h2>
+          <h2 class="subtitle is-3" style="text-align: left; margin-bottom: 15px">Pseudo-Expert Scene Simulation</h2>
             <tr>
               <td>
                 <div class="row">
@@ -490,7 +652,7 @@
               </td>
             </tr>
 
-          <h2 class="subtitle is-3" style="text-align: left; margin-bottom: 15px;margin-top: px">&nbspSimulated OOD Scenes</h2>
+          <h2 class="subtitle is-3" style="text-align: left; margin-bottom: 15px; margin-top: px">&nbspSimulated OOD Scenes</h2>
 
                 <div class="row">
                   <div class="col">
@@ -501,10 +663,10 @@
                 </div>
 
           <details style="margin-bottom: 1.5rem;">
-            <summary style="font-size:1.5rem; font-weight:700; cursor:pointer;">
+            <!-- <summary style="font-size:1.5rem; font-weight:700; cursor:pointer;">
               More Results
-            </summary>
-
+            </summary> -->
+          <summary class="subtitle is-3" style="text-align: left; margin-bottom: 15px; margin-top: px; font-weight:600">More Results</summary>
             <div style="margin-top:1rem;">
               <div class="row">
                 <div class="col">
@@ -571,14 +733,14 @@
     </div>
   </section>
   
-  <section class="section" id="BibTeX">
+  <section class="section" id="BibTeX" style="margin-top: -60px;">
     <div class="container is-max-desktop content">
       <h2 class="titile">BibTeX</h2>
       If you find the project helpful for your research, please consider citing our paper:
-      <pre><code>@article{tian2025SimScale,
+      <pre><code>@article{tian2025simscale,
         title={SimScale: Learning to Drive via Real-World Simulation at Scale},
-        author={xxxx},
-        journal={arXiv preprint arXiv:xxx},
+        author={Haochen Tian and Tianyu Li and Haochen Liu and Jiazhi Yang and Yihang Qiu and Guang Li and Junli Wang and Yinfeng Gao and Zhang Zhang and Liang Wang and Hangjun Ye and Tieniu Tan and Long Chen and Hongyang Li},
+        journal={arXiv preprint arXiv:2511.23369},
         year={2025}
       }</code></pre>
     </div>

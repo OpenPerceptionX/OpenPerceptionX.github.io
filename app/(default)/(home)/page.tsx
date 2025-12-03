@@ -261,7 +261,7 @@ export default function Home() {
 
                             {
                                 publication.description && (
-                                    <i className="text-sm text-o-gray">
+                                    <i className="text-sm text-o-gray whitespace-pre-line">
                                         {publication.description}
                                     </i>
                                 )
