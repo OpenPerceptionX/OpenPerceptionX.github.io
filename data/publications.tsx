@@ -48,7 +48,6 @@ members.forEach((member) => {
 
 
 
-
 export const publications: {
     title: string;
     link: string;
