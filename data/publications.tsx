@@ -62,9 +62,23 @@ export const publications: {
     keys: string[];
 }[] = [
     {
+        title: "Intelligent Robot Manipulation Requires Self-Directed Learning",
+        link: "https://openreview.net/forum?id=Seb7rprW1Y",
+        image: "/assets/publication/selfdirected.jpg",
+        author: "Intelligent Robot Manipulation Requires Self-Directed Learning Download PDF Li Chen, Chonghao Sima, Kashyap Chitta, Antonio Loquercio, Ping Luo, Yi Ma, Hongyang Li",
+        note: "2025",
+        noteoption: '',
+        star: "",
+        starlink: "",
+        icon: [
+        ],
+        description: "",
+        keys: ['editor_pick', 'home_sliding', 'embodied_ai'],
+    },
+    {
         title: "GO-1-Pro: Is Diversity All You Need for Scalable Robotic Manipulation?",
         link: "https://arxiv.org/abs/2507.06219",
-        image: "/assets/publication/GO-1-Pro.jpg",
+        image: "/assets/publication/go1.jpg",
         author: "Modi Shi, Li Chen, Jin Chen, Yuxiang Lu, Chiming Liu, Guanghui Ren, Ping Luo, Di Huang, Maoqing Yao, Hongyang Li",
         note: "arXiv 2025",
         noteoption: '',
@@ -85,7 +99,7 @@ export const publications: {
             },
         ],
         description: "The first comprehensive analysis of data diversity principles revealing optimal scaling strategies for large-scale robotic manipulation training.",
-        keys: ['editor_pick', 'home_sliding', 'drawer_e2e'],
+        keys: ['editor_pick', 'home_sliding', 'drawer_embodied'],
     },
     {
         title: "Detect Anything 3D in the Wild",
@@ -198,7 +212,7 @@ export const publications: {
         link: "https://arxiv.org/abs/2503.06669",
         image: "/assets/publication/go-1.jpg",
         author: "Team AgiBot-World",
-        note: "IROS 2025",
+        note: "IROS 2025 Best Paper Finalist",
         noteoption: '',
         star: "https://img.shields.io/github/stars/OpenDriveLab/AgiBot-World?style=social",
         starlink: "https://github.com/OpenDriveLab/AgiBot-World",
@@ -269,7 +283,7 @@ export const publications: {
             },
         ],
         description: "Unlocking the future where autonomous driving meets the unlimited potential of language.",
-        keys: ['editor_pick', 'home_sliding', 'drawer_e2e'],
+        keys: ['end_to_end_ad'],
     },
     {
         title: "Agility Meets Stability: Versatile Humanoid Control with Heterogeneous Data",
