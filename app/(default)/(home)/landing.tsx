@@ -22,7 +22,7 @@ import { AspectRatio } from "@/components/ui/aspect-ratio"
 
 
 import { publications } from "@/data/publications"
-const landings = [5,0,1,4,2,3].map(index => [...publications.values()].filter(publication => publication.keys.includes('home_sliding'))[index])
+const landings = [0,5,1,4,2,3].map(index => [...publications.values()].filter(publication => publication.keys.includes('home_sliding'))[index])
 const type_mapping: Record<string, string> = {
     "page": "Page",
     "huggingface": "Hugging Face",
@@ -35,6 +35,7 @@ const type_mapping: Record<string, string> = {
     "dataset": "Dataset",
 }
 const image_mapping: Record<string, string> = {
+    "Intelligent Robot Manipulation Requires Self-Directed Learning": "https://ik.imagekit.io/opendrivelab/position.jpg",
     "GO-1-Pro: Is Diversity All You Need for Scalable Robotic Manipulation?": "/assets/publication/GO-1-Pro.jpg",
     "UniVLA: Learning to Act Anywhere with Task-centric Latent Actions": "https://ik.imagekit.io/opendrivelab/univla",
     "Planning-oriented Autonomous Driving": "/assets/background/890e373a8bca0b4f0df9701fa09cf131.png",
@@ -164,7 +165,11 @@ export function Landing() {
                                         <Link href={landing.link} target={landing.link.startsWith('http') ? '_blank' : '_self'} className="animated-underline-gray mr-3 text-nowrap">
                                             Paper
                                         </Link>
-                                        <span className="text-xs mr-3"> | </span>
+                                        {
+                                            landing.icon.length != 0  && (
+                                                <span className="text-xs mr-3"> | </span>
+                                            )
+                                        }
                                         {
                                             landing.icon.map((icon, index) => (
                                                 icon.type != 'zhihu' && (

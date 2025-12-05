@@ -64,16 +64,16 @@ export const publications: {
     {
         title: "Intelligent Robot Manipulation Requires Self-Directed Learning",
         link: "https://openreview.net/forum?id=Seb7rprW1Y",
-        image: "/assets/publication/selfdirected.jpg",
-        author: "Intelligent Robot Manipulation Requires Self-Directed Learning Download PDF Li Chen, Chonghao Sima, Kashyap Chitta, Antonio Loquercio, Ping Luo, Yi Ma, Hongyang Li",
-        note: "2025",
+        image: "/assets/publication/position.jpg",
+        author: "Li Chen, Chonghao Sima, Kashyap Chitta, Antonio Loquercio, Ping Luo, Yi Ma, Hongyang Li",
+        note: "Preprint 2026",
         noteoption: '',
         star: "",
         starlink: "",
         icon: [
         ],
         description: "",
-        keys: ['editor_pick'],
+        keys: ['editor_pick', 'home_sliding', "position"],
     },
     {
         title: "GO-1-Pro: Is Diversity All You Need for Scalable Robotic Manipulation?",
