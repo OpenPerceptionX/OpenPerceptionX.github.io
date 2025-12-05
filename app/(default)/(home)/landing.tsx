@@ -159,7 +159,6 @@ export function Landing() {
                                 </h2>
 
 
-
                                 <div>
                                     <div className="flex flex-row items-center flex-wrap text-sm lg:text-base">
                                         <Link href={landing.link} target={landing.link.startsWith('http') ? '_blank' : '_self'} className="animated-underline-gray mr-3 text-nowrap">
