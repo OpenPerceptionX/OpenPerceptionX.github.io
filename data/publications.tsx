@@ -73,7 +73,7 @@ export const publications: {
         icon: [
         ],
         description: "",
-        keys: ['editor_pick', 'home_sliding', 'embodied_ai'],
+        keys: ['editor_pick'],
     },
     {
         title: "GO-1-Pro: Is Diversity All You Need for Scalable Robotic Manipulation?",
