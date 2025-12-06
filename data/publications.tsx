@@ -64,7 +64,7 @@ export const publications: {
     {
         title: "Intelligent Robot Manipulation Requires Self-Directed Learning",
         link: "https://openreview.net/forum?id=Seb7rprW1Y",
-        image: "/assets/publication/position.jpg",
+        image: "https://ik.imagekit.io/opendrivelab/position.jpg?updatedAt=1765023911765",
         author: "Li Chen, Chonghao Sima, Kashyap Chitta, Antonio Loquercio, Ping Luo, Yi Ma, Hongyang Li",
         note: "Preprint 2026",
         noteoption: '',

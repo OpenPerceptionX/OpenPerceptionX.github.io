@@ -35,7 +35,7 @@ const type_mapping: Record<string, string> = {
     "dataset": "Dataset",
 }
 const image_mapping: Record<string, string> = {
-    "Intelligent Robot Manipulation Requires Self-Directed Learning": "https://ik.imagekit.io/opendrivelab/position.jpg",
+    "Intelligent Robot Manipulation Requires Self-Directed Learning": "https://ik.imagekit.io/opendrivelab/position.jpg?updatedAt=1765023911765",
     "GO-1-Pro: Is Diversity All You Need for Scalable Robotic Manipulation?": "/assets/publication/GO-1-Pro.jpg",
     "UniVLA: Learning to Act Anywhere with Task-centric Latent Actions": "https://ik.imagekit.io/opendrivelab/univla",
     "Planning-oriented Autonomous Driving": "/assets/background/890e373a8bca0b4f0df9701fa09cf131.png",
