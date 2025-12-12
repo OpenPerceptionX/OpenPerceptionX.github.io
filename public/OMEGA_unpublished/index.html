@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OMEGA</title>
+
+  <!-- <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet"> -->
+
+  <!-- <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script> -->
+
+  <!-- <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet"> -->
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./static/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/bootstrap.min.css">
+
+  <script src="./static/js/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <!-- <link rel="icon" type="image/png" href="/assets/icon/D_small.png"> -->
+
+
+
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="900" />
+
+</head>
+
+<!-- Google tag (gtag.js) -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-L7VEDHS6G8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L7VEDHS6G8');
+</script> -->
+
+
+<body>
+
+  <!-- TODO -->
+  <section class="hero teaser" style="margin-top: 64px;">
+    <div class="container is-max-desktop">
+        <div align="center">
+          <!-- <video src="https://ik.imagekit.io/StarBurger/imgs/title_1080p.mov" autoplay loop muted playsinline width="90%"></video> -->
+          <!-- <img src="https://ik.imagekit.io/StarBurger/SimScale/title_2k.gif"  width="90%">  -->
+        </div>  
+    </div>
+  </section>
+
+  <section class="hero" style="margin-top: -20px;">
+    <div class="hero-body no-bottom-padding">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Optimization-Guided Diffusion for Interactive Scene Generation</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <!-- Author Names Omitted for Anonymous Review. -->
+                <a target="_blank" href="https://github.com/lshasd123">Shihao Li</a><sup>1,2,3</sup><sup>†</sup>&nbsp;&nbsp;&nbsp;
+                <a target="_blank" href="https://naishengye.owlstown.net/">Naisheng Ye</a><sup>2</sup>&nbsp;&nbsp;&nbsp;
+                <a target="_blank" href="https://github.com/sephyli">Tianyu Li</a><sup>2</sup>&nbsp;&nbsp;&nbsp;
+                <a target="_blank" href="https://kashyap7x.github.io/">Kashyap Chitta</a><sup>4</sup>&nbsp;&nbsp;&nbsp;
+                Tuo An</a><sup>3</sup>&nbsp;&nbsp;&nbsp;
+                <br>
+                <a target="_blank" href="https://scholar.google.com/citations?user=NVY71L0AAAAJ">Peng Su</a><sup>5</sup>&nbsp;&nbsp;&nbsp;
+                Boyang Wang</a><sup>1</sup>&nbsp;&nbsp;&nbsp;
+                Haiou Liu</a><sup>1</sup>&nbsp;&nbsp;&nbsp;
+                <a target="_blank" href="https://scholar.google.com/citations?hl=zh-CN&user=UKVs2CEAAAAJ">Chen Lv</a><sup>5</sup>&nbsp;&nbsp;&nbsp;
+                <a target="_blank" href="https://lihongyang.info/">Hongyang Li</a><sup>2</sup>
+                <br>
+
+                <br><sup>1 </sup>Intelligent Vehicle Research Center at Beijing Institute of Technology &nbsp;&nbsp;&nbsp;
+                <sup>2 </sup>OpenDriveLab at The University of HongKong
+                <br><sup>3 </sup>Nanyang Technological University &nbsp;&nbsp;&nbsp;&nbsp;
+                <sup>4 </sup>NVIDIA Research &nbsp;&nbsp;&nbsp;
+                <sup>5 </sup>Yinwang Intelligent Tech. Co. Ltd.
+
+                <br><span style="font-size: 15px;">
+                    <sup>†</sup>Work done while interning at OpenDriveLab
+                </span>
+                <!-- <span class="brmod" style="color:rgb(183, 0, 0)"><b>ICCV 2025</b></span> -->
+              </span>
+            </div>
+
+            <!-- https://raw.githubusercontent.com/lshasd123/OMEGA-assets/master/images -->
+            <!-- https://ik.imagekit.io/lsh/Reaserch/OMEGA -->
+            <!-- ====== Institution Logos ====== -->
+            <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:70px; margin-top:20px;">
+              <img src="https://ik.imagekit.io/lsh/Reaserch/OMEGA/BIT.png"
+                  style="max-width:230px; width:35%; min-width:120px; border-radius:5px;">
+              <img src="https://ik.imagekit.io/lsh/Reaserch/OMEGA/hku.webp"
+                  style="max-width:300px; width:40%; min-width:120px; border-radius:5px;">
+              <img src="https://ik.imagekit.io/lsh/Reaserch/OMEGA/NTU.png"
+                  style="max-width:160px; width:25%; min-width:100px; border-radius:5px;">
+            </div>
+
+            <!-- ====== Industrial Logos ====== -->
+            <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:70px; margin-top:20px; margin-bottom:20px;">
+              <img src="https://ik.imagekit.io/lsh/Reaserch/OMEGA/NVIDIA1.webp"
+                  style="max-width:160px; width:30%; min-width:110px; border-radius:5px;">
+              <img src="https://ik.imagekit.io/lsh/Reaserch/OMEGA/YINWANG.png"
+                  style="max-width:80px; width:20%; min-width:70px; border-radius:5px;">
+            </div>
+            
+            
+
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2512.07661"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                <!-- arXiv Link. -->
+                <span class="link-block">
+                  <a target="_blank" href="https://arxiv.org/abs/2512.07661"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+                <!-- <span class="link-block">
+                  <a target="_blank" href="https://www.youtube.com/embed/gYEEMNHo5Lc"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span> -->
+
+                <!-- <span class="link-block">
+                  <a href="https://github.com/OpenDriveLab/SimScale" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <svg class="svg-inline--fa fa-github fa-w-16" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+                    </span>
+                    <span>Code (Dec. 2025)</span>
+                  </a>
+                </span> -->
+
+                <!-- <span class="link-block">
+                  <a href=""
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fa fa-database"></i>
+                    </span>
+                    <span>Dataset (Dec. 2025)</span>
+                  </a>
+                </span> -->
+
+                <!-- Code Link. -->
+
+                <!-- twitter Link. -->
+                <!-- <span class="link-block">
+                  <a target="_blank" href=""
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fab fa-twitter"></i>
+                    </span>
+                    <span>Summary</span>
+                  </a>
+                </span> -->
+              </div>
+  
+            </div>
+            </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+
+  <section class="hero teaser" style="margin-top:-20px; padding-top:1.5rem; padding-bottom:2rem;">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+  
+        <!-- 图 + 图题 -->
+        <figure class="image" style="margin:0 auto;">
+          <img
+            src="https://ik.imagekit.io/lsh/Reaserch/OMEGA/Visualization_of_OMEGA.svg"
+            alt="OMEGA (\Omega) teaser"
+            style="width:100%; height:auto; border-radius:6px;"
+          >
+          <figcaption
+            style="
+              text-align:justify;
+              font-size:15px;
+              color:#555;
+              line-height:1.55;
+              max-width:880px;
+              margin:10px auto 0 auto;">
+            <strong>OMEGA (\(\Omega\)).</strong>
+            Our plug-and-play, training-free guidance module can be dropped into existing
+            diffusion-based driving scene generators to provide
+            <em>significantly more realistic, controllable, and interactive</em>
+            traffic scenarios. Color transitions indicate the direction and speed of motion:
+            <strong>ego</strong> (red gradient),
+            <strong>attacker</strong> (yellow gradient),
+            and <strong>other vehicles</strong> (blue gradient).
+          </figcaption>
+        </figure>
+  
+        <!-- 三个要点：Top / Middle / Bottom -->
+        <div
+          style="
+            max-width:880px;
+            margin:1.8rem auto 0 auto;
+            padding:1.2rem 1.4rem;
+            border-radius:8px;
+            background-color:#f7f7fb;
+            border:1px solid #e0e2ee;
+          ">
+
+          <!-- 每一段都采用相同布局结构 -->
+          <div style="display:flex; align-items:flex-start; margin-bottom:1rem;">
+            <div
+              style="
+                min-width:90px;
+                font-size:0.75rem;
+                font-weight:600;
+                letter-spacing:0.04em;
+                text-transform:uppercase;
+                padding:0.2rem 0.55rem;
+                border-radius:999px;
+                background-color:#d7e8f5;
+                color:#4683B0;
+                text-align:center;
+                flex-shrink:0;">
+              Top
+            </div>
+            <p style="margin:0 0 0 1rem; font-size:14px; line-height:1.6; color:#333;">
+              Our guidance produces diverse and realistic future scenarios from the same historical
+              initialization, increasing the rate of physically and behaviorally valid scenes on both
+              the nuPlan benchmark (used during the base model's training) and the Waymo benchmark
+              (zero-shot deployment) compared to unguided baselines.
+            </p>
+          </div>
+
+          <div style="display:flex; align-items:flex-start; margin-bottom:1rem;">
+            <div
+              style="
+                min-width:90px;
+                font-size:0.75rem;
+                font-weight:600;
+                letter-spacing:0.04em;
+                text-transform:uppercase;
+                padding:0.2rem 0.55rem;
+                border-radius:999px;
+                background-color:#d1f0e7;
+                color:#5CA28E;
+                text-align:center;
+                flex-shrink:0;">
+              Middle
+            </div>
+            <p style="margin:0 0 0 1rem; font-size:14px; line-height:1.6; color:#333;">
+              Controllability-conditioned generation synthesizes scenes where vehicles must reach
+              predefined goal points (green flags) for one or multiple target agents, achieving precise
+              behavioral control while maintaining natural interactions.
+            </p>
+          </div>
+
+          <div style="display:flex; align-items:flex-start;">
+            <div
+              style="
+                min-width:90px;
+                font-size:0.75rem;
+                font-weight:600;
+                letter-spacing:0.04em;
+                text-transform:uppercase;
+                padding:0.2rem 0.55rem;
+                border-radius:999px;
+                background-color:#FFEDE1;
+                color:#F0904E;
+                text-align:center;
+                flex-shrink:0;">
+              Bottom
+            </div>
+            <p style="margin:0 0 0 1rem; font-size:14px; line-height:1.6; color:#333;">
+              Finally, we enable adversarial scene generation, adaptively producing diverse attack
+              scenarios without explicitly specifying attacker trajectories.
+            </p>
+          </div>
+
+        </div>
+
+  
+      </div>
+    </div>
+  </section>
+  
+
+
+  <section class="hero is-light is-small">
+    <div class="hero-body ">
+      <div class="container is-two-thirds">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-two-thirds">
+            <h2 class="title is-2">Abstract</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section body">
+    <div class="container">
+      <!-- <div class="container is-two-thirds"> -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths  is-full-width">
+            <div class="content has-text-justified" style="font-size: 18px">
+              Realistic and diverse multi-agent driving scenes are crucial for evaluating autonomous vehicles, but safety-critical events which are essential for this task are rare and underrepresented in driving datasets. Data-driven scene generation offers a low-cost alternative by synthesizing complex traffic behaviors from existing driving logs. However, existing models often lack controllability or yield samples that violate physical or social constraints, limiting their usability. We present <strong>OMEGA, an optimization-guided, training-free framework</strong> that enforces structural consistency and interaction awareness during diffusion-based sampling from a scene generation model. OMEGA re-anchors each reverse diffusion step via constrained optimization, steering the generation towards physically plausible and behaviorally coherent trajectories. Building on this framework, we <strong>formulate ego-attacker interactions as a game-theoretic optimization in the distribution space</strong>, approximating Nash equilibria to generate realistic, safety-critical adversarial scenarios. Experiments on nuPlan and Waymo show that OMEGA improves generation realism, consistency, and controllability, increasing the ratio of physically and behaviorally valid scenes <strong>from 32.35% to 72.27%</strong> for free exploration capabilities, and <strong>from 11% to 80%</strong> for controllability-focused generation. Our approach can also generate <strong>\(5\times\) more near-collision frames</strong> with a time-to-collision under three seconds while maintaining the overall scene realism.
+            </div>
+          </div>
+        </div>
+      <!-- </div> -->
+    </div>
+  </section>
+
+  <section class="hero is-light is-small">
+    <div class="hero-body ">
+      <div class="container is-two-thirds">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-two-thirds">
+            <h2 class="title is-2">Method</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== -->
+  <!-- Method / Approach     -->
+  <!-- ===================== -->
+     <section id="method" class="section" style="padding-top:2.5rem; padding-bottom:3rem;">
+      <div class="container is-max-desktop">
+    
+        <!-- ========== 第一行：全栏主方法图 ========== -->
+        <figure class="image" style="margin:0 auto 1rem auto;">
+          <img
+            src="https://ik.imagekit.io/lsh/Reaserch/OMEGA/OMEGA.png"
+            alt="Standard diffusion vs optimization-guided OMEGA"
+            style="width:100%; height:auto; border-radius:6px;"
+          >
+        </figure>
+    
+        <p
+          style="
+            text-align:justify;
+            font-size:15px;
+            color:#555;
+            line-height:1.55;
+            font-size:17px;
+            max-width:880px;
+            margin:10px auto 0 auto;">
+          <strong>Standard diffusion sampling (top) vs. our optimization-guided OMEGA (bottom).</strong>
+          OMEGA re-anchors each reverse diffusion step using constrained optimization
+          within a KL-bounded trust region, steering sampling toward physically consistent
+          and behaviorally coherent scenes.
+        </p>
+    
+        <!-- ========== 第二行：左图（半栏） + 右侧简短方法文字 ========== -->
+        <div class="columns is-vcentered" style="margin-top:1.6rem;">
+    
+          <!-- 左：Two-phase 图（半栏） -->
+          <div class="column is-6">
+            <figure class="image">
+              <img
+                src="https://ik.imagekit.io/lsh/Reaserch/OMEGA/Two-phase_noise_scheduling.svg"
+                alt="Two-phase noise scheduling"
+                style="width:100%; height:auto; border-radius:6px;"
+              >
+            </figure>
+          </div>
+    
+          <!-- 右：简短方法描述（而不是挤 Key Contributions） -->
+          <div class="column is-6">
+            <p
+              style="
+                text-align:justify;
+                font-size:15px;
+                color:#555;
+                line-height:1.6;
+                font-size:17px;
+                margin:0;">
+              <strong>Two-phase noise scheduling.</strong>
+              Warmup reduces noise along full trajectories to establish macro-level layout and agent-wise dynamic plausibility, minimizing drift and stabilizing long-horizon trends. Rolling-Zero then performs fine-grained, time-indexed denoising with residual-noise updates that incorporate environmental feedback, improving reactivity and yielding structurally feasible, responsive multi-agent scenes.
+            </p>
+          </div>
+    
+        </div>
+    
+        <!-- ========== 第三行：Key Contributions 全栏蓝色信息框 ========== -->
+        <article class="message"
+          style="
+            margin-top:2.0rem;
+            border:none;
+            border-left:6px solid #4A78FF;
+            background-color:#F4F7FF;
+            color:#102040;
+            border-radius:8px;
+            padding:0.3rem 0;
+          ">
+          <div class="message-body"
+            style="
+              background-color:transparent;
+              color:inherit;
+              border:none !important;
+              padding:1rem 1.2rem;
+              font-size:15px;
+              line-height:1.6;
+              text-align:justify;
+            ">
+    
+            <h4 style="margin-bottom:0.7rem; font-weight:700; font-size:18px; color:#1F4BE0;">
+              <strong>Key Contributions✨</strong>
+            </h4>
+    
+            <p style="margin-bottom:0.7rem; font-size:18px;">
+              ⚓ <strong>Optimization-guided diffusion sampling.</strong>
+              A plug-and-play, training-free method that re-anchors each reverse step via constrained optimization, enforcing structural consistency and stable diffusion guidance.
+            </p>
+    
+            <p style="margin-bottom:0.7rem; font-size:18px;">
+              🕐 <strong>Two-phase noise scheduling.</strong>
+              A coarse-to-fine denoising strategy for interaction fidelity, ensuring macro-level plausibility with fine-grained reactivity, enabling context-aware and dynamically coordinated multi-agent scene evolution.
+            </p>
+    
+            <p style="margin-bottom:0; font-size:18px;">
+              ♟️ <strong>OMEGA<sub>Adv</sub>.</strong>
+              A game-thoretic formulation that models ego-attacker interactions as a distributional optimization game, enabling the adaptive generation of realistic yet challenging driving scenarios.
+            </p>
+    
+          </div>
+        </article>
+    
+      </div>
+    </section>
+
+
+  <section class="hero is-light is-small">
+    <div class="hero-body ">
+      <div class="container is-two-thirds">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-two-thirds">
+            <h2 class="title is-2">Quantitative Results</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <div class="columns is-centered">
+            <div class="column is-four-fifths">
+              <div class="content has-text-justified">
+  
+                <!-- ================= Free Exploration ================= -->
+                <h2 class="subtitle is-3" style="text-align:left; margin-bottom:12px;">
+                  Free Exploration
+                </h2>
+  
+                <p style="font-size:15px; margin-top:-4px; margin-bottom:10px;">
+                  <strong>Free-exploration scene generation on nuPlan and zero-shot evaluation on Waymo.</strong>
+                  Oracle denotes the original logged data. We report N-Dist (JSD of nearest-agent distance, \(\times 10^{-3}\)),
+                  L-Dev (lateral deviation JSD, \(\times 10^{-3}\)), A-Dev (angular deviation JSD, \(\times 10^{-3}\)),
+                  Spd (speed JSD, \(\times 10^{-3}\)), per-agent / per-scene validity (P-Ag. / P-Sc.),
+                  and overall scene valid rate (no collision / off-road / kinematic violation).
+                  Arrows \(\downarrow\) / \(\uparrow\) indicate lower / higher is better.
+                </p>
+  
+                <figure class="image" style="margin-top:10px;">
+                  <img
+                    src="https://ik.imagekit.io/lsh/Reaserch/OMEGA/Free-exploration.svg?updatedAt=1765270357186"
+                    alt="Free-exploration scene generation results"
+                    style="width:100%; height:auto;"
+                  >
+                </figure>
+  
+                <!-- ================= Goal-conditioned Controllability ================= -->
+                <h2 class="subtitle is-3" style="text-align:left; margin-top:32px; margin-bottom:12px;">
+                  Goal-Conditioned Controllability
+                </h2>
+  
+                <p style="font-size:15px; margin-top:-4px; margin-bottom:10px;">
+                  <strong>Controllability under user-specified intents.</strong>
+                  Each method is evaluated by assigning multiple user-defined goal points to the target vehicle
+                  and measuring whether it can reliably reach these goals while maintaining scene realism and validity.
+                </p>
+  
+                <figure class="image" style="margin-top:10px;">
+                  <img
+                    src="https://ik.imagekit.io/lsh/Reaserch/OMEGA/ComparisonOfGuidance.svg?updatedAt=1765270357047"
+                    alt="Goal-conditioned controllability comparison"
+                    style="width:100%; height:auto;"
+                  >
+                </figure>
+  
+                <!-- ================= Adversarial Scene Generation ================= -->
+                <h2 class="subtitle is-3" style="text-align:left; margin-top:32px; margin-bottom:12px;">
+                  Adversarial Scene Generation
+                </h2>
+  
+                <p style="font-size:15px; margin-top:-4px; margin-bottom:10px;">
+                  <strong>Adversarial scene generation with ego–attacker interactions.</strong>
+                  We compare ground truth (Oracle), Nexus variants finetuned or guided for attacking behavior:
+                  Nexus-FT (finetuned on adversarial scenarios), Nexus-GC (goal-attacking conditioning), and
+                  Nexus-CTG\(_\mathrm{Adv}\) (cost-based attacking with CTG). Please refer to the supplementary material for details.
+                  We report ego risk metrics (mean time-to-collision per frame, TTC [s], and the percentage of frames with
+                  \(\mathrm{TTC} < 1,2,3\,\mathrm{s}\)), motion intensity (mean acceleration [\(\mathrm{m^2/s}\)] and jerk [\(\mathrm{m^3/s}\)]),
+                  and ego non-responsible collision rate (Ego NC, \%).
+                  <strong>Right:</strong> Nexus-\(\Omega_\mathrm{Adv}\) produces more low-speed, short-TTC frames, indicating riskier yet realistic scenarios.
+                </p>
+  
+                <figure class="image" style="margin-top:10px;">
+                  <img
+                    src="https://ik.imagekit.io/lsh/Reaserch/OMEGA/AdversarialScene.svg?updatedAt=1765270360520"
+                    alt="Adversarial scene generation results"
+                    style="width:100%; height:auto;"
+                  >
+                </figure>
+  
+                <!-- ================= More Results (Collapsible) ================= -->
+                <details style="margin-top:32px; margin-bottom:1.5rem;">
+                  <summary class="subtitle is-3" style="text-align:left; font-weight:600; margin-bottom:0;">
+                    More Results
+                  </summary>
+  
+                  <!-- Comparison of Guidance Strategies -->
+                  <h3 class="subtitle is-4" style="text-align:left; margin-top:20px; margin-bottom:6px;">
+                    Comparison of Guidance Strategies
+                  </h3>
+                  <figure class="image">
+                    <img
+                      src="https://ik.imagekit.io/lsh/Reaserch/OMEGA/ComparisonOfGuidance.svg?updatedAt=1765270357047"
+                      alt="Comparison of different guidance strategies"
+                      style="width:100%; height:auto; margin-top:4px;"
+                    >
+                  </figure>
+  
+                  <!-- Ablation Study -->
+                  <h3 class="subtitle is-4" style="text-align:left; margin-top:22px; margin-bottom:6px;">
+                    Ablation Study
+                  </h3>
+                  <figure class="image">
+                    <img
+                      src="https://ik.imagekit.io/lsh/Reaserch/OMEGA/Ablation.svg?updatedAt=1765270357021"
+                      alt="Ablation study"
+                      style="width:100%; height:auto; margin-top:4px;"
+                    >
+                  </figure>
+  
+                  <!-- Ego-kinematic distributions -->
+                  <h3 class="subtitle is-4" style="text-align:left; margin-top:22px; margin-bottom:6px;">
+                    Ego-Kinematic Distributions in Adversarial Scenarios
+                  </h3>
+  
+                  <p style="font-size:15px; margin-top:2px; margin-bottom:10px;">
+                    Joint distributions of ego speed with TTC, acceleration, jerk, and yaw rate are shown for
+                    ground truth, Nexus, and Nexus-\(\Omega_{\mathrm{Adv}}\).
+                    Marginal histograms use a logarithmic scale to highlight rare events.
+                    Nexus-\(\Omega_{\mathrm{Adv}}\) produces more short-TTC frames, shifts ego speeds toward lower and medium ranges,
+                    and broadens acceleration and jerk distributions, indicating stronger adversarial effects on ego motion.
+                  </p>
+  
+                  <figure class="image">
+                    <img
+                      src="https://ik.imagekit.io/lsh/Reaserch/OMEGA/EgoKinematicDistributions.svg?updatedAt=1765270359081"
+                      alt="Ego-kinematic distributions in adversarial scenarios"
+                      style="width:100%; height:auto; margin-top:4px;"
+                    >
+                  </figure>
+  
+                </details>
+  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <section class="hero is-light is-small">
+    <div class="hero-body ">
+      <div class="container is-two-thirds">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-two-thirds">
+            <h2 class="title is-2">More Qualitative Results</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== Qualitative Results (White Cards + Lightbox) ============== -->
+  <section class="section body">
+    <div class="container">
+
+      <div style="text-align:left; margin-top:-10px; margin-bottom:20px;">
+        <span style="font-size:13px; color:#666;">
+          Click any image to view in full resolution.
+        </span>
+      </div>
+
+      <!-- 2×2 Grid -->
+      <div class="columns is-multiline is-centered">
+
+        <!-- ======================= CARD 1 ======================= -->
+        <div class="column is-half" style="padding:12px;">
+          <div class="result-card"
+            style="
+              background:white;
+              border-radius:10px;
+              padding:16px 18px;
+              box-shadow:0 3px 10px rgba(0,0,0,0.06);
+              transition:all .18s ease-out;
+            "
+            onmouseover="this.style.boxShadow='0 6px 18px rgba(0,0,0,0.12)'; this.style.transform='translateY(-2px)';"
+            onmouseout="this.style.boxShadow='0 3px 10px rgba(0,0,0,0.06)'; this.style.transform='translateY(0)';"
+          >
+            
+            <span style="font-size:12px; font-weight:600; color:#3A63D0;">nuPlan</span>
+            <h2 class="subtitle is-4" style="margin-bottom:6px; text-align:left;">
+              Free Exploration
+            </h2>
+
+            <p style="font-size:14px; color:#555; line-height:1.55; margin-bottom:12px; text-align:justify;">
+              <strong>Top:</strong> Multiple inference runs from the same initial scene yield diverse future evolutions.  
+              <strong>Bottom:</strong> Additional scenarios illustrating broad variation in free exploration.
+            </p>
+
+            <figure class="image is-clickable" onclick="openLightbox(this)" style="cursor:pointer; margin:0;">
+              <img
+                src="https://ik.imagekit.io/lsh/Reaserch/OMEGA/Sup_norm_all.svg"
+                alt="Free exploration on nuPlan"
+                style="border-radius:6px;"
+                data-caption="Free Exploration on nuPlan — Diverse generated futures from identical starting states."
+              >
+            </figure>
+
+          </div>
+        </div>
+
+        <!-- ======================= CARD 2 ======================= -->
+        <div class="column is-half" style="padding:12px;">
+          <div class="result-card"
+            style="
+              background:white;
+              border-radius:10px;
+              padding:16px 18px;
+              box-shadow:0 3px 10px rgba(0,0,0,0.06);
+              transition:all .18s ease-out;
+            "
+            onmouseover="this.style.boxShadow='0 6px 18px rgba(0,0,0,0.12)'; this.style.transform='translateY(-2px)';"
+            onmouseout="this.style.boxShadow='0 3px 10px rgba(0,0,0,0.06)'; this.style.transform='translateY(0)';"
+          >
+
+            <span style="font-size:12px; font-weight:600; color:#3A63D0;">Waymo (Zero-shot)</span>
+            <h2 class="subtitle is-4" style="margin-bottom:6px; text-align:left;">
+              Free Exploration
+            </h2>
+
+            <p style="font-size:14px; color:#555; line-height:1.55; margin-bottom:12px; text-align:justify;">
+              <strong>Top:</strong> Zero-shot rollouts on Waymo produce diverse future evolutions.  
+              <strong>Bottom:</strong> Additional scenarios demonstrating strong cross-domain generalization.
+            </p>
+
+            <figure class="image is-clickable" onclick="openLightbox(this)" style="cursor:pointer; margin:0;">
+              <img
+                src="https://ik.imagekit.io/lsh/Reaserch/OMEGA/Sup_waymo_full.svg"
+                alt="Zero-shot free exploration on Waymo"
+                style="border-radius:6px;"
+                data-caption="Zero-shot Free Exploration on Waymo — Strong generalization producing diverse future scene evolutions."
+              >
+            </figure>
+
+          </div>
+        </div>
+
+        <!-- ======================= CARD 3 ======================= -->
+        <div class="column is-half" style="padding:12px;">
+          <div class="result-card"
+            style="
+              background:white;
+              border-radius:10px;
+              padding:16px 18px;
+              box-shadow:0 3px 10px rgba(0,0,0,0.06);
+              transition:all .18s ease-out;
+            "
+            onmouseover="this.style.boxShadow='0 6px 18px rgba(0,0,0,0.12)'; this.style.transform='translateY(-2px)';"
+            onmouseout="this.style.boxShadow='0 3px 10px rgba(0,0,0,0.06)'; this.style.transform='translateY(0)';"
+          >
+
+            <span style="font-size:12px; font-weight:600; color:#3A63D0;">nuPlan</span>
+            <h2 class="subtitle is-4" style="margin-bottom:6px; text-align:left;">
+              Goal-Conditioned Generation
+            </h2>
+
+            <p style="font-size:14px; color:#555; line-height:1.55; margin-bottom:12px; text-align:justify;">
+              <strong>Top:</strong> Different goal points yield diverse but consistent goal-directed behaviors.  
+              <strong>Bottom:</strong> Additional cases showing controllable, coherent multi-agent outcomes.
+            </p>
+
+            <figure class="image is-clickable" onclick="openLightbox(this)" style="cursor:pointer; margin:0;">
+              <img
+                src="https://ik.imagekit.io/lsh/Reaserch/OMEGA/Sup_goal_full.svg"
+                alt="Goal-conditioned scene generation"
+                style="border-radius:6px;"
+                data-caption="Goal-Conditioned Scene Generation — Consistent goal-directed outcomes under different user-defined goals."
+              >
+            </figure>
+
+          </div>
+        </div>
+
+        <!-- ======================= CARD 4 ======================= -->
+        <div class="column is-half" style="padding:12px;">
+          <div class="result-card"
+            style="
+              background:white;
+              border-radius:10px;
+              padding:16px 18px;
+              box-shadow:0 3px 10px rgba(0,0,0,0.06);
+              transition:all .18s ease-out;
+            "
+            onmouseover="this.style.boxShadow='0 6px 18px rgba(0,0,0,0.12)'; this.style.transform='translateY(-2px)';"
+            onmouseout="this.style.boxShadow='0 3px 10px rgba(0,0,0,0.06)'; this.style.transform='translateY(0)';"
+          >
+
+            <span style="font-size:12px; font-weight:600; color:#3A63D0;">nuPlan</span>
+            <h2 class="subtitle is-4" style="margin-bottom:6px; text-align:left;">
+              Adversarial Generation
+            </h2>
+
+            <p style="font-size:14px; color:#555; line-height:1.55; margin-bottom:12px; text-align:justify;">
+              <strong>Top:</strong> Different attacker identities generate distinct adversarial outcomes.  
+              <strong>Bottom:</strong> Nexus-Ω<sub>Adv</sub> adapts to attacker positions and produces plausible attack behaviors.
+            </p>
+
+            <figure class="image is-clickable" onclick="openLightbox(this)" style="cursor:pointer; margin:0;">
+              <img
+                src="https://ik.imagekit.io/lsh/Reaserch/OMEGA/Sup_adv_all.svg"
+                alt="Adversarial scene generation"
+                style="border-radius:6px;"
+                data-caption="Adversarial Scene Generation — ΩAdv adapts to attacker identity and position to produce realistic adversarial trajectories."
+              >
+            </figure>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== LIGHTBOX ===================== -->
+  <div id="lightboxOverlay"
+      onclick="closeLightbox()"
+      style="
+          display:none;
+          position:fixed;
+          top:0; left:0;
+          width:100%; height:100%;
+          background:rgba(0,0,0,0.88);
+          z-index:2000;
+          justify-content:center;
+          align-items:center;
+          padding:20px;
+      ">
+    <div style="max-width:96%; max-height:96%; display:flex; flex-direction:column; align-items:center;">
+      <img id="lightboxImg"
+          style="max-width:100%; max-height:80vh; border-radius:8px; box-shadow:0 8px 24px rgba(0,0,0,0.45);">
+      <p id="lightboxCaption"
+        style="margin-top:12px; font-size:14px; line-height:1.5; color:#f0f0f0; text-align:center;"></p>
+    </div>
+  </div>
+
+  <script>
+    function openLightbox(fig) {
+      const img = fig.querySelector('img');
+      document.getElementById("lightboxImg").src = img.src;
+      document.getElementById("lightboxCaption").innerText = img.getAttribute("data-caption") || "";
+      document.getElementById("lightboxOverlay").style.display = "flex";
+    }
+    function closeLightbox() {
+      document.getElementById("lightboxOverlay").style.display = "none";
+    }
+  </script>
+
+  
+
+
+
+  <section class="hero is-light is-small">
+    <div class="hero-body ">
+      <div class="container">
+        <div class="columns is-centered has-text-centered">
+          <div class="column">
+            <h2 class="title is-2">Ecosystem</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <!-- <h1 class="title is-2" style="text-align: center; padding-bottom: 10px;">Ecosystem</h1> -->
+          <!-- <h2 class="subtitle is-4" style="text-align: center;">Defining Visual Affordances</h2> -->
+          <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths ">
+          <div class="content has-text-justified">
+            
+            <p>
+              This work is part of a broader research program at 
+              <a target="_blank" href="https://opendrivelab.com/">OpenDriveLab</a> focusing on
+              large-scale simulation, scene generation, behavior modeling, and end-to-end training for autonomous driving.
+            </p>
+            <p>
+              Please stay tuned for more work from <a target="_blank" href="https://opendrivelab.com/">OpenDriveLab</a>: 
+              <a target="_blank" href="https://arxiv.org/abs/2506.09800">R2SE</a>, 
+              <a target="_blank" href="https://opendrivelab.com/ReSim">ReSim</a>, 
+              <a target="_blank" href="https://arxiv.org/abs/2504.10485">NEXUS</a>, 
+              <a target="_blank" href="https://arxiv.org/html/2503.12552v1">MTGS</a>, 
+              <a target="_blank" href="https://arxiv.org/abs/2503.11650">Centaur</a> .
+            </p>
+
+          </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section" id="BibTeX" style="margin-top: -60px;">
+    <div class="container is-max-desktop content">
+      <h2 class="titile">BibTeX</h2>
+      If you find the project helpful for your research, please consider citing our paper:
+      <pre><code>@article{li2025omega,
+        title={Optimization-Guided Diffusion for Interactive Scene Generation},
+        author={Shihao Li, Naisheng Ye, Tianyu Li, Kashyap Chitta, Tuo An, Peng Su, Boyang Wang, Haiou Liu, Chen Lv, and Hongyang Li},
+        journal={arXiv preprint arXiv:2512.07661},
+        year={2025}
+      }</code></pre>
+    </div>
+  </section>
+  
+  <br><br><br>
+
+<!-- <footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <br />
+      <p> Template from <a href="https://nerfies.github.io"><span class="dnerf">Nerfies</span></a>.</p>
+    </div>
+  </div>
+</footer> -->
+
+</body>
+</html>
+
+
