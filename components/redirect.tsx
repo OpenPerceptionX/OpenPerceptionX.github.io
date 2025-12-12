@@ -108,6 +108,11 @@ export default function Redirect() {
     ) {
         redirect('/AMS')
     }
+    if (
+        pathname.toLowerCase().startsWith('/wholebodyvLA')
+    ) {
+        redirect('/WholeBodyVLA')
+    }
 
 
 

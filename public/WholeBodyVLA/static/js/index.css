@@ -1,0 +1,321 @@
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+
+.footer .icon-link {
+    font-size: 25px;
+    color: #000;
+}
+
+.link-block a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.dnerf {
+  font-variant: small-caps;
+}
+
+
+.teaser .hero-body {
+  padding-top: 0;
+  padding-bottom: 3rem;
+}
+
+.teaser {
+  font-family: 'Google Sans', sans-serif;
+}
+
+
+.publication-title {
+}
+
+.publication-banner {
+  max-height: parent;
+
+}
+
+.publication-banner video {
+  position: relative;
+  left: auto;
+  top: auto;
+  transform: none;
+  object-fit: fit;
+}
+
+.publication-header .hero-body {
+}
+
+.publication-title {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-authors {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-venue {
+    color: #555;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.publication-awards {
+    color: #ff3860;
+    width: fit-content;
+    font-weight: bolder;
+}
+
+.publication-authors {
+}
+
+.publication-authors a {
+   color: hsl(204, 86%, 53%) !important;
+}
+
+.publication-authors a:hover {
+    text-decoration: underline;
+}
+
+.author-block {
+  display: inline-block;
+}
+
+.publication-banner img {
+}
+
+.publication-authors {
+  /*color: #4286f4;*/
+}
+
+.publication-video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+
+    overflow: hidden;
+    border-radius: 10px !important;
+}
+
+.publication-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.publication-body img {
+}
+
+
+
+
+
+.bilibili-hover .hover-text::after {
+  content: "BiliBili";
+}
+
+
+.bilibili-hover:hover .hover-text::after {
+  content: "一键三连(◍•ᴗ•◍)❤"; 
+  margin-left: 5px;
+}
+
+.bilibili-hover .hover-text {
+  transition: all 1s ease;
+}
+
+
+
+
+
+.caption-external {
+  text-align: center;
+}
+
+
+.caption-title {
+  margin-bottom: 0.5rem;
+  position: relative;
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: bold; 
+  color: #333;    
+}
+
+
+.caption-description {
+  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+  color: #666;
+  line-height: 1.6;
+}
+
+
+.results-carousel {
+  overflow: hidden;
+}
+
+.results-carousel .item {
+  margin: 0px;
+  overflow: hidden;
+  border: 0px solid #bbb;
+  border-radius: 12px;
+  padding: 5px;
+  margin: 5px;
+  font-size: 0;
+  background-color: #e4e4e4
+}
+
+.results-carousel video {
+  margin: 0;
+  height: 100%;
+  width: auto;
+  border-radius: 10px;
+}
+
+
+
+.interpolation-panel {
+  background: #f5f5f5;
+  border-radius: 10px;
+}
+
+.interpolation-panel .interpolation-image {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.interpolation-video-column {
+}
+
+.interpolation-panel .slider {
+  margin: 0 !important;
+}
+
+.interpolation-panel .slider {
+  margin: 0 !important;
+}
+
+#interpolation-image-wrapper {
+  width: 100%;
+}
+#interpolation-image-wrapper img {
+  border-radius: 5px;
+}
+
+
+.image-container img {
+  width: 50%;
+}
+
+.image-container h2 {
+  width: 60%;
+  text-align: center;
+}
+
+
+
+.cb-carousel {
+  position: relative;
+  width: 40%;
+  height: auto;
+  margin: 50px auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+
+.cb-slides {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.cb-slide {
+    position: relative;
+    flex: 0 0 100%;
+    min-width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+
+}
+
+.cb-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.cb-slide:hover img {
+    transform: scale(1.1);
+}
+
+.cb-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3rem;
+    pointer-events: none;
+}
+
+.cb-slide:hover .cb-mask {
+    display: flex;
+}
+
+.cb-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 10;
+    border: none;
+    font-size: 20px;
+}
+
+.cb-arrow.cb-prev {
+    left: 0;
+    border-radius: 0 5px 5px 0;
+}
+
+.cb-arrow.cb-next {
+    right: 0;
+    border-radius: 5px 0 0 5px;
+}
+
+
+@media (max-width: 768px) {
+  .cb-carousel {
+      width: 100%;
+  }
+
+  .caption-title {
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+
+  }
+  .image-container img {
+    width: 100%;
+  }
+
+  .image-container h2 {
+    width: 100%;
+  }
+  .cb-mask {
+    font-size: 2rem;
+
+}
+}

@@ -1,0 +1,2132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Web of WholeBodyVLA">
+  <meta name="keywords" content="Humanoid Robot Systems, Loco-manipulation">
+  <title>WholeBodyVLA: Towards Unified Latent VLA for Whole-body Loco-manipulation Control</title>
+
+  <!-- Stylesheets -->
+  <!-- 使用新 favicon，并加版本号避免浏览器缓存 -->
+  <link rel="icon" type="image/png" href="https://assets.kinetixai.cn/WholeBodyVLA/web_icon4.png?v=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #4361ee;
+      --secondary-color: #3a0ca3;
+      --success-color: #4cc9f0;
+      --danger-color: #f72585;
+      --light-bg: #f8f9fa;
+      --dark-text: #212529;
+      --card-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      --transition: all 0.3s ease;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--light-bg);
+      color: var(--dark-text);
+      line-height: 1.6;
+    }
+    
+    .navbar-menu {
+      background-color: rgba(128, 128, 128, 0.3);
+    }
+    
+    .hero-video {
+      background-color: black;
+    }
+    
+    .blue-text {
+      color: rgb(25, 106, 226);
+    }
+    
+    .green-text {
+      color: rgb(0, 116, 124);
+    }
+    
+    .yellow-text {
+      color: rgb(202, 138, 0);
+    }
+    
+    /* Left Navigation Bar Styles */
+    .left-nav {
+      position: fixed;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1000;
+      background-color: rgba(255, 255, 255, 0.95);
+      border-radius: 0 10px 10px 0;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+      padding: 10px 5px;
+      transition: all 0.3s ease;
+    }
+    
+    .left-nav.collapsed {
+      transform: translateY(-50%) translateX(-90%);
+    }
+    
+    .left-nav-toggle {
+      position: absolute;
+      right: -30px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(255, 255, 255, 0.95);
+      border-radius: 0 5px 5px 0;
+      padding: 10px 5px;
+      cursor: pointer;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+      width: 30px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .left-nav-menu {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .left-nav-item {
+      margin: 10px 0;
+      text-align: center;
+    }
+    
+    .left-nav-link {
+      display: block;
+      padding: 8px 12px;
+      color: #333;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+    
+    .left-nav-link:hover {
+      background-color: rgba(67, 97, 238, 0.1);
+      color: #4361ee;
+    }
+    
+    .left-nav-link.active {
+      background-color: #4361ee;
+      color: white;
+    }
+    
+    /* Content Sections */
+    .header {
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        color: white;
+        padding: 3rem 0;
+        margin-bottom: 2rem;
+        border-radius: 0 0 20px 20px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    .task-section {
+      background-color: white;
+      border-radius: 15px;
+      padding: 2rem;
+      margin-bottom: 3rem;
+      box-shadow: var(--card-shadow);
+      transition: var(--transition);
+    }
+    
+    .task-section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+    
+    .task-title {
+      color: var(--secondary-color);
+      border-left: 5px solid var(--primary-color);
+      padding-left: 15px;
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+    }
+    
+    .subsection-title {
+      color: var(--primary-color);
+      margin: 1.5rem 0 1rem;
+      font-weight: 600;
+      text-align: center;
+    }
+    
+    .video-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      margin-bottom: 1.5rem;
+      transition: var(--transition);
+      overflow: hidden;
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+    
+    .video-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+    
+    .video-container {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 Aspect Ratio */
+      background-color: #000;
+    }
+    
+    .video-container video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 12px 12px 0 0;
+    }
+    
+    .video-caption {
+      padding: 1.2rem;
+      text-align: center;
+      font-weight: 500;
+      background-color: rgba(67, 97, 238, 0.03);
+    }
+    
+    .success-badge {
+      background-color: var(--success-color);
+      color: white;
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+    }
+    
+    .failure-badge {
+      background-color: var(--danger-color);
+      color: white;
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+    }
+    
+    .section-title {
+      color: var(--secondary-color);
+      border-left: 5px solid var(--primary-color);
+      padding-left: 15px;
+      margin: 2.5rem 0 1.5rem;
+      font-weight: 700;
+    }
+    
+    /* 可点击锚点标题样式 */
+    .anchor-heading {
+      position: relative;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block; /* 使下划线宽度只覆盖文字而不是整行 */
+      transition: color 0.2s ease;
+    }
+
+    .anchor-heading::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background-color: currentColor;
+      transition: width 0.2s ease;
+    }
+
+    .anchor-heading:hover::after {
+      width: 100%;
+    }
+
+    .anchor-heading:hover {
+      /* 使用比 primary 更浅的蓝色，保证深蓝/浅蓝标题都有明显变化 */
+      color: #6ea8ff;
+    }
+
+    /* 复制提示气泡 */
+    .copy-anchor-toast {
+      position: fixed;
+      left: 50%;
+      bottom: 24px;
+      transform: translateX(-50%);
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: rgba(33, 37, 41, 0.92);
+      color: #ffffff;
+      font-size: 0.9rem;
+      z-index: 2000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    .copy-anchor-toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(-4px);
+    }
+    
+    .grid-section {
+      background-color: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    }
+    
+    .experiment-highlight {
+      border-left: 4px solid var(--danger-color);
+      background-color: rgba(231, 76, 60, 0.05);
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .footer {
+      background-color: var(--secondary-color);
+      color: white;
+      padding: 2rem 0;
+      margin-top: 3rem;
+      text-align: center;
+      border-radius: 20px 20px 0 0;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .left-nav {
+        display: none; /* Hide on mobile to avoid UI clutter */
+      }
+      
+      .header {
+        padding: 2rem 0;
+      }
+      
+      .task-section {
+        padding: 1.5rem;
+      }
+      
+      .section-title {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Left Navigation Bar -->
+<style>
+  /* 超明显测试：你应该立刻看到 Reviewer 背景变蓝 */
+  nav.left-nav .left-nav-heading {
+    margin-top: 14px;
+    margin-bottom: 4px;
+    padding: 4px 6px;
+
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: none;
+    /* 顶层标题与子项风格更接近：浅色背景 + 蓝色文字 */
+    color: #4361ee;
+    background: rgba(67, 97, 238, 0.06);
+    border-left: 3px solid rgba(67, 97, 238, 0.35);
+    border-radius: 4px;
+  }
+
+  nav.left-nav .left-nav-subitem {
+    padding-left: 16px;
+    margin: 2px 0;
+    position: relative;
+  }
+
+  nav.left-nav .left-nav-subitem::before {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 7px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: rgba(200, 210, 255, 0.4);
+  }
+
+  nav.left-nav .left-nav-link {
+    display: block;
+    font-size: 11px;
+    color: #666666; /* 子项改为更清晰的浅灰色 */
+    text-decoration: none;
+    padding: 1px 4px;
+    border-radius: 3px;
+    transition: 0.12s ease;
+  }
+
+  /* 导航里括号及 reviewer 编号：整体比主标题更小一号 */
+  nav.left-nav .left-nav-reviewers {
+    font-size: 8px;
+    margin-left: 0;
+    color: #a5a5a5; /* 括号和逗号为浅灰色，编号颜色由各自类覆盖 */
+    opacity: 0.9;   /* 整体稍微再淡一点 */
+  }
+
+  /* 选中状态下的子项：文字改为白色，保证对比度 */
+  nav.left-nav .left-nav-link.active {
+    color: #ffffff;
+    font-weight: 600;
+  }
+
+  nav.left-nav .left-nav-link:hover {
+    background: rgba(110, 150, 255, 0.25);
+    color: #ffffff;
+    transform: translateX(2px);
+  }
+
+  /* Reviewer response notes under video titles */
+  .reviewer-note {
+    font-size: 0.9rem;
+    color: #777777;
+    margin-top: 4px;
+  }
+
+  .reviewer-c1fr {
+    color: #7BCFA5; /* light green */
+  }
+
+  .reviewer-n1ib {
+    color: #F4A261; /* light orange */
+  }
+
+  .reviewer-76f3 {
+    color: #7FB4FF; /* light blue */
+  }
+
+  .reviewer-1asv {
+    color: #F4A3C4; /* light pink */
+  }
+</style>
+
+<nav class="left-nav" id="leftNav">
+  <div class="left-nav-toggle" id="navToggle">
+    <i class="fas fa-chevron-right" id="toggleIcon"></i>
+  </div>
+
+  <ul class="left-nav-menu">
+    <!-- Method Overview -->
+    <li class="left-nav-heading">
+      <a href="#method" class="left-nav-link">
+        Method Overview
+      </a>
+    </li>
+
+    <!-- Real-world Demos（该部分没有特定 reviewer） -->
+    <li class="left-nav-heading">
+      <a href="#demos" class="left-nav-link">
+        Real-world Demos
+      </a>
+    </li>
+
+    <!-- Generalization -->
+    <li class="left-nav-heading">
+      <a href="#generalization" class="left-nav-link">
+        Generalization
+      </a>
+    </li>
+    <li class="left-nav-subitem">
+      <a href="#obj-gen" class="left-nav-link">
+        Object Generalization
+        <span class="left-nav-reviewers"></span>
+      </a>
+    </li>
+    <li class="left-nav-subitem">
+      <a href="#dist-gen" class="left-nav-link">
+        Start-Pose Generalization
+        <span class="left-nav-reviewers"></span>
+      </a>
+    </li>
+    <li class="left-nav-subitem">
+      <a href="#terrain-gen" class="left-nav-link">
+        Terrain Generalization
+        <span class="left-nav-reviewers"></span>
+      </a>
+    </li>
+
+    <!-- Navigation Capabilities -->
+    <li class="left-nav-heading">
+      <a href="#navigation" class="left-nav-link">
+        Navigation
+        <span class="left-nav-reviewers"></span>
+      </a>
+    </li>
+
+    <!-- Long-Horizon -->
+    <li class="left-nav-heading">
+      <a href="#manipulation" class="left-nav-link">
+        Long-Horizon
+        <span class="left-nav-reviewers"></span>
+      </a>
+    </li>
+
+    <!-- What's More -->
+    <li class="left-nav-heading">
+      <a href="#more" class="left-nav-link">
+        What's More
+        <span class="left-nav-reviewers"></span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+
+  <!-- Hero Section -->
+  <section class="hero is-link is-fullheight video" id="home" style="overflow: hidden;">
+    <div class="hero-video" style="
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    ">
+      <video playsinline autoplay muted loop style="
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      ">
+        <source src="https://assets.kinetixai.cn/WholeBodyVLA/long.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="hero-video is-hidden-tablet is-inline-block-mobile" style="
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    ">
+      <video playsinline autoplay muted loop style="
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      ">
+        <source src="https://assets.kinetixai.cn/WholeBodyVLA/long.mp4" type="video/mp4">
+      </video>
+    </div>
+    
+    <div class="overlay"></div>
+    
+    <div class="hero-head">
+      <header class="navbar-menu">
+        <div class="container is-size-5" style="max-width: 500px; margin: 0 auto;">
+          <div class="navbar-start" style="flex-grow: 1; justify-content: center; gap: 20px;">
+            <a class="navbar-item" href="#demos" style="justify-content: center;">
+              <span class="icon" style="margin-right:5px;">
+                <i class="fas fa-video"></i>
+              </span>
+              <span>Video</span>
+            </a>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h1 class="title is-1 publication-title is-size-2-mobile" style="font-size: 5rem;">
+          WholeBodyVLA
+        </h1>
+        <h1 class="title is-1 publication-title is-size-5-mobile" style="font-size: 2.8rem;">
+          <small>Towards Unified Latent VLA for Whole-body Loco-manipulation Control</small>
+        </h1>
+      </div>
+    </div>
+
+    <div class="hero-foot">
+      <div class="container has-text-centered">
+        <h1 class="title is-size-7-mobile" style="font-size: 1.5rem;">
+          ▼ Scroll down the page to find more ▼<br><br>
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- Overview Section -->
+  <section class="hero teaser" id="teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <div align="center">
+          <img src="https://assets.kinetixai.cn/WholeBodyVLA/teaser.png" alt="WholeBodyVLA Overview" width="100%">
+        </div>  
+        <br> 
+        <h2 class="subtitle">
+          <div class="content has-text-justified">
+            <strong> Overview of WholeBodyVLA. </strong> Introducing WholeBodyVLA, a humanoid system that operates on Agibot X2 robot and
+            performs end-to-end humanoid loco–manipulation in large space for the first time. The proposed
+            system achieves consecutive tasks autonomously, including (a-c) basic bimanual grasping, side-step
+            toward the box, and squatting to place; (d-e) squatting to grasp and lift the box and turning to place
+            the box onto the cart; (f-h) grasping the cart handle, pushing the cart forward, and pushing a load of
+            more than 50 kg.
+          </div>
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- Method Section -->
+  <section class="section body" id="method">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <h1 class="title is-2" style="text-align: center; padding-bottom: 10px;">Method Overview</h1>
+        <div align="center">
+          <img src="https://assets.kinetixai.cn/WholeBodyVLA/method_wbvla.png" alt="WholeBodyVLA Method" width="100%">
+        </div>  
+        <br> 
+        <h2 class="subtitle">
+          <div class="content has-text-justified">
+            <strong> Pipeline of WholeBodyVLA. </strong>  LAM is pretrained on manipulation and manipulation-
+            aware locomotion videos, yielding unified latent supervision for the VLM. Meanwhile, the LMO
+            RL policy is trained for precise and stable locomotion under disturbances. At runtime, egocentric
+            images and language instructions are encoded by the VLM into latent action tokens, which are
+            decoded (∼ 10 Hz )into (i) dual-arm joint actions and (ii) locomotion commands executed by LMO
+            at 50 Hz, enabling robust whole-body loco–manipulation.
+          </div>
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- Real-world Demos Section -->
+  <section id="demos">
+
+    <header class="header text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Real-world Demos</h1>
+            <p class="lead">WholeBodyVLA Performance in Complex Tasks</p>
+        </div>
+    </header>
+
+    <div class="container">
+      <!-- Task 1: Bag Packing -->
+      <section id="task1" class="task-section">
+        <h2 class="task-title">Task 1: Bag Packing</h2>
+        
+        <!-- Success Cases -->
+        <h3 class="subsection-title">
+          <span class="success-badge">
+            <i class="fas fa-check-circle me-2"></i>Our Success Cases
+          </span>
+        </h3>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="video-card">
+              <div class="video-container">
+                  <video
+                    id="t1s1-video"
+                    playsinline
+                    webkit-playsinline
+                    autoplay
+                    muted
+                    loop
+                    preload="auto"
+                    style="width: 100%; height: 100%; object-fit: cover; object-position: center;"
+                  >
+                  <source src="https://assets.kinetixai.cn/WholeBodyVLA/1_480p.mov" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="video-caption">WholeBodyVLA (ours)</div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="video-card">
+              <div class="video-container">
+                  <video
+                    id="t1s2-video"
+                    playsinline
+                    webkit-playsinline
+                    autoplay
+                    muted
+                    loop
+                    preload="auto"
+                    style="width: 100%; height: 100%; object-fit: cover; object-position: center;"
+                  >
+                  <source src="https://assets.kinetixai.cn/WholeBodyVLA/8_480p.mov" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="video-caption">WholeBodyVLA under visual variation</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Failure Cases -->
+        <h3 class="subsection-title">
+          <span class="failure-badge">
+            <i class="fas fa-times-circle me-2"></i>Failure Cases of Baseline Methods
+          </span>
+        </h3>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="video-card">
+              <div class="video-container">
+                  <video
+                    id="t1f1-video"
+                    playsinline
+                    webkit-playsinline
+                    autoplay
+                    muted
+                    loop
+                    preload="auto"
+                    style="width: 100%; height: 100%; object-fit: cover; object-position: center;"
+                  >
+                  <source src="https://assets.kinetixai.cn/WholeBodyVLA/4_480p.mov" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="video-caption">❌ Stumble to stop</div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="video-card">
+              <div class="video-container">
+                  <video
+                    id="t1f2-video"
+                    playsinline
+                    webkit-playsinline
+                    autoplay
+                    muted
+                    loop
+                    preload="auto"
+                    style="width: 100%; height: 100%; object-fit: cover; object-position: center;"
+                  >
+                  <source src="https://assets.kinetixai.cn/WholeBodyVLA/7_480p.mov" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="video-caption">❌ Lose balance and kick the box</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Task 2: Box Loading -->
+      <section id="task2" class="task-section">
+        <h2 class="task-title">Task 2: Box Loading</h2>
+        
+        <!-- Success Cases -->
+        <h3 class="subsection-title">
+          <span class="success-badge">
+            <i class="fas fa-check-circle me-2"></i>Our Success Cases
+          </span>
+        </h3>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="video-card">
+              <div class="video-container">
+                  <video
+                    id="t2s1-video"
+                    playsinline
+                    webkit-playsinline
+                    autoplay
+                    muted
+                    loop
+                    preload="auto"
+                    style="width: 100%; height: 100%; object-fit: cover; object-position: center;"
+                  >
+                  <source src="https://assets.kinetixai.cn/WholeBodyVLA/task2_1_480p.mov" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="video-caption">WholeBodyVLA (ours)</div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="video-card">
+              <div class="video-container">
+                  <video
+                    id="t2s2-video"
+                    playsinline
+                    webkit-playsinline
+                    autoplay
+                    muted
+                    loop
+                    preload="auto"
+                    style="width: 100%; height: 100%; object-fit: cover; object-position: center;"
+                  >
+                  <source src="https://assets.kinetixai.cn/WholeBodyVLA/task2_4_480p.mov" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="video-caption">WholeBodyVLA under unseen object</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Failure Cases -->
+        <h3 class="subsection-title">
+          <span class="failure-badge">
+            <i class="fas fa-times-circle me-2"></i>Failure Cases of Baseline Methods
+          </span>
+        </h3>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="video-card">
+              <div class="video-container">
+                  <video
+                    id="t2f1-video"
+                    playsinline
+                    webkit-playsinline
+                    autoplay
+                    muted
+                    loop
+                    preload="auto"
+                    style="width: 100%; height: 100%; object-fit: cover; object-position: center;"
+                  >
+                  <source src="https://assets.kinetixai.cn/WholeBodyVLA/task2_6_480p.mov" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="video-caption">❌ Stumble to stop</div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="video-card">
+              <div class="video-container">
+                  <video
+                    id="t2f2-video"
+                    playsinline
+                    webkit-playsinline
+                    autoplay
+                    muted
+                    loop
+                    preload="auto"
+                    style="width: 100%; height: 100%; object-fit: cover; object-position: center;"
+                  >
+                  <source src="https://assets.kinetixai.cn/WholeBodyVLA/task2_7_480p.mov" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="video-caption">❌ Lose balance and deviate greatly from the intended direction</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Task 3: Cart Pushing -->
+      <section id="task3" class="task-section">
+        <h2 class="task-title">Task 3: Cart Pushing</h2>
+        
+        <!-- Success Cases -->
+        <h3 class="subsection-title">
+          <span class="success-badge">
+            <i class="fas fa-check-circle me-2"></i>Our Success Cases
+          </span>
+        </h3>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="video-card">
+              <div class="video-container">
+                  <video
+                    id="t3s1-video"
+                    playsinline
+                    webkit-playsinline
+                    autoplay
+                    muted
+                    loop
+                    preload="auto"
+                    style="width: 100%; height: 100%; object-fit: cover; object-position: center;"
+                  >
+                  <source src="https://assets.kinetixai.cn/WholeBodyVLA/task3_1_480p.mov" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="video-caption">WholeBodyVLA (ours)</div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="video-card">
+              <div class="video-container">
+                  <video
+                    id="t3s2-video"
+                    playsinline
+                    webkit-playsinline
+                    autoplay
+                    muted
+                    loop
+                    preload="auto"
+                    style="width: 100%; height: 100%; object-fit: cover; object-position: center;"
+                  >
+                  <source src="https://assets.kinetixai.cn/WholeBodyVLA/task3_8_480p.mov" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="video-caption">WholeBodyVLA under unseen heavy load</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Failure Cases -->
+        <h3 class="subsection-title">
+          <span class="failure-badge">
+            <i class="fas fa-times-circle me-2"></i>Failure Cases of Baseline Methods
+          </span>
+        </h3>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="video-card">
+              <div class="video-container">
+                  <video
+                    id="t3f1-video"
+                    playsinline
+                    webkit-playsinline
+                    autoplay
+                    muted
+                    loop
+                    preload="auto"
+                    style="width: 100%; height: 100%; object-fit: cover; object-position: center;"
+                  >
+                  <source src="https://assets.kinetixai.cn/WholeBodyVLA/task3_2_480p.mov" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="video-caption">❌ Deviate from the right direction</div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="video-card">
+              <div class="video-container">
+                  <video
+                    id="t3f2-video"
+                    playsinline
+                    webkit-playsinline
+                    autoplay
+                    muted
+                    loop
+                    preload="auto"
+                    style="width: 100%; height: 100%; object-fit: cover; object-position: center;"
+                  >
+                  <source src="https://assets.kinetixai.cn/WholeBodyVLA/task3_7_480p.mov" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="video-caption">❌ Stop too late</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <!-- Generalization Experiments -->
+  <section id="generalization">
+    <header class="header text-center">
+      <div class="container">
+        <h1 class="display-4 fw-bold">Experiments on Robot Generalization and Capability Showcases</h1>
+        <p class="lead">Adaptability & Scalability</p>
+      </div>
+    </header>
+
+    <div class="container">
+      <section class="mb-5">
+        <h2 class="section-title">Generalization Experiments</h2>
+        
+        <div class="grid-section">
+          <h3 class="subsection-title" id="obj-gen">1. Object Generalization</h3>
+          <p class="has-text-grey reviewer-note">Demonstrate WholeBodyVLA's robustness to variations in objects appearance and position, layout, and table color.</p>
+          <div class="row">
+            <div class="col-md-8 mx-auto">
+              <div class="video-card">
+                <div class="video-container">
+                  <video
+                    id="obj-gen-video"
+                    playsinline
+                    webkit-playsinline
+                    autoplay
+                    muted
+                    loop
+                    preload="auto"
+                    style="width: 100%; height: 100%; object-fit: cover; object-position: center;"
+                  >
+                    <source src="https://assets.kinetixai.cn/WholeBodyVLA/intervene.mp4" type="video/mp4">
+                    Video format not supported.
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="grid-section">
+          <h3 class="subsection-title" id="dist-gen">2. Start-Pose Generalization</h3>
+          <p class="has-text-grey reviewer-note">Showcase WholeBodyVLA's ability to compose forward advancing, sidestepping, turning, and squatting to handle diverse start-poses (X/Y offsets, orientations, and table heights).</p>
+          
+          <h4 class="mt-4">Distance X-Axis</h4>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="video-card">
+                <div class="video-container">
+                  <video
+                    id="dist-x-gen1-video"
+                    playsinline
+                    webkit-playsinline
+                    autoplay
+                    muted
+                    loop
+                    preload="auto"
+                    style="width: 100%; height: 100%; object-fit: cover; object-position: center;"
+                  >
+                    <source src="https://assets.kinetixai.cn/WholeBodyVLA/head1.mp4" type="video/mp4">
+                    Video format not supported.
+                  </video>
+                </div>
+                <div class="video-caption">X-axis Distance Generalization Experiment 1</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="video-card">
+                <div class="video-container">
+                  <video
+                    id="dist-x-gen2-video"
+                    playsinline
+                    webkit-playsinline
+                    autoplay
+                    muted
+                    loop
+                    preload="auto"
+                    style="width: 100%; height: 100%; object-fit: cover; object-position: center;"
+                  >
+                    <source src="https://assets.kinetixai.cn/WholeBodyVLA/head2.mp4" type="video/mp4">
+                    Video format not supported.
+                  </video>
+                </div>
+                <div class="video-caption">X-axis Distance Generalization Experiment 2 (w/ unseen table color)</div>
+              </div>
+            </div>
+          </div>
+          
+          <h4 class="mt-4">Distance Y-Axis</h4>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="video-card">
+                <div class="video-container">
+                  <video
+                    id="dist-y-gen1-video"
+                    playsinline
+                    webkit-playsinline
+                    autoplay
+                    muted
+                    loop
+                    preload="auto"
+                    style="width: 100%; height: 100%; object-fit: cover; object-position: center;"
+                  >
+                    <source src="https://assets.kinetixai.cn/WholeBodyVLA/sidestep2.mp4" type="video/mp4">
+                    Video format not supported.
+                  </video>
+                </div>
+                <div class="video-caption">Y-axis Distance Generalization Experiment 1</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="video-card">
+                <div class="video-container">
+                  <video
+                    id="dist-y-gen2-video"
+                    playsinline
+                    webkit-playsinline
+                    autoplay
+                    muted
+                    loop
+                    preload="auto"
+                    style="width: 100%; height: 100%; object-fit: cover; object-position: center;"
+                  >
+                    <source src="https://assets.kinetixai.cn/WholeBodyVLA/sidestep1.mp4" type="video/mp4">
+                    Video format not supported.
+                  </video>
+                </div>
+                <div class="video-caption">Y-axis Distance Generalization Experiment 2 (w/ unseen table color)</div>
+              </div>
+            </div>
+          </div>
+          
+          <h4 class="mt-4">Orientation</h4>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="video-card">
+                <div class="video-container">
+                  <video
+                    id="dist-o-gen1-video"
+                    playsinline
+                    webkit-playsinline
+                    autoplay
+                    muted
+                    loop
+                    preload="auto"
+                    style="width: 100%; height: 100%; object-fit: cover; object-position: center;"
+                  >
+                    <source src="https://assets.kinetixai.cn/WholeBodyVLA/turn1.mp4" type="video/mp4">
+                    Video format not supported.
+                  </video>
+                </div>
+                <div class="video-caption">Orientation Generalization Experiment 1</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="video-card">
+                <div class="video-container">
+                  <video
+                    id="dist-o-gen2-video"
+                    playsinline
+                    webkit-playsinline
+                    autoplay
+                    muted
+                    loop
+                    preload="auto"
+                    style="width: 100%; height: 100%; object-fit: cover; object-position: center;"
+                  >
+                    <source src="https://assets.kinetixai.cn/WholeBodyVLA/turn2.mp4" type="video/mp4">
+                    Video format not supported.
+                  </video>
+                </div>
+                <div class="video-caption">Orientation Generalization Experiment 2 (w/ unseen table color)</div>
+              </div>
+            </div>
+          </div>
+          
+          <h4 class="mt-4">Height</h4>
+          <div class="row">
+            <div class="col-md-6 mx-auto">
+              <div class="video-card">
+                <div class="video-container">
+                  <video
+                    id="dist-h-gen-video"
+                    playsinline
+                    webkit-playsinline
+                    autoplay
+                    muted
+                    loop
+                    preload="auto"
+                    style="width: 100%; height: 100%; object-fit: cover; object-position: center;"
+                  >
+                    <source src="https://assets.kinetixai.cn/WholeBodyVLA/squat.mp4" type="video/mp4">
+                    Video format not supported.
+                  </video>
+                </div>
+                <div class="video-caption">Height Generalization Experiment</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-section">
+          <h3 class="subsection-title" id="terrain-gen">3. Terrian Generalization</h3>
+          <p class="has-text-grey reviewer-note">Demonstrate WholeBodyVLA's ability to traverse uneven terrain.</p>
+          <div class="row">
+            <div class="col-md-8 mx-auto">
+              <div class="video-card">
+                <div class="video-container">
+                  <video
+                    id="terrian-video"
+                    playsinline
+                    webkit-playsinline
+                    autoplay
+                    muted
+                    loop
+                    preload="auto"
+                    style="width: 100%; height: 100%; object-fit: cover; object-position: center;"
+                  >
+                    <source src="https://assets.kinetixai.cn/WholeBodyVLA/terrian.mp4" type="video/mp4">
+                    Video format not supported.
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </div>
+  </section>
+
+  <!-- Navigation Capabilities -->
+  <section id="navigation">
+    <div class="container">
+      <section class="mb-5">
+        <h2 class="section-title" id="nav-cap">Navigation Capabilities</h2>
+        <p class="has-text-grey reviewer-note">Showcase WholeBodyVLA's visual navigation and obstacle-avoidance capabilities over long trajectories.</p>
+        
+        <div class="row">
+          <div class="col-md-6">
+            <div class="video-card">
+              <div class="video-container">
+                  <video
+                    id="navi-video"
+                    playsinline
+                    webkit-playsinline
+                    autoplay
+                    muted
+                    loop
+                    preload="auto"
+                    style="width: 100%; height: 100%; object-fit: cover; object-position: center;"
+                  >
+                  <source src="https://assets.kinetixai.cn/WholeBodyVLA/navi.mp4" type="video/mp4">
+                  Video format not supported.
+                </video>
+              </div>
+              <div class="video-caption">Visual Navigation, Sign Following</div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="video-card">
+              <div class="video-container">
+                  <video
+                    id="goaround-video"
+                    playsinline
+                    webkit-playsinline
+                    autoplay
+                    muted
+                    loop
+                    preload="auto"
+                    style="width: 100%; height: 100%; object-fit: cover; object-position: center;"
+                  >
+                  <source src="https://assets.kinetixai.cn/WholeBodyVLA/goaround.mp4" type="video/mp4">
+                  Video format not supported.
+                </video>
+              </div>
+              <div class="video-caption">Obstacle Avoidance</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <!-- Long-Horizon Bimanual Manipulation -->
+  <section id="manipulation">
+    <div class="container">
+      <section class="mb-5">
+        <h2 class="section-title" id="long-horizon">Long-Horizon Bimanual Manipulation</h2>
+        <p class="has-text-grey reviewer-note">Demonstrate WholeBodyVLA's competence on long-horizon sequences that involve loco-manipualtion and whole-body coordinated actions.</p>
+        
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+            <div class="video-card">
+              <div class="video-container">
+                  <video
+                    id="long-video"
+                    playsinline
+                    webkit-playsinline
+                    autoplay
+                    muted
+                    loop
+                    preload="auto"
+                    style="width: 100%; height: 100%; object-fit: cover; object-position: center;"
+                  >
+                  <source src="https://assets.kinetixai.cn/WholeBodyVLA/long.mp4" type="video/mp4">
+                  Video format not supported.
+                </video>
+              </div>
+              <div class="video-caption">Long-Horizon Bimanual Manipulation with Coordination</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <!-- More Demos -->
+  <section id="more">
+    <div class="container">
+      <section class="mb-5">
+        <h2 class="section-title" id="whats-more">What's More</h2>
+        <p class="has-text-grey reviewer-note">Showcase WholeBodyVLA's scalability to more complex everyday loco-manipulation tasks (e.g., wiping, vacuum cleaning, etc).</p>
+        
+        <div class="row">
+          <!-- coffee -->
+          <div class="col-md-4">
+            <div class="video-card">
+              <div class="video-container">
+                  <video
+                    id="coffe-video"
+                    playsinline
+                    webkit-playsinline
+                    autoplay
+                    muted
+                    loop
+                    preload="auto"
+                    style="width: 100%; height: 100%; object-fit: cover; object-position: center;"
+                  >
+                  <source src="https://assets.kinetixai.cn/WholeBodyVLA/ex-coffe.mp4" type="video/mp4">
+                  Video format not supported.
+                </video>
+              </div>
+            </div>
+          </div>
+          <!-- vacuum cleaning -->
+          <div class="col-md-4">
+            <div class="video-card">
+              <div class="video-container">
+                  <video
+                    id="clean-video"
+                    playsinline
+                    webkit-playsinline
+                    autoplay
+                    muted
+                    loop
+                    preload="auto"
+                    style="width: 100%; height: 100%; object-fit: cover; object-position: center;"
+                  >
+                  <source src="https://assets.kinetixai.cn/WholeBodyVLA/ex-clean.mp4" type="video/mp4">
+                  Video format not supported.
+                </video>
+              </div>
+            </div>
+          </div>
+          <!-- watering -->
+          <div class="col-md-4">
+            <div class="video-card">
+              <div class="video-container">
+                  <video
+                    id="water-video"
+                    playsinline
+                    webkit-playsinline
+                    autoplay
+                    muted
+                    loop
+                    preload="auto"
+                    style="width: 100%; height: 100%; object-fit: cover; object-position: center;"
+                  >
+                  <source src="https://assets.kinetixai.cn/WholeBodyVLA/ex-water.mp4" type="video/mp4">
+                  Video format not supported.
+                </video>
+              </div>
+            </div>
+          </div>
+          <!-- squat grasping -->
+          <div class="col-md-4">
+            <div class="video-card">
+              <div class="video-container">
+                  <video
+                    id="chair-video"
+                    playsinline
+                    webkit-playsinline
+                    autoplay
+                    muted
+                    loop
+                    preload="auto"
+                    style="width: 100%; height: 100%; object-fit: cover; object-position: center;"
+                  >
+                  <source src="https://assets.kinetixai.cn/WholeBodyVLA/ex-chair.mp4" type="video/mp4">
+                  Video format not supported.
+                </video>
+              </div>
+            </div>
+          </div>
+          <!-- pushchair -->
+          <div class="col-md-4">
+            <div class="video-card">
+              <div class="video-container">
+                  <video
+                    id="stair-video"
+                    playsinline
+                    webkit-playsinline
+                    autoplay
+                    muted
+                    loop
+                    preload="auto"
+                    style="width: 100%; height: 100%; object-fit: cover; object-position: center;"
+                  >
+                  <source src="https://assets.kinetixai.cn/WholeBodyVLA/ex-stair.mp4" type="video/mp4">
+                  Video format not supported.
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p class="mb-0">WholeBodyVLA Research &copy; 2025</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Navigation functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const leftNav = document.getElementById('leftNav');
+      const navToggle = document.getElementById('navToggle');
+      const toggleIcon = document.getElementById('toggleIcon');
+      const navLinks = document.querySelectorAll('.left-nav-link');
+      
+      // Toggle navigation visibility
+      navToggle.addEventListener('click', function() {
+        leftNav.classList.toggle('collapsed');
+        toggleIcon.classList.toggle('fa-chevron-right');
+        toggleIcon.classList.toggle('fa-chevron-left');
+      });
+      
+      // Smooth scrolling for navigation links（统一用浏览器默认的定位逻辑）
+      navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+
+            // 同时更新地址栏 hash，但不触发页面刷新
+            if (history && history.pushState) {
+              history.pushState(null, '', targetId);
+            } else {
+              window.location.hash = targetId;
+            }
+          } else {
+            // 兜底：如果没找到元素，就直接修改 hash，交给浏览器处理
+            window.location.hash = targetId;
+          }
+
+          // Update active link
+          navLinks.forEach(l => l.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+      
+      // Update active link on scroll
+      window.addEventListener('scroll', function() {
+        const scrollPosition = window.scrollY;
+        
+        // Find the current section in view
+        let currentSection = '';
+        const sections = document.querySelectorAll('section[id]');
+        
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          
+          if (scrollPosition >= (sectionTop - 100)) {
+            currentSection = section.getAttribute('id');
+          }
+        });
+        
+        // Update active link
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + currentSection) {
+            link.classList.add('active');
+          }
+        });
+      });
+
+      // =========================
+      // 标题锚点复制功能
+      // =========================
+      const anchorHeadings = document.querySelectorAll(
+        'section#method h1.title, h1.display-4, h2.section-title, h2.task-title, h3.subsection-title#obj-gen, h3.subsection-title#dist-gen, h3.subsection-title#terrain-gen'
+      );
+
+      let copyToast = null;
+      let copyToastTimer = null;
+
+      function showCopyToast(message) {
+        if (!copyToast) {
+          copyToast = document.createElement('div');
+          copyToast.className = 'copy-anchor-toast';
+          document.body.appendChild(copyToast);
+        }
+
+        copyToast.textContent = message || '已复制当前段落链接';
+        copyToast.classList.add('show');
+
+        if (copyToastTimer) {
+          clearTimeout(copyToastTimer);
+        }
+
+        copyToastTimer = setTimeout(function() {
+          copyToast.classList.remove('show');
+        }, 1600);
+      }
+
+      anchorHeadings.forEach(function(heading) {
+        // 优先使用标题自身的 id，否则回退到最近的 section[id]
+        var anchorId = heading.getAttribute('id');
+        if (!anchorId) {
+          var parentSection = heading.closest('section[id]');
+          if (parentSection) {
+            anchorId = parentSection.id;
+          }
+        }
+
+        if (!anchorId) {
+          return; // 找不到现有锚点就不处理，确保不新建或修改任何链接
+        }
+
+        heading.classList.add('anchor-heading');
+
+        heading.addEventListener('click', function() {
+          // 先滚动到对应锚点位置（和左侧目录一样的效果）
+          var targetElement = document.getElementById(anchorId) || document.querySelector('[id="' + anchorId + '"]');
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+
+          var baseUrl = window.location.origin + window.location.pathname;
+          var fullUrl = baseUrl + '#' + anchorId;
+
+          // 尽量复制到剪贴板（旧浏览器失败也不会报错）
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(fullUrl).catch(function() {
+              // 忽略错误，至少还能更新地址栏的 hash
+            });
+          }
+
+          // 更新地址栏 hash，方便用户刷新后直接定位
+          if (history.replaceState) {
+            history.replaceState(null, '', '#' + anchorId);
+          } else {
+            window.location.hash = anchorId;
+          }
+
+          showCopyToast('已复制当前段落链接');
+        });
+      });
+    });
+  </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("obj-gen-video");
+
+    // 尝试自动播放
+    const p = video.play();
+    if (p !== undefined) {
+      p.catch(err => {
+        console.log("Autoplay blocked or delayed:", err);
+      });
+    }
+
+    // 第一次点击视频：开启原生控制条
+    const enableControlsOnce = () => {
+      video.setAttribute("controls", "controls");  // 出现暂停/进度条/倍速菜单
+      video.removeEventListener("click", enableControlsOnce);
+    };
+
+    video.addEventListener("click", enableControlsOnce);
+  });
+  </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("dist-x-gen1-video");
+
+    // 尝试自动播放
+    const p = video.play();
+    if (p !== undefined) {
+      p.catch(err => {
+        console.log("Autoplay blocked or delayed:", err);
+      });
+    }
+
+    // 第一次点击视频：开启原生控制条
+    const enableControlsOnce = () => {
+      video.setAttribute("controls", "controls");  // 出现暂停/进度条/倍速菜单
+      video.removeEventListener("click", enableControlsOnce);
+    };
+
+    video.addEventListener("click", enableControlsOnce);
+  });
+  </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("dist-x-gen2-video");
+
+    // 尝试自动播放
+    const p = video.play();
+    if (p !== undefined) {
+      p.catch(err => {
+        console.log("Autoplay blocked or delayed:", err);
+      });
+    }
+
+    // 第一次点击视频：开启原生控制条
+    const enableControlsOnce = () => {
+      video.setAttribute("controls", "controls");  // 出现暂停/进度条/倍速菜单
+      video.removeEventListener("click", enableControlsOnce);
+    };
+
+    video.addEventListener("click", enableControlsOnce);
+  });
+  </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("dist-y-gen1-video");
+
+    // 尝试自动播放
+    const p = video.play();
+    if (p !== undefined) {
+      p.catch(err => {
+        console.log("Autoplay blocked or delayed:", err);
+      });
+    }
+
+    // 第一次点击视频：开启原生控制条
+    const enableControlsOnce = () => {
+      video.setAttribute("controls", "controls");  // 出现暂停/进度条/倍速菜单
+      video.removeEventListener("click", enableControlsOnce);
+    };
+
+    video.addEventListener("click", enableControlsOnce);
+  });
+  </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("dist-y-gen2-video");
+
+    // 尝试自动播放
+    const p = video.play();
+    if (p !== undefined) {
+      p.catch(err => {
+        console.log("Autoplay blocked or delayed:", err);
+      });
+    }
+
+    // 第一次点击视频：开启原生控制条
+    const enableControlsOnce = () => {
+      video.setAttribute("controls", "controls");  // 出现暂停/进度条/倍速菜单
+      video.removeEventListener("click", enableControlsOnce);
+    };
+
+    video.addEventListener("click", enableControlsOnce);
+  });
+  </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("dist-o-gen1-video");
+
+    // 尝试自动播放
+    const p = video.play();
+    if (p !== undefined) {
+      p.catch(err => {
+        console.log("Autoplay blocked or delayed:", err);
+      });
+    }
+
+    // 第一次点击视频：开启原生控制条
+    const enableControlsOnce = () => {
+      video.setAttribute("controls", "controls");  // 出现暂停/进度条/倍速菜单
+      video.removeEventListener("click", enableControlsOnce);
+    };
+
+    video.addEventListener("click", enableControlsOnce);
+  });
+  </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("dist-o-gen2-video");
+
+    // 尝试自动播放
+    const p = video.play();
+    if (p !== undefined) {
+      p.catch(err => {
+        console.log("Autoplay blocked or delayed:", err);
+      });
+    }
+
+    // 第一次点击视频：开启原生控制条
+    const enableControlsOnce = () => {
+      video.setAttribute("controls", "controls");  // 出现暂停/进度条/倍速菜单
+      video.removeEventListener("click", enableControlsOnce);
+    };
+
+    video.addEventListener("click", enableControlsOnce);
+  });
+  </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("dist-h-gen-video");
+
+    // 尝试自动播放
+    const p = video.play();
+    if (p !== undefined) {
+      p.catch(err => {
+        console.log("Autoplay blocked or delayed:", err);
+      });
+    }
+
+    // 第一次点击视频：开启原生控制条
+    const enableControlsOnce = () => {
+      video.setAttribute("controls", "controls");  // 出现暂停/进度条/倍速菜单
+      video.removeEventListener("click", enableControlsOnce);
+    };
+
+    video.addEventListener("click", enableControlsOnce);
+  });
+  </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("terrian-video");
+
+    // 尝试自动播放
+    const p = video.play();
+    if (p !== undefined) {
+      p.catch(err => {
+        console.log("Autoplay blocked or delayed:", err);
+      });
+    }
+
+    // 第一次点击视频：开启原生控制条
+    const enableControlsOnce = () => {
+      video.setAttribute("controls", "controls");  // 出现暂停/进度条/倍速菜单
+      video.removeEventListener("click", enableControlsOnce);
+    };
+
+    video.addEventListener("click", enableControlsOnce);
+  });
+  </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("navi-video");
+
+    // 尝试自动播放
+    const p = video.play();
+    if (p !== undefined) {
+      p.catch(err => {
+        console.log("Autoplay blocked or delayed:", err);
+      });
+    }
+
+    // 第一次点击视频：开启原生控制条
+    const enableControlsOnce = () => {
+      video.setAttribute("controls", "controls");  // 出现暂停/进度条/倍速菜单
+      video.removeEventListener("click", enableControlsOnce);
+    };
+
+    video.addEventListener("click", enableControlsOnce);
+  });
+  </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("goaround-video");
+
+    // 尝试自动播放
+    const p = video.play();
+    if (p !== undefined) {
+      p.catch(err => {
+        console.log("Autoplay blocked or delayed:", err);
+      });
+    }
+
+    // 第一次点击视频：开启原生控制条
+    const enableControlsOnce = () => {
+      video.setAttribute("controls", "controls");  // 出现暂停/进度条/倍速菜单
+      video.removeEventListener("click", enableControlsOnce);
+    };
+
+    video.addEventListener("click", enableControlsOnce);
+  });
+  </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("long-video");
+
+    // 尝试自动播放
+    const p = video.play();
+    if (p !== undefined) {
+      p.catch(err => {
+        console.log("Autoplay blocked or delayed:", err);
+      });
+    }
+
+    // 第一次点击视频：开启原生控制条
+    const enableControlsOnce = () => {
+      video.setAttribute("controls", "controls");  // 出现暂停/进度条/倍速菜单
+      video.removeEventListener("click", enableControlsOnce);
+    };
+
+    video.addEventListener("click", enableControlsOnce);
+  });
+  </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("coffe-video");
+
+    // 尝试自动播放
+    const p = video.play();
+    if (p !== undefined) {
+      p.catch(err => {
+        console.log("Autoplay blocked or delayed:", err);
+      });
+    }
+
+    // 第一次点击视频：开启原生控制条
+    const enableControlsOnce = () => {
+      video.setAttribute("controls", "controls");  // 出现暂停/进度条/倍速菜单
+      video.removeEventListener("click", enableControlsOnce);
+    };
+
+    video.addEventListener("click", enableControlsOnce);
+  });
+  </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("clean-video");
+
+    // 尝试自动播放
+    const p = video.play();
+    if (p !== undefined) {
+      p.catch(err => {
+        console.log("Autoplay blocked or delayed:", err);
+      });
+    }
+
+    // 第一次点击视频：开启原生控制条
+    const enableControlsOnce = () => {
+      video.setAttribute("controls", "controls");  // 出现暂停/进度条/倍速菜单
+      video.removeEventListener("click", enableControlsOnce);
+    };
+
+    video.addEventListener("click", enableControlsOnce);
+  });
+  </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("water-video");
+
+    // 尝试自动播放
+    const p = video.play();
+    if (p !== undefined) {
+      p.catch(err => {
+        console.log("Autoplay blocked or delayed:", err);
+      });
+    }
+
+    // 第一次点击视频：开启原生控制条
+    const enableControlsOnce = () => {
+      video.setAttribute("controls", "controls");  // 出现暂停/进度条/倍速菜单
+      video.removeEventListener("click", enableControlsOnce);
+    };
+
+    video.addEventListener("click", enableControlsOnce);
+  });
+  </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("chair-video");
+
+    // 尝试自动播放
+    const p = video.play();
+    if (p !== undefined) {
+      p.catch(err => {
+        console.log("Autoplay blocked or delayed:", err);
+      });
+    }
+
+    // 第一次点击视频：开启原生控制条
+    const enableControlsOnce = () => {
+      video.setAttribute("controls", "controls");  // 出现暂停/进度条/倍速菜单
+      video.removeEventListener("click", enableControlsOnce);
+    };
+
+    video.addEventListener("click", enableControlsOnce);
+  });
+  </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("stair-video");
+
+    // 尝试自动播放
+    const p = video.play();
+    if (p !== undefined) {
+      p.catch(err => {
+        console.log("Autoplay blocked or delayed:", err);
+      });
+    }
+
+    // 第一次点击视频：开启原生控制条
+    const enableControlsOnce = () => {
+      video.setAttribute("controls", "controls");  // 出现暂停/进度条/倍速菜单
+      video.removeEventListener("click", enableControlsOnce);
+    };
+
+    video.addEventListener("click", enableControlsOnce);
+  });
+  </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("t1s1-video");
+
+    // 尝试自动播放
+    const p = video.play();
+    if (p !== undefined) {
+      p.catch(err => {
+        console.log("Autoplay blocked or delayed:", err);
+      });
+    }
+
+    // 第一次点击视频：开启原生控制条
+    const enableControlsOnce = () => {
+      video.setAttribute("controls", "controls");  // 出现暂停/进度条/倍速菜单
+      video.removeEventListener("click", enableControlsOnce);
+    };
+
+    video.addEventListener("click", enableControlsOnce);
+  });
+  </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("t1s2-video");
+
+    // 尝试自动播放
+    const p = video.play();
+    if (p !== undefined) {
+      p.catch(err => {
+        console.log("Autoplay blocked or delayed:", err);
+      });
+    }
+
+    // 第一次点击视频：开启原生控制条
+    const enableControlsOnce = () => {
+      video.setAttribute("controls", "controls");  // 出现暂停/进度条/倍速菜单
+      video.removeEventListener("click", enableControlsOnce);
+    };
+
+    video.addEventListener("click", enableControlsOnce);
+  });
+  </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("t1f1-video");
+
+    // 尝试自动播放
+    const p = video.play();
+    if (p !== undefined) {
+      p.catch(err => {
+        console.log("Autoplay blocked or delayed:", err);
+      });
+    }
+
+    // 第一次点击视频：开启原生控制条
+    const enableControlsOnce = () => {
+      video.setAttribute("controls", "controls");  // 出现暂停/进度条/倍速菜单
+      video.removeEventListener("click", enableControlsOnce);
+    };
+
+    video.addEventListener("click", enableControlsOnce);
+  });
+  </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("t1f2-video");
+
+    // 尝试自动播放
+    const p = video.play();
+    if (p !== undefined) {
+      p.catch(err => {
+        console.log("Autoplay blocked or delayed:", err);
+      });
+    }
+
+    // 第一次点击视频：开启原生控制条
+    const enableControlsOnce = () => {
+      video.setAttribute("controls", "controls");  // 出现暂停/进度条/倍速菜单
+      video.removeEventListener("click", enableControlsOnce);
+    };
+
+    video.addEventListener("click", enableControlsOnce);
+  });
+  </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("t2s1-video");
+
+    // 尝试自动播放
+    const p = video.play();
+    if (p !== undefined) {
+      p.catch(err => {
+        console.log("Autoplay blocked or delayed:", err);
+      });
+    }
+
+    // 第一次点击视频：开启原生控制条
+    const enableControlsOnce = () => {
+      video.setAttribute("controls", "controls");  // 出现暂停/进度条/倍速菜单
+      video.removeEventListener("click", enableControlsOnce);
+    };
+
+    video.addEventListener("click", enableControlsOnce);
+  });
+  </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("t2s2-video");
+
+    // 尝试自动播放
+    const p = video.play();
+    if (p !== undefined) {
+      p.catch(err => {
+        console.log("Autoplay blocked or delayed:", err);
+      });
+    }
+
+    // 第一次点击视频：开启原生控制条
+    const enableControlsOnce = () => {
+      video.setAttribute("controls", "controls");  // 出现暂停/进度条/倍速菜单
+      video.removeEventListener("click", enableControlsOnce);
+    };
+
+    video.addEventListener("click", enableControlsOnce);
+  });
+  </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("t2f1-video");
+
+    // 尝试自动播放
+    const p = video.play();
+    if (p !== undefined) {
+      p.catch(err => {
+        console.log("Autoplay blocked or delayed:", err);
+      });
+    }
+
+    // 第一次点击视频：开启原生控制条
+    const enableControlsOnce = () => {
+      video.setAttribute("controls", "controls");  // 出现暂停/进度条/倍速菜单
+      video.removeEventListener("click", enableControlsOnce);
+    };
+
+    video.addEventListener("click", enableControlsOnce);
+  });
+  </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("t2f2-video");
+
+    // 尝试自动播放
+    const p = video.play();
+    if (p !== undefined) {
+      p.catch(err => {
+        console.log("Autoplay blocked or delayed:", err);
+      });
+    }
+
+    // 第一次点击视频：开启原生控制条
+    const enableControlsOnce = () => {
+      video.setAttribute("controls", "controls");  // 出现暂停/进度条/倍速菜单
+      video.removeEventListener("click", enableControlsOnce);
+    };
+
+    video.addEventListener("click", enableControlsOnce);
+  });
+  </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("t3s1-video");
+
+    // 尝试自动播放
+    const p = video.play();
+    if (p !== undefined) {
+      p.catch(err => {
+        console.log("Autoplay blocked or delayed:", err);
+      });
+    }
+
+    // 第一次点击视频：开启原生控制条
+    const enableControlsOnce = () => {
+      video.setAttribute("controls", "controls");  // 出现暂停/进度条/倍速菜单
+      video.removeEventListener("click", enableControlsOnce);
+    };
+
+    video.addEventListener("click", enableControlsOnce);
+  });
+  </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("t3s2-video");
+
+    // 尝试自动播放
+    const p = video.play();
+    if (p !== undefined) {
+      p.catch(err => {
+        console.log("Autoplay blocked or delayed:", err);
+      });
+    }
+
+    // 第一次点击视频：开启原生控制条
+    const enableControlsOnce = () => {
+      video.setAttribute("controls", "controls");  // 出现暂停/进度条/倍速菜单
+      video.removeEventListener("click", enableControlsOnce);
+    };
+
+    video.addEventListener("click", enableControlsOnce);
+  });
+  </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("t3f1-video");
+
+    // 尝试自动播放
+    const p = video.play();
+    if (p !== undefined) {
+      p.catch(err => {
+        console.log("Autoplay blocked or delayed:", err);
+      });
+    }
+
+    // 第一次点击视频：开启原生控制条
+    const enableControlsOnce = () => {
+      video.setAttribute("controls", "controls");  // 出现暂停/进度条/倍速菜单
+      video.removeEventListener("click", enableControlsOnce);
+    };
+
+    video.addEventListener("click", enableControlsOnce);
+  });
+  </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("t3f2-video");
+
+    // 尝试自动播放
+    const p = video.play();
+    if (p !== undefined) {
+      p.catch(err => {
+        console.log("Autoplay blocked or delayed:", err);
+      });
+    }
+
+    // 第一次点击视频：开启原生控制条
+    const enableControlsOnce = () => {
+      video.setAttribute("controls", "controls");  // 出现暂停/进度条/倍速菜单
+      video.removeEventListener("click", enableControlsOnce);
+    };
+
+    video.addEventListener("click", enableControlsOnce);
+  });
+  </script>
+</body>
+</html>
