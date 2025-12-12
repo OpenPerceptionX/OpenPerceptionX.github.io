@@ -412,6 +412,24 @@ export const publications: {
         keys: ['embodied_ai'],
     },
     {
+        title: "Optimization-Guided Diffusion for Interactive Scene Generation",
+        link: "https://arxiv.org/abs/2512.07661",
+        image: "/assets/publication/omega.jpg",
+        author: "Shihao Li, Naisheng Ye, Tianyu Li, Kashyap Chitta, Tuo An, Peng Su, Boyang Wang, Haiou Liu, Chen Lv, Hongyang Li",
+        note: "arXiv 2025",
+        noteoption: '',
+        star: "",
+        starlink: "",
+        icon: [
+            {
+                type: "page",
+                link: "/OMEGA/",
+            },
+        ],
+        description: "OMEGA is a training-free, optimization-guided diffusion framework that enforces structural consistency and interaction reasoning during sampling to generate realistic, controllable, and safety-critical multi-agent driving scenes.",
+        keys: ['ad_algorithm'],
+    },
+    {
         title: "MTGS: Multi-Traversal Gaussian Splatting",
         link: "https://arxiv.org/abs/2503.12552",
         image: "/assets/publication/mtgs.jpg",
