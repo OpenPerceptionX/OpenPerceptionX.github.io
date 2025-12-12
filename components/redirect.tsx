@@ -112,14 +112,15 @@ export default function Redirect() {
         pathname.toLowerCase().startsWith('/wholebodyvLA')
     ) {
         redirect('/WholeBodyVLA')
-        if (
+    }
+    if (
         pathname.toLowerCase().startsWith('/omega')
     ) {
         redirect('/OMEGA')
     }
 
 
-    
+
 
     // event 2025
     if (
