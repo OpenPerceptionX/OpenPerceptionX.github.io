@@ -380,6 +380,24 @@
       border-radius: 20px 20px 0 0;
     }
     
+    /* Publication links styles */
+    .publication-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .link-block {
+      display: inline-block;
+    }
+    
+    .link-block a {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+    
     /* Responsive adjustments */
     @media (max-width: 768px) {
       .left-nav {
@@ -611,6 +629,12 @@
               </span>
               <span>Video</span>
             </a>
+            <a class="navbar-item pl-4 pr-4" href="static/pdf/WholeBodyVLA.pdf" target="_blank" style="justify-content: center;">
+              <span class="icon" style="margin-right:5px;">
+                <img src="static/pdf/pdf.svg" alt="PDF" />
+              </span>
+              <span>Paper</span>
+            </a>
           </div>
         </div>
       </header>
@@ -622,7 +646,7 @@
           WholeBodyVLA
         </h1>
         <h1 class="title is-1 publication-title is-size-5-mobile" style="font-size: 2.8rem;">
-          <small>WholeBodyVLA: Towards Unified Latent VLA for Whole-body Loco-manipulation Control</small>
+          <small>Towards Unified Latent VLA for Whole-body Loco-manipulation Control</small>
         </h1>
       </div>
     </div>
@@ -680,8 +704,20 @@
             <div style="display: flex; justify-content: center; align-items: center; gap: 40px; margin-top: 20px;">
               <img src="https://assets.kinetixai.cn/WholeBodyVLA/hku_logo.png" width="20%">
               <img src="https://assets.kinetixai.cn/WholeBodyVLA/agibot_logo.png" width="20%">
-              <img src="https://assets.kinetixai.cn/WholeBodyVLA/fudan_logo.png" width="25%">
+              <img src="static/pdf/fudan.png" width="12%">
               <img src="https://assets.kinetixai.cn/WholeBodyVLA/sii_logo.png" width="15%">
+            </div>
+            <div class="column has-text-centered" style="margin-top: 30px;">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="static/pdf/WholeBodyVLA.pdf" class="external-link button is-large is-rounded is-dark" target="_blank" style="font-size: 1.2rem; padding: 1rem 2rem; text-decoration: none;">
+                    <span class="icon" style="font-size: 1.5rem;">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+              </div>
             </div>
           </div>
         </div>
