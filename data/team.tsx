@@ -647,7 +647,7 @@ export const members: {
                 url: "https://github.com/serene-sivy",
             },
         ],
-        keys: ["phd"],
+        keys: ["alumni"],
     },
     {
         name: "Naisheng Ye",
@@ -753,7 +753,7 @@ export const members: {
                 url: "https://github.com/Jiaheng-Wang-kcl",
             },
         ],
-        keys: ["intern"],
+        keys: ["alumni"],
     },
     {
         name: "Shadi Hamdan",
