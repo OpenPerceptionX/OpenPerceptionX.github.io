@@ -37,6 +37,7 @@ export const scholar: Record<string, string> = {
     "Zhiqi Li": "https://scholar.google.com/citations?user=H2fJLqEAAAAJ",
     "Wenhai Wang": "https://scholar.google.com/citations?user=WM0OglcAAAAJ0",
     "Hongwei Xue": "https://scholar.google.com/citations?user=k5CJa5YAAAAJ",
+    "Zhihui Peng": "https://github.com/peng-zhihui",
 }
 import { members } from "@/data/team"
 members.forEach((member) => {
