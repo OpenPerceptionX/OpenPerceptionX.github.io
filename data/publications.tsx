@@ -312,6 +312,28 @@ export const publications: {
         keys: ['embodied_ai', 'home_sliding'],
     },
     {
+        title: "WholeBodyVLA: Towards Unified Latent VLA for Whole-body Loco-manipulation Control",
+        link: "https://opendrivelab.com/WholeBodyVLA/static/pdf/WholeBodyVLA.pdf",
+        image: "/assets/publication/wholebodyvla.jpg",
+        author: "Haoran Jiang, Jin Chen, Qingwen Bu, Li Chen, Modi Shi, Yanjie Zhang, Delong Li, Chuanzhe Suo, Chuang Wang, Zhihui Peng, Hongyang Li",
+        note: "arXiv 2025",
+        noteoption: '',
+        star: "",
+        starlink: "",
+        icon: [
+            {
+                type: "page",
+                link: "https://opendrivelab.com/WholeBodyVLA/",
+            },
+            {
+                type: "youtube",
+                link: "https://assets.kinetixai.cn/WholeBodyVLA/long.mp4",
+            },
+        ],
+        description: "A unified VLA framework enabling large-space humanoid loco-manipulation via unified latent learning and loco–manipulation–oriented RL. ",
+        keys: ['embodied_ai'],
+    },
+    {
         title: "Towards Synergistic, Generalized, and Efficient Dual-System for Robotic Manipulation",
         link: "https://arxiv.org/abs/2410.08001",
         image: "/assets/publication/robodual.jpg",
