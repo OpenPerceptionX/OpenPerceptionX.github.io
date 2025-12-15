@@ -19,6 +19,16 @@ const nextConfig: NextConfig = {
                 hostname: 'ik.imagekit.io',
                 pathname: '/opendrivelab/**',
             },
+            {
+                protocol: 'https',
+                hostname: 'ik.imagekit.io',
+                pathname: '/mmlab/**',
+            },
+            {
+                protocol: 'https',
+                hostname: 'assets.kinetixai.cn',
+                pathname: '/**',
+            },
         ],
         dangerouslyAllowSVG: true,
     },
