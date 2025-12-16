@@ -697,6 +697,31 @@ export const members: {
         keys: ["phd"],
     },
     {
+        name: "Zihao Zhang",
+        image: "/assets/person/zihao_zhang.jpeg",
+        desc: "Southeast University",
+        image_s: "/assets/person/zihao_zhang.jpeg",
+        links: [
+            {
+                icon: "homepage",
+                url: "https://zizizi-hao.github.io/"
+            },
+            {
+                icon: "email",
+                url: "zhangzihao@opendrivelab.com",
+            },
+            {
+                icon: "scholar",
+                url: "https://scholar.google.com/citations?user=R2Brvm4AAAAJ\&hl=en",
+            },
+            {
+                icon: "github",
+                url: "https://github.com/Zizizi-hao",
+            },
+        ],
+        keys: ["phd"],
+    },
+    {
         name: "Shijia Peng",
         image: "/assets/person/shijia_peng.jpg",
         desc: "Shenzhen University",

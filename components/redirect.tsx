@@ -118,6 +118,11 @@ export default function Redirect() {
     ) {
         redirect('/OMEGA')
     }
+    if (
+        pathname.toLowerCase().startsWith('/foldanything')
+    ) {
+        redirect('/FoldAnything')
+    }
 
 
 
