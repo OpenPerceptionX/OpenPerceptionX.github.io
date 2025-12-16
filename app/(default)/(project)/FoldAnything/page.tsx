@@ -11,6 +11,10 @@ import Link from "next/link"
 
 
 
+import { ExampleChart } from "./chart/examplechart"
+
+
+
 import { Separator } from "@/components/ui/separator"
 import { AspectRatio } from "@/components/ui/aspect-ratio"
 
@@ -30,6 +34,9 @@ export default function Home() {
                             <h1 className="font-bold text-t1 leading-tight">
                                 Mastering Garment Manipulation from 0 to 100% in 500,000 rmb/20 Hours
                             </h1>
+                            <i>
+                                TL;DR: In this blogpost, we investigate an effective pathway to achieve robost manipulation for live-streaming broadcast without heavy resources (compute, data, infra, etc.), just in one day.
+                            </i>
                             <div className="flex flex-row gap-20">
                                 <div className="flex flex-col">
                                     <h2>
@@ -74,8 +81,8 @@ export default function Home() {
 
 
 
-                        <div className="w-full flex flex-col items-center">
-                            <div className="w-full flex flex-col items-center px-6 mt-20">
+                        <div className="w-full flex flex-col items-center my-20 px-6">
+                            <div className="w-full flex flex-col items-center">
                                 <div className="w-full max-w-4xl flex flex-col relative p-10 gap-6">
                                     <div className="absolute top-0 left-0 w-8 h-8 border-t-6 border-l-6 border-black"></div>
                                     <div className="absolute bottom-0 right-0 w-8 h-8 border-b-6 border-r-6 border-black"></div>
@@ -88,6 +95,82 @@ export default function Home() {
                                 <i>Julius Caesar</i>
                             </div> 
                         </div>
+
+
+
+                        <div className="flex flex-row gap-6 justify-center">
+                            <div></div>
+                            <p className="w-full leading-relaxed max-w-4xl">
+                                Is massive scale the only path to robotic dexterity? While foundational models like Pi05 and GO-1 leverage massive compute and data to achieve task-generalization, we explore a "resource-aware" alternative for state-generalization. We present a comprehensive guideline for mastering long-horizon garment manipulation, taking a system from 0% to 100% reliability with a fraction of the standard cost—specifically, within 20 hours of human demonstration, 8*A100 gpus, rather than tens of thousands of hrs data and hundreds of GPUs which are typically required.
+                            </p>
+                            <div></div>
+                        </div>
+
+
+
+                        <div className="mt-6 flex flex-row gap-6 justify-center">
+                            <div></div>
+                            <p className="w-full leading-relaxed max-w-4xl">
+                                Our system enables collaborative, dual-arm robots to perform complex folding tasks over extended horizons (up to 6 minutes), demonstrating exceptional robustness to the compounding errors that plague collaborative handovers. This reliability extends to "in-the-wild" scenarios, handling interruptions and varied lighting with ease.
+                            </p>
+                            <div></div>
+                        </div>
+
+
+
+                        <div className="mt-6 flex flex-row gap-6 justify-center">
+                            <div></div>
+                            <p className="w-full leading-relaxed max-w-4xl">
+                                The core of our efficiency lies in a new philosophical approach to Imitation Learning:
+                            </p>
+                            <div></div>
+                        </div>
+
+
+
+                        <div className="mt-6 flex flex-row gap-6 justify-center px-6">
+                            <ol className="space-y-3 w-full leading-relaxed max-w-4xl list-decimal px-4 md:px-6">
+                                <li>
+                                    <b>
+                                        Mode Consistency:&nbsp;
+                                    </b>
+                                    We argue that not all data is created equal. By strictly aligning the human demonstration distribution ($P_train$), the model's knowledge ($Q_model$), and the test-time distribution ($P_test$), we minimize in-distribution shifts that lead to failure.
+                                </li>
+                                <li>
+                                    <b>
+                                        Model Arithmetic:&nbsp;
+                                    </b>
+                                    Rather than relying on a single checkpoint, we identify that models trained on different data subsets learn distinct manifolds. We introduce a "shortcut" to merge these manifolds—condensing several diverse models into a single, adaptive policy without the complexity of MoE architectures.
+                                </li>
+                                <li>
+                                    <b>
+                                        Distribution-Aware Orchestration:&nbsp;
+                                    </b>
+                                    A specialized mechanism to handle the "last mile" of precision (the final 80-100% performance gain).
+                                </li>
+                            </ol>
+                        </div>
+
+
+
+                        <div className="mt-6 flex flex-row gap-6 justify-center">
+                            <div></div>
+                            <p className="w-full leading-relaxed max-w-4xl">
+                                This recipe is universally applicable, functioning across different embodiments (AgileX Piper, ARX X5) and model architectures (pi series, x-vla, go-1), proving that efficient, high-performance manipulation is accessible without industrial-scale resources.
+                            </p>
+                            <div></div>
+                        </div>
+
+
+
+                        <div className="mt-6 flex flex-row gap-6 justify-center">
+                            <div></div>
+                            <p className="w-full leading-relaxed max-w-4xl">
+                                We will release data, checkpoints and host Challenge in 2026.
+                            </p>
+                            <div></div>
+                        </div>
+
 
 
 
@@ -111,7 +194,7 @@ export default function Home() {
                         <div className="mt-6 flex flex-row gap-6 justify-center">
                             <div></div>
                             <p className="leading-relaxed max-w-4xl">
-                                文字部分：Turning Stumbles into Strides: Mode Consistency between Data and model. (P_train (human action), Q_model (action projection, weights), P_test (policy action) 三者).  ( 0 - 20%, 基建)文字部分：Turning Stumbles into Stridesand model. (P_train (human action), Q_model (action projection, weights), P_test (policy action) 三者).  ( 0 - 20%, 基建)文字部分：Turning Stumbles into Strides: Mode Consistency between Data and model. (P_train (human action), Q_model (action projection, weights), P_test (policy action) 三者).  ( 0 - 20%, 基建)
+                                <Link className="text-foreground animated-underline hover:text-mred" href="/" >this is a link</Link><br></br>文字部分：Turning Stumbles into Strides: Mode Consistency between Data and model. (P_train (human action), Q_model (action projection, weights), P_test (policy action) 三者).  ( 0 - 20%, 基建)文字部分：Turning Stumbles into Stridesand model. (P_train (human action), Q_model (action projection, weights), P_test (policy action) 三者).  ( 0 - 20%, 基建)文字部分：Turning Stumbles into Strides: Mode Consistency between Data and model. (P_train (human action), Q_model (action projection, weights), P_test (policy action) 三者).  ( 0 - 20%, 基建)
                             </p>
                             <div></div>
                         </div>
@@ -149,6 +232,11 @@ export default function Home() {
                                 文字部分：Turning Stumbles into Strides: Mode Consistency between Data and model. (P_train (human action), Q_model (action projection, weights), P_test (policy action) 三者).  ( 0 - 20%, 基建)文字部分：Turning Stumbles into Stridesand model. (P_train (human action), Q_model (action projection, weights), P_test (policy action) 三者).  ( 0 - 20%, 基建)文字部分：Turning Stumbles into Strides: Mode Consistency between Data and model. (P_train (human action), Q_model (action projection, weights), P_test (policy action) 三者).  ( 0 - 20%, 基建)
                             </p>
                             <div></div>
+                        </div>
+                        <div className="mt-6 flex flex-row justify-center">
+                            <div className="max-w-7xl">
+                                <ExampleChart />
+                            </div>
                         </div>
 
 
@@ -266,6 +354,7 @@ export default function Home() {
 
 
                     </div>
+
 
 
 
