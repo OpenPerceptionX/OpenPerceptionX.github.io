@@ -44,7 +44,7 @@ const image_mapping: Record<string, string> = {
     "FreeTacMan: Robot-free Visuo-Tactile Data Collection System for Contact-rich Manipulation": "https://ik.imagekit.io/opendrivelab/freetacman.png",
     "ReSim: Reliable World Simulation for Autonomous Driving": "https://ik.imagekit.io/opendrivelab/resim.jpg",
     "Agility Meets Stability: Versatile Humanoid Control with Heterogeneous Data": "https://ik.imagekit.io/opendrivelab/ams.gif",
-    "WholeBodyVLA: Towards Unified Latent VLA for Whole-body Loco-manipulation Control": "https://ik.imagekit.io/opendrivelab/WholeBodyVLA/wholebodyvla_landing.gif",
+    "WholeBodyVLA: Towards Unified Latent VLA for Whole-body Loco-manipulation Control": "https://opendrivelab.github.io/WholeBodyVLA/wholebodyvla_landing.gif",
 }
 
 

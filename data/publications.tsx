@@ -289,7 +289,7 @@ export const publications: {
     {
         title: "WholeBodyVLA: Towards Unified Latent VLA for Whole-body Loco-manipulation Control",
         link: "https://arxiv.org/abs/2512.11047",
-        image: "https://ik.imagekit.io/opendrivelab/WholeBodyVLA/wholebodyvla_pub.gif",
+        image: "https://opendrivelab.github.io/WholeBodyVLA/wholebodyvla_pub.gif",
         author: "Haoran Jiang, Jin Chen, Qingwen Bu, Li Chen, Modi Shi, Yanjie Zhang, Delong Li, Chuanzhe Suo, Chuang Wang, Zhihui Peng, Hongyang Li",
         note: "arXiv 2025",
         noteoption: '',
