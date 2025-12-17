@@ -119,7 +119,7 @@ const organizers: {
 
 
 
-export const events: {
+const events: {
     title: string;
     subtitle: string;
     url: string,
