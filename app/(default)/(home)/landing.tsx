@@ -22,7 +22,7 @@ import { AspectRatio } from "@/components/ui/aspect-ratio"
 
 
 import { publications } from "@/data/publications"
-const landings = [0,5,1,4,2,3].map(index => [...publications.values()].filter(publication => publication.keys.includes('home_sliding'))[index])
+const landings = [0,5,6,1,4,2,3].map(index => [...publications.values()].filter(publication => publication.keys.includes('home_sliding'))[index])
 const type_mapping: Record<string, string> = {
     "page": "Page",
     "huggingface": "Hugging Face",
@@ -44,6 +44,7 @@ const image_mapping: Record<string, string> = {
     "FreeTacMan: Robot-free Visuo-Tactile Data Collection System for Contact-rich Manipulation": "https://ik.imagekit.io/opendrivelab/freetacman.png",
     "ReSim: Reliable World Simulation for Autonomous Driving": "https://ik.imagekit.io/opendrivelab/resim.jpg",
     "Agility Meets Stability: Versatile Humanoid Control with Heterogeneous Data": "https://ik.imagekit.io/opendrivelab/ams.gif",
+    "WholeBodyVLA: Towards Unified Latent VLA for Whole-body Loco-manipulation Control": "https://ik.imagekit.io/opendrivelab/WholeBodyVLA/wholebodyvla_landing.gif",
 }
 
 
