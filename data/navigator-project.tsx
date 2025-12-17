@@ -53,10 +53,6 @@ export const NavigatorProject: {
             text: "Introduction",
             id: "introduction",
         },
-        // {
-        //     text: "Contact",
-        //     id: "contact",
-        // },
         {
             text: "Schedule",
             id: "schedule",
