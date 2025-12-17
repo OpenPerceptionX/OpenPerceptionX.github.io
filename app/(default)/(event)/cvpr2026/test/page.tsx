@@ -221,10 +221,7 @@ export default function Home() {
             <div className="w-full px-6 flex justify-center mt-12">
                 <div className="w-full max-w-7xl flex flex-col gap-3">
                     <p className="leading-relaxed">
-                        Autonomous systems, such as robots and self-driving cars, have rapidly evolved over the past decades. Despite this, several problems remain. Attempts have been made to develop more capable autonomous systems, such as integrating foundation models and utilizing large-scale data. However, the challenging problems have yet to be solved.
-                    </p>
-                    <p className="leading-relaxed">
-                        The motivation behind this workshop is to explore potential solutions, and discuss the challenges and opportunities associated with these approaches. We believe that this workshop serves as a brand-new perspective on <b>the present and future of autonomous systems</b>, and is necessary for both the robotics and computer vision communities.
+                        Embodied intelligence brings us closer to creating robots that can truly see, think, and act in the real world. Yet, today’s systems remain fragile, struggling to handle the complexity of the real world. This workshop looks ahead - toward generalizable embodied intelligence that thrives beyond the lab. By gathering pioneers from vision and robotics, the workshop seeks to identify key challenges, discuss interdisciplinary solutions, and chart promising directions for advancing embodied systems to everyday life.
                     </p>
                     <p className="leading-relaxed">
                         If you are interested in our workshop, please <b>mark the workshop in your CVPR registration</b>, to have enough space for the workshop room.
