@@ -48,7 +48,7 @@ export const NavigatorProject: {
             id: "action_free",
         },
     ],
-    "/cvpr2026/test": [
+    "/cvpr2026/workshop": [
         {
             text: "Introduction",
             id: "introduction",

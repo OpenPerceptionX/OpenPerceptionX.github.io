@@ -161,7 +161,7 @@ export default function Home() {
 
 
 
-            <div className="w-full h-svh p-16">   
+            <div className="w-full h-svh py-16 px-6 3xl:px-16">   
                 <div className="w-full h-full relative rounded-sm">
                     <Image
                         src='/assets/background/denver.jpg'
@@ -169,24 +169,24 @@ export default function Home() {
                         fill
                         className='object-center object-cover bg-gradient-landing rounded-sm bg-black bg-opacity-30 bg-blend-overlay select-none'
                     />
-                    <div className="w-full h-full absolute flex flex-col justify-end items-start p-12 gap-6">
-                        <div className="flex flex-row gap-6 laptop:gap-10">
+                    <div className="w-full h-full absolute flex flex-col justify-end items-start p-6 xl:p-10 gap-6">
+                        <div className="flex flex-row gap-6">
                             <Image
                                 src='/assets/icon/cvpr/cvpr2026_white.svg'
                                 alt='cvpr'
-                                width={256}
+                                width={128}
                                 height={1}
                                 className='select-none'
                             />
                             <Image
                                 src='/assets/icon/cvpr/ieee_cs_white.png'
                                 alt='cvpr'
-                                width={256}
+                                width={128}
                                 height={1}
                                 className='select-none'
                             />
                         </div>
-                        <h1 className="text-white text-t0 font-bold">
+                        <h1 className="text-white text-t1 font-bold">
                             From Labs to Life: Embodied Intelligence in the Wild
                         </h1>
                         <h5 className="text-white">
