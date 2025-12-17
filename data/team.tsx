@@ -704,7 +704,7 @@ export const members: {
         links: [
             {
                 icon: "email",
-                url: "jingchanghui@opendrivelab.com",
+                url: "mailto:jingchanghui@opendrivelab.com",
             },
             {
                 icon: "github",
@@ -725,7 +725,7 @@ export const members: {
             },
             {
                 icon: "email",
-                url: "zhangzihao@opendrivelab.com",
+                url: "mailto:zhangzihao@opendrivelab.com",
             },
             {
                 icon: "scholar",
