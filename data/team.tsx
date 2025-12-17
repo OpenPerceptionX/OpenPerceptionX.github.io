@@ -697,10 +697,27 @@ export const members: {
         keys: ["phd"],
     },
     {
+        name: "Changhui Jing",
+        image: "/assets/person/changhui_jing.jpeg",
+        desc: "Tongji University",
+        image_s: "/assets/person/changhui_jing_s.jpg",
+        links: [
+            {
+                icon: "email",
+                url: "jingchanghui@opendrivelab.com",
+            },
+            {
+                icon: "github",
+                url: "https://github.com/szpk",
+            },
+        ],
+        keys: ["phd"],
+    },
+    {
         name: "Zihao Zhang",
         image: "/assets/person/zihao_zhang.jpeg",
         desc: "Southeast University",
-        image_s: "/assets/person/zihao_zhang.jpeg",
+        image_s: "/assets/person/zihao_zhang_s.jpg",
         links: [
             {
                 icon: "homepage",
