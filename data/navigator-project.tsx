@@ -48,4 +48,30 @@ export const NavigatorProject: {
             id: "action_free",
         },
     ],
+    "/cvpr2026/test": [
+        {
+            text: "Introduction",
+            id: "introduction",
+        },
+        // {
+        //     text: "Contact",
+        //     id: "contact",
+        // },
+        {
+            text: "Schedule",
+            id: "schedule",
+        },
+        {
+            text: "Speakers",
+            id: "speaker",
+        },
+        {
+            text: "Organizers",
+            id: "organizer",
+        },
+        {
+            text: "Past Editions",
+            id: "edition",
+        },
+    ],
 };
