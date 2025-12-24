@@ -70,4 +70,22 @@ export const NavigatorProject: {
             id: "edition",
         },
     ],
+    "/kai0": [
+        {
+            text: "Introduction",
+            id: "introduction",
+        },
+        {
+            text: "Methodology",
+            id: "methodology",
+        },
+        {
+            text: "Bottom Line",
+            id: "bottom_line",
+        },
+        {
+            text: "Citation",
+            id: "citation",
+        },
+    ],
 };
