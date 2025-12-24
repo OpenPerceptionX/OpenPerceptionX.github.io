@@ -22,7 +22,7 @@ import { AspectRatio } from "@/components/ui/aspect-ratio"
 
 
 import { publications } from "@/data/publications"
-const landings = [0,5,6,1,4,2,3].map(index => [...publications.values()].filter(publication => publication.keys.includes('home_sliding'))[index])
+const landings = [0,1,2,3,5,4].map(index => [...publications.values()].filter(publication => publication.keys.includes('home_sliding'))[index])
 const type_mapping: Record<string, string> = {
     "page": "Page",
     "huggingface": "Hugging Face",
@@ -45,6 +45,7 @@ const image_mapping: Record<string, string> = {
     "ReSim: Reliable World Simulation for Autonomous Driving": "https://ik.imagekit.io/opendrivelab/resim.jpg",
     "Agility Meets Stability: Versatile Humanoid Control with Heterogeneous Data": "https://ik.imagekit.io/opendrivelab/ams.gif",
     "WholeBodyVLA: Towards Unified Latent VLA for Whole-body Loco-manipulation Control": "https://opendrivelab.github.io/WholeBodyVLA/wholebodyvla_landing.gif",
+    "χ0: A Live-Stream Robotic Teamwork for Clothing Manipulation from Zero to Hero": "https://ik.imagekit.io/opendrivelab/kai0.png",
 }
 
 
@@ -163,7 +164,13 @@ export function Landing() {
                                 <div>
                                     <div className="flex flex-row items-center flex-wrap text-sm lg:text-base">
                                         <Link href={landing.link} target={landing.link.startsWith('http') ? '_blank' : '_self'} className="animated-underline-gray mr-3 text-nowrap">
-                                            Paper
+                                            {
+                                                landing.link.startsWith('http') ? (
+                                                    "Paper"
+                                                ) : (
+                                                    "Blog"
+                                                )
+                                            }
                                         </Link>
                                         {
                                             landing.icon.length != 0  && (

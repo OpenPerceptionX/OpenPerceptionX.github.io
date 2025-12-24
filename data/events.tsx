@@ -1,4 +1,5 @@
 export const years: string[] = [
+    '2026',
     '2025',
     '2024',
     '2023',
@@ -18,6 +19,16 @@ export const events: {
     keys: string[];
 }[] = [
     {
+        title: "Workshop at CVPR 2026",
+        subtitle: "From Labs to Life: Embodied Intelligence in the Wild",
+        url: "/cvpr2026/workshop/",
+        image: "/assets/background/denver.jpg",
+        imageoption: "object-center",
+        date: "June, 2025",
+        location: "Denver",
+        keys: ['2026', 'editor_pick'],
+    },
+    {
         title: "Workshop at IROS 2025",
         subtitle: "FAST: Fully Autonomy Emerges from Situational CogniTion",
         url: "https://sites.google.com/view/iros2025fastworkshop/home",
@@ -35,7 +46,7 @@ export const events: {
         imageoption: "object-center",
         date: "",
         location: "",
-        keys: ['2025', 'editor_pick'],
+        keys: ['2025'],
     },
     {
         title: "Workshop at ICCV 2025",
@@ -45,7 +56,7 @@ export const events: {
         imageoption: "object-left",
         date: "October 19, 2025",
         location: "Honolulu",
-        keys: ['2025', 'editor_pick'],
+        keys: ['2025'],
     },
     {
         title: "Events at CVPR 2025",

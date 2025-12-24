@@ -63,6 +63,20 @@ export const publications: {
     keys: string[];
 }[] = [
     {
+        title: "χ0: A Live-Stream Robotic Teamwork for Clothing Manipulation from Zero to Hero",
+        link: "/kai0",
+        image: "https://ik.imagekit.io/opendrivelab/position.jpg?updatedAt=1765023911765",
+        author: "",
+        note: "arXiv",
+        noteoption: '',
+        star: "",
+        starlink: "",
+        icon: [
+        ],
+        description: "\"Veni, Vidi, Vici\" - I came, I saw, I conquered. We aim to conquer the \"Mount Everest\" of robotics: 100% reliability in real-world garment manipulation.",
+        keys: ['home_sliding'],
+    },
+    {
         title: "Intelligent Robot Manipulation Requires Self-Directed Learning",
         link: "https://openreview.net/forum?id=Seb7rprW1Y",
         image: "https://ik.imagekit.io/opendrivelab/position.jpg?updatedAt=1765023911765",
@@ -310,7 +324,7 @@ export const publications: {
             },
         ],
         description: "A unified VLA framework enabling large-space humanoid loco-manipulation via unified latent learning and loco–manipulation–oriented RL. ",
-        keys: ['embodied_ai', 'home_sliding'],
+        keys: ['embodied_ai'],
     },
     {
         title: "Agility Meets Stability: Versatile Humanoid Control with Heterogeneous Data",
@@ -336,7 +350,7 @@ export const publications: {
             },
         ],
         description: "A unified whole-body control policy for humanoid robots that enables zero-shot execution of diverse motions, including Ip Man'squat, dancing, running and real-time teleoperation.",
-        keys: ['embodied_ai', 'home_sliding'],
+        keys: ['embodied_ai'],
     },
     {
         title: "Towards Synergistic, Generalized, and Efficient Dual-System for Robotic Manipulation",
