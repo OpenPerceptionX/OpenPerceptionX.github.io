@@ -62,7 +62,7 @@ function PageSidebar() {
 
                 {
                     content_page == null && (
-                        <div className="md:h-[23vh] select-none"></div>
+                        <div className="md:h-[33vh] select-none"></div>
                     )
                 } {
                     content_page != null && (
