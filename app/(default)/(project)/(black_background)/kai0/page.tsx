@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = {
-    title: "kai0 | HKU MMLab",
-    description: "Multimedia Laboratory",
-    keywords: ["kai0", "MMLab", "Multimedia Laboratory", "HKU", "CUHK", "NTU"],
+    title: "kai0 | OpenDriveLab",
+    description: "kai0: A Live-Stream Robotic Teamwork for Clothing Manipulation from Zero to Hero",
+    keywords: ["kai0", "OpenDriveLab", "Robotics", "Embodied AI", "Autonomous Driving", "HKU"],
 };
 
 
@@ -72,7 +72,7 @@ export default function Home() {
     return (
         <main>
             {/* Spacer for top positioning */}
-            <div className="w-full h-48"></div>
+            <div className="w-full h-24 xl:h-48"></div>
 
 
                 {/* Main content - centered */}
