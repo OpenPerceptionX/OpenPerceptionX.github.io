@@ -714,6 +714,23 @@ export const members: {
         keys: ["phd"],
     },
     {
+        name: "Bangjun Wang",
+        image: "/assets/person/bangjun_wang.jpg",
+        image_s: "/assets/person/bangjun_wang.jpg",
+        desc: "HKU (The University of Hong Kong)",
+        links: [
+            {
+                icon: "dummy",
+                url: "https://www.bangjunwang.com/",
+            },
+            {
+                icon: "scholar",
+                url: "https://scholar.google.com/citations?user=_LeSlzUAAAAJ",
+            },
+        ],
+        keys: ["phd"],
+    },
+    {
         name: "Zihao Zhang",
         image: "/assets/person/zihao_zhang.jpeg",
         desc: "Southeast University",
@@ -943,23 +960,6 @@ export const members: {
             {
                 icon: "scholar",
                 url: "https://scholar.google.com/citations?user=4IPkoa4AAAAJ",
-            },
-        ],
-        keys: ["alumni"],
-    },
-    {
-        name: "Bangjun Wang",
-        image: "",
-        image_s: "",
-        desc: "SJTU (Shanghai Jiao Tong University)",
-        links: [
-            {
-                icon: "dummy",
-                url: "https://www.bangjunwang.com/",
-            },
-            {
-                icon: "scholar",
-                url: "https://scholar.google.com/citations?user=_LeSlzUAAAAJ",
             },
         ],
         keys: ["alumni"],
