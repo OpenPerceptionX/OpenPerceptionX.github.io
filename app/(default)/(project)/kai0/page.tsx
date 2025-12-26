@@ -325,7 +325,7 @@ export default function Home() {
                                     </svg>
                                 </div>
                                 <p className="w-full leading-relaxed">
-                                    We will release data, checkpoints, and host <a className="text-o-blue animated-underline hover:text-o-blue" href="https://opendrivelab.com/" target="_blank">Challenge</a> in 2026.
+                                    We will release data, checkpoints, and host <a className="text-o-blue animated-underline hover:text-o-blue" href="/">Challenge</a> in 2026.
                                 </p>
                             </div>
                             <div></div>
