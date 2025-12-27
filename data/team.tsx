@@ -229,6 +229,31 @@ export const members: {
     //     keys: ["phd"],
     // },
     {
+        name: "Ziye Wang",
+        image: "/assets/person/ziye_wang.jpg",
+        desc: "HKU (The University of Hong Kong)",
+        image_s: "/assets/person/ziye_wang_s.jpg",
+        links: [
+            {
+                icon: "homepage",
+                url: "https://ziyeeee.github.io/",
+            },
+            {
+                icon: "scholar",
+                url: "https://scholar.google.com/citations?user=C9IGdzYAAAAJ",
+            },
+            {
+                icon: "email",
+                url: "mailto:ziyewang@connect.hku.hk",
+            },
+            {
+                icon: "github",
+                url: "https://github.com/Ziyeeee",
+            },
+        ],
+        keys: ["phd"],
+    },
+    {
         name: "Hai Zhang",
         image: "/assets/person/hai_zhang.jpg",
         desc: "HKU (The University of Hong Kong)",
@@ -253,31 +278,6 @@ export const members: {
             {
                 icon: "zhihu",
                 url: "https://www.zhihu.com/people/betray12138",
-            },
-        ],
-        keys: ["phd"],
-    },
-    {
-        name: "Ziye Wang",
-        image: "/assets/person/ziye_wang.jpg",
-        desc: "HKU (The University of Hong Kong)",
-        image_s: "/assets/person/ziye_wang_s.jpg",
-        links: [
-            {
-                icon: "homepage",
-                url: "https://ziyeeee.github.io/",
-            },
-            {
-                icon: "scholar",
-                url: "https://scholar.google.com/citations?user=C9IGdzYAAAAJ",
-            },
-            {
-                icon: "email",
-                url: "mailto:ziyewang@connect.hku.hk",
-            },
-            {
-                icon: "github",
-                url: "https://github.com/Ziyeeee",
             },
         ],
         keys: ["phd"],
@@ -716,7 +716,7 @@ export const members: {
     {
         name: "Bangjun Wang",
         image: "/assets/person/bangjun_wang.jpg",
-        image_s: "/assets/person/bangjun_wang.jpg",
+        image_s: "/assets/person/bangjun_wang_s.jpg",
         desc: "HKU (The University of Hong Kong)",
         links: [
             {
