@@ -720,7 +720,7 @@ export const members: {
         desc: "HKU (The University of Hong Kong)",
         links: [
             {
-                icon: "dummy",
+                icon: "homepage",
                 url: "https://www.bangjunwang.com/",
             },
             {
