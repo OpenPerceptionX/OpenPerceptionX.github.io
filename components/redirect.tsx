@@ -123,6 +123,11 @@ export default function Redirect() {
     ) {
         redirect('/kai0')
     }
+    if (
+        pathname.toLowerCase().startsWith('/simscale')
+    ) {
+        redirect('/SimScale/')
+    }
 
 
 
