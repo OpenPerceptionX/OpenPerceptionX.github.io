@@ -51,13 +51,6 @@ const speakers: {
         link: 'https://haroldsoh.com/'
     },
     {
-        name: "Jiatao Gu",
-        image: "/assets/person/jiatao_gu.jpg",
-        position: "Staff Research Scientist",
-        affiliation: 'Apple',
-        link: 'https://jiataogu.me/'
-    },
-    {
         name: "Shuran Song",
         image: "/assets/person/shuran_song.jpg",
         position: "Assistant Professor",
@@ -77,6 +70,13 @@ const speakers: {
         position: "Assistant Professor",
         affiliation: 'UC Berkeley',
         link: 'https://people.eecs.berkeley.edu/~kanazawa/'
+    },
+    {
+        name: "Jiatao Gu",
+        image: "/assets/person/jiatao_gu.jpg",
+        position: "Assistant Professor",
+        affiliation: 'University of Pennsylvania',
+        link: 'https://jiataogu.me/'
     },
 ];
 
