@@ -30,6 +30,13 @@ const speakers: {
         link: 'https://cseweb.ucsd.edu/~haosu/'
     },
     {
+        name: "Rika Antonova",
+        image: "/assets/person/rika_antonova.jpg",
+        position: "Associate Professor",
+        affiliation: 'Cambridge',
+        link: 'https://contactrika.github.io/'
+    },
+    {
         name: "Edward Johns",
         image: "/assets/person/edward_johns.jpg",
         position: "Associate Professor",
