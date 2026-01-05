@@ -43,13 +43,13 @@ const speakers: {
         affiliation: 'Imperial College London',
         link: 'https://www.robot-learning.uk/'
     },
-    {
-        name: "Harold Soh",
-        image: "/assets/person/harold_soh.jpg",
-        position: "Associate Professor",
-        affiliation: 'National University of Singapore',
-        link: 'https://haroldsoh.com/'
-    },
+    // {
+    //     name: "Harold Soh",
+    //     image: "/assets/person/harold_soh.jpg",
+    //     position: "Associate Professor",
+    //     affiliation: 'National University of Singapore',
+    //     link: 'https://haroldsoh.com/'
+    // },
     {
         name: "Shuran Song",
         image: "/assets/person/shuran_song.jpg",
