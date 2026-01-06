@@ -579,9 +579,8 @@ export const members: {
     {
         name: "Jin Chen",
         image: "/assets/person/jin_chen.jpg",
-        desc: "XJTU (Xi'an Jiaotong University)",
+        desc: "Fudan University",
         image_s: "/assets/person/jin_chen_s.jpg",
-        // desc: "复旦大学（25级联培）",
         links: [
             {
                 icon: "email",
@@ -594,14 +593,6 @@ export const members: {
             {
                 icon: "github",
                 url: "https://github.com/dunknsabsw",
-            },
-            {
-                icon: "zhihu",
-                url: "https://www.zhihu.com/people/lu-kou-5-68",
-            },
-            {
-                icon: "xiaohongshu",
-                url: "https://www.xiaohongshu.com/user/profile/609cbe510000000001002922",
             },
         ],
         keys: ["phd"],
@@ -632,7 +623,6 @@ export const members: {
         image: "/assets/person/jisong_cai.jpg",
         desc: "SJTU (Shanghai Jiao Tong University)",
         image_s: "/assets/person/jisong_cai_s.jpg",
-        // desc: "上海交通大学（25级联培）",
         links: [
             {
                 icon: "scholar",
@@ -654,7 +644,6 @@ export const members: {
         image: "/assets/person/naisheng_ye.jpg",
         desc: "HKU (The University of Hong Kong)",
         image_s: "/assets/person/naisheng_ye_s.jpg",
-        // desc: "复旦大学（25级联培）",
         links: [
             {
                 icon: "email",
