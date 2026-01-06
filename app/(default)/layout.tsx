@@ -143,7 +143,7 @@ export default function RootLayout({
                 </div>
 
                 <div className="w-full max-w-7xl text-xs">
-                    OpenDriveLab © 2021 - 2025
+                    OpenDriveLab © 2021 - 2026
                 </div>
 
             </footer>
