@@ -20,8 +20,22 @@ import {
 import { AspectRatio } from "@/components/ui/aspect-ratio"
 
 
+import {
+    Drawer,
+    DrawerClose,
+    DrawerContent,
+    DrawerDescription,
+    DrawerFooter,
+    DrawerHeader,
+    DrawerTitle,
+    DrawerTrigger,
+} from "@/components/ui/drawer"
+import { Chen2025_value_learning } from "@/components/citation-drawer"
+
+
 
 import { publications } from "@/data/publications"
+import { Button } from "@/components/ui/button"
 const landings = [0,1,2,3,5,4].map(index => [...publications.values()].filter(publication => publication.keys.includes('home_sliding'))[index])
 const type_mapping: Record<string, string> = {
     "page": "Page",
@@ -206,6 +220,23 @@ export function Landing() {
                                                 <Link href='/challenge2025//#agibot-world' className="animated-underline-gray mr-3 text-nowrap">
                                                     Challenge
                                                 </Link>
+                                            )
+                                        }
+                                        {
+                                            landing.title.startsWith('Intelligent Robot') && (
+                                                <span className="text-xs mr-3"> | </span>
+                                            )
+                                        } {
+                                            landing.title.startsWith('Intelligent Robot') && (
+
+                                                <Drawer direction="top">
+                                                    <DrawerTrigger asChild>
+                                                        <span className="animated-underline-gray mr-3 text-nowrap">
+                                                            Cite
+                                                        </span>
+                                                    </DrawerTrigger>
+                                                    <Chen2025_value_learning />
+                                                </Drawer>
                                             )
                                         }
                                     </div>
