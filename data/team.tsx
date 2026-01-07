@@ -203,31 +203,31 @@ export const members: {
         ],
         keys: ["phd"],
     },
-    // {
-    //     name: "Zhuoheng Li",
-    //     image: "/assets/person/zhuoheng_li.jpg",
-    //     desc: "HKU (The University of Hong Kong)",
-    //     image_s: "/assets/person/zhuoheng_li_s.jpg",
-    //     links: [
-    //         {
-    //             icon: "email",
-    //             url: "mailto:lizhuoheng@opendrivelab.com",
-    //         },
-    //         {
-    //             icon: "github",
-    //             url: "https://github.com/StarCycle/StarCycle",
-    //         },
-    //         {
-    //             icon: "linkedin",
-    //             url: "https://www.linkedin.com/in/lizhuoheng/",
-    //         },
-    //         {
-    //             icon: "huggingface",
-    //             url: "https://huggingface.co/StarCycle",
-    //         },
-    //     ],
-    //     keys: ["phd"],
-    // },
+    {
+        name: "Zhuoheng Li",
+        image: "/assets/person/zhuoheng_li.jpg",
+        desc: "HKU (The University of Hong Kong)",
+        image_s: "/assets/person/zhuoheng_li_s.jpg",
+        links: [
+            {
+                icon: "email",
+                url: "mailto:lizhuoheng@opendrivelab.com",
+            },
+            {
+                icon: "github",
+                url: "https://github.com/StarCycle/StarCycle",
+            },
+            {
+                icon: "linkedin",
+                url: "https://www.linkedin.com/in/lizhuoheng/",
+            },
+            {
+                icon: "huggingface",
+                url: "https://huggingface.co/StarCycle",
+            },
+        ],
+        keys: ["phd"],
+    },
     {
         name: "Ziye Wang",
         image: "/assets/person/ziye_wang.jpg",
