@@ -136,6 +136,27 @@ export const members: {
         keys: ["joint"],
     },
     {
+        name: "Yihang Qiu",
+        image: "/assets/person/yihang_qiu.jpg",
+        desc: "HKU (The University of Hong Kong)",
+        image_s: "/assets/person/yihang_qiu_s.jpg",
+        links: [
+            {
+                icon: "scholar",
+                url: "https://scholar.google.com/citations?user=qgRUOdIAAAAJ",
+            },
+            {
+                icon: "email",
+                url: "mailto:qiuyihang@opendrivelab.com",
+            },
+            {
+                icon: "github",
+                url: "https://github.com/GihhArwtw",
+            },
+        ],
+        keys: ["hku"],
+    },
+    {
         name: "Qingwen Bu",
         image: "/assets/person/qingwen_bu.jpg",
         image_s: "/assets/person/qingwen_bu_s.jpg",
@@ -343,27 +364,6 @@ export const members: {
             },
         ],
         keys: ["alumni"],
-    },
-    {
-        name: "Yihang Qiu",
-        image: "/assets/person/yihang_qiu.jpg",
-        desc: "HKU (The University of Hong Kong)",
-        image_s: "/assets/person/yihang_qiu_s.jpg",
-        links: [
-            {
-                icon: "scholar",
-                url: "https://scholar.google.com/citations?user=qgRUOdIAAAAJ",
-            },
-            {
-                icon: "email",
-                url: "mailto:qiuyihang@opendrivelab.com",
-            },
-            {
-                icon: "github",
-                url: "https://github.com/GihhArwtw",
-            },
-        ],
-        keys: ["student"],
     },
     {
         name: "Jiazhi Yang",
