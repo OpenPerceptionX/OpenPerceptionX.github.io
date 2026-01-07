@@ -781,7 +781,7 @@ export const members: {
         name: "Yuxiang Lu",
         image: "",
         image_s: "",
-        desc: "",
+        desc: "HKU (The University of Hong Kong)",
         links: [
             {
                 icon: "scholar",
@@ -794,7 +794,7 @@ export const members: {
         name: "Yanting Yang",
         image: "",
         image_s: "",
-        desc: "",
+        desc: "Rutgers University",
         links: [
             {
                 icon: "scholar",
@@ -845,7 +845,7 @@ export const members: {
         name: "Shenyuan Gao",
         image: "",
         image_s: "",
-        desc: "The Hong Kong University of Science and Technology",
+        desc: "HKUST (The Hong Kong University of Science and Technology)",
         links: [
             {
                 icon: "scholar",
