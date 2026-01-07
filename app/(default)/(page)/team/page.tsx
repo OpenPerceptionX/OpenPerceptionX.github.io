@@ -38,7 +38,7 @@ export default function Home() {
             </div>
 
 
-            <div className="w-full px-6 flex justify-center mt-24">
+            {/* <div className="w-full px-6 flex justify-center mt-24">
                 <div className="w-full max-w-7xl h-48 xl:h-72 relative">
                     <div>
                         <Image
@@ -49,7 +49,7 @@ export default function Home() {
                         />
                     </div>
                 </div>
-            </div>
+            </div> */}
 
 
 
