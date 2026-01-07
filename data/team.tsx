@@ -282,6 +282,23 @@ export const members: {
         keys: ["hku"],
     },
     {
+        name: "Bangjun Wang",
+        image: "/assets/person/bangjun_wang.jpg",
+        image_s: "/assets/person/bangjun_wang_s.jpg",
+        desc: "HKU (The University of Hong Kong)",
+        links: [
+            {
+                icon: "homepage",
+                url: "https://www.bangjunwang.com/",
+            },
+            {
+                icon: "scholar",
+                url: "https://scholar.google.com/citations?user=_LeSlzUAAAAJ",
+            },
+        ],
+        keys: ["hku"],
+    },
+    {
         name: "Yuhang Lu",
         image: "/assets/person/yuhang_lu.jpg",
         desc: "HKU (The University of Hong Kong)",
@@ -675,23 +692,6 @@ export const members: {
             },
         ],
         keys: ["joint"],
-    },
-    {
-        name: "Bangjun Wang",
-        image: "/assets/person/bangjun_wang.jpg",
-        image_s: "/assets/person/bangjun_wang_s.jpg",
-        desc: "HKU (The University of Hong Kong)",
-        links: [
-            {
-                icon: "homepage",
-                url: "https://www.bangjunwang.com/",
-            },
-            {
-                icon: "scholar",
-                url: "https://scholar.google.com/citations?user=_LeSlzUAAAAJ",
-            },
-        ],
-        keys: ["hku"],
     },
     {
         name: "Zihao Zhang",
