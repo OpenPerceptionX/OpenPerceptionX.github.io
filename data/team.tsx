@@ -17,7 +17,7 @@ export const members: {
                 url: "https://scholar.google.com/citations?user=7m-TOp8AAAAJ",
             },
         ],
-        keys: [],
+        keys: ["alumni"],
     },
     {
         name: "Yanting Yang",
@@ -30,7 +30,7 @@ export const members: {
                 url: "https://scholar.google.com/citations?user=UXRnnz8AAAAJ",
             },
         ],
-        keys: [],
+        keys: ["alumni"],
     },
     {
         name: "Hongyang Li",
@@ -51,7 +51,7 @@ export const members: {
                 url: "mailto:hy@opendrivelab.com",
             },
         ],
-        keys: ["scholar"],
+        keys: ["staff"],
     },
     {
         name: "Li Chen",
@@ -80,7 +80,7 @@ export const members: {
                 url: "https://twitter.com/ilnehc",
             },
         ],
-        keys: ["scholar"],
+        keys: ["phd"],
     },
     {
         name: "Huijie Wang",
@@ -109,7 +109,7 @@ export const members: {
                 url: "https://twitter.com/wongfaikit",
             },
         ],
-        keys: ["scholar"],
+        keys: ["staff"],
     },
     {
         name: "Chonghao Sima",
@@ -134,7 +134,7 @@ export const members: {
                 url: "https://twitter.com/smch_1127",
             },
         ],
-        keys: ["scholar"],
+        keys: ["phd"],
     },
     {
         name: "Tianyu Li",
@@ -784,7 +784,7 @@ export const members: {
                 url: "hugologymai@connect.hku.hk",
             },
         ],
-        keys: ["intern"],
+        keys: ["staff"],
     },
     {
         name: "Jiaheng Wang",
