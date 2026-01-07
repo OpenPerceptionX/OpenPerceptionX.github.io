@@ -32,16 +32,20 @@ export const NavigatorPage: {
     ],
     "/team": [
         {
-            text: "Scholar",
-            id: "scholar",
+            text: "Staff",
+            id: "staff",
         },
         {
-            text: "Ph.D.",
-            id: "phd",
+            text: "HKU Ph.D.",
+            id: "hku",
         },
         {
-            text: "Intern",
-            id: "intern",
+            text: "Joint Ph.D.",
+            id: "joint",
+        },
+        {
+            text: "Student",
+            id: "student",
         },
         {
             text: "Alumni",

@@ -7,32 +7,6 @@ export const members: {
     keys: string[];
 }[] = [
     {
-        name: "Yuxiang Lu",
-        image: "",
-        image_s: "",
-        desc: "",
-        links: [
-            {
-                icon: "scholar",
-                url: "https://scholar.google.com/citations?user=7m-TOp8AAAAJ",
-            },
-        ],
-        keys: ["alumni"],
-    },
-    {
-        name: "Yanting Yang",
-        image: "",
-        image_s: "",
-        desc: "",
-        links: [
-            {
-                icon: "scholar",
-                url: "https://scholar.google.com/citations?user=UXRnnz8AAAAJ",
-            },
-        ],
-        keys: ["alumni"],
-    },
-    {
         name: "Hongyang Li",
         image: "/assets/person/hongyang_li.jpg",
         image_s: "/assets/person/hongyang_li_s.jpg",
@@ -80,7 +54,7 @@ export const members: {
                 url: "https://twitter.com/ilnehc",
             },
         ],
-        keys: ["phd"],
+        keys: ["hku"],
     },
     {
         name: "Huijie Wang",
@@ -134,7 +108,7 @@ export const members: {
                 url: "https://twitter.com/smch_1127",
             },
         ],
-        keys: ["phd"],
+        keys: ["hku"],
     },
     {
         name: "Tianyu Li",
@@ -159,7 +133,7 @@ export const members: {
                 url: "https://twitter.com/sephy_li",
             },
         ],
-        keys: ["phd"],
+        keys: ["joint"],
     },
     {
         name: "Qingwen Bu",
@@ -180,7 +154,7 @@ export const members: {
                 url: "https://github.com/retsuh-bqw",
             },
         ],
-        keys: ["phd"],
+        keys: ["hku"],
     },
     {
         name: "Yixuan Pan",
@@ -201,7 +175,7 @@ export const members: {
                 url: "https://github.com/lzpyx",
             },
         ],
-        keys: ["phd"],
+        keys: ["hku"],
     },
     {
         name: "Zhuoheng Li",
@@ -226,32 +200,7 @@ export const members: {
                 url: "https://huggingface.co/StarCycle",
             },
         ],
-        keys: ["phd"],
-    },
-    {
-        name: "Ziye Wang",
-        image: "/assets/person/ziye_wang.jpg",
-        desc: "HKU (The University of Hong Kong)",
-        image_s: "/assets/person/ziye_wang_s.jpg",
-        links: [
-            {
-                icon: "homepage",
-                url: "https://ziyeeee.github.io/",
-            },
-            {
-                icon: "scholar",
-                url: "https://scholar.google.com/citations?user=C9IGdzYAAAAJ",
-            },
-            {
-                icon: "email",
-                url: "mailto:ziyewang@connect.hku.hk",
-            },
-            {
-                icon: "github",
-                url: "https://github.com/Ziyeeee",
-            },
-        ],
-        keys: ["phd"],
+        keys: ["hku"],
     },
     {
         name: "Hai Zhang",
@@ -280,7 +229,32 @@ export const members: {
                 url: "https://www.zhihu.com/people/betray12138",
             },
         ],
-        keys: ["phd"],
+        keys: ["hku"],
+    },
+    {
+        name: "Ziye Wang",
+        image: "/assets/person/ziye_wang.jpg",
+        desc: "HKU (The University of Hong Kong)",
+        image_s: "/assets/person/ziye_wang_s.jpg",
+        links: [
+            {
+                icon: "homepage",
+                url: "https://ziyeeee.github.io/",
+            },
+            {
+                icon: "scholar",
+                url: "https://scholar.google.com/citations?user=C9IGdzYAAAAJ",
+            },
+            {
+                icon: "email",
+                url: "mailto:ziyewang@connect.hku.hk",
+            },
+            {
+                icon: "github",
+                url: "https://github.com/Ziyeeee",
+            },
+        ],
+        keys: ["hku"],
     },
     {
         name: "Yichao Zhong",
@@ -305,7 +279,7 @@ export const members: {
                 url: "https://x.com/PeterYChong",
             },
         ],
-        keys: ["phd"],
+        keys: ["hku"],
     },
     {
         name: "Yuhang Lu",
@@ -330,7 +304,7 @@ export const members: {
                 url: "https://github.com/yuhanglu2000",
             },
         ],
-        keys: ["phd"],
+        keys: ["hku"],
     },
     {
         name: "Hanxue Zhang",
@@ -351,7 +325,7 @@ export const members: {
                 url: "https://github.com/jjxjiaxue",
             },
         ],
-        keys: ["phd"],
+        keys: ["alumni"],
     },
     {
         name: "Yihang Qiu",
@@ -372,7 +346,7 @@ export const members: {
                 url: "https://github.com/GihhArwtw",
             },
         ],
-        keys: ["intern"],
+        keys: ["student"],
     },
     {
         name: "Jiazhi Yang",
@@ -397,7 +371,7 @@ export const members: {
                 url: "https://x.com/jiazhi_yang2024",
             },
         ],
-        keys: ["intern"],
+        keys: ["student"],
     },
     {
         name: "Yunsong Zhou",
@@ -439,7 +413,7 @@ export const members: {
                 url: "https://github.com/ModiShi",
             },
         ],
-        keys: ["phd"],
+        keys: ["joint"],
     },
     {
         name: "Longyan Wu",
@@ -456,7 +430,7 @@ export const members: {
                 url: "https://github.com/wly-Lilie",
             },
         ],
-        keys: ["phd"],
+        keys: ["joint"],
     },
     {
         name: "Caojun Wang",
@@ -477,7 +451,7 @@ export const members: {
                 url: "https://github.com/WCJ-BERT",
             },
         ],
-        keys: ["phd"],
+        keys: ["joint"],
     },
     {
         name: "Hongchen Li",
@@ -494,7 +468,7 @@ export const members: {
                 url: "https://github.com/lhcstation",
             },
         ],
-        keys: ["phd"],
+        keys: ["joint"],
     },
     {
         name: "Zhenhua Wu",
@@ -511,7 +485,7 @@ export const members: {
                 url: "https://github.com/ArthurWuzh",
             },
         ],
-        keys: ["phd"],
+        keys: ["joint"],
     },
     {
         name: "Haochen Liu",
@@ -532,7 +506,7 @@ export const members: {
                 url: "https://github.com/georgeliu233",
             },
         ],
-        keys: ["intern"],
+        keys: ["alumni"],
     },
     {
         name: "Haochen Tian",
@@ -553,7 +527,7 @@ export const members: {
                 url: "https://github.com/hctian713",
             },
         ],
-        keys: ["intern"],
+        keys: ["student"],
     },
     {
         name: "Haoran Jiang",
@@ -574,7 +548,7 @@ export const members: {
                 url: "https://github.com/HRRiver7",
             },
         ],
-        keys: ["phd"],
+        keys: ["joint"],
     },
     {
         name: "Jin Chen",
@@ -595,7 +569,7 @@ export const members: {
                 url: "https://github.com/dunknsabsw",
             },
         ],
-        keys: ["phd"],
+        keys: ["joint"],
     },
     {
         name: "Chengen Xie",
@@ -616,7 +590,7 @@ export const members: {
                 url: "https://github.com/ChengenXie",
             },
         ],
-        keys: ["phd"],
+        keys: ["joint"],
     },
     {
         name: "Jisong Cai",
@@ -658,7 +632,7 @@ export const members: {
                 url: "https://github.com/Y-vic",
             },
         ],
-        keys: ["phd"],
+        keys: ["hku"],
     },
     {
         name: "Checheng Yu",
@@ -683,7 +657,7 @@ export const members: {
                 url: "https://github.com/Tradewindycc",
             },
         ],
-        keys: ["phd"],
+        keys: ["hku"],
     },
     {
         name: "Changhui Jing",
@@ -700,7 +674,7 @@ export const members: {
                 url: "https://github.com/szpk",
             },
         ],
-        keys: ["phd"],
+        keys: ["joint"],
     },
     {
         name: "Bangjun Wang",
@@ -717,7 +691,7 @@ export const members: {
                 url: "https://scholar.google.com/citations?user=_LeSlzUAAAAJ",
             },
         ],
-        keys: ["phd"],
+        keys: ["hku"],
     },
     {
         name: "Zihao Zhang",
@@ -742,7 +716,7 @@ export const members: {
                 url: "https://github.com/Zizizi-hao",
             },
         ],
-        keys: ["phd"],
+        keys: ["joint"],
     },
     {
         name: "Shijia Peng",
@@ -771,7 +745,7 @@ export const members: {
                 url: "https://www.xiaohongshu.com/user/profile/5d2ff1090000000012035ac6",
             },
         ],
-        keys: ["intern"],
+        keys: ["alumni"],
     },
     {
         name: "Hugo Mak",
@@ -799,6 +773,32 @@ export const members: {
             {
                 icon: "github",
                 url: "https://github.com/Jiaheng-Wang-kcl",
+            },
+        ],
+        keys: ["alumni"],
+    },
+    {
+        name: "Yuxiang Lu",
+        image: "",
+        image_s: "",
+        desc: "",
+        links: [
+            {
+                icon: "scholar",
+                url: "https://scholar.google.com/citations?user=7m-TOp8AAAAJ",
+            },
+        ],
+        keys: ["alumni"],
+    },
+    {
+        name: "Yanting Yang",
+        image: "",
+        image_s: "",
+        desc: "",
+        links: [
+            {
+                icon: "scholar",
+                url: "https://scholar.google.com/citations?user=UXRnnz8AAAAJ",
             },
         ],
         keys: ["alumni"],
