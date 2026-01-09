@@ -40,6 +40,16 @@ export default function Redirect() {
         pathname.toLowerCase().startsWith('/events')
     ) {
         redirect('/events')
+    }    
+    if (
+        pathname.toLowerCase().startsWith('/embodiedai')
+    ) {
+        redirect('/EmbodiedAI')
+    }
+    if (
+        pathname.toLowerCase().startsWith('/e2ead')
+    ) {
+        redirect('/E2EAD')
     }
 
 

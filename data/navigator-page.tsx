@@ -124,4 +124,6 @@ export const NavigatorPage: {
             id: "driving",
         },
     ],
+    "/embodiedai": [],
+    "/e2ead": [],
 };

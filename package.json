@@ -44,6 +44,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "daisyui": "^5.5.14",
     "prettier": "^3.5.3",
     "tailwindcss": "^4",
     "typescript": "^5"
