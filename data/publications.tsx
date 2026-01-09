@@ -506,7 +506,7 @@ export const publications: {
         description: "OMEGA is a training-free, optimization-guided diffusion framework that enforces structural consistency and interaction reasoning during sampling to generate realistic, controllable, and safety-critical multi-agent driving scenes.",
         keys: ['ad_algorithm'],
         time: '2025.12.08',
-        timeline:['te2e'],
+        timeline:[],
     },
     {
         title: "MTGS: Multi-Traversal Gaussian Splatting",
@@ -566,7 +566,7 @@ export const publications: {
         description: "",
         keys: ['ad_algorithm'],
         time: '2023.12.26',
-        timeline:['te2e'],
+        timeline:[],
     },
     {
         title: "Leveraging Vision-Centric Multi-Modal Expertise for 3D Object Detection",
@@ -586,7 +586,7 @@ export const publications: {
         description: "The unified framework to enhance 3D object detection by uniting a multi-modal expert model with a trajectory distillation module.",
         keys: ['ad_algorithm'],
         time: '2023.10.24',
-        timeline:['te2e'],
+        timeline:[],
     },
     {
         title: "OpenLane-V2: A Topology Reasoning Benchmark for Unified 3D HD Mapping",
@@ -610,7 +610,7 @@ export const publications: {
         description: "The world's first perception and reasoning benchmark for scene structure in autonomous driving.",
         keys: ['ad_algorithm'],
         time: '2023.04.20',
-        timeline:['te2e'],
+        timeline:['te2e', 'highlight'],
     },
     {
         title: "Delving into the Devils of Bird's-Eye-View Perception: A Review, Evaluation and Recipe",
@@ -630,7 +630,7 @@ export const publications: {
         description: "We review the most recent work on BEV perception and provide analysis of different solutions.",
         keys: ['ad_algorithm', 'survey'],
         time: '2022.09.12',
-        timeline:['te2e'],
+        timeline:['te2e', 'highlight'],
     },
     {
         title: "Scene as Occupancy",
@@ -670,7 +670,7 @@ export const publications: {
         description: "We propose Sparse Dense Fusion (SDF), a complementary framework that incorporates both sparse-fusion and dense-fusion modules via the Transformer architecture.",
         keys: ['ad_algorithm'],
         time: '2023.04.09',
-        timeline:['te2e'],
+        timeline:[],
     },
     {
         title: "HDGT: Heterogeneous Driving Graph Transformer for Multi-Agent Trajectory Prediction via Scene Encoding",
@@ -690,7 +690,7 @@ export const publications: {
         description: "HDGT formulates the driving scene as a heterogeneous graph with different types of nodes and edges.",
         keys: ['ad_algorithm'],
         time: '2022.04.30',
-        timeline:['te2e'],
+        timeline:[],
     },
     {
         title: "Distilling Focal Knowledge from Imperfect Expert for 3D Object Detection",
@@ -770,7 +770,7 @@ export const publications: {
         description: "We propose GAPretrain, a plug-and-play framework that boosts 3D detection by pretraining with spatial-structural cues and BEV representation.",
         keys: ['ad_algorithm'],
         time: '2023.04.06',
-        timeline:['te2e'],
+        timeline:[],
     },
     {
         title: "3D Data Augmentation for Driving Scenes on Camera",
@@ -790,7 +790,7 @@ export const publications: {
         description: "We propose a 3D data augmentation approach termed Drive-3DAug to augment the driving scenes on camera in the 3D space.",
         keys: ['ad_algorithm'],
         time: '2023.03.18',
-        timeline:['te2e'],
+        timeline:[],
     },
     {
         title: "Towards Capturing the Temporal Dynamics for Trajectory Prediction: a Coarse-to-Fine Approach",
@@ -834,7 +834,7 @@ export const publications: {
         description: "A paradigm for autonomous driving that applies both Transformer and Temporal structure to generate BEV features.",
         keys: ['ad_algorithm'],
         time: '2022.03.31',
-        timeline:['te2e'],
+        timeline:['te2e', 'highlight'],
     },
     {
         title: "PersFormer: 3D Lane Detection via Perspective Transformer and the OpenLane Benchmark",
@@ -866,7 +866,7 @@ export const publications: {
         description: "PersFormer adopts a unified 2D/3D anchor design and an auxiliary task to detect 2D/3D lanes; we release one of the first large-scale real-world 3D lane datasets, OpenLane.",
         keys: ['ad_algorithm'],
         time: '2022.03.21',
-        timeline:['te2e'],
+        timeline:['te2e', 'highlight'],
     },
     {
         title: "ReSim: Reliable World Simulation for Autonomous Driving",
@@ -886,7 +886,7 @@ export const publications: {
         description: "ReSim is a driving world model that enables Reliable Simulation of diverse open-world driving scenarios under various actions, including hazardous non-expert ones. A Video2Reward model estimates the reward from ReSim's simulated future.",
         keys: ['end_to_end_ad', 'home_sliding'],
         time: '2025.06.11',
-        timeline:['te2e'],
+        timeline:['te2e', 'highlight'],
     },
     {
         title: "ETA: Efficiency through Thinking Ahead, A Dual Approach to Self-Driving with Large Models",
@@ -1022,7 +1022,7 @@ export const publications: {
         description: "Data-Driven Non-Reactive Autonomous Vehicle Simulation and Benchmarking.",
         keys: ['end_to_end_ad'],
         time: '2024.06.21',
-        timeline:['te2e'],
+        timeline:['te2e', 'highlight'],
     },
     {
         title: "Generalized Predictive Model for Autonomous Driving",
@@ -1061,8 +1061,8 @@ export const publications: {
         ],
         description: "We aim to establish a generalized video prediction paradigm for autonomous driving by presenting the largest multimodal driving video dataset to date, OpenDV-2K, and a generative model that predicts the future given past visual and textual input, GenAD.",
         keys: ['end_to_end_ad'],
-        time: '2024.06.21',
-        timeline:['te2e'],
+        time: '2024.03.14',
+        timeline:['te2e', 'highlight'],
     },
     {
         title: "Visual Point Cloud Forecasting enables Scalable Autonomous Driving",
