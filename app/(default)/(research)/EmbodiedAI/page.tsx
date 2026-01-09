@@ -27,6 +27,9 @@ export default function Home() {
                     <h1 className="text-t0 font-bold">
                         Embodied AI
                     </h1>
+                    <span className="text-xl">
+                        is the integration of artificial intelligence with the physical world, enabling robots to interact with and learn from the real world. We focus on the most critical areas of embodied AI, including humanoid, robot manipulation, and dexterous hand. Our goal is to explore the scaling law for robots, develop general world models, and unveil the power of reinforcement learning to achieve general-purpose embodied agents. For full publication, please see <Link href="/publications" className="underline text-o-blue hover:text-o-light-blue">here</Link>.
+                    </span>
                 </div>
             </div>
 
@@ -37,6 +40,14 @@ export default function Home() {
                     <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
                         {[...publications.values()].filter(publication => publication.keys.includes("embodied_ai")).map((publication, index) => (
                             <li key={publication.title}>
+                                {
+                                    index != 0 && (
+                                        <hr />
+                                    )
+                                }
+
+
+
                                 <div className="timeline-middle mx-3">
                                     <svg
                                     viewBox="0 0 20 20"
@@ -46,20 +57,35 @@ export default function Home() {
                                         <circle cx="10" cy="10" r="8" />
                                     </svg>
                                 </div>
+
+
+
                                 <div
                                 className={`mb-6 grid gap-1 ${
                                     index % 2 === 1 ? "timeline-end md:text-start" : "timeline-start md:text-end"
                                 }`}
                                 >
+
+
+
                                     <time className="text-o-gray">
                                         1984
                                     </time>
+
+
+
                                     <Link href={publication.link} target={publication.link.startsWith('http') ? '_blank' : '_self'} className="text-xl hover:text-o-blue mt-1">
                                         {publication.title}
                                     </Link>
+
+
+
                                     <i className="text-sm text-o-gray whitespace-pre-line">
                                         {publication.description}
                                     </i>
+
+
+
                                     <div className="px-20 w-full flex justify-center items-center relative mt-3">
                                         <Link href={publication.link} target={publication.link.startsWith('http') ? '_blank' : '_self'}>
                                             <Image
@@ -71,101 +97,24 @@ export default function Home() {
                                             />
                                         </Link>
                                     </div>
+
+
+
                                 </div>
-                                <hr />
+
+
+
+                                {
+                                    index != [...publications.values()].filter(publication => publication.keys.includes("embodied_ai")).length - 1 && (
+                                        <hr />
+                                    )
+                                }
                             </li>
                         ))}
                     </ul>
                 </div>
             </div>
 
-
-
-            <div className="w-full px-6 flex justify-center mt-24">
-                <div className="w-full max-w-7xl flex">
-                    <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
-                        <li>
-                            <div className="timeline-middle mx-3">
-                                <svg
-                                viewBox="0 0 20 20"
-                                className="h-5 w-5 text-o-gray"
-                                fill="currentColor"
-                                >
-                                    <circle cx="10" cy="10" r="8" />
-                                </svg>
-                            </div>
-                            <div className="timeline-start mb-6 md:text-end grid gap-1">
-                                <time>
-                                    1984
-                                </time>
-                                <div>
-                                    First Macintosh computer
-                                </div>
-                                <p>
-                                    The Apple Macintosh—later rebranded as the Macintosh 128K—is the original Apple Macintosh
-                                    personal computer. It played a pivotal role in establishing desktop publishing as a general
-                                    office function. The motherboard, a 9 in (23 cm) CRT monitor, and a floppy drive were housed
-                                    in a beige case with integrated carrying handle; it came with a keyboard and single-button
-                                    mouse.
-                                </p>
-                            </div>
-                            <hr />
-                        </li>
-                        <li>
-                            <div className="timeline-middle mx-3">
-                                <svg
-                                viewBox="0 0 20 20"
-                                className="h-5 w-5 text-o-gray"
-                                fill="currentColor"
-                                >
-                                    <circle cx="10" cy="10" r="8" />
-                                </svg>
-                            </div>
-                            <div className="timeline-end mb-6 grid gap-1">
-                                <time>
-                                    1984
-                                </time>
-                                <div>
-                                    First Macintosh computer
-                                </div>
-                                <p>
-                                    The Apple Macintosh—later rebranded as the Macintosh 128K—is the original Apple Macintosh
-                                    personal computer. It played a pivotal role in establishing desktop publishing as a general
-                                    office function. The motherboard, a 9 in (23 cm) CRT monitor, and a floppy drive were housed
-                                    in a beige case with integrated carrying handle; it came with a keyboard and single-button
-                                    mouse.
-                                </p>
-                            </div>
-                            <hr />
-                        </li>
-                        <li>
-                            <hr />
-                            <div className="timeline-middle">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                                className="h-5 w-5"
-                            >
-                                <path
-                                fillRule="evenodd"
-                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                                clipRule="evenodd"
-                                />
-                            </svg>
-                            </div>
-                            <div className="timeline-start mb-10 md:text-end">
-                            <time className="font-mono italic">2015</time>
-                            <div className="text-lg font-black">Apple Watch</div>
-                            The Apple Watch is a line of smartwatches produced by Apple Inc. It incorporates fitness
-                            tracking, health-oriented capabilities, and wireless telecommunication, and integrates with
-                            iOS and other Apple products and services
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-           
 
 
         </div>
