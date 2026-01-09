@@ -780,9 +780,9 @@
     <div class="container is-max-desktop">
       <div class="hero-body">
         <h1 class="title is-2" style="text-align: center; padding-bottom: 10px;">Method Overview</h1>
-        <div align="center" style="position: relative; display: inline-block; width: 100%;">
+        <div align="center" style="position: relative; width: 100%;">
           <img id="method-gif" src="https://assets.kinetixai.cn/WholeBodyVLA/20251217-123804.gif" alt="WholeBodyVLA Method" width="100%" style="display: block;">
-          <img id="method-static" src="https://assets.kinetixai.cn/WholeBodyVLA/method_wbvla.png" alt="WholeBodyVLA Method" width="100%" style="display: none; position: absolute; top: 0; left: 0;">
+          <img id="method-static" src="https://assets.kinetixai.cn/WholeBodyVLA/method_wbvla.png" alt="WholeBodyVLA Method" width="100%" style="visibility: hidden; position: absolute; top: 0; left: 0;">
         </div>  
         <br> 
         <h2 class="subtitle">
@@ -2360,11 +2360,12 @@
     
     // 估计 GIF 播放时长（秒），可以根据实际 GIF 时长调整
     const GIF_DURATION = 8; // 假设 GIF 播放时长为 8 秒，你可以根据实际调整
-    const STATIC_DURATION = 3; // 静态图片显示 3 秒
+    const STATIC_DURATION = 5; // 静态图片显示 3 秒
     
     function showGif() {
-      methodGif.style.display = "block";
-      methodStatic.style.display = "none";
+      // GIF 显示，静态图片隐藏
+      methodGif.style.visibility = "visible";
+      methodStatic.style.visibility = "hidden";
       
       // 清除之前的定时器
       if (staticTimer) {
@@ -2380,8 +2381,10 @@
     }
     
     function showStatic() {
-      methodGif.style.display = "none";
-      methodStatic.style.display = "block";
+      // 使用 visibility 而不是 display，这样 GIF 仍然占据空间，保持容器高度
+      // GIF 隐藏但占据空间，静态图片显示并覆盖在上面
+      methodGif.style.visibility = "hidden";
+      methodStatic.style.visibility = "visible";
       
       // 清除之前的定时器
       if (gifTimer) {
