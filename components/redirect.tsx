@@ -98,15 +98,15 @@ export default function Redirect() {
         redirect('/RoboDual/')
     }
     if (
-        pathname.toLowerCase().startsWith('/freetacman')
-        // pathname.toLowerCase().startsWith('/blog/freetacman')
+        pathname.toLowerCase().startsWith('/freetacman') ||
+        pathname.toLowerCase().startsWith('/blog/freetacman')
     ) {
-        redirect('/FreeTacMan')
+        redirect('/FreeTacMan/')
     }
     if (
         pathname.toLowerCase().startsWith('/resim')
     ) {
-        redirect('/ReSim')
+        redirect('/ReSim/')
     }
     if (
         pathname.toLowerCase().startsWith('/elm')
@@ -116,27 +116,32 @@ export default function Redirect() {
     if (
         pathname.toLowerCase().startsWith('/ams')
     ) {
-        redirect('/AMS')
+        redirect('/AMS/')
     }
     if (
         pathname.toLowerCase().startsWith('/wholebodyvla')
     ) {
-        redirect('/WholeBodyVLA')
+        redirect('/WholeBodyVLA/')
     }
     if (
         pathname.toLowerCase().startsWith('/omega')
     ) {
-        redirect('/OMEGA')
+        redirect('/OMEGA/')
     }
     if (
         pathname.toLowerCase().startsWith('/kai0')
     ) {
-        redirect('/kai0')
+        redirect('/kai0/')
     }
     if (
         pathname.toLowerCase().startsWith('/simscale')
     ) {
         redirect('/SimScale/')
+    }
+    if (
+        pathname.toLowerCase().startsWith('/opengo1')
+    ) {
+        redirect('/OpenGO1/')
     }
 
 

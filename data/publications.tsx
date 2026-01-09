@@ -108,7 +108,7 @@ export const publications: {
         icon: [
             {
                 type: "blog",
-                link: "https://opendrivelab.com/OpenGO1/",
+                link: "/OpenGO1/",
             },
             {
                 type: "github",
@@ -122,7 +122,7 @@ export const publications: {
         description: "The first comprehensive analysis of data diversity principles revealing optimal scaling strategies for large-scale robotic manipulation training.",
         keys: ['editor_pick', 'home_sliding', 'drawer_embodied'],
         time: '2025.07.08',
-        timeline:['tembodied', 'highlight'],
+        timeline:['tembodied'],
     },
     {
         title: "Detect Anything 3D in the Wild",
@@ -156,7 +156,7 @@ export const publications: {
         icon: [
             {
                 type: "page",
-                link: "https://opendrivelab.com/SimScale/",
+                link: "/SimScale/",
             },
             {
                 type: "github",
@@ -336,7 +336,7 @@ export const publications: {
         icon: [
             {
                 type: "page",
-                link: "https://opendrivelab.com/WholeBodyVLA/",
+                link: "/WholeBodyVLA/",
             },
             {
                 type: "github",
@@ -347,7 +347,7 @@ export const publications: {
                 link: "https://assets.kinetixai.cn/WholeBodyVLA/long.mp4",
             },
         ],
-        description: "A unified VLA framework enabling large-space humanoid loco-manipulation via unified latent learning and loco–manipulation–oriented RL. ",
+        description: "A unified VLA framework enabling large-space humanoid loco-manipulation via unified latent learning and loco-manipulation-oriented RL. ",
         keys: ['embodied_ai'],
         time: '2025.12.11',
         timeline:['tembodied'],
@@ -364,7 +364,7 @@ export const publications: {
         icon: [
             {
                 type: "page",
-                link: "https://opendrivelab.com/AMS/",
+                link: "/AMS/",
             },
             {
                 type: "youtube",
@@ -486,7 +486,7 @@ export const publications: {
         description: "We propose a general pre-training pipeline that learns Manipulation by Predicting the Interaction (MPI).",
         keys: ['embodied_ai'],
         time: '2024.06.01',
-        timeline:['tembodied'],
+        timeline:['tembodied', 'highlight'],
     },
     {
         title: "Optimization-Guided Diffusion for Interactive Scene Generation",
