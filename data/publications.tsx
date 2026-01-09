@@ -90,6 +90,10 @@ export const publications: {
         star: "",
         starlink: "",
         icon: [
+            {
+                type: "cite",
+                link: "",
+            },
         ],
         description: "",
         keys: ['editor_pick', 'home_sliding', "position"],

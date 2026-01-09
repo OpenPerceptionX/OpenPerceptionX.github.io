@@ -228,7 +228,6 @@ export function Landing() {
                                             )
                                         } {
                                             landing.title.startsWith('Intelligent Robot') && (
-
                                                 <Drawer direction="top">
                                                     <DrawerTrigger asChild>
                                                         <span className="animated-underline-gray mr-3 text-nowrap">

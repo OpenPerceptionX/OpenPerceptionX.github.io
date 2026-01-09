@@ -26,6 +26,7 @@ import {
 import { Landing } from "./landing"
 import { News } from "./news"
 import { Embodied, E2EAD } from "@/components/app-drawer"
+import { Chen2025_value_learning } from "@/components/citation-drawer"
 
 
 
@@ -301,19 +302,38 @@ export default function Home() {
                                 }
                                 {
                                     publication.icon.map((link) => (
-                                        link.type != 'github' &&
-                                        <Link href={link.link} target={link.link.startsWith('http') ? '_blank' : '_self'} key={link.type} className="size-4 md:size-5 group/icon">
-                                            <AspectRatio ratio={1/1}>
-                                                <Image
-                                                    src={"/resources/icon/" + link.type + ".svg"}
-                                                    alt={link.type}
-                                                    fill
-                                                    className="group-hover/icon:scale-125 transition delay-100 duration-200"
-                                                />
-                                            </AspectRatio>
-                                        </Link>
+                                        link.type != 'github' && (
+                                            link.type != 'cite' ?
+                                            <Link href={link.link} target={link.link.startsWith('http') ? '_blank' : '_self'} key={link.type} className="size-4 md:size-5 group/icon">
+                                                <AspectRatio ratio={1/1}>
+                                                    <Image
+                                                        src={"/resources/icon/" + link.type + ".svg"}
+                                                        alt={link.type}
+                                                        fill
+                                                        className="group-hover/icon:scale-125 transition delay-100 duration-200"
+                                                    />
+                                                </AspectRatio>
+                                            </Link>
+                                            :                                
+                                            <Drawer direction="top" key={link.type}>
+                                                <DrawerTrigger asChild>
+                                                    <div className="size-4 md:size-5 group/icon hover:cursor-pointer">
+                                                        <AspectRatio ratio={1/1}>
+                                                            <Image
+                                                                src={"/resources/icon/" + link.type + ".svg"}
+                                                                alt={link.type}
+                                                                fill
+                                                                className="group-hover/icon:scale-125 transition delay-100 duration-200"
+                                                            />
+                                                        </AspectRatio>
+                                                    </div>
+                                                </DrawerTrigger>
+                                                <Chen2025_value_learning />
+                                            </Drawer>
+                                        )
                                     ))
                                 }
+
                             </div>
 
                         </div>
