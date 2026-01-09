@@ -125,5 +125,5 @@ export const NavigatorPage: {
         },
     ],
     "/embodiedai": [],
-    "/e2ead": [],
+    "/autonomousdriving": [],
 };

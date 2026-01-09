@@ -206,9 +206,9 @@ export function AppSidebar() {
 
 
 
-                                <Link href="/datasets" className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
+                                {/* <Link href="/datasets" className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
                                     Dataset
-                                </Link>
+                                </Link> */}
                                 {/* <Collapsible className="group/collapsible flex flex-col gap-6">
                                     <SidebarMenuItem>
                                         <CollapsibleTrigger className="w-full flex flex-row justify-between items-center p-2 rounded-sm hover:bg-o-blue/3 select-none">

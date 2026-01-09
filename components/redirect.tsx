@@ -47,9 +47,9 @@ export default function Redirect() {
         redirect('/EmbodiedAI')
     }
     if (
-        pathname.toLowerCase().startsWith('/e2ead')
+        pathname.toLowerCase().startsWith('/autonomousdriving')
     ) {
-        redirect('/E2EAD')
+        redirect('/AutonomousDriving')
     }
 
 

@@ -325,7 +325,7 @@ export default function Home() {
 
 
 
-            <div className="w-full px-6 flex justify-center mt-36">
+            {/* <div className="w-full px-6 flex justify-center mt-36">
                 <div className="w-full max-w-7xl flex">
                     <div className="w-full flex justify-between items-center">
                         <h2 className="text-t1"> 
@@ -367,11 +367,11 @@ export default function Home() {
                         </Link>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
 
 
-            <div className="w-full px-6 flex justify-center mt-12">
+            {/* <div className="w-full px-6 flex justify-center mt-12">
                 <div className="w-full max-w-7xl flex flex-col gap-12">
 
                     <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 justify-between">
@@ -458,7 +458,7 @@ export default function Home() {
                     </div>
 
                 </div>
-            </div>
+            </div> */}
 
 
 

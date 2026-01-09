@@ -38,7 +38,13 @@ export default function Home() {
             <div className="w-full px-6 flex justify-center mt-24">
                 <div className="w-full max-w-7xl flex">
                     <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
-                        {[...publications.values()].filter(publication => publication.timeline.includes("tembodied")).map((publication, index) => (
+                        {[...publications.values()].filter(publication => publication.timeline.includes("tembodied"))
+                        .sort((a, b) => {
+                            const timeA = new Date(a.time.replace(/\./g, "-")).getTime();
+                            const timeB = new Date(b.time.replace(/\./g, "-")).getTime();
+                            return timeB - timeA;
+                        })
+                        .map((publication, index) => (
                             <li key={publication.title}>
                                 {
                                     index != 0 && (
@@ -80,7 +86,7 @@ export default function Home() {
 
 
 
-                                    <i className="text-sm text-o-gray whitespace-pre-line">
+                                    <i className="text-sm text-o-gray whitespace-pre-line text-start">
                                         {publication.description}
                                     </i>
 
