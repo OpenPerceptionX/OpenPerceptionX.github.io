@@ -166,7 +166,7 @@ export const publications: {
         description: `🏗️ A scalable simulation pipeline that synthesizes diverse and high-fidelity reactive driving scenarios with pseudo-expert.\n🚀 An effective sim-real co-training strategy that improves robustness and generalization across end-to-end planners.\n🔬 A comprehensive recipe that reveals crucial insights into the underlying scaling properties of sim-real learning systems.`,
         keys: ['end_to_end_ad'],
         time: '2025.11.28',
-        timeline:['te2e'],
+        timeline:[],
     },
     {
         title: "Reinforced Refinement with Self-Aware Expansion for End-to-End Autonomous Driving",
@@ -182,7 +182,7 @@ export const publications: {
         description: "",
         keys: ['end_to_end_ad'],
         time: '2025.06.11',
-        timeline:['te2e'],
+        timeline:[],
     },
     {
         title: "UniVLA: Learning to Act Anywhere with Task-centric Latent Actions",
@@ -690,7 +690,7 @@ export const publications: {
         description: "HDGT formulates the driving scene as a heterogeneous graph with different types of nodes and edges.",
         keys: ['ad_algorithm'],
         time: '2022.04.30',
-        timeline:['te2e', 'highlight'],
+        timeline:['te2e'],
     },
     {
         title: "Distilling Focal Knowledge from Imperfect Expert for 3D Object Detection",
@@ -710,7 +710,7 @@ export const publications: {
         description: "We investigate on how to distill the knowledge from an imperfect expert. We propose FD3D, a Focal Distiller for 3D object detection.",
         keys: ['ad_algorithm'],
         time: '2023.06.18',
-        timeline:['te2e'],
+        timeline:[],
     },
     {
         title: "BEVFormer v2: Adapting Modern Image Backbones to Bird's-Eye-View Recognition via Perspective Supervision",
@@ -730,7 +730,7 @@ export const publications: {
         description: "A novel bird's-eye-view (BEV) detector with perspective supervision, which converges faster and better suits modern image backbones.",
         keys: ['ad_algorithm'],
         time: '2022.11.18',
-        timeline:['te2e'],
+        timeline:[],
     },
     {
         title: "Graph-based Topology Reasoning for Driving Scenes",
@@ -902,7 +902,7 @@ export const publications: {
         description: "",
         keys: ['end_to_end_ad'],
         time: '2025.06.09',
-        timeline:['te2e'],
+        timeline:[],
     },
     {
         title: "Decoupled Diffusion Sparks Adaptive Scene Generation",
@@ -922,7 +922,7 @@ export const publications: {
         description: "",
         keys: ['end_to_end_ad'],
         time: '2025.04.14',
-        timeline:['te2e'],
+        timeline:[],
     },
     {
         title: "Centaur: Robust End-to-End Autonomous Driving with Test-Time Training",
@@ -938,7 +938,7 @@ export const publications: {
         description: "",
         keys: ['end_to_end_ad'],
         time: '2025.03.14',
-        timeline:['te2e'],
+        timeline:[],
     },
         {
         title: "Vista: A Generalizable Driving World Model with High Fidelity and Versatile Controllability",
@@ -1002,7 +1002,7 @@ export const publications: {
         description: "",
         keys: ['end_to_end_ad'],
         time: '2024.09.26',
-        timeline:['te2e'],
+        timeline:[],
     },
     {
         title: "NAVSIM: Data-Driven Non-Reactive Autonomous Vehicle Simulation and Benchmarking",
@@ -1130,7 +1130,7 @@ export const publications: {
         description: "Revive driving scene understanding by delving into the embodiment philosophy.",
         keys: ['end_to_end_ad'],
         time: '2024.03.07',
-        timeline:['te2e'],
+        timeline:[],
     },
     {
         title: "DriveAdapter: Breaking the Coupling Barrier of Perception and Planning in End-to-End Autonomous Driving",

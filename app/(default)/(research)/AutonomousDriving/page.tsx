@@ -94,45 +94,6 @@ export default function Home() {
 
                                     {
                                         publication.timeline.includes("highlight") && (
-                                            <div
-                                            className={`w-full flex gap-3 flex-wrap items-center ${
-                                                index % 2 === 1 ? "md:justify-start" : "md:justify-end"
-                                            }`}
-                                            >
-                                                {
-                                                    publication.note != 'arXiv' &&  (
-                                                        publication.noteoption ?
-                                                            <Link href={publication.noteoption} target={publication.noteoption.startsWith('http') ? '_blank' : '_self'} className="text-xs text-white bg-gradient-to-br from-o-light-blue via-o-blue to-o-light-blue rounded-sm px-2 py-1.5 hover:scale-105 transition delay-100 duration-200">
-                                                                {publication.note}
-                                                            </Link>
-                                                        :
-                                                            <span className="text-xs text-white bg-gradient-to-br from-o-light-blue via-o-blue to-o-light-blue rounded-sm px-2 py-1.5">
-                                                                {publication.note}
-                                                            </span>
-                                                    )
-                                                }
-                                                {
-                                                    publication.keys.includes('survey') && (
-                                                        <span className="text-xs text-white bg-black rounded-sm px-2 py-1.5">
-                                                            Survey
-                                                        </span>
-                                                    )
-                                                }
-                                                {
-                                                    publication.keys.includes('position') && (
-                                                        <span className="text-xs text-white bg-black rounded-sm px-2 py-1.5">
-                                                            Position Paper
-                                                        </span>
-                                                    )
-                                                }
-                                            </div>
-                                        )
-                                    }
-
-
-
-                                    {
-                                        publication.timeline.includes("highlight") && (
                                             <div className="px-20 md:px-0 xl:px-20 w-full flex justify-center items-center relative mt-3">
                                                 <Link href={publication.link} target={publication.link.startsWith('http') ? '_blank' : '_self'}>
                                                     <Image
