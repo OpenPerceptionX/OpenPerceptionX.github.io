@@ -28,7 +28,7 @@ export default function Home() {
                         Embodied AI
                     </h1>
                     <span className="text-xl">
-                        is the integration of artificial intelligence with the physical world, enabling robots to interact with and learn from the real world. We focus on the most critical areas of embodied AI, including humanoid, robot manipulation, and dexterous hand. Our goal is to explore the scaling law for robots, develop general world models, and unveil the power of reinforcement learning to achieve general-purpose embodied agents. For full publication, please see <Link href="/publications" className="underline text-o-blue hover:text-o-light-blue">here</Link>.
+                        is the integration of artificial intelligence with the physical world, enabling robots to interact with and learn from the real world. We focus on the most critical areas of embodied AI, including humanoid, robot manipulation, and dexterous hand. Our goal is to explore the scaling law for robots, develop general world models, and unveil the power of reinforcement learning to achieve general-purpose embodied agents. For a complete list of publications, please see <Link href="/publications" className="underline text-o-blue hover:text-o-light-blue">here</Link>.
                     </span>
                 </div>
             </div>
@@ -38,7 +38,7 @@ export default function Home() {
             <div className="w-full px-6 flex justify-center mt-24">
                 <div className="w-full max-w-7xl flex">
                     <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
-                        {[...publications.values()].filter(publication => publication.keys.includes("embodied_ai")).map((publication, index) => (
+                        {[...publications.values()].filter(publication => publication.timeline.includes("tembodied")).map((publication, index) => (
                             <li key={publication.title}>
                                 {
                                     index != 0 && (
@@ -69,7 +69,7 @@ export default function Home() {
 
 
                                     <time className="text-o-gray">
-                                        1984
+                                        {publication.time}
                                     </time>
 
 
@@ -86,17 +86,21 @@ export default function Home() {
 
 
 
-                                    <div className="px-20 w-full flex justify-center items-center relative mt-3">
-                                        <Link href={publication.link} target={publication.link.startsWith('http') ? '_blank' : '_self'}>
-                                            <Image
-                                                src={publication.image}
-                                                alt={publication.title}
-                                                width={1024}
-                                                height={1024}
-                                                className="rounded-sm bg-gradient-landing hover:scale-103 transition delay-100 duration-200"
-                                            />
-                                        </Link>
-                                    </div>
+                                    {
+                                        publication.timeline.includes("highlight") && (
+                                            <div className="px-20 w-full flex justify-center items-center relative mt-3">
+                                                <Link href={publication.link} target={publication.link.startsWith('http') ? '_blank' : '_self'}>
+                                                    <Image
+                                                        src={publication.image}
+                                                        alt={publication.title}
+                                                        width={1024}
+                                                        height={1024}
+                                                        className="rounded-sm bg-gradient-landing hover:scale-103 transition delay-100 duration-200"
+                                                    />
+                                                </Link>
+                                            </div>
+                                        )
+                                    }
 
 
 
@@ -105,7 +109,7 @@ export default function Home() {
 
 
                                 {
-                                    index != [...publications.values()].filter(publication => publication.keys.includes("embodied_ai")).length - 1 && (
+                                    index != [...publications.values()].filter(publication => publication.timeline.includes("tembodied")).length - 1 && (
                                         <hr />
                                     )
                                 }

@@ -61,11 +61,13 @@ export const publications: {
     icon: { type: string; link: string }[];
     description: string;
     keys: string[];
+    time: string;
+    timeline: string[];
 }[] = [
     {
         title: "χ0: A Live-Stream Robotic Teamwork for Clothing Manipulation from Zero to Hero",
         link: "/kai0",
-        image: "https://ik.imagekit.io/opendrivelab/position.jpg?updatedAt=1765023911765",
+        image: "https://ik.imagekit.io/opendrivelab/kai0.png",
         author: "",
         note: "arXiv",
         noteoption: '',
@@ -75,6 +77,8 @@ export const publications: {
         ],
         description: "\"Veni, Vidi, Vici\" - I came, I saw, I conquered. We aim to conquer the \"Mount Everest\" of robotics: 100% reliability in real-world garment manipulation.",
         keys: ['home_sliding'],
+        time: '2025.12.24',
+        timeline:['tembodied', 'highlight'],
     },
     {
         title: "Intelligent Robot Manipulation Requires Self-Directed Learning",
@@ -89,6 +93,8 @@ export const publications: {
         ],
         description: "",
         keys: ['editor_pick', 'home_sliding', "position"],
+        time: '2025.12.03',
+        timeline:['tembodied', 'highlight'],
     },
     {
         title: "GO-1-Pro: Is Diversity All You Need for Scalable Robotic Manipulation?",
@@ -115,6 +121,8 @@ export const publications: {
         ],
         description: "The first comprehensive analysis of data diversity principles revealing optimal scaling strategies for large-scale robotic manipulation training.",
         keys: ['editor_pick', 'home_sliding', 'drawer_embodied'],
+        time: '2025.07.08',
+        timeline:['tembodied', 'highlight'],
     },
     {
         title: "Detect Anything 3D in the Wild",
@@ -133,10 +141,12 @@ export const publications: {
         ],
         description: "DetAny3D is a promptable 3D detection foundation model that leverages 2D foundation knowledge to enable zero-shot 3D object detection from monocular images across novel categories and camera settings.",
         keys: ['cv_at_scale'],
+        time: '',
+        timeline:[],
     },
     {
         title: "SimScale: Learning to Drive via Real-World Simulation at Scale",
-        link: "https://arxiv.org/pdf/2511.23369",
+        link: "https://arxiv.org/abs/2511.23369",
         image: "/assets/publication/SimScale.png",
         author: "Haochen Tian, Tianyu Li, Haochen Liu, Jiazhi Yang, Yihang Qiu, Guang Li, Junli Wang, Yinfeng Gao, Zhang Zhang, Liang Wang, Hangjun Ye, Tieniu Tan, Long Chen, Hongyang Li",
         note: "arXiv 2025",
@@ -155,6 +165,8 @@ export const publications: {
         ],
         description: `🏗️ A scalable simulation pipeline that synthesizes diverse and high-fidelity reactive driving scenarios with pseudo-expert.\n🚀 An effective sim-real co-training strategy that improves robustness and generalization across end-to-end planners.\n🔬 A comprehensive recipe that reveals crucial insights into the underlying scaling properties of sim-real learning systems.`,
         keys: ['end_to_end_ad'],
+        time: '2025.11.28',
+        timeline:['te2e'],
     },
     {
         title: "Reinforced Refinement with Self-Aware Expansion for End-to-End Autonomous Driving",
@@ -169,6 +181,8 @@ export const publications: {
         ],
         description: "",
         keys: ['end_to_end_ad'],
+        time: '2025.06.11',
+        timeline:['te2e'],
     },
     {
         title: "UniVLA: Learning to Act Anywhere with Task-centric Latent Actions",
@@ -187,6 +201,8 @@ export const publications: {
         ],
         description: "A unified vision-language-action framework that enables policy learning across different environments.",
         keys: ['editor_pick', 'home_sliding', 'drawer_embodied'],
+        time: '2025.05.09',
+        timeline:['tembodied', 'highlight'],
     },
     {
         title: "Planning-oriented Autonomous Driving",
@@ -221,6 +237,8 @@ export const publications: {
         ],
         description: "UniAD: The first comprehensive framework that incorporates full-stack driving tasks.",
         keys: ['editor_pick', 'home_sliding', 'drawer_e2e'],
+        time: '2022.12.20',
+        timeline:['te2e', 'highlight'],
     },
     {
         title: "AgiBot World Colosseo: A Large-scale Manipulation Platform for Scalable and Intelligent Embodied Systems",
@@ -251,6 +269,8 @@ export const publications: {
         ],
         description: "A novel generalist policy that leverages latent action representations to maximize data utilization, demonstrating predictable performance scaling with increased data volume.",
         keys: ['editor_pick', 'home_sliding', 'drawer_embodied'],
+        time: '2025.06.09',
+        timeline:['tembodied', 'highlight'],
     },
     {
         title: "End-to-End Autonomous Driving: Challenges and Frontiers",
@@ -269,6 +289,8 @@ export const publications: {
         ],
         description: "In this survey, we provide a comprehensive analysis of more than 270 papers on the motivation, roadmap, methodology, challenges, and future trends in end-to-end autonomous driving.",
         keys: ['editor_pick', 'survey', 'drawer_e2e'],
+        time: '2023.06.29',
+        timeline:['te2e', 'highlight'],
     },
     {
         title: "DriveLM: Driving with Graph Visual Question Answering",
@@ -299,6 +321,8 @@ export const publications: {
         ],
         description: "Unlocking the future where autonomous driving meets the unlimited potential of language.",
         keys: ['end_to_end_ad'],
+        time: '2023.12.21',
+        timeline:['te2e', 'highlight'],
     },
     {
         title: "WholeBodyVLA: Towards Unified Latent VLA for Whole-body Loco-manipulation Control",
@@ -325,6 +349,8 @@ export const publications: {
         ],
         description: "A unified VLA framework enabling large-space humanoid loco-manipulation via unified latent learning and loco–manipulation–oriented RL. ",
         keys: ['embodied_ai'],
+        time: '2025.12.11',
+        timeline:['tembodied'],
     },
     {
         title: "Agility Meets Stability: Versatile Humanoid Control with Heterogeneous Data",
@@ -351,6 +377,8 @@ export const publications: {
         ],
         description: "A unified whole-body control policy for humanoid robots that enables zero-shot execution of diverse motions, including Ip Man'squat, dancing, running and real-time teleoperation.",
         keys: ['embodied_ai'],
+        time: '2025.11.21',
+        timeline:['tembodied'],
     },
     {
         title: "Towards Synergistic, Generalized, and Efficient Dual-System for Robotic Manipulation",
@@ -373,6 +401,8 @@ export const publications: {
         ],
         description: "Our objective is to develop a synergistic dual-system framework which supplements the generalizability of large-scale pre-trained generalist with the efficient and task-specific adaptation of specialist.",
         keys: ['embodied_ai'],
+        time: '2024.10.10',
+        timeline:['tembodied'],
     },
     {
         title: "Closed-Loop Visuomotor Control with Generative Expectation for Robotic Manipulation",
@@ -395,6 +425,8 @@ export const publications: {
         ],
         description: "CLOVER employs a text-conditioned video diffusion model for generating visual plans as reference inputs, then these sub-goals guide the feedback-driven policy to generate actions with an error measurement strategy.",
         keys: ['embodied_ai'],
+        time: '2024.09.13',
+        timeline:['tembodied'],
     },
     {
         title: "FreeTacMan: Robot-free Visuo-Tactile Data Collection System for Contact-rich Manipulation",
@@ -429,6 +461,8 @@ export const publications: {
         ],
         description: "A human-centric and robot-free visuo-tactile data collection system for high-quality and efficient robot manipulation.",
         keys: ['embodied_ai', 'home_sliding'],
+        time: '2025.06.02',
+        timeline:['tembodied'],
     },
     {
         title: "Learning Manipulation by Predicting Interaction",
@@ -451,6 +485,8 @@ export const publications: {
         ],
         description: "We propose a general pre-training pipeline that learns Manipulation by Predicting the Interaction (MPI).",
         keys: ['embodied_ai'],
+        time: '2024.06.01',
+        timeline:['tembodied'],
     },
     {
         title: "Optimization-Guided Diffusion for Interactive Scene Generation",
@@ -469,6 +505,8 @@ export const publications: {
         ],
         description: "OMEGA is a training-free, optimization-guided diffusion framework that enforces structural consistency and interaction reasoning during sampling to generate realistic, controllable, and safety-critical multi-agent driving scenes.",
         keys: ['ad_algorithm'],
+        time: '2025.12.08',
+        timeline:['te2e'],
     },
     {
         title: "MTGS: Multi-Traversal Gaussian Splatting",
@@ -487,6 +525,8 @@ export const publications: {
         ],
         description: "",
         keys: ['ad_algorithm'],
+        time: '2025.03.16',
+        timeline:['te2e'],
     },
     {
         title: "LaneSegNet: Map Learning with Lane Segment Perception for Autonomous Driving",
@@ -505,6 +545,8 @@ export const publications: {
         ],
         description: "We advocate Lane Segment as a map learning paradigm that seamlessly incorporates both map geometry and topology information.",
         keys: ['ad_algorithm'],
+        time: '2023.12.26',
+        timeline:['te2e'],
     },
     {
         title: "Fully Sparse 3D Occupancy Prediction",
@@ -523,6 +565,8 @@ export const publications: {
         ],
         description: "",
         keys: ['ad_algorithm'],
+        time: '2023.12.26',
+        timeline:['te2e'],
     },
     {
         title: "Leveraging Vision-Centric Multi-Modal Expertise for 3D Object Detection",
@@ -541,6 +585,8 @@ export const publications: {
         ],
         description: "The unified framework to enhance 3D object detection by uniting a multi-modal expert model with a trajectory distillation module.",
         keys: ['ad_algorithm'],
+        time: '2023.10.24',
+        timeline:['te2e'],
     },
     {
         title: "OpenLane-V2: A Topology Reasoning Benchmark for Unified 3D HD Mapping",
@@ -563,6 +609,8 @@ export const publications: {
         ],
         description: "The world's first perception and reasoning benchmark for scene structure in autonomous driving.",
         keys: ['ad_algorithm'],
+        time: '2023.04.20',
+        timeline:['te2e'],
     },
     {
         title: "Delving into the Devils of Bird's-Eye-View Perception: A Review, Evaluation and Recipe",
@@ -581,6 +629,8 @@ export const publications: {
         ],
         description: "We review the most recent work on BEV perception and provide analysis of different solutions.",
         keys: ['ad_algorithm', 'survey'],
+        time: '2022.09.12',
+        timeline:['te2e'],
     },
     {
         title: "Scene as Occupancy",
@@ -599,6 +649,8 @@ export const publications: {
         ],
         description: "Occupancy serves as a general representation of the scene and could facilitate perception and planning in the full-stack of autonomous driving.",
         keys: ['ad_algorithm'],
+        time: '2023.06.05',
+        timeline:['te2e'],
     },
     {
         title: "Sparse Dense Fusion for 3D Object Detection",
@@ -617,6 +669,8 @@ export const publications: {
         ],
         description: "We propose Sparse Dense Fusion (SDF), a complementary framework that incorporates both sparse-fusion and dense-fusion modules via the Transformer architecture.",
         keys: ['ad_algorithm'],
+        time: '2023.04.09',
+        timeline:['te2e'],
     },
     {
         title: "HDGT: Heterogeneous Driving Graph Transformer for Multi-Agent Trajectory Prediction via Scene Encoding",
@@ -635,6 +689,8 @@ export const publications: {
         ],
         description: "HDGT formulates the driving scene as a heterogeneous graph with different types of nodes and edges.",
         keys: ['ad_algorithm'],
+        time: '2022.04.30',
+        timeline:['te2e'],
     },
     {
         title: "Distilling Focal Knowledge from Imperfect Expert for 3D Object Detection",
@@ -653,6 +709,8 @@ export const publications: {
         ],
         description: "We investigate on how to distill the knowledge from an imperfect expert. We propose FD3D, a Focal Distiller for 3D object detection.",
         keys: ['ad_algorithm'],
+        time: '2023.06.18',
+        timeline:['te2e'],
     },
     {
         title: "BEVFormer v2: Adapting Modern Image Backbones to Bird's-Eye-View Recognition via Perspective Supervision",
@@ -671,6 +729,8 @@ export const publications: {
         ],
         description: "A novel bird's-eye-view (BEV) detector with perspective supervision, which converges faster and better suits modern image backbones.",
         keys: ['ad_algorithm'],
+        time: '2022.11.18',
+        timeline:['te2e'],
     },
     {
         title: "Graph-based Topology Reasoning for Driving Scenes",
@@ -689,6 +749,8 @@ export const publications: {
         ],
         description: "A new baseline for scene topology reasoning, which unifies heterogeneous feature learning and enhances feature interactions via the graph neural network architecture and the knowledge graph design.",
         keys: ['ad_algorithm'],
+        time: '2023.04.11',
+        timeline:['te2e'],
     },
     {
         title: "Geometric-aware Pretraining for Vision-centric 3D Object Detection",
@@ -707,6 +769,8 @@ export const publications: {
         ],
         description: "We propose GAPretrain, a plug-and-play framework that boosts 3D detection by pretraining with spatial-structural cues and BEV representation.",
         keys: ['ad_algorithm'],
+        time: '2023.04.06',
+        timeline:['te2e'],
     },
     {
         title: "3D Data Augmentation for Driving Scenes on Camera",
@@ -725,6 +789,8 @@ export const publications: {
         ],
         description: "We propose a 3D data augmentation approach termed Drive-3DAug to augment the driving scenes on camera in the 3D space.",
         keys: ['ad_algorithm'],
+        time: '2023.03.18',
+        timeline:['te2e'],
     },
     {
         title: "Towards Capturing the Temporal Dynamics for Trajectory Prediction: a Coarse-to-Fine Approach",
@@ -743,9 +809,11 @@ export const publications: {
         ],
         description: "We find taking scratch trajectories generated by MLP as input, a refinement module based on structures with temporal prior, could  boost the accuracy.",
         keys: ['ad_algorithm'],
+        time: '2022.09.10',
+        timeline:['te2e'],
     },
     {
-        title: "BEVFormer: Learning Bird’s-Eye-View Representation From LiDAR-Camera via Spatiotemporal Transformers",
+        title: "BEVFormer: Learning Bird's-Eye-View Representation From LiDAR-Camera via Spatiotemporal Transformers",
         link: "https://www.computer.org/csdl/journal/tp/2025/03/10791908/22ABgP6PlUQ",
         image: "/assets/publication/bevformer.jpg",
         author: "Zhiqi Li, Wenhai Wang, Hongyang Li, Enze Xie, Chonghao Sima, Tong Lu, Yu Qiao, Jifeng Dai",
@@ -765,6 +833,8 @@ export const publications: {
         ],
         description: "A paradigm for autonomous driving that applies both Transformer and Temporal structure to generate BEV features.",
         keys: ['ad_algorithm'],
+        time: '2022.03.31',
+        timeline:['te2e'],
     },
     {
         title: "PersFormer: 3D Lane Detection via Perspective Transformer and the OpenLane Benchmark",
@@ -795,6 +865,8 @@ export const publications: {
         ],
         description: "PersFormer adopts a unified 2D/3D anchor design and an auxiliary task to detect 2D/3D lanes; we release one of the first large-scale real-world 3D lane datasets, OpenLane.",
         keys: ['ad_algorithm'],
+        time: '2022.03.21',
+        timeline:['te2e'],
     },
     {
         title: "ReSim: Reliable World Simulation for Autonomous Driving",
@@ -813,6 +885,8 @@ export const publications: {
         ],
         description: "ReSim is a driving world model that enables Reliable Simulation of diverse open-world driving scenarios under various actions, including hazardous non-expert ones. A Video2Reward model estimates the reward from ReSim's simulated future.",
         keys: ['end_to_end_ad', 'home_sliding'],
+        time: '2025.06.11',
+        timeline:['te2e'],
     },
     {
         title: "ETA: Efficiency through Thinking Ahead, A Dual Approach to Self-Driving with Large Models",
@@ -827,6 +901,8 @@ export const publications: {
         ],
         description: "",
         keys: ['end_to_end_ad'],
+        time: '2025.06.09',
+        timeline:['te2e'],
     },
     {
         title: "Decoupled Diffusion Sparks Adaptive Scene Generation",
@@ -845,6 +921,8 @@ export const publications: {
         ],
         description: "",
         keys: ['end_to_end_ad'],
+        time: '2025.04.14',
+        timeline:['te2e'],
     },
     {
         title: "Centaur: Robust End-to-End Autonomous Driving with Test-Time Training",
@@ -859,6 +937,8 @@ export const publications: {
         ],
         description: "",
         keys: ['end_to_end_ad'],
+        time: '2025.03.14',
+        timeline:['te2e'],
     },
         {
         title: "Vista: A Generalizable Driving World Model with High Fidelity and Versatile Controllability",
@@ -901,6 +981,8 @@ export const publications: {
         ],
         description: "A generalizable driving world model with high-fidelity open-world prediction, continuous long-horizon rollout, and zero-shot action controllability.",
         keys: ['end_to_end_ad'],
+        time: '2024.05.27',
+        timeline:['te2e', 'highlight'],
     },
     {
         title: "Reasoning Multi-Agent Behavioral Topology for Interactive Autonomous Driving",
@@ -919,6 +1001,8 @@ export const publications: {
         ],
         description: "",
         keys: ['end_to_end_ad'],
+        time: '2024.09.26',
+        timeline:['te2e'],
     },
     {
         title: "NAVSIM: Data-Driven Non-Reactive Autonomous Vehicle Simulation and Benchmarking",
@@ -937,6 +1021,8 @@ export const publications: {
         ],
         description: "Data-Driven Non-Reactive Autonomous Vehicle Simulation and Benchmarking.",
         keys: ['end_to_end_ad'],
+        time: '2024.06.21',
+        timeline:['te2e'],
     },
     {
         title: "Generalized Predictive Model for Autonomous Driving",
@@ -975,6 +1061,8 @@ export const publications: {
         ],
         description: "We aim to establish a generalized video prediction paradigm for autonomous driving by presenting the largest multimodal driving video dataset to date, OpenDV-2K, and a generative model that predicts the future given past visual and textual input, GenAD.",
         keys: ['end_to_end_ad'],
+        time: '2024.06.21',
+        timeline:['te2e'],
     },
     {
         title: "Visual Point Cloud Forecasting enables Scalable Autonomous Driving",
@@ -993,6 +1081,8 @@ export const publications: {
         ],
         description: "A new self-supervised pre-training task for end-to-end autonomous driving, predicting future point clouds from historical visual inputs, joint modeling the 3D geometry and temporal dynamics for simultaneous perception, prediction, and planning.",
         keys: ['end_to_end_ad'],
+        time: '2023.12.29',
+        timeline:['te2e'],
     },
     {
         title: "自動駕駛開源數據體系：現狀與未來",
@@ -1015,6 +1105,8 @@ export const publications: {
         ],
         description: "",
         keys: ['end_to_end_ad', 'survey'],
+        time: '2023.12.06',
+        timeline:['te2e'],
     },
     {
         title: "Embodied Understanding of Driving Scenarios",
@@ -1037,6 +1129,8 @@ export const publications: {
         ],
         description: "Revive driving scene understanding by delving into the embodiment philosophy.",
         keys: ['end_to_end_ad'],
+        time: '2024.03.07',
+        timeline:['te2e'],
     },
     {
         title: "DriveAdapter: Breaking the Coupling Barrier of Perception and Planning in End-to-End Autonomous Driving",
@@ -1055,6 +1149,8 @@ export const publications: {
         ],
         description: "A new paradigm for end-to-end autonomous driving without causal confusion issue.",
         keys: ['end_to_end_ad'],
+        time: '2023.08.01',
+        timeline:['te2e'],
     },
     {
         title: "Think Twice before Driving: Towards Scalable Decoders for End-to-End Autonomous Driving",
@@ -1073,6 +1169,8 @@ export const publications: {
         ],
         description: "A scalable decoder paradigm that generates the future trajectory and action of the ego vehicle for end-to-end autonomous driving.",
         keys: ['end_to_end_ad'],
+        time: '2023.05.10',
+        timeline:['te2e'],
     },
     {
         title: "LLM4Drive: A Survey of Large Language Models for Autonomous Driving",
@@ -1091,6 +1189,8 @@ export const publications: {
         ],
         description: "A collection of research papers about LLM-for-Autonomous-Driving (LLM4AD).",
         keys: ['end_to_end_ad', 'survey'],
+        time: '',
+        timeline:[],
     },
     {
         title: "Policy Pre-Training for End-to-End Autonomous Driving via Self-Supervised Geometric Modeling",
@@ -1113,6 +1213,8 @@ export const publications: {
         ],
         description: "An intuitive and straightforward fully self-supervised framework curated for the policy pre-training in visuomotor driving.",
         keys: ['end_to_end_ad'],
+        time: '2023.01.03',
+        timeline:['te2e'],
     },
     {
         title: "Trajectory-guided Control Prediction for End-to-end Autonomous Driving: A Simple yet Strong Baseline",
@@ -1135,6 +1237,8 @@ export const publications: {
         ],
         description: "Take the initiative to explore the combination of controller based on a planned trajectory and perform control prediction.",
         keys: ['end_to_end_ad'],
+        time: '2022.07.06',
+        timeline:['te2e'],
     },
     {
         title: "ST-P3: End-to-End Vision-Based Autonomous Driving via Spatial-Temporal Feature Learning",
@@ -1157,6 +1261,8 @@ export const publications: {
         ],
         description: "A spatial-temporal feature learning scheme towards a set of more representative features for perception, prediction and planning tasks simultaneously.",
         keys: ['end_to_end_ad'],
+        time: '2022.07.15',
+        timeline:['te2e'],
     },
     {
         title: "Test-time Correction with Human Feedback: An Online 3D Detection System via Visual Prompting",
@@ -1175,6 +1281,8 @@ export const publications: {
         ],
         description: "",
         keys: ['cv_at_scale'],
+        time: '',
+        timeline:[],
     },
     {
         title: "FastMAC: Stochastic Spectral Sampling of Correspondence Graph",
@@ -1193,6 +1301,8 @@ export const publications: {
         ],
         description: "",
         keys: ['cv_at_scale'],
+        time: '',
+        timeline:[],
     },
     {
         title: "Referred by Multi-Modality: A Unified Temporal Transformer for Video Object Segmentation",
@@ -1211,6 +1321,8 @@ export const publications: {
         ],
         description: "",
         keys: ['cv_at_scale'],
+        time: '',
+        timeline:[],
     },
     {
         title: "Stare at What You See: Masked Image Modeling without Reconstruction",
@@ -1229,6 +1341,8 @@ export const publications: {
         ],
         description: "An efficient MIM paradigm MaskAlign and a Dynamic Alignment module to apply learnable alignment to tackle the problem of input inconsistency.",
         keys: ['cv_at_scale'],
+        time: '',
+        timeline:[],
     },
     {
         title: "Mimic before Reconstruct: Enhancing Masked Autoencoders with Feature Mimicking",
@@ -1247,6 +1361,8 @@ export const publications: {
         ],
         description: "Introducing high-level and low-level representations to MAE without interference during pre-training.",
         keys: ['cv_at_scale'],
+        time: '',
+        timeline:[],
     },
     {
         title: "Align Representations With Base: A New Approach to Self-Supervised Learning",
@@ -1265,5 +1381,7 @@ export const publications: {
         ],
         description: "",
         keys: ['cv_at_scale'],
+        time: '',
+        timeline:[],
     },
 ];
