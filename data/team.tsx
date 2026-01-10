@@ -581,6 +581,32 @@ export const members: {
         keys: ["student"],
     },
     {
+        name: "Jialong Zeng",
+        image: "/assets/person/jialong_zeng.jpg",
+        desc: "South China University of Technology",
+        image_s: "/assets/person/jialong_zeng_s.jpg",
+        links: [
+            {
+                icon: "email",
+                url: "colenzeng@gmail.com",
+            },
+        ],
+        keys: ["student"],
+    },
+    {
+        name: "Jinwei Li",
+        image: "/assets/person/jinwei_li.jpg",
+        desc: "Tsinghua University",
+        image_s: "/assets/person/jinwei_li_s.jpg",
+        links: [
+            {
+                icon: "email",
+                url: "lijinwei22@mails.tsinghua.edu.cn",
+            },
+        ],
+        keys: ["student"],
+    },
+    {
         name: "Haoran Jiang",
         image: "/assets/person/haoran_jiang.jpg",
         image_s: "/assets/person/haoran_jiang_s.jpg",
