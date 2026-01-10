@@ -547,6 +547,40 @@ export const members: {
         keys: ["student"],
     },
     {
+        name: "Yucheng Huang",
+        image: "/assets/person/yucheng_huang.jpg",
+        desc: "HKU (The University of Hong Kong)",
+        image_s: "/assets/person/yucheng_huang_s.jpg",
+        links: [
+            {
+                icon: "email",
+                url: "issacb25@connect.hku.hk",
+            },
+            {
+                icon: "github",
+                url: "https://github.com/ale4638",
+            },
+        ],
+        keys: ["student"],
+    },
+    {
+        name: "Penglin Fu",
+        image: "/assets/person/penglin_fu.jpg",
+        desc: "HKUST",
+        image_s: "/assets/person/penglin_fu_s.jpg",
+        links: [
+            {
+                icon: "email",
+                url: "jimmyyaaaa@gmail.com",
+            },
+            {
+                icon: "github",
+                url: "https://github.com/jimmyyaaa",
+            },
+        ],
+        keys: ["student"],
+    },
+    {
         name: "Haoran Jiang",
         image: "/assets/person/haoran_jiang.jpg",
         image_s: "/assets/person/haoran_jiang_s.jpg",
