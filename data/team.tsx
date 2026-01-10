@@ -607,6 +607,23 @@ export const members: {
         keys: ["student"],
     },
     {
+        name: "Kai Zhang",
+        image: "/assets/person/kai_zhang.jpg",
+        desc: "Shandong University",
+        image_s: "/assets/person/kai_zhang_s.jpg",
+        links: [
+            {
+                icon: "email",
+                url: "zhangjojo31@gmail.com",
+            },
+            {
+                icon: "github",
+                url: "https://github.com/junkerman2004",
+            },
+        ],
+        keys: ["student"],
+    },
+    {
         name: "Haoran Jiang",
         image: "/assets/person/haoran_jiang.jpg",
         image_s: "/assets/person/haoran_jiang_s.jpg",
