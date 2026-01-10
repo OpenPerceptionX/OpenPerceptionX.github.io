@@ -624,6 +624,23 @@ export const members: {
         keys: ["student"],
     },
     {
+        name: "Shihao Li",
+        image: "/assets/person/shihao_li.jpg",
+        desc: "Beijing Institute of Technology",
+        image_s: "/assets/person/shihao_li_s.jpg",
+        links: [
+            {
+                icon: "email",
+                url: "lishihao.shawn@gmail.com",
+            },
+            {
+                icon: "github",
+                url: "https://github.com/lshasd123",
+            },
+        ],
+        keys: ["student"],
+    },
+    {
         name: "Haoran Jiang",
         image: "/assets/person/haoran_jiang.jpg",
         image_s: "/assets/person/haoran_jiang_s.jpg",
