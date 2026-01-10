@@ -566,7 +566,7 @@ export const members: {
     {
         name: "Penglin Fu",
         image: "/assets/person/penglin_fu.jpg",
-        desc: "HKUST",
+        desc: "HKUST (The Hong Kong University of Science and Technology)",
         image_s: "/assets/person/penglin_fu_s.jpg",
         links: [
             {
