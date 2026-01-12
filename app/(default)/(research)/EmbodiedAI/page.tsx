@@ -110,8 +110,8 @@ export default function Home() {
 
 
                                     <div>
-                                        <div className={`text-sm text-o-gray w-full flex flex-row items-center flex-wrap ${
-                                            index % 2 === 1 ? "justify-start" : "justify-end"
+                                        <div className={`text-sm text-o-gray w-full flex flex-row items-center flex-wrap justify-start ${
+                                            index % 2 === 1 ? "md:justify-start" : "md:justify-end"
                                         }`}
                                         >
                                             <Link href={publication.link} target={publication.link.startsWith('http') ? '_blank' : '_self'} className="animated-underline-gray mr-3 text-nowrap">
