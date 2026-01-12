@@ -170,7 +170,7 @@ export const publications: {
         description: `🏗️ A scalable simulation pipeline that synthesizes diverse and high-fidelity reactive driving scenarios with pseudo-expert.\n🚀 An effective sim-real co-training strategy that improves robustness and generalization across end-to-end planners.\n🔬 A comprehensive recipe that reveals crucial insights into the underlying scaling properties of sim-real learning systems.`,
         keys: ['end_to_end_ad'],
         time: '2025.11.28',
-        timeline:[],
+        timeline:['te2e'],
     },
     {
         title: "Reinforced Refinement with Self-Aware Expansion for End-to-End Autonomous Driving",
@@ -926,7 +926,7 @@ export const publications: {
         description: "",
         keys: ['end_to_end_ad'],
         time: '2025.04.14',
-        timeline:[],
+        timeline:['te2e'],
     },
     {
         title: "Centaur: Robust End-to-End Autonomous Driving with Test-Time Training",
@@ -1134,7 +1134,7 @@ export const publications: {
         description: "Revive driving scene understanding by delving into the embodiment philosophy.",
         keys: ['end_to_end_ad'],
         time: '2024.03.07',
-        timeline:[],
+        timeline:['te2e'],
     },
     {
         title: "DriveAdapter: Breaking the Coupling Barrier of Perception and Planning in End-to-End Autonomous Driving",

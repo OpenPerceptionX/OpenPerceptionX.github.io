@@ -38,7 +38,7 @@ export function Header() {
             <div className="fixed flex flex-row gap-3 p-6 z-20 flex-wrap w-full justify-between md:w-fit md:justify-start">
 
 
-
+                {/* see app-sidebard */}
                 <Button asChild className="bg-background text-foreground hover:bg-white group">
                     <Link href="/" className="select-none">
                         <Image

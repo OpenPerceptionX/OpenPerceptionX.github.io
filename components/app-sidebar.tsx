@@ -115,6 +115,10 @@ export function AppSidebar() {
     return (
         <FadeIn>
             <Sidebar>
+
+
+
+                {/* see header */}
                 <div className="fixed flex md:hidden flex-row gap-3 m-6 z-20 flex-wrap">
                     <Button asChild className="bg-background text-foreground hover:bg-white group">
                         <Link href="/" className="select-none">
@@ -123,11 +127,12 @@ export function AppSidebar() {
                                 alt="OpenDriveLab"
                                 width={24}
                                 height={24}
-                            className="group-hover:scale-125 transition delay-100 duration-200"
+                                className="group-hover:scale-125 transition delay-100 duration-200"
                             />
                         </Link>
                     </Button>
                 </div>
+                
 
 
                 <div className="mt-24 overflow-y-scroll no-scrollbar">
