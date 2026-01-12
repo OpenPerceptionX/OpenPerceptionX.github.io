@@ -26,7 +26,7 @@ export function ProgressBar() {
   useEffect(() => {
     const updateProgress = () => {
       const methodologyEl = document.getElementById("methodology");
-      const citationEl = document.getElementById("citation");
+      const citationEl = document.getElementById("progressend");
 
       if (methodologyEl && citationEl) {
         const methodologyRect = methodologyEl.getBoundingClientRect();

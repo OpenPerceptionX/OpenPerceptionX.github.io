@@ -1011,7 +1011,7 @@ export default function Home() {
 
 
                         
-                        <div className="mt-10 flex flex-row justify-center px-6">
+                        <div className="mt-10 flex flex-row justify-center px-6" id='progressend'>
                             <div className="max-w-7xl w-full flex flex-col lg:flex-row gap-10 justify-center">
                                 <AdvantageBarChart1 />
                                 <AdvantageBarChart2 />
