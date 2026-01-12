@@ -1134,7 +1134,7 @@ export const publications: {
         description: "Revive driving scene understanding by delving into the embodiment philosophy.",
         keys: ['end_to_end_ad'],
         time: '2024.03.07',
-        timeline:['te2e'],
+        timeline:[],
     },
     {
         title: "DriveAdapter: Breaking the Coupling Barrier of Perception and Planning in End-to-End Autonomous Driving",
