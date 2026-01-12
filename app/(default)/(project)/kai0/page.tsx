@@ -33,6 +33,7 @@ import { AdvantageBarChart1 } from "./chart/advantage/advantage1"
 import { AdvantageBarChart2 } from "./chart/advantage/advantage2"
 import { AdvantageBarChart3 } from "./chart/advantage/advantage3"
 import { StageVideo1 } from "./stage/stage1"
+import { ProgressBar } from "./progress-bar"
 import Citation from "./citation"
 
 
@@ -71,6 +72,9 @@ const paths: { path: string; url: string; }[] = [
 export default function Home() {
     return (
         <main>
+            {/* Progress Bar */}
+            <ProgressBar />
+            
             {/* Spacer for top positioning */}
             <div className="w-full h-24 xl:h-48"></div>
 
