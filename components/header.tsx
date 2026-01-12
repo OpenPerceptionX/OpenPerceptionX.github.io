@@ -35,18 +35,28 @@ export function Header() {
 
 
 
-            <div className="fixed flex flex-row gap-3 p-6 z-20 flex-wrap w-full justify-between md:w-fit md:justify-start">
+            <div className="fixed flex flex-row gap-3 p-6 z-20 flex-wrap w-full justify-between md:w-fit md:justify-start items-center">
 
 
                 {/* see app-sidebard */}
-                <Button asChild className="bg-background text-foreground hover:bg-white group">
+                <Button className="bg-background text-foreground hover:bg-white">
                     <Link href="/" className="select-none">
                         <Image
-                            src="/resources/logo/OpenDriveLab/OpenDriveLab x MMLab.png"
+                            src="/resources/logo/OpenDriveLab/D.png"
                             alt="OpenDriveLab"
-                            width={48}
+                            width={24}
                             height={24}
-                            className="group-hover:scale-125 transition delay-100 duration-200"
+                            className="hover:scale-125 transition delay-100 duration-200"
+                        />
+                    </Link>
+                    <div className="h-full min-w-0.5 bg-foreground/50 select-none" />
+                    <Link href="https://mmlab.hk/" target="_blank" className="select-none">
+                        <Image
+                            src="/resources/logo/OpenDriveLab/HKU_MMLAB.png"
+                            alt="OpenDriveLab"
+                            width={24}
+                            height={24}
+                            className="hover:scale-125 transition delay-100 duration-200"
                         />
                     </Link>
                 </Button>

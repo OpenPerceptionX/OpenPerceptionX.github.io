@@ -120,7 +120,7 @@ export function AppSidebar() {
 
                 {/* see header */}
                 <div className="fixed flex md:hidden flex-row gap-3 m-6 z-20 flex-wrap">
-                    <Button asChild className="bg-background text-foreground hover:bg-white group">
+                    {/* <Button asChild className="bg-background text-foreground hover:bg-white group">
                         <Link href="/" className="select-none">
                             <Image
                                 src="/resources/logo/OpenDriveLab/D.png"
@@ -128,6 +128,27 @@ export function AppSidebar() {
                                 width={24}
                                 height={24}
                                 className="group-hover:scale-125 transition delay-100 duration-200"
+                            />
+                        </Link>
+                    </Button> */}
+                    <Button className="bg-background text-foreground hover:bg-white">
+                        <Link href="/" className="select-none">
+                            <Image
+                                src="/resources/logo/OpenDriveLab/D.png"
+                                alt="OpenDriveLab"
+                                width={24}
+                                height={24}
+                                className="hover:scale-125 transition delay-100 duration-200"
+                            />
+                        </Link>
+                        <div className="h-full min-w-0.5 bg-foreground/50 select-none" />
+                        <Link href="https://mmlab.hk/" target="_blank" className="select-none">
+                            <Image
+                                src="/resources/logo/OpenDriveLab/HKU_MMLAB.png"
+                                alt="OpenDriveLab"
+                                width={24}
+                                height={24}
+                                className="hover:scale-125 transition delay-100 duration-200"
                             />
                         </Link>
                     </Button>

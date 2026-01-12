@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button"
 export function NavigatorTrigger() {
     const { toggleSidebar } = useSidebar()
     return (
-        <Button className="bg-background text-foreground hover:bg-white group" onClick={toggleSidebar}>
+        <Button className="bg-background text-foreground hover:bg-white hover:cursor-pointer group" onClick={toggleSidebar}>
             <svg viewBox="0 0 24 24" className="scale-150 group-hover:scale-175 transition delay-100 duration-200 mx-1" fill="none" stroke="#0d0d0d">
                 <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                 <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
