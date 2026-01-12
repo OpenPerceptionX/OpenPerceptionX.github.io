@@ -155,9 +155,9 @@ export default function Home() {
                             <span className="text-xl">
                                 {member.name}
                             </span>
-                            <span className="text-xs">
+                            {/* <span className="text-xs">
                                 {member.desc}
-                            </span>
+                            </span> */}
                             <div className="flex gap-3 flex-wrap">
                                 {member.links.map((link) => (
                                     <Link href={link.url} target={link.url.startsWith('http') ? '_blank' : '_self'} key={link.icon} className="size-4 md:size-5 group/icon">

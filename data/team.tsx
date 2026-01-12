@@ -27,7 +27,7 @@ export const members: {
         name: "Hongyang Li",
         image: "/assets/person/hongyang_li.jpg",
         image_s: "/assets/person/hongyang_li_s.jpg",
-        desc: "Autonomous Driving & Embodied AI",
+        desc: "Embodied AI & Autonomous Driving",
         links: [
             {
                 icon: "homepage",
@@ -844,7 +844,7 @@ export const members: {
     {
         name: "Hugo Mak",
         image: "/assets/person/haoguang_mai.jpg",
-        desc: "HKU (The University of Hong Kong)",
+        desc: "Ecosystem",
         image_s: "/assets/person/haoguang_mai_s.jpg",
         links: [
             {
