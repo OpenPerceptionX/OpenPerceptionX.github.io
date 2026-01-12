@@ -43,7 +43,7 @@ export default function Home() {
                         Embodied AI
                     </h1>
                     <span className="text-xl">
-                        is the integration of artificial intelligence with the physical world, enabling robots to interact with and learn from the real world. We focus on the most critical areas of embodied AI, including humanoid, robot manipulation, and dexterous hand. Our goal is to explore the scaling law for robots, develop general world models, and unveil the power of reinforcement learning to achieve general-purpose embodied agents.
+                        bridges intelligence and the physical world through real-world perception, action, and learning. Focusing on humanoids, manipulation, and dexterous hands, we aim to uncover robot scaling laws, develop general world models, and unlock reinforcement learning for general-purpose embodied agents.
                     </span>
                     <span className="text-xl">
                         For a complete list of publications, please see <Link href="/publications" className="underline text-o-blue hover:text-o-light-blue">here</Link>.

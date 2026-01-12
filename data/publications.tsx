@@ -167,7 +167,7 @@ export const publications: {
                 link: "https://github.com/OpenDriveLab/SimScale",
             },
         ],
-        description: `🏗️ A scalable simulation pipeline that synthesizes diverse and high-fidelity reactive driving scenarios with pseudo-expert.\n🚀 An effective sim-real co-training strategy that improves robustness and generalization across end-to-end planners.\n🔬 A comprehensive recipe that reveals crucial insights into the underlying scaling properties of sim-real learning systems.`,
+        description: `A scalable sim-real learning framework that synthesizes high-fidelity driving data and cboosts end-to-end planners to achieve robust, generalizable autonomy with principled scaling insights.`,
         keys: ['end_to_end_ad'],
         time: '2025.11.28',
         timeline:['te2e'],
