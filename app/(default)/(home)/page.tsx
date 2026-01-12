@@ -24,8 +24,8 @@ import {
 
 
 import { Landing } from "./landing"
-import { News } from "./news"
-import { Embodied, E2EAD } from "@/components/app-drawer"
+// import { News } from "./news"
+// import { Embodied, E2EAD } from "@/components/app-drawer"
 import { Chen2025_value_learning } from "@/components/citation-drawer"
 
 
@@ -157,7 +157,35 @@ export default function Home() {
             <div className="w-full px-6 flex justify-center mt-12">
                 <div className="w-full max-w-7xl grid gap-12 grid-cols-1 xl:grid-cols-2">
 
-                    <Drawer direction="top">
+                    <Link href='/EmbodiedAI' className="w-full h-64 md:h-80 relative rounded-sm shadow-sm overflow-hidden group hover:cursor-pointer">
+                        <Image
+                            src="/assets/background/50b9a68a4c9773f405f914c9b1d857398.jpg"
+                            alt="Embodied AI"
+                            fill
+                            className="object-center object-cover bg-gradient-landing group-hover:scale-103 transition delay-100 duration-200"
+                        />
+                        <div className="w-full h-full absolute flex flex-col justify-end items-end p-6">
+                            <h3 className="text-white font-bold text-t1 select-none text-end">
+                                Embodied AI
+                            </h3>
+                        </div>
+                    </Link>
+
+                    <Link href='/AutonomousDriving' className="w-full h-64 md:h-80 relative rounded-sm shadow-sm overflow-hidden group hover:cursor-pointer">
+                        <Image
+                            src="/assets/background/34dafb77s3a94a108af741cd955ac9ba2.jpg"
+                            alt="Autonomous Driving"
+                            fill
+                            className="object-center object-cover bg-gradient-landing group-hover:scale-103 transition delay-100 duration-200"
+                        />
+                        <div className="w-full h-full absolute flex flex-col justify-end items-end p-6">
+                            <h3 className="text-white font-bold text-t1 select-none text-end">
+                                Autonomous Driving
+                            </h3>
+                        </div>
+                    </Link>
+                    
+                    {/* <Drawer direction="top">
                         <DrawerTrigger asChild>
                             <div className="w-full h-64 md:h-80 relative rounded-sm shadow-sm overflow-hidden group hover:cursor-pointer">
                                 <Image
@@ -174,9 +202,9 @@ export default function Home() {
                             </div>
                         </DrawerTrigger>
                         <Embodied/>
-                    </Drawer>
+                    </Drawer> */}
 
-                    <Drawer direction="top">
+                    {/* <Drawer direction="top">
                         <DrawerTrigger asChild>
                             <div className="w-full h-64 md:h-80 relative rounded-sm shadow-sm overflow-hidden group hover:cursor-pointer">
                                 <Image
@@ -193,7 +221,7 @@ export default function Home() {
                             </div>
                         </DrawerTrigger>
                         <E2EAD/>
-                    </Drawer>
+                    </Drawer> */}
 
                 </div>
             </div>

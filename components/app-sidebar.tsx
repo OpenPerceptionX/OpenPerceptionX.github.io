@@ -44,7 +44,7 @@ import { FadeIn } from "@/components/animation/fade-in"
 
 
 
-import { Embodied, E2EAD } from "@/components/app-drawer"
+// import { Embodied, E2EAD } from "@/components/app-drawer"
 
 
 
@@ -156,6 +156,16 @@ export function AppSidebar() {
                                         </CollapsibleTrigger>
                                         <CollapsibleContent>
                                             <SidebarMenuSub>
+                                                <Link href="/EmbodiedAI"  className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
+                                                    Embodied AI
+                                                </Link> 
+                                                <Link href="/AutonomousDriving"  className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
+                                                    Autonomous Driving
+                                                </Link>
+                                            </SidebarMenuSub>
+                                        </CollapsibleContent>
+                                        {/* <CollapsibleContent>
+                                            <SidebarMenuSub>
                                                 <Drawer direction="top">
                                                     <DrawerTrigger asChild>
                                                         <div className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
@@ -173,7 +183,7 @@ export function AppSidebar() {
                                                     <E2EAD/>
                                                 </Drawer>
                                             </SidebarMenuSub>
-                                        </CollapsibleContent>
+                                        </CollapsibleContent> */}
                                     </SidebarMenuItem>
                                 </Collapsible>
 
