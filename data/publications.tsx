@@ -273,7 +273,7 @@ export const publications: {
         ],
         description: "A novel generalist policy that leverages latent action representations to maximize data utilization, demonstrating predictable performance scaling with increased data volume.",
         keys: ['editor_pick', 'home_sliding', 'drawer_embodied'],
-        time: '2025.06.09',
+        time: '2025.03.10',
         timeline:['tembodied', 'highlight'],
     },
     {

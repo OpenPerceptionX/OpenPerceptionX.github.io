@@ -36,18 +36,8 @@ import { Chen2025_value_learning } from "@/components/citation-drawer"
 
 import { publications } from "@/data/publications"
 import { Button } from "@/components/ui/button"
+import { type_mapping } from "@/data/mapping"
 const landings = [0,1,2,3,5,4].map(index => [...publications.values()].filter(publication => publication.keys.includes('home_sliding'))[index])
-const type_mapping: Record<string, string> = {
-    "page": "Page",
-    "huggingface": "Hugging Face",
-    "slides": "Slides",
-    "github": "GitHub",
-    "youtube": "Video",
-    "wechat": "解读",
-    "bilibili": "Video",
-    "blog": "Blog",
-    "dataset": "Dataset",
-}
 const image_mapping: Record<string, string> = {
     "Intelligent Robot Manipulation Requires Self-Directed Learning": "https://ik.imagekit.io/opendrivelab/position.jpg?updatedAt=1765023911765",
     "GO-1-Pro: Is Diversity All You Need for Scalable Robotic Manipulation?": "/assets/publication/GO-1-Pro.jpg",
@@ -187,13 +177,13 @@ export function Landing() {
                                             }
                                         </Link>
                                         {
-                                            landing.icon.length != 0  && (
+                                            landing.icon.length != 0 && landing.icon[0].type != 'cite' && (
                                                 <span className="text-xs mr-3"> | </span>
                                             )
                                         }
                                         {
                                             landing.icon.map((icon, index) => (
-                                                icon.type != 'zhihu' && (
+                                                icon.type != 'cite' && (
                                                     <div key={index} className="flex items-center">
                                                         <Link href={icon.link} target={icon.link.startsWith('http') ? '_blank' : '_self'} className="animated-underline-gray mr-3 text-nowrap">
                                                             {

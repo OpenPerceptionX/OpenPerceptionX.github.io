@@ -16,6 +16,21 @@ import { categories, publications, scholar } from "@/data/publications"
 
 
 
+import {
+    Drawer,
+    DrawerClose,
+    DrawerContent,
+    DrawerDescription,
+    DrawerFooter,
+    DrawerHeader,
+    DrawerTitle,
+    DrawerTrigger,
+} from "@/components/ui/drawer"
+import { Chen2025_value_learning } from "@/components/citation-drawer"
+import { type_mapping } from "@/data/mapping"
+
+
+
 export default function Home() {
     return (
         <div className="w-full">
@@ -28,7 +43,10 @@ export default function Home() {
                         Embodied AI
                     </h1>
                     <span className="text-xl">
-                        is the integration of artificial intelligence with the physical world, enabling robots to interact with and learn from the real world. We focus on the most critical areas of embodied AI, including humanoid, robot manipulation, and dexterous hand. Our goal is to explore the scaling law for robots, develop general world models, and unveil the power of reinforcement learning to achieve general-purpose embodied agents. For a complete list of publications, please see <Link href="/publications" className="underline text-o-blue hover:text-o-light-blue">here</Link>.
+                        is the integration of artificial intelligence with the physical world, enabling robots to interact with and learn from the real world. We focus on the most critical areas of embodied AI, including humanoid, robot manipulation, and dexterous hand. Our goal is to explore the scaling law for robots, develop general world models, and unveil the power of reinforcement learning to achieve general-purpose embodied agents.
+                    </span>
+                    <span className="text-xl">
+                        For a complete list of publications, please see <Link href="/publications" className="underline text-o-blue hover:text-o-light-blue">here</Link>.
                     </span>
                 </div>
             </div>
@@ -86,9 +104,79 @@ export default function Home() {
 
 
 
-                                    <i className="text-sm text-o-gray whitespace-pre-line text-start">
+                                    <i className="text-sm text-o-gray whitespace-pre-line">
                                         {publication.description}
                                     </i>
+
+
+                                    <div>
+                                        <div className={`text-sm text-o-gray w-full flex flex-row items-center flex-wrap ${
+                                            index % 2 === 1 ? "justify-start" : "justify-end"
+                                        }`}
+                                        >
+                                            <Link href={publication.link} target={publication.link.startsWith('http') ? '_blank' : '_self'} className="animated-underline-gray mr-3 text-nowrap">
+                                                {
+                                                    publication.link.startsWith('http') ? (
+                                                        "Paper"
+                                                    ) : (
+                                                        "Blog"
+                                                    )
+                                                }
+                                            </Link>
+                                            {
+                                                publication.icon.length != 0 && publication.icon[0].type != 'cite' && (
+                                                    <span className="text-xs mr-3"> | </span>
+                                                )
+                                            }
+                                            {
+                                                publication.icon.map((icon, index) => (
+                                                    icon.type != 'cite' && (
+                                                        <div key={index} className="flex items-center">
+                                                            <Link href={icon.link} target={icon.link.startsWith('http') ? '_blank' : '_self'} className="animated-underline-gray mr-3 text-nowrap">
+                                                                {
+                                                                    publication.title.startsWith('FreeTacMan') && icon.type =='blog' ? (
+                                                                        'Hardware Guide'
+                                                                    ) : (
+                                                                        type_mapping[icon.type] ?? "XXX"
+                                                                    )
+                                                                }
+                                                            </Link>
+                                                            {index < publication.icon.length - 1 && (
+                                                                <span className="text-xs mr-3"> | </span>
+                                                            )}
+                                                        </div>
+                                                    )
+                                                ))
+                                            } 
+                                            {
+                                                publication.title.startsWith('AgiBot') && (
+                                                    <span className="text-xs mr-3"> | </span>
+                                                )
+                                            } {
+                                                publication.title.startsWith('AgiBot') && (
+                                                    <Link href='/challenge2025//#agibot-world' className="animated-underline-gray mr-3 text-nowrap">
+                                                        Challenge
+                                                    </Link>
+                                                )
+                                            }
+                                            {
+                                                publication.title.startsWith('Intelligent Robot') && (
+                                                    <span className="text-xs mr-3"> | </span>
+                                                )
+                                            } {
+                                                publication.title.startsWith('Intelligent Robot') && (
+                                                    <Drawer direction="top">
+                                                        <DrawerTrigger asChild>
+                                                            <span className="animated-underline-gray mr-3 text-nowrap">
+                                                                Cite
+                                                            </span>
+                                                        </DrawerTrigger>
+                                                        <Chen2025_value_learning />
+                                                    </Drawer>
+                                                )
+                                            }
+                                        </div>
+                                    </div>
 
 
 
@@ -127,7 +215,7 @@ export default function Home() {
 
 
 
-            <div className="w-full px-6 flex justify-center mt-24">
+            {/* <div className="w-full px-6 flex justify-center mt-24">
                 <div className="w-full max-w-7xl flex">
                     <h2 className="text-t1"> 
                         <Link href='#dataset' className="scroll-mt-32 group flex items-center" id='dataset'>
@@ -195,7 +283,7 @@ export default function Home() {
 
 
                 </div>
-            </div>
+            </div> */}
 
 
 

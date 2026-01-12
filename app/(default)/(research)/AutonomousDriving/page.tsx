@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = {
-    title: "Embodied AI | OpenDriveLab",
+    title: "Autonomous Driving | OpenDriveLab",
     description: "OpenDriveLab is committed to exploring cutting-edge embodied AI technology, launching a series of benchmarking work, open source to serve the community, and promote the common development of the industry. Friends who are committed to making influential research are welcome to join!",
-    keywords: ["Embodied AI", "OpenDriveLab", "Robotics", "Embodied AI", "Autonomous Driving", "HKU", "SII"],
+    keywords: ["Autonomous Driving", "OpenDriveLab", "Robotics", "Embodied AI", "Autonomous Driving", "HKU", "SII"],
 };
 
 
@@ -13,6 +13,21 @@ import Link from "next/link"
 
 
 import { categories, publications, scholar } from "@/data/publications"
+
+
+
+import {
+    Drawer,
+    DrawerClose,
+    DrawerContent,
+    DrawerDescription,
+    DrawerFooter,
+    DrawerHeader,
+    DrawerTitle,
+    DrawerTrigger,
+} from "@/components/ui/drawer"
+import { Chen2025_value_learning } from "@/components/citation-drawer"
+import { type_mapping } from "@/data/mapping"
 
 
 
@@ -28,7 +43,10 @@ export default function Home() {
                         Autonomous Driving
                     </h1>
                     <span className="text-xl">
-                        stands at the intersection of intelligence, world modeling, and safety alignment, enabling vehicles to respond to the surroundings effectively for both comfort and safety. We target the crucial areas of autonomous driving, including whole-scene perception systems, critical data generation, and end-to-end decision-making. Our mission is to establish a comprehensive pipeline by leveraging massive real-world driving data and building efficient world representation for safe and generalizable autonomy. For a complete list of publications, please see <Link href="/publications" className="underline text-o-blue hover:text-o-light-blue">here</Link>.
+                        stands at the intersection of intelligence, world modeling, and safety alignment, enabling vehicles to respond to the surroundings effectively for both comfort and safety. We target the crucial areas of autonomous driving, including whole-scene perception systems, critical data generation, and end-to-end decision-making. Our mission is to establish a comprehensive pipeline by leveraging massive real-world driving data and building efficient world representation for safe and generalizable autonomy.
+                    </span>
+                    <span className="text-xl">
+                        For a complete list of publications, please see <Link href="/publications" className="underline text-o-blue hover:text-o-light-blue">here</Link>.
                     </span>
                 </div>
             </div>
@@ -86,9 +104,80 @@ export default function Home() {
 
 
 
-                                    <i className="text-sm text-o-gray whitespace-pre-line text-start">
+                                    <i className="text-sm text-o-gray whitespace-pre-line">
                                         {publication.description}
                                     </i>
+
+
+
+                                    <div>
+                                        <div className={`text-sm text-o-gray w-full flex flex-row items-center flex-wrap ${
+                                            index % 2 === 1 ? "justify-start" : "justify-end"
+                                        }`}
+                                        >
+                                            <Link href={publication.link} target={publication.link.startsWith('http') ? '_blank' : '_self'} className="animated-underline-gray mr-3 text-nowrap">
+                                                {
+                                                    publication.link.startsWith('http') ? (
+                                                        "Paper"
+                                                    ) : (
+                                                        "Blog"
+                                                    )
+                                                }
+                                            </Link>
+                                            {
+                                                publication.icon.length != 0 && publication.icon[0].type != 'cite' && (
+                                                    <span className="text-xs mr-3"> | </span>
+                                                )
+                                            }
+                                            {
+                                                publication.icon.map((icon, index) => (
+                                                    icon.type != 'cite' && (
+                                                        <div key={index} className="flex items-center">
+                                                            <Link href={icon.link} target={icon.link.startsWith('http') ? '_blank' : '_self'} className="animated-underline-gray mr-3 text-nowrap">
+                                                                {
+                                                                    publication.title.startsWith('FreeTacMan') && icon.type =='blog' ? (
+                                                                        'Hardware Guide'
+                                                                    ) : (
+                                                                        type_mapping[icon.type] ?? "XXX"
+                                                                    )
+                                                                }
+                                                            </Link>
+                                                            {index < publication.icon.length - 1 && (
+                                                                <span className="text-xs mr-3"> | </span>
+                                                            )}
+                                                        </div>
+                                                    )
+                                                ))
+                                            } 
+                                            {
+                                                publication.title.startsWith('AgiBot') && (
+                                                    <span className="text-xs mr-3"> | </span>
+                                                )
+                                            } {
+                                                publication.title.startsWith('AgiBot') && (
+                                                    <Link href='/challenge2025//#agibot-world' className="animated-underline-gray mr-3 text-nowrap">
+                                                        Challenge
+                                                    </Link>
+                                                )
+                                            }
+                                            {
+                                                publication.title.startsWith('Intelligent Robot') && (
+                                                    <span className="text-xs mr-3"> | </span>
+                                                )
+                                            } {
+                                                publication.title.startsWith('Intelligent Robot') && (
+                                                    <Drawer direction="top">
+                                                        <DrawerTrigger asChild>
+                                                            <span className="animated-underline-gray mr-3 text-nowrap">
+                                                                Cite
+                                                            </span>
+                                                        </DrawerTrigger>
+                                                        <Chen2025_value_learning />
+                                                    </Drawer>
+                                                )
+                                            }
+                                        </div>
+                                    </div>
 
 
 
@@ -127,7 +216,7 @@ export default function Home() {
 
 
 
-            <div className="w-full px-6 flex justify-center mt-24">
+            {/* <div className="w-full px-6 flex justify-center mt-24">
                 <div className="w-full max-w-7xl flex">
                     <h2 className="text-t1"> 
                         <Link href='#dataset' className="scroll-mt-32 group flex items-center" id='dataset'>
@@ -384,7 +473,7 @@ export default function Home() {
 
 
                 </div>
-            </div>
+            </div> */}
 
 
 
