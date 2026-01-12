@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = {
-    title: "OpenDriveLab | Robotics and Autonomous Driving at HKU, SII, and beyond",
+    title: "OpenDriveLab | Robotics and Autonomous Driving at HKU and Beyond",
     description: "OpenDriveLab is committed to exploring cutting-edge embodied AI technology, launching a series of benchmarking work, open source to serve the community, and promote the common development of the industry. Friends who are committed to making influential research are welcome to join!",
-    keywords: ["OpenDriveLab", "Robotics", "Embodied AI", "Autonomous Driving", "HKU", "SII"],
+    keywords: ["OpenDriveLab", "Robotics", "Embodied AI", "Autonomous Driving", "HKU" ],
 };
 
 
