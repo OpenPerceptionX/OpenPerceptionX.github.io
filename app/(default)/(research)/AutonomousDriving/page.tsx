@@ -43,7 +43,7 @@ export default function Home() {
                         Autonomous Driving
                     </h1>
                     <span className="text-xl">
-                        lies at the intersection of intelligence, world modeling, and safety alignment, enabling vehicles to perceive, reason, and act safely in complex environments. We focus on whole-scene perception, critical data generation, and end-to-end decision-making. Our goal is to build a unified and scalable autonomy pipeline grounded in large-scale real-world driving data and efficient world representations.
+                        enables vehicles to perceive, reason, and act safely in complex environments. We focus on whole-scene perception, critical data generation, and end-to-end decision-making. Our goal is to build a unified and scalable autonomy pipeline grounded in large-scale real-world driving data and efficient world representations.
                     </span>
                     <span className="text-xl">
                         For a complete list of publications, please see <Link href="/publications" className="underline text-o-blue hover:text-o-light-blue">here</Link>.
