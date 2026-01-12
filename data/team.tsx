@@ -7,6 +7,23 @@ export const members: {
     keys: string[];
 }[] = [
     {
+        name: "Shihao Li",
+        image: "/assets/person/shihao_li.jpg",
+        desc: "Beijing Institute of Technology",
+        image_s: "/assets/person/shihao_li_s.jpg",
+        links: [
+            {
+                icon: "email",
+                url: "lishihao.shawn@gmail.com",
+            },
+            {
+                icon: "github",
+                url: "https://github.com/lshasd123",
+            },
+        ],
+        keys: ["alumni"],
+    },
+    {
         name: "Hongyang Li",
         image: "/assets/person/hongyang_li.jpg",
         image_s: "/assets/person/hongyang_li_s.jpg",
@@ -391,6 +408,23 @@ export const members: {
         keys: ["student"],
     },
     {
+        name: "Zhenhua Wu",
+        image: "/assets/person/zhenhua_wu.jpg",
+        desc: "Sun Yat-sen University",
+        image_s: "/assets/person/zhenhua_wu_s.jpg",
+        links: [
+            {
+                icon: "email",
+                url: "mailto:wuzhenhua1122@gmail.com",
+            },
+            {
+                icon: "github",
+                url: "https://github.com/ArthurWuzh",
+            },
+        ],
+        keys: ["alumni"],
+    },
+    {
         name: "Yunsong Zhou",
         image: "/assets/person/yunsong_zhou.jpg",
         desc: "SJTU (Shanghai Jiao Tong University)",
@@ -488,23 +522,6 @@ export const members: {
         keys: ["joint"],
     },
     {
-        name: "Zhenhua Wu",
-        image: "/assets/person/zhenhua_wu.jpg",
-        desc: "Sun Yat-sen University",
-        image_s: "/assets/person/zhenhua_wu_s.jpg",
-        links: [
-            {
-                icon: "email",
-                url: "mailto:wuzhenhua1122@gmail.com",
-            },
-            {
-                icon: "github",
-                url: "https://github.com/ArthurWuzh",
-            },
-        ],
-        keys: ["alumni"],
-    },
-    {
         name: "Haochen Liu",
         image: "/assets/person/haochen_liu.jpg",
         desc: "NTU (Nanyang Technological University)",
@@ -547,6 +564,19 @@ export const members: {
         keys: ["student"],
     },
     {
+        name: "Jinwei Li",
+        image: "/assets/person/jinwei_li.jpg",
+        desc: "Tsinghua University",
+        image_s: "/assets/person/jinwei_li_s.jpg",
+        links: [
+            {
+                icon: "email",
+                url: "lijinwei22@mails.tsinghua.edu.cn",
+            },
+        ],
+        keys: ["student"],
+    },
+    {
         name: "Yucheng Huang",
         image: "/assets/person/yucheng_huang.jpg",
         desc: "HKU (The University of Hong Kong)",
@@ -581,32 +611,6 @@ export const members: {
         keys: ["student"],
     },
     {
-        name: "Jialong Zeng",
-        image: "/assets/person/jialong_zeng.jpg",
-        desc: "South China University of Technology",
-        image_s: "/assets/person/jialong_zeng_s.jpg",
-        links: [
-            {
-                icon: "email",
-                url: "colenzeng@gmail.com",
-            },
-        ],
-        keys: ["student"],
-    },
-    {
-        name: "Jinwei Li",
-        image: "/assets/person/jinwei_li.jpg",
-        desc: "Tsinghua University",
-        image_s: "/assets/person/jinwei_li_s.jpg",
-        links: [
-            {
-                icon: "email",
-                url: "lijinwei22@mails.tsinghua.edu.cn",
-            },
-        ],
-        keys: ["student"],
-    },
-    {
         name: "Kai Zhang",
         image: "/assets/person/kai_zhang.jpg",
         desc: "Shandong University",
@@ -624,18 +628,14 @@ export const members: {
         keys: ["student"],
     },
     {
-        name: "Shihao Li",
-        image: "/assets/person/shihao_li.jpg",
-        desc: "Beijing Institute of Technology",
-        image_s: "/assets/person/shihao_li_s.jpg",
+        name: "Jialong Zeng",
+        image: "/assets/person/jialong_zeng.jpg",
+        desc: "South China University of Technology",
+        image_s: "/assets/person/jialong_zeng_s.jpg",
         links: [
             {
                 icon: "email",
-                url: "lishihao.shawn@gmail.com",
-            },
-            {
-                icon: "github",
-                url: "https://github.com/lshasd123",
+                url: "colenzeng@gmail.com",
             },
         ],
         keys: ["student"],
