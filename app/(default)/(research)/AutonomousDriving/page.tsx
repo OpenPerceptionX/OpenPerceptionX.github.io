@@ -183,7 +183,7 @@ export default function Home() {
 
                                     {
                                         publication.timeline.includes("highlight") && (
-                                            <div className="px-20 md:px-0 xl:px-20 w-full flex justify-center items-center relative mt-3">
+                                            <div className="px-10 md:px-0 xl:px-20 w-full flex justify-center items-center relative mt-3">
                                                 <Link href={publication.link} target={publication.link.startsWith('http') ? '_blank' : '_self'}>
                                                     <Image
                                                         src={publication.image}
