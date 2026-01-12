@@ -129,7 +129,8 @@ export default function Redirect() {
         redirect('/OMEGA/')
     }
     if (
-        pathname.toLowerCase().startsWith('/kai0')
+        pathname.toLowerCase().startsWith('/kai0') ||
+        pathname.toLowerCase().startsWith('/foldanything')
     ) {
         redirect('/kai0/')
     }

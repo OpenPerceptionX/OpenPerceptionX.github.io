@@ -79,7 +79,7 @@ export default function Home() {
                 <div className="max-w-7xl mx-auto flex flex-col">
 
                         <div className="w-full flex flex-row justify-center">
-                            <div className="flex flex-col w-full gap-6 px-6 max-w-4xl">
+                            <div className="flex flex-col w-full gap-6 px-6 max-w-7xl">
                                 <h1 className="font-bold text-4xl leading-tight">
                                     &chi;<sub>0</sub>: A Live-Stream Robotic Teamwork for Clothing Manipulation from Zero to Hero
                                 </h1>
