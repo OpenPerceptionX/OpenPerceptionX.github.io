@@ -144,7 +144,11 @@ export default function Redirect() {
     ) {
         redirect('/OpenGO1/')
     }
-
+    if (
+        pathname.toLowerCase().startsWith('/plannerrft')
+    ) {
+        redirect('/PlannerRFT/')
+    }
 
 
 
