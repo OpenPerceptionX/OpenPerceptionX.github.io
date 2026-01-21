@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PlannerRFT</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/button.css">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./static/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="./static/js/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <link rel="icon" type="image/png" href="./assets/icon/D_small.png">
+
+  <script type="text/javascript" async src="./static/js/MathJax.js"></script>
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="900" />
+
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="./static/js/gtag.js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L7VEDHS6G8');
+</script>
+
+
+<body>
+
+  <section class="hero teaser" style="margin-top: 64px;">
+    <div class="container is-max-desktop">
+        <div align="center">
+          <img src="https://ik.imagekit.io/lhcstation/PlanerRFT/title2.gif" alt="Image description" width="90%">
+        </div>  
+    </div>
+  </section>
+
+  <section class="hero">
+    <div class="hero-body no-bottom-padding">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Reinforcing Diffusion Planners through <br> Closed-Loop and Sample-Efficient Fine-Tuning</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a target="_blank" href="https://github.com/lhcstation">Hongchen Li</a><sup>1,2,3</sup>&nbsp;&nbsp;&nbsp;
+                <a target="_blank" href="https://github.com/sephyli">Tianyu Li</a><sup>2,3</sup>&nbsp;&nbsp;&nbsp;
+                <a target="_blank" href="https://scholar.google.com.hk/citations?hl=zh-CN&user=Ju7nGX8AAAAJ">Jiazhi Yang</a><sup>1</sup>&nbsp;&nbsp;&nbsp;
+                <a target="_blank" href="https://github.com/hctian713">Haochen Tian</a><sup>3</sup>&nbsp;&nbsp;&nbsp;
+                <br>
+                Caojun Wang</a><sup>1,2,3</sup>&nbsp;&nbsp;&nbsp;
+                Lei Shi</a><sup>4</sup>&nbsp;&nbsp;&nbsp;
+                Mingyang Shang</a><sup>5</sup>&nbsp;&nbsp;&nbsp;
+                Zengrong Lin</a><sup>5</sup>&nbsp;&nbsp;&nbsp;
+                <br>
+                Gaoqiang Wu</a><sup>5</sup>&nbsp;&nbsp;&nbsp;
+                Zhihui Hao</a><sup>5</sup>&nbsp;&nbsp;&nbsp;
+                <a target="_blank" href="https://www.linkedin.com/in/xianpeng-lang-%E9%83%8E%E5%92%B8%E6%9C%8B-75083926/">Xianpeng Lang</a><sup>4</sup>&nbsp;&nbsp;&nbsp;
+                <a target="_blank" href="https://scholar.google.com/citations?hl=en&user=a34GvQoAAAAJ">Jia Hu</a><sup>1</sup><sup>&dagger;</sup>&nbsp;&nbsp;&nbsp;
+                <a target="_blank" href="https://scholar.google.com.hk/citations?hl=zh-CN&user=Hfrih1EAAAAJ">Hongyang Li</a><sup>3</sup><sup>&dagger;</sup>&nbsp;&nbsp;&nbsp;
+                <br /><sup>1</sup>Tongji University&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sup>2</sup>Shanghai Innovation Institute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <br /><sup>3</sup>OpenDriveLab at The University of Hong Kong &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <sup>4</sup>Meituan Inc.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <sup>5</sup>Li Auto Inc.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <!-- <span class="brmod" style="color:rgb(183, 0, 0)"><b>ICCV 2025</b></span> -->
+              </span>
+            </div>
+
+            <tr>
+              <td>
+                <div style="display:flex; flex-direction:column; justify-content:center; align-items:center; gap:20px; margin-top: 20px; margin-bottom: 20px;">
+                  <div style="display:flex; justify-content:center; align-items:center; gap:40px; flex-wrap:wrap;">
+                    <img src="https://ik.imagekit.io/lhcstation/PlanerRFT/institution/tongji.png" width="200" style="border-radius:5px;">
+                    <img src="https://ik.imagekit.io/lhcstation/PlanerRFT/institution/sii.svg" width="200" style="border-radius:5px;">
+                  </div>
+                  <div style="display:flex; justify-content:center; align-items:center; gap:40px; flex-wrap:nowrap;">
+                    <img src="https://ik.imagekit.io/StarBurger/SimScale/hku.png" width="260" style="border-radius:5px;">
+                    <img src="https://ik.imagekit.io/lhcstation/PlanerRFT/institution/meituan.png" width="110" style="border-radius:5px;">
+                    <img src="https://ik.imagekit.io/lhcstation/PlanerRFT/institution/liauto.svg" width="160" style="border-radius:5px;">
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2601.12901"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2601.12901"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+
+                <!-- <span class="link-block">
+                  <a href="https://github.com/OpenDriveLab/" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <svg class="svg-inline--fa fa-github fa-w-16" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <span class="link-block">
+                  <a href=""
+                      class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fa fa-database"></i>
+                    </span>
+                    <span>Dataset (nuMax)</span>
+                  </a>
+                </span> -->
+
+              </div>
+              
+            </div>
+            </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <div align="center">
+          <img src="https://ik.imagekit.io/lhcstation/PlanerRFT/models/teaser0.png" alt="Image description" width="100%">
+        </div>  
+
+        <article class="message"
+          style="
+            margin-top:2.0rem;
+            border:none;
+            border-left:6px solid #4A78FF;
+            background-color:#F4F7FF;
+            color:#102040;
+            border-radius:8px;
+            padding:0.3rem 0;
+          ">
+          <div class="message-body"
+            style="
+              background-color:transparent;
+              color:inherit;
+              border:none !important;
+              padding:1rem 1.2rem;
+              font-size:15px;
+              line-height:1.6;
+              text-align:justify;
+            ">
+    
+            <h4 style="margin-bottom:0.7rem; font-weight:700; font-size:22px; color:#1F4BE0;">
+              <strong>🎯 TL;DR: A closed-loop and sample-efficient RFT framework for diffusion-based planners.</strong>
+            </h4>
+    
+            <p style="margin-bottom:0.7rem; font-size:18px;">
+              <strong>📐 Orthogonal Guided Denoising.</strong>
+              An orthogonally decoupled guided denoising strategy that perturbs lateral displacement and longitudinal velocity around a reference trajectory, facilitating diverse and continuous trajectory sampling.
+            </p>
+    
+            <p style="margin-bottom:0.7rem; font-size:18px;">
+              <strong>🧭 Scenario-Adaptive Exploration.</strong>
+              A learnable exploration policy that dynamically adjusts the denoising process based on the current scenario, toward more promising exploration thus improving sample-efficiency.
+            </p>
+    
+            <p style="margin-bottom:0; font-size:18px;">
+              <strong style="font-weight:900;">🔁 Closed-Loop Optimization.</strong>
+              A dual-branch optimization framework that jointly refines trajectory distributions and the exploration policy through closed-loop rollouts.
+            </p>
+    
+          </div>
+        </article>
+    </div>
+
+
+    </div>
+  </section>
+
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container is-two-thirds">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-two-thirds">
+            <h2 class="title is-2">Abstract</h2>
+          </div>
+      </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section body">
+    <div class="container">
+      <!-- <div class="container is-two-thirds"> -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths  is-full-width">
+            <div class="content has-text-justified" style="font-size: 18px">
+              Diffusion-based planners have emerged as a promising approach for human-like trajectory generation in autonomous driving. 
+              Recent works incorporate reinforcement fine-tuning to enhance robustness 
+              through reward-oriented optimization in a generation-evaluation loop. 
+              However, they struggle to generate <strong>multi-modal, scenario-adaptive trajectories</strong>, 
+              hindering the exploitation efficiency of informative rewards during fine-tuning. 
+              To resolve this, we propose <strong>PlannerRFT</strong>, a 
+              <strong>sample-efficient reinforcement fine-tuning framework</strong> for diffusion-based planners. 
+              PlannerRFT adopts a <strong>dual-branch optimization</strong> that simultaneously refines the trajectory distribution 
+              and adaptively guides the denoising process toward more promising exploration, 
+              without altering the original inference pipeline. 
+              To support parallel learning at scale, we develop <strong>nuMax</strong>, 
+              an optimized simulator that achieves 10x faster rollout compared to native nuPlan. 
+              Extensive experiments show that <strong>PlannerRFT achieves state-of-the-art performance</strong>, 
+              with distinct behaviors emerging during the learning process.
+            </div>            
+          </div>
+        </div>
+      <!-- </div> -->
+    </div>
+  </section>
+
+
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container is-two-thirds">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-two-thirds">
+            <h2 class="title is-2">Model Overview</h2>
+          </div>
+      </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <!-- <h1 class="title is-2" style="text-align: center; padding-bottom: 10px;">Model Overview</h1> -->
+          <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths ">
+          <div class="content has-text-justified">
+            
+            <tr>
+              <td>
+                <div class="row">
+                  <div class="col">
+                    <img src="https://ik.imagekit.io/lhcstation/PlanerRFT/models/pipeline.svg" 
+                    alt="Image description" 
+                    width="95%"
+                    style="display: block; margin: 0 auto;">
+                  </div>
+                </div>
+                <br>
+                <div class="columns is-centered has-text-centered">
+                  <div class="column">
+                  <!-- <div class="content has-text-justified interpolation-panel"> -->
+                    <p style="text-align: left;font-size: 18px"> 
+                      We enhance multi-modality during RL sampling through <strong>Guided Denoising</strong>, 
+                      with guidance scales modulated by the Exploration Policy to generate scenario-adaptive trajectories. 
+                      The planner gathers on-policy interaction data through <strong>Closed-Loop Rollout</strong> in simulation. 
+                      A <strong>dual-branch optimization framework</strong> performs trajectory optimization and 
+                      <strong>exploration optimization</strong> to steer the denoising process.
+                    </p>
+                  <!-- </div> -->
+                </div>
+              </div>
+              </td>
+            </tr>
+          </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container is-two-thirds">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-two-thirds">
+            <h2 class="title is-2">Experiment Results</h2>
+          </div>
+      </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+
+    <section class="section">
+    <div class="container">
+      <!-- Section Title -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h1 class="title is-2" style="text-align: center; padding-bottom: 10px;">Closed-loop Performance</h1>
+
+          <!-- Closed-loop Performance on nuPlan Dataset -->
+          <p style="text-align: left;margin-bottom:6px; font-size:18px;">
+            <b>Closed-loop planning results on nuPlan dataset.</b> 
+            PlannerRFT adopts the DDIM sampler with 5 denoising steps. 
+            <code style="color: #222;">DPM</code>: DPM-Solver with 10 denoising steps.
+            <code style="color: #222;">DDIM</code>: DDIM sampler with 5 denoising steps.
+            NR: non-reactive traffic. R: reactive traffic.
+          </p>
+          <div class="content has-text-centered">
+            <img src="https://ik.imagekit.io/lhcstation/PlanerRFT/models/result.png"
+                 alt="algebraic reasoning"
+                 class="center"
+                 style="display:block; margin:0 auto; width:80%; max-width:100%; height:auto;">
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <details style="margin-bottom: 1.5rem;">
+            <summary class="subtitle is-3" style="text-align: left; margin-bottom: 15px;margin-top: 20px; font-weight:600">More Quantitative Results</summary> 
+            
+            <!-- Ablation on Exploration Policy -->
+            <h3 class="subtitle is-4" style="text-align:left; margin-top:20px; margin-bottom:6px;font-weight:600">
+              Comparison of Exploration Policies
+            </h3>
+            <p style="font-size:15px; margin-top:2px; margin-bottom:30px;">
+              We evaluate four exploration policies in RL sampling: 
+              1) w/o Guidance: denoising from random noise without any guidance, 
+              2) w/ Uniform Dist: sampling the guidance scale from a uniform distribution, 
+              3) w/ Fixed Beta Dist: sampling the guidance scale from a fixed Beta distribution, and 
+              4) our policy-guided denoising.
+              All planners use the same 5-step DDIM denoising setup. 
+              \( \mathcal{D} \) denotes the modality of the sampled trajectory group, 
+              following the definition in <em>
+                <a href="https://arxiv.org/abs/2411.15139" target="_blank" rel="noopener noreferrer">
+                  DiffusionDrive
+                </a>
+              </em>, while
+              \( \bar{r} \) and \( s_{r} \) represent the mean and standard deviation of the corresponding rewards, respectively.
+            </p>
+            <div class="row">
+              <div class="col">
+                <div align="center">
+                  <img src="https://ik.imagekit.io/lhcstation/PlanerRFT/results/table2.png" style="margin-top: -30px;" alt="Image description" width="100%">
+                </div> 
+              </div>
+            </div>
+
+            <!-- Ablation on Guidance Type -->
+            <h3 class="subtitle is-4" style="text-align:left; margin-top:20px; margin-bottom:6px;font-weight:600">
+              Comparison of Guidance Type
+            </h3>
+            <p style="font-size:15px; margin-top:2px; margin-bottom:10px;">
+              We evaluate the effectiveness of lateral and longitudinal guidance by 
+              enabling them individually in the policy-guided denoising process.
+              Results are reported on the Test14-random reactive benchmark.
+            </p>
+            <div class="row">
+              <div class="col">
+                <div align="center">
+                  <img src="https://ik.imagekit.io/lhcstation/PlanerRFT/results/table3.png" style="margin-top: -5px;" alt="Image description" width="80%">
+                </div> 
+              </div>
+            </div>
+
+            <!-- Ablations of fine-tuning data distribution -->
+            <h3 class="subtitle is-4" style="text-align:left; margin-top:20px; margin-bottom:6px;font-weight:600">
+              Comparison of Fine-tuning Data Distribution
+            </h3>
+            <p style="font-size:15px; margin-top:2px; margin-bottom:10px;">
+              We collect 144,494 non-overlapping scenarios from nuPlan at 10 Hz sampling rate.
+              We evaluate all scenes using the pretrained planner and construct three datasets according to performance scores: 
+              1) <code style="color: #222;">Fail</code>, including 10,417 collision or off-road cases; 
+              2) <code style="color: #222;">Lt90</code>, including all low-score (less than 90) cases, totaling 24,691 scenes; and 
+              3) <code style="color: #222;">All</code>, which includes all available scenes.
+            </p>
+            <div class="row">
+              <div class="col">
+                <div align="center">
+                  <img src="https://ik.imagekit.io/lhcstation/PlanerRFT/results/table4.png" style="margin-top: -10px;" alt="Image description" width="40%">
+                </div> 
+              </div>
+            </div>
+
+          </details>
+        </div>
+      </div>
+
+      <div class="container">
+        <h1 class="title is-2" style="text-align: center; padding-bottom: 10px;">Qualitative Results</h1>
+        <div class="columns is-centered has-text-centered">
+        </div>
+        <div class="columns is-centered" style="gap: 10px; margin-bottom: 30px; margin-top: 10px;">
+          <button class="login video-switch-btn" data-group="5">Multi-ped</button>
+          <button class="login video-switch-btn" data-group="2">Multi-lane</button>
+          <button class="login video-switch-btn" data-group="4">Left Turn</button>
+          <button class="login video-switch-btn" data-group="1">Change Lane</button>
+          <button class="login video-switch-btn" data-group="6">Narrow-pass</button>
+          <button class="login video-switch-btn" data-group="3">Interactions</button>  
+          <button class="login video-switch-btn" data-group="7">Confusion</button>
+        </div>
+      </div>
+
+      <div class="columns is-centered is-multiline" style="gap: 10px;">
+        <div class="video-container group-1" style="margin: 10px; text-align: center;">
+          <video loop controls style="width: 1000px; height: auto;">
+            <source src="https://ik.imagekit.io/lhcstation/PlanerRFT/videos/NR-1.mp4" type="video/mp4">
+          </video>
+          <p style="font-size:18px; margin-top:2px; margin-bottom:10px; width: 1000px; text-align: left;">
+            <strong>Left</strong>: IL-Pretrained. <strong>Right</strong>: PlannerRFT.
+            <strong>S-Curve Lane Change.</strong> 
+            The ego vehicle starts in the left lane of an S-curve, with a stationary vehicle ahead in the same lane.
+          </p>
+        </div>
+        <div class="video-container group-2" style="margin: 10px; text-align: center;">
+          <video loop controls style="width: 1000px; height: auto;">
+            <source src="https://ik.imagekit.io/lhcstation/PlanerRFT/videos/NR-3.mp4" type="video/mp4">
+          </video>
+          <p style="font-size:18px; margin-top:2px; margin-bottom:10px; width: 1000px; text-align: left;">
+            <strong>Left</strong>: IL-Pretrained. <strong>Right</strong>: PlannerRFT.
+            <strong>Multi-Lane.</strong> 
+            The ego vehicle is driving in a multi-lane road.
+          </p>
+        </div>
+        <div class="video-container group-3" style="margin: 10px; text-align: center;">
+          <video loop controls style="width: 1000px; height: auto;">
+            <source src="https://ik.imagekit.io/lhcstation/PlanerRFT/videos/R-3.mp4" type="video/mp4">
+          </video>
+          <p style="font-size:18px; margin-top:2px; margin-bottom:10px; width: 1000px; text-align: left;">
+            <strong>Left</strong>: IL-Pretrained. <strong>Right</strong>: PlannerRFT.
+            <strong>Blocked Right-Turn in Reactive Traffic.</strong> 
+            The ego vehicle intends to turn right at the upcoming intersection.
+          </p>
+        </div>
+        <div class="video-container group-4" style="margin: 10px; text-align: center;">
+          <video loop controls style="width: 1000px; height: auto;">
+            <source src="https://ik.imagekit.io/lhcstation/PlanerRFT/videos/R-1.mp4" type="video/mp4">
+          </video>
+          <p style="font-size:18px; margin-top:2px; margin-bottom:10px; width: 1000px; text-align: left;">
+            <strong>Left</strong>: IL-Pretrained. <strong>Right</strong>: PlannerRFT.
+            <strong>Left-Turn in Reactive Traffic.</strong> 
+            The ego vehicle intends to turn left at an unsignalized intersection.
+          </p>
+        </div>
+        <div class="video-container group-5" style="margin: 10px; text-align: center;">
+          <video loop controls style="width: 1000px; height: auto;">
+            <source src="https://ik.imagekit.io/lhcstation/PlanerRFT/videos/R-2.mp4" type="video/mp4">
+          </video>
+          <p style="font-size:18px; margin-top:2px; margin-bottom:10px; width: 1000px; text-align: left;">
+            <strong>Left</strong>: IL-Pretrained. <strong>Right</strong>: PlannerRFT.
+            <strong>Intersection Pedestrian Avoidance.</strong> 
+            The ego vehicle intends to make a right turn at an intersection while pedestrians are crossing.
+          </p>
+        </div>
+        <div class="video-container group-6" style="margin: 10px; text-align: center;">
+          <video loop controls style="width: 1000px; height: auto;">
+            <source src="https://ik.imagekit.io/lhcstation/PlanerRFT/videos/NR-4.mp4" type="video/mp4">
+          </video>
+          <p style="font-size:18px; margin-top:2px; margin-bottom:10px; width: 1000px; text-align: left;">
+            <strong>Left</strong>: IL-Pretrained. <strong>Right</strong>: PlannerRFT. 
+            <strong>Traffic-Cone Narrowing.</strong> The ego vehicle is driving on a curved road with cones.
+          </p>
+        </div>
+        <div class="video-container group-7" style="margin: 10px; text-align: center;">
+          <video loop controls style="width: 1000px; height: auto;">
+            <source src="https://ik.imagekit.io/lhcstation/PlanerRFT/videos/NR-5.mp4" type="video/mp4">
+          </video>
+          <p style="font-size:18px; margin-top:2px; margin-bottom:10px; width: 1000px; text-align: left;">
+            <strong>Left</strong>: IL-Pretrained. <strong>Right</strong>: PlannerRFT.
+            <strong>A Causal-Confusion Scenario.</strong>
+            The ego vehicle turns right at an intersection. 
+            The IL pretrained planner directs the ego vehicle to turn right and then pull over to the side of the road.
+            This behavior is likely due to causal confusion: 
+            a large number of scenarios in the training data where vehicles turn right and stop to pick up passengers.
+          </p>
+        </div>
+      </div>
+  </section>
+
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container is-two-thirds">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-two-thirds">
+            <h2 class="title is-2">Closed-Loop Simulator: nuMax</h2>
+          </div>
+      </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section body">
+    <div class="container">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths  is-full-width">
+            <div class="content has-text-justified" style="font-size: 18px">
+              For scalable closed-loop training, we develop nuMax, a GPU-parallel simulator
+              built upon
+              <em>
+                <a href="https://github.com/waymo-research/waymax" target="_blank" rel="noopener noreferrer">
+                  Waymax
+                </a>
+              </em>
+              and calibrated for the large-scale nuPlan benchmark, achieving up to 10x faster
+              simulation speed than the native nuPlan simulator. 
+            </div>            
+          </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths ">
+          <div class="content has-text-justified">
+            
+            <div class="row">
+              <div class="col" style="flex: 0 0 45%; max-width: 45%;">
+                <img src="https://ik.imagekit.io/lhcstation/PlanerRFT/numax/numax.svg" 
+                alt="Image description" 
+                width="100%"
+                style="display: block; margin: 0 auto;">
+                <p style="font-size:15px; margin-top:2px; margin-bottom:10px; text-align: left;">
+                  <b>Illustration of nuMax.</b> (a) Scenario cache: nuPlan sce-
+                  narios are preprocessed and cached for fast loading during large-
+                  scale RL rollouts; (b) LQR tracker and scorer: vehicle kinemat-
+                  ics and reward computation are calibrated to match nuPlan; and
+                  (c) Distributed RL training pipeline: enables communication be-
+                  tween PyTorch DistributedDataParallel (DDP) workers and the
+                  JAX-based simulator.
+                </p>
+              </div>
+              <div class="col" style="flex: 0 0 55%; max-width: 55%;">
+                <img src="https://ik.imagekit.io/lhcstation/PlanerRFT/numax/rlpipeline.svg" 
+                alt="Image description" 
+                width="100%"
+                style="display: block; margin: 0 auto;">
+                <p style="font-size:15px; margin-top:2px; margin-bottom:10px; text-align: left;">
+                  <b>Distributed RL Training Pipeline.</b> 
+                  Policy inference and learning run in PyTorch DDP, while environment simulation is
+                  executed in JAX on rank-0 to avoid XLA conflicts. Observations
+                  and replay samples are scattered to all ranks for guided denoising
+                  and gradient updates, and planned trajectories are gathered back to
+                  rank-0 for simulation, with synchronization at every step.
+                </p>
+              </div>
+            </div>
+          </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero is-light is-small">
+    <div class="hero-body ">
+      <div class="container">
+        <div class="columns is-centered has-text-centered">
+          <div class="column">
+            <h2 class="title is-2">Ecosystem</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <!-- <h1 class="title is-2" style="text-align: center; padding-bottom: 10px;">Ecosystem</h1> -->
+          <!-- <h2 class="subtitle is-4" style="text-align: center;">Defining Visual Affordances</h2> -->
+          <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths ">
+          <div class="content has-text-justified">
+            
+            <p>
+              This work is part of a broader research program at 
+              <a target="_blank" href="https://opendrivelab.com/">OpenDriveLab</a> focusing on
+              large-scale simulation, scene generation, behavior modeling, and end-to-end training for autonomous driving.
+            </p>
+            <p>
+              Please stay tuned for more work from <a target="_blank" href="https://opendrivelab.com/">OpenDriveLab</a>: 
+              <a target="_blank" href="https://arxiv.org/abs/2506.09800">R2SE</a>, 
+              <a target="_blank" href="https://opendrivelab.com/ReSim">ReSim</a>, 
+              <a target="_blank" href="https://arxiv.org/abs/2504.10485">NEXUS</a>, 
+              <a target="_blank" href="https://arxiv.org/html/2503.12552v1">MTGS</a>, 
+              <a target="_blank" href="https://arxiv.org/abs/2503.11650">Centaur</a> .
+            </p>
+
+          </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="titile">BibTeX</h2>
+      If you find the project helpful for your research, please consider citing our paper:
+      <pre><code>@article{li2026plannerrft,
+        title={PlannerRFT: Reinforcing Diffusion Planners through Closed-Loop and Sample-Efficient Fine-Tuning},
+        author={Hongchen Li and Tianyu Li and Jiazhi Yang and Haochen Tian and Caojun Wang and Lei Shi and Mingyang Shang and Zengrong Lin and Gaoqiang Wu and Zhihui Hao and Xianpeng Lang and Jia Hu and Hongyang Li},
+        journal={arXiv preprint arXiv:2601.12901},
+        year={2026}
+      }</code></pre>
+    </div>
+  </section>
+  
+  <br><br><br>
+
+</body>
+</html>
+
+
+<script>let currentSlide = 0;
+
+  //  <!-- zjl revise here!!!!! -->
+  const slide_length = [0, 6, 10, 16, 20]
+  const slideContainer = document.getElementById('slider-container');
+  const slides = slideContainer.children;
+  const dots = document.querySelectorAll('#slider-dots button');
+  const totalSlides = slides.length;
+  function updateSlider(animate = true) {
+    const slideWidth = slides[0].offsetWidth + 16;
+    const offset = currentSlide * slideWidth;
+
+    if (animate) {
+      slideContainer.style.transition = 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+    } else {
+      slideContainer.style.transition = 'none';
+    }
+
+    slideContainer.style.transform = `translateX(-${offset}px)`;
+
+    dots.forEach((dot, index) => {
+      dot.style.backgroundColor = (slide_length[index] <= currentSlide & currentSlide < slide_length[index + 1]) ? '#4F46E5' : '#D1D5DB';
+    });
+  }
+  function slideLeft() {
+    if (currentSlide > 0) {
+      currentSlide--;
+      updateSlider();
+    } else {
+      // Optional: Bounce effect when at the start
+      slideContainer.style.transform = `translateX(20px)`;
+      setTimeout(() => {
+        slideContainer.style.transform = `translateX(0px)`;
+      }, 150);
+    }
+  }
+  function slideRight() {
+    if (currentSlide < totalSlides - 1) {
+      currentSlide++;
+      updateSlider();
+    } else {
+      // Optional: Bounce effect when at the end
+      const maxOffset = (totalSlides - 1) * (slides[0].offsetWidth + 16);
+      slideContainer.style.transform = `translateX(-${maxOffset - 20}px)`;
+      setTimeout(() => {
+        slideContainer.style.transform = `translateX(-${maxOffset}px)`;
+      }, 150);
+    }
+  }
+  function handleTouchStart(e) {
+    const touch = e.touches[0];
+    window.touchStartX = touch.clientX;
+    window.touchStartY = touch.clientY;
+    slideContainer.style.transition = 'none';
+  }
+  function handleTouchMove(e) {
+    if (!window.touchStartX) return;
+
+    const touch = e.touches[0];
+    const diffX = touch.clientX - window.touchStartX;
+    const diffY = touch.clientY - window.touchStartY;
+
+    // If vertical scrolling is dominant, don't slide
+    if (Math.abs(diffY) > Math.abs(diffX)) return;
+
+    e.preventDefault();
+    const slideWidth = slides[0].offsetWidth + 16;
+    const currentOffset = -(currentSlide * slideWidth);
+    const newOffset = currentOffset + diffX;
+
+    slideContainer.style.transform = `translateX(${newOffset}px)`;
+  }
+  function handleTouchEnd(e) {
+    if (!window.touchStartX) return;
+
+    const touch = e.changedTouches[0];
+    const diffX = touch.clientX - window.touchStartX;
+
+    if (Math.abs(diffX) > 50) {
+      if (diffX > 0 && currentSlide > 0) {
+        slideLeft();
+      } else if (diffX < 0 && currentSlide < totalSlides - 1) {
+        slideRight();
+      } else {
+        updateSlider();
+      }
+    } else {
+      updateSlider();
+    }
+
+    window.touchStartX = null;
+    window.touchStartY = null;
+  }
+  // Add touch events
+  slideContainer.addEventListener('touchstart', handleTouchStart);
+  slideContainer.addEventListener('touchmove', handleTouchMove);
+  slideContainer.addEventListener('touchend', handleTouchEnd);
+  // Add click event listeners to buttons
+  const leftButton = document.getElementById('id-88');
+  const rightButton = document.getElementById('id-90');
+  if (leftButton) leftButton.addEventListener('click', slideLeft);
+  if (rightButton) rightButton.addEventListener('click', slideRight);
+  // Add click events to dots
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      currentSlide = slide_length[index];
+      updateSlider();
+    });
+  });
+  // Initialize slider
+  document.addEventListener('DOMContentLoaded', () => {
+    updateSlider(false);
+  });
+  // Update on window resize with debounce
+  let resizeTimeout;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => updateSlider(false), 100);
+  });</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const videoContainers = document.querySelectorAll('.video-container');
+    const videoButtons = document.querySelectorAll('.video-switch-btn');
+    const imageContainers = document.querySelectorAll('.image-container');
+    const imageButtons = document.querySelectorAll('.image-switch-btn');
+
+    // 显示相应组的内容并更新按钮颜色
+    function showGroup(groupNumber, containers, buttons) {
+        containers.forEach(container => {
+            if (container.classList.contains(`group-${groupNumber}`)) {
+                container.style.display = 'block';
+            } else {
+                container.style.display = 'none';
+            }
+        });
+
+        buttons.forEach(btn => {
+            if (btn.dataset.group === groupNumber.toString()) {
+                btn.classList.add('bg-custom', 'text-white'); // 设置选中的按钮样式
+                btn.classList.remove('bg-white');
+            } else {
+                btn.classList.remove('bg-custom', 'text-white'); // 移除非选中按钮的样式
+                btn.classList.add('bg-white');
+            }
+        });
+    }
+
+    videoButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            showGroup(parseInt(btn.dataset.group), videoContainers, videoButtons);
+        });
+    });
+
+    imageButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            showGroup(parseInt(btn.dataset.group), imageContainers, imageButtons);
+        });
+    });
+
+    showGroup(1, videoContainers, videoButtons);
+    showGroup(1, imageContainers, imageButtons);
+});
+
+  // const initialimgButton = document.querySelector('.image-switch-btn[data-group="1"]');
+  // if (initialimgButton) {
+  //   initialimgButton.focus(); // 触发按钮的 focus 状态
+  // }
+
+  // const initialvideoButton = document.querySelector('.video-switch-btn[data-group="1"]');
+  // if (initialvideoButton) {
+  //  initialvideoButton.focus(); // 触发按钮的 focus 状态
+  // }
+</script>
