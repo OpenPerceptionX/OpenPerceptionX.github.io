@@ -14,7 +14,7 @@ export const members: {
         links: [
             {
                 icon: "email",
-                url: "lishihao.shawn@gmail.com",
+                url: "mailto:lishihao.shawn@gmail.com",
             },
             {
                 icon: "github",
@@ -348,7 +348,7 @@ export const members: {
             },
             {
                 icon: "email",
-                url: "lu.yuhang2000@outlook.com",
+                url: "mailto:lu.yuhang2000@outlook.com",
             },
             {
                 icon: "scholar",
@@ -571,7 +571,7 @@ export const members: {
         links: [
             {
                 icon: "email",
-                url: "lijinwei22@mails.tsinghua.edu.cn",
+                url: "mailto:lijinwei22@mails.tsinghua.edu.cn",
             },
         ],
         keys: ["student"],
@@ -584,7 +584,7 @@ export const members: {
         links: [
             {
                 icon: "email",
-                url: "issacb25@connect.hku.hk",
+                url: "mailto:issacb25@connect.hku.hk",
             },
             {
                 icon: "github",
@@ -601,7 +601,7 @@ export const members: {
         links: [
             {
                 icon: "email",
-                url: "jimmyyaaaa@gmail.com",
+                url: "mailto:jimmyyaaaa@gmail.com",
             },
             {
                 icon: "github",
@@ -618,7 +618,7 @@ export const members: {
         links: [
             {
                 icon: "email",
-                url: "zhangjojo31@gmail.com",
+                url: "mailto:zhangjojo31@gmail.com",
             },
             {
                 icon: "github",
@@ -635,7 +635,7 @@ export const members: {
         links: [
             {
                 icon: "email",
-                url: "colenzeng@gmail.com",
+                url: "mailto:colenzeng@gmail.com",
             },
         ],
         keys: ["student"],
@@ -849,7 +849,7 @@ export const members: {
         links: [
             {
                 icon: "email",
-                url: "hugologymai@connect.hku.hk",
+                url: "mailto:hugologymai@connect.hku.hk",
             },
         ],
         keys: ["staff"],
@@ -862,7 +862,7 @@ export const members: {
         links: [
             {
                 icon: "email",
-                url: "jiaheng.wang.ucl@gmail.com",
+                url: "mailto:jiaheng.wang.ucl@gmail.com",
             },
             {
                 icon: "github",
