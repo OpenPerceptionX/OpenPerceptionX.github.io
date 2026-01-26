@@ -28,6 +28,7 @@ import {
     BreadcrumbList,
     BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
+import { CitationLayout, CitationNote } from "@/components/citation"
 
 
 
@@ -250,6 +251,26 @@ export default function Home() {
                     </p>
                     <div></div>
                 </div>
+
+
+
+                <CitationLayout offset={1}>
+                    <p className="w-full leading-relaxed mt-6">
+                        "Veni, Vidi, Vici" - I came, I saw, I conquered. Just as Julius Caesar's swift victory at Zela defined strategic efficiency, we aim to conquer the "Mount Everest" of robotics: 100% reliability in real-world garment manipulation. In this mission, Veni (data collection), Vidi (model training), and Vici (real-robot inference) form a progressive, interlocking chain where every link is critical. While foundational models like{" "}
+                        Pi0
+                        <CitationNote id={1} link="https://www.physicalintelligence.company/blog/pi0">
+                            &pi;<sub>0</sub> (2024)
+                        </CitationNote>{" "}
+                        and{" "}
+                        GO-1
+                        <CitationNote id={2} link="https://opendrivelab.com/OpenGO1/">
+                            GO-1 (2025)
+                        </CitationNote>{" "}
+                        rely on "brute-force" scale to reach these heights, we present a resource-aware alternative. We demonstrate how to take a system from 0% to 100% reliability using a fraction of the standard cost—specifically, within 20 hours of human demonstration and 8xA100 GPUs, rather than the tens of thousands of hours and hundreds of GPUs typically required.
+                        <br /><br />
+                        We achieve this through a three-stage technical philosophy that optimizes the transition from seeing to conquering:
+                    </p>
+                </CitationLayout>
 
 
 
