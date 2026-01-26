@@ -102,7 +102,7 @@ export function ExampleBarChart() {
                             />
                         </Bar>
                         <Bar dataKey="mobile" fill="var(--color-mobile)" yAxisId="left" radius={4}>
-                            <ErrorBar stroke="white" 
+                            < ErrorBar 
                                 dataKey="desktopStd" 
                                 direction="y" 
                             />
