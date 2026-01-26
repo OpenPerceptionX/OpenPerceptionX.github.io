@@ -129,7 +129,7 @@ export default function Redirect() {
         redirect('/OMEGA/')
     }
     if (
-        pathname.toLowerCase().startsWith('/kai0') ||
+        pathname.toLowerCase() == '/kai0' ||
         pathname.toLowerCase().startsWith('/foldanything')
     ) {
         redirect('/kai0/')
@@ -149,7 +149,11 @@ export default function Redirect() {
     ) {
         redirect('/PlannerRFT/')
     }
-
+    if (
+        pathname.toLowerCase().startsWith('/kai0rl')
+    ) {
+        redirect('/kai0RL/')
+    }
 
 
     // event 2025
