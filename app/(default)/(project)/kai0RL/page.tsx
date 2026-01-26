@@ -39,91 +39,95 @@ export default function Home() {
 
 
 
-                <div className="w-full max-w-7xl flex flex-col">
-                    <div className="flex flex-col w-full gap-6 px-6">
-
-
-                        <h1 className="font-bold text-t1 leading-tight">
-                            &chi;<sub>0</sub>RL: xxx
-                        </h1>
-
-
-
-                        <div className="max-w-4xl flex flex-row items-start w-full justify-start gap-3 border-l-2 border-black pl-3">
-                            <p className="w-full leading-relaxed">
-                                NOTE
-                            </p>
-                        </div>
-
-
-
-                        <div className="flex flex-col gap-2 font-mono">
-                            {/* Published */}
-                            <div className="flex flex-row gap-6 md:gap-10 xl:gap-20 2xl:gap-40">
-                                <h2 className="whitespace-nowrap shrink-0 w-[6rem]">
-                                    Published
-                                </h2>
-                                <h2 className="flex-1 break-words">
-                                    December 24, 2025
-                                </h2>
-                            </div>
-                            {/* Report */}
-                            <div className="flex flex-row gap-6 md:gap-10 xl:gap-20 2xl:gap-40">
-                                <h2 className="whitespace-nowrap shrink-0 w-[6rem]">
-                                    Report
-                                </h2>
-                                <h2 className="flex-1 break-words">
-                                    Available in Late January 2026
-                                </h2>
-                            </div>
-
-                            {/* Email */}
-                            <div className="flex flex-row gap-6 md:gap-10 xl:gap-20 2xl:gap-40">
-                                <h2 className="whitespace-nowrap shrink-0 w-[6rem]">
-                                    Email
-                                </h2>
-                                <h2 className="flex-1 break-all">
-                                    <Link
-                                        className="text-o-blue animated-underline hover:text-o-blue"
-                                        href="mailto:research@mmlab.hk"
-                                    >
-                                        research@mmlab.hk
-                                    </Link>
-                                </h2>
-                            </div>
-                            {/* By */}
-                            <div className="flex flex-row gap-6 md:gap-10 xl:gap-20 2xl:gap-40">
-                                <h2 className="whitespace-nowrap shrink-0 w-[6rem]">
-                                    By
-                                </h2>
-                                <h2 className="flex-1">
-                                    HKU MMLab
-                                </h2>
-                            </div>
-                            {/* Post */}
-                            <div className="flex flex-row gap-6 md:gap-10 xl:gap-20 2xl:gap-40">
-                                <h2 className="whitespace-nowrap shrink-0 w-[6rem]">
-                                    Share
-                                </h2>
-                                <h2 className="flex flex-row flex-wrap gap-x-2 flex-1 items-center">
-                                    <Link className="text-o-blue animated-underline hover:text-o-blue" href="https://x.com/OpenDriveLab/status/2003745616955142150?s=20" target="_blank">
-                                        X
-                                    </Link>
-                                    <span className="text-xs select-none">|</span>
-                                    <Link className="text-o-blue animated-underline hover:text-o-blue" href="https://www.linkedin.com/feed/update/urn:li:activity:7409531902761795584/" target="_blank">
-                                        LinkedIn
-                                    </Link>
-                                    <span className="text-xs select-none">|</span>
-                                    <Link className="text-o-blue animated-underline hover:text-o-blue" href="https://bsky.app/profile/opendrivelab.bsky.social/post/3mapyr5u4nc24" target="_blank">
-                                        Bluesky
-                                    </Link>
-                                </h2>
-                            </div>
-                        </div>
-                    </div>
+                <div className="flex flex-row gap-6 justify-center mt-6">
+                    <div></div>
+                    <h1 className="w-full max-w-7xl font-bold text-t1 leading-tight">
+                        &chi;<sub>0</sub>RL: xxx
+                    </h1>
+                    <div></div>
                 </div>
 
 
+
+                <div className="flex flex-row gap-6 justify-center mt-6">
+                    <div></div>
+                    <div className="w-full max-w-7xl flex flex-row items-start justify-start gap-3 border-l-2 border-black pl-3">
+                        <p className="w-full leading-relaxed">
+                            NOTE
+                        </p>
+                    </div>
+                    <div></div>
+                </div>
+
+
+
+                <div className="flex flex-row gap-6 justify-center mt-6">
+                    <div></div>
+                    <div className="w-full max-w-7xl flex flex-col gap-2 font-mono">
+                        {/* Published */}
+                        <div className="flex flex-row gap-6 md:gap-10 xl:gap-20 2xl:gap-40">
+                            <h2 className="whitespace-nowrap shrink-0 w-[6rem]">
+                                Published
+                            </h2>
+                            <h2 className="flex-1 break-words">
+                                December 24, 2025
+                            </h2>
+                        </div>
+                        {/* Report */}
+                        <div className="flex flex-row gap-6 md:gap-10 xl:gap-20 2xl:gap-40">
+                            <h2 className="whitespace-nowrap shrink-0 w-[6rem]">
+                                Report
+                            </h2>
+                            <h2 className="flex-1 break-words">
+                                Available in Late January 2026
+                            </h2>
+                        </div>
+
+                        {/* Email */}
+                        <div className="flex flex-row gap-6 md:gap-10 xl:gap-20 2xl:gap-40">
+                            <h2 className="whitespace-nowrap shrink-0 w-[6rem]">
+                                Email
+                            </h2>
+                            <h2 className="flex-1 break-all">
+                                <Link
+                                    className="text-o-blue animated-underline hover:text-o-blue"
+                                    href="mailto:research@mmlab.hk"
+                                >
+                                    research@mmlab.hk
+                                </Link>
+                            </h2>
+                        </div>
+                        {/* By */}
+                        <div className="flex flex-row gap-6 md:gap-10 xl:gap-20 2xl:gap-40">
+                            <h2 className="whitespace-nowrap shrink-0 w-[6rem]">
+                                By
+                            </h2>
+                            <h2 className="flex-1">
+                                HKU MMLab
+                            </h2>
+                        </div>
+                        {/* Post */}
+                        <div className="flex flex-row gap-6 md:gap-10 xl:gap-20 2xl:gap-40">
+                            <h2 className="whitespace-nowrap shrink-0 w-[6rem]">
+                                Share
+                            </h2>
+                            <h2 className="flex flex-row flex-wrap gap-x-2 flex-1 items-center">
+                                <Link className="text-o-blue animated-underline hover:text-o-blue" href="https://x.com/OpenDriveLab/status/2003745616955142150?s=20" target="_blank">
+                                    X
+                                </Link>
+                                <span className="text-xs select-none">|</span>
+                                <Link className="text-o-blue animated-underline hover:text-o-blue" href="https://www.linkedin.com/feed/update/urn:li:activity:7409531902761795584/" target="_blank">
+                                    LinkedIn
+                                </Link>
+                                <span className="text-xs select-none">|</span>
+                                <Link className="text-o-blue animated-underline hover:text-o-blue" href="https://bsky.app/profile/opendrivelab.bsky.social/post/3mapyr5u4nc24" target="_blank">
+                                    Bluesky
+                                </Link>
+                            </h2>
+                        </div>
+                    </div>
+                    <div></div>
+                </div>
 
 
 
@@ -139,12 +143,14 @@ export default function Home() {
                     <div></div>
                 </div>
 
+
+
                 <div className="flex flex-row gap-6 justify-center mt-6">
                     <div></div>
                     <video
                             autoPlay muted loop controls playsInline
                             poster="https://assets.kinetixai.cn/FoldAnything/full.png"
-                            className="w-full aspect-video rounded-sm max-w-7xl"
+                            className="w-full max-w-7xl object-cover object-center rounded-sm bg-gradient-loading select-none aspect-video"
                         >
                             <source src="https://assets.kinetixai.cn/FoldAnything/opening_Dec23_demo_v7.mp4" type="video/mp4" />
                     </video>
@@ -240,7 +246,7 @@ export default function Home() {
                 <div className="flex flex-row gap-6 justify-center mt-6">
                     <div></div>
                     <p className="w-full leading-relaxed max-w-4xl">
-                        Is massive scale the only path to robotic dexterity? While foundational models like Pi05 and GO-1 leverage massive compute and data to achieve task-generalization, we explore a "resource-aware" alternative for state-generalization. We present a comprehensive guideline for mastering long-horizon garment manipulation, taking a system from 0% to 100% reliability with a fraction of the standard cost—specifically, within 20 hours of human demonstration, 8*A100 gpus, rather than tens of thousands of hrs data and hundreds of GPUs which are typically required.
+                        text
                     </p>
                     <div></div>
                 </div>
@@ -255,45 +261,14 @@ export default function Home() {
                             </b>
                             We argue that not all data is created equal. By strictly aligning the human demonstration distribution ($P_train$), the model's knowledge ($Q_model$), and the test-time distribution ($P_test$), we minimize in-distribution shifts that lead to failure.
                         </li>
-                        <li>
-                            <b>
-                                Model Arithmetic:&nbsp;
-                            </b>
-                            Rather than relying on a single checkpoint, we identify that models trained on different data subsets learn distinct manifolds. We introduce a "shortcut" to merge these manifolds—condensing several diverse models into a single, adaptive policy without the complexity of MoE architectures.
-                        </li>
-                        <li>
-                            <b>
-                                Distribution-Aware Orchestration:&nbsp;
-                            </b>
-                            A specialized mechanism to handle the "last mile" of precision (the final 80-100% performance gain).
-                        </li>
                     </ol>
                 </div>
-
-
-
-
-                <div className="flex flex-row justify-center px-6 mt-6">
-                    <div className="max-w-7xl w-full flex flex-row gap-10 justify-center">
-                        <Image
-                            src="https://assets.kinetixai.cn/FoldAnything%2Fpqp_1220_1258.gif"
-                            alt="Consistency" 
-                            width={500}
-                            height={200}
-                            className="w-full lg:max-w-1/2 object-cover object-center rounded-sm bg-gradient-loading select-none"
-                        />
-                    </div>
-                </div>
-                <div className="mt-5 flex justify-center px-6">
-                    <p className="text-sm leading-relaxed text-muted-foreground/80 text-center max-w-4xl">
-                        Distribution dynamics of <span className="font-medium font-math text-black/80">P<sub>train</sub></span>, <span className="font-medium font-math text-black/80">Q<sub>model</sub></span>, and <span className="font-medium font-math text-black/80">P<sub>test</sub></span>.
-                    </p>
-                </div>
                 
 
-                
-                <div className="mt-6 flex flex-col gap-3">
-                    <div className="grid grid-cols-3 gap-6">
+
+                <div className="flex flex-row gap-6 justify-center mt-6">
+                    <div></div>
+                    <div className="w-full max-w-7xl grid grid-cols-3 gap-6">
                         <video
                             autoPlay muted loop controls playsInline
                             poster="https://assets.kinetixai.cn/kinetixai/research/detail-1/video-7-2.jpg"
@@ -316,11 +291,12 @@ export default function Home() {
                             <source src="https://assets.kinetixai.cn/kinetixai/research/detail-1/video-7-2.mp4" type="video/mp4" />
                         </video>
                     </div>
+                    <div></div>
                 </div>
                 <div className="flex flex-row gap-6 justify-center mt-3">
                     <div></div>
                     <p className="text-sm leading-relaxed text-muted-foreground/80 max-w-4xl">
-                        Is massive scale the only path to robotic dexterity? While foundational models like Pi05 and GO-1 leverage massive compute and data to achieve task-generalization, we explore a "resource-aware" alternative for state-generalization. We present a comprehensive guideline for mastering long-horizon garment manipulation, taking a system from 0% to 100% reliability with a fraction of the standard cost—specifically, within 20 hours of human demonstration, 8*A100 gpus, rather than tens of thousands of hrs data and hundreds of GPUs which are typically required.
+                        CAPTION
                     </p>
                     <div></div>
                 </div>
