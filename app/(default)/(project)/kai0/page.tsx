@@ -76,7 +76,7 @@ export default function Home() {
             <ProgressBar />
             
             {/* Spacer for top positioning */}
-            <div className="w-full h-24 xl:h-48"></div>
+            <div className="w-full h-36 md:h-24"></div>
 
 
                 {/* Main content - centered */}
