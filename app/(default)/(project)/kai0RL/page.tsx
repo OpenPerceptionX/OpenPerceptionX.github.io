@@ -35,7 +35,7 @@ export default function Home() {
     return (
         <div className="w-full overflow-x-hidden pt-36 md:pt-24 flex flex-row justify-center">
             {/* transferable */}
-            <div className="w-full max-w-7xl flex flex-col">
+            <div className="w-full flex flex-col justify-center">
 
 
 
@@ -125,26 +125,31 @@ export default function Home() {
 
 
 
-                <Image
-                    src="https://ik.imagekit.io/mmlab/mmlab@hku.jpg"
-                    alt="Nashville" 
-                    width={352}
-                    height={384}
-                    className="w-full h-6/12 object-cover object-center rounded-sm bg-gradient-loading select-none mt-20"
-                />
 
 
-
-                <div className="mt-20">
-                    <video
-                        autoPlay muted loop controls playsInline
-                        poster="https://assets.kinetixai.cn/FoldAnything/full.png"
-                        className="w-full aspect-video rounded-sm"
-                    >
-                        <source src="https://assets.kinetixai.cn/FoldAnything/opening_Dec23_demo_v7.mp4" type="video/mp4" />
-                    </video>
+                <div className="flex flex-row gap-6 justify-center mt-6">
+                    <div></div>
+                    <Image
+                        src="https://ik.imagekit.io/mmlab/mmlab@hku.jpg"
+                        alt="Nashville" 
+                        width={352}
+                        height={384}
+                        className="w-full max-w-7xl object-cover object-center rounded-sm bg-gradient-loading select-none"
+                    />
+                    <div></div>
                 </div>
 
+                <div className="flex flex-row gap-6 justify-center mt-6">
+                    <div></div>
+                    <video
+                            autoPlay muted loop controls playsInline
+                            poster="https://assets.kinetixai.cn/FoldAnything/full.png"
+                            className="w-full aspect-video rounded-sm max-w-7xl"
+                        >
+                            <source src="https://assets.kinetixai.cn/FoldAnything/opening_Dec23_demo_v7.mp4" type="video/mp4" />
+                    </video>
+                    <div></div>
+                </div>
 
 
                 <div className="w-full flex flex-col items-center my-20 px-6" id="introduction" >
