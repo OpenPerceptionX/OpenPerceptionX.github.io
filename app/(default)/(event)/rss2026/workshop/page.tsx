@@ -29,13 +29,6 @@ const speakers: {
         affiliation: 'UC San Diego',
         link: 'https://cseweb.ucsd.edu/~haosu/'
     },
-    // {
-    //     name: "Harold Soh",
-    //     image: "/assets/person/harold_soh.jpg",
-    //     position: "Associate Professor",
-    //     affiliation: 'National University of Singapore',
-    //     link: 'https://haroldsoh.com/'
-    // },
 ];
 
 
@@ -121,7 +114,7 @@ export default function Home() {
                             <Image
                                 src='https://ik.imagekit.io/opendrivelab/rss2026.png'
                                 alt='cvpr'
-                                width={256}
+                                width={192}
                                 height={1}
                                 className='select-none'
                             />
