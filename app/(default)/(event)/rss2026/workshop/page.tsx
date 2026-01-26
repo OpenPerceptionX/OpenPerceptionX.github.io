@@ -40,12 +40,12 @@ const organizers: {
 }[] = [
     {
         name: "Hongyang Li",
-        affiliation: 'University of Hong Kong',
+        affiliation: 'The University of Hong Kong',
         link: 'https://datascience.hku.hk/people/hongyang-li/'
     },
     {
         name: "Ping Luo",
-        affiliation: 'University of Hong Kong',
+        affiliation: 'The University of Hong Kong',
         link: 'http://luoping.me/'
     },
     {
