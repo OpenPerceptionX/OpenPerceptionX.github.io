@@ -129,12 +129,6 @@ export default function Redirect() {
         redirect('/OMEGA/')
     }
     if (
-        pathname.toLowerCase() == '/kai0' ||
-        pathname.toLowerCase().startsWith('/foldanything')
-    ) {
-        redirect('/kai0/')
-    }
-    if (
         pathname.toLowerCase().startsWith('/simscale')
     ) {
         redirect('/SimScale/')
@@ -149,11 +143,27 @@ export default function Redirect() {
     ) {
         redirect('/PlannerRFT/')
     }
+
+
+
+    // kai
     if (
-        pathname.toLowerCase().startsWith('/kai0rl')
+        pathname.toLowerCase().startsWith('/kai0')
     ) {
-        redirect('/kai0RL/')
+        if (
+            pathname.toLowerCase().startsWith('/kai0rl')
+        ) {
+            redirect('/kai0RL/')
+        } else {
+            redirect('/kai0/')
+        }
     }
+    if (
+        pathname.toLowerCase().startsWith('/foldanything')
+    ) {
+        redirect('/kai0/')
+    }
+
 
 
     // event 2025
