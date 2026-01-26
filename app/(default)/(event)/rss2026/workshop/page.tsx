@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = {
-    title: "Workshop at CVPR 2026 | OpenDriveLab",
-    description: "Workshop at CVPR 2026",
-    keywords: ["Workshop", "CVPR 2026", "OpenDriveLab", "HKU"],
+    title: "Workshop at RSS 2026 | OpenDriveLab",
+    description: "Workshop at RSS 2026",
+    keywords: ["Workshop", "RSS 2026", "OpenDriveLab", "HKU"],
 };
 
 
@@ -29,20 +29,6 @@ const speakers: {
         affiliation: 'UC San Diego',
         link: 'https://cseweb.ucsd.edu/~haosu/'
     },
-    {
-        name: "Rika Antonova",
-        image: "/assets/person/rika_antonova.jpg",
-        position: "Associate Professor",
-        affiliation: 'Cambridge',
-        link: 'https://contactrika.github.io/'
-    },
-    {
-        name: "Edward Johns",
-        image: "/assets/person/edward_johns.jpg",
-        position: "Associate Professor",
-        affiliation: 'Imperial College London',
-        link: 'https://www.robot-learning.uk/'
-    },
     // {
     //     name: "Harold Soh",
     //     image: "/assets/person/harold_soh.jpg",
@@ -50,34 +36,6 @@ const speakers: {
     //     affiliation: 'National University of Singapore',
     //     link: 'https://haroldsoh.com/'
     // },
-    {
-        name: "Shuran Song",
-        image: "/assets/person/shuran_song.jpg",
-        position: "Assistant Professor",
-        affiliation: 'Stanford',
-        link: 'https://shurans.github.io/'
-    },
-    {
-        name: "Yilun Du",
-        image: "/assets/person/yilun_du.jpg",
-        position: "Assistant Professor",
-        affiliation: 'Harvard',
-        link: 'https://yilundu.github.io/'
-    },
-    {
-        name: "Angjoo Kanazawa",
-        image: "/assets/person/angjoo_kanazawa.jpg",
-        position: "Assistant Professor",
-        affiliation: 'UC Berkeley',
-        link: 'https://people.eecs.berkeley.edu/~kanazawa/'
-    },
-    {
-        name: "Jiatao Gu",
-        image: "/assets/person/jiatao_gu.jpg",
-        position: "Assistant Professor",
-        affiliation: 'University of Pennsylvania',
-        link: 'https://jiataogu.me/'
-    },
 ];
 
 
@@ -88,34 +46,24 @@ const organizers: {
     link: string;
 }[] = [
     {
-        name: "Ping Luo",
-        affiliation: 'University of Hong Kong',
-        link: 'http://luoping.me/'
-    },
-    {
         name: "Hongyang Li",
         affiliation: 'University of Hong Kong',
         link: 'https://datascience.hku.hk/people/hongyang-li/'
     },
     {
-        name: "Andrei Bursuc",
-        affiliation: 'Valeo',
-        link: 'https://abursuc.github.io/'
+        name: "Ping Luo",
+        affiliation: 'University of Hong Kong',
+        link: 'http://luoping.me/'
     },
     {
-        name: "Animesh Garg",
-        affiliation: 'Georgia Tech',
-        link: 'https://animesh.garg.tech/'
+        name: "Yasemin Bekiroğlu",
+        affiliation: 'University College London',
+        link: 'https://www.dryaseminbekiroglu.com/'
     },
     {
-        name: "Lingjie Liu",
-        affiliation: 'University of Pennsylvania',
-        link: 'https://lingjie0206.github.io/'
-    },
-    {
-        name: "Amy Zhang",
-        affiliation: 'UT Austin',
-        link: 'https://amyzhang.github.io/'
+        name: "Lucy Xiaoyang Shi",
+        affiliation: 'Stanford & Physical Intelligence',
+        link: 'https://lucys0.github.io/'
     },
     {
         name: "Huijie Wang",
@@ -135,28 +83,20 @@ const events: {
     location: string;
 }[] = [
     {
-        title: "Foundation Models for Autonomous Systems",
-        subtitle: "CVPR 2025",
-        url: "/cvpr2025/workshop",
-        image: "/assets/background/nashville_night.jpg",
+        title: "From Labs to Life: Embodied Intelligence in the Wild",
+        subtitle: "CVPR 2026",
+        url: "/cvpr2026/workshop",
+        image: "https://ik.imagekit.io/opendrivelab/nils-huenerfuerst-OVE2SA0TVJE-unsplash.jpg?updatedAt=1761792013763",
         imageoption: "object-center",
-        location: "Nashville",
+        location: "Denver",
     },
     {
-        title: "Embodied Intelligence for Autonomous Systems on the Horizon",
-        subtitle: "CVPR 2024",
-        url: "/cvpr2024/workshop",
-        image: "/assets/background/seattle.jpg",
+        title: "Learning to See: Advancing Spatial Understanding for Embodied Intelligence",
+        subtitle: "ICCV 2025",
+        url: "/iccv2025/workshop",
+        image: "/assets/background/honolulu.jpg",
         imageoption: "object-center",
-        location: "Seattle",
-    },
-    {
-        title: "End-to-End Autonomous Driving: Emerging Tasks and Challenges",
-        subtitle: "CVPR 2023",
-        url: "/cvpr2023/workshop",
-        image: "/ui2023/cvpr2023/img/workshop/banner.jpg",
-        imageoption: "object-center",
-        location: "Vancouver",
+        location: "Honolulu",
     },
 ];
 
@@ -171,35 +111,28 @@ export default function Home() {
             <div className="w-full h-svh py-16 px-6 3xl:px-16">   
                 <div className="w-full h-full relative rounded-sm">
                     <Image
-                        src='https://ik.imagekit.io/opendrivelab/nils-huenerfuerst-OVE2SA0TVJE-unsplash.jpg?updatedAt=1761792013763'
-                        alt='Denver'
+                        src='https://ik.imagekit.io/opendrivelab/jamie-davies-Hao52Fu9-F8-unsplash.jpg'
+                        alt='Sydney'
                         fill
                         className='object-center object-cover bg-gradient-landing rounded-sm bg-black bg-opacity-30 bg-blend-overlay select-none'
                     />
                     <div className="w-full h-full absolute flex flex-col justify-end items-start p-6 xl:p-10 gap-6">
                         <div className="flex flex-row gap-6">
                             <Image
-                                src='/assets/icon/cvpr/cvpr2026_white.svg'
+                                src='https://ik.imagekit.io/opendrivelab/rss2026.png'
                                 alt='cvpr'
-                                width={128}
-                                height={1}
-                                className='select-none'
-                            />
-                            <Image
-                                src='/assets/icon/cvpr/ieee_cs_white.png'
-                                alt='cvpr'
-                                width={128}
+                                width={256}
                                 height={1}
                                 className='select-none'
                             />
                         </div>
                         <h1 className="text-white text-t1 font-bold">
-                            From Labs to Life: Embodied Intelligence in the Wild
+                            Towards Robust Execution of Complex Long-Horizon Tasks
                         </h1>
                         <h5 className="text-white">
-                            CVPR 2026 Workshop
+                            RSS 2026 Workshop
                             <br></br>
-                            Denver, USA
+                            Sydney, Australia
                         </h5>
                     </div>
                 </div>
@@ -228,10 +161,7 @@ export default function Home() {
             <div className="w-full px-6 flex justify-center mt-12">
                 <div className="w-full max-w-7xl flex flex-col gap-3">
                     <p className="leading-relaxed">
-                        Embodied intelligence brings us closer to creating robots that can truly see, think, and act in the real world. Yet, today’s systems remain fragile, struggling to handle the complexity of the real world. This workshop looks ahead - toward generalizable embodied intelligence that thrives beyond the lab. By gathering pioneers from vision and robotics, the workshop seeks to identify key challenges, discuss interdisciplinary solutions, and chart promising directions for advancing embodied systems to everyday life.
-                    </p>
-                    <p className="leading-relaxed">
-                        If you are interested in our workshop, please <b>mark the workshop in your CVPR registration</b>, to have enough space for the workshop room.
+                        TBD
                     </p>
                 </div>
             </div>
@@ -276,10 +206,14 @@ export default function Home() {
                     </h2>
                 </div>
             </div>
-
-
-
             <div className="w-full px-6 flex justify-center mt-12">
+                <div className="w-full max-w-7xl flex">
+                    To be announced.
+                </div>
+            </div>
+
+
+            {/* <div className="w-full px-6 flex justify-center mt-12">
                 <div className="w-full max-w-7xl grid gap-12 grid-cols-2 md:grid-cols-3 xl:grid-cols-4 3xl:grid-cols-5">
                     {[...speakers.values()].map((speaker) => (
                         <div className="flex flex-col gap-3 group/image" key={speaker.name}>
@@ -308,7 +242,7 @@ export default function Home() {
                         </div>
                     ))}
                 </div>
-            </div>
+            </div> */}
 
 
 
@@ -367,8 +301,8 @@ export default function Home() {
             <div className="w-full px-6 flex justify-center mt-24">
                 <div className="w-full max-w-7xl flex">
                     <h2 className="text-t1"> 
-                        <Link href="#edition" className="scroll-mt-32 group flex items-center" id="edition">
-                            Past Editions
+                        <Link href="#related" className="scroll-mt-32 group flex items-center" id="related">
+                            Related Workshops
                             <span className="ml-6 hidden group-hover:inline-block size-6 text-foreground">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                                     <path d="M15.197 3.35462C16.8703 1.67483 19.4476 1.53865 20.9536 3.05046C22.4596 4.56228 22.3239 7.14956 20.6506 8.82935L18.2268 11.2626M10.0464 14C8.54044 12.4882 8.67609 9.90087 10.3494 8.22108L12.5 6.06212" strokeWidth="2.5" strokeLinecap="round"/>

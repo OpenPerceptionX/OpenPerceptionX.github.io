@@ -168,15 +168,20 @@ export default function Redirect() {
 
     // event 2025
     if (
+        pathname.toLowerCase().startsWith('/rss2026')
+    ) {
+        redirect('/rss2026/workshop/')
+    }
+    if (
+        pathname.toLowerCase().startsWith('/cvpr2026')
+    ) {
+        redirect('/cvpr2026/workshop/')
+    }
+    if (
         pathname.toLowerCase() == '/cvpr2025' ||
         pathname.toLowerCase() == '/cvpr2025/'
     ) {
         redirect('/cvpr2025/')
-    }
-    if (
-        pathname.toLowerCase().startsWith('/cvpr2026/workshop')
-    ) {
-        redirect('/cvpr2026/workshop/')
     }
     if (
         pathname.toLowerCase().startsWith('/cvpr2025/workshop')

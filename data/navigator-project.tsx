@@ -70,6 +70,28 @@ export const NavigatorProject: {
             id: "edition",
         },
     ],
+    "/rss2026/workshop": [
+        {
+            text: "Introduction",
+            id: "introduction",
+        },
+        {
+            text: "Schedule",
+            id: "schedule",
+        },
+        {
+            text: "Speakers",
+            id: "speaker",
+        },
+        {
+            text: "Organizers",
+            id: "organizer",
+        },
+        {
+            text: "Related Workshops",
+            id: "related",
+        },
+    ],
     "/kai0": [
         {
             text: "Introduction",
