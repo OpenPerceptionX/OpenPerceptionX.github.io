@@ -304,13 +304,7 @@ export default function Home() {
                         >
                             <source src="https://assets.kinetixai.cn/kinetixai/research/detail-1/video-7-2.mp4" type="video/mp4" />
                         </video>
-                        <video
-                            autoPlay muted loop controls playsInline
-                            poster="https://assets.kinetixai.cn/kinetixai/research/detail-1/video-7-2.jpg"
-                            className="w-full aspect-video rounded-sm"
-                        >
-                            <source src="https://assets.kinetixai.cn/kinetixai/research/detail-1/video-7-2.mp4" type="video/mp4" />
-                        </video>
+                        <ExampleBarChart />
                     </div>
                     <div></div>
                 </div>
