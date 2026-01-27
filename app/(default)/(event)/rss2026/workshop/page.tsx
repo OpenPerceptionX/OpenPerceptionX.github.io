@@ -43,11 +43,11 @@ const organizers: {
         affiliation: 'The University of Hong Kong',
         link: 'https://datascience.hku.hk/people/hongyang-li/'
     },
-    {
-        name: "Ping Luo",
-        affiliation: 'The University of Hong Kong',
-        link: 'http://luoping.me/'
-    },
+    // {
+    //     name: "Ping Luo",
+    //     affiliation: 'The University of Hong Kong',
+    //     link: 'http://luoping.me/'
+    // },
     {
         name: "Yasemin Bekiroğlu",
         affiliation: 'University College London',
