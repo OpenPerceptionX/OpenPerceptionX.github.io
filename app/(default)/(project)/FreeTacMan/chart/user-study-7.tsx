@@ -16,8 +16,8 @@ import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "./ui/chart"
-import { getUserStudySingleData } from "@/./user-study"
+} from "../ui/chart"
+import { getUserStudySingleData } from "./user-study"
 
 const chartData = getUserStudySingleData("7")
 

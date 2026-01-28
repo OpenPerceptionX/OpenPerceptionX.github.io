@@ -16,7 +16,7 @@ import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "./ui/chart"
+} from "../ui/chart"
 
 const chartData = [
   { category: "1", value1: 35, value2: 75, value3: 80, fill1: "var(--color-1)", fill2: "var(--color-2)", fill3: "var(--color-3)" },

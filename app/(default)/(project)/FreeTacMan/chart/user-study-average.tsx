@@ -16,9 +16,9 @@ import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "./ui/chart"
+} from "../ui/chart"
 
-import { userStudyAverageData as chartData } from "@/./user-study"
+import { userStudyAverageData as chartData } from "./user-study"
 
 const chartConfig = {
   value1: {
