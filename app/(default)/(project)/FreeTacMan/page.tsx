@@ -9,37 +9,37 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/project/freetacman/ui/card";
-import { Separator } from "@/components/project/freetacman/ui/separator";
+} from "./ui/card";
+import { Separator } from "./ui/separator";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/components/project/freetacman/ui/tabs";
+} from "./ui/tabs";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/project/freetacman/ui/carousel";
+} from "./ui/carousel";
 
-import { PolicyRollouts1 } from "@/components/project/freetacman/chart/policy-rollouts-1";
-import { PolicyRollouts2 } from "@/components/project/freetacman/chart/policy-rollouts-2";
-import { PolicyRollouts3 } from "@/components/project/freetacman/chart/policy-rollouts-3";
-import { PolicyRollouts4 } from "@/components/project/freetacman/chart/policy-rollouts-4";
-import { PolicyRollouts5 } from "@/components/project/freetacman/chart/policy-rollouts-5";
-import { PolicyRolloutsAverage } from "@/components/project/freetacman/chart/policy-rollouts-average";
-import { UserStudy1 } from "@/components/project/freetacman/chart/user-study-1";
-import { UserStudy2 } from "@/components/project/freetacman/chart/user-study-2";
-import { UserStudy3 } from "@/components/project/freetacman/chart/user-study-3";
-import { UserStudy4 } from "@/components/project/freetacman/chart/user-study-4";
-import { UserStudy5 } from "@/components/project/freetacman/chart/user-study-5";
-import { UserStudy6 } from "@/components/project/freetacman/chart/user-study-6";
-import { UserStudy7 } from "@/components/project/freetacman/chart/user-study-7";
-import { UserStudy8 } from "@/components/project/freetacman/chart/user-study-8";
-import { UserStudyAverage } from "@/components/project/freetacman/chart/user-study-average";
+import { PolicyRollouts1 } from "./chart/policy-rollouts-1";
+import { PolicyRollouts2 } from "./chart/policy-rollouts-2";
+import { PolicyRollouts3 } from "./chart/policy-rollouts-3";
+import { PolicyRollouts4 } from "./chart/policy-rollouts-4";
+import { PolicyRollouts5 } from "./chart/policy-rollouts-5";
+import { PolicyRolloutsAverage } from "./chart/policy-rollouts-average";
+import { UserStudy1 } from "./chart/user-study-1";
+import { UserStudy2 } from "./chart/user-study-2";
+import { UserStudy3 } from "./chart/user-study-3";
+import { UserStudy4 } from "./chart/user-study-4";
+import { UserStudy5 } from "./chart/user-study-5";
+import { UserStudy6 } from "./chart/user-study-6";
+import { UserStudy7 } from "./chart/user-study-7";
+import { UserStudy8 } from "./chart/user-study-8";
+import { UserStudyAverage } from "./chart/user-study-average";
 
 const policy_rollouts: { id: string; title: string; color: string }[] = [
   {

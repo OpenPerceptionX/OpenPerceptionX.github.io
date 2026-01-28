@@ -16,10 +16,9 @@ import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/components/project/freetacman/ui/chart"
-import { getUserStudySingleData } from "@/data/user-study"
-
-const chartData = getUserStudySingleData("7")
+} from "./ui/chart"
+import { getUserStudySingleData } from "@/./user-study"
+const chartData = getUserStudySingleData("1")
 
 const chartConfig = {
   visitors: {
@@ -27,19 +26,19 @@ const chartConfig = {
   },
   1: {
     label: "ALOHA",
-    color: "#d8f2c2",
+    color: "#98AEF3",
   },
   2: {
     label: "UMI",
-    color: "#a5e070",
+    color: "#3B68E9",
   },
   3: {
     label: "Ours",
-    color: "#7ed233",
+    color: "#174BE5",
   },
 } satisfies ChartConfig
 
-export function UserStudy7() {
+export function UserStudy1() {
   return (
     <Card className="border-0">
       <CardHeader>

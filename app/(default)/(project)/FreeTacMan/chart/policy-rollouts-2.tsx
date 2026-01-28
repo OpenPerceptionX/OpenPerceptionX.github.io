@@ -16,11 +16,11 @@ import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/components/project/freetacman/ui/chart"
+} from "./ui/chart"
 const chartData = [
-  { browser: "1", visitors: 30, fill: "var(--color-1)" },
-  { browser: "2", visitors: 65, fill: "var(--color-2)" },
-  { browser: "3", visitors: 80, fill: "var(--color-3)" },
+  { browser: "1", visitors: 20, fill: "var(--color-1)" },
+  { browser: "2", visitors: 70, fill: "var(--color-2)" },
+  { browser: "3", visitors: 90, fill: "var(--color-3)" },
 ]
 
 const chartConfig = {
@@ -29,19 +29,19 @@ const chartConfig = {
   },
   1: {
     label: "ACT",
-    color: "#FFA9BF",
+    color: "#9DE2DE",
   },
   2: {
     label: "Ours-α",
-    color: "#FF96B0",
+    color: "#62D3CB",
   },
   3: {
     label: "Ours-β",
-    color: "#FF668C",
+    color: "#43C9C1",
   },
 } satisfies ChartConfig
 
-export function PolicyRollouts4() {
+export function PolicyRollouts2() {
   return (
     <Card className="border-0">
       <CardHeader>

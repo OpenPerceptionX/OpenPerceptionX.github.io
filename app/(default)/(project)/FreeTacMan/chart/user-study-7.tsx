@@ -16,36 +16,34 @@ import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/components/project/freetacman/ui/chart"
-const chartData = [
-  { browser: "1", visitors: 20, fill: "var(--color-1)" },
-  { browser: "2", visitors: 55, fill: "var(--color-2)" },
-  { browser: "3", visitors: 85, fill: "var(--color-3)" },
-]
+} from "./ui/chart"
+import { getUserStudySingleData } from "@/./user-study"
+
+const chartData = getUserStudySingleData("7")
 
 const chartConfig = {
   visitors: {
-    label: "Success Rate (%):",
+    label: "CPUT Score: ",
   },
   1: {
-    label: "ACT",
-    color: "#FFE5A9",
+    label: "ALOHA",
+    color: "#d8f2c2",
   },
   2: {
-    label: "Ours-α",
-    color: "#FFD97C",
+    label: "UMI",
+    color: "#a5e070",
   },
   3: {
-    label: "Ours-β",
-    color: "#FFC53D",
+    label: "Ours",
+    color: "#7ed233",
   },
 } satisfies ChartConfig
 
-export function PolicyRollouts3() {
+export function UserStudy7() {
   return (
     <Card className="border-0">
       <CardHeader>
-        <CardTitle>Policy Success Rate (%)</CardTitle>
+        <CardTitle>CPUT Score</CardTitle>
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig}>
@@ -64,7 +62,7 @@ export function PolicyRollouts3() {
             />
             <ChartTooltip
               cursor={false}
-              content={<ChartTooltipContent  />}
+              content={<ChartTooltipContent />}
             />
             <Bar  className="select-none"
               dataKey="visitors"
@@ -89,15 +87,6 @@ export function PolicyRollouts3() {
           </BarChart>
         </ChartContainer>
       </CardContent>
-      <CardFooter className="flex-col items-start gap-2 text-sm">
-        <div className="text-muted-foreground select-none">
-        ACT: Vision-only
-        <br></br>
-        Ours-α: + Tactile
-        <br></br>
-        Ours-β: + Tactile Pretrained
-        </div>
-      </CardFooter>
     </Card>
   )
 }

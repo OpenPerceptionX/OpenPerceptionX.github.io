@@ -333,7 +333,7 @@ export const publications: {
         link: "https://arxiv.org/abs/2512.11047",
         image: "https://opendrivelab.github.io/WholeBodyVLA/wholebodyvla_pub.gif",
         author: "Haoran Jiang, Jin Chen, Qingwen Bu, Li Chen, Modi Shi, Yanjie Zhang, Delong Li, Chuanzhe Suo, Chuang Wang, Zhihui Peng, Hongyang Li",
-        note: "arXiv 2025",
+        note: "ICLR 2026",
         noteoption: '',
         star: "https://img.shields.io/github/stars/OpenDriveLab/WholebodyVLA?style=social",
         starlink: "https://github.com/OpenDriveLab/WholebodyVLA",

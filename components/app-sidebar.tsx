@@ -289,6 +289,24 @@ export function AppSidebar() {
 
 
 
+                                <Collapsible className="group/collapsible flex flex-col gap-6" defaultOpen>
+                                    <SidebarMenuItem>
+                                        <CollapsibleTrigger className="w-full flex flex-row justify-between items-center p-2 rounded-sm hover:bg-o-blue/3 select-none">
+                                            Teaching
+                                            <ChevronDown className="size-4 transition-transform group-data-[state=closed]/collapsible:rotate-270 group-data-[state=open]/collapsible:rotate-0" />
+                                        </CollapsibleTrigger>
+                                        <CollapsibleContent>
+                                            <SidebarMenuSub>
+                                                <Link href="https://mmlab.hk/CCAI9025" target="_blank" className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
+                                                    HKU CCAI9025
+                                                </Link> 
+                                            </SidebarMenuSub>
+                                        </CollapsibleContent>
+                                    </SidebarMenuItem>
+                                </Collapsible>
+
+
+
                                 <Link href="/team" className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
                                     Team
                                 </Link>

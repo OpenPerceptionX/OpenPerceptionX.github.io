@@ -16,7 +16,7 @@ import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/components/project/freetacman/ui/chart"
+} from "./ui/chart"
 const chartData = [
   { browser: "1", visitors: 35, fill: "var(--color-1)" },
   { browser: "2", visitors: 75, fill: "var(--color-2)" },
