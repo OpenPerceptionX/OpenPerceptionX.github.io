@@ -163,6 +163,16 @@ export default function Redirect() {
     ) {
         redirect('/kai0/')
     }
+    if (
+        pathname.toLowerCase().startsWith('/egohumanoid')
+    ) {
+        redirect('/EgoHumanoid/')
+    }
+    if (
+        pathname.toLowerCase().startsWith('/sparsevnav')
+    ) {
+        redirect('/SparseVNav/')
+    }
 
 
 
