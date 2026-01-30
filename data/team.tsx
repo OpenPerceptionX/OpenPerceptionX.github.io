@@ -44,35 +44,35 @@ export const members: {
         ],
         keys: ["staff"],
     },
-    // {
-    //     name: "Li Chen",
-    //     image: "/assets/person/li_chen.jpg",
-    //     image_s: "/assets/person/li_chen_s.jpg",
-    //     desc: "End-to-End Autonomous Driving & Embodied AI",
-    //     links: [
-    //         {
-    //             icon: "homepage",
-    //             url: "https://ilnehc.github.io/",
-    //         },
-    //         {
-    //             icon: "scholar",
-    //             url: "https://scholar.google.com/citations?user=ulZxvY0AAAAJ",
-    //         },
-    //         {
-    //             icon: "email",
-    //             url: "mailto:lichen@opendrivelab.com",
-    //         },
-    //         {
-    //             icon: "github",
-    //             url: "https://github.com/ilnehc",
-    //         },
-    //         {
-    //             icon: "x",
-    //             url: "https://twitter.com/ilnehc",
-    //         },
-    //     ],
-    //     keys: ["hku"],
-    // },
+    {
+        name: "Li Chen",
+        image: "/assets/person/li_chen.jpg",
+        image_s: "/assets/person/li_chen_s.jpg",
+        desc: "End-to-End Autonomous Driving & Embodied AI",
+        links: [
+            {
+                icon: "homepage",
+                url: "https://ilnehc.github.io/",
+            },
+            {
+                icon: "scholar",
+                url: "https://scholar.google.com/citations?user=ulZxvY0AAAAJ",
+            },
+            {
+                icon: "email",
+                url: "mailto:lichen@opendrivelab.com",
+            },
+            {
+                icon: "github",
+                url: "https://github.com/ilnehc",
+            },
+            {
+                icon: "x",
+                url: "https://twitter.com/ilnehc",
+            },
+        ],
+        keys: [],
+    },
     {
         name: "Huijie Wang",
         image: "/assets/person/huijie_wang.jpg",
@@ -102,31 +102,31 @@ export const members: {
         ],
         keys: ["staff"],
     },
-    // {
-    //     name: "Chonghao Sima",
-    //     image: "/assets/person/chonghao_sima.jpg",
-    //     image_s: "/assets/person/chonghao_sima_s.jpg",
-    //     desc: "Autonomous Driving",
-    //     links: [
-    //         {
-    //             icon: "scholar",
-    //             url: "https://scholar.google.com/citations?user=dgYJ6esAAAAJ",
-    //         },
-    //         {
-    //             icon: "email",
-    //             url: "mailto:smch@opendrivelab.com",
-    //         },
-    //         {
-    //             icon: "github",
-    //             url: "https://github.com/ChonghaoSima",
-    //         },
-    //         {
-    //             icon: "x",
-    //             url: "https://twitter.com/smch_1127",
-    //         },
-    //     ],
-    //     keys: ["hku"],
-    // },
+    {
+        name: "Chonghao Sima",
+        image: "/assets/person/chonghao_sima.jpg",
+        image_s: "/assets/person/chonghao_sima_s.jpg",
+        desc: "Autonomous Driving",
+        links: [
+            {
+                icon: "scholar",
+                url: "https://scholar.google.com/citations?user=dgYJ6esAAAAJ",
+            },
+            {
+                icon: "email",
+                url: "mailto:smch@opendrivelab.com",
+            },
+            {
+                icon: "github",
+                url: "https://github.com/ChonghaoSima",
+            },
+            {
+                icon: "x",
+                url: "https://twitter.com/smch_1127",
+            },
+        ],
+        keys: [],
+    },
     {
         name: "Tianyu Li",
         image: "/assets/person/tianyu_li.jpg",

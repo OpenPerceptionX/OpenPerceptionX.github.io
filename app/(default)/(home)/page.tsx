@@ -24,7 +24,7 @@ import {
 
 
 import { Landing } from "./landing"
-// import { News } from "./news"
+import { News } from "./news"
 // import { Embodied, E2EAD } from "@/components/app-drawer"
 import { Chen2025_value_learning } from "@/components/citation-drawer"
 
@@ -46,7 +46,7 @@ export default function Home() {
 
 
 
-            {/* <div className="w-full px-6 flex justify-center mt-24">
+            <div className="w-full px-6 flex justify-center mt-24">
                 <div className="w-full max-w-7xl flex">
                     <h2 className="text-t1"> 
                         <Link href="#news" className="scroll-mt-32 group flex items-center" id="news">
@@ -64,7 +64,7 @@ export default function Home() {
 
 
 
-            <News /> */}
+            <News />
 
 
 
