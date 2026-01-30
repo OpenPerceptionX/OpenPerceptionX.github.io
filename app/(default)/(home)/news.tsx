@@ -87,7 +87,7 @@ export function News() {
                     {
                         publicationNews.map((item, idx) => (
                             <div key={idx} className="flex flex-row items-center">
-                                <Badge variant="default" className="mr-2 w-[88px] text-center shrink-0">
+                                <Badge variant="default" className="mr-2 w-[80px] text-center shrink-0">
                                     {item.date}
                                 </Badge>
                                 <div className="flex flex-row items-center flex-wrap">
