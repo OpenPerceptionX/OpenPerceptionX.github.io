@@ -346,10 +346,6 @@ export const publications: {
                 type: "github",
                 link: "https://github.com/OpenDriveLab/WholebodyVLA",
             },
-            {
-                type: "youtube",
-                link: "https://assets.kinetixai.cn/WholeBodyVLA/long.mp4",
-            },
         ],
         description: "A unified VLA framework enabling large-space humanoid loco-manipulation via unified latent learning and loco-manipulation-oriented RL. ",
         keys: ['embodied_ai'],
