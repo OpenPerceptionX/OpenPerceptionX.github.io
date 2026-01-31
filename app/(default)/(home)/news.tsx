@@ -86,29 +86,28 @@ export function News() {
                 <ul className="space-y-6">
                     {
                         publicationNews.map((item, idx) => (
-                            <div key={idx} className="flex flex-row items-center">
-                                <Badge variant="default" className="mr-2 w-[80px] text-center shrink-0">
+                            <div key={idx} className="flex flex-col md:flex-row items-start md:items-center gap-2">
+                                <Badge variant="default" className="w-[80px] text-center shrink-0">
                                     {item.date}
                                 </Badge>
-                                <div className="flex flex-row items-center flex-wrap">
+                                <div className="flex flex-col md:flex-row items-start md:items-center flex-wrap gap-2">
                                     <span>
                                         {item.content}
                                     </span>
-                                    <span className="select-none">
-                                        &nbsp;
-                                    </span>
-                                    {
-                                        item.links?.map((link, index) => (
-                                            <span key={index} className="flex items-center">
-                                                <Link className="text-o-blue animated-underline" href={link.url} target={link.url.startsWith('http') ? '_blank' : '_self'}>
-                                                    {link.label}
-                                                </Link>
-                                                {index < (item.links ?? []).length - 1 && (
-                                                    <span className="text-xs mx-2"> | </span>
-                                                )}
-                                            </span>
-                                        ))
-                                    } 
+                                    <div className="flex flex-row flex-wrap">
+                                        {
+                                            item.links?.map((link, index) => (
+                                                <span key={index} className="flex items-center">
+                                                    <Link className="text-o-blue animated-underline" href={link.url} target={link.url.startsWith('http') ? '_blank' : '_self'}>
+                                                        {link.label}
+                                                    </Link>
+                                                    {index < (item.links ?? []).length - 1 && (
+                                                        <span className="text-xs mx-2"> | </span>
+                                                    )}
+                                                </span>
+                                            ))
+                                        } 
+                                    </div>
                                 </div>
                             </div>
                         ))
