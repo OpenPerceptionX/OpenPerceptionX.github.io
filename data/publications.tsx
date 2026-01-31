@@ -174,7 +174,7 @@ export const publications: {
     },
     {
         title: "Reinforced Refinement with Self-Aware Expansion for End-to-End Autonomous Driving",
-        link: "https://arxiv.org/abs/2506.09800",
+        link: "https://ieeexplore.ieee.org/document/11353028",
         image: "/assets/publication/e2eads.jpg",
         author: "Haochen Liu, Tianyu Li, Haohan Yang, Li Chen, Caojun Wang, Ke Guo, Haochen Tian, Hongchen Li, Hongyang Li, Chen Lv",
         note: "IEEE-TPAMI 2026",
