@@ -154,7 +154,7 @@ export default function Redirect() {
             pathname.toLowerCase().startsWith('/kai0rl')
             || pathname.toLowerCase().startsWith('/kai0-rl')
         ) {
-            redirect('/kai0-RL/')
+            redirect('/kai0-rl/')
         } else {
             redirect('/kai0/')
         }
@@ -168,13 +168,13 @@ export default function Redirect() {
         pathname.toLowerCase().startsWith('/egohumanoid')
         || pathname.toLowerCase().startsWith('/kaidata')
     ) {
-        redirect('/EgoHumanoid/')
+        redirect('/kaidata/')
     }
     if (
         pathname.toLowerCase().startsWith('/sparsevnav')
-        || pathname.toLowerCase().startsWith('/mm-vn')
+        || pathname.toLowerCase().startsWith('/mm-videonav')
     ) {
-        redirect('https://mmlab.hk/research/MM-VN')
+        redirect('https://mmlab.hk/research/MM-VideoNav')
     }
     if (
         pathname.toLowerCase().startsWith('/mm-hand')
