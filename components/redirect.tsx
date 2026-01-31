@@ -153,6 +153,7 @@ export default function Redirect() {
         if (
             pathname.toLowerCase().startsWith('/kai0rl')
             || pathname.toLowerCase().startsWith('/kai0-rl')
+            || pathname.toLowerCase().startsWith('/rise')
         ) {
             redirect('/kai0-rl/')
         } else {
@@ -171,7 +172,7 @@ export default function Redirect() {
         redirect('/kaidata/')
     }
     if (
-        pathname.toLowerCase().startsWith('/sparsevnav')
+        pathname.toLowerCase().startsWith('/sparsevideonav')
         || pathname.toLowerCase().startsWith('/mm-videonav')
     ) {
         redirect('https://mmlab.hk/research/MM-VideoNav')
