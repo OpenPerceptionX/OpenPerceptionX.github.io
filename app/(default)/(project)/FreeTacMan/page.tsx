@@ -128,9 +128,9 @@ export default function Home() {
                   <img src="https://opendrivelab.github.io/FreeTacMan/logo/NJU.png" alt="NJU" className="h-8 md:h-12 object-contain" />
                 </div> */}
               </div>
-              {/* <div className="mb-2">
-                <span className="text-red-600 font-semibold">arXiv 2025</span>
-              </div> */}
+              { <div className="mb-2">
+                <span className="text-red-600 font-semibold">ICRA 2026</span>
+              </div> }
               <div className="mt-4 flex flex-row justify-center gap-2 md:gap-4">
                 <a
                   href="http://arxiv.org/abs/2506.01941"
@@ -147,6 +147,14 @@ export default function Home() {
                   rel="noopener noreferrer"
                 >
                   Dataset
+                </a>
+                <a
+                  href="https://www.modelscope.cn/datasets/OpenDriveLab/FreeTacMan"
+                  className="px-3 py-1 md:px-4 md:py-2 bg-white text-[#174BE5] rounded-lg shadow-md hover:shadow-lg transition-all duration-200 border border-gray-200 text-xs sm:text-sm md:text-base"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  ModelScope
                 </a>
                 <a
                   href="https://github.com/OpenDriveLab/FreeTacMan"
