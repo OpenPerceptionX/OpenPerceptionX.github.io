@@ -92,6 +92,20 @@ export const NavigatorProject: {
             id: "related",
         },
     ],
+    "/challenge2026": [
+        {
+            text: "Introduction",
+            id: "introduction",
+        },
+        {
+            text: "Schedule",
+            id: "schedule",
+        },
+        {
+            text: "Past Editions",
+            id: "edition",
+        },
+    ],
     "/kai0": [
         {
             text: "Introduction",
