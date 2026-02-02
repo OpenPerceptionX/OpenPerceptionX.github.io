@@ -152,7 +152,11 @@ export default function Home() {
                     <h3 className="text-xl font-bold">
                         Participate
                     </h3>
-                    <div className="mt-6 flex gap-6 items-center">
+                </div>
+            </div>
+            <div className="w-full px-6 flex justify-center mt-6">
+                <div className="w-full max-w-7xl flex flex-col">
+                    <div className="flex gap-6 items-center">
                         <Link href="https://forms.gle/C1gu8z9zgENUSJn88" target="_blank" className="size-6 md:size-8 group">
                             <AspectRatio ratio={1/1}>
                                 <Image
