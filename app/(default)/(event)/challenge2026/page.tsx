@@ -181,10 +181,10 @@ export default function Home() {
             <div className="w-full px-6 flex justify-center mt-12">
                 <div className="w-full max-w-7xl flex flex-col gap-3">
                     <p className="leading-relaxed">
-                        Embodied intelligence brings us closer to creating robots that can truly see, think, and act in the real world. Yet, today’s systems remain fragile, struggling to handle the complexity of the real world. This workshop looks ahead - toward generalizable embodied intelligence that thrives beyond the lab. By gathering pioneers from vision and robotics, the workshop seeks to identify key challenges, discuss interdisciplinary solutions, and chart promising directions for advancing embodied systems to everyday life.
+                        Embodied intelligence brings us closer to creating robots that can truly see, think, and act in the real world. Yet, today's systems remain fragile, struggling to handle the complexity of the real world. This workshop looks ahead - toward generalizable embodied intelligence that thrives beyond the lab. By gathering pioneers from vision and robotics, the workshop seeks to identify key challenges, discuss interdisciplinary solutions, and chart promising directions for advancing embodied systems to everyday life.
                     </p>
                     <p className="leading-relaxed">
-                        If you are interested in our workshop, please <b>mark the workshop in your CVPR registration</b>, to have enough space for the workshop room.
+                        If you are interested in our workshop, please <span className="underline">mark the workshop in your CVPR registration</span>, to have enough space for the workshop room.
                     </p>
                 </div>
             </div>
