@@ -334,7 +334,7 @@ export default function Home() {
                         </Link>
                         <div className="flex-1 flex flex-col gap-3">
                             <h2 className="text-xl font-bold">
-                                Challenge 2026
+                                Autonomous Grand Challenge 2026
                             </h2>
                             <p>
                                 To be released.
