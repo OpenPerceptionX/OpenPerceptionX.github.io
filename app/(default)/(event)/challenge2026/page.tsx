@@ -147,6 +147,32 @@ export default function Home() {
             </div>
 
 
+            <div className="w-full px-6 flex justify-center mt-12">
+                <div className="w-full max-w-7xl flex flex-col">
+                    <h3 className="text-xl font-bold">
+                        Participate
+                    </h3>
+                    <div className="mt-6 flex gap-6 items-center">
+                        <Link href="https://forms.gle/C1gu8z9zgENUSJn88" target="_blank" className="size-6 md:size-8 group">
+                            <AspectRatio ratio={1/1}>
+                                <Image
+                                    src="/assets/icon/google_form.png"
+                                    alt="icon"
+                                    fill
+                                    className="group-hover:scale-125 transition delay-100 duration-200"
+                                />
+                            </AspectRatio>
+                        </Link>
+                        <span>
+                            For participation in the challenge, registering for your team is a <span className="underline">strict requirement</span> by filling out this <Link className="text-o-blue animated-underline" href="https://forms.gle/C1gu8z9zgENUSJn88" target="_blank">Google Form</Link>.
+                            {/* <br></br>
+                            The registration information can be modified until <code>[ICCV 2025] September 20</code>. */}
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+
 
             <div className="w-full px-6 flex justify-center mt-12">
                 <div className="w-full max-w-7xl flex flex-col gap-3">
