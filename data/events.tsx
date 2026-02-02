@@ -19,6 +19,16 @@ export const events: {
     keys: string[];
 }[] = [
     {
+        title: "Challenge 2026",
+        subtitle: "Autonomous Grand Challenge",
+        url: "/challenge2026/",
+        image: "https://ik.imagekit.io/opendrivelab/Modify_the_left_human_hand_to_become_an_abstract_e-1770009757382.jpg?updatedAt=1770010027998",
+        imageoption: "object-center",
+        date: "",
+        location: "",
+        keys: ['2026', 'editor_pick'],
+    },
+    {
         title: "Workshop at CVPR 2026",
         subtitle: "From Labs to Life: Embodied Intelligence in the Wild",
         url: "/cvpr2026/workshop/",
