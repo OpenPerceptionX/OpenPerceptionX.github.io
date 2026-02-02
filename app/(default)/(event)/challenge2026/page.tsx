@@ -116,7 +116,7 @@ export default function Home() {
                         </h1>
                         <h5 className="text-white">
                             In conjunction with
-                            <ul className="ml-6 space-y-3 list-outside list-disc mt-6">
+                            <ul className="ml-6 space-y-3 list-outside list-disc mt-2">
                                 <li>
                                     <Link href="/cvpr2026/workshop/" className="underline hover:text-o-blue hover:cursor-pointer">
                                         CVPR 2026 Workshop
