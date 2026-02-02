@@ -96,8 +96,8 @@ export default function Home() {
             <div className="w-full h-svh py-16 px-6 3xl:px-16">   
                 <div className="w-full h-full relative rounded-sm">
                     <Image
-                        src='https://ik.imagekit.io/opendrivelab/nils-huenerfuerst-OVE2SA0TVJE-unsplash.jpg?updatedAt=1761792013763'
-                        alt='Denver'
+                        src='https://ik.imagekit.io/opendrivelab/Modify_the_left_human_hand_to_become_an_abstract_e-1770009757382.jpg?updatedAt=1770010027998'
+                        alt='cover'
                         fill
                         className='object-center object-cover bg-gradient-landing rounded-sm bg-black bg-opacity-30 bg-blend-overlay select-none'
                     />
@@ -147,6 +147,24 @@ export default function Home() {
             </div>
 
 
+
+            <div className="w-full px-6 flex justify-center mt-12">
+                <div className="w-full max-w-7xl flex flex-col">
+                    <h3 className="text-xl font-bold">
+                        Track 1
+                    </h3>
+                </div>
+            </div>
+            <div className="w-full px-6 flex justify-center mt-6">
+                <div className="w-full max-w-7xl flex flex-col gap-3">
+                    <p className="leading-relaxed">
+                        To be released.
+                    </p>
+                </div>
+            </div>
+
+
+
             <div className="w-full px-6 flex justify-center mt-12">
                 <div className="w-full max-w-7xl flex flex-col">
                     <h3 className="text-xl font-bold">
@@ -173,19 +191,6 @@ export default function Home() {
                             The registration information can be modified until <code>[ICCV 2025] September 20</code>. */}
                         </span>
                     </div>
-                </div>
-            </div>
-            
-
-
-            <div className="w-full px-6 flex justify-center mt-12">
-                <div className="w-full max-w-7xl flex flex-col gap-3">
-                    <p className="leading-relaxed">
-                        Embodied intelligence brings us closer to creating robots that can truly see, think, and act in the real world. Yet, today's systems remain fragile, struggling to handle the complexity of the real world. This workshop looks ahead - toward generalizable embodied intelligence that thrives beyond the lab. By gathering pioneers from vision and robotics, the workshop seeks to identify key challenges, discuss interdisciplinary solutions, and chart promising directions for advancing embodied systems to everyday life.
-                    </p>
-                    <p className="leading-relaxed">
-                        If you are interested in our workshop, please <span className="underline">mark the workshop in your CVPR registration</span>, to have enough space for the workshop room.
-                    </p>
                 </div>
             </div>
 
