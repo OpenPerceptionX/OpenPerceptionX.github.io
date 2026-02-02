@@ -98,8 +98,8 @@ export const NavigatorProject: {
     ],
     "/challenge2026": [
         {
-            text: "Introduction",
-            id: "introduction",
+            text: "Track",
+            id: "track",
         },
         {
             text: "Schedule",

@@ -133,8 +133,8 @@ export default function Home() {
             <div className="w-full px-6 flex justify-center mt-24">
                 <div className="w-full max-w-7xl flex">
                     <h2 className="text-t1"> 
-                        <Link href="#introduction" className="scroll-mt-32 group flex items-center" id="introduction">
-                            Introduction
+                        <Link href="#track" className="scroll-mt-32 group flex items-center" id="track">
+                            Tentative Tracks
                             <span className="ml-6 hidden group-hover:inline-block size-6 text-foreground">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                                     <path d="M15.197 3.35462C16.8703 1.67483 19.4476 1.53865 20.9536 3.05046C22.4596 4.56228 22.3239 7.14956 20.6506 8.82935L18.2268 11.2626M10.0464 14C8.54044 12.4882 8.67609 9.90087 10.3494 8.22108L12.5 6.06212" strokeWidth="2.5" strokeLinecap="round"/>
@@ -151,7 +151,24 @@ export default function Home() {
             <div className="w-full px-6 flex justify-center mt-12">
                 <div className="w-full max-w-7xl flex flex-col">
                     <h3 className="text-xl font-bold">
-                        Track 1
+                        General-Purpose Dexterous Manipulation
+                    </h3>
+                </div>
+            </div>
+            <div className="w-full px-6 flex justify-center mt-6">
+                <div className="w-full max-w-7xl flex flex-col gap-3">
+                    <p className="leading-relaxed">
+                        Dexterous manipulation with multi-fingered hands is a fundamental capability for robots to perform complex, human-like tasks in unstructured environments. It is crucial for developing general-purpose robots that can assist in daily life, from household chores to industrial assembly. To help accelerate progress in this area, our challenge invites participants to develop and train control policies for an <span className="underline">open-source, high-degree-of-freedom dexterous hand</span>. Participants will demonstrate the capability and robustness of their policies through their success rates across a series of defined manipulation tasks, evaluated first in simulation and then on a physical system.
+                    </p>
+                </div>
+            </div>
+
+
+
+            <div className="w-full px-6 flex justify-center mt-12">
+                <div className="w-full max-w-7xl flex flex-col">
+                    <h3 className="text-xl font-bold">
+                        Track X
                     </h3>
                 </div>
             </div>
@@ -166,6 +183,35 @@ export default function Home() {
 
 
             <div className="w-full px-6 flex justify-center mt-12">
+                <div className="w-full max-w-7xl flex flex-col">
+                    <h3 className="text-xl font-bold">
+                        Feedback
+                    </h3>
+                </div>
+            </div>
+            <div className="w-full px-6 flex justify-center mt-6">
+                <div className="w-full max-w-7xl flex flex-col">
+                    <div className="flex-1 flex gap-6 items-center">
+                        <Link href="https://forms.gle/C1gu8z9zgENUSJn88" target="_blank" className="size-6 md:size-8 group">
+                            <AspectRatio ratio={1/1}>
+                                <Image
+                                    src="/assets/icon/google_form.png"
+                                    alt="icon"
+                                    fill
+                                    className="group-hover:scale-125 transition delay-100 duration-200"
+                                />
+                            </AspectRatio>
+                        </Link>
+                        <span className="flex-1">
+                        We welcome your feedback on the proposed challenge topics. Please share your thoughts by completing this <Link className="text-o-blue animated-underline" href="https://forms.gle/fyi4EEEWKscekU5o7" target="_blank">Google Form</Link>.
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+
+
+            {/* <div className="w-full px-6 flex justify-center mt-12">
                 <div className="w-full max-w-7xl flex flex-col">
                     <h3 className="text-xl font-bold">
                         Participate
@@ -187,12 +233,12 @@ export default function Home() {
                         </Link>
                         <span className="flex-1">
                             For participation in the challenge, registering for your team is a <span className="underline">strict requirement</span> by filling out this <Link className="text-o-blue animated-underline" href="https://forms.gle/C1gu8z9zgENUSJn88" target="_blank">Google Form</Link>.
-                            {/* <br></br>
-                            The registration information can be modified until <code>[ICCV 2025] September 20</code>. */}
+                            <br></br>
+                            The registration information can be modified until <code>[ICCV 2025] September 20</code>.
                         </span>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
 
 
