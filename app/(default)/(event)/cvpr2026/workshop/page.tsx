@@ -231,7 +231,7 @@ export default function Home() {
                         Embodied intelligence brings us closer to creating robots that can truly see, think, and act in the real world. Yet, today’s systems remain fragile, struggling to handle the complexity of the real world. This workshop looks ahead - toward generalizable embodied intelligence that thrives beyond the lab. By gathering pioneers from vision and robotics, the workshop seeks to identify key challenges, discuss interdisciplinary solutions, and chart promising directions for advancing embodied systems to everyday life.
                     </p>
                     <p className="leading-relaxed">
-                        If you are interested in our workshop, please <b>mark the workshop in your CVPR registration</b>, to have enough space for the workshop room.
+                        If you are interested in our workshop, please <span className="underline">mark the workshop in your CVPR registration</span>, to have enough space for the workshop room.
                     </p>
                 </div>
             </div>
@@ -334,7 +334,9 @@ export default function Home() {
                         </Link>
                         <div className="flex-1 flex flex-col gap-3">
                             <h2 className="text-xl font-bold">
-                                Autonomous Grand Challenge 2026
+                                <Link href="/challenge2026/" className="text-o-blue animated-underline">
+                                    Autonomous Grand Challenge 2026
+                                </Link>
                             </h2>
                             <p>
                                 To be released.
