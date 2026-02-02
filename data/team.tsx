@@ -205,6 +205,10 @@ export const members: {
                 url: "https://lzpyx.github.io/",
             },
             {
+                icon: "scholar",
+                url: "https://scholar.google.com/citations?user=60OgIQsAAAAJ",
+            },
+            {
                 icon: "email",
                 url: "mailto:yixuanpan2024@gmail.com",
             },
