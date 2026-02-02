@@ -156,7 +156,7 @@ export default function Home() {
             </div>
             <div className="w-full px-6 flex justify-center mt-6">
                 <div className="w-full max-w-7xl flex flex-col">
-                    <div className="flex gap-6 items-center">
+                    <div className="flex-1 flex gap-6 items-center">
                         <Link href="https://forms.gle/C1gu8z9zgENUSJn88" target="_blank" className="size-6 md:size-8 group">
                             <AspectRatio ratio={1/1}>
                                 <Image
@@ -167,7 +167,7 @@ export default function Home() {
                                 />
                             </AspectRatio>
                         </Link>
-                        <span>
+                        <span className="flex-1">
                             For participation in the challenge, registering for your team is a <span className="underline">strict requirement</span> by filling out this <Link className="text-o-blue animated-underline" href="https://forms.gle/C1gu8z9zgENUSJn88" target="_blank">Google Form</Link>.
                             {/* <br></br>
                             The registration information can be modified until <code>[ICCV 2025] September 20</code>. */}
