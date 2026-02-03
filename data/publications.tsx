@@ -149,6 +149,26 @@ export const publications: {
         timeline:[],
     },
     {
+        title: "PlannerRFT: Reinforcing Diffusion Planners through Closed-Loop and Sample-Efficient Fine-Tuning",
+        link: "https://arxiv.org/pdf/2601.12901",
+        image: "/assets/publication/PlannerRFT.jpeg",
+        author: "Hongchen Li, Tianyu Li, Jiazhi Yang, Haochen Tian, Caojun Wang, Lei Shi, Mingyang Shang, Zengrong Lin, Gaoqiang Wu, Zhihui Hao, Xianpeng Lang, Jia Hu, Hongyang Li",
+        note: "arXiv 2026",
+        noteoption: '',
+        star: "",
+        starlink: "",
+        icon: [
+            {
+                type: "page",
+                link: "/PlannerRFT/",
+            },
+        ],
+        description: `A closed-loop and sample-efficient RFT framework for diffusion-based planners.`,
+        keys: ['ad_algorithm'],
+        time: '2026.1.19',
+        timeline:[''],
+    },
+    {
         title: "SimScale: Learning to Drive via Real-World Simulation at Scale",
         link: "https://arxiv.org/abs/2511.23369",
         image: "/assets/publication/SimScale.png",
