@@ -26,7 +26,7 @@ export const events: {
         imageoption: "object-center",
         date: "",
         location: "",
-        keys: ['2026', 'editor_pick'],
+        keys: [], //'2026', 'editor_pick'
     },
     {
         title: "Workshop at CVPR 2026",
