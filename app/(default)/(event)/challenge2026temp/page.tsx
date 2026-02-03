@@ -192,7 +192,7 @@ export default function Home() {
             <div className="w-full px-6 flex justify-center mt-6">
                 <div className="w-full max-w-7xl flex flex-col gap-3">
                     <p className="leading-relaxed">
-                        Dexterous manipulation in unstructured environments demands both high-dimensional control and rich sensory feedback. This challenge advances research on <span className="underline">High-DoF anthropomorphic hands with multimodal sensing</span> — proprioception, tactile, and binocular vision, to enable robust, contact-rich manipulation. Participants will be evaluated on a suite of standardized manipulation tasks that test precision, robustness, and generalization.
+                        Dexterous manipulation in unstructured environments demands both high-dimensional control and rich sensory feedback. This challenge advances research on <span className="underline">High-DoF anthropomorphic hands with multimodal sensing</span> - proprioception, tactile, and binocular vision, to enable robust, contact-rich manipulation. Participants will be evaluated on a suite of standardized manipulation tasks that test precision, robustness, and generalization.
                     </p>
                 </div>
             </div>
