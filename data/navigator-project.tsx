@@ -54,6 +54,10 @@ export const NavigatorProject: {
             id: "introduction",
         },
         {
+            text: "Contribution",
+            id: "contribution",
+        },
+        {
             text: "Challenge",
             id: "challenge",
         },

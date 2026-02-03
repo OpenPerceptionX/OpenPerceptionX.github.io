@@ -238,7 +238,7 @@ export default function Home() {
 
 
 
-            {/* <div className="w-full px-6 flex justify-center mt-24">
+            <div className="w-full px-6 flex justify-center mt-24">
                 <div className="w-full max-w-7xl flex">
                     <h2 className="text-t1"> 
                         <Link href="#contribution" className="scroll-mt-32 group flex items-center" id="contribution">
@@ -253,60 +253,110 @@ export default function Home() {
                     </h2>
                 </div>
             </div>
+
             <div className="w-full px-6 flex justify-center mt-12">
-                <div className="w-full max-w-7xl">
+                <div className="w-full max-w-7xl flex flex-col">
+                    <h3 className="text-xl font-bold">
+                        Topics of Interest
+                    </h3>
+                </div>
+            </div>
+            <div className="w-full px-6 flex justify-center mt-6">
+                <div className="w-full max-w-7xl flex flex-col gap-3">
                     <p>
-                        We invite submissions to the workshop on From Labs to Life: Embodied Intelligence in the Wild at CVPR 2026. Accepted contributions will be <b>archived as part of the CVPR proceedings and on IEEE Xplore</b>. We welcome work on a wide range of topics, including but not limited to:
+                        We welcome works on a wide range of topics, including but not limited to:
                     </p>
-                    <ul className="ml-6 space-y-3 list-outside list-disc mt-6">
+                    <ul className="ml-6 space-y-3 list-outside list-disc">
                         <li>
                             Visual generalization for embodied systems, including manipulation, locomotion, etc.
                         </li>
                         <li>
-                            Vision-based perception and understanding
+                            Vision-based perception and understanding.
                         </li>
                         <li>
-                            Visual representations for embodied intelligence
+                            Generalization, robustness, and safety in real-world settings.
                         </li>
                         <li>
-                            Generalization, robustness, and safety in real-world settings
+                            Cross-embodiment transfer and hardware-agnostic policies.
                         </li>
                         <li>
-                            Cross-embodiment transfer and hardware-agnostic policies
+                            Real-world deployment of embodied agents.
                         </li>
                         <li>
-                            Real-world deployment of embodied agents
-                        </li>
-                        <li>
-                            Benchmarking and evaluating embodied intelligence in the wild
-                        </li>
-                    </ul>
-                    <p className="mt-6">
-                        Please refer to the timeline below for important dates and submission deadlines:
-                    </p>
-                    <ul className="ml-6 space-y-3 list-outside list-disc mt-6">
-                        <li>
-                            Submissions are managed via&nbsp;
-                            <Link href="/challenge2025//#1x-wm" className="text-o-blue animated-underline">
-                                OpenReview
-                            </Link>                        
-                        </li>
-                        <li>
-                            Submission Deadline: March 10, 2026
-                        </li>
-                        <li>
-                            Notification: March 20, 2025
-                        </li>
-                        <li>
-                            Camera-Ready Deadline: April 10, 2026 - Submissions to CVPR 2026 will be managed through the official conference portal (link forthcoming)
+                            Benchmarking and evaluating embodied intelligence in the wild.
                         </li>
                     </ul>
                 </div>
-            </div> */}
+            </div>
+
+            <div className="w-full px-6 flex justify-center mt-12">
+                <div className="w-full max-w-7xl flex flex-col">
+                    <h3 className="text-xl font-bold">
+                        Guidelines
+                    </h3>
+                </div>
+            </div>
+            <div className="w-full px-6 flex justify-center mt-6">
+                <div className="w-full max-w-7xl flex flex-col gap-3">
+                    <ul className="ml-6 space-y-3 list-outside list-disc">
+                        <li>All papers must be submitted through&nbsp;
+                            <Link href="https://openreview.net/group?id=thecvf.com/CVPR/2026/Workshop/EmbodiedAIinLife" target="_blank" className="text-o-blue animated-underline">
+                                OpenReview
+                            </Link>.
+                        </li>
+                        <li>
+                            Submissions must strictly adhere to the&nbsp;
+                            <Link href="https://cvpr.thecvf.com/Conferences/2026/AuthorGuidelines" target="_blank" className="text-o-blue animated-underline">
+                                CVPR 2026 Author Guidelines
+                            </Link> 
+                            &nbsp;in terms of potential ethics issues and potential risks of negative social impacts.
+                        </li>
+                        <li>
+                            Manuscripts should be between 4 and 8 pages in length (excluding references) using the&nbsp;
+                            <Link href="https://github.com/cvpr-org/author-kit/archive/refs/tags/CVPR2026-v1(latex).zip" target="_blank" className="text-o-blue animated-underline">
+                                CVPR 2026 submission template
+                            </Link>.
+                        </li>
+                        <li>
+                            To facilitate double-blind review, all manuscripts must be fully anonymized.
+                        </li>
+                        <li>
+                            Accepted papers will be formally published in the CVPR 2026 Workshop Proceedings.
+                        </li>
+                        <li>
+                            Exceptional submissions will be considered for Best Paper Award and Spotlight Presentations.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div className="w-full px-6 flex justify-center mt-12">
+                <div className="w-full max-w-7xl flex flex-col">
+                    <h3 className="text-xl font-bold">
+                        Timeline
+                    </h3>
+                </div>
+            </div>
+            <div className="w-full px-6 flex justify-center mt-6">
+                <div className="w-full max-w-7xl flex flex-col gap-3">
+                    <p>
+                        For any potential ambiguities, please refer to OpenReview.
+                    </p>
+                    <ul className="ml-6 space-y-3 list-outside list-disc">
+                        <li>
+                            Submission start: February 10, 2026
+                        </li><li>
+                            Submission end: March 10, 2026
+                        </li><li>
+                            Notification: March 21, 2026
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
 
 
-<           div className="w-full px-6 flex justify-center mt-24">
+            <div className="w-full px-6 flex justify-center mt-24">
                 <div className="w-full max-w-7xl flex">
                     <h2 className="text-t1"> 
                         <Link href="#challenge" className="scroll-mt-32 group flex items-center" id="challenge">
