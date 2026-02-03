@@ -98,6 +98,11 @@ const organizers: {
         link: 'http://luoping.me/'
     },
     {
+        name: "Hao Zhao",
+        affiliation: 'Tsinghua University',
+        link: 'https://sites.google.com/view/fromandto/'
+    },
+    {
         name: "Andrei Bursuc",
         affiliation: 'Valeo',
         link: 'https://abursuc.github.io/'
