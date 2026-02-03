@@ -149,6 +149,26 @@ export const publications: {
         timeline:[],
     },
     {
+        title: "PlannerRFT: Reinforcing Diffusion Planners through Closed-Loop and Sample-Efficient Fine-Tuning",
+        link: "https://arxiv.org/pdf/2601.12901",
+        image: "/assets/publication/PlannerRFT.jpeg",
+        author: "Hongchen Li, Tianyu Li, Jiazhi Yang, Haochen Tian, Caojun Wang, Lei Shi, Mingyang Shang, Zengrong Lin, Gaoqiang Wu, Zhihui Hao, Xianpeng Lang, Jia Hu, Hongyang Li",
+        note: "arXiv 2026",
+        noteoption: '',
+        star: "",
+        starlink: "",
+        icon: [
+            {
+                type: "page",
+                link: "/PlannerRFT/",
+            },
+        ],
+        description: `A closed-loop and sample-efficient RFT framework for diffusion-based planners.`,
+        keys: ['end_to_end_ad'],
+        time: '2026.1.19',
+        timeline:['te2e', 'highlight'],
+    },
+    {
         title: "SimScale: Learning to Drive via Real-World Simulation at Scale",
         link: "https://arxiv.org/abs/2511.23369",
         image: "/assets/publication/SimScale.png",
@@ -170,26 +190,6 @@ export const publications: {
         description: `A scalable sim-real learning framework that synthesizes high-fidelity driving data and cboosts end-to-end planners to achieve robust, generalizable autonomy with principled scaling insights.`,
         keys: ['end_to_end_ad'],
         time: '2025.11.28',
-        timeline:['te2e'],
-    },
-    {
-        title: "PlannerRFT: Reinforcing Diffusion Planners through Closed-Loop and Sample-Efficient Fine-Tuning",
-        link: "https://arxiv.org/pdf/2601.12901",
-        image: "/assets/publication/PlannerRFT.jpeg",
-        author: "Hongchen Li, Tianyu Li, Jiazhi Yang, Haochen Tian, Caojun Wang, Lei Shi, Mingyang Shang, Zengrong Lin, Gaoqiang Wu, Zhihui Hao, Xianpeng Lang, Jia Hu, Hongyang Li",
-        note: "arXiv 2026",
-        noteoption: '',
-        star: "",
-        starlink: "",
-        icon: [
-            {
-                type: "page",
-                link: "/PlannerRFT/",
-            },
-        ],
-        description: `A closed-loop and sample-efficient RFT framework for diffusion-based planners.`,
-        keys: ['end_to_end_ad'],
-        time: '2026.1.19',
         timeline:['te2e'],
     },
     {
