@@ -151,14 +151,14 @@ export default function Home() {
             <div className="w-full px-6 flex justify-center mt-12">
                 <div className="w-full max-w-7xl flex flex-col">
                     <h3 className="text-xl font-bold">
-                        General-Purpose Dexterous Manipulation
+                        Humanoid Ping-Pong
                     </h3>
                 </div>
             </div>
             <div className="w-full px-6 flex justify-center mt-6">
                 <div className="w-full max-w-7xl flex flex-col gap-3">
                     <p className="leading-relaxed">
-                        Dexterous manipulation with multi-fingered hands is a fundamental capability for robots to perform complex, human-like tasks in unstructured environments. It is crucial for developing general-purpose robots that can assist in daily life, from household chores to industrial assembly. To help accelerate progress in this area, our challenge invites participants to develop and train control policies for an <span className="underline">open-source, high-degree-of-freedom dexterous hand</span>. Participants will demonstrate the capability and robustness of their policies through their success rates across a series of defined manipulation tasks, evaluated first in simulation and then on a physical system.
+                    High-dynamic ball sports such as table tennis pose extreme challenges for humanoid robots, requiring tight integration of high-speed perception, real-time decision-making, and agile whole-body control. This challenge uses table tennis as a representative task to systematically evaluate whether humanoid robots can achieve <span className="underline">human-like performance</span> in fast-paced, adversarial sports scenarios. The competition is designed in strict accordance with official table tennis rules, balancing fairness, realism, and technical difficulty. Participants are expected to develop complete perception-planning-control systems capable of handling rapid ball motion, precise contact timing, and dynamic opponent behaviors.
                     </p>
                 </div>
             </div>
@@ -166,6 +166,57 @@ export default function Home() {
 
 
             <div className="w-full px-6 flex justify-center mt-12">
+                <div className="w-full max-w-7xl flex flex-col">
+                    <h3 className="text-xl font-bold">
+                        Deformable Object Manipulation
+                    </h3>
+                </div>
+            </div>
+            <div className="w-full px-6 flex justify-center mt-6">
+                <div className="w-full max-w-7xl flex flex-col gap-3">
+                    <p className="leading-relaxed">
+                        Deformable Object Manipulation, particularly the <span className="underline">handling of textiles</span> such as clothing, remains one of the most fundamental and unsolved challenges in robotics. Unlike rigid objects, deformable materials exhibit effectively infinite degrees of freedom and highly non-linear dynamics, making perception, modeling, and control intrinsically difficult. The challenge is designed as a scientific instrument to assess a system's full-stack capability. Participants are tasked with developing end-to-end solutions for flat folding garments. This task requires the coordinated integration of computer vision, control theory, and learning-based methods such as deep reinforcement learning, under realistic physical constraints.
+                    </p>
+                </div>
+            </div>
+
+
+
+            <div className="w-full px-6 flex justify-center mt-12">
+                <div className="w-full max-w-7xl flex flex-col">
+                    <h3 className="text-xl font-bold">
+                        General-Purpose Dexterous Manipulation with High-DoF Hands
+                    </h3>
+                </div>
+            </div>
+            <div className="w-full px-6 flex justify-center mt-6">
+                <div className="w-full max-w-7xl flex flex-col gap-3">
+                    <p className="leading-relaxed">
+                        Dexterous manipulation with multi-fingered hands is a foundational capability for robots operating in unstructured, real-world environments. It underpins the development of general-purpose robotic systems capable of performing complex, human-like tasks ranging from household activities to industrial assembly. To advance research in this area, this challenge invites participants to develop and train control policies for an <span className="underline">open-source, high-degree-of-freedom dexterous hand</span>. Participants will be evaluated on a suite of standardized manipulation tasks that test precision, robustness, and generalization.
+                    </p>
+                </div>
+            </div>
+
+
+
+            <div className="w-full px-6 flex justify-center mt-12">
+                <div className="w-full max-w-7xl flex flex-col">
+                    <h3 className="text-xl font-bold">
+                        Visuo-Tactile Learning for Contact-Rich Manipulation
+                    </h3>
+                </div>
+            </div>
+            <div className="w-full px-6 flex justify-center mt-6">
+                <div className="w-full max-w-7xl flex flex-col gap-3">
+                    <p className="leading-relaxed">
+                        Contact-rich manipulation involves complex physical interactions where visual observations alone are often insufficient to capture critical local contact states, forces, and deformations. This challenge invites participants to develop <span className="underline">visuo-tactile manipulation policies</span> that effectively integrate visual and tactile information for decision-making and control. Submitted approaches will be evaluated on their performance across multiple manipulation tasks, with a particular emphasis on effectiveness, efficiency, and generalization. This challenge aims to systematically assess the role of tactile perception in robotic manipulation and to advance the development of robust, generalizable visuo-tactile learning methods for real-world physical interaction.
+                    </p>
+                </div>
+            </div>
+
+
+
+            {/* <div className="w-full px-6 flex justify-center mt-12">
                 <div className="w-full max-w-7xl flex flex-col">
                     <h3 className="text-xl font-bold">
                         Track X
@@ -178,7 +229,7 @@ export default function Home() {
                         To be released.
                     </p>
                 </div>
-            </div>
+            </div> */}
 
 
 
