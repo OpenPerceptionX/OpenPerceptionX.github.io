@@ -173,6 +173,26 @@ export const publications: {
         timeline:['te2e'],
     },
     {
+        title: "PlannerRFT: Reinforcing Diffusion Planners through Closed-Loop and Sample-Efficient Fine-Tuning",
+        link: "https://arxiv.org/pdf/2601.12901",
+        image: "/assets/publication/PlannerRFT.jpeg",
+        author: "Hongchen Li, Tianyu Li, Jiazhi Yang, Haochen Tian, Caojun Wang, Lei Shi, Mingyang Shang, Zengrong Lin, Gaoqiang Wu, Zhihui Hao, Xianpeng Lang, Jia Hu, Hongyang Li",
+        note: "arXiv 2026",
+        noteoption: '',
+        star: "",
+        starlink: "",
+        icon: [
+            {
+                type: "page",
+                link: "/PlannerRFT/",
+            },
+        ],
+        description: `A closed-loop and sample-efficient RFT framework for diffusion-based planners.`,
+        keys: ['end_to_end_ad'],
+        time: '2026.1.19',
+        timeline:['te2e'],
+    },
+    {
         title: "Reinforced Refinement with Self-Aware Expansion for End-to-End Autonomous Driving",
         link: "https://ieeexplore.ieee.org/document/11353028",
         image: "/assets/publication/e2eads.jpg",
