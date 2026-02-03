@@ -254,7 +254,7 @@ export default function Home() {
                             </AspectRatio>
                         </Link>
                         <span className="flex-1">
-                        We welcome your feedback on the proposed challenge topics. Please share your thoughts by completing this <Link className="text-o-blue animated-underline" href="https://forms.gle/fyi4EEEWKscekU5o7" target="_blank">Google Form</Link>.
+                        We welcome your feedback on the proposed challenge topics. Please share your thoughts on the topics you find most compelling by completing this <Link className="text-o-blue animated-underline" href="https://forms.gle/fyi4EEEWKscekU5o7" target="_blank">Google Form</Link>.
                         </span>
                     </div>
                 </div>
