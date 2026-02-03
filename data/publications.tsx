@@ -164,9 +164,9 @@ export const publications: {
             },
         ],
         description: `A closed-loop and sample-efficient RFT framework for diffusion-based planners.`,
-        keys: ['end_to_end_ad'],
+        keys: ['ad_algorithm'],
         time: '2026.1.19',
-        timeline:['te2e', 'highlight'],
+        timeline:[''],
     },
     {
         title: "SimScale: Learning to Drive via Real-World Simulation at Scale",
