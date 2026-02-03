@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EGOHUMANOID | Human-to-Humanoid Transfer for Loco-Manipulation</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@200..800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+    <nav class="nav">
+        <div class="nav-inner">
+            <div class="nav-logo">EGOHUMANOID</div>
+            <ul class="nav-links">
+                <li><a href="#demo">Demo</a></li>
+                <li><a href="#method">Method</a></li>
+                <li><a href="#tasks">Tasks</a></li>
+                <li><a href="#results">Results</a></li>
+                <li><a href="#abstract">Summary</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="#" class="btn btn-secondary"><svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>Paper</a>
+                <a href="#" class="btn btn-primary"><svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>Code</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" id="demo">
+        <div class="hero-bg"></div>
+        <div class="hero-grid"></div>
+        <div class="hero-badge"><span class="hero-badge-dot"></span>First Human-to-Humanoid Transfer Framework</div>
+        <h1 class="hero-title">Unlocking In-the-Wild <span class="highlight">Loco-Manipulation</span> with Robot-Free <span class="highlight">Egocentric</span> Demonstration</h1>
+        <p class="hero-subtitle">The first framework enabling humanoid robots to learn whole-body loco-manipulation from egocentric human demonstrations, achieving 51% improvement in generalization</p>
+        <div class="hero-stats">
+            <div class="hero-stat"><div class="hero-stat-value counter" data-target="51">0</div><div class="hero-stat-label">% Improvement</div></div>
+            <div class="hero-stat"><div class="hero-stat-value counter" data-target="4">0</div><div class="hero-stat-label">Real-World Tasks</div></div>
+            <div class="hero-stat"><div class="hero-stat-value">2×</div><div class="hero-stat-label">Data Efficiency</div></div>
+        </div>
+        <div class="hero-cta">
+            <a href="#" class="btn btn-primary"><svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>Read Full Paper</a>
+            <a href="#" class="btn btn-secondary"><svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>View Code</a>
+        </div>
+        <div class="hero-visual">
+            <div class="video-container"><div class="video-placeholder" id="heroVideo"><div class="video-play-btn"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><span class="video-label">Click to play demo video</span></div></div>
+        </div>
+    </section>
+
+    <!-- Method Section with Embedded Pipeline -->
+    <section class="section" id="method">
+        <div class="container">
+            <div class="section-header reveal"><span class="section-label">Method</span><h2 class="section-title">Human-to-Humanoid Alignment Pipeline</h2><p class="section-desc">A systematic approach to bridge the embodiment gap between humans and robots</p></div>
+            
+            <!-- Embedded Pipeline Component -->
+            <div class="pipeline-wrapper reveal">
+                <div class="pipeline">
+                    <div class="input-section">
+                        <div class="demo-card human">
+                            <h3>Human Demonstrations</h3>
+                            <p class="demo-subtitle">Diverse Environments</p>
+                            <div class="image-placeholder"><span>📷 Human Demo</span></div>
+                        </div>
+                        <div class="demo-card robot">
+                            <h3>Robot Demonstrations</h3>
+                            <p class="demo-subtitle">Laboratory Environments</p>
+                            <div class="image-placeholder"><span>📷 Robot Demo</span></div>
+                        </div>
+                    </div>
+
+                    <div class="connector"><div class="connector-arrow"><div class="flow-light"></div></div></div>
+
+                    <div class="view-alignment">
+                        <h3 class="pipeline-section-title"><span>(a)</span> View Alignment</h3>
+                        <div class="process-loop">
+                            <div class="process-item item-tl"><div class="process-label">Depth Estimation</div><div class="image-placeholder"><span>📷 Depth</span></div></div>
+                            <div class="empty-top"></div>
+                            <div class="process-item item-tr"><div class="process-label">Inpainting</div><div class="image-placeholder"><span>📷 Inpainting</span></div></div>
+                            <div class="loop-arrow arrow-left arrow-down"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg></div>
+                            <div class="empty-center"></div>
+                            <div class="loop-arrow arrow-right arrow-up"><svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg></div>
+                            <div class="process-item item-bl"><div class="process-label">Point Cloud Transform</div><div class="image-placeholder"><span>📷 Transform</span></div></div>
+                            <div class="loop-arrow arrow-bottom arrow-right-dir"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                            <div class="process-item item-br"><div class="process-label">Point Cloud Reprojection</div><div class="image-placeholder"><span>📷 Reprojection</span></div></div>
+                        </div>
+                    </div>
+
+                    <div class="connector"><div class="connector-arrow"><div class="flow-light"></div></div></div>
+
+                    <div class="action-alignment">
+                        <h3 class="pipeline-section-title"><span>(b)</span> Action Alignment</h3>
+                        <div class="unified-badge">✨ Unified Action Space</div>
+                        <div class="action-grid">
+                            <div class="action-row">
+                                <div class="body-part"><div class="body-icon"><span class="emoji">💪</span></div><div class="body-name">Upper Body</div></div>
+                                <span class="flow-arrow-action">→</span>
+                                <div class="action-output"><div class="action-title">6-DoF Delta End-Effector</div><div class="action-icons-row"><div class="action-icon-item"><span>X</span></div><div class="action-icon-item"><span>Y</span></div><div class="action-icon-item"><span>Z</span></div><div class="action-icon-item"><span>Rx</span></div><div class="action-icon-item"><span>Ry</span></div><div class="action-icon-item"><span>Rz</span></div></div></div>
+                            </div>
+                            <div class="action-row">
+                                <div class="body-part"><div class="body-icon"><span class="emoji">🦵</span></div><div class="body-name">Lower Body</div></div>
+                                <span class="flow-arrow-action">→</span>
+                                <div class="action-output"><div class="action-title">Discrete Velocity Commands</div><div class="action-icons-row"><div class="action-icon-item"><span>⬆️</span></div><div class="action-icon-item"><span>⬇️</span></div><div class="action-icon-item"><span>⬅️</span></div><div class="action-icon-item"><span>➡️</span></div><div class="action-icon-item"><span>↩️</span></div><div class="action-icon-item"><span>↪️</span></div></div></div>
+                            </div>
+                            <div class="action-row">
+                                <div class="body-part"><div class="body-icon"><span class="emoji">🖐️</span></div><div class="body-name">Dexterous Hand</div></div>
+                                <span class="flow-arrow-action">→</span>
+                                <div class="action-output"><div class="action-title">Binary Open/Close</div><div class="binary-icons"><div><div class="binary-icon">✋</div><div class="binary-label">Open</div></div><span class="binary-divider">/</span><div><div class="binary-icon">✊</div><div class="binary-label">Close</div></div></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Four Tasks Section -->
+    <section class="section section-dark" id="tasks">
+        <div class="container">
+            <div class="section-header reveal"><span class="section-label">Task Showcase</span><h2 class="section-title">Four Loco-Manipulation Tasks</h2><p class="section-desc">Spanning varying levels of difficulty for large-space movement and dexterous manipulation</p></div>
+            
+            <div class="task-block reveal">
+                <div class="task-block-header"><div class="task-block-icon robot-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div><div><h3 class="task-block-title">Robot Data Collection</h3><p class="task-block-subtitle">Teleoperated demonstrations in laboratory environments</p></div></div>
+                <div class="task-video-grid">
+                    <div class="task-video-card"><div class="task-video-placeholder"><span>Pillow Placement</span><div class="task-video-badge">Laboratory</div></div><div class="task-video-title">Pillow Placement</div></div>
+                    <div class="task-video-card"><div class="task-video-placeholder"><span>Trash Disposal</span><div class="task-video-badge">Laboratory</div></div><div class="task-video-title">Trash Disposal</div></div>
+                    <div class="task-video-card"><div class="task-video-placeholder"><span>Toy Transfer</span><div class="task-video-badge">Laboratory</div></div><div class="task-video-title">Toy Transfer</div></div>
+                    <div class="task-video-card"><div class="task-video-placeholder"><span>Cart Stowing</span><div class="task-video-badge">Laboratory</div></div><div class="task-video-title">Cart Stowing</div></div>
+                </div>
+            </div>
+
+            <div class="task-block reveal">
+                <div class="task-block-header"><div class="task-block-icon human-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg></div><div><h3 class="task-block-title">Human Data Collection</h3><p class="task-block-subtitle">Egocentric demonstrations in diverse real-world environments</p></div></div>
+                <div class="task-video-grid">
+                    <div class="task-video-card"><div class="task-video-placeholder human"><span>Pillow Placement</span><div class="task-video-badge">In-the-Wild</div></div><div class="task-video-title">Pillow Placement</div></div>
+                    <div class="task-video-card"><div class="task-video-placeholder human"><span>Trash Disposal</span><div class="task-video-badge">In-the-Wild</div></div><div class="task-video-title">Trash Disposal</div></div>
+                    <div class="task-video-card"><div class="task-video-placeholder human"><span>Toy Transfer</span><div class="task-video-badge">In-the-Wild</div></div><div class="task-video-title">Toy Transfer</div></div>
+                    <div class="task-video-card"><div class="task-video-placeholder human"><span>Cart Stowing</span><div class="task-video-badge">In-the-Wild</div></div><div class="task-video-title">Cart Stowing</div></div>
+                </div>
+            </div>
+
+            <div class="task-block reveal">
+                <div class="task-block-header"><div class="task-block-icon deploy-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div><div><h3 class="task-block-title">Loco-Manipulation Deployment</h3><p class="task-block-subtitle">Real-world deployment comparing different training configurations</p></div></div>
+                <div class="deploy-tabs">
+                    <button class="deploy-tab active" data-tab="deploy-pillow">Pillow Placement</button>
+                    <button class="deploy-tab" data-tab="deploy-trash">Trash Disposal</button>
+                    <button class="deploy-tab" data-tab="deploy-toy">Toy Transfer</button>
+                    <button class="deploy-tab" data-tab="deploy-cart">Cart Stowing</button>
+                </div>
+                <div class="deploy-content active" id="deploy-pillow">
+                    <div class="deploy-grid">
+                        <div class="deploy-card"><div class="deploy-video-placeholder robot-only"><span>Robot-only</span></div><div class="deploy-card-footer"><div class="deploy-card-title">Robot-only</div><div class="deploy-card-score danger">0% Gen.</div></div></div>
+                        <div class="deploy-card"><div class="deploy-video-placeholder human-only"><span>Human-only</span></div><div class="deploy-card-footer"><div class="deploy-card-title">Human-only</div><div class="deploy-card-score warning">95% Gen.</div></div></div>
+                        <div class="deploy-card highlight"><div class="deploy-video-placeholder cotrain"><span>Co-training</span></div><div class="deploy-card-footer"><div class="deploy-card-title">Co-training</div><div class="deploy-card-score success">97.5% Gen.</div></div></div>
+                    </div>
+                </div>
+                <div class="deploy-content" id="deploy-trash">
+                    <div class="deploy-grid">
+                        <div class="deploy-card"><div class="deploy-video-placeholder robot-only"><span>Robot-only</span></div><div class="deploy-card-footer"><div class="deploy-card-title">Robot-only</div><div class="deploy-card-score warning">55% Gen.</div></div></div>
+                        <div class="deploy-card"><div class="deploy-video-placeholder human-only"><span>Human-only</span></div><div class="deploy-card-footer"><div class="deploy-card-title">Human-only</div><div class="deploy-card-score warning">80% Gen.</div></div></div>
+                        <div class="deploy-card highlight"><div class="deploy-video-placeholder cotrain"><span>Co-training</span></div><div class="deploy-card-footer"><div class="deploy-card-title">Co-training</div><div class="deploy-card-score success">87.5% Gen.</div></div></div>
+                    </div>
+                </div>
+                <div class="deploy-content" id="deploy-toy">
+                    <div class="deploy-grid">
+                        <div class="deploy-card"><div class="deploy-video-placeholder robot-only"><span>Robot-only</span></div><div class="deploy-card-footer"><div class="deploy-card-title">Robot-only</div><div class="deploy-card-score warning">37.5% Gen.</div></div></div>
+                        <div class="deploy-card"><div class="deploy-video-placeholder human-only"><span>Human-only</span></div><div class="deploy-card-footer"><div class="deploy-card-title">Human-only</div><div class="deploy-card-score warning">35% Gen.</div></div></div>
+                        <div class="deploy-card highlight"><div class="deploy-video-placeholder cotrain"><span>Co-training</span></div><div class="deploy-card-footer"><div class="deploy-card-title">Co-training</div><div class="deploy-card-score success">78.8% Gen.</div></div></div>
+                    </div>
+                </div>
+                <div class="deploy-content" id="deploy-cart">
+                    <div class="deploy-grid">
+                        <div class="deploy-card"><div class="deploy-video-placeholder robot-only"><span>Robot-only</span></div><div class="deploy-card-footer"><div class="deploy-card-title">Robot-only</div><div class="deploy-card-score warning">31.3% Gen.</div></div></div>
+                        <div class="deploy-card"><div class="deploy-video-placeholder human-only"><span>Human-only</span></div><div class="deploy-card-footer"><div class="deploy-card-title">Human-only</div><div class="deploy-card-score danger">0% Gen.</div></div></div>
+                        <div class="deploy-card highlight"><div class="deploy-video-placeholder cotrain"><span>Co-training</span></div><div class="deploy-card-footer"><div class="deploy-card-title">Co-training</div><div class="deploy-card-score success">65% Gen.</div></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="section" id="results">
+        <div class="container">
+            <div class="section-header reveal"><span class="section-label">Results</span><h2 class="section-title">Performance Comparison</h2><p class="section-desc">Co-training consistently improves performance across both in-domain and generalization settings</p></div>
+            <div class="performance-container reveal">
+                <div class="chart-card"><div class="chart-header"><div><div class="chart-title">In-Domain Performance</div><div class="chart-subtitle">Laboratory environments</div></div><div class="chart-legend"><div class="legend-item"><span class="legend-dot robot"></span>Robot-only</div><div class="legend-item"><span class="legend-dot cotrain"></span>Co-training</div></div></div><div class="chart-wrapper"><canvas id="inDomainChart"></canvas></div></div>
+                <div class="chart-card"><div class="chart-header"><div><div class="chart-title">Generalization Performance</div><div class="chart-subtitle">Diverse real-world scenes (+51% improvement)</div></div><div class="chart-legend"><div class="legend-item"><span class="legend-dot robot"></span>Robot-only</div><div class="legend-item"><span class="legend-dot cotrain"></span>Co-training</div></div></div><div class="chart-wrapper"><canvas id="generalizationChart"></canvas></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subtask Analysis -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="section-header reveal"><span class="section-label">Transfer Analysis</span><h2 class="section-title">Subtask Performance Breakdown</h2><p class="section-desc">Navigation transfers effectively; manipulation depends on precision requirements</p></div>
+            <div class="table-container reveal">
+                <table class="subtask-table">
+                    <thead>
+                        <tr><th>Data Config</th><th colspan="2">Pillow Placement</th><th colspan="2">Trash Disposal</th><th colspan="4">Toy Transfer</th><th colspan="4">Cart Stowing</th></tr>
+                        <tr><th></th><th class="cell-loco">s1</th><th class="cell-manip">s2</th><th class="cell-loco">s1</th><th class="cell-manip">s2</th><th class="cell-loco">s1</th><th class="cell-manip">s2</th><th class="cell-loco">s3</th><th class="cell-manip">s4</th><th class="cell-loco">s1</th><th class="cell-manip">s2</th><th class="cell-manip">s3</th><th class="cell-manip">s4</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Robot-only</td><td class="cell-danger">0</td><td class="cell-danger">0</td><td class="cell-warning">65</td><td class="cell-warning">45</td><td class="cell-success">100</td><td class="cell-warning">50</td><td class="cell-danger">0</td><td class="cell-danger">0</td><td class="cell-success">100</td><td class="cell-danger">15</td><td class="cell-danger">5</td><td class="cell-danger">5</td></tr>
+                        <tr><td>Human-only</td><td class="cell-success">100</td><td class="cell-success">95</td><td class="cell-success">100</td><td class="cell-success">80</td><td class="cell-success">100</td><td class="cell-success">100</td><td class="cell-warning">45</td><td class="cell-warning">35</td><td class="cell-success">100</td><td class="cell-danger">5</td><td class="cell-danger">0</td><td class="cell-danger">0</td></tr>
+                        <tr><td><strong>Co-training</strong></td><td class="cell-success">100</td><td class="cell-success">95</td><td class="cell-success">100</td><td class="cell-success">75</td><td class="cell-success">100</td><td class="cell-success">100</td><td class="cell-warning">60</td><td class="cell-warning">55</td><td class="cell-success">100</td><td class="cell-warning">60</td><td class="cell-warning">50</td><td class="cell-warning">50</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-legend reveal"><div class="legend-item"><span class="legend-dot" style="background:var(--accent-blue);"></span>Locomotion</div><div class="legend-item"><span class="legend-dot" style="background:var(--accent-orange);"></span>Manipulation</div></div>
+        </div>
+    </section>
+
+    <!-- Failure Analysis -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header reveal"><span class="section-label">Failure Analysis</span><h2 class="section-title">Understanding Failure Modes</h2><p class="section-desc">Systematic breakdown of failure cases across different training configurations</p></div>
+            <div class="sankey-container reveal">
+                <div class="sankey-card"><div class="sankey-title">(a) Robot-only</div><div class="sankey-diagram"><div class="sankey-col left"><div class="sankey-node main">Failures<br><span class="sankey-value">70</span></div></div><div class="sankey-col mid"><div class="sankey-node type loco">Locomotion<br><span>37</span></div><div class="sankey-node type manip">Manipulation<br><span>33</span></div></div><div class="sankey-col right"><div class="sankey-node cause">Early Stop: 30</div><div class="sankey-node cause">No Stop: 5</div><div class="sankey-node cause">Poor Grasp: 22</div><div class="sankey-node cause">Early Gripper: 9</div></div></div></div>
+                <div class="sankey-card"><div class="sankey-title">(b) Human-only</div><div class="sankey-diagram"><div class="sankey-col left"><div class="sankey-node main">Failures<br><span class="sankey-value">49</span></div></div><div class="sankey-col mid"><div class="sankey-node type loco">Locomotion<br><span>11</span></div><div class="sankey-node type manip">Manipulation<br><span>38</span></div></div><div class="sankey-col right"><div class="sankey-node cause">Early Stop: 11</div><div class="sankey-node cause">Poor Grasp: 19</div><div class="sankey-node cause">Early Gripper: 11</div><div class="sankey-node cause">Poor Place: 8</div></div></div></div>
+                <div class="sankey-card"><div class="sankey-title">(c) Co-training</div><div class="sankey-diagram"><div class="sankey-col left"><div class="sankey-node main">Failures<br><span class="sankey-value">25</span></div></div><div class="sankey-col mid"><div class="sankey-node type loco">Locomotion<br><span>8</span></div><div class="sankey-node type manip">Manipulation<br><span>17</span></div></div><div class="sankey-col right"><div class="sankey-node cause">Early Stop: 4</div><div class="sankey-node cause">Poor Grasp: 8</div><div class="sankey-node cause">Poor Place: 8</div><div class="sankey-node cause">Wrong Orient: 4</div></div></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Abstract Section -->
+    <section class="section section-dark" id="abstract">
+        <div class="container">
+            <div class="section-header reveal"><span class="section-label">Abstract</span><h2 class="section-title">Research Summary</h2></div>
+            <div class="abstract-container reveal">
+                <div class="abstract-text">
+                    <p>Human demonstrations offer <span class="highlight-text">rich environmental diversity and scale naturally</span>, making them an appealing alternative to robot teleoperation. We present <strong>EGOHUMANOID</strong>, the first framework to co-train a vision-language-action policy using abundant egocentric human demonstrations together with a limited amount of robot data.</p>
+                    <p>To bridge the embodiment gap, we introduce a <span class="highlight-text">systematic alignment pipeline</span> with two key components: <strong>view alignment</strong> reduces visual discrepancies; <strong>action alignment</strong> maps human motions into a unified action space for humanoid control.</p>
+                    <p>Extensive real-world experiments demonstrate that incorporating robot-free egocentric data <span class="highlight-text">significantly outperforms robot-only baselines by 51%</span>, particularly in unseen environments.</p>
+                </div>
+                <div class="contributions-sidebar">
+                    <div class="contribution-card-mini"><div class="contribution-icon-mini"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg></div><h4>First Human-to-Humanoid Transfer</h4><p>The first endorsement for whole-body loco-manipulation tasks.</p></div>
+                    <div class="contribution-card-mini"><div class="contribution-icon-mini"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg></div><h4>Principled Alignment Pipeline</h4><p>View and action alignment to bridge embodiment gaps.</p></div>
+                    <div class="contribution-card-mini"><div class="contribution-icon-mini"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg></div><h4>Comprehensive Evaluation</h4><p>51% improvement in generalization performance.</p></div>
+                </div>
+            </div>
+            <div class="citation-box reveal">
+                <div class="citation-header"><div class="citation-title"><svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>BibTeX Citation</div><button class="citation-copy" onclick="copyCitation()">Copy</button></div>
+                <pre class="citation-code">@article{egohumanoid2025,
+  title={Unlocking In-the-Wild Loco-Manipulation with Robot-Free Egocentric Demonstration},
+  author={xxx},
+  journal={ArXiv:xxx},
+  year={2025}
+}</pre>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-logo">EGOHUMANOID</div>
+            <div class="footer-links"><a href="#demo">Demo</a><a href="#method">Method</a><a href="#tasks">Tasks</a><a href="#results">Results</a></div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
