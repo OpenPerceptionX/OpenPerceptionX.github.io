@@ -132,4 +132,18 @@ export const NavigatorProject: {
             id: "citation",
         },
     ],
+    "/ap0001": [
+        {
+            text: "Description",
+            id: "description",
+        },
+        {
+            text: "Schedule",
+            id: "schedule",
+        },
+        {
+            text: "Instructors",
+            id: "instructor",
+        },
+    ],
 };
