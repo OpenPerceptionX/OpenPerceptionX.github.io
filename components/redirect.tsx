@@ -169,7 +169,7 @@ export default function Redirect() {
         pathname.toLowerCase().startsWith('/egohumanoid')
         || pathname.toLowerCase().startsWith('/kaidata')
     ) {
-        redirect('/kaidata/')
+        redirect('/EgoHumanoid/')
     }
     if (
         pathname.toLowerCase().startsWith('/sparsevideonav')
