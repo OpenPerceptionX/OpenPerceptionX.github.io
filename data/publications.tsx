@@ -165,7 +165,7 @@ export const publications: {
         ],
         description: `A closed-loop and sample-efficient RFT framework for diffusion-based planners.`,
         keys: ['ad_algorithm'],
-        time: '2026.1.19',
+        time: '2026.01.19',
         timeline:[''],
     },
     {
