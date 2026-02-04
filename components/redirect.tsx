@@ -175,7 +175,7 @@ export default function Redirect() {
         pathname.toLowerCase().startsWith('/sparsevideonav')
         || pathname.toLowerCase().startsWith('/mm-videonav')
     ) {
-        redirect('https://mmlab.hk/research/MM-VideoNav')
+        redirect('/MM-VideoNav/')
     }
     if (
         pathname.toLowerCase().startsWith('/mm-hand')
