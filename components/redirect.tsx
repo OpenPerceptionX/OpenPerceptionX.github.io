@@ -297,9 +297,10 @@ export default function Redirect() {
 
 
 
+    // teaching
     if (
-        pathname.toLowerCase().startsWith('/CCAI9025') || 
-        pathname.toLowerCase().startsWith('/teaching/CCAI9025')
+        pathname.toLowerCase().startsWith('/ccai9025') || 
+        pathname.toLowerCase().startsWith('/teaching/ccai9025')
     ) {
         redirect('https://mmlab.hk/CCAI9025')
     }
