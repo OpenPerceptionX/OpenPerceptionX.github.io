@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Sparse Video Generation Propels Real-World Beyond-the-View Vision-Language Navigation">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sparse Video Generation Propels Real-World Beyond-the-View Vision-Language Navigation</title>
+  <link rel="icon" type="image/png" href="https://assets.kinetixai.cn/images2026/favicon.png">
+  <link rel="icon" type="image/x-icon" href="https://assets.kinetixai.cn/images2026/favicon.ico">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> -->
+
+
+  <!-- </script> -->
+
+  <!-- <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet"> -->
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <!-- <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"> -->
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body onload="updateComparativeVideos();">
+
+
+
+<section class="hero is-link is-fullheight video" style="overflow: hidden; position:relative;">
+  <div class="hero-video" style="height: 100%; width: 177.77777778vh; min-width: 100%;min-height: 56.25vw;">
+    <video id="hero-video" playsinline webkit-playsinline x5-playsinline x5-video-player-type="h5" autoplay loop muted >
+      <!-- <source src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/master/AMS/teaser.mp4" type="video/mp4"> -->
+      <source src="https://assets.kinetixai.cn/images2026/hk_teaser.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero-video is-hidden-tablet is-inline-block-mobile"
+    style="height: 154.28571428vw; width: 100%; min-width:64.81481481vh;min-height:100%;">
+    <video id="hero-video-mobile" playsinline webkit-playsinline x5-playsinline x5-video-player-type="h5" autoplay loop muted>
+      <!-- <source src="https://assets.kinetixai.cn/images2026/teaser_mobile.mp4" type="video/mp4"> -->
+      <source src="https://assets.kinetixai.cn/images2026/hk_teaser.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="overlay"></div>
+  <div class="hero-head is-hidden-mobile">
+    <header class="navbar">
+      <div class="container is-size-5">
+        <div class="navbar-menu">
+          <div class="navbar-end">
+            <!-- <a class="navbar-item pl-4 pr-4" href="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/master/AMS/AMS.pdf" target="_blank">
+              <span class="icon" style="margin-right:5px;">
+                <img src="https://assets.kinetixai.cn/images2026/pdf.svg" alt="PDF" />
+              </span>
+              <span>Paper</span>
+            </a> -->
+            <a class="navbar-item  pl-4 pr-4" href=""  target="_blank"> 
+              <span class="icon" style="margin-right:5px;">
+                <img src="https://assets.kinetixai.cn/images2026/arxiv.svg" alt="ArXiv" />
+              </span>
+              <span>arXiv</span> </a>
+            <!-- <a href="https://youtu.be/vrYhegnX7m0?si=YLMzhLj_hLh_-Pj8" class="navbar-item pl-4 pr-4"  target="_blank">
+              <span class="icon" style="margin-right:5px;">
+                <img src="https://assets.kinetixai.cn/images2026/youtube.svg" alt="YouTube" style="width: 24px; height: 24px;" />
+              </span>
+              <span>YouTube</span>
+            </a>
+              <a href="https://github.com/OpenDriveLab/AMS" class="navbar-item pl-4 pr-4"  target="_blank">
+                <span class="icon" style="margin-right: 5px;">
+                  <img src="https://assets.kinetixai.cn/images2026/github.svg" alt="GitHub" style="width: 24px; height: 24px;" />
+                </span>
+                <span>Code</span>
+              </a> -->
+            </span>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+ 
+  <!-- <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title is-1 publication-title is-size-1-mobile" style="font-size: 10rem;">
+        SparseVideoNav
+      </h1>
+      <h1 class="subtitle is-1 publication-title is-size-4-mobile" style="font-size: 4rem;">
+        Sparse Video Generation Propels Real-World Beyond-the-View Vision-Language Navigation
+      </h1>
+      <div class="column has-text-centered is-hidden-tablet">
+        <div class="publication-links">
+        </div>
+      </div>
+    </div>
+  </div> -->
+</section>
+  
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Sparse Video Generation Propels <br>
+            Real-World Beyond-the-View <br>
+            Vision-Language Navigation</h1>
+          <!-- <h3 class="title is-4 conference-authors"><a target="_blank" href="https://www.robot-learning.org/">CoRL 2025</span></a> (Oral Presentation)</h3> -->
+          <!-- <h3 class="title is-4 conference-authors"><a target="_blank" href="https://wcbm-workshop.github.io/">RSS Workshop on Whole-body Control and Bimanual Manipulation 2025</a></h3> -->
+          <!-- <div class="column has-text-centered"> -->
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a target="_blank" href="https://betray12138.github.io/resume/">Hai Zhang</a><sup>*</sup>,</span>
+              <span class="author-block">
+                <a target="_blank" href="https://scholar.google.com/citations?user=abN7zrsAAAAJ">Siqi Liang</a><sup>*</sup>,</span> 
+              <span class="author-block">
+                <a target="_blank" href="https://ilnehc.github.io/">Li Chen</a>,</span>
+              <span class="author-block">
+                <a target="_blank" href="https://github.com/LiYuxian0306">Yuxian Li</a>,</span>
+              <span class="author-block">
+                <a target="_blank" href="https://github.com/PUFFERFISHTNT">Yukuan Xu</a>,</span>
+              <span class="author-block">
+                <a target="_blank" href="https://z-taylcr7.github.io">Yichao Zhong</a>,</span> 
+              <br>
+              <span class="author-block">
+                <a target="_blank" href="https://mech.hku.hk/academic-staff/zhang-f/">Fu Zhang</a>,</span>
+                <a target="_blank" href="https://lihongyang.info/">Hongyang Li</a>
+              </span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">The University of Hong Kong,</span>
+            </div>
+            <div class="is-size-6 publication-authors"> *Equal Contribution </div>
+            <div style="display: flex; justify-content: center; align-items: center; gap: 40px; margin-top: 20px;">
+              <img src="https://assets.kinetixai.cn/images2026/HKU_logo_1.png" width="30%">
+              <!-- <img src="https://assets.kinetixai.cn/images2026/NVIDIA_logo.png" width="20%">
+              <img src="https://assets.kinetixai.cn/images2026/Tsinghua_logo.png" width="20%"> -->
+            </div>
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <!-- <span class="link-block">
+                  <a target="_blank" href="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/master/AMS/AMS.pdf"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span> -->
+                <!-- arXiv Link. -->
+                <span class="link-block">
+                  <a target="_blank" href="https://arxiv.org/abs/2511.17373"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <img src="https://assets.kinetixai.cn/images2026/arxiv.svg" alt="ArXiv" style="width: 24px; height: 24px;" />
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+                <span class="link-block">
+                  <a target="_blank" href="https://youtu.be/vrYhegnX7m0?si=YLMzhLj_hLh_-Pj8"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <img src="https://assets.kinetixai.cn/images2026/youtube.svg" alt="YouTube" style="width: 24px; height: 24px;" />
+                    </span>
+                    <span>YouTube</span>
+                  </a>
+                </span>
+                <!-- Bilibili Video Link -->
+                <!-- <span class="link-block">
+                  <a target="_blank" href=""
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <img src="https://assets.kinetixai.cn/images2026/bilibili.svg" alt="Bilibili" style="width: 24px; height: 24px;" />
+                    </span>
+                    <span>Bilibili</span>
+                  </a>
+                </span> -->
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a target="_blank" href="https://github.com/OpenDriveLab/AMS"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <img src="https://assets.kinetixai.cn/images2026/github.svg" alt="GitHub" style="width: 24px; height: 24px;" />
+                    </span>
+                    <span>Code (Comming Soon)</span>
+                    </a>
+                </span>
+
+                <span class="link-block">
+                  <a href="https://x.com/TongZha22057330/status/1922092674644894041" target="_blank"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fas fa-database"></i>
+                    </span>
+                    <span>Dataset (Comming Soon)</span>
+                  </a>
+                </span>
+
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-bottom: 0">
+  <div class="container">
+    <div id="method_video" class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds no-bottom-padding">
+        <!-- <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
+          <iframe 
+            src="https://www.youtube.com/embed/mzXH4MEypsk?si=D5r93ytzpsHOojZ7" 
+            title="YouTube video player" 
+            frameborder="0" 
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 1px solid #bbb; border-radius: 10px;" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen
+          ></iframe>
+        </div> -->
+        <video autoplay muted loop playsinline webkit-playsinline x5-playsinline x5-video-player-type="h5" controls width="100%" style="border-radius: 10px;" >
+          <!-- <source src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/master/AMS/demo_1122.mp4" type="video/mp4"> -->
+          <source src="https://assets.kinetixai.cn/images2026/full_demo.mp4" type="video/mp4">
+          <!-- <source src="https://youtu.be/vrYhegnX7m0?si=qLpze0wiY9Hyy9jL" type="video/mp4"> -->
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <h2 class="title is-2" style="text-align: center; padding-bottom: 0px;">Challenging Beyond-thew-View Navigation Tasks</h2>
+        <!-- <p class="has-text-centered is-size-5" style="margin-bottom: 30px; padding-bottom: 0px;">
+          (1x, autonomous)
+        </p> -->
+        <div style="margin-bottom: 50px;">
+          <h3 class="title is-3" style="text-align: center; margin-bottom: 20px; font-size: x-large;">Night Scenes</h3>
+          <div class="columns">
+            <div class="column">
+              <!-- <video autoplay muted loop playsinline webkit-playsinline x5-playsinline x5-video-player-type="h5" controls src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/master/AMS/balance_motions/single_leg_stand1.mp4" width="100%" style="border-radius:10px;"></video> -->
+              <video autoplay muted loop playsinline webkit-playsinline x5-playsinline x5-video-player-type="h5" controls src="https://assets.kinetixai.cn/images2026/night_2.mp4" width="100%" style="border-radius:10px;"></video>
+            </div>
+            <div class="column">
+              <!-- <video autoplay muted loop playsinline webkit-playsinline x5-playsinline x5-video-player-type="h5" controls src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/master/AMS/balance_motions/single_leg_stand2.mp4" width="100%" style="border-radius:10px;"></video> -->
+              <video autoplay muted loop playsinline webkit-playsinline x5-playsinline x5-video-player-type="h5" controls src="https://assets.kinetixai.cn/images2026/night_1.mp4" width="100%" style="border-radius:10px;"></video>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 50px;">
+          <h3 class="title is-3" style="text-align: center; margin-bottom: 20px; font-size: x-large;">Outdoor Scenes</h3>
+          <div class="columns">
+            <div class="column">
+              <!-- <video autoplay muted loop playsinline webkit-playsinline x5-playsinline x5-video-player-type="h5" controls src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/master/AMS/balance_motions/single_leg_stand1.mp4" width="100%" style="border-radius:10px;"></video> -->
+              <video autoplay muted loop playsinline webkit-playsinline x5-playsinline x5-video-player-type="h5" controls src="https://assets.kinetixai.cn/images2026/outdoor_2.mp4" width="100%" style="border-radius:10px;" ></video>
+            </div>
+            <div class="column">
+              <!-- <video autoplay muted loop playsinline webkit-playsinline x5-playsinline x5-video-player-type="h5" controls src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/master/AMS/balance_motions/single_leg_stand2.mp4" width="100%" style="border-radius:10px;"></video> -->
+              <video autoplay muted loop playsinline webkit-playsinline x5-playsinline x5-video-player-type="h5" controls src="https://assets.kinetixai.cn/images2026/outdoor_1.mp4" width="100%" style="border-radius:10px;"></video>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 50px;">
+          <h3 class="title is-3" style="text-align: center; margin-bottom: 20px; font-size: x-large;">Indoor Scenes</h3>
+          <div class="columns">
+            <div class="column">
+              <!-- <video autoplay muted loop playsinline webkit-playsinline x5-playsinline x5-video-player-type="h5" controls src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/master/AMS/balance_motions/Ip_man_squat_1.mp4" width="100%" style="border-radius:10px;"></video> -->
+              <video autoplay muted loop playsinline webkit-playsinline x5-playsinline x5-video-player-type="h5" controls src="https://assets.kinetixai.cn/images2026/indoor_1.mp4" width="100%" style="border-radius:10px;" ></video>
+            </div>
+            <div class="column">
+              <!-- <video autoplay muted loop playsinline webkit-playsinline x5-playsinline x5-video-player-type="h5" controls src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/master/AMS/balance_motions/Ip_man_squat_2.mp4" width="100%" style="border-radius:10px;"></video> -->
+              <video autoplay muted loop playsinline webkit-playsinline x5-playsinline x5-video-player-type="h5" controls src="https://assets.kinetixai.cn/images2026/indoor_2.mp4" width="100%" style="border-radius:10px;" ></video>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <h2 class="title is-2" style="text-align: center; padding-bottom: 0px;">Language-Following Navigation</h2>
+        <div style="margin-bottom: 50px;">
+          <!-- <h3 class="title is-3" style="text-align: center; margin-bottom: 20px; font-size: x-large;">RGB-based Real-time Teleoperation</h3> -->
+          <div class="columns">
+            <div class="column">
+              <!-- <video autoplay muted loop playsinline webkit-playsinline x5-playsinline x5-video-player-type="h5" controls src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/master/AMS/teleoperation/rgb_teleop_single_leg.mp4" width="100%" style="border-radius:10px;"></video> -->
+              <video autoplay muted loop playsinline webkit-playsinline x5-playsinline x5-video-player-type="h5" controls src="https://assets.kinetixai.cn/images2026/vln_1.mp4" width="100%" style="border-radius:10px;"></video>
+            </div>
+            <div class="column">
+              <!-- <video autoplay muted loop playsinline webkit-playsinline x5-playsinline x5-video-player-type="h5" controls src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/master/AMS/teleoperation/rgb_teleop_single_leg_2.mp4" width="100%" style="border-radius:10px;"></video> -->
+              <video autoplay muted loop playsinline webkit-playsinline x5-playsinline x5-video-player-type="h5" controls src="https://assets.kinetixai.cn/images2026/vln_2.mp4" width="100%" style="border-radius:10px;"></video>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="columns is-centered" style="margin-bottom: 10px;">
+          <div class="column is-half">
+            <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Bruce Lee's Kick (10+ consecutive executions)</h3>
+            <video autoplay muted loop playsinline webkit-playsinline x5-playsinline x5-video-player-type="h5" controls src="./media/long_horizon/bruce_compressed.mp4" width="100%" style="border-radius:10px;"></video>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <h2 class="title is-2" style="text-align: center; padding-bottom: 0px;">More Exciting Results</h2>
+        <div style="margin-bottom: 50px;">
+          <div class="columns">
+            <div class="column">
+              <h3 class="title is-3" style="text-align: center; margin-bottom: 20px; font-size: x-large;">Dynamic Pedestrain Avoidance</h3>
+              <video autoplay muted loop playsinline webkit-playsinline x5-playsinline x5-video-player-type="h5" controls 
+                    src="https://assets.kinetixai.cn/images2026/exciting_results.mp4" 
+                    width="50%" 
+                    style="border-radius:10px; margin: 0 auto; display: block;" 
+                    ></video>
+            </div>
+            <!-- <div class="column">
+              <h3 class="title is-3" style="text-align: center; margin-bottom: 20px; font-size: x-large;">Navigation with Camera Height Variation</h3>
+              <video autoplay muted loop playsinline webkit-playsinline x5-playsinline x5-video-player-type="h5" controls src="https://assets.kinetixai.cn/AMS/video/rgb_teleop_single_leg_2.mp4" width="100%" style="border-radius:10px;" poster="https://assets.kinetixai.cn/images2026/rgb_2.jpg"></video>
+            </div> -->
+          </div>
+        </div>
+        <!-- <div class="columns is-centered" style="margin-bottom: 10px;">
+          <div class="column is-half">
+            <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Bruce Lee's Kick (10+ consecutive executions)</h3>
+            <video autoplay muted loop playsinline webkit-playsinline x5-playsinline x5-video-player-type="h5" controls src="./media/long_horizon/bruce_compressed.mp4" width="100%" style="border-radius:10px;"></video>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+          <strong>Why must vision-language navigation be bound to detailed and verbose language instructions?</strong>
+          While such details ease decision-making, they fundamentally contradict the goal for navigation in the real-world.
+          Ideally, agents should possess the autonomy to navigate in unknown environments guided solely by simple and high-level intents. 
+          Realizing this ambition introduces a formidable challenge: Beyond-the-View Navigation (BVN), where agents must locate distant, unseen targets without dense and step-by-step guidance.
+          Existing large language model (LLM)-based methods, though adept at following dense instructions, often suffer from short-sighted behaviors due to their reliance on short-horizon supervision.
+          Simply extending the supervision horizon, however, destabilizes LLM training.
+          </p>
+          <p>
+          In this work, we identify that video generation models inherently benefit from long-horizon supervision to align with language instructions, rendering them uniquely suitable for BVN tasks.
+          Capitalizing on this insight, we propose introducing the video generation model into this field for the first time.
+          Yet, the prohibitive latency for generating videos spanning tens of seconds makes real-world deployment impractical.
+          </p>
+          <p>
+          To bridge this gap, we propose SparseVideoNav, achieving sub-second trajectory inference guided by a generated sparse future spanning a 20-second horizon.
+          This yields a remarkable 27× speed-up compared to the unoptimized counterpart.
+          Extensive real-world zero-shot experiments demonstrate that SparseVideoNav achieves 2.5× the success rate of state-of-the-art LLM baselines on BVN tasks and marks the first realization of such capability in challenging night scenes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="rows">
+
+    <div class="rows is-centered ">
+      <div class="row is-full-width">
+        <h2 class="title is-3"><span class="dperact">Overview of SparseVideoNav</span></h2>
+
+        <img src="https://assets.kinetixai.cn/images2026/model_architecture.png" class="interpolation-image" 
+         alt="Interpolate start reference image." />
+          <p>
+            <!-- <b>Overview of AMS.</b> -->
+            <b>(Top)</b> denotes our whole training architecture. Current observation, historical observations, and the language instruction are fed into the video generation model (VGM) backbone to generate future sparse video latents.
+            DiT-based action head then predicts continuous actions conditioned on generated sparse future and the language instruction. <b>(Bottom)</b> denotes our four-stage training pipeline, 
+            with <b>Stage 1</b> adapting T2V to I2V, 
+            <b>Stage 2</b> injecting history into I2V backbone; 
+            <b>Stage 3</b> distilling the backbone to reduce denoising steps; 
+            <b>Stage 4</b> learning actions based on generated sparse future.
+            Components not utilized in a specific stage are indicated by gray blocks.
+          </p> 
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="rows">
+
+    <div class="rows is-centered ">
+      <div class="row is-full-width">
+        <h2 class="title is-3"><span class="dperact">140H RealWorld VLN DATASET</span></h2>
+
+        <img src="https://assets.kinetixai.cn/images2026/dataset.jpg" class="interpolation-image" 
+         alt="Interpolate start reference image." />
+          <p>
+            <!-- <b>Overview of AMS.</b> -->
+            <b>The largest real-world VLN dataset to date.</b> <i>We will open-source the dataset to benefit the community.</i>
+          </p> 
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{zhang2026sparse,
+  title={Sparse Video Generation Propels Real-World Beyond-the-View Vision-Language Navigation},
+  author={Zhang, Hai and Liang, Siqi and Chen, Li and Li, Yuxian and Xu, Yukuan and Zhong, Yichao and Zhang, Fu and Li, Hongyang},
+  journal={arXiv preprint},
+  year={2026}
+}</code></pre>
+  </div>
+</section>
+  
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content has-text-centered">
+          <p>
+            Website template borrowed from <a href="https://umi-on-legs.github.io/">UMI on Legs</a>. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
