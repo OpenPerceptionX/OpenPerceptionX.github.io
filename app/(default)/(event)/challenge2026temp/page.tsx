@@ -216,6 +216,22 @@ export default function Home() {
 
 
 
+            <div className="w-full px-6 flex justify-center mt-12">
+                <div className="w-full max-w-7xl flex flex-col">
+                    <h3 className="text-xl font-bold">
+                        DexoraSim Challenge
+                    </h3>
+                </div>
+            </div>
+            <div className="w-full px-6 flex justify-center mt-6">
+                <div className="w-full max-w-7xl flex flex-col gap-3">
+                    <p className="leading-relaxed">
+                        This challenge targets <span className="underline">vcontact-rich household and tool-use behaviors</span> that require precise coordination between two hands, continuous control, and robust perception. Participants develop policies that map multi-view visual observations and natural-language instructions to joint-space control, with evaluation designed to reflect both task completion and the stability of physical interaction.
+                    </p>
+                </div>
+            </div>
+
+
             {/* <div className="w-full px-6 flex justify-center mt-12">
                 <div className="w-full max-w-7xl flex flex-col">
                     <h3 className="text-xl font-bold">
