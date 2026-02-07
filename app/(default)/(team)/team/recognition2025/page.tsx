@@ -16,7 +16,7 @@ import { AspectRatio } from "@/components/ui/aspect-ratio"
 
 
 
-export const members: {
+const members: {
     name: string;
     desc: string;
 }[] = [
