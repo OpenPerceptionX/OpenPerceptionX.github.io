@@ -333,11 +333,6 @@ export default function Redirect() {
     ) {
         redirect('/assets/file/ICCV23_oral_DriveAdapter.pdf')
     }
-    if (
-        pathname.toLowerCase().startsWith('/recognition2024') 
-    ) {
-        redirect('https://opendrivelab.github.io/recognition2024.pdf')
-    }
 
 
 

@@ -51,6 +51,10 @@ export const NavigatorPage: {
             text: "Alumni",
             id: "alumni",
         },
+        {
+            text: "Recognition",
+            id: "recognition",
+        },
     ],
     "/publications": [
         {
@@ -126,4 +130,5 @@ export const NavigatorPage: {
     ],
     "/embodiedai": [],
     "/autonomousdriving": [],
+    "/team/recognition2025": [],
 };
