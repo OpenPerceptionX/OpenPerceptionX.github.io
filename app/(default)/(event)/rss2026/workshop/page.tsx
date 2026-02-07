@@ -120,7 +120,7 @@ export default function Home() {
                             />
                         </div>
                         <h1 className="text-white text-t1 font-bold">
-                            Towards Robust Execution of Complex Long-Horizon Tasks
+                            Towards Robust Execution of Long-Horizon Whole-body Control Tasks
                         </h1>
                         <h5 className="text-white">
                             RSS 2026 Workshop
