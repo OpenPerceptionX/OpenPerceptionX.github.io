@@ -175,7 +175,7 @@ export default function Redirect() {
         pathname.toLowerCase().startsWith('/sparsevideonav')
         || pathname.toLowerCase().startsWith('/mm-videonav')
     ) {
-        redirect('/MM-VideoNav/')
+        redirect('/SparseVideoNav/')
     }
     if (
         pathname.toLowerCase().startsWith('/mm-hand')
