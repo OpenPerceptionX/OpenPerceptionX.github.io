@@ -157,8 +157,8 @@ export const publications: {
         author: "Checheng Yu, Chonghao Sima, Gangcheng Jiang, Hai Zhang, Haoguang Mai, Hongyang Li, Huijie Wang, Jin Chen, Kaiyang Wu, Li Chen, Lirui Zhao, Modi Shi, Ping Luo, Qingwen Bu, Shijia Peng, Tianyu Li, Yibo Yuan",
         note: "Preprint 2026",
         noteoption: '',
-        star: "",
-        starlink: "",
+        star: "https://img.shields.io/github/stars/OpenDriveLab/kai0?style=social",
+        starlink: "https://github.com/OpenDriveLab/kai0",
         icon: [
             {
                 type: "page",
