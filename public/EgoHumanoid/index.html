@@ -6,44 +6,253 @@
     <title>EGOHUMANOID | Human-to-Humanoid Transfer for Loco-Manipulation</title>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@200..800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+    <script async src="https://unpkg.com/es-module-shims@1.8.0/dist/es-module-shims.js"></script>
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="progress-bar" id="progressBar"></div>
+    
+    <!-- Side Navigation -->
+    <nav class="side-nav" id="sideNav">
+        <a href="#demo" class="side-nav-item active" data-section="demo">
+            <span class="side-nav-label">Introduction</span>
+        </a>
+        <a href="#abstract" class="side-nav-item" data-section="abstract">
+            <span class="side-nav-label">Highlight</span>
+        </a>
+        <a href="#tasks" class="side-nav-item" data-section="tasks">
+            <span class="side-nav-label">Tasks</span>
+        </a>
+        <a href="#results" class="side-nav-item" data-section="results">
+            <span class="side-nav-label">Results</span>
+        </a>
+        <a href="#method" class="side-nav-item" data-section="method">
+            <span class="side-nav-label">Methodology</span>
+        </a>
+    </nav>
+
     <nav class="nav">
         <div class="nav-inner">
-            <div class="nav-logo">EGOHUMANOID</div>
-            <ul class="nav-links">
-                <li><a href="#demo">Demo</a></li>
-                <li><a href="#method">Method</a></li>
-                <li><a href="#tasks">Tasks</a></li>
-                <li><a href="#results">Results</a></li>
-                <li><a href="#abstract">Summary</a></li>
-            </ul>
+            <div class="nav-icons">
+                <a href="https://opendrivelab.com/" class="nav-icon-link" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/D.png" alt="OpenDriveLab" class="nav-icon">
+                </a>
+                <span class="nav-icon-divider">|</span>
+                <a href="https://mmlab.hk/" class="nav-icon-link" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/HKU_MMLAB.png" alt="MMLab @ HKU" class="nav-icon">
+                </a>
+            </div>
             <div class="nav-cta">
                 <a href="#" class="btn btn-secondary"><svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>Paper</a>
-                <a href="#" class="btn btn-primary"><svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>Code</a>
+                <a href="#" class="btn btn-primary"><svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>Code (Coming Soon)</a>
             </div>
         </div>
     </nav>
 
-    <section class="hero" id="demo">
-        <div class="hero-bg"></div>
-        <div class="hero-grid"></div>
-        <div class="hero-badge"><span class="hero-badge-dot"></span>First Human-to-Humanoid Transfer Framework</div>
-        <h1 class="hero-title">Unlocking In-the-Wild <span class="highlight">Loco-Manipulation</span> with Robot-Free <span class="highlight">Egocentric</span> Demonstration</h1>
-        <p class="hero-subtitle">The first framework enabling humanoid robots to learn whole-body loco-manipulation from egocentric human demonstrations, achieving 51% improvement in generalization</p>
-        <div class="hero-stats">
-            <div class="hero-stat"><div class="hero-stat-value counter" data-target="51">0</div><div class="hero-stat-label">% Improvement</div></div>
-            <div class="hero-stat"><div class="hero-stat-value counter" data-target="4">0</div><div class="hero-stat-label">Real-World Tasks</div></div>
-            <div class="hero-stat"><div class="hero-stat-value">2×</div><div class="hero-stat-label">Data Efficiency</div></div>
+    <header class="hero-video" id="demo">
+        <video id="heroBgVideo" src="https://assets.kinetixai.cn/20260210/title_video1.mp4" autoplay muted loop playsinline preload="auto"></video>
+        <div class="hero-video-overlay">
+            <div class="hero-video-content">
+                <h1 class="hero-title"> <span class="highlight">EgoHumanoid:</span> Unlocking In-the-Wild <span class="highlight">Loco-Manipulation</span> with Robot-Free <span class="highlight">Egocentric</span> Demonstration</h1>
+                <p class="hero-subtitle">The first framework enabling humanoid robots to learn whole-body loco-manipulation from egocentric human demonstrations, achieving 51% improvement in generalization</p>
+                <div class="hero-authors">
+                    <div class="hero-authors-list">
+                        Modi Shi<sup>2,3*</sup> &nbsp; Shijia Peng<sup>4*</sup> &nbsp; Jin Chen<sup>2*</sup> &nbsp; Haoran Jiang<sup>2</sup> &nbsp; Yinghui Li<sup>1,4</sup><br>
+                        Di Huang<sup>3</sup> &nbsp; Ping Luo<sup>1</sup> &nbsp; Hongyang Li<sup>1♮</sup> &nbsp; Li Chen<sup>1♮</sup>
+                    </div>
+                    <div class="hero-affiliations">
+                        <span><sup>1</sup> The University of Hong Kong</span> &nbsp;
+                        <span><sup>2</sup> Shanghai Innovation Institute</span> &nbsp;
+                        <span><sup>3</sup> Beihang University</span> &nbsp;
+                        <span><sup>4</sup> Kinetix AI</span>
+                    </div>
+                    <div class="hero-notes">
+                        <span>*Equal Contribution</span> &nbsp; <span>♮Project Lead</span>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <a href="https://opendrivelab.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary"><svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>Read Full Paper</a>
+                    <a href="#" class="btn btn-secondary"><svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>Code (Coming Soon)</a>
+                </div>
+            </div>
         </div>
-        <div class="hero-cta">
-            <a href="#" class="btn btn-primary"><svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>Read Full Paper</a>
-            <a href="#" class="btn btn-secondary"><svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>View Code</a>
+        <div class="hero-scroll-hint"><span>Scroll</span><div class="hero-chevron"></div></div>
+    </header>
+
+    <!-- Abstract Section -->
+    <section class="section" id="abstract">
+        <div class="container">
+            <div class="section-header reveal"><span class="section-label">HIGHLIGHT</span><h2 class="section-title">Research Summary</h2></div>
+            <div class="abstract-container reveal">
+                <div class="abstract-text">
+                    <p>Human demonstrations offer <span class="highlight-text">rich environmental diversity and scale naturally</span>, making them an appealing alternative to robot teleoperation. We present <strong>EGOHUMANOID</strong>, the first framework to co-train a vision-language-action policy using abundant egocentric human demonstrations together with a limited amount of robot data.</p>
+                    <p>To bridge the embodiment gap, we introduce a <span class="highlight-text">systematic alignment pipeline</span> with two key components: <strong>view alignment</strong> reduces visual discrepancies; <strong>action alignment</strong> maps human motions into a unified action space for humanoid control.</p>
+                    <p>Extensive real-world experiments demonstrate that incorporating robot-free egocentric data <span class="highlight-text">significantly outperforms robot-only baselines by 51%</span>, particularly in unseen environments.</p>
+                </div>
+                <div class="contributions-sidebar">
+                    <div class="contribution-card-mini"><div class="contribution-icon-mini"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg></div><h4>First Human-to-Humanoid Transfer</h4><p>The first endorsement for whole-body loco-manipulation tasks.</p></div>
+                    <div class="contribution-card-mini"><div class="contribution-icon-mini"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg></div><h4>Principled Alignment Pipeline</h4><p>View and action alignment to bridge embodiment gaps.</p></div>
+                    <div class="contribution-card-mini"><div class="contribution-icon-mini"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg></div><h4>Comprehensive Evaluation</h4><p>51% improvement in generalization performance.</p></div>
+                </div>
+            </div>
+            <div class="abstract-video reveal">
+                <video controls playsinline preload="metadata">
+                    <source src="https://assets.kinetixai.cn/20260210/title_video1.mp4" type="video/mp4">
+                </video>
+            </div>
         </div>
-        <div class="hero-visual">
-            <div class="video-container"><div class="video-placeholder" id="heroVideo"><div class="video-play-btn"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><span class="video-label">Click to play demo video</span></div></div>
+    </section>
+
+    <!-- Four Tasks Section -->
+    <section class="section section-dark" id="tasks">
+        <div class="container">
+            <div class="section-header reveal"><span class="section-label">Task Showcase</span><h2 class="section-title">Real World Loco-Manipulation Tasks</h2><p class="section-desc">Spanning varying levels of difficulty for large-space movement and dexterous manipulation</p></div>
+            
+            <div class="task-block reveal">
+                <div class="task-block-header"><div class="task-block-icon robot-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div><div><h3 class="task-block-title">Robot Data Collection</h3><p class="task-block-subtitle">Teleoperated demonstrations in laboratory environments</p></div></div>
+                <div class="task-video-grid">
+                    <div class="task-video-card"><div class="task-video-placeholder"><video src="https://assets.kinetixai.cn/20260210/bed_data_robot.mp4" autoplay muted loop playsinline></video><div class="task-video-badge">Laboratory</div></div><div class="task-video-title">Pillow Placement</div></div>
+                    <div class="task-video-card"><div class="task-video-placeholder"><video src="https://assets.kinetixai.cn/20260210/trash_data_robot.mp4" autoplay muted loop playsinline></video><div class="task-video-badge">Laboratory</div></div><div class="task-video-title">Trash Disposal</div></div>
+                    <div class="task-video-card"><div class="task-video-placeholder"><video src="https://assets.kinetixai.cn/20260210/toy_data_robot.mp4" autoplay muted loop playsinline></video><div class="task-video-badge">Laboratory</div></div><div class="task-video-title">Toy Transfer</div></div>
+                    <div class="task-video-card"><div class="task-video-placeholder"><video src="https://assets.kinetixai.cn/20260210/cart_data_robot%20-%2001.mp4" autoplay muted loop playsinline></video><div class="task-video-badge">Laboratory</div></div><div class="task-video-title">Cart Stowing</div></div>
+                </div>
+            </div>
+
+            <div class="task-block reveal">
+                <div class="task-block-header"><div class="task-block-icon human-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg></div><div><h3 class="task-block-title">Human Data Collection</h3><p class="task-block-subtitle">Egocentric demonstrations in diverse real-world environments</p></div></div>
+                <div class="task-video-grid">
+                    <div class="task-video-card"><div class="task-video-placeholder human"><video src="https://assets.kinetixai.cn/20260210/bed_data_human.mp4" autoplay muted loop playsinline></video><div class="task-video-badge">In-the-Wild</div></div><div class="task-video-title">Pillow Placement</div></div>
+                    <div class="task-video-card"><div class="task-video-placeholder human"><video src="https://assets.kinetixai.cn/20260210/trash_data_human.mp4" autoplay muted loop playsinline></video><div class="task-video-badge">In-the-Wild</div></div><div class="task-video-title">Trash Disposal</div></div>
+                    <div class="task-video-card"><div class="task-video-placeholder human"><video src="https://assets.kinetixai.cn/20260210/toy_data_human.mp4" autoplay muted loop playsinline></video><div class="task-video-badge">In-the-Wild</div></div><div class="task-video-title">Toy Transfer</div></div>
+                    <div class="task-video-card"><div class="task-video-placeholder human"><video src="https://assets.kinetixai.cn/20260210/cart_data_human.mp4" autoplay muted loop playsinline></video><div class="task-video-badge">In-the-Wild</div></div><div class="task-video-title">Cart Stowing</div></div>
+                </div>
+            </div>
+
+            <div class="task-block reveal">
+                <div class="task-block-header"><div class="task-block-icon deploy-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div><div><h3 class="task-block-title">Loco-Manipulation Deployment</h3><p class="task-block-subtitle">Real-world deployment comparing different training configurations</p></div></div>
+                <div class="deploy-tabs">
+                    <button class="deploy-tab active" data-tab="deploy-pillow">Pillow Placement</button>
+                    <button class="deploy-tab" data-tab="deploy-trash">Trash Disposal</button>
+                    <button class="deploy-tab" data-tab="deploy-toy">Toy Transfer</button>
+                    <button class="deploy-tab" data-tab="deploy-cart">Cart Stowing</button>
+                </div>
+                <div class="deploy-content active" id="deploy-pillow">
+                    <div class="deploy-grid">
+                        <div class="deploy-card"><div class="deploy-video-placeholder robot-only"><video src="https://assets.kinetixai.cn/20260210/title_video1.mp4" autoplay muted loop playsinline></video></div><div class="deploy-card-footer"><div class="deploy-card-title">Robot-only</div><div class="deploy-card-score danger">0% Gen.</div></div></div>
+                        <div class="deploy-card"><div class="deploy-video-placeholder human-only"><video src="https://assets.kinetixai.cn/20260210/title_video1.mp4" autoplay muted loop playsinline></video></div><div class="deploy-card-footer"><div class="deploy-card-title">Human-only</div><div class="deploy-card-score warning">95% Gen.</div></div></div>
+                        <div class="deploy-card highlight"><div class="deploy-video-placeholder cotrain"><video src="https://assets.kinetixai.cn/20260210/title_video1.mp4" autoplay muted loop playsinline></video></div><div class="deploy-card-footer"><div class="deploy-card-title">Co-training</div><div class="deploy-card-score success">97.5% Gen.</div></div></div>
+                    </div>
+                </div>
+                <div class="deploy-content" id="deploy-trash">
+                    <div class="deploy-grid">
+                        <div class="deploy-card"><div class="deploy-video-placeholder robot-only"><video src="https://assets.kinetixai.cn/20260210/title_video1.mp4" autoplay muted loop playsinline></video></div><div class="deploy-card-footer"><div class="deploy-card-title">Robot-only</div><div class="deploy-card-score warning">55% Gen.</div></div></div>
+                        <div class="deploy-card"><div class="deploy-video-placeholder human-only"><video src="https://assets.kinetixai.cn/20260210/title_video1.mp4" autoplay muted loop playsinline></video></div><div class="deploy-card-footer"><div class="deploy-card-title">Human-only</div><div class="deploy-card-score warning">80% Gen.</div></div></div>
+                        <div class="deploy-card highlight"><div class="deploy-video-placeholder cotrain"><video src="https://assets.kinetixai.cn/20260210/title_video1.mp4" autoplay muted loop playsinline></video></div><div class="deploy-card-footer"><div class="deploy-card-title">Co-training</div><div class="deploy-card-score success">87.5% Gen.</div></div></div>
+                    </div>
+                </div>
+                <div class="deploy-content" id="deploy-toy">
+                    <div class="deploy-grid">
+                        <div class="deploy-card"><div class="deploy-video-placeholder robot-only"><video src="https://assets.kinetixai.cn/20260210/title_video1.mp4" autoplay muted loop playsinline></video></div><div class="deploy-card-footer"><div class="deploy-card-title">Robot-only</div><div class="deploy-card-score warning">37.5% Gen.</div></div></div>
+                        <div class="deploy-card"><div class="deploy-video-placeholder human-only"><video src="https://assets.kinetixai.cn/20260210/title_video1.mp4" autoplay muted loop playsinline></video></div><div class="deploy-card-footer"><div class="deploy-card-title">Human-only</div><div class="deploy-card-score warning">35% Gen.</div></div></div>
+                        <div class="deploy-card highlight"><div class="deploy-video-placeholder cotrain"><video src="https://assets.kinetixai.cn/20260210/title_video1.mp4" autoplay muted loop playsinline></video></div><div class="deploy-card-footer"><div class="deploy-card-title">Co-training</div><div class="deploy-card-score success">78.8% Gen.</div></div></div>
+                    </div>
+                </div>
+                <div class="deploy-content" id="deploy-cart">
+                    <div class="deploy-grid">
+                        <div class="deploy-card"><div class="deploy-video-placeholder robot-only"><video src="https://assets.kinetixai.cn/20260210/title_video1.mp4" autoplay muted loop playsinline></video></div><div class="deploy-card-footer"><div class="deploy-card-title">Robot-only</div><div class="deploy-card-score warning">31.3% Gen.</div></div></div>
+                        <div class="deploy-card"><div class="deploy-video-placeholder human-only"><video src="https://assets.kinetixai.cn/20260210/title_video1.mp4" autoplay muted loop playsinline></video></div><div class="deploy-card-footer"><div class="deploy-card-title">Human-only</div><div class="deploy-card-score danger">0% Gen.</div></div></div>
+                        <div class="deploy-card highlight"><div class="deploy-video-placeholder cotrain"><video src="https://assets.kinetixai.cn/20260210/title_video1.mp4" autoplay muted loop playsinline></video></div><div class="deploy-card-footer"><div class="deploy-card-title">Co-training</div><div class="deploy-card-score success">65% Gen.</div></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="section" id="results">
+        <div class="container">
+            <div class="section-header reveal"><span class="section-label">Results</span><h2 class="section-title">Performance Comparison</h2><p class="section-desc">Co-training consistently improves performance across both in-domain and generalization settings</p></div>
+            <div class="performance-container reveal">
+                <div class="chart-card"><div class="chart-header"><div><div class="chart-title">In-Domain Performance</div><div class="chart-subtitle">Laboratory environments</div></div><div class="chart-legend"><div class="legend-item"><span class="legend-dot robot"></span>Robot-only</div><div class="legend-item"><span class="legend-dot cotrain"></span>Co-training</div></div></div><div class="chart-wrapper"><canvas id="inDomainChart"></canvas></div></div>
+                <div class="chart-card"><div class="chart-header"><div><div class="chart-title">Generalization Performance</div><div class="chart-subtitle">Diverse real-world scenes (+51% improvement)</div></div><div class="chart-legend"><div class="legend-item"><span class="legend-dot robot"></span>Robot-only</div><div class="legend-item"><span class="legend-dot cotrain"></span>Co-training</div></div></div><div class="chart-wrapper"><canvas id="generalizationChart"></canvas></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subtask Analysis -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="section-header reveal"><span class="section-label">Transfer Analysis</span><h2 class="section-title">Subtask Performance Breakdown</h2><p class="section-desc">Navigation transfers effectively; manipulation depends on precision requirements</p></div>
+            <div class="table-container reveal">
+                <table class="subtask-table">
+                    <thead>
+                        <tr><th>Data Config</th><th colspan="2">Pillow Placement</th><th colspan="2">Trash Disposal</th><th colspan="4">Toy Transfer</th><th colspan="4">Cart Stowing</th></tr>
+                        <tr class="subtask-header-row"><th></th><th class="cell-loco">s1</th><th class="cell-manip">s2</th><th class="cell-loco">s1</th><th class="cell-manip">s2</th><th class="cell-loco">s1</th><th class="cell-manip">s2</th><th class="cell-loco">s3</th><th class="cell-manip">s4</th><th class="cell-loco">s1</th><th class="cell-manip">s2</th><th class="cell-manip">s3</th><th class="cell-loco">s4</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Robot-only</td><td class="cell-danger">0</td><td class="cell-danger">0</td><td class="cell-warning">65</td><td class="cell-warning">45</td><td class="cell-success">100</td><td class="cell-warning">50</td><td class="cell-danger">0</td><td class="cell-danger">0</td><td class="cell-success">100</td><td class="cell-danger">15</td><td class="cell-danger">5</td><td class="cell-danger">5</td></tr>
+                        <tr><td>Human-only</td><td class="cell-success">100</td><td class="cell-success">95</td><td class="cell-success">100</td><td class="cell-success">80</td><td class="cell-success">100</td><td class="cell-success">100</td><td class="cell-warning">45</td><td class="cell-warning">35</td><td class="cell-success">100</td><td class="cell-danger">5</td><td class="cell-danger">0</td><td class="cell-danger">0</td></tr>
+                        <tr class="highlight-row"><td><strong>Co-training</strong></td><td class="cell-success">100</td><td class="cell-success">95</td><td class="cell-success">100</td><td class="cell-success">75</td><td class="cell-success">100</td><td class="cell-success">100</td><td class="cell-warning">60</td><td class="cell-warning">55</td><td class="cell-success">100</td><td class="cell-warning">60</td><td class="cell-warning">50</td><td class="cell-warning">50</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-legend reveal"><div class="legend-item"><span class="legend-dot" style="background:var(--accent);"></span>Locomotion</div><div class="legend-item"><span class="legend-dot" style="background:var(--accent-orange);"></span>Manipulation</div></div>
+        </div>
+    </section>
+
+    <!-- Failure Analysis -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header reveal"><span class="section-label">Failure Analysis</span><h2 class="section-title">Understanding Failure Modes</h2><p class="section-desc">Systematic breakdown of failure cases across different training configurations</p></div>
+            <div class="sankey-container reveal">
+                <div class="sankey-card"><div class="sankey-title">(a) Robot-only</div><svg id="sankey-a"></svg></div>
+                <div class="sankey-card"><div class="sankey-title">(b) Human-only</div><svg id="sankey-b"></svg></div>
+                <div class="sankey-card"><div class="sankey-title">(c) Co-training</div><svg id="sankey-c"></svg></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scaling Analysis -->
+    <section class="section section-dark" id="scaling">
+        <div class="container">
+            <div class="section-header reveal"><span class="section-label">Scaling Analysis</span><h2 class="section-title">Human Data Scaling Behavior</h2><p class="section-desc">Performance consistently improves as human demonstrations accumulate</p></div>
+            
+            <div class="scaling-legend reveal">
+                <div class="scaling-legend-item"><span class="scaling-legend-dot" style="background:#3A8DC1;"></span>Robot:Human 1:2</div>
+                <div class="scaling-legend-item"><span class="scaling-legend-dot" style="background:#5AAE61;"></span>Robot:Human 1:1</div>
+                <div class="scaling-legend-item"><span class="scaling-legend-dot" style="background:#E5A835;"></span>Robot:Human 2:1</div>
+            </div>
+            
+            <div class="scaling-grid reveal">
+                <div class="scaling-chart-card">
+                    <div class="scaling-chart-title">Average</div>
+                    <canvas id="scalingAverage"></canvas>
+                </div>
+                <div class="scaling-chart-card">
+                    <div class="scaling-chart-title">Pillow Placement</div>
+                    <canvas id="scalingPillow"></canvas>
+                </div>
+                <div class="scaling-chart-card">
+                    <div class="scaling-chart-title">Trash Disposal</div>
+                    <canvas id="scalingTrash"></canvas>
+                </div>
+                <div class="scaling-chart-card">
+                    <div class="scaling-chart-title">Toy Transfer</div>
+                    <canvas id="scalingToy"></canvas>
+                </div>
+                <div class="scaling-chart-card">
+                    <div class="scaling-chart-title">Cart Stowing</div>
+                    <canvas id="scalingCart"></canvas>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -59,12 +268,12 @@
                         <div class="demo-card human">
                             <h3>Human Demonstrations</h3>
                             <p class="demo-subtitle">Diverse Environments</p>
-                            <div class="image-placeholder"><span>📷 Human Demo</span></div>
+                            <div class="image-placeholder"><img src="https://assets.kinetixai.cn/20260210/human_demo.png" alt="Human Demo" style="width:100%;height:100%;object-fit:cover;border-radius:8px;"></div>
                         </div>
                         <div class="demo-card robot">
                             <h3>Robot Demonstrations</h3>
                             <p class="demo-subtitle">Laboratory Environments</p>
-                            <div class="image-placeholder"><span>📷 Robot Demo</span></div>
+                            <div class="image-placeholder"><img src="https://assets.kinetixai.cn/20260210/robot_demo.jpg" alt="Robot Demo" style="width:100%;height:100%;object-fit:cover;border-radius:8px;"></div>
                         </div>
                     </div>
 
@@ -73,15 +282,15 @@
                     <div class="view-alignment">
                         <h3 class="pipeline-section-title"><span>(a)</span> View Alignment</h3>
                         <div class="process-loop">
-                            <div class="process-item item-tl"><div class="process-label">Depth Estimation</div><div class="image-placeholder"><span>📷 Depth</span></div></div>
+                            <div class="process-item item-tl"><div class="process-label">Depth Estimation</div><div class="image-placeholder"><img src="https://assets.kinetixai.cn/20260210/depth.png" alt="Depth" style="width:100%;height:100%;object-fit:cover;border-radius:8px;"></div></div>
                             <div class="empty-top"></div>
-                            <div class="process-item item-tr"><div class="process-label">Inpainting</div><div class="image-placeholder"><span>📷 Inpainting</span></div></div>
+                            <div class="process-item item-tr"><div class="process-label">Inpainting</div><div class="image-placeholder"><img src="https://assets.kinetixai.cn/20260210/result.png" alt="Inpainting" style="width:100%;height:100%;object-fit:cover;border-radius:8px;"></div></div>
                             <div class="loop-arrow arrow-left arrow-down"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg></div>
                             <div class="empty-center"></div>
                             <div class="loop-arrow arrow-right arrow-up"><svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg></div>
-                            <div class="process-item item-bl"><div class="process-label">Point Cloud Transform</div><div class="image-placeholder"><span>📷 Transform</span></div></div>
+                            <div class="process-item item-bl"><div class="process-label">Point Cloud Transform</div><div class="image-placeholder" id="plyContainer" style="position:relative;cursor:grab;overflow:hidden;"><canvas id="plyCanvas"></canvas><div class="ply-hint">🖱 Drag to rotate</div></div></div>
                             <div class="loop-arrow arrow-bottom arrow-right-dir"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-                            <div class="process-item item-br"><div class="process-label">Point Cloud Reprojection</div><div class="image-placeholder"><span>📷 Reprojection</span></div></div>
+                            <div class="process-item item-br"><div class="process-label">Point Cloud Reprojection</div><div class="image-placeholder"><img src="https://assets.kinetixai.cn/20260210/warped.png" alt="Reprojection" style="width:100%;height:100%;object-fit:cover;border-radius:8px;"></div></div>
                         </div>
                     </div>
 
@@ -113,131 +322,9 @@
         </div>
     </section>
 
-    <!-- Four Tasks Section -->
-    <section class="section section-dark" id="tasks">
-        <div class="container">
-            <div class="section-header reveal"><span class="section-label">Task Showcase</span><h2 class="section-title">Four Loco-Manipulation Tasks</h2><p class="section-desc">Spanning varying levels of difficulty for large-space movement and dexterous manipulation</p></div>
-            
-            <div class="task-block reveal">
-                <div class="task-block-header"><div class="task-block-icon robot-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div><div><h3 class="task-block-title">Robot Data Collection</h3><p class="task-block-subtitle">Teleoperated demonstrations in laboratory environments</p></div></div>
-                <div class="task-video-grid">
-                    <div class="task-video-card"><div class="task-video-placeholder"><span>Pillow Placement</span><div class="task-video-badge">Laboratory</div></div><div class="task-video-title">Pillow Placement</div></div>
-                    <div class="task-video-card"><div class="task-video-placeholder"><span>Trash Disposal</span><div class="task-video-badge">Laboratory</div></div><div class="task-video-title">Trash Disposal</div></div>
-                    <div class="task-video-card"><div class="task-video-placeholder"><span>Toy Transfer</span><div class="task-video-badge">Laboratory</div></div><div class="task-video-title">Toy Transfer</div></div>
-                    <div class="task-video-card"><div class="task-video-placeholder"><span>Cart Stowing</span><div class="task-video-badge">Laboratory</div></div><div class="task-video-title">Cart Stowing</div></div>
-                </div>
-            </div>
-
-            <div class="task-block reveal">
-                <div class="task-block-header"><div class="task-block-icon human-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg></div><div><h3 class="task-block-title">Human Data Collection</h3><p class="task-block-subtitle">Egocentric demonstrations in diverse real-world environments</p></div></div>
-                <div class="task-video-grid">
-                    <div class="task-video-card"><div class="task-video-placeholder human"><span>Pillow Placement</span><div class="task-video-badge">In-the-Wild</div></div><div class="task-video-title">Pillow Placement</div></div>
-                    <div class="task-video-card"><div class="task-video-placeholder human"><span>Trash Disposal</span><div class="task-video-badge">In-the-Wild</div></div><div class="task-video-title">Trash Disposal</div></div>
-                    <div class="task-video-card"><div class="task-video-placeholder human"><span>Toy Transfer</span><div class="task-video-badge">In-the-Wild</div></div><div class="task-video-title">Toy Transfer</div></div>
-                    <div class="task-video-card"><div class="task-video-placeholder human"><span>Cart Stowing</span><div class="task-video-badge">In-the-Wild</div></div><div class="task-video-title">Cart Stowing</div></div>
-                </div>
-            </div>
-
-            <div class="task-block reveal">
-                <div class="task-block-header"><div class="task-block-icon deploy-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div><div><h3 class="task-block-title">Loco-Manipulation Deployment</h3><p class="task-block-subtitle">Real-world deployment comparing different training configurations</p></div></div>
-                <div class="deploy-tabs">
-                    <button class="deploy-tab active" data-tab="deploy-pillow">Pillow Placement</button>
-                    <button class="deploy-tab" data-tab="deploy-trash">Trash Disposal</button>
-                    <button class="deploy-tab" data-tab="deploy-toy">Toy Transfer</button>
-                    <button class="deploy-tab" data-tab="deploy-cart">Cart Stowing</button>
-                </div>
-                <div class="deploy-content active" id="deploy-pillow">
-                    <div class="deploy-grid">
-                        <div class="deploy-card"><div class="deploy-video-placeholder robot-only"><span>Robot-only</span></div><div class="deploy-card-footer"><div class="deploy-card-title">Robot-only</div><div class="deploy-card-score danger">0% Gen.</div></div></div>
-                        <div class="deploy-card"><div class="deploy-video-placeholder human-only"><span>Human-only</span></div><div class="deploy-card-footer"><div class="deploy-card-title">Human-only</div><div class="deploy-card-score warning">95% Gen.</div></div></div>
-                        <div class="deploy-card highlight"><div class="deploy-video-placeholder cotrain"><span>Co-training</span></div><div class="deploy-card-footer"><div class="deploy-card-title">Co-training</div><div class="deploy-card-score success">97.5% Gen.</div></div></div>
-                    </div>
-                </div>
-                <div class="deploy-content" id="deploy-trash">
-                    <div class="deploy-grid">
-                        <div class="deploy-card"><div class="deploy-video-placeholder robot-only"><span>Robot-only</span></div><div class="deploy-card-footer"><div class="deploy-card-title">Robot-only</div><div class="deploy-card-score warning">55% Gen.</div></div></div>
-                        <div class="deploy-card"><div class="deploy-video-placeholder human-only"><span>Human-only</span></div><div class="deploy-card-footer"><div class="deploy-card-title">Human-only</div><div class="deploy-card-score warning">80% Gen.</div></div></div>
-                        <div class="deploy-card highlight"><div class="deploy-video-placeholder cotrain"><span>Co-training</span></div><div class="deploy-card-footer"><div class="deploy-card-title">Co-training</div><div class="deploy-card-score success">87.5% Gen.</div></div></div>
-                    </div>
-                </div>
-                <div class="deploy-content" id="deploy-toy">
-                    <div class="deploy-grid">
-                        <div class="deploy-card"><div class="deploy-video-placeholder robot-only"><span>Robot-only</span></div><div class="deploy-card-footer"><div class="deploy-card-title">Robot-only</div><div class="deploy-card-score warning">37.5% Gen.</div></div></div>
-                        <div class="deploy-card"><div class="deploy-video-placeholder human-only"><span>Human-only</span></div><div class="deploy-card-footer"><div class="deploy-card-title">Human-only</div><div class="deploy-card-score warning">35% Gen.</div></div></div>
-                        <div class="deploy-card highlight"><div class="deploy-video-placeholder cotrain"><span>Co-training</span></div><div class="deploy-card-footer"><div class="deploy-card-title">Co-training</div><div class="deploy-card-score success">78.8% Gen.</div></div></div>
-                    </div>
-                </div>
-                <div class="deploy-content" id="deploy-cart">
-                    <div class="deploy-grid">
-                        <div class="deploy-card"><div class="deploy-video-placeholder robot-only"><span>Robot-only</span></div><div class="deploy-card-footer"><div class="deploy-card-title">Robot-only</div><div class="deploy-card-score warning">31.3% Gen.</div></div></div>
-                        <div class="deploy-card"><div class="deploy-video-placeholder human-only"><span>Human-only</span></div><div class="deploy-card-footer"><div class="deploy-card-title">Human-only</div><div class="deploy-card-score danger">0% Gen.</div></div></div>
-                        <div class="deploy-card highlight"><div class="deploy-video-placeholder cotrain"><span>Co-training</span></div><div class="deploy-card-footer"><div class="deploy-card-title">Co-training</div><div class="deploy-card-score success">65% Gen.</div></div></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Results Section -->
-    <section class="section" id="results">
-        <div class="container">
-            <div class="section-header reveal"><span class="section-label">Results</span><h2 class="section-title">Performance Comparison</h2><p class="section-desc">Co-training consistently improves performance across both in-domain and generalization settings</p></div>
-            <div class="performance-container reveal">
-                <div class="chart-card"><div class="chart-header"><div><div class="chart-title">In-Domain Performance</div><div class="chart-subtitle">Laboratory environments</div></div><div class="chart-legend"><div class="legend-item"><span class="legend-dot robot"></span>Robot-only</div><div class="legend-item"><span class="legend-dot cotrain"></span>Co-training</div></div></div><div class="chart-wrapper"><canvas id="inDomainChart"></canvas></div></div>
-                <div class="chart-card"><div class="chart-header"><div><div class="chart-title">Generalization Performance</div><div class="chart-subtitle">Diverse real-world scenes (+51% improvement)</div></div><div class="chart-legend"><div class="legend-item"><span class="legend-dot robot"></span>Robot-only</div><div class="legend-item"><span class="legend-dot cotrain"></span>Co-training</div></div></div><div class="chart-wrapper"><canvas id="generalizationChart"></canvas></div></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Subtask Analysis -->
+    <!-- Citation Section -->
     <section class="section section-dark">
         <div class="container">
-            <div class="section-header reveal"><span class="section-label">Transfer Analysis</span><h2 class="section-title">Subtask Performance Breakdown</h2><p class="section-desc">Navigation transfers effectively; manipulation depends on precision requirements</p></div>
-            <div class="table-container reveal">
-                <table class="subtask-table">
-                    <thead>
-                        <tr><th>Data Config</th><th colspan="2">Pillow Placement</th><th colspan="2">Trash Disposal</th><th colspan="4">Toy Transfer</th><th colspan="4">Cart Stowing</th></tr>
-                        <tr><th></th><th class="cell-loco">s1</th><th class="cell-manip">s2</th><th class="cell-loco">s1</th><th class="cell-manip">s2</th><th class="cell-loco">s1</th><th class="cell-manip">s2</th><th class="cell-loco">s3</th><th class="cell-manip">s4</th><th class="cell-loco">s1</th><th class="cell-manip">s2</th><th class="cell-manip">s3</th><th class="cell-manip">s4</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Robot-only</td><td class="cell-danger">0</td><td class="cell-danger">0</td><td class="cell-warning">65</td><td class="cell-warning">45</td><td class="cell-success">100</td><td class="cell-warning">50</td><td class="cell-danger">0</td><td class="cell-danger">0</td><td class="cell-success">100</td><td class="cell-danger">15</td><td class="cell-danger">5</td><td class="cell-danger">5</td></tr>
-                        <tr><td>Human-only</td><td class="cell-success">100</td><td class="cell-success">95</td><td class="cell-success">100</td><td class="cell-success">80</td><td class="cell-success">100</td><td class="cell-success">100</td><td class="cell-warning">45</td><td class="cell-warning">35</td><td class="cell-success">100</td><td class="cell-danger">5</td><td class="cell-danger">0</td><td class="cell-danger">0</td></tr>
-                        <tr><td><strong>Co-training</strong></td><td class="cell-success">100</td><td class="cell-success">95</td><td class="cell-success">100</td><td class="cell-success">75</td><td class="cell-success">100</td><td class="cell-success">100</td><td class="cell-warning">60</td><td class="cell-warning">55</td><td class="cell-success">100</td><td class="cell-warning">60</td><td class="cell-warning">50</td><td class="cell-warning">50</td></tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="table-legend reveal"><div class="legend-item"><span class="legend-dot" style="background:var(--accent-blue);"></span>Locomotion</div><div class="legend-item"><span class="legend-dot" style="background:var(--accent-orange);"></span>Manipulation</div></div>
-        </div>
-    </section>
-
-    <!-- Failure Analysis -->
-    <section class="section">
-        <div class="container">
-            <div class="section-header reveal"><span class="section-label">Failure Analysis</span><h2 class="section-title">Understanding Failure Modes</h2><p class="section-desc">Systematic breakdown of failure cases across different training configurations</p></div>
-            <div class="sankey-container reveal">
-                <div class="sankey-card"><div class="sankey-title">(a) Robot-only</div><div class="sankey-diagram"><div class="sankey-col left"><div class="sankey-node main">Failures<br><span class="sankey-value">70</span></div></div><div class="sankey-col mid"><div class="sankey-node type loco">Locomotion<br><span>37</span></div><div class="sankey-node type manip">Manipulation<br><span>33</span></div></div><div class="sankey-col right"><div class="sankey-node cause">Early Stop: 30</div><div class="sankey-node cause">No Stop: 5</div><div class="sankey-node cause">Poor Grasp: 22</div><div class="sankey-node cause">Early Gripper: 9</div></div></div></div>
-                <div class="sankey-card"><div class="sankey-title">(b) Human-only</div><div class="sankey-diagram"><div class="sankey-col left"><div class="sankey-node main">Failures<br><span class="sankey-value">49</span></div></div><div class="sankey-col mid"><div class="sankey-node type loco">Locomotion<br><span>11</span></div><div class="sankey-node type manip">Manipulation<br><span>38</span></div></div><div class="sankey-col right"><div class="sankey-node cause">Early Stop: 11</div><div class="sankey-node cause">Poor Grasp: 19</div><div class="sankey-node cause">Early Gripper: 11</div><div class="sankey-node cause">Poor Place: 8</div></div></div></div>
-                <div class="sankey-card"><div class="sankey-title">(c) Co-training</div><div class="sankey-diagram"><div class="sankey-col left"><div class="sankey-node main">Failures<br><span class="sankey-value">25</span></div></div><div class="sankey-col mid"><div class="sankey-node type loco">Locomotion<br><span>8</span></div><div class="sankey-node type manip">Manipulation<br><span>17</span></div></div><div class="sankey-col right"><div class="sankey-node cause">Early Stop: 4</div><div class="sankey-node cause">Poor Grasp: 8</div><div class="sankey-node cause">Poor Place: 8</div><div class="sankey-node cause">Wrong Orient: 4</div></div></div></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Abstract Section -->
-    <section class="section section-dark" id="abstract">
-        <div class="container">
-            <div class="section-header reveal"><span class="section-label">Abstract</span><h2 class="section-title">Research Summary</h2></div>
-            <div class="abstract-container reveal">
-                <div class="abstract-text">
-                    <p>Human demonstrations offer <span class="highlight-text">rich environmental diversity and scale naturally</span>, making them an appealing alternative to robot teleoperation. We present <strong>EGOHUMANOID</strong>, the first framework to co-train a vision-language-action policy using abundant egocentric human demonstrations together with a limited amount of robot data.</p>
-                    <p>To bridge the embodiment gap, we introduce a <span class="highlight-text">systematic alignment pipeline</span> with two key components: <strong>view alignment</strong> reduces visual discrepancies; <strong>action alignment</strong> maps human motions into a unified action space for humanoid control.</p>
-                    <p>Extensive real-world experiments demonstrate that incorporating robot-free egocentric data <span class="highlight-text">significantly outperforms robot-only baselines by 51%</span>, particularly in unseen environments.</p>
-                </div>
-                <div class="contributions-sidebar">
-                    <div class="contribution-card-mini"><div class="contribution-icon-mini"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg></div><h4>First Human-to-Humanoid Transfer</h4><p>The first endorsement for whole-body loco-manipulation tasks.</p></div>
-                    <div class="contribution-card-mini"><div class="contribution-icon-mini"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg></div><h4>Principled Alignment Pipeline</h4><p>View and action alignment to bridge embodiment gaps.</p></div>
-                    <div class="contribution-card-mini"><div class="contribution-icon-mini"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg></div><h4>Comprehensive Evaluation</h4><p>51% improvement in generalization performance.</p></div>
-                </div>
-            </div>
             <div class="citation-box reveal">
                 <div class="citation-header"><div class="citation-title"><svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>BibTeX Citation</div><button class="citation-copy" onclick="copyCitation()">Copy</button></div>
                 <pre class="citation-code">@article{egohumanoid2025,
@@ -253,10 +340,287 @@
     <footer class="footer">
         <div class="footer-inner">
             <div class="footer-logo">EGOHUMANOID</div>
-            <div class="footer-links"><a href="#demo">Demo</a><a href="#method">Method</a><a href="#tasks">Tasks</a><a href="#results">Results</a></div>
+            <div class="footer-links"><a href="#demo">Demo</a><a href="#tasks">Tasks</a><a href="#results">Results</a><a href="#abstract">Summary</a><a href="#method">Method</a></div>
         </div>
     </footer>
 
+    <script>
+    (function(){
+        const DATASETS = [
+            {
+                svgId:'sankey-a', total:70,
+                categories:[
+                    { name:'Locomotion Failure', value:37, color:'#2563EB',
+                      light:'rgba(37,99,235,0.12)', border:'rgba(37,99,235,0.4)', band:'rgba(37,99,235,0.28)',
+                      causes:[{name:'Wrong Orientation',value:2},{name:'Early Stop',value:30},{name:'No Stop',value:5}]},
+                    { name:'Manipulation Failure', value:33, color:'#F97316',
+                      light:'rgba(249,115,22,0.12)', border:'rgba(249,115,22,0.4)', band:'rgba(249,115,22,0.28)',
+                      causes:[{name:'Early Gripper Open',value:9},{name:'Poor Grasping Pose',value:22},{name:'Poor Placing Pose',value:2}]}
+                ]
+            },
+            {
+                svgId:'sankey-b', total:49,
+                categories:[
+                    { name:'Locomotion Failure', value:11, color:'#2563EB',
+                      light:'rgba(37,99,235,0.12)', border:'rgba(37,99,235,0.4)', band:'rgba(37,99,235,0.28)',
+                      causes:[{name:'Early Stop',value:11}]},
+                    { name:'Manipulation Failure', value:38, color:'#F97316',
+                      light:'rgba(249,115,22,0.12)', border:'rgba(249,115,22,0.4)', band:'rgba(249,115,22,0.28)',
+                      causes:[{name:'Early Gripper Open',value:11},{name:'Poor Grasping Pose',value:19},{name:'Poor Placing Pose',value:8}]}
+                ]
+            },
+            {
+                svgId:'sankey-c', total:25,
+                categories:[
+                    { name:'Locomotion Failure', value:8, color:'#2563EB',
+                      light:'rgba(37,99,235,0.12)', border:'rgba(37,99,235,0.4)', band:'rgba(37,99,235,0.28)',
+                      causes:[{name:'Wrong Orientation',value:4},{name:'Early Stop',value:4}]},
+                    { name:'Manipulation Failure', value:17, color:'#F97316',
+                      light:'rgba(249,115,22,0.12)', border:'rgba(249,115,22,0.4)', band:'rgba(249,115,22,0.28)',
+                      causes:[{name:'Early Gripper Open',value:1},{name:'Poor Grasping Pose',value:8},{name:'Poor Placing Pose',value:8}]}
+                ]
+            }
+        ];
+
+        DATASETS.forEach(d => drawSankey(d));
+
+        function drawSankey(data) {
+            const svg = document.getElementById(data.svgId);
+            if (!svg) return;
+            const ns = 'http://www.w3.org/2000/svg';
+            function ce(tag, attrs) {
+                const e = document.createElementNS(ns, tag);
+                for (const [k,v] of Object.entries(attrs)) e.setAttribute(k, String(v));
+                return e;
+            }
+
+            /* Layout constants */
+            const nodeW = [110, 115, 145];
+            const flowW = 50;
+            const padX = 8, padY = 20, nodeGap = 6, minH = 22;
+            const W = padX*2 + nodeW[0] + flowW + nodeW[1] + flowW + nodeW[2];
+            const colX = [padX, padX+nodeW[0]+flowW, padX+nodeW[0]+flowW+nodeW[1]+flowW];
+
+            /* Flatten right-side causes */
+            const cats = data.categories;
+            const allRight = [];
+            cats.forEach(c => c.causes.forEach(r => allRight.push({...r, color:c.color, light:c.light, border:c.border, band:c.band})));
+
+            /* Compute scale so tallest column fits ~260px */
+            const target = 260;
+            const midGaps = (cats.length-1)*nodeGap;
+            const rightGaps = (allRight.length-1)*nodeGap;
+            const rightSum = allRight.reduce((s,n)=>s+n.value,0);
+            const scale = Math.min(
+                target / data.total,
+                (target - midGaps) / data.total,
+                rightSum > 0 ? (target - rightGaps) / rightSum : 999
+            );
+            function nh(v){ return Math.max(v*scale, minH); }
+
+            const leftH = nh(data.total);
+            const mNodes = cats.map(c=>({...c, h:nh(c.value)}));
+            const mTotalH = mNodes.reduce((s,n)=>s+n.h,0) + midGaps;
+            const rNodes = allRight.map(n=>({...n, h:nh(n.value)}));
+            const rTotalH = rNodes.reduce((s,n)=>s+n.h,0) + rightGaps;
+            const maxH = Math.max(leftH, mTotalH, rTotalH);
+            const H = maxH + 2*padY;
+
+            svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+
+            /* Y positions (centred) */
+            const leftY = padY + (maxH-leftH)/2;
+            let cy = padY + (maxH-mTotalH)/2;
+            mNodes.forEach(n=>{ n.y=cy; cy+=n.h+nodeGap; });
+            cy = padY + (maxH-rTotalH)/2;
+            rNodes.forEach(n=>{ n.y=cy; cy+=n.h+nodeGap; });
+
+            /* Draw flow band */
+            function band(x1,y1,h1,x2,y2,h2,col){
+                const mx1=x1+(x2-x1)*0.42, mx2=x1+(x2-x1)*0.58;
+                svg.appendChild(ce('path',{
+                    d:`M${x1},${y1} C${mx1},${y1} ${mx2},${y2} ${x2},${y2} L${x2},${y2+h2} C${mx2},${y2+h2} ${mx1},${y1+h1} ${x1},${y1+h1} Z`,
+                    fill:col, opacity:'0.32'
+                }));
+            }
+
+            /* Flows: left → mid */
+            let off = leftY;
+            mNodes.forEach(mn=>{
+                const srcH = (mn.value/data.total)*leftH;
+                band(colX[0]+nodeW[0], off, srcH, colX[1], mn.y, mn.h, mn.band);
+                off += srcH;
+            });
+
+            /* Flows: mid → right */
+            let ri = 0;
+            cats.forEach((cat,ci)=>{
+                let mOff = mNodes[ci].y;
+                cat.causes.forEach(cause=>{
+                    const rn = rNodes[ri];
+                    const srcH = (cause.value/cat.value)*mNodes[ci].h;
+                    band(colX[1]+nodeW[1], mOff, srcH, colX[2], rn.y, rn.h, cat.band);
+                    mOff += srcH;
+                    ri++;
+                });
+            });
+
+            /* Draw node rectangles */
+            function drawRect(x,y,w,h,fill,stroke){
+                svg.appendChild(ce('rect',{x,y,width:w,height:h,rx:6,fill,stroke,'stroke-width':'1'}));
+            }
+            drawRect(colX[0], leftY, nodeW[0], leftH, 'rgba(239,68,68,0.12)','rgba(239,68,68,0.4)');
+            mNodes.forEach(mn=> drawRect(colX[1], mn.y, nodeW[1], mn.h, mn.light, mn.border));
+            rNodes.forEach(rn=> drawRect(colX[2], rn.y, nodeW[2], rn.h, rn.light, rn.border));
+
+            /* Text labels */
+            function txt(x,y,str,opts={}){
+                const t = ce('text',{
+                    x,y,
+                    'font-size': opts.size||11,
+                    'font-family': "'Manrope',sans-serif",
+                    'font-weight': opts.weight||400,
+                    fill: opts.fill||'#444',
+                    'dominant-baseline':'middle',
+                    'text-anchor': opts.anchor||'middle'
+                });
+                t.textContent = str;
+                svg.appendChild(t);
+            }
+
+            /* Left */
+            const lc = colX[0]+nodeW[0]/2;
+            txt(lc, leftY+leftH/2-10, 'Failure Trials', {size:11, weight:600});
+            txt(lc, leftY+leftH/2+10, String(data.total), {size:16, weight:700, fill:'#EF4444'});
+
+            /* Mid */
+            mNodes.forEach(mn=>{
+                const cx = colX[1]+nodeW[1]/2, cy = mn.y+mn.h/2;
+                if(mn.h >= 50){
+                    const parts = mn.name.split(' ');
+                    txt(cx, cy-14, parts.slice(0,-1).join(' '), {size:10.5, weight:600});
+                    txt(cx, cy+1, parts[parts.length-1], {size:10.5, weight:600});
+                    txt(cx, cy+16, String(mn.value), {size:13, weight:700, fill:mn.color});
+                } else if(mn.h >= 36){
+                    txt(cx, cy-7, mn.name, {size:9.5, weight:600});
+                    txt(cx, cy+8, String(mn.value), {size:12, weight:700, fill:mn.color});
+                } else {
+                    txt(cx, cy, mn.value, {size:11, weight:700, fill:mn.color});
+                }
+            });
+
+            /* Right */
+            rNodes.forEach(rn=>{
+                const cx = colX[2]+nodeW[2]/2;
+                txt(cx, rn.y+rn.h/2, rn.name+': '+rn.value, {size:10, weight:500});
+            });
+        }
+    })();
+    </script>
     <script src="scripts.js"></script>
+    <script type="module">
+        import * as THREE from 'three';
+        import { PLYLoader } from 'three/addons/loaders/PLYLoader.js';
+        import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+        const container = document.getElementById('plyContainer');
+        const canvas = document.getElementById('plyCanvas');
+        if (container && canvas) {
+            const scene = new THREE.Scene();
+            scene.background = new THREE.Color(0xf0f0f0);
+
+            const w = container.clientWidth || 200;
+            const h = container.clientHeight || 200;
+            const camera = new THREE.PerspectiveCamera(50, w / h, 0.01, 100);
+            camera.position.set(0, 0, 2.5);
+
+            const renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true });
+            renderer.setSize(w, h);
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+            const controls = new OrbitControls(camera, canvas);
+            controls.enableDamping = true;
+            controls.dampingFactor = 0.1;
+            controls.enableZoom = true;
+            controls.autoRotate = false;
+
+            const loader = new PLYLoader();
+            loader.load('assets/ pipeline/pointcloud.ply', function(geometry) {
+                geometry.computeBoundingBox();
+                const box = geometry.boundingBox;
+                const center = new THREE.Vector3();
+                box.getCenter(center);
+                geometry.translate(-center.x, -center.y, -center.z);
+
+                const size = new THREE.Vector3();
+                box.getSize(size);
+                const maxDim = Math.max(size.x, size.y, size.z);
+                const scale = 1.5 / maxDim;
+                geometry.scale(scale, scale, scale);
+
+                /* Normalise vertex colours – PLY often stores 0-255 */
+                if (geometry.hasAttribute('color')) {
+                    const col = geometry.getAttribute('color');
+                    let needsNorm = false;
+                    for (let i = 0; i < Math.min(col.count, 100); i++) {
+                        if (col.getX(i) > 1.01 || col.getY(i) > 1.01 || col.getZ(i) > 1.01) {
+                            needsNorm = true; break;
+                        }
+                    }
+                    if (needsNorm) {
+                        for (let i = 0; i < col.count; i++) {
+                            col.setXYZ(i, col.getX(i) / 255, col.getY(i) / 255, col.getZ(i) / 255);
+                        }
+                        col.needsUpdate = true;
+                    }
+                }
+
+                let material;
+                if (geometry.hasAttribute('color')) {
+                    material = new THREE.PointsMaterial({ size: 0.01, vertexColors: true, sizeAttenuation: true });
+                } else {
+                    material = new THREE.PointsMaterial({ size: 0.01, color: 0x2563EB, sizeAttenuation: true });
+                }
+                const points = new THREE.Points(geometry, material);
+                scene.add(points);
+
+                // Set camera from given extrinsic (original world coords)
+                const origCamPos = new THREE.Vector3(-0.0232, 0.6468, 1.0476);
+                const origCamDir = new THREE.Vector3(-0.0000, -0.0000, -1.0000);
+                // Transform to the centered + scaled coordinate system
+                const newCamPos = origCamPos.clone().sub(center).multiplyScalar(scale);
+                const newTarget = origCamPos.clone().add(origCamDir).sub(center).multiplyScalar(scale);
+                camera.position.copy(newCamPos);
+                controls.target.copy(newTarget);
+                controls.update();
+
+                // Hide hint after loaded
+                const hint = container.querySelector('.ply-hint');
+                if (hint) hint.textContent = '🖱 Drag to rotate';
+            }, function(xhr) {
+                const hint = container.querySelector('.ply-hint');
+                if (hint) {
+                    const pct = Math.round(xhr.loaded / xhr.total * 100);
+                    hint.textContent = 'Loading ' + pct + '%';
+                }
+            });
+
+            function animate() {
+                requestAnimationFrame(animate);
+                controls.update();
+                renderer.render(scene, camera);
+            }
+            animate();
+
+            const ro = new ResizeObserver(() => {
+                const w = container.clientWidth;
+                const h = container.clientHeight;
+                camera.aspect = w / h;
+                camera.updateProjectionMatrix();
+                renderer.setSize(w, h);
+            });
+            ro.observe(container);
+        }
+    </script>
 </body>
 </html>
