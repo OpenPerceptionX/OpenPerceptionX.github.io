@@ -13,9 +13,10 @@
     <div class="row">
       <div class="brand">RISE</div>
       <nav class="nav">
+        <a href="#overview">At a Glance</a>
         <a href="#demos">Demos</a>
-        <a href="#results">Results</a>
         <a href="#method">Method</a>
+        <a href="#results">Results</a>
         <a href="#abstract">Abstract</a>
         <a href="#bibtex">BibTeX</a>
       </nav>
@@ -29,7 +30,7 @@
 
 <header class="hero-video" id="top">
   <div class="hero-dim" id="heroDim"></div>
-  <video id="heroVideo" src="https://assets.kinetixai.cn/rise/teaser.mp4" autoplay muted loop playsinline preload="auto"></video>
+  <video id="heroVideo" src="https://assets.kinetixai.cn/rise3/website_teaser.mp4" autoplay muted loop playsinline preload="auto"></video>
 
   
   <div class="hero-overlay" id="heroOverlay">
@@ -37,7 +38,7 @@
        <div class="hero-links" id="heroLinks">
         <!-- <a class="btn" href="assets/paper.pdf">PDF</a> -->
         <a class="btn" href="#" onclick="alert('Add arXiv link here.'); return false;">arXiv</a>
-        <a class="btn" href="#" onclick="alert('Add video link here.'); return false;">Video</a>
+        <a class="btn" href="#" onclick="https://opendrivelab.github.io/test_page.github.io/"; return false;">Code (Soon)</a>
       </div>
       <!-- <div class="pill">Project Page</div> -->
       <div class="hero-title" id="heroTitle">RISE: Self-Improving Robot Policy with Compositional World Model</div>
@@ -49,18 +50,18 @@
       </div>
       <div class="hero-meta" id="heroMeta">
         <div class="hero-authors">
-          Jiazhi Yang<sup>1,2*†</sup> ·
-          Kunyang Lin<sup>2*</sup> ·
-          Jinwei Li<sup>2,6*</sup> ·
-          Wencong Zhang<sup>2*</sup> ·
-          Tianwei Lin<sup>5</sup> ·
+          Jiazhi Yang<sup>1,2*†</sup>
+          Kunyang Lin<sup>2*</sup>
+          Jinwei Li<sup>2,6*</sup>
+          Wencong Zhang<sup>2*</sup>
+          Tianwei Lin<sup>5</sup>
           Longyan Wu<sup>4</sup><br/>
-          Zhizhong Su<sup>5</sup> ·
-          Hao Zhao<sup>6</sup> ·
-          Ya-Qin Zhang<sup>6</sup> ·
-          Li Chen<sup>3</sup> ·
-          Ping Luo<sup>3</sup> ·
-          Xiangyu Yue<sup>1♮</sup> ·
+          Zhizhong Su<sup>5</sup>
+          Hao Zhao<sup>6</sup>
+          Ya-Qin Zhang<sup>6</sup>
+          Li Chen<sup>3</sup>
+          Ping Luo<sup>3</sup>
+          Xiangyu Yue<sup>1♮</sup>
           Hongyang Li<sup>3♮</sup>
         </div>
       </div>
@@ -105,40 +106,89 @@
 
 <main class="container mainwrap">
 
+<section id="overview">
+  <h2>At a Glance</h2>
+ <h3>System Overview</h3>
+  <!-- <div style="margin-top:10px"></div> -->
+  
+  <div>
+    <div class="media">
+      <video src="https://assets.kinetixai.cn/rise2/teaser.mp4" autoplay muted loop playsinline></video>
+    </div>
+    <div class="caption">
+        <b>RISE</b> shifts the 
+        RL environment to a <b>Compositional World Model</b>, which first emulates future observations for proposed actions, then
+        evaluates imagined states to derive advantage for policy improvement.
+    </div>
+  </div>
+
+
+  <h3>Contributions</h3>
+  <ul class="contrib-list">
+    <li>
+      <b>RISE</b>, a principled framework for robotic reinforcement learning, that
+      enables autonomous self-improvement in a scalable and online manner.
+      RISE overcomes the physical restrictions posed by prior art by shifting
+      robotic interactions from physical environment to imaginative space.
+    </li>
+
+    <li>
+      <b>Compositional World Model</b>, an online learning environment that builds reliable dynamics and value estimates
+      for real-world tasks. We unveil critical design choices to derive informative learning
+      signals for policy improvement.
+    </li>
+
+    <li>
+      Through extensive experiments on <b>dexterous manipulation tasks</b>, we demonstrate
+      that RISE exhibits significantly higher performance compared to existing RL methods.
+    </li>
+  </ul>
+</section>
+
+
 <section id="demos">
   <h2>Real-World Autonomous Execution</h2>
   
 
 
-  <h3>Continuous Success achieved by RISE</h3>
-  <p class="small">Double-click any video to open a large modal player.</p>
+<h3>Continuous Success achieved by RISE</h3>
+<p class="small">Autonomous execution on three complex tasks.</p>
 
-  <div class="demo-rotator-wrap" id="demoRotatorWrap" style="margin-top:12px">
-    <div class="demo-rotator-sticky">
-      <div class="demo-rotator" id="demoRotator">
-        <article class="demo-card is-active" data-idx="0">
-          <div class="media" ondblclick="openModal('https://assets.kinetixai.cn/rise2/conveyor_continuous_10_RISE_720p.mp4')">
-            <video src="https://assets.kinetixai.cn/rise2/conveyor_continuous_10_RISE_720p.mp4" autoplay muted loop playsinline preload="metadata"></video>
-          </div>
-          <div class="caption" style="font-size: 18px;"><b>Dynamic Brick Sorting (Continuous Success)</b></div>
-        </article>
-        <article class="demo-card" data-idx="1">
-          <div class="media" ondblclick="openModal('https://assets.kinetixai.cn/rise2/backpack_continuous_10_RISE_720p.mp4')">
-            <video src="https://assets.kinetixai.cn/rise2/backpack_continuous_10_RISE_720p.mp4" autoplay muted loop playsinline preload="metadata"></video>
-          </div>
-          <div class="caption" style="font-size: 18px;"><b>Backpack Packing (Continuous Success)</b></div>
-        </article>
-        <article class="demo-card" data-idx="2">
-          <div class="media" ondblclick="openModal('https://assets.kinetixai.cn/rise2/box_continuous_10_RISE_720p.mp')">
-            <video src="https://assets.kinetixai.cn/rise2/box_continuous_10_RISE_720p.mp4" autoplay muted loop playsinline preload="metadata"></video>
-          </div>
-            <div class="caption" style="font-size: 18px;"><b>Box Closing (Continuous Success)</b></div>
-        </article>
-      </div>
+<div class="carousel-container">
+  <button class="nav-btn prev-btn" id="prevBtn">
+    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+  </button>
+  
+  <div class="carousel-window">
+    <div class="carousel-track" id="track">
+      <article class="carousel-card">
+        <div class="video-wrapper">
+          <video style="pointer-events: none;" src="https://assets.kinetixai.cn/rise3/conveyor_continuous_11_RISE_compressed.mp4" autoplay muted loop playsinline preload="metadata"></video>
+        </div>
+        <div class="caption">Task1: Dynamic Brick Sorting</div>
+      </article>
+
+      <article class="carousel-card">
+        <div class="video-wrapper">
+          <video style="pointer-events: none;" src="https://assets.kinetixai.cn/rise3/backpack_continuous_21_RISE_compressed.mp4" autoplay muted loop playsinline preload="metadata"></video>
+        </div>
+        <div class="caption">Task 2: Backpack Packing</div>
+      </article>
+
+      <article class="carousel-card">
+        <div class="video-wrapper">
+          <video style="pointer-events: none;" src="https://assets.kinetixai.cn/rise3/box_continuous_10_RISE_compressed.mp4" autoplay muted loop playsinline preload="metadata"></video>
+        </div>
+        <div class="caption">Task 3: Box Closing</div>
+      </article>
     </div>
   </div>
 
-  <hr/>
+  <button class="nav-btn next-btn" id="nextBtn">
+    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+  </button>
+</div>
+<hr/>
 
   <!-- <h3>RISE in Real-World Tasks: Uncut & Continuous</h3>
   <div class="grid3" style="margin-top:10px">
@@ -156,21 +206,7 @@
     </div>
   </div> -->
 
-  <h3>At a Glance</h3>
-  <div style="margin-top:10px"></div>
   
-  <div>
-    <div class="media">
-      <!-- <video src="https://assets.kinetixai.cn/rise/dynamic_brick_sorting.mp4" autoplay muted loop playsinline></video> -->
-      <video src="https://assets.kinetixai.cn/rise2/teaser.mp4" autoplay muted loop playsinline></video>
-    </div>
-    <div class="caption">
-        <b>RISE</b> shifts the 
-        RL environment to a <b>Compositional World Model</b>, which first emulates future observations for proposed actions, then
-        evaluates imagined states to derive advantage for policy improvement.
-    </div>
-  </div>
-  <hr/>
 
   <h3>Comparison: RISE vs. Baselines</h3>
   <p class="small">
@@ -182,13 +218,13 @@
     <div>
       <div class="media">
         <!-- <video src="https://assets.kinetixai.cn/rise/dynamic_brick_sorting.mp4" autoplay muted loop playsinline></video> -->
-        <video src="https://assets.kinetixai.cn/rise2/conveyor_continuous_10_RISE_720p.mp4" autoplay muted loop playsinline></video>
+        <video style="pointer-events: none;" src="https://assets.kinetixai.cn/rise3/conveyor_continuous_10_RISE_compressed.mp4" autoplay muted loop playsinline></video>
       </div>
       <div class="caption"><b>RISE</b> (Dynamic Brick Sorting)</div>
     </div>
     <div>
       <div class="media">
-        <video src="https://assets.kinetixai.cn/rise2/conveyor_baseline_720p.mp4" autoplay muted loop playsinline></video>
+        <video style="pointer-events: none;" src="https://assets.kinetixai.cn/rise3/conveyor_baseline_v2_compressed.mp4" autoplay muted loop playsinline></video>
       </div>
       <div class="caption"><b>Baselines</b> (Dynamic Brick Sorting)</div>
     </div>
@@ -196,26 +232,26 @@
     <div>
       <div class="media">
         <!-- <video src="https://assets.kinetixai.cn/rise/backpack_packing.mp4" autoplay muted loop playsinline></video> -->
-        <video src="https://assets.kinetixai.cn/rise2/backpack_continuous_10_RISE_720p.mp4" autoplay muted loop playsinline></video>
+        <video style="pointer-events: none;" src="https://assets.kinetixai.cn/rise3/backpack_continuous_10_RISE_compressed.mp4" autoplay muted loop playsinline></video>
       </div>
       <div class="caption"><b>RISE</b> (Backpack Packing)</div>
     </div>
     <div>
       <div class="media">
-        <video src="https://assets.kinetixai.cn/rise2/backpack_baseline_720.mp4" autoplay muted loop playsinline></video>
+        <video style="pointer-events: none;" src="https://assets.kinetixai.cn/rise3/backpack_baseline_v2_compressed.mp4" autoplay muted loop playsinline></video>
       </div>
       <div class="caption"><b>Baselines</b> (Backpack Packing)</div>
     </div>
 
     <div>
       <div class="media">
-        <video src="https://assets.kinetixai.cn/rise2/box_continuous_10_RISE_720p.mp4" autoplay muted loop playsinline></video>
+        <video style="pointer-events: none;" src="https://assets.kinetixai.cn/rise3/box_continuous_10_RISE_compressed.mp4" autoplay muted loop playsinline></video>
       </div>
       <div class="caption"><b>RISE</b> (Box Closing)</div>
     </div>
     <div>
       <div class="media">
-        <video src="https://assets.kinetixai.cn/rise2/box_baseline_720p.mp4" autoplay muted loop playsinline></video>
+        <video style="pointer-events: none;" src="https://assets.kinetixai.cn/rise3/box_baseline_v2_compressed.mp4" autoplay muted loop playsinline></video>
       </div>
       <div class="caption"><b>Baselines</b> (Box Closing)</div>
     </div>
@@ -230,7 +266,7 @@
     
     <div>
       <div class="media">
-        <video src="https://assets.kinetixai.cn/rise/backpack_anti_disturbance_self_recovery_RISE.mp4" autoplay muted loop playsinline></video>
+        <video style="pointer-events: none;" src="https://assets.kinetixai.cn/rise3/backpack_anti_disturbance_self_recovery_RISE_compressed1.mp4" autoplay muted loop playsinline></video>
       </div>
       <div class="caption">
         <b>Self-Correction & Robustness</b>
@@ -240,7 +276,7 @@
     <div>
       <div class="media">
         <!-- <video src="assets/videos/backpack_spatial_generalization.mp4" autoplay muted loop playsinline></video> -->
-        <video src="https://assets.kinetixai.cn/rise/backpack_spatial_generalization_RISE.mov" autoplay muted loop playsinline></video>
+        <video style="pointer-events: none;" src="https://assets.kinetixai.cn/rise3/backpack_spatial_generalization_RISE_compressed.mp4" autoplay muted loop playsinline></video>
       </div>
       <div class="caption">
         <b>Spatial Generalization</b>
@@ -277,19 +313,24 @@
 </section>
 <hr/>
 
-<section id="overview">
+<section id="method">
   <h2 class="section-title">Methodology</h2>
 
 
   
   <h3>Key Component#1: Compositional World Model</h3>
-  <div style="margin-top:10px"></div>
+  <!-- <div style="margin-top:10px"></div> -->
   
   <div>
     <div class="media">
       <!-- <video src="https://assets.kinetixai.cn/rise/dynamic_brick_sorting.mp4" autoplay muted loop playsinline></video> -->
-      <video src="https://assets.kinetixai.cn/rise2/world_model.mp4" autoplay muted loop playsinline></video>
+      <video  style="pointer-events: none;" src="https://assets.kinetixai.cn/rise2/world_model.mp4" autoplay muted loop playsinline></video>
     </div>
+    <div class="caption">
+        Inference pipeline that yields rewarded samples for policy
+        optimization. Both modules are compatible with multi-view
+        images.
+      </div>
   
     
   </div>
@@ -298,15 +339,21 @@
 
 
   <h3>Key Component#2: Self-Improving Loop</h3>
-  <div style="margin-top:10px"></div>
+  <!-- <div style="margin-top:10px"></div> -->
   
   <div>
     <div class="media media-small">
       <!-- <video src="https://assets.kinetixai.cn/rise/dynamic_brick_sorting.mp4" autoplay muted loop playsinline></video> -->
-      <video class="small-video" src="https://assets.kinetixai.cn/rise2/self_improve.mp4" autoplay muted loop playsinline></video>
+      <video  style="pointer-events: none;" class="small-video" src="https://assets.kinetixai.cn/rise2/self_improve.mp4" autoplay muted loop playsinline></video>
     </div>
   
-    
+    <div class="caption">
+        <b>Top</b>: Rollout stage. Prompted with an
+          optimal advantage, the rollout policy interacts with the world
+          model to produce rollout data. <b>Bottom</b>: Training stage. The
+          behavior policy is then trained to generate proper action under
+          an advantage-conditioning scheme.
+      </div>
   </div>
 
 
@@ -318,6 +365,9 @@
 <section id="results">
   <h2>Results</h2>
   <h3>Main Results</h3>
+  <p class="small" style="margin-bottom:12px">
+    RISE outperforms all baselines with +35% on brick sorting, +45% on backpack packing, and +35% on box closing through world model imagination.
+  </p>
 
   <div class="card" style="padding:14px; margin-top:10px">
     <div class="toolbar">
@@ -358,6 +408,10 @@
   <hr/>
 
   <h3>Ablations</h3>
+  <p class="small" style="margin-bottom:12px">
+    <b>Left:</b> Optimal offline ratio (0.6) balances demonstrations with online rollouts.<br/>
+    <b>Right:</b> Both online actions and states essential; full RISE with all components achieves best performance.
+  </p>
   <div class="grid2 ablation-grid" style="margin-top:10px">
     <div class="card">
       <div class="canvas-wrap">
@@ -376,27 +430,16 @@
   <hr/>
 
   <h3>Dynamics Model Comparisons</h3>
-  <div class="grid2" style="margin-top:10px">
-    <div>
-      <div class="media"><video src="https://assets.kinetixai.cn/rise/dynamics_world_visualization.mp4" autoplay muted loop playsinline controls preload="metadata"></video></div>
-      <div class="caption">Qualitative comparison: controllable future prediction under candidate actions.</div>
-    </div>
-    <div class="card">
-      <div class="kv">
-        <div class="item">
-          <div class="k">What you should notice</div>
-          <div class="v">Sharper long-horizon behavior and fewer catastrophic drifts during imagined rollouts.</div>
-        </div>
-        <div class="item">
-          <div class="k">Why it matters</div>
-          <div class="v">More reliable value estimation → better advantages → stronger policy improvement.</div>
-        </div>
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    
+    <div style="max-width: 800px; width: 60%;">
+      <div class="media">
+        <video src="https://assets.kinetixai.cn/rise3/dynamics_world_visualization_compressed.mp4" autoplay muted loop playsinline controls preload="metadata" style="width: 100%;"></video>
       </div>
-      <p class="small" style="margin-top:10px">
-        (Replace this text with your paper’s most important qualitative claim about imagination.)
-      </p>
+      <div class="caption" style="text-align: center;">Qualitative comparison: controllable future prediction under candidate actions.</div>
     </div>
-  </div>
+
+    </div>
 
   <script>window.__RISE_CHARTS__ = {"main": {"Dynamic Brick Sorting": {"methods": ["\u03c00.5", "\u03c00.5 + DAgger", "\u03c00.5 + PPO", "\u03c00.5 + DSRL", "RECAP", "RISE (Ours)"], "succ": [35.0, 15.0, 10.0, 10.0, 50.0, 85.0], "score": [8.28, 6.1, 7.68, 6.65, 9.0, 9.78]}, "Backpack Packing": {"methods": ["\u03c00.5", "\u03c00.5 + DAgger", "\u03c00.5 + PPO", "\u03c00.5 + DSRL", "RECAP", "RISE (Ours)"], "succ": [30.0, 50.0, 35.0, 10.0, 40.0, 85.0], "score": [4.25, 7.0, 5.88, 3.5, 6.13, 9.5]}, "Box Closing": {"methods": ["\u03c00.5", "\u03c00.5 + DAgger", "\u03c00.5 + PPO", "\u03c00.5 + DSRL", "RECAP", "RISE (Ours)"], "succ": [35.0, 40.0, 10.0, 10.0, 60.0, 95.0], "score": [7.5, 7.5, 4.75, 7.63, 8.13, 9.88]}}, "offline_ratio": {"ratio": [0.1, 0.3, 0.6, 0.9], "pick": [15.0, 78.75, 90.0, 90.0], "sort": [83.33, 80.95, 87.5, 80.56], "comp": [5.0, 25.0, 50.0, 30.0]}, "online_integration": {"labels": ["(\u2717,\u2717)", "(\u2713,\u2717)", "(\u2713,\u2713)"], "pick": [80.0, 96.25, 98.75], "sort": [76.56, 84.42, 92.41], "comp": [35.0, 40.0, 70.0]}, "module": {"labels": ["w/o Pre-train", "w/o Task-Centric", "w/o Progress", "w/o TD Learning", "RISE (all)"], "score": [7.43, 8.78, 8.78, 8.38, 9.43]}};</script>
 </section>
@@ -548,7 +591,7 @@
   </p>
 </section>
 
-
+<!-- 
 <section id="Contributions">
   <h2>Contributions</h2>
   <p>
@@ -569,7 +612,7 @@
     tasks, we demonstrate that RISE exhibits significantly higher
     performance compared to existing RL methods. <br/>
   </p>
-</section>
+</section> -->
 
 <!-- <hr/> -->
 
