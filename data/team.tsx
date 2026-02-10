@@ -464,6 +464,10 @@ export const members: {
                 url: "mailto:modishi@buaa.edu.cn",
             },
             {
+                icon: "scholar",
+                url: "https://scholar.google.com/citations?user=e8e7k58AAAAJ",
+            },
+            {
                 icon: "github",
                 url: "https://github.com/ModiShi",
             },
