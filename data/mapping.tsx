@@ -11,4 +11,5 @@ export const type_mapping: Record<string, string> = {
     "dataset": "Dataset",
     "poster": "Poster",
     "arxiv": "arXiv",
+    "discord": "Community",
 }

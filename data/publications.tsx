@@ -167,6 +167,10 @@ export const publications: {
             {
                 type: "github",
                 link: "https://github.com/OpenDriveLab/kai0"
+            },
+            {
+                type: "discord",
+                link: "https://discord.gg/weUGdEPpsF"
             }
         ],
         description: "\"Veni, Vidi, Vici\" - I came, I saw, I conquered. We aim to conquer the \"Mount Everest\" of robotics: 100% reliability in real-world garment manipulation.",
