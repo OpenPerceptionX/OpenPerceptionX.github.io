@@ -38,19 +38,6 @@ import { publications } from "@/data/publications"
 import { Button } from "@/components/ui/button"
 import { type_mapping } from "@/data/mapping"
 const landings = [0,1,2,3,5,4].map(index => [...publications.values()].filter(publication => publication.keys.includes('home_sliding'))[index])
-const image_mapping: Record<string, string> = {
-    "Intelligent Robot Manipulation Requires Self-Directed Learning": "https://ik.imagekit.io/opendrivelab/position.jpg?updatedAt=1765023911765",
-    "GO-1-Pro: Is Diversity All You Need for Scalable Robotic Manipulation?": "/assets/publication/GO-1-Pro.jpg",
-    "UniVLA: Learning to Act Anywhere with Task-centric Latent Actions": "https://ik.imagekit.io/opendrivelab/univla",
-    "Planning-oriented Autonomous Driving": "/assets/background/890e373a8bca0b4f0df9701fa09cf131.png",
-    "AgiBot World Colosseo: A Large-scale Manipulation Platform for Scalable and Intelligent Embodied Systems": "https://ik.imagekit.io/opendrivelab/agibotworld.jpg",
-    "DriveLM: Driving with Graph Visual Question Answering": "/assets/background/cd0d184b033748b5b5cc8a43c3b9ddc8.jpeg",
-    "FreeTacMan: Robot-free Visuo-Tactile Data Collection System for Contact-rich Manipulation": "https://ik.imagekit.io/opendrivelab/freetacman.png",
-    "ReSim: Reliable World Simulation for Autonomous Driving": "https://ik.imagekit.io/opendrivelab/resim.jpg",
-    "Agility Meets Stability: Versatile Humanoid Control with Heterogeneous Data": "https://ik.imagekit.io/opendrivelab/ams.gif",
-    "WholeBodyVLA: Towards Unified Latent VLA for Whole-body Loco-manipulation Control": "https://opendrivelab.github.io/WholeBodyVLA/wholebodyvla_landing.gif",
-    "χ0: A Live-Stream Robotic Teamwork for Clothing Manipulation from Zero to Hero": "https://ik.imagekit.io/opendrivelab/kai0.png",
-}
 
 
 
@@ -105,7 +92,7 @@ export function Landing() {
                             <div className="flex-1/2 w-full lg:h-full flex flex-col justify-center select-none">
                                 <AspectRatio ratio={16/9}>
                                     <Image
-                                        src={image_mapping[landing.title] ?? ""}
+                                        src={landing.image_sliding ?? ""}
                                         alt={landing.title}
                                         fill
                                         className="object-cover object-center rounded-sm bg-gradient-landing hover:scale-103 transition delay-100 duration-200"
@@ -187,11 +174,7 @@ export function Landing() {
                                                     <div key={index} className="flex items-center">
                                                         <Link href={icon.link} target={icon.link.startsWith('http') ? '_blank' : '_self'} className="animated-underline-gray mr-3 text-nowrap">
                                                             {
-                                                                landing.title.startsWith('FreeTacMan') && icon.type =='blog' ? (
-                                                                    'Hardware Guide'
-                                                                ) : (
-                                                                    type_mapping[icon.type] ?? "XXX"
-                                                                )
+                                                                type_mapping[icon.type] ?? "XXX"
                                                             }
                                                         </Link>
                                                         {index < landing.icon.length - 1 && (
@@ -201,6 +184,7 @@ export function Landing() {
                                                 )
                                             ))
                                         } 
+                                        {/* AgiBot World */}
                                         {
                                             landing.title.startsWith('AgiBot') && (
                                                 <span className="text-xs mr-3"> | </span>
@@ -212,6 +196,7 @@ export function Landing() {
                                                 </Link>
                                             )
                                         }
+                                        {/* Position Paper */}
                                         {
                                             landing.title.startsWith('Intelligent Robot') && (
                                                 <span className="text-xs mr-3"> | </span>
