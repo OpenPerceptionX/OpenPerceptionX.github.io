@@ -4,21 +4,34 @@ const q = (s, el=document)=>el.querySelector(s);
 const qa = (s, el=document)=>[...el.querySelectorAll(s)];
 const clamp=(x,a,b)=>Math.max(a,Math.min(b,x));
 
-/* Active nav */
-function setActiveNav(){
+/* Active nav - Enhanced */
+function setupActiveNav(){
   const sections = qa("section[id]");
-  const links = qa(".nav-links a");
-  const y = window.scrollY + 140;
-  let current = sections[0]?.id;
-  for (const sec of sections){
-    if (sec.offsetTop <= y) current = sec.id;
+  const navLinks = qa(".nav a[href^='#']");
+  
+  function updateActiveNav(){
+    const y = window.scrollY + 160;
+    let current = '';
+    
+    sections.forEach(sec => {
+      const sectionTop = sec.offsetTop;
+      const sectionHeight = sec.clientHeight;
+      if(y >= sectionTop - 100 && y < sectionTop + sectionHeight){
+        current = sec.getAttribute('id');
+      }
+    });
+    
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if(link.getAttribute('href') === '#' + current){
+        link.classList.add('active');
+      }
+    });
   }
-  links.forEach(a=>{
-    a.classList.toggle("active", a.getAttribute("href")==="#"+current);
-  });
+  
+  window.addEventListener("scroll", updateActiveNav, {passive:true});
+  updateActiveNav();
 }
-window.addEventListener("scroll", setActiveNav, {passive:true});
-window.addEventListener("load", setActiveNav);
 
 /* Video modal */
 function openModal(videoRef){
@@ -127,6 +140,10 @@ function drawBarChartPerBar(cfg){
     maxV = isPercentAxis ? 100 : 10;
   }
 
+  // Animation support
+  if(!canvas._animProgress) canvas._animProgress = 0;
+  const animProgress = canvas._animProgress;
+
   ctx.clearRect(0,0,W,H);
 
   const ticks = cfg.ticks || 5;
@@ -152,7 +169,8 @@ function drawBarChartPerBar(cfg){
 
   for(let i=0;i<n;i++){
     const v = values[i];
-    const bh = (v/maxV)*plotH;
+    const bhFull = (v/maxV)*plotH;
+    const bh = bhFull * animProgress; // Apply animation progress
     const x = pad.l + i*groupW + (groupW-barW)/2;
     const y = pad.t + plotH - bh;
 
@@ -232,6 +250,10 @@ function drawGroupedBarChart(cfg){
     maxV = isPercentAxis ? 100 : 10;
   }
 
+  // Animation support
+  if(!canvas._animProgress) canvas._animProgress = 0;
+  const animProgress = canvas._animProgress;
+
   ctx.clearRect(0,0,W,H);
 
   const ticks = cfg.ticks || 5;
@@ -261,11 +283,13 @@ function drawGroupedBarChart(cfg){
     for(let j=0;j<m;j++){
       const s = series[j];
       const v = s.values[i];
-      const bh = (v/maxV)*plotH;
+      const bhFull = (v/maxV)*plotH;
+      const bh = bhFull * animProgress; // Apply animation progress
       const x = gx + gap + j*barW;
       const y = pad.t + plotH - bh;
       ctx.fillStyle=s.color;
       drawRoundedBar(ctx, x,y,barW*0.92,bh,6);
+      
       bars.push({x,y,w:barW*0.92,h:bh,label:labels[i],series:s.name,value:v});
     }
     const t = labels[i].length>18 ? labels[i].slice(0,16)+"…" : labels[i];
@@ -349,37 +373,61 @@ function setupCharts(){
       if(!data) continue;
       const labels = data.methods.map(simplifyMethod);
 
-      let values, yFmt, title, tipLabel;
+      let values, yFmt, tipLabel, htmlTitle;
       if(metric==="succ"){
         values = data.succ.slice();
         yFmt = (v)=>v.toFixed(0)+"%";
-        title = `${task}: Success (%)`;
+        htmlTitle = `${task}: Success (%)`;
         tipLabel = "Success:";
       }else{
         values = data.score.slice();
         yFmt = (v)=>v.toFixed(2);
-        title = `${task}: Score`;
+        htmlTitle = `${task}: Score`;
         tipLabel = "Score:";
+      }
+
+      // Update HTML title (h4 above canvas)
+      const canvasId = TASK_CANVAS[task].replace('#', '');
+      const canvasEl = document.getElementById(canvasId);
+      if(canvasEl){
+        // Find parent div, then find the h4 sibling before canvas-wrap
+        const parentDiv = canvasEl.closest('.canvas-wrap').parentElement;
+        const h4 = parentDiv.querySelector('h4');
+        if(h4){
+          h4.textContent = htmlTitle;
+        }
       }
 
       const outlineIdx = labels.findIndex(x=>x.includes("RISE"));
       const colors = labels.map(m=> m.includes("RISE") ? "rgba(91,124,250,.88)" : "rgba(120,140,170,.55)");
       const chartMax = (metric==="succ") ? 100 : null;
-      drawBarChartPerBar({canvas: TASK_CANVAS[task], labels, values, colors, outlineIdx, yFmt, title, tipLabel, max: chartMax});
+      // Remove 'title' parameter to hide chart internal title
+      drawBarChartPerBar({canvas: TASK_CANVAS[task], labels, values, colors, outlineIdx, yFmt, tipLabel, max: chartMax});
     }
   }
 
+  // Initialize charts with progress 0 (invisible bars)
+  for(const task of TASKS){
+    const canvasEl = q(TASK_CANVAS[task]);
+    if(canvasEl) canvasEl._animProgress = 0;
+  }
+  const ablOffline = q("#ablationOffline");
+  const ablOnline = q("#ablationOnline");
+  if(ablOffline) ablOffline._animProgress = 0;
+  if(ablOnline) ablOnline._animProgress = 0;
+
   metricSel.onchange = renderMainAll;
   renderMainAll();
-
+  
+  // Store redraw functions
   const r1 = drawGroupedBarChart({
     canvas:"#ablationOffline",
-    title:"Ablation: Offline data ratio",
+    // title removed - now in HTML h4
     labels: C.offline_ratio.ratio.map(r=>`ratio ${r}`),
     series:[
-      {name:"Pick&Place Succ.(%)", values:C.offline_ratio.pick, color:"rgba(91,124,250,.72)"},
-      {name:"Sort Acc.(%)", values:C.offline_ratio.sort, color:"rgba(168,85,247,.55)"},
-      {name:"Complete Succ.(%)", values:C.offline_ratio.comp, color:"rgba(120,140,170,.55)"},
+      {name:"Sort Accuracy", values:C.offline_ratio.sort, color:"rgba(91,124,250,.72)"},
+      {name:"Pick&Place Success Rate", values:C.offline_ratio.pick, color:"rgba(168,85,247,.55)"},
+      {name:"Complete Success Rate", values:C.offline_ratio.comp, color:"rgba(120,140,170,.55)"},
     ],
     yFmt:(v)=>v.toFixed(0)+"%",
     ticks:5,
@@ -388,17 +436,21 @@ function setupCharts(){
 
   const r2 = drawGroupedBarChart({
     canvas:"#ablationOnline",
-    title:"Ablation: Online action/state integration",
+    // title removed - now in HTML h4
     labels: C.online_integration.labels,
     series:[
-      {name:"Pick&Place Succ.(%)", values:C.online_integration.pick, color:"rgba(91,124,250,.72)"},
-      {name:"Sort Acc.(%)", values:C.online_integration.sort, color:"rgba(168,85,247,.55)"},
-      {name:"Complete Succ.(%)", values:C.online_integration.comp, color:"rgba(120,140,170,.55)"},
+      {name:"Sort Accuracy", values:C.online_integration.sort, color:"rgba(91,124,250,.72)"},
+      {name:"Pick&Place Success Rate", values:C.online_integration.pick, color:"rgba(168,85,247,.55)"},
+      {name:"Complete Success Rate", values:C.online_integration.comp, color:"rgba(120,140,170,.55)"},
     ],
     yFmt:(v)=>v.toFixed(0)+"%",
     ticks:5,
     boldLabels:["(✓,✓)"]
   });
+  
+  // Initial draw with 0 progress (invisible bars)
+  r1();
+  r2();
 
   let t=null;
   window.addEventListener("resize", ()=>{
@@ -407,12 +459,65 @@ function setupCharts(){
       renderMainAll(); r1(); r2();
     }, 120);
   }, {passive:true});
+
+  // Animation on scroll into view
+  const animateChartOnScroll = (canvas) => {
+    if(!canvas || canvas._animated) return;
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting && !canvas._animated){
+          canvas._animated = true;
+          const duration = 800; // Animation duration in ms
+          const startTime = performance.now();
+          
+          const animate = (currentTime) => {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            // Ease-out cubic for smooth deceleration
+            const eased = 1 - Math.pow(1 - progress, 3);
+            
+            canvas._animProgress = eased;
+            
+            // Redraw based on which chart type
+            if(canvas.id === 'mainChartBrick' || canvas.id === 'mainChartBackpack' || canvas.id === 'mainChartBox'){
+              renderMainAll();
+            } else if(canvas.id === 'ablationOffline'){
+              r1();
+            } else if(canvas.id === 'ablationOnline'){
+              r2();
+            }
+            
+            if(progress < 1){
+              requestAnimationFrame(animate);
+            }
+          };
+          
+          requestAnimationFrame(animate);
+          observer.unobserve(canvas);
+        }
+      });
+    }, {threshold: 0.2}); // Trigger when 20% of chart is visible
+    
+    observer.observe(canvas);
+  };
+
+  // Setup animation for all charts
+  for(const task of TASKS){
+    const canvasEl = q(TASK_CANVAS[task]);
+    if(canvasEl) animateChartOnScroll(canvasEl);
+  }
+  animateChartOnScroll(q("#ablationOffline"));
+  animateChartOnScroll(q("#ablationOnline"));
 }
 
 window.addEventListener("load", ()=>{
   setupProgressBar();
   setupCopyButtons();
   setupCharts();
+  setupBackToTop();
+  setupFadeInAnimations();
+  setupActiveNav();
 });
 
 /* ===== Hero video interactions ===== */
@@ -742,143 +847,217 @@ function initDemoRotator(){
 }
 
 window.addEventListener('load', ()=>{ try{ initDemoRotator(); }catch(e){} });
-// 1. 初始化变量
-// 1. 获取元素
-const track = document.getElementById('track');
-const originalCards = document.querySelectorAll('.carousel-card');
-const prevBtn = document.getElementById('prevBtn');
-const nextBtn = document.getElementById('nextBtn');
-const gapPx = 15; // 必须和 CSS 里的 gap 保持一致
+/* =========================================
+   无缝轮播 (修复回滚时的卡片缩放闪烁问题)
+   ========================================= */
+function initCarousel() {
+  const track = document.getElementById('track');
+  if (!track) return;
 
-// 2. 动态获取当前是从 60% 还是 75% 渲染
-function getCardWidthPercent() {
-  return window.innerWidth < 768 ? 75 : 60;
-}
+  const originalCards = document.querySelectorAll('.carousel-card');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const gapPx = 15;
 
-// 3. 克隆首尾 (Clone)
-const firstClone = originalCards[0].cloneNode(true);
-const lastClone = originalCards[originalCards.length - 1].cloneNode(true);
-track.appendChild(firstClone);
-track.insertBefore(lastClone, originalCards[0]);
+  // 1. 克隆首尾
+  const firstClone = originalCards[0].cloneNode(true);
+  const lastClone = originalCards[originalCards.length - 1].cloneNode(true);
+  track.appendChild(firstClone);
+  track.insertBefore(lastClone, originalCards[0]);
 
-let allCards = document.querySelectorAll('.carousel-card');
-let currentIndex = 1; 
-let isTransitioning = false;
+  let allCards = document.querySelectorAll('.carousel-card');
+  let currentIndex = 1; 
+  let isTransitioning = false;
 
-// 4. 核心：更新位置 (使用纯 CSS calc，稳如老狗)
-function updateTrack(animate) {
-  if (animate) {
-    track.style.transition = 'transform 0.4s cubic-bezier(0.25, 1, 0.5, 1)';
-  } else {
-    track.style.transition = 'none';
+  // 2. 动态获取宽度
+  function getCardWidthPercent() {
+    return window.innerWidth < 768 ? 75 : 60;
   }
 
-  const wPercent = getCardWidthPercent();
-  
-  // 公式解释：
-  // 居中偏移量 = (100% - 卡片宽度%) / 2
-  // 移动距离 = 居中偏移量 - (当前索引 * (卡片宽度% + 间距px))
-  const centerOffset = (100 - wPercent) / 2;
-  const val = `calc(${centerOffset}% - ${currentIndex} * (${wPercent}% + ${gapPx}px))`;
-  
-  track.style.transform = `translateX(${val})`;
-}
+  // 3. 更新轨道位置
+  function updateTrack(animate) {
+    if (animate) {
+      track.style.transition = 'transform 0.4s cubic-bezier(0.25, 1, 0.5, 1)';
+    } else {
+      track.style.transition = 'none';
+    }
+    const wPercent = getCardWidthPercent();
+    const centerOffset = (100 - wPercent) / 2;
+    const val = `calc(${centerOffset}% - ${currentIndex} * (${wPercent}% + ${gapPx}px))`;
+    track.style.transform = `translateX(${val})`;
+  }
 
-// 5. 切换逻辑
-function switchSlide(direction) {
-  if (isTransitioning) return;
-  
-  // 防止快速点击越界
-  if (direction === 1 && currentIndex >= allCards.length - 1) return;
-  if (direction === -1 && currentIndex <= 0) return;
-
-  currentIndex += direction;
-  isTransitioning = true;
-  updateTrack(true);
-  updateActive();
-}
-
-// 6. 事件绑定 (暴力绑定 click 和 touchend)
-
-// 电脑端点击
-nextBtn.addEventListener('click', (e) => { e.preventDefault(); switchSlide(1); });
-prevBtn.addEventListener('click', (e) => { e.preventDefault(); switchSlide(-1); });
-
-// 手机端触摸 (加锁防止双重触发)
-let touchLock = false;
-function handleTouch(e, dir) {
-  if(touchLock) return;
-  e.preventDefault(); e.stopPropagation(); // 阻止冒泡
-  switchSlide(dir);
-  touchLock = true;
-  setTimeout(() => touchLock = false, 300);
-}
-nextBtn.addEventListener('touchend', (e) => handleTouch(e, 1));
-prevBtn.addEventListener('touchend', (e) => handleTouch(e, -1));
-
-// 7. 手机滑动支持 (Swipe)
-let touchStartX = 0;
-track.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].screenX; }, {passive: true});
-track.addEventListener('touchend', e => {
-  const touchEndX = e.changedTouches[0].screenX;
-  if (touchEndX < touchStartX - 50) switchSlide(1); // 左滑 -> 下一张
-  if (touchEndX > touchStartX + 50) switchSlide(-1); // 右滑 -> 上一张
-}, {passive: true});
-
-// 8. 无缝循环 & 视频同步
-track.addEventListener('transitionend', () => {
-  isTransitioning = false;
-  let targetIndex = -1;
-  
-  // 到了克隆的最后一张 -> 跳回真实第1张
-  if (currentIndex === allCards.length - 1) targetIndex = 1;
-  // 到了克隆的第一张 -> 跳回真实最后一张
-  else if (currentIndex === 0) targetIndex = allCards.length - 2;
-
-  if (targetIndex !== -1) {
-    // 视频同步
-    const v1 = allCards[currentIndex].querySelector('video');
-    const v2 = allCards[targetIndex].querySelector('video');
-    if (v1 && v2) v2.currentTime = v1.currentTime;
-
-    // 瞬移
-    track.classList.add('no-transition');
-    allCards.forEach(c => c.classList.add('no-transition'));
+  // 4. 更新激活状态 (控制缩放和透明度)
+  function updateActive() {
+    allCards.forEach((card, index) => {
+      const video = card.querySelector('video');
+      
+      if (index === currentIndex) {
+        // 当前激活卡片
+        card.classList.add('is-active');
+        // 直接操作样式，保证优先级
+        card.style.opacity = '1';
+        card.style.transform = 'scale(1)'; 
+        card.style.filter = 'blur(0)';
+        card.style.zIndex = '10';
+        if (video) video.play().catch(()=>{});
+      } else {
+        // 非激活卡片
+        card.classList.remove('is-active');
+        card.style.opacity = '0.4';
+        card.style.transform = 'scale(0.9)';
+        card.style.filter = 'blur(1px)';
+        card.style.zIndex = '1';
+        if (video) video.pause();
+      }
+    });
     
-    currentIndex = targetIndex;
-    updateTrack(false); // 重新定位
-    updateActive();
-
-    void track.offsetHeight; // 强制重绘
-    requestAnimationFrame(() => {
-      track.classList.remove('no-transition');
-      allCards.forEach(c => c.classList.remove('no-transition'));
+    // Update indicators
+    updateIndicators();
+  }
+  
+  // Update carousel indicators
+  function updateIndicators(){
+    const indicators = document.querySelectorAll('#carouselIndicators .indicator');
+    // Map current index (1-3 with clones) to original (0-2)
+    let realIndex = currentIndex - 1;
+    if(realIndex < 0) realIndex = originalCards.length - 1;
+    if(realIndex >= originalCards.length) realIndex = 0;
+    
+    indicators.forEach((ind, i) => {
+      ind.classList.toggle('active', i === realIndex);
     });
   }
-});
-
-// 9. 激活状态 (只播中间，两边暂停)
-function updateActive() {
-  allCards.forEach((card, index) => {
-    const v = card.querySelector('video');
-    if (index === currentIndex) {
-      card.classList.add('is-active');
-      if (v) {
-        v.muted = true;
-        v.playsInline = true;
-        // 必须加 catch 防止报错
-        v.play().catch(()=>{});
+  
+  // Click indicator to jump
+  const indicators = document.querySelectorAll('#carouselIndicators .indicator');
+  indicators.forEach((ind, i) => {
+    ind.addEventListener('click', () => {
+      if(isTransitioning) return;
+      const targetIndex = i + 1; // +1 because of clone offset
+      if(targetIndex !== currentIndex){
+        currentIndex = targetIndex;
+        isTransitioning = true;
+        updateActive();
+        updateTrack(true);
       }
-    } else {
-      card.classList.remove('is-active');
-      if (v) v.pause();
+    });
+  });
+
+  // 5. 切换逻辑
+  function switchSlide(direction) {
+    if (isTransitioning) return;
+    currentIndex += direction;
+    isTransitioning = true;
+    
+    updateActive(); // 先触发缩放动画
+    updateTrack(true); // 再触发位移动画
+  }
+
+  // 6. 监听动画结束 (处理瞬间回滚 + 防止缩放闪烁)
+  track.addEventListener('transitionend', () => {
+    if (!isTransitioning) return;
+    isTransitioning = false;
+
+    let targetIndex = -1;
+    // 检测是否到了边界
+    if (currentIndex === allCards.length - 1) targetIndex = 1;
+    else if (currentIndex === 0) targetIndex = allCards.length - 2;
+
+    if (targetIndex !== -1) {
+      // === 核心修复开始 ===
+      
+      // 1. 给所有卡片加上禁止动画类
+      // 这步至关重要：防止从 scale(0.9) 变成 scale(1) 时播放动画
+      allCards.forEach(c => c.classList.add('no-transition'));
+      track.style.transition = 'none';
+
+      // 2. 视频同步 (防止黑屏)
+      const currentVideo = allCards[currentIndex].querySelector('video');
+      const targetVideo = allCards[targetIndex].querySelector('video');
+      if (currentVideo && targetVideo) {
+        targetVideo.currentTime = currentVideo.currentTime;
+        targetVideo.play().catch(()=>{});
+      }
+
+      // 3. 瞬间瞬移位置
+      currentIndex = targetIndex;
+      updateTrack(false);
+      
+      // 4. 瞬间强制应用激活样式 (因为加了 no-transition，这里会瞬间变大，不会有动画)
+      updateActive();
+
+      // 5. 强制浏览器重绘 (Force Reflow)
+      // 告诉浏览器：“立刻把上面的变化渲染出来，不要等”
+      void track.offsetHeight; 
+
+      // 6. 恢复动画能力 (下一帧再移除锁，确保万无一失)
+      requestAnimationFrame(() => {
+        allCards.forEach(c => c.classList.remove('no-transition'));
+        track.style.transition = ''; 
+      });
+      // === 核心修复结束 ===
     }
   });
+
+  // 7. 事件绑定
+  nextBtn.onclick = (e) => { e.preventDefault(); switchSlide(1); };
+  prevBtn.onclick = (e) => { e.preventDefault(); switchSlide(-1); };
+
+  // 手机滑动
+  let touchStartX = 0;
+  track.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].screenX; }, {passive: true});
+  track.addEventListener('touchend', e => {
+    const diff = e.changedTouches[0].screenX - touchStartX;
+    if (diff < -50) switchSlide(1);
+    if (diff > 50) switchSlide(-1);
+  }, {passive: true});
+
+  // 初始化
+  updateTrack(false);
+  updateActive();
+  updateIndicators();
+  window.addEventListener('resize', () => updateTrack(false));
 }
 
-// 初始化
-updateTrack(false);
-updateActive();
+window.addEventListener('load', () => {
+  try { initCarousel(); } catch(e) { console.error(e); }
+});
 
-// 监听窗口大小变化（自动适应横竖屏）
-window.addEventListener('resize', () => updateTrack(false));
+/* ===== Back to Top Button ===== */
+function setupBackToTop(){
+  const btn = q('#backToTop');
+  if(!btn) return;
+  
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  
+  window.addEventListener('scroll', () => {
+    if(window.scrollY > 400){
+      btn.classList.add('show');
+    } else {
+      btn.classList.remove('show');
+    }
+  }, {passive: true});
+}
+
+/* ===== Fade-in Animations on Scroll ===== */
+function setupFadeInAnimations(){
+  const elements = qa('.fade-in, .fade-in-section');
+  if(elements.length === 0) return;
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  });
+  
+  elements.forEach(el => observer.observe(el));
+}

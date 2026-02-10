@@ -11,7 +11,7 @@
 <div class="topbar">
   <div class="container">
     <div class="row">
-      <div class="brand">RISE</div>
+      <a href="#top" class="brand" style="text-decoration: none;">RISE</a>
       <nav class="nav">
         <a href="#overview">At a Glance</a>
         <a href="#demos">Demos</a>
@@ -37,50 +37,66 @@
     <div class="hero-overlay-inner">
        <div class="hero-links" id="heroLinks">
         <!-- <a class="btn" href="assets/paper.pdf">PDF</a> -->
-        <a class="btn" href="#" onclick="alert('Add arXiv link here.'); return false;">arXiv</a>
-        <a class="btn" href="#" onclick="https://opendrivelab.github.io/test_page.github.io/"; return false;">Code (Soon)</a>
+        <a class="btn" href="https://opendrivelab.github.io/RISE.pdf", target="_blank">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+          PDF
+        </a>
+        <a class="btn" href="https://opendrivelab.com/kai0-rl/", target="_blank">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+          </svg>
+          Code (Soon)
+        </a>
       </div>
       <!-- <div class="pill">Project Page</div> -->
       <div class="hero-title" id="heroTitle">RISE: Self-Improving Robot Policy with Compositional World Model</div>
-      <div class="hero-subtitle" id="heroSubtitle">
-          | The first study on leveraging world
+      <div class="hero-subtitle" id="heroSubtitle" style="text-align: left;">
+          The first study on leveraging world
           models as an effective learning environment for challenging
           real-world manipulation, bootstrapping performance on tasks
           requiring high dynamics, dexterity, and precision. 
       </div>
       <div class="hero-meta" id="heroMeta">
         <div class="hero-authors">
-          Jiazhi Yang<sup>1,2*†</sup>
-          Kunyang Lin<sup>2*</sup>
-          Jinwei Li<sup>2,6*</sup>
-          Wencong Zhang<sup>2*</sup>
-          Tianwei Lin<sup>5</sup>
-          Longyan Wu<sup>4</sup><br/>
-          Zhizhong Su<sup>5</sup>
-          Hao Zhao<sup>6</sup>
-          Ya-Qin Zhang<sup>6</sup>
-          Li Chen<sup>3</sup>
-          Ping Luo<sup>3</sup>
-          Xiangyu Yue<sup>1♮</sup>
-          Hongyang Li<sup>3♮</sup>
+          <span>Jiazhi Yang<sup>1,2*†</sup></span>
+          <span>Kunyang Lin<sup>2*</sup></span>
+          <span>Jinwei Li<sup>2,6*</sup></span>
+          <span>Wencong Zhang<sup>2*</sup></span>
+          <span>Tianwei Lin<sup>5</sup></span>
+          <span>Longyan Wu<sup>4</sup></span>
+          <span>Zhizhong Su<sup>5</sup></span>
+          <span>Hao Zhao<sup>6</sup></span>
+          <span>Ya-Qin Zhang<sup>6</sup></span>
+          <span>Li Chen<sup>3</sup></span>
+          <span>Ping Luo<sup>3</sup></span>
+          <span>Xiangyu Yue<sup>1♮</sup></span>
+          <span>Hongyang Li<sup>3♮</sup></span>
         </div>
       </div>
 
-        <div style="height:5px;"></div>
-
-        <div class="hero-affiliations">
-          <span><sup>1</sup> The Chinese University of Hong Kong</span>
-          <span><sup>2</sup> Kinetix AI</span>
-          <span><sup>3</sup> The University of Hong Kong</span><br/>
-          <span><sup>4</sup> Shanghai Innovation Institute</span>
-          <span><sup>5</sup> Horizon Robotics</span>
-          <span><sup>6</sup> Tsinghua University</span><br/>
-          
-          <div style="height:2px;"></div>
-          <span class="hero-notes"><sup>*</sup> Equal Contribution</span>
-          <span class="hero-notes"><sup>†</sup> Project lead</span>
-          <span class="hero-notes"><sup>♮</sup> Equal Advising</span><br/>
+      <div class="hero-affiliations">
+        <div class="affiliation-row">
+          <span class="affil-item"><sup>1</sup> The Chinese University of Hong Kong</span>
+          <span class="affil-item"><sup>2</sup> Kinetix AI</span>
+          <span class="affil-item"><sup>3</sup> The University of Hong Kong</span>
         </div>
+        <div class="affiliation-row">
+          <span class="affil-item"><sup>4</sup> Shanghai Innovation Institute</span>
+          <span class="affil-item"><sup>5</sup> Horizon Robotics</span>
+          <span class="affil-item"><sup>6</sup> Tsinghua University</span>
+        </div>
+        <div class="hero-notes-row">
+          <span class="note-item"><sup>*</sup> Equal Contribution</span>
+          <span class="note-item"><sup>†</sup> Project Lead</span>
+          <span class="note-item"><sup>♮</sup> Equal Advising</span>
+        </div>
+      </div>
       </div>
 
       <!-- <div class="hero-links" id="heroLinks">
@@ -106,7 +122,7 @@
 
 <main class="container mainwrap">
 
-<section id="overview">
+<section id="overview" class="fade-in-section">
   <h2>At a Glance</h2>
  <h3>System Overview</h3>
   <!-- <div style="margin-top:10px"></div> -->
@@ -124,29 +140,38 @@
 
 
   <h3>Contributions</h3>
-  <ul class="contrib-list">
-    <li>
-      <b>RISE</b>, a principled framework for robotic reinforcement learning, that
-      enables autonomous self-improvement in a scalable and online manner.
-      RISE overcomes the physical restrictions posed by prior art by shifting
-      robotic interactions from physical environment to imaginative space.
-    </li>
+  <div class="contrib-cards">
+    <div class="contrib-card fade-in">
+      <div class="contrib-number">①</div>
+      <div class="contrib-content">
+        <strong class="highlight">RISE</strong>, a principled framework for robotic reinforcement learning, that
+        enables autonomous self-improvement in a scalable and online manner.
+        RISE overcomes the physical restrictions posed by prior art by shifting
+        robotic interactions from physical environment to imaginative space.
+      </div>
+    </div>
 
-    <li>
-      <b>Compositional World Model</b>, an online learning environment that builds reliable dynamics and value estimates
-      for real-world tasks. We unveil critical design choices to derive informative learning
-      signals for policy improvement.
-    </li>
+    <div class="contrib-card fade-in">
+      <div class="contrib-number">②</div>
+      <div class="contrib-content">
+        <strong class="highlight">Compositional World Model</strong>, an online learning environment that builds reliable dynamics and value estimates
+        for real-world tasks. We unveil critical design choices to derive informative learning
+        signals for policy improvement.
+      </div>
+    </div>
 
-    <li>
-      Through extensive experiments on <b>dexterous manipulation tasks</b>, we demonstrate
-      that RISE exhibits significantly higher performance compared to existing RL methods.
-    </li>
-  </ul>
+    <div class="contrib-card fade-in">
+      <div class="contrib-number">③</div>
+      <div class="contrib-content">
+        Through extensive experiments on <strong class="highlight">dexterous manipulation tasks</strong>, we demonstrate
+        that RISE exhibits significantly higher performance compared to existing RL methods.
+      </div>
+    </div>
+  </div>
 </section>
 
 
-<section id="demos">
+<section id="demos" class="fade-in-section">
   <h2>Real-World Autonomous Execution</h2>
   
 
@@ -163,23 +188,23 @@
     <div class="carousel-track" id="track">
       <article class="carousel-card">
         <div class="video-wrapper">
-          <video style="pointer-events: none;" src="https://assets.kinetixai.cn/rise3/conveyor_continuous_11_RISE_compressed.mp4" autoplay muted loop playsinline preload="metadata"></video>
+          <video style="pointer-events: none;" src="https://assets.kinetixai.cn/rise3/backpack_continuous_21_RISE_compressed.mp4" autoplay muted loop playsinline preload="metadata"></video>
         </div>
-        <div class="caption">Task1: Dynamic Brick Sorting</div>
+        <div class="carousel-caption">Backpack Packing</div>
       </article>
 
       <article class="carousel-card">
         <div class="video-wrapper">
-          <video style="pointer-events: none;" src="https://assets.kinetixai.cn/rise3/backpack_continuous_21_RISE_compressed.mp4" autoplay muted loop playsinline preload="metadata"></video>
+          <video style="pointer-events: none;" src="https://assets.kinetixai.cn/rise3/conveyor_continuous_11_RISE_compressed.mp4" autoplay muted loop playsinline preload="metadata"></video>
         </div>
-        <div class="caption">Task 2: Backpack Packing</div>
+        <div class="carousel-caption">Dynamic Brick Sorting</div>
       </article>
 
       <article class="carousel-card">
         <div class="video-wrapper">
           <video style="pointer-events: none;" src="https://assets.kinetixai.cn/rise3/box_continuous_10_RISE_compressed.mp4" autoplay muted loop playsinline preload="metadata"></video>
         </div>
-        <div class="caption">Task 3: Box Closing</div>
+        <div class="carousel-caption">Box Closing</div>
       </article>
     </div>
   </div>
@@ -187,6 +212,13 @@
   <button class="nav-btn next-btn" id="nextBtn">
     <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
   </button>
+  
+  <!-- Carousel Indicators -->
+  <div class="carousel-indicators" id="carouselIndicators">
+    <span class="indicator active" data-index="0"></span>
+    <span class="indicator" data-index="1"></span>
+    <span class="indicator" data-index="2"></span>
+  </div>
 </div>
 <hr/>
 
@@ -210,25 +242,11 @@
 
   <h3>Comparison: RISE vs. Baselines</h3>
   <p class="small">
-    Left: <b>RISE (Ours)</b>. Right: <b>Baselines</b> (Composite video including <i>π</i><sub>0.5</sub>, <i>π</i><sub>0.5</sub>+DSRL, RECAP).
+    Left: <b>RISE (Ours)</b>. Right: <b>Baselines</b> (Composite video including RECAP, <i>π</i><sub>0.5</sub>, <i>π</i><sub>0.5</sub>+DSRL).
   </p>
   
   <div class="grid2" style="margin-top:10px">
     
-    <div>
-      <div class="media">
-        <!-- <video src="https://assets.kinetixai.cn/rise/dynamic_brick_sorting.mp4" autoplay muted loop playsinline></video> -->
-        <video style="pointer-events: none;" src="https://assets.kinetixai.cn/rise3/conveyor_continuous_10_RISE_compressed.mp4" autoplay muted loop playsinline></video>
-      </div>
-      <div class="caption"><b>RISE</b> (Dynamic Brick Sorting)</div>
-    </div>
-    <div>
-      <div class="media">
-        <video style="pointer-events: none;" src="https://assets.kinetixai.cn/rise3/conveyor_baseline_v2_compressed.mp4" autoplay muted loop playsinline></video>
-      </div>
-      <div class="caption"><b>Baselines</b> (Dynamic Brick Sorting)</div>
-    </div>
-
     <div>
       <div class="media">
         <!-- <video src="https://assets.kinetixai.cn/rise/backpack_packing.mp4" autoplay muted loop playsinline></video> -->
@@ -241,6 +259,20 @@
         <video style="pointer-events: none;" src="https://assets.kinetixai.cn/rise3/backpack_baseline_v2_compressed.mp4" autoplay muted loop playsinline></video>
       </div>
       <div class="caption"><b>Baselines</b> (Backpack Packing)</div>
+    </div>
+
+    <div>
+      <div class="media">
+        <!-- <video src="https://assets.kinetixai.cn/rise/dynamic_brick_sorting.mp4" autoplay muted loop playsinline></video> -->
+        <video style="pointer-events: none;" src="https://assets.kinetixai.cn/rise3/conveyor_continuous_10_RISE_compressed.mp4" autoplay muted loop playsinline></video>
+      </div>
+      <div class="caption"><b>RISE</b> (Dynamic Brick Sorting)</div>
+    </div>
+    <div>
+      <div class="media">
+        <video style="pointer-events: none;" src="https://assets.kinetixai.cn/rise3/conveyor_baseline_v2_compressed.mp4" autoplay muted loop playsinline></video>
+      </div>
+      <div class="caption"><b>Baselines</b> (Dynamic Brick Sorting)</div>
     </div>
 
     <div>
@@ -313,7 +345,7 @@
 </section>
 <hr/>
 
-<section id="method">
+<section id="method" class="fade-in-section">
   <h2 class="section-title">Methodology</h2>
 
 
@@ -350,7 +382,8 @@
     <div class="caption">
         <b>Top</b>: Rollout stage. Prompted with an
           optimal advantage, the rollout policy interacts with the world
-          model to produce rollout data. <b>Bottom</b>: Training stage. The
+          model to produce rollout data.<br/>
+        <b>Bottom</b>: Training stage. The
           behavior policy is then trained to generate proper action under
           an advantage-conditioning scheme.
       </div>
@@ -362,11 +395,11 @@
 
 <hr/>
 
-<section id="results">
+<section id="results" class="fade-in-section">
   <h2>Results</h2>
   <h3>Main Results</h3>
   <p class="small" style="margin-bottom:12px">
-    RISE outperforms all baselines with +35% on brick sorting, +45% on backpack packing, and +35% on box closing through world model imagination.
+    <strong class="highlight">RISE</strong> outperforms all baselines with <span class="number-highlight">+35%</span> on brick sorting, <span class="number-highlight">+45%</span> on backpack packing, and <span class="number-highlight">+35%</span> on box closing through world model imagination.
   </p>
 
   <div class="card" style="padding:14px; margin-top:10px">
@@ -385,46 +418,62 @@
 
     <div class="grid3 results-grid" style="margin-top:10px">
       <div>
+        <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 8px; text-align: center;">Dynamic Brick Sorting: Success (%)</h4>
         <div class="canvas-wrap">
           <canvas id="mainChartBrick" class="chart"></canvas>
           <div class="tooltip"></div>
         </div>
-</div>
+      </div>
       <div>
+        <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 8px; text-align: center;">Backpack Packing: Success (%)</h4>
         <div class="canvas-wrap">
           <canvas id="mainChartBackpack" class="chart"></canvas>
           <div class="tooltip"></div>
         </div>
-</div>
+      </div>
       <div>
+        <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 8px; text-align: center;">Box Closing: Success (%)</h4>
         <div class="canvas-wrap">
           <canvas id="mainChartBox" class="chart"></canvas>
           <div class="tooltip"></div>
         </div>
-</div>
+      </div>
     </div>
 </div>
 
   <hr/>
 
   <h3>Ablations</h3>
+  <p class="small" style="margin-bottom:8px">
+    Ablation studies conducted on the <strong class="highlight">Dynamic Brick Sorting</strong> task.
+  </p>
   <p class="small" style="margin-bottom:12px">
     <b>Left:</b> Optimal offline ratio (0.6) balances demonstrations with online rollouts.<br/>
-    <b>Right:</b> Both online actions and states essential; full RISE with all components achieves best performance.
+    <b>Right:</b> Both online actions and states are essential; full RISE with all components achieves best performance.
   </p>
+  
   <div class="grid2 ablation-grid" style="margin-top:10px">
     <div class="card">
+      <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 12px; text-align: center;">Ablation: Offline data ratio</h4>
       <div class="canvas-wrap">
         <canvas id="ablationOffline" class="chart"></canvas>
         <div class="tooltip"></div>
       </div>
-</div>
+    </div>
     <div class="card">
+      <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 12px; text-align: center;">Ablation: Online action/state integration</h4>
       <div class="canvas-wrap">
         <canvas id="ablationOnline" class="chart"></canvas>
         <div class="tooltip"></div>
       </div>
-</div>
+    </div>
+  </div>
+  
+  <!-- Legend for Ablation Charts -->
+  <div class="legend" style="margin-top: 16px; justify-content: center;">
+    <div class="item"><span class="swatch" style="background: rgba(91,124,250,.72)"></span> Sort Accuracy</div>
+    <div class="item"><span class="swatch" style="background: rgba(168,85,247,.55)"></span> Pick&Place Success Rate</div>
+    <div class="item"><span class="swatch" style="background: rgba(120,140,170,.55)"></span> Complete Success Rate</div>
   </div>
 
   <hr/>
@@ -581,9 +630,9 @@
 
 <hr/>
 
-<section id="abstract">
+<section id="abstract" class="fade-in-section">
   <h2>Abstract</h2>
-  <p>
+  <p style="text-align: justify; line-height: 1.7;">
     Despite the sustained scaling on model capacity and data acquisition, 
     Vision–Language–Action (VLA) models remain brittle in contact-rich and dynamic manipulation tasks, 
     where minor execution deviations can compound into failures. 
@@ -616,7 +665,7 @@
 
 <!-- <hr/> -->
 
-<section id="bibtex">
+<section id="bibtex" class="fade-in-section">
   <h2>BibTeX</h2>
   <div class="toolbar">
     <div class="small">Copy the citation:</div>
@@ -624,8 +673,7 @@
   </div>
   <pre id="bibtex_code" class="code">@article{rise2026,
   title={RISE: Self-Improving Robot Policy with Compositional World Model},
-  author={Author A and Author B and Author C},
-  journal={arXiv preprint},
+  author={Yang, Jiazhi and Lin, Kunyang and Li, Jinwei and Zhang, Wencong and Lin, Tianwei and Wu, Longyan and Su, Zhizhong and Zhao, Hao and Zhang, Ya-Qin and Chen, Li and Luo, Ping and Yue, Xiangyu and Li, Hongyang},
   year={2026}
 }</pre>
 </section>
@@ -641,6 +689,13 @@
     <div class="small" style="color:#ddd; margin-top:8px">Press ESC to close. Double-click videos to open here.</div>
   </div>
 </div>
+
+<!-- Back to Top Button -->
+<button id="backToTop" class="back-to-top" title="Back to top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</button>
 
 <script src="assets/js/main.js"></script>
 <script>
