@@ -82,6 +82,15 @@ export default function Home() {
             </div>
 
 
+            <div className="w-full px-6 flex justify-center mt-12">
+                <div className="w-full max-w-7xl">
+                    <p>
+                        Some other Awards are announced internally without shown onto the website here.
+                    </p>
+                </div>
+            </div>
+
+
 
 
 
