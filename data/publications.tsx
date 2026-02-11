@@ -66,10 +66,10 @@ export const publications: {
     timeline: string[];
 }[] = [
     {
-        title: "EgoHumanoid",
-        link: "",
-        image: "",
-        author: "",
+        title: "EgoHumanoid: Unlocking In-the-Wild Loco-Manipulation with Robot-Free Egocentric Demonstration",
+        link: "https://arxiv.org/abs/2602.10106",
+        image: "https://ik.imagekit.io/opendrivelab/publication/EgoHumanoid.jpg",
+        author: "Modi Shi, Shijia Peng, Jin Chen, Haoran Jiang, Yinghui Li, Di Huang, Ping Luo, Hongyang Li, Li Chen",
         note: "Preprint 2026",
         noteoption: '',
         star: "",
@@ -81,9 +81,9 @@ export const publications: {
             },
         ],
         description: "",
-        keys: [],
-        time: '',
-        timeline:[],
+        keys: ['embodied_ai'],
+        time: '2026.02.10',
+        timeline:['tembodied', 'highlight'],
     },
     {
         title: "MM-Hand",

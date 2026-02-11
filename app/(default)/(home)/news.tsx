@@ -29,7 +29,7 @@ function isWithinLastNMonths(time: string, months = 3) {
     return pubDate >= past && pubDate <= now;
 }
 const recentPublications = publications
-    .filter(pub => pub.time && isWithinLastNMonths(pub.time, 3))
+    .filter(pub => pub.time && isWithinLastNMonths(pub.time, 2))
     .sort(
         (a, b) =>
         new Date(b.time.replace(/\./g, '-')).getTime() -
@@ -73,7 +73,7 @@ function getPublicationLinks(pub: {
   }
 const publicationNews: NewsItem[] = recentPublications.map(pub => ({
     date: pub.time,
-    content: `${pub.title} has been published.`,
+    content: `${pub.title}.`,
     links: getPublicationLinks(pub),
 }));
 
