@@ -144,7 +144,7 @@ export const publications: {
                 link: "https://github.com/OpenDriveLab/SparseVideoNav",
             },
         ],
-        description: "",
+        description: "we investigate beyond-the-view navigation task in the real world by introducing video generation model in this field for the first time, pioneering such capability in challenging night scenarios.",
         keys: ["embodied_ai"],
         time: '2026.02.05',
         timeline:['tembodied'],
