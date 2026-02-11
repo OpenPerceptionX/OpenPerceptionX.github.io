@@ -80,7 +80,7 @@ export const publications: {
                 link: "/EgoHumanoid",
             },
         ],
-        description: "",
+        description: "The first endorsement of human-to-humanoid transfer for whole-body locomanipulation.",
         keys: ['embodied_ai'],
         time: '2026.02.10',
         timeline:['tembodied', 'highlight'],
