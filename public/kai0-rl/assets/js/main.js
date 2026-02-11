@@ -384,8 +384,8 @@ function setupCharts(){
 
     // Legend stays shared.
     legend.innerHTML = `
-      <div class="item"><span class="swatch" style="background: rgba(120,140,170,.55)"></span> Baselines</div>
-      <div class="item"><span class="swatch" style="background: rgba(91,124,250,.88)"></span> RISE</div>
+      <div class="item"><span class="swatch" style="background: rgba(180,180,180,.75)"></span> Baselines</div>
+      <div class="item"><span class="swatch" style="background: rgba(30,58,138,.85)"></span> RISE</div>
     `;
 
     for(const task of TASKS){
@@ -419,7 +419,7 @@ function setupCharts(){
       }
 
       const outlineIdx = labels.findIndex(x=>x.includes("RISE"));
-      const colors = labels.map(m=> m.includes("RISE") ? "rgba(91,124,250,.88)" : "rgba(120,140,170,.55)");
+      const colors = labels.map(m=> m.includes("RISE") ? "rgba(30,58,138,.85)" : "rgba(180,180,180,.75)");
       const chartMax = (metric==="succ") ? 100 : null;
       // Remove 'title' parameter to hide chart internal title
       drawBarChartPerBar({canvas: TASK_CANVAS[task], labels, values, colors, outlineIdx, yFmt, tipLabel, max: chartMax});
@@ -445,9 +445,9 @@ function setupCharts(){
     // title removed - now in HTML h4
     labels: C.offline_ratio.ratio.map(r=>`ratio ${r}`),
     series:[
-      {name:"Sort Accuracy", values:C.offline_ratio.sort, color:"rgba(91,124,250,.72)"},
-      {name:"Pick&Place Success Rate", values:C.offline_ratio.pick, color:"rgba(168,85,247,.55)"},
-      {name:"Complete Success Rate", values:C.offline_ratio.comp, color:"rgba(120,140,170,.55)"},
+      {name:"Sort Accuracy", values:C.offline_ratio.sort, color:"rgba(96,165,250,.70)"},
+      {name:"Pick&Place Success Rate", values:C.offline_ratio.pick, color:"rgba(37,99,235,.65)"},
+      {name:"Complete Success Rate", values:C.offline_ratio.comp, color:"rgba(30,58,138,.75)"},
     ],
     yFmt:(v)=>v.toFixed(0)+"%",
     ticks:5,
@@ -459,9 +459,9 @@ function setupCharts(){
     // title removed - now in HTML h4
     labels: C.online_integration.labels,
     series:[
-      {name:"Sort Accuracy", values:C.online_integration.sort, color:"rgba(91,124,250,.72)"},
-      {name:"Pick&Place Success Rate", values:C.online_integration.pick, color:"rgba(168,85,247,.55)"},
-      {name:"Complete Success Rate", values:C.online_integration.comp, color:"rgba(120,140,170,.55)"},
+      {name:"Sort Accuracy", values:C.online_integration.sort, color:"rgba(96,165,250,.70)"},
+      {name:"Pick&Place Success Rate", values:C.online_integration.pick, color:"rgba(37,99,235,.65)"},
+      {name:"Complete Success Rate", values:C.online_integration.comp, color:"rgba(30,58,138,.75)"},
     ],
     yFmt:(v)=>v.toFixed(0)+"%",
     ticks:5,
