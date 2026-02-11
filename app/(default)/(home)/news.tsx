@@ -84,6 +84,25 @@ export function News() {
         <div className="w-full px-6 flex justify-center mt-12">
             <div className="w-full max-w-7xl flex flex-col gap-6 leading-relaxed">
                 <ul className="space-y-6">
+
+
+                    <div className="flex flex-col md:flex-row items-start md:items-center gap-2">
+                        <Badge variant="default" className="w-[80px] text-center shrink-0">
+                            2026.02.05
+                        </Badge>
+                        <div className="flex flex-col md:flex-row items-start md:items-center flex-wrap gap-2">
+                            <span>
+                                We are proud to recognize our members for their outstanding achievements in&nbsp;
+                                <Link className="text-o-blue animated-underline" href='/team/recognition2025'>
+                                    2025
+                                </Link>
+                                .
+                            </span>
+                        </div>
+                    </div>
+
+
+
                     {
                         publicationNews.map((item, idx) => (
                             <div key={idx} className="flex flex-col md:flex-row items-start md:items-center gap-2">
@@ -112,6 +131,9 @@ export function News() {
                             </div>
                         ))
                     }
+
+
+
                 </ul>
             </div>
         </div>

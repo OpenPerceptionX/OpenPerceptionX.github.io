@@ -25,16 +25,16 @@ const members: {
         desc: "Outstanding Funding Buddy 最佳項目夥計獎",
     },
     {
-        name: "Hai Zhang",
-        desc: "Outstanding Funding Buddy 最佳項目夥計獎 & Outstanding Teaching Assistant 最佳助教獎",
+        name: "Jiazhi Yang",
+        desc: "Outstanding Research 最佳研究獎",
     },
     {
         name: "Modi Shi",
         desc: "Outstanding Research 最佳研究獎",
     },
     {
-        name: "Jiazhi Yang",
-        desc: "Outstanding Research 最佳研究獎",
+        name: "Hai Zhang",
+        desc: "Outstanding Funding Buddy 最佳項目夥計獎 & Outstanding Teaching Assistant 最佳助教獎",
     },
     {
         name: "Hugo Mak",
