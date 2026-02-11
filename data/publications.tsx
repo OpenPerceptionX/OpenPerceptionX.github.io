@@ -120,7 +120,7 @@ export const publications: {
                 link: "/kai0-rl",
             },
         ],
-        description: "",
+        description: "The first study on leveraging world models as an effective learning environment for challenging real-world manipulation, bootstrapping performance on tasks requiring high dynamics, dexterity, and precision.",
         keys: ['embodied_ai'],
         time: '2026.02.11',
         timeline:['tembodied', 'highlight'],
