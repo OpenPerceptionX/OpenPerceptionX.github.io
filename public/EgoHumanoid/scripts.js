@@ -1,10 +1,144 @@
-// Progress bar
-window.addEventListener('scroll', () => {
-    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const scrolled = (winScroll / height) * 100;
-    document.getElementById('progressBar').style.width = scrolled + '%';
-});
+// ============================================
+// Progress Bar & Side Navigation Controller
+// ============================================
+
+class NavigationController {
+    constructor() {
+        this.sideNavItems = document.querySelectorAll('.side-nav-item');
+        this.progressBar = document.getElementById('progressBar');
+        this.navSectionIds = [];
+        this.sectionCache = [];
+        this.currentActiveSection = null;
+        this.rafId = null;
+        this.isScrolling = false;
+        
+        this.init();
+    }
+    
+    init() {
+        // 仅追踪导航中存在的章节 ID，确保一一对应
+        this.navSectionIds = Array.from(this.sideNavItems)
+            .map(item => item.getAttribute('data-section'))
+            .filter(Boolean);
+        
+        this.updateSectionCache();
+        this.update();
+        
+        window.addEventListener('scroll', () => this.handleScroll(), { passive: true });
+        window.addEventListener('resize', () => {
+            this.updateSectionCache();
+            this.update();
+        }, { passive: true });
+        
+        // 处理 hash 导航：直接访问 #section 或点击锚点后
+        window.addEventListener('hashchange', () => this.onHashChange());
+        if (window.location.hash) {
+            setTimeout(() => this.onHashChange(), 100);
+        }
+        
+        this.setupNavClickHandlers();
+    }
+    
+    onHashChange() {
+        const hash = window.location.hash.slice(1);
+        if (hash && this.navSectionIds.includes(hash)) {
+            this.updateSectionCache();
+            this.update();
+        }
+    }
+    
+    updateSectionCache() {
+        this.sectionCache = this.navSectionIds
+            .map(id => {
+                const el = document.getElementById(id);
+                if (!el) return null;
+                const rect = el.getBoundingClientRect();
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                return {
+                    id,
+                    top: scrollTop + rect.top,
+                    bottom: scrollTop + rect.bottom,
+                    height: rect.height,
+                    element: el
+                };
+            })
+            .filter(Boolean)
+            .sort((a, b) => a.top - b.top);
+    }
+    
+    handleScroll() {
+        if (!this.isScrolling) {
+            this.isScrolling = true;
+            this.rafId = requestAnimationFrame(() => {
+                this.update();
+                this.isScrolling = false;
+            });
+        }
+    }
+    
+    update() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight;
+        const clientHeight = document.documentElement.clientHeight;
+        
+        if (this.progressBar && scrollHeight > clientHeight) {
+            const progress = (scrollTop / (scrollHeight - clientHeight)) * 100;
+            this.progressBar.style.width = Math.min(100, Math.max(0, progress)) + '%';
+        }
+        
+        const activeSection = this.getActiveSection(scrollTop);
+        if (activeSection !== this.currentActiveSection) {
+            this.setActiveSection(activeSection);
+            this.currentActiveSection = activeSection;
+        }
+    }
+    
+    getActiveSection(scrollTop) {
+        if (!this.sectionCache.length) return this.navSectionIds[0] || 'demo';
+        
+        const viewportCenter = scrollTop + window.innerHeight * 0.35;
+        
+        if (scrollTop < 80) return this.sectionCache[0].id;
+        
+        // 找到视口中心所在或刚刚经过的章节（最后一个 top <= viewportCenter 的）
+        let active = this.sectionCache[0].id;
+        for (const section of this.sectionCache) {
+            if (section.top <= viewportCenter) {
+                active = section.id;
+            }
+        }
+        return active;
+    }
+    
+    setActiveSection(sectionId) {
+        this.sideNavItems.forEach(item => {
+            const isActive = item.getAttribute('data-section') === sectionId;
+            item.classList.toggle('active', isActive);
+        });
+    }
+    
+    setupNavClickHandlers() {
+        this.sideNavItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = item.getAttribute('href');
+                const target = document.querySelector(targetId);
+                
+                if (target) {
+                    this.updateSectionCache();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    setTimeout(() => {
+                        this.updateSectionCache();
+                        this.update();
+                    }, 600);
+                }
+            });
+        });
+    }
+}
+
+// Initialize navigation controller
+const navController = new NavigationController();
 
 // Reveal on scroll
 const reveals = document.querySelectorAll('.reveal');
@@ -55,10 +189,31 @@ deployTabs.forEach(tab => {
 // Copy citation
 function copyCitation() {
     const citation = document.querySelector('.citation-code').textContent;
-    navigator.clipboard.writeText(citation);
     const btn = document.querySelector('.citation-copy');
-    btn.textContent = 'Copied!';
-    setTimeout(() => btn.textContent = 'Copy', 2000);
+
+    // 优先使用 Clipboard API，不支持时用 fallback
+    function onCopied() {
+        btn.textContent = 'Copied!';
+        btn.classList.add('copied');
+        setTimeout(() => {
+            btn.textContent = 'Copy';
+            btn.classList.remove('copied');
+        }, 2000);
+    }
+
+    if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(citation).then(onCopied);
+    } else {
+        const textarea = document.createElement('textarea');
+        textarea.value = citation;
+        textarea.style.position = 'fixed';
+        textarea.style.opacity = '0';
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+        onCopied();
+    }
 }
 
 // Charts - Updated with blue color scheme
@@ -148,40 +303,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Side Navigation - Active section tracking
-const sideNavItems = document.querySelectorAll('.side-nav-item');
-const sections = document.querySelectorAll('section[id], .hero[id]');
-
-const sectionObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const id = entry.target.getAttribute('id');
-            sideNavItems.forEach(item => {
-                item.classList.remove('active');
-                if (item.getAttribute('data-section') === id) {
-                    item.classList.add('active');
-                }
-            });
-        }
-    });
-}, { 
-    threshold: 0.2,
-    rootMargin: '-10% 0px -70% 0px'
-});
-
-sections.forEach(section => sectionObserver.observe(section));
-
-// Side nav smooth scroll
-sideNavItems.forEach(item => {
-    item.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const target = document.querySelector(targetId);
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-    });
-});
 
 // Scaling Analysis Charts - Data from scaling.py
 const scalingColors = {
@@ -318,3 +439,81 @@ function initScalingCharts() {
 
 // Initialize charts
 initScalingCharts();
+
+// ============================================
+// 移动端视频自动播放兼容处理
+// ============================================
+(function() {
+    var allVideos = document.querySelectorAll('video[autoplay]');
+    if (!allVideos.length) return;
+
+    // 1. 强制通过 JS 设置关键属性（部分移动端只认 JS property，不认 HTML attribute）
+    allVideos.forEach(function(video) {
+        video.muted = true;
+        video.playsInline = true;
+        video.setAttribute('webkit-playsinline', '');    // iOS Safari 旧版
+        video.setAttribute('x5-playsinline', '');        // 腾讯 X5 内核（微信/QQ）
+        video.setAttribute('x5-video-player-type', 'h5'); // 微信 H5 同层播放
+        video.setAttribute('t7-video-player-type', 'inline'); // UC 浏览器
+    });
+
+    // 2. 播放函数：确保 muted 后再 play
+    function tryPlay(video) {
+        video.muted = true;
+        var p = video.play();
+        if (p && p.then) {
+            p.then(function(){}).catch(function() {
+                // play 被拒绝，等待用户交互后重试
+                video.dataset.needsPlay = '1';
+            });
+        }
+    }
+
+    // 3. IntersectionObserver：只播放视口内的视频，离开视口暂停
+    var userHasInteracted = false;
+
+    if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                var video = entry.target;
+                if (entry.isIntersecting) {
+                    tryPlay(video);
+                } else {
+                    video.pause();
+                }
+            });
+        }, { threshold: 0.1 });
+        allVideos.forEach(function(video) { observer.observe(video); });
+    }
+
+    // 4. 页面加载完成后尝试播放视口内的视频
+    function playVisibleVideos() {
+        allVideos.forEach(function(video) {
+            var rect = video.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                tryPlay(video);
+            }
+        });
+    }
+    playVisibleVideos();
+
+    // 5. 监听用户首次交互 —— 这是移动端最关键的时机
+    function onFirstInteraction() {
+        if (userHasInteracted) return;
+        userHasInteracted = true;
+        playVisibleVideos();
+        // 移除所有监听
+        interactionEvents.forEach(function(evt) {
+            document.removeEventListener(evt, onFirstInteraction, true);
+        });
+    }
+    var interactionEvents = ['touchstart', 'touchend', 'click', 'pointerdown', 'scroll'];
+    interactionEvents.forEach(function(evt) {
+        document.addEventListener(evt, onFirstInteraction, { capture: true, passive: true });
+    });
+
+    // 6. 页面可见性变化时恢复播放（从后台切回前台）
+    document.addEventListener('visibilitychange', function() {
+        if (!document.hidden) playVisibleVideos();
+    });
+})();
