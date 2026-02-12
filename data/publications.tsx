@@ -86,26 +86,6 @@ export const publications: {
         timeline:['tembodied', 'highlight'],
     },
     {
-        title: "MM-Hand",
-        link: "",
-        image: "",
-        author: "",
-        note: "Preprint 2026",
-        noteoption: '',
-        star: "",
-        starlink: "",
-        icon: [
-            {
-                type: "page",
-                link: "https://mmlab.hk/research/MM-Hand",
-            },
-        ],
-        description: "",
-        keys: [],
-        time: '',
-        timeline:[],
-    },
-    {
         title: "RISE: Self-Improving Robot Policy with Compositional World Model",
         link: "https://arxiv.org/abs/2602.11075",
         image: "https://ik.imagekit.io/opendrivelab/publication/kai0-rl.jpg",
