@@ -107,7 +107,7 @@ export const publications: {
     },
     {
         title: "RISE: Self-Improving Robot Policy with Compositional World Model",
-        link: "https://opendrivelab.github.io/RISE.pdf",
+        link: "https://arxiv.org/abs/2602.11075",
         image: "https://ik.imagekit.io/opendrivelab/publication/kai0-rl.jpg",
         author: "Jiazhi Yang, Kunyang Lin, Jinwei Li, Wencong Zhang, Tianwei Lin, Longyan Wu, Zhizhong Su, Hao Zhao, Ya-Qin Zhang, Li Chen, Ping Luo, Xiangyu Yue, Hongyang Li",
         note: "Preprint 2026",

@@ -333,6 +333,11 @@ export default function Redirect() {
     ) {
         redirect('/assets/file/ICCV23_oral_DriveAdapter.pdf')
     }
+    if (
+        pathname == '/RISE.pdf'
+    ) {
+        redirect('https://arxiv.org/abs/2602.11075')
+    }
 
 
 
