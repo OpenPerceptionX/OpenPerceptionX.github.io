@@ -86,6 +86,23 @@ export function News() {
                 <ul className="space-y-6">
 
 
+
+                    <div className="flex flex-col md:flex-row items-start md:items-center gap-2">
+                        <Badge variant="default" className="w-[80px] text-center shrink-0">
+                            2026.02.12
+                        </Badge>
+                        <div className="flex flex-col md:flex-row items-start md:items-center flex-wrap gap-2">
+                            <span>
+                                <Link className="text-o-blue animated-underline" href='https://mmlab.hk/research/MM-Hand' target="_blank">
+                                    MM-Hand 1.0
+                                </Link>
+                                &nbsp;is currently open for preorder.·· 
+                            </span>
+                        </div>
+                    </div>
+
+
+
                     <div className="flex flex-col md:flex-row items-start md:items-center gap-2">
                         <Badge variant="default" className="w-[80px] text-center shrink-0">
                             2026.02.05
