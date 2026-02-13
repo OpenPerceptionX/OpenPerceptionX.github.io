@@ -142,7 +142,7 @@ export const publications: {
             },
             {
                 type: "youtube",
-                link: "https://youtu.be/nsUr3TLz4_U",
+                link: "https://youtu.be/3WlaxJk714k",
             },
         ],
         description: "we investigate beyond-the-view navigation task in the real world by introducing video generation model in this field for the first time, pioneering such capability in challenging night scenarios.",
