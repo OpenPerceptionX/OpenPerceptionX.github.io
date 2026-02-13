@@ -66,6 +66,23 @@ export const publications: {
     timeline: string[];
 }[] = [
     {
+        title: "MM-Hand 1.0",
+        link: "https://mmlab.hk/research/MM-Hand",
+        image: "",
+        image_sliding: 'https://ik.imagekit.io/opendrivelab/mmhand1.0.jpg',
+        author: "",
+        note: "arXiv",
+        noteoption: '',
+        star: "",
+        starlink: "",
+        icon: [
+        ],
+        description: "is currently open for preorder.",
+        keys: ['home_sliding'],
+        time: '',
+        timeline:[],
+    },
+    {
         title: "EgoHumanoid: Unlocking In-the-Wild Loco-Manipulation with Robot-Free Egocentric Demonstration",
         link: "https://arxiv.org/abs/2602.10106",
         image: "https://ik.imagekit.io/opendrivelab/publication/EgoHumanoid.jpg",

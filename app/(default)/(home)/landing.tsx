@@ -37,7 +37,7 @@ import { Chen2025_value_learning } from "@/components/citation-drawer"
 import { publications } from "@/data/publications"
 import { Button } from "@/components/ui/button"
 import { type_mapping } from "@/data/mapping"
-const landings = [0,1,2,3,5,4].map(index => [...publications.values()].filter(publication => publication.keys.includes('home_sliding'))[index])
+const landings = [0,1,2,3,4,6,5].map(index => [...publications.values()].filter(publication => publication.keys.includes('home_sliding'))[index])
 
 
 
@@ -130,11 +130,7 @@ export function Landing() {
                                         landing.title.startsWith('AgiBot') ? (
                                             "AgiBot World"
                                         ) : (
-                                            landing.title.startsWith('FreeTacMan') ? (
-                                                "FreeTacMan: Robot-free Visuo-Tactile Data Collection System"
-                                            ) : (
-                                                landing.title
-                                            )
+                                            landing.title
                                         )
                                     }
                                 </h1>
@@ -154,15 +150,19 @@ export function Landing() {
 
                                 <div>
                                     <div className="flex flex-row items-center flex-wrap text-sm lg:text-base">
-                                        <Link href={landing.link} target={landing.link.startsWith('http') ? '_blank' : '_self'} className="animated-underline-gray mr-3 text-nowrap">
-                                            {
-                                                landing.link.startsWith('http') ? (
-                                                    "Paper"
-                                                ) : (
-                                                    "Blog"
-                                                )
-                                            }
-                                        </Link>
+                                        {
+                                            landing.link != '' && (
+                                                <Link href={landing.link} target={landing.link.startsWith('http') ? '_blank' : '_self'} className="animated-underline-gray mr-3 text-nowrap">
+                                                    {
+                                                        landing.link.startsWith('https://mmlab.hk/research/MM-Hand') ? (
+                                                            "Page"
+                                                        ) : (
+                                                            "Paper"
+                                                        )
+                                                    }
+                                                </Link>
+                                            )
+                                        }
                                         {
                                             landing.icon.length != 0 && landing.icon[0].type != 'cite' && (
                                                 <span className="text-xs mr-3"> | </span>

@@ -96,7 +96,7 @@ export function News() {
                                 <Link className="text-o-blue animated-underline" href='https://mmlab.hk/research/MM-Hand' target="_blank">
                                     MM-Hand 1.0
                                 </Link>
-                                &nbsp;is currently open for preorder.·· 
+                                &nbsp;is currently open for preorder.
                             </span>
                         </div>
                     </div>
