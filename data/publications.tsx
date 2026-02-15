@@ -66,10 +66,10 @@ export const publications: {
     timeline: string[];
 }[] = [
     {
-        title: "MM-Hand 1.0",
+        title: "MM-Hand 1.0 is currently open for preorder",
         link: "https://mmlab.hk/research/MM-Hand",
         image: "",
-        image_sliding: 'https://ik.imagekit.io/opendrivelab/mmhand1.0.jpg',
+        image_sliding: 'https://ik.imagekit.io/opendrivelab/20260215-160809.png',
         author: "",
         note: "arXiv",
         noteoption: '',
@@ -77,7 +77,7 @@ export const publications: {
         starlink: "",
         icon: [
         ],
-        description: "is currently open for preorder.",
+        description: "An open-source, high DoF, lightweight, motimodal, and modular dexterous hand.",
         keys: ['home_sliding'],
         time: '',
         timeline:[],

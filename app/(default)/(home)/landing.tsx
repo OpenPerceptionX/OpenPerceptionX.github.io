@@ -155,7 +155,7 @@ export function Landing() {
                                                 <Link href={landing.link} target={landing.link.startsWith('http') ? '_blank' : '_self'} className="animated-underline-gray mr-3 text-nowrap">
                                                     {
                                                         landing.link.startsWith('https://mmlab.hk/research/MM-Hand') ? (
-                                                            "Page"
+                                                            "Checkout at mmlab.hk/MM-Hand"
                                                         ) : (
                                                             "Paper"
                                                         )
