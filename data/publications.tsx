@@ -77,7 +77,7 @@ export const publications: {
         starlink: "",
         icon: [
         ],
-        description: "An open-source, high DoF, lightweight, motimodal, and modular dexterous hand.",
+        description: "An open-source, high-DoF, lightweight, multimodal, and modular dexterous hand.",
         keys: ['home_sliding'],
         time: '',
         timeline:[],
