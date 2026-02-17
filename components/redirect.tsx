@@ -338,7 +338,11 @@ export default function Redirect() {
     ) {
         redirect('https://arxiv.org/abs/2602.11075')
     }
-
+    if (
+        pathname == 'https://opendrivelab.com/Dataset_Survey_Chinese_V2.pdf'
+    ) {
+        redirect('https://www.sciengine.com/SSI/doi/10.1360/SSI-2023-0313')
+    }
 
 
     redirect('/')
