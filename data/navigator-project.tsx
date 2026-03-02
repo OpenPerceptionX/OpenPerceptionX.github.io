@@ -138,6 +138,18 @@ export const NavigatorProject: {
             id: "description",
         },
         {
+            text: "Prerequisite",
+            id: "prerequisite",
+        },
+        {
+            text: "References",
+            id: "textbook-and-references",
+        },
+        {
+            text: "Tools",
+            id: "website-and-computing-tools",
+        },
+        {
             text: "Schedule",
             id: "schedule",
         },

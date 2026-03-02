@@ -86,6 +86,24 @@ export function News() {
                 <ul className="space-y-6">
 
 
+                
+
+                    <div className="flex flex-col md:flex-row items-start md:items-center gap-2">
+                        <Badge variant="default" className="w-[80px] text-center shrink-0">
+                            2026.02.12
+                        </Badge>
+                        <div className="flex flex-col md:flex-row items-start md:items-center flex-wrap gap-2">
+                            <span>
+                                Announcing the strategic partnerships with Unitree, Noitom Robotics, and BrainCo. Check more details&nbsp;
+                                <Link className="text-o-blue animated-underline" href='https://mp.weixin.qq.com/s/i2s8g8sHAC9uDFsVyucTxA' target="_blank">
+                                    here
+                                </Link>
+                                .
+                            </span>
+                        </div>
+                    </div>
+
+
 
                     <div className="flex flex-col md:flex-row items-start md:items-center gap-2">
                         <Badge variant="default" className="w-[80px] text-center shrink-0">
