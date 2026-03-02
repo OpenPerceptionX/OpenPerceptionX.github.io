@@ -298,6 +298,11 @@ export default function Redirect() {
     ) {
         redirect('https://mmlab.hk/CCAI9025')
     }
+    if (
+        pathname.toLowerCase().startsWith('/ap0001') 
+    ) {
+        redirect('/AP0001')
+    }
 
 
     
