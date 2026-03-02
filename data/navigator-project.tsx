@@ -142,12 +142,16 @@ export const NavigatorProject: {
             id: "prerequisite",
         },
         {
-            text: "References",
+            text: "Materials",
             id: "textbook-and-references",
         },
         {
             text: "Tools",
             id: "website-and-computing-tools",
+        },
+        {
+            text: "Policy",
+            id: "grading-policy",
         },
         {
             text: "Schedule",

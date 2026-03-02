@@ -267,8 +267,7 @@ const scheduleItems: {
 
 export default function Home() {
     return (
-        <div className="w-full">
-
+        <div className="w-full text-lg">
 
 
             <div className="w-full h-96 py-16 px-6 3xl:px-16">   
@@ -456,6 +455,46 @@ export default function Home() {
                             </li>
                         ))}
                     </ul>
+                </div>
+            </div>
+
+
+
+            <div className="w-full px-6 flex justify-center mt-24">
+                <div className="w-full max-w-7xl flex">
+                    <h2 className="text-t1 font-bold"> 
+                        <Link href="#grading-policy" className="scroll-mt-32 group flex items-center" id="grading-policy">
+                            Grading Policy
+                            <span className="ml-6 hidden group-hover:inline-block size-6 text-foreground">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M15.197 3.35462C16.8703 1.67483 19.4476 1.53865 20.9536 3.05046C22.4596 4.56228 22.3239 7.14956 20.6506 8.82935L18.2268 11.2626M10.0464 14C8.54044 12.4882 8.67609 9.90087 10.3494 8.22108L12.5 6.06212" strokeWidth="2.5" strokeLinecap="round"/>
+                                    <path d="M13.9536 10C15.4596 11.5118 15.3239 14.0991 13.6506 15.7789L11.2268 18.2121L8.80299 20.6454C7.12969 22.3252 4.55237 22.4613 3.0464 20.9495C1.54043 19.4377 1.67609 16.8504 3.34939 15.1706L5.77323 12.7373" strokeWidth="2.5" strokeLinecap="round"/>
+                                </svg>
+                            </span>
+                        </Link>
+                    </h2>
+                </div>
+            </div>
+            <div className="w-full px-6 flex justify-center mt-12">
+                <div className="w-full max-w-7xl flex flex-col gap-3">
+                    <div className="rounded-lg border border-sky-200/60 bg-sky-50/80 dark:bg-sky-950/30 dark:border-sky-800/60 px-5 py-5 text-foreground">
+                        <p className="leading-relaxed text-justify mb-4">
+                            The grading policy of this course is as follows:
+                        </p>
+                        <ul className="list-disc list-inside space-y-2 leading-relaxed text-justify">
+                            <li><strong>Participation (10%)</strong></li>
+                            <li><strong>Quiz (10%)</strong></li>
+                            <li>
+                                <strong>Assignment (20%)</strong>: There will be about 2 homework assignments for the first 14 weeks. Each homework contains both a written part and a programming part.
+                            </li>
+                            <li>
+                                <strong>Group Project (60%)</strong>: You can work on a topic of your choice. Open-source data will be provided for your reference. Each team needs to submit a midterm project proposal and give a 10-min presentation. The proposal and presentation should show adequate literature surveys on related topics, and provide good motivations to support the ideas. Each team will deliver a short (15 min) talk in the last week together with a project report and code.
+                                <ul className="list-[circle] list-inside ml-4 mt-2 space-y-1 text-foreground/90">
+                                    <li>The final presentation might be in the form of a symposium or mini-conference style, presenting Posters and panels, depending on the future arrangement.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
