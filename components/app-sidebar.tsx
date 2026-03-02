@@ -300,7 +300,7 @@ export function AppSidebar() {
                                                 {/* <Link href="/AP0001" className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
                                                     SLAI AP0001
                                                 </Link>  */}
-                                                <Link href="/CCAI9025" target="_blank" className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
+                                                <Link href="https://mmlab.hk/CCAI9025" target="_blank" className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
                                                     HKU CCAI9025
                                                 </Link> 
                                             </SidebarMenuSub>
