@@ -71,14 +71,14 @@ const textbookAndReferences = {
         },
     ],
     onlineCourses: [
-        { title: "Introduction to Robot Learning", href: "https://16-831-s24.github.io/", by: "Guanya Shi" },
-        { title: "Deep Learning for Robotics", href: "https://16-884.github.io/", by: "Deepak Pathak" },
+        { title: "Introduction to Robot Learning", href: "https://16-831-s24.github.io/", by: "Guanya Shi", byHref: "https://www.gshi.me/" },
+        { title: "Deep Learning for Robotics", href: "https://16-884.github.io/", by: "Deepak Pathak", byHref: "https://scholar.google.com/citations?user=AEsPCAUAAAAJ&hl=en" },
     ],
     conferences: [
-        "Robotics: Science and Systems (RSS)",
-        "Conference on Robot Learning (CoRL)",
-        "IEEE Conference on Computer Vision and Pattern Recognition (CVPR)",
-        "Annual Conference on Neural Information Processing Systems (NeurIPS)",
+        { title: "Robotics: Science and Systems (RSS)", href: "https://roboticsconference.org/" },
+        { title: "Conference on Robot Learning (CoRL)", href: "https://www.corl.org/" },
+        { title: "IEEE Conference on Computer Vision and Pattern Recognition (CVPR)", href: "https://ieeexplore.ieee.org/document/517044" },
+        { title: "Annual Conference on Neural Information Processing Systems (NeurIPS)", href: "https://en.wikipedia.org/wiki/Conference_on_Neural_Information_Processing_Systems" },
     ],
 } as const;
 
@@ -107,7 +107,7 @@ const scheduleItems: {
 }[] = [
     {
         date: "2026/3/5",
-        lecture: "Course Introduction [BASIC]",
+        lecture: "Course Introduction",
         topics: [
             "Introduction to Embodied AI",
             "DL and ML Basics",
@@ -115,7 +115,7 @@ const scheduleItems: {
     },
     {
         date: "2026/3/12",
-        lecture: "CV, Robotics and Coding Mixer [BASIC]",
+        lecture: "CV, Robotics and Coding Mixer",
         topics: [
             "Computer Vision Fundamentals for Embodied AI",
             "Core robotics basics",
@@ -124,7 +124,7 @@ const scheduleItems: {
     },
     {
         date: "2026/3/19",
-        lecture: "Reinforcement Learning [BASIC]",
+        lecture: "Reinforcement Learning",
         topics: [
             "Fundamentals of Reinforcement Learning",
             "Key challenges of RL in Embodied AI",
@@ -134,7 +134,7 @@ const scheduleItems: {
     },
     {
         date: "2026/3/26",
-        lecture: "World Models and Foundation Models in Embodied AI [BASIC]",
+        lecture: "World Models and Foundation Models in Embodied AI",
         topics: [
             "Core concepts and construction of world models",
             "Foundation models adaptation for embodied AI",
@@ -142,17 +142,16 @@ const scheduleItems: {
     },
     {
         date: "2026/4/2",
-        lecture: "Manipulation and VLAs [ALGORITHM]",
+        lecture: "Manipulation and VLAs",
         topics: [
             "Core problems of robotic manipulation in embodied AI",
             "Design and training of VLA models",
             "VLA model deployment for typical robotic manipulation tasks",
         ],
-        note: "Attendance required",
     },
     {
         date: "2026/4/9",
-        lecture: "Navigation and VLNs [ALGORITHM]",
+        lecture: "Navigation and VLNs",
         topics: [
             "Core challenges of embodied navigation tasks",
             "Fundamentals and key technologies of VLN models",
@@ -161,27 +160,26 @@ const scheduleItems: {
     },
     {
         date: "2026/4/16",
-        lecture: "Simulation [DATA]",
+        lecture: "Simulation",
         topics: [
             "High-fidelity simulation engines",
             "Sim-to-real gap mitigation",
             "Scenario and task design",
         ],
-        note: "HW1 due; RSS AC Meeting Trip",
+        note: "HW1 due",
     },
     {
         date: "2026/4/23",
-        lecture: "Data Collection System / MoCap / Data Pyramid [DATA]",
+        lecture: "Data Collection System / MoCap / Data Pyramid",
         topics: [
             "Motion capture fundamentals",
             "End-to-end data collection pipeline",
             "The data pyramid for embodied AI",
         ],
-        note: "ICLR Day 1",
     },
     {
         date: "2026/4/30",
-        lecture: "Ego-centric Data Learning [DATA]",
+        lecture: "Ego-centric Data Learning",
         topics: [
             "Egocentric perception",
             "Representation learning from ego-centric data",
@@ -189,7 +187,7 @@ const scheduleItems: {
     },
     {
         date: "2026/5/7",
-        lecture: "Locomotion on Humanoids [ALGORITHM]",
+        lecture: "Locomotion on Humanoids",
         topics: [
             "Humanoid locomotion fundamentals",
             "Learning-based locomotion",
@@ -199,7 +197,7 @@ const scheduleItems: {
     },
     {
         date: "2026/5/14",
-        lecture: "Whole-body Control on Humanoids [ALGORITHM]",
+        lecture: "Whole-body Control on Humanoids",
         topics: [
             "Whole-body control theory",
             "Integration of locomotion and manipulation",
@@ -207,7 +205,7 @@ const scheduleItems: {
     },
     {
         date: "2026/5/21",
-        lecture: "DexHand: A Hardware Perspective [HARDWARE]",
+        lecture: "DexHand: A Hardware Perspective",
         topics: [
             "DexHand architecture deep dive",
             "Hardware-software co-design",
@@ -216,38 +214,37 @@ const scheduleItems: {
     },
     {
         date: "2026/5/28",
-        lecture: "Hands-on Experiments: LeRobot / TodderBot / MMHand [HARDWARE]",
+        lecture: "Hands-on Experiments: LeRobot / TodderBot / MMHand",
         topics: [
             "Platform familiarization",
             "Low-level control interface",
             "Algorithm deployment",
-        ],
-        note: "CoRL submission",
+        ]
     },
     {
         date: "2026/6/4",
-        lecture: "Building Humanoids from Scratch or World Models [HARDWARE]",
+        lecture: "Building Humanoids from Scratch or World Models",
         topics: [
             "Full humanoid system integration",
             "\"From scratch\" vs. \"model-centric\" design",
             "World models as a virtual hardware",
         ],
-        note: "HW2 due; CVPR week",
+        note: "HW2 due",
     },
     {
         date: "2026/6/11",
-        lecture: "How to Make Research Impact: Writing, Rebuttal and Presentation in Embodied AI [BASIC]",
+        lecture: "How to Make Research Impact: Writing, Rebuttal and Presentation in Embodied AI",
         topics: [
             "Impactful paper writing",
             "Response to reviews (rebuttal)",
             "High-impact presentation",
             "Ethics and open science",
         ],
-        note: "Quiz in class",
+        note: "Quiz",
     },
     {
         date: "2026/6/18",
-        lecture: "Final Project Symposium I [PRESENTATION]",
+        lecture: "Final Project Symposium I",
         topics: [
             "Oral presentation sessions",
             "Peer review and moderation",
@@ -255,7 +252,7 @@ const scheduleItems: {
     },
     {
         date: "2026/6/25",
-        lecture: "Final Project Symposium II [PRESENTATION]",
+        lecture: "Final Project Symposium II",
         topics: [
             "Oral presentation sessions",
             "Peer review and moderation",
@@ -326,12 +323,11 @@ export default function Home() {
             </div>
 
 
-
             <div className="w-full px-6 flex justify-center mt-24">
                 <div className="w-full max-w-7xl flex">
                     <h2 className="text-t1 font-bold"> 
-                        <Link href="#prerequisite" className="scroll-mt-32 group flex items-center" id="prerequisite">
-                            Prerequisite
+                        <Link href="#course-logistics" className="scroll-mt-32 group flex items-center" id="course-logistics">
+                            Course Logistics
                             <span className="ml-6 hidden group-hover:inline-block size-6 text-foreground">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                                     <path d="M15.197 3.35462C16.8703 1.67483 19.4476 1.53865 20.9536 3.05046C22.4596 4.56228 22.3239 7.14956 20.6506 8.82935L18.2268 11.2626M10.0464 14C8.54044 12.4882 8.67609 9.90087 10.3494 8.22108L12.5 6.06212" strokeWidth="2.5" strokeLinecap="round"/>
@@ -344,154 +340,28 @@ export default function Home() {
             </div>
             <div className="w-full px-6 flex justify-center mt-12">
                 <div className="w-full max-w-7xl flex flex-col gap-3">
-                    {prerequisiteParagraphs.map((paragraph, index) => (
-                        <p key={index} className="leading-relaxed text-justify">
-                            {paragraph}
-                        </p>
-                    ))}
-                </div>
-            </div>
-
-
-
-            <div className="w-full px-6 flex justify-center mt-24">
-                <div className="w-full max-w-7xl flex">
-                    <h2 className="text-t1 font-bold"> 
-                        <Link href="#textbook-and-references" className="scroll-mt-32 group flex items-center" id="textbook-and-references">
-                            Textbook and References
-                            <span className="ml-6 hidden group-hover:inline-block size-6 text-foreground">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                    <path d="M15.197 3.35462C16.8703 1.67483 19.4476 1.53865 20.9536 3.05046C22.4596 4.56228 22.3239 7.14956 20.6506 8.82935L18.2268 11.2626M10.0464 14C8.54044 12.4882 8.67609 9.90087 10.3494 8.22108L12.5 6.06212" strokeWidth="2.5" strokeLinecap="round"/>
-                                    <path d="M13.9536 10C15.4596 11.5118 15.3239 14.0991 13.6506 15.7789L11.2268 18.2121L8.80299 20.6454C7.12969 22.3252 4.55237 22.4613 3.0464 20.9495C1.54043 19.4377 1.67609 16.8504 3.34939 15.1706L5.77323 12.7373" strokeWidth="2.5" strokeLinecap="round"/>
-                                </svg>
-                            </span>
-                        </Link>
-                    </h2>
-                </div>
-            </div>
-            <div className="w-full px-6 flex justify-center mt-12">
-                <div className="w-full max-w-7xl flex flex-col gap-3">
-                    <p className="leading-relaxed text-justify">
-                        {textbookAndReferences.intro}
-                    </p>
-                    <p className="font-semibold mt-2">Textbook:</p>
-                    <ul className="list-disc list-inside space-y-1 leading-relaxed ml-4 text-justify">
-                        {textbookAndReferences.textbook.map((item, index) => (
-                            <li key={index}>
-                                <a href={item.titleHref} target="_blank" rel="noopener noreferrer" className="text-o-blue hover:underline">
-                                    {item.title}
-                                </a>
-                                , by{" "}
-                                <a href={item.authorHref} target="_blank" rel="noopener noreferrer" className="text-o-blue hover:underline">
-                                    {item.author}
-                                </a>
-                                {"authorSuffix" in item && item.authorSuffix}
-                            </li>
-                        ))}
-                    </ul>
-                    <p className="font-semibold mt-2">Online courses (some contents in our course are by courtesy of them):</p>
-                    <ul className="list-disc list-inside space-y-1 leading-relaxed ml-4 text-justify">
-                        {textbookAndReferences.onlineCourses.map((item, index) => (
-                            <li key={index}>
-                                <a href={item.href} target="_blank" rel="noopener noreferrer" className="text-o-blue hover:underline">
-                                    {item.title}
-                                </a>
-                                , by {item.by}
-                            </li>
-                        ))}
-                    </ul>
-                    <p className="font-semibold mt-2">Conferences (where you get the latest advances in this field):</p>
-                    <ul className="list-disc list-inside space-y-1 leading-relaxed ml-4 text-justify">
-                        {textbookAndReferences.conferences.map((item, index) => (
-                            <li key={index}>{item}</li>
-                        ))}
-                    </ul>
-                </div>
-            </div>
-
-
-
-            <div className="w-full px-6 flex justify-center mt-24">
-                <div className="w-full max-w-7xl flex">
-                    <h2 className="text-t1 font-bold"> 
-                        <Link href="#website-and-computing-tools" className="scroll-mt-32 group flex items-center" id="website-and-computing-tools">
-                            Website and Computing Tools
-                            <span className="ml-6 hidden group-hover:inline-block size-6 text-foreground">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                    <path d="M15.197 3.35462C16.8703 1.67483 19.4476 1.53865 20.9536 3.05046C22.4596 4.56228 22.3239 7.14956 20.6506 8.82935L18.2268 11.2626M10.0464 14C8.54044 12.4882 8.67609 9.90087 10.3494 8.22108L12.5 6.06212" strokeWidth="2.5" strokeLinecap="round"/>
-                                    <path d="M13.9536 10C15.4596 11.5118 15.3239 14.0991 13.6506 15.7789L11.2268 18.2121L8.80299 20.6454C7.12969 22.3252 4.55237 22.4613 3.0464 20.9495C1.54043 19.4377 1.67609 16.8504 3.34939 15.1706L5.77323 12.7373" strokeWidth="2.5" strokeLinecap="round"/>
-                                </svg>
-                            </span>
-                        </Link>
-                    </h2>
-                </div>
-            </div>
-            <div className="w-full px-6 flex justify-center mt-12">
-                <div className="w-full max-w-7xl flex flex-col gap-3">
-                    <ul className="list-disc list-inside space-y-2 leading-relaxed ml-4 text-justify">
-                        {websiteAndComputingTools.items.map((item, index) => (
-                            <li key={index}>
-                                {"titleLabel" in item ? (
-                                    <>
-                                        {item.titleLabel}{" "}
-                                        <a href={item.titleLink} target="_blank" rel="noopener noreferrer" className="text-o-blue hover:underline">
-                                            {item.titleLinkText}
-                                        </a>
-                                        {"sub" in item && item.sub != null && (
-                                            <ul className="list-[circle] list-inside ml-4 mt-1 space-y-0.5 text-foreground/90">
-                                                <li>
-                                                    {item.sub}
-                                                    <a href={item.subLink} target="_blank" rel="noopener noreferrer" className="text-o-blue hover:underline">
-                                                        {item.subLinkText}
-                                                    </a>
-                                                    {item.subAfter}
-                                                </li>
-                                            </ul>
-                                        )}
-                                    </>
-                                ) : (
-                                    item.title
-                                )}
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            </div>
-
-
-
-            <div className="w-full px-6 flex justify-center mt-24">
-                <div className="w-full max-w-7xl flex">
-                    <h2 className="text-t1 font-bold"> 
-                        <Link href="#grading-policy" className="scroll-mt-32 group flex items-center" id="grading-policy">
-                            Grading Policy
-                            <span className="ml-6 hidden group-hover:inline-block size-6 text-foreground">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                    <path d="M15.197 3.35462C16.8703 1.67483 19.4476 1.53865 20.9536 3.05046C22.4596 4.56228 22.3239 7.14956 20.6506 8.82935L18.2268 11.2626M10.0464 14C8.54044 12.4882 8.67609 9.90087 10.3494 8.22108L12.5 6.06212" strokeWidth="2.5" strokeLinecap="round"/>
-                                    <path d="M13.9536 10C15.4596 11.5118 15.3239 14.0991 13.6506 15.7789L11.2268 18.2121L8.80299 20.6454C7.12969 22.3252 4.55237 22.4613 3.0464 20.9495C1.54043 19.4377 1.67609 16.8504 3.34939 15.1706L5.77323 12.7373" strokeWidth="2.5" strokeLinecap="round"/>
-                                </svg>
-                            </span>
-                        </Link>
-                    </h2>
-                </div>
-            </div>
-            <div className="w-full px-6 flex justify-center mt-12">
-                <div className="w-full max-w-7xl flex flex-col gap-3">
-                    <div className="rounded-lg border border-sky-200/60 bg-sky-50/80 dark:bg-sky-950/30 dark:border-sky-800/60 px-5 py-5 text-foreground">
-                        <p className="leading-relaxed text-justify mb-4">
-                            The grading policy of this course is as follows:
-                        </p>
-                        <ul className="list-disc list-inside space-y-2 leading-relaxed text-justify">
-                            <li><strong>Participation (10%)</strong></li>
-                            <li><strong>Quiz (10%)</strong></li>
+                    <div className="rounded-lg border border-slate-200/60 bg-slate-100/60 dark:bg-slate-800/30 dark:border-slate-700/60 px-5 py-5 text-foreground">
+                        
+                        <ul className="list-disc list-inside space-y-4 leading-relaxed text-justify ml-4 mt-6">
                             <li>
-                                <strong>Assignment (20%)</strong>: There will be about 2 homework assignments for the first 14 weeks. Each homework contains both a written part and a programming part.
+                                <strong>Lecture Venue and Time</strong>
+                                <br />
+                                <span className="block mt-1 pl-4 text-foreground/90"> Thurseday 9:30-12:15 am in B420 at <a href="https://www.slai.edu.cn/" target="_blank" rel="noopener noreferrer" className="text-o-blue hover:underline">SLAI</a>. </span>
                             </li>
                             <li>
-                                <strong>Group Project (60%)</strong>: You can work on a topic of your choice. Open-source data will be provided for your reference. Each team needs to submit a midterm project proposal and give a 10-min presentation. The proposal and presentation should show adequate literature surveys on related topics, and provide good motivations to support the ideas. Each team will deliver a short (15 min) talk in the last week together with a project report and code.
-                                <ul className="list-[circle] list-inside ml-4 mt-2 space-y-1 text-foreground/90">
-                                    <li>The final presentation might be in the form of a symposium or mini-conference style, presenting Posters and panels, depending on the future arrangement.</li>
-                                </ul>
+                                <strong>Lecture Slides and Recordings</strong>
+                                <br />
+                                <span className="block mt-1 pl-4 text-foreground/90">Lecture slides and recordings will be uploaded to the <a href="https://piazza.com/class/mkxyas2e8j84bj#" target="_blank" rel="noopener noreferrer" className="text-o-blue hover:underline">Piazza</a> after each lecture.</span>
+                            </li>
+                            <li>
+                                <strong>Contact</strong>
+                                <br />
+                                <span className="block mt-1 pl-4 text-foreground/90">You can contact the instructors via <a href="https://piazza.com/class/mkxyas2e8j84bj#" target="_blank" rel="noopener noreferrer" className="text-o-blue hover:underline">Piazza</a> or email (<a href="mailto:slai_ap0001@googlegroups.com" className="text-o-blue hover:underline">slai_ap0001@googlegroups.com</a>).</span>
+                            </li>
+                            <li>
+                                <strong>Computing resource</strong>
+                                <br />
+                                <span className="block mt-1 pl-4 text-foreground/90"><a href="https://www.slai.edu.cn/" target="_blank" rel="noopener noreferrer" className="text-o-blue hover:underline">SLAI</a> computing resource, Google Colab, other online computing resources also can be used. Hugging Face for hosting the dataset would be recommended.</span>
                             </li>
                         </ul>
                     </div>
@@ -502,7 +372,7 @@ export default function Home() {
 
             <div className="w-full px-6 flex justify-center mt-24">
                 <div className="w-full max-w-7xl flex">
-                    <h2 className="text-t1 font-bold"> 
+                    <h2 className="text-t1 font-bold">
                         <Link href="#schedule" className="scroll-mt-32 group flex items-center" id="schedule">
                             Schedule
                             <span className="ml-6 hidden group-hover:inline-block size-6 text-foreground">
@@ -565,7 +435,6 @@ export default function Home() {
 
 
 
-
             <div className="w-full px-6 flex justify-center mt-24">
                 <div className="w-full max-w-7xl flex">
                     <h2 className="text-t1 font-bold"> 
@@ -581,7 +450,6 @@ export default function Home() {
                     </h2>
                 </div>
             </div>
-
 
 
             <div className="w-full px-6 flex justify-center mt-12">
@@ -623,6 +491,144 @@ export default function Home() {
                             ))}
                         </ul>
                     </div>
+                </div>
+            </div>
+
+            <div className="w-full px-6 flex justify-center mt-24">
+                <div className="w-full max-w-7xl flex">
+                    <h2 className="text-t1 font-bold"> 
+                        <Link href="#grading-policy" className="scroll-mt-32 group flex items-center" id="grading-policy">
+                            Grading Policy
+                            <span className="ml-6 hidden group-hover:inline-block size-6 text-foreground">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M15.197 3.35462C16.8703 1.67483 19.4476 1.53865 20.9536 3.05046C22.4596 4.56228 22.3239 7.14956 20.6506 8.82935L18.2268 11.2626M10.0464 14C8.54044 12.4882 8.67609 9.90087 10.3494 8.22108L12.5 6.06212" strokeWidth="2.5" strokeLinecap="round"/>
+                                    <path d="M13.9536 10C15.4596 11.5118 15.3239 14.0991 13.6506 15.7789L11.2268 18.2121L8.80299 20.6454C7.12969 22.3252 4.55237 22.4613 3.0464 20.9495C1.54043 19.4377 1.67609 16.8504 3.34939 15.1706L5.77323 12.7373" strokeWidth="2.5" strokeLinecap="round"/>
+                                </svg>
+                            </span>
+                        </Link>
+                    </h2>
+                </div>
+            </div>
+            <div className="w-full px-6 flex justify-center mt-12">
+                <div className="w-full max-w-7xl flex flex-col gap-3">
+                    <div className="rounded-lg border border-sky-200/60 bg-sky-50/50 dark:bg-sky-950/30 dark:border-sky-800/60 px-5 py-5 text-foreground">
+                        <ul className="list-disc list-inside space-y-4 leading-relaxed text-justify">
+                            <li>
+                                <strong>Participation (10%)</strong>
+                                <br />
+                                <span className="block mt-1 pl-4 text-foreground/90">Students are encouraged to actively participate in the course activities, such as quizzes and discussions.</span>
+                            </li>
+                            <li>
+                                <strong>Quiz (10%)</strong>
+                                <br />
+                                <span className="block mt-1 pl-4 text-foreground/90"> Students are encouraged to actively participate in the course quizzes to familiarize themselves with the knowledge and engage in active discussions.</span>
+                            </li>
+                            <li>
+                                <strong>Assignment (20%)</strong>
+                                <br />
+                                <span className="block mt-1 pl-4 text-foreground/90">Students are encouraged to complete them independently and communicate with instructors in a timely manner.</span>
+                            </li>
+                            <li>
+                                <strong>Group Project (60%)</strong>
+                                <br />
+                                <span className="block mt-1 pl-4 text-foreground/90">Students are encouraged to undertake projects related to Embodied Intelligence, or to conduct their own self-directed projects. A project report, presentation, and code must be submitted upon completion of the course.</span>
+                            </li>
+                            <li>
+                                <strong>Regrade Request</strong>
+                                <br />
+                                <span className="block mt-1 pl-4 text-foreground/90">If you believe that the course staff made an objective error in grading, you may submit a regrade request and email us within 3 days of the grade release. Your request should briefly summarize why the original grading was incorrect. Note that staff may regrade the entire submission, so it is possible for you to lose more points than you gain if a mistake was overlooked in the first time.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div className="w-full px-6 flex justify-center mt-24">
+                <div className="w-full max-w-7xl flex">
+                    <h2 className="text-t1 font-bold"> 
+                        <Link href="#prerequisite" className="scroll-mt-32 group flex items-center" id="prerequisite">
+                            Prerequisite
+                            <span className="ml-6 hidden group-hover:inline-block size-6 text-foreground">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M15.197 3.35462C16.8703 1.67483 19.4476 1.53865 20.9536 3.05046C22.4596 4.56228 22.3239 7.14956 20.6506 8.82935L18.2268 11.2626M10.0464 14C8.54044 12.4882 8.67609 9.90087 10.3494 8.22108L12.5 6.06212" strokeWidth="2.5" strokeLinecap="round"/>
+                                    <path d="M13.9536 10C15.4596 11.5118 15.3239 14.0991 13.6506 15.7789L11.2268 18.2121L8.80299 20.6454C7.12969 22.3252 4.55237 22.4613 3.0464 20.9495C1.54043 19.4377 1.67609 16.8504 3.34939 15.1706L5.77323 12.7373" strokeWidth="2.5" strokeLinecap="round"/>
+                                </svg>
+                            </span>
+                        </Link>
+                    </h2>
+                </div>
+            </div>
+            <div className="w-full px-6 flex justify-center mt-12">
+                <div className="w-full max-w-7xl flex flex-col gap-3">
+                    {prerequisiteParagraphs.map((paragraph, index) => (
+                        <p key={index} className="leading-relaxed text-justify">
+                            {paragraph}
+                        </p>
+                    ))}
+                </div>
+            </div>
+
+
+            <div className="w-full px-6 flex justify-center mt-24">
+                <div className="w-full max-w-7xl flex">
+                    <h2 className="text-t1 font-bold"> 
+                        <Link href="#textbook-and-references" className="scroll-mt-32 group flex items-center" id="textbook-and-references">
+                            Course Materials
+                            <span className="ml-6 hidden group-hover:inline-block size-6 text-foreground">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M15.197 3.35462C16.8703 1.67483 19.4476 1.53865 20.9536 3.05046C22.4596 4.56228 22.3239 7.14956 20.6506 8.82935L18.2268 11.2626M10.0464 14C8.54044 12.4882 8.67609 9.90087 10.3494 8.22108L12.5 6.06212" strokeWidth="2.5" strokeLinecap="round"/>
+                                    <path d="M13.9536 10C15.4596 11.5118 15.3239 14.0991 13.6506 15.7789L11.2268 18.2121L8.80299 20.6454C7.12969 22.3252 4.55237 22.4613 3.0464 20.9495C1.54043 19.4377 1.67609 16.8504 3.34939 15.1706L5.77323 12.7373" strokeWidth="2.5" strokeLinecap="round"/>
+                                </svg>
+                            </span>
+                        </Link>
+                    </h2>
+                </div>
+            </div>
+            <div className="w-full px-6 flex justify-center mt-12">
+                <div className="w-full max-w-7xl flex flex-col gap-3">
+                    <p className="leading-relaxed text-justify">
+                        {textbookAndReferences.intro}
+                    </p>
+                    <p className="font-semibold mt-2">Textbook:</p>
+                    <ul className="list-disc list-inside space-y-1 leading-relaxed ml-4 text-justify">
+                        {textbookAndReferences.textbook.map((item, index) => (
+                            <li key={index}>
+                                <a href={item.titleHref} target="_blank" rel="noopener noreferrer" className="text-o-blue hover:underline">
+                                    {item.title}
+                                </a>
+                                , by{" "}
+                                <a href={item.authorHref} target="_blank" rel="noopener noreferrer" className="text-o-blue hover:underline">
+                                    {item.author}
+                                </a>
+                                {"authorSuffix" in item && item.authorSuffix}
+                            </li>
+                        ))}
+                    </ul>
+                    <p className="font-semibold mt-2">Online courses:</p>
+                    <ul className="list-disc list-inside space-y-1 leading-relaxed ml-4 text-justify">
+                        {textbookAndReferences.onlineCourses.map((item, index) => (
+                            <li key={index}>
+                                <a href={item.href} target="_blank" rel="noopener noreferrer" className="text-o-blue hover:underline">
+                                    {item.title}
+                                </a>
+                                , by{" "}
+                                <a href={item.byHref} target="_blank" rel="noopener noreferrer" className="text-o-blue hover:underline">
+                                    {item.by}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                    <p className="font-semibold mt-2">Conferences:</p>
+                    <ul className="list-disc list-inside space-y-1 leading-relaxed ml-4 text-justify">
+                        {textbookAndReferences.conferences.map((item, index) => (
+                            <li key={index}>
+                                <a href={item.href} target="_blank" rel="noopener noreferrer" className="text-o-blue hover:underline">
+                                    {item.title}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
                 </div>
             </div>
 

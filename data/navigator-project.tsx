@@ -138,21 +138,10 @@ export const NavigatorProject: {
             id: "description",
         },
         {
-            text: "Prerequisite",
-            id: "prerequisite",
+            text: "Course Logistics",
+            id: "course-logistics",
         },
-        {
-            text: "Materials",
-            id: "textbook-and-references",
-        },
-        {
-            text: "Tools",
-            id: "website-and-computing-tools",
-        },
-        {
-            text: "Policy",
-            id: "grading-policy",
-        },
+
         {
             text: "Schedule",
             id: "schedule",
@@ -160,6 +149,18 @@ export const NavigatorProject: {
         {
             text: "Instructors",
             id: "instructor",
+        },
+        {
+            text: "Policy",
+            id: "grading-policy",
+        },
+        {
+            text: "Prerequisite",
+            id: "prerequisite",
+        },
+        {
+            text: "Materials",
+            id: "textbook-and-references",
         },
     ],
 };
