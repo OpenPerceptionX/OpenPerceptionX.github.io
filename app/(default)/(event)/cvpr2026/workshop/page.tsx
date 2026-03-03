@@ -317,7 +317,7 @@ export default function Home() {
                             &nbsp;in terms of potential ethics issues and potential risks of negative social impacts.
                         </li>
                         <li>
-                            Manuscripts should be between 4 and 8 pages in length (excluding references) using the&nbsp;
+                            Manuscripts are limited to eight pages (excluding references) using the&nbsp;
                             <Link href="https://github.com/cvpr-org/author-kit/archive/refs/tags/CVPR2026-v1(latex).zip" target="_blank" className="text-o-blue animated-underline">
                                 CVPR 2026 submission template
                             </Link>.
