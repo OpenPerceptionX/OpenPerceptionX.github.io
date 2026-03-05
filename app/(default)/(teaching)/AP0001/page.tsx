@@ -47,17 +47,17 @@ const tas: {
 }[] = [
     {
         name: "Zihao Zhang",
-        image: "/assets/person/ap0001_zihao_zhang.webp",
+        image: "https://ik.imagekit.io/opendrivelab/people/20260305-163446.jpeg",
         link: "https://zizizi-hao.github.io/"
     },
     {
         name: "Haitao Jiang",
-        image: "/assets/person/ap0001_haitao_jiang.webp",
+        image: "https://ik.imagekit.io/opendrivelab/people/20260305-163442.jpeg",
         link: "https://www.researchgate.net/profile/Jiang-Haitao-3?ev=prf_overview"
     },
     {
         name: "Tianyu Zhang",
-        image: "/assets/person/ap0001_tianyu_zhang.webp",
+        image: "https://ik.imagekit.io/opendrivelab/people/20260305-163436.jpeg ",
         link: "https://github.com/TianyuZhang503"
     },
 ];
