@@ -12,10 +12,6 @@ import Link from "next/link"
 
 
 
-import { AspectRatio } from "@/components/ui/aspect-ratio"
-
-
-
 const instructors: {
     name: string;
     image: string;
@@ -26,12 +22,44 @@ const instructors: {
         image: "/assets/person/hongyang_li.jpg",
         link: 'https://lihongyang.info/'
     },
+    {
+        name: "Hai Zhang",
+        image: "/assets/person/hai_zhang.jpg",
+        link: "https://betray12138.github.io/resume/"
+    },
+    {
+        name: "Chonghao Sima",
+        image: "/assets/person/chonghao_sima.jpg",
+        link: "https://chonghaosima.github.io/"
+    },
+    {
+        name: "Li Chen",
+        image: "/assets/person/li_chen.jpg",
+        link: "https://ilnehc.github.io/"
+    }
 ];
 
-const tas: string[] = [
-    "Zihao Zhang",
-    "Haitao Jiang",
-    "Tianyu Zhang",
+const tas: {
+    name: string;
+    image: string;
+    link: string;
+    subtitle?: string;
+}[] = [
+    {
+        name: "Zihao Zhang",
+        image: "/assets/person/ap0001_zihao_zhang.webp",
+        link: "https://zizizi-hao.github.io/"
+    },
+    {
+        name: "Haitao Jiang",
+        image: "/assets/person/ap0001_haitao_jiang.webp",
+        link: "https://www.researchgate.net/profile/Jiang-Haitao-3?ev=prf_overview"
+    },
+    {
+        name: "Tianyu Zhang",
+        image: "/assets/person/ap0001_tianyu_zhang.webp",
+        link: "https://github.com/TianyuZhang503"
+    },
 ];
 
 const descriptionFirstBlock = {
@@ -102,12 +130,14 @@ const websiteAndComputingTools = {
 const scheduleItems: {
     date: string;
     lecture: string;
+    lectureSlideUrl?: string;
     topics: string[];
     note?: string;
 }[] = [
     {
         date: "2026/3/5",
         lecture: "Course Introduction",
+        lectureSlideUrl: "https://drive.google.com/file/d/1lekXtxFOVTSRCHwKYhiZwoAmSUVlMDtg/view?usp=sharing",
         topics: [
             "Introduction to Embodied AI",
             "DL and ML Basics",
@@ -306,19 +336,23 @@ export default function Home() {
             </div>
             <div className="w-full px-6 flex justify-center mt-12">
                 <div className="w-full max-w-7xl flex flex-col gap-3">
-                    <p className="leading-relaxed text-justify">
-                        {descriptionFirstBlock.intro}
-                    </p>
-                    <ul className="list-disc list-inside space-y-2 leading-relaxed ml-4 text-justify font-semibold">
-                        {descriptionFirstBlock.points.map((point, index) => (
-                            <li key={index}>{point}</li>
-                        ))}
-                    </ul>
-                    {descriptionParagraphs.map((paragraph, index) => (
-                        <p key={index} className="leading-relaxed text-justify">
-                            {paragraph}
+                    <div className="rounded-lg border border-slate-200/60 bg-slate-100/60 dark:bg-slate-800/30 dark:border-slate-700/60 px-5 py-5 text-foreground">
+                        <p className="leading-relaxed text-justify">
+                            {descriptionFirstBlock.intro}
                         </p>
-                    ))}
+                        <ul className="list-disc list-inside space-y-2 leading-relaxed ml-4 text-justify font-semibold mt-4">
+                            {descriptionFirstBlock.points.map((point, index) => (
+                                <li key={index}>{point}</li>
+                            ))}
+                        </ul>
+                        <div className="mt-4 flex flex-col gap-3">
+                            {descriptionParagraphs.map((paragraph, index) => (
+                                <p key={index} className="leading-relaxed text-justify">
+                                    {paragraph}
+                                </p>
+                            ))}
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -407,7 +441,21 @@ export default function Home() {
                                             {item.date}
                                         </td>
                                         <td className="px-4 py-2 align-top font-semibold">
-                                            {item.lecture}
+                                            {item.lectureSlideUrl ? (
+                                                <span>
+                                                    {item.lecture}{" "}
+                                                    <Link
+                                                        href={item.lectureSlideUrl}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="text-o-blue hover:underline text-sm"
+                                                    >
+                                                        [slide]
+                                                    </Link>
+                                                </span>
+                                            ) : (
+                                                item.lecture
+                                            )}
                                         </td>
                                         <td className="px-4 py-2 align-top">
                                             <ul className="list-disc list-inside space-y-1">
@@ -439,7 +487,7 @@ export default function Home() {
                 <div className="w-full max-w-7xl flex">
                     <h2 className="text-t1 font-bold"> 
                         <Link href="#instructor" className="scroll-mt-32 group flex items-center" id="instructor">
-                            Instructors
+                            Staff
                             <span className="ml-6 hidden group-hover:inline-block size-6 text-foreground">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                                     <path d="M15.197 3.35462C16.8703 1.67483 19.4476 1.53865 20.9536 3.05046C22.4596 4.56228 22.3239 7.14956 20.6506 8.82935L18.2268 11.2626M10.0464 14C8.54044 12.4882 8.67609 9.90087 10.3494 8.22108L12.5 6.06212" strokeWidth="2.5" strokeLinecap="round"/>
@@ -453,43 +501,60 @@ export default function Home() {
 
 
             <div className="w-full px-6 flex justify-center mt-12">
-                <div className="w-full max-w-7xl flex flex-col md:flex-row gap-12 md:gap-6">
-                    <div className="w-full md:w-[50%] flex flex-col gap-6">
-                        <h3 className="text-lg font-semibold">INSTRUCTOR</h3>
-                        <div className="grid gap-12 grid-cols-1 w-24 sm:w-28">
+                <div className="w-full max-w-7xl flex flex-col md:flex-row gap-12 md:gap-10">
+                    {/* Instructors: 40% 宽度，两行两列：Hongyang Li & Hai Zhang 一行，Chonghao Sima & Li Chen 一行 */}
+                    <div className="w-full md:w-[45%] flex flex-col gap-6">
+                        <h3 className="text-lg font-semibold pb-2 border-b border-foreground/30">Instructors</h3>
+                        <div className="grid grid-cols-2 gap-6 sm:gap-8 justify-items-center">
                             {instructors.map((instructor) => (
-                                <div className="flex flex-col gap-3 group/image" key={instructor.name}>
-                                    <Link href={instructor.link} target="_blank">
-                                        <AspectRatio ratio={1/1}>
-                                            <Image
-                                                src={instructor.image}
-                                                alt={instructor.name}
-                                                fill
-                                                className="h-full w-full rounded-sm object-cover bg-gradient-landing group-hover/image:scale-101 transition delay-100 duration-200"
-                                            />
-                                        </AspectRatio>
+                                <div className="flex flex-col items-center gap-2 group/image" key={instructor.name}>
+                                    <Link href={instructor.link} target="_blank" rel="noopener noreferrer" className="block w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden flex-shrink-0 ring-1 ring-border/50">
+                                        <Image
+                                            src={instructor.image}
+                                            alt={instructor.name}
+                                            width={96}
+                                            height={96}
+                                            className="h-full w-full object-cover group-hover/image:scale-105 transition duration-200"
+                                        />
                                     </Link>
-                                    <a
-                                        href="https://scholar.google.com/citations?hl=en&user=Hfrih1EAAAAJ"
+                                    <Link
+                                        href={instructor.link}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="text-xl text-o-blue hover:underline w-fit whitespace-nowrap"
+                                        className="text-sm sm:text-base text-o-blue hover:underline text-center"
                                     >
                                         {instructor.name}
-                                    </a>
+                                    </Link>
                                 </div>
                             ))}
                         </div>
                     </div>
-                    <div className="w-full md:w-[50%] flex flex-col gap-6">
-                        <h3 className="text-lg font-semibold">TAs</h3>
-                        <ul className="flex flex-col gap-3">
-                            {tas.map((name) => (
-                                <li key={name} className="text-lg leading-relaxed">
-                                    {name}
-                                </li>
+                    {/* Teaching Assistants: 60% 宽度 */}
+                    <div className="w-full md:w-[55%] flex flex-col gap-6">
+                        <h3 className="text-lg font-semibold pb-2 border-b border-foreground/30">Teaching Assistants</h3>
+                        <div className="flex flex-wrap gap-1 sm:gap-20">
+                            {tas.map((ta) => (
+                                <div className="flex flex-col items-center gap-2 group/image" key={ta.name}>
+                                    <Link href={ta.link} target="_blank" rel="noopener noreferrer" className="block w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden flex-shrink-0 ring-1 ring-border/50">
+                                        <Image
+                                            src={ta.image}
+                                            alt={ta.name}
+                                            width={96}
+                                            height={96}
+                                            className="h-full w-full object-cover group-hover/image:scale-105 transition duration-200"
+                                        />
+                                    </Link>
+                                    <Link
+                                        href={ta.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-sm sm:text-base text-o-blue hover:underline text-center"
+                                    >
+                                        {ta.name}
+                                    </Link>
+                                </div>
                             ))}
-                        </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -498,7 +563,7 @@ export default function Home() {
                 <div className="w-full max-w-7xl flex">
                     <h2 className="text-t1 font-bold"> 
                         <Link href="#grading-policy" className="scroll-mt-32 group flex items-center" id="grading-policy">
-                            Grading Policy
+                            CourseWork
                             <span className="ml-6 hidden group-hover:inline-block size-6 text-foreground">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                                     <path d="M15.197 3.35462C16.8703 1.67483 19.4476 1.53865 20.9536 3.05046C22.4596 4.56228 22.3239 7.14956 20.6506 8.82935L18.2268 11.2626M10.0464 14C8.54044 12.4882 8.67609 9.90087 10.3494 8.22108L12.5 6.06212" strokeWidth="2.5" strokeLinecap="round"/>
@@ -542,6 +607,11 @@ export default function Home() {
                                 <strong>Regrade Request</strong>
                                 <br />
                                 <span className="block mt-1 pl-4 text-foreground/90">If you believe that the course staff made an objective error in grading, you may submit a regrade request and email us within 3 days of the grade release. Your request should briefly summarize why the original grading was incorrect. Note that staff may regrade the entire submission, so it is possible for you to lose more points than you gain if a mistake was overlooked in the first time.</span>
+                            </li>
+                            <li>
+                                <strong>LLM Policy</strong>
+                                <br />
+                                <span className="block mt-1 pl-4 text-foreground/90">We encourage students to use LLM tools to improve the quality of their assignments and projects and enhance their writing skills; however, if you use an LLM, you must disclose its use at the end of your document, and you are fully responsible for the work produced with LLM assistance.</span>
                             </li>
                         </ul>
                     </div>

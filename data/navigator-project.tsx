@@ -147,11 +147,11 @@ export const NavigatorProject: {
             id: "schedule",
         },
         {
-            text: "Instructors",
+            text: "Staff",
             id: "instructor",
         },
         {
-            text: "Policy",
+            text: "CourseWork",
             id: "grading-policy",
         },
         {
