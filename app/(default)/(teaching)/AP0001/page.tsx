@@ -148,6 +148,7 @@ const scheduleItems: {
             "Design and training of VLA models",
             "VLA model deployment for typical robotic manipulation tasks",
         ],
+        note: "Quiz",
     },
     {
         date: "2026/4/9",
@@ -240,7 +241,6 @@ const scheduleItems: {
             "High-impact presentation",
             "Ethics and open science",
         ],
-        note: "Quiz",
     },
     {
         date: "2026/6/18",
@@ -529,9 +529,14 @@ export default function Home() {
                                 <span className="block mt-1 pl-4 text-foreground/90">Students are encouraged to complete them independently and communicate with instructors in a timely manner.</span>
                             </li>
                             <li>
-                                <strong>Group Project (60%)</strong>
+                                <strong>Individual Final Project (60%)</strong>
                                 <br />
-                                <span className="block mt-1 pl-4 text-foreground/90">Students are encouraged to undertake projects related to Embodied Intelligence, or to conduct their own self-directed projects. A project report, presentation, and code must be submitted upon completion of the course.</span>
+                                <span className="block mt-1 pl-4 text-foreground/90">
+                                    <ul className="list-[circle] list-inside ml-4 mt-1 space-y-0.5">
+                                        <li><strong>Content: </strong>Technical - non-robotics / Demo - robotics [Our tutorial] / Survey on Data Collection [reading week] / Business Plan</li>
+                                        <li><strong>Formation: </strong>Report (peer-reviewed), Presentation and Q&A</li>
+                                    </ul>
+                                </span>
                             </li>
                             <li>
                                 <strong>Regrade Request</strong>
