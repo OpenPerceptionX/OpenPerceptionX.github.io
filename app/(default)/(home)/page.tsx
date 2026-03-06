@@ -118,7 +118,7 @@ export default function Home() {
             <div className="w-full px-6 flex justify-center mt-12">
                 <div className="w-full max-w-7xl flex flex-col gap-6 leading-relaxed">
                     <p>
-                        We are searching for talents from all over the world. Are you looking for opportunities? Don't hesitate to contact us via <Link className="text-o-blue animated-underline" href="mailto:contact@opendrivelab.com">contact@opendrivelab.com</Link> or <Link className="text-o-blue animated-underline" href="https://lihongyang.info" target="_blank">Dr. Hongyang Li</Link>.
+                        We are searching for talents from all over the world. Are you looking for opportunities? Don't hesitate to contact us via <Link className="text-o-blue animated-underline" href="mailto:recruit@opendrivelab.com">recruit@opendrivelab.com</Link> or <Link className="text-o-blue animated-underline" href="https://lihongyang.info" target="_blank">Dr. Hongyang Li</Link>.
                     </p>
                     <ul className="ml-6 space-y-3 list-outside list-disc">
                         <li>
