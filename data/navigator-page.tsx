@@ -22,10 +22,6 @@ export const NavigatorPage: {
             id: "publication",
         },
         {
-            text: "Dataset",
-            id: "dataset",
-        },
-        {
             text: "Event",
             id: "event",
         },
