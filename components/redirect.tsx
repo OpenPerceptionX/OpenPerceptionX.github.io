@@ -292,11 +292,11 @@ export default function Redirect() {
 
 
     // teaching
-    if (
-        pathname.toLowerCase().startsWith('/ap0001') 
-    ) {
-        redirect('/AP0001')
-    }
+    // if (
+    //     pathname.toLowerCase().startsWith('/ap0001') 
+    // ) {
+    //     redirect('/AP0001')
+    // }
 
 
     
