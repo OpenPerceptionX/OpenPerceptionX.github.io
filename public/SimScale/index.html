@@ -77,11 +77,11 @@
             <div class="is-size-5 publication-authors">
               <span class="author-block">
                 <!-- Author Names Omitted for Anonymous Review. -->
-                <a target="_blank" href="https://github.com/hctian713">Haochen Tian</a><sup>1,2,3</sup><sup>†</sup>&nbsp;&nbsp;&nbsp;
-                <a target="_blank" href="https://github.com/sephyli">Tianyu Li</a><sup>2</sup>&nbsp;&nbsp;&nbsp;
+                <a target="_blank" href="https://github.com/hctian713">Haochen Tian</a><sup>1,2,3</sup><sup>◇</sup>&nbsp;&nbsp;&nbsp;
+                <a target="_blank" href="https://github.com/sephyli">Tianyu Li</a><sup>2</sup><sup>†</sup>&nbsp;&nbsp;&nbsp;
                 <a target="_blank" href="https://georgeliu233.github.io/">Haochen Liu</a><sup>3</sup>&nbsp;&nbsp;&nbsp;
                 <a target="_blank" href="https://github.com/YTEP-ZHI">Jiazhi Yang</a><sup>2</sup>&nbsp;&nbsp;&nbsp;
-                <a target="_blank" href="https://github.com/gihharwtw">Yihang Qiu</a><sup>2</sup><sup>†</sup>
+                <a target="_blank" href="https://github.com/gihharwtw">Yihang Qiu</a><sup>2</sup><sup>◇</sup>
                 <br>
                 <a target="_blank" href="https://scholar.google.com/citations?user=McEfO8UAAAAJ&hl=en">Guang Li</a><sup>3</sup>&nbsp;&nbsp;&nbsp;
                 <a target="_blank" href="https://openreview.net/profile?id=%7EJunli_Wang4">Junli Wang</a><sup>1,3</sup>&nbsp;&nbsp;&nbsp;
@@ -95,12 +95,14 @@
                 <a target="_blank" href="https://lihongyang.info/">Hongyang Li</a><sup>2</sup>
                 <br><sup>1 </sup>MAIS, Institute of Automation, Chinese Academy of Sciences
                 <br><sup>2 </sup>OpenDriveLab at The University of HongKong&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <sup>3 </sup>Xiaomi EV
+                <sup>3 </sup>Xiaomi EV  
 
                 <br><span style="font-size: 15px;">
-                    <sup>†</sup>Work done while interning at Xiaomi Embodied Intelligence Team
+                    <sup>◇</sup>Work done while interning at Xiaomi Embodied Intelligence Team. &nbsp; <sup>†</sup>Project Lead.
                 </span>
-                <!-- <span class="brmod" style="color:rgb(183, 0, 0)"><b>ICCV 2025</b></span> -->
+                <span class="brmod" style="color:#3a0361; font-family:'Georgia', 'Times New Roman', serif;font-size: 25px;">
+                <b>🎉 CVPR 2026</b>
+                </span>
               </span>
             </div>
 
@@ -254,7 +256,7 @@
               states upon existing driving logs.
               Our pipeline utilizes advanced <strong>neural rendering with a reactive environment</strong> to generate high-fidelity multi-view observations controlled by the perturbed ego trajectory.
               Furthermore, we develop a <strong>pseudo-expert trajectory generation</strong> mechanism for these newly simulated states to provide action supervision.
-              Upon the synthesized data, we find that a simple <strong>co-training strategy on both real-world and simulated samples</strong> can lead to significant improvements in both robustness and generalization for various planning methods on challenging real-world benchmarks, up to <strong>+6.8 EPDMS on navhard and +2.9 on navtest</strong>.
+              Upon the synthesized data, we find that a simple <strong>co-training strategy on both real-world and simulated samples</strong> can lead to significant improvements in both robustness and generalization for various planning methods on challenging real-world benchmarks, up to <strong>+8.6 EPDMS on navhard and +2.9 on navtest</strong>.
               More importantly, such policy improvement scales smoothly by increasing simulation data only, even without extra real-world data streaming in.
               We further reveal several crucial findings of such a sim-real learning system, which we term SimScale, including the design of pseudo-experts and the scaling properties for different policy architectures.
             </div>
@@ -468,6 +470,27 @@
                   <div class="col">
                     <div align="center">
                       <img src="https://opendrivelab.github.io/SimScale/reaction.png" style="margin-top: -30px;" alt="Image description" width="50%">
+                    </div> 
+                  </div>
+                </div>
+
+              <h2 class="subtitle is-4" style="text-align: left; margin-bottom: 0px;margin-top:20px">&nbspEffect of Simulation Visual Fidelity</h2>
+
+                
+              <div class="columns is-centered has-text-centered">
+                <div class="column">
+                <div class="content has-text-justified ">
+                    <p style="font-size: 18px; "> 
+                         &nbsp#R: sampling rounds; EPDMS on navhard.
+                    </p>
+                </div>
+                </div>
+              </div>
+
+                <div class="row">
+                  <div class="col">
+                    <div align="center">
+                      <img src="https://opendrivelab.github.io/SimScale/psnr.png" style="margin-top: -30px;" alt="Image description" width="50%">
                     </div> 
                   </div>
                 </div>
@@ -714,7 +737,7 @@
           <div class="content has-text-justified">
             
             <p>
-              The code and simulation data would be open-sourced before 2026! 
+              The code and simulation data have been fully released! 
             </p>
             <p>
               Please stay tuned for more work from <a target="_blank" href="https://opendrivelab.com/">OpenDriveLab</a>: 
