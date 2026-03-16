@@ -50,13 +50,13 @@ const speakers: {
     //     affiliation: 'National University of Singapore',
     //     link: 'https://haroldsoh.com/'
     // },
-    {
-        name: "Shuran Song",
-        image: "/assets/person/shuran_song.jpg",
-        position: "Assistant Professor",
-        affiliation: 'Stanford',
-        link: 'https://shurans.github.io/'
-    },
+    // {
+    //     name: "Shuran Song",
+    //     image: "/assets/person/shuran_song.jpg",
+    //     position: "Assistant Professor",
+    //     affiliation: 'Stanford',
+    //     link: 'https://shurans.github.io/'
+    // },
     {
         name: "Yilun Du",
         image: "/assets/person/yilun_du.jpg",
