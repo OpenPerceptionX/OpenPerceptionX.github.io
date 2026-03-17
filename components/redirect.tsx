@@ -155,6 +155,11 @@ export default function Redirect() {
         }
     }
     if (
+        pathname.toLowerCase().startsWith('/rise')
+    ) {
+        redirect('/kai0-rl/')
+    }
+    if (
         pathname.toLowerCase().startsWith('/foldanything')
     ) {
         redirect('/kai0/')
