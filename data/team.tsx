@@ -7,6 +7,19 @@ export const members: {
     keys: string[];
 }[] = [
     {
+        name: "Jinwei Li",
+        image: "/assets/person/jinwei_li.jpg",
+        desc: "Tsinghua University",
+        image_s: "/assets/person/jinwei_li_s.jpg",
+        links: [
+            {
+                icon: "email",
+                url: "mailto:lijinwei22@mails.tsinghua.edu.cn",
+            },
+        ],
+        keys: ["alumni"],
+    },
+    {
         name: "Shihao Li",
         image: "/assets/person/shihao_li.jpg",
         desc: "Beijing Institute of Technology",
@@ -567,19 +580,6 @@ export const members: {
             {
                 icon: "github",
                 url: "https://github.com/hctian713",
-            },
-        ],
-        keys: ["student"],
-    },
-    {
-        name: "Jinwei Li",
-        image: "/assets/person/jinwei_li.jpg",
-        desc: "Tsinghua University",
-        image_s: "/assets/person/jinwei_li_s.jpg",
-        links: [
-            {
-                icon: "email",
-                url: "mailto:lijinwei22@mails.tsinghua.edu.cn",
             },
         ],
         keys: ["student"],
