@@ -67,7 +67,7 @@ export const publications: {
 }[] = [
         {
         title: "SMASH: Mastering Scalable Whole-Body Skills for Humanoid Ping-Pong with Egocentric Vision",
-        link: "https://mmlab.hk/Smash/",
+        link: "/SMASH/",
         image: "https://ik.imagekit.io/opendrivelab/2026-03-27%2022.24.48.png",
         image_sliding: "https://ik.imagekit.io/opendrivelab/2026-03-27%2022.24.48.png",
         author: "",
