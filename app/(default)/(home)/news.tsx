@@ -120,7 +120,7 @@ export function News() {
 
 
 
-                    <div className="flex flex-col md:flex-row items-start md:items-center gap-2">
+                    {/* <div className="flex flex-col md:flex-row items-start md:items-center gap-2">
                         <Badge variant="default" className="w-[80px] text-center shrink-0">
                             2026.02.05
                         </Badge>
@@ -133,7 +133,7 @@ export function News() {
                                 .
                             </span>
                         </div>
-                    </div>
+                    </div> */}
 
 
 

@@ -157,7 +157,11 @@ export function Landing() {
                                                         landing.link.startsWith('https://mmlab.hk/research/MM-Hand') ? (
                                                             "Checkout at mmlab.hk/MM-Hand"
                                                         ) : (
-                                                            "Paper"
+                                                            landing.link.startsWith('https://mmlab.hk/Smash/') ? (
+                                                                "Page"
+                                                            ) : (
+                                                                "Paper"
+                                                            )
                                                         )
                                                     }
                                                 </Link>

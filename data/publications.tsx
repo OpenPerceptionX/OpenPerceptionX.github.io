@@ -65,6 +65,27 @@ export const publications: {
     time: string;
     timeline: string[];
 }[] = [
+        {
+        title: "SMASH: Mastering Scalable Whole-Body Skills for Humanoid Ping-Pong with Egocentric Vision",
+        link: "https://mmlab.hk/Smash/",
+        image: "https://ik.imagekit.io/opendrivelab/2026-03-27%2022.24.48.png",
+        image_sliding: "https://ik.imagekit.io/opendrivelab/2026-03-27%2022.24.48.png",
+        author: "",
+        note: "arXiv",
+        noteoption: '',
+        star: "",
+        starlink: "",
+        icon: [
+            // {
+            //     type: "page",
+            //     link: "https://mmlab.hk/Smash/",
+            // },
+        ],
+        description: "The future of robotics begins where the lab ends: in open-world interaction.",
+        keys: ['embodied_ai', 'home_sliding'],
+        time: '2026.03.26',
+        timeline:['tembodied', 'highlight'],
+    },
     {
         title: "MM-Hand 1.0 is currently open for preorder",
         link: "https://mmlab.hk/research/MM-Hand",

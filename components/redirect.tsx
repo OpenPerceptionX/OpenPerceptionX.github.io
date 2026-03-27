@@ -137,7 +137,11 @@ export default function Redirect() {
     ) {
         redirect('/PlannerRFT/')
     }
-
+    if (
+        pathname.toLowerCase().startsWith('/smash')
+    ) {
+        redirect('https://mmlab.hk/Smash/')
+    }
 
 
     // kai
