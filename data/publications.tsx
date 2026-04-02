@@ -67,19 +67,19 @@ export const publications: {
 }[] = [
         {
         title: "SMASH: Mastering Scalable Whole-Body Skills for Humanoid Ping-Pong with Egocentric Vision",
-        link: "/SMASH/",
-        image: "https://ik.imagekit.io/opendrivelab/2026-03-27%2022.24.48.png",
-        image_sliding: "https://ik.imagekit.io/opendrivelab/2026-03-27%2022.24.48.png",
-        author: "",
-        note: "arXiv",
+        link: "https://arxiv.org/abs/2604.01158",
+        image: "https://ik.imagekit.io/opendrivelab/SMASH.png",
+        image_sliding: "https://ik.imagekit.io/opendrivelab/2026-04-02%2012.18.26.png",
+        author: "Junli Ren, Yinghui Li, Kai Zhang, Penglin Fu, Haoran Jiang, Yixuan Pan, Guangjun Zeng, Tao Huang, Weizhong Guo, Peng Lu, Tianyu Li, Jingbo Wang, Li Chen, Hongyang Li, Ping Luo",
+        note: "Preprint 2026",
         noteoption: '',
         star: "",
         starlink: "",
         icon: [
-            // {
-            //     type: "page",
-            //     link: "https://mmlab.hk/Smash/",
-            // },
+            {
+                type: "page",
+                link: "https://mmlab.hk/Smash/",
+            },
         ],
         description: "The future of robotics begins where the lab ends: in open-world interaction.",
         keys: ['embodied_ai', 'home_sliding'],
