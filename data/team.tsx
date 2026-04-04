@@ -599,7 +599,7 @@ export const members: {
                 url: "https://github.com/ale4638",
             },
         ],
-        keys: ["student"],
+        keys: [],
     },
     {
         name: "Penglin Fu",
