@@ -23,6 +23,7 @@ export function Header() {
 
 
     const pathname = usePathname()
+    const hideSidebar = pathname.toLowerCase().startsWith("/tamen")
 
 
 
@@ -31,7 +32,7 @@ export function Header() {
 
 
 
-            <AppSidebar />
+            {!hideSidebar && <AppSidebar />}
 
 
 
