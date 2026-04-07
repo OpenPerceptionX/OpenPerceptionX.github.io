@@ -3,7 +3,7 @@ import * as React from "react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "FreeTacMan | OpenDriveLab",
+  title: "TAMEn | OpenDriveLab",
   description: "FreeTacMan",
   keywords: ["FreeTacMan", "OpenDriveLab", "HKU" ],
   viewport: "width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes",
