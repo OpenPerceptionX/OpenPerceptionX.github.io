@@ -1142,7 +1142,7 @@ export default function Home() {
           <div className="max-w-6xl w-full flex flex-row justify-between">
             <div className="flex-1 flex flex-col justify-start">
               <span className="text-xs sm:text-sm md:text-base select-none text-center">
-                FreeTacMan © 2025
+                TAMEn@2026
               </span>
             </div>
           </div>
