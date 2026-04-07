@@ -110,13 +110,17 @@ export const publications: {
         author: "Modi Shi, Shijia Peng, Jin Chen, Haoran Jiang, Yinghui Li, Di Huang, Ping Luo, Hongyang Li, Li Chen",
         note: "Preprint 2026",
         noteoption: '',
-        star: "",
-        starlink: "",
+        star: "https://img.shields.io/github/stars/OpenDriveLab/EgoHumanoid?style=social",
+        starlink: "https://github.com/OpenDriveLab/EgoHumanoid",
         icon: [
             {
                 type: "page",
                 link: "/EgoHumanoid",
             },
+            {
+                type: "github",
+                link: "https://github.com/OpenDriveLab/EgoHumanoid",
+            }
         ],
         description: "The first endorsement of human-to-humanoid transfer for whole-body locomanipulation.",
         keys: ['embodied_ai'],
