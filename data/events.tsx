@@ -34,7 +34,7 @@ export const events: {
         url: "/cvpr2026/workshop/",
         image: "/assets/background/denver.jpg",
         imageoption: "object-center",
-        date: "June, 2026",
+        date: "June 03, 2026",
         location: "Denver",
         keys: ['2026', 'editor_pick'],
     },
