@@ -151,7 +151,7 @@ export default function Home() {
                   </p>
                   <div className="mt-4 md:mt-6 flex flex-row justify-center gap-2 md:gap-4">
                     <a
-                      href="http://arxiv.org/abs/2506.01941"
+                      href="https://arxiv.org/abs/2604.07335"
                       className="px-3 py-1 md:px-4 md:py-2 bg-black/30 text-white rounded-lg shadow-md hover:shadow-lg hover:bg-white/10 transition-all duration-200 border border-white/40 text-[10px] sm:text-xs md:text-sm"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -473,7 +473,7 @@ export default function Home() {
             <Separator className="max-w-6xl mt-14 md:mt-28" />
           </div>
 
-          {/* FreeTacMan 3D Model  */}
+          {/* TAMEn 3D Model  */}
           <div
             className="w-full px-4 md:px-6 flex flex-col items-center"
             id="model"
