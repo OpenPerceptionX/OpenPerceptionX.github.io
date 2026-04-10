@@ -158,12 +158,14 @@ export default function Home() {
                     >
                       Paper
                     </a>
-                    <span
-                      aria-disabled="true"
-                      className="px-3 py-1 md:px-4 md:py-2 bg-black/30 text-white/75 rounded-lg border border-white/30 text-[10px] sm:text-xs md:text-sm cursor-not-allowed select-none"
+                    <a
+                      href="https://github.com/OpenDriveLab/TAMEn"
+                      className="px-3 py-1 md:px-4 md:py-2 bg-black/30 text-white rounded-lg shadow-md hover:shadow-lg hover:bg-white/10 transition-all duration-200 border border-white/40 text-[10px] sm:text-xs md:text-sm"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      Code (Coming Soon)
-                    </span>
+                      Code
+                    </a>
                   </div>
                 </div>
               </div>
