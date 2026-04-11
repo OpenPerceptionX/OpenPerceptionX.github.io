@@ -34,6 +34,7 @@ import {
   GeneralizationUnseenChart,
   RobustnessDisturbanceChart,
 } from "./chart/generalization-unseen";
+import { ModelViewerFrame } from "./model-viewer-frame";
 
 const exo2 = Exo_2({
   subsets: ["latin"],
@@ -64,6 +65,10 @@ const policy_rollouts: { id: string; title: string; color: string }[] = [
     color: policyRolloutActiveBlue,
   },
 ];
+
+/** Preview shown until the 3D iframe fires `load`. */
+const TAMEN_MODEL_VIEWER_POSTER =
+  "https://ik.imagekit.io/7rgtwup0y/3dmodel.jpg";
 
 const pageNavItems: { text: string; id: string }[] = [
   { text: "Highlights", id: "highlights" },
@@ -565,11 +570,11 @@ export default function Home() {
                       </b>{" "}
                       now!
                     </p>
-                    <iframe
-                      src="https://opendrivelab.github.io/TAMEn/3d_model/tamen_model.html"
+                    <ModelViewerFrame
+                      iframeSrc="https://opendrivelab.github.io/TAMEn/3d_model/tamen_model.html"
+                      posterSrc={TAMEN_MODEL_VIEWER_POSTER}
                       title="TAMEn 3D model viewer"
-                      className="w-full max-w-[320px] md:max-w-[480px] lg:max-w-[640px] md:w-[480px] lg:w-[640px] h-[240px] md:h-[360px] lg:h-[480px] border-2 md:border-4 border-white hover:border-[#174BE5] transition-colors duration-300 rounded-lg mx-auto"
-                    ></iframe>
+                    />
                   </div>
                 </div>
               </div>
