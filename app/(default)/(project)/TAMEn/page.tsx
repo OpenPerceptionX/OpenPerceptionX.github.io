@@ -132,7 +132,7 @@ export default function Home() {
                 poster="https://ik.imagekit.io/uqvsd50nv/teaser.jpg"
                 className="absolute inset-0 h-full w-full object-contain bg-black"
               >
-                <source src="https://ik.imagekit.io/uqvsd50nv/teaser.mp4" />
+                <source src="https://ik.imagekit.io/7rgtwup0y/teaser.mp4" />
               </video>
               <div className="absolute inset-0 z-10 flex items-center justify-center px-4 md:px-8 bg-black/25">
                 <div className="max-w-5xl text-center">
