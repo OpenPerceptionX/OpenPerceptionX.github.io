@@ -1158,9 +1158,10 @@ export default function Home() {
                     loop
                     muted
                     playsInline
+                    poster="https://ik.imagekit.io/3ic6kgidz/method.jpg"
                     className="w-full h-auto rounded-lg border border-white/20 bg-black"
                   >
-                    <source src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/master/TAMEn/mothod/method.mp4" />
+                    <source src="https://ik.imagekit.io/3ic6kgidz/method.mp4" />
                   </video>
                 </div>
               </div>
