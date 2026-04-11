@@ -123,6 +123,7 @@
   @apply bg-gradient-to-br from-[#FF668C] via-[#FF668C] to-[#FF668C];
 }
 .color-text-1 {
+  max-width: 100%;
   width: fit-content;
   background-image: linear-gradient(
     120deg,
@@ -173,8 +174,9 @@ svg {
   height: 1rem;
 }
 
+/* Avoid global video scale — it shrinks visuals without fixing layout box and breaks mobile alignment. */
 video {
-  transform: scale(0.8);
+  max-width: 100%;
 }
 
 button[data-slot="carousel-previous"] {
@@ -318,5 +320,32 @@ button[data-slot="carousel-next"] {
 
   .user-study-label .label-phase {
     font-size: 12px;
+  }
+}
+
+/* Mobile: carousel zoom + off-screen arrows caused horizontal overflow */
+@media (max-width: 767px) {
+  .user-study-carousel [data-slot="carousel-item"] .card {
+    transform: scale(0.96);
+    filter: saturate(0.75) blur(0px);
+  }
+
+  .user-study-carousel [data-slot="carousel-item"][data-active="true"] .card {
+    transform: scale(1);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18),
+      0 12px 28px rgba(0, 0, 0, 0.45);
+  }
+
+  .user-study-carousel [data-slot="carousel-item"][data-active="true"] video {
+    transform: none;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22);
+  }
+
+  button[data-slot="carousel-previous"] {
+    left: 2px;
+  }
+
+  button[data-slot="carousel-next"] {
+    right: 2px;
   }
 }

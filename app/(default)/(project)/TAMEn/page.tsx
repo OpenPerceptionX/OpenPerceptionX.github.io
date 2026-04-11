@@ -76,7 +76,7 @@ const pageNavItems: { text: string; id: string }[] = [
 
 export default function Home() {
   return (
-    <main className="w-full overflow-hidden bg-black text-white">
+    <main className="w-full min-w-0 overflow-x-clip bg-black text-white">
       <nav
         className="fixed left-5 top-1/2 -translate-y-1/2 z-30 hidden md:block"
         aria-label="TAMEn section navigation"
@@ -121,8 +121,8 @@ export default function Home() {
       {/* Landing Section with Gray Background */}
       <div className="w-full min-h-[100dvh] flex flex-col items-center px-2 md:px-4 bg-black">
         <div className="flex flex-col w-full h-[100dvh] py-2 md:py-4">
-          <div className="w-full h-full rounded-2xl border border-white/20 p-3 md:p-5 flex flex-col">
-            <div className="relative w-full flex-1 min-h-0 overflow-hidden rounded-xl">
+          <div className="w-full h-full min-w-0 rounded-2xl border border-white/20 p-2 sm:p-3 md:p-5 flex flex-col">
+            <div className="relative w-full flex-1 min-h-0 min-w-0 overflow-hidden rounded-xl">
               <video
                 preload="none"
                 autoPlay
@@ -134,18 +134,18 @@ export default function Home() {
               >
                 <source src="https://ik.imagekit.io/7rgtwup0y/teaser.mp4" />
               </video>
-              <div className="absolute inset-0 z-10 flex items-center justify-center px-4 md:px-8 bg-black/25">
-                <div className="max-w-5xl text-center">
-                  <h1 className="color-text-1 text-lg sm:text-2xl md:text-4xl font-bold leading-tight">
-                    <span className="block text-3xl sm:text-5xl md:text-7xl leading-none mb-2 md:mb-3">
+              <div className="absolute inset-0 z-10 flex items-center justify-center px-3 sm:px-4 md:px-8 bg-black/25">
+                <div className="max-w-5xl min-w-0 w-full text-center">
+                  <h1 className="color-text-1 text-base sm:text-lg md:text-4xl font-bold leading-tight break-words text-pretty">
+                    <span className="block text-2xl sm:text-5xl md:text-7xl leading-none mb-2 md:mb-3">
                       TAMEn:
                     </span>
-                    <span>
+                    <span className="inline-block max-w-full">
                       Tactile-Aware Manipulation Engine for Closed-Loop Data
                       Collection in Contact-Rich Tasks
                     </span>
                   </h1>
-                  <p className="mt-3 md:mt-5 text-[10px] sm:text-xs md:text-sm italic text-gray-300">
+                  <p className="mt-3 md:mt-5 text-[10px] sm:text-xs md:text-sm italic text-gray-300 break-words text-pretty px-1">
                     TAMEn builds upon the UMI paradigm with key enhancements in
                     multimodality, precision-portability synergy, replayability,
                     and data flywheel.
@@ -384,66 +384,66 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="w-full px-4 md:px-6 flex flex-col items-center">
-              <div className="w-full max-w-6xl mt-6 md:mt-12">
+            <div className="w-full px-3 sm:px-4 md:px-6 flex flex-col items-center min-w-0">
+              <div className="w-full max-w-6xl min-w-0 mt-6 md:mt-12">
                 <Tabs
                   defaultValue="01"
-                  className="flex flex-col md:flex-row w-full gap-3 md:gap-3 h-auto md:h-[576px]"
+                  className="flex flex-col md:flex-row w-full min-w-0 gap-3 md:gap-3 h-auto md:h-[576px]"
                 >
-                  <TabsList className="flex flex-row md:flex-col justify-between gap-2 md:gap-4 h-auto md:h-full w-full md:w-[24%]">
+                  <TabsList className="flex flex-col justify-stretch gap-2 md:gap-4 h-auto md:h-full w-full md:w-[24%] min-w-0">
                     <TabsTrigger
                       value="01"
                       key="modes-01"
-                      className="group disabled:pointer-events-none w-full md:h-[164px] p-0 bg-transparent"
+                      className="group disabled:pointer-events-none w-full min-w-0 md:h-[164px] p-0 bg-transparent shrink-0"
                     >
-                      <div className="w-fit h-full flex items-center rounded-xl border border-white/25 bg-black/40 overflow-hidden group-data-[state=active]:border-[#60a5fa] group-data-[state=active]:shadow-[0_0_0_1px_rgba(96,165,250,0.35)]">
-                        <h2 className="w-14 md:w-16 h-full flex items-center justify-center border-r border-white/15 text-3xl md:text-4xl font-bold tabular-nums text-white/90 group-data-[state=active]:text-[#60a5fa]">
+                      <div className="w-full min-w-0 h-[88px] sm:h-[100px] md:h-full flex items-center rounded-xl border border-white/25 bg-black/40 overflow-hidden group-data-[state=active]:border-[#60a5fa] group-data-[state=active]:shadow-[0_0_0_1px_rgba(96,165,250,0.35)]">
+                        <h2 className="w-11 sm:w-14 md:w-16 shrink-0 h-full flex items-center justify-center border-r border-white/15 text-2xl sm:text-3xl md:text-4xl font-bold tabular-nums text-white/90 group-data-[state=active]:text-[#60a5fa]">
                           01
                         </h2>
                         <img
                           src="https://ik.imagekit.io/uqvsd50nv/01.jpg"
                           alt="Highlight 01"
-                          className="h-full w-[170px] md:w-[210px] object-contain object-center bg-black"
+                          className="h-full w-full min-w-0 flex-1 max-h-[120px] md:max-h-none md:w-[210px] object-contain object-center bg-black"
                         />
                       </div>
                     </TabsTrigger>
                     <TabsTrigger
                       value="02"
                       key="modes-02"
-                      className="group disabled:pointer-events-none w-full md:h-[164px] p-0 bg-transparent"
+                      className="group disabled:pointer-events-none w-full min-w-0 md:h-[164px] p-0 bg-transparent shrink-0"
                     >
-                      <div className="w-fit h-full flex items-center rounded-xl border border-white/25 bg-black/40 overflow-hidden group-data-[state=active]:border-[#60a5fa] group-data-[state=active]:shadow-[0_0_0_1px_rgba(96,165,250,0.35)]">
-                        <h2 className="w-14 md:w-16 h-full flex items-center justify-center border-r border-white/15 text-3xl md:text-4xl font-bold tabular-nums text-white/90 group-data-[state=active]:text-[#60a5fa]">
+                      <div className="w-full min-w-0 h-[88px] sm:h-[100px] md:h-full flex items-center rounded-xl border border-white/25 bg-black/40 overflow-hidden group-data-[state=active]:border-[#60a5fa] group-data-[state=active]:shadow-[0_0_0_1px_rgba(96,165,250,0.35)]">
+                        <h2 className="w-11 sm:w-14 md:w-16 shrink-0 h-full flex items-center justify-center border-r border-white/15 text-2xl sm:text-3xl md:text-4xl font-bold tabular-nums text-white/90 group-data-[state=active]:text-[#60a5fa]">
                           02
                         </h2>
                         <img
                           src="https://ik.imagekit.io/uqvsd50nv/02.jpg"
                           alt="Highlight 02"
-                          className="h-full w-[170px] md:w-[210px] object-contain object-center bg-black"
+                          className="h-full w-full min-w-0 flex-1 max-h-[120px] md:max-h-none md:w-[210px] object-contain object-center bg-black"
                         />
                       </div>
                     </TabsTrigger>
                     <TabsTrigger
                       value="03"
                       key="modes-03"
-                      className="group disabled:pointer-events-none w-full md:h-[164px] p-0 bg-transparent"
+                      className="group disabled:pointer-events-none w-full min-w-0 md:h-[164px] p-0 bg-transparent shrink-0"
                     >
-                      <div className="w-fit h-full flex items-center rounded-xl border border-white/25 bg-black/40 overflow-hidden group-data-[state=active]:border-[#60a5fa] group-data-[state=active]:shadow-[0_0_0_1px_rgba(96,165,250,0.35)]">
-                        <h2 className="w-14 md:w-16 h-full flex items-center justify-center border-r border-white/15 text-3xl md:text-4xl font-bold tabular-nums text-white/90 group-data-[state=active]:text-[#60a5fa]">
+                      <div className="w-full min-w-0 h-[88px] sm:h-[100px] md:h-full flex items-center rounded-xl border border-white/25 bg-black/40 overflow-hidden group-data-[state=active]:border-[#60a5fa] group-data-[state=active]:shadow-[0_0_0_1px_rgba(96,165,250,0.35)]">
+                        <h2 className="w-11 sm:w-14 md:w-16 shrink-0 h-full flex items-center justify-center border-r border-white/15 text-2xl sm:text-3xl md:text-4xl font-bold tabular-nums text-white/90 group-data-[state=active]:text-[#60a5fa]">
                           03
                         </h2>
                         <img
                           src="https://ik.imagekit.io/uqvsd50nv/03.jpg"
                           alt="Highlight 03"
-                          className="h-full w-[170px] md:w-[210px] object-contain object-center bg-black"
+                          className="h-full w-full min-w-0 flex-1 max-h-[120px] md:max-h-none md:w-[210px] object-contain object-center bg-black"
                         />
                       </div>
                     </TabsTrigger>
                   </TabsList>
 
-                  <TabsContent value="01" key="mode-content-01" className="w-full h-full">
-                    <Card className="border-4 md:border-8 border-[#98AEF3] bg-black h-full overflow-hidden">
-                      <CardContent className="h-full flex justify-center items-center p-0">
+                  <TabsContent value="01" key="mode-content-01" className="w-full min-w-0 flex-1 md:h-full">
+                    <Card className="border-4 md:border-8 border-[#98AEF3] bg-black min-h-[200px] md:h-full overflow-hidden">
+                      <CardContent className="h-full min-h-[200px] md:min-h-0 flex justify-center items-center p-0">
                         <video
                           preload="none"
                           autoPlay
@@ -451,16 +451,16 @@ export default function Home() {
                           muted
                           playsInline
                           poster="https://ik.imagekit.io/uqvsd50nv/highlight01.jpg"
-                          className="w-full h-full object-contain bg-black"
+                          className="w-full max-h-[min(56vh,520px)] md:max-h-none md:h-full object-contain bg-black"
                         >
                           <source src="https://ik.imagekit.io/7rgtwup0y/highlight01.mp4" />
                         </video>
                       </CardContent>
                     </Card>
                   </TabsContent>
-                  <TabsContent value="02" key="mode-content-02" className="w-full">
-                    <Card className="border-4 md:border-8 border-[#98AEF3] bg-black h-full overflow-hidden">
-                      <CardContent className="h-full flex justify-center items-center p-0">
+                  <TabsContent value="02" key="mode-content-02" className="w-full min-w-0 flex-1 md:h-full">
+                    <Card className="border-4 md:border-8 border-[#98AEF3] bg-black min-h-[200px] md:h-full overflow-hidden">
+                      <CardContent className="h-full min-h-[200px] md:min-h-0 flex justify-center items-center p-0">
                         <video
                           preload="none"
                           autoPlay
@@ -468,16 +468,16 @@ export default function Home() {
                           muted
                           playsInline
                           poster="https://ik.imagekit.io/uqvsd50nv/highlight02.jpg"
-                          className="w-full h-full object-contain bg-black"
+                          className="w-full max-h-[min(56vh,520px)] md:max-h-none md:h-full object-contain bg-black"
                         >
                           <source src="https://ik.imagekit.io/7rgtwup0y/highlight02.mp4" />
                         </video>
                       </CardContent>
                     </Card>
                   </TabsContent>
-                  <TabsContent value="03" key="mode-content-03" className="w-full">
-                    <Card className="border-4 md:border-8 border-[#98AEF3] bg-black h-full overflow-hidden">
-                      <CardContent className="h-full flex justify-center items-center p-0">
+                  <TabsContent value="03" key="mode-content-03" className="w-full min-w-0 flex-1 md:h-full">
+                    <Card className="border-4 md:border-8 border-[#98AEF3] bg-black min-h-[200px] md:h-full overflow-hidden">
+                      <CardContent className="h-full min-h-[200px] md:min-h-0 flex justify-center items-center p-0">
                         <video
                           preload="none"
                           autoPlay
@@ -485,7 +485,7 @@ export default function Home() {
                           muted
                           playsInline
                           poster="https://ik.imagekit.io/uqvsd50nv/highlight03.jpg"
-                          className="w-full h-full object-contain bg-black"
+                          className="w-full max-h-[min(56vh,520px)] md:max-h-none md:h-full object-contain bg-black"
                         >
                           <source src="https://ik.imagekit.io/7rgtwup0y/highlight03.mp4" />
                         </video>
@@ -567,7 +567,8 @@ export default function Home() {
                     </p>
                     <iframe
                       src="https://opendrivelab.github.io/TAMEn/3d_model/tamen_model.html"
-                      className="w-[320px] md:w-[480px] lg:w-[640px] h-[240px] md:h-[360px] lg:h-[480px] border-2 md:border-4 border-white hover:border-[#174BE5] transition-colors duration-300 rounded-lg mx-auto"
+                      title="TAMEn 3D model viewer"
+                      className="w-full max-w-[320px] md:max-w-[480px] lg:max-w-[640px] md:w-[480px] lg:w-[640px] h-[240px] md:h-[360px] lg:h-[480px] border-2 md:border-4 border-white hover:border-[#174BE5] transition-colors duration-300 rounded-lg mx-auto"
                     ></iframe>
                   </div>
                 </div>
@@ -696,7 +697,7 @@ export default function Home() {
                             muted
                             playsInline
                             poster="https://ik.imagekit.io/3ic6kgidz/Herbal%20Transfer.jpg"
-                            className="rounded-xl object-fit"
+                            className="rounded-xl w-full object-contain"
                           >
                             <source src="https://ik.imagekit.io/3ic6kgidz/Herbal%20Transfer.mp4" />
                           </video>
@@ -730,7 +731,7 @@ export default function Home() {
                             muted
                             playsInline
                             poster="https://ik.imagekit.io/3ic6kgidz/Cable%20Mounting.jpg"
-                            className="rounded-xl object-fit"
+                            className="rounded-xl w-full object-contain"
                           >
                             <source src="https://ik.imagekit.io/3ic6kgidz/Cable%20Mounting.mp4" />
                           </video>
@@ -766,7 +767,7 @@ export default function Home() {
                             muted
                             playsInline
                             poster="https://ik.imagekit.io/3ic6kgidz/Binder%20Clip%20Removal.jpg"
-                            className="rounded-xl object-fit"
+                            className="rounded-xl w-full object-contain"
                           >
                             <source src="https://ik.imagekit.io/3ic6kgidz/Binder%20Clip%20Removal.mp4" />
                           </video>
@@ -800,7 +801,7 @@ export default function Home() {
                             muted
                             playsInline
                             poster="https://ik.imagekit.io/3ic6kgidz/Dish%20Washing.jpg"
-                            className="rounded-xl object-fit"
+                            className="rounded-xl w-full object-contain"
                           >
                             <source src="https://ik.imagekit.io/3ic6kgidz/Dish%20Washing.mp4" />
                           </video>
@@ -886,7 +887,7 @@ export default function Home() {
                 className="max-w-7xl w-full rounded-xl"
               />
             </div> */}
-            <div className="w-full max-w-full md:max-w-[1400px] px-6 md:px-20 3xl:px-64 mt-5 md:mt-10 p-2 md:p-6 overflow-hidden">
+            <div className="w-full min-w-0 max-w-full md:max-w-[1400px] px-3 sm:px-6 md:px-20 3xl:px-64 mt-5 md:mt-10 p-2 md:p-6 overflow-x-clip">
               <Carousel
                 opts={{
                   align: "center",
@@ -914,7 +915,7 @@ export default function Home() {
                           muted
                           playsInline
                           poster="https://ik.imagekit.io/3ic6kgidz/cable_robust_full.jpg"
-                          className="border-2 md:border-6 border-[#174BE5]/50 rounded-xl object-fit"
+                          className="border-2 md:border-6 border-[#174BE5]/50 rounded-xl w-full"
                         >
                           <source src="https://ik.imagekit.io/7rgtwup0y/cable_robust_full.mp4" />
                         </video>
@@ -938,7 +939,7 @@ export default function Home() {
                           muted
                           playsInline
                           poster="https://ik.imagekit.io/3ic6kgidz/cable_robust_post.jpg"
-                          className="border-2 md:border-6 border-[#174BE5]/50 rounded-xl object-fit"
+                          className="border-2 md:border-6 border-[#174BE5]/50 rounded-xl w-full"
                         >
                           <source src="https://ik.imagekit.io/7rgtwup0y/cable_robust_post.mp4" />
                         </video>
@@ -964,7 +965,7 @@ export default function Home() {
                           muted
                           playsInline
                           poster="https://ik.imagekit.io/3ic6kgidz/gen_cable.jpg"
-                          className="border-2 md:border-6 border-[#174BE5]/50 rounded-xl object-fit"
+                          className="border-2 md:border-6 border-[#174BE5]/50 rounded-xl w-full"
                         >
                           <source src="https://ik.imagekit.io/3ic6kgidz/gen_cable.mp4" />
                         </video>
@@ -987,7 +988,7 @@ export default function Home() {
                           muted
                           playsInline
                           poster="https://ik.imagekit.io/3ic6kgidz/gen_clip.jpg"
-                          className="border-2 md:border-6 border-[#174BE5]/50 rounded-xl object-fit"
+                          className="border-2 md:border-6 border-[#174BE5]/50 rounded-xl w-full"
                         >
                           <source src="https://ik.imagekit.io/3ic6kgidz/gen_clip.mp4" />
                         </video>
@@ -1010,7 +1011,7 @@ export default function Home() {
                           muted
                           playsInline
                           poster="https://ik.imagekit.io/3ic6kgidz/gen_herbal.jpg"
-                          className="border-2 md:border-6 border-[#174BE5]/50 rounded-xl object-fit"
+                          className="border-2 md:border-6 border-[#174BE5]/50 rounded-xl w-full"
                         >
                           <source src="https://ik.imagekit.io/3ic6kgidz/gen_herbal.mp4" />
                         </video>
@@ -1033,7 +1034,7 @@ export default function Home() {
                           muted
                           playsInline
                           poster="https://ik.imagekit.io/3ic6kgidz/herbal_robust_post.jpg"
-                          className="border-2 md:border-6 border-[#174BE5]/50 rounded-xl object-fit"
+                          className="border-2 md:border-6 border-[#174BE5]/50 rounded-xl w-full"
                         >
                           <source src="https://ik.imagekit.io/7rgtwup0y/herbal_robust_post.mp4" />
                         </video>
