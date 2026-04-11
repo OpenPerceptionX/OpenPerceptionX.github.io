@@ -694,9 +694,10 @@ export default function Home() {
                             loop
                             muted
                             playsInline
+                            poster="https://ik.imagekit.io/3ic6kgidz/Herbal%20Transfer.jpg"
                             className="rounded-xl object-fit"
                           >
-                            <source src="https://opendrivelab.github.io/TAMEn/policy_rollouts/Herbal%20Transfer.mp4" />
+                            <source src="https://ik.imagekit.io/3ic6kgidz/Herbal%20Transfer.mp4" />
                           </video>
                         </div>
                       </div>
@@ -727,9 +728,10 @@ export default function Home() {
                             loop
                             muted
                             playsInline
+                            poster="https://ik.imagekit.io/3ic6kgidz/Cable%20Mounting.jpg"
                             className="rounded-xl object-fit"
                           >
-                            <source src="https://opendrivelab.github.io/TAMEn/policy_rollouts/Cable%20Mounting.mp4" />
+                            <source src="https://ik.imagekit.io/3ic6kgidz/Cable%20Mounting.mp4" />
                           </video>
                         </div>
                       </div>
@@ -762,9 +764,10 @@ export default function Home() {
                             loop
                             muted
                             playsInline
+                            poster="https://ik.imagekit.io/3ic6kgidz/Binder%20Clip%20Removal.jpg"
                             className="rounded-xl object-fit"
                           >
-                            <source src="https://opendrivelab.github.io/TAMEn/policy_rollouts/Binder%20Clip%20Removal.mp4" />
+                            <source src="https://ik.imagekit.io/3ic6kgidz/Binder%20Clip%20Removal.mp4" />
                           </video>
                         </div>
                       </div>
@@ -795,9 +798,10 @@ export default function Home() {
                             loop
                             muted
                             playsInline
+                            poster="https://ik.imagekit.io/3ic6kgidz/Dish%20Washing.jpg"
                             className="rounded-xl object-fit"
                           >
-                            <source src="https://opendrivelab.github.io/TAMEn/policy_rollouts/Dish%20Washing.mp4" />
+                            <source src="https://ik.imagekit.io/3ic6kgidz/Dish%20Washing.mp4" />
                           </video>
                         </div>
                       </div>
@@ -902,15 +906,16 @@ export default function Home() {
                   <CarouselItem className="carouselItem basis-full md:basis-1/2 lg:basis-1/3 pl-2 md:pl-4">
                     <Card className="border-[#174BE5]/50 bg-black/40 border-0 card">
                       <CardContent className="cardContent flex flex-col items-center justify-center p-2 md:p-6 gap-1 md:gap-1">
-                      <video
+                        <video
                           preload="none"
                           autoPlay
                           loop
                           muted
                           playsInline
+                          poster="https://ik.imagekit.io/3ic6kgidz/cable_robust_full.jpg"
                           className="border-2 md:border-6 border-[#174BE5]/50 rounded-xl object-fit"
                         >
-                          <source src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/master/TAMEn/policy_rollouts/cable_robust_full.mp4" />
+                          <source src="https://ik.imagekit.io/3ic6kgidz/cable_robust_full.mp4" />
                         </video>
                         <div className="w-full text-center bg-black/70 p-1 rounded-lg shadow-md border border-white/20">
                           <p className="user-study-label text-[#174BE5]">
@@ -931,9 +936,10 @@ export default function Home() {
                           loop
                           muted
                           playsInline
+                          poster="https://ik.imagekit.io/3ic6kgidz/cable_robust_post.jpg"
                           className="border-2 md:border-6 border-[#174BE5]/50 rounded-xl object-fit"
                         >
-                          <source src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/master/TAMEn/policy_rollouts/cable_robust_post.mp4" />
+                          <source src="https://ik.imagekit.io/3ic6kgidz/cable_robust_post.mp4" />
                         </video>
                         <div className="w-full text-center bg-black/70 p-1 rounded-lg shadow-md border border-white/20">
                           <p className="user-study-label text-[#174BE5]">
@@ -956,9 +962,10 @@ export default function Home() {
                           loop
                           muted
                           playsInline
+                          poster="https://ik.imagekit.io/3ic6kgidz/gen_cable.jpg"
                           className="border-2 md:border-6 border-[#174BE5]/50 rounded-xl object-fit"
                         >
-                          <source src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/master/TAMEn/policy_rollouts/gen_cable.mp4" />
+                          <source src="https://ik.imagekit.io/3ic6kgidz/gen_cable.mp4" />
                         </video>
                         <div className="w-full text-center bg-black/70 p-1 rounded-lg shadow-md border border-white/20">
                           <p className="user-study-label text-[#174BE5]">
@@ -978,9 +985,10 @@ export default function Home() {
                           loop
                           muted
                           playsInline
+                          poster="https://ik.imagekit.io/3ic6kgidz/gen_clip.jpg"
                           className="border-2 md:border-6 border-[#174BE5]/50 rounded-xl object-fit"
                         >
-                          <source src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/master/TAMEn/policy_rollouts/gen_clip.mp4" />
+                          <source src="https://ik.imagekit.io/3ic6kgidz/gen_clip.mp4" />
                         </video>
                         <div className="w-full text-center bg-black/70 p-1 rounded-lg shadow-md border border-white/20">
                           <p className="user-study-label text-[#174BE5]">
@@ -1000,9 +1008,10 @@ export default function Home() {
                           loop
                           muted
                           playsInline
+                          poster="https://ik.imagekit.io/3ic6kgidz/gen_herbal.jpg"
                           className="border-2 md:border-6 border-[#174BE5]/50 rounded-xl object-fit"
                         >
-                          <source src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/master/TAMEn/policy_rollouts/gen_herbal.mp4" />
+                          <source src="https://ik.imagekit.io/3ic6kgidz/gen_herbal.mp4" />
                         </video>
                         <div className="w-full text-center bg-black/70 p-1 rounded-lg shadow-md border border-white/20">
                           <p className="user-study-label text-[#174BE5]">
@@ -1022,9 +1031,10 @@ export default function Home() {
                           loop
                           muted
                           playsInline
+                          poster="https://ik.imagekit.io/3ic6kgidz/herbal_robust_post.jpg"
                           className="border-2 md:border-6 border-[#174BE5]/50 rounded-xl object-fit"
                         >
-                          <source src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/master/TAMEn/policy_rollouts/herbal_robust_post.mp4" />
+                          <source src="https://ik.imagekit.io/3ic6kgidz/herbal_robust_post.mp4" />
                         </video>
                         <div className="w-full text-center bg-black/70 p-1 rounded-lg shadow-md border border-white/20">
                           <p className="user-study-label text-[#174BE5]">
