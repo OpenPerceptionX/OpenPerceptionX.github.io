@@ -284,6 +284,7 @@ export default function Home() {
                   controls
                   preload="metadata"
                   playsInline
+                  poster="https://ik.imagekit.io/7rgtwup0y/suppvideo.jpg?updatedAt=1775908649682"
                   className="w-full h-auto rounded-lg border border-white/20 bg-black"
                 >
                   <source src="https://ik.imagekit.io/dpjxm6pdu/suppvideo.mp4" />
