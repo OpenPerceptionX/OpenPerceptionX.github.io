@@ -142,7 +142,11 @@ export default function Redirect() {
     ) {
         redirect('https://mmlab.hk/Smash/')
     }
-
+    if (
+        pathname.toLowerCase().startsWith('/tamen')
+    ) {
+        redirect('/TAMEn/')
+    }
 
     // kai
     if (

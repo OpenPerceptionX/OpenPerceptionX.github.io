@@ -87,7 +87,7 @@ export const publications: {
         description: "TAMEn builds upon the UMI paradigm with key enhancements in multimodality, precision-portability synergy, replayability, and data flywheel.",
         keys: ['embodied_ai'],
         time: '2026.04.08',
-        timeline: ['tembodied', 'highlight'],
+        timeline: ['tembodied'],
     },
         {
         title: "SMASH: Mastering Scalable Whole-Body Skills for Humanoid Ping-Pong with Egocentric Vision",
