@@ -11,6 +11,11 @@ const nextConfig: NextConfig = {
             },
             {
                 protocol: 'https',
+                hostname: 'raw.githubusercontent.com',
+                pathname: '/OpenDriveLab/opendrivelab.github.io/**',
+            },
+            {
+                protocol: 'https',
                 hostname: 'img.shields.io',
                 pathname: '/**',
             },

@@ -68,7 +68,7 @@ export const publications: {
     {
         title: "TAMEn: Tactile-Aware Manipulation Engine for Closed-Loop Data Collection in Contact-Rich Tasks",
         link: "https://arxiv.org/abs/2604.07335",
-        image: "/publication/tamen-teaser.jpg",
+        image: "https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/master/TAMEn/landing/teaser.jpg",
         author: "Longyan Wu, Jieji Ren, Chenghang Jiang, Junxi Zhou, Shijia Peng, Ran Huang, Guoying Gu, Li Chen, Hongyang Li",
         note: "Preprint 2026",
         noteoption: '',
