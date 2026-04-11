@@ -452,7 +452,7 @@ export default function Home() {
                           poster="https://ik.imagekit.io/uqvsd50nv/highlight01.jpg"
                           className="w-full h-full object-contain bg-black"
                         >
-                          <source src="https://ik.imagekit.io/uqvsd50nv/highlight01.mp4" />
+                          <source src="https://ik.imagekit.io/7rgtwup0y/highlight01.mp4" />
                         </video>
                       </CardContent>
                     </Card>
@@ -469,7 +469,7 @@ export default function Home() {
                           poster="https://ik.imagekit.io/uqvsd50nv/highlight02.jpg"
                           className="w-full h-full object-contain bg-black"
                         >
-                          <source src="https://ik.imagekit.io/uqvsd50nv/highlight02.mp4" />
+                          <source src="https://ik.imagekit.io/7rgtwup0y/highlight02.mp4" />
                         </video>
                       </CardContent>
                     </Card>
@@ -486,7 +486,7 @@ export default function Home() {
                           poster="https://ik.imagekit.io/uqvsd50nv/highlight03.jpg"
                           className="w-full h-full object-contain bg-black"
                         >
-                          <source src="https://ik.imagekit.io/uqvsd50nv/highlight03.mp4" />
+                          <source src="https://ik.imagekit.io/7rgtwup0y/highlight03.mp4" />
                         </video>
                       </CardContent>
                     </Card>
