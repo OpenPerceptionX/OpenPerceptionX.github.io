@@ -1206,6 +1206,11 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      <div
+        className="w-full h-40 md:h-64 bg-[linear-gradient(180deg,#000_0%,#0c0c0c_14%,#1c1c1c_32%,#3a3a3a_52%,#6b6b6b_70%,#b8b8b8_86%,var(--background)_100%)]"
+        aria-hidden
+      />
     </main>
   );
 }
