@@ -64,16 +64,25 @@ const X_AXIS_SHORT: Record<string, string> = {
   "5": "Avg.",
 }
 
-export function PolicyRolloutsAverage() {
-  const [compactChart, setCompactChart] = React.useState(false)
+/** Chart area narrower than this → shorten X labels & shrink ticks (avoids overlap in padded layouts). */
+const NARROW_CHART_PX = 560
 
-  React.useEffect(() => {
-    const mq = window.matchMedia("(max-width: 640px)")
-    const apply = () => setCompactChart(mq.matches)
-    apply()
-    mq.addEventListener("change", apply)
-    return () => mq.removeEventListener("change", apply)
+export function PolicyRolloutsAverage() {
+  const chartRef = React.useRef<HTMLDivElement>(null)
+  const [narrowChart, setNarrowChart] = React.useState(false)
+
+  React.useLayoutEffect(() => {
+    const el = chartRef.current
+    if (!el || typeof ResizeObserver === "undefined") return
+    const ro = new ResizeObserver(() => {
+      setNarrowChart(el.getBoundingClientRect().width < NARROW_CHART_PX)
+    })
+    ro.observe(el)
+    setNarrowChart(el.getBoundingClientRect().width < NARROW_CHART_PX)
+    return () => ro.disconnect()
   }, [])
+
+  const tickPx = narrowChart ? 7 : 11
 
   return (
     <Card className="border border-white/20 bg-black text-white">
@@ -82,6 +91,7 @@ export function PolicyRolloutsAverage() {
       </CardHeader>
       <CardContent className="p-2 md:p-4">
         <ChartContainer
+          ref={chartRef}
           config={chartConfig}
           className="!aspect-auto h-[278px] md:h-[260px]"
         >
@@ -90,9 +100,9 @@ export function PolicyRolloutsAverage() {
             data={chartData}
             margin={{
               top: 12,
-              bottom: compactChart ? 36 : 24,
-              left: compactChart ? 8 : 16,
-              right: compactChart ? 4 : 16,
+              bottom: narrowChart ? 44 : 24,
+              left: narrowChart ? 6 : 16,
+              right: narrowChart ? 4 : 16,
             }}
           >
             <CartesianGrid vertical={false} />
@@ -100,20 +110,20 @@ export function PolicyRolloutsAverage() {
               className="select-none"
               dataKey="category"
               tickLine={false}
-              tickMargin={compactChart ? 4 : 8}
+              tickMargin={narrowChart ? 2 : 8}
               axisLine={false}
               interval={0}
-              height={compactChart ? 48 : 32}
+              height={narrowChart ? 52 : 32}
               tick={{
-                fontSize: compactChart ? 9 : 11,
+                fontSize: tickPx,
                 fill: "rgba(255,255,255,0.65)",
               }}
-              angle={compactChart ? -32 : 0}
-              textAnchor={compactChart ? "end" : "middle"}
-              dy={compactChart ? 4 : 0}
+              angle={narrowChart ? -35 : 0}
+              textAnchor={narrowChart ? "end" : "middle"}
+              dy={narrowChart ? 4 : 0}
               tickFormatter={(value) => {
                 const v = String(value)
-                if (compactChart && X_AXIS_SHORT[v]) return X_AXIS_SHORT[v]
+                if (narrowChart && X_AXIS_SHORT[v]) return X_AXIS_SHORT[v]
                 const full =
                   chartConfig[v as keyof typeof chartConfig]?.label
                 return typeof full === "string" ? full : v
@@ -124,9 +134,9 @@ export function PolicyRolloutsAverage() {
               tickFormatter={(value) => `${value.toFixed(0)}`}
               tickLine={false}
               axisLine={false}
-              width={compactChart ? 28 : 36}
+              width={narrowChart ? 26 : 36}
               tick={{
-                fontSize: compactChart ? 9 : 11,
+                fontSize: tickPx,
                 fill: "rgba(255,255,255,0.65)",
               }}
             />

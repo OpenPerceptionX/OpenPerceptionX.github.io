@@ -1,5 +1,6 @@
 "use client";
 
+import * as React from "react";
 import { Bar, BarChart, CartesianGrid, LabelList, XAxis, YAxis } from "recharts";
 
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -40,7 +41,41 @@ const robustnessConfig = {
   oursPost: { label: "Ours (+ Pretrain + DAgger) Post-Grasp Dist.", color: "#1E3FAF" },
 };
 
+const NARROW_CHART_PX = 560;
+
+const PHASE_LABEL_SHORT: Record<string, string> = {
+  "Herbal Transfer": "Herbal",
+  "Cable Mounting": "Cable",
+  "Binder Clip Removal": "Binder",
+};
+
+const TASK_LABEL_SHORT: Record<string, string> = {
+  "Herbal Transfer": "Herbal",
+  "Cable Mounting": "Cable",
+};
+
+function useChartNarrow(ref: React.RefObject<HTMLDivElement | null>) {
+  const [narrow, setNarrow] = React.useState(false);
+
+  React.useLayoutEffect(() => {
+    const el = ref.current;
+    if (!el || typeof ResizeObserver === "undefined") return;
+    const ro = new ResizeObserver(() => {
+      setNarrow(el.getBoundingClientRect().width < NARROW_CHART_PX);
+    });
+    ro.observe(el);
+    setNarrow(el.getBoundingClientRect().width < NARROW_CHART_PX);
+    return () => ro.disconnect();
+  }, []);
+
+  return narrow;
+}
+
 export function GeneralizationUnseenChart() {
+  const chartRef = React.useRef<HTMLDivElement>(null);
+  const narrow = useChartNarrow(chartRef);
+  const tickPx = narrow ? 7 : 10;
+
   return (
     <Card className="border border-white/20 bg-black/60 text-white">
       <CardHeader className="pb-2 md:pb-3">
@@ -53,10 +88,19 @@ export function GeneralizationUnseenChart() {
         </p>
       </CardHeader>
       <CardContent className="p-2 md:p-3">
-        <ChartContainer config={chartConfig} className="!aspect-auto h-[210px] md:h-[235px]">
+        <ChartContainer
+          ref={chartRef}
+          config={chartConfig}
+          className="!aspect-auto h-[232px] md:h-[235px]"
+        >
           <BarChart
             data={chartData}
-            margin={{ top: 12, bottom: 6, left: 4, right: 4 }}
+            margin={{
+              top: 12,
+              bottom: narrow ? 40 : 8,
+              left: narrow ? 2 : 4,
+              right: narrow ? 2 : 4,
+            }}
             barCategoryGap="18%"
             barGap={2}
           >
@@ -65,13 +109,30 @@ export function GeneralizationUnseenChart() {
               dataKey="phase"
               tickLine={false}
               axisLine={false}
-              tickMargin={8}
-              angle={0}
-              textAnchor="middle"
+              tickMargin={narrow ? 2 : 8}
+              angle={narrow ? -34 : 0}
+              textAnchor={narrow ? "end" : "middle"}
               interval={0}
-              height={28}
+              height={narrow ? 52 : 28}
+              tick={{
+                fontSize: tickPx,
+                fill: "rgba(255,255,255,0.65)",
+              }}
+              dy={narrow ? 4 : 0}
+              tickFormatter={(v) =>
+                narrow ? (PHASE_LABEL_SHORT[String(v)] ?? String(v)) : String(v)
+              }
             />
-            <YAxis domain={[0, 100]} tickLine={false} axisLine={false} />
+            <YAxis
+              domain={[0, 100]}
+              tickLine={false}
+              axisLine={false}
+              width={narrow ? 26 : 36}
+              tick={{
+                fontSize: tickPx,
+                fill: "rgba(255,255,255,0.65)",
+              }}
+            />
             <ChartTooltip
               cursor={false}
               shared={false}
@@ -127,6 +188,10 @@ export function GeneralizationUnseenChart() {
 }
 
 export function RobustnessDisturbanceChart() {
+  const chartRef = React.useRef<HTMLDivElement>(null);
+  const narrow = useChartNarrow(chartRef);
+  const tickPx = narrow ? 7 : 10;
+
   return (
     <Card className="border border-white/20 bg-black/60 text-white">
       <CardHeader className="pb-2 md:pb-3">
@@ -138,16 +203,51 @@ export function RobustnessDisturbanceChart() {
         </p>
       </CardHeader>
       <CardContent className="p-2 md:p-3">
-        <ChartContainer config={robustnessConfig} className="!aspect-auto h-[220px] md:h-[245px]">
+        <ChartContainer
+          ref={chartRef}
+          config={robustnessConfig}
+          className="!aspect-auto h-[238px] md:h-[245px]"
+        >
           <BarChart
             data={robustnessWholeTaskData}
-            margin={{ top: 12, bottom: 6, left: 4, right: 4 }}
+            margin={{
+              top: 12,
+              bottom: narrow ? 40 : 8,
+              left: narrow ? 2 : 4,
+              right: narrow ? 2 : 4,
+            }}
             barCategoryGap="10%"
             barGap={1}
           >
             <CartesianGrid vertical={false} />
-            <XAxis dataKey="task" tickLine={false} axisLine={false} tickMargin={8} height={28} />
-            <YAxis domain={[0, 100]} tickLine={false} axisLine={false} />
+            <XAxis
+              dataKey="task"
+              tickLine={false}
+              axisLine={false}
+              tickMargin={narrow ? 2 : 8}
+              height={narrow ? 48 : 28}
+              interval={0}
+              angle={narrow ? -32 : 0}
+              textAnchor={narrow ? "end" : "middle"}
+              tick={{
+                fontSize: tickPx,
+                fill: "rgba(255,255,255,0.65)",
+              }}
+              dy={narrow ? 4 : 0}
+              tickFormatter={(v) =>
+                narrow ? (TASK_LABEL_SHORT[String(v)] ?? String(v)) : String(v)
+              }
+            />
+            <YAxis
+              domain={[0, 100]}
+              tickLine={false}
+              axisLine={false}
+              width={narrow ? 26 : 36}
+              tick={{
+                fontSize: tickPx,
+                fill: "rgba(255,255,255,0.65)",
+              }}
+            />
             <ChartTooltip
               cursor={false}
               shared={false}
