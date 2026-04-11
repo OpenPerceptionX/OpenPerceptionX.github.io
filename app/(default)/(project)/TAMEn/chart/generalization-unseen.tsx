@@ -43,17 +43,6 @@ const robustnessConfig = {
 
 const NARROW_CHART_PX = 560;
 
-const PHASE_LABEL_SHORT: Record<string, string> = {
-  "Herbal Transfer": "Herbal",
-  "Cable Mounting": "Cable",
-  "Binder Clip Removal": "Binder",
-};
-
-const TASK_LABEL_SHORT: Record<string, string> = {
-  "Herbal Transfer": "Herbal",
-  "Cable Mounting": "Cable",
-};
-
 function useChartNarrow(ref: React.RefObject<HTMLDivElement | null>) {
   const [narrow, setNarrow] = React.useState(false);
 
@@ -74,7 +63,7 @@ function useChartNarrow(ref: React.RefObject<HTMLDivElement | null>) {
 export function GeneralizationUnseenChart() {
   const chartRef = React.useRef<HTMLDivElement>(null);
   const narrow = useChartNarrow(chartRef);
-  const tickPx = narrow ? 7 : 10;
+  const tickPx = narrow ? 8 : 10;
 
   return (
     <Card className="border border-white/20 bg-black/60 text-white">
@@ -91,13 +80,13 @@ export function GeneralizationUnseenChart() {
         <ChartContainer
           ref={chartRef}
           config={chartConfig}
-          className="!aspect-auto h-[232px] md:h-[235px]"
+          className="!aspect-auto h-[248px] md:h-[235px]"
         >
           <BarChart
             data={chartData}
             margin={{
               top: 12,
-              bottom: narrow ? 40 : 8,
+              bottom: narrow ? 48 : 8,
               left: narrow ? 2 : 4,
               right: narrow ? 2 : 4,
             }}
@@ -110,18 +99,15 @@ export function GeneralizationUnseenChart() {
               tickLine={false}
               axisLine={false}
               tickMargin={narrow ? 2 : 8}
-              angle={narrow ? -34 : 0}
+              angle={narrow ? -36 : 0}
               textAnchor={narrow ? "end" : "middle"}
               interval={0}
-              height={narrow ? 52 : 28}
+              height={narrow ? 58 : 28}
               tick={{
                 fontSize: tickPx,
                 fill: "rgba(255,255,255,0.65)",
               }}
               dy={narrow ? 4 : 0}
-              tickFormatter={(v) =>
-                narrow ? (PHASE_LABEL_SHORT[String(v)] ?? String(v)) : String(v)
-              }
             />
             <YAxis
               domain={[0, 100]}
@@ -190,7 +176,7 @@ export function GeneralizationUnseenChart() {
 export function RobustnessDisturbanceChart() {
   const chartRef = React.useRef<HTMLDivElement>(null);
   const narrow = useChartNarrow(chartRef);
-  const tickPx = narrow ? 7 : 10;
+  const tickPx = narrow ? 8 : 10;
 
   return (
     <Card className="border border-white/20 bg-black/60 text-white">
@@ -206,13 +192,13 @@ export function RobustnessDisturbanceChart() {
         <ChartContainer
           ref={chartRef}
           config={robustnessConfig}
-          className="!aspect-auto h-[238px] md:h-[245px]"
+          className="!aspect-auto h-[252px] md:h-[245px]"
         >
           <BarChart
             data={robustnessWholeTaskData}
             margin={{
               top: 12,
-              bottom: narrow ? 40 : 8,
+              bottom: narrow ? 46 : 8,
               left: narrow ? 2 : 4,
               right: narrow ? 2 : 4,
             }}
@@ -225,18 +211,15 @@ export function RobustnessDisturbanceChart() {
               tickLine={false}
               axisLine={false}
               tickMargin={narrow ? 2 : 8}
-              height={narrow ? 48 : 28}
+              height={narrow ? 54 : 28}
               interval={0}
-              angle={narrow ? -32 : 0}
+              angle={narrow ? -34 : 0}
               textAnchor={narrow ? "end" : "middle"}
               tick={{
                 fontSize: tickPx,
                 fill: "rgba(255,255,255,0.65)",
               }}
               dy={narrow ? 4 : 0}
-              tickFormatter={(v) =>
-                narrow ? (TASK_LABEL_SHORT[String(v)] ?? String(v)) : String(v)
-              }
             />
             <YAxis
               domain={[0, 100]}

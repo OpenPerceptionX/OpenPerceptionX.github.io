@@ -56,15 +56,7 @@ const chartConfig = {
   },
 } satisfies ChartConfig
 
-const X_AXIS_SHORT: Record<string, string> = {
-  "1": "Herbal",
-  "2": "Cable",
-  "3": "Binder",
-  "4": "Dish",
-  "5": "Avg.",
-}
-
-/** Chart area narrower than this → shorten X labels & shrink ticks (avoids overlap in padded layouts). */
+/** Chart area narrower than this → tilt X labels & tighten margins (full names, no abbreviations). */
 const NARROW_CHART_PX = 560
 
 export function PolicyRolloutsAverage() {
@@ -82,7 +74,7 @@ export function PolicyRolloutsAverage() {
     return () => ro.disconnect()
   }, [])
 
-  const tickPx = narrowChart ? 7 : 11
+  const tickPx = narrowChart ? 8 : 11
 
   return (
     <Card className="border border-white/20 bg-black text-white">
@@ -93,14 +85,14 @@ export function PolicyRolloutsAverage() {
         <ChartContainer
           ref={chartRef}
           config={chartConfig}
-          className="!aspect-auto h-[278px] md:h-[260px]"
+          className="!aspect-auto h-[292px] md:h-[260px]"
         >
           <BarChart
             accessibilityLayer
             data={chartData}
             margin={{
               top: 12,
-              bottom: narrowChart ? 44 : 24,
+              bottom: narrowChart ? 52 : 24,
               left: narrowChart ? 6 : 16,
               right: narrowChart ? 4 : 16,
             }}
@@ -113,17 +105,16 @@ export function PolicyRolloutsAverage() {
               tickMargin={narrowChart ? 2 : 8}
               axisLine={false}
               interval={0}
-              height={narrowChart ? 52 : 32}
+              height={narrowChart ? 58 : 32}
               tick={{
                 fontSize: tickPx,
                 fill: "rgba(255,255,255,0.65)",
               }}
-              angle={narrowChart ? -35 : 0}
+              angle={narrowChart ? -38 : 0}
               textAnchor={narrowChart ? "end" : "middle"}
               dy={narrowChart ? 4 : 0}
               tickFormatter={(value) => {
                 const v = String(value)
-                if (narrowChart && X_AXIS_SHORT[v]) return X_AXIS_SHORT[v]
                 const full =
                   chartConfig[v as keyof typeof chartConfig]?.label
                 return typeof full === "string" ? full : v
