@@ -70,6 +70,13 @@ const policy_rollouts: { id: string; title: string; color: string }[] = [
 const TAMEN_MODEL_VIEWER_POSTER =
   "https://ik.imagekit.io/7rgtwup0y/3dmodel.jpg";
 
+/** Inline playback hints for WeChat Android (X5) WebView inside carousel slides. */
+const WECHAT_INLINE_VIDEO_PROPS: Record<string, string> = {
+  "x5-video-player-type": "h5",
+  "x5-playsinline": "true",
+  "x5-video-player-fullscreen": "false",
+};
+
 const pageNavItems: { text: string; id: string }[] = [
   { text: "Highlights", id: "highlights" },
   { text: "Data Collection Modes", id: "data-collection-modes" },
@@ -919,6 +926,7 @@ export default function Home() {
                           loop
                           muted
                           playsInline
+                          {...WECHAT_INLINE_VIDEO_PROPS}
                           poster="https://ik.imagekit.io/3ic6kgidz/cable_robust_full.jpg"
                           className="border-2 md:border-6 border-[#174BE5]/50 rounded-xl w-full"
                         >
@@ -943,6 +951,7 @@ export default function Home() {
                           loop
                           muted
                           playsInline
+                          {...WECHAT_INLINE_VIDEO_PROPS}
                           poster="https://ik.imagekit.io/3ic6kgidz/cable_robust_post.jpg"
                           className="border-2 md:border-6 border-[#174BE5]/50 rounded-xl w-full"
                         >
@@ -969,6 +978,7 @@ export default function Home() {
                           loop
                           muted
                           playsInline
+                          {...WECHAT_INLINE_VIDEO_PROPS}
                           poster="https://ik.imagekit.io/3ic6kgidz/gen_cable.jpg"
                           className="border-2 md:border-6 border-[#174BE5]/50 rounded-xl w-full"
                         >
@@ -992,6 +1002,7 @@ export default function Home() {
                           loop
                           muted
                           playsInline
+                          {...WECHAT_INLINE_VIDEO_PROPS}
                           poster="https://ik.imagekit.io/3ic6kgidz/gen_clip.jpg"
                           className="border-2 md:border-6 border-[#174BE5]/50 rounded-xl w-full"
                         >
@@ -1015,6 +1026,7 @@ export default function Home() {
                           loop
                           muted
                           playsInline
+                          {...WECHAT_INLINE_VIDEO_PROPS}
                           poster="https://ik.imagekit.io/3ic6kgidz/gen_herbal.jpg"
                           className="border-2 md:border-6 border-[#174BE5]/50 rounded-xl w-full"
                         >
@@ -1038,6 +1050,7 @@ export default function Home() {
                           loop
                           muted
                           playsInline
+                          {...WECHAT_INLINE_VIDEO_PROPS}
                           poster="https://ik.imagekit.io/3ic6kgidz/herbal_robust_post.jpg"
                           className="border-2 md:border-6 border-[#174BE5]/50 rounded-xl w-full"
                         >

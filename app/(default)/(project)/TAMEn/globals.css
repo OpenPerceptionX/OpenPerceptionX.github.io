@@ -246,31 +246,46 @@ button[data-slot="carousel-next"] {
   height: auto;
   aspect-ratio: 16 / 9;
   object-fit: cover;
-  transform: none;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
+/*
+ * WeChat / iOS WebView: <video> often fails to paint when ancestors use opacity,
+ * transform, or filter. Use a dimming overlay (::after) instead of lowering card opacity.
+ */
 .user-study-carousel [data-slot="carousel-item"] .card {
-  opacity: 0.38;
-  transform: scale(0.88);
-  filter: saturate(0.6) blur(0.3px);
-  transition: transform 260ms ease, opacity 260ms ease, filter 260ms ease, box-shadow 260ms ease;
+  position: relative;
+  overflow: hidden;
+  opacity: 1;
+  transform: none;
+  filter: none;
+  transition: box-shadow 260ms ease;
+}
+
+.user-study-carousel [data-slot="carousel-item"]:not([data-active="true"]) .card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: rgba(0, 0, 0, 0.48);
+  pointer-events: none;
+  z-index: 2;
+  transition: opacity 260ms ease;
 }
 
 .user-study-carousel [data-slot="carousel-item"][data-active="true"] .card {
-  opacity: 1;
-  transform: scale(1.06);
-  filter: saturate(1.2);
   z-index: 2;
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 20px 42px rgba(0, 0, 0, 0.55);
 }
 
-.user-study-carousel [data-slot="carousel-item"] video {
-  transition: transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease;
+.user-study-carousel [data-slot="carousel-item"]:not([data-active="true"]) .card {
+  box-shadow: none;
 }
 
-.user-study-carousel [data-slot="carousel-item"][data-active="true"] video {
-  transform: scale(1.04);
-  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.28), 0 14px 28px rgba(0, 0, 0, 0.45);
+.user-study-carousel [data-slot="carousel-item"] .card .cardContent {
+  position: relative;
+  z-index: 1;
 }
 
 .user-study-label {
@@ -323,22 +338,11 @@ button[data-slot="carousel-next"] {
   }
 }
 
-/* Mobile: carousel zoom + off-screen arrows caused horizontal overflow */
+/* Mobile: keep arrows on-screen; card/video avoid transform (see WeChat note above) */
 @media (max-width: 767px) {
-  .user-study-carousel [data-slot="carousel-item"] .card {
-    transform: scale(0.96);
-    filter: saturate(0.75) blur(0px);
-  }
-
   .user-study-carousel [data-slot="carousel-item"][data-active="true"] .card {
-    transform: scale(1);
     box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18),
       0 12px 28px rgba(0, 0, 0, 0.45);
-  }
-
-  .user-study-carousel [data-slot="carousel-item"][data-active="true"] video {
-    transform: none;
-    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22);
   }
 
   button[data-slot="carousel-previous"] {
