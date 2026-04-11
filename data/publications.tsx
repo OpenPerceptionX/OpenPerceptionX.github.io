@@ -65,6 +65,30 @@ export const publications: {
     time: string;
     timeline: string[];
 }[] = [
+    {
+        title: "TAMEn: Tactile-Aware Manipulation Engine for Closed-Loop Data Collection in Contact-Rich Tasks",
+        link: "https://arxiv.org/abs/2604.07335",
+        image: "/publication/tamen-teaser.jpg",
+        author: "Longyan Wu, Jieji Ren, Chenghang Jiang, Junxi Zhou, Shijia Peng, Ran Huang, Guoying Gu, Li Chen, Hongyang Li",
+        note: "Preprint 2026",
+        noteoption: '',
+        star: "https://img.shields.io/github/stars/OpenDriveLab/TAMEn?style=social",
+        starlink: "https://github.com/OpenDriveLab/TAMEn",
+        icon: [
+            {
+                type: "page",
+                link: "/TAMEn",
+            },
+            {
+                type: "github",
+                link: "https://github.com/OpenDriveLab/TAMEn",
+            },
+        ],
+        description: "TAMEn builds upon the UMI paradigm with key enhancements in multimodality, precision-portability synergy, replayability, and data flywheel.",
+        keys: ['embodied_ai'],
+        time: '2026.04.08',
+        timeline: ['tembodied', 'highlight'],
+    },
         {
         title: "SMASH: Mastering Scalable Whole-Body Skills for Humanoid Ping-Pong with Egocentric Vision",
         link: "https://arxiv.org/abs/2604.01158",
