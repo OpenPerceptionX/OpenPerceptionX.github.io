@@ -1,12 +1,11 @@
 "use client"
 
-import { TrendingUp } from "lucide-react"
+import * as React from "react"
 import { Bar, BarChart, CartesianGrid, Rectangle, XAxis, YAxis } from "recharts"
 
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
@@ -57,35 +56,79 @@ const chartConfig = {
   },
 } satisfies ChartConfig
 
+const X_AXIS_SHORT: Record<string, string> = {
+  "1": "Herbal",
+  "2": "Cable",
+  "3": "Binder",
+  "4": "Dish",
+  "5": "Avg.",
+}
+
 export function PolicyRolloutsAverage() {
+  const [compactChart, setCompactChart] = React.useState(false)
+
+  React.useEffect(() => {
+    const mq = window.matchMedia("(max-width: 640px)")
+    const apply = () => setCompactChart(mq.matches)
+    apply()
+    mq.addEventListener("change", apply)
+    return () => mq.removeEventListener("change", apply)
+  }, [])
+
   return (
     <Card className="border border-white/20 bg-black text-white">
       <CardHeader>
         <CardTitle className="text-sm md:text-base">Policy Success Rate (%)</CardTitle>
       </CardHeader>
       <CardContent className="p-2 md:p-4">
-        <ChartContainer config={chartConfig} className="!aspect-auto h-[240px] md:h-[260px]">  
-          <BarChart accessibilityLayer data={chartData} margin={{
-              top: 20,
-              bottom: 20,
-              left: 20,
-              right: 20
-            }}>
+        <ChartContainer
+          config={chartConfig}
+          className="!aspect-auto h-[278px] md:h-[260px]"
+        >
+          <BarChart
+            accessibilityLayer
+            data={chartData}
+            margin={{
+              top: 12,
+              bottom: compactChart ? 36 : 24,
+              left: compactChart ? 8 : 16,
+              right: compactChart ? 4 : 16,
+            }}
+          >
             <CartesianGrid vertical={false} />
-            <XAxis className="select-none"
+            <XAxis
+              className="select-none"
               dataKey="category"
               tickLine={false}
-              tickMargin={10}
+              tickMargin={compactChart ? 4 : 8}
               axisLine={false}
-              tickFormatter={(value) =>
-                chartConfig[value as keyof typeof chartConfig]?.label
-              }
+              interval={0}
+              height={compactChart ? 48 : 32}
+              tick={{
+                fontSize: compactChart ? 9 : 11,
+                fill: "rgba(255,255,255,0.65)",
+              }}
+              angle={compactChart ? -32 : 0}
+              textAnchor={compactChart ? "end" : "middle"}
+              dy={compactChart ? 4 : 0}
+              tickFormatter={(value) => {
+                const v = String(value)
+                if (compactChart && X_AXIS_SHORT[v]) return X_AXIS_SHORT[v]
+                const full =
+                  chartConfig[v as keyof typeof chartConfig]?.label
+                return typeof full === "string" ? full : v
+              }}
             />
-            <YAxis 
+            <YAxis
               domain={[0, 100]}
-              tickFormatter={(value) => `${(value).toFixed(0)}`}
+              tickFormatter={(value) => `${value.toFixed(0)}`}
               tickLine={false}
               axisLine={false}
+              width={compactChart ? 28 : 36}
+              tick={{
+                fontSize: compactChart ? 9 : 11,
+                fill: "rgba(255,255,255,0.65)",
+              }}
             />
             <ChartTooltip
               cursor={false}
@@ -99,17 +142,20 @@ export function PolicyRolloutsAverage() {
                 ]
 
                 return (
-                  <div className="rounded-lg border border-white/20 bg-black/95 p-3 shadow-sm">
-                    <div className="mb-2 text-sm font-semibold text-white">
+                  <div className="max-w-[min(100vw-2rem,280px)] rounded-lg border border-white/20 bg-black/95 p-2 shadow-sm sm:max-w-none sm:p-3">
+                    <div className="mb-1.5 text-xs font-semibold leading-snug text-white sm:mb-2 sm:text-sm">
                       {chartConfig[label as keyof typeof chartConfig]?.label || label}
                     </div>
-                    <div className="grid gap-1.5">
+                    <div className="grid gap-1 sm:gap-1.5">
                       {payload.map((entry, index) => (
-                        <div key={`${entry.dataKey}-${index}`} className="flex items-center justify-between gap-3">
-                          <span className="text-xs text-gray-300">
+                        <div
+                          key={`${entry.dataKey}-${index}`}
+                          className="flex items-start justify-between gap-2 sm:items-center sm:gap-3"
+                        >
+                          <span className="min-w-0 flex-1 text-[10px] leading-tight text-gray-300 sm:text-xs">
                             {methodLabels[index] || String(entry.dataKey)}
                           </span>
-                          <span className="text-sm font-semibold text-white">
+                          <span className="shrink-0 text-xs font-semibold text-white sm:text-sm">
                             {Number(entry.value).toFixed(0)}%
                           </span>
                         </div>
@@ -167,19 +213,40 @@ export function PolicyRolloutsAverage() {
           </BarChart>
         </ChartContainer>
       </CardContent>
-      <CardFooter className="flex-col items-start gap-2 text-sm">
-        <div className="text-muted-foreground select-none flex flex-row gap-4">
-          <div className="flex items-center gap-2">
-            <div className="w-4 h-4 rounded-sm" style={{ backgroundColor: "#B8C9F0" }}></div>
-            <span>ACT(Vision-only)</span>
+      <CardFooter className="flex-col items-stretch gap-2 px-2 pb-4 pt-0 sm:px-6">
+        <div className="text-muted-foreground select-none flex flex-col gap-2 text-[10px] leading-snug sm:flex-row sm:flex-wrap sm:gap-x-5 sm:gap-y-2 sm:text-xs md:text-sm">
+          <div className="flex min-w-0 items-start gap-2 sm:items-center">
+            <div
+              className="mt-0.5 h-3 w-3 shrink-0 rounded-sm sm:mt-0 sm:h-4 sm:w-4"
+              style={{ backgroundColor: "#B8C9F0" }}
+            />
+            <span className="break-words text-white/80" title="ACT(Vision-only)">
+              ACT(Vision-only)
+            </span>
           </div>
-          <div className="flex items-center gap-2">
-            <div className="w-4 h-4 rounded-sm" style={{ backgroundColor: "#7C9AE8" }}></div>
-            <span>Ours-a (+Tactile +Pretrained)</span>
+          <div className="flex min-w-0 items-start gap-2 sm:items-center">
+            <div
+              className="mt-0.5 h-3 w-3 shrink-0 rounded-sm sm:mt-0 sm:h-4 sm:w-4"
+              style={{ backgroundColor: "#7C9AE8" }}
+            />
+            <span
+              className="break-words text-white/80"
+              title="Ours-a (+Tactile +Pretrained)"
+            >
+              Ours-a (+Tactile +Pretrained)
+            </span>
           </div>
-          <div className="flex items-center gap-2">
-            <div className="w-4 h-4 rounded-sm" style={{ backgroundColor: "#3D56C8" }}></div>
-            <span>Ours-B (+Tactile +Pretrained +DAgger)</span>
+          <div className="flex min-w-0 items-start gap-2 sm:items-center">
+            <div
+              className="mt-0.5 h-3 w-3 shrink-0 rounded-sm sm:mt-0 sm:h-4 sm:w-4"
+              style={{ backgroundColor: "#3D56C8" }}
+            />
+            <span
+              className="break-words text-white/80"
+              title="Ours-B (+Tactile +Pretrained +DAgger)"
+            >
+              Ours-B (+Tactile +Pretrained +DAgger)
+            </span>
           </div>
         </div>
       </CardFooter>
