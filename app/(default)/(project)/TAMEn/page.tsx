@@ -400,7 +400,7 @@ export default function Home() {
                           01
                         </h2>
                         <img
-                          src="https://opendrivelab.github.io/TAMEn/highlights/01.jpg"
+                          src="https://ik.imagekit.io/uqvsd50nv/01.jpg"
                           alt="Highlight 01"
                           className="h-full w-[170px] md:w-[210px] object-contain object-center bg-black"
                         />
@@ -416,7 +416,7 @@ export default function Home() {
                           02
                         </h2>
                         <img
-                          src="https://opendrivelab.github.io/TAMEn/highlights/02.jpg"
+                          src="https://ik.imagekit.io/uqvsd50nv/02.jpg"
                           alt="Highlight 02"
                           className="h-full w-[170px] md:w-[210px] object-contain object-center bg-black"
                         />
@@ -432,7 +432,7 @@ export default function Home() {
                           03
                         </h2>
                         <img
-                          src="https://opendrivelab.github.io/TAMEn/highlights/03.jpg"
+                          src="https://ik.imagekit.io/uqvsd50nv/03.jpg"
                           alt="Highlight 03"
                           className="h-full w-[170px] md:w-[210px] object-contain object-center bg-black"
                         />
@@ -449,10 +449,10 @@ export default function Home() {
                           loop
                           muted
                           playsInline
-                          poster="https://opendrivelab.github.io/TAMEn/highlights/highlight01.jpg"
+                          poster="https://ik.imagekit.io/uqvsd50nv/highlight01.jpg"
                           className="w-full h-full object-contain bg-black"
                         >
-                          <source src="https://opendrivelab.github.io/TAMEn/highlights/highlight01.mp4" />
+                          <source src="https://ik.imagekit.io/uqvsd50nv/highlight01.mp4" />
                         </video>
                       </CardContent>
                     </Card>
@@ -466,10 +466,10 @@ export default function Home() {
                           loop
                           muted
                           playsInline
-                          poster="https://opendrivelab.github.io/TAMEn/highlights/highlight02.jpg"
+                          poster="https://ik.imagekit.io/uqvsd50nv/highlight02.jpg"
                           className="w-full h-full object-contain bg-black"
                         >
-                          <source src="https://opendrivelab.github.io/TAMEn/highlights/highlight02.mp4" />
+                          <source src="https://ik.imagekit.io/uqvsd50nv/highlight02.mp4" />
                         </video>
                       </CardContent>
                     </Card>
@@ -483,10 +483,10 @@ export default function Home() {
                           loop
                           muted
                           playsInline
-                          poster="https://opendrivelab.github.io/TAMEn/highlights/highlight03.jpg"
+                          poster="https://ik.imagekit.io/uqvsd50nv/highlight03.jpg"
                           className="w-full h-full object-contain bg-black"
                         >
-                          <source src="https://opendrivelab.github.io/TAMEn/highlights/highlight03.mp4" />
+                          <source src="https://ik.imagekit.io/uqvsd50nv/highlight03.mp4" />
                         </video>
                       </CardContent>
                     </Card>
