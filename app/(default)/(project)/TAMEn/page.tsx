@@ -129,9 +129,10 @@ export default function Home() {
                 loop
                 muted
                 playsInline
+                poster="https://ik.imagekit.io/uqvsd50nv/teaser.jpg"
                 className="absolute inset-0 h-full w-full object-contain bg-black"
               >
-                <source src="https://ik.imagekit.io/dpjxm6pdu/teaser.mp4" />
+                <source src="https://ik.imagekit.io/uqvsd50nv/teaser.mp4" />
               </video>
               <div className="absolute inset-0 z-10 flex items-center justify-center px-4 md:px-8 bg-black/25">
                 <div className="max-w-5xl text-center">
@@ -442,7 +443,15 @@ export default function Home() {
                   <TabsContent value="01" key="mode-content-01" className="w-full h-full">
                     <Card className="border-4 md:border-8 border-[#98AEF3] bg-black h-full overflow-hidden">
                       <CardContent className="h-full flex justify-center items-center p-0">
-                        <video preload="none" autoPlay loop muted playsInline className="w-full h-full object-contain bg-black">
+                        <video
+                          preload="none"
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
+                          poster="https://opendrivelab.github.io/TAMEn/highlights/highlight01.jpg"
+                          className="w-full h-full object-contain bg-black"
+                        >
                           <source src="https://opendrivelab.github.io/TAMEn/highlights/highlight01.mp4" />
                         </video>
                       </CardContent>
@@ -451,7 +460,15 @@ export default function Home() {
                   <TabsContent value="02" key="mode-content-02" className="w-full">
                     <Card className="border-4 md:border-8 border-[#98AEF3] bg-black h-full overflow-hidden">
                       <CardContent className="h-full flex justify-center items-center p-0">
-                        <video preload="none" autoPlay loop muted playsInline className="w-full h-full object-contain bg-black">
+                        <video
+                          preload="none"
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
+                          poster="https://opendrivelab.github.io/TAMEn/highlights/highlight02.jpg"
+                          className="w-full h-full object-contain bg-black"
+                        >
                           <source src="https://opendrivelab.github.io/TAMEn/highlights/highlight02.mp4" />
                         </video>
                       </CardContent>
@@ -460,7 +477,15 @@ export default function Home() {
                   <TabsContent value="03" key="mode-content-03" className="w-full">
                     <Card className="border-4 md:border-8 border-[#98AEF3] bg-black h-full overflow-hidden">
                       <CardContent className="h-full flex justify-center items-center p-0">
-                        <video preload="none" autoPlay loop muted playsInline className="w-full h-full object-contain bg-black">
+                        <video
+                          preload="none"
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
+                          poster="https://opendrivelab.github.io/TAMEn/highlights/highlight03.jpg"
+                          className="w-full h-full object-contain bg-black"
+                        >
                           <source src="https://opendrivelab.github.io/TAMEn/highlights/highlight03.mp4" />
                         </video>
                       </CardContent>
