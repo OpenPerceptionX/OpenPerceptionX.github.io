@@ -915,7 +915,7 @@ export default function Home() {
                           poster="https://ik.imagekit.io/3ic6kgidz/cable_robust_full.jpg"
                           className="border-2 md:border-6 border-[#174BE5]/50 rounded-xl object-fit"
                         >
-                          <source src="https://ik.imagekit.io/3ic6kgidz/cable_robust_full.mp4" />
+                          <source src="https://ik.imagekit.io/7rgtwup0y/cable_robust_full.mp4" />
                         </video>
                         <div className="w-full text-center bg-black/70 p-1 rounded-lg shadow-md border border-white/20">
                           <p className="user-study-label text-[#174BE5]">
@@ -939,7 +939,7 @@ export default function Home() {
                           poster="https://ik.imagekit.io/3ic6kgidz/cable_robust_post.jpg"
                           className="border-2 md:border-6 border-[#174BE5]/50 rounded-xl object-fit"
                         >
-                          <source src="https://ik.imagekit.io/3ic6kgidz/cable_robust_post.mp4" />
+                          <source src="https://ik.imagekit.io/7rgtwup0y/cable_robust_post.mp4" />
                         </video>
                         <div className="w-full text-center bg-black/70 p-1 rounded-lg shadow-md border border-white/20">
                           <p className="user-study-label text-[#174BE5]">
@@ -1034,7 +1034,7 @@ export default function Home() {
                           poster="https://ik.imagekit.io/3ic6kgidz/herbal_robust_post.jpg"
                           className="border-2 md:border-6 border-[#174BE5]/50 rounded-xl object-fit"
                         >
-                          <source src="https://ik.imagekit.io/3ic6kgidz/herbal_robust_post.mp4" />
+                          <source src="https://ik.imagekit.io/7rgtwup0y/herbal_robust_post.mp4" />
                         </video>
                         <div className="w-full text-center bg-black/70 p-1 rounded-lg shadow-md border border-white/20">
                           <p className="user-study-label text-[#174BE5]">
