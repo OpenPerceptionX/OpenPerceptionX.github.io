@@ -130,11 +130,11 @@ export default function Home() {
         </ul>
       </nav>
 
-      {/* Landing Section with Gray Background */}
-      <div className="w-full min-h-[100dvh] flex flex-col items-center px-2 md:px-4 bg-black">
-        <div className="flex flex-col w-full h-[100dvh] py-2 md:py-4">
-          <div className="w-full h-full min-w-0 rounded-2xl border border-white/20 p-2 sm:p-3 md:p-5 flex flex-col">
-            <div className="relative w-full flex-1 min-h-0 min-w-0 overflow-hidden rounded-xl">
+      {/* Landing: mobile 用 aspect-video 贴合 16:9，减少 object-contain 在固定高度下的上下黑边；桌面全屏 contain。 */}
+      <div className="flex w-full flex-col items-center bg-black px-1.5 pt-[5.5rem] md:min-h-[100dvh] md:px-4 md:pt-0">
+        <div className="flex w-full max-md:h-auto flex-col py-0 md:h-[100dvh] md:min-h-0 md:py-4">
+          <div className="flex h-full min-h-0 w-full min-w-0 max-md:h-auto flex-col rounded-2xl border border-white/20 p-1 sm:p-2 md:p-5">
+            <div className="relative aspect-video w-full overflow-hidden rounded-xl md:aspect-auto md:h-full md:min-h-0 md:flex-1">
               <video
                 preload="none"
                 autoPlay
@@ -142,7 +142,7 @@ export default function Home() {
                 muted
                 playsInline
                 poster="https://ik.imagekit.io/uqvsd50nv/teaser.jpg"
-                className="absolute inset-0 h-full w-full object-contain bg-black"
+                className="absolute inset-0 h-full w-full bg-black object-cover md:object-contain"
               >
                 <source src="https://ik.imagekit.io/7rgtwup0y/teaser.mp4" />
               </video>
@@ -198,7 +198,7 @@ export default function Home() {
             className="w-full px-4 md:px-6 flex flex-col items-center"
             id="highlights"
           >
-            <div className="w-full flex flex-col items-center mt-8 md:mt-16">
+            <div className="mt-2 flex w-full flex-col items-center md:mt-16">
               <div className="w-full max-w-6xl flex flex-row justify-between">
                 <h2 className="text-2xl md:text-3xl font-bold">
                   <Link
@@ -229,7 +229,7 @@ export default function Home() {
               </div>
             </div>
             <div className="w-full px-4 md:px-6 flex flex-col items-center">
-              <div className="w-full flex flex-col items-center mt-10 md:mt-20">
+              <div className="mt-4 flex w-full flex-col items-center md:mt-20">
                 <div className="w-full max-w-5xl flex flex-row justify-between">
                   <div className="flex flex-col gap-3 md:gap-6">
                     <p className="text-[11px] sm:text-xs md:text-sm text-left w-full">
@@ -290,7 +290,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="w-full px-4 md:px-6 flex flex-col items-center mt-6 md:mt-10">
+            <div className="mt-3 flex w-full flex-col items-center px-4 md:mt-10 md:px-6">
               <div className="w-full max-w-6xl">
                 <video
                   controls
@@ -304,7 +304,7 @@ export default function Home() {
               </div>
             </div>
             <div className="w-full px-4 md:px-6 flex flex-col items-center">
-              <Separator className="max-w-6xl mt-14 md:mt-28" />
+              <Separator className="mt-8 max-w-6xl md:mt-28" />
             </div>
           </div>
 
