@@ -327,18 +327,26 @@ export const publications: {
         link: "https://arxiv.org/abs/2511.23369",
         image: "/assets/publication/SimScale.png",
         author: "Haochen Tian, Tianyu Li, Haochen Liu, Jiazhi Yang, Yihang Qiu, Guang Li, Junli Wang, Yinfeng Gao, Zhang Zhang, Liang Wang, Hangjun Ye, Tieniu Tan, Long Chen, Hongyang Li",
-        note: "Preprint 2025",
+        note: "CVPR 26 Oral",
         noteoption: '',
         star: "https://img.shields.io/github/stars/OpenDriveLab/SimScale?style=social",
         starlink: "https://github.com/OpenDriveLab/SimScale",
         icon: [
             {
                 type: "page",
-                link: "/SimScale/",
+                link: "https://opendrivelab.com/SimScale/",
             },
             {
                 type: "github",
                 link: "https://github.com/OpenDriveLab/SimScale",
+            },
+            {
+                type: "dataset",
+                link: "https://huggingface.co/datasets/OpenDriveLab/SimScale/tree/main/SimScale_data",
+            },
+            {
+                type: "media",
+                link: "https://mp.weixin.qq.com/s/OGV3Xlb0bHSSSloG11qFJA",
             },
         ],
         description: `A scalable sim-real learning framework that synthesizes high-fidelity driving data and cboosts end-to-end planners to achieve robust, generalizable autonomy with principled scaling insights.`,

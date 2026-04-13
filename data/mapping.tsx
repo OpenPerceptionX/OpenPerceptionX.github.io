@@ -8,6 +8,7 @@ export const type_mapping: Record<string, string> = {
     "zhihu": "解讀",
     "bilibili": "Video",
     "blog": "Blog",
+    "media": "Media",
     "dataset": "Dataset",
     "poster": "Poster",
     "arxiv": "arXiv",
