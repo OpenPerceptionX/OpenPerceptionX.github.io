@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>World Engine: Towards the Era of Post-Training for Physical AI</title>
+  <link rel="stylesheet" href="./static/fonts/fonts.css" />
+  <style>
+    /* ── Reset & base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:        #ffffff;
+      --bg-card:   #f5f7fa;
+      --bg-card2:  #eef1f6;
+      --border:    rgba(0,0,0,.10);
+      --accent:    #1a56db;
+      --accent2:   #0284c7;
+      --text:      #111827;
+      --text-muted:#6b7280;
+      --radius:    12px;
+      --max-w:     960px;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    img { max-width: 100%; border-radius: var(--radius); display: block; }
+
+    /* ── Nav ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      backdrop-filter: blur(16px);
+      background: rgba(255,255,255,.92);
+      border-bottom: 1px solid var(--border);
+      padding: 0 28px;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 20px;
+      min-height: 56px;
+    }
+    .nav-brand {
+      font-weight: 700; font-size: .82rem; letter-spacing: .01em;
+      color: var(--accent);
+      max-width: 420px; line-height: 1.3;
+    }
+    .nav-links { display: flex; gap: 24px; font-size: .85rem; color: var(--text-muted); flex-shrink: 0; }
+    .nav-links a { color: var(--text-muted); }
+    .nav-links a:hover { color: var(--accent); text-decoration: none; }
+
+    /* ── Layout ── */
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+    section { padding: 72px 0; }
+    section + section { border-top: 1px solid var(--border); }
+
+    /* ── Hero ── */
+    .hero { padding: 80px 0 60px; text-align: center; }
+    .hero-logo-img { height: 160px; width: auto; max-width: 80%; }
+    .venue-badge {
+      display: inline-block;
+      background: rgba(79,142,247,.15);
+      border: 1px solid rgba(79,142,247,.35);
+      color: var(--accent2);
+      padding: 4px 14px; border-radius: 999px;
+      font-size: .78rem; font-weight: 600; letter-spacing: .06em;
+      text-transform: uppercase; margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-size: clamp(1.9rem, 4vw, 2.9rem);
+      font-weight: 700; line-height: 1.2;
+      letter-spacing: -.02em;
+      background: linear-gradient(160deg, #111827 40%, #1a56db 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      margin-bottom: 8px;
+    }
+    .hero-subtitle {
+      font-size: 1.1rem; color: var(--text-muted);
+      margin-bottom: 36px;
+    }
+
+    /* Authors */
+    .authors { font-size: .88rem; margin-bottom: 28px; }
+    .authors-row {
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 4px 18px; margin-bottom: 6px;
+    }
+    .authors-row .name { font-weight: 500; color: var(--text); white-space: nowrap; }
+    .authors-row sup { color: var(--accent); font-size: .7em; }
+    .equal-note { font-size: .78rem; color: var(--text-muted); margin-top: 6px; }
+
+    /* Affils */
+    .affiliations {
+      font-size: .78rem; color: var(--text-muted);
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 24px;
+      margin-bottom: 36px;
+    }
+    .affil { display: flex; align-items: center; gap: 4px; }
+    .affil sup { color: var(--accent); font-size: .7em; }
+
+    /* Buttons */
+    .btn-row { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-bottom: 52px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 22px; border-radius: 8px;
+      font-size: .88rem; font-weight: 600;
+      cursor: pointer; transition: all .18s;
+      border: 1.5px solid transparent;
+    }
+    .btn-primary {
+      background: var(--accent); color: #fff;
+    }
+    .btn-primary:hover { background: #3a7be8; text-decoration: none; }
+    .btn-outline {
+      border-color: var(--border); color: var(--text);
+      background: rgba(0,0,0,.03);
+    }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); background: rgba(26,86,219,.05); text-decoration: none; }
+    .btn svg { width: 16px; height: 16px; }
+
+    /* Video */
+    .video-wrap {
+      border-radius: 16px; overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: 0 16px 60px rgba(0,0,0,.12);
+    }
+    .video-wrap video { width: 100%; display: block; }
+
+    /* ── Section labels ── */
+    .section-label {
+      font-size: .72rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--accent);
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+      font-weight: 700; letter-spacing: -.02em;
+      margin-bottom: 20px;
+    }
+    h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; color: #111827; }
+    p { color: #4b5563; margin-bottom: 16px; }
+    p:last-child { margin-bottom: 0; }
+
+    /* ── Abstract ── */
+    .abstract-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px 36px;
+      font-size: .95rem; line-height: 1.85;
+    }
+    .abstract-box p { color: #374151; }
+
+    /* ── Stats row ── */
+    .stats-row {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px; margin-top: 40px;
+    }
+    .stat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 20px; text-align: center;
+    }
+    .stat-card .num {
+      font-size: 2.4rem; font-weight: 800;
+      background: linear-gradient(135deg, #1a56db, #0284c7);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      line-height: 1;
+    }
+    .stat-card .label { font-size: .8rem; color: #6b7280; margin-top: 6px; }
+
+    /* ── Method ── */
+    .fig-wrap {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .fig-wrap img { border-radius: 0; }
+    .fig-caption {
+      padding: 14px 20px;
+      font-size: .8rem; color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      line-height: 1.55;
+    }
+
+    /* Pipeline steps */
+    .steps {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px; margin-top: 32px;
+    }
+    .step-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+    }
+    .step-num {
+      width: 28px; height: 28px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      display: flex; align-items: center; justify-content: center;
+      font-size: .8rem; font-weight: 700; color: #fff;
+      margin-bottom: 12px;
+    }
+    .step-card h3 { font-size: .9rem; margin-bottom: 6px; }
+    .step-card p { font-size: .82rem; margin: 0; }
+
+    /* ── Results ── */
+    .result-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    @media (max-width: 640px) { .result-grid { grid-template-columns: 1fr; } }
+    .result-grid .fig-wrap { }
+
+    /* GIF grid */
+    .gif-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px; margin-top: 24px;
+    }
+    .gif-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .gif-card img { border-radius: 0; width: 100%; }
+    .gif-label {
+      padding: 8px 12px;
+      font-size: .75rem; color: var(--text-muted);
+      text-align: center;
+    }
+
+    /* ── Comparison grid (original vs refined) ── */
+    .compare-row {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 12px; margin-bottom: 20px;
+    }
+    .compare-col-label {
+      text-align: center; font-size: .75rem; font-weight: 600;
+      color: var(--text-muted); text-transform: uppercase;
+      letter-spacing: .08em; margin-bottom: 8px;
+    }
+    .compare-col { }
+    .compare-col img { width: 100%; object-fit: cover; border-radius: 8px; }
+
+    /* ── Real-world ── */
+    .realworld-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 24px; align-items: start;
+    }
+    @media (max-width: 640px) { .realworld-grid { grid-template-columns: 1fr; } }
+
+    /* ── BibTeX ── */
+    .bibtex-block {
+      background: #f1f5f9;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      position: relative;
+    }
+    .bibtex-block pre {
+      font-family: 'JetBrains Mono', 'Fira Code', monospace;
+      font-size: .8rem; color: #1e3a5f;
+      white-space: pre-wrap; word-break: break-word;
+      line-height: 1.7;
+    }
+    .copy-btn {
+      position: absolute; top: 16px; right: 16px;
+      background: rgba(79,142,247,.15);
+      border: 1px solid rgba(79,142,247,.3);
+      color: var(--accent); padding: 5px 12px;
+      border-radius: 6px; font-size: .75rem; font-weight: 600;
+      cursor: pointer; transition: all .15s;
+    }
+    .copy-btn:hover { background: rgba(79,142,247,.3); }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center; padding: 48px 24px;
+      font-size: .8rem; color: var(--text-muted);
+      border-top: 1px solid var(--border);
+    }
+    footer a { color: var(--text-muted); }
+    footer a:hover { color: var(--text); }
+
+    /* ── Mobile / WeChat ── */
+    @media (max-width: 600px) {
+      /* Nav */
+      .nav-brand { font-size: .72rem; max-width: 200px; }
+      .nav-links { display: none; }
+
+      /* Hero */
+      .hero { padding: 48px 0 36px; }
+      .hero-logo-img { height: 80px; }
+      .hero h1 { font-size: 1.6rem; }
+      .hero-subtitle { font-size: .95rem; }
+      .btn-row { gap: 8px; }
+      .btn { padding: 8px 14px; font-size: .8rem; }
+      .affiliations { font-size: .72rem; gap: 6px 14px; }
+      .authors { font-size: .82rem; }
+      .authors-row { gap: 3px 12px; }
+
+      /* Stats */
+      .stats-row { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .stat-card .num { font-size: 1.8rem; }
+
+      /* Sections */
+      section { padding: 48px 0; }
+      .container { padding: 0 16px; }
+      h2 { font-size: 1.3rem; }
+
+      /* Overview */
+      .abstract-box { padding: 20px 18px; }
+
+      /* Method step cards */
+      .steps { grid-template-columns: 1fr 1fr; }
+
+      /* BWM side-by-side → stacked */
+      .bwm-grid { grid-template-columns: 1fr !important; }
+
+      /* GIF grid: 2 cols max */
+      .gif-grid { grid-template-columns: 1fr 1fr !important; }
+
+      /* Render results: single col */
+      .gif-grid[style*="repeat(3"] { grid-template-columns: 1fr !important; }
+
+      /* Fig 3 centered 65% → full width */
+      [style*="max-width: 65%"] { max-width: 100% !important; }
+
+      /* Results / realworld grids */
+      .result-grid { grid-template-columns: 1fr; }
+      .realworld-grid { grid-template-columns: 1fr; }
+
+      /* Tables */
+      .bibtex-block { padding: 16px; }
+      .bibtex-block pre { font-size: .72rem; }
+    }
+
+    /* Slightly wider phones (601–768) */
+    @media (min-width: 601px) and (max-width: 768px) {
+      .steps { grid-template-columns: 1fr 1fr; }
+      .stats-row { grid-template-columns: 1fr 1fr; }
+      [style*="max-width: 65%"] { max-width: 85% !important; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ───────────── Nav ───────────── -->
+<nav>
+  <span class="nav-brand">World Engine: Towards the Era of Post-Training for Physical AI</span>
+  <div class="nav-links">
+    <a href="#abstract">Overview</a>
+    <a href="#method">Method</a>
+    <a href="#results">Results</a>
+    <a href="#realworld">Validation</a>
+    <a href="#impact">Impact</a>
+    <a href="#open">Open</a>
+    <a href="#bibtex">BibTeX</a>
+  </div>
+</nav>
+
+
+<!-- ───────────── Hero ───────────── -->
+<section class="hero">
+  <div class="container">
+
+    <!-- Project logo — replaces the "World Engine" text title -->
+    <div style="display:flex; justify-content:center; margin-bottom:20px;">
+      <img src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/refs/heads/master/WorldEngine/imgs/WE_title.png" alt="World Engine Logo"
+           class="hero-logo-img" style="border-radius:0; display:inline-block;" />
+    </div>
+
+    <p class="hero-subtitle">Towards the Era of Post-Training for Physical AI</p>
+    <div class="venue-badge" style="margin-top:14px; margin-bottom:32px;">Research Paper · 2026</div>
+
+    <!-- Authors — 3 rows -->
+    <div class="authors">
+      <!-- Row 1: non-corresponding authors (first half) -->
+      <div class="authors-row">
+        <span><span class="name">Tianyu Li</span><sup>†1,2,3</sup></span>
+        <span><span class="name">Li Chen</span><sup>†1</sup></span>
+        <span><span class="name">Caojun Wang</span><sup>†3</sup></span>
+        <span><span class="name">Haochen Liu</span><sup>†5</sup></span>
+        <span><span class="name">Kashyap Chitta</span><sup>4</sup></span>
+        <span><span class="name">Yuhang Lu</span><sup>1</sup></span>
+        <span><span class="name">Naisheng Ye</span><sup>1</sup></span>
+        <span><span class="name">Yufei Wang</span><sup>2</sup></span>
+      </div>
+      <!-- Row 2: non-corresponding authors (second half) -->
+      <div class="authors-row">
+        <span><span class="name">Jiaxin Peng</span><sup>2</sup></span>
+        <span><span class="name">Jin Pan</span><sup>2</sup></span>
+        <span><span class="name">Zhaoyu Su</span><sup>2</sup></span>
+        <span><span class="name">Andrei Bursuc</span><sup>8</sup></span>
+        <span><span class="name">Shengbo Eben Li</span><sup>9</sup></span>
+        <span><span class="name">Andreas Geiger</span><sup>6,7</sup></span>
+        <span><span class="name">Honglin Bian</span><sup>2</sup></span>
+      </div>
+      <!-- Row 3: corresponding authors -->
+      <div class="authors-row" style="margin-top:4px; padding-top:8px; border-top:1px solid var(--border);">
+        <span><span class="name">Hongyang Li</span><sup>†*1</sup></span>
+        <span><span class="name">Peng Su</span><sup>*2</sup></span>
+      </div>
+      <div class="equal-note"><sup>†</sup>Equal contribution &nbsp;·&nbsp; <sup>*</sup>Corresponding authors</div>
+    </div>
+
+    <!-- Affiliations -->
+    <div class="affiliations">
+      <span class="affil"><sup>1</sup> OpenDriveLab, The University of Hong Kong</span>
+      <span class="affil"><sup>2</sup> Huawei Inc.</span>
+      <span class="affil"><sup>3</sup> Shanghai Innovation Institute</span>
+      <span class="affil"><sup>4</sup> NVIDIA Research</span>
+      <span class="affil"><sup>5</sup> Nanyang Technological University</span>
+      <span class="affil"><sup>6,7</sup> University of Tübingen / KE:SAI</span>
+      <span class="affil"><sup>8</sup> valeo.ai</span>
+      <span class="affil"><sup>9</sup> Tsinghua University</span>
+    </div>
+
+    <!-- Buttons -->
+    <div class="btn-row">
+      <span class="btn btn-outline" style="cursor:default; opacity:.45;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/></svg>
+        Paper (Coming Soon)
+      </span>
+      <a class="btn btn-outline" href="https://github.com/OpenDriveLab/WorldEngine" target="_blank" rel="noopener">
+        <!-- GitHub icon -->
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+        GitHub
+      </a>
+      <a class="btn btn-outline" href="https://huggingface.co/datasets/OpenDriveLab/WorldEngine" target="_blank" rel="noopener">
+        <!-- HuggingFace icon -->
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1.5 14.5c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm3 0c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm2.5-5c0 1.1-.9 2-2 2h-4c-1.1 0-2-.9-2-2V9c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2v2.5z"/></svg>
+        Dataset
+      </a>
+      <a class="btn btn-outline" href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 00.5 6.2 31 31 0 000 12a31 31 0 00.5 5.8 3 3 0 002.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 002.1-2.1A31 31 0 0024 12a31 31 0 00-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>
+        YouTube
+      </a>
+      <a class="btn btn-outline" href="https://www.bilibili.com/video/YOUR_BV_ID" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.813 4.653h.854c1.51.054 2.769.578 3.773 1.574 1.004.995 1.524 2.249 1.56 3.76v7.36c-.036 1.51-.556 2.769-1.56 3.773s-2.262 1.524-3.773 1.56H5.333c-1.51-.036-2.769-.556-3.773-1.56S.036 18.858 0 17.347v-7.36c.036-1.511.556-2.765 1.56-3.76 1.004-.996 2.262-1.52 3.773-1.574h.774l-1.174-1.12a1.234 1.234 0 0 1-.373-.906c0-.356.124-.658.373-.907l.027-.027c.267-.249.573-.373.92-.373.347 0 .653.124.92.373L9.653 4.44c.071.071.134.142.187.213h4.267a.836.836 0 0 1 .16-.213l2.853-2.747c.267-.249.573-.373.92-.373.347 0 .662.151.929.4.267.249.391.551.391.907 0 .355-.124.657-.373.906zM5.333 7.24c-.746.018-1.373.276-1.88.773-.506.498-.769 1.13-.786 1.894v7.52c.017.764.28 1.395.786 1.893.507.498 1.134.756 1.88.773h13.334c.746-.017 1.373-.275 1.88-.773.506-.498.769-1.13.786-1.893v-7.52c-.017-.765-.28-1.396-.786-1.894-.507-.497-1.134-.755-1.88-.773zM8 11.107c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c0-.373.129-.689.386-.947.258-.257.574-.386.947-.386zm8 0c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c.017-.391.15-.711.4-.96.249-.249.56-.373.933-.373z"/></svg>
+        Bilibili
+      </a>
+      <a class="btn btn-outline" href="#bibtex">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12h6m-6 4h6M9 8h6M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+        Cite
+      </a>
+    </div>
+
+    <!-- Key numbers -->
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="num">45.5%</div>
+        <div class="label">Collision Rate Reduction<br>(industrial CL simulation)</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">~200 km</div>
+        <div class="label">Real-world On-road Test<br>with Zero Disengagements</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">14×</div>
+        <div class="label">Equivalent Pre-training Data<br>Gain in CL Perf.</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">80k+</div>
+        <div class="label">Training Hours of Real-world<br>Driving Logs</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ───────────── Abstract ───────────── -->
+<section id="abstract">
+  <div class="container" style="max-width:760px;">
+    <p class="section-label">Overview</p>
+
+    <!-- Hook -->
+    <p style="font-size:1.55rem; font-weight:700; color:#111827; line-height:1.3; margin-bottom:40px; letter-spacing:-.02em;">
+      World Engine does not scale the dataset.<br>It scales the difficulty.
+    </p>
+
+    <!-- Beat 1: The consensus -->
+    <p style="font-size:.95rem; font-weight:600; text-transform:uppercase; letter-spacing:.1em; color:var(--accent); margin-bottom:10px;">The Problem</p>
+    <p style="font-size:1.05rem; color:#374151; line-height:1.8; margin-bottom:0;">
+      There is an unspoken consensus in autonomous driving: more data means safer models.<br />
+      It is intuitive. It is reasonable. And for a long time, it shaped how the entire industry thought about progress. <br />
+      But the dangerous moments that matter most — the split-second decisions that separate a safe vehicle from a tragic one — are vanishingly
+      rare in real-world driving logs. You can collect petabytes of highway cruising and urban commutes.
+      You will still be systematically underexposed to the edge cases that actually kill people.
+    </p>
+
+    <!-- Pull-quote -->
+    <blockquote style="margin:32px 0; padding:20px 28px; border-left:4px solid var(--accent);
+                       background:rgba(26,86,219,.05); border-radius:0 8px 8px 0;">
+      <p style="font-size:1.15rem; font-weight:600; color:#111827; margin:0; line-height:1.5;">
+        "More data does not solve this. It dilutes it.<br>
+        The real problem is not data volume — it is data distribution."
+      </p>
+    </blockquote>
+
+    <!-- Beat 2: The insight -->
+    <p style="font-size:.95rem; font-weight:600; text-transform:uppercase; letter-spacing:.1em; color:var(--accent); margin-bottom:10px;">The Insight</p>
+    <p style="font-size:1.05rem; color:#374151; line-height:1.8; margin-bottom:0;">
+      What autonomous driving systems actually need is not more of the same — it is more of
+      what they have never seen. The dangerous scenarios that cause failures are dangerous
+      precisely because they are rare. No amount of routine driving data will naturally surface
+      them at the density required to learn from them. <br />
+      This is where synthetic data enters, not as a shortcut, but as a necessity.
+    </p>
+
+    <!-- Beat 3: The answer -->
+    <p style="font-size:.95rem; font-weight:600; text-transform:uppercase; letter-spacing:.1em; color:var(--accent); margin-top:32px; margin-bottom:10px;">The Answer</p>
+    <p style="font-size:1.05rem; color:#374151; line-height:1.8; margin-bottom:0;">
+      If the real world will not generate enough critical scenarios on its own, construct them
+      deliberately. Synthesize the near-misses. Generate the adversarial cut-ins. Reconstruct
+      the intersection failures and run them ten thousand times with controlled variation.<br />
+      The questions are: how do you synthesize data realistically enough to transfer?
+      How do you ensure the model trained on synthetic scenes actually performs better in the real world?<br /><br />
+      <strong style="color:#111827;">That is the problem World Engine was built to solve.</strong>
+    </p>
+
+  </div>
+</section>
+
+
+<!-- ───────────── Method ───────────── -->
+<section id="method">
+  <div class="container">
+    <p class="section-label">Method</p>
+    <h2>A Systematic Solution: Discover, Reconstruct, Synthesize, Train</h2>
+    <p>
+      We built World Engine to address this gap directly — not with a new architecture, not with a better backbone,
+      but with a <strong style="color:#111827;">new post-training paradigm</strong>. <br />
+      The framework has four stages, designed to work together as a closed loop.<br />
+      This is not just data augmentation, it is targeted curriculum construction, driven by real failure signals, closed by reinforcement learning.
+    </p>
+
+    <!-- Steps -->
+    <div class="steps">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h3>Discover</h3>
+        <p>Identify where the deployed model fails — not in benchmarks, but in the training data, in the real world, in the specific scenarios where performance breaks down.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h3>Reconstruct</h3>
+        <p>Use 3D Gaussian Splatting to rebuild those failure scenarios as high-fidelity neural environments. The real world becomes an editable substrate.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h3>Synthesize</h3>
+        <p>Generate adversarial variations of those critical scenes — harder, more diverse, more representative of the long tail. Create the training data that real-world driving will never naturally provide.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">4</div>
+        <h3>Train</h3>
+        <p>Apply reinforcement learning post-training on this targeted, synthesized data. Teach the model exactly what it was missing.</p>
+      </div>
+    </div>
+
+    <!-- Pipeline figure -->
+    <div class="fig-wrap" style="margin-top: 32px;">
+      <img src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/refs/heads/master/WorldEngine/imgs/pipeline.png" alt="World Engine Pipeline" />
+      <p class="fig-caption">
+        <strong>Fig. 1 — Conceptual pipeline of World Engine.</strong>
+        Starting from real-world driving logs, long-tail events are discovered, reconstructed into photorealistic interactive environments,
+        augmented with diverse traffic variations, and used to refine the policy via reinforcement post-training.
+      </p>
+    </div>
+
+    <!-- Overall system -->
+    <div class="fig-wrap" style="margin-top: 16px;">
+      <img src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/refs/heads/master/WorldEngine/imgs/README_overall.jpg" alt="World Engine System Overview" />
+      <p class="fig-caption">
+        <strong>Fig. 2 — System overview.</strong>
+        World Engine integrates a neural rendering simulation engine with a generative behaviour world model and RL-based post-training
+        into a unified closed-loop framework for physical AI.
+      </p>
+    </div>
+
+    <!-- Behaviour World Model — combined figure (BWM_combined + BWM.jpg side by side) -->
+    <div class="fig-wrap" style="margin-top: 16px;">
+      <div class="bwm-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:0; align-items:stretch;">
+        <img src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/refs/heads/master/WorldEngine/imgs/BWM_combined.png" alt="Photorealistic sensor simulation variants"
+             style="border-radius:0; width:100%; height:100%; object-fit:contain; object-position:center; display:block; background:#f5f7fa;" />
+        <img src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/refs/heads/master/WorldEngine/imgs/BWM.jpg" alt="Behavioural variations from behaviour world model"
+             style="border-radius:0; width:100%; height:100%; object-fit:contain; object-position:center; display:block; border-left:1px solid var(--border); background:#f5f7fa;" />
+      </div>
+      <p class="fig-caption">
+        <strong>Fig. 3 — Behaviour world model.</strong>
+        <em>Left:</em> Variants of safety-critical driving scenarios generated by World Engine through photorealistic sensor simulation.
+        <em>Right:</em> Behavioural variations synthesized from a single long-tail scenario by the behaviour world model.
+      </p>
+    </div>
+
+    <!-- Simulation GIFs — BWM variants -->
+    <h3 style="margin-top: 40px; margin-bottom: 16px;">Synthesized Safety-Critical Scenarios</h3>
+    <p>Behavioural variations synthesized from real long-tail events by the behaviour world model.</p>
+    <div class="gif-grid">
+      <div class="gif-card">
+        <img src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/refs/heads/master/WorldEngine/BWM/2021.05.12.23.36.44_veh-35_00785_01041-3b92b8a6e8585eb2-006-ezgif.com-video-to-gif-converter.gif" alt="BWM variant 1" loading="lazy" />
+        <div class="gif-label">Variant 1</div>
+      </div>
+      <div class="gif-card">
+        <img src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/refs/heads/master/WorldEngine/BWM/2021.05.12.23.36.44_veh-35_00785_01041-6c61fae57b175318-002-ezgif.com-video-to-gif-converter.gif" alt="BWM variant 2" loading="lazy" />
+        <div class="gif-label">Variant 2</div>
+      </div>
+      <div class="gif-card">
+        <img src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/refs/heads/master/WorldEngine/BWM/2021.06.09.18.23.43_veh-35_03967_05057-f6155106a6595271-002-ezgif.com-video-to-gif-converter.gif" alt="BWM variant 3" loading="lazy" />
+        <div class="gif-label">Variant 3</div>
+      </div>
+      <div class="gif-card">
+        <img src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/refs/heads/master/WorldEngine/BWM/2021.06.14.17.26.26_veh-38_03238_03403-819fb5304add5295-000-ezgif.com-video-to-gif-converter.gif" alt="BWM variant 4" loading="lazy" />
+        <div class="gif-label">Variant 4</div>
+      </div>
+    </div>
+
+    <!-- Neural Rendering — GIFs -->
+    <h3 style="margin-top: 40px; margin-bottom: 8px;">Neural Rendering Quality</h3>
+    <p>Photorealistic sensor observations rendered by World Engine's 3DGS simulation engine.</p>
+    <div class="gif-grid" style="margin-top: 16px; grid-template-columns: repeat(3, 1fr);">
+      <div class="gif-card">
+        <img src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/refs/heads/master/WorldEngine/imgs/render_results/camera_view_c1839a3333695317-ezgif.com-video-to-gif-converter.gif" alt="Render result 1" loading="lazy" />
+      </div>
+      <div class="gif-card">
+        <img src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/refs/heads/master/WorldEngine/imgs/render_results/camera_view_ce2f1ac423965b7a-ezgif.com-video-to-gif-converter.gif" alt="Render result 2" loading="lazy" />
+      </div>
+      <div class="gif-card">
+        <img src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/refs/heads/master/WorldEngine/imgs/render_results/camera_view_f29d6171f46b551d-ezgif.com-video-to-gif-converter.gif" alt="Render result 3" loading="lazy" />
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ───────────── Results ───────────── -->
+<section id="results">
+  <div class="container">
+    <p class="section-label">Results</p>
+    <h2>What This Unlocks</h2>
+    <p>
+      The results validate the approach. <br />
+      These are not benchmark numbers chased for their own sake.
+      They are the product of a system that was explicitly designed to find what the model does not know — and fix it.
+      We evaluate on a curated set of safety-critical long-tail scenarios from the nuPlan test split,
+      using open-loop PDM Score and closed-loop success rate (4-second episodes; collision or off-road = failure).
+    </p>
+
+    <!-- Fig 1 — full width -->
+    <div class="fig-wrap" style="margin-top: 28px;">
+      <img src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/refs/heads/master/WorldEngine/imgs/data_scale.jpg" alt="Data scaling analysis" loading="lazy" />
+      <p class="fig-caption">
+        <strong>Fig. 1 — Data scaling analysis.</strong>
+        Performance on rare safety-critical cases saturates quickly as pre-training data scales.
+        World Engine post-training starting from a 50k-scene base model delivers gains
+        equivalent to ~14× more pre-training data, at a fraction of the cost.
+      </p>
+    </div>
+
+    <!-- Fig 2 — full width -->
+    <div class="fig-wrap" style="margin-top: 16px;">
+      <img src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/refs/heads/master/WorldEngine/imgs/ablation.jpg" alt="Effectiveness of World Engine post-training" loading="lazy" />
+      <p class="fig-caption">
+        <strong>Fig. 2 — Effectiveness of World Engine.</strong>
+        Post-training with World Engine consistently improves closed-loop performance across
+        configurations, confirming that targeted synthesis of safety-critical scenarios
+        is the key driver of gains over the base model.
+      </p>
+    </div>
+
+    <!-- Fig 3 — constrained width, centered -->
+    <div style="margin-top: 16px; display:flex; justify-content:center;">
+      <div class="fig-wrap" style="max-width: 65%;">
+        <img src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/refs/heads/master/WorldEngine/imgs/nuplan_combined.png" alt="Base model vs World Engine comparison" loading="lazy" />
+        <p class="fig-caption">
+          <strong>Fig. 3 — Base model vs. World Engine.</strong>
+          Qualitative comparison on safety-critical nuPlan scenarios. The base model (FAIL) collides
+          or leaves the road; the World Engine post-trained model (PASS) successfully navigates
+          the same high-risk interactions across diverse scene types.
+        </p>
+      </div>
+    </div>
+
+    <div class="fig-wrap" style="margin-top: 16px;">
+      <img src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/refs/heads/master/WorldEngine/imgs/table_nuplan.jpg" alt="nuPlan quantitative table" loading="lazy" />
+      <p class="fig-caption">
+        <strong>Table 1 — Full quantitative results across post-training configurations.</strong>
+        Despite being optimized on long-tail cases, the post-trained agent maintains strong performance on common scenarios,
+        confirming that safety-oriented adaptation does not compromise general driving competence.
+      </p>
+    </div>
+
+    <!-- Simulation GIFs for nuplan -->
+    <h3 style="margin-top: 40px; margin-bottom: 12px;">Camera Views from Simulation</h3>
+    <div class="gif-grid">
+      <div class="gif-card">
+        <img src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/refs/heads/master/WorldEngine/Simulation_gifs/camera_view_5379d354b9b95048-ezgif.com-video-to-gif-converter.gif" alt="Simulation view A" loading="lazy" />
+        <div class="gif-label">Closed-loop scenario A</div>
+      </div>
+      <div class="gif-card">
+        <img src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/refs/heads/master/WorldEngine/Simulation_gifs/camera_view_7a91cd530cac57fc-ezgif.com-video-to-gif-converter.gif" alt="Simulation view B" loading="lazy" />
+        <div class="gif-label">Closed-loop scenario B</div>
+      </div>
+      <div class="gif-card">
+        <img src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/refs/heads/master/WorldEngine/Simulation_gifs/camera_view_f6b9867069845fd2-ezgif.com-video-to-gif-converter.gif" alt="Simulation view C" loading="lazy" />
+        <div class="gif-label">Closed-loop scenario C</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ───────────── Real-world Testing ───────────── -->
+<section id="realworld">
+  <div class="container">
+    <p class="section-label">Production-Scale Validation</p>
+    <h2>Scaling to Production: AITO M9</h2>
+    <p>
+      In industrial closed-loop simulation evaluations, collision rates dropped 45.5%.
+      In real-world deployment, the model ran 200 km without a single disengagement.
+      We validate World Engine on a production-scale autonomous driving system trained on over 80,000 hours of real-world driving logs,
+      evaluated on an industry-grade closed-loop simulation platform with over 10,000 scenarios.
+    </p>
+
+    <!-- Key results callout -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 28px 0;">
+      <div class="stat-card" style="text-align: left;">
+        <div style="font-size:.75rem; text-transform:uppercase; letter-spacing:.1em; color:var(--accent); margin-bottom:8px;">Simulated Collision Rate</div>
+        <div style="font-size:2rem; font-weight:800; background:linear-gradient(135deg,#1a56db,#0284c7); -webkit-background-clip:text; -webkit-text-fill-color:transparent; display:inline-block;">–45.5%</div>
+        <div style="font-size:.8rem; color:var(--text-muted); margin-top:4px;">vs. strong base model on industry simulation platform</div>
+      </div>
+      <div class="stat-card" style="text-align: left;">
+        <div style="font-size:.75rem; text-transform:uppercase; letter-spacing:.1em; color:var(--accent); margin-bottom:8px;">On-road Disengagements</div>
+        <div style="font-size:2rem; font-weight:800; background:linear-gradient(135deg,#1a56db,#0284c7); -webkit-background-clip:text; -webkit-text-fill-color:transparent; display:inline-block;">0</div>
+        <div style="font-size:.8rem; color:var(--text-muted); margin-top:4px;">in a 200-kilometre real-world deployment test</div>
+      </div>
+      <div class="stat-card" style="text-align: left;">
+        <div style="font-size:.75rem; text-transform:uppercase; letter-spacing:.1em; color:var(--accent); margin-bottom:8px;">Test Routes</div>
+        <div style="font-size:2rem; font-weight:800; background:linear-gradient(135deg,#1a56db,#0284c7); -webkit-background-clip:text; -webkit-text-fill-color:transparent; display:inline-block;">~200 km</div>
+        <div style="font-size:.8rem; color:var(--text-muted); margin-top:4px;">Urban motorways, elevated roads, and residential roads in Shanghai</div>
+      </div>
+    </div>
+
+    <!-- Simulation result figure -->
+    <div class="fig-wrap" style="margin-bottom: 24px;">
+      <img src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/refs/heads/master/WorldEngine/imgs/huawei_simulation_result.jpg" alt="Huawei production simulation results" loading="lazy" />
+      <p class="fig-caption">
+        <strong>Fig. 2014 Production-scale closed-loop simulation results.</strong>
+        World Engine post-training improves key safety metrics over the ADS base model,
+        reducing collision rates by up to 45.5% across over 10,000 industry-grade simulation scenarios.
+      </p>
+    </div>
+    <!-- Simulation test GIFs -->
+    <h3 style="margin-top:32px; margin-bottom:12px;">Closed-Loop Simulation Clips</h3>
+    <div class="gif-grid" style="grid-template-columns: repeat(2, 1fr);">
+      <div class="gif-card">
+        <img src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/refs/heads/master/WorldEngine/imgs/sim_test/WE_sim1.gif" alt="Simulation test 1" loading="lazy" />
+        <div class="gif-label">Sim test 1</div>
+      </div>
+      <div class="gif-card">
+        <img src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/refs/heads/master/WorldEngine/imgs/sim_test/WE_sim2.gif" alt="Simulation test 2" loading="lazy" />
+        <div class="gif-label">Sim test 2</div>
+      </div>
+      <div class="gif-card">
+        <img src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/refs/heads/master/WorldEngine/imgs/sim_test/WE_sim3.gif" alt="Simulation test 3" loading="lazy" />
+        <div class="gif-label">Sim test 3</div>
+      </div>
+      <div class="gif-card">
+        <img src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/refs/heads/master/WorldEngine/imgs/sim_test/WE_sim4.gif" alt="Simulation test 4" loading="lazy" />
+        <div class="gif-label">Sim test 4</div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:40px; margin-bottom:12px;">On-Road Testing</h3>
+    <div class="realworld-grid">
+      <!-- Vehicle + route -->
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <div class="fig-wrap">
+          <img src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/refs/heads/master/WorldEngine/imgs/AITOM9.jpeg" alt="AITO M9 Test Vehicle" loading="lazy" />
+          <p class="fig-caption">AITO M9 — the production vehicle used for real-world validation of World Engine post-training.</p>
+        </div>
+        <div class="fig-wrap">
+          <img src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/refs/heads/master/WorldEngine/imgs/road-test-route.png" alt="On-road test route (urban motorways)" loading="lazy" />
+          <p class="fig-caption">Route A — ~65 km urban motorways and elevated roads in Shanghai, evaluated in two daytime runs.</p>
+        </div>
+      </div>
+
+      <!-- Route 2 -->
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <div class="fig-wrap">
+          <img src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/refs/heads/master/WorldEngine/imgs/road-test-route2.png" alt="On-road test route (urban roads)" loading="lazy" />
+          <p class="fig-caption">Route B — ~70 km urban and residential roads in Shanghai, evaluated in one nighttime run.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Road test GIFs -->
+    <div class="gif-grid" style="margin-top: 24px;">
+      <div class="gif-card">
+        <img src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/refs/heads/master/WorldEngine/imgs/road_test/road_test_1.gif" alt="On-road test clip 1" loading="lazy" />
+        <div class="gif-label">On-road test clip 1</div>
+      </div>
+      <div class="gif-card">
+        <img src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/refs/heads/master/WorldEngine/imgs/road_test/road_test_2.gif" alt="On-road test clip 2" loading="lazy" />
+        <div class="gif-label">On-road test clip 2</div>
+      </div>
+      <div class="gif-card">
+        <img src="https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/refs/heads/master/WorldEngine/imgs/road_test/road_test_3.gif" alt="On-road test clip 3" loading="lazy" />
+        <div class="gif-label">On-road test clip 3</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ───────────── Why This Matters ───────────── -->
+<section id="impact">
+  <div class="container">
+    <p class="section-label">Broader Impact</p>
+    <h2>Why This Matters Beyond AD</h2>
+    <p>
+      We chose autonomous driving as the proving ground because the safety stakes are real,
+      the failure modes are measurable, and the gap between simulation and deployment is well understood.
+    </p>
+    <p>
+      But the underlying problem — that training distributions systematically underrepresent consequential edge cases —
+      is not specific to vehicles. It applies to any Physical AI system that must operate reliably in an open, uncontrolled world.
+    </p>
+    <p style="font-size:1.05rem; font-weight:600; color:#111827;">
+      World Engine is a framework. The domain is autonomous driving. The problem it solves is universal.
+    </p>
+  </div>
+</section>
+
+
+<!-- ───────────── Open Contribution ───────────── -->
+<section id="open">
+  <div class="container">
+    <p class="section-label">Open Contribution</p>
+    <h2>An Open Contribution to the Community</h2>
+    <p>
+      We are not proposing World Engine as the final answer. We are proposing it as a new path —
+      one that the community can build on, stress-test, and extend.
+    </p>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; margin:28px 0;">
+      <div class="stat-card" style="text-align:left;">
+        <div style="font-size:1.6rem; margin-bottom:8px;">📂</div>
+        <h3 style="font-size:.95rem; margin-bottom:6px;">Dataset is Open</h3>
+        <p style="font-size:.85rem;">Accessible on HuggingFace for the community to use and build upon.</p>
+        <a href="https://huggingface.co/datasets/OpenDriveLab/WorldEngine" target="_blank" rel="noopener"
+           style="font-size:.82rem; font-weight:600; color:var(--accent);">View Dataset →</a>
+      </div>
+      <div class="stat-card" style="text-align:left;">
+        <div style="font-size:1.6rem; margin-bottom:8px;">⚙️</div>
+        <h3 style="font-size:.95rem; margin-bottom:6px;">Code is Open</h3>
+        <p style="font-size:.85rem;">Full implementation available on GitHub. Results are reproducible.</p>
+        <a href="https://github.com/OpenDriveLab/WorldEngine" target="_blank" rel="noopener"
+           style="font-size:.82rem; font-weight:600; color:var(--accent);">View Code →</a>
+      </div>
+      <div class="stat-card" style="text-align:left;">
+        <div style="font-size:1.6rem; margin-bottom:8px;">🎯</div>
+        <h3 style="font-size:.95rem; margin-bottom:6px;">Built for the Field</h3>
+        <p style="font-size:.85rem;">If you work on E2E autonomous driving, Physical AI, or any system where the hardest moments are also the rarest — this work is for you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ───────────── BibTeX ───────────── -->
+<section id="bibtex">
+  <div class="container">
+    <p class="section-label">Citation</p>
+    <h2>BibTeX</h2>
+    <p>If you find this work useful, please consider citing:</p>
+    <div class="bibtex-block">
+      <button class="copy-btn" onclick="copyBibtex(this)">Copy</button>
+      <pre id="bibtex-text">
+      Coming Soon
+      </pre>
+    </div>
+    <p>If you find the Render Assets (MTGS) useful, please consider citing:</p>
+    <div class="bibtex-block">
+      <button class="copy-btn" onclick="copyBibtex(this)">Copy</button>
+      <pre id="bibtex-text">
+@article{li2025mtgs,
+  title={MTGS: Multi-Traversal Gaussian Splatting},
+  author={Li, Tianyu and Qiu, Yihang and Wu, Zhenhua and Lindstr{\"o}m, Carl and Su, Peng and Nie{\ss}ner, Matthias and Li, Hongyang},
+  journal={arXiv preprint arXiv:2503.12552},
+  year={2025}
+}
+</pre>
+    </div>
+<p>If you use augmented scenarios data, please consider citing:</p>
+    <div class="bibtex-block">
+      <button class="copy-btn" onclick="copyBibtex(this)">Copy</button>
+      <pre id="bibtex-text">
+@inproceedings{zhou2025nexus,
+  title={Decoupled Diffusion Sparks Adaptive Scene Generation},
+  author={Zhou, Yunsong and Ye, Naisheng and Ljungbergh, William and Li, Tianyu and Yang, Jiazhi and Yang, Zetong and Zhu, Hongzi and Petersson, Christoffer and Li, Hongyang},
+  booktitle={ICCV},
+  year={2025}
+}
+
+@article{li2025optimization,
+  title={Optimization-Guided Diffusion for Interactive Scene Generation},
+  author={Li, Shihao and Ye, Naisheng and Li, Tianyu and Chitta, Kashyap and An, Tuo and Su, Peng and Wang, Boyang and Liu, Haiou and Lv, Chen and Li, Hongyang},
+  journal={arXiv preprint arXiv:2512.07661},
+  year={2025}
+}
+</pre>
+    </div>
+<p>If you use the reinforced refinement method in WE, please consider citing:</p>
+    <div class="bibtex-block">
+      <button class="copy-btn" onclick="copyBibtex(this)">Copy</button>
+      <pre id="bibtex-text">
+@ARTICLE{11353028,
+  author={Liu, Haochen and Li, Tianyu and Yang, Haohan and Chen, Li and Wang, Caojun and Guo, Ke and Tian, Haochen and Li, Hongchen and Li, Hongyang and Lv, Chen},
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence}, 
+  title={Reinforced Refinement With Self-Aware Expansion for End-to-End Autonomous Driving}, 
+  year={2026},
+  volume={48},
+  number={5},
+  pages={5774-5792},
+  keywords={Adaptation models;Self-aware;Autonomous vehicles;Pipelines;Planning;Training;Reinforcement learning;Uncertainty;Data models;Safety;End-to-end autonomous driving;reinforced finetuning;imitation learning;motion planning},
+  doi={10.1109/TPAMI.2026.3653866}
+}
+</pre>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── Footer ───────────── -->
+<footer>
+  <div class="container">
+    <p>
+      <strong>World Engine</strong> — OpenDriveLab, The University of Hong Kong &amp; Huawei Inc. &amp; Shanghai Innovation Institute · 2026
+    </p>
+    <p style="margin-top: 8px;">
+      <a href="https://opendrivelab.com" target="_blank" rel="noopener">OpenDriveLab</a>
+      &nbsp;·&nbsp;
+      Corresponding: <a href="mailto:hongyang@hku.hk">hongyang@hku.hk</a>
+      &nbsp;·&nbsp;
+      <a href="mailto:p.su@huawei.com">p.su@huawei.com</a>
+    </p>
+    <p style="margin-top: 16px; opacity: .60;">
+      Stay tuned for great work <a href="https://opendrivelab.com/SimScale/" target="_blank">SimScale</a>, <a href="https://opendrivelab.com/PlannerRFT/" target="_blank">PlannerRFT</a>, <a href="https://opendrivelab.com/ReSim/" target="_blank">ReSim</a>, <a href="https://arxiv.org/abs/2506.09800" target="_blank">R2SE</a>, <a href="https://arxiv.org/abs/2406.15349" target="_blank">NAVSIM</a>, <a href="https://github.com/OpenDriveLab/MTGS/" target="_blank">MTGS</a>, <a href="https://opendrivelab.com/Nexus/" target="_blank">Nexus</a> and more to come.
+    </p>
+  </div>
+</footer>
+
+
+<script>
+  function copyBibtex(btn) {
+    const text = document.getElementById('bibtex-text').textContent;
+    navigator.clipboard.writeText(text).then(() => {
+      const orig = btn.textContent;
+      btn.textContent = 'Copied!';
+      setTimeout(() => btn.textContent = orig, 2000);
+    });
+  }
+</script>
+
+</body>
+</html>

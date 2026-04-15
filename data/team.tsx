@@ -511,6 +511,10 @@ export const members: {
         image_s: "/assets/person/caojun_wang_s.jpg",
         links: [
             {
+                icon: "homepage",
+                url: "https://wcj-bert.github.io/",
+            },
+            {
                 icon: "scholar",
                 url: "https://scholar.google.com/citations?user=35xHlDUAAAAJ&hl"
             },
