@@ -117,15 +117,17 @@ export default function Home() {
                                         >
                                             <Link href={publication.link} target={publication.link.startsWith('http') ? '_blank' : '_self'} className="animated-underline-gray mr-3 text-nowrap">
                                                 {
-                                                    publication.link.startsWith('http') ? (
-                                                        "Paper"
-                                                    ) : (
-                                                        "Blog"
+                                                    publication.link != '' && (
+                                                        publication.link.startsWith('http') ? (
+                                                            "Paper"
+                                                        ) : (
+                                                            "Blog"
+                                                        )
                                                     )
                                                 }
                                             </Link>
                                             {
-                                                publication.icon.length != 0 && publication.icon[0].type != 'cite' && (
+                                                publication.icon.length != 0 && publication.icon[0].type != 'cite' && publication.link != '' && (
                                                     <span className="text-xs mr-3"> | </span>
                                                 )
                                             }

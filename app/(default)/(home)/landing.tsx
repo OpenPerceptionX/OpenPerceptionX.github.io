@@ -157,7 +157,7 @@ export function Landing() {
                                                         landing.link.startsWith('https://mmlab.hk/research/MM-Hand') ? (
                                                             "Checkout at mmlab.hk/MM-Hand"
                                                         ) : (
-                                                            landing.link.startsWith('/SMASH/') ? (
+                                                            false ? (
                                                                 "Page"
                                                             ) : (
                                                                 "Paper"
@@ -168,7 +168,7 @@ export function Landing() {
                                             )
                                         }
                                         {
-                                            landing.icon.length != 0 && landing.icon[0].type != 'cite' && (
+                                            landing.icon.length != 0 && landing.icon[0].type != 'cite' && landing.link != '' && (
                                                 <span className="text-xs mr-3"> | </span>
                                             )
                                         }

@@ -147,6 +147,11 @@ export default function Redirect() {
     ) {
         redirect('/TAMEn/')
     }
+    if (
+        pathname.toLowerCase().startsWith('/worldengine')
+    ) {
+        redirect('/WorldEngine/')
+    }
 
     // kai
     if (
