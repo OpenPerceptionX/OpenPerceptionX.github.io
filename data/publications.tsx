@@ -160,7 +160,7 @@ export const publications: {
         title: "EgoHumanoid: Unlocking In-the-Wild Loco-Manipulation with Robot-Free Egocentric Demonstration",
         link: "https://arxiv.org/abs/2602.10106",
         image: "https://ik.imagekit.io/opendrivelab/publication/EgoHumanoid.jpg",
-        image_sliding: "https://ik.imagekit.io/opendrivelab/publication/EgoHumanoid.jpg",
+        image_sliding: "https://ik.imagekit.io/opendrivelab/20260418-202651.jpeg",
         author: "Modi Shi, Shijia Peng, Jin Chen, Haoran Jiang, Yinghui Li, Di Huang, Ping Luo, Hongyang Li, Li Chen",
         note: "Preprint 2026",
         noteoption: '',
