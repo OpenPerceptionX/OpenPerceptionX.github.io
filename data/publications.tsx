@@ -65,31 +65,35 @@ export const publications: {
     time: string;
     timeline: string[];
 }[] = [
-    // {
-    //     title: "Towards the Era of Post-Training for Physical AI",
-    //     link: "",
-    //     image: "https://ik.imagekit.io/opendrivelab/publication/README_overall.jpg?updatedAt=1776279802611",
-    //     image_sliding: "https://ik.imagekit.io/opendrivelab/WE_sliding.jpg?updatedAt=1776279788833",
-    //     author: "Tianyu Li, Li Chen, Caojun Wang, Haochen Liu, Kashyap Chitta, Yuhang Lu, Naisheng Ye, Yufei Wang, Jiaxin Peng, Jin Pan, Zhaoyu Su, Andrei Bursuc, Shengbo Eben Li, Andreas Geiger, Honglin Bian, Hongyang Li, Peng Su",
-    //     note: "Preprint 2026",
-    //     noteoption: '',
-    //     star: "https://img.shields.io/github/stars/OpenDriveLab/WorldEngine?style=social",
-    //     starlink: "https://github.com/OpenDriveLab/WorldEngine",
-    //     icon: [
-    //         {
-    //             type: "page",
-    //             link: "/WorldEngine",
-    //         },
-    //         {
-    //             type: "github",
-    //             link: "https://github.com/OpenDriveLab/WorldEngine",
-    //         },
-    //     ],
-    //     description: "World Engine does not scale the dataset. It scales the difficulty.",
-    //     keys: ['end_to_end_ad', 'home_sliding'],
-    //     time: '2026.04.18',
-    //     timeline: ['te2e', 'highlight'],
-    // },
+    {
+        title: "World Engine: Towards the Era of Post-Training for Physical AI",
+        link: "",
+        image: "https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/refs/heads/master/WorldEngine/imgs/README_overall.jpg",
+        image_sliding: "https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/refs/heads/master/WorldEngine/imgs/WE_hero_img_nologo.jpg",
+        author: "Tianyu Li, Li Chen, Hongyang Li, Caojun Wang, Haochen Liu, Kashyap Chitta, Yuhang Lu, Naisheng Ye, Yufei Wang, Jiaxin Peng, Jin Pan, Zhaoyu Su, Peng Su, Andrei Bursuc, Shengbo Eben Li, Andreas Geiger, Honglin Bian",
+        note: "Research Paper 2026",
+        noteoption: '',
+        star: "https://img.shields.io/github/stars/OpenDriveLab/WorldEngine?style=social",
+        starlink: "https://github.com/OpenDriveLab/WorldEngine",
+        icon: [
+            {
+                type: "page",
+                link: "/WorldEngine",
+            },
+            {
+                type: "github",
+                link: "https://github.com/OpenDriveLab/WorldEngine",
+            },
+            {
+                type: "huggingface",
+                link: "https://huggingface.co/datasets/OpenDriveLab/WorldEngine",
+            },
+        ],
+        description: "The missing infrastructure for Physical AI post-training in AD. Open-source. Production-validated.",
+        keys: ['editor_pick', 'end_to_end_ad', 'home_sliding'],
+        time: '2026.04.17',
+        timeline: ['te2e', 'highlight'],
+    },
     {
         title: "TAMEn: Tactile-Aware Manipulation Engine for Closed-Loop Data Collection in Contact-Rich Tasks",
         link: "https://arxiv.org/abs/2604.07335",
