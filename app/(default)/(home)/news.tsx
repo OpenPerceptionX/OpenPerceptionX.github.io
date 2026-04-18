@@ -29,7 +29,7 @@ function isWithinLastNMonths(time: string, months = 3) {
     return pubDate >= past && pubDate <= now;
 }
 const recentPublications = publications
-    .filter(pub => pub.time && isWithinLastNMonths(pub.time, 2))
+    .filter(pub => pub.time && isWithinLastNMonths(pub.time, 3))
     .sort(
         (a, b) =>
         new Date(b.time.replace(/\./g, '-')).getTime() -
