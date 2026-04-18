@@ -71,7 +71,7 @@ export const publications: {
         image: "https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/refs/heads/master/WorldEngine/imgs/README_overall.jpg",
         image_sliding: "https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/refs/heads/master/WorldEngine/imgs/WE_hero_img_nologo.jpg",
         author: "Tianyu Li, Li Chen, Hongyang Li, Caojun Wang, Haochen Liu, Kashyap Chitta, Yuhang Lu, Naisheng Ye, Yufei Wang, Jiaxin Peng, Jin Pan, Zhaoyu Su, Peng Su, Andrei Bursuc, Shengbo Eben Li, Andreas Geiger, Honglin Bian",
-        note: "Research Paper 2026",
+        note: "Research Article 2026",
         noteoption: '',
         star: "https://img.shields.io/github/stars/OpenDriveLab/WorldEngine?style=social",
         starlink: "https://github.com/OpenDriveLab/WorldEngine",
