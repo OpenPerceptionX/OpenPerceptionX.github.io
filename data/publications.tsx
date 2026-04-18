@@ -160,6 +160,7 @@ export const publications: {
         title: "EgoHumanoid: Unlocking In-the-Wild Loco-Manipulation with Robot-Free Egocentric Demonstration",
         link: "https://arxiv.org/abs/2602.10106",
         image: "https://ik.imagekit.io/opendrivelab/publication/EgoHumanoid.jpg",
+        image_sliding: "https://ik.imagekit.io/opendrivelab/publication/EgoHumanoid.jpg",
         author: "Modi Shi, Shijia Peng, Jin Chen, Haoran Jiang, Yinghui Li, Di Huang, Ping Luo, Hongyang Li, Li Chen",
         note: "Preprint 2026",
         noteoption: '',
@@ -176,7 +177,7 @@ export const publications: {
             }
         ],
         description: "The first endorsement of human-to-humanoid transfer for whole-body locomanipulation.",
-        keys: ['embodied_ai'],
+        keys: ['embodied_ai', 'home_sliding'],
         time: '2026.02.10',
         timeline:['tembodied', 'highlight'],
     },
