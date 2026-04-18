@@ -68,8 +68,8 @@ export const publications: {
     {
         title: "World Engine: Towards the Era of Post-Training for Physical AI",
         link: "",
-        image: "https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/refs/heads/master/WorldEngine/imgs/README_overall.jpg",
-        image_sliding: "https://raw.githubusercontent.com/OpenDriveLab/opendrivelab.github.io/refs/heads/master/WorldEngine/imgs/WE_hero_img_nologo.jpg",
+        image: "https://ik.imagekit.io/WCJBERT/README_overall.jpg?updatedAt=1776319746886",
+        image_sliding: "https://ik.imagekit.io/WCJBERT/WE_hero_img_nologo.jpg",
         author: "Tianyu Li, Li Chen, Hongyang Li, Caojun Wang, Haochen Liu, Kashyap Chitta, Yuhang Lu, Naisheng Ye, Yufei Wang, Jiaxin Peng, Jin Pan, Zhaoyu Su, Peng Su, Andrei Bursuc, Shengbo Eben Li, Andreas Geiger, Honglin Bian",
         note: "Research Article 2026",
         noteoption: '',

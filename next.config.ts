@@ -31,6 +31,11 @@ const nextConfig: NextConfig = {
             },
             {
                 protocol: 'https',
+                hostname: 'ik.imagekit.io',
+                pathname: '/WCJBERT/**',
+            },
+            {
+                protocol: 'https',
                 hostname: 'assets.kinetixai.cn',
                 pathname: '/**',
             },
