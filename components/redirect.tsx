@@ -160,17 +160,16 @@ export default function Redirect() {
         if (
             pathname.toLowerCase().startsWith('/kai0rl')
             || pathname.toLowerCase().startsWith('/kai0-rl')
-            || pathname.toLowerCase().startsWith('/rise')
         ) {
-            redirect('/kai0-rl/')
+            redirect('/RISE/')
         } else {
             redirect('/kai0/')
         }
     }
     if (
-        pathname.toLowerCase().startsWith('/rise')
+        pathname.toLowerCase().startsWith('/rise/')
     ) {
-        redirect('/kai0-rl/')
+        redirect('/RISE/')
     }
     if (
         pathname.toLowerCase().startsWith('/foldanything')
