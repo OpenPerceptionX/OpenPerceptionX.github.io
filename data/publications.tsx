@@ -140,21 +140,25 @@ export const publications: {
         timeline:['tembodied', 'highlight'],
     },
     {
-        title: "MM-Hand 1.0 is currently open for preorder",
-        link: "https://mmlab.hk/research/MM-Hand",
-        image: "",
+        title: "MM-Hand: A 21-DOF Multi-modal Modular Dexterous Robotic Hand with Remote Actuation",
+        link: "https://arxiv.org/abs/2604.17245",
+        image: "https://ik.imagekit.io/opendrivelab/20260215-160809.png",
         image_sliding: 'https://ik.imagekit.io/opendrivelab/20260215-160809.png',
-        author: "",
-        note: "arXiv",
+        author: "Zhuoheng Li, Qingquan Lin, Checheng Yu, Qiangyu Chen, Zhiqian Lan, Lutong Zhang, Hongyang Li, Ping Luo",
+        note: "Preprint 2026",
         noteoption: '',
         star: "",
         starlink: "",
         icon: [
+            {
+                type: "page",
+                link: "https://mmlab.hk/research/MM-Hand",
+            }
         ],
         description: "An open-source, high-DoF, lightweight, multimodal, and modular dexterous hand.",
-        keys: ['home_sliding'],
-        time: '',
-        timeline:[],
+        keys: ['home_sliding', 'embodied_ai'],
+        time: '2026.04.19',
+        timeline:['tembodied', 'highlight'],
     },
     {
         title: "EgoHumanoid: Unlocking In-the-Wild Loco-Manipulation with Robot-Free Egocentric Demonstration",
