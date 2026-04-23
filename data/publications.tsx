@@ -197,7 +197,11 @@ export const publications: {
         icon: [
             {
                 type: "page",
-                link: "/kai0-rl",
+                link: "/RISE",
+            },
+            {
+                type: "github",
+                link: "https://github.com/OpenDriveLab/RISE",
             },
             {
                 type: "youtube",
