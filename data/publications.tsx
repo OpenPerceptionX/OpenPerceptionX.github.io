@@ -192,8 +192,8 @@ export const publications: {
         author: "Jiazhi Yang, Kunyang Lin, Jinwei Li, Wencong Zhang, Tianwei Lin, Longyan Wu, Zhizhong Su, Hao Zhao, Ya-Qin Zhang, Li Chen, Ping Luo, Xiangyu Yue, Hongyang Li",
         note: "Preprint 2026",
         noteoption: '',
-        star: "",
-        starlink: "",
+        star: "https://img.shields.io/github/stars/OpenDriveLab/RISE?style=social",
+        starlink: "https://github.com/OpenDriveLab/RISE",
         icon: [
             {
                 type: "page",
