@@ -186,52 +186,52 @@ export const members: {
         ],
         keys: ["hku"],
     },
-    {
-        name: "Qingwen Bu",
-        image: "/assets/person/qingwen_bu.jpg",
-        image_s: "/assets/person/qingwen_bu_s.jpg",
-        desc: "HKU (The University of Hong Kong)",
-        links: [
-            {
-                icon: "scholar",
-                url: "https://scholar.google.com/citations?user=-JCRysgAAAAJ",
-            },
-            {
-                icon: "email",
-                url: "mailto:qwbu01@sjtu.edu.cn",
-            },
-            {
-                icon: "github",
-                url: "https://github.com/retsuh-bqw",
-            },
-        ],
-        keys: ["hku"],
-    },
-    {
-        name: "Yixuan Pan",
-        image: "/assets/person/yixuan_pan.jpg",
-        desc: "HKU (The University of Hong Kong)",
-        image_s: "/assets/person/yixuan_pan_s.jpg",
-        links: [
-            {
-                icon: "homepage",
-                url: "https://lzpyx.github.io/",
-            },
-            {
-                icon: "scholar",
-                url: "https://scholar.google.com/citations?user=60OgIQsAAAAJ",
-            },
-            {
-                icon: "email",
-                url: "mailto:yixuanpan2024@gmail.com",
-            },
-            {
-                icon: "github",
-                url: "https://github.com/lzpyx",
-            },
-        ],
-        keys: ["hku"],
-    },
+    // {
+    //     name: "Qingwen Bu",
+    //     image: "/assets/person/qingwen_bu.jpg",
+    //     image_s: "/assets/person/qingwen_bu_s.jpg",
+    //     desc: "HKU (The University of Hong Kong)",
+    //     links: [
+    //         {
+    //             icon: "scholar",
+    //             url: "https://scholar.google.com/citations?user=-JCRysgAAAAJ",
+    //         },
+    //         {
+    //             icon: "email",
+    //             url: "mailto:qwbu01@sjtu.edu.cn",
+    //         },
+    //         {
+    //             icon: "github",
+    //             url: "https://github.com/retsuh-bqw",
+    //         },
+    //     ],
+    //     keys: ["hku"],
+    // },
+    // {
+    //     name: "Yixuan Pan",
+    //     image: "/assets/person/yixuan_pan.jpg",
+    //     desc: "HKU (The University of Hong Kong)",
+    //     image_s: "/assets/person/yixuan_pan_s.jpg",
+    //     links: [
+    //         {
+    //             icon: "homepage",
+    //             url: "https://lzpyx.github.io/",
+    //         },
+    //         {
+    //             icon: "scholar",
+    //             url: "https://scholar.google.com/citations?user=60OgIQsAAAAJ",
+    //         },
+    //         {
+    //             icon: "email",
+    //             url: "mailto:yixuanpan2024@gmail.com",
+    //         },
+    //         {
+    //             icon: "github",
+    //             url: "https://github.com/lzpyx",
+    //         },
+    //     ],
+    //     keys: ["hku"],
+    // },
     {
         name: "Zhuoheng Li",
         image: "/assets/person/zhuoheng_li.jpg",
@@ -399,31 +399,31 @@ export const members: {
         ],
         keys: ["alumni"],
     },
-    {
-        name: "Jiazhi Yang",
-        image: "/assets/person/jiazhi_yang.jpg",
-        desc: "CUHK (The Chinese University of Hong Kong)",
-        image_s: "/assets/person/jiazhi_yang_s.jpg",
-        links: [
-            {
-                icon: "scholar",
-                url: "https://scholar.google.com/citations?user=Ju7nGX8AAAAJ",
-            },
-            {
-                icon: "email",
-                url: "mailto:yangjiazhi@opendrivelab.com",
-            },
-            {
-                icon: "github",
-                url: "https://github.com/YTEP-ZHI",
-            },
-            {
-                icon: "x",
-                url: "https://x.com/jiazhi_yang2024",
-            },
-        ],
-        keys: ["student"],
-    },
+    // {
+    //     name: "Jiazhi Yang",
+    //     image: "/assets/person/jiazhi_yang.jpg",
+    //     desc: "CUHK (The Chinese University of Hong Kong)",
+    //     image_s: "/assets/person/jiazhi_yang_s.jpg",
+    //     links: [
+    //         {
+    //             icon: "scholar",
+    //             url: "https://scholar.google.com/citations?user=Ju7nGX8AAAAJ",
+    //         },
+    //         {
+    //             icon: "email",
+    //             url: "mailto:yangjiazhi@opendrivelab.com",
+    //         },
+    //         {
+    //             icon: "github",
+    //             url: "https://github.com/YTEP-ZHI",
+    //         },
+    //         {
+    //             icon: "x",
+    //             url: "https://x.com/jiazhi_yang2024",
+    //         },
+    //     ],
+    //     keys: ["student"],
+    // },
     {
         name: "Zhenhua Wu",
         image: "/assets/person/zhenhua_wu.jpg",
@@ -466,27 +466,27 @@ export const members: {
         ],
         keys: ["alumni"],
     },
-    {
-        name: "Modi Shi",
-        image: "/assets/person/modi_shi.jpg",
-        desc: "BUAA (Beijing University of Aeronautics and Astronautics)",
-        image_s: "/assets/person/modi_shi_s.jpg",
-        links: [
-            {
-                icon: "email",
-                url: "mailto:modishi@buaa.edu.cn",
-            },
-            {
-                icon: "scholar",
-                url: "https://scholar.google.com/citations?user=e8e7k58AAAAJ",
-            },
-            {
-                icon: "github",
-                url: "https://github.com/ModiShi",
-            },
-        ],
-        keys: ["joint"],
-    },
+    // {
+    //     name: "Modi Shi",
+    //     image: "/assets/person/modi_shi.jpg",
+    //     desc: "BUAA (Beijing University of Aeronautics and Astronautics)",
+    //     image_s: "/assets/person/modi_shi_s.jpg",
+    //     links: [
+    //         {
+    //             icon: "email",
+    //             url: "mailto:modishi@buaa.edu.cn",
+    //         },
+    //         {
+    //             icon: "scholar",
+    //             url: "https://scholar.google.com/citations?user=e8e7k58AAAAJ",
+    //         },
+    //         {
+    //             icon: "github",
+    //             url: "https://github.com/ModiShi",
+    //         },
+    //     ],
+    //     keys: ["joint"],
+    // },
     {
         name: "Longyan Wu",
         image: "/assets/person/longyan_wu.jpg",
@@ -529,23 +529,23 @@ export const members: {
         ],
         keys: ["joint"],
     },
-    {
-        name: "Hongchen Li",
-        image: "/assets/person/hongchen_li.jpg",
-        desc: "Tongji University",
-        image_s: "/assets/person/hongchen_li_s.jpg",
-        links: [
-            {
-                icon: "email",
-                url: "mailto:lhchen0531@gmail.com",
-            },
-            {
-                icon: "github",
-                url: "https://github.com/lhcstation",
-            },
-        ],
-        keys: ["joint"],
-    },
+    // {
+    //     name: "Hongchen Li",
+    //     image: "/assets/person/hongchen_li.jpg",
+    //     desc: "Tongji University",
+    //     image_s: "/assets/person/hongchen_li_s.jpg",
+    //     links: [
+    //         {
+    //             icon: "email",
+    //             url: "mailto:lhchen0531@gmail.com",
+    //         },
+    //         {
+    //             icon: "github",
+    //             url: "https://github.com/lhcstation",
+    //         },
+    //     ],
+    //     keys: ["joint"],
+    // },
     {
         name: "Haochen Liu",
         image: "/assets/person/haochen_liu.jpg",
@@ -605,74 +605,74 @@ export const members: {
         ],
         keys: [],
     },
-    {
-        name: "Penglin Fu",
-        image: "/assets/person/penglin_fu.jpg",
-        desc: "HKUST (The Hong Kong University of Science and Technology)",
-        image_s: "/assets/person/penglin_fu_s.jpg",
-        links: [
-            {
-                icon: "email",
-                url: "mailto:jimmyyaaaa@gmail.com",
-            },
-            {
-                icon: "github",
-                url: "https://github.com/jimmyyaaa",
-            },
-        ],
-        keys: ["student"],
-    },
-    {
-        name: "Kai Zhang",
-        image: "/assets/person/kai_zhang.jpg",
-        desc: "Shandong University",
-        image_s: "/assets/person/kai_zhang_s.jpg",
-        links: [
-            {
-                icon: "email",
-                url: "mailto:zhangjojo31@gmail.com",
-            },
-            {
-                icon: "github",
-                url: "https://github.com/junkerman2004",
-            },
-        ],
-        keys: ["student"],
-    },
-    {
-        name: "Jialong Zeng",
-        image: "/assets/person/jialong_zeng.jpg",
-        desc: "South China University of Technology",
-        image_s: "/assets/person/jialong_zeng_s.jpg",
-        links: [
-            {
-                icon: "email",
-                url: "mailto:colenzeng@gmail.com",
-            },
-        ],
-        keys: ["student"],
-    },
-    {
-        name: "Haoran Jiang",
-        image: "/assets/person/haoran_jiang.jpg",
-        image_s: "/assets/person/haoran_jiang_s.jpg",
-        desc: "Fudan University",
-        links: [
-            {
-                icon: "scholar",
-                url: "https://scholar.google.com/citations?user=KYzm-k0AAAAJ",
-            },
-            {
-                icon: "email",
-                url: "mailto:jianghaoran2024@gmail.com",
-            },
-            {
-                icon: "github",
-                url: "https://github.com/HRRiver7",
-            },
-        ],
-        keys: ["joint"],
-    },
+    // {
+    //     name: "Penglin Fu",
+    //     image: "/assets/person/penglin_fu.jpg",
+    //     desc: "HKUST (The Hong Kong University of Science and Technology)",
+    //     image_s: "/assets/person/penglin_fu_s.jpg",
+    //     links: [
+    //         {
+    //             icon: "email",
+    //             url: "mailto:jimmyyaaaa@gmail.com",
+    //         },
+    //         {
+    //             icon: "github",
+    //             url: "https://github.com/jimmyyaaa",
+    //         },
+    //     ],
+    //     keys: ["student"],
+    // },
+    // {
+    //     name: "Kai Zhang",
+    //     image: "/assets/person/kai_zhang.jpg",
+    //     desc: "Shandong University",
+    //     image_s: "/assets/person/kai_zhang_s.jpg",
+    //     links: [
+    //         {
+    //             icon: "email",
+    //             url: "mailto:zhangjojo31@gmail.com",
+    //         },
+    //         {
+    //             icon: "github",
+    //             url: "https://github.com/junkerman2004",
+    //         },
+    //     ],
+    //     keys: ["student"],
+    // },
+    // {
+    //     name: "Jialong Zeng",
+    //     image: "/assets/person/jialong_zeng.jpg",
+    //     desc: "South China University of Technology",
+    //     image_s: "/assets/person/jialong_zeng_s.jpg",
+    //     links: [
+    //         {
+    //             icon: "email",
+    //             url: "mailto:colenzeng@gmail.com",
+    //         },
+    //     ],
+    //     keys: ["student"],
+    // },
+    // {
+    //     name: "Haoran Jiang",
+    //     image: "/assets/person/haoran_jiang.jpg",
+    //     image_s: "/assets/person/haoran_jiang_s.jpg",
+    //     desc: "Fudan University",
+    //     links: [
+    //         {
+    //             icon: "scholar",
+    //             url: "https://scholar.google.com/citations?user=KYzm-k0AAAAJ",
+    //         },
+    //         {
+    //             icon: "email",
+    //             url: "mailto:jianghaoran2024@gmail.com",
+    //         },
+    //         {
+    //             icon: "github",
+    //             url: "https://github.com/HRRiver7",
+    //         },
+    //     ],
+    //     keys: ["joint"],
+    // },
     {
         name: "Jin Chen",
         image: "/assets/person/jin_chen.jpg",
@@ -757,31 +757,31 @@ export const members: {
         ],
         keys: ["hku"],
     },
-    {
-        name: "Checheng Yu",
-        image: "/assets/person/checheng_yu.jpg",
-        desc: "HKU (The University of Hong Kong)",
-        image_s: "/assets/person/checheng_yu_s.jpg",
-        links: [
-            {
-                icon: "homepage",
-                url: "https://tradewindycc.github.io/"
-            },
-            {
-                icon: "email",
-                url: "mailto:ycc2366582449@outlook.com",
-            },
-            {
-                icon: "scholar",
-                url: "https://scholar.google.com/citations?user=9yWZWaIAAAAJ",
-            },
-            {
-                icon: "github",
-                url: "https://github.com/Tradewindycc",
-            },
-        ],
-        keys: ["hku"],
-    },
+    // {
+    //     name: "Checheng Yu",
+    //     image: "/assets/person/checheng_yu.jpg",
+    //     desc: "HKU (The University of Hong Kong)",
+    //     image_s: "/assets/person/checheng_yu_s.jpg",
+    //     links: [
+    //         {
+    //             icon: "homepage",
+    //             url: "https://tradewindycc.github.io/"
+    //         },
+    //         {
+    //             icon: "email",
+    //             url: "mailto:ycc2366582449@outlook.com",
+    //         },
+    //         {
+    //             icon: "scholar",
+    //             url: "https://scholar.google.com/citations?user=9yWZWaIAAAAJ",
+    //         },
+    //         {
+    //             icon: "github",
+    //             url: "https://github.com/Tradewindycc",
+    //         },
+    //     ],
+    //     keys: ["hku"],
+    // },
     {
         name: "Changhui Jing",
         image: "/assets/person/changhui_jing.jpeg",
@@ -824,35 +824,35 @@ export const members: {
         ],
         keys: ["joint"],
     },
-    {
-        name: "Shijia Peng",
-        image: "/assets/person/shijia_peng.jpg",
-        desc: "Shenzhen University",
-        image_s: "/assets/person/shijia_peng_s.jpg",
-        links: [
-            {
-                icon: "homepage",
-                url: "https://shijiapeng03.github.io/",
-            },
-            {
-                icon: "email",
-                url: "mailto:jiagedainifei@gmail.com",
-            },
-            {
-                icon: "scholar",
-                url: "https://scholar.google.com/citations?hl=en&user=T3lq19kAAAAJ",
-            },
-            {
-                icon: "github",
-                url: "https://github.com/ShijiaPeng03",
-            },
-            {
-                icon: "xiaohongshu",
-                url: "https://www.xiaohongshu.com/user/profile/5d2ff1090000000012035ac6",
-            },
-        ],
-        keys: ["alumni"],
-    },
+    // {
+    //     name: "Shijia Peng",
+    //     image: "/assets/person/shijia_peng.jpg",
+    //     desc: "Shenzhen University",
+    //     image_s: "/assets/person/shijia_peng_s.jpg",
+    //     links: [
+    //         {
+    //             icon: "homepage",
+    //             url: "https://shijiapeng03.github.io/",
+    //         },
+    //         {
+    //             icon: "email",
+    //             url: "mailto:jiagedainifei@gmail.com",
+    //         },
+    //         {
+    //             icon: "scholar",
+    //             url: "https://scholar.google.com/citations?hl=en&user=T3lq19kAAAAJ",
+    //         },
+    //         {
+    //             icon: "github",
+    //             url: "https://github.com/ShijiaPeng03",
+    //         },
+    //         {
+    //             icon: "xiaohongshu",
+    //             url: "https://www.xiaohongshu.com/user/profile/5d2ff1090000000012035ac6",
+    //         },
+    //     ],
+    //     keys: ["alumni"],
+    // },
     {
         name: "Hugo Mak",
         image: "/assets/person/haoguang_mai.jpg",
