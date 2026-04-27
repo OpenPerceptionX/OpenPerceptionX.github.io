@@ -29,6 +29,16 @@ export const events: {
         keys: ['2026', 'editor_pick'],
     },
     {
+        title: "Workshop at RSS 2026",
+        subtitle: "Towards Robust Execution of Long-Horizon Whole-Body Control Tasks",
+        url: "/rss2026/workshop/",
+        image: "https://ik.imagekit.io/opendrivelab/jamie-davies-Hao52Fu9-F8-unsplash.jpg",
+        imageoption: "object-center",
+        date: "July, 2026",
+        location: "Sydney",
+        keys: ['2026', 'editor_pick'],
+    },
+    {
         title: "Workshop at CVPR 2026",
         subtitle: "From Labs to Life: Embodied Intelligence in the Wild",
         url: "/cvpr2026/workshop/",
