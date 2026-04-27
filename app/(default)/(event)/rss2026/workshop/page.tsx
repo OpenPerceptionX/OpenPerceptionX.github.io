@@ -154,7 +154,7 @@ export default function Home() {
             <div className="w-full px-6 flex justify-center mt-12">
                 <div className="w-full max-w-7xl flex flex-col gap-3">
                     <p className="leading-relaxed">
-                        TBD
+                        Recent progress in robot learning has significantly advanced robotic capabilities on short-horizon skills and well-defined tasks. However, despite these advances, robots, such as humanoids and robotic arms, continue to struggle when deployed on <span className="underline">long-horizon, complex tasks in the real world</span>. Topics of interest of this workshop include on-policy progress estimation for multi-stage tasks, run-time failure recovery, hierarchical and memory-augmented policies trained under long-horizon rollouts, sim-to-real transfer with execution-time fine-tuning, and leveraging foundation models for task planning, perception, and feedback within closed-loop, on-policy execution.
                     </p>
                 </div>
             </div>
