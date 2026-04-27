@@ -23,11 +23,46 @@ const speakers: {
     link: string;
 }[] = [
     {
-        name: "Hao Su",
-        image: "/assets/person/hao_su.jpg",
+        name: "Javier Alonso-Mora",
+        image: "https://ik.imagekit.io/opendrivelab/yuance/people/javier_alonso_mora.jpg",
+        position: "Full Professor",
+        affiliation: 'TU Delft',
+        link: 'https://autonomousrobots.nl/people/'
+    },
+    {
+        name: "Leslie Pack Kaelbling",
+        image: "https://ik.imagekit.io/opendrivelab/yuance/people/leslie_kaelbling.jpg",
+        position: "Professor",
+        affiliation: 'MIT',
+        link: 'https://people.csail.mit.edu/lpk/'
+    },
+    {
+        name: "Shan Luo",
+        image: "https://ik.imagekit.io/opendrivelab/yuance/people/shan_luo.jpg",
+        position: "Reader",
+        affiliation: "King's College London",
+        link: 'https://shanluo.github.io/'
+    },
+    {
+        name: "Hamidreza Kasaei",
+        image: "https://ik.imagekit.io/opendrivelab/yuance/people/hamidreza_kasaei.jpg",
         position: "Associate Professor",
-        affiliation: 'UC San Diego',
-        link: 'https://cseweb.ucsd.edu/~haosu/'
+        affiliation: 'University of Groningen',
+        link: 'https://hkasaei.github.io/'
+    },
+    {
+        name: "Roberto Martín-Martín",
+        image: "https://ik.imagekit.io/opendrivelab/yuance/people/roberto_marti%CC%81n_marti%CC%81n.jpg",
+        position: "Assistant Professor",
+        affiliation: 'UT Austin',
+        link: 'https://robertomartinmartin.com/'
+    },
+    {
+        name: "Fan Shi",
+        image: "https://ik.imagekit.io/opendrivelab/yuance/people/fan_shi.jpg",
+        position: "Assistant Professor",
+        affiliation: 'NUS',
+        link: 'https://fanshi14.github.io/me/'
     },
 ];
 
@@ -199,14 +234,10 @@ export default function Home() {
                     </h2>
                 </div>
             </div>
+
+
+
             <div className="w-full px-6 flex justify-center mt-12">
-                <div className="w-full max-w-7xl flex">
-                    To be announced.
-                </div>
-            </div>
-
-
-            {/* <div className="w-full px-6 flex justify-center mt-12">
                 <div className="w-full max-w-7xl grid gap-12 grid-cols-2 md:grid-cols-3 xl:grid-cols-4 3xl:grid-cols-5">
                     {[...speakers.values()].map((speaker) => (
                         <div className="flex flex-col gap-3 group/image" key={speaker.name}>
@@ -235,7 +266,7 @@ export default function Home() {
                         </div>
                     ))}
                 </div>
-            </div> */}
+            </div>
 
 
 
