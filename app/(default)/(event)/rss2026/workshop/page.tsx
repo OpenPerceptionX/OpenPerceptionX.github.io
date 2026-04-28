@@ -191,6 +191,15 @@ export default function Home() {
                     <p className="leading-relaxed">
                         Recent progress in robot learning has significantly advanced robotic capabilities on short-horizon skills and well-defined tasks. However, despite these advances, robots, such as humanoids and robotic arms, continue to struggle when deployed on <span className="underline">long-horizon, complex tasks in the real world</span>. Topics of interest of this workshop include on-policy progress estimation for multi-stage tasks, run-time failure recovery, hierarchical and memory-augmented policies trained under long-horizon rollouts, sim-to-real transfer with execution-time fine-tuning, and leveraging foundation models for task planning, perception, and feedback within closed-loop, on-policy execution.
                     </p>
+                    <div className="mt-6">
+                        <img src="/assets/icon/discord.png" className="size-8 inline-block mr-2"/>
+                        <span>
+                            <Link href="https://discord.gg/AQ3ESj7tvr" target="_blank" className="text-o-blue animated-underline">
+                                Join Discord
+                            </Link>
+                            <span>&nbsp;</span>to chat with the organizers.
+                        </span>
+                    </div>
                 </div>
             </div>
 

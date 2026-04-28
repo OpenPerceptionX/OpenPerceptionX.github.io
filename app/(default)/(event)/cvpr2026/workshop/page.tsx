@@ -238,6 +238,15 @@ export default function Home() {
                     <p className="leading-relaxed">
                         If you are interested in our workshop, please <span className="underline">mark the workshop in your CVPR registration</span>, to have enough space for the workshop room.
                     </p>
+                    <div className="mt-6">
+                        <img src="/assets/icon/discord.png" className="size-8 inline-block mr-2"/>
+                        <span>
+                            <Link href="https://discord.gg/pS74Qcp2SX" target="_blank" className="text-o-blue animated-underline">
+                                Join Discord
+                            </Link>
+                            <span>&nbsp;</span>to chat with the organizers.
+                        </span>
+                    </div>
                 </div>
             </div>
 
