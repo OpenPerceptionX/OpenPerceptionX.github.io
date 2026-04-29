@@ -224,7 +224,7 @@ export default function Home() {
             <div className="w-full px-6 flex justify-center mt-12">
                 <div className="w-full max-w-7xl flex flex-col gap-3">
                     <p>
-                        We invite researchers to share their work with the community through submissions to the workshop in a variety of formats beyond traditional papers, <b>inlcuding reports, demos, video, and etc</b>. Submissions may include research papers or reports, but we equally welcome alternative formats such as videos demonstrating systems in action, demos, interactive artifacts, or other creative presentations of research ideas. We particularly welcome <b>ongoing, preliminary, or exploratory work</b>.
+                        We invite researchers to share their work with the community through submissions to the workshop in a variety of formats beyond traditional papers, <b>including reports, demos, video, and etc</b>. Submissions may include research papers or reports, but we equally welcome alternative formats such as videos demonstrating systems in action, demos, interactive artifacts, or other creative presentations of research ideas. We particularly welcome <b>ongoing, preliminary, or exploratory work</b>.
                     </p>
                 </div>
             </div>
