@@ -370,7 +370,7 @@ export default function Home() {
 
 
 
-            <div className="w-full px-6 flex justify-center mt-24">
+            {/* <div className="w-full px-6 flex justify-center mt-24">
                 <div className="w-full max-w-7xl flex">
                     <h2 className="text-t1"> 
                         <Link href="#challenge" className="scroll-mt-32 group flex items-center" id="challenge">
@@ -408,7 +408,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
 
 
