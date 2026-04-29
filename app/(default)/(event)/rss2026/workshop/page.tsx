@@ -249,6 +249,12 @@ export default function Home() {
                             Long-horizon robot learning and multi-stage task execution.
                         </li>
                         <li>
+                            Whole-body control for high-dimensional, multi-contact robotic systems.
+                        </li>
+                        <li>
+                            Loco-manipulation and mobile manipulation in unstructured environments.
+                        </li>
+                        <li>
                             On-policy progress estimation under partial observability.
                         </li>
                         <li>
