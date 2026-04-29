@@ -246,28 +246,28 @@ export default function Home() {
                     </p>
                     <ul className="ml-6 space-y-3 list-outside list-disc">
                         <li>
-                            Long-horizon robot learning and multi-stage task execution
+                            Long-horizon robot learning and multi-stage task execution.
                         </li>
                         <li>
-                            On-policy progress estimation under partial observability
+                            On-policy progress estimation under partial observability.
                         </li>
                         <li>
-                            Task decomposition and sub-goal discovery for complex behaviors
+                            Task decomposition and sub-goal discovery for complex behaviors.
                         </li>
                         <li>
-                            Run-time failure detection, recovery, and robustness in real-world deployment
+                            Run-time failure detection, recovery, and robustness in real-world deployment.
                         </li>
                         <li>
-                            Closed-loop decision-making with feedback-driven adaptation
+                            Closed-loop decision-making with feedback-driven adaptation.
                         </li>
                         <li>
-                            Integration of learning, planning, and control for sequential decision-making
+                            Integration of learning, planning, and control for sequential decision-making.
                         </li>
                         <li>
-                            Data efficiency in robot learning, including on-policy data collection and hybrid offline–online training
+                            Data efficiency in robot learning, including on-policy data collection and hybrid offline-online training.
                         </li>
                         <li>
-                            Metrics and evaluation protocols for long-horizon performance, robustness, and generalization
+                            Metrics and evaluation protocols for long-horizon performance, robustness, and generalization.
                         </li>
                     </ul>
                 </div>
@@ -283,7 +283,7 @@ export default function Home() {
             <div className="w-full px-6 flex justify-center mt-6">
                 <div className="w-full max-w-7xl flex flex-col gap-3">
                     <ul className="ml-6 space-y-3 list-outside list-disc">
-                        <li>All papers must be submitted through&nbsp;
+                        <li>All contributions must be submitted through&nbsp;
                             <Link href="https://openreview.net/group?id=roboticsfoundation.org/RSS/2026/Workshop/ExWBC" target="_blank" className="text-o-blue animated-underline">
                                 OpenReview
                             </Link>.
@@ -306,10 +306,10 @@ export default function Home() {
                             To facilitate double-blind review, all submissions must be fully anonymized.
                         </li>
                         <li>
-                            Accepted contributions will be made available online on this workshop website as non-archival reports.
+                            All accepted contributions will be made available online on this workshop website as non-archival reports.
                         </li>
                         <li>
-                            All accepted contributions will be invited for presentations.
+                            Selected contributions will be invited for presentations.
                         </li>
                     </ul>
                 </div>
