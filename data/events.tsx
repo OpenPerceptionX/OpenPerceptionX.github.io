@@ -34,7 +34,7 @@ export const events: {
         url: "/rss2026/workshop/",
         image: "https://ik.imagekit.io/opendrivelab/jamie-davies-Hao52Fu9-F8-unsplash.jpg",
         imageoption: "object-center",
-        date: "July, 2026",
+        date: "July 13, 2026",
         location: "Sydney",
         keys: ['2026', 'editor_pick'],
     },
