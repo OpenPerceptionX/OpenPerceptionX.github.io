@@ -224,10 +224,7 @@ export default function Home() {
             <div className="w-full px-6 flex justify-center mt-12">
                 <div className="w-full max-w-7xl flex flex-col gap-3">
                     <p>
-                        We invite researchers to share their work with the community through submissions to the workshop in a variety of formats beyond traditional papers, <b>inlcuding reports, demos, video, and etc</b>. Submissions may include research papers or reports, but we equally welcome alternative formats such as videos demonstrating systems in action, demos, interactive artifacts, or other creative presentations of research ideas. Our goal is to support a broad and flexible range of contributions.
-                    </p>
-                    <p>
-                        We particularly welcome <b>ongoing, preliminary, or exploratory work</b>. Accepted submissions will be presented in person as a combination of a short spotlight talk and a poster or demo session, fostering discussion and community engagement.
+                        We invite researchers to share their work with the community through submissions to the workshop in a variety of formats beyond traditional papers, <b>inlcuding reports, demos, video, and etc</b>. Submissions may include research papers or reports, but we equally welcome alternative formats such as videos demonstrating systems in action, demos, interactive artifacts, or other creative presentations of research ideas. We particularly welcome <b>ongoing, preliminary, or exploratory work</b>.
                     </p>
                 </div>
             </div>
