@@ -160,7 +160,7 @@ export default function Home() {
                         <h5 className="text-white">
                             RSS 2026 Workshop
                             <br></br>
-                            Sydney, Australia
+                            July 13, Morning, Sydney, Australia
                         </h5>
                     </div>
                 </div>
@@ -200,6 +200,142 @@ export default function Home() {
                             <span>&nbsp;</span>to chat with the organizers.
                         </span>
                     </div>
+                </div>
+            </div>
+
+
+
+            <div className="w-full px-6 flex justify-center mt-24">
+                <div className="w-full max-w-7xl flex">
+                    <h2 className="text-t1"> 
+                        <Link href="#contribution" className="scroll-mt-32 group flex items-center" id="contribution">
+                            Call for Contributions
+                            <span className="ml-6 hidden group-hover:inline-block size-6 text-foreground">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M15.197 3.35462C16.8703 1.67483 19.4476 1.53865 20.9536 3.05046C22.4596 4.56228 22.3239 7.14956 20.6506 8.82935L18.2268 11.2626M10.0464 14C8.54044 12.4882 8.67609 9.90087 10.3494 8.22108L12.5 6.06212" strokeWidth="2.5" strokeLinecap="round"/>
+                                    <path d="M13.9536 10C15.4596 11.5118 15.3239 14.0991 13.6506 15.7789L11.2268 18.2121L8.80299 20.6454C7.12969 22.3252 4.55237 22.4613 3.0464 20.9495C1.54043 19.4377 1.67609 16.8504 3.34939 15.1706L5.77323 12.7373" strokeWidth="2.5" strokeLinecap="round"/>
+                                </svg>
+                            </span>
+                        </Link>
+                    </h2>
+                </div>
+            </div>
+
+            <div className="w-full px-6 flex justify-center mt-12">
+                <div className="w-full max-w-7xl flex flex-col gap-3">
+                    <p>
+                        We invite researchers to share their work with the community through submissions to the workshop. Authors may submit reports describing their research contributions, and we also encourage alternative formats such as videos demonstrating systems in action, even without a formal paper.
+                    </p>
+                    <p>
+                        We particularly welcome <b>ongoing, preliminary, or exploratory work</b>. Accepted submissions will be presented in person as a combination of a short spotlight talk and a poster or demo session, fostering discussion and community engagement.
+                    </p>
+                </div>
+            </div>
+
+            <div className="w-full px-6 flex justify-center mt-12">
+                <div className="w-full max-w-7xl flex flex-col">
+                    <h3 className="text-xl font-bold">
+                        Topics of Interest
+                    </h3>
+                </div>
+            </div>
+            <div className="w-full px-6 flex justify-center mt-6">
+                <div className="w-full max-w-7xl flex flex-col gap-3">
+                    <p>
+                        We welcome works on a wide range of topics, including but not limited to:
+                    </p>
+                    <ul className="ml-6 space-y-3 list-outside list-disc">
+                        <li>
+                            Long-horizon robot learning and multi-stage task execution
+                        </li>
+                        <li>
+                            On-policy progress estimation under partial observability
+                        </li>
+                        <li>
+                            Task decomposition and sub-goal discovery for complex behaviors
+                        </li>
+                        <li>
+                            Run-time failure detection, recovery, and robustness in real-world deployment
+                        </li>
+                        <li>
+                            Closed-loop decision-making with feedback-driven adaptation
+                        </li>
+                        <li>
+                            Integration of learning, planning, and control for sequential decision-making
+                        </li>
+                        <li>
+                            Data efficiency in robot learning, including on-policy data collection and hybrid offline–online training
+                        </li>
+                        <li>
+                            Metrics and evaluation protocols for long-horizon performance, robustness, and generalization
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div className="w-full px-6 flex justify-center mt-12">
+                <div className="w-full max-w-7xl flex flex-col">
+                    <h3 className="text-xl font-bold">
+                        Guidelines
+                    </h3>
+                </div>
+            </div>
+            <div className="w-full px-6 flex justify-center mt-6">
+                <div className="w-full max-w-7xl flex flex-col gap-3">
+                    <ul className="ml-6 space-y-3 list-outside list-disc">
+                        <li>All papers must be submitted through&nbsp;
+                            <Link href="https://openreview.net/group?id=roboticsfoundation.org/RSS/2026/Workshop/ExWBC" target="_blank" className="text-o-blue animated-underline">
+                                OpenReview
+                            </Link>.
+                        </li>
+                        <li>
+                            Manuscripts are required to use the&nbsp;
+                            <Link href="https://roboticsconference.org/docs/paper-template-latex.tar.gz" target="_blank" className="text-o-blue animated-underline">
+                                LaTex
+                            </Link>
+                            &nbsp;or&nbsp;
+                            <Link href="https://roboticsconference.org/docs/paper-template-word.zip" target="_blank" className="text-o-blue animated-underline">
+                                Word
+                            </Link>
+                            &nbsp;template.
+                        </li>
+                        <li>
+                            No strict page length requirements on submissions.
+                        </li>
+                        <li>
+                            To facilitate double-blind review, all submissions must be fully anonymized.
+                        </li>
+                        <li>
+                            Accepted contributions will be made available online on this workshop website as non-archival reports.
+                        </li>
+                        <li>
+                            All accepted contributions will be invited for presentations.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div className="w-full px-6 flex justify-center mt-12">
+                <div className="w-full max-w-7xl flex flex-col">
+                    <h3 className="text-xl font-bold">
+                        Timeline
+                    </h3>
+                </div>
+            </div>
+            <div className="w-full px-6 flex justify-center mt-6">
+                <div className="w-full max-w-7xl flex flex-col gap-3">
+                    <p>
+                        For any potential ambiguities, please refer to OpenReview.
+                    </p>
+                    <ul className="ml-6 space-y-3 list-outside list-disc">
+                        <li>
+                            Submission start: May 10, 2026
+                        </li><li>
+                            Submission end: June 21, 2026
+                        </li><li>
+                            Notification: July 01, 2026
+                        </li>
+                    </ul>
                 </div>
             </div>
 
