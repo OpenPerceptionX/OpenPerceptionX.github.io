@@ -78,6 +78,13 @@ const speakers: {
         affiliation: 'University of Pennsylvania',
         link: 'https://jiataogu.me/'
     },
+    {
+        name: "Zhiyu Huang",
+        image: "https://ik.imagekit.io/opendrivelab/yuance/people/zhiyu_huang.jpg",
+        position: "Postdoc",
+        affiliation: 'UCLA',
+        link: 'https://mczhi.github.io/'
+    },
 ];
 
 
