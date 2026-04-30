@@ -439,7 +439,7 @@ export default function Home() {
                 </div>
             </div>
             <div className="w-full px-6 flex justify-center mt-12">
-                <div className="w-full max-w-7xl flex">
+                <div className="w-full max-w-7xl">
                     <ScheduleList/>
                 </div>
             </div>

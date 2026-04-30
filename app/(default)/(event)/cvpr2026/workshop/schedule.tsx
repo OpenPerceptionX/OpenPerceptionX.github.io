@@ -58,7 +58,7 @@ const scheduleItems: {
 }[] = [
     {
         type: "talk",
-        time: "2025-06-11T14:00:00",
+        time: "2026-06-03T23:00:00",
         name: "Hongyang Li",
         nameLink: "https://lihongyang.info/",
         affiliation: "HKU, China",
@@ -70,7 +70,7 @@ const scheduleItems: {
     },
     {
         type: "talk",
-        time: "2025-06-11T14:10:00",
+        time: "2026-06-03T23:10:00",
         name: "Hao Su",
         nameLink: "https://cseweb.ucsd.edu/~haosu/",
         affiliation: "UC San Diego, USA",
@@ -85,7 +85,7 @@ const scheduleItems: {
     },
     {
         type: "talk",
-        time: "2025-06-11T14:00:00",
+        time: "2026-06-04T00:00:00",
         name: "Spotlights Presentaion",
         title: "Accepted Paper Authors",
         recordings: {
@@ -95,12 +95,12 @@ const scheduleItems: {
     },
     {
         type: "break",
-        time: "2025-06-11T15:10:00",
+        time: "2026-06-04T00:20:00",
         title: "Coffee Break",
     },
     {
         type: "talk",
-        time: "2025-06-11T15:20:00",
+        time: "2026-06-04T00:30:00",
         name: "Zhiyu Huang",
         nameLink: "https://mczhi.github.io/",
         affiliation: "UCLA, USA",
@@ -115,7 +115,7 @@ const scheduleItems: {
     },
     {
         type: "talk",
-        time: "2025-06-11T18:40:00",
+        time: "2026-06-04T01:20:00",
         name: "Angjoo Kanazawa",
         nameLink: "https://people.eecs.berkeley.edu/~kanazawa/",
         affiliation: "UC Berkeley, USA",
@@ -130,12 +130,12 @@ const scheduleItems: {
     },
     {
         type: "break",
-        time: "2025-06-11T16:40:00",
+        time: "2026-06-04T02:10:00",
         title: "Lunch Break",
     },
     {
         type: "talk",
-        time: "2025-06-11T18:00:00",
+        time: "2026-06-04T03:00:00",
         name: "Edward Johns",
         nameLink: "https://www.robot-learning.uk/",
         affiliation: "Imperial College London, UK",
@@ -150,7 +150,7 @@ const scheduleItems: {
     },
     {
         type: "talk",
-        time: "2025-06-11T15:20:00",
+        time: "2026-06-04T03:50:00",
         name: "Jiatao Gu",
         nameLink: "https://jiataogu.me/",
         affiliation: "UPenn, USA",
@@ -165,13 +165,13 @@ const scheduleItems: {
     },
     {
         type: "break",
-        time: "2025-06-11T20:20:00",
+        time: "2026-06-04T04:40:00",
         title: "Coffee Break",
     },
 
     {
         type: "talk",
-        time: "2025-06-11T19:40:00",
+        time: "2026-06-04T04:50:00",
         name: "Rika Antonova",
         nameLink: "https://contactrika.github.io/",
         affiliation: "Cambridge, UK",
@@ -186,7 +186,7 @@ const scheduleItems: {
     },
     {
         type: "talk",
-        time: "2025-06-11T20:30:00",
+        time: "2026-06-04T05:40:00",
         name: "Yilun Du",
         nameLink: "https://yilundu.github.io/",
         affiliation: "Harvard, USA",
@@ -201,12 +201,12 @@ const scheduleItems: {
     },
     {
         type: "panel",
-        time: "2025-06-11T21:10:00",
+        time: "2026-06-04T06:30:00",
         title: "Debate",
     },
     {
         type: "closing",
-        time: "2025-06-11T22:10:00",
+        time: "2026-06-04T07:30:00",
         title: "Closing Remarks",
     },
 ];
@@ -236,8 +236,9 @@ function ScheduleAvatar({ item }: { item: typeof scheduleItems[0] }) {
     }
     if (item.type === "challenge") {
         return (
-            <div className="relative">
-                <img className="flex size-10 items-center justify-center bg-white" src="/assets/icon/D.svg" alt="" />
+            <div className="relative shrink-0">
+                {/* FIX 1: use w-10 h-10 object-contain instead of flex size-10 ... */}
+                <img className="w-10 h-10 object-contain" src="/assets/icon/D.svg" alt="" />
             </div>
         );
     }
@@ -254,8 +255,9 @@ function ScheduleAvatar({ item }: { item: typeof scheduleItems[0] }) {
     }
     if (item.affiliationLogo) {
         return (
-            <div className="relative">
-                <img className="flex size-10 items-center justify-center bg-white" src={item.affiliationLogo} alt="" />
+            // FIX 1: use w-10 h-10 object-contain + shrink-0 to preserve aspect ratio
+            <div className="relative shrink-0">
+                <img className="w-10 h-10 object-contain" src={item.affiliationLogo} alt="" />
             </div>
         );
     }
@@ -314,7 +316,8 @@ export function ScheduleList() {
 
                                 <div className="relative flex items-start space-x-3">
                                     <ScheduleAvatar item={item} />
-                                    <div className="flex flex-col w-full gap-3">
+                                    {/* FIX 2: min-w-0 + overflow-hidden clamps the column to its flex-allocated width */}
+                                    <div className="flex flex-col w-full min-w-0 overflow-hidden gap-3">
                                         <div className={`flex justify-between${isBreakType(item.type) ? " pt-1" : ""}`}>
                                             <div>
                                                 {item.type === "challenge" ? (
@@ -375,7 +378,8 @@ export function ScheduleList() {
                                         {item.bio && (
                                             <details className="text-xs">
                                                 <summary className="content-none">Biography</summary>
-                                                <p className="mt-3">{item.bio}</p>
+                                                {/* FIX 2: break-words prevents long strings from expanding the container */}
+                                                <p className="mt-3 w-full break-words">{item.bio}</p>
                                             </details>
                                         )}
                                     </div>
