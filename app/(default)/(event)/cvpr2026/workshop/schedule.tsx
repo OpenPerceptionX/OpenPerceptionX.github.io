@@ -190,7 +190,7 @@ const scheduleItems: {
         name: "Yilun Du",
         nameLink: "https://yilundu.github.io/",
         affiliation: "Harvard, USA",
-        affiliationLogo: "/assets/brand/harvard.png",
+        affiliationLogo: "/assets/brand/Harvard.png",
         title: "TBD",
         recordings: {
             youtube: "",
