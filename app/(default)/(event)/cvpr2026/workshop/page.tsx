@@ -15,6 +15,10 @@ import { AspectRatio } from "@/components/ui/aspect-ratio"
 
 
 
+import { ScheduleList } from "./schedule"
+
+
+
 const speakers: {
     name: string;
     image: string;
@@ -436,7 +440,7 @@ export default function Home() {
             </div>
             <div className="w-full px-6 flex justify-center mt-12">
                 <div className="w-full max-w-7xl flex">
-                    To be announced.
+                    <ScheduleList/>
                 </div>
             </div>
 
