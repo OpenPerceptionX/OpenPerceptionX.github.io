@@ -95,9 +95,9 @@ export function News() {
                             <span>
                                 Announcing the strategic partnerships with Unitree, Noitom Robotics, and BrainCo. More details are available in&nbsp;
                                 <Link className="text-o-blue animated-underline" href='https://hku.hk/press/news_detail_28976.html' target="_blank">
-                                    English
+                                    HKU News
                                 </Link>
-                                &nbsp;and&nbsp;
+                                &nbsp;and in&nbsp;
                                 <Link className="text-o-blue animated-underline" href='https://mp.weixin.qq.com/s/i2s8g8sHAC9uDFsVyucTxA' target="_blank">
                                     Chinese
                                 </Link>
