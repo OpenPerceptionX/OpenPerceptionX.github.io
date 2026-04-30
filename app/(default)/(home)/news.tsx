@@ -93,9 +93,13 @@ export function News() {
                         </Badge>
                         <div className="flex flex-col md:flex-row items-start md:items-center flex-wrap gap-2">
                             <span>
-                                Announcing the strategic partnerships with Unitree, Noitom Robotics, and BrainCo. Check more details&nbsp;
+                                Announcing the strategic partnerships with Unitree, Noitom Robotics, and BrainCo. More details are available in&nbsp;
+                                <Link className="text-o-blue animated-underline" href='https://hku.hk/press/news_detail_28976.html' target="_blank">
+                                    English
+                                </Link>
+                                &nbsp;and&nbsp;
                                 <Link className="text-o-blue animated-underline" href='https://mp.weixin.qq.com/s/i2s8g8sHAC9uDFsVyucTxA' target="_blank">
-                                    here
+                                    Chinese
                                 </Link>
                                 .
                             </span>
@@ -139,30 +143,32 @@ export function News() {
 
                     {
                         publicationNews.map((item, idx) => (
-                            <div key={idx} className="flex flex-col md:flex-row items-start md:items-center gap-2">
-                                <Badge variant="default" className="w-[80px] text-center shrink-0">
-                                    {item.date}
-                                </Badge>
-                                <div className="flex flex-col md:flex-row items-start md:items-center flex-wrap gap-2">
-                                    <span>
-                                        {item.content}
-                                    </span>
-                                    <div className="flex flex-row flex-wrap">
-                                        {
-                                            item.links?.map((link, index) => (
-                                                <span key={index} className="flex items-center">
-                                                    <Link className="text-o-blue animated-underline" href={link.url} target={link.url.startsWith('http') ? '_blank' : '_self'}>
-                                                        {link.label}
-                                                    </Link>
-                                                    {index < (item.links ?? []).length - 1 && (
-                                                        <span className="text-xs mx-2"> | </span>
-                                                    )}
-                                                </span>
-                                            ))
-                                        } 
+                            !item.content.startsWith("TAMEn") && !item.content.startsWith("Sparse Video") && (
+                                <div key={idx} className="flex flex-col md:flex-row items-start md:items-center gap-2">
+                                    <Badge variant="default" className="w-[80px] text-center shrink-0">
+                                        {item.date}
+                                    </Badge>
+                                    <div className="flex flex-col md:flex-row items-start md:items-center flex-wrap gap-2">
+                                        <span>
+                                            {item.content}
+                                        </span>
+                                        <div className="flex flex-row flex-wrap">
+                                            {
+                                                item.links?.map((link, index) => (
+                                                    <span key={index} className="flex items-center">
+                                                        <Link className="text-o-blue animated-underline" href={link.url} target={link.url.startsWith('http') ? '_blank' : '_self'}>
+                                                            {link.label}
+                                                        </Link>
+                                                        {index < (item.links ?? []).length - 1 && (
+                                                            <span className="text-xs mx-2"> | </span>
+                                                        )}
+                                                    </span>
+                                                ))
+                                            } 
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            )
                         ))
                     }
 
