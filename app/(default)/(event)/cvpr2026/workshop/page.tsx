@@ -138,6 +138,11 @@ const organizers: {
         affiliation: 'OpenDriveLab',
         link: 'https://faikit.github.io/'
     },
+    {
+        name: "Haochen Tian",
+        affiliation: 'OpenDriveLab',
+        link: 'https://scholar.google.com/citations?user=DoyuNwEAAAAJ'
+    }
 ];
 
 
