@@ -64,6 +64,13 @@ const speakers: {
         affiliation: 'NUS',
         link: 'https://fanshi14.github.io/me/'
     },
+    {
+        name: "Tianyu Li",
+        image: "/assets/person/tianyu_li.jpg",
+        position: "Ph.D. Candidate",
+        affiliation: 'Fudan University',
+        link: 'https://scholar.google.com/citations?user=X6vTmEMAAAAJ'
+    },
 ];
 
 
