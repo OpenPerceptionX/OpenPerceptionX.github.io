@@ -67,8 +67,8 @@ const speakers: {
     {
         name: "Tianyu Li",
         image: "/assets/person/tianyu_li.jpg",
-        position: "Ph.D. Candidate",
-        affiliation: 'Fudan University',
+        position: "CEO",
+        affiliation: 'Archon',
         link: 'https://scholar.google.com/citations?user=X6vTmEMAAAAJ'
     },
 ];
