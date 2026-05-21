@@ -40,13 +40,13 @@ const speakers: {
         affiliation: 'Cambridge',
         link: 'https://contactrika.github.io/'
     },
-    {
-        name: "Edward Johns",
-        image: "/assets/person/edward_johns.jpg",
-        position: "Associate Professor",
-        affiliation: 'Imperial College London',
-        link: 'https://www.robot-learning.uk/'
-    },
+    // {
+    //     name: "Edward Johns",
+    //     image: "/assets/person/edward_johns.jpg",
+    //     position: "Associate Professor",
+    //     affiliation: 'Imperial College London',
+    //     link: 'https://www.robot-learning.uk/'
+    // },
     // {
     //     name: "Harold Soh",
     //     image: "/assets/person/harold_soh.jpg",
@@ -69,11 +69,11 @@ const speakers: {
         link: 'https://yilundu.github.io/'
     },
     {
-        name: "Angjoo Kanazawa",
-        image: "/assets/person/angjoo_kanazawa.jpg",
-        position: "Assistant Professor",
+        name: "Jiahui Lei",
+        image: "/assets/person/jiahui_lei.jpg",
+        position: "Postdoc",
         affiliation: 'UC Berkeley',
-        link: 'https://people.eecs.berkeley.edu/~kanazawa/'
+        link: 'https://jiahuilei.com/'
     },
     {
         name: "Jiatao Gu",
