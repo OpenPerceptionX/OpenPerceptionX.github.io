@@ -280,7 +280,7 @@ export default function Redirect() {
 
     // event 2023
     if (
-        pathname.toLowerCase().startsWith('/AD23Challenge') || 
+        pathname.toLowerCase().startsWith('/ad23Challenge') || 
         pathname.toLowerCase().startsWith('/challenge2023')
     ) {
         redirect('/challenge2023/')
