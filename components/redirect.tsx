@@ -280,27 +280,27 @@ export default function Redirect() {
 
     // event 2023
     if (
-        pathname.toLowerCase().startsWith('/ad23Challenge') || 
+        pathname.startsWith('/AD23Challenge') || 
         pathname.toLowerCase().startsWith('/challenge2023')
     ) {
         redirect('/challenge2023/')
     }
     if (
-        pathname.toLowerCase().startsWith('/event/iclr23_ADworkshop') || 
+        pathname.startsWith('/event/iclr23_ADworkshop') || 
         pathname.toLowerCase().startsWith('/sr4ad/iclr23') || 
         pathname.toLowerCase().startsWith('/iclr2023')
     ) {
         redirect('/iclr2023/workshop/')
     }
     if (
-        pathname.toLowerCase().startsWith('/event/cvpr23_ADworkshop') ||
+        pathname.startsWith('/event/cvpr23_ADworkshop') ||
         pathname.toLowerCase().startsWith('/e2ead/cvpr23') ||
         pathname.toLowerCase().startsWith('/cvpr2023')
     ) {
         redirect('/cvpr2023/workshop/')
     }
     if (
-        pathname.toLowerCase().startsWith('/e2ead/cvpr23_CN') || 
+        pathname.startsWith('/e2ead/cvpr23_CN') || 
         pathname.toLowerCase().startsWith('/event2023')
     ) {
         redirect('/event2023/')
