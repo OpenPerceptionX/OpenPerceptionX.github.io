@@ -120,7 +120,7 @@ const scheduleItems: {
         nameLink: "https://jiahuilei.com/",
         affiliation: "UC Berkeley, USA",
         affiliationLogo: "/assets/brand/ucberkeley.png",
-        title: "TBD",
+        title: "World Motion Model, from 4D Vision to Robotics and Beyond",
         recordings: {
             youtube: "",
             bilibili: "",
@@ -175,7 +175,7 @@ const scheduleItems: {
         nameLink: "https://contactrika.github.io/",
         affiliation: "Cambridge, UK",
         affiliationLogo: "/assets/brand/cambridge.png",
-        title: "TBD",
+        title: "Mobilizing and Deforming: Advancements in Mobile Manipulation, Sensing, and Shape Adaptation",
         recordings: {
             youtube: "",
             bilibili: "",
