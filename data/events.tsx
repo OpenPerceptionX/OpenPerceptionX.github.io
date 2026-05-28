@@ -19,12 +19,32 @@ export const events: {
     keys: string[];
 }[] = [
     {
+        title: "Challenge 2026",
+        subtitle: "Autonomous Grand Challenge",
+        url: "/challenge2026/",
+        image: "https://ik.imagekit.io/opendrivelab/Modify_the_left_human_hand_to_become_an_abstract_e-1770009757382.jpg?updatedAt=1770010027998",
+        imageoption: "object-center",
+        date: "",
+        location: "",
+        keys: ['2026', 'editor_pick'],
+    },
+    {
+        title: "Workshop at RSS 2026",
+        subtitle: "Towards Robust Execution of Long-Horizon Whole-Body Control Tasks",
+        url: "/rss2026/workshop/",
+        image: "https://ik.imagekit.io/opendrivelab/jamie-davies-Hao52Fu9-F8-unsplash.jpg",
+        imageoption: "object-center",
+        date: "July 13, 2026",
+        location: "Sydney",
+        keys: ['2026', 'editor_pick'],
+    },
+    {
         title: "Workshop at CVPR 2026",
         subtitle: "From Labs to Life: Embodied Intelligence in the Wild",
         url: "/cvpr2026/workshop/",
         image: "/assets/background/denver.jpg",
         imageoption: "object-center",
-        date: "June, 2026",
+        date: "June 03, 2026",
         location: "Denver",
         keys: ['2026', 'editor_pick'],
     },

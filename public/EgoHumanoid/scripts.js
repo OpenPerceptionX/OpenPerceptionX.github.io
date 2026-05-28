@@ -1,0 +1,519 @@
+// ============================================
+// Progress Bar & Side Navigation Controller
+// ============================================
+
+class NavigationController {
+    constructor() {
+        this.sideNavItems = document.querySelectorAll('.side-nav-item');
+        this.progressBar = document.getElementById('progressBar');
+        this.navSectionIds = [];
+        this.sectionCache = [];
+        this.currentActiveSection = null;
+        this.rafId = null;
+        this.isScrolling = false;
+        
+        this.init();
+    }
+    
+    init() {
+        // 仅追踪导航中存在的章节 ID，确保一一对应
+        this.navSectionIds = Array.from(this.sideNavItems)
+            .map(item => item.getAttribute('data-section'))
+            .filter(Boolean);
+        
+        this.updateSectionCache();
+        this.update();
+        
+        window.addEventListener('scroll', () => this.handleScroll(), { passive: true });
+        window.addEventListener('resize', () => {
+            this.updateSectionCache();
+            this.update();
+        }, { passive: true });
+        
+        // 处理 hash 导航：直接访问 #section 或点击锚点后
+        window.addEventListener('hashchange', () => this.onHashChange());
+        if (window.location.hash) {
+            setTimeout(() => this.onHashChange(), 100);
+        }
+        
+        this.setupNavClickHandlers();
+    }
+    
+    onHashChange() {
+        const hash = window.location.hash.slice(1);
+        if (hash && this.navSectionIds.includes(hash)) {
+            this.updateSectionCache();
+            this.update();
+        }
+    }
+    
+    updateSectionCache() {
+        this.sectionCache = this.navSectionIds
+            .map(id => {
+                const el = document.getElementById(id);
+                if (!el) return null;
+                const rect = el.getBoundingClientRect();
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                return {
+                    id,
+                    top: scrollTop + rect.top,
+                    bottom: scrollTop + rect.bottom,
+                    height: rect.height,
+                    element: el
+                };
+            })
+            .filter(Boolean)
+            .sort((a, b) => a.top - b.top);
+    }
+    
+    handleScroll() {
+        if (!this.isScrolling) {
+            this.isScrolling = true;
+            this.rafId = requestAnimationFrame(() => {
+                this.update();
+                this.isScrolling = false;
+            });
+        }
+    }
+    
+    update() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight;
+        const clientHeight = document.documentElement.clientHeight;
+        
+        if (this.progressBar && scrollHeight > clientHeight) {
+            const progress = (scrollTop / (scrollHeight - clientHeight)) * 100;
+            this.progressBar.style.width = Math.min(100, Math.max(0, progress)) + '%';
+        }
+        
+        const activeSection = this.getActiveSection(scrollTop);
+        if (activeSection !== this.currentActiveSection) {
+            this.setActiveSection(activeSection);
+            this.currentActiveSection = activeSection;
+        }
+    }
+    
+    getActiveSection(scrollTop) {
+        if (!this.sectionCache.length) return this.navSectionIds[0] || 'demo';
+        
+        const viewportCenter = scrollTop + window.innerHeight * 0.35;
+        
+        if (scrollTop < 80) return this.sectionCache[0].id;
+        
+        // 找到视口中心所在或刚刚经过的章节（最后一个 top <= viewportCenter 的）
+        let active = this.sectionCache[0].id;
+        for (const section of this.sectionCache) {
+            if (section.top <= viewportCenter) {
+                active = section.id;
+            }
+        }
+        return active;
+    }
+    
+    setActiveSection(sectionId) {
+        this.sideNavItems.forEach(item => {
+            const isActive = item.getAttribute('data-section') === sectionId;
+            item.classList.toggle('active', isActive);
+        });
+    }
+    
+    setupNavClickHandlers() {
+        this.sideNavItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = item.getAttribute('href');
+                const target = document.querySelector(targetId);
+                
+                if (target) {
+                    this.updateSectionCache();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    setTimeout(() => {
+                        this.updateSectionCache();
+                        this.update();
+                    }, 600);
+                }
+            });
+        });
+    }
+}
+
+// Initialize navigation controller
+const navController = new NavigationController();
+
+// Reveal on scroll
+const reveals = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+}, { threshold: 0.1 });
+reveals.forEach(el => revealObserver.observe(el));
+
+// Counter animation
+const counters = document.querySelectorAll('.counter');
+const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const counter = entry.target;
+            const target = parseInt(counter.getAttribute('data-target'));
+            let current = 0;
+            const increment = target / 50;
+            const updateCounter = () => {
+                if (current < target) {
+                    current += increment;
+                    counter.textContent = Math.ceil(current);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counter.textContent = target;
+                }
+            };
+            updateCounter();
+            counterObserver.unobserve(counter);
+        }
+    });
+}, { threshold: 0.5 });
+counters.forEach(counter => counterObserver.observe(counter));
+
+// Deploy tabs
+const deployTabs = document.querySelectorAll('.deploy-tab');
+const deployContents = document.querySelectorAll('.deploy-content');
+deployTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        deployTabs.forEach(t => t.classList.remove('active'));
+        deployContents.forEach(c => c.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.tab).classList.add('active');
+    });
+});
+
+// Copy citation
+function copyCitation() {
+    const citation = document.querySelector('.citation-code').textContent;
+    const btn = document.querySelector('.citation-copy');
+
+    // 优先使用 Clipboard API，不支持时用 fallback
+    function onCopied() {
+        btn.textContent = 'Copied!';
+        btn.classList.add('copied');
+        setTimeout(() => {
+            btn.textContent = 'Copy';
+            btn.classList.remove('copied');
+        }, 2000);
+    }
+
+    if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(citation).then(onCopied);
+    } else {
+        const textarea = document.createElement('textarea');
+        textarea.value = citation;
+        textarea.style.position = 'fixed';
+        textarea.style.opacity = '0';
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+        onCopied();
+    }
+}
+
+// Charts - Updated with blue color scheme
+const chartColors = { 
+    robot: '#2563EB',      // Primary blue
+    cotrain: '#10B981',    // Accent green
+    grid: 'rgba(37,99,235,0.08)' 
+};
+
+const chartOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+        legend: { display: false },
+        tooltip: { 
+            backgroundColor: 'rgba(30,41,59,0.95)', 
+            titleColor: '#fff', 
+            bodyColor: '#94A3B8', 
+            borderColor: 'rgba(37,99,235,0.2)', 
+            borderWidth: 1, 
+            padding: 12, 
+            cornerRadius: 8 
+        }
+    },
+    scales: {
+        x: { 
+            grid: { color: chartColors.grid }, 
+            ticks: { color: '#64748B' },
+            border: { color: 'rgba(37,99,235,0.15)' }
+        },
+        y: { 
+            grid: { color: chartColors.grid }, 
+            ticks: { color: '#64748B' }, 
+            min: 0, 
+            max: 100,
+            border: { color: 'rgba(37,99,235,0.15)' }
+        }
+    }
+};
+
+const inDomainCtx = document.getElementById('inDomainChart');
+if (inDomainCtx) {
+    new Chart(inDomainCtx, {
+        type: 'bar',
+        data: {
+            labels: ['Pillow', 'Trash', 'Toy', 'Cart', 'Average'],
+            datasets: [
+                { label: 'Robot-only', data: [60, 85, 47.5, 42.5, 58.8], backgroundColor: chartColors.robot, borderRadius: 6 },
+                { label: 'Co-training', data: [85, 97.5, 61.3, 70, 78.4], backgroundColor: chartColors.cotrain, borderRadius: 6 }
+            ]
+        },
+        options: chartOptions
+    });
+}
+
+const genCtx = document.getElementById('generalizationChart');
+if (genCtx) {
+    new Chart(genCtx, {
+        type: 'bar',
+        data: {
+            labels: ['Pillow', 'Trash', 'Toy', 'Cart', 'Average'],
+            datasets: [
+                { label: 'Robot-only', data: [0, 55, 37.5, 31.3, 30.9], backgroundColor: chartColors.robot, borderRadius: 6 },
+                { label: 'Co-training', data: [97.5, 87.5, 78.8, 65, 82.2], backgroundColor: chartColors.cotrain, borderRadius: 6 }
+            ]
+        },
+        options: chartOptions
+    });
+}
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+});
+
+// Nav background - transparent on hero, solid when scrolled
+const nav = document.querySelector('.nav');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 80) {
+        nav.classList.add('scrolled');
+    } else {
+        nav.classList.remove('scrolled');
+    }
+});
+
+
+// Scaling Analysis Charts - Data from scaling.py
+const scalingColors = {
+    ratio_1_2: '#3A8DC1',  // Blue
+    ratio_1_1: '#5AAE61',  // Green
+    ratio_2_1: '#E5A835'   // Orange
+};
+
+// Raw data from scaling.py
+const scalingRawData = {
+    pillow: { '1:2': [0, 65, 90, 97.5], '1:1': [0, 77.5, 85, 80], '2:1': [0, 82.5, 85, 80] },
+    trash: { '1:2': [55, 80, 92.5, 87.5], '1:1': [55, 80, 95, 82.5], '2:1': [55, 95, 87.5, 85] },
+    toy: { '1:2': [37.5, 35, 68.75, 58.75], '1:1': [37.5, 41.25, 58.75, 71.25], '2:1': [37.5, 41.25, 61.25, 78.75] },
+    cart: { '1:2': [31.25, 26.25, 38.75, 50], '1:1': [31.25, 40, 58.75, 52.5], '2:1': [31.25, 67.5, 41.25, 65] }
+};
+
+// Calculate average for each ratio
+function calcAverage(ratio) {
+    return [0, 1, 2, 3].map(i => 
+        (scalingRawData.pillow[ratio][i] + scalingRawData.trash[ratio][i] + scalingRawData.toy[ratio][i] + scalingRawData.cart[ratio][i]) / 4
+    );
+}
+
+scalingRawData.average = {
+    '1:2': calcAverage('1:2'),
+    '1:1': calcAverage('1:1'),
+    '2:1': calcAverage('2:1')
+};
+
+const scalingLabels = ['0', '100', '200', '300'];
+
+const scalingChartOptions = {
+    responsive: true,
+    maintainAspectRatio: true,
+    aspectRatio: 1,
+    plugins: {
+        legend: { display: false },
+        tooltip: {
+            backgroundColor: 'rgba(30, 41, 59, 0.95)',
+            titleColor: '#fff',
+            bodyColor: '#94A3B8',
+            borderColor: 'rgba(37, 99, 235, 0.2)',
+            borderWidth: 1,
+            padding: 12,
+            cornerRadius: 8
+        }
+    },
+    scales: {
+        x: {
+            grid: { color: 'rgba(0, 0, 0, 0.06)' },
+            ticks: { color: '#666666', font: { size: 12 } },
+            border: { color: '#CCCCCC' },
+            title: { display: true, text: 'Human Demos', color: '#555555', font: { size: 13, weight: 'bold' } }
+        },
+        y: {
+            grid: { color: 'rgba(0, 0, 0, 0.06)' },
+            ticks: { color: '#666666', font: { size: 12 } },
+            min: 0,
+            max: 100,
+            border: { color: '#CCCCCC' }
+        }
+    }
+};
+
+function createScalingChart(canvasId, taskKey) {
+    const ctx = document.getElementById(canvasId);
+    if (!ctx) return null;
+    
+    const taskData = scalingRawData[taskKey];
+    
+    return new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: scalingLabels,
+            datasets: [
+                {
+                    label: 'Robot:Human 1:2',
+                    data: taskData['1:2'],
+                    borderColor: scalingColors.ratio_1_2,
+                    backgroundColor: scalingColors.ratio_1_2 + '20',
+                    fill: false,
+                    tension: 0.3,
+                    pointRadius: 6,
+                    pointBackgroundColor: scalingColors.ratio_1_2,
+                    pointBorderColor: '#FFFFFF',
+                    pointBorderWidth: 2,
+                    pointHoverRadius: 8,
+                    borderWidth: 3
+                },
+                {
+                    label: 'Robot:Human 1:1',
+                    data: taskData['1:1'],
+                    borderColor: scalingColors.ratio_1_1,
+                    backgroundColor: scalingColors.ratio_1_1 + '20',
+                    fill: false,
+                    tension: 0.3,
+                    pointRadius: 6,
+                    pointBackgroundColor: scalingColors.ratio_1_1,
+                    pointBorderColor: '#FFFFFF',
+                    pointBorderWidth: 2,
+                    pointHoverRadius: 8,
+                    borderWidth: 3
+                },
+                {
+                    label: 'Robot:Human 2:1',
+                    data: taskData['2:1'],
+                    borderColor: scalingColors.ratio_2_1,
+                    backgroundColor: scalingColors.ratio_2_1 + '20',
+                    fill: false,
+                    tension: 0.3,
+                    pointRadius: 6,
+                    pointBackgroundColor: scalingColors.ratio_2_1,
+                    pointBorderColor: '#FFFFFF',
+                    pointBorderWidth: 2,
+                    pointHoverRadius: 8,
+                    borderWidth: 3
+                }
+            ]
+        },
+        options: scalingChartOptions
+    });
+}
+
+let scalingCharts = {};
+
+function initScalingCharts() {
+    // Create all 5 charts
+    scalingCharts.average = createScalingChart('scalingAverage', 'average');
+    scalingCharts.pillow = createScalingChart('scalingPillow', 'pillow');
+    scalingCharts.trash = createScalingChart('scalingTrash', 'trash');
+    scalingCharts.toy = createScalingChart('scalingToy', 'toy');
+    scalingCharts.cart = createScalingChart('scalingCart', 'cart');
+}
+
+// Initialize charts
+initScalingCharts();
+
+// ============================================
+// 移动端视频自动播放兼容处理
+// ============================================
+(function() {
+    var allVideos = document.querySelectorAll('video[autoplay]');
+    if (!allVideos.length) return;
+
+    // 1. 强制通过 JS 设置关键属性（部分移动端只认 JS property，不认 HTML attribute）
+    allVideos.forEach(function(video) {
+        video.muted = true;
+        video.playsInline = true;
+        video.setAttribute('webkit-playsinline', '');    // iOS Safari 旧版
+        video.setAttribute('x5-playsinline', '');        // 腾讯 X5 内核（微信/QQ）
+        video.setAttribute('x5-video-player-type', 'h5'); // 微信 H5 同层播放
+        video.setAttribute('t7-video-player-type', 'inline'); // UC 浏览器
+    });
+
+    // 2. 播放函数：确保 muted 后再 play
+    function tryPlay(video) {
+        video.muted = true;
+        var p = video.play();
+        if (p && p.then) {
+            p.then(function(){}).catch(function() {
+                // play 被拒绝，等待用户交互后重试
+                video.dataset.needsPlay = '1';
+            });
+        }
+    }
+
+    // 3. IntersectionObserver：只播放视口内的视频，离开视口暂停
+    var userHasInteracted = false;
+
+    if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                var video = entry.target;
+                if (entry.isIntersecting) {
+                    tryPlay(video);
+                } else {
+                    video.pause();
+                }
+            });
+        }, { threshold: 0.1 });
+        allVideos.forEach(function(video) { observer.observe(video); });
+    }
+
+    // 4. 页面加载完成后尝试播放视口内的视频
+    function playVisibleVideos() {
+        allVideos.forEach(function(video) {
+            var rect = video.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                tryPlay(video);
+            }
+        });
+    }
+    playVisibleVideos();
+
+    // 5. 监听用户首次交互 —— 这是移动端最关键的时机
+    function onFirstInteraction() {
+        if (userHasInteracted) return;
+        userHasInteracted = true;
+        playVisibleVideos();
+        // 移除所有监听
+        interactionEvents.forEach(function(evt) {
+            document.removeEventListener(evt, onFirstInteraction, true);
+        });
+    }
+    var interactionEvents = ['touchstart', 'touchend', 'click', 'pointerdown', 'scroll'];
+    interactionEvents.forEach(function(evt) {
+        document.addEventListener(evt, onFirstInteraction, { capture: true, passive: true });
+    });
+
+    // 6. 页面可见性变化时恢复播放（从后台切回前台）
+    document.addEventListener('visibilitychange', function() {
+        if (!document.hidden) playVisibleVideos();
+    });
+})();

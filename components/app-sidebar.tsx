@@ -44,7 +44,7 @@ import { FadeIn } from "@/components/animation/fade-in"
 
 
 
-import { Embodied, E2EAD } from "@/components/app-drawer"
+// import { Embodied, E2EAD } from "@/components/app-drawer"
 
 
 
@@ -115,19 +115,45 @@ export function AppSidebar() {
     return (
         <FadeIn>
             <Sidebar>
+
+
+
+                {/* see header */}
                 <div className="fixed flex md:hidden flex-row gap-3 m-6 z-20 flex-wrap">
-                    <Button asChild className="bg-background text-foreground hover:bg-white group">
+                    {/* <Button asChild className="bg-background text-foreground hover:bg-white group">
                         <Link href="/" className="select-none">
                             <Image
                                 src="/resources/logo/OpenDriveLab/D.png"
                                 alt="OpenDriveLab"
                                 width={24}
                                 height={24}
-                            className="group-hover:scale-125 transition delay-100 duration-200"
+                                className="group-hover:scale-125 transition delay-100 duration-200"
+                            />
+                        </Link>
+                    </Button> */}
+                    <Button className="bg-background text-foreground hover:bg-white">
+                        <Link href="/" className="select-none">
+                            <Image
+                                src="/resources/logo/OpenDriveLab/D.png"
+                                alt="OpenDriveLab"
+                                width={24}
+                                height={24}
+                                className="hover:scale-125 transition delay-100 duration-200"
+                            />
+                        </Link>
+                        <div className="h-full min-w-0.5 bg-foreground/50 select-none" />
+                        <Link href="https://mmlab.hk/" target="_blank" className="select-none">
+                            <Image
+                                src="/resources/logo/OpenDriveLab/HKU_MMLAB.png"
+                                alt="OpenDriveLab"
+                                width={24}
+                                height={24}
+                                className="hover:scale-125 transition delay-100 duration-200"
                             />
                         </Link>
                     </Button>
                 </div>
+                
 
 
                 <div className="mt-24 overflow-y-scroll no-scrollbar">
@@ -156,6 +182,16 @@ export function AppSidebar() {
                                         </CollapsibleTrigger>
                                         <CollapsibleContent>
                                             <SidebarMenuSub>
+                                                <Link href="/EmbodiedAI"  className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
+                                                    Embodied AI
+                                                </Link> 
+                                                <Link href="/AutonomousDriving"  className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
+                                                    Autonomous Driving
+                                                </Link>
+                                            </SidebarMenuSub>
+                                        </CollapsibleContent>
+                                        {/* <CollapsibleContent>
+                                            <SidebarMenuSub>
                                                 <Drawer direction="top">
                                                     <DrawerTrigger asChild>
                                                         <div className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
@@ -173,7 +209,7 @@ export function AppSidebar() {
                                                     <E2EAD/>
                                                 </Drawer>
                                             </SidebarMenuSub>
-                                        </CollapsibleContent>
+                                        </CollapsibleContent> */}
                                     </SidebarMenuItem>
                                 </Collapsible>
 
@@ -206,9 +242,9 @@ export function AppSidebar() {
 
 
 
-                                <Link href="/datasets" className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
+                                {/* <Link href="/datasets" className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
                                     Dataset
-                                </Link>
+                                </Link> */}
                                 {/* <Collapsible className="group/collapsible flex flex-col gap-6">
                                     <SidebarMenuItem>
                                         <CollapsibleTrigger className="w-full flex flex-row justify-between items-center p-2 rounded-sm hover:bg-o-blue/3 select-none">
@@ -246,6 +282,27 @@ export function AppSidebar() {
                                                 <Link href="/events"  className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
                                                     more
                                                 </Link>
+                                            </SidebarMenuSub>
+                                        </CollapsibleContent>
+                                    </SidebarMenuItem>
+                                </Collapsible>
+
+
+
+                                <Collapsible className="group/collapsible flex flex-col gap-6" defaultOpen>
+                                    <SidebarMenuItem>
+                                        <CollapsibleTrigger className="w-full flex flex-row justify-between items-center p-2 rounded-sm hover:bg-o-blue/3 select-none">
+                                            Teaching
+                                            <ChevronDown className="size-4 transition-transform group-data-[state=closed]/collapsible:rotate-270 group-data-[state=open]/collapsible:rotate-0" />
+                                        </CollapsibleTrigger>
+                                        <CollapsibleContent>
+                                            <SidebarMenuSub>
+                                                {/* <Link href="/AP0001" className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
+                                                    SLAI AP0001
+                                                </Link>  */}
+                                                <Link href="https://mmlab.hk/CCAI9025" target="_blank" className="p-2 rounded-sm hover:bg-o-blue/3 select-none">
+                                                    HKU CCAI9025
+                                                </Link> 
                                             </SidebarMenuSub>
                                         </CollapsibleContent>
                                     </SidebarMenuItem>

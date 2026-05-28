@@ -98,7 +98,6 @@ export function AdvantageBarChart3() {
                             activeBar={({ ...props }) => <Rectangle {...props} fillOpacity={0.8} />}
                         >
                             <ErrorBar 
-                                stroke="white" 
                                 dataKey="SuccessRate_std" 
                                 direction="y" 
                             />

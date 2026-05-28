@@ -5,10 +5,10 @@ export const NavigatorPage: {
     }[]
 } = {
     "/": [
-        // {
-        //     text: "News",
-        //     id: "news",
-        // },
+        {
+            text: "News",
+            id: "news",
+        },
         {
             text: "Recruit",
             id: "recruit",
@@ -20,10 +20,6 @@ export const NavigatorPage: {
         {
             text: "Publication",
             id: "publication",
-        },
-        {
-            text: "Dataset",
-            id: "dataset",
         },
         {
             text: "Event",
@@ -50,6 +46,10 @@ export const NavigatorPage: {
         {
             text: "Alumni",
             id: "alumni",
+        },
+        {
+            text: "Recognition",
+            id: "recognition",
         },
     ],
     "/publications": [
@@ -125,5 +125,6 @@ export const NavigatorPage: {
         },
     ],
     "/embodiedai": [],
-    "/e2ead": [],
+    "/autonomousdriving": [],
+    "/team/recognition2025": [],
 };

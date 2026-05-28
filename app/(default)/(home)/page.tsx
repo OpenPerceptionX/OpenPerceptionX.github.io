@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = {
-    title: "OpenDriveLab | Robotics and Autonomous Driving at HKU, SII, and beyond",
+    title: "OpenDriveLab | Embodied AI and Autonomous Driving at HKU",
     description: "OpenDriveLab is committed to exploring cutting-edge embodied AI technology, launching a series of benchmarking work, open source to serve the community, and promote the common development of the industry. Friends who are committed to making influential research are welcome to join!",
-    keywords: ["OpenDriveLab", "Robotics", "Embodied AI", "Autonomous Driving", "HKU", "SII"],
+    keywords: ["OpenDriveLab", "Robotics", "Embodied AI", "Autonomous Driving", "HKU" ],
 };
 
 
@@ -25,7 +25,8 @@ import {
 
 import { Landing } from "./landing"
 import { News } from "./news"
-import { Embodied, E2EAD } from "@/components/app-drawer"
+// import { Embodied, E2EAD } from "@/components/app-drawer"
+import { Chen2025_value_learning } from "@/components/citation-drawer"
 
 
 
@@ -45,7 +46,7 @@ export default function Home() {
 
 
 
-            {/* <div className="w-full px-6 flex justify-center mt-24">
+            <div className="w-full px-6 flex justify-center mt-24">
                 <div className="w-full max-w-7xl flex">
                     <h2 className="text-t1"> 
                         <Link href="#news" className="scroll-mt-32 group flex items-center" id="news">
@@ -63,7 +64,7 @@ export default function Home() {
 
 
 
-            <News /> */}
+            <News />
 
 
 
@@ -117,7 +118,7 @@ export default function Home() {
             <div className="w-full px-6 flex justify-center mt-12">
                 <div className="w-full max-w-7xl flex flex-col gap-6 leading-relaxed">
                     <p>
-                        We are searching for talents from all over the world. Are you looking for opportunities? Don't hesitate to contact us via <Link className="text-o-blue animated-underline" href="mailto:contact@opendrivelab.com">contact@opendrivelab.com</Link> or <Link className="text-o-blue animated-underline" href="https://lihongyang.info" target="_blank">Dr. Hongyang Li</Link>.
+                        We are searching for talents from all over the world. Are you looking for opportunities? Don't hesitate to contact us via <Link className="text-o-blue animated-underline" href="mailto:recruit@opendrivelab.com">recruit@opendrivelab.com</Link> or <Link className="text-o-blue animated-underline" href="https://lihongyang.info" target="_blank">Dr. Hongyang Li</Link>.
                     </p>
                     <ul className="ml-6 space-y-3 list-outside list-disc">
                         <li>
@@ -156,7 +157,35 @@ export default function Home() {
             <div className="w-full px-6 flex justify-center mt-12">
                 <div className="w-full max-w-7xl grid gap-12 grid-cols-1 xl:grid-cols-2">
 
-                    <Drawer direction="top">
+                    <Link href='/EmbodiedAI' className="w-full h-64 md:h-80 relative rounded-sm shadow-sm overflow-hidden group hover:cursor-pointer">
+                        <Image
+                            src="/assets/background/50b9a68a4c9773f405f914c9b1d857398.jpg"
+                            alt="Embodied AI"
+                            fill
+                            className="object-center object-cover bg-gradient-landing group-hover:scale-103 transition delay-100 duration-200"
+                        />
+                        <div className="w-full h-full absolute flex flex-col justify-end items-end p-6">
+                            <h3 className="text-white font-bold text-t1 select-none text-end">
+                                Embodied AI
+                            </h3>
+                        </div>
+                    </Link>
+
+                    <Link href='/AutonomousDriving' className="w-full h-64 md:h-80 relative rounded-sm shadow-sm overflow-hidden group hover:cursor-pointer">
+                        <Image
+                            src="/assets/background/34dafb77s3a94a108af741cd955ac9ba2.jpg"
+                            alt="Autonomous Driving"
+                            fill
+                            className="object-center object-cover bg-gradient-landing group-hover:scale-103 transition delay-100 duration-200"
+                        />
+                        <div className="w-full h-full absolute flex flex-col justify-end items-end p-6">
+                            <h3 className="text-white font-bold text-t1 select-none text-end">
+                                Autonomous Driving
+                            </h3>
+                        </div>
+                    </Link>
+                    
+                    {/* <Drawer direction="top">
                         <DrawerTrigger asChild>
                             <div className="w-full h-64 md:h-80 relative rounded-sm shadow-sm overflow-hidden group hover:cursor-pointer">
                                 <Image
@@ -173,9 +202,9 @@ export default function Home() {
                             </div>
                         </DrawerTrigger>
                         <Embodied/>
-                    </Drawer>
+                    </Drawer> */}
 
-                    <Drawer direction="top">
+                    {/* <Drawer direction="top">
                         <DrawerTrigger asChild>
                             <div className="w-full h-64 md:h-80 relative rounded-sm shadow-sm overflow-hidden group hover:cursor-pointer">
                                 <Image
@@ -192,7 +221,7 @@ export default function Home() {
                             </div>
                         </DrawerTrigger>
                         <E2EAD/>
-                    </Drawer>
+                    </Drawer> */}
 
                 </div>
             </div>
@@ -301,17 +330,35 @@ export default function Home() {
                                 }
                                 {
                                     publication.icon.map((link) => (
-                                        link.type != 'github' &&
-                                        <Link href={link.link} target={link.link.startsWith('http') ? '_blank' : '_self'} key={link.type} className="size-4 md:size-5 group/icon">
-                                            <AspectRatio ratio={1/1}>
-                                                <Image
-                                                    src={"/resources/icon/" + link.type + ".svg"}
-                                                    alt={link.type}
-                                                    fill
-                                                    className="group-hover/icon:scale-125 transition delay-100 duration-200"
-                                                />
-                                            </AspectRatio>
-                                        </Link>
+                                        link.type != 'github' && (
+                                            link.type != 'cite' ?
+                                            <Link href={link.link} target={link.link.startsWith('http') ? '_blank' : '_self'} key={link.type} className="size-4 md:size-5 group/icon">
+                                                <AspectRatio ratio={1/1}>
+                                                    <Image
+                                                        src={"/resources/icon/" + link.type + ".svg"}
+                                                        alt={link.type}
+                                                        fill
+                                                        className="group-hover/icon:scale-125 transition delay-100 duration-200"
+                                                    />
+                                                </AspectRatio>
+                                            </Link>
+                                            :                                
+                                            <Drawer direction="top" key={link.type}>
+                                                <DrawerTrigger asChild>
+                                                    <div className="size-4 md:size-5 group/icon hover:cursor-pointer">
+                                                        <AspectRatio ratio={1/1}>
+                                                            <Image
+                                                                src={"/resources/icon/" + link.type + ".svg"}
+                                                                alt={link.type}
+                                                                fill
+                                                                className="group-hover/icon:scale-125 transition delay-100 duration-200"
+                                                            />
+                                                        </AspectRatio>
+                                                    </div>
+                                                </DrawerTrigger>
+                                                <Chen2025_value_learning />
+                                            </Drawer>
+                                        )
                                     ))
                                 }
                             </div>
@@ -325,7 +372,7 @@ export default function Home() {
 
 
 
-            <div className="w-full px-6 flex justify-center mt-36">
+            {/* <div className="w-full px-6 flex justify-center mt-36">
                 <div className="w-full max-w-7xl flex">
                     <div className="w-full flex justify-between items-center">
                         <h2 className="text-t1"> 
@@ -367,11 +414,11 @@ export default function Home() {
                         </Link>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
 
 
-            <div className="w-full px-6 flex justify-center mt-12">
+            {/* <div className="w-full px-6 flex justify-center mt-12">
                 <div className="w-full max-w-7xl flex flex-col gap-12">
 
                     <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 justify-between">
@@ -458,7 +505,7 @@ export default function Home() {
                     </div>
 
                 </div>
-            </div>
+            </div> */}
 
 
 

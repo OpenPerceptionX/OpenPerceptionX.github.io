@@ -15,6 +15,10 @@ import { AspectRatio } from "@/components/ui/aspect-ratio"
 
 
 
+import { ScheduleList } from "./schedule"
+
+
+
 const speakers: {
     name: string;
     image: string;
@@ -36,13 +40,13 @@ const speakers: {
         affiliation: 'Cambridge',
         link: 'https://contactrika.github.io/'
     },
-    {
-        name: "Edward Johns",
-        image: "/assets/person/edward_johns.jpg",
-        position: "Associate Professor",
-        affiliation: 'Imperial College London',
-        link: 'https://www.robot-learning.uk/'
-    },
+    // {
+    //     name: "Edward Johns",
+    //     image: "/assets/person/edward_johns.jpg",
+    //     position: "Associate Professor",
+    //     affiliation: 'Imperial College London',
+    //     link: 'https://www.robot-learning.uk/'
+    // },
     // {
     //     name: "Harold Soh",
     //     image: "/assets/person/harold_soh.jpg",
@@ -50,13 +54,13 @@ const speakers: {
     //     affiliation: 'National University of Singapore',
     //     link: 'https://haroldsoh.com/'
     // },
-    {
-        name: "Shuran Song",
-        image: "/assets/person/shuran_song.jpg",
-        position: "Assistant Professor",
-        affiliation: 'Stanford',
-        link: 'https://shurans.github.io/'
-    },
+    // {
+    //     name: "Shuran Song",
+    //     image: "/assets/person/shuran_song.jpg",
+    //     position: "Assistant Professor",
+    //     affiliation: 'Stanford',
+    //     link: 'https://shurans.github.io/'
+    // },
     {
         name: "Yilun Du",
         image: "/assets/person/yilun_du.jpg",
@@ -65,11 +69,11 @@ const speakers: {
         link: 'https://yilundu.github.io/'
     },
     {
-        name: "Angjoo Kanazawa",
-        image: "/assets/person/angjoo_kanazawa.jpg",
-        position: "Assistant Professor",
+        name: "Jiahui Lei",
+        image: "/assets/person/jiahui_lei.jpg",
+        position: "Postdoc",
         affiliation: 'UC Berkeley',
-        link: 'https://people.eecs.berkeley.edu/~kanazawa/'
+        link: 'https://jiahuilei.com/'
     },
     {
         name: "Jiatao Gu",
@@ -77,6 +81,13 @@ const speakers: {
         position: "Assistant Professor",
         affiliation: 'University of Pennsylvania',
         link: 'https://jiataogu.me/'
+    },
+    {
+        name: "Zhiyu Huang",
+        image: "https://ik.imagekit.io/opendrivelab/yuance/people/zhiyu_huang.jpg",
+        position: "Postdoc",
+        affiliation: 'UCLA',
+        link: 'https://mczhi.github.io/'
     },
 ];
 
@@ -88,14 +99,19 @@ const organizers: {
     link: string;
 }[] = [
     {
+        name: "Hongyang Li",
+        affiliation: 'The University of Hong Kong',
+        link: 'https://datascience.hku.hk/people/hongyang-li/'
+    },
+    {
         name: "Ping Luo",
-        affiliation: 'University of Hong Kong',
+        affiliation: 'The University of Hong Kong',
         link: 'http://luoping.me/'
     },
     {
-        name: "Hongyang Li",
-        affiliation: 'University of Hong Kong',
-        link: 'https://datascience.hku.hk/people/hongyang-li/'
+        name: "Hao Zhao",
+        affiliation: 'Tsinghua University',
+        link: 'https://sites.google.com/view/fromandto/'
     },
     {
         name: "Andrei Bursuc",
@@ -122,6 +138,11 @@ const organizers: {
         affiliation: 'OpenDriveLab',
         link: 'https://faikit.github.io/'
     },
+    {
+        name: "Haochen Tian",
+        affiliation: 'OpenDriveLab',
+        link: 'https://scholar.google.com/citations?user=DoyuNwEAAAAJ'
+    }
 ];
 
 
@@ -171,7 +192,7 @@ export default function Home() {
             <div className="w-full h-svh py-16 px-6 3xl:px-16">   
                 <div className="w-full h-full relative rounded-sm">
                     <Image
-                        src='/assets/background/denver.jpg'
+                        src='https://ik.imagekit.io/opendrivelab/nils-huenerfuerst-OVE2SA0TVJE-unsplash.jpg?updatedAt=1761792013763'
                         alt='Denver'
                         fill
                         className='object-center object-cover bg-gradient-landing rounded-sm bg-black bg-opacity-30 bg-blend-overlay select-none'
@@ -199,7 +220,7 @@ export default function Home() {
                         <h5 className="text-white">
                             CVPR 2026 Workshop
                             <br></br>
-                            Denver, USA
+                            2A-2D, June 03, Denver, USA
                         </h5>
                     </div>
                 </div>
@@ -228,13 +249,182 @@ export default function Home() {
             <div className="w-full px-6 flex justify-center mt-12">
                 <div className="w-full max-w-7xl flex flex-col gap-3">
                     <p className="leading-relaxed">
-                        Embodied intelligence brings us closer to creating robots that can truly see, think, and act in the real world. Yet, today’s systems remain fragile, struggling to handle the complexity of the real world. This workshop looks ahead - toward generalizable embodied intelligence that thrives beyond the lab. By gathering pioneers from vision and robotics, the workshop seeks to identify key challenges, discuss interdisciplinary solutions, and chart promising directions for advancing embodied systems to everyday life.
+                        Embodied intelligence brings us closer to creating robots that can truly see, think, and act in the real world. Yet, today's systems remain fragile, struggling to handle the complexity of the real world. This workshop looks ahead - toward generalizable embodied intelligence that thrives beyond the lab. By gathering pioneers from vision and robotics, the workshop seeks to identify key challenges, discuss interdisciplinary solutions, and chart promising directions for advancing embodied systems to everyday life.
                     </p>
                     <p className="leading-relaxed">
-                        If you are interested in our workshop, please <b>mark the workshop in your CVPR registration</b>, to have enough space for the workshop room.
+                        If you are interested in our workshop, please <span className="underline">mark the workshop in your CVPR registration</span>, to have enough space for the workshop room.
                     </p>
+                    <div className="mt-6">
+                        <img src="/assets/icon/discord.png" className="size-8 inline-block mr-2"/>
+                        <span>
+                            <Link href="https://discord.gg/pS74Qcp2SX" target="_blank" className="text-o-blue animated-underline">
+                                Join Discord
+                            </Link>
+                            <span>&nbsp;</span>to chat with the organizers.
+                        </span>
+                    </div>
                 </div>
             </div>
+
+
+
+            <div className="w-full px-6 flex justify-center mt-24">
+                <div className="w-full max-w-7xl flex">
+                    <h2 className="text-t1"> 
+                        <Link href="#contribution" className="scroll-mt-32 group flex items-center" id="contribution">
+                            Call for Contributions
+                            <span className="ml-6 hidden group-hover:inline-block size-6 text-foreground">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M15.197 3.35462C16.8703 1.67483 19.4476 1.53865 20.9536 3.05046C22.4596 4.56228 22.3239 7.14956 20.6506 8.82935L18.2268 11.2626M10.0464 14C8.54044 12.4882 8.67609 9.90087 10.3494 8.22108L12.5 6.06212" strokeWidth="2.5" strokeLinecap="round"/>
+                                    <path d="M13.9536 10C15.4596 11.5118 15.3239 14.0991 13.6506 15.7789L11.2268 18.2121L8.80299 20.6454C7.12969 22.3252 4.55237 22.4613 3.0464 20.9495C1.54043 19.4377 1.67609 16.8504 3.34939 15.1706L5.77323 12.7373" strokeWidth="2.5" strokeLinecap="round"/>
+                                </svg>
+                            </span>
+                        </Link>
+                    </h2>
+                </div>
+            </div>
+
+            <div className="w-full px-6 flex justify-center mt-12">
+                <div className="w-full max-w-7xl flex flex-col">
+                    <h3 className="text-xl font-bold">
+                        Topics of Interest
+                    </h3>
+                </div>
+            </div>
+            <div className="w-full px-6 flex justify-center mt-6">
+                <div className="w-full max-w-7xl flex flex-col gap-3">
+                    <p>
+                        We welcome works on a wide range of topics, including but not limited to:
+                    </p>
+                    <ul className="ml-6 space-y-3 list-outside list-disc">
+                        <li>
+                            Visual generalization for embodied systems, including manipulation, locomotion, etc.
+                        </li>
+                        <li>
+                            Vision-based perception and understanding.
+                        </li>
+                        <li>
+                            Generalization, robustness, and safety in real-world settings.
+                        </li>
+                        <li>
+                            Cross-embodiment transfer and hardware-agnostic policies.
+                        </li>
+                        <li>
+                            Real-world deployment of embodied agents.
+                        </li>
+                        <li>
+                            Benchmarking and evaluating embodied intelligence in the wild.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div className="w-full px-6 flex justify-center mt-12">
+                <div className="w-full max-w-7xl flex flex-col">
+                    <h3 className="text-xl font-bold">
+                        Guidelines
+                    </h3>
+                </div>
+            </div>
+            <div className="w-full px-6 flex justify-center mt-6">
+                <div className="w-full max-w-7xl flex flex-col gap-3">
+                    <ul className="ml-6 space-y-3 list-outside list-disc">
+                        <li>All papers must be submitted through&nbsp;
+                            <Link href="https://openreview.net/group?id=thecvf.com/CVPR/2026/Workshop/EmbodiedAIinLife" target="_blank" className="text-o-blue animated-underline">
+                                OpenReview
+                            </Link>.
+                        </li>
+                        <li>
+                            Submissions must strictly adhere to the&nbsp;
+                            <Link href="https://cvpr.thecvf.com/Conferences/2026/AuthorGuidelines" target="_blank" className="text-o-blue animated-underline">
+                                CVPR 2026 Author Guidelines
+                            </Link> 
+                            &nbsp;in terms of potential ethics issues and potential risks of negative social impacts.
+                        </li>
+                        <li>
+                            Manuscripts are limited to eight pages (excluding references) using the&nbsp;
+                            <Link href="https://github.com/cvpr-org/author-kit/archive/refs/tags/CVPR2026-v1(latex).zip" target="_blank" className="text-o-blue animated-underline">
+                                CVPR 2026 submission template
+                            </Link>.
+                        </li>
+                        <li>
+                            To facilitate double-blind review, all manuscripts must be fully anonymized.
+                        </li>
+                        <li>
+                            Accepted papers will be formally published in the CVPR 2026 Workshop Proceedings.
+                        </li>
+                        <li>
+                            Exceptional submissions will be considered for Best Paper Award and Spotlight Presentations.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div className="w-full px-6 flex justify-center mt-12">
+                <div className="w-full max-w-7xl flex flex-col">
+                    <h3 className="text-xl font-bold">
+                        Timeline
+                    </h3>
+                </div>
+            </div>
+            <div className="w-full px-6 flex justify-center mt-6">
+                <div className="w-full max-w-7xl flex flex-col gap-3">
+                    <p>
+                        For any potential ambiguities, please refer to OpenReview.
+                    </p>
+                    <ul className="ml-6 space-y-3 list-outside list-disc">
+                        <li>
+                            Submission start: February 10, 2026
+                        </li><li>
+                            Submission end: March 10, 2026
+                        </li><li>
+                            Notification: March 21, 2026
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+            {/* <div className="w-full px-6 flex justify-center mt-24">
+                <div className="w-full max-w-7xl flex">
+                    <h2 className="text-t1"> 
+                        <Link href="#challenge" className="scroll-mt-32 group flex items-center" id="challenge">
+                            Challenge
+                            <span className="ml-6 hidden group-hover:inline-block size-6 text-foreground">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M15.197 3.35462C16.8703 1.67483 19.4476 1.53865 20.9536 3.05046C22.4596 4.56228 22.3239 7.14956 20.6506 8.82935L18.2268 11.2626M10.0464 14C8.54044 12.4882 8.67609 9.90087 10.3494 8.22108L12.5 6.06212" strokeWidth="2.5" strokeLinecap="round"/>
+                                    <path d="M13.9536 10C15.4596 11.5118 15.3239 14.0991 13.6506 15.7789L11.2268 18.2121L8.80299 20.6454C7.12969 22.3252 4.55237 22.4613 3.0464 20.9495C1.54043 19.4377 1.67609 16.8504 3.34939 15.1706L5.77323 12.7373" strokeWidth="2.5" strokeLinecap="round"/>
+                                </svg>
+                            </span>
+                        </Link>
+                    </h2>
+                </div>
+            </div>
+            <div className="w-full px-6 flex justify-center mt-12">
+                <div className="w-full max-w-7xl">
+                    <div className="flex flex-col xl:flex-row gap-6 xl:items-center">
+                        <Link className="xl:flex-1 w-full h-64 md:h-80 relative rounded-sm shadow-sm overflow-hidden group" href="/challenge2026">
+                            <Image
+                                src="https://ik.imagekit.io/opendrivelab/Modify_the_left_human_hand_to_become_an_abstract_e-1770009757382.jpg?updatedAt=1770010027998"
+                                alt="cover"
+                                fill
+                                className="object-center object-cover bg-gradient-landing group-hover:scale-103 transition delay-100 duration-200"
+                            />
+                        </Link>
+                        <div className="flex-1 flex flex-col gap-3">
+                            <h2 className="text-xl font-bold">
+                                <Link href="/challenge2026/" className="text-o-blue animated-underline">
+                                    Autonomous Grand Challenge 2026
+                                </Link>
+                            </h2>
+                            <p>
+                                To be released.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div> */}
 
 
 
@@ -254,8 +444,8 @@ export default function Home() {
                 </div>
             </div>
             <div className="w-full px-6 flex justify-center mt-12">
-                <div className="w-full max-w-7xl flex">
-                    To be announced.
+                <div className="w-full max-w-7xl">
+                    <ScheduleList/>
                 </div>
             </div>
 

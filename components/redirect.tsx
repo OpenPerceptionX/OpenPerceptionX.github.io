@@ -29,12 +29,6 @@ export default function Redirect() {
         redirect('/recruit')
     }
     if (
-        pathname.toLowerCase().startsWith('/dataset') || 
-        pathname.toLowerCase().startsWith('/project')
-    ) {
-        redirect('/datasets')
-    }
-    if (
         pathname.toLowerCase() == '/event' || 
         pathname.toLowerCase() == '/event/' ||
         pathname.toLowerCase().startsWith('/events')
@@ -47,9 +41,9 @@ export default function Redirect() {
         redirect('/EmbodiedAI')
     }
     if (
-        pathname.toLowerCase().startsWith('/e2ead')
+        pathname.toLowerCase().startsWith('/autonomousdriving')
     ) {
-        redirect('/E2EAD')
+        redirect('/AutonomousDriving')
     }
 
 
@@ -98,15 +92,15 @@ export default function Redirect() {
         redirect('/RoboDual/')
     }
     if (
-        pathname.toLowerCase().startsWith('/freetacman')
-        // pathname.toLowerCase().startsWith('/blog/freetacman')
+        pathname.toLowerCase().startsWith('/freetacman') ||
+        pathname.toLowerCase().startsWith('/blog/freetacman')
     ) {
-        redirect('/FreeTacMan')
+        redirect('/FreeTacMan/')
     }
     if (
         pathname.toLowerCase().startsWith('/resim')
     ) {
-        redirect('/ReSim')
+        redirect('/ReSim/')
     }
     if (
         pathname.toLowerCase().startsWith('/elm')
@@ -116,43 +110,108 @@ export default function Redirect() {
     if (
         pathname.toLowerCase().startsWith('/ams')
     ) {
-        redirect('/AMS')
+        redirect('/AMS/')
     }
     if (
         pathname.toLowerCase().startsWith('/wholebodyvla')
     ) {
-        redirect('/WholeBodyVLA')
+        redirect('/WholeBodyVLA/')
     }
     if (
         pathname.toLowerCase().startsWith('/omega')
     ) {
-        redirect('/OMEGA')
-    }
-    if (
-        pathname.toLowerCase().startsWith('/kai0')
-    ) {
-        redirect('/kai0')
+        redirect('/OMEGA/')
     }
     if (
         pathname.toLowerCase().startsWith('/simscale')
     ) {
         redirect('/SimScale/')
     }
+    if (
+        pathname.toLowerCase().startsWith('/opengo1')
+    ) {
+        redirect('/OpenGO1/')
+    }
+    if (
+        pathname.toLowerCase().startsWith('/plannerrft')
+    ) {
+        redirect('/PlannerRFT/')
+    }
+    if (
+        pathname.toLowerCase().startsWith('/smash')
+    ) {
+        redirect('https://mmlab.hk/Smash/')
+    }
+    if (
+        pathname.toLowerCase().startsWith('/tamen')
+    ) {
+        redirect('/TAMEn/')
+    }
+    if (
+        pathname.toLowerCase().startsWith('/worldengine')
+    ) {
+        redirect('/WorldEngine/')
+    }
 
+    // kai
+    if (
+        pathname.toLowerCase().startsWith('/kai0')
+    ) {
+        if (
+            pathname.toLowerCase().startsWith('/kai0rl')
+            || pathname.toLowerCase().startsWith('/kai0-rl')
+        ) {
+            redirect('/RISE/')
+        } else {
+            redirect('/kai0/')
+        }
+    }
+    if (
+        pathname.toLowerCase().startsWith('/rise/')
+    ) {
+        redirect('/RISE/')
+    }
+    if (
+        pathname.toLowerCase().startsWith('/foldanything')
+    ) {
+        redirect('/kai0/')
+    }
+    if (
+        pathname.toLowerCase().startsWith('/egohumanoid')
+        || pathname.toLowerCase().startsWith('/kaidata')
+    ) {
+        redirect('/EgoHumanoid/')
+    }
+    if (
+        pathname.toLowerCase().startsWith('/sparsevideonav')
+        || pathname.toLowerCase().startsWith('/mm-videonav')
+    ) {
+        redirect('/SparseVideoNav/')
+    }
+    if (
+        pathname.toLowerCase().startsWith('/mm-hand')
+    ) {
+        redirect('https://mmlab.hk/research/MM-Hand')
+    }
 
 
 
     // event 2025
     if (
+        pathname.toLowerCase().startsWith('/rss2026')
+    ) {
+        redirect('/rss2026/workshop/')
+    }
+    if (
+        pathname.toLowerCase().startsWith('/cvpr2026')
+    ) {
+        redirect('/cvpr2026/workshop/')
+    }
+    if (
         pathname.toLowerCase() == '/cvpr2025' ||
         pathname.toLowerCase() == '/cvpr2025/'
     ) {
         redirect('/cvpr2025/')
-    }
-    if (
-        pathname.toLowerCase().startsWith('/cvpr2026/workshop')
-    ) {
-        redirect('/cvpr2026/workshop/')
     }
     if (
         pathname.toLowerCase().startsWith('/cvpr2025/workshop')
@@ -221,27 +280,27 @@ export default function Redirect() {
 
     // event 2023
     if (
-        pathname.toLowerCase().startsWith('/AD23Challenge') || 
+        pathname.startsWith('/AD23Challenge') || 
         pathname.toLowerCase().startsWith('/challenge2023')
     ) {
         redirect('/challenge2023/')
     }
     if (
-        pathname.toLowerCase().startsWith('/event/iclr23_ADworkshop') || 
+        pathname.startsWith('/event/iclr23_ADworkshop') || 
         pathname.toLowerCase().startsWith('/sr4ad/iclr23') || 
         pathname.toLowerCase().startsWith('/iclr2023')
     ) {
         redirect('/iclr2023/workshop/')
     }
     if (
-        pathname.toLowerCase().startsWith('/event/cvpr23_ADworkshop') ||
+        pathname.startsWith('/event/cvpr23_ADworkshop') ||
         pathname.toLowerCase().startsWith('/e2ead/cvpr23') ||
         pathname.toLowerCase().startsWith('/cvpr2023')
     ) {
         redirect('/cvpr2023/workshop/')
     }
     if (
-        pathname.toLowerCase().startsWith('/e2ead/cvpr23_CN') || 
+        pathname.startsWith('/e2ead/cvpr23_CN') || 
         pathname.toLowerCase().startsWith('/event2023')
     ) {
         redirect('/event2023/')
@@ -249,6 +308,15 @@ export default function Redirect() {
 
 
 
+    // teaching
+    // if (
+    //     pathname.toLowerCase().startsWith('/ap0001') 
+    // ) {
+    //     redirect('/AP0001')
+    // }
+
+
+    
     // misc.
     if (
         pathname.toLowerCase().startsWith('/lihongyang')
@@ -275,7 +343,11 @@ export default function Redirect() {
     ) {
         redirect('/assets/file/ICCV23_oral_DriveAdapter.pdf')
     }
-
+    if (
+        pathname == '/RISE.pdf'
+    ) {
+        redirect('https://arxiv.org/abs/2602.11075')
+    }
 
 
     redirect('/')

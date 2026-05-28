@@ -26,6 +26,28 @@ export const NavigatorProject: {
             id: "user-study",
         },
     ],
+    "/tamen": [
+        {
+            text: "Highlights",
+            id: "highlights",
+        },
+        {
+            text: "3D Model",
+            id: "model",
+        },
+        {
+            text: "Applications",
+            id: "applications",
+        },
+        {
+            text: "Policy Rollouts",
+            id: "policy-rollouts",
+        },
+        {
+            text: "User study",
+            id: "user-study",
+        },
+    ],
     "/resim": [
         {
             text: "Overview",
@@ -54,6 +76,14 @@ export const NavigatorProject: {
             id: "introduction",
         },
         {
+            text: "Contribution",
+            id: "contribution",
+        },
+        // {
+        //     text: "Challenge",
+        //     id: "challenge",
+        // },
+        {
             text: "Schedule",
             id: "schedule",
         },
@@ -64,6 +94,46 @@ export const NavigatorProject: {
         {
             text: "Organizers",
             id: "organizer",
+        },
+        {
+            text: "Past Editions",
+            id: "edition",
+        },
+    ],
+    "/rss2026/workshop": [
+        {
+            text: "Introduction",
+            id: "introduction",
+        },
+        {
+            text: "Contribution",
+            id: "contribution",
+        },
+        {
+            text: "Schedule",
+            id: "schedule",
+        },
+        {
+            text: "Speakers",
+            id: "speaker",
+        },
+        {
+            text: "Organizers",
+            id: "organizer",
+        },
+        {
+            text: "Related Workshops",
+            id: "related",
+        },
+    ],
+    "/challenge2026": [
+        {
+            text: "Track",
+            id: "track",
+        },
+        {
+            text: "Schedule",
+            id: "schedule",
         },
         {
             text: "Past Editions",
@@ -86,6 +156,37 @@ export const NavigatorProject: {
         {
             text: "Citation",
             id: "citation",
+        },
+    ],
+    "/ap0001": [
+        {
+            text: "Description",
+            id: "description",
+        },
+        {
+            text: "Course Logistics",
+            id: "course-logistics",
+        },
+
+        {
+            text: "Schedule",
+            id: "schedule",
+        },
+        {
+            text: "Staff",
+            id: "instructor",
+        },
+        {
+            text: "CourseWork",
+            id: "grading-policy",
+        },
+        {
+            text: "Prerequisite",
+            id: "prerequisite",
+        },
+        {
+            text: "Materials",
+            id: "textbook-and-references",
         },
     ],
 };
