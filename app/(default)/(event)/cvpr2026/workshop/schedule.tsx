@@ -75,7 +75,7 @@ const scheduleItems: {
         nameLink: "https://cseweb.ucsd.edu/~haosu/",
         affiliation: "UC San Diego, USA",
         affiliationLogo: "/assets/brand/ucsd.svg",
-        title: "TBD",
+        title: "The Illusion of Physical Understanding",
         recordings: {
             youtube: "",
             bilibili: "",
