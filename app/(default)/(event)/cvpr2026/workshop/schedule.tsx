@@ -72,9 +72,9 @@ const scheduleItems: {
         type: "talk",
         time: "2026-06-03T23:10:00",
         name: "Hao Su",
-        nameLink: "https://cseweb.ucsd.edu/~haosu/",
-        affiliation: "UC San Diego, USA",
-        affiliationLogo: "/assets/brand/ucsd.svg",
+        nameLink: "https://www.haosu.ai/",
+        affiliation: "Fudan University, China",
+        affiliationLogo: "/assets/brand/fudan_s.png",
         title: "The Illusion of Physical Understanding",
         recordings: {
             youtube: "",

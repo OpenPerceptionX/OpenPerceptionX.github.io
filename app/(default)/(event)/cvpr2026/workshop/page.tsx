@@ -29,9 +29,9 @@ const speakers: {
     {
         name: "Hao Su",
         image: "/assets/person/hao_su.jpg",
-        position: "Associate Professor",
-        affiliation: 'UC San Diego',
-        link: 'https://cseweb.ucsd.edu/~haosu/'
+        position: "Professor",
+        affiliation: 'Fudan University',
+        link: 'https://www.haosu.ai/'
     },
     {
         name: "Rika Antonova",
