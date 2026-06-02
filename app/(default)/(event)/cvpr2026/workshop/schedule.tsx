@@ -59,9 +59,9 @@ const scheduleItems: {
     {
         type: "talk",
         time: "2026-06-03T23:00:00",
-        name: "Hongyang Li",
-        nameLink: "https://lihongyang.info/",
-        affiliation: "HKU, China",
+        name: "Haochen Tian",
+        nameLink: "https://scholar.google.com/citations?user=DoyuNwEAAAAJ",
+        affiliation: "OpenDriveLab, China",
         title: "Opening Remarks",
         recordings: {
             youtube: "",
