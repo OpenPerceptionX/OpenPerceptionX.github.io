@@ -220,7 +220,7 @@ export default function Home() {
                         <h5 className="text-white">
                             CVPR 2026 Workshop
                             <br></br>
-                            2A-2D, June 03, Denver, USA
+                            Four Seasons 1, June 03, Denver, USA
                         </h5>
                     </div>
                 </div>
