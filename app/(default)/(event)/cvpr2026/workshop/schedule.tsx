@@ -190,7 +190,7 @@ const scheduleItems: {
         nameLink: "https://jiataogu.me/",
         affiliation: "UPenn, USA",
         affiliationLogo: "/assets/brand/UPenn.png",
-        title: "TBD",
+        title: "Should Embodied Intelligence Care About 3D?",
         recordings: {
             youtube: "",
             bilibili: "",
