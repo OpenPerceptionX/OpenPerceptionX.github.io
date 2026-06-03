@@ -58,7 +58,7 @@ const scheduleItems: {
 }[] = [
     {
         type: "talk",
-        time: "2026-06-03T23:00:00",
+        time: "9:00 AM",
         name: "Haochen Tian",
         nameLink: "https://scholar.google.com/citations?user=DoyuNwEAAAAJ",
         affiliation: "OpenDriveLab, China",
@@ -70,7 +70,7 @@ const scheduleItems: {
     },
     {
         type: "talk",
-        time: "2026-06-03T23:10:00",
+        time: "9:10 AM",
         name: "Hao Su",
         nameLink: "https://www.haosu.ai/",
         affiliation: "Fudan University, China",
@@ -85,7 +85,7 @@ const scheduleItems: {
     },
     {
         type: "talk",
-        time: "2026-06-04T00:00:00",
+        time: "10:00 AM",
         name: "Spotlights Presentaion",
         title: "Accepted Paper Authors",
         recordings: {
@@ -95,12 +95,12 @@ const scheduleItems: {
     },
     {
         type: "break",
-        time: "2026-06-04T00:20:00",
+        time: "10:20 AM",
         title: "Coffee Break",
     },
     {
         type: "talk",
-        time: "2026-06-04T00:30:00",
+        time: "10:30 AM",
         name: "Zhiyu Huang",
         nameLink: "https://mczhi.github.io/",
         affiliation: "UCLA, USA",
@@ -115,7 +115,7 @@ const scheduleItems: {
     },
     {
         type: "talk",
-        time: "2026-06-04T01:20:00",
+        time: "11:20 AM",
         name: "Jiahui Lei",
         nameLink: "https://jiahuilei.com/",
         affiliation: "UC Berkeley, USA",
@@ -130,7 +130,7 @@ const scheduleItems: {
     },
     {
         type: "break",
-        time: "2026-06-04T02:10:00",
+        time: "12:10 PM",
         title: "Lunch Break",
     },
     // {
@@ -150,7 +150,7 @@ const scheduleItems: {
     // },
     {
         type: "talk",
-        time: "2026-06-04T03:50:00",
+        time: "1:50 PM",
         name: "Yilun Du",
         nameLink: "https://yilundu.github.io/",
         affiliation: "Harvard, USA",
@@ -165,12 +165,12 @@ const scheduleItems: {
     },
     {
         type: "break",
-        time: "2026-06-04T04:40:00",
+        time: "2:40 PM",
         title: "Coffee Break",
     },
     {
         type: "talk",
-        time: "2026-06-04T04:50:00",
+        time: "2:50 PM",
         name: "Rika Antonova",
         nameLink: "https://contactrika.github.io/",
         affiliation: "Cambridge, UK",
@@ -185,7 +185,7 @@ const scheduleItems: {
     },
     {
         type: "talk",
-        time: "2026-06-04T05:40:00",
+        time: "3:40 PM",
         name: "Jiatao Gu",
         nameLink: "https://jiataogu.me/",
         affiliation: "UPenn, USA",
@@ -200,12 +200,12 @@ const scheduleItems: {
     },
     {
         type: "panel",
-        time: "2026-06-04T06:30:00",
+        time: "4:30 PM",
         title: "Debate",
     },
     {
         type: "closing",
-        time: "2026-06-04T07:30:00",
+        time: "5:30 PM",
         title: "Closing Remarks",
     },
 ];
@@ -351,7 +351,8 @@ export function ScheduleList() {
 
                                             {/* ── Time display ── */}
                                             <span className={`text-sm tabular-nums shrink-0 ml-4${isBreakType(item.type) ? " text-o-gray" : ""}`}>
-                                                {formatTime(item.time, tz.offset)}
+                                                {/* {formatTime(item.time, tz.offset)} */}
+                                                {item.time}
                                             </span>
                                         </div>
 
