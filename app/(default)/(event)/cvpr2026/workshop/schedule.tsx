@@ -274,7 +274,8 @@ function ScheduleAvatar({ item }: { item: typeof scheduleItems[0] }) {
 
 export function ScheduleList() {
     // Default to UTC-5 / Nashville (index 7)
-    const [tzIndex, setTzIndex] = useState(6);
+    // const [tzIndex, setTzIndex] = useState(6);
+    const tzIndex = 6;
     const tz = timezones[tzIndex];
     const isBreakType = (type: ScheduleItemType) => type === "break";
 
@@ -282,7 +283,7 @@ export function ScheduleList() {
         <div className="max-w-wider">
 
             {/* ── Timezone selector ── */}
-            <div className="flex items-center gap-4 mb-8 text-sm">
+            {/* <div className="flex items-center gap-4 mb-8 text-sm">
                 <span className="text-o-gray">Time zone:</span>
                 <select
                     value={tzIndex}
@@ -295,7 +296,7 @@ export function ScheduleList() {
                         </option>
                     ))}
                 </select>
-            </div>
+            </div> */}
 
             <ul>
                 {scheduleItems.map((item, index) => {
