@@ -17,18 +17,6 @@ document.querySelectorAll("[data-copy-target]").forEach((button) => {
   });
 });
 
-// Video loading state
-document.querySelectorAll(".hero-bg, .reel-frame video, .video-card video, .video-mini video").forEach((video) => {
-  const frame = video.closest(".hero, .reel-frame, .video-card, .video-mini");
-  if (!frame) return;
-  const setReady = () => frame.classList.remove("is-video-loading");
-
-  frame.classList.add("is-video-loading");
-  video.addEventListener("loadeddata", setReady, { once: true });
-  video.addEventListener("playing", setReady, { once: true });
-  if (video.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA) setReady();
-});
-
 // Top navigation: active section + scroll progress
 (function () {
   const topnav = document.querySelector(".topnav");
