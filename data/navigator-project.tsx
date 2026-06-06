@@ -126,6 +126,16 @@ export const NavigatorProject: {
             id: "related",
         },
     ],
+    "/neurips2026/workshop": [
+        {
+            text: "Introduction",
+            id: "introduction",
+        },
+        {
+            text: "Speakers",
+            id: "speaker",
+        },
+    ],
     "/challenge2026": [
         {
             text: "Track",

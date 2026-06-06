@@ -198,6 +198,11 @@ export default function Redirect() {
 
     // event 2025
     if (
+        pathname.toLowerCase().startsWith('/neurips2026')
+    ) {
+        redirect('/neurips2026/workshop/')
+    }
+    if (
         pathname.toLowerCase().startsWith('/rss2026')
     ) {
         redirect('/rss2026/workshop/')
