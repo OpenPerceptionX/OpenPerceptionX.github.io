@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="title" content="RoboNaldo: Accurate, Stable and Powerful Humanoid Soccer Shooting">
+  <meta name="description" content="RoboNaldo — motion-guided curriculum RL for accurate, stable, powerful humanoid soccer shooting on a Unitree G1.">
+  <meta name="keywords" content="RoboNaldo, humanoid soccer, reinforcement learning, sim-to-real, whole-body control, OpenDriveLab, HKU">
+  <meta name="author" content="Yichao Zhong, Yidan Lu, Yuhang Lu, Tianyang Tang, Haoguang Mai, Yixuan Pan, Tianyu Li, Li Chen, Jingbo Wang, Zhongyu Li, Peng Lu, Hongyang Li">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="RoboNaldo: Accurate, Stable and Powerful Humanoid Soccer Shooting">
+  <meta property="og:description" content="Motion-guided curriculum RL for accurate, powerful humanoid soccer shooting on Unitree G1.">
+  <meta property="og:image" content="https://ik.imagekit.io/lwzdfij3h/images/social-preview.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>RoboNaldo | Humanoid Soccer Shooting</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%BD%3C/text%3E%3C/svg%3E">
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800;9..144,900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"> -->
+  <script>
+    /* Platform tagging — used by CSS to tone-down HDR videos on non-Apple
+       (Linux/Windows/Android) browsers where iPhone HDR clips render with
+       over-saturated, washed-out colors. */
+    (function () {
+      try {
+        var ua = navigator.userAgent || "";
+        var plat = (navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || "";
+        var isApple = /Mac|iPhone|iPad|iPod/i.test(plat) || /Macintosh|iPhone|iPad|iPod/i.test(ua);
+        var html = document.documentElement;
+        if (isApple) html.classList.add("plat-apple");
+        else html.classList.add("plat-non-apple");
+        if (/Android/i.test(ua)) html.classList.add("plat-android");
+        if (/Linux/i.test(plat) && !/Android/i.test(ua)) html.classList.add("plat-linux");
+        if (/Win/i.test(plat)) html.classList.add("plat-win");
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="static/css/index.css">
+</head>
+<body>
+  <div class="top-progress" aria-hidden="true"><span class="top-progress-bar"></span></div>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <a href="https://opendrivelab.com" target="_blank" rel="noopener" class="logo-link" aria-label="OpenDriveLab">
+          <img src="https://ik.imagekit.io/lwzdfij3h/images/logos/opendrivelab.png" alt="OpenDriveLab" class="logo-odl">
+        </a>
+        <span class="brand-sep">·</span>
+        <a href="#top" class="brand-title"><span class="brand-emoji" aria-hidden="true">⚽</span>RoboNaldo</a>
+      </div>
+      <nav class="topnav" aria-label="Section navigation">
+        <a href="#top" data-target="top">Introduction</a>
+        <a href="#highlights" data-target="highlights">Highlights</a>
+        <a href="#overview" data-target="overview">Overview</a>
+        <a href="#experiments" data-target="experiments">Experiments</a>
+        <a href="#results" data-target="results">Results</a>
+        <a href="#abstract" data-target="abstract">Abstract</a>
+        <a href="#bibtex" data-target="bibtex">BibTeX</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="top">
+    <video class="hero-bg" autoplay muted loop playsinline preload="auto" poster="https://ik.imagekit.io/lwzdfij3h/images/loader-spinner.svg">
+      <source src="https://ik.imagekit.io/lwzdfij3h/videos/roboNaldo-web-teaser.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="paper-title">
+        <span class="brand-name">RoboNaldo</span><span class="colon">:</span>
+        Accurate, Stable and Powerful Humanoid Soccer Shooting
+        <span class="title-sub">via Motion-Guided Curriculum Reinforcement Learning</span>
+      </h1>
+
+      <nav class="hero-links" aria-label="Paper resources">
+        <span class="hero-link is-soon" data-todo="paper-pdf" aria-disabled="true">
+          <svg class="hero-link-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <path d="M14 2v6h6"/>
+            <path d="M9 13h6M9 17h6M9 9h2"/>
+          </svg>
+          <span>Paper</span>
+          <em class="hero-link-soon">soon</em>
+        </span>
+        <span class="hero-link is-soon" data-todo="arxiv-url" aria-disabled="true">
+          <svg class="hero-link-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 4h16v16H4z"/>
+            <path d="M8 8l8 8M16 8l-8 8"/>
+          </svg>
+          <span>arXiv</span>
+          <em class="hero-link-soon">soon</em>
+        </span>
+        <span class="hero-link is-soon" data-todo="github-url" aria-disabled="true">
+          <svg class="hero-link-ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 .5a11.5 11.5 0 0 0-3.64 22.42c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.39-3.88-1.39-.53-1.35-1.3-1.71-1.3-1.71-1.07-.73.08-.72.08-.72 1.18.08 1.8 1.21 1.8 1.21 1.05 1.8 2.76 1.28 3.43.98.1-.77.41-1.28.74-1.58-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.04 11.04 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.18 1.83 1.18 3.09 0 4.42-2.69 5.39-5.25 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.66.8.55A11.5 11.5 0 0 0 12 .5z"/>
+          </svg>
+          <span>Code</span>
+          <em class="hero-link-soon">soon</em>
+        </span>
+        <span class="hero-link is-soon" data-todo="youtube-url" aria-disabled="true">
+          <svg class="hero-link-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 8a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h12a4 4 0 0 0 4-4z"/>
+            <path d="M10 9l5 3-5 3z" fill="currentColor"/>
+          </svg>
+          <span>YouTube</span>
+          <em class="hero-link-soon">soon</em>
+        </span>
+      </nav>
+
+      <p class="one-liner">World's first less-than-1-meter-level accurate humanoid soccer shooting policy in general cases.<br> Single human reference, learn to track, then deviate and adapt.</p>
+    </div>
+    <div class="scroll-hint" aria-hidden="true">scroll</div>
+  </section>
+
+  <section class="paper-info">
+    <div class="container">
+      <div class="authors">
+        <!-- TODO: replace each href="#" below with the author's homepage URL -->
+        <div class="author-row">
+          <a href="https://z-taylcr7.github.io/">Yichao Zhong</a><sup>*1</sup>,
+          <a href="https://lu-yidan.github.io/">Yidan Lu</a><sup>*1</sup>,
+          <a href="https://yuhanglu2000.github.io/">Yuhang Lu</a><sup>1</sup>,
+          <span>Tianyang Tang<sup>1</sup></span>,
+          <span>Haoguang Mai<sup>1</sup></span>,
+          <a href="https://lzpyx.github.io/">Yixuan Pan</a><sup>1</sup>,
+          <a href="https://sephyli.github.io/">Tianyu Li</a><sup>1</sup>,
+          <a href="https://ilnehc.github.io/">Li Chen</a><sup>1</sup>,
+        </div>
+        <div class="author-row">
+          <a href="https://wangjingbo1219.github.io/">Jingbo Wang</a><sup>3</sup>,
+          <a href="https://zyliatzju.github.io">Zhongyu Li</a><sup>2</sup>,
+          <a href="https://arclab.hku.hk/PengLu.html">Peng Lu</a><sup>1</sup>,
+          <a href="https://www.hongyang.li/">Hongyang Li</a><sup>1</sup>
+        </div>
+      </div>
+      <div class="affiliations">
+        <span><sup>1</sup>The University of Hong Kong</span>
+        <span><sup>2</sup>The Chinese University of Hong Kong</span>
+        <span><sup>3</sup>Individual Researcher</span>
+      </div>
+
+      <!-- <div class="cta-row">
+        <a class="cta" href="static/pdfs/paper.pdf" target="_blank" rel="noopener">Paper · PDF</a>
+        <span class="cta disabled">Code · soon</span>
+        <span class="cta disabled">Video · soon</span>
+        <a class="cta" href="#bibtex">BibTeX</a>
+      </div> -->
+    </div>
+  </section>
+
+  <section class="section highlight" id="highlights">
+    <div class="container">
+      <h2>Highlights</h2>
+      <br>
+      <br>
+      <figure class="reel-frame">
+        <video controls autoplay muted loop playsinline preload="metadata" poster="https://ik.imagekit.io/lwzdfij3h/images/loader-spinner.svg">
+          <source src="https://ik.imagekit.io/lwzdfij3h/videos/web-robonaldo-all.mp4" type="video/mp4">
+        </video>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===== Overview · 3-stage pipeline ===== -->
+  <section class="section overview" id="overview">
+    <div class="container">
+      <h2>Overview</h2>
+
+      <figure class="paper-figure wide">
+        <img src="https://ik.imagekit.io/lwzdfij3h/images/pipeline.png" alt="Three-stage motion-guided curriculum pipeline">
+      </figure>
+
+      <p class="lede">
+        A <span class="kw">3-stage RL curriculum</span> for a general-case humanoid soccer shooting policy, built on a single human kick reference.<br>
+        In <em class="stage-ref">Stage&nbsp;1</em>, the policy tracks the reference for a <span class="kw">stable kicking prior</span>.<br>
+        In <em class="stage-ref">Stage&nbsp;2</em>, <span class="kw">task-reward-driven RL fine-tuning</span> learns <span class="kw">deviations</span> around the tracker to adapt the kick to varied stationary-ball configurations. This stage saturates beyond stationary balls — once timing pressure rises with moving balls, the policy abandons the motion prior to chase task reward.<br>
+        In <em class="stage-ref">Stage&nbsp;3</em>, a <span class="kw">heuristic kick-timing and locomotion planner</span> drives the policy: the reference kick provides guidance only when the planner triggers a kick; otherwise, locomotion rewards drive the robot toward the ball.
+      </p>
+
+      <div class="stages-row">
+        <figure class="stage-card">
+          <div class="stage-card-head">
+            <span class="stage-num">Stage&nbsp;1</span>
+            <h4>Motion Tracking</h4>
+          </div>
+          <div class="video-mini">
+            <video autoplay muted loop playsinline preload="metadata" poster="https://ik.imagekit.io/lwzdfij3h/images/loader-spinner.svg">
+              <source src="https://ik.imagekit.io/lwzdfij3h/videos/stages/Stage1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <figcaption>Track a single human-kick reference for a <em>stable kicking prior</em>.</figcaption>
+        </figure>
+
+        <figure class="stage-card">
+          <div class="stage-card-head">
+            <span class="stage-num">Stage&nbsp;2</span>
+            <h4>Shooting Adaptation</h4>
+          </div>
+          <div class="video-mini">
+            <video autoplay muted loop playsinline preload="metadata" poster="https://ik.imagekit.io/lwzdfij3h/images/loader-spinner.svg">
+              <source src="https://ik.imagekit.io/lwzdfij3h/videos/stages/stage2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <figcaption>RL fine-tune <em>deviations</em> for varied stationary-ball configurations.</figcaption>
+        </figure>
+
+        <figure class="stage-card">
+          <div class="stage-card-head">
+            <span class="stage-num">Stage&nbsp;3</span>
+            <h4>Task Generalization</h4>
+          </div>
+          <div class="video-mini">
+            <video autoplay muted loop playsinline preload="metadata" poster="https://ik.imagekit.io/lwzdfij3h/images/loader-spinner.svg">
+              <source src="https://ik.imagekit.io/lwzdfij3h/videos/stages/stage3.mp4" type="video/mp4">
+            </video>
+          </div>
+          <figcaption>Co-train with a <em>kick-timing + locomotion planner</em> for one-touch shots.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Experiments (Stage 2 + Stage 3) ===== -->
+  <section class="section demo-block" id="experiments">
+    <div class="container">
+      <!-- <div class="kicker">Experiments</div> -->
+      <h2>Experiments</h2>
+      <p class="lede">
+        On real hardware, RoboNaldo reaches <strong>0.73&nbsp;m</strong> / <strong>0.86&nbsp;m</strong>
+        point-level shot-to-goal error in stationary / moving-ball cases; the best shot lands
+        <strong>17&nbsp;cm</strong> from a 3&nbsp;m target at <strong>13.10&nbsp;m/s</strong> ball speed.
+        With <span class="kw">egocentric onboard sensing</span> of both ball and target, RoboNaldo is
+        ready for outdoor deployment.
+      </p>
+      <p class="lede">
+        Stage&nbsp;2 learns accurate free-kicks on stationary balls. Stage&nbsp;3 extends the policy to interactive shots on moving balls with heuristically planned timing and locomotion.
+      </p>
+
+      <!-- Stage 2 -->
+      <div class="stage-block">
+        <div class="stage-head">
+          <span class="stage-tag">Stage 2</span>
+          <h3>Free-Kick Shooting Policy</h3>
+          <p>Stationary ball, directed targets at 3m far.</p>
+        </div>
+
+        <div class="subgroup">
+        <h3 class="sub-title">Target position · <em>Low</em></h3>
+        <p class="sub-cap">Target at left · middle · right.</p>
+        <div class="vg-3">
+          <figure class="video-mini">
+            <video class="hdr-video" autoplay muted loop playsinline preload="metadata" poster="https://ik.imagekit.io/lwzdfij3h/images/loader-spinner.svg">
+              <source src="https://ik.imagekit.io/lwzdfij3h/videos/freekick/low/low_left_target.mp4" type="video/mp4">
+            </video>
+            <figcaption>Low · Left</figcaption>
+          </figure>
+          <figure class="video-mini">
+            <video class="hdr-video" autoplay muted loop playsinline preload="metadata" poster="https://ik.imagekit.io/lwzdfij3h/images/loader-spinner.svg">
+              <source src="https://ik.imagekit.io/lwzdfij3h/videos/freekick/low/low_mid_target.mp4" type="video/mp4">
+            </video>
+            <figcaption>Low · Middle</figcaption>
+          </figure>
+          <figure class="video-mini">
+            <video class="hdr-video" autoplay muted loop playsinline preload="metadata" poster="https://ik.imagekit.io/lwzdfij3h/images/loader-spinner.svg">
+              <source src="https://ik.imagekit.io/lwzdfij3h/videos/freekick/low/low_right_target.mp4" type="video/mp4">
+            </video>
+            <figcaption>Low · Right</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="subgroup">
+        <h3 class="sub-title">Target position · <em>Medium-High</em></h3>
+        <p class="sub-cap">Target at left · middle · right.</p>
+        <div class="vg-3">
+          <figure class="video-mini">
+            <video autoplay muted loop playsinline preload="metadata" poster="https://ik.imagekit.io/lwzdfij3h/images/loader-spinner.svg">
+              <source src="https://ik.imagekit.io/lwzdfij3h/videos/freekick/medium/left_target.mp4" type="video/mp4">
+            </video>
+            <figcaption>Med-High · Left</figcaption>
+          </figure>
+          <figure class="video-mini">
+            <video class="hdr-video" autoplay muted loop playsinline preload="metadata" poster="https://ik.imagekit.io/lwzdfij3h/images/loader-spinner.svg">
+              <source src="https://ik.imagekit.io/lwzdfij3h/videos/freekick/medium/mid_target.mp4" type="video/mp4">
+            </video>
+            <figcaption>Med-High · Middle</figcaption>
+          </figure>
+          <figure class="video-mini">
+            <video autoplay muted loop playsinline preload="metadata" poster="https://ik.imagekit.io/lwzdfij3h/images/loader-spinner.svg">
+              <source src="https://ik.imagekit.io/lwzdfij3h/videos/freekick/medium/right_target.mp4" type="video/mp4">
+            </video>
+            <figcaption>Med-High · Right</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="subgroup">
+        <h3 class="sub-title">Target position · <em>Super-High</em></h3>
+        <p class="sub-cap">Target at left · middle · right.</p>
+        <div class="vg-3">
+          <figure class="video-mini">
+            <video autoplay muted loop playsinline preload="metadata" poster="https://ik.imagekit.io/lwzdfij3h/images/loader-spinner.svg">
+              <source src="https://ik.imagekit.io/lwzdfij3h/videos/freekick/high/high-left.mp4" type="video/mp4">
+            </video>
+            <figcaption>Super-High · Left</figcaption>
+          </figure>
+          <figure class="video-mini">
+            <video class="hdr-video" autoplay muted loop playsinline preload="metadata" poster="https://ik.imagekit.io/lwzdfij3h/images/loader-spinner.svg">
+              <source src="https://ik.imagekit.io/lwzdfij3h/videos/freekick/high/high-mid.mp4" type="video/mp4">
+            </video>
+            <figcaption>Super-High · Middle</figcaption>
+          </figure>
+          <figure class="video-mini">
+            <video class="hdr-video" autoplay muted loop playsinline preload="metadata" poster="https://ik.imagekit.io/lwzdfij3h/images/loader-spinner.svg">
+              <source src="https://ik.imagekit.io/lwzdfij3h/videos/freekick/high/high-right.mp4" type="video/mp4">
+            </video>
+            <figcaption>Super-High · Right</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="cluster-break" aria-hidden="true"></div>
+
+      <div class="subgroup">
+        <h3 class="sub-title">Ball position · <em>Lateral</em></h3>
+        <p class="sub-cap">Left · middle · right of the robot.</p>
+        <div class="vg-3">
+          <figure class="video-mini">
+            <video autoplay muted loop playsinline preload="metadata" poster="https://ik.imagekit.io/lwzdfij3h/images/loader-spinner.svg">
+              <source src="https://ik.imagekit.io/lwzdfij3h/videos/freekick/ball_pos/ball_lateral_left.mp4" type="video/mp4">
+            </video>
+            <figcaption>Ball · Left</figcaption>
+          </figure>
+          <figure class="video-mini">
+            <video class="hdr-video" autoplay muted loop playsinline preload="metadata" poster="https://ik.imagekit.io/lwzdfij3h/images/loader-spinner.svg">
+              <source src="https://ik.imagekit.io/lwzdfij3h/videos/freekick/ball_pos/ball_lateral_mid.mp4" type="video/mp4">
+            </video>
+            <figcaption>Ball · Middle</figcaption>
+          </figure>
+          <figure class="video-mini">
+            <video autoplay muted loop playsinline preload="metadata" poster="https://ik.imagekit.io/lwzdfij3h/images/loader-spinner.svg">
+              <source src="https://ik.imagekit.io/lwzdfij3h/videos/freekick/ball_pos/ball_lateral_right.mp4" type="video/mp4">
+            </video>
+            <figcaption>Ball · Right</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="subgroup">
+        <h3 class="sub-title">Ball position · <em>Distance</em></h3>
+        <p class="sub-cap">Near · medium · far from the robot.</p>
+        <div class="vg-3">
+          <figure class="video-mini">
+            <video class="hdr-video" autoplay muted loop playsinline preload="metadata" poster="https://ik.imagekit.io/lwzdfij3h/images/loader-spinner.svg">
+              <source src="https://ik.imagekit.io/lwzdfij3h/videos/freekick/ball_pos/ball_near.mp4" type="video/mp4">
+            </video>
+            <figcaption>Ball · Near</figcaption>
+          </figure>
+          <figure class="video-mini">
+            <video autoplay muted loop playsinline preload="metadata" poster="https://ik.imagekit.io/lwzdfij3h/images/loader-spinner.svg">
+              <source src="https://ik.imagekit.io/lwzdfij3h/videos/freekick/ball_pos/medium-far.mp4" type="video/mp4">
+            </video>
+            <figcaption>Ball · Medium</figcaption>
+          </figure>
+          <figure class="video-mini">
+            <video autoplay muted loop playsinline preload="metadata" poster="https://ik.imagekit.io/lwzdfij3h/images/loader-spinner.svg">
+              <source src="https://ik.imagekit.io/lwzdfij3h/videos/freekick/ball_pos/ball_far.mp4" type="video/mp4">
+            </video>
+            <figcaption>Ball · Far</figcaption>
+          </figure>
+        </div>
+      </div>
+      </div><!-- /.stage-block (Stage 2) -->
+
+      <!-- Stage 3 -->
+      <div class="stage-block alt">
+        <div class="stage-head">
+          <span class="stage-tag">Stage 3</span>
+          <h3>Moving-Ball Shooting Policy</h3>
+          <p>One-touch shots on rolling balls.</p>
+        </div>
+
+        <div class="subgroup">
+        <h3 class="sub-title">Ball speed sweep</h3>
+        <p class="sub-cap">Increasing ball speed.</p>
+        <div class="vg-3">
+          <figure class="video-mini">
+            <video class="hdr-video" autoplay muted loop playsinline preload="metadata" poster="https://ik.imagekit.io/lwzdfij3h/images/loader-spinner.svg">
+              <source src="https://ik.imagekit.io/lwzdfij3h/videos/movekick/web-stationary.mp4" type="video/mp4">
+            </video>
+            <figcaption>Stationary Ball</figcaption>
+          </figure>
+          <figure class="video-mini">
+            <video autoplay muted loop playsinline preload="metadata" poster="https://ik.imagekit.io/lwzdfij3h/images/loader-spinner.svg">
+              <source src="https://ik.imagekit.io/lwzdfij3h/videos/movekick/web-medium-speed.mp4" type="video/mp4">
+            </video>
+            <figcaption>Neutral-Speed Moving Ball</figcaption>
+          </figure>
+          <figure class="video-mini">
+            <video autoplay muted loop playsinline preload="metadata" poster="https://ik.imagekit.io/lwzdfij3h/images/loader-spinner.svg">
+              <source src="https://ik.imagekit.io/lwzdfij3h/videos/movekick/web-high-speed.mp4" type="video/mp4">
+            </video>
+            <figcaption>High-Speed Moving Ball</figcaption>
+          </figure>
+        </div>
+      </div>
+      </div><!-- /.stage-block (Stage 3) -->
+
+      <!-- Outdoor -->
+      <div class="stage-block">
+        <div class="stage-head">
+          <!-- <span class="stage-tag">Outdoor</span> -->
+          <h3>Outdoor Capability</h3>
+          <p>On-field deployment, fully onboard.</p>
+        </div>
+
+        <div class="subgroup">
+          <h3 class="sub-title">Deployed on different terrains</h3>
+          <p class="sub-cap">Artificial soccer field · artificial hockey field · natural grass field. The hockey field is a bit more plain than the soccer field.</p>
+          <div class="vg-3">
+            <figure class="video-mini">
+              <video autoplay muted loop playsinline preload="metadata" poster="https://ik.imagekit.io/lwzdfij3h/images/loader-spinner.svg">
+                <source src="https://ik.imagekit.io/lwzdfij3h/videos/outdoor/artificial-grass.mp4" type="video/mp4">
+              </video>
+              <figcaption>Artificial Grassfield</figcaption>
+            </figure>
+            <figure class="video-mini">
+              <video autoplay muted loop playsinline preload="metadata" poster="https://ik.imagekit.io/lwzdfij3h/images/loader-spinner.svg">
+                <source src="https://ik.imagekit.io/lwzdfij3h/videos/outdoor/artificial-hockey.mp4" type="video/mp4">
+              </video>
+              <figcaption>Artificial Hockeyfield</figcaption>
+            </figure>
+            <figure class="video-mini">
+              <video autoplay muted loop playsinline preload="metadata" poster="https://ik.imagekit.io/lwzdfij3h/images/loader-spinner.svg">
+                <source src="https://ik.imagekit.io/lwzdfij3h/videos/outdoor/natural-grass.mp4" type="video/mp4">
+              </video>
+              <figcaption>Natural Grassfield</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div><!-- /.stage-block (Outdoor) -->
+
+      <!-- Perception -->
+      <div class="stage-block perception-block">
+        <div class="stage-head">
+          <span class="stage-tag">Perception</span>
+          <h3>On-Robot Sensing</h3>
+        </div>
+        <figure class="paper-figure">
+          <img src="https://ik.imagekit.io/lwzdfij3h/images/sensor.png" alt="Hybrid LiDAR–camera perception pipeline">
+        </figure>
+      </div><!-- /.stage-block (Perception) -->
+    </div>
+  </section>
+
+  <!-- ===== Results ===== -->
+  <section class="section results-section" id="results">
+    <div class="container">
+      <h2>Results</h2>
+
+      <!-- Real Robot -->
+      <div class="stage-block">
+        <div class="stage-head">
+          <span class="stage-tag">Real Robot</span>
+          <h3>Shot Dispersion &amp; Trajectories</h3>
+        </div>
+        <figure class="paper-figure">
+          <img src="https://ik.imagekit.io/lwzdfij3h/images/real_static_kick_panels.png" alt="Real-world shot dispersion, trajectories and statistics">
+          <figcaption>(A) Shot dispersion · (B) Free-kick trajectories · (C) Target-region statistics · (D) Moving-ball trajectories.</figcaption>
+        </figure>
+      </div><!-- /.stage-block (Real Robot) -->
+
+      <!-- Simulation -->
+      <div class="stage-block">
+        <div class="stage-head">
+          <span class="stage-tag">Simulation</span>
+          <h3>Shooting-Quality Heatmaps</h3>
+          <p class="block-narrative">
+            Targets sweep an <span class="kw">8&nbsp;m &times; 2&nbsp;m goal plane</span> at a
+            <span class="kw">3&nbsp;m shooting distance</span>. Each cell colors the shot-quality score
+            at that target location. Stage&nbsp;2 sharply covers the
+            free-kick regime; Stage&nbsp;3 trades a small accuracy margin for
+            <span class="kw">moving-ball</span> generalization.
+          </p>
+        </div>
+        <figure class="paper-figure">
+          <img src="https://ik.imagekit.io/lwzdfij3h/images/Heatmaps.png" alt="Simulation shooting-quality heatmaps">
+        </figure>
+      </div><!-- /.stage-block (Simulation) -->
+    </div>
+  </section>
+
+  <!-- ===== Abstract ===== -->
+  <section class="section abstract" id="abstract">
+    <div class="container">
+      <h2>Abstract</h2>
+      <p class="abstract-body">
+        Elite humanoid soccer shooting requires whole-body stability, high-impulse whole-body interactions,
+        and accuracy to targets. Motion tracking-driven reinforcement learning (RL) provides stability in
+        whole-body movement coordination, but a fixed reference makes it hard to adapt to varied ball
+        positions and strike timings; in contrast, task reward-driven RL struggles to explore and discover
+        valid kicks from scratch. We therefore introduce <strong>RoboNaldo</strong>, a three-stage
+        motion-guided curriculum RL framework for high-impulse humanoid interaction. A single human-kick
+        reference is used as a scaffold and progressively shifts optimization towards shooting performance.
+        The curriculum first learns a stable whole-body kicking prior, then adapts the kick to free-kick
+        settings where the ball is stationary at random positions, and finally extends it to moving-ball
+        shooting through a locomotion-command and kick-trigger interface. A high-level heuristic
+        planner controls this interface during training, while alternative high-level controllers can drive
+        the same low-level policy at inference. In simulation, RoboNaldo demonstrates free-kick shot error
+        <strong>50% lower</strong> and shoot velocity <strong>2.96&times;</strong> than prior work
+        baselines. In real world on a Unitree G1 with onboard perception, RoboNaldo attains
+        <strong>0.73&nbsp;m</strong> and <strong>0.86&nbsp;m</strong> average target shooting error from
+        3&nbsp;m away in free-kick and moving-ball cases, accordingly. And the post-contact ball velocity
+        reaches <strong>13.10&nbsp;m/s</strong>, which is <strong>59–71%</strong> of reported professional
+        open-play shot speed.
+      </p>
+    </div>
+  </section>
+
+  <section class="section bib" id="bibtex">
+    <div class="container">
+      <!-- <div class="kicker">Citation</div> -->
+      <h2>BibTeX</h2>
+      <div class="bibtex-box">
+        <button type="button" data-copy-target="bibtex-code">Copy</button>
+        <pre id="bibtex-code"><code>@article{zhong2026robonaldo,
+  title   = {RoboNaldo: Accurate, Stable and Powerful Humanoid Soccer Shooting
+             via Motion-Guided Curriculum Reinforcement Learning},
+  author  = {Zhong, Yichao and Lu, Yidan and Lu, Yuhang and Tang, Tianyang
+             and Mai, Haoguang and Pan, Yixuan and Li, Tianyu and Chen, Li
+             and Wang, Jingbo and Li, Zhongyu and Lu, Peng and Li, Hongyang},
+  note    = {Under review},
+  year    = {2026}
+}</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <a class="brand small" href="https://opendrivelab.com" target="_blank" rel="noopener">
+        <img src="https://ik.imagekit.io/lwzdfij3h/images/logos/opendrivelab.png" alt="OpenDriveLab">
+        <span>OpenDriveLab</span>
+      </a>
+      <span class="copy">© 2026 RoboNaldo Team. Page inspired by OpenDriveLab project templates.</span>
+    </div>
+  </footer>
+
+  <script src="static/js/index.js"></script>
+</body>
+</html>
