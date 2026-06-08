@@ -841,9 +841,10 @@ img { display: block; max-width: 100%; }
 .subgroup:first-of-type { margin-top: 1.4rem; }
 .cluster-break {
   margin: 3.4rem auto 2.4rem;
-  max-width: 140px;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--accent-soft), transparent);
+  max-width: 70%;
+  height: 0;
+  border-top: 1px dashed var(--accent-soft);
+  background: none;
 }
 .cluster-break + .subgroup { margin-top: 0; }
 .sub-title {
