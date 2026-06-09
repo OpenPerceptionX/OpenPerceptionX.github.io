@@ -187,7 +187,6 @@ img { display: block; max-width: 100%; }
   height: 100%;
   object-fit: cover;
   z-index: 0;
-  filter: saturate(1.05) brightness(0.92) contrast(1.02);
   transform: scale(1.04);
 }
 .hero-overlay {
@@ -579,12 +578,6 @@ img { display: block; max-width: 100%; }
   background: transparent;
   z-index: 1;
 }
-.video-card video.hdr-video {
-  filter: brightness(0.5) contrast(1.1) saturate(0.82);
-}
-.video-card video.hdr-video-hot {
-  filter: brightness(0.4) contrast(1.28) saturate(0.72);
-}
 .video-card figcaption {
   position: absolute;
   z-index: 2;
@@ -748,7 +741,6 @@ img { display: block; max-width: 100%; }
   height: 100%;
   object-fit: cover;
   background: #000;
-  filter: brightness(0.92) contrast(1.05) saturate(0.95);
 }
 .stage-card figcaption {
   margin: 0;
@@ -886,42 +878,6 @@ img { display: block; max-width: 100%; }
   object-fit: cover;
   background: transparent;
   z-index: 1;
-  /* Lower contrast pulls bright clips down + dark clips up to flatten
-     the perceived variance between adjacent videos. */
-  filter: brightness(1.02) contrast(0.92) saturate(0.92);
-}
-.video-mini video.hdr-video {
-  filter: brightness(0.50) contrast(0.90) saturate(0.86);
-}
-
-/* Non-Apple browsers (Linux/Windows/Android) don't tone-map iPhone HDR
-   metadata. Keep saturation damped, contrast still slightly flattened. */
-:root.plat-non-apple .video-mini video,
-:root.plat-non-apple .stage-card .video-mini video {
-  filter: brightness(0.98) contrast(0.94) saturate(0.82);
-}
-:root.plat-non-apple .video-mini video.hdr-video {
-  filter: brightness(0.72) contrast(1.08) saturate(0.72);
-}
-:root.plat-linux .video-mini video,
-:root.plat-linux .stage-card .video-mini video {
-  filter: brightness(0.96) contrast(0.95) saturate(0.78);
-}
-:root.plat-linux .video-mini video.hdr-video {
-  filter: brightness(0.68) contrast(1.10) saturate(0.68);
-}
-/* Hero / reel: a tiny tone-down on non-Apple, not a dim. */
-:root.plat-non-apple .hero-bg {
-  filter: saturate(0.95) brightness(0.86) contrast(1.04);
-}
-:root.plat-non-apple .reel-frame video {
-  filter: saturate(0.95) brightness(1.0) contrast(1.02);
-}
-.video-mini video.hdr-video-hot {
-  filter: brightness(0.34) contrast(1.28) saturate(0.72);
-}
-.video-mini video.hdr-video-superhot {
-  filter: brightness(0.22) contrast(1.32) saturate(0.68);
 }
 .video-mini figcaption {
   position: absolute;
