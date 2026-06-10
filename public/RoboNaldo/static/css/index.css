@@ -542,6 +542,10 @@ img { display: block; max-width: 100%; }
   font-size: clamp(1.1rem, 1.4vw, 1.25rem);
   color: var(--text);
 }
+.pipeline .lede,
+#real-robot > .container > .lede {
+  max-width: 1080px;
+}
 /* Mint-highlight numeric strong inside narrative paragraphs */
 .lede strong,
 .story strong {
@@ -878,6 +882,11 @@ img { display: block; max-width: 100%; }
   object-fit: cover;
   background: transparent;
   z-index: 1;
+}
+@media (dynamic-range: high), (video-dynamic-range: high) {
+  video.hdr-dim {
+    filter: brightness(0.62);
+  }
 }
 .video-mini figcaption {
   position: absolute;
