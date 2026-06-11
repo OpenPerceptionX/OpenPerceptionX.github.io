@@ -68,8 +68,8 @@ export const publications: {
     {
         title: "RoboNaldo: Accurate, Stable and Powerful Humanoid Soccer Shooting via Motion-Guided Curriculum Reinforcement Learning",
         link: "https://arxiv.org/abs/2606.11092",
-        image: "https://ik.imagekit.io/lwzdfij3h/posters/web-robonaldo-all.webp",
-        image_sliding: "https://ik.imagekit.io/lwzdfij3h/posters/web-robonaldo-all.webp",
+        image: "/assets/publication/RoboNaldo.png",
+        image_sliding: "/assets/publication/RoboNaldo.png",
         author: "Yichao Zhong, Yidan Lu, Yuhang Lu, Tianyang Tang, Haoguang Mai, Yixuan Pan, Tianyu Li, Li Chen, Jingbo Wang, Zhongyu Li, Peng Lu, Hongyang Li",
         note: "Preprint 2026",
         noteoption: '',
@@ -87,6 +87,10 @@ export const publications: {
             {
                 type: "youtube",
                 link: "https://youtu.be/a6DQJWE5dJg",
+            },
+            {
+                type: "bilibili",
+                link: "https://www.bilibili.com/video/BV11sEz6NEbZ/",
             },
         ],
         description: "World's first sub-meter accurate humanoid soccer shooting policy in general cases — single human reference, learn to track, then deviate and adapt.",
