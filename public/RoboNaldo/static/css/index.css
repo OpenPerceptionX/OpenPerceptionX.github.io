@@ -414,19 +414,19 @@ img { display: block; max-width: 100%; }
 }
 .affiliation-logos a:hover { opacity: 1; transform: translateY(-1px); }
 .affiliation-logos img {
-  height: 30px;
+  height: 22px;
   width: auto;
-  max-width: min(190px, 22vw);
+  max-width: min(140px, 18vw);
   object-fit: contain;
   display: block;
 }
-.affiliation-logos .logo-hku-text { height: 34px; max-width: min(180px, 22vw); }
-.affiliation-logos .logo-cuhk-text { max-width: min(168px, 20vw); }
-.affiliation-logos .logo-archon-text { max-width: min(190px, 22vw); }
+.affiliation-logos .logo-hku-text { height: 25px; max-width: min(135px, 18vw); }
+.affiliation-logos .logo-cuhk-text { max-width: min(125px, 17vw); }
+.affiliation-logos .logo-archon-text { max-width: min(140px, 18vw); }
 @media (max-width: 640px) {
-  .affiliation-logos { gap: 0.75rem; }
-  .affiliation-logos img { height: 20px; max-width: 24vw; }
-  .affiliation-logos .logo-hku-text { height: 23px; }
+  .affiliation-logos { gap: 0.5rem; }
+  .affiliation-logos img { height: 16px; max-width: 20vw; }
+  .affiliation-logos .logo-hku-text { height: 18px; }
 }
 .cta-row {
   display: inline-flex;
