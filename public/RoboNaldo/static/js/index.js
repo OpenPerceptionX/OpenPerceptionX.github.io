@@ -55,7 +55,10 @@ document.querySelectorAll("[data-copy-target]").forEach((button) => {
 // Lazy-load non-primary videos so in-app browsers do not open every stream at once.
 (function () {
   const videos = Array.from(document.querySelectorAll("video[data-lazy-video]"));
-  if (!videos.length) return;
+  const primaryDeferredVideos = Array.from(document.querySelectorAll("video[data-defer-inapp-video]"));
+  if (!videos.length && !primaryDeferredVideos.length) return;
+  const ua = navigator.userAgent || "";
+  const isConstrainedBrowser = /Twitter|MicroMessenger|FBAN|FBAV|Instagram|Line|LinkedInApp|Feishu|Lark|Bytedance|Aweme|MQQBrowser|QQ\//i.test(ua);
 
   const hydrate = (video) => {
     if (video.dataset.loaded === "true") return;
@@ -69,13 +72,35 @@ document.querySelectorAll("[data-copy-target]").forEach((button) => {
     video.load();
   };
 
-  const tryPlay = (video) => {
-    if (!video.autoplay) return;
+  const tryPlay = (video, force = false) => {
+    if (!force && !video.autoplay) return;
     const playPromise = video.play();
     if (playPromise && typeof playPromise.catch === "function") {
       playPromise.catch(() => {});
     }
   };
+
+  if (isConstrainedBrowser) {
+    [...primaryDeferredVideos, ...videos].forEach((video) => {
+      video.autoplay = false;
+      video.controls = true;
+      video.dataset.tapToLoad = "true";
+      video.addEventListener(
+        "click",
+        () => {
+          hydrate(video);
+          tryPlay(video, true);
+        },
+        { once: true }
+      );
+    });
+    return;
+  }
+
+  primaryDeferredVideos.forEach((video) => {
+    hydrate(video);
+    tryPlay(video);
+  });
 
   if (!("IntersectionObserver" in window)) {
     videos.slice(0, 4).forEach((video) => {
