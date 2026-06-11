@@ -54,11 +54,15 @@ document.querySelectorAll("[data-copy-target]").forEach((button) => {
 
 // Lazy-load non-primary videos so in-app browsers do not open every stream at once.
 (function () {
+  const heroVideos = Array.from(document.querySelectorAll("video[data-hero-video]"));
   const videos = Array.from(document.querySelectorAll("video[data-lazy-video]"));
   const primaryDeferredVideos = Array.from(document.querySelectorAll("video[data-defer-inapp-video]"));
-  if (!videos.length && !primaryDeferredVideos.length) return;
+  if (!heroVideos.length && !videos.length && !primaryDeferredVideos.length) return;
   const ua = navigator.userAgent || "";
-  const isConstrainedBrowser = /Twitter|MicroMessenger|FBAN|FBAV|Instagram|Line|LinkedInApp|Feishu|Lark|Bytedance|Aweme|MQQBrowser|QQ\//i.test(ua);
+  const isIOS = /iP(?:hone|ad|od)/i.test(ua);
+  const isKnownIOSBrowser = /Version\/[\d.]+.*Safari|CriOS|FxiOS|EdgiOS/i.test(ua);
+  const isIOSWebView = isIOS && !isKnownIOSBrowser;
+  const isConstrainedBrowser = isIOSWebView || /Twitter|MicroMessenger|FBAN|FBAV|Instagram|Line|LinkedInApp|Feishu|Lark|Bytedance|Aweme|MQQBrowser|QQ\//i.test(ua);
 
   const hydrate = (video) => {
     if (video.dataset.loaded === "true") return;
@@ -81,6 +85,10 @@ document.querySelectorAll("[data-copy-target]").forEach((button) => {
   };
 
   if (isConstrainedBrowser) {
+    heroVideos.forEach((video) => {
+      video.autoplay = false;
+    });
+
     [...primaryDeferredVideos, ...videos].forEach((video) => {
       video.autoplay = false;
       video.controls = true;
@@ -96,6 +104,11 @@ document.querySelectorAll("[data-copy-target]").forEach((button) => {
     });
     return;
   }
+
+  heroVideos.forEach((video) => {
+    hydrate(video);
+    tryPlay(video);
+  });
 
   primaryDeferredVideos.forEach((video) => {
     hydrate(video);
