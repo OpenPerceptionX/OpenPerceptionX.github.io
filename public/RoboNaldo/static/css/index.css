@@ -421,12 +421,13 @@ img { display: block; max-width: 100%; }
   display: block;
 }
 .affiliation-logos .logo-hku-text { height: 25px; max-width: min(135px, 18vw); }
-.affiliation-logos .logo-cuhk-text { max-width: min(125px, 17vw); }
+.affiliation-logos .logo-cuhk-text { height: 32px; max-width: min(170px, 22vw); }
 .affiliation-logos .logo-archon-text { max-width: min(140px, 18vw); }
 @media (max-width: 640px) {
   .affiliation-logos { gap: 0.5rem; }
   .affiliation-logos img { height: 16px; max-width: 20vw; }
   .affiliation-logos .logo-hku-text { height: 18px; }
+  .affiliation-logos .logo-cuhk-text { height: 24px; max-width: 26vw; }
 }
 .cta-row {
   display: inline-flex;
