@@ -350,7 +350,7 @@ img { display: block; max-width: 100%; }
   text-shadow: 0 0 18px rgba(110, 231, 163, 0.45), 0 1px 10px rgba(0, 20, 8, 0.45);
 }
 .paper-info {
-  background: var(--bg-tint);
+  background: #fff;
   border-bottom: 1px solid var(--line);
   padding: 2.6rem 0 2.2rem;
   text-align: center;
