@@ -51,3 +51,57 @@ document.querySelectorAll("[data-copy-target]").forEach((button) => {
   window.addEventListener("resize", onScroll);
   onScroll();
 })();
+
+// Lazy-load non-primary videos so in-app browsers do not open every stream at once.
+(function () {
+  const videos = Array.from(document.querySelectorAll("video[data-lazy-video]"));
+  if (!videos.length) return;
+
+  const hydrate = (video) => {
+    if (video.dataset.loaded === "true") return;
+
+    video.querySelectorAll("source[data-src]").forEach((source) => {
+      source.src = source.dataset.src;
+      source.removeAttribute("data-src");
+    });
+
+    video.dataset.loaded = "true";
+    video.load();
+  };
+
+  const tryPlay = (video) => {
+    if (!video.autoplay) return;
+    const playPromise = video.play();
+    if (playPromise && typeof playPromise.catch === "function") {
+      playPromise.catch(() => {});
+    }
+  };
+
+  if (!("IntersectionObserver" in window)) {
+    videos.slice(0, 4).forEach((video) => {
+      hydrate(video);
+      tryPlay(video);
+    });
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const video = entry.target;
+        if (entry.isIntersecting) {
+          hydrate(video);
+          tryPlay(video);
+        } else if (video.dataset.loaded === "true" && !video.paused) {
+          video.pause();
+        }
+      });
+    },
+    {
+      rootMargin: "600px 0px",
+      threshold: 0.01,
+    }
+  );
+
+  videos.forEach((video) => observer.observe(video));
+})();
