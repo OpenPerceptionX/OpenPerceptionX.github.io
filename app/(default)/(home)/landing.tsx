@@ -37,7 +37,7 @@ import { Chen2025_value_learning } from "@/components/citation-drawer"
 import { publications } from "@/data/publications"
 import { Button } from "@/components/ui/button"
 import { type_mapping } from "@/data/mapping"
-const landings = [0,1,4,2,3].map(index => [...publications.values()].filter(publication => publication.keys.includes('home_sliding'))[index])
+const landings = [0,1,2,3,5,4].map(index => [...publications.values()].filter(publication => publication.keys.includes('home_sliding'))[index])
 
 
 
