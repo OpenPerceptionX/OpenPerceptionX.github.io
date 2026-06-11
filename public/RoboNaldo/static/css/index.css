@@ -394,6 +394,32 @@ img { display: block; max-width: 100%; }
   font-style: italic;
 }
 .affiliations sup { color: var(--accent-deep); }
+.affiliation-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2.2rem;
+  margin: 1.2rem auto 0;
+}
+.affiliation-logos a {
+  display: inline-flex;
+  align-items: center;
+  opacity: 0.85;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.affiliation-logos a:hover { opacity: 1; transform: translateY(-1px); }
+.affiliation-logos img {
+  height: 44px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+  display: block;
+}
+@media (max-width: 640px) {
+  .affiliation-logos { gap: 1.4rem; }
+  .affiliation-logos img { height: 34px; }
+}
 .cta-row {
   display: inline-flex;
   flex-wrap: wrap;
