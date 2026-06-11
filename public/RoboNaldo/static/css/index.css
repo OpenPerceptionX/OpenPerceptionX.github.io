@@ -1164,12 +1164,18 @@ footer::before {
 }
 @media (max-width: 540px) {
   .hero h1 { font-size: clamp(3rem, 16vw, 4.6rem); }
-  .brand-title { display: none; }
   .topbar-inner {
     width: min(var(--max), calc(100% - 24px));
     padding: 10px 0 8px;
+    gap: 0.5rem;
+    justify-content: center;
   }
-  .topnav {
-    display: none;
+  .brand { gap: 0.4rem; }
+  .brand .logo-odl { height: 20px; }
+  .brand-sep { margin: 0 0.1rem; }
+  .brand-title {
+    font-size: 0.95rem;
+    gap: 0.3rem;
   }
+  .topnav { display: none; }
 }

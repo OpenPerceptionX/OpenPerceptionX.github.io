@@ -66,6 +66,35 @@ export const publications: {
     timeline: string[];
 }[] = [
     {
+        title: "RoboNaldo: Accurate, Stable and Powerful Humanoid Soccer Shooting via Motion-Guided Curriculum Reinforcement Learning",
+        link: "https://arxiv.org/abs/2606.11092",
+        image: "https://ik.imagekit.io/lwzdfij3h/posters/web-robonaldo-all.webp",
+        image_sliding: "https://ik.imagekit.io/lwzdfij3h/posters/web-robonaldo-all.webp",
+        author: "Yichao Zhong, Yidan Lu, Yuhang Lu, Tianyang Tang, Haoguang Mai, Yixuan Pan, Tianyu Li, Li Chen, Jingbo Wang, Zhongyu Li, Peng Lu, Hongyang Li",
+        note: "Preprint 2026",
+        noteoption: '',
+        star: "https://img.shields.io/github/stars/OpenDriveLab/RoboNaldo?style=social",
+        starlink: "https://github.com/OpenDriveLab/RoboNaldo",
+        icon: [
+            {
+                type: "page",
+                link: "/RoboNaldo",
+            },
+            {
+                type: "github",
+                link: "https://github.com/OpenDriveLab/RoboNaldo",
+            },
+            {
+                type: "youtube",
+                link: "https://youtu.be/a6DQJWE5dJg",
+            },
+        ],
+        description: "World's first sub-meter accurate humanoid soccer shooting policy in general cases — single human reference, learn to track, then deviate and adapt.",
+        keys: ['embodied_ai', 'home_sliding'],
+        time: '2026.06.11',
+        timeline: ['tembodied', 'highlight'],
+    },
+    {
         title: "World Engine: Towards the Era of Post-Training for Physical AI",
         link: "",
         image: "https://ik.imagekit.io/WCJBERT/README_overall.jpg?updatedAt=1776319746886",
