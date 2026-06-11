@@ -529,6 +529,38 @@ img { display: block; max-width: 100%; }
   object-fit: cover;
   background: transparent;
 }
+.video-play-button {
+  position: absolute;
+  z-index: 4;
+  left: 50%;
+  top: 50%;
+  width: 58px;
+  height: 58px;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.52);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.26);
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  transition: background 0.18s ease, opacity 0.18s ease, transform 0.18s ease;
+}
+.video-play-button::before {
+  content: "";
+  position: absolute;
+  left: 22px;
+  top: 17px;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 18px solid #fff;
+}
+.video-play-button:hover {
+  background: rgba(0, 0, 0, 0.66);
+  transform: translate(-50%, -50%) scale(1.04);
+}
+.video-play-button.is-loading {
+  opacity: 0.64;
+  pointer-events: none;
+}
 .reel-cap {
   margin: 1.4rem auto 0;
   max-width: 720px;

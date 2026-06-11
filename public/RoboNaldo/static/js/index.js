@@ -84,6 +84,29 @@ document.querySelectorAll("[data-copy-target]").forEach((button) => {
     }
   };
 
+  const addTapToPlayButton = (video, onActivate) => {
+    const parent = video.parentElement;
+    if (!parent || parent.querySelector(".video-play-button")) return;
+
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "video-play-button";
+    button.setAttribute("aria-label", "Play video");
+    button.title = "Play video";
+
+    const activate = (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      button.classList.add("is-loading");
+      onActivate();
+    };
+
+    button.addEventListener("click", activate);
+    video.addEventListener("playing", () => button.remove(), { once: true });
+    video.addEventListener("error", () => button.classList.remove("is-loading"));
+    parent.appendChild(button);
+  };
+
   if (isConstrainedBrowser) {
     heroVideos.forEach((video) => {
       video.autoplay = false;
@@ -93,14 +116,13 @@ document.querySelectorAll("[data-copy-target]").forEach((button) => {
       video.autoplay = false;
       video.controls = true;
       video.dataset.tapToLoad = "true";
-      video.addEventListener(
-        "click",
-        () => {
-          hydrate(video);
-          tryPlay(video, true);
-        },
-        { once: true }
-      );
+      const loadAndPlay = () => {
+        hydrate(video);
+        tryPlay(video, true);
+      };
+
+      addTapToPlayButton(video, loadAndPlay);
+      video.addEventListener("click", loadAndPlay, { once: true });
     });
     return;
   }
