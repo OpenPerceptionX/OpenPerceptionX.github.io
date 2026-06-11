@@ -62,6 +62,7 @@ document.querySelectorAll("[data-copy-target]").forEach((button) => {
   const isIOS = /iP(?:hone|ad|od)/i.test(ua);
   const isKnownIOSBrowser = /Version\/[\d.]+.*Safari|CriOS|FxiOS|EdgiOS/i.test(ua);
   const isIOSWebView = isIOS && !isKnownIOSBrowser;
+  const isMobileLike = isIOS || /Android|Mobile|Windows Phone/i.test(ua);
   const isConstrainedBrowser = isIOSWebView || /Twitter|MicroMessenger|FBAN|FBAV|Instagram|Line|LinkedInApp|Feishu|Lark|Bytedance|Aweme|MQQBrowser|QQ\//i.test(ua);
 
   const hydrate = (video) => {
@@ -107,10 +108,27 @@ document.querySelectorAll("[data-copy-target]").forEach((button) => {
     parent.appendChild(button);
   };
 
-  if (isConstrainedBrowser) {
+  const replaceHeroWithPoster = () => {
     heroVideos.forEach((video) => {
+      if (!video.parentElement) return;
+      const poster = video.getAttribute("poster");
+      if (!poster) return;
+
+      const image = document.createElement("img");
+      image.className = video.className;
+      image.src = poster;
+      image.alt = "";
+      image.setAttribute("aria-hidden", "true");
+
       video.autoplay = false;
+      video.removeAttribute("autoplay");
+      video.pause();
+      video.replaceWith(image);
     });
+  };
+
+  if (isConstrainedBrowser) {
+    replaceHeroWithPoster();
 
     [...primaryDeferredVideos, ...videos].forEach((video) => {
       video.autoplay = false;
@@ -127,10 +145,14 @@ document.querySelectorAll("[data-copy-target]").forEach((button) => {
     return;
   }
 
-  heroVideos.forEach((video) => {
-    hydrate(video);
-    tryPlay(video);
-  });
+  if (isMobileLike) {
+    replaceHeroWithPoster();
+  } else {
+    heroVideos.forEach((video) => {
+      hydrate(video);
+      tryPlay(video);
+    });
+  }
 
   primaryDeferredVideos.forEach((video) => {
     hydrate(video);
