@@ -26,7 +26,7 @@ export const events: {
         imageoption: "object-center",
         date: "",
         location: "",
-        keys: ['2026', 'editor_pick'],
+        keys: ['2026'],
     },
     {
         title: "Workshop at RSS 2026",
@@ -46,7 +46,7 @@ export const events: {
         imageoption: "object-center",
         date: "June 03, 2026",
         location: "Denver",
-        keys: ['2026', 'editor_pick'],
+        keys: ['2026'],
     },
     {
         title: "Workshop at IROS 2025",
