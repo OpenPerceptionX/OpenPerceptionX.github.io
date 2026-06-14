@@ -15,6 +15,10 @@ import { AspectRatio } from "@/components/ui/aspect-ratio"
 
 
 
+import { ScheduleList } from "./schedule"
+
+
+
 const speakers: {
     name: string;
     image: string;
@@ -22,13 +26,13 @@ const speakers: {
     affiliation: string;
     link: string;
 }[] = [
-    {
-        name: "Javier Alonso-Mora",
-        image: "https://ik.imagekit.io/opendrivelab/yuance/people/javier_alonso_mora.jpg",
-        position: "Full Professor",
-        affiliation: 'TU Delft',
-        link: 'https://autonomousrobots.nl/people/'
-    },
+    // {
+    //     name: "Javier Alonso-Mora",
+    //     image: "https://ik.imagekit.io/opendrivelab/yuance/people/javier_alonso_mora.jpg",
+    //     position: "Full Professor",
+    //     affiliation: 'TU Delft',
+    //     link: 'https://autonomousrobots.nl/people/'
+    // },
     {
         name: "Leslie Pack Kaelbling",
         image: "https://ik.imagekit.io/opendrivelab/yuance/people/leslie_kaelbling.jpg",
@@ -50,13 +54,13 @@ const speakers: {
         affiliation: 'University of Groningen',
         link: 'https://hkasaei.github.io/'
     },
-    {
-        name: "Roberto Martín-Martín",
-        image: "https://ik.imagekit.io/opendrivelab/yuance/people/roberto_marti%CC%81n_marti%CC%81n.jpg",
-        position: "Assistant Professor",
-        affiliation: 'UT Austin',
-        link: 'https://robertomartinmartin.com/'
-    },
+    // {
+    //     name: "Roberto Martín-Martín",
+    //     image: "https://ik.imagekit.io/opendrivelab/yuance/people/roberto_marti%CC%81n_marti%CC%81n.jpg",
+    //     position: "Assistant Professor",
+    //     affiliation: 'UT Austin',
+    //     link: 'https://robertomartinmartin.com/'
+    // },
     {
         name: "Fan Shi",
         image: "https://ik.imagekit.io/opendrivelab/yuance/people/fan_shi.jpg",
@@ -68,7 +72,7 @@ const speakers: {
         name: "Tianyu Li",
         image: "/assets/person/tianyu_li.jpg",
         position: "CEO",
-        affiliation: 'Archon',
+        affiliation: 'Archon Robotics',
         link: 'https://scholar.google.com/citations?user=X6vTmEMAAAAJ'
     },
 ];
@@ -104,6 +108,11 @@ const organizers: {
         name: "Huijie Wang",
         affiliation: 'OpenDriveLab',
         link: 'https://faikit.github.io/'
+    },
+    {
+        name: "Chonghao Sima",
+        affiliation: 'The University of Hong Kong',
+        link: 'https://scholar.google.com/citations?user=dgYJ6esAAAAJ'
     },
 ];
 
@@ -367,8 +376,8 @@ export default function Home() {
                 </div>
             </div>
             <div className="w-full px-6 flex justify-center mt-12">
-                <div className="w-full max-w-7xl flex">
-                    To be announced.
+                <div className="w-full max-w-7xl">
+                    <ScheduleList/>
                 </div>
             </div>
 
