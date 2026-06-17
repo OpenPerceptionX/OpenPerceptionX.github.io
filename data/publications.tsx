@@ -99,7 +99,7 @@ export const publications: {
         timeline: ['tembodied', 'highlight'],
     },
     {
-        title: "World Engine: Towards the Era of Post-Training for Physical AI",
+        title: "World Engine: Towards the Era of Post-Training for Autonomous Driving",
         link: "",
         image: "https://ik.imagekit.io/WCJBERT/README_overall.jpg?updatedAt=1776319746886",
         image_sliding: "https://ik.imagekit.io/WCJBERT/WE_hero_img_nologo.jpg",
