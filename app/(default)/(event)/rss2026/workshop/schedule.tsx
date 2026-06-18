@@ -143,13 +143,13 @@ const scheduleItems: {
         nameLink: "https://fanshi14.github.io/me/",
         affiliation: "National University of Singapore, Singapore",
         affiliationLogo: "/assets/brand/nus.png",
-        title: "TBD",
+        title: "Simulation Enabled Robust Locomotion Learning. Can It Do the Same for Manipulation?",
         recordings: {
             youtube: "",
             bilibili: "",
         },
         slides: "",
-        bio: "Fan Shi is an Assistant Professor and director of Human-Centered Robotic Lab, Electrical and Computer Engineering, National University of Singapore, awarded by Presidential Young Professorship. He was a Postdoctoral Fellow at ETH AI Center working with Prof. Stelian Coros and Prof. Marco Hutter. He obtained the PhD degree at JSK Lab, the University of Tokyo, supervised by Prof. Masayuki Inaba and Prof. Kei Okada from 2016 to 2021. In 2020, he was visiting RSL Lab, ETH Zurich supervised by Prof. Macro Hutter. He did his Bachelor in Peking University advised by Prof. Huijing Zhao. He was visiting in Microsoft Research Asia (by Prof. Katsushi Ikeuchi) and Takanishi Lab (by Prof. Atsuo Takanishi) during my undergraduate. His lifelong target is to build the good stuff, and help the good happen.",
+        bio: "Fan Shi is an Assistant Professor at the National University of Singapore, where he holds the prestigious NUS Presidential Young Professorship. His research lies at the intersection of artificial intelligence and robotics, with a focus on physical simulation, robot learning, and the development of scalable methods for embodied intelligence. His work has been recognized through awards and support from leading organizations, including the NVIDIA Academic Grant Program, Google Research, and the Swiss AI Initiative.",
     },
     {
         type: "talk",
