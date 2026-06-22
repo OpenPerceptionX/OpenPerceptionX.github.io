@@ -103,7 +103,7 @@ export const publications: {
         link: "",
         image: "https://ik.imagekit.io/WCJBERT/README_overall.jpg?updatedAt=1776319746886",
         image_sliding: "https://ik.imagekit.io/WCJBERT/WE_hero_img_nologo.jpg",
-        author: "Tianyu Li, Li Chen, Caojun Wang, Haochen Liu, Kashyap Chitta, Zhenjie Yang, Yuhang Lu, Naisheng Ye, Yihang Qiu, Yufei Wang, Luoxi Zou, Jiaxin Peng, Jin Pan, Zhaoyu Su, Andrei Bursuc, Shengbo Eben Li, Andreas Geiger, Peng Su, Hongyang Li",
+        author: "Tianyu Li, Li Chen, Caojun Wang, Haochen Liu, Kashyap Chitta, Zhenjie Yang, Yuhang Lu, Naisheng Ye, Yihang Qiu, Haochen Tian, Yufei Wang, Luoxi Zou, Jiaxin Peng, Jin Pan, Zhaoyu Su, Andrei Bursuc, Shengbo Eben Li, Andreas Geiger, Peng Su, Hongyang Li",
         note: "Research Article 2026",
         noteoption: '',
         star: "https://img.shields.io/github/stars/OpenDriveLab/WorldEngine?style=social",
