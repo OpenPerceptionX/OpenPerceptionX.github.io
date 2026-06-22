@@ -59,8 +59,8 @@ const scheduleItems: {
     {
         type: "talk",
         time: "8:30 AM",
-        name: "Chonghao Sima",
-        nameLink: "https://scholar.google.com/citations?user=dgYJ6esAAAAJ",
+        name: "Hongyang Li",
+        nameLink: "https://www.hongyang.li/",
         affiliation: "The University of Hong Kong, China",
         title: "Opening Remarks",
         recordings: {
