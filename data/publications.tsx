@@ -110,6 +110,10 @@ export const publications: {
         starlink: "https://github.com/OpenDriveLab/WorldEngine",
         icon: [
             {
+                type: "paper",
+                link: "https://arxiv.org/abs/2606.19836",
+            },
+            {
                 type: "page",
                 link: "/WorldEngine",
             },
