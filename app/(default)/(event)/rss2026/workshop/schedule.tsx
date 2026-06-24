@@ -58,7 +58,7 @@ const scheduleItems: {
 }[] = [
     {
         type: "talk",
-        time: "8:30 AM",
+        time: "08:30 AM",
         name: "Hongyang Li",
         nameLink: "https://www.hongyang.li/",
         affiliation: "The University of Hong Kong, China",
@@ -128,7 +128,7 @@ const scheduleItems: {
         time: "10:30 AM",
         name: "Marcel Torne",
         nameLink: "https://marceltorne.github.io/",
-        affiliation: "Stanford, Physical Intelligence",
+        affiliation: "Stanford University & Physical Intelligence, USA",
         affiliationLogo: "/assets/brand/stanford.png",
         title: "TBD",
         recordings: {

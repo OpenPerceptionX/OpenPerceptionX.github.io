@@ -44,7 +44,7 @@ const speakers: {
         name: "Marcel Torne",
         image: "/assets/person/marcel_torne.jpg",
         position: "Researcher",
-        affiliation: "Stanford, Physical Intelligence",
+        affiliation: "Stanford University & Physical Intelligence, USA",
         link: 'https://marceltorne.github.io/'
     },
     // {
@@ -58,14 +58,14 @@ const speakers: {
         name: "Fan Shi",
         image: "https://ik.imagekit.io/opendrivelab/yuance/people/fan_shi.jpg",
         position: "Assistant Professor",
-        affiliation: 'NUS',
+        affiliation: 'National University of Singapore, Singapore',
         link: 'https://fanshi14.github.io/me/'
     },
     {
         name: "Tianyu Li",
         image: "/assets/person/tianyu_li.jpg",
         position: "CEO",
-        affiliation: 'Archon Robotics',
+        affiliation: 'Archon Robotics, China',
         link: 'https://scholar.google.com/citations?user=X6vTmEMAAAAJ'
     },
 ];
@@ -94,7 +94,7 @@ const organizers: {
     },
     {
         name: "Lucy Xiaoyang Shi",
-        affiliation: 'Stanford & Physical Intelligence',
+        affiliation: 'Stanford University & Physical Intelligence',
         link: 'https://lucys0.github.io/'
     },
     {
