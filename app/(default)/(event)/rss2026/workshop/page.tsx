@@ -34,25 +34,18 @@ const speakers: {
     //     link: 'https://autonomousrobots.nl/people/'
     // },
     {
-        name: "Leslie Pack Kaelbling",
-        image: "https://ik.imagekit.io/opendrivelab/yuance/people/leslie_kaelbling.jpg",
-        position: "Professor",
-        affiliation: 'MIT',
-        link: 'https://people.csail.mit.edu/lpk/'
+        name: "Yi Li",
+        image: "/assets/person/yi_li.jpg",
+        position: "Assistant Professor",
+        affiliation: 'Tsinghua University, China',
+        link: 'https://scholar.google.com/citations?user=UyZL660AAAAJ&hl=en'
     },
     {
-        name: "Shan Luo",
-        image: "https://ik.imagekit.io/opendrivelab/yuance/people/shan_luo.jpg",
-        position: "Reader",
-        affiliation: "King's College London",
-        link: 'https://shanluo.github.io/'
-    },
-    {
-        name: "Hamidreza Kasaei",
-        image: "https://ik.imagekit.io/opendrivelab/yuance/people/hamidreza_kasaei.jpg",
-        position: "Associate Professor",
-        affiliation: 'University of Groningen',
-        link: 'https://hkasaei.github.io/'
+        name: "Marcel Torne",
+        image: "/assets/person/marcel_torne.jpg",
+        position: "Researcher",
+        affiliation: "Stanford, Physical Intelligence",
+        link: 'https://marceltorne.github.io/'
     },
     // {
     //     name: "Roberto Martín-Martín",
@@ -108,6 +101,11 @@ const organizers: {
         name: "Huijie Wang",
         affiliation: 'OpenDriveLab',
         link: 'https://faikit.github.io/'
+    },
+    {
+        name: "Hai Zhang",
+        affiliation: 'The University of Hong Kong',
+        link: 'https://betray12138.github.io/resume/'
     },
     {
         name: "Chonghao Sima",
