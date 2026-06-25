@@ -48,6 +48,7 @@ const scheduleItems: {
     type: ScheduleItemType;
     time: string;
     name?: string;
+    nameNote?: string;
     nameLink?: string;
     affiliation?: string;
     affiliationLogo?: string;
@@ -90,13 +91,13 @@ const scheduleItems: {
         nameLink: "https://scholar.google.com/citations?user=UyZL660AAAAJ&hl=en",
         affiliation: "Tsinghua University, China",
         affiliationLogo: "/assets/brand/tsinghua_square.png",
-        title: "TBD",
+        title: "Beyond Imitation: Executable, Correctable, and Adaptable Skills for Humanoid Robots",
         recordings: {
             youtube: "",
             bilibili: "",
         },
         slides: "",
-        bio: "Yi Li is an Assistant Professor in the Institute for Interdisciplinary Information Sciences (IIIS) at Tsinghua University. He received his PhD from Stanford University advised by Leonidas J. Guibas, and later worked as a Research Scientist at Google. His recent research interests include 3D perception, humanoid robot learning, and human-robot interaction.",
+        bio: "Li Yi is a tenure-track assistant professor at the Institute for Interdisciplinary Information Sciences (IIIS), Tsinghua University, and Chief Scientist at Beijing Galbot Co., Ltd. He received his Ph.D. from Stanford University, advised by Professor Leonidas J. Guibas. And he was previously a Research Scientist at Google. Before joining Stanford, he got his B.E. in Electronic Engineering from Tsinghua University. His recent research focuses on 3D computer vision, humanoid robot learning, and dexterous manipulation, and his mission is to equip robotic agents with the ability of understanding and interacting with the 3D world. He has published papers at top-tier computer vision, computer graphics, and machine learning conferences with more than 35000 citations. And he has served as an Area Chair for CVPR, IJCAI, and NeurIPS. His representative work includes ShapeNet, PointNet++, and HOI4D.",
     },
     {
         type: "talk",
@@ -125,21 +126,6 @@ const scheduleItems: {
     },
     {
         type: "talk",
-        time: "10:30 AM",
-        name: "Marcel Torne",
-        nameLink: "https://marceltorne.github.io/",
-        affiliation: "Stanford University & Physical Intelligence, USA",
-        affiliationLogo: "/assets/brand/stanford.png",
-        title: "TBD",
-        recordings: {
-            youtube: "",
-            bilibili: "",
-        },
-        slides: "",
-        bio: "Marcel Torne is a researcher at Stanford and Physical Intelligence. His research focuses on learning-based assistive robots and methods for in-context adaptation of policies to unseen scenarios with an emphasis on human-centric approaches.",
-    },
-    {
-        type: "talk",
         time: "11:00 AM",
         name: "Fan Shi",
         nameLink: "https://fanshi14.github.io/me/",
@@ -155,13 +141,34 @@ const scheduleItems: {
     },
     {
         type: "talk",
-        time: "12:00 AM",
-        name: "Speakers and Organizers",
-        title: "Debate",
+        time: "11:30 AM",
+        name: "Marcel Torne",
+        nameNote: "remote",
+        nameLink: "https://marceltorne.github.io/",
+        affiliation: "Stanford University & Physical Intelligence, USA",
+        affiliationLogo: "/assets/brand/stanford.png",
+        title: "TBD",
         recordings: {
             youtube: "",
             bilibili: "",
         },
+        slides: "",
+        bio: "Marcel Torne is a researcher at Stanford and Physical Intelligence. His research focuses on learning-based assistive robots and methods for in-context adaptation of policies to unseen scenarios with an emphasis on human-centric approaches.",
+    },
+    {
+        type: "talk",
+        time: "12:00 PM",
+        name: "Tapomayukh Bhattacharjee",
+        nameLink: "https://scholar.google.com/citations?user=X1zsXTgAAAAJ&hl=en",
+        affiliation: "Cornell University, USA",
+        affiliationLogo: "/assets/brand/cornell.png",
+        title: "TBD",
+        recordings: {
+            youtube: "",
+            bilibili: "",
+        },
+        slides: "",
+        bio: "Tapomayukh \"Tapo\" Bhattacharjee is an Assistant Professor in the Department of Computer Science at Cornell University, where he directs the EmPRISE Lab. His research aims to enable robots to assist people with mobility limitations with activities of daily living, spanning human-robot interaction, haptic perception, and robot manipulation. He received his PhD in Robotics from Georgia Institute of Technology and was an NIH Ruth L. Kirschstein NRSA postdoctoral research associate at the University of Washington.",
     },
 ];
 
@@ -292,6 +299,11 @@ export function ScheduleList() {
                                                         >
                                                             {item.name}
                                                         </Link>
+                                                        {item.nameNote && (
+                                                            <span className="ml-1 text-xs text-o-gray">
+                                                                ({item.nameNote})
+                                                            </span>
+                                                        )}
                                                         {item.affiliation && (
                                                             <>
                                                                 <br className="laptop:hidden" />

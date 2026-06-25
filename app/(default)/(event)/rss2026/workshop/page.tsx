@@ -47,6 +47,13 @@ const speakers: {
         affiliation: "Stanford University & Physical Intelligence, USA",
         link: 'https://marceltorne.github.io/'
     },
+    {
+        name: "Tapomayukh Bhattacharjee",
+        image: "/assets/person/tapomayukh_bhattacharjee.jpg",
+        position: "Assistant Professor",
+        affiliation: "Cornell University, USA",
+        link: 'https://scholar.google.com/citations?user=X1zsXTgAAAAJ&hl=en'
+    },
     // {
     //     name: "Roberto Martín-Martín",
     //     image: "https://ik.imagekit.io/opendrivelab/yuance/people/roberto_marti%CC%81n_marti%CC%81n.jpg",
@@ -400,7 +407,7 @@ export default function Home() {
 
 
             <div className="w-full px-6 flex justify-center mt-12">
-                <div className="w-full max-w-7xl grid gap-12 grid-cols-2 md:grid-cols-3 xl:grid-cols-4 3xl:grid-cols-5">
+                <div className="w-full max-w-7xl grid gap-12 grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
                     {[...speakers.values()].map((speaker) => (
                         <div className="flex flex-col gap-3 group/image" key={speaker.name}>
                             <Link href={speaker.link} target="_blank">
