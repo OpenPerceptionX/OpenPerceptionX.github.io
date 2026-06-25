@@ -392,7 +392,7 @@ main > .section:not(.hero)::after {
 
 .overview-heading {
   max-width: var(--max);
-  margin: 0 auto 56px;
+  margin: 0 auto 68px;
   text-align: left;
 }
 
@@ -512,6 +512,7 @@ h4 {
 
 .metric-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px;
 }
 
 .event-card,
@@ -537,51 +538,15 @@ h4 {
 }
 
 .metric-card {
-  --metric-accent: var(--blue);
-  --metric-bg: rgba(47, 137, 182, 0.11);
-  --metric-border: rgba(47, 137, 182, 0.22);
   min-height: 0;
-  padding: 0 22px;
+  padding: 8px 22px 0;
   text-align: center;
 }
 
-.metric-card--workshop {
-  --metric-accent: #75a94d;
-  --metric-bg: rgba(117, 169, 77, 0.14);
-  --metric-border: rgba(117, 169, 77, 0.25);
-}
-
-.metric-card--papers {
-  --metric-accent: #2f89b6;
-  --metric-bg: rgba(47, 137, 182, 0.13);
-  --metric-border: rgba(47, 137, 182, 0.24);
-}
-
-.metric-card--talks {
-  --metric-accent: #d4882c;
-  --metric-bg: rgba(212, 136, 44, 0.14);
-  --metric-border: rgba(212, 136, 44, 0.25);
-}
-
-.metric-card--opensource {
-  --metric-accent: #4bb3c3;
-  --metric-bg: rgba(75, 179, 195, 0.14);
-  --metric-border: rgba(75, 179, 195, 0.24);
-}
-
 .metric-card__icon {
-  display: inline-grid;
-  width: 58px;
-  height: 58px;
-  margin: 0 auto 22px;
-  place-items: center;
-  border: 1px solid var(--metric-border);
-  border-radius: 18px;
-  background:
-    radial-gradient(circle at 35% 22%, rgba(255, 255, 255, 0.95), transparent 48%),
-    var(--metric-bg);
-  box-shadow: 0 14px 28px rgba(16, 21, 21, 0.07);
-  font-size: 1.9rem;
+  display: block;
+  margin: 0 auto 30px;
+  font-size: 2.35rem;
   line-height: 1;
 }
 
@@ -595,7 +560,7 @@ h4 {
 
 .metric-card__label {
   display: block;
-  margin-top: 24px;
+  margin-top: 30px;
   color: var(--ink);
   font-size: 1.13rem;
   font-weight: 880;
@@ -2220,11 +2185,8 @@ h4 {
   }
 
   .metric-card__icon {
-    width: 52px;
-    height: 52px;
-    margin-bottom: 18px;
-    border-radius: 16px;
-    font-size: 1.7rem;
+    margin-bottom: 22px;
+    font-size: 2rem;
   }
 
   .section-heading h2,
