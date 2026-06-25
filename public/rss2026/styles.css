@@ -499,17 +499,50 @@ h4 {
   max-width: 980px;
 }
 
-.section-heading .event-lead {
-  width: min(100%, 1180px);
+#events .section-heading {
   max-width: none;
-  margin-top: 22px;
-  padding: 2px 0 6px 18px;
-  border-left: 3px solid rgba(22, 137, 178, 0.35);
-  color: rgba(16, 21, 21, 0.58);
-  font-size: clamp(1.28rem, 2.1vw, 1.68rem);
-  font-weight: 560;
-  line-height: 1.42;
+}
+
+.section-heading .event-lead {
+  position: relative;
+  width: 100%;
+  max-width: none;
+  margin-top: 20px;
+  border: 1px solid rgba(22, 137, 178, 0.08);
+  border-radius: var(--radius);
+  padding: 18px 24px 18px 60px;
+  background:
+    linear-gradient(135deg, rgba(22, 137, 178, 0.045), rgba(123, 185, 87, 0.035)),
+    rgba(255, 255, 255, 0.32);
+  color: rgba(16, 21, 21, 0.54);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.03rem, 1.35vw, 1.18rem);
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.62;
   text-wrap: pretty;
+}
+
+.section-heading .event-lead::before {
+  content: "\201C";
+  position: absolute;
+  left: 20px;
+  top: 8px;
+  color: rgba(22, 137, 178, 0.22);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 3.3rem;
+  line-height: 1;
+}
+
+.section-heading .event-lead::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 16px;
+  bottom: 16px;
+  width: 3px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(22, 137, 178, 0.58), rgba(123, 185, 87, 0.48));
 }
 
 .metric-grid,
@@ -2207,6 +2240,24 @@ h4 {
   .career-copy h2 {
     font-size: 34px;
     line-height: 1.02;
+  }
+
+  .section-heading .event-lead {
+    padding: 16px 16px 16px 46px;
+    font-size: 1rem;
+    line-height: 1.56;
+  }
+
+  .section-heading .event-lead::before {
+    left: 14px;
+    top: 8px;
+    font-size: 2.65rem;
+  }
+
+  .section-heading .event-lead::after {
+    top: 14px;
+    bottom: 14px;
+    width: 2px;
   }
 
   h3 {
