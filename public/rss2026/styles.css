@@ -499,6 +499,15 @@ h4 {
   max-width: 980px;
 }
 
+.section-heading .event-lead {
+  max-width: 900px;
+  margin-top: 18px;
+  color: rgba(15, 23, 25, 0.64);
+  font-size: clamp(1.2rem, 1.85vw, 1.5rem);
+  font-weight: 650;
+  line-height: 1.36;
+}
+
 .metric-grid,
 .event-grid,
 .media-grid,
