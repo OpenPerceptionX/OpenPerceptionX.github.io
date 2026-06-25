@@ -743,11 +743,13 @@ h4 {
   grid-auto-flow: column;
   grid-auto-columns: 354px;
   gap: 18px;
-  overflow-x: auto;
+  justify-content: safe center;
+  overflow-x: scroll;
   overscroll-behavior-inline: contain;
   padding: 4px 4px 16px;
   scroll-snap-type: inline mandatory;
   scrollbar-color: rgba(22, 137, 178, 0.28) rgba(16, 21, 21, 0.06);
+  scrollbar-gutter: stable;
   scrollbar-width: thin;
 }
 
