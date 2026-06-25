@@ -500,12 +500,16 @@ h4 {
 }
 
 .section-heading .event-lead {
-  max-width: 900px;
-  margin-top: 18px;
-  color: rgba(15, 23, 25, 0.64);
-  font-size: clamp(1.2rem, 1.85vw, 1.5rem);
-  font-weight: 650;
-  line-height: 1.36;
+  width: min(100%, 1180px);
+  max-width: none;
+  margin-top: 22px;
+  padding: 2px 0 6px 18px;
+  border-left: 3px solid rgba(22, 137, 178, 0.35);
+  color: rgba(16, 21, 21, 0.58);
+  font-size: clamp(1.28rem, 2.1vw, 1.68rem);
+  font-weight: 560;
+  line-height: 1.42;
+  text-wrap: pretty;
 }
 
 .metric-grid,
