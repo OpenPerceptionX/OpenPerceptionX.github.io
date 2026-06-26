@@ -245,7 +245,7 @@ summary {
 .hero {
   position: relative;
   display: flex;
-  min-height: 760px;
+  min-height: 700px;
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
@@ -259,7 +259,7 @@ summary {
 .hero__inner {
   width: min(1320px, calc(100% - 48px));
   margin: 0 auto;
-  padding: 166px 0 112px;
+  padding: 148px 0 92px;
 }
 
 .hero__copy {
@@ -271,7 +271,7 @@ summary {
 
 .rss-mark {
   width: min(470px, 78vw);
-  margin: 0 0 48px;
+  margin: 0 0 56px;
 }
 
 .kicker {
@@ -311,7 +311,7 @@ summary {
 }
 
 .hero .hero-date {
-  margin: 34px 0 0;
+  margin: 42px 0 0;
   color: #ffffff;
   font-size: 1.24rem;
   font-weight: 780;
@@ -2609,19 +2609,6 @@ h4 {
   box-shadow: 0 16px 30px rgba(22, 137, 178, 0.13);
   color: #116f94;
   transform: translateY(-1px);
-}
-
-.asset-link--soon {
-  border-color: rgba(123, 185, 87, 0.2);
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(246, 252, 246, 0.88));
-  color: #4f8156;
-}
-
-.asset-link--soon:hover {
-  border-color: rgba(123, 185, 87, 0.36);
-  box-shadow: 0 16px 30px rgba(123, 185, 87, 0.12);
-  color: #3f7047;
 }
 
 .release-links .icon-link--text {
