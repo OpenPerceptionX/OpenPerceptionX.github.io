@@ -1676,9 +1676,9 @@ h4 {
   position: relative;
   overflow: hidden;
   max-width: 430px;
-  height: 148px;
+  height: 156px;
   margin-top: 26px;
-  padding-block: 10px;
+  padding-block: 8px;
   border-block: 1px solid rgba(22, 137, 178, 0.1);
   mask-image: linear-gradient(to bottom, transparent, #000 6%, #000 94%, transparent);
 }
@@ -1694,18 +1694,21 @@ h4 {
 
 .workshop-activity-list {
   display: grid;
-  gap: 8px;
+  gap: 6px;
   margin: 0;
-  padding: 0 0 8px;
+  padding: 0 0 6px;
   list-style: none;
 }
 
 .workshop-activity-list li {
+  display: flex;
+  align-items: center;
+  min-height: 22px;
   overflow: hidden;
   color: rgba(16, 21, 21, 0.68);
   font-size: 0.9rem;
   font-weight: 700;
-  line-height: 1.25;
+  line-height: 1.2;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -2608,6 +2611,19 @@ h4 {
   transform: translateY(-1px);
 }
 
+.asset-link--soon {
+  border-color: rgba(123, 185, 87, 0.2);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(246, 252, 246, 0.88));
+  color: #4f8156;
+}
+
+.asset-link--soon:hover {
+  border-color: rgba(123, 185, 87, 0.36);
+  box-shadow: 0 16px 30px rgba(123, 185, 87, 0.12);
+  color: #3f7047;
+}
+
 .release-links .icon-link--text {
   width: 42px;
   border-radius: 8px;
@@ -2959,14 +2975,14 @@ h4 {
   width: max-content;
   margin-top: 12px;
   border-radius: 999px;
-  padding: 5px 10px;
+  padding: 5px 11px;
   background: rgba(22, 137, 178, 0.08);
   color: #315f66;
   font-size: 0.72rem;
   font-weight: 850;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
   line-height: 1.2;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .footer {
