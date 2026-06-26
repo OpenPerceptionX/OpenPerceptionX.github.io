@@ -661,14 +661,17 @@ h4 {
   background: var(--surface-3);
 }
 
-.work-media img {
+.work-media img,
+.work-media video {
+  display: block;
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
   transition: transform 240ms ease;
 }
 
-.work-media:hover img {
+.work-media:hover img,
+.work-media:hover video {
   transform: scale(1.025);
 }
 
@@ -2501,14 +2504,17 @@ h4 {
   pointer-events: none;
 }
 
-.release-media img {
+.release-media img,
+.release-media video {
+  display: block;
   width: 100%;
   aspect-ratio: 16 / 8.8;
   object-fit: cover;
   transition: transform 220ms ease;
 }
 
-.release-card:hover .release-media img {
+.release-card:hover .release-media img,
+.release-card:hover .release-media video {
   transform: scale(1.035);
 }
 
