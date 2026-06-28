@@ -73,8 +73,8 @@ export const publications: {
         author: "Yichao Zhong, Yidan Lu, Yuhang Lu, Tianyang Tang, Haoguang Mai, Yixuan Pan, Tianyu Li, Li Chen, Jingbo Wang, Zhongyu Li, Peng Lu, Hongyang Li",
         note: "Preprint 2026",
         noteoption: '',
-        star: "https://img.shields.io/github/stars/OpenDriveLab/RoboNaldo?style=social",
-        starlink: "https://github.com/OpenDriveLab/RoboNaldo",
+        star: "https://img.shields.io/github/stars/opendrivelab/RoboNaldo?style=social",
+        starlink: "https://github.com/opendrivelab/RoboNaldo",
         icon: [
             {
                 type: "page",
@@ -82,7 +82,7 @@ export const publications: {
             },
             {
                 type: "github",
-                link: "https://github.com/OpenDriveLab/RoboNaldo",
+                link: "https://github.com/opendrivelab/RoboNaldo",
             },
             {
                 type: "youtube",
