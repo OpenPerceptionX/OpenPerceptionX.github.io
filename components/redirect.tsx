@@ -203,11 +203,6 @@ export default function Redirect() {
         redirect('/neurips2026/workshop/')
     }
     if (
-        pathname.toLowerCase().startsWith('/rss2026')
-    ) {
-        redirect('/rss2026/workshop/')
-    }
-    if (
         pathname.toLowerCase().startsWith('/cvpr2026')
     ) {
         redirect('/cvpr2026/workshop/')

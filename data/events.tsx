@@ -31,7 +31,7 @@ export const events: {
     {
         title: "Workshop at RSS 2026",
         subtitle: "Towards Robust Execution of Long-Horizon Whole-Body Control Tasks",
-        url: "/rss2026/workshop/",
+        url: "/rss2026/",
         image: "https://ik.imagekit.io/opendrivelab/jamie-davies-Hao52Fu9-F8-unsplash.jpg",
         imageoption: "object-center",
         date: "July 13, 2026",
