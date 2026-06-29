@@ -81,11 +81,13 @@ const speakers: {
 
 const organizers: {
     name: string;
+    image: string;
     affiliation: string;
     link: string;
 }[] = [
     {
         name: "Hongyang Li",
+        image: "/assets/person/hongyang_li.jpg",
         affiliation: 'The University of Hong Kong',
         link: 'https://datascience.hku.hk/people/hongyang-li/'
     },
@@ -96,26 +98,31 @@ const organizers: {
     // },
     {
         name: "Yasemin Bekiroğlu",
+        image: "/assets/person/yasemin_bekiroglu.jpg",
         affiliation: 'University College London',
         link: 'https://www.dryaseminbekiroglu.com/'
     },
     {
         name: "Lucy Xiaoyang Shi",
+        image: "/assets/person/lucy_xiaoyang_shi.jpg",
         affiliation: 'Stanford University & Physical Intelligence',
         link: 'https://lucys0.github.io/'
     },
     {
         name: "Huijie Wang",
+        image: "/assets/person/huijie_wang.jpg",
         affiliation: 'OpenDriveLab',
         link: 'https://faikit.github.io/'
     },
     {
         name: "Hai Zhang",
+        image: "/assets/person/hai_zhang.jpg",
         affiliation: 'The University of Hong Kong',
         link: 'https://betray12138.github.io/resume/'
     },
     {
         name: "Chonghao Sima",
+        image: "/assets/person/chonghao_sima.jpg",
         affiliation: 'The University of Hong Kong',
         link: 'https://scholar.google.com/citations?user=dgYJ6esAAAAJ'
     },
@@ -439,7 +446,7 @@ export default function Home() {
 
 
 
-            <div className="w-full px-6 flex justify-center mt-24">
+            <div className="w-full px-6 flex justify-center mt-16">
                 <div className="w-full max-w-7xl flex">
                     <h2 className="text-t1"> 
                         <Link href="#organizer" className="scroll-mt-32 group flex items-center" id="organizer">
@@ -458,34 +465,27 @@ export default function Home() {
 
 
             <div className="w-full px-6 flex justify-center mt-12">
-                <div className="w-full max-w-7xl">
-                    <div className="w-full max-w-5xl flex flex-col gap-6">
-                        {[...organizers.values()].map((organizer) => (
-                            <div className="flex gap-6" key={organizer.name}>
-                                {
-                                    organizer.link == "" && (
-                                        <div className="flex-1/2">
-                                            <span>
-                                                {organizer.name}
-                                            </span>
-                                        </div>
-                                    )
-                                }
-                                {
-                                    organizer.link != "" && (
-                                        <div className="flex-1/2">
-                                            <Link href={organizer.link} target={organizer.link.startsWith('http') ? '_blank' : '_self'} className="hover:text-o-blue">
-                                                {organizer.name}
-                                            </Link>
-                                        </div>
-                                    )
-                                }
-                                <i className="flex-1/2">
-                                    {organizer.affiliation}
-                                </i>
-                            </div>
-                        ))}
-                    </div>
+                <div className="w-full max-w-7xl grid gap-8 grid-cols-2 md:grid-cols-3 xl:grid-cols-6">
+                    {[...organizers.values()].map((organizer) => (
+                        <div className="flex flex-col gap-3 group/image" key={organizer.name}>
+                            <Link href={organizer.link || "#"} target={organizer.link.startsWith('http') ? '_blank' : '_self'}>
+                                <AspectRatio ratio={1/1}>
+                                    <Image
+                                        src={organizer.image}
+                                        alt={organizer.name}
+                                        fill
+                                        className="h-full w-full rounded-sm object-cover bg-gradient-landing group-hover/image:scale-101 transition delay-100 duration-200"
+                                    />
+                                </AspectRatio>
+                            </Link>
+                            <span className="text-lg">
+                                {organizer.name}
+                            </span>
+                            <span className="text-sm text-o-gray">
+                                {organizer.affiliation}
+                            </span>
+                        </div>
+                    ))}
                 </div>
             </div>
 

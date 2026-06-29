@@ -109,19 +109,19 @@ const scheduleItems: {
             bilibili: "",
         },
     },
-    {
-        type: "talk",
-        time: "09:50 AM",
-        name: "All Participants",
-        title: "Breakout Discussion",
-        recordings: {
-            youtube: "",
-            bilibili: "",
-        },
-    },
+    // {
+    //     type: "talk",
+    //     time: "09:50 AM",
+    //     name: "All Participants",
+    //     title: "Breakout Discussion",
+    //     recordings: {
+    //         youtube: "",
+    //         bilibili: "",
+    //     },
+    // },
     {
         type: "break",
-        time: "10:00 AM",
+        time: "10:35 AM",
         title: "Coffee Break",
     },
     {
@@ -147,7 +147,7 @@ const scheduleItems: {
         nameLink: "https://marceltorne.github.io/",
         affiliation: "Stanford University & Physical Intelligence, USA",
         affiliationLogo: "/assets/brand/stanford.png",
-        title: "TBD",
+        title: "Long and Short-Term Memory for Long-Horizon Manipulation",
         recordings: {
             youtube: "",
             bilibili: "",
@@ -162,7 +162,7 @@ const scheduleItems: {
         nameLink: "https://scholar.google.com/citations?user=X1zsXTgAAAAJ&hl=en",
         affiliation: "Cornell University, USA",
         affiliationLogo: "/assets/brand/cornell.png",
-        title: "TBD",
+        title: "Learning Personalized Whole-arm Manipulation Around Humans",
         recordings: {
             youtube: "",
             bilibili: "",
