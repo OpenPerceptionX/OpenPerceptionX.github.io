@@ -2617,17 +2617,6 @@ h4 {
   transform: translateY(-1px);
 }
 
-.work-asset-links {
-  gap: 7px;
-  margin-top: 16px;
-}
-
-.work-asset-links .asset-link {
-  min-height: 32px;
-  padding: 0 12px;
-  font-size: 0.76rem;
-}
-
 .release-links .icon-link--text {
   width: 42px;
   border-radius: 8px;
