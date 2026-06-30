@@ -670,6 +670,69 @@ h4 {
   transition: transform 240ms ease;
 }
 
+.work-media--memory {
+  position: relative;
+  display: grid;
+  min-height: 199px;
+  place-items: center;
+  isolation: isolate;
+  color: rgba(16, 21, 21, 0.72);
+  background:
+    radial-gradient(circle at 22% 28%, rgba(95, 181, 199, 0.18), transparent 30%),
+    radial-gradient(circle at 82% 16%, rgba(130, 183, 87, 0.16), transparent 28%),
+    linear-gradient(135deg, #f7fbfc 0%, #f3f8f3 100%);
+}
+
+.work-media--memory::before {
+  content: "";
+  position: absolute;
+  inset: 28px;
+  border: 1px solid rgba(22, 137, 178, 0.14);
+  border-radius: 18px;
+  background:
+    linear-gradient(90deg, transparent 0 32%, rgba(22, 137, 178, 0.18) 32% 33%, transparent 33% 66%, rgba(130, 183, 87, 0.18) 66% 67%, transparent 67%),
+    repeating-linear-gradient(0deg, rgba(16, 21, 21, 0.08) 0 1px, transparent 1px 22px);
+  opacity: 0.64;
+}
+
+.work-media--memory strong {
+  position: relative;
+  z-index: 1;
+  max-width: 250px;
+  color: rgba(16, 21, 21, 0.76);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.32rem;
+  font-style: italic;
+  line-height: 1.14;
+  text-align: center;
+}
+
+.memory-visual {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transform: translateY(-44px);
+}
+
+.memory-visual span {
+  display: block;
+  width: 28px;
+  height: 28px;
+  border: 1px solid rgba(22, 137, 178, 0.22);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.68);
+  box-shadow: 0 10px 24px rgba(22, 137, 178, 0.08);
+  transform: rotate(45deg);
+}
+
+.memory-visual span:nth-child(2) {
+  width: 42px;
+  height: 42px;
+  border-color: rgba(130, 183, 87, 0.28);
+}
+
 .work-media:hover img,
 .work-media:hover video {
   transform: scale(1.025);
