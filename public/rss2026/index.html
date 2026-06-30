@@ -41,7 +41,6 @@
         </a>
       </div>
       <nav class="nav" aria-label="Primary navigation">
-        <a href="#overview">Overview</a>
         <a href="#latest">Latest</a>
         <a href="#events">On-site</a>
         <a href="#opensource">Open Source</a>
@@ -61,36 +60,6 @@
               <a href="https://roboticsconference.org/">July 13-17, 2026, Sydney, Australia</a>
             </p>
           </div>
-        </div>
-      </section>
-
-      <section class="section overview-section" id="overview" aria-labelledby="overview-title">
-        <div class="section__inner overview-heading">
-          <p class="kicker">Overview</p>
-          <h2 class="sr-only" id="overview-title">Archon &amp; OpenDriveLab at RSS 2026 focuses on robot world models, long-horizon control, open-source systems, and real-world autonomy.</h2>
-        </div>
-
-        <div class="section__inner metric-grid" aria-label="Archon &amp; OpenDriveLab RSS 2026 overview metrics">
-          <article class="metric-card metric-card--workshop">
-            <span class="metric-card__icon" aria-hidden="true">🗓️</span>
-            <strong>1</strong>
-            <span class="metric-card__label">Workshop</span>
-          </article>
-          <article class="metric-card metric-card--papers">
-            <span class="metric-card__icon" aria-hidden="true">🏆</span>
-            <strong>4</strong>
-            <span class="metric-card__label">Papers</span>
-          </article>
-          <article class="metric-card metric-card--talks">
-            <span class="metric-card__icon" aria-hidden="true">🎙️</span>
-            <strong>3</strong>
-            <span class="metric-card__label">Talks</span>
-          </article>
-          <article class="metric-card metric-card--opensource">
-            <span class="metric-card__icon" aria-hidden="true">💻</span>
-            <strong>6</strong>
-            <span class="metric-card__label">Open-source Repos</span>
-          </article>
         </div>
       </section>
 
@@ -187,7 +156,7 @@
               </div>
               <div class="work-title-row">
                 <h3><a href="https://opendrivelab.com/kai0">Kai0</a></h3>
-                <div class="icon-pair">
+                <div class="icon-links" aria-label="Kai0 resources">
                   <a class="icon-link icon-link--arxiv" href="https://arxiv.org/abs/2602.09021" aria-label="Kai0 arXiv"><img src="../images/rss2026/icons/arxiv-icon.png" alt=""></a>
                   <a class="icon-link" href="https://github.com/OpenDriveLab/kai0" aria-label="Kai0 GitHub"><img src="../images/rss2026/icons/github.svg" alt=""></a>
                 </div>
@@ -230,7 +199,7 @@
                   </div>
                 </details>
                 <details class="speaker-note speaker-note--topic">
-                  <summary><span class="topic-copy">Topic: Whole-body Intelligence with Human-centric Data</span></summary>
+                  <summary><span class="topic-copy">Title: Whole-body Intelligence with Human-centric Data</span></summary>
                   <div class="speaker-note__content">
                     <p>How can human-centric data become a principled substrate for whole-body intelligence? Drawing on sustained work in embodied intelligence, autonomous systems, and human-centric robot learning, the speaker will examine how behavior traces and demonstrations can be structured for cross-embodiment transfer. The discussion will foreground evaluation beyond isolated demos, toward robot capabilities that generalize across bodies, tasks, and environments.</p>
                   </div>
@@ -242,7 +211,7 @@
             <article class="talk-card">
               <img src="../images/rss2026/li-chen.jpg" alt="Li Chen">
               <div class="talk-body">
-                <span class="date-chip date-chip--green">Jul 17 · Time TBA</span>
+                <span class="date-chip date-chip--green">Jul 17 · 10:00-10:25</span>
                 <h4><a href="https://ilnehc.github.io/">Li Chen</a></h4>
                 <details class="speaker-note">
                   <summary><span>Biography</span></summary>
@@ -251,7 +220,7 @@
                   </div>
                 </details>
                 <details class="speaker-note speaker-note--topic">
-                  <summary><span class="topic-copy">Topic: Robot World<br>Models</span></summary>
+                  <summary><span class="topic-copy">Title: Improving Embodied Policy with Compositional World Model</span></summary>
                   <div class="speaker-note__content">
                     <p>What should a robot world model predict, abstract, and control to support long-horizon decision making? Drawing on a research trajectory in embodied AI systems and model-based autonomy, the speaker will connect controllable prediction with planning, imagination-based policy improvement, and evaluation. The talk will frame world models as operational interfaces between perception, memory, and physical consequence.</p>
                   </div>
@@ -272,7 +241,7 @@
                   </div>
                 </details>
                 <details class="speaker-note speaker-note--topic">
-                  <summary><span class="topic-copy">Topic: Long-Horizon Whole-Body Execution</span></summary>
+                  <summary><span class="topic-copy">Title: Long-Horizon Whole-Body Execution</span></summary>
                   <div class="speaker-note__content">
                     <p>What does robust execution require when whole-body policies encounter contact, latency, and task drift in the physical world? Drawing on deployment-oriented research in VLA systems and long-horizon robot control, the speaker will examine execution-time feedback, recovery, and progress estimation. The discussion will position robustness not as a post-hoc correction, but as a design principle for reliable humanoid autonomy.</p>
                   </div>
@@ -342,7 +311,7 @@
                     <li><span>Talk</span> Tapomayukh Bhattacharjee</li>
                     <li><span>Talk</span> Fan Shi</li>
                     <li><span>Demo</span> Humanoid Football Challenge!</li>
-                    <li><span>Demo</span> Humanoid Ping-Pong Rally!</li>
+                    <li><span>Demo</span> Outdoor Humanoid Ping-Pong Rally!</li>
                   </ul>
                   <ul class="workshop-activity-list" aria-hidden="true">
                     <li><span>Talk</span> Tianyu Li</li>
@@ -351,7 +320,7 @@
                     <li><span>Talk</span> Tapomayukh Bhattacharjee</li>
                     <li><span>Talk</span> Fan Shi</li>
                     <li><span>Demo</span> Humanoid Football Challenge!</li>
-                    <li><span>Demo</span> Humanoid Ping-Pong Rally!</li>
+                    <li><span>Demo</span> Outdoor Humanoid Ping-Pong Rally!</li>
                   </ul>
                 </div>
               </div>
@@ -441,16 +410,16 @@
             </article>
             <article>
               <div class="demo-media">
-                <video autoplay muted loop playsinline preload="metadata" poster="../images/rss2026/smash-pingpong.png" aria-label="SMASH humanoid ping-pong demo video">
-                  <source src="../images/rss2026/smash-pingpong-loop.mp4" type="video/mp4">
+                <video autoplay muted loop playsinline preload="metadata" poster="../images/rss2026/smash-outdoor-poster.jpg" aria-label="Outdoor humanoid ping-pong rally demo video">
+                  <source src="../images/rss2026/smash-outdoor-loop.mp4" type="video/mp4">
                 </video>
               </div>
               <div class="demo-card-body">
-                <h4>SMASH Ping-Pong</h4>
-                <p>Fast rallies through onboard vision.</p>
-                <ul class="demo-highlights" aria-label="SMASH demo highlights">
+                <h4>Outdoor Ping-Pong Rally!</h4>
+                <p>Open-air rallies through onboard vision.</p>
+                <ul class="demo-highlights" aria-label="Outdoor ping-pong demo highlights">
+                  <li>Outdoor rally</li>
                   <li>Onboard vision</li>
-                  <li>Quick rally</li>
                   <li>Whole-body swing</li>
                 </ul>
               </div>
@@ -548,27 +517,10 @@
           </article>
           <article class="release-card">
             <div class="release-media">
-              <video autoplay muted loop playsinline preload="metadata" poster="../images/rss2026/kai0-card-demo.jpg" aria-label="Kai0 generalist robot policy demo video">
-                <source src="../images/rss2026/kai0-card-loop.mp4" type="video/mp4">
-              </video>
-              <span class="release-index">04</span>
-            </div>
-            <div class="release-body">
-              <h3><a href="https://opendrivelab.com/kai0">Kai0</a></h3>
-              <p><strong>Generalist robot policy</strong> assets for embodied post-training, curation, and evaluation.</p>
-              <div class="release-links asset-links" aria-label="Kai0 resources">
-                <a class="asset-link" href="https://github.com/OpenDriveLab/kai0" aria-label="Kai0 code">Code</a>
-                <a class="asset-link" href="https://huggingface.co/datasets/OpenDriveLab-org/Kai0" aria-label="Kai0 dataset">Dataset</a>
-                <a class="asset-link" href="https://huggingface.co/OpenDriveLab-org/Kai0" aria-label="Kai0 checkpoints">Checkpoints</a>
-              </div>
-            </div>
-          </article>
-          <article class="release-card">
-            <div class="release-media">
               <video autoplay muted loop playsinline preload="metadata" poster="../images/rss2026/sparsevideonav-card.png" aria-label="SparseVideoNav beyond-the-view navigation demo video">
                 <source src="../images/rss2026/sparsevideonav-card-loop.mp4" type="video/mp4">
               </video>
-              <span class="release-index">05</span>
+              <span class="release-index">04</span>
             </div>
             <div class="release-body">
               <h3><a href="https://opendrivelab.com/SparseVideoNav/">SparseVideoNav</a></h3>
@@ -585,7 +537,7 @@
               <video autoplay muted loop playsinline preload="metadata" poster="../images/rss2026/worldengine-card-demo.jpg" aria-label="World Engine autonomous driving post-training demo video">
                 <source src="../images/rss2026/worldengine-card-loop.mp4" type="video/mp4">
               </video>
-              <span class="release-index">06</span>
+              <span class="release-index">05</span>
             </div>
             <div class="release-body">
               <h3><a href="https://opendrivelab.com/WorldEngine/">World Engine</a></h3>
@@ -650,6 +602,8 @@
 
         <div class="section__inner partner-grid">
           <a class="partner-card" href="https://www.unitree.com/"><img src="../images/rss2026/unitree.svg" alt="Unitree"><strong>Unitree</strong><span>Humanoid platform support for whole-body control and live demos.</span></a>
+          <a class="partner-card partner-card--qbit" href="https://www.qbitai.com/"><img src="../images/rss2026/qbitai-logo.png" alt="QbitAI"><strong>QbitAI</strong><span>Technology media partner for AI research, robotics, and community stories.</span></a>
+          <a class="partner-card partner-card--swancor" href="https://www.swancor.com.cn/"><img src="../images/rss2026/swancor-logo.png" alt="Swancor Advanced Materials"><strong>Swancor Advanced Materials</strong><span>Materials ecosystem partner for advanced manufacturing and real-world physical systems.</span></a>
         </div>
       </section>
 

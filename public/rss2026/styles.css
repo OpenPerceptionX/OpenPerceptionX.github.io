@@ -2409,7 +2409,7 @@ h4 {
 }
 
 .partner-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .partner-card {
@@ -2434,6 +2434,18 @@ h4 {
   max-width: 138px;
   max-height: 60px;
   object-fit: contain;
+}
+
+.partner-card--qbit img {
+  width: 148px;
+  height: auto;
+  max-height: 54px;
+  object-fit: contain;
+}
+
+.partner-card--swancor img {
+  max-width: 168px;
+  max-height: 54px;
 }
 
 .partner-card span,
