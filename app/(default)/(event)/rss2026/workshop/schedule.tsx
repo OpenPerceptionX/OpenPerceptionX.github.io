@@ -76,13 +76,13 @@ const scheduleItems: {
         nameLink: "https://scholar.google.com/citations?user=X6vTmEMAAAAJ",
         affiliation: "Archon Robotics, China",
         affiliationLogo: "https://www.archon.tech/apple-touch-icon.png",
-        title: "TBD",
+        title: "Scaling Whole-Body Humanoid Skills with Human Demostration",
         recordings: {
             youtube: "",
             bilibili: "",
         },
         slides: "",
-        bio: "Tianyu Li is the co-founder of Archon Robotics and a PhD researcher affiliated with Fudan University, Shanghai Innovation Institute, and OpenDriveLab. His research focuses on Physical AI, autonomous driving, end-to-end autonomous driving systems, 3D reconstruction, and generative models.",
+        bio: "Tianyu Li is the Co-Founder of Archon Robotics, where he is building Large Humanoid Models toward general-purpose whole-body intelligence. He is also a PhD researcher at Fudan University and the Shanghai Innovation Institute, conducting research at OpenDriveLab under the supervision of Prof. Hongyang Li. His work centers on humanoid robot learning, autonomos driving, and 3D computer vision.",
     },
     {
         type: "talk",

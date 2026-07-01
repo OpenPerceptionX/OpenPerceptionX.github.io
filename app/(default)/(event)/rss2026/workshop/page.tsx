@@ -86,10 +86,10 @@ const organizers: {
     link: string;
 }[] = [
     {
-        name: "Hongyang Li",
-        image: "/assets/person/hongyang_li.jpg",
+        name: "Hai Zhang",
+        image: "/assets/person/hai_zhang.jpg",
         affiliation: 'The University of Hong Kong',
-        link: 'https://datascience.hku.hk/people/hongyang-li/'
+        link: 'https://betray12138.github.io/resume/'
     },
     // {
     //     name: "Ping Luo",
@@ -97,10 +97,10 @@ const organizers: {
     //     link: 'http://luoping.me/'
     // },
     {
-        name: "Yasemin Bekiroğlu",
-        image: "/assets/person/yasemin_bekiroglu.jpg",
-        affiliation: 'University College London',
-        link: 'https://www.dryaseminbekiroglu.com/'
+        name: "Huijie Wang",
+        image: "/assets/person/huijie_wang.jpg",
+        affiliation: 'OpenDriveLab',
+        link: 'https://faikit.github.io/'
     },
     {
         name: "Lucy Xiaoyang Shi",
@@ -109,22 +109,22 @@ const organizers: {
         link: 'https://lucys0.github.io/'
     },
     {
-        name: "Huijie Wang",
-        image: "/assets/person/huijie_wang.jpg",
-        affiliation: 'OpenDriveLab',
-        link: 'https://faikit.github.io/'
-    },
-    {
-        name: "Hai Zhang",
-        image: "/assets/person/hai_zhang.jpg",
-        affiliation: 'The University of Hong Kong',
-        link: 'https://betray12138.github.io/resume/'
-    },
-    {
         name: "Chonghao Sima",
         image: "/assets/person/chonghao_sima.jpg",
         affiliation: 'The University of Hong Kong',
         link: 'https://scholar.google.com/citations?user=dgYJ6esAAAAJ'
+    },
+    {
+        name: "Yasemin Bekiroğlu",
+        image: "/assets/person/yasemin_bekiroglu.jpg",
+        affiliation: 'University College London',
+        link: 'https://www.dryaseminbekiroglu.com/'
+    },
+    {
+        name: "Hongyang Li",
+        image: "/assets/person/hongyang_li.jpg",
+        affiliation: 'The University of Hong Kong',
+        link: 'https://datascience.hku.hk/people/hongyang-li/'
     },
 ];
 
