@@ -2511,6 +2511,32 @@ h4 {
   max-height: 54px;
 }
 
+.partner-card .primebot-wordmark {
+  display: inline-flex;
+  align-items: center;
+  min-height: 60px;
+  margin-top: 0;
+  color: #101515;
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 950;
+  letter-spacing: 0.015em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.partner-card .primebot-wordmark::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  border-radius: 7px;
+  background:
+    linear-gradient(135deg, transparent 0 36%, #101515 36% 64%, transparent 64%),
+    linear-gradient(45deg, #101515 0 48%, transparent 48%);
+  transform: skewX(-8deg);
+}
+
 .partner-card span,
 .partner-card strong {
   display: block;
