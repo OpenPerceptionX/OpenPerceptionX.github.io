@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { useState } from "react"
 
-type ScheduleItemType = "talk" | "break" | "challenge" | "panel" | "closing";
+type ScheduleItemType = "talk" | "break" | "demo" | "challenge" | "panel" | "closing";
 
 const timezones: { label: string; offset: number }[] = [
     { label: "UTC-12", offset: -12 },
@@ -125,6 +125,13 @@ const scheduleItems: {
         title: "Coffee Break",
     },
     {
+        type: "demo",
+        time: "10:35 AM-10:45 AM",
+        name: "RoboNaldo",
+        nameLink: "https://opendrivelab.com/RoboNaldo/",
+        title: "Live Demo Demonstration",
+    },
+    {
         type: "talk",
         time: "11:00 AM",
         name: "Fan Shi",
@@ -195,6 +202,17 @@ function ScheduleAvatar({ item }: { item: typeof scheduleItems[0] }) {
             </div>
         );
     }
+    if (item.type === "demo") {
+        return (
+            <div className="relative px-1">
+                <div className="flex size-8 items-center justify-center rounded-full border border-o-blue/40 bg-o-blue/10 text-o-blue">
+                    <svg fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-5">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z" />
+                    </svg>
+                </div>
+            </div>
+        );
+    }
     if (item.type === "challenge") {
         return (
             <div className="relative shrink-0">
@@ -240,6 +258,7 @@ export function ScheduleList() {
     const tzIndex = 6;
     const tz = timezones[tzIndex];
     const isBreakType = (type: ScheduleItemType) => type === "break";
+    const isDemoType = (type: ScheduleItemType) => type === "demo";
 
     return (
         <div className="max-w-wider">
@@ -279,7 +298,7 @@ export function ScheduleList() {
                                 <div className="relative flex items-start space-x-3">
                                     <ScheduleAvatar item={item} />
                                     {/* FIX 2: min-w-0 + overflow-hidden clamps the column to its flex-allocated width */}
-                                    <div className="flex flex-col w-full min-w-0 overflow-hidden gap-3">
+                                    <div className={`flex flex-col w-full min-w-0 overflow-hidden gap-3${isDemoType(item.type) ? " rounded-sm border border-o-blue/30 bg-o-blue/5 px-4 py-3 shadow-sm" : ""}`}>
                                         <div className={`flex justify-between${isBreakType(item.type) ? " pt-1" : ""}`}>
                                             <div>
                                                 {item.type === "challenge" ? (
@@ -290,6 +309,20 @@ export function ScheduleList() {
                                                     <span>Closing Remarks</span>
                                                 ) : item.type === "break" ? (
                                                     <span className="text-o-gray">{item.title}</span>
+                                                ) : item.type === "demo" ? (
+                                                    <>
+                                                        <span className="mb-1 inline-flex rounded-sm bg-o-blue px-2 py-0.5 text-xs font-bold text-white">
+                                                            Parallel Live Demo
+                                                        </span>
+                                                        <br />
+                                                        <Link
+                                                            href={item.nameLink ?? "#"}
+                                                            target="_blank"
+                                                            className="font-bold text-o-blue hover:underline"
+                                                        >
+                                                            {item.name}
+                                                        </Link>
+                                                    </>
                                                 ) : item.name ? (
                                                     <>
                                                         <Link
@@ -317,13 +350,13 @@ export function ScheduleList() {
                                             </div>
 
                                             {/* ── Time display ── */}
-                                            <span className={`text-sm tabular-nums shrink-0 ml-4${isBreakType(item.type) ? " text-o-gray" : ""}`}>
+                                            <span className={`text-sm tabular-nums shrink-0 ml-4${isBreakType(item.type) ? " text-o-gray" : ""}${isDemoType(item.type) ? " text-o-blue font-bold" : ""}`}>
                                                 {/* {formatTime(item.time, tz.offset)} */}
                                                 {item.time}
                                             </span>
                                         </div>
 
-                                        {item.type !== "break" && item.type !== "closing" && (
+                                        {item.type !== "break" && item.type !== "closing" && item.type !== "demo" && (
                                             <span>{item.title}</span>
                                         )}
 
