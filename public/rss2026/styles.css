@@ -137,6 +137,19 @@ summary {
   object-fit: contain;
 }
 
+.brand-link--qbit {
+  gap: 0;
+}
+
+.brand-link--qbit img {
+  width: 86px;
+  height: 28px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.28);
+}
+
 .brand-link span {
   line-height: 1;
 }
@@ -2516,25 +2529,14 @@ h4 {
   align-items: center;
   min-height: 60px;
   margin-top: 0;
-  color: #101515;
+  color: #f06d22;
   font-size: 2rem;
   font-style: italic;
   font-weight: 950;
   letter-spacing: 0.015em;
   line-height: 1;
+  text-shadow: 0 10px 24px rgba(240, 109, 34, 0.1);
   text-transform: uppercase;
-}
-
-.partner-card .primebot-wordmark::before {
-  content: "";
-  width: 30px;
-  height: 30px;
-  margin-right: 10px;
-  border-radius: 7px;
-  background:
-    linear-gradient(135deg, transparent 0 36%, #101515 36% 64%, transparent 64%),
-    linear-gradient(45deg, #101515 0 48%, transparent 48%);
-  transform: skewX(-8deg);
 }
 
 .partner-card span,
@@ -3312,6 +3314,12 @@ h4 {
   .brand-link img {
     width: 29px;
     height: 29px;
+  }
+
+  .brand-link--qbit img {
+    width: 78px;
+    height: 25px;
+    padding: 3px 7px;
   }
 
   .brand-link span {
