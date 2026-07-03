@@ -152,7 +152,7 @@ const scheduleItems: {
         name: "Marcel Torne",
         nameNote: "remote",
         nameLink: "https://marceltorne.github.io/",
-        affiliation: "Stanford University & Physical Intelligence, USA",
+        affiliation: "Stanford University, USA",
         affiliationLogo: "/assets/brand/stanford.png",
         title: "Long and Short-Term Memory for Long-Horizon Manipulation",
         recordings: {
@@ -160,7 +160,7 @@ const scheduleItems: {
             bilibili: "",
         },
         slides: "",
-        bio: "Marcel Torne is a researcher at Stanford and Physical Intelligence. His research focuses on learning-based assistive robots and methods for in-context adaptation of policies to unseen scenarios with an emphasis on human-centric approaches.",
+        bio: "Marcel Torne is a researcher at Stanford University. His research focuses on learning-based assistive robots and methods for in-context adaptation of policies to unseen scenarios with an emphasis on human-centric approaches.",
     },
     {
         type: "talk",

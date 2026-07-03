@@ -44,7 +44,7 @@ const speakers: {
         name: "Marcel Torne",
         image: "/assets/person/marcel_torne.jpg",
         position: "Researcher",
-        affiliation: "Stanford University & Physical Intelligence, USA",
+        affiliation: "Stanford University, USA",
         link: 'https://marceltorne.github.io/'
     },
     {
