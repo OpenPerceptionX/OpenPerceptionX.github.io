@@ -2485,7 +2485,7 @@ h4 {
 }
 
 .partner-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .partner-card {
@@ -2520,6 +2520,12 @@ h4 {
   height: auto;
   max-height: 54px;
   object-fit: contain;
+}
+
+.partner-card--noitom img {
+  width: 132px;
+  height: auto;
+  filter: invert(1);
 }
 
 .partner-card--swancor img {
