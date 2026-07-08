@@ -150,6 +150,19 @@ summary {
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.28);
 }
 
+.brand-link--noitom {
+  gap: 0;
+}
+
+.brand-link--noitom img {
+  width: 146px;
+  height: 28px;
+  padding: 4px 10px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.28);
+}
+
 .brand-link span {
   line-height: 1;
 }
@@ -3332,6 +3345,12 @@ h4 {
     padding: 3px 7px;
   }
 
+  .brand-link--noitom img {
+    width: 126px;
+    height: 25px;
+    padding: 3px 8px;
+  }
+
   .brand-link span {
     font-size: 0.92rem;
   }
@@ -3673,6 +3692,28 @@ h4 {
 
   .footer-social {
     justify-content: flex-start;
+  }
+}
+
+@media (max-width: 560px) {
+  .brand {
+    gap: 8px;
+  }
+
+  .brand-link:not(.brand-link--qbit):not(.brand-link--noitom) span {
+    display: none;
+  }
+
+  .brand-link + .brand-link {
+    padding-left: 8px;
+  }
+
+  .brand-link--qbit img {
+    width: 68px;
+  }
+
+  .brand-link--noitom img {
+    width: 110px;
   }
 }
 
