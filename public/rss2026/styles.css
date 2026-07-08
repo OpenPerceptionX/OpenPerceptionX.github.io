@@ -2523,9 +2523,9 @@ h4 {
 }
 
 .partner-card--noitom img {
-  width: 132px;
+  width: 220px;
+  max-width: 220px;
   height: auto;
-  filter: invert(1);
 }
 
 .partner-card--swancor img {
