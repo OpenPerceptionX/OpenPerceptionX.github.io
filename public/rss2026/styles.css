@@ -1971,8 +1971,9 @@ h4 {
 
 .demo-mini-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
+  grid-template-columns: minmax(0, 860px);
+  justify-content: center;
+  gap: 0;
   margin-top: var(--event-title-gap);
   max-width: none;
 }
@@ -1988,109 +1989,6 @@ h4 {
     linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.9)),
     var(--surface-2);
   box-shadow: 0 24px 60px rgba(16, 21, 21, 0.08);
-}
-
-.demo-context-card {
-  position: relative;
-  display: grid;
-  min-height: 100%;
-  align-content: center;
-  overflow: hidden;
-  border: 1px solid rgba(22, 137, 178, 0.14);
-  border-radius: var(--radius);
-  padding: clamp(26px, 4vw, 48px);
-  background:
-    radial-gradient(circle at 16% 14%, rgba(86, 180, 193, 0.16), transparent 34%),
-    radial-gradient(circle at 84% 86%, rgba(126, 181, 83, 0.16), transparent 36%),
-    linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(244, 250, 249, 0.92));
-  box-shadow: 0 26px 70px rgba(16, 21, 21, 0.08);
-}
-
-.demo-context-card::before,
-.demo-context-card::after {
-  content: "";
-  position: absolute;
-  pointer-events: none;
-}
-
-.demo-context-card::before {
-  inset: 18px;
-  border: 1px solid rgba(22, 137, 178, 0.1);
-  border-radius: calc(var(--radius) - 4px);
-}
-
-.demo-context-card::after {
-  width: 220px;
-  height: 220px;
-  right: -78px;
-  bottom: -88px;
-  border: 1px solid rgba(126, 181, 83, 0.18);
-  border-radius: 50%;
-}
-
-.demo-context-card__eyebrow {
-  position: relative;
-  width: max-content;
-  margin: 0 0 20px;
-  border-radius: 999px;
-  padding: 8px 13px;
-  background: rgba(22, 137, 178, 0.1);
-  color: var(--blue);
-  font-size: 0.78rem;
-  font-weight: 900;
-  line-height: 1;
-  text-transform: uppercase;
-}
-
-.demo-context-card h4 {
-  position: relative;
-  max-width: 520px;
-  margin: 0;
-  color: var(--ink);
-  font-size: clamp(2rem, 3vw, 3.1rem);
-  line-height: 0.98;
-  letter-spacing: 0;
-}
-
-.demo-context-card > p {
-  position: relative;
-  max-width: 500px;
-  margin: 22px 0 0;
-  color: rgba(16, 21, 21, 0.64);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1.06rem, 1.4vw, 1.22rem);
-  font-style: italic;
-  font-weight: 620;
-  line-height: 1.42;
-}
-
-.demo-context-card dl {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-  margin: 34px 0 0;
-}
-
-.demo-context-card dl div {
-  border-left: 2px solid rgba(22, 137, 178, 0.28);
-  padding-left: 12px;
-}
-
-.demo-context-card dt {
-  color: var(--blue);
-  font-size: 0.72rem;
-  font-weight: 900;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.demo-context-card dd {
-  margin: 6px 0 0;
-  color: rgba(16, 21, 21, 0.7);
-  font-size: 0.9rem;
-  font-weight: 780;
-  line-height: 1.22;
 }
 
 .demo-media {
@@ -3375,12 +3273,8 @@ h4 {
   }
 
   .demo-mini-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: minmax(0, 840px);
     max-width: 100%;
-  }
-
-  .demo-context-card dl {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -3545,14 +3439,6 @@ h4 {
   }
 
   .demo-program-copy {
-    grid-template-columns: 1fr;
-  }
-
-  .demo-context-card {
-    min-height: 360px;
-  }
-
-  .demo-context-card dl {
     grid-template-columns: 1fr;
   }
 
