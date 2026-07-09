@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { useState } from "react"
 
-type ScheduleItemType = "talk" | "break" | "demo" | "challenge" | "panel" | "closing";
+type ScheduleItemType = "talk" | "poster" | "break" | "demo" | "challenge" | "panel" | "closing";
 
 const timezones: { label: string; offset: number }[] = [
     { label: "UTC-12", offset: -12 },
@@ -56,6 +56,7 @@ const scheduleItems: {
     recordings?: { youtube?: string; bilibili?: string };
     slides?: string;
     bio?: string;
+    presentations?: string[];
 }[] = [
     {
         type: "talk",
@@ -72,17 +73,17 @@ const scheduleItems: {
     {
         type: "talk",
         time: "08:35 AM",
-        name: "Tianyu Li",
-        nameLink: "https://scholar.google.com/citations?user=X6vTmEMAAAAJ",
-        affiliation: "Archon Robotics, China",
-        affiliationLogo: "https://www.archon.tech/apple-touch-icon.png",
-        title: "Scaling Whole-Body Humanoid Skills with Human Demostration",
+        name: "Tapomayukh Bhattacharjee",
+        nameLink: "https://scholar.google.com/citations?user=X1zsXTgAAAAJ&hl=en",
+        affiliation: "Cornell University, USA",
+        affiliationLogo: "/assets/brand/cornell.png",
+        title: "Learning Personalized Whole-arm Manipulation Around Humans",
         recordings: {
             youtube: "",
             bilibili: "",
         },
         slides: "",
-        bio: "Tianyu Li is the Co-Founder of Archon Robotics, where he is building Large Humanoid Models toward general-purpose whole-body intelligence. He is also a PhD researcher at Fudan University and the Shanghai Innovation Institute, conducting research at OpenDriveLab under the supervision of Prof. Hongyang Li. His work centers on humanoid robot learning, autonomos driving, and 3D computer vision.",
+        bio: "Tapomayukh \"Tapo\" Bhattacharjee is an Assistant Professor in the Department of Computer Science at Cornell University, where he directs the EmPRISE Lab. His research aims to enable robots to assist people with mobility limitations with activities of daily living, spanning human-robot interaction, haptic perception, and robot manipulation. He received his PhD in Robotics from Georgia Institute of Technology and was an NIH Ruth L. Kirschstein NRSA postdoctoral research associate at the University of Washington.",
     },
     {
         type: "talk",
@@ -102,12 +103,22 @@ const scheduleItems: {
     {
         type: "talk",
         time: "09:35 AM",
-        name: "Selected Presenters",
-        title: "Spotlight Presentations",
+        name: "Oral Presentations",
+        title: "Oral Presentations",
         recordings: {
             youtube: "",
             bilibili: "",
         },
+        presentations: [
+            "HEX: Humanoid-Aligned Experts for Cross-Embodiment Whole-Body Manipulation",
+            "Sparse Video Generation Propels Real-World Beyond-the-View Vision-Language Navigation",
+            "OMG: Omni-Modal Motion Generation for Generalist Humanoid Control",
+            "Human2Any: Human-to-Robot Transfer via Constraint-Aware Compositional Planning",
+            "RoboNaldo: Accurate, Stable and Powerful Humanoid Soccer Shooting via Motion-Guided Curriculum Reinforcement Learning",
+            "Can We Tune Humanoid Behavior Foundation Models for Dynamic and Contact-Rich Tasks?",
+            "Native Memory Compression for Long-Horizon Robotic Manipulation",
+            "Visibility-Aware Mobile Grasping in Dynamic Environments",
+        ],
     },
     // {
     //     type: "talk",
@@ -120,13 +131,18 @@ const scheduleItems: {
     //     },
     // },
     {
+        type: "poster",
+        time: "10:15 AM",
+        title: "Poster Session",
+    },
+    {
         type: "break",
-        time: "10:35 AM",
+        time: "10:40 AM",
         title: "Coffee Break",
     },
     {
         type: "demo",
-        time: "10:35 AM-10:45 AM",
+        time: "10:45 AM-10:55 AM",
         name: "RoboNaldo",
         nameLink: "https://opendrivelab.com/RoboNaldo/",
         title: "Live Demo Demonstration",
@@ -165,17 +181,17 @@ const scheduleItems: {
     {
         type: "talk",
         time: "12:00 PM",
-        name: "Tapomayukh Bhattacharjee",
-        nameLink: "https://scholar.google.com/citations?user=X1zsXTgAAAAJ&hl=en",
-        affiliation: "Cornell University, USA",
-        affiliationLogo: "/assets/brand/cornell.png",
-        title: "Learning Personalized Whole-arm Manipulation Around Humans",
+        name: "Tianyu Li",
+        nameLink: "https://scholar.google.com/citations?user=X6vTmEMAAAAJ",
+        affiliation: "Archon Robotics, China",
+        affiliationLogo: "https://www.archon.tech/apple-touch-icon.png",
+        title: "Scaling Whole-Body Humanoid Skills with Human Demostration",
         recordings: {
             youtube: "",
             bilibili: "",
         },
         slides: "",
-        bio: "Tapomayukh \"Tapo\" Bhattacharjee is an Assistant Professor in the Department of Computer Science at Cornell University, where he directs the EmPRISE Lab. His research aims to enable robots to assist people with mobility limitations with activities of daily living, spanning human-robot interaction, haptic perception, and robot manipulation. He received his PhD in Robotics from Georgia Institute of Technology and was an NIH Ruth L. Kirschstein NRSA postdoctoral research associate at the University of Washington.",
+        bio: "Tianyu Li is the Co-Founder of Archon Robotics, where he is building Large Humanoid Models toward general-purpose whole-body intelligence. He is also a PhD researcher at Fudan University and the Shanghai Innovation Institute, conducting research at OpenDriveLab under the supervision of Prof. Hongyang Li. His work centers on humanoid robot learning, autonomos driving, and 3D computer vision.",
     },
 ];
 
@@ -197,6 +213,17 @@ function ScheduleAvatar({ item }: { item: typeof scheduleItems[0] }) {
                 <div className="flex size-8 items-center justify-center rounded-full bg-white">
                     <svg className="size-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
+                    </svg>
+                </div>
+            </div>
+        );
+    }
+    if (item.type === "poster") {
+        return (
+            <div className="relative px-1">
+                <div className="flex size-8 items-center justify-center rounded-full bg-white">
+                    <svg fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 4.5h16.5M3.75 9h16.5M9 13.5h11.25M9 18h11.25M3.75 13.5h1.5M3.75 18h1.5" />
                     </svg>
                 </div>
             </div>
@@ -309,29 +336,39 @@ export function ScheduleList() {
                                                     <span>Closing Remarks</span>
                                                 ) : item.type === "break" ? (
                                                     <span className="text-o-gray">{item.title}</span>
+                                                ) : item.type === "poster" ? (
+                                                    <span className="font-bold">{item.title}</span>
                                                 ) : item.type === "demo" ? (
                                                     <>
                                                         <span className="mb-1 inline-flex rounded-sm bg-o-blue px-2 py-0.5 text-xs font-bold text-white">
                                                             Parallel Live Demo
                                                         </span>
                                                         <br />
-                                                        <Link
-                                                            href={item.nameLink ?? "#"}
-                                                            target="_blank"
-                                                            className="font-bold text-o-blue hover:underline"
-                                                        >
-                                                            {item.name}
-                                                        </Link>
+                                                        {item.nameLink ? (
+                                                            <Link
+                                                                href={item.nameLink}
+                                                                target="_blank"
+                                                                className="font-bold text-o-blue hover:underline"
+                                                            >
+                                                                {item.name}
+                                                            </Link>
+                                                        ) : (
+                                                            <span className="font-bold text-o-blue">{item.name}</span>
+                                                        )}
                                                     </>
                                                 ) : item.name ? (
                                                     <>
-                                                        <Link
-                                                            href={item.nameLink ?? "#"}
-                                                            target="_blank"
-                                                            className="font-bold hover:underline"
-                                                        >
-                                                            {item.name}
-                                                        </Link>
+                                                        {item.nameLink ? (
+                                                            <Link
+                                                                href={item.nameLink}
+                                                                target="_blank"
+                                                                className="font-bold hover:underline"
+                                                            >
+                                                                {item.name}
+                                                            </Link>
+                                                        ) : (
+                                                            <span className="font-bold">{item.name}</span>
+                                                        )}
                                                         {item.nameNote && (
                                                             <span className="ml-1 text-xs text-o-gray">
                                                                 ({item.nameNote})
@@ -356,8 +393,21 @@ export function ScheduleList() {
                                             </span>
                                         </div>
 
-                                        {item.type !== "break" && item.type !== "closing" && item.type !== "demo" && (
+                                        {item.type !== "break" && item.type !== "closing" && item.type !== "demo" && item.type !== "poster" && !item.presentations && (
                                             <span>{item.title}</span>
+                                        )}
+
+                                        {item.presentations && (
+                                            <details className="text-xs">
+                                                <summary className="content-none">{item.title}</summary>
+                                                <ol className="mt-3 list-decimal space-y-2 pl-5">
+                                                    {item.presentations.map((presentation) => (
+                                                        <li key={presentation} className="break-words">
+                                                            {presentation}
+                                                        </li>
+                                                    ))}
+                                                </ol>
+                                            </details>
                                         )}
 
                                         {/* {item.recordings && (
