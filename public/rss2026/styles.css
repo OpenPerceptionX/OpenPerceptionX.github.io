@@ -1712,6 +1712,13 @@ h4 {
   margin-bottom: 18px;
 }
 
+.workshop-meta-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
 .workshop-label {
   display: inline-flex;
   align-items: center;
@@ -1724,6 +1731,12 @@ h4 {
   font-size: 0.78rem;
   font-weight: 860;
   line-height: 1;
+}
+
+.workshop-label--venue {
+  border-color: rgba(22, 137, 178, 0.18);
+  background: rgba(22, 137, 178, 0.07);
+  color: #2c82a0;
 }
 
 .workshop-site-link {
@@ -1764,12 +1777,21 @@ h4 {
   color: var(--blue);
 }
 
+.workshop-location-note {
+  max-width: 430px;
+  margin: 8px 0 0;
+  color: rgba(16, 21, 21, 0.56);
+  font-size: 0.78rem;
+  font-weight: 820;
+  letter-spacing: 0.01em;
+}
+
 .workshop-activity-window {
   position: relative;
   overflow: hidden;
   max-width: 430px;
   height: 156px;
-  margin-top: 26px;
+  margin-top: 22px;
   padding-block: 8px;
   border-block: 1px solid rgba(22, 137, 178, 0.1);
   mask-image: linear-gradient(to bottom, transparent, #000 6%, #000 94%, transparent);
