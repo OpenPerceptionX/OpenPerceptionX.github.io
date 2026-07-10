@@ -66,6 +66,30 @@ export const publications: {
     timeline: string[];
 }[] = [
     {
+        title: "Native Memory Compression for Long-Horizon Robotic Manipulation",
+        link: "https://arxiv.org/abs/2607.06678",
+        image: "/assets/publication/nativemem.jpg",
+        author: "Ziye Wang, Modi Shi, Chaojun Ni, Jiazhi Yang, Mengdi Li, Zhizhong Su, Tianwei Lin, Hongyang Li",
+        note: "Preprint 2026",
+        noteoption: '',
+        star: "https://img.shields.io/github/stars/opendrivelab/NativeMEM?style=social",
+        starlink: "https://github.com/opendrivelab/NativeMEM",
+        icon: [
+            {
+                type: "page",
+                link: "/NativeMEM",
+            },
+            {
+                type: "github",
+                link: "https://github.com/opendrivelab/NativeMEM",
+            },
+        ],
+        description: "NativeMEM gives pretrained Vision-Language-Action policies long-term, real-time visual memory by compressing each historical frame-view observation into a single native memory token.",
+        keys: ['embodied_ai'],
+        time: '2026.07.07',
+        timeline: ['tembodied'],
+    },
+    {
         title: "RoboNaldo: Accurate, Stable and Powerful Humanoid Soccer Shooting via Motion-Guided Curriculum Reinforcement Learning",
         link: "https://arxiv.org/abs/2606.11092",
         image: "/assets/publication/robonaldo.jpg",

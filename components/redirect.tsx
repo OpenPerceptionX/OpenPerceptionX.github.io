@@ -183,6 +183,11 @@ export default function Redirect() {
         redirect('/EgoHumanoid/')
     }
     if (
+        pathname.toLowerCase().startsWith('/nativemem')
+    ) {
+        redirect('/NativeMEM/')
+    }
+    if (
         pathname.toLowerCase().startsWith('/sparsevideonav')
         || pathname.toLowerCase().startsWith('/mm-videonav')
     ) {

@@ -1,0 +1,616 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Native Memory Compression for Long-Horizon Robotic Manipulation</title>
+  <meta name="description" content="NativeMEM is a memory-augmented VLA policy that compresses long-horizon visual history into native one-token memory for robotic manipulation.">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/img/robotic-arm-icon.png">
+  <link rel="preconnect" href="https://ik.imagekit.io">
+  <link rel="dns-prefetch" href="//ik.imagekit.io">
+  <link rel="preload" as="image" href="https://ik.imagekit.io/ziye/NativeMEM/posters/scan_code_hard.jpg?updatedAt=1783603914195&tr=w-1280%2Cq-78%2Cf-auto" fetchpriority="high">
+  <link rel="preload" as="video" href="https://ik.imagekit.io/ziye/NativeMEM/videos/scan_code_hard_1080P.m4v/ik-video.mp4?updatedAt=1783603861056&tr=w-1920%2Cq-55%2Cf-mp4" type="video/mp4" fetchpriority="high">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="NativeMEM home">NativeMEM</a>
+    <nav class="nav" aria-label="Page navigation">
+      <a href="#overview">Overview</a>
+      <a href="#method">Method</a>
+      <a href="#demos">Demos</a>
+      <a href="#results">Results</a>
+      <a href="#analysis">Analysis</a>
+      <a href="#bibtex">BibTeX</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-label="NativeMEM introduction">
+      <video class="hero-video" src="https://ik.imagekit.io/ziye/NativeMEM/videos/scan_code_hard_1080P.m4v/ik-video.mp4?updatedAt=1783603861056&tr=w-1920%2Cq-55%2Cf-mp4" poster="https://ik.imagekit.io/ziye/NativeMEM/posters/scan_code_hard.jpg?updatedAt=1783603914195&tr=w-1280%2Cq-78%2Cf-auto" autoplay muted loop playsinline preload="auto" fetchpriority="high"></video>
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow">Long-horizon visual memory for VLA robot policies</p>
+        <h1>
+          <span class="title-main">Native Memory Compression</span>
+          <span class="title-rest">for Long-Horizon Robotic Manipulation</span>
+        </h1>
+        <p class="lead">
+          NativeMEM gives pretrained Vision-Language-Action policies long-term, real-time visual memory by compressing each historical frame-view observation into a single native memory token.
+        </p>
+        <div class="hero-actions" aria-label="Project actions">
+          <a class="btn primary" href="#demos">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M8 5v14l11-7z"></path>
+            </svg>
+            Demos
+          </a>
+          <a class="btn" href="https://arxiv.org/abs/2607.06678" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7z"></path>
+              <path d="M14 2v5h5"></path>
+              <path d="M9 13h6"></path>
+              <path d="M9 17h4"></path>
+            </svg>
+            arXiv
+          </a>
+          <a class="btn" href="https://github.com/Ziyeeee/NativeMEM" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M16 18l6-6-6-6"></path>
+              <path d="M8 6l-6 6 6 6"></path>
+            </svg>
+            Code
+          </a>
+        </div>
+        <div class="authors">
+          <span><strong>Ziye Wang</strong><sup>1</sup></span>
+          <span><strong>Modi Shi</strong><sup>2</sup></span>
+          <span><strong>Chaojun Ni</strong><sup>3</sup></span>
+          <span><strong>Jiazhi Yang</strong><sup>4</sup></span>
+          <span><strong>Mengdi Li</strong><sup>5</sup></span>
+          <span><strong>Zhizhong Su</strong><sup>5</sup></span>
+          <span><strong>Tianwei Lin</strong><sup>5</sup></span>
+          <span><strong>Hongyang Li</strong><sup>1†</sup></span>
+        </div>
+        <div class="affiliations">
+          <span><sup>1</sup> The University of Hong Kong</span>
+          <span><sup>2</sup> Beihang University</span>
+          <span><sup>3</sup> Peking University</span>
+          <span><sup>4</sup> The Chinese University of Hong Kong</span>
+          <span><sup>5</sup> Horizon Robotics</span>
+        </div>
+        <div class="corresponding">
+          <span><sup>†</sup> Corresponding author</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="overview" class="section container">
+      <div class="section-head">
+        <p class="eyebrow">At a glance</p>
+        <h2>Native memory without an external memory module</h2>
+      </div>
+      <div class="overview-grid">
+        <article class="statement">
+          <p>
+            NativeMEM turns long-horizon robot history into <strong>native visual memory</strong>: no external planner, no separate memory module, and no language-only notes. By compressing each historical frame-view into <strong>one memory token</strong>, the policy can retain <strong>minute-level visual context</strong> while staying compatible with the pretrained VLA token sequence.
+          </p>
+          <div class="metrics-row">
+            <div>
+              <strong>1 token</strong>
+              <span>per historical frame</span>
+            </div>
+            <div>
+              <strong>160+ frames</strong>
+              <span>history memory capacity</span>
+            </div>
+            <div>
+              <strong>100 demos</strong>
+              <span>for finetuning</span>
+            </div>
+            <div>
+              <strong>98.7%</strong>
+              <span>real-world average success</span>
+            </div>
+          </div>
+        </article>
+        <figure class="figure-panel">
+          <video data-src="https://ik.imagekit.io/ziye/NativeMEM/videos/scan_code_hard_latency_720P.m4v/ik-video.mp4?updatedAt=1783603862223&tr=w-960%2Cq-52%2Cf-mp4" data-poster="https://ik.imagekit.io/ziye/NativeMEM/posters/scan_code_hard_latency.jpg?updatedAt=1783603913797&tr=w-960%2Cq-76%2Cf-auto" autoplay muted loop playsinline controls preload="none"></video>
+          <figcaption>NativeMEM keeps full visual history coverage with one-token memory compression while preserving low latency.</figcaption>
+        </figure>
+      </div>
+
+      <div class="contribution-grid">
+        <article>
+          <span class="number">01</span>
+          <h3>Native memory tokens</h3>
+          <p>Each historical frame-view observation is compressed into one token in the VLA's native visual token space.</p>
+        </article>
+        <article>
+          <span class="number">02</span>
+          <h3>Action-supervised compression</h3>
+          <p>The tokenizer is trained through the frozen VLA's original action objective, aligning memory with control rather than reconstruction.</p>
+        </article>
+        <article>
+          <span class="number">03</span>
+          <h3>Real-time long horizon</h3>
+          <p>The policy can attend to minute-level histories while preserving low latency and modest GPU memory usage.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="method" class="section container">
+      <div class="section-head">
+        <p class="eyebrow">Method</p>
+        <h2>Compress history into the same token space as the VLA</h2>
+      </div>
+      <div class="method-grid">
+        <article class="method-step" data-method-stage="stage1">
+          <span>Stage 1</span>
+          <h3>Learn the memory tokenizer</h3>
+          <p>A memory encoder initialized from the VLA vision encoder uses a learnable query to aggregate each frame-view into one summary token. The VLA stays frozen, so gradients force the memory branch to encode action-relevant evidence.</p>
+        </article>
+        <article class="method-step" data-method-stage="stage2">
+          <span>Stage 2</span>
+          <h3>Finetune with cached memory</h3>
+          <p>After tokenizer training, memory tokens are cached for task demonstrations and appended to the standard VLA input sequence during task-specific finetuning.</p>
+        </article>
+        <article class="method-step" data-method-stage="deployment">
+          <span>Deployment</span>
+          <h3>Update memory in real time</h3>
+          <p>The tokenizer runs independently from action prediction, maintaining a compact queue that the policy consumes whenever an action is requested.</p>
+        </article>
+      </div>
+      <div class="method-video">
+        <video data-src="https://ik.imagekit.io/ziye/NativeMEM/videos/method.mov/ik-video.mp4?updatedAt=1783603859506&tr=w-1280%2Cq-52%2Cf-mp4" data-poster="https://ik.imagekit.io/ziye/NativeMEM/posters/method.jpg?updatedAt=1783603914325&tr=w-1280%2Cq-76%2Cf-auto" controls muted playsinline preload="none"></video>
+      </div>
+    </section>
+
+    <section id="demos" class="section wide">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Robot demonstrations</p>
+          <h2>Memory-dependent manipulation</h2>
+        </div>
+      </div>
+
+      <div class="container video-feature">
+        <div class="video-shell">
+          <video data-src="https://ik.imagekit.io/ziye/NativeMEM/videos/compare_720P.m4v/ik-video.mp4?updatedAt=1783603862453&tr=w-1280%2Cq-52%2Cf-mp4" data-poster="https://ik.imagekit.io/ziye/NativeMEM/posters/compare.jpg?updatedAt=1783603914229&tr=w-1280%2Cq-76%2Cf-auto" controls muted loop playsinline preload="none"></video>
+        </div>
+        <div class="feature-copy">
+          <h3>Memory-dependent Task</h3>
+          <p>
+            Similar current observations can require different actions depending on prior events, so the policy must remember interaction history.
+          </p>
+          <dl class="compact-list">
+            <div><dt>Click Buttons</dt><dd>Follow a specified sequence without repeating previous clicks.</dd></div>
+            <div><dt>Put Back Block</dt><dd>Recall where the block started after moving it to the center.</dd></div>
+            <div><dt>Grocery Checkout Scanning</dt><dd>Track scanned items and avoid duplicates or misses.</dd></div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="container media-grid">
+        <article class="media-card">
+          <video data-src="https://ik.imagekit.io/ziye/NativeMEM/videos/click_buttons_attn_720P.m4v/ik-video.mp4?updatedAt=1783603858881&tr=w-720%2Cq-52%2Cf-mp4" data-poster="https://ik.imagekit.io/ziye/NativeMEM/posters/click_buttons_attn.jpg?updatedAt=1783603914208&tr=w-720%2Cq-74%2Cf-auto" controls muted loop playsinline preload="none"></video>
+          <h4>Click Buttons</h4>
+        </article>
+        <article class="media-card">
+          <video data-src="https://ik.imagekit.io/ziye/NativeMEM/videos/put_back_cube_attn_720P.m4v/ik-video.mp4?updatedAt=1783603860227&tr=w-720%2Cq-52%2Cf-mp4" data-poster="https://ik.imagekit.io/ziye/NativeMEM/posters/put_back_cube_attn.jpg?updatedAt=1783603914201&tr=w-720%2Cq-74%2Cf-auto" controls muted loop playsinline preload="none"></video>
+          <h4>Put Back Block</h4>
+        </article>
+        <article class="media-card">
+          <video data-src="https://ik.imagekit.io/ziye/NativeMEM/videos/scan_code_attn_720P.m4v/ik-video.mp4?updatedAt=1783603860832&tr=w-720%2Cq-52%2Cf-mp4" data-poster="https://ik.imagekit.io/ziye/NativeMEM/posters/scan_code_attn.jpg?updatedAt=1783603913808&tr=w-720%2Cq-74%2Cf-auto" controls muted loop playsinline preload="none"></video>
+          <h4 class="unseen-title">Grocery Checkout Scanning <span>(Unseen)</span></h4>
+          <p class="unseen-note">*Unseen: not included during first-stage memory-tokenizer training.</p>
+        </article>
+      </div>
+
+      <div class="container baseline-tabs" data-tabs>
+        <div class="tab-controls" role="tablist" aria-label="Baseline comparisons">
+          <button class="tab active" type="button" data-tab="click">Click Buttons</button>
+          <button class="tab" type="button" data-tab="putback">Put Back Block</button>
+        </div>
+        <div class="tab-panel active" data-panel="click">
+          <div class="comparison-grid">
+            <article><video data-src="https://ik.imagekit.io/ziye/NativeMEM/videos/Click_Buttons_NativeMEM_480p.mov/ik-video.mp4?updatedAt=1783603858842&tr=w-640%2Cq-52%2Cf-mp4" data-poster="https://ik.imagekit.io/ziye/NativeMEM/posters/Click_Buttons_NativeMEM.jpg?updatedAt=1783603914330&tr=w-640%2Cq-74%2Cf-auto" controls muted loop playsinline preload="none"></video><h4>NativeMEM</h4></article>
+            <article><video data-src="https://ik.imagekit.io/ziye/NativeMEM/videos/Click_Buttons_Pi05_480p.mov/ik-video.mp4?updatedAt=1783603859717&tr=w-640%2Cq-52%2Cf-mp4" data-poster="https://ik.imagekit.io/ziye/NativeMEM/posters/Click_Buttons_Pi05.jpg?updatedAt=1783603914171&tr=w-640%2Cq-74%2Cf-auto" controls muted loop playsinline preload="none"></video><h4>π<sub>0.5</sub></h4></article>
+            <article><video data-src="https://ik.imagekit.io/ziye/NativeMEM/videos/Click_Buttons_Mem0_480p.mov/ik-video.mp4?updatedAt=1783603860451&tr=w-640%2Cq-52%2Cf-mp4" data-poster="https://ik.imagekit.io/ziye/NativeMEM/posters/Click_Buttons_Mem0.jpg?updatedAt=1783603914313&tr=w-640%2Cq-74%2Cf-auto" controls muted loop playsinline preload="none"></video><h4>Mem-0</h4></article>
+            <article><video data-src="https://ik.imagekit.io/ziye/NativeMEM/videos/Click_Buttons_MEMshort_480p.mov/ik-video.mp4?updatedAt=1783603856923&tr=w-640%2Cq-52%2Cf-mp4" data-poster="https://ik.imagekit.io/ziye/NativeMEM/posters/Click_Buttons_MEMshort.jpg?updatedAt=1783603913846&tr=w-640%2Cq-74%2Cf-auto" controls muted loop playsinline preload="none"></video><h4>MEM-short</h4></article>
+          </div>
+        </div>
+        <div class="tab-panel" data-panel="putback">
+          <div class="comparison-grid">
+            <article><video data-src="https://ik.imagekit.io/ziye/NativeMEM/videos/Put_Back_Cube_NativeMEM_480p.mov/ik-video.mp4?updatedAt=1783603859693&tr=w-640%2Cq-52%2Cf-mp4" data-poster="https://ik.imagekit.io/ziye/NativeMEM/posters/Put_Back_Cube_NativeMEM.jpg?updatedAt=1783603914163&tr=w-640%2Cq-74%2Cf-auto" controls muted loop playsinline preload="none"></video><h4>NativeMEM</h4></article>
+            <article><video data-src="https://ik.imagekit.io/ziye/NativeMEM/videos/Put_Back_Cube_Pi05_480p.mov/ik-video.mp4?updatedAt=1783603860953&tr=w-640%2Cq-52%2Cf-mp4" data-poster="https://ik.imagekit.io/ziye/NativeMEM/posters/Put_Back_Cube_Pi05.jpg?updatedAt=1783603914306&tr=w-640%2Cq-74%2Cf-auto" controls muted loop playsinline preload="none"></video><h4>π<sub>0.5</sub></h4></article>
+            <article><video data-src="https://ik.imagekit.io/ziye/NativeMEM/videos/Put_Back_Cube_Mem0_480p.mov/ik-video.mp4?updatedAt=1783603860934&tr=w-640%2Cq-52%2Cf-mp4" data-poster="https://ik.imagekit.io/ziye/NativeMEM/posters/Put_Back_Cube_Mem0.jpg?updatedAt=1783603914258&tr=w-640%2Cq-74%2Cf-auto" controls muted loop playsinline preload="none"></video><h4>Mem-0</h4></article>
+            <article><video data-src="https://ik.imagekit.io/ziye/NativeMEM/videos/Put_Back_Cube_MEMshort_480p.mov/ik-video.mp4?updatedAt=1783603860524&tr=w-640%2Cq-52%2Cf-mp4" data-poster="https://ik.imagekit.io/ziye/NativeMEM/posters/Put_Back_Cube_MEMshort.jpg?updatedAt=1783603914214&tr=w-640%2Cq-74%2Cf-auto" controls muted loop playsinline preload="none"></video><h4>MEM-short</h4></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="results" class="section container">
+      <div class="section-head">
+        <p class="eyebrow">Results</p>
+        <h2>Large gains on simulation and real-robot memory tasks</h2>
+      </div>
+      <div class="results-highlight">
+        <article>
+          <span class="kicker">Simulation</span>
+          <strong>32.4% to 84.0%</strong>
+          <p>Average success exceeds the strongest listed memory baseline.</p>
+        </article>
+        <article>
+          <span class="kicker">Real world</span>
+          <strong>34.7% to 98.7%</strong>
+          <p>Average final-stage success exceeds the strongest listed baseline.</p>
+        </article>
+        <article>
+          <span class="kicker">Data efficiency</span>
+          <strong>20% data</strong>
+          <p>10 demonstrations reach or exceed other models trained with 50.</p>
+        </article>
+      </div>
+
+      <div class="results-charts">
+        <div class="results-chart-card" data-results-collapse>
+          <div class="results-chart-head">
+            <div>
+              <h3>Simulation success rates (%)</h3>
+              <!-- <p>Per-task and success rate.</p> -->
+            </div>
+            <div class="chart-actions">
+              <div class="chart-legend">
+                <span><i class="bar-baseline"></i>Baselines</span>
+                <span><i class="bar-native"></i>NativeMEM</span>
+              </div>
+              <button class="chart-toggle" type="button" aria-expanded="false">Show tasks</button>
+            </div>
+          </div>
+          <div class="mini-chart-grid simulation-results">
+            <article class="mini-chart">
+              <h4>Click Buttons</h4>
+              <div class="grouped-bars" aria-label="Click Buttons simulation success rates">
+                <span class="bar-pi" style="--value:0"><b>0</b><em>π<sub>0.5</sub></em></span>
+                <span class="bar-xvla" style="--value:7"><b>7</b><em>X-VLA</em></span>
+                <span class="bar-memer" style="--value:12"><b>12</b><em>MemER</em></span>
+                <span class="bar-mem0" style="--value:0"><b>0</b><em>Mem-0</em></span>
+                <span class="bar-hamlet" style="--value:4"><b>4</b><em>HAMLET*</em></span>
+                <span class="bar-memshort" style="--value:0"><b>0</b><em>MEM-short*</em></span>
+                <span class="bar-native" style="--value:94"><b>94</b><em>NativeMEM</em></span>
+              </div>
+            </article>
+            <article class="mini-chart">
+              <h4>Click Buttons (Hard)</h4>
+              <div class="grouped-bars" aria-label="Click Hard simulation success rates">
+                <span class="bar-pi" style="--value:0"><b>0</b><em>π<sub>0.5</sub></em></span>
+                <span class="bar-xvla" style="--value:12"><b>12</b><em>X-VLA</em></span>
+                <span class="bar-memer" style="--value:8"><b>8</b><em>MemER</em></span>
+                <span class="bar-mem0" style="--value:1"><b>1</b><em>Mem-0</em></span>
+                <span class="bar-hamlet" style="--value:17"><b>17</b><em>HAMLET*</em></span>
+                <span class="bar-memshort" style="--value:39"><b>39</b><em>MEM-short*</em></span>
+                <span class="bar-native" style="--value:88"><b>88</b><em>NativeMEM</em></span>
+              </div>
+            </article>
+            <article class="mini-chart">
+              <h4>Swap Blocks</h4>
+              <div class="grouped-bars" aria-label="Swap Blocks simulation success rates">
+                <span class="bar-pi" style="--value:24"><b>24</b><em>π<sub>0.5</sub></em></span>
+                <span class="bar-xvla" style="--value:16"><b>16</b><em>X-VLA</em></span>
+                <span class="bar-memer" style="--value:18"><b>18</b><em>MemER</em></span>
+                <span class="bar-mem0" style="--value:67"><b>67</b><em>Mem-0</em></span>
+                <span class="bar-hamlet" style="--value:11"><b>11</b><em>HAMLET*</em></span>
+                <span class="bar-memshort" style="--value:4"><b>4</b><em>MEM-short*</em></span>
+                <span class="bar-native" style="--value:94"><b>94</b><em>NativeMEM</em></span>
+              </div>
+            </article>
+            <article class="mini-chart">
+              <h4>Put Back Block</h4>
+              <div class="grouped-bars" aria-label="Put Back simulation success rates">
+                <span class="bar-pi" style="--value:11"><b>11</b><em>π<sub>0.5</sub></em></span>
+                <span class="bar-xvla" style="--value:18"><b>18</b><em>X-VLA</em></span>
+                <span class="bar-memer" style="--value:12"><b>12</b><em>MemER</em></span>
+                <span class="bar-mem0" style="--value:90"><b>90</b><em>Mem-0</em></span>
+                <span class="bar-hamlet" style="--value:3"><b>3</b><em>HAMLET*</em></span>
+                <span class="bar-memshort" style="--value:15"><b>15</b><em>MEM-short*</em></span>
+                <span class="bar-native" style="--value:100"><b>100</b><em>NativeMEM</em></span>
+              </div>
+            </article>
+            <article class="mini-chart">
+              <h4>Observe and Pickup</h4>
+              <div class="grouped-bars" aria-label="Observe Pickup simulation success rates">
+                <span class="bar-pi" style="--value:9"><b>9</b><em>π<sub>0.5</sub></em></span>
+                <span class="bar-xvla" style="--value:9"><b>9</b><em>X-VLA</em></span>
+                <span class="bar-memer" style="--value:2"><b>2</b><em>MemER</em></span>
+                <span class="bar-mem0" style="--value:4"><b>4</b><em>Mem-0</em></span>
+                <span class="bar-hamlet" style="--value:10"><b>10</b><em>HAMLET*</em></span>
+                <span class="bar-memshort" style="--value:6"><b>6</b><em>MEM-short*</em></span>
+                <span class="bar-native" style="--value:44"><b>44</b><em>NativeMEM</em></span>
+              </div>
+            </article>
+            <article class="mini-chart summary">
+              <h4>Average</h4>
+              <div class="grouped-bars" aria-label="Simulation average success rates">
+                <span class="bar-pi" style="--value:8.8"><b>8.8</b><em>π<sub>0.5</sub></em></span>
+                <span class="bar-xvla" style="--value:12.4"><b>12.4</b><em>X-VLA</em></span>
+                <span class="bar-memer" style="--value:10.4"><b>10.4</b><em>MemER</em></span>
+                <span class="bar-mem0" style="--value:32.4"><b>32.4</b><em>Mem-0</em></span>
+                <span class="bar-hamlet" style="--value:9"><b>9.0</b><em>HAMLET*</em></span>
+                <span class="bar-memshort" style="--value:12.8"><b>12.8</b><em>MEM-short*</em></span>
+                <span class="bar-native" style="--value:84"><b>84.0</b><em>NativeMEM</em></span>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="results-chart-card" data-results-collapse>
+          <div class="results-chart-head">
+            <div>
+              <h3>Real-world success rates (%)</h3>
+              <!-- <p>Per task final success rate and average success rate.</p> -->
+            </div>
+            <div class="chart-actions">
+              <div class="chart-legend">
+                <span><i class="bar-baseline"></i>Baselines</span>
+                <span><i class="bar-native"></i>NativeMEM</span>
+              </div>
+              <button class="chart-toggle" type="button" aria-expanded="false">Show tasks</button>
+            </div>
+          </div>
+          <div class="mini-chart-grid real-results">
+            <article class="mini-chart">
+              <h4>Click Buttons</h4>
+              <div class="grouped-bars" aria-label="Click Buttons real-world final-stage success rates">
+                <span class="bar-pi" style="--value:2"><b>2</b><em>π<sub>0.5</sub></em></span>
+                <span class="bar-rtc" style="--value:16"><b>16</b><em>π<sub>0.5</sub> + RTC</em></span>
+                <span class="bar-mem0" style="--value:0"><b>0</b><em>Mem-0</em></span>
+                <span class="bar-memshort" style="--value:40"><b>40</b><em>MEM-short*</em></span>
+                <span class="bar-native" style="--value:96"><b>96</b><em>NativeMEM</em></span>
+              </div>
+            </article>
+            <article class="mini-chart">
+              <h4>Put Back Block</h4>
+              <div class="grouped-bars" aria-label="Put Back real-world final-stage success rates">
+                <span class="bar-pi" style="--value:14"><b>14</b><em>π<sub>0.5</sub></em></span>
+                <span class="bar-rtc" style="--value:24"><b>24</b><em>π<sub>0.5</sub> + RTC</em></span>
+                <span class="bar-mem0" style="--value:0"><b>0</b><em>Mem-0</em></span>
+                <span class="bar-memshort" style="--value:0"><b>0</b><em>MEM-short*</em></span>
+                <span class="bar-native" style="--value:100"><b>100</b><em>NativeMEM</em></span>
+              </div>
+            </article>
+            <article class="mini-chart">
+              <h4>Grocery Checkout Scanning</h4>
+              <div class="grouped-bars" aria-label="Grocery Checkout real-world final-stage success rates">
+                <span class="bar-pi" style="--value:28"><b>28</b><em>π<sub>0.5</sub></em></span>
+                <span class="bar-rtc" style="--value:64"><b>64</b><em>π<sub>0.5</sub> + RTC</em></span>
+                <span class="bar-mem0" style="--value:0"><b>0</b><em>Mem-0</em></span>
+                <span class="bar-memshort" style="--value:52"><b>52</b><em>MEM-short*</em></span>
+                <span class="bar-native" style="--value:100"><b>100</b><em>NativeMEM</em></span>
+              </div>
+            </article>
+            <article class="mini-chart summary">
+              <h4>Average</h4>
+              <div class="grouped-bars" aria-label="Real-world average cumulative success rates">
+                <span class="bar-pi" style="--value:14.7"><b>14.7</b><em>π<sub>0.5</sub></em></span>
+                <span class="bar-rtc" style="--value:34.7"><b>34.7</b><em>π<sub>0.5</sub> + RTC</em></span>
+                <span class="bar-mem0" style="--value:0"><b>0.0</b><em>Mem-0</em></span>
+                <span class="bar-memshort" style="--value:30.7"><b>30.7</b><em>MEM-short*</em></span>
+                <span class="bar-native" style="--value:98.7"><b>98.7</b><em>NativeMEM</em></span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <div class="results-chart-card scaling-card">
+        <div class="results-chart-head">
+          <div>
+            <h3>Runtime and memory scaling</h3>
+            <p>Measured on RTX 5090 32GB across increasing visual history frame budgets.</p>
+          </div>
+          <div class="chart-actions">
+            <div class="chart-legend line-legend">
+              <span><i class="mem-line"></i>MEM</span>
+              <span><i class="ours-line"></i>NativeMEM</span>
+            </div>
+          </div>
+        </div>
+        <div class="scaling-grid">
+          <figure class="line-chart-panel">
+            <figcaption>Latency (ms)</figcaption>
+            <svg class="line-chart" viewBox="0 0 520 280" role="img" aria-label="Latency scaling by frame budget">
+              <line class="chart-grid-line" x1="58" y1="203" x2="502" y2="203"></line>
+              <line class="chart-grid-line" x1="58" y1="91.3" x2="502" y2="91.3"></line>
+              <line class="chart-axis" x1="58" y1="232" x2="502" y2="232"></line>
+              <line class="chart-axis" x1="58" y1="24" x2="58" y2="232"></line>
+              <text class="axis-label y-label" x="50" y="207">100</text>
+              <text class="axis-label y-label" x="50" y="95">1000</text>
+              <text class="axis-label" x="58" y="257">5</text>
+              <text class="axis-label" x="147.1" y="257">20</text>
+              <text class="axis-label" x="250.6" y="257">100</text>
+              <text class="axis-label" x="354" y="257">500</text>
+              <text class="axis-label" x="443.1" y="257">2000</text>
+              <text class="axis-label" x="502" y="257">5000</text>
+              <text class="axis-title" x="280" y="276">Frame budget</text>
+              <text class="axis-title rotated" x="-128" y="15">Latency (ms)</text>
+              <path class="line-series mem-series" d="M58.0 216.3 L102.6 203.6 L147.1 187.2 L206.0 154.8 L250.6 124.9 L295.1 93.2 L354.0 47.3"></path>
+              <path class="line-series ours-series" d="M58.0 223.2 L102.6 224.8 L147.1 224.6 L206.0 222.0 L250.6 221.9 L295.1 214.2 L354.0 199.8 L398.6 180.8 L443.1 148.4 L502.0 80.8"></path>
+              <circle class="line-point mem-point" cx="58.0" cy="216.3" r="3.2"></circle>
+              <circle class="line-point mem-point" cx="102.6" cy="203.6" r="3.2"></circle>
+              <circle class="line-point mem-point" cx="147.1" cy="187.2" r="3.2"></circle>
+              <circle class="line-point mem-point" cx="206.0" cy="154.8" r="3.2"></circle>
+              <circle class="line-point mem-point" cx="250.6" cy="124.9" r="3.2"></circle>
+              <circle class="line-point mem-point" cx="295.1" cy="93.2" r="3.2"></circle>
+              <circle class="line-point mem-point" cx="354.0" cy="47.3" r="3.2"></circle>
+              <circle class="line-point ours-point" cx="58.0" cy="223.2" r="3.2"></circle>
+              <circle class="line-point ours-point" cx="102.6" cy="224.8" r="3.2"></circle>
+              <circle class="line-point ours-point" cx="147.1" cy="224.6" r="3.2"></circle>
+              <circle class="line-point ours-point" cx="206.0" cy="222.0" r="3.2"></circle>
+              <circle class="line-point ours-point" cx="250.6" cy="221.9" r="3.2"></circle>
+              <circle class="line-point ours-point" cx="295.1" cy="214.2" r="3.2"></circle>
+              <circle class="line-point ours-point" cx="354.0" cy="199.8" r="3.2"></circle>
+              <circle class="line-point ours-point" cx="398.6" cy="180.8" r="3.2"></circle>
+              <circle class="line-point ours-point" cx="443.1" cy="148.4" r="3.2"></circle>
+              <circle class="line-point ours-point" cx="502.0" cy="80.8" r="3.2"></circle>
+            </svg>
+          </figure>
+
+          <figure class="line-chart-panel">
+            <figcaption>Peak VRAM (GB)</figcaption>
+            <svg class="line-chart" viewBox="0 0 520 280" role="img" aria-label="Peak VRAM scaling by frame budget">
+              <line class="chart-grid-line" x1="58" y1="194.2" x2="502" y2="194.2"></line>
+              <line class="chart-grid-line" x1="58" y1="118.5" x2="502" y2="118.5"></line>
+              <line class="chart-grid-line" x1="58" y1="42.9" x2="502" y2="42.9"></line>
+              <line class="chart-axis" x1="58" y1="232" x2="502" y2="232"></line>
+              <line class="chart-axis" x1="58" y1="24" x2="58" y2="232"></line>
+              <line class="gpu-cap-line" x1="58" y1="42.9" x2="502" y2="42.9"></line>
+              <text class="axis-label y-label" x="50" y="198">16</text>
+              <text class="axis-label y-label" x="50" y="122">24</text>
+              <text class="axis-label y-label" x="50" y="47">32</text>
+              <text class="cap-label" x="64" y="38">32 GB cap</text>
+              <text class="axis-label" x="58" y="257">5</text>
+              <text class="axis-label" x="147.1" y="257">20</text>
+              <text class="axis-label" x="250.6" y="257">100</text>
+              <text class="axis-label" x="354" y="257">500</text>
+              <text class="axis-label" x="443.1" y="257">2000</text>
+              <text class="axis-label" x="502" y="257">5000</text>
+              <text class="axis-title" x="280" y="276">Frame budget</text>
+              <text class="axis-title rotated" x="-136" y="15">Peak VRAM (GB)</text>
+              <path class="line-series mem-series" d="M58.0 218.7 L102.6 218.6 L147.1 217.6 L206.0 214.3 L250.6 208.3 L295.1 195.2 L354.0 132.1"></path>
+              <path class="line-series ours-series" d="M58.0 220.2 L102.6 220.2 L147.1 220.1 L206.0 220.1 L250.6 219.7 L295.1 219.8 L354.0 217.8 L398.6 212.0 L443.1 192.4 L502.0 71.9"></path>
+              <circle class="line-point mem-point" cx="58.0" cy="218.7" r="3.2"></circle>
+              <circle class="line-point mem-point" cx="102.6" cy="218.6" r="3.2"></circle>
+              <circle class="line-point mem-point" cx="147.1" cy="217.6" r="3.2"></circle>
+              <circle class="line-point mem-point" cx="206.0" cy="214.3" r="3.2"></circle>
+              <circle class="line-point mem-point" cx="250.6" cy="208.3" r="3.2"></circle>
+              <circle class="line-point mem-point" cx="295.1" cy="195.2" r="3.2"></circle>
+              <circle class="line-point mem-point" cx="354.0" cy="132.1" r="3.2"></circle>
+              <circle class="line-point ours-point" cx="58.0" cy="220.2" r="3.2"></circle>
+              <circle class="line-point ours-point" cx="102.6" cy="220.2" r="3.2"></circle>
+              <circle class="line-point ours-point" cx="147.1" cy="220.1" r="3.2"></circle>
+              <circle class="line-point ours-point" cx="206.0" cy="220.1" r="3.2"></circle>
+              <circle class="line-point ours-point" cx="250.6" cy="219.7" r="3.2"></circle>
+              <circle class="line-point ours-point" cx="295.1" cy="219.8" r="3.2"></circle>
+              <circle class="line-point ours-point" cx="354.0" cy="217.8" r="3.2"></circle>
+              <circle class="line-point ours-point" cx="398.6" cy="212.0" r="3.2"></circle>
+              <circle class="line-point ours-point" cx="443.1" cy="192.4" r="3.2"></circle>
+              <circle class="line-point ours-point" cx="502.0" cy="71.9" r="3.2"></circle>
+              <path class="oom-marker" d="M393.6 37.9 L403.6 47.9 M403.6 37.9 L393.6 47.9"></path>
+              <text class="oom-label" x="406" y="47">MEM OOM</text>
+            </svg>
+          </figure>
+        </div>
+      </div>
+
+      <!--
+      <div class="table-wrap">
+        <table>
+          <caption>Simulation success rates (%)</caption>
+          <thead>
+            <tr><th>Method</th><th>Click</th><th>Click hard</th><th>Swap</th><th>Put back</th><th>Observe</th><th>Avg.</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>π<sub>0.5</sub></td><td>0</td><td>0</td><td>24</td><td>11</td><td>9</td><td>8.8</td></tr>
+            <tr><td>X-VLA</td><td>7</td><td>12</td><td>16</td><td>18</td><td>9</td><td>12.4</td></tr>
+            <tr><td>MemER</td><td>12</td><td>8</td><td>18</td><td>12</td><td>2</td><td>10.4</td></tr>
+            <tr><td>Mem-0</td><td>0</td><td>1</td><td>67</td><td>90</td><td>4</td><td>32.4</td></tr>
+            <tr><td>HAMLET*</td><td>4</td><td>17</td><td>11</td><td>3</td><td>10</td><td>9.0</td></tr>
+            <tr><td>MEM-short*</td><td>0</td><td>39</td><td>4</td><td>15</td><td>6</td><td>12.8</td></tr>
+            <tr class="best"><td>NativeMEM</td><td>94</td><td>88</td><td>94</td><td>100</td><td>44</td><td>84.0</td></tr>
+          </tbody>
+        </table>
+      </div>
+      -->
+
+      <!--
+      <div class="table-wrap">
+        <table>
+          <caption>Real-world cumulative success rates (%)</caption>
+          <thead>
+            <tr><th>Method</th><th>Click S1</th><th>Click S2</th><th>Click S3</th><th>Put S1</th><th>Put S2</th><th>Scan S1</th><th>Scan S2</th><th>Scan S3</th><th>Avg.</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>π<sub>0.5</sub></td><td>16</td><td>8</td><td>2</td><td>72</td><td>14</td><td>90</td><td>58</td><td>28</td><td>14.7</td></tr>
+            <tr><td>π<sub>0.5</sub> + RTC</td><td>26</td><td>18</td><td>16</td><td>56</td><td>24</td><td>74</td><td>66</td><td>64</td><td>34.7</td></tr>
+            <tr><td>Mem-0</td><td>36</td><td>4</td><td>0</td><td>0</td><td>0</td><td>6</td><td>0</td><td>0</td><td>0.0</td></tr>
+            <tr><td>MEM-short*</td><td>72</td><td>52</td><td>40</td><td>6</td><td>0</td><td>72</td><td>56</td><td>52</td><td>30.7</td></tr>
+            <tr class="best"><td>NativeMEM</td><td>100</td><td>98</td><td>96</td><td>100</td><td>100</td><td>100</td><td>100</td><td>100</td><td>98.7</td></tr>
+          </tbody>
+        </table>
+      </div>
+      -->
+    </section>
+
+    <section id="analysis" class="section container">
+      <div class="section-head">
+        <p class="eyebrow">Qualitative analysis</p>
+        <h2>Interpretable memory activates native VLA priors</h2>
+      </div>
+      <div class="analysis-stack">
+        <figure class="attention-panel">
+          <div class="attention-visual">
+            <img src="assets/img/spatial-attention.png" alt="Spatial attention of the NativeMEM memory tokenizer over historical observations">
+          </div>
+          <figcaption class="attention-copy">
+            <h3>Spatial attention</h3>
+            <p>
+              NativeMEM concentrates memory tokens on task-relevant objects, robot endpoints, and workspace landmarks. Even on tasks unseen during memory-tokenizer pretraining, it preserves task-relevant information in a general way without being distracted by background pixels.
+            </p>
+          </figcaption>
+        </figure>
+        <figure class="attention-panel">
+          <div class="attention-visual">
+            <img src="assets/img/temporal-attention.png" alt="Temporal attention map with memory snapshot time on the x-axis and action prediction time on the y-axis">
+          </div>
+          <figcaption class="attention-copy">
+            <h3>Temporal attention</h3>
+            <p>
+              Each heatmap shows <strong>action-to-memory lookup</strong>: the x-axis is the timestamp of each historical memory, the y-axis is the action prediction timestep, and brighter cells mark stronger attention. Reading across a row shows which memories support one action prediction; reading down a column shows how long a particular memory remains useful.
+            </p>
+            <p>
+              NativeMEM attends to <strong>task-relevant moments</strong> rather than simply the latest frame. In Click Buttons, high-attention memories follow the three button-click stages. In Put Back Block, attention concentrates on the pickup moment, which tells the policy the original pad where the block should be returned.
+            </p>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="video-feature reverse analysis-case">
+        <div class="video-shell">
+          <video data-src="https://ik.imagekit.io/ziye/NativeMEM/videos/recover_720P.m4v/ik-video.mp4?updatedAt=1783603861071&tr=w-1280%2Cq-52%2Cf-mp4" data-poster="https://ik.imagekit.io/ziye/NativeMEM/posters/recover.jpg?updatedAt=1783603914167&tr=w-1280%2Cq-76%2Cf-auto" controls muted loop playsinline preload="none"></video>
+        </div>
+        <div class="feature-copy">
+          <span class="kicker">Case study</span>
+          <h3>Recovery from failure</h3>
+          <p>
+            At 5s, the third item is not grasped, yet the policy <strong>actively retries</strong>, a behavior absent from demonstrations. At 16s, it has executed four scan motions but only three succeeded. Instead of overfitting to the action count, NativeMEM <strong>understands the real history</strong> and performs a fifth scan for the missed item, relying on pretrained VLA priors beyond the demonstrated trajectories.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="bibtex" class="section container">
+      <div class="section-head">
+        <p class="eyebrow">Citation</p>
+        <h2>BibTeX</h2>
+      </div>
+      <div class="code-head">
+        <button class="copy" type="button" data-copy="#bibtex-code">Copy</button>
+      </div>
+      <pre id="bibtex-code"><code>@article{wang2026nativemem,
+  title={NativeMEM: Native Memory Compression for Long-Horizon Robotic Manipulation},
+  author={Wang, Ziye and Shi, Modi and Ni, Chaojun and Yang, Jiazhi and Li, Mengdi and Su, Zhizhong and Lin, Tianwei and Li, Hongyang},
+  journal={arXiv preprint arXiv:2607.06678},
+  year={2026}
+}</code></pre>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <p>Project page for NativeMEM.</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
