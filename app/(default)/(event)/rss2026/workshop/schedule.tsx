@@ -152,7 +152,7 @@ const scheduleItems: {
         nameLink: "https://fanshi14.github.io/me/",
         affiliation: "National University of Singapore, Singapore",
         affiliationLogo: "/assets/brand/nus.png",
-        title: "Simulation Enabled Robust Locomotion Learning. Can It Do the Same for Manipulation?",
+        title: "Simulation Is Back: Scaling Contact-Rich, Long-Horizon Manipulation",
         recordings: {
             youtube: "",
             bilibili: "",
