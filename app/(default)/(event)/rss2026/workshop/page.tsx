@@ -34,7 +34,7 @@ const speakers: {
     //     link: 'https://autonomousrobots.nl/people/'
     // },
     {
-        name: "Yi Li",
+        name: "Li Yi",
         image: "/assets/person/yi_li.jpg",
         position: "Assistant Professor",
         affiliation: 'Tsinghua University, China',

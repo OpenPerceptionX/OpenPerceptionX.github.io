@@ -88,7 +88,7 @@ const scheduleItems: {
     {
         type: "talk",
         time: "09:05 AM",
-        name: "Yi Li",
+        name: "Li Yi",
         nameLink: "https://scholar.google.com/citations?user=UyZL660AAAAJ&hl=en",
         affiliation: "Tsinghua University, China",
         affiliationLogo: "/assets/brand/tsinghua_square.png",
