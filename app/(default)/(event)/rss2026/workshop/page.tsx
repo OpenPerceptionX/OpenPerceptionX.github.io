@@ -370,6 +370,17 @@ export default function Home() {
                 </div>
             </div>
 
+            <div className="w-full px-6 flex justify-center mt-8">
+                <div className="w-full max-w-7xl flex flex-col gap-3">
+                    <h3 className="text-xl font-bold">
+                        Venue
+                    </h3>
+                    <p>
+                        UTS (University of Technology Sydney), <strong>CB11.B2.103</strong>
+                    </p>
+                </div>
+            </div>
+
 
 
             <div className="w-full px-6 flex justify-center mt-24">
