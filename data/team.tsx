@@ -44,7 +44,7 @@ export const members: {
         links: [
             {
                 icon: "homepage",
-                url: "https://lihongyang.info/",
+                url: "https://hongyang.li/",
             },
             {
                 icon: "scholar",
