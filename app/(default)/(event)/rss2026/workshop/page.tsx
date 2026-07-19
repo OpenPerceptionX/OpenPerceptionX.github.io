@@ -158,6 +158,95 @@ const events: {
 
 
 
+const acceptedPapers: {
+    title: string;
+    url: string;
+    filename: string;
+}[] = [
+    {
+        title: "Human2Any: Human-to-Robot Transfer via Constraint-Aware Compositional Planning",
+        url: "https://ik.imagekit.io/xxyvnpkee/rss_accepted/9.pdf?updatedAt=1784472251392&ik-attachment=true",
+        filename: "Human2Any-Human-to-Robot-Transfer.pdf",
+    },
+    {
+        title: "RoboNaldo: Accurate, Stable and Powerful Humanoid Soccer Shooting via Motion-Guided Curriculum Reinforcement Learning",
+        url: "https://ik.imagekit.io/xxyvnpkee/rss_accepted/18.pdf?updatedAt=1784472250950&ik-attachment=true",
+        filename: "RoboNaldo-Humanoid-Soccer-Shooting.pdf",
+    },
+    {
+        title: "P³: Toward Versatile Embodied Agents",
+        url: "https://ik.imagekit.io/xxyvnpkee/rss_accepted/14.pdf?updatedAt=1784472251053&ik-attachment=true",
+        filename: "P3-Toward-Versatile-Embodied-Agents.pdf",
+    },
+    {
+        title: "OMG: Omni-Modal Motion Generation for Generalist Humanoid Control",
+        url: "https://ik.imagekit.io/xxyvnpkee/rss_accepted/8.pdf?updatedAt=1784472251137&ik-attachment=true",
+        filename: "OMG-Omni-Modal-Motion-Generation.pdf",
+    },
+    {
+        title: "Vectorized Online POMDP Planning with Neural POMDP Models",
+        url: "https://ik.imagekit.io/xxyvnpkee/rss_accepted/26.pdf?updatedAt=1784472248159&ik-attachment=true",
+        filename: "Vectorized-Online-POMDP-Planning.pdf",
+    },
+    {
+        title: "Sparse Video Generation Propels Real-World Beyond-the-View Vision-Language Navigation",
+        url: "https://ik.imagekit.io/xxyvnpkee/rss_accepted/7.pdf?updatedAt=1784472248107&ik-attachment=true",
+        filename: "Sparse-Video-Generation-Beyond-the-View-Navigation.pdf",
+    },
+    {
+        title: "HEX: Humanoid-Aligned Experts for Cross-Embodiment Whole-Body Manipulation",
+        url: "https://ik.imagekit.io/xxyvnpkee/rss_accepted/1.pdf?updatedAt=1784472247732&ik-attachment=true",
+        filename: "HEX-Humanoid-Aligned-Experts.pdf",
+    },
+    {
+        title: "Can We Tune Humanoid Behavior Foundation Models for Dynamic and Contact-Rich Tasks?",
+        url: "https://ik.imagekit.io/xxyvnpkee/rss_accepted/21.pdf?updatedAt=1784472247441&ik-attachment=true",
+        filename: "SONAR-Humanoid-Behavior-Foundation-Models.pdf",
+    },
+    {
+        title: "UEREBot: Learning Safe Quadrupedal Navigation under Unstructured Environments and High-Speed Dynamic Obstacles",
+        url: "https://ik.imagekit.io/xxyvnpkee/rss_accepted/2.pdf?updatedAt=1784472247288&ik-attachment=true",
+        filename: "UEREBot-Safe-Quadrupedal-Navigation.pdf",
+    },
+    {
+        title: "PRTS: A Primitive Reasoning and Tasking System via Contrastive Representations",
+        url: "https://ik.imagekit.io/xxyvnpkee/rss_accepted/23.pdf?updatedAt=1784472247164&ik-attachment=true",
+        filename: "PRTS-Primitive-Reasoning-and-Tasking.pdf",
+    },
+    {
+        title: "TANGO: Humanoid Navigation in Cluttered Environments with a Whole-Body Vision-Language-Action Model",
+        url: "https://ik.imagekit.io/xxyvnpkee/rss_accepted/17.pdf?updatedAt=1784472247063&ik-attachment=true",
+        filename: "TANGO-Humanoid-Navigation.pdf",
+    },
+    {
+        title: "FlowDPG: Deterministic Policy Gradient on Flow Matching Policies for Real-World Manipulation",
+        url: "https://ik.imagekit.io/xxyvnpkee/rss_accepted/25.pdf?updatedAt=1784472246539&ik-attachment=true",
+        filename: "FlowDPG-Real-World-Manipulation.pdf",
+    },
+    {
+        title: "UR-VC: Unsupervised Robotic Value Correction for Time-Derived Progress Proxies",
+        url: "https://ik.imagekit.io/xxyvnpkee/rss_accepted/10.pdf?updatedAt=1784472246556&ik-attachment=true",
+        filename: "UR-VC-Robotic-Value-Correction.pdf",
+    },
+    {
+        title: "UGTC: Uncertainty-Gated Temporal Credit – A Modular Advantage Estimator for Data-Efficient Actor-Critic RL",
+        url: "https://ik.imagekit.io/xxyvnpkee/rss_accepted/13.pdf?updatedAt=1784472246136&ik-attachment=true",
+        filename: "UGTC-Uncertainty-Gated-Temporal-Credit.pdf",
+    },
+    {
+        title: "Visibility-Aware Mobile Grasping in Dynamic Environments",
+        url: "https://ik.imagekit.io/xxyvnpkee/rss_accepted/6.pdf?updatedAt=1784472245966&ik-attachment=true",
+        filename: "Visibility-Aware-Mobile-Grasping.pdf",
+    },
+    {
+        title: "Learning External Force Sensing for Commodity Robot Arms Improves Policy Learning",
+        url: "https://ik.imagekit.io/xxyvnpkee/rss_accepted/16.pdf?updatedAt=1784472245985&ik-attachment=true",
+        filename: "Learning-External-Force-Sensing.pdf",
+    },
+];
+
+
+
 export default function Home() {
     return (
         <div className="w-full">
@@ -498,6 +587,43 @@ export default function Home() {
                         </div>
                     ))}
                 </div>
+            </div>
+
+
+
+            <div className="w-full px-6 flex justify-center mt-24">
+                <div className="w-full max-w-7xl flex">
+                    <h2 className="text-t1">
+                        <Link href="#accepted-papers" className="scroll-mt-32 group flex items-center" id="accepted-papers">
+                            Accepted Papers
+                            <span className="ml-6 hidden group-hover:inline-block size-6 text-foreground">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M15.197 3.35462C16.8703 1.67483 19.4476 1.53865 20.9536 3.05046C22.4596 4.56228 22.3239 7.14956 20.6506 8.82935L18.2268 11.2626M10.0464 14C8.54044 12.4882 8.67609 9.90087 10.3494 8.22108L12.5 6.06212" strokeWidth="2.5" strokeLinecap="round"/>
+                                    <path d="M13.9536 10C15.4596 11.5118 15.3239 14.0991 13.6506 15.7789L11.2268 18.2121L8.80299 20.6454C7.12969 22.3252 4.55237 22.4613 3.0464 20.9495C1.54043 19.4377 1.67609 16.8504 3.34939 15.1706L5.77323 12.7373" strokeWidth="2.5" strokeLinecap="round"/>
+                                </svg>
+                            </span>
+                        </Link>
+                    </h2>
+                </div>
+            </div>
+            <div className="w-full px-6 flex justify-center mt-12">
+                <ul className="w-full max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-x-12 border-t border-foreground/15">
+                    {acceptedPapers.map((paper) => (
+                        <li className="min-w-0 flex items-start gap-4 py-5 border-b border-foreground/15" key={paper.url}>
+                            <span className="min-w-0 flex-1 leading-relaxed">
+                                {paper.title}
+                            </span>
+                            <a
+                                href={paper.url}
+                                download={paper.filename}
+                                aria-label={`Download ${paper.title}`}
+                                className="shrink-0 pt-0.5 text-sm font-medium text-o-blue animated-underline"
+                            >
+                                [download]
+                            </a>
+                        </li>
+                    ))}
+                </ul>
             </div>
 
 

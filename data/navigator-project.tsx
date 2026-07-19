@@ -122,6 +122,10 @@ export const NavigatorProject: {
             id: "organizer",
         },
         {
+            text: "Accepted Papers",
+            id: "accepted-papers",
+        },
+        {
             text: "Related Workshops",
             id: "related",
         },
