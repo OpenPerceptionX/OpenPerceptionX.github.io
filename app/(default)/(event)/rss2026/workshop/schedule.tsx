@@ -88,7 +88,7 @@ const scheduleItems: {
     {
         type: "talk",
         time: "09:05 AM",
-        name: "Yi Li",
+        name: "Li Yi",
         nameLink: "https://scholar.google.com/citations?user=UyZL660AAAAJ&hl=en",
         affiliation: "Tsinghua University, China",
         affiliationLogo: "/assets/brand/tsinghua_square.png",
@@ -112,9 +112,7 @@ const scheduleItems: {
         presentations: [
             "HEX: Humanoid-Aligned Experts for Cross-Embodiment Whole-Body Manipulation",
             "Sparse Video Generation Propels Real-World Beyond-the-View Vision-Language Navigation",
-            "OMG: Omni-Modal Motion Generation for Generalist Humanoid Control",
             "Human2Any: Human-to-Robot Transfer via Constraint-Aware Compositional Planning",
-            "RoboNaldo: Accurate, Stable and Powerful Humanoid Soccer Shooting via Motion-Guided Curriculum Reinforcement Learning",
             "Can We Tune Humanoid Behavior Foundation Models for Dynamic and Contact-Rich Tasks?",
             "Native Memory Compression for Long-Horizon Robotic Manipulation",
             "Visibility-Aware Mobile Grasping in Dynamic Environments",
@@ -154,7 +152,7 @@ const scheduleItems: {
         nameLink: "https://fanshi14.github.io/me/",
         affiliation: "National University of Singapore, Singapore",
         affiliationLogo: "/assets/brand/nus.png",
-        title: "Simulation Enabled Robust Locomotion Learning. Can It Do the Same for Manipulation?",
+        title: "Simulation Is Back: Scaling Contact-Rich, Long-Horizon Manipulation",
         recordings: {
             youtube: "",
             bilibili: "",
@@ -185,7 +183,7 @@ const scheduleItems: {
         nameLink: "https://scholar.google.com/citations?user=X6vTmEMAAAAJ",
         affiliation: "Archon Robotics, China",
         affiliationLogo: "https://www.archon.tech/apple-touch-icon.png",
-        title: "Scaling Whole-Body Humanoid Skills with Human Demostration",
+        title: "Scaling Whole-Body Humanoid Skills with Human Demonstration",
         recordings: {
             youtube: "",
             bilibili: "",

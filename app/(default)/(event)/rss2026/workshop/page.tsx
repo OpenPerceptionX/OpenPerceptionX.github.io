@@ -34,7 +34,7 @@ const speakers: {
     //     link: 'https://autonomousrobots.nl/people/'
     // },
     {
-        name: "Yi Li",
+        name: "Li Yi",
         image: "/assets/person/yi_li.jpg",
         position: "Assistant Professor",
         affiliation: 'Tsinghua University, China',
@@ -367,6 +367,17 @@ export default function Home() {
                             Notification: July 01, 2026
                         </li>
                     </ul>
+                </div>
+            </div>
+
+            <div className="w-full px-6 flex justify-center mt-8">
+                <div className="w-full max-w-7xl flex flex-col gap-3">
+                    <h3 className="text-xl font-bold">
+                        Venue
+                    </h3>
+                    <p>
+                        UTS (University of Technology Sydney), <strong>CB11.B2.103</strong>
+                    </p>
                 </div>
             </div>
 
