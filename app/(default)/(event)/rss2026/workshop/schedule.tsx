@@ -79,7 +79,7 @@ const scheduleItems: {
         affiliationLogo: "/assets/brand/cornell.png",
         title: "Learning Personalized Whole-arm Manipulation Around Humans",
         recordings: {
-            youtube: "",
+            youtube: "https://youtu.be/CX3A0ha4SSk",
             bilibili: "",
         },
         slides: "",
@@ -88,13 +88,13 @@ const scheduleItems: {
     {
         type: "talk",
         time: "09:05 AM",
-        name: "Yi Li",
+        name: "Li Yi",
         nameLink: "https://scholar.google.com/citations?user=UyZL660AAAAJ&hl=en",
         affiliation: "Tsinghua University, China",
         affiliationLogo: "/assets/brand/tsinghua_square.png",
         title: "Beyond Imitation: Executable, Correctable, and Adaptable Skills for Humanoid Robots",
         recordings: {
-            youtube: "",
+            youtube: "https://youtu.be/6J5yugqOZxc",
             bilibili: "",
         },
         slides: "",
@@ -106,15 +106,13 @@ const scheduleItems: {
         name: "Oral Presentations",
         title: "Oral Presentations",
         recordings: {
-            youtube: "",
+            youtube: "https://youtu.be/Y4nrL_R-TTo",
             bilibili: "",
         },
         presentations: [
             "HEX: Humanoid-Aligned Experts for Cross-Embodiment Whole-Body Manipulation",
             "Sparse Video Generation Propels Real-World Beyond-the-View Vision-Language Navigation",
-            "OMG: Omni-Modal Motion Generation for Generalist Humanoid Control",
             "Human2Any: Human-to-Robot Transfer via Constraint-Aware Compositional Planning",
-            "RoboNaldo: Accurate, Stable and Powerful Humanoid Soccer Shooting via Motion-Guided Curriculum Reinforcement Learning",
             "Can We Tune Humanoid Behavior Foundation Models for Dynamic and Contact-Rich Tasks?",
             "Native Memory Compression for Long-Horizon Robotic Manipulation",
             "Visibility-Aware Mobile Grasping in Dynamic Environments",
@@ -154,9 +152,9 @@ const scheduleItems: {
         nameLink: "https://fanshi14.github.io/me/",
         affiliation: "National University of Singapore, Singapore",
         affiliationLogo: "/assets/brand/nus.png",
-        title: "Simulation Enabled Robust Locomotion Learning. Can It Do the Same for Manipulation?",
+        title: "Simulation Is Back: Scaling Contact-Rich, Long-Horizon Manipulation",
         recordings: {
-            youtube: "",
+            youtube: "https://youtu.be/vVugTFi4JsQ",
             bilibili: "",
         },
         slides: "",
@@ -172,10 +170,10 @@ const scheduleItems: {
         affiliationLogo: "/assets/brand/stanford.png",
         title: "Long and Short-Term Memory for Long-Horizon Manipulation",
         recordings: {
-            youtube: "",
+            youtube: "https://youtu.be/6ypF2XQh6mU",
             bilibili: "",
         },
-        slides: "",
+        slides: "https://ik.imagekit.io/xxyvnpkee/rss_speaker/MEM_RSS_longhor_workshop_presentation_compressed.pdf",
         bio: "Marcel Torne is a researcher at Stanford University. His research focuses on learning-based assistive robots and methods for in-context adaptation of policies to unseen scenarios with an emphasis on human-centric approaches.",
     },
     {
@@ -185,12 +183,12 @@ const scheduleItems: {
         nameLink: "https://scholar.google.com/citations?user=X6vTmEMAAAAJ",
         affiliation: "Archon Robotics, China",
         affiliationLogo: "https://www.archon.tech/apple-touch-icon.png",
-        title: "Scaling Whole-Body Humanoid Skills with Human Demostration",
+        title: "Scaling Whole-Body Humanoid Skills with Human Demonstration",
         recordings: {
-            youtube: "",
+            youtube: "https://youtu.be/z6vdlkJXDdY",
             bilibili: "",
         },
-        slides: "",
+        slides: "https://ik.imagekit.io/xxyvnpkee/rss_speaker/RSS_ExWBC-human-centric-data.pdf",
         bio: "Tianyu Li is the Co-Founder of Archon Robotics, where he is building Large Humanoid Models toward general-purpose whole-body intelligence. He is also a PhD researcher at Fudan University and the Shanghai Innovation Institute, conducting research at OpenDriveLab under the supervision of Prof. Hongyang Li. His work centers on humanoid robot learning, autonomos driving, and 3D computer vision.",
     },
 ];
@@ -394,12 +392,29 @@ export function ScheduleList() {
                                         </div>
 
                                         {item.type !== "break" && item.type !== "closing" && item.type !== "demo" && item.type !== "poster" && !item.presentations && (
-                                            <span>{item.title}</span>
+                                            <span>
+                                                {item.title}
+                                                {item.recordings?.youtube && (
+                                                    <Link href={item.recordings.youtube} target="_blank" className="ml-2 text-o-blue hover:underline">
+                                                        [video]
+                                                    </Link>
+                                                )}
+                                                {item.slides && (
+                                                    <Link href={item.slides} target="_blank" className="ml-2 text-o-blue hover:underline">
+                                                        [slides]
+                                                    </Link>
+                                                )}
+                                            </span>
                                         )}
 
                                         {item.presentations && (
                                             <details className="text-xs">
-                                                <summary className="content-none">{item.title}</summary>
+                                                <summary className="content-none inline">{item.title}</summary>
+                                                {item.recordings?.youtube && (
+                                                    <Link href={item.recordings.youtube} target="_blank" className="ml-2 text-o-blue hover:underline">
+                                                        [video]
+                                                    </Link>
+                                                )}
                                                 <ol className="mt-3 list-decimal space-y-2 pl-5">
                                                     {item.presentations.map((presentation) => (
                                                         <li key={presentation} className="break-words">
