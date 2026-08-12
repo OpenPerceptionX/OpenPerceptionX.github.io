@@ -18,16 +18,16 @@ export const events: {
     location: string;
     keys: string[];
 }[] = [
-    {
-        title: "Challenge 2026",
-        subtitle: "Autonomous Grand Challenge",
-        url: "/challenge2026/",
-        image: "https://ik.imagekit.io/opendrivelab/Modify_the_left_human_hand_to_become_an_abstract_e-1770009757382.jpg?updatedAt=1770010027998",
-        imageoption: "object-center",
-        date: "",
-        location: "",
-        keys: ['2026'],
-    },
+    // {
+    //     title: "Challenge 2026",
+    //     subtitle: "Autonomous Grand Challenge",
+    //     url: "/challenge2026/",
+    //     image: "https://ik.imagekit.io/opendrivelab/Modify_the_left_human_hand_to_become_an_abstract_e-1770009757382.jpg?updatedAt=1770010027998",
+    //     imageoption: "object-center",
+    //     date: "",
+    //     location: "",
+    //     keys: ['2026'],
+    // },
     {
         title: "Archon & OpenDriveLab at RSS 2026",
         subtitle: "Papers, talks, live demos, workshop, and community programs",

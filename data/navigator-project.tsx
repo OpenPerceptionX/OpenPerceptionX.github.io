@@ -136,20 +136,20 @@ export const NavigatorProject: {
             id: "speaker",
         },
     ],
-    "/challenge2026": [
-        {
-            text: "Track",
-            id: "track",
-        },
-        {
-            text: "Schedule",
-            id: "schedule",
-        },
-        {
-            text: "Past Editions",
-            id: "edition",
-        },
-    ],
+    // "/challenge2026": [
+    //     {
+    //         text: "Track",
+    //         id: "track",
+    //     },
+    //     {
+    //         text: "Schedule",
+    //         id: "schedule",
+    //     },
+    //     {
+    //         text: "Past Editions",
+    //         id: "edition",
+    //     },
+    // ],
     "/kai0": [
         {
             text: "Introduction",
