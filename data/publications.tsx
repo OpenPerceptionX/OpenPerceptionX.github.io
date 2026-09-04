@@ -95,7 +95,7 @@ export const publications: {
         image: "/assets/publication/robonaldo.jpg",
         image_sliding: "/assets/publication/robonaldo.jpg",
         author: "Yichao Zhong, Yidan Lu, Yuhang Lu, Tianyang Tang, Haoguang Mai, Yixuan Pan, Tianyu Li, Li Chen, Jingbo Wang, Zhongyu Li, Peng Lu, Hongyang Li",
-        note: "Preprint 2026",
+        note: "CoRL 2026",
         noteoption: '',
         star: "https://img.shields.io/github/stars/opendrivelab/RoboNaldo?style=social",
         starlink: "https://github.com/opendrivelab/RoboNaldo",
