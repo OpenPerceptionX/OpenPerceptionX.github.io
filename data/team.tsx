@@ -504,31 +504,31 @@ export const members: {
         ],
         keys: ["joint"],
     },
-    {
-        name: "Caojun Wang",
-        image: "/assets/person/caojun_wang.jpg",
-        desc: "Tongji University",
-        image_s: "/assets/person/caojun_wang_s.jpg",
-        links: [
-            {
-                icon: "homepage",
-                url: "https://wcj-bert.github.io/",
-            },
-            {
-                icon: "scholar",
-                url: "https://scholar.google.com/citations?user=35xHlDUAAAAJ&hl"
-            },
-            {
-                icon: "email",
-                url: "mailto:wangcaojunsos4@gmail.com",
-            },
-            {
-                icon: "github",
-                url: "https://github.com/WCJ-BERT",
-            },
-        ],
-        keys: ["joint"],
-    },
+    // {
+    //     name: "Caojun Wang",
+    //     image: "/assets/person/caojun_wang.jpg",
+    //     desc: "Tongji University",
+    //     image_s: "/assets/person/caojun_wang_s.jpg",
+    //     links: [
+    //         {
+    //             icon: "homepage",
+    //             url: "https://wcj-bert.github.io/",
+    //         },
+    //         {
+    //             icon: "scholar",
+    //             url: "https://scholar.google.com/citations?user=35xHlDUAAAAJ&hl"
+    //         },
+    //         {
+    //             icon: "email",
+    //             url: "mailto:wangcaojunsos4@gmail.com",
+    //         },
+    //         {
+    //             icon: "github",
+    //             url: "https://github.com/WCJ-BERT",
+    //         },
+    //     ],
+    //     keys: ["joint"],
+    // },
     // {
     //     name: "Hongchen Li",
     //     image: "/assets/person/hongchen_li.jpg",
