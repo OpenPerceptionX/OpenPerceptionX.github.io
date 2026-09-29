@@ -495,3 +495,8 @@ html, body { overflow-x: clip; }
   .footer-nav a { min-height: 44px; display: inline-flex; align-items: center; }
 }
 .hero-background.poster-shell { position: absolute; }
+
+/* Edge-to-edge grid media; spacing belongs between cards, not inside them. */
+.matrix-card .video-frame { aspect-ratio: 16 / 9; overflow: hidden; padding: 0; background: var(--color-surface); }
+.matrix-card .video-frame video,
+.matrix-card .video-thumbnail { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
