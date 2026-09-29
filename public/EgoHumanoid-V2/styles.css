@@ -395,3 +395,6 @@ thead th { font-weight: 600; color: var(--color-muted); }
 .figure-dialog-actions { display: flex; flex-shrink: 0; gap: .6rem; }
 @media (min-width: 90rem) { .scaling-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-lg); } }
 @media (max-width: 39.99rem) { .figure-dialog-toolbar { justify-content: flex-end; } .figure-dialog-toolbar p { display: none; } }
+
+.header-links [aria-disabled="true"] { cursor: default; }
+.header-links .coming-soon { font-size: .65rem; opacity: .7; }
