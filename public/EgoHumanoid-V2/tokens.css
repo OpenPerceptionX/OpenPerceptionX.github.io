@@ -1,0 +1,72 @@
+/* Hallmark · Photographic · studied-DNA: EgoHumanoid · technical research */
+@font-face {
+  font-family: "Manrope";
+  src: url("assets/fonts/manrope.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DM Sans";
+  src: url("assets/fonts/dm-sans.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+}
+:root {
+  --color-paper: oklch(100% 0 0);
+  --color-surface: oklch(98.1% .004 253);
+  --color-soft: oklch(94.8% .012 250);
+  --color-ink: oklch(28% .033 257);
+  --color-secondary: oklch(43% .028 257);
+  --color-muted: oklch(49% .025 257);
+  --color-rule: oklch(92% .026 260);
+  --color-accent: oklch(54.6% .215 262.9);
+  --color-accent-soft: oklch(96% .018 260);
+  --color-focus: oklch(53% .2 258);
+  --color-on-dark: oklch(98% .004 250);
+  --color-dark: oklch(21% .023 253);
+  --color-dark-muted: oklch(76% .018 250);
+  --color-dark-rule: oklch(39% .024 250);
+  --color-teal: oklch(46% .077 181);
+  --color-teal-soft: oklch(96% .016 180);
+  --color-error: oklch(48% .15 29);
+  --color-overlay: oklch(18% .023 254 / .86);
+  --color-transparent: transparent;
+  --font-display: "Manrope", "Arial", sans-serif;
+  --font-body: "DM Sans", "Arial", sans-serif;
+  --space-xs: .25rem;
+  --space-sm: .5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-section: clamp(4rem, 6.7vw, 6rem);
+  --text-sm: .875rem;
+  --text-base: 1rem;
+  --text-md: 1.125rem;
+  --text-lg: 1.375rem;
+  --text-heading: clamp(1.9rem, 3.2vw, 2.75rem);
+  --text-display: clamp(1.95rem, 4.2vw, 3.65rem);
+  --radius-sm: .5rem;
+  --radius-md: 1rem;
+  --rule-width: 1px;
+  --ease-out: cubic-bezier(.16, 1, .3, 1);
+  --ease-in: cubic-bezier(.7, 0, .84, 0);
+  --ease-in-out: cubic-bezier(.65, 0, .35, 1);
+  --dur-fast: 150ms;
+  --radius-pill: 999px;
+  --color-accent-hover: oklch(49% .215 262.9);
+  --color-accent-border: oklch(77% .105 260);
+  --color-bar-baseline: oklch(80% .055 260);
+  --color-bar-middle: oklch(68% .13 260);
+  --color-shadow: oklch(45% .12 260 / .06);
+  --color-hero-accent: oklch(78% .117 255);
+  --color-hero-muted: oklch(91% .007 255);
+  --color-hero-rule: oklch(94% .008 255 / .48);
+  --color-hero-shade: oklch(14% .014 257 / .84);
+  --color-hero-shade-light: oklch(14% .014 257 / .65);
+  --color-hero-wash: oklch(98% .003 255 / .1);
+
+}
