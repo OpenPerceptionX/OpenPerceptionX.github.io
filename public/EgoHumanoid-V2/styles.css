@@ -398,3 +398,8 @@ thead th { font-weight: 600; color: var(--color-muted); }
 
 .header-links [aria-disabled="true"] { cursor: default; }
 .header-links .coming-soon { font-size: .65rem; opacity: .7; }
+
+.institution-logos { display: flex; align-items: center; gap: 12px; }
+.institution-logos a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; }
+.institution-logos img { width: 32px; height: 32px; object-fit: contain; }
+.institution-logos > span { color: currentColor; opacity: .35; font-size: 18px; }
