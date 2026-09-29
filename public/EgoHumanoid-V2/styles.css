@@ -419,3 +419,43 @@ thead th { font-weight: 600; color: var(--color-muted); }
 .footer-nav a { color: var(--color-muted); font-size: 14px; }
 .footer-nav a:hover { color: var(--color-accent); }
 @media (max-width: 600px) { .footer { padding-block: 40px; } .footer-inner { flex-direction: column; align-items: flex-start; } .footer-nav { gap: 16px 24px; } }
+
+/* Hallmark · task comparison matrix + synchronized pipeline · P5 H5 E4 S5 R5 V4 */
+.task-matrix-row + .task-matrix-row { margin-top: 56px; }
+.matrix-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-bottom: 20px; margin-bottom: 26px; border-bottom: 1px solid var(--color-rule); }
+.matrix-heading h3 { font-size: clamp(1.1rem, 2vw, 1.5rem); }
+.matrix-heading p { color: var(--color-muted); margin-top: 4px; font-size: .85rem; }
+.task-matrix-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
+.matrix-card { margin: 0; }
+.matrix-card figcaption { text-align: center; padding: 15px 8px; font-weight: 700; font-size: .9rem; }
+.matrix-card video { display: block; width: 100%; aspect-ratio: 16/9; object-fit: contain; }
+.matrix-play { flex-shrink: 0; white-space: nowrap; }
+.motion-canvas { position: relative; isolation: isolate; }
+.motion-canvas > img { display: block; width: 100%; }
+.flow-overlay { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
+.flow-streams, .refine-loop { fill: none; stroke: var(--color-accent); stroke-width: 5; stroke-linecap: round; stroke-dasharray: 8 18; animation: stream-flow 1.6s linear infinite; }
+.refine-loop { stroke-width: 4; animation-duration: 2.8s; }
+.tracking-points { fill: none; stroke: var(--color-accent); stroke-width: 3; animation: tracking-pulse 2s ease-in-out infinite; }
+.tracking-tip { fill: var(--color-accent); stroke: var(--color-paper); stroke-width: 2; }
+.stage-spotlight { fill: var(--color-accent-soft); fill-opacity: .12; stroke: var(--color-accent); stroke-width: 3; stroke-dasharray: 8 6; transition: x .5s ease, width .5s ease; }
+.motion-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 18px; }
+.motion-toolbar > span { color: var(--color-secondary); font-size: .85rem; }
+.motion-toolbar .button { flex-shrink: 0; white-space: nowrap; }
+.alignment-steps { display: flex; flex-wrap: wrap; gap: 8px; }
+.alignment-step { border: 1px solid var(--color-rule); border-radius: var(--radius-pill); padding: 10px 14px; background: var(--color-paper); color: var(--color-secondary); font: inherit; font-size: .8rem; white-space: nowrap; cursor: pointer; }
+.alignment-step.is-active { color: var(--color-paper); background: var(--color-accent); border-color: var(--color-accent); }
+.live-metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 24px; padding: 24px 0; border-block: 1px solid var(--color-rule); }
+.live-metrics > div { text-align: center; }
+.live-metrics span { display: block; color: var(--color-secondary); font-size: .85rem; }
+.live-metrics strong { display: block; color: var(--color-accent); font-size: clamp(1.4rem, 3vw, 2.4rem); font-variant-numeric: tabular-nums; }
+.live-metrics small { font-size: .5em; font-weight: 500; }
+.chart-row, .endpoint-table tbody tr { transition: background .4s, opacity .4s; }
+.stage-selected { background: var(--color-accent-soft); }
+.motion-paused * { animation-play-state: paused !important; }
+@keyframes stream-flow { to { stroke-dashoffset: -104; } }
+@keyframes tracking-pulse { 50% { opacity: .35; stroke-width: 6; } }
+@media (max-width: 900px) { .task-matrix-grid { gap: 12px; } .matrix-card figcaption { font-size: .75rem; } .motion-toolbar { flex-wrap: wrap; } }
+@media (max-width: 600px) { .task-matrix-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .matrix-heading { align-items: flex-start; gap: 12px; } .matrix-heading p { font-size: .75rem; } .matrix-play { padding-inline: 12px; } .live-metrics { gap: 8px; } .live-metrics span { font-size: .7rem; } .alignment-step { font-size: .7rem; padding: 8px 10px; } }
+@media (prefers-reduced-motion: reduce) { .flow-overlay *, .stage-spotlight { animation: none; transition: none; } }
+
+.pose-trace { fill: none; stroke: var(--color-accent); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; opacity: .6; }

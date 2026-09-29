@@ -63,51 +63,8 @@ function selectTab(group, task, focus = false) {
     if (selected && focus) tab.focus({ preventScroll: true });
   });
   $(`#${group}-panel`).setAttribute("aria-labelledby", `${group}-tab-${task}`);
-  if (group === "demo") renderDemo();
   if (group === "ik") renderIK();
   announce(`${tasks[task].name} selected.`);
-}
-
-function renderDemo() {
-  const task = tasks[state.demo];
-  state.view = "external";
-  $("#task-heading").textContent = task.name;
-  $("#task-score").replaceChildren(document.createTextNode(task.score), Object.assign(document.createElement("span"), { textContent: "%" }));
-  $("#view-toggle").hidden = !task.ego;
-  $("#view-original").hidden = state.demo !== "curtain";
-  $("#curtain-edit-note").hidden = state.demo !== "curtain";
-  updateViewControls();
-  setClip($("#human-video"), `human-${state.demo}`, `Human demonstration: ${task.name}`);
-  setClip($("#robot-video"), `deployment-${state.demo}`, `Robot execution: ${task.name}`);
-}
-
-function updateViewControls() {
-  const label = state.view === "ego" ? "Show external view" : "Show egocentric view";
-  $("#view-toggle").setAttribute("aria-label", label);
-  $("#view-toggle").setAttribute("title", label);
-  $("#view-toggle").setAttribute("aria-pressed", String(state.view === "ego"));
-  $("#view-original").setAttribute("aria-pressed", String(state.view === "original"));
-  $("#view-original").textContent = state.view === "original" ? "Chair removed" : "Original";
-}
-
-function changeView(view) {
-  if (state.view === view) return;
-  const video = $("#robot-video");
-  const restoreTime = state.demo === "curtain" ? video.currentTime : 0;
-  const restorePlayback = state.demo === "curtain" && !video.paused;
-  state.view = view;
-  updateViewControls();
-  const clip = view === "original" ? "deployment-curtain-original" : `${view === "ego" ? "ego" : "deployment"}-${state.demo}`;
-  const label = view === "original" ? "Original recording" : view === "ego" ? "Egocentric" : state.demo === "curtain" ? "Chair-removed visualization" : "External";
-  setClip(video, clip, `${label}: ${tasks[state.demo].name}`);
-  if (restoreTime || restorePlayback) {
-    video.addEventListener("loadedmetadata", () => {
-      if (video.dataset.src !== `assets/videos/${clip}.mp4`) return;
-      video.currentTime = Math.min(restoreTime, video.duration);
-      if (restorePlayback) video.play().catch(() => {});
-    }, { once: true });
-  }
-  announce(`${label} selected.`);
 }
 
 function renderIK() {
@@ -136,13 +93,6 @@ $$('[role="tablist"]').forEach((tablist) => {
   });
 });
 
-$("#view-toggle").addEventListener("click", () => changeView(state.view === "ego" ? "external" : "ego"));
-$("#view-original").addEventListener("click", () => changeView(state.view === "original" ? "external" : "original"));
-$("#robot-video").addEventListener("ratechange", (event) => {
-  $("#playback-speed").textContent = `${Number(event.currentTarget.playbackRate.toFixed(2))}×`;
-});
-$$('[data-hero-task]').forEach((link) => link.addEventListener("click", () => selectTab("demo", link.dataset.heroTask)));
-
 function bindGroupPlayback(button, videos, playLabel, pauseLabel) {
   function updateLabel() {
     const playing = videos.some((video) => !video.paused && !video.ended);
@@ -167,7 +117,6 @@ function bindGroupPlayback(button, videos, playLabel, pauseLabel) {
   });
 }
 
-bindGroupPlayback($("#play-pair"), [$("#human-video"), $("#robot-video")], "Play both", "Pause both");
 bindGroupPlayback($("#play-ik"), ["a", "b", "c"].map((variant) => $(`#ik-video-${variant}`)), "Play all three", "Pause all three");
 
 const videoLoader = new IntersectionObserver((entries) => {
