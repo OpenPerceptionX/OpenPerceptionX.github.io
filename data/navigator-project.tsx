@@ -26,7 +26,7 @@ export const NavigatorProject: {
             id: "user-study",
         },
     ],
-    "/tamen": [
+    "/bitacman": [
         {
             text: "Highlights",
             id: "highlights",

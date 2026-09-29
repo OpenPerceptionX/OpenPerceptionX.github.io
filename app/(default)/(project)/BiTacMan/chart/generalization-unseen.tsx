@@ -173,6 +173,139 @@ export function GeneralizationUnseenChart() {
   );
 }
 
+const unseenTextureData = [
+  { task: "Herbal Transfer", unseen: 50, unseenTex: 45 },
+  { task: "Cable Mounting", unseen: 15, unseenTex: 15 },
+  { task: "Binder Clip Removal", unseen: 55, unseenTex: 50 },
+  { task: "Avg.", unseen: 40, unseenTex: 37 },
+];
+
+const unseenTextureConfig = {
+  unseen: { label: "Unseen Objects", color: "#B8C9F0" },
+  unseenTex: { label: "Unseen Objects + Unseen Textures", color: "#3D56C8" },
+};
+
+export function UnseenTexturesChart() {
+  const chartRef = React.useRef<HTMLDivElement>(null);
+  const narrow = useChartNarrow(chartRef);
+  const tickPx = narrow ? 8 : 10;
+
+  return (
+    <Card className="border border-white/20 bg-black/60 text-white">
+      <CardHeader className="pb-2 md:pb-3">
+        <CardTitle className="text-sm md:text-base">
+          Generalization to unseen objects with unseen textures
+        </CardTitle>
+        <p className="text-[11px] md:text-xs text-white/70">
+          Success rates (%) of Ours (+ Pretrain) under unseen objects, and unseen
+          objects with unseen textures. Whole-task rates are shown.
+        </p>
+      </CardHeader>
+      <CardContent className="p-2 md:p-3">
+        <ChartContainer
+          ref={chartRef}
+          config={unseenTextureConfig}
+          className="!aspect-auto h-[248px] md:h-[235px]"
+        >
+          <BarChart
+            data={unseenTextureData}
+            margin={{
+              top: 12,
+              bottom: narrow ? 48 : 8,
+              left: narrow ? 2 : 4,
+              right: narrow ? 2 : 4,
+            }}
+            barCategoryGap="18%"
+            barGap={2}
+          >
+            <CartesianGrid vertical={false} />
+            <XAxis
+              dataKey="task"
+              tickLine={false}
+              axisLine={false}
+              tickMargin={narrow ? 2 : 8}
+              angle={narrow ? -36 : 0}
+              textAnchor={narrow ? "end" : "middle"}
+              interval={0}
+              height={narrow ? 58 : 28}
+              tick={{
+                fontSize: tickPx,
+                fill: "rgba(255,255,255,0.65)",
+              }}
+              dy={narrow ? 4 : 0}
+            />
+            <YAxis
+              domain={[0, 100]}
+              tickLine={false}
+              axisLine={false}
+              width={narrow ? 26 : 36}
+              tick={{
+                fontSize: tickPx,
+                fill: "rgba(255,255,255,0.65)",
+              }}
+            />
+            <ChartTooltip
+              cursor={false}
+              shared={false}
+              content={({ active, payload, label }) => {
+                if (!active || !payload?.length) return null;
+                const entry = payload[payload.length - 1];
+                const key = String(entry.dataKey) as keyof typeof unseenTextureConfig;
+                const fullLabel = unseenTextureConfig[key]?.label || key;
+                const note =
+                  label === "Avg."
+                    ? key === "unseen"
+                      ? " (40 ± 22)"
+                      : " (37 ± 19)"
+                    : "";
+                return (
+                  <div className="rounded-md border border-white/20 bg-black/95 px-3 py-2 text-xs text-white shadow-md">
+                    <div className="font-semibold mb-1">{label}</div>
+                    <div className="flex items-center justify-between gap-3">
+                      <span className="text-white/80">{fullLabel}</span>
+                      <span className="font-semibold">
+                        {entry.value}%{note}
+                      </span>
+                    </div>
+                  </div>
+                );
+              }}
+            />
+            <Bar dataKey="unseen" fill="#B8C9F0" radius={6} minPointSize={4} maxBarSize={34}>
+              <LabelList
+                dataKey="unseen"
+                position="top"
+                className="fill-foreground"
+                fontSize={9}
+                formatter={(value: number) => `${value}%`}
+              />
+            </Bar>
+            <Bar dataKey="unseenTex" fill="#3D56C8" radius={6} minPointSize={4} maxBarSize={34}>
+              <LabelList
+                dataKey="unseenTex"
+                position="top"
+                className="fill-foreground"
+                fontSize={9}
+                formatter={(value: number) => `${value}%`}
+              />
+            </Bar>
+          </BarChart>
+        </ChartContainer>
+      </CardContent>
+      <CardFooter className="pt-0 pb-3 md:pb-4 text-[11px] md:text-xs text-white/70 flex flex-col gap-1.5 sm:flex-row sm:gap-4">
+        <span className="inline-flex items-center gap-2">
+          <span className="inline-block h-2.5 w-2.5 rounded-sm bg-[#B8C9F0]" />
+          Unseen Objects
+        </span>
+        <span className="inline-flex items-center gap-2">
+          <span className="inline-block h-2.5 w-2.5 rounded-sm bg-[#3D56C8]" />
+          Unseen Objects + Unseen Textures
+        </span>
+      </CardFooter>
+    </Card>
+  );
+}
+
 export function RobustnessDisturbanceChart() {
   const chartRef = React.useRef<HTMLDivElement>(null);
   const narrow = useChartNarrow(chartRef);

@@ -33,8 +33,12 @@ import { PolicyRolloutsAverage } from "./chart/policy-rollouts-average";
 import {
   GeneralizationUnseenChart,
   RobustnessDisturbanceChart,
+  UnseenTexturesChart,
 } from "./chart/generalization-unseen";
+import { HeterogeneousGrippersChart } from "./chart/heterogeneous-grippers";
+import { InTheWildChart } from "./chart/in-the-wild";
 import { ModelViewerFrame } from "./model-viewer-frame";
+import { GripperDesignerFrame } from "./gripper-designer-frame";
 
 const exo2 = Exo_2({
   subsets: ["latin"],
@@ -66,6 +70,44 @@ const policy_rollouts: { id: string; title: string; color: string }[] = [
   },
 ];
 
+const inTheWildVideos: { src: string; title: string }[] = [
+  {
+    src: "https://ik.imagekit.io/xbbju7iuo/med.mp4",
+    title: "Herbal Transfer",
+  },
+  {
+    src: "https://ik.imagekit.io/xbbju7iuo/wire.mp4",
+    title: "Cable Mounting",
+  },
+  {
+    src: "https://ik.imagekit.io/xbbju7iuo/clamp.mp4",
+    title: "Binder Clip Removal",
+  },
+  {
+    src: "https://ik.imagekit.io/xbbju7iuo/plate.mp4",
+    title: "Dish Washing",
+  },
+];
+
+const unseenTextureVideos: { src: string; title: string }[] = [
+  {
+    src: "https://ik.imagekit.io/vxod2zgd8/med%20%E6%B3%9B.mp4",
+    title: "Herbal Transfer",
+  },
+  {
+    src: "https://ik.imagekit.io/vxod2zgd8/wild%20%E6%B3%9B.mp4",
+    title: "Cable Mounting",
+  },
+  {
+    src: "https://ik.imagekit.io/vxod2zgd8/clamp%20%E6%B3%9B-1.mp4",
+    title: "Binder Clip Removal",
+  },
+  {
+    src: "https://ik.imagekit.io/vxod2zgd8/plate%20%E6%B3%9B.mp4",
+    title: "Dish Washing",
+  },
+];
+
 /** Preview shown until the 3D iframe fires `load`. */
 const TAMEN_MODEL_VIEWER_POSTER =
   "https://ik.imagekit.io/7rgtwup0y/3dmodel.jpg";
@@ -81,6 +123,7 @@ const pageNavItems: { text: string; id: string }[] = [
   { text: "Highlights", id: "highlights" },
   { text: "Data Collection Modes", id: "data-collection-modes" },
   { text: "3D Model", id: "model" },
+  { text: "Adaptation to Heterogeneous Grippers", id: "adaptation-to-heterogeneous-grippers" },
   { text: "Policy Rollouts", id: "policy-rollouts" },
   { text: "Generalization and Robustness", id: "generalization-and-robustness" },
   { text: "Methodology", id: "methodology" },
@@ -91,7 +134,7 @@ export default function Home() {
     <main className="w-full min-w-0 overflow-x-clip bg-black text-white">
       <nav
         className="fixed left-5 top-1/2 -translate-y-1/2 z-30 hidden md:block"
-        aria-label="TAMEn section navigation"
+        aria-label="BiTacMan section navigation"
       >
         <div className="pointer-events-none absolute -left-3 top-2 bottom-2 w-px bg-gradient-to-b from-transparent via-white/40 to-transparent" />
         <ul className="relative flex flex-col gap-2 rounded-2xl border border-white/15 bg-white/[0.03] px-3 py-3 backdrop-blur-md shadow-[0_8px_30px_rgba(0,0,0,0.35)]">
@@ -150,15 +193,15 @@ export default function Home() {
                 <div className="max-w-5xl min-w-0 w-full text-center">
                   <h1 className="color-text-1 text-base sm:text-lg md:text-4xl font-bold leading-tight break-words text-pretty">
                     <span className="block text-2xl sm:text-5xl md:text-7xl leading-none mb-2 md:mb-3">
-                      TAMEn:
+                      BiTacMan
                     </span>
                     <span className="inline-block max-w-full">
-                      Tactile-Aware Manipulation Engine for Closed-Loop Data
-                      Collection in Contact-Rich Tasks
+                      Tactile-Aware Data Collection System for Contact-Rich
+                      Bimanual Manipulation
                     </span>
                   </h1>
                   <p className="mt-3 md:mt-5 text-[10px] sm:text-xs md:text-sm italic text-gray-300 break-words text-pretty px-1">
-                    TAMEn builds upon the UMI paradigm with key enhancements in
+                    BiTacMan builds upon the UMI paradigm with key enhancements in
                     multimodality, precision-portability synergy, replayability,
                     and data flywheel.
                   </p>
@@ -240,7 +283,7 @@ export default function Home() {
                     </p>
                     <p className="text-[11px] sm:text-xs md:text-sm text-left w-full">
                     To bridge these gaps, we introduce{" "}
-                      <b className={`${exo2.className} color-text-1 inline-block`}>TAMEn</b>, a <b className={`${exo2.className} color-text-1 inline-block`}>visuo-tactile data engine</b> for bimanual contact-rich manipulation, which integrates hardware, acquisition strategy, and policy learning into a closed-loop framework.
+                      <b className={`${exo2.className} color-text-1 inline-block`}>BiTacMan</b>, a <b className={`${exo2.className} color-text-1 inline-block`}>visuo-tactile data engine</b> for bimanual contact-rich manipulation, which integrates hardware, acquisition strategy, and policy learning into a closed-loop framework.
                     </p>
                     <ol className="w-full space-y-2 md:space-y-3">
                       <li className="flex items-start gap-2 md:gap-3 rounded-lg border border-white/15 bg-white/[0.03] px-3 py-2 md:px-4 md:py-3">
@@ -281,7 +324,7 @@ export default function Home() {
                             closed-loop data flywheel
                           </b>{" "}
                           that leverages AR-based teleoperation with tactile
-                          feedback (tAmeR) to refine policies using corrective
+                          feedback (BiTacAR) to refine policies using corrective
                           data from realistic failures.
                         </p>
                       </li>
@@ -296,10 +339,10 @@ export default function Home() {
                   controls
                   preload="metadata"
                   playsInline
-                  poster="https://ik.imagekit.io/7rgtwup0y/suppvideo.jpg?updatedAt=1775908649682"
+                  poster="https://ik.imagekit.io/bwfsqmbjv/BiTacMan/BiTacMan%E5%B0%81%E9%9D%A2.png"
                   className="w-full h-auto rounded-lg border border-white/20 bg-black"
                 >
-                  <source src="https://ik.imagekit.io/dpjxm6pdu/suppvideo.mp4" />
+                  <source src="https://ik.imagekit.io/bwfsqmbjv/BiTacMan/BiTacMan.mp4?updatedAt=1790672086848" />
                 </video>
               </div>
             </div>
@@ -389,7 +432,7 @@ export default function Home() {
                     </b>{" "}
                     recovery teleoperation (
                     <b className={`${exo2.className} color-text-1 inline-block`}>
-                      tAmeR
+                      BiTacAR
                     </b>
                     ).
                   </p>
@@ -513,7 +556,7 @@ export default function Home() {
             <Separator className="max-w-6xl mt-14 md:mt-28" />
           </div>
 
-          {/* TAMEn 3D Model  */}
+          {/* BiTacMan 3D Model  */}
           <div
             className="w-full px-4 md:px-6 flex flex-col items-center"
             id="model"
@@ -580,10 +623,146 @@ export default function Home() {
                     <ModelViewerFrame
                       iframeSrc="https://opendrivelab.github.io/TAMEn/3d_model/tamen_model.html"
                       posterSrc={TAMEN_MODEL_VIEWER_POSTER}
-                      title="TAMEn 3D model viewer"
+                      title="BiTacMan 3D model viewer"
                     />
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="w-full px-4 md:px-6 flex flex-col items-center">
+            <Separator className="max-w-6xl mt-10 md:mt-24" />
+          </div>
+
+          <div
+            className="w-full scroll-mt-32 px-4 md:px-6 flex flex-col items-center"
+            id="adaptation-to-heterogeneous-grippers"
+          >
+            <div className="w-full flex flex-col items-center mt-8 md:mt-16">
+              <div className="w-full max-w-6xl flex flex-row justify-between items-center gap-10 md:gap-20">
+                <h2 className="text-2xl md:text-3xl font-bold">
+                  <Link
+                    href="#adaptation-to-heterogeneous-grippers"
+                    className="scroll-mt-32 group flex items-center"
+                  >
+                    Adaptation to Heterogeneous Grippers
+                    <span className="ml-2 md:ml-6 hidden group-hover:inline-block size-6 md:size-10 text-foreground">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                      >
+                        <path
+                          d="M15.197 3.35462C16.8703 1.67483 19.4476 1.53865 20.9536 3.05046C22.4596 4.56228 22.3239 7.14956 20.6506 8.82935L18.2268 11.2626M10.0464 14C8.54044 12.4882 8.67609 9.90087 10.3494 8.22108L12.5 6.06212"
+                          strokeWidth="2.5"
+                          strokeLinecap="round"
+                        />
+                        <path
+                          d="M13.9536 10C15.4596 11.5118 15.3239 14.0991 13.6506 15.7789L11.2268 18.2121L8.80299 20.6454C7.12969 22.3252 4.55237 22.4613 3.0464 20.9495C1.54043 19.4377 1.67609 16.8504 3.34939 15.1706L5.77323 12.7373"
+                          strokeWidth="2.5"
+                          strokeLinecap="round"
+                        />
+                      </svg>
+                    </span>
+                  </Link>
+                </h2>
+              </div>
+            </div>
+            <div className="mt-8 flex w-full flex-col items-center gap-3 md:mt-12 md:gap-5">
+              <span className="font-bold text-xl md:text-2xl text-center">
+                Interactive Gripper Designer
+              </span>
+              <p className="text-xs sm:text-sm md:text-base text-center max-w-6xl">
+                Enter 💡
+                <b className={`${exo2.className} color-text-1 inline-block`}>
+                  design inputs
+                </b>{" "}
+                for link length, axis distance, and the target maximum
+                opening.
+                <br />
+                Click calculate, then drag the 🖱️
+                <b className={`${exo2.className} color-text-1 inline-block`}>
+                  slider
+                </b>{" "}
+                to watch the mechanism move and the opening curve update.
+                <br />
+                Export the 💫
+                <b className={`${exo2.className} color-text-1 inline-block`}>
+                  design result
+                </b>{" "}
+                and adapt one gripper interface across different hardware.
+              </p>
+              <div className="w-full">
+                <GripperDesignerFrame />
+              </div>
+              <div className="mt-5 w-full max-w-6xl px-2 md:mt-8 md:px-4">
+                <Card className="flex h-auto flex-col justify-start gap-3 border-4 border-[#5B6EE1]/50 bg-black/40 py-4 md:gap-5 md:border-6 md:py-6">
+                  <p className="mt-1 px-4 text-center text-xs text-[#5B6EE1] sm:text-sm md:mt-2 md:px-10 md:text-base">
+                    Policies trained on demonstrations collected with the adapted
+                    interface successfully perform bimanual tasks on the target
+                    grippers.
+                  </p>
+                  <CardContent className="flex flex-col gap-4 p-2 md:gap-5 md:p-4">
+                    <div className="grid w-full grid-cols-1 gap-3 sm:grid-cols-2 md:gap-4">
+                      <div className="flex flex-col gap-1.5 md:gap-2">
+                        <div className="relative">
+                          <video
+                            preload="none"
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            {...WECHAT_INLINE_VIDEO_PROPS}
+                            className="aspect-video w-full rounded-xl border border-[#5B6EE1]/40 object-cover"
+                          >
+                            <source src="https://ik.imagekit.io/xbbju7iuo/TAMEn%E5%AE%A3%E5%8F%91%E5%AE%8C%E6%95%B4(1)-1.mp4" />
+                          </video>
+                          <span className="pointer-events-none absolute left-2 top-2 rounded-md border border-white/25 bg-black/70 px-1.5 py-0.5 text-[9px] font-semibold text-white sm:text-[10px] md:left-3 md:top-3 md:text-xs">
+                            Left: DH AG-105-145
+                          </span>
+                          <span className="pointer-events-none absolute right-2 top-2 rounded-md border border-white/25 bg-black/70 px-1.5 py-0.5 text-[9px] font-semibold text-white sm:text-[10px] md:right-3 md:top-3 md:text-xs">
+                            Right: Inspire EG2-4C2
+                          </span>
+                        </div>
+                        <div className="w-full rounded-lg border border-white/20 bg-black/70 p-1 text-center shadow-md">
+                          <p className="user-study-label text-[#5B6EE1]">
+                            <span className="label-task">Bimanual Handover</span>
+                          </p>
+                        </div>
+                      </div>
+                      <div className="flex flex-col gap-1.5 md:gap-2">
+                        <div className="relative">
+                          <video
+                            preload="none"
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            {...WECHAT_INLINE_VIDEO_PROPS}
+                            className="aspect-video w-full rounded-xl border border-[#5B6EE1]/40 object-cover"
+                          >
+                            <source src="https://ik.imagekit.io/xbbju7iuo/TAMEn%E5%AE%A3%E5%8F%91%E5%AE%8C%E6%95%B4(1)(1)-1.mp4" />
+                          </video>
+                          <span className="pointer-events-none absolute left-2 top-2 rounded-md border border-white/25 bg-black/70 px-1.5 py-0.5 text-[9px] font-semibold text-white sm:text-[10px] md:left-3 md:top-3 md:text-xs">
+                            Left: DH AG-105-145
+                          </span>
+                          <span className="pointer-events-none absolute right-2 top-2 rounded-md border border-white/25 bg-black/70 px-1.5 py-0.5 text-[9px] font-semibold text-white sm:text-[10px] md:right-3 md:top-3 md:text-xs">
+                            Right: Inspire EG2-4C2
+                          </span>
+                        </div>
+                        <div className="w-full rounded-lg border border-white/20 bg-black/70 p-1 text-center shadow-md">
+                          <p className="user-study-label text-[#5B6EE1]">
+                            <span className="label-task">Delicate Grasping</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="w-full">
+                      <HeterogeneousGrippersChart />
+                    </div>
+                  </CardContent>
+                </Card>
               </div>
             </div>
           </div>
@@ -634,7 +813,7 @@ export default function Home() {
                   <p className="text-[11px] sm:text-xs md:text-sm text-left w-full">
                     We evaluate the{" "}
                     <b className={`${exo2.className} color-text-1 inline-block`}>
-                      effectiveness of TAMEn system
+                      effectiveness of BiTacMan system
                     </b>{" "}
                     through a diverse set of contact-rich manipulation tasks.
                     Experiments show that{" "}
@@ -653,7 +832,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="w-full flex justify-center mt-5 md:mt-10">
-                  <div className="w-full max-w-4xl">
+                  <div className="w-full max-w-6xl">
                     <PolicyRolloutsAverage />
                   </div>
                 </div>
@@ -827,6 +1006,54 @@ export default function Home() {
                 </TabsContent>
 
               </Tabs>
+            </div>
+
+            <div className="mt-10 w-full max-w-6xl px-2 md:mt-16 md:px-4">
+              <div className="mb-4 flex w-full flex-col items-center md:mb-6">
+                <span className="text-center text-xl font-bold md:text-2xl">
+                  In-the-wild System Evaluation
+                </span>
+              </div>
+              <Card className="flex h-auto flex-col justify-start gap-3 border-4 border-[#5B6EE1]/50 bg-black/40 py-4 md:gap-4 md:border-6 md:py-6">
+                <p className="mt-1 px-4 text-center text-xs text-[#5B6EE1] sm:text-sm md:mt-2 md:px-10 md:text-base">
+                  Policy success rates across contact-rich tasks in laboratory
+                  and real-world environments. Env. denotes environment; Lab.
+                  and Wild denote laboratory and in-the-wild settings,
+                  respectively.
+                </p>
+                <CardContent className="flex flex-col items-stretch justify-between gap-4 p-2 md:gap-6 md:p-4 xl:flex-row">
+                  <div className="grid w-full grid-cols-1 gap-3 sm:grid-cols-2 md:gap-4 xl:w-[560px] xl:flex-[3_3_0%]">
+                    {inTheWildVideos.map((item) => (
+                      <div
+                        key={item.title}
+                        className="flex flex-col gap-1.5 md:gap-2"
+                      >
+                        <video
+                          preload="none"
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
+                          {...WECHAT_INLINE_VIDEO_PROPS}
+                          className="w-full rounded-xl border border-[#5B6EE1]/40 object-contain"
+                        >
+                          <source src={item.src} />
+                        </video>
+                        <div className="w-full rounded-lg border border-white/20 bg-black/70 p-1 text-center shadow-md">
+                          <p className="user-study-label text-[#5B6EE1]">
+                            <span className="label-task">{item.title}</span>
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="flex w-full items-center xl:w-[420px] xl:flex-[2_2_0%]">
+                    <div className="w-full">
+                      <InTheWildChart />
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
 
@@ -1041,6 +1268,37 @@ export default function Home() {
                       </CardContent>
                     </Card>
                   </CarouselItem>
+                  {unseenTextureVideos.map((item) => (
+                    <CarouselItem
+                      key={item.src}
+                      className="carouselItem basis-full md:basis-1/2 lg:basis-1/3 pl-2 md:pl-4"
+                    >
+                      <Card className="card border-[#174BE5]/50 bg-black/40 border-0">
+                        <CardContent className="cardContent flex flex-col items-center justify-center p-2 md:p-6 gap-1 md:gap-1">
+                          <video
+                            preload="none"
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            {...WECHAT_INLINE_VIDEO_PROPS}
+                            className="border-2 md:border-6 border-[#174BE5]/50 rounded-xl w-full"
+                          >
+                            <source src={item.src} />
+                          </video>
+                          <div className="w-full text-center bg-black/70 p-1 rounded-lg shadow-md border border-white/20">
+                            <p className="user-study-label text-[#174BE5]">
+                              <span className="label-type">Generalization</span>
+                              <span className="label-task">{item.title}</span>
+                              <span className="label-phase">
+                                (Unseen Objects + Unseen Textures)
+                              </span>
+                            </p>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </CarouselItem>
+                  ))}
                   <CarouselItem className="carouselItem basis-full md:basis-1/2 lg:basis-1/3 pl-2 md:pl-4">
                     <Card className="card border-[#174BE5]/50 bg-black/40 border-0">
                       <CardContent className="cardContent flex flex-col items-center justify-center p-2 md:p-6 gap-1 md:gap-1">
@@ -1077,6 +1335,11 @@ export default function Home() {
             <div className="w-full px-4 md:px-6 flex flex-col items-center mt-5 md:mt-10">
               <div className="w-full max-w-4xl">
                 <GeneralizationUnseenChart />
+              </div>
+            </div>
+            <div className="w-full px-4 md:px-6 flex flex-col items-center mt-5 md:mt-8">
+              <div className="w-full max-w-4xl">
+                <UnseenTexturesChart />
               </div>
             </div>
             <div className="w-full px-4 md:px-6 flex flex-col items-center mt-5 md:mt-8">
@@ -1127,7 +1390,7 @@ export default function Home() {
                   <p className="text-[11px] sm:text-xs md:text-sm text-left w-full">
                     Introducing{" "}
                     <b className={`${exo2.className} color-text-1 inline-block`}>
-                      TAMEn
+                      BiTacMan
                     </b>
                     , a{" "}
                     <b className={`${exo2.className} color-text-1 inline-block`}>
@@ -1163,7 +1426,7 @@ export default function Home() {
                     <br />
                     (c){" "}
                     <b className={`${exo2.className} color-text-1 inline-block`}>
-                      tAmeR
+                      BiTacAR
                     </b>
                     , our AR-based
                     teleoperation system, helps collect recovery data with
@@ -1200,7 +1463,7 @@ export default function Home() {
           <div className="max-w-6xl w-full flex flex-row justify-between">
             <div className="flex-1 flex flex-col justify-start">
               <span className="text-xs sm:text-sm md:text-base select-none text-center">
-                TAMEn@2026
+                BiTacMan@2026
               </span>
             </div>
           </div>

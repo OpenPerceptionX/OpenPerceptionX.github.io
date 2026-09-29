@@ -1,0 +1,1956 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>平行四边形夹爪自动设计器</title>
+  <style>
+    :root{
+      --bg:#f4f6f9;
+      --panel:#ffffff;
+      --text:#111827;
+      --muted:#667085;
+      --border:#d9dee8;
+      --accent:#2563eb;
+      --accent-soft:#eef4ff;
+      --ok:#16803a;
+      --bad:#b42318;
+      --warn:#9a6700;
+      --pgram:#e5b735;
+      --ae:#2ca6a4;
+      --me:#e77db4;
+      --es:#5fc478;
+      --rail:#6b7280;
+      --axis:#d92d20;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:var(--bg);
+      color:var(--text);
+    }
+    .page{
+      width:min(1480px, calc(100% - 24px));
+      margin:18px auto 36px;
+    }
+    .hero{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:18px;
+      flex-wrap:wrap;
+      margin-bottom:16px;
+    }
+    h1{font-size:25px;margin:0 0 6px}
+    .subtitle{
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.65;
+      max-width:900px;
+    }
+    .hero-tools{
+      display:flex;
+      flex-direction:column;
+      align-items:flex-end;
+      gap:8px;
+    }
+    .lang-select{
+      min-height:34px;
+      border:1px solid var(--border);
+      background:#fff;
+      border-radius:9px;
+      padding:4px 9px;
+      font-weight:700;
+      color:var(--text);
+    }
+    .diagram-option{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      font-size:13px;
+      color:var(--muted);
+      user-select:none;
+      white-space:nowrap;
+    }
+    .diagram-option input{accent-color:var(--accent)}
+    .removed-copy:empty{display:none !important;}
+
+    /* Explicit blue styling for the bottom Slider position s control */
+    #sSlider{
+      width:100%;
+      appearance:none;
+      -webkit-appearance:none;
+      background:transparent;
+      accent-color:#2563eb;
+    }
+    #sSlider::-webkit-slider-runnable-track{
+      height:4px;
+      border-radius:999px;
+      background:#93c5fd;
+    }
+    #sSlider::-webkit-slider-thumb{
+      -webkit-appearance:none;
+      appearance:none;
+      width:16px;
+      height:16px;
+      border-radius:50%;
+      background:#2563eb;
+      border:2px solid #ffffff;
+      box-shadow:0 1px 3px rgba(0,0,0,0.18);
+      margin-top:-6px;
+    }
+    #sSlider::-moz-range-track{
+      height:4px;
+      border-radius:999px;
+      background:#93c5fd;
+      border:none;
+    }
+    #sSlider::-moz-range-thumb{
+      width:16px;
+      height:16px;
+      border-radius:50%;
+      background:#2563eb;
+      border:2px solid #ffffff;
+      box-shadow:0 1px 3px rgba(0,0,0,0.18);
+    }
+
+
+    .badge{
+      border:1px solid #bfd0ff;
+      background:var(--accent-soft);
+      color:#1d4ed8;
+      border-radius:999px;
+      padding:8px 12px;
+      font-weight:700;
+      font-size:13px;
+      white-space:nowrap;
+    }
+    .layout{
+      display:grid;
+      grid-template-columns:380px minmax(0,1fr);
+      gap:16px;
+      align-items:start;
+    }
+    .panel{
+      background:var(--panel);
+      border:1px solid var(--border);
+      border-radius:16px;
+      overflow:hidden;
+    }
+    .card{padding:16px}
+    .stack{display:flex;flex-direction:column;gap:14px}
+    h2{
+      font-size:16px;
+      margin:0 0 12px;
+    }
+    h3{
+      font-size:14px;
+      margin:0 0 9px;
+    }
+    .control{margin:10px 0}
+    .control:first-of-type{margin-top:0}
+    .row{
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      align-items:center;
+      margin-bottom:7px;
+      font-size:14px;
+    }
+    .row strong{font-variant-numeric:tabular-nums}
+    .input-grid{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) 82px;
+      gap:9px;
+      align-items:center;
+    }
+    input[type="range"]{width:100%}
+    input[type="number"]{
+      width:100%;
+      min-height:38px;
+      border:1px solid var(--border);
+      border-radius:9px;
+      padding:7px 8px;
+      font-size:14px;
+      background:#fff;
+      color:var(--text);
+    }
+    .note{
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.5;
+      margin-top:5px;
+    }
+    .formula{
+      padding:10px 12px;
+      border-radius:10px;
+      background:#f8fafc;
+      border:1px solid #e5e7eb;
+      font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+      font-size:13px;
+      line-height:1.6;
+      overflow-wrap:anywhere;
+    }
+    button{
+      border:1px solid var(--border);
+      background:#fff;
+      color:var(--text);
+      min-height:40px;
+      padding:0 14px;
+      border-radius:10px;
+      cursor:pointer;
+      font-weight:700;
+      font-size:14px;
+    }
+    button.primary{
+      background:var(--accent);
+      border-color:var(--accent);
+      color:white;
+    }
+    button:disabled{
+      opacity:.5;
+      cursor:not-allowed;
+    }
+    .actions{display:flex;gap:8px;flex-wrap:wrap}
+    .full{width:100%}
+    .message{
+      padding:10px 12px;
+      border-radius:10px;
+      font-size:13px;
+      line-height:1.55;
+      border:1px solid var(--border);
+      background:#f8fafc;
+      color:var(--muted);
+    }
+    .message.ok{
+      color:var(--ok);
+      background:#f2fbf5;
+      border-color:#bfe8cd;
+    }
+    .message.bad{
+      color:var(--bad);
+      background:#fff5f5;
+      border-color:#f1c0bd;
+    }
+    .message.warn{
+      color:var(--warn);
+      background:#fff9e8;
+      border-color:#ead8a0;
+    }
+    .right-stack{display:flex;flex-direction:column;gap:16px}
+    .results-head{
+      padding:14px 16px 0;
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+    .results-grid{
+      display:grid;
+      grid-template-columns:minmax(0,1fr);
+      gap:12px;
+      padding:14px 16px 16px;
+    }
+    .design-card{
+      border:1px solid var(--border);
+      border-radius:13px;
+      padding:14px;
+      background:#fff;
+      min-width:0;
+    }
+    .design-card.selected{
+      border-color:#7aa2ff;
+      box-shadow:0 0 0 2px rgba(37,99,235,.08);
+      background:#fbfdff;
+    }
+    .design-title{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:8px;
+      margin-bottom:10px;
+      font-weight:800;
+      font-size:14px;
+    }
+    .tag{
+      font-size:11px;
+      color:#475467;
+      background:#f2f4f7;
+      border-radius:999px;
+      padding:4px 7px;
+      font-weight:700;
+    }
+    .metric{
+      display:grid;
+      grid-template-columns:1fr auto;
+      gap:6px 10px;
+      font-size:12.5px;
+      line-height:1.55;
+    }
+    .metric span:nth-child(odd){color:var(--muted)}
+    .metric span:nth-child(even){
+      font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+      text-align:right;
+    }
+    .design-card button{width:100%;margin-top:12px}
+    .sim-head{
+      padding:12px 14px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+      border-bottom:1px solid var(--border);
+    }
+    .sim-head .left{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+    .opening{
+      background:var(--accent-soft);
+      color:#1d4ed8;
+      border:1px solid #c7d5ff;
+      border-radius:999px;
+      padding:7px 10px;
+      font-size:13px;
+      font-weight:800;
+    }
+    .sim-grid{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) 300px;
+      gap:0;
+    }
+    .canvas-wrap{
+      padding:12px;
+      min-width:0;
+    }
+    svg#scene{
+      display:block;
+      width:100%;
+      height:min(72vh,760px);
+      min-height:520px;
+      border-radius:12px;
+      background:#f4f5f7;
+    }
+    .sim-side{
+      padding:14px;
+      border-left:1px solid var(--border);
+      min-width:0;
+    }
+    .sim-side .metric{font-size:13px}
+    .slider-box{
+      margin-top:14px;
+      padding-top:14px;
+      border-top:1px solid var(--border);
+    }
+    .tune-control{margin:10px 0}
+    .tune-control .row{margin-bottom:5px}
+    .tune-grid{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) 76px;
+      gap:8px;
+      align-items:center;
+    }
+    .tune-grid input[type="number"]{
+      min-height:34px;
+      padding:5px 6px;
+      font-size:13px;
+    }
+    .chart{
+      width:100%;
+      height:180px;
+      display:block;
+      border-radius:10px;
+      background:#fafafa;
+      border:1px solid #eceff3;
+    }
+    .legend{
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.7;
+      margin-top:9px;
+    }
+    .mini{
+      font-size:12px;
+      color:var(--muted);
+    }
+    .section-hidden{display:none}
+    
+    /* v9 compact interface */
+    .removed-ui{
+      display:none !important;
+    }
+    /* Before a design is generated, keep the input card centered instead of
+       reserving a large empty right column. */
+    .layout:has(#simPanel.section-hidden){
+      grid-template-columns:minmax(0,720px);
+      justify-content:center;
+    }
+    .layout:has(#simPanel.section-hidden) .right-stack{
+      display:none;
+    }
+    /* Once simulation is visible, use the full workspace. */
+    .layout:has(#simPanel:not(.section-hidden)){
+      grid-template-columns:300px minmax(0,1fr);
+      gap:10px;
+    }
+    .stack{gap:10px}
+    .panel.card{padding:14px}
+    .right-stack{gap:10px}
+    #simPanel{overflow:visible}
+    .sim-head{padding:10px 12px}
+    .sim-grid{padding:10px}
+    .sim-left,.sim-right{gap:8px}
+    .sim-right .slider-box{
+      padding-top:10px;
+      margin-top:0;
+    }
+
+    /* v8 simulation layout overrides */
+    .sim-grid{
+      display:grid;
+      grid-template-columns:minmax(0,1fr);
+      gap:10px;
+      align-items:start;
+    }
+    .sim-right{
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+      min-width:0;
+    }
+    .sim-center{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      min-width:0;
+      gap:8px;
+      padding:0;
+    }
+    .canvas-wrap{
+      width:100%;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:0;
+      min-width:0;
+    }
+    svg#scene{
+      display:block;
+      width:100%;
+      max-width:900px;
+      aspect-ratio:1 / 1;
+      height:auto;
+      min-height:0;
+      border-radius:12px;
+      background:#f4f5f7;
+    }
+    .slider-under{
+      width:min(100%, 680px);
+      margin:0 auto;
+    }
+    .slider-under .slider-box{
+      margin-top:0;
+      padding-top:0;
+      border-top:0;
+    }
+    .sim-left .slider-box,
+    .sim-right .slider-box{
+      margin-top:0;
+    }
+    .sim-left .metric,
+    .sim-right .metric{
+      font-size:13px;
+    }
+    .chart{
+      display:block;
+      width:100%;
+      aspect-ratio:1 / 1;
+      height:auto;
+      min-height:0;
+    }
+    .compact-monitor .metric,
+    .sim-right .metric{
+      font-size:12.5px;
+    }
+    .compact-monitor h3,
+    .sim-right h3{
+      margin-bottom:6px;
+    }
+    .compact-monitor .slider-box{margin-top:0;padding-top:0;border-top:0}
+    .compact-monitor{padding:14px}
+    .compact-monitor .chart{margin-top:4px}
+    .compact-monitor .slider-box + .slider-box{margin-top:12px;padding-top:12px;border-top:1px solid var(--border)}
+
+
+    /* v19: vertically balance the left/right columns with the main slider */
+    @media(min-width:1121px){
+      .layout:has(#simPanel:not(.section-hidden)){
+        align-items:stretch;
+      }
+      .layout:has(#simPanel:not(.section-hidden)) > .right-stack > #simPanel{
+        flex:1 0 auto;
+      }
+      .design-input-card{flex-shrink:0}
+      .layout:has(#simPanel:not(.section-hidden)) > .stack{
+        display:flex;
+        flex-direction:column;
+        justify-content:flex-start;
+        gap:22px;
+        box-sizing:border-box;
+        min-height:0;
+      }
+      .design-input-card{
+        display:flex;
+        flex-direction:column;
+      }
+      .design-input-card .control{
+        margin:32px 0;
+      }
+      .design-input-card .actions{
+        margin-top:18px !important;
+      }
+
+      .compact-monitor{
+        display:flex;
+        flex:1 0 auto;
+        flex-direction:column;
+        justify-content:space-between;
+        gap:24px;
+        min-height:0;
+      }
+      .compact-monitor .slider-box + .slider-box{
+        margin-top:26px;
+        padding-top:26px;
+      }
+
+      .compact-monitor > .slider-box:last-of-type{
+        margin-top:auto;
+      }
+
+      .sim-grid{
+        align-items:start;
+      }
+      .sim-right{
+        display:flex;
+        flex-direction:column;
+        box-sizing:border-box;
+      }
+      .sim-right > .slider-box{
+        flex:1 1 auto;
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between;
+        gap:0;
+      }
+      .sim-right .tune-control{
+        margin:0;
+      }
+      .sim-right .tune-control + .tune-control{
+        margin-top:14px;
+      }
+      .sim-right .actions{
+        margin-top:18px !important;
+      }
+    }
+
+@media(max-width:1120px){
+      .layout{grid-template-columns:1fr}
+      .sim-grid{grid-template-columns:1fr}
+      .sim-right,.sim-center{width:100%}
+      .results-grid{grid-template-columns:1fr 1fr 1fr}
+      svg#scene{width:min(100%, 820px)}
+    }
+    @media(max-width:850px){
+      .sim-grid{grid-template-columns:1fr}
+      .results-grid{grid-template-columns:1fr}
+      svg#scene{width:min(100%,680px)}
+      .slider-under{width:100%}
+    }
+    @media(max-width:520px){
+      .page{width:min(100% - 12px,1480px);margin-top:10px}
+      .input-grid{grid-template-columns:1fr 80px}
+      svg#scene{height:460px;min-height:420px}
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <div class="hero">
+    <div>
+      <h1 data-i18n="title">Parallelogram Gripper Auto Designer</h1>
+    </div>
+    <div class="hero-tools">
+    </div>
+  </div>
+
+  <div class="layout">
+    <aside class="stack">
+      <section class="panel card design-input-card">
+        <h2 data-i18n="designInput">1. Design Inputs</h2>
+
+        <div class="control">
+          <div class="row"><span>AD = BC = <b>l</b> (mm)</span><span id="lText" style="display:none">120</span></div>
+          <div class="input-grid">
+            <input id="l" type="range" min="40" max="160" value="120" step="1">
+            <input id="lNum" type="number" min="40" max="160" value="120" step="1">
+          </div>
+        </div>
+
+        <div class="control">
+          <div class="row"><span data-i18n="hLabel">A 到对称轴 = <b>H</b></span><span id="HText" style="display:none">20</span></div>
+          <div class="input-grid">
+            <input id="H" type="range" min="0" max="140" value="20" step="1">
+            <input id="HNum" type="number" min="0" max="140" value="20" step="1">
+          </div>
+        </div>
+
+        <div class="control">
+          <div class="row"><span data-i18n="wLabel">目标最大总开口 <b>Wmax</b></span><span id="WText" style="display:none">180</span></div>
+          <div class="input-grid">
+            <input id="W" type="range" min="20" max="300" value="180" step="1">
+            <input id="WNum" type="number" min="20" max="300" value="180" step="1">
+          </div>
+        </div>
+
+        
+
+        <div id="inputMessage" class="message" style="margin-top:12px" data-i18n="inputPrompt">输入参数后点击“自动设计机构”。</div>
+
+        <div class="actions" style="margin-top:12px">
+          <button id="generateBtn" class="primary full" data-i18n="generate">自动设计机构</button>
+        </div>
+      </section>
+      <section class="panel card compact-monitor">
+        <div class="slider-box">
+              <h3 data-i18n="currentDimensions">Derived Dimensions</h3>
+              <div class="metric" id="designReadout"></div>
+              <span id="curW" style="display:none">—</span>
+              <span id="curTheta" style="display:none">—</span>
+              <span id="curPhi" style="display:none">—</span>
+              <span id="curBeta" style="display:none">—</span>
+              <span id="curGamma" style="display:none">—</span>
+            </div>
+            <div class="slider-box">
+              <h3 data-i18n="fineTune">仿真微调</h3>
+              <div class="note removed-copy" style="margin-bottom:10px;display:none" data-i18n="fineTuneNote"></div>
+
+              <span id="tuneBText" style="display:none">—</span>
+
+              <div class="tune-control">
+                <div class="row"><span>ES (mm)</span><strong id="tuneCText" style="display:none">—</strong></div>
+                <div class="tune-grid">
+                  <input id="tuneC" type="range" min="20" max="60" step="1">
+                  <input id="tuneCNum" type="number" min="20" max="60" step="1">
+                </div>
+              </div>
+
+              <div class="tune-control">
+                <div class="row"><span data-i18n="offsetD">横杆端点偏置 d</span><strong id="tuneDText" style="display:none">—</strong></div>
+                <div class="tune-grid">
+                  <input id="tuneD" type="range" min="-100" max="100" step="1">
+                  <input id="tuneDNum" type="number" min="-100" max="100" step="1">
+                </div>
+              </div>
+
+              <div class="actions" style="margin-top:10px">
+                <button id="resetTuneBtn" type="button" data-i18n="reset">恢复自动设计值</button>
+              </div>
+              <div id="tuneMessage" class="message removed-copy" style="margin-top:10px;display:none" data-i18n="tunePrompt"></div>
+            </div>
+            <div class="slider-box">
+              <h3 data-i18n="curveTitle">开口—滑块曲线 W(s)</h3>
+              <svg id="chart" class="chart" viewBox="0 0 280 180" aria-label="W versus s curve"></svg>
+              <div class="legend removed-copy" data-i18n="curveNote" style="display:none"></div>
+            </div>
+      </section>
+
+
+      <section class="panel card removed-ui">
+        <h2 data-i18n="assumptions">2. 固定设计假设</h2>
+        <div class="metric">
+          <span data-i18n="minOpening">最小开口 Wmin</span><span>0 mm</span>
+          <span data-i18n="gripRef">夹持参考点</span><span data-i18n="pointD">D 点</span>
+          <span data-i18n="abRange">AB = DC</span><span>12.5 mm</span>
+          <span data-i18n="transRecommended">传动角推荐区间</span><span>35°–145°</span>
+          <span data-i18n="transSafety">传动角安全限制</span><span>15°–165°</span>
+          <span data-i18n="bilateral">左右机构</span><span data-i18n="strictMirror">严格镜像</span>
+          <span data-i18n="sliderConstraint">滑块约束</span><span data-i18n="centerAxis">x = 0 中轴线</span>
+          <span data-i18n="eConstraint">E 点约束</span><span>xE &gt; xB</span>
+          <span data-i18n="aeLength">AE 长度</span><span data-i18n="autoSelect">38 mm</span>
+          <span data-i18n="closedPose">完全闭合姿态</span><span data-i18n="aeAngleRange">AE = 0°</span>
+        </div>
+        <div class="legend" data-i18n="assumptionNote">自动设计仅输出一套均衡方案，满足几何可行性并综合考虑传动角、行程与运动平滑性。</div>
+      </section>
+    </aside>
+
+    <main class="right-stack">
+      <section class="panel removed-ui">
+        <div class="results-head">
+          <div>
+            <h2 style="margin:0" data-i18n="results">自动设计结果</h2>
+            <div id="searchInfo" class="mini" data-i18n="notGenerated">尚未生成。</div>
+          </div>
+          <div id="angleSummary" class="mini"></div>
+        </div>
+        <div id="resultsGrid" class="results-grid">
+          <div class="message" style="grid-column:1/-1" data-i18n="resultPrompt">点击左侧“自动设计机构”生成均衡方案。</div>
+        </div>
+      </section>
+
+      <section id="simPanel" class="panel section-hidden">
+        <div class="sim-head">
+          <div class="left">
+            <strong id="simTitle">Simulation</strong>
+          </div>
+          <div class="actions">
+            <label class="diagram-option">
+              <input id="showLabels" type="checkbox" checked>
+              <span data-i18n="showLabels">显示字母</span>
+            </label>
+            <button id="exportBtn" data-i18n="export">导出设计 JSON</button>
+            <button id="playBtn" class="primary" data-i18n="play">自动开合</button>
+          </div>
+        </div>
+
+        <div class="sim-grid">
+          
+
+          <div class="sim-center">
+            <div class="canvas-wrap">
+              <svg id="scene" viewBox="-260 -240 520 560" aria-label="symmetric gripper mechanism"></svg>
+            </div>
+            <div class="slider-under">
+              <div class="slider-box">
+              <div class="row"><span data-i18n="sliderPos">主动滑块位置 s</span><strong id="sValue">—</strong></div>
+              <input id="sSlider" type="range" min="0" max="100" value="0" step="0.1">
+              <div class="note removed-copy" data-i18n="sliderNote" style="display:none"></div>
+            </div>
+            </div>
+          </div>
+
+
+        </div>
+        <div id="simStatus" class="status message removed-copy" style="display:none"></div>
+      </section>
+    </main>
+  </div>
+</div>
+
+<script>
+(() => {
+  const $ = id => document.getElementById(id);
+  const NS = 'http://www.w3.org/2000/svg';
+
+  let uiLang='en';
+  let showJointLabels=true;
+
+  const I18N={
+    zh:{
+      title:'平行四边形夹爪自动设计器',
+      subtitle:'',
+      designInput:'1. 设计输入', lNote:'',
+      hLabel:'A 到对称轴 = <b>H</b> (mm)', hNote:'',
+      wLabel:'目标最大总开口 <b>Wmax</b> (mm)', wNote:'',
+      generate:'自动设计机构', assumptions:'2. 固定设计假设', results:'自动设计结果',
+      export:'导出设计 JSON', play:'自动开合', pause:'暂停',
+      currentDimensions:'当前方案尺寸', fineTune:'仿真微调',
+      fineTuneNote:'',
+      reset:'恢复自动设计值', sliderPos:'主动滑块位置 s', sliderNote:'',
+      motionState:'当前运动状态', openingW:'总开口 W', curveTitle:'开口—滑块曲线 W(s)',
+      curveNote:'',
+      minOpening:'最小开口 Wmin', gripRef:'夹持参考点', pointD:'D 点',
+      abRange:'AB = DC', transRecommended:'传动角推荐区间', transSafety:'传动角安全限制',
+      bilateral:'左右机构', strictMirror:'严格镜像', sliderConstraint:'滑块约束', centerAxis:'x = 0 中轴线',
+      eConstraint:'E 点约束', aeLength:'AE 长度', autoSelect:'38 mm',
+      closedPose:'完全闭合姿态', aeAngleRange:'AE = 0°',
+      closedAEAngle:'闭合时 AE 角度（固定水平）', meAuto:'ME', offsetD:'横杆端点偏置 d (mm)',
+      assumptionNote:'自动设计仅输出一套均衡方案，满足几何可行性并综合考虑传动角、行程与运动平滑性。',
+      inputPrompt:'', notGenerated:'尚未生成。',
+      resultPrompt:'点击左侧“自动设计机构”生成均衡方案。', tunePrompt:'',
+      showLabels:'显示字母', balanced:'均衡方案',
+      balancedDesc:'综合考虑传动角、机构尺寸、中央滑块行程与 W(s) 平滑度',
+      enterSim:'进入仿真微调', simTitle:'运动仿真与微调',
+      searchWorking:'正在搜索满足约束的均衡机构…', regenerate:'重新计算'
+    },
+    en:{
+      title:'Parallelogram Gripper Auto-Designer',
+      subtitle:'',
+      designInput:'1. Design Inputs', lNote:'',
+      hLabel:'A-to-axis distance = <b>H</b> (mm)', hNote:'',
+      wLabel:'Target maximum opening <b>Wmax</b> (mm)', wNote:'',
+      generate:'Generate Design', assumptions:'2. Fixed Design Constraints', results:'Design Result',
+      export:'Export Design JSON', play:'Auto Motion', pause:'Pause',
+      currentDimensions:'Derived Dimensions', fineTune:'Simulation Fine-Tuning',
+      fineTuneNote:'',
+      reset:'Restore Auto Design', sliderPos:'Slider position s', sliderNote:'',
+      motionState:'Motion State', openingW:'Opening W', curveTitle:'Opening–Slider Curve W(s)',
+      curveNote:'',
+      minOpening:'Minimum opening Wmin', gripRef:'Grip reference', pointD:'Point D',
+      abRange:'AB = DC', transRecommended:'Recommended transmission angle', transSafety:'Safety transmission angle',
+      bilateral:'Left/right linkage', strictMirror:'Strict mirror', sliderConstraint:'Slider constraint', centerAxis:'x = 0 center axis',
+      eConstraint:'E-point constraint', aeLength:'AE length', autoSelect:'38 mm',
+      closedPose:'Fully closed pose', aeAngleRange:'AE = 0°',
+      closedAEAngle:'AE at closure (fixed horizontal)', meAuto:'ME', offsetD:'Crossbar endpoint offset d (mm)',
+      assumptionNote:'Only one balanced design is returned, satisfying geometric feasibility while considering transmission angle, stroke, and motion smoothness.',
+      inputPrompt:'', notGenerated:'Not generated yet.',
+      resultPrompt:'Click “Generate Design” to obtain the balanced design.', tunePrompt:'',
+      showLabels:'Show joint letters', balanced:'Balanced Design',
+      balancedDesc:'Balances transmission angle, linkage size, central-slider stroke, and W(s) smoothness',
+      enterSim:'Open Fine-Tuning', simTitle:'Motion Simulation & Fine-Tuning',
+      searchWorking:'Searching for a balanced feasible mechanism…', regenerate:'Calculate'
+    }
+  };
+
+  const tr=(zh,en)=>uiLang==='zh'?zh:en;
+
+  function applyLanguage(lang){
+    uiLang=lang;
+    document.documentElement.lang=lang==='zh'?'zh-CN':'en';
+    document.title=I18N[lang].title;
+    document.querySelectorAll('[data-i18n]').forEach(el=>{
+      const key=el.dataset.i18n;
+      if(I18N[lang][key]!==undefined) el.innerHTML=I18N[lang][key];
+    });
+    if($('langSelect')) $('langSelect').value=lang;
+    requestAnimationFrame(alignSideColumnsToMainSlider);
+  }
+
+  const inputs = {
+    l: $('l'), H: $('H'), W: $('W')
+  };
+  const nums = {
+    l: $('lNum'), H: $('HNum'), W: $('WNum')
+  };
+  const texts = {
+    l: $('lText'), H: $('HText'), W: $('WText')
+  };
+
+  let designs = [];
+  let activeDesign = null;
+  let autoDesignBaseline = null;
+  let anim = null;
+  let animDir = 1;
+  let animLast = 0;
+
+  const rad = d => d*Math.PI/180;
+  const deg = r => r*180/Math.PI;
+  const clamp = (v,a,b) => Math.max(a,Math.min(b,v));
+  const lerp = (a,b,t) => a+(b-a)*t;
+
+  function circleIntersections(p0,r0,p1,r1){
+    const dx=p1.x-p0.x, dy=p1.y-p0.y;
+    const D=Math.hypot(dx,dy);
+    if(!D || D>r0+r1+1e-9 || D<Math.abs(r0-r1)-1e-9) return [];
+    const aa=(r0*r0-r1*r1+D*D)/(2*D);
+    const h2=r0*r0-aa*aa;
+    if(h2 < -1e-8) return [];
+    const h=Math.sqrt(Math.max(0,h2));
+    const xm=p0.x+aa*dx/D, ym=p0.y+aa*dy/D;
+    const rx=-dy*h/D, ry=dx*h/D;
+    return [
+      {x:xm+rx,y:ym+ry},
+      {x:xm-rx,y:ym-ry}
+    ];
+  }
+
+  function nearest(points, ref){
+    if(!points.length) return null;
+    if(!ref) return points[0];
+    return points.slice().sort((a,b) =>
+      Math.hypot(a.x-ref.x,a.y-ref.y)-Math.hypot(b.x-ref.x,b.y-ref.y)
+    )[0];
+  }
+
+  function angle3(a,b,c){
+    // angle ABC
+    const v1={x:a.x-b.x,y:a.y-b.y};
+    const v2={x:c.x-b.x,y:c.y-b.y};
+    const n1=Math.hypot(v1.x,v1.y), n2=Math.hypot(v2.x,v2.y);
+    if(!n1 || !n2) return 0;
+    const cs=clamp((v1.x*v2.x+v1.y*v2.y)/(n1*n2),-1,1);
+    return deg(Math.acos(cs));
+  }
+
+  function syncInput(key, fromNumber=false){
+    const src=fromNumber?nums[key]:inputs[key];
+    let v=+src.value;
+    if(!Number.isFinite(v)) v=+inputs[key].value;
+    const lo=+inputs[key].min, hi=+inputs[key].max;
+    v=clamp(v,lo,hi);
+    inputs[key].value=v;
+    nums[key].value=v;
+    texts[key].textContent=v;
+    validateInputs(false);
+  }
+
+  ['l','H','W'].forEach(k=>{
+    inputs[k].addEventListener('input',()=>syncInput(k,false));
+    nums[k].addEventListener('change',()=>syncInput(k,true));
+  });
+
+  function currentInputs(){
+    return {l:+inputs.l.value,H:+inputs.H.value,Wmax:+inputs.W.value};
+  }
+
+  function validateInputs(show=true){
+    const {l,H,Wmax}=currentInputs();
+    const msg=$('inputMessage');
+
+    // dynamic Wmax ceiling for slider/number, but leave a useful global upper limit.
+    const physicalMax=2*(H+l);
+    nums.W.max=Math.ceil(physicalMax);
+    inputs.W.max=Math.max(20,Math.ceil(physicalMax));
+
+    if(H>l){
+      if(show){
+        msg.className='message bad';
+        msg.textContent=''; msg.style.display='none';
+      }
+      return null;
+    }
+    if(Wmax<=0 || Wmax>physicalMax+1e-9){
+      if(show){
+        msg.className='message bad';
+        msg.textContent=''; msg.style.display='none';
+      }
+      return null;
+    }
+
+    const closeArg=-H/l;
+    const openArg=(Wmax/2-H)/l;
+    if(openArg<-1 || openArg>1){
+      if(show){
+        msg.className='message bad';
+        msg.textContent=''; msg.style.display='none';
+      }
+      return null;
+    }
+
+    const thetaClose=Math.acos(clamp(closeArg,-1,1));
+    const thetaOpen=Math.acos(clamp(openArg,-1,1));
+    const travel=Math.abs(thetaClose-thetaOpen);
+
+    if(travel<rad(8)){
+      if(show){
+        msg.className='message warn';
+        msg.textContent=''; msg.style.display='none';
+      }
+    }else if(show){
+      msg.className='message ok';
+      msg.textContent=''; msg.style.display='none';
+    }
+    return {l,H,Wmax,thetaOpen,thetaClose,physicalMax};
+  }
+
+  function sampleThetas(thetaClose,thetaOpen,n){
+    const out=[];
+    for(let i=0;i<n;i++){
+      const t=i/(n-1);
+      out.push(lerp(thetaClose,thetaOpen,t));
+    }
+    return out;
+  }
+
+  function buildEPath(l,a,r,alphaCloseDeg,thetas){
+    a=12.5;
+    r=38;
+    const A={x:0,y:0};
+    const O={x:a/2,y:0};
+    const Ms=thetas.map(th=>({
+      x:a/2+l*Math.cos(th),
+      y:l*Math.sin(th)
+    }));
+
+    // Closed-state design freedom:
+    // Fixed lengths: AB = DC = 12.5 mm; AE = 38 mm.
+    // AE is strictly horizontal at closure; angle tuning is prohibited.
+    alphaCloseDeg=0;
+    const alpha=rad(alphaCloseDeg);
+    const Eclose={
+      x:r*Math.cos(alpha),
+      y:r*Math.sin(alpha)
+    };
+
+    // E must stay outside B. In the right-side local frame B=(a,0).
+    if(Eclose.x <= a + 1e-6) return null;
+
+    // Once a, r, alphaClose are chosen, ME=b is determined by the closed pose.
+    const b=Math.hypot(Ms[0].x-Eclose.x,Ms[0].y-Eclose.y);
+    if(b < 15 || b > 1.65*l) return null;
+
+    const Es=[Eclose];
+    for(let i=1;i<Ms.length;i++){
+      const ints=circleIntersections(A,r,Ms[i],b).filter(e => e.x > a + 1e-6);
+      if(!ints.length) return null;
+      Es.push(nearest(ints,Es[Es.length-1]));
+    }
+
+    if(Es.some(e=>e.x<=a+1e-6)) return null;
+
+    const branchPenalty = Es.reduce((s,e,i)=>{
+      let p=0;
+      if(e.y > Ms[i].y) p += 2;
+      return s+p;
+    },0);
+
+    const mus=Es.map((e,i)=>angle3(A,e,Ms[i]));
+    const minMu=Math.min(...mus), maxMu=Math.max(...mus);
+
+    // 15°–165° is a hard safety envelope.
+    // 35°–145° is only the recommended zone and contributes a soft penalty.
+    if(minMu<15 || maxMu>165) return null;
+
+    const centerPenalty=mus.reduce((s,mu)=>s+Math.pow((mu-90)/65,2),0)/mus.length;
+    const recommendedPenalty=mus.reduce((s,mu)=>{
+      let p=0;
+      if(mu<35) p=Math.pow((35-mu)/20,2);
+      if(mu>145) p=Math.pow((mu-145)/20,2);
+      return s+p;
+    },0)/mus.length;
+
+    const transPenalty=0.75*centerPenalty+2.0*recommendedPenalty;
+    const transWarn=(minMu<35 || maxMu>145);
+    const smoothJump=Es.slice(1).reduce((s,e,i)=>s+Math.hypot(e.x-Es[i].x,e.y-Es[i].y),0)/(l||1);
+
+    return {
+      A,O,Ms,Es,mus,minMu,maxMu,transPenalty,recommendedPenalty,transWarn,
+      branchPenalty,smoothJump,r,b,Eclose,alphaCloseDeg
+    };
+  }
+
+  function evaluateSlider(path,l,H,Wmax,c,d,thetas){
+    // Right-side crossbar endpoint is at global x = H + d.
+    // It must remain on the right side of the symmetry axis; the left endpoint is its mirror.
+    if(H + d <= 3) return null;
+
+    const ss=[];
+    const esAngles=[];
+    for(let i=0;i<path.Es.length;i++){
+      const e=path.Es[i];
+      const dx=d-e.x;
+      const under=c*c-dx*dx;
+      if(under<=1e-8) return null;
+      const root=Math.sqrt(under);
+
+      // Slider is chosen below E, matching the original mechanism sketch.
+      const yS=e.y-root;
+      const s=-yS;
+      ss.push(s);
+
+      // angle between ES and horizontal, 90° is vertical
+      esAngles.push(deg(Math.atan2(Math.abs(root),Math.abs(dx)+1e-12)));
+    }
+
+    const dif=[];
+    for(let i=1;i<ss.length;i++) dif.push(ss[i]-ss[i-1]);
+    const allPos=dif.every(v=>v>1e-4);
+    const allNeg=dif.every(v=>v<-1e-4);
+    if(!(allPos||allNeg)) return null;
+
+    const sMin=Math.min(...ss), sMax=Math.max(...ss), stroke=sMax-sMin;
+    if(stroke < 0.05*l || stroke > 1.6*l) return null;
+
+    const minEsAngle=Math.min(...esAngles);
+    if(minEsAngle<20) return null;
+
+    const Ws=thetas.map(th=>2*(H+l*Math.cos(th)));
+    const ratios=[];
+    for(let i=1;i<Ws.length;i++){
+      const ds=ss[i]-ss[i-1];
+      if(Math.abs(ds)<1e-9) return null;
+      ratios.push(Math.abs((Ws[i]-Ws[i-1])/ds));
+    }
+    const meanRatio=ratios.reduce((a,b)=>a+b,0)/ratios.length;
+    const mean=meanRatio||1;
+    const variance=ratios.reduce((s,v)=>s+(v-mean)*(v-mean),0)/ratios.length;
+    const smooth=Math.sqrt(variance)/mean;
+
+    return {
+      ss,Ws,sMin,sMax,stroke,minEsAngle,meanRatio,smooth,
+      direction:allPos?1:-1
+    };
+  }
+
+  function coarseSynthesis(cfg){
+    const {l,H,Wmax,thetaClose,thetaOpen}=cfg;
+    const thetas=sampleThetas(thetaClose,thetaOpen,31);
+
+    const stats={
+      stage1Tried:0,
+      stage1Valid:0,
+      stage2Tried:0,
+      sliderValid:0,
+      ratioRejected:0
+    };
+
+    // Stage 1: evaluate the fixed configuration once.
+    // ME is determined exactly by the closed-pose geometry.
+    const a=12.5, r=38, alphaCloseDeg=0;
+    stats.stage1Tried=1;
+    const path=buildEPath(l,a,r,alphaCloseDeg,thetas);
+    if(!path) return {finals:[],stats};
+    stats.stage1Valid=1;
+    const base={a,r,b:path.b,alphaCloseDeg,path,thetas};
+
+    // Stage 2: synthesize ES and the attachment point on the rigid crossbar.
+    const finals=[];
+    {
+      const xs=base.path.Es.map(e=>e.x);
+      const dStep=Math.max(4,Math.round(l/18));
+
+      for(let d=-0.7*l;d<=0.7*l+1e-9;d+=dStep){
+        const maxDx=Math.max(...xs.map(x=>Math.abs(d-x)));
+        let cMin=Math.max(20,maxDx+0.08*l);
+        cMin=Math.ceil(cMin/5)*5;
+        const cMax=Math.min(60,1.5*l);
+        const cStep=Math.max(5,Math.round(l/18));
+
+        for(let c=cMin;c<=cMax+1e-9;c+=cStep){
+          stats.stage2Tried++;
+          const slider=evaluateSlider(base.path,l,H,Wmax,c,d,base.thetas);
+          if(!slider) continue;
+          stats.sliderValid++;
+          if(slider.meanRatio>9){
+            stats.ratioRejected++;
+            continue;
+          }
+
+          const size=(base.a+base.r+base.b+c)/(4*l);
+          const strokeN=slider.stroke/l;
+          const ratioBalanced=Math.pow((slider.meanRatio-2.5)/2.0,2);
+          const ratioShort=Math.pow((slider.meanRatio-5.0)/3.0,2);
+          const esPenalty=Math.pow((slider.minEsAngle-55)/55,2);
+          const closeAnglePenalty=0.04*Math.pow(base.alphaCloseDeg/5,2);
+
+          const balanced =
+            1.35*base.path.transPenalty +
+            0.45*strokeN +
+            0.45*size +
+            0.75*slider.smooth +
+            0.35*esPenalty +
+            0.90*ratioBalanced +
+            closeAnglePenalty;
+
+          const compact =
+            0.80*base.path.transPenalty +
+            0.35*strokeN +
+            1.55*size +
+            0.50*slider.smooth +
+            0.25*esPenalty +
+            0.50*ratioBalanced +
+            closeAnglePenalty;
+
+          const short =
+            0.70*base.path.transPenalty +
+            1.55*strokeN +
+            0.35*size +
+            0.45*slider.smooth +
+            0.30*esPenalty +
+            0.70*ratioShort +
+            closeAnglePenalty;
+
+          finals.push({
+            a:base.a,
+            r:base.r,
+            b:base.b,
+            alphaCloseDeg:base.alphaCloseDeg,
+            c:Math.round(c),
+            d:Math.round(d),
+            path:base.path,
+            thetas:base.thetas,
+            slider,
+            muMin:base.path.minMu,
+            muMax:base.path.maxMu,
+            transWarn:base.path.transWarn,
+            balanced,compact,short,size
+          });
+        }
+      }
+    }
+
+    return {finals,stats};
+  }
+
+  function refineCandidate(seed,cfg,mode){
+    const {l,H,Wmax,thetaClose,thetaOpen}=cfg;
+    const thetas=sampleThetas(thetaClose,thetaOpen,71);
+    const results=[];
+
+    const aLo=12.5, aHi=12.5;
+    const rLo=38, rHi=38;
+    const alphaLo=0, alphaHi=0;
+
+    const ranges={
+      d:[seed.d-8,seed.d+8,2],
+      c:[Math.max(20,seed.c-8),Math.min(60,seed.c+8),2]
+    };
+
+    for(let a=aLo;a<=aHi+1e-9;a+=1){
+      for(let r=rLo;r<=rHi+1e-9;r+=0.5){
+        for(let alphaCloseDeg=alphaLo;alphaCloseDeg<=alphaHi+1e-9;alphaCloseDeg+=1){
+          const path=buildEPath(l,a,r,alphaCloseDeg,thetas);
+          if(!path) continue;
+          const b=path.b;
+
+          for(let d=ranges.d[0];d<=ranges.d[1];d+=ranges.d[2]){
+            for(let c=ranges.c[0];c<=ranges.c[1];c+=ranges.c[2]){
+              const slider=evaluateSlider(path,l,H,Wmax,c,d,thetas);
+              if(!slider || slider.meanRatio>9) continue;
+
+              const size=(a+r+b+c)/(4*l);
+              const strokeN=slider.stroke/l;
+              const ratioBalanced=Math.pow((slider.meanRatio-2.5)/2.0,2);
+              const ratioShort=Math.pow((slider.meanRatio-5.0)/3.0,2);
+              const esPenalty=Math.pow((slider.minEsAngle-55)/55,2);
+              const closeAnglePenalty=0.04*Math.pow(alphaCloseDeg/5,2);
+
+              const score={
+                balanced:
+                  1.35*path.transPenalty+0.45*strokeN+0.45*size+
+                  0.75*slider.smooth+0.35*esPenalty+0.90*ratioBalanced+
+                  closeAnglePenalty,
+                compact:
+                  0.80*path.transPenalty+0.35*strokeN+1.55*size+
+                  0.50*slider.smooth+0.25*esPenalty+0.50*ratioBalanced+
+                  closeAnglePenalty,
+                short:
+                  0.70*path.transPenalty+1.55*strokeN+0.35*size+
+                  0.45*slider.smooth+0.30*esPenalty+0.70*ratioShort+
+                  closeAnglePenalty
+              }[mode];
+
+              results.push({
+                a,
+                r,
+                b,
+                alphaCloseDeg,
+                c:Math.round(c),
+                d:Math.round(d),
+                path,thetas,slider,
+                muMin:path.minMu,
+                muMax:path.maxMu,
+                transWarn:path.transWarn,
+                size,score,mode
+              });
+            }
+          }
+        }
+      }
+    }
+
+    results.sort((x,y)=>x.score-y.score);
+    return results[0] || null;
+  }
+
+  function chooseSeeds(finals){
+    if(!finals.length) return null;
+    const best=(key)=>finals.slice().sort((a,b)=>a[key]-b[key])[0];
+
+    const b=best('balanced');
+    let c=best('compact');
+    let s=best('short');
+
+    // Encourage visibly different alternatives when the exact same seed wins.
+    const dist=(u,v)=>Math.abs(u.a-v.a)+Math.abs(u.r-v.r)+Math.abs(u.b-v.b)+Math.abs(u.c-v.c)+Math.abs(u.d-v.d);
+    if(dist(b,c)<8){
+      const alt=finals.slice().sort((a,b)=>a.compact-b.compact).find(x=>dist(b,x)>=8);
+      if(alt) c=alt;
+    }
+    if(dist(b,s)<8 || dist(c,s)<8){
+      const alt=finals.slice().sort((a,b)=>a.short-b.short).find(x=>dist(b,x)>=8 && dist(c,x)>=8);
+      if(alt) s=alt;
+    }
+    return {balanced:b,compact:c,short:s};
+  }
+
+  function generateDesign(){
+    const cfg=validateInputs(true);
+    if(!cfg) return;
+
+    $('generateBtn').disabled=true;
+    $('generateBtn').textContent=I18N[uiLang].searchWorking;
+    $('resultsGrid').innerHTML=`<div class="message" style="grid-column:1/-1">${I18N[uiLang].searchWorking}</div>`;
+    $('searchInfo').textContent=tr('搜索中…','Searching…');
+
+    setTimeout(()=>{
+      const t0=performance.now();
+      const synthesis=coarseSynthesis(cfg);
+      const finals=synthesis.finals;
+      const stats=synthesis.stats;
+      if(!finals.length){
+        $('generateBtn').disabled=false;
+        $('generateBtn').textContent=I18N[uiLang].generate;
+
+        let diagnosis='';
+        if(stats.stage1Valid===0){
+          diagnosis=tr(
+            `AE–ME 闭环阶段无连续可行解：已尝试 ${stats.stage1Tried} 组 AB=DC（12.5 mm）/ AE / 闭合角组合。当前硬条件包括 AE=38 mm、闭合角固定 0°、E 始终位于 B 外侧、传动角安全范围 15°–165°。建议优先增大 AD、减小 H，或减小目标 Wmax。`,
+            `No continuous AE–ME closed-loop solution was found after testing ${stats.stage1Tried} AB=DC (12.5 mm) / AE / closure-angle combinations. Hard constraints include AE=38 mm, closure angle fixed at 0°, E remaining outside B, and a 15°–165° transmission-angle safety range. Try increasing AD, reducing H, or reducing Wmax.`
+          );
+        }else if(stats.sliderValid===0){
+          diagnosis=tr(
+            `已找到 ${stats.stage1Valid} 组可行的 A–E–M 传动机构，但 ES + 中央横杆无法在整个开合范围内形成单调中央滑块运动。建议调整 AD / H / Wmax。`,
+            `${stats.stage1Valid} feasible A–E–M linkages were found, but ES and the central crossbar cannot produce monotonic central-slider motion over the full range. Try adjusting AD, H, or Wmax.`
+          );
+        }else{
+          diagnosis=tr(
+            `已找到 ${stats.sliderValid} 组中央滑块几何解，但位移比 ΔW/Δs 超出当前控制阈值。`,
+            `${stats.sliderValid} central-slider geometries were found, but their displacement ratio ΔW/Δs exceeds the current control threshold.`
+          );
+        }
+
+        $('resultsGrid').innerHTML=`<div class="message bad" style="grid-column:1/-1"><b>${tr('没有找到最终可用方案。','No usable design was found.')}</b><br>${diagnosis}</div>`;
+        $('searchInfo').textContent=tr(
+          `诊断：Stage 1 可行 ${stats.stage1Valid}/${stats.stage1Tried}；中央滑块几何可行 ${stats.sliderValid}/${stats.stage2Tried}。`,
+          `Diagnostics: Stage 1 feasible ${stats.stage1Valid}/${stats.stage1Tried}; central-slider geometry feasible ${stats.sliderValid}/${stats.stage2Tried}.`
+        );
+        $('simPanel').classList.add('section-hidden');
+        return;
+      }
+
+      const balancedSeed=finals.slice().sort((a,b)=>a.balanced-b.balanced)[0];
+      const balanced=refineCandidate(balancedSeed,cfg,'balanced') || {
+        ...balancedSeed,
+        score:balancedSeed.balanced,
+        mode:'balanced'
+      };
+
+      designs=[
+        {...balanced,label:I18N[uiLang].balanced,subtitle:'Balanced',description:I18N[uiLang].balancedDesc}
+      ];
+
+      const elapsed=performance.now()-t0;
+      $('searchInfo').textContent=tr(`阶段 1 可行 ${stats.stage1Valid}/${stats.stage1Tried}；中央滑块可行 ${stats.sliderValid}/${stats.stage2Tried}；用时 ${elapsed.toFixed(0)} ms。`,`Stage 1 feasible ${stats.stage1Valid}/${stats.stage1Tried}; central-slider feasible ${stats.sliderValid}/${stats.stage2Tried}; ${elapsed.toFixed(0)} ms.`);
+      $('angleSummary').textContent=`θopen ${deg(cfg.thetaOpen).toFixed(1)}° · θclose ${deg(cfg.thetaClose).toFixed(1)}°`;
+      renderDesignCards(cfg);
+      $('generateBtn').disabled=false;
+      $('generateBtn').textContent=I18N[uiLang].regenerate;
+
+      if(designs.length) applyDesign(0,cfg);
+    },30);
+  }
+
+  function renderDesignCards(cfg){
+    const grid=$('resultsGrid');
+    grid.innerHTML='';
+    designs.forEach((d,i)=>{
+      const globalRail=cfg.H+d.d;
+      const card=document.createElement('div');
+      card.className='design-card'+(activeDesign===d?' selected':'');
+      card.innerHTML=`
+        <div class="design-title">
+          <span>${d.label}</span><span class="tag">${d.subtitle}</span>
+        </div>
+        <div class="mini" style="margin-bottom:10px">${d.description}</div>
+        <div class="metric">
+          <span>DC = AB</span><span>${d.a} mm</span>
+          <span>AE</span><span>${d.r.toFixed(1)} mm</span>
+          <span data-i18n="closedAEAngle">闭合时 AE 角度</span><span>${d.alphaCloseDeg.toFixed(1)}°</span>
+          <span>ME</span><span>${d.b.toFixed(1)} mm</span>
+          <span>ES</span><span>${d.c} mm</span>
+          <span>${tr('横杆端点相对 A 偏置 d','Crossbar endpoint offset d')}</span><span>${d.d} mm</span>
+          <span>${tr('中央横杆半宽 q','Crossbar half-span q')}</span><span>${globalRail.toFixed(0)} mm</span>
+          <span>${tr('中央滑块行程 Δs','Central-slider stroke Δs')}</span><span>${d.slider.stroke.toFixed(1)} mm</span>
+          <span>${tr('位移比 ΔW/Δs','Displacement ratio ΔW/Δs')}</span><span>${d.slider.meanRatio.toFixed(2)}</span>
+          <span>${tr('AE–ME 传动角','AE–ME transmission angle')}</span><span>${d.muMin.toFixed(1)}°–${d.muMax.toFixed(1)}°${d.transWarn?' ⚠':''}</span>
+          <span>${tr('W(s) 平滑度','W(s) smoothness')}</span><span>${d.slider.smooth.toFixed(3)}</span>
+        </div>
+        ${d.transWarn?`<div class="message warn" style="margin-top:10px">${tr('部分姿态超出推荐传动角范围，但仍处于安全范围。','Some poses exceed the recommended transmission-angle range but remain within the safety range.')}</div>`:''}
+        <button type="button" data-design="${i}">${I18N[uiLang].enterSim}</button>
+      `;
+      grid.appendChild(card);
+    });
+
+    grid.querySelectorAll('button[data-design]').forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        const idx=+btn.dataset.design;
+        applyDesign(idx,cfg);
+      });
+    });
+  }
+
+  function getCfg(){
+    return validateInputs(false);
+  }
+
+  function applyDesign(index,cfg=getCfg()){
+    if(!designs[index] || !cfg) return;
+    activeDesign=designs[index];
+    $('simPanel').classList.remove('section-hidden');
+    $('simTitle').textContent=I18N[uiLang].simTitle;
+
+    // update selected state
+    [...$('resultsGrid').querySelectorAll('.design-card')].forEach((c,i)=>c.classList.toggle('selected',i===index));
+
+    const sLo=activeDesign.slider.sMin, sHi=activeDesign.slider.sMax;
+    $('sSlider').min=Math.min(sLo,sHi);
+    $('sSlider').max=Math.max(sLo,sHi);
+    $('sSlider').step=Math.max(0.05,activeDesign.slider.stroke/600);
+    $('sSlider').value=activeDesign.slider.ss[0];
+
+    autoDesignBaseline=activeDesign;
+    populateTuneControls(cfg,activeDesign);
+    renderDesignReadout(cfg);
+    renderChart(activeDesign);
+    renderSimulation(cfg);
+  }
+
+  function renderDesignReadout(cfg){
+    const d=activeDesign;
+    $('designReadout').innerHTML=`
+      <span>ME</span><span>${(+d.b).toFixed(1)} mm</span>
+      <span>${tr('横杆半宽 q = H+d','Crossbar half-span q = H + d')}</span><span>${(cfg.H+d.d).toFixed(1)} mm</span>
+      <span>${tr('中央滑块 Δs','Central slider Δs')}</span><span>${d.slider.stroke.toFixed(1)} mm</span>
+    `;
+  }
+
+  function populateTuneControls(cfg,design){
+    const pairs=[
+      ['tuneC','tuneCNum',design.c],
+      ['tuneD','tuneDNum',design.d]
+    ];
+
+    const cMax=60;
+    const dMax=Math.max(20,Math.round(0.7*cfg.l));
+    $('tuneC').max=cMax;$('tuneCNum').max=cMax;
+    $('tuneD').min=-dMax;$('tuneD').max=dMax;
+    $('tuneDNum').min=-dMax;$('tuneDNum').max=dMax;
+
+    pairs.forEach(([rid,nid,v])=>{
+      $(rid).value=v;
+      $(nid).value=v;
+    });
+    $('tuneBText').textContent=`${(+design.b).toFixed(1)} mm`;
+    $('tuneCText').textContent=`${(+design.c).toFixed(1)} mm`;
+    $('tuneDText').textContent=`${(+design.d).toFixed(1)} mm`;
+    $('tuneMessage').className='message';
+    $('tuneMessage').textContent=''; $('tuneMessage').style.display='none';
+  }
+
+  function tunedValues(){
+    return {
+      a:12.5,
+      r:38,
+      alphaCloseDeg:0,
+      c:+$('tuneC').value,
+      d:+$('tuneD').value
+    };
+  }
+
+  function syncTunePair(rangeId,numId,fromNumber=false){
+    const range=$(rangeId), num=$(numId);
+    let v=+(fromNumber?num.value:range.value);
+    if(!Number.isFinite(v)) v=+range.value;
+    v=clamp(v,+range.min,+range.max);
+    range.value=v;
+    num.value=v;
+    updateTunedDesign();
+  }
+
+  function updateTunedDesign(){
+    const cfg=getCfg();
+    if(!cfg || !activeDesign) return;
+
+    const v=tunedValues();
+    $('tuneCText').textContent=`${v.c.toFixed(1)} mm`;
+    $('tuneDText').textContent=`${v.d.toFixed(1)} mm`;
+
+    const thetas=sampleThetas(cfg.thetaClose,cfg.thetaOpen,71);
+    const path=buildEPath(cfg.l,v.a,v.r,v.alphaCloseDeg,thetas);
+
+    if(!path){
+      $('tuneBText').textContent='—';
+      $('tuneMessage').className='message bad';
+      $('tuneMessage').textContent=''; $('tuneMessage').style.display='none';
+      return;
+    }
+
+    $('tuneBText').textContent=`${path.b.toFixed(1)} mm`;
+
+    const slider=evaluateSlider(path,cfg.l,cfg.H,cfg.Wmax,v.c,v.d,thetas);
+    if(!slider){
+      $('tuneMessage').className='message bad';
+      $('tuneMessage').textContent=''; $('tuneMessage').style.display='none';
+      return;
+    }
+
+    const tuned={
+      ...activeDesign,
+      a:v.a,
+      r:v.r,
+      b:path.b,
+      alphaCloseDeg:v.alphaCloseDeg,
+      c:v.c,
+      d:v.d,
+      path,
+      thetas,
+      slider,
+      muMin:path.minMu,
+      muMax:path.maxMu,
+      transWarn:path.transWarn,
+      label:tr('均衡方案（用户微调）','Balanced Design (User Tuned)'),
+      mode:'user_tuned'
+    };
+    activeDesign=tuned;
+
+    const sLo=slider.sMin,sHi=slider.sMax;
+    const oldS=+$('sSlider').value;
+    $('sSlider').min=Math.min(sLo,sHi);
+    $('sSlider').max=Math.max(sLo,sHi);
+    $('sSlider').step=Math.max(0.05,slider.stroke/600);
+    $('sSlider').value=clamp(oldS,+$('sSlider').min,+$('sSlider').max);
+
+    renderDesignReadout(cfg);
+    renderChart(activeDesign);
+    renderSimulation(cfg);
+
+    $('tuneMessage').className=path.transWarn?'message warn':'message ok';
+    $('tuneMessage').textContent=
+      '';
+  }
+
+  function resetTuning(){
+    const cfg=getCfg();
+    if(!cfg || !autoDesignBaseline) return;
+    activeDesign=autoDesignBaseline;
+    populateTuneControls(cfg,activeDesign);
+
+    const sLo=activeDesign.slider.sMin,sHi=activeDesign.slider.sMax;
+    $('sSlider').min=Math.min(sLo,sHi);
+    $('sSlider').max=Math.max(sLo,sHi);
+    $('sSlider').step=Math.max(0.05,activeDesign.slider.stroke/600);
+    $('sSlider').value=activeDesign.slider.ss[0];
+
+    renderDesignReadout(cfg);
+    renderChart(activeDesign);
+    renderSimulation(cfg);
+    $('tuneMessage').className='message ok';
+    $('tuneMessage').textContent=''; $('tuneMessage').style.display='none';
+  }
+
+  function interpolateThetaFromS(design,s){
+    const ss=design.slider.ss;
+    const th=design.thetas;
+    const increasing=ss[ss.length-1]>ss[0];
+
+    if((increasing && s<=ss[0]) || (!increasing && s>=ss[0])) return th[0];
+    if((increasing && s>=ss[ss.length-1]) || (!increasing && s<=ss[ss.length-1])) return th[th.length-1];
+
+    for(let i=0;i<ss.length-1;i++){
+      const a=ss[i], b=ss[i+1];
+      if((increasing && s>=a && s<=b) || (!increasing && s<=a && s>=b)){
+        const t=(s-a)/(b-a);
+        return lerp(th[i],th[i+1],t);
+      }
+    }
+    return th[0];
+  }
+
+  function poseAtTheta(design,cfg,theta){
+    const A={x:0,y:0};
+    const B={x:design.a,y:0};
+    const D={x:cfg.l*Math.cos(theta),y:cfg.l*Math.sin(theta)};
+    const C={x:design.a+D.x,y:D.y};
+    const M={x:design.a/2+D.x,y:D.y};
+
+    const ints=circleIntersections(A,design.r,M,design.b).filter(e => e.x > design.a + 1e-6);
+    if(!ints.length) return null;
+
+    // nearest to design-path sample
+    let nearestIdx=0, best=Infinity;
+    design.thetas.forEach((t,i)=>{
+      const e=Math.abs(t-theta);
+      if(e<best){best=e;nearestIdx=i;}
+    });
+    const ref=design.path.Es[nearestIdx];
+    const E=nearest(ints,ref);
+
+    const dx=design.d-E.x;
+    const under=design.c*design.c-dx*dx;
+    if(under<=0) return null;
+    const root=Math.sqrt(under);
+    const yS=E.y-root;
+    const S={x:design.d,y:yS};
+    const s=-yS;
+    const W=2*(cfg.H+D.x);
+
+    return {A,B,C,D,M,E,S,s,W,theta};
+  }
+
+  function svgEl(name,attrs={}){
+    const n=document.createElementNS(NS,name);
+    Object.entries(attrs).forEach(([k,v])=>n.setAttribute(k,v));
+    return n;
+  }
+
+  function P(p){return{x:p.x,y:-p.y};}
+  function line(svg,p,q,attrs={}){
+    p=P(p);q=P(q);
+    svg.appendChild(svgEl('line',{
+      x1:p.x,y1:p.y,x2:q.x,y2:q.y,
+      stroke:'#111827','stroke-width':2.5,'stroke-linecap':'round',
+      ...attrs
+    }));
+  }
+
+  function arrowDimension(svg,p,q,attrs={}){
+    const color = attrs.stroke || '#2563eb';
+    const width = attrs['stroke-width'] || 1.8;
+    const pp=P(p), qq=P(q);
+    svg.appendChild(svgEl('line',{
+      x1:pp.x,y1:pp.y,x2:qq.x,y2:qq.y,
+      stroke:color,'stroke-width':width,'stroke-linecap':'round',
+      'stroke-dasharray': attrs['stroke-dasharray'] || null
+    }));
+    const dx=qq.x-pp.x, dy=qq.y-pp.y;
+    const len=Math.hypot(dx,dy)||1;
+    const ux=dx/len, uy=dy/len;
+    const ah=9, aw=5;
+    function addHead(x,y,dirx,diry){
+      const bx=x-dirx*ah, by=y-diry*ah;
+      const px=-diry, py=dirx;
+      const pts=[
+        [x,y],
+        [bx+px*aw, by+py*aw],
+        [bx-px*aw, by-py*aw]
+      ].map(v=>v.join(',')).join(' ');
+      svg.appendChild(svgEl('polygon',{points:pts,fill:color}));
+    }
+    addHead(pp.x,pp.y,-ux,-uy);
+    addHead(qq.x,qq.y,ux,uy);
+  }
+  function joint(svg,p,label){
+    const q=P(p);
+    svg.appendChild(svgEl('circle',{cx:q.x,cy:q.y,r:4.4,fill:'#fff',stroke:'#111827','stroke-width':2.1}));
+    if(showJointLabels && label){
+      const offsets={
+        'A':[-16,-10],
+        'B':[8,-12],
+        'C':[10,-10],
+        'D':[-18,-10],
+        'M':[-18,12],
+        'E':[8,14],
+        'S_L':[-26,14],
+        'S_R':[10,14],
+        'S₀':[10,16],
+        'S':[10,14]
+      };
+      const [dx,dy]=(offsets[label]||[8,-8]);
+      const t=svgEl('text',{
+        x:q.x+dx,y:q.y+dy,'font-size':9.5,'font-weight':700,fill:'#111827',
+        'paint-order':'stroke','stroke':'#ffffff','stroke-width':3.5,'stroke-linejoin':'round'
+      });
+      t.textContent=label;svg.appendChild(t);
+    }
+  }
+  function textAt(svg,p,str,dx=5,dy=-5,attrs={}){
+    const q=P(p);
+    const t=svgEl('text',{x:q.x+dx,y:q.y+dy,'font-size':9,fill:'#374151',...attrs});
+    t.textContent=str;svg.appendChild(t);
+  }
+  const midpoint=(a,b)=>({x:(a.x+b.x)/2,y:(a.y+b.y)/2});
+
+  function toRight(p,H){return{x:H+p.x,y:p.y};}
+  function toLeft(p,H){return{x:-H-p.x,y:p.y};}
+
+  function drawSide(svg,pose,H,side,design){
+    const T=side==='right'?toRight:toLeft;
+    const pts={};
+    ['A','B','C','D','M','E','S'].forEach(k=>pts[k]=T(pose[k],H));
+
+    line(svg,pts.A,pts.B,{stroke:'#111827','stroke-width':3});
+    line(svg,pts.A,pts.D,{stroke:'#111827','stroke-width':3.5});
+    line(svg,pts.B,pts.C,{stroke:'#111827','stroke-width':3.5});
+    line(svg,pts.D,pts.C,{stroke:'#111827','stroke-width':3.5});
+    line(svg,pts.A,pts.E,{stroke:'#111827','stroke-width':3.2});
+    line(svg,pts.M,pts.E,{stroke:'#111827','stroke-width':3.2});
+    line(svg,pts.E,pts.S,{stroke:'#111827','stroke-width':3.3});
+
+    // S is now only the rigid crossbar attachment point; the actual slider is at x = 0.
+    // Finger/reference surface at D:
+    // only keep the portion above D; remove the lower extension.
+    line(svg,{x:pts.D.x,y:pts.D.y+36},{x:pts.D.x,y:pts.D.y+3},{stroke:'#1f2937','stroke-width':4.5});
+
+    ['A','B','C','D','M','E'].forEach(k=>joint(svg,pts[k],k));
+    joint(svg,pts.S,side==='right'?'S_R':'S_L');
+
+    return pts;
+  }
+
+  let cfgForDraw=null;
+
+  function fitView(svg,points){
+    const xs=points.map(p=>p.x), ys=points.map(p=>-p.y);
+    const padX=10, padY=10;
+    const halfW=Math.max(...xs.map(v=>Math.abs(v))) + padX;
+    const minY=Math.min(...ys), maxY=Math.max(...ys);
+    const cy=(minY+maxY)/2;
+    const halfH=(maxY-minY)/2 + padY;
+    const w=Math.max(180,2*halfW), h=Math.max(180,2*halfH);
+    svg.setAttribute('viewBox',`${-w/2} ${cy-h/2} ${w} ${h}`);
+  }
+
+  function renderSimulation(cfg){
+    if(!activeDesign || !cfg) return;
+    cfgForDraw=cfg;
+    const sRequested=+$('sSlider').value;
+    const theta=interpolateThetaFromS(activeDesign,sRequested);
+    const pose=poseAtTheta(activeDesign,cfg,theta);
+    if(!pose) return;
+
+    const svg=$('scene');
+    svg.replaceChildren();
+
+    const rightPreview=['A','B','C','D','M','E','S'].map(k=>toRight(pose[k],cfg.H));
+    const leftPreview=['A','B','C','D','M','E','S'].map(k=>toLeft(pose[k],cfg.H));
+
+    const mechPts=[...rightPreview,...leftPreview];
+    const yTop=Math.max(...mechPts.map(p=>p.y))+16;
+    const yBottom=Math.min(...mechPts.map(p=>p.y))-20;
+    fitView(svg,[...mechPts,{x:0,y:yTop},{x:0,y:yBottom}]);
+
+    // Symmetry axis / central rail, trimmed close to the mechanism.
+    line(svg,{x:0,y:yTop},{x:0,y:yBottom},{stroke:'var(--axis)','stroke-width':2.0,'stroke-dasharray':'7 5'});
+
+    line(svg,{x:Math.min(...mechPts.map(p=>p.x))-14,y:0},{x:Math.max(...mechPts.map(p=>p.x))+14,y:0},{stroke:'#cfd4dc','stroke-width':1,'stroke-dasharray':'4 4'});
+
+    // Opening dimension: draw on a lower SVG layer, before the gripper.
+    const leftD=toLeft(pose.D,cfg.H);
+    const rightD=toRight(pose.D,cfg.H);
+    const yDim=Math.max(leftD.y,rightD.y)+22;
+
+    arrowDimension(
+      svg,
+      {x:leftD.x,y:yDim},
+      {x:rightD.x,y:yDim},
+      {stroke:'#2563eb','stroke-width':1.45,'stroke-dasharray':'6 4'}
+    );
+
+    const wLabelPos=P({x:(leftD.x+rightD.x)/2,y:yDim});
+
+    const wLabel=svgEl('text',{
+      x:wLabelPos.x,
+      y:wLabelPos.y+3,
+      'text-anchor':'middle',
+      'font-size':8.5,
+      'font-weight':650,
+      fill:'#2563eb',
+      'paint-order':'stroke',
+      stroke:'#ffffff',
+      'stroke-width':2.2,
+      'stroke-linejoin':'round'
+    });
+    wLabel.textContent='W';
+    svg.appendChild(wLabel);
+
+    // Full rigid crossbar S_L--S_R.
+    // Draw it FIRST so it is on the bottom visual layer, underneath
+    // both endpoint circles and the central S0 slider/circle.
+    const rightS=toRight(pose.S,cfg.H);
+    const leftS=toLeft(pose.S,cfg.H);
+    line(svg,leftS,rightS,{stroke:'#111827','stroke-width':3.4});
+
+    // Draw the linkage and endpoint joints above the crossbar.
+    const right=drawSide(svg,pose,cfg.H,'right',activeDesign);
+    const left=drawSide(svg,pose,cfg.H,'left',activeDesign);
+
+    // Central slider constrained to x = 0, also above the crossbar.
+    const yBar = right.S.y;
+    const sliderCenter={x:0,y:yBar};
+    const sc=P(sliderCenter);
+    svg.appendChild(svgEl('rect',{
+      x:sc.x-12,y:sc.y-9,width:24,height:18,rx:4,
+      fill:'#ffffff',stroke:'#111827','stroke-width':2.4
+    }));
+    joint(svg,sliderCenter,'S₀');
+
+    // Symmetry axis (drawn above the mechanism background so it stays visible).
+    const axisTop=Math.max(left.D.y,right.D.y)+18;
+    const axisBottom=Math.min(pose.S.y,left.S.y,right.S.y)-14;
+    const pTop=P({x:0,y:axisTop});
+    const pBottom=P({x:0,y:axisBottom});
+    const symAxis=svgEl('line',{
+      x1:pTop.x,y1:pTop.y,x2:pBottom.x,y2:pBottom.y,
+      stroke:'#dc2626','stroke-width':2.2,'stroke-dasharray':'10 8',
+      'stroke-linecap':'round'
+    });
+    svg.appendChild(symAxis);
+
+    const phi=deg(Math.atan2(pose.E.y,pose.E.x));
+    const beta=deg(Math.atan2(pose.E.y-pose.M.y,pose.E.x-pose.M.x));
+    const gamma=deg(Math.atan2(pose.S.y-pose.E.y,pose.S.x-pose.E.x));
+
+    $('sValue').textContent=`${pose.s.toFixed(1)} mm`;
+    $('curW').textContent=`${pose.W.toFixed(1)} mm`;
+    $('curTheta').textContent=`${deg(pose.theta).toFixed(1)}°`;
+    $('curPhi').textContent=`${phi.toFixed(1)}°`;
+    $('curBeta').textContent=`${beta.toFixed(1)}°`;
+    $('curGamma').textContent=`${gamma.toFixed(1)}°`;
+
+    $('simStatus').className='status message ok'; $('simStatus').textContent=''; $('simStatus').style.display='none';
+    alignSideColumnsToMainSlider();
+  }
+
+  function renderChart(design){
+    const svg=$('chart');
+    svg.replaceChildren();
+    const ss=design.slider.ss, Ws=design.slider.Ws;
+    const minS=Math.min(...ss),maxS=Math.max(...ss),minW=Math.min(...Ws),maxW=Math.max(...Ws);
+    const pad={l:46,r:20,t:30,b:36};
+    const W=280,H=180;
+    const x=s=>pad.l+(s-minS)/(maxS-minS||1)*(W-pad.l-pad.r);
+    const y=w=>H-pad.b-(w-minW)/(maxW-minW||1)*(H-pad.t-pad.b);
+
+    const axis=svgEl('path',{
+      d:`M ${pad.l} ${pad.t} L ${pad.l} ${H-pad.b} L ${W-pad.r} ${H-pad.b}`,
+      fill:'none',stroke:'#98a2b3','stroke-width':1.2
+    });
+    svg.appendChild(axis);
+
+    const pts=ss.map((s,i)=>`${x(s)},${y(Ws[i])}`).join(' ');
+    svg.appendChild(svgEl('polyline',{
+      points:pts,fill:'none',stroke:'#2563eb','stroke-width':2.2,
+      'stroke-linejoin':'round','stroke-linecap':'round'
+    }));
+
+    const labels=[
+      [pad.l,H-14,minS.toFixed(1),'middle'],
+      [W-pad.r,H-14,maxS.toFixed(1),'middle'],
+      [pad.l-8,H-pad.b+5,minW.toFixed(0),'end'],
+      [pad.l-8,pad.t+5,maxW.toFixed(0),'end']
+    ];
+    labels.forEach(([xx,yy,tv,anchor])=>{
+      const t=svgEl('text',{x:xx,y:yy,'text-anchor':anchor,'font-size':14,fill:'#667085','font-weight':600});t.textContent=tv;svg.appendChild(t);
+    });
+
+    const tx=svgEl('text',{x:W-4,y:H-pad.b+6,'text-anchor':'end','font-size':20,fill:'#475467','font-weight':700});tx.textContent='s';svg.appendChild(tx);
+    const tw=svgEl('text',{x:pad.l,y:19,'text-anchor':'middle','font-size':16,fill:'#475467','font-weight':700});tw.textContent='W';svg.appendChild(tw);
+    alignSideColumnsToMainSlider();
+  }
+
+
+  function alignSideColumnsToMainSlider(){
+    // The tuning controls now flow naturally above the chart in the left column.
+  }
+
+  $('sSlider').addEventListener('input',()=>{
+    const cfg=getCfg();
+    if(cfg) renderSimulation(cfg);
+  });
+
+  [
+    ['tuneC','tuneCNum'],
+    ['tuneD','tuneDNum']
+  ].forEach(([rid,nid])=>{
+    $(rid).addEventListener('input',()=>syncTunePair(rid,nid,false));
+    $(nid).addEventListener('change',()=>syncTunePair(rid,nid,true));
+  });
+  $('resetTuneBtn').addEventListener('click',resetTuning);
+  window.addEventListener('resize',alignSideColumnsToMainSlider);
+
+  $('showLabels').addEventListener('change',()=>{
+    showJointLabels=$('showLabels').checked;
+    const cfg=getCfg();
+    if(cfg && activeDesign) renderSimulation(cfg);
+  });
+
+  const langSelectEl=$('langSelect');
+  if(langSelectEl) langSelectEl.addEventListener('change',()=>{
+    applyLanguage(langSelectEl.value);
+    validateInputs(true);
+    if(activeDesign){
+      activeDesign.label=I18N[uiLang].balanced;
+      activeDesign.description=I18N[uiLang].balancedDesc;
+      renderDesignCards(getCfg());
+      renderDesignReadout(getCfg());
+      renderSimulation(getCfg());
+      $('simTitle').textContent=I18N[uiLang].simTitle;
+    }
+  });
+
+  $('playBtn').addEventListener('click',()=>{
+    if(!activeDesign) return;
+    if(anim){
+      cancelAnimationFrame(anim);
+      anim=null;
+      $('playBtn').textContent=I18N[uiLang].play;
+      return;
+    }
+    $('playBtn').textContent=I18N[uiLang].pause;
+    animLast=performance.now();
+    const slider=$('sSlider');
+
+    const tick=t=>{
+      const dt=Math.min(40,t-animLast);
+      animLast=t;
+      const lo=+slider.min,hi=+slider.max;
+      const speed=Math.max(2,(hi-lo)/3.5);
+      let v=+slider.value+animDir*speed*dt/1000;
+      if(v>=hi){v=hi;animDir=-1;}
+      if(v<=lo){v=lo;animDir=1;}
+      slider.value=v;
+      const cfg=getCfg();
+      if(cfg) renderSimulation(cfg);
+      anim=requestAnimationFrame(tick);
+    };
+    anim=requestAnimationFrame(tick);
+  });
+
+  $('exportBtn').addEventListener('click',()=>{
+    const cfg=getCfg();
+    if(!activeDesign || !cfg) return;
+    const payload={
+      inputs:{AD_BC:cfg.l,A_to_symmetry_axis_H:cfg.H,Wmax:cfg.Wmax,Wmin:0},
+      source: activeDesign.mode==='user_tuned' ? 'user_tuned_balanced_design' : 'automatic_balanced_design',
+      design:{
+        AB_DC:activeDesign.a,
+        AE:activeDesign.r,
+        AE_closed_angle_deg:activeDesign.alphaCloseDeg,
+        ME:activeDesign.b,
+        ES:activeDesign.c,
+        crossbar_endpoint_offset_from_A_d:activeDesign.d,
+        crossbar_half_span_q:cfg.H+activeDesign.d,
+        central_slider_axis_x:0,
+        central_slider_min:activeDesign.slider.sMin,
+        central_slider_max:activeDesign.slider.sMax,
+        central_slider_stroke:activeDesign.slider.stroke,
+        displacement_ratio_dW_ds:activeDesign.slider.meanRatio,
+        transmission_angle_min_deg:activeDesign.muMin,
+        transmission_angle_max_deg:activeDesign.muMax
+      },
+      assumptions:{
+        grip_reference_point:'D',
+        symmetry:'left-right mirror about x=0',
+        W_formula:'W = 2(H + l cos(theta))',
+        AB_DC_fixed_mm:12.5,
+        AE_fixed_mm:38,
+        ES_length_range_mm:[20,60],
+        AE_closed_angle_range_deg:[0,0],
+        transmission_angle_recommended_deg:[35,145],
+        transmission_angle_safety_deg:[15,165]
+      }
+    };
+    const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'});
+    const url=URL.createObjectURL(blob);
+    const a=document.createElement('a');
+    a.href=url;
+    a.download='gripper_design.json';
+    a.click();
+    setTimeout(()=>URL.revokeObjectURL(url),1000);
+  });
+
+  $('generateBtn').addEventListener('click',generateDesign);
+
+  // Initialize language and generate a useful first design.
+  applyLanguage('en');
+  validateInputs(true);
+  setTimeout(generateDesign,80);
+})();
+</script>
+</body>
+</html>

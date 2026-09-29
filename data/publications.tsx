@@ -163,7 +163,7 @@ export const publications: {
         icon: [
             {
                 type: "page",
-                link: "/TAMEn",
+                link: "/BiTacMan",
             },
             {
                 type: "github",

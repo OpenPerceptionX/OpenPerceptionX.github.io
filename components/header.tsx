@@ -23,7 +23,7 @@ export function Header() {
 
 
     const pathname = usePathname()
-    const hideSidebar = pathname.toLowerCase().startsWith("/tamen")
+    const hideSidebar = pathname.toLowerCase().startsWith("/tamen") || pathname.toLowerCase().startsWith("/bitacman")
 
 
 

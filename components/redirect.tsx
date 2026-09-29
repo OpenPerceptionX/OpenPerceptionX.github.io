@@ -143,9 +143,10 @@ export default function Redirect() {
         redirect('https://mmlab.hk/Smash/')
     }
     if (
-        pathname.toLowerCase().startsWith('/tamen')
+        pathname.toLowerCase().startsWith('/tamen') ||
+        pathname.toLowerCase().startsWith('/bitacman')
     ) {
-        redirect('/TAMEn/')
+        redirect('/BiTacMan/')
     }
     if (
         pathname.toLowerCase().startsWith('/worldengine')
