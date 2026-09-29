@@ -403,3 +403,11 @@ thead th { font-weight: 600; color: var(--color-muted); }
 .institution-logos a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; }
 .institution-logos img { width: 32px; height: 32px; object-fit: contain; }
 .institution-logos > span { color: currentColor; opacity: .35; font-size: 18px; }
+
+/* Fade the cover into the first white section. */
+.hero::after { content: ""; position: absolute; inset: auto 0 0; height: clamp(150px, 24vh, 280px); z-index: -1; pointer-events: none; background: linear-gradient(to bottom, transparent 0%, rgb(255 255 255 / .3) 42%, rgb(255 255 255 / .78) 76%, var(--color-paper) 100%); }
+.hero-bottom, .hero-bottom .quiet-button { color: var(--color-ink); }
+.hero-bottom .quiet-button { border-color: var(--color-rule); }
+.hero-actions [aria-disabled="true"] { cursor: default; }
+
+.hero-bottom .scroll-cue { color: var(--color-ink); }
