@@ -137,7 +137,7 @@ function updateScrollPosition() {
     if (section.getBoundingClientRect().top <= innerHeight * .33) current = section.id;
   });
   if (progress > .99) current = sections.at(-1).id;
-  current = ({ results: "scaling", "data-collection": "visual-alignment" })[current] || current;
+  current = ({ scaling: "demonstrations" })[current] || current;
   sectionLinks.forEach((link) => {
     if (link.hash === `#${current}`) link.setAttribute("aria-current", "location");
     else link.removeAttribute("aria-current");
