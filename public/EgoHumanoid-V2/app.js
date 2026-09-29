@@ -1,21 +1,5 @@
 "use strict";
 
-const tasks = {
-  laptop: {
-    name: "Laptop closing", score: "53.33", ego: true,
-  },
-  fridge: {
-    name: "Refrigerator opening", score: "38.33", ego: true,
-  },
-  curtain: {
-    name: "Curtain pulling", score: "53.33", ego: false,
-  },
-  drawer: {
-    name: "Drawer closing", score: "61.67", ego: false,
-  },
-};
-
-const state = { demo: "laptop", ik: "laptop", view: "external" };
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => [...document.querySelectorAll(selector)];
 const announce = (message) => { $("#announcement").textContent = message; };
@@ -41,83 +25,6 @@ function clearFeedback(video) {
   frame?.querySelector(".media-error")?.remove();
   frame?.querySelector(".media-status")?.remove();
 }
-
-function setClip(video, id, label) {
-  video.pause();
-  clearFeedback(video);
-  video.removeAttribute("src");
-  video.poster = `assets/images/${id}.jpg`;
-  video.dataset.src = `assets/videos/${id}.mp4`;
-  video.setAttribute("aria-label", label);
-  video.load();
-  if (nearViewport(video)) loadVideo(video);
-}
-
-function selectTab(group, task, focus = false) {
-  state[group] = task;
-  const tablist = $(`[data-tabs="${group}"]`);
-  tablist.querySelectorAll("[role=tab]").forEach((tab) => {
-    const selected = tab.dataset.task === task;
-    tab.setAttribute("aria-selected", String(selected));
-    tab.tabIndex = selected ? 0 : -1;
-    if (selected && focus) tab.focus({ preventScroll: true });
-  });
-  $(`#${group}-panel`).setAttribute("aria-labelledby", `${group}-tab-${task}`);
-  if (group === "ik") renderIK();
-  announce(`${tasks[task].name} selected.`);
-}
-
-function renderIK() {
-  const foot = state.ik === "drawer";
-  $("#ik-desc-a").textContent = foot ? "Leg IK; SONIC on remaining joints." : "Arm and waist IK; SONIC legs.";
-  $("#ik-desc-b").textContent = foot ? "Leg IK + SONIC balance feedback." : "Endpoint IK + SONIC balance feedback.";
-  $("#ik-desc-c").textContent = foot ? "IK controls the right leg; SONIC elsewhere." : "Arm IK; SONIC waist and legs.";
-  ["a", "b", "c"].forEach((variant) => setClip($(`#ik-video-${variant}`), `ik-${variant}-${state.ik}`, `Online IK variant ${variant.toUpperCase()}: ${tasks[state.ik].name}`));
-}
-
-$$('[role="tablist"]').forEach((tablist) => {
-  tablist.addEventListener("click", (event) => {
-    const button = event.target.closest("[role=tab]");
-    if (button) selectTab(tablist.dataset.tabs, button.dataset.task);
-  });
-  tablist.addEventListener("keydown", (event) => {
-    if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
-    event.preventDefault();
-    const buttons = [...tablist.querySelectorAll("[role=tab]")];
-    let index = buttons.indexOf(document.activeElement);
-    if (index < 0) return;
-    if (event.key === "Home") index = 0;
-    else if (event.key === "End") index = buttons.length - 1;
-    else index = (index + (event.key === "ArrowRight" ? 1 : -1) + buttons.length) % buttons.length;
-    selectTab(tablist.dataset.tabs, buttons[index].dataset.task, true);
-  });
-});
-
-function bindGroupPlayback(button, videos, playLabel, pauseLabel) {
-  function updateLabel() {
-    const playing = videos.some((video) => !video.paused && !video.ended);
-    button.replaceChildren(Object.assign(document.createElement("span"), { textContent: playing ? "Ⅱ" : "▶" }), document.createTextNode(` ${playing ? pauseLabel : playLabel}`));
-    button.firstElementChild.setAttribute("aria-hidden", "true");
-    button.setAttribute("aria-pressed", String(playing));
-  }
-  videos.forEach((video) => ["play", "pause", "ended", "emptied"].forEach((event) => video.addEventListener(event, updateLabel)));
-  button.addEventListener("click", async () => {
-    if (videos.some((video) => !video.paused && !video.ended)) {
-      videos.forEach((video) => video.pause());
-    } else {
-      heroVideos.forEach((video) => video.pause());
-      const results = await Promise.allSettled(videos.map((video) => {
-        loadVideo(video);
-        if (video.ended) video.currentTime = 0;
-        return video.play();
-      }));
-      if (results.some((result) => result.status === "rejected")) announce("One or more clips could not start. Use the video controls to retry.");
-    }
-    updateLabel();
-  });
-}
-
-bindGroupPlayback($("#play-ik"), ["a", "b", "c"].map((variant) => $(`#ik-video-${variant}`)), "Play all three", "Pause all three");
 
 const videoLoader = new IntersectionObserver((entries) => {
   entries.forEach(({ target, isIntersecting }) => {
@@ -230,7 +137,7 @@ function updateScrollPosition() {
     if (section.getBoundingClientRect().top <= innerHeight * .33) current = section.id;
   });
   if (progress > .99) current = sections.at(-1).id;
-  current = ({ results: "scaling", "online-ik": "scaling", "data-collection": "visual-alignment" })[current] || current;
+  current = ({ results: "scaling", "data-collection": "visual-alignment" })[current] || current;
   sectionLinks.forEach((link) => {
     if (link.hash === `#${current}`) link.setAttribute("aria-current", "location");
     else link.removeAttribute("aria-current");
