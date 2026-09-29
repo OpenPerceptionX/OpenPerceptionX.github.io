@@ -1,0 +1,389 @@
+[
+  {
+    "id": "human-laptop",
+    "video": "assets/videos/human-laptop.mp4",
+    "poster": "assets/images/human-laptop.jpg",
+    "duration": 14.13,
+    "bytes": 1936521,
+    "width": 1280,
+    "height": 720
+  },
+  {
+    "id": "deployment-laptop",
+    "video": "assets/videos/deployment-laptop.mp4",
+    "poster": "assets/images/deployment-laptop.jpg",
+    "duration": 14.0,
+    "bytes": 941410,
+    "width": 1280,
+    "height": 720
+  },
+  {
+    "id": "ik-a-laptop",
+    "video": "assets/videos/ik-a-laptop.mp4",
+    "poster": "assets/images/ik-a-laptop.jpg",
+    "duration": 22.8,
+    "bytes": 1487209,
+    "width": 1280,
+    "height": 620
+  },
+  {
+    "id": "ik-b-laptop",
+    "video": "assets/videos/ik-b-laptop.mp4",
+    "poster": "assets/images/ik-b-laptop.jpg",
+    "duration": 24.2,
+    "bytes": 1171633,
+    "width": 1280,
+    "height": 620
+  },
+  {
+    "id": "ik-c-laptop",
+    "video": "assets/videos/ik-c-laptop.mp4",
+    "poster": "assets/images/ik-c-laptop.jpg",
+    "duration": 23.37,
+    "bytes": 946640,
+    "width": 1280,
+    "height": 620
+  },
+  {
+    "id": "start-laptop-1",
+    "video": "assets/videos/start-laptop-1.mp4",
+    "poster": "assets/images/start-laptop-1.jpg",
+    "duration": 7.33,
+    "bytes": 475908,
+    "width": 1920,
+    "height": 560
+  },
+  {
+    "id": "start-laptop-2",
+    "video": "assets/videos/start-laptop-2.mp4",
+    "poster": "assets/images/start-laptop-2.jpg",
+    "duration": 3.37,
+    "bytes": 291700,
+    "width": 1920,
+    "height": 560
+  },
+  {
+    "id": "start-laptop-3",
+    "video": "assets/videos/start-laptop-3.mp4",
+    "poster": "assets/images/start-laptop-3.jpg",
+    "duration": 4.87,
+    "bytes": 370424,
+    "width": 1920,
+    "height": 560
+  },
+  {
+    "id": "start-laptop-4",
+    "video": "assets/videos/start-laptop-4.mp4",
+    "poster": "assets/images/start-laptop-4.jpg",
+    "duration": 3.13,
+    "bytes": 285414,
+    "width": 1920,
+    "height": 560
+  },
+  {
+    "id": "start-laptop-5",
+    "video": "assets/videos/start-laptop-5.mp4",
+    "poster": "assets/images/start-laptop-5.jpg",
+    "duration": 19.63,
+    "bytes": 1168468,
+    "width": 1920,
+    "height": 560
+  },
+  {
+    "id": "human-fridge",
+    "video": "assets/videos/human-fridge.mp4",
+    "poster": "assets/images/human-fridge.jpg",
+    "duration": 7.97,
+    "bytes": 1282649,
+    "width": 1280,
+    "height": 720
+  },
+  {
+    "id": "deployment-fridge",
+    "video": "assets/videos/deployment-fridge.mp4",
+    "poster": "assets/images/deployment-fridge.jpg",
+    "duration": 23.0,
+    "bytes": 1644824,
+    "width": 1280,
+    "height": 720
+  },
+  {
+    "id": "ik-a-fridge",
+    "video": "assets/videos/ik-a-fridge.mp4",
+    "poster": "assets/images/ik-a-fridge.jpg",
+    "duration": 41.63,
+    "bytes": 2239268,
+    "width": 1280,
+    "height": 620
+  },
+  {
+    "id": "ik-b-fridge",
+    "video": "assets/videos/ik-b-fridge.mp4",
+    "poster": "assets/images/ik-b-fridge.jpg",
+    "duration": 42.93,
+    "bytes": 1694984,
+    "width": 1280,
+    "height": 620
+  },
+  {
+    "id": "ik-c-fridge",
+    "video": "assets/videos/ik-c-fridge.mp4",
+    "poster": "assets/images/ik-c-fridge.jpg",
+    "duration": 30.03,
+    "bytes": 1247204,
+    "width": 1280,
+    "height": 620
+  },
+  {
+    "id": "start-fridge-1",
+    "video": "assets/videos/start-fridge-1.mp4",
+    "poster": "assets/images/start-fridge-1.jpg",
+    "duration": 20.47,
+    "bytes": 1454752,
+    "width": 1920,
+    "height": 560
+  },
+  {
+    "id": "start-fridge-2",
+    "video": "assets/videos/start-fridge-2.mp4",
+    "poster": "assets/images/start-fridge-2.jpg",
+    "duration": 23.07,
+    "bytes": 1632771,
+    "width": 1920,
+    "height": 560
+  },
+  {
+    "id": "start-fridge-3",
+    "video": "assets/videos/start-fridge-3.mp4",
+    "poster": "assets/images/start-fridge-3.jpg",
+    "duration": 18.33,
+    "bytes": 1278253,
+    "width": 1920,
+    "height": 560
+  },
+  {
+    "id": "start-fridge-4",
+    "video": "assets/videos/start-fridge-4.mp4",
+    "poster": "assets/images/start-fridge-4.jpg",
+    "duration": 20.53,
+    "bytes": 1350314,
+    "width": 1920,
+    "height": 560
+  },
+  {
+    "id": "start-fridge-5",
+    "video": "assets/videos/start-fridge-5.mp4",
+    "poster": "assets/images/start-fridge-5.jpg",
+    "duration": 20.43,
+    "bytes": 1425933,
+    "width": 1920,
+    "height": 560
+  },
+  {
+    "id": "human-curtain",
+    "video": "assets/videos/human-curtain.mp4",
+    "poster": "assets/images/human-curtain.jpg",
+    "duration": 12.7,
+    "bytes": 1516974,
+    "width": 1280,
+    "height": 720
+  },
+  {
+    "id": "deployment-curtain",
+    "video": "assets/videos/deployment-curtain.mp4",
+    "poster": "assets/images/deployment-curtain.jpg",
+    "duration": 40.03,
+    "bytes": 2936124,
+    "width": 960,
+    "height": 540
+  },
+  {
+    "id": "ik-a-curtain",
+    "video": "assets/videos/ik-a-curtain.mp4",
+    "poster": "assets/images/ik-a-curtain.jpg",
+    "duration": 15.13,
+    "bytes": 872557,
+    "width": 1280,
+    "height": 620
+  },
+  {
+    "id": "ik-b-curtain",
+    "video": "assets/videos/ik-b-curtain.mp4",
+    "poster": "assets/images/ik-b-curtain.jpg",
+    "duration": 15.03,
+    "bytes": 847338,
+    "width": 1280,
+    "height": 620
+  },
+  {
+    "id": "ik-c-curtain",
+    "video": "assets/videos/ik-c-curtain.mp4",
+    "poster": "assets/images/ik-c-curtain.jpg",
+    "duration": 18.03,
+    "bytes": 983416,
+    "width": 1280,
+    "height": 620
+  },
+  {
+    "id": "start-curtain-1",
+    "video": "assets/videos/start-curtain-1.mp4",
+    "poster": "assets/images/start-curtain-1.jpg",
+    "duration": 12.6,
+    "bytes": 886350,
+    "width": 1920,
+    "height": 560
+  },
+  {
+    "id": "start-curtain-2",
+    "video": "assets/videos/start-curtain-2.mp4",
+    "poster": "assets/images/start-curtain-2.jpg",
+    "duration": 12.97,
+    "bytes": 911454,
+    "width": 1920,
+    "height": 560
+  },
+  {
+    "id": "start-curtain-3",
+    "video": "assets/videos/start-curtain-3.mp4",
+    "poster": "assets/images/start-curtain-3.jpg",
+    "duration": 15.13,
+    "bytes": 996493,
+    "width": 1920,
+    "height": 560
+  },
+  {
+    "id": "start-curtain-4",
+    "video": "assets/videos/start-curtain-4.mp4",
+    "poster": "assets/images/start-curtain-4.jpg",
+    "duration": 13.67,
+    "bytes": 975103,
+    "width": 1920,
+    "height": 560
+  },
+  {
+    "id": "start-curtain-5",
+    "video": "assets/videos/start-curtain-5.mp4",
+    "poster": "assets/images/start-curtain-5.jpg",
+    "duration": 14.37,
+    "bytes": 987565,
+    "width": 1920,
+    "height": 560
+  },
+  {
+    "id": "human-drawer",
+    "video": "assets/videos/human-drawer.mp4",
+    "poster": "assets/images/human-drawer.jpg",
+    "duration": 5.47,
+    "bytes": 752284,
+    "width": 1280,
+    "height": 720
+  },
+  {
+    "id": "deployment-drawer",
+    "video": "assets/videos/deployment-drawer.mp4",
+    "poster": "assets/images/deployment-drawer.jpg",
+    "duration": 6.27,
+    "bytes": 648115,
+    "width": 1280,
+    "height": 720
+  },
+  {
+    "id": "ik-a-drawer",
+    "video": "assets/videos/ik-a-drawer.mp4",
+    "poster": "assets/images/ik-a-drawer.jpg",
+    "duration": 8.03,
+    "bytes": 322344,
+    "width": 1280,
+    "height": 620
+  },
+  {
+    "id": "ik-b-drawer",
+    "video": "assets/videos/ik-b-drawer.mp4",
+    "poster": "assets/images/ik-b-drawer.jpg",
+    "duration": 8.03,
+    "bytes": 347322,
+    "width": 1280,
+    "height": 620
+  },
+  {
+    "id": "ik-c-drawer",
+    "video": "assets/videos/ik-c-drawer.mp4",
+    "poster": "assets/images/ik-c-drawer.jpg",
+    "duration": 8.03,
+    "bytes": 302988,
+    "width": 1280,
+    "height": 620
+  },
+  {
+    "id": "start-drawer-1",
+    "video": "assets/videos/start-drawer-1.mp4",
+    "poster": "assets/images/start-drawer-1.jpg",
+    "duration": 13.47,
+    "bytes": 844101,
+    "width": 1920,
+    "height": 560
+  },
+  {
+    "id": "start-drawer-2",
+    "video": "assets/videos/start-drawer-2.mp4",
+    "poster": "assets/images/start-drawer-2.jpg",
+    "duration": 12.77,
+    "bytes": 983523,
+    "width": 1920,
+    "height": 560
+  },
+  {
+    "id": "start-drawer-3",
+    "video": "assets/videos/start-drawer-3.mp4",
+    "poster": "assets/images/start-drawer-3.jpg",
+    "duration": 11.73,
+    "bytes": 959906,
+    "width": 1920,
+    "height": 560
+  },
+  {
+    "id": "start-drawer-4",
+    "video": "assets/videos/start-drawer-4.mp4",
+    "poster": "assets/images/start-drawer-4.jpg",
+    "duration": 12.73,
+    "bytes": 840837,
+    "width": 1920,
+    "height": 560
+  },
+  {
+    "id": "start-drawer-5",
+    "video": "assets/videos/start-drawer-5.mp4",
+    "poster": "assets/images/start-drawer-5.jpg",
+    "duration": 12.97,
+    "bytes": 942157,
+    "width": 1920,
+    "height": 560
+  },
+  {
+    "id": "ego-laptop",
+    "video": "assets/videos/ego-laptop.mp4",
+    "poster": "assets/images/ego-laptop.jpg",
+    "duration": 12.97,
+    "bytes": 2009784,
+    "width": 1280,
+    "height": 720
+  },
+  {
+    "id": "ego-fridge",
+    "video": "assets/videos/ego-fridge.mp4",
+    "poster": "assets/images/ego-fridge.jpg",
+    "duration": 36.0,
+    "bytes": 6425070,
+    "width": 1280,
+    "height": 720
+  },
+  {
+    "id": "deployment-curtain-original",
+    "video": "assets/videos/deployment-curtain-original.mp4",
+    "poster": "assets/images/deployment-curtain-original.jpg",
+    "duration": 40.03,
+    "bytes": 2904860,
+    "width": 960,
+    "height": 540
+  }
+]
