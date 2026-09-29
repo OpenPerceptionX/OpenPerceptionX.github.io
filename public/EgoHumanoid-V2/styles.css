@@ -465,3 +465,33 @@ thead th { font-weight: 600; color: var(--color-muted); }
 .contribution-list strong { color: var(--color-accent); font-weight: 700; }
 .overview-video { margin: 40px 0 0; border-radius: var(--radius-md); overflow: hidden; }
 .overview-video video { display: block; width: 100%; aspect-ratio: 16 / 9; }
+
+/* Five navigation groups; real poster images remain visible during media loading. */
+.poster-shell { position: relative; }
+.video-thumbnail { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; pointer-events: none; z-index: 1; }
+.hero-background .video-thumbnail { object-fit: cover; object-position: 58% center; }
+.poster-pending { opacity: 0; }
+.video-ready > .video-thumbnail { visibility: hidden; }
+.video-ready > video { opacity: 1; }
+.workflow-number { color: var(--color-accent); margin-right: 8px; font-size: .75rem; }
+.visual-workflow:first-of-type { margin-top: 32px; }
+.visual-workflow .matrix-card figcaption { font-size: .78rem; }
+.workflow-notes { margin-top: 24px; color: var(--color-muted); font-size: .8rem; }
+.workflow-notes p { margin-top: 12px; max-width: 85ch; }
+html, body { overflow-x: clip; }
+@media (max-width: 600px) {
+  .section { padding-block: 48px; }
+  .hero h1 .hero-project { overflow-wrap: anywhere; }
+  .hero-description { font-size: 1rem; }
+  .hero-actions { gap: 10px; }
+  .hero-actions .button { padding-inline: 14px; font-size: .78rem; white-space: nowrap; }
+  .section-heading { margin-bottom: 28px; }
+  .task-matrix-row + .task-matrix-row { margin-top: 36px; }
+  .matrix-heading h3 { font-size: 1rem; }
+  .task-matrix-grid { gap: 14px; }
+  .visual-workflow .task-matrix-grid { grid-template-columns: minmax(0, 1fr); }
+  .visual-workflow .matrix-card figcaption { text-align: left; padding-inline: 16px; }
+  .matrix-play, .motion-toolbar .button { min-height: 44px; }
+  .footer-nav a { min-height: 44px; display: inline-flex; align-items: center; }
+}
+.hero-background.poster-shell { position: absolute; }

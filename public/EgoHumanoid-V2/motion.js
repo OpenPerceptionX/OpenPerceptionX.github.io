@@ -83,3 +83,16 @@
   },250);
   showStage(0);
 })();
+
+// The four workflow stages represent the same source-frame timeline.
+setInterval(() => {
+  document.querySelectorAll('[data-sync="true"]').forEach(row => {
+    if (row.dataset.visible !== 'true' || row.dataset.paused === 'true' || document.hidden) return;
+    const videos = [...row.querySelectorAll('video')];
+    const leader = videos[0];
+    if (leader.paused || leader.readyState < 2) return;
+    videos.slice(1).forEach(video => {
+      if (video.readyState >= 2 && Math.abs(video.currentTime - leader.currentTime) > .15) video.currentTime = Math.min(leader.currentTime, video.duration);
+    });
+  });
+}, 500);

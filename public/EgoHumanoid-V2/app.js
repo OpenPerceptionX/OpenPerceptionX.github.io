@@ -230,6 +230,7 @@ function updateScrollPosition() {
     if (section.getBoundingClientRect().top <= innerHeight * .33) current = section.id;
   });
   if (progress > .99) current = sections.at(-1).id;
+  current = ({ results: "scaling", "online-ik": "scaling", "data-collection": "visual-alignment" })[current] || current;
   sectionLinks.forEach((link) => {
     if (link.hash === `#${current}`) link.setAttribute("aria-current", "location");
     else link.removeAttribute("aria-current");
@@ -269,3 +270,18 @@ figureDialog.addEventListener("click", (event) => {
   if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) figureDialog.close();
 });
 figureDialog.addEventListener("close", () => figureOpener?.focus({ preventScroll: true }));
+
+// Keep a real frame visible until the first decoded video frame is ready.
+$$('video').forEach(video => {
+  const thumb = video.parentElement.querySelector('.video-thumbnail');
+  const pending = () => {
+    if (thumb) thumb.src = video.poster;
+    video.classList.add('poster-pending');
+    video.parentElement.classList.remove('video-ready');
+  };
+  const ready = () => { if (video.readyState >= 2) {video.classList.remove('poster-pending');video.parentElement.classList.add('video-ready');} };
+  ['loadstart','emptied','error'].forEach(event => video.addEventListener(event,pending));
+  ['loadeddata','canplay','playing','seeked'].forEach(event => video.addEventListener(event,ready));
+  new MutationObserver(pending).observe(video,{attributes:true,attributeFilter:['poster']});
+  ready();
+});
