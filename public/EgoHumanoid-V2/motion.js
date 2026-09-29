@@ -49,10 +49,11 @@
     fig.dataset.paused = String(reduce.matches);
     const button = fig.querySelector('.motion-toggle, .alignment-toggle');
     const update = () => {
+      if (!button) { syncMotion(fig); return; }
       button.textContent = fig.dataset.paused === 'true' ? 'Play animation' : 'Pause animation';
       button.setAttribute('aria-pressed', String(fig.dataset.paused === 'true')); syncMotion(fig);
     };
-    button.addEventListener('click', () => { fig.dataset.paused = String(fig.dataset.paused !== 'true');update(); });
+    button?.addEventListener('click', () => { fig.dataset.paused = String(fig.dataset.paused !== 'true');update(); });
     reduce.addEventListener('change', () => { fig.dataset.paused = String(reduce.matches);update(); });
     document.addEventListener('visibilitychange', () => syncMotion(fig));
     update();motionObserver.observe(fig);

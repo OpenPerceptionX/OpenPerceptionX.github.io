@@ -459,3 +459,9 @@ thead th { font-weight: 600; color: var(--color-muted); }
 @media (prefers-reduced-motion: reduce) { .flow-overlay *, .stage-spotlight { animation: none; transition: none; } }
 
 .pose-trace { fill: none; stroke: var(--color-accent); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; opacity: .6; }
+
+.contribution-list { margin: 0 auto 40px; padding-left: 1.3em; max-width: 1080px; font-size: clamp(1rem, 1.3vw, 1.15rem); line-height: 1.8; }
+.contribution-list li + li { margin-top: 12px; }
+.contribution-list strong { color: var(--color-accent); font-weight: 700; }
+.overview-video { margin: 40px 0 0; border-radius: var(--radius-md); overflow: hidden; }
+.overview-video video { display: block; width: 100%; aspect-ratio: 16 / 9; }
