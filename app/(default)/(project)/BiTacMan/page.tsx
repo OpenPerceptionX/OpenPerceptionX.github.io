@@ -222,6 +222,14 @@ export default function Home() {
                     >
                       Code
                     </a>
+                    <a
+                      href="https://huggingface.co/datasets/OpenDriveLab-org/BiTacMan"
+                      className="px-3 py-1 md:px-4 md:py-2 bg-black/30 text-white rounded-lg shadow-md hover:shadow-lg hover:bg-white/10 transition-all duration-200 border border-white/40 text-[10px] sm:text-xs md:text-sm"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Dataset
+                    </a>
                   </div>
                 </div>
               </div>
