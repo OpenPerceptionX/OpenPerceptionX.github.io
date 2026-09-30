@@ -350,7 +350,7 @@ export default function Home() {
                   poster="https://ik.imagekit.io/bwfsqmbjv/BiTacMan/BiTacMan%E5%B0%81%E9%9D%A2.png"
                   className="w-full h-auto rounded-lg border border-white/20 bg-black"
                 >
-                  <source src="https://ik.imagekit.io/bwfsqmbjv/BiTacMan/BiTacMan.mp4?updatedAt=1790672086848" />
+                  <source src="https://ik.imagekit.io/jt5bw69vq/BiTacMan%E5%AE%A3%E5%8F%91%E5%AE%8C%E6%95%B4.mp4" />
                 </video>
               </div>
             </div>
