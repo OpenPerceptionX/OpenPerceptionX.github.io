@@ -179,14 +179,14 @@ export default function Home() {
                         <div className="w-full max-w-7xl grid gap-12 grid-cols-1 xl:grid-cols-2">
                             {[...events.values()].filter(event => event.keys.includes(year)).map((event) => (
                                 <div className="flex flex-col gap-6" key={event.title}>
-                                    <Link className="w-full h-64 md:h-80 relative rounded-sm shadow-sm overflow-hidden group" href={event.url} target={event.url.startsWith('http') ? '_blank' : '_self'}>
+                                    <Link className={`w-full ${event.imageAspectRatio ? "" : "h-64 md:h-80"} relative rounded-sm shadow-sm overflow-hidden group`} style={event.imageAspectRatio ? { aspectRatio: event.imageAspectRatio } : undefined} href={event.url} target={event.url.startsWith('http') ? '_blank' : '_self'}>
                                         <Image
                                             src={event.image}
-                                            alt={event.location}
+                                            alt={event.title}
                                             fill
-                                            className={event.imageoption + " object-cover bg-gradient-landing group-hover:scale-103 transition delay-100 duration-200"}
+                                            className={`${event.imageoption} ${event.imageAspectRatio ? "object-contain" : "object-cover bg-gradient-landing"} group-hover:scale-103 transition delay-100 duration-200`}
                                         />
-                                        <div className="w-full h-full absolute flex flex-col justify-end items-end p-6">
+                                        <div className={`${event.imageAspectRatio ? "hidden" : "flex"} w-full h-full absolute flex-col justify-end items-end p-6`}>
                                             <h3 className="text-white font-bold text-t0 select-none">
                                                 {event.location}
                                             </h3>
@@ -201,7 +201,7 @@ export default function Home() {
                                         </h3>
                                     </div>
                                     <span className="text-o-gray">
-                                        {event.date}
+                                        {event.date}{event.imageAspectRatio && event.location ? ` · ${event.location}` : ""}
                                     </span>
                                 </div>
                             ))}   

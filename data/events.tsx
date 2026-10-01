@@ -1,3 +1,5 @@
+import { alpasim2026 } from "./alpasim2026"
+
 export const years: string[] = [
     '2026',
     '2025',
@@ -14,10 +16,22 @@ export const events: {
     url: string,
     image: string;
     imageoption: string;
+    imageAspectRatio?: string;
     date: string;
     location: string;
     keys: string[];
 }[] = [
+    {
+        title: alpasim2026.title,
+        subtitle: "A closed-loop benchmark for autonomous driving policies",
+        url: alpasim2026.url,
+        image: alpasim2026.image,
+        imageoption: "object-center",
+        imageAspectRatio: "1058 / 468",
+        date: "June 15 – October 31, 2026",
+        location: "Online",
+        keys: ['2026', 'editor_pick'],
+    },
     // {
     //     title: "Challenge 2026",
     //     subtitle: "Autonomous Grand Challenge",

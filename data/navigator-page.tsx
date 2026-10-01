@@ -4,6 +4,12 @@ export const NavigatorPage: {
         id: string;
     }[]
 } = {
+    "/alpasim2026": [
+        { text: "Overview", id: "overview" },
+        { text: "Tracks", id: "tracks" },
+        { text: "Evaluation", id: "evaluation" },
+        { text: "Timeline", id: "timeline" },
+    ],
     "/": [
         {
             text: "News",

@@ -37,7 +37,27 @@ import { Chen2025_value_learning } from "@/components/citation-drawer"
 import { publications } from "@/data/publications"
 import { Button } from "@/components/ui/button"
 import { type_mapping } from "@/data/mapping"
-const landings = [0,1,2,3,5,4].map(index => [...publications.values()].filter(publication => publication.keys.includes('home_sliding'))[index])
+import { alpasim2026 } from "@/data/alpasim2026"
+
+type LandingItem = Pick<(typeof publications)[number], "title" | "image_sliding" | "description" | "note" | "link" | "icon"> & {
+    linkLabel?: string;
+    imageFit?: "contain" | "cover";
+};
+
+const featuredPublications = publications.filter(publication => publication.keys.includes('home_sliding'))
+const landings: LandingItem[] = [
+    {
+        title: alpasim2026.title,
+        image_sliding: alpasim2026.image,
+        imageFit: "contain",
+        description: alpasim2026.description,
+        note: "Event 2026",
+        link: alpasim2026.url,
+        linkLabel: "Explore the challenge",
+        icon: [{ type: "github", link: alpasim2026.repository }],
+    },
+    ...[0,1,2,3,5,4].flatMap(index => featuredPublications[index] ? [featuredPublications[index]] : []),
+]
 
 
 
@@ -95,7 +115,7 @@ export function Landing() {
                                         src={landing.image_sliding ?? ""}
                                         alt={landing.title}
                                         fill
-                                        className="object-cover object-center rounded-sm bg-gradient-landing hover:scale-103 transition delay-100 duration-200"
+                                        className={`${landing.imageFit === "contain" ? "object-contain" : "object-cover bg-gradient-landing"} object-center rounded-sm hover:scale-103 transition delay-100 duration-200`}
                                     />
                                 </AspectRatio>
                             </div>
@@ -154,7 +174,7 @@ export function Landing() {
                                             landing.link != '' && (
                                                 <Link href={landing.link} target={landing.link.startsWith('http') ? '_blank' : '_self'} className="animated-underline-gray mr-3 text-nowrap">
                                                     {
-                                                        landing.link.startsWith('https://mmlab.hk/research/MM-Hand') ? (
+                                                        landing.linkLabel ? landing.linkLabel : landing.link.startsWith('https://mmlab.hk/research/MM-Hand') ? (
                                                             "Checkout at mmlab.hk/MM-Hand"
                                                         ) : (
                                                             false ? (
@@ -238,6 +258,8 @@ export function Landing() {
                             <button
                                 key={index}
                                 type="button"
+                                aria-label={`Show slide ${index + 1}: ${landings[index].title}`}
+                                aria-current={currentIndex === index ? "true" : undefined}
                                 className={`
                                     w-1.5 h-1.5 rounded-full transition-all duration-300
                                     ${currentIndex === index 
