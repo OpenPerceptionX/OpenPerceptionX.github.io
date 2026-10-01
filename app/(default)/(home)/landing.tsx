@@ -110,7 +110,7 @@ export function Landing() {
                             
 
                             <div className="flex-1/2 w-full lg:h-full flex flex-col justify-center select-none">
-                                <AspectRatio ratio={16/9}>
+                                <AspectRatio ratio={landing.imageFit === "contain" ? 1058 / 468 : 16 / 9}>
                                     <Image
                                         src={landing.image_sliding ?? ""}
                                         alt={landing.title}
