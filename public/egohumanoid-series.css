@@ -1,0 +1,87 @@
+/* Shared navigation and cross-references for the EgoHumanoid research series. */
+.research-series {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .65rem 1rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  font-family: "Manrope", Arial, sans-serif;
+}
+.research-series-label {
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.research-series-links {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: .25rem;
+  padding: .25rem;
+  border: 1px solid rgb(255 255 255 / .35);
+  border-radius: 1rem;
+  background: rgb(15 23 42 / .65);
+}
+.research-series-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: .5rem .85rem;
+  border-radius: .75rem;
+  color: #fff;
+  font-size: .8rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-decoration: none;
+}
+.research-series-links a[aria-current="page"] {
+  background: #fff;
+  color: #1d4ed8;
+}
+.research-series-links a:hover:not([aria-current="page"]) {
+  background: rgb(255 255 255 / .15);
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+.research-series-links a:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+.series-related {
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+  padding: 1.2rem 1.5rem;
+  border: 1px solid #dbeafe;
+  border-left: 3px solid #2563eb;
+  border-radius: .75rem;
+  background: #eff6ff;
+  color: #334155;
+  text-align: left;
+}
+.series-related-label {
+  display: block;
+  margin-bottom: .4rem;
+  color: #1d4ed8;
+  font-family: "Manrope", Arial, sans-serif;
+  font-size: .7rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.series-related p { margin: 0; font-size: .95rem; line-height: 1.75; }
+.series-related a { color: #1d4ed8; font-weight: 700; text-decoration: underline; text-underline-offset: .2em; }
+.series-related a:hover { color: #1e3a8a; }
+.series-related a:focus-visible { outline: 2px solid #2563eb; outline-offset: 4px; }
+
+/* Let the original page's cover grow when the series navigation wraps. */
+.hero-video { height: auto; min-height: max(640px, 100svh); }
+.hero-video-overlay { min-height: inherit; padding-block: 110px 100px; }
+.hero-video-content { transform: none; }
+.footer-links { flex-wrap: wrap; }
+@media (max-width: 500px) {
+  .research-series { gap: .6rem; margin-bottom: 1.25rem; }
+  .research-series-label { flex-basis: 100%; }
+  .research-series-links a { font-size: .75rem; padding-inline: .75rem; }
+  .series-related { padding: 1rem; }
+}

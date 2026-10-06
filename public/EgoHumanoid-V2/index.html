@@ -14,9 +14,10 @@
 <link as="font" crossorigin="" href="assets/fonts/manrope.woff2" rel="preload" type="font/woff2"/>
 <link as="font" crossorigin="" href="assets/fonts/dm-sans.woff2" rel="preload" type="font/woff2"/>
 <link as="image" fetchpriority="high" href="assets/images/hero-human-to-robot.jpg" rel="preload"/>
-<link href="styles.css?v=20260929-edge-to-edge" rel="stylesheet"/>
-<script defer="" src="app.js?v=20260929-sections-v2"></script>
-<link href="/resources/logo/OpenDriveLab/D.png" rel="icon" type="image/png"/><script defer="" src="motion.js?v=20260929-workflows"></script></head>
+<link href="styles.css?v=20261006-citation" rel="stylesheet"/>
+<script defer="" src="app.js?v=20261006-citation"></script>
+<link href="/resources/logo/OpenDriveLab/D.png" rel="icon" type="image/png"/><script defer="" src="motion.js?v=20260929-workflows"></script><link rel="stylesheet" href="../egohumanoid-series.css?v=20261006">
+</head>
 <body>
 <a class="skip-link" href="#overview">Skip to research</a>
 <div aria-hidden="true" class="reading-progress"></div>
@@ -26,12 +27,19 @@
 </header>
 <nav aria-label="On this page" class="section-nav on-hero">
 <button aria-controls="section-links" aria-expanded="false" class="nav-toggle">Sections <span aria-hidden="true">☰</span></button>
-<div class="section-links" id="section-links"><a href="#introduction">Overview</a><a href="#overview">Highlights</a><a href="#demonstrations">Results</a><a href="#results">Action Alignment</a><a href="#visual-alignment">Visual Alignment</a></div>
+<div class="section-links" id="section-links"><a href="#introduction">Overview</a><a href="#overview">Highlights</a><a href="#demonstrations">Results</a><a href="#results">Action Alignment</a><a href="#visual-alignment">Visual Alignment</a><a href="#citation">Citation</a></div>
 </nav>
 <main id="top">
 <section aria-labelledby="paper-title" class="hero" id="introduction">
 <div class="hero-background poster-shell"><img alt="" aria-hidden="true" class="video-thumbnail" decoding="async" fetchpriority="high" loading="eager" src="assets/images/hero-human-to-robot.jpg"/><video aria-label="Human-to-humanoid refrigerator-opening transition" class="poster-pending" data-hero="" data-src="assets/videos/hero-human-to-robot.mp4" loop="" muted="" playsinline="" poster="assets/images/hero-human-to-robot.jpg" preload="none"></video></div>
 <div class="wrap hero-content">
+<nav class="research-series" aria-label="EgoHumanoid research series">
+<span class="research-series-label">EgoHumanoid Series</span>
+<div class="research-series-links">
+<a href="../EgoHumanoid/">EgoHumanoid</a>
+<a href="../EgoHumanoid-V2/" aria-current="page">EgoHumanoid-V2</a>
+</div>
+</nav>
 <h1 id="paper-title"><span class="hero-project">EgoHumanoid-V2:</span> <span class="hero-title-rest">Human-to-Humanoid Transfer of <span class="hero-emphasis">Coordinated <span class="keep-together">Whole-Body</span> Skills</span> for <span class="keep-together">Loco-Manipulation</span></span></h1>
 <p class="hero-description">The first egocentric human-to-humanoid skill transfer framework for coordinated whole-body loco-manipulation</p>
 <div class="hero-actions"><a class="button hero-primary" href="https://arxiv.org/pdf/2609.37181" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8zM14 3v6h6M8 13h8M8 17h5"></path></svg> Full Paper</a><a aria-disabled="true" class="button hero-secondary" role="link" title="Coming soon"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="m8 6-6 6 6 6m8-12 6 6-6 6M14 3l-4 18"></path></svg> Code (Coming Soon)</a></div>
@@ -39,6 +47,10 @@
 <div class="hero-bottom wrap"><a class="scroll-cue" href="#overview">Explore the research <span aria-hidden="true">↓</span></a><button aria-pressed="false" class="quiet-button" id="preview-toggle"><span aria-hidden="true" class="play-icon">Ⅱ</span><span>Pause previews</span></button></div>
 </section>
 <section aria-labelledby="overview-title" class="section" id="overview"><div class="wrap">
+<aside class="series-related" aria-label="Previous work">
+<span class="series-related-label">Previously in the series</span>
+<p><a href="../EgoHumanoid/">EgoHumanoid <span aria-hidden="true">→</span></a> enables humanoid robots to learn loco-manipulation from egocentric human demonstrations.</p>
+</aside>
 <div class="section-heading"><h2 id="overview-title">Highlights</h2></div>
 <ul class="contribution-list"><li>The first <strong>egocentric human-to-humanoid skill transfer</strong> framework for <strong>coordinated whole-body loco-manipulation</strong>.</li><li><strong>Coarse-to-fine action alignment</strong> combines kinematic reference correction with dynamics-aware refinement.</li><li><strong>Zero-shot skill transfer</strong> on four real-world tasks, with analyses of accuracy, policy scores, and collection cost.</li></ul>
 <figure class="paper-figure overview-figure animated-figure" data-motion=""><a aria-label="Enlarge framework overview" class="figure-zoom" data-figure="" href="assets/figures/framework.webp"><div class="motion-canvas"><img alt="EgoHumanoid-V2 overview: human demonstrations undergo visual and action alignment, then supervise a VLA policy for whole-body robot control." decoding="async" height="1196" loading="lazy" src="assets/figures/framework.webp" width="2600"/><svg aria-hidden="true" class="flow-overlay framework-flow" viewbox="0 0 2048 942"><g class="flow-streams"><path d="M875 102H910 M1222 102H1255 M1483 102H1530 M563 411H685 M952 411H1007 M1407 411H1530 M1873 298H1908 M1873 422H1908 M1774 565V585"></path><path d="M1607 183V248 M1696 422V285H1725"></path></g><path class="refine-loop" d="M1180 360C1335 245 1415 365 1280 434C1200 482 1154 407 1110 401"></path><g class="tracking-points"><circle cx="912" cy="361" r="12"></circle><circle cx="1184" cy="359" r="12"></circle></g><polyline class="pose-trace" points="787,367 799,392 841,407"><animate attributename="points" dur="3s" repeatcount="indefinite" values="787,367 799,392 841,407;787,367 834,348 912,361;787,367 799,392 841,407"></animate></polyline><circle class="tracking-tip" r="7"><animatemotion dur="3s" path="M841 407 Q875 390 912 361 Q875 390 841 407" repeatcount="indefinite"></animatemotion></circle></svg></div><span class="figure-hint">View figure ↗</span></a></figure><figure class="overview-video"><div class="video-frame poster-shell"><img alt="" aria-hidden="true" class="video-thumbnail" decoding="async" loading="lazy" src="assets/images/project-overview.jpg"/><video aria-label="EgoHumanoid-V2 project overview" class="poster-pending" controls="" data-src="assets/videos/project-overview-v12.mp4" playsinline="" poster="assets/images/project-overview.jpg" preload="none"></video></div></figure>
@@ -91,8 +103,26 @@
 <tr class="highlight-row"><th scope="row">+ Both</th><td>53.33</td><td>38.33</td><td>53.33</td><td>—</td></tr>
 </tbody></table></div><p>Task scores with 200 human demonstrations. Arm rendering is not evaluated for foot-operated drawer closing.</p></details></div></section>
 
+<section aria-labelledby="citation-title" class="section section-tint" id="citation">
+<div class="wrap">
+<div class="citation-box">
+<div class="citation-header">
+<h2 id="citation-title"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M9 5H6a2 2 0 0 0-2 2v13h14v-3M9 3h6v4H9zM15 5h3a2 2 0 0 1 2 2v5M10 12h10m-3-3 3 3-3 3"></path></svg>BibTeX Citation</h2>
+<button class="button primary small citation-copy" id="copy-citation" type="button" aria-label="Copy BibTeX citation">Copy</button>
+</div>
+<pre class="citation-code" tabindex="0" aria-label="BibTeX citation"><code id="citation-code">@article{chen2026egohumanoidv2,
+    title={{EgoHumanoid-V2}: Human-to-Humanoid Transfer of Coordinated Whole-Body Skills for Loco-Manipulation},
+    author={Chen, Jin and Jiang, Yiming and Xu, Chongyang and Shi, Modi and Peng, Shijia and Chen, Li and Li, Tianyu and Xu, Mu and Chen, Yilun and Hoi, Steven and Li, Hongyang},
+    journal={arXiv preprint arXiv:2609.37181},
+    year={2026}
+}</code></pre>
+<p class="citation-feedback" id="citation-feedback" role="status" aria-live="polite"></p>
+</div>
+</div>
+</section>
+
 </main>
-<footer class="footer"><div class="wrap footer-inner"><a class="footer-brand" href="#introduction">EGOHUMANOID-V2</a><nav aria-label="Footer navigation" class="footer-nav"><a href="#introduction">Overview</a><a href="#overview">Highlights</a><a href="#demonstrations">Results</a><a href="#results">Action Alignment</a><a href="#visual-alignment">Visual Alignment</a></nav></div></footer>
+<footer class="footer"><div class="wrap footer-inner"><a class="footer-brand" href="#introduction">EGOHUMANOID-V2</a><nav aria-label="Footer navigation" class="footer-nav"><a href="#introduction">Overview</a><a href="#overview">Highlights</a><a href="#demonstrations">Results</a><a href="#results">Action Alignment</a><a href="#visual-alignment">Visual Alignment</a><a href="#citation">Citation</a><a href="../EgoHumanoid/">EgoHumanoid →</a></nav></div></footer>
 <dialog aria-label="Enlarged research figure" class="figure-dialog"><div class="figure-dialog-toolbar"><p id="figure-dialog-caption"></p><div class="figure-dialog-actions"><a class="button small" href="assets/figures/framework.webp" id="figure-fullsize" rel="noopener" target="_blank">Full size ↗</a><button class="button small" id="close-figure" type="button">Close <span aria-hidden="true">×</span></button></div></div><img alt="" id="figure-dialog-image"/></dialog>
 <div aria-live="polite" class="visually-hidden" id="announcement" role="status"></div>
 <noscript><div class="noscript-note">Enable JavaScript to switch videos, or <a href="assets/documents/supplementary-videos.zip">download the collection</a>.</div></noscript>

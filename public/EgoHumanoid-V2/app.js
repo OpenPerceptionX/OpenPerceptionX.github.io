@@ -4,6 +4,39 @@ const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => [...document.querySelectorAll(selector)];
 const announce = (message) => { $("#announcement").textContent = message; };
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const copyCitationButton = $("#copy-citation");
+let citationFeedbackTimer;
+copyCitationButton.addEventListener("click", async () => {
+  clearTimeout(citationFeedbackTimer);
+  const code = $("#citation-code");
+  const feedback = $("#citation-feedback");
+  copyCitationButton.disabled = true;
+  feedback.textContent = "";
+  try {
+    await navigator.clipboard.writeText(code.textContent.trim());
+    copyCitationButton.textContent = "Copied!";
+    copyCitationButton.classList.add("copied");
+    feedback.textContent = "BibTeX citation copied to clipboard.";
+  } catch {
+    const range = document.createRange();
+    range.selectNodeContents(code);
+    const selection = window.getSelection();
+    selection.removeAllRanges();
+    selection.addRange(range);
+    copyCitationButton.textContent = "Copy";
+    copyCitationButton.classList.remove("copied");
+    feedback.textContent = "Automatic copying is unavailable. The citation is selected; press Ctrl+C or ⌘C, or use your device’s Copy menu.";
+  } finally {
+    copyCitationButton.disabled = false;
+  }
+  if (copyCitationButton.classList.contains("copied")) {
+    citationFeedbackTimer = setTimeout(() => {
+      copyCitationButton.textContent = "Copy";
+      copyCitationButton.classList.remove("copied");
+      feedback.textContent = "";
+    }, 2000);
+  }
+});
 const heroVideos = $$("video[data-hero]");
 let previewsPaused = reducedMotion.matches || Boolean(navigator.connection?.saveData);
 

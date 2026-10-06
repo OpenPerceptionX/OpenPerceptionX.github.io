@@ -500,3 +500,15 @@ html, body { overflow-x: clip; }
 .matrix-card .video-frame { aspect-ratio: 16 / 9; overflow: hidden; padding: 0; background: var(--color-surface); }
 .matrix-card .video-frame video,
 .matrix-card .video-thumbnail { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+
+/* Citation styling follows the original EgoHumanoid project page. */
+.citation-box { padding: clamp(1rem, 3vw, 1.5rem); border: 1px solid var(--color-rule); border-radius: var(--radius-md); background: var(--color-paper); }
+.citation-header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; }
+.citation-header h2 { display: flex; align-items: center; gap: .5rem; font-size: clamp(1rem, 2vw, 1.2rem); font-weight: 650; letter-spacing: -.02em; line-height: 1.4; }
+.citation-header svg { flex-shrink: 0; }
+.citation-copy { flex-shrink: 0; border-radius: var(--radius-sm); min-width: 82px; }
+.citation-copy.copied { background: var(--color-paper); color: var(--color-accent); border-color: var(--color-accent); }
+.citation-code { margin: 0; padding: 1rem; border-radius: var(--radius-sm); background: #1e293b; color: #cbd5e1; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: .8rem; line-height: 1.8; overflow-x: auto; white-space: pre; tab-size: 4; }
+.citation-code code { font: inherit; }
+.citation-feedback { margin-top: .75rem; color: var(--color-secondary); font-size: .85rem; }
+.citation-feedback:empty { display: none; }
