@@ -512,3 +512,5 @@ html, body { overflow-x: clip; }
 .citation-code code { font: inherit; }
 .citation-feedback { margin-top: .75rem; color: var(--color-secondary); font-size: .85rem; }
 .citation-feedback:empty { display: none; }
+
+@media (max-width: 360px) { .institution-logos { gap: 4px; } }
