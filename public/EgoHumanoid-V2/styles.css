@@ -518,3 +518,26 @@ html, body { overflow-x: clip; }
 .task-scores-table { table-layout: fixed; min-width: 640px; }
 .task-scores-table th, .task-scores-table td { text-align: center; font-variant-numeric: tabular-nums lining-nums; }
 .task-scores-table th:first-child { width: 30%; text-align: left; }
+
+/* Matching header and data rows make the two alignment metrics comparable. */
+.results-grid .chart-card h3 { margin: 0; line-height: 28px; }
+.results-grid .score-column-head { display: grid; grid-template-columns: 80px minmax(0, 1fr) 60px; gap: .55rem; align-items: center; height: 44px; margin-top: 20px; border-bottom: 1px solid var(--color-rule); color: var(--color-muted); font-size: .8rem; }
+.score-column-head span:last-child { grid-column: 2 / 4; text-align: right; }
+.results-grid .bar-chart { gap: 0; padding: 0; }
+.results-grid .chart-row { min-height: 56px; font-size: .85rem; }
+.results-grid .chart-row strong { font-size: 1rem; }
+.results-grid .bar-track { height: 18px; border-radius: 3px; }
+.results-grid .bar { border-radius: 3px; }
+.results-grid .chart-scale { margin-top: 12px; }
+.results-grid .endpoint-table { table-layout: fixed; margin-top: 20px; }
+.results-grid .endpoint-table th, .results-grid .endpoint-table td { padding: 0 .35rem; vertical-align: middle; }
+.results-grid .endpoint-table thead tr { height: 44px; }
+.results-grid .endpoint-table thead th { font-size: .8rem; text-align: right; white-space: normal; }
+.results-grid .endpoint-table thead th:first-child { text-align: left; }
+.results-grid .endpoint-table tbody tr { height: 56px; }
+.results-grid .endpoint-table tbody th { font-size: .85rem; font-weight: 500; }
+.results-grid .endpoint-table tbody td { font-size: 1rem; font-weight: 650; font-variant-numeric: tabular-nums; }
+@media (max-width: 600px) {
+  .results-grid .score-column-head, .results-grid .chart-row { grid-template-columns: 66px minmax(0, 1fr) 60px; gap: .4rem; }
+  .results-grid .chart-scale { margin-left: 73px; margin-right: 66px; }
+}

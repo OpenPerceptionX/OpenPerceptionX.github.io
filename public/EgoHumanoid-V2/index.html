@@ -14,7 +14,7 @@
 <link as="font" crossorigin="" href="assets/fonts/manrope.woff2" rel="preload" type="font/woff2"/>
 <link as="font" crossorigin="" href="assets/fonts/dm-sans.woff2" rel="preload" type="font/woff2"/>
 <link as="image" fetchpriority="high" href="assets/images/hero-human-to-robot.jpg" rel="preload"/>
-<link href="styles.css?v=20261010-task-tables" rel="stylesheet"/>
+<link href="styles.css?v=20261010-metric-layout" rel="stylesheet"/>
 <script defer="" src="app.js?v=20261006-citation"></script>
 <link href="/resources/logo/OpenDriveLab/D.png" rel="icon" type="image/png"/><script defer="" src="motion.js?v=20260929-workflows"></script><link rel="stylesheet" href="../egohumanoid-series.css?v=20261006-continuous-underline">
 </head>
@@ -75,7 +75,8 @@
 <div class="section-heading"><h2 id="results-title">Action Alignment</h2><p class="alignment-overview"><span><strong>H:</strong> Initial SONIC rollout</span><span><strong>K:</strong> Kinematic reference correction</span><span><strong>D:</strong> Dynamics-aware refinement</span></p></div>
 <figure class="paper-figure action-figure animated-figure" data-motion=""><a aria-label="Enlarge action alignment method" class="figure-zoom" data-figure="" href="assets/figures/action-alignment.webp"><div class="motion-canvas"><img alt="Human motion is initialized through SONIC, corrected by offline inverse kinematics, and refined using an MLP response model and iterative execution feedback." decoding="async" height="872" loading="lazy" src="assets/figures/action-alignment.webp" width="2600"/><svg aria-hidden="true" class="flow-overlay action-flow" viewbox="0 0 2048 685"><rect class="stage-spotlight" height="375" rx="14" width="310" x="310" y="195"></rect><g class="flow-streams"><path d="M270 394H320 M628 394H675 M967 394H1026 M1238 390H1408 M1657 394H1705"></path></g><path class="refine-loop" d="M1600 385C1700 195 1290 235 1238 342"></path></svg></div><span class="figure-hint">View figure ↗</span></a><div class="motion-toolbar"><div aria-label="Action alignment stage" class="alignment-steps" role="group"><button aria-pressed="true" class="alignment-step is-active" data-stage="0" type="button">H · SONIC rollout</button><button aria-pressed="false" class="alignment-step" data-stage="1" type="button">H + K · Correction</button><button aria-pressed="false" class="alignment-step" data-stage="2" type="button">H + K + Dₛ · Refinement</button></div><button aria-pressed="false" class="button small alignment-toggle" type="button">Pause animation</button></div><div aria-label="Published results for the highlighted stage" class="live-metrics"><div><span>Mean task score</span><strong id="live-score">21.25%</strong></div><div><span>Position error</span><strong id="live-position">11.21 <small>cm</small></strong></div><div><span>Orientation error</span><strong id="live-orientation">21.22<small>°</small></strong></div></div></figure>
 <div class="results-grid">
-<figure class="chart-card"><figcaption><h3>Real-world task score</h3><p>Mean across four tasks · higher is better</p></figcaption>
+<figure class="chart-card"><figcaption><h3>Mean score ↑</h3></figcaption>
+<div aria-hidden="true" class="score-column-head"><span>Stage</span><span>Score (%)</span></div>
 <div aria-label="Mean task score: H 21.25 percent; H plus K 47.08 percent; H plus K plus selected refinement 51.67 percent." class="bar-chart" role="img">
 <div class="chart-row"><span>H</span><div class="bar-track"><span class="bar bar-baseline" style="--value:21.25"></span></div><strong>21.25%</strong></div>
 <div class="chart-row"><span>H + K</span><div class="bar-track"><span class="bar bar-middle" style="--value:47.08"></span></div><strong>47.08%</strong></div>
@@ -83,8 +84,8 @@
 </div>
 <div aria-hidden="true" class="chart-scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100%</span></div>
 </figure>
-<div class="chart-card endpoint-results"><h3>Executed endpoint error</h3><p>Simulation · lower is better</p>
-<table aria-label="Mean executed endpoint errors" class="endpoint-table"><thead><tr><th scope="col">Stage</th><th scope="col">Position <span>(cm)</span></th><th scope="col">Orientation <span>(°)</span></th></tr></thead><tbody>
+<div class="chart-card endpoint-results"><h3>Endpoint error ↓</h3>
+<table aria-label="Mean executed endpoint errors" class="endpoint-table"><thead><tr><th scope="col">Stage</th><th scope="col">Position (cm)</th><th scope="col">Orientation (°)</th></tr></thead><tbody>
 <tr><th scope="row">H</th><td>11.21</td><td>21.22</td></tr>
 <tr><th scope="row">H + K</th><td>4.45</td><td>13.77</td></tr>
 <tr class="endpoint-best"><th scope="row">H + K + D<sub>s</sub></th><td>3.41</td><td>6.71</td></tr>
