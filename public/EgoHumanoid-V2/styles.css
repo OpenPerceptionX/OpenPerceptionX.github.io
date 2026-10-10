@@ -514,3 +514,7 @@ html, body { overflow-x: clip; }
 .citation-feedback:empty { display: none; }
 
 @media (max-width: 360px) { .institution-logos { gap: 4px; } }
+
+.task-scores-table { table-layout: fixed; min-width: 640px; }
+.task-scores-table th, .task-scores-table td { text-align: center; font-variant-numeric: tabular-nums lining-nums; }
+.task-scores-table th:first-child { width: 30%; text-align: left; }
