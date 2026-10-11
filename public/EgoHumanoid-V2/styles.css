@@ -547,7 +547,7 @@ html, body { overflow-x: clip; }
 .alignment-overview > span { display: inline-flex; align-items: baseline; gap: .4rem; }
 .alignment-overview strong { font-weight: 700; }
 .alignment-step { display: inline-flex; align-items: baseline; gap: .6rem; min-height: 44px; padding: 10px 16px; font-family: var(--font-display); font-size: .9375rem; font-weight: 500; line-height: 1.4; letter-spacing: 0; }
-.alignment-step .stage-symbol { font-weight: 700; white-space: nowrap; }
+.alignment-step .stage-symbol { display: inline; margin: 0; color: inherit; font-size: inherit; font-weight: 700; white-space: nowrap; }
 .alignment-step .stage-divider { opacity: .55; }
 .alignment-step sub { position: relative; bottom: -.2em; font-size: .72em; line-height: 0; vertical-align: baseline; }
 @media (max-width: 600px) {
