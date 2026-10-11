@@ -541,3 +541,16 @@ html, body { overflow-x: clip; }
   .results-grid .score-column-head, .results-grid .chart-row { grid-template-columns: 66px minmax(0, 1fr) 60px; gap: .4rem; }
   .results-grid .chart-scale { margin-left: 73px; margin-right: 66px; }
 }
+
+/* Match the method legend and stage controls to the section typography. */
+.section-heading .alignment-overview { font-family: var(--font-display); font-size: 1rem; font-weight: 500; line-height: 1.5; letter-spacing: 0; gap: .75rem 1.75rem; color: var(--color-secondary); }
+.alignment-overview > span { display: inline-flex; align-items: baseline; gap: .4rem; }
+.alignment-overview strong { font-weight: 700; }
+.alignment-step { display: inline-flex; align-items: baseline; gap: .6rem; min-height: 44px; padding: 10px 16px; font-family: var(--font-display); font-size: .9375rem; font-weight: 500; line-height: 1.4; letter-spacing: 0; }
+.alignment-step .stage-symbol { font-weight: 700; white-space: nowrap; }
+.alignment-step .stage-divider { opacity: .55; }
+.alignment-step sub { position: relative; bottom: -.2em; font-size: .72em; line-height: 0; vertical-align: baseline; }
+@media (max-width: 600px) {
+ .section-heading .alignment-overview { font-size: .9375rem; gap: .55rem 1.25rem; }
+ .alignment-step { font-size: .875rem; padding: 10px 14px; }
+}
