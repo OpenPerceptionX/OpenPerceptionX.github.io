@@ -55,3 +55,6 @@ pre{background:#ded9e9;color:#514565;border:1px solid #cec6df;box-shadow:none;bo
 .section{padding-top:32px;padding-bottom:28px}
 .abstract-section{padding-top:32px;padding-bottom:28px}
 @media(max-width:720px){.section,.abstract-section{padding-top:24px;padding-bottom:20px}}
+
+.resource-links .button:nth-child(2){background:#5978b8;border-color:#5978b8;color:#fff}
+.resource-links .button:nth-child(2):hover{background:#4865a0;border-color:#4865a0}
