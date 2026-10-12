@@ -46,6 +46,7 @@ members.forEach((member) => {
         scholar[member.name] = scholarlink.url;
     }
 });
+scholar["Zhenjie Yang"] = "https://scholar.google.com/citations?user=jVlRiUEAAAAJ";
 
 
 
@@ -65,6 +66,24 @@ export const publications: {
     time: string;
     timeline: string[];
 }[] = [
+    {
+        title: "SimVTA: Simulation-Grounded Video-Trajectory Alignment for Driving World Action Models",
+        link: "https://arxiv.org/abs/2610.13781",
+        image: "/SimVTA/assets/figure-1.webp",
+        author: "Changhui Jing, Haochen Tian, Hongchen Li, Tianyu Li, Caojun Wang, Zihao Zhang, Yanhao Liu, Chengen Xie, Bailin Li, Hao Zhao, Zhenjie Yang",
+        note: "Preprint 2026",
+        noteoption: '',
+        star: "https://img.shields.io/github/stars/OpenDriveLab/SimVTA?style=social",
+        starlink: "https://github.com/OpenDriveLab/SimVTA",
+        icon: [
+            { type: "page", link: "/SimVTA/" },
+            { type: "github", link: "https://github.com/OpenDriveLab/SimVTA" },
+        ],
+        description: "SimVTA aligns candidate driving trajectories with simulator-rendered future videos, combining reward-guided trajectory optimization with matched visual supervision for world action model post-training.",
+        keys: ['end_to_end_ad'],
+        time: '2026.10.09',
+        timeline: ['te2e'],
+    },
     {
         title: "EgoHumanoid-V2: Human-to-Humanoid Transfer of Coordinated Whole-Body Skills for Loco-Manipulation",
         link: "https://arxiv.org/abs/2609.37181",
