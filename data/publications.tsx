@@ -88,7 +88,7 @@ export const publications: {
         description: "Egocentric human demonstrations transfer coordinated whole-body loco-manipulation skills to humanoids through coarse-to-fine action alignment and visual alignment, without target-task robot demonstrations.",
         keys: ['embodied_ai', 'home_sliding'],
         time: '2026.09.29',
-        timeline: ['tembodied', 'highlight'],
+        timeline: ['tembodied'],
     },
     {
         title: "Native Memory Compression for Long-Horizon Robotic Manipulation",
