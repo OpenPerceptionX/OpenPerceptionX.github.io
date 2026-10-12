@@ -63,7 +63,7 @@ export default function Home() {
                             return timeB - timeA;
                         })
                         .map((publication, index) => (
-                            <li key={publication.title}>
+                            <li key={publication.title} className={publication.timeline.includes("preview") ? "pb-8 md:min-h-88 md:py-8 md:grid-rows-[1fr_20px_1fr]" : undefined}>
                                 {
                                     index != 0 && (
                                         <hr />
@@ -72,7 +72,7 @@ export default function Home() {
 
 
 
-                                <div className="timeline-middle mx-3">
+                                <div className={`timeline-middle mx-3 ${publication.timeline.includes("preview") ? "md:self-center" : ""}`}>
                                     <svg
                                     viewBox="0 0 20 20"
                                     className="h-5 w-5 text-o-gray"
@@ -85,7 +85,7 @@ export default function Home() {
 
 
                                 <div
-                                className={`mb-6 grid gap-1 ${
+                                className={`mb-6 grid gap-1 ${publication.timeline.includes("preview") ? "md:self-center md:mb-0" : ""} ${
                                     index % 2 === 1 ? "timeline-end md:text-start" : "timeline-start md:text-end"
                                 }`}
                                 >
@@ -181,7 +181,7 @@ export default function Home() {
 
 
                                     {publication.timeline.includes("preview") && (
-                                        <Link href={publication.link} target="_blank" className="md:hidden block w-full max-w-80 mt-4 mb-2 mx-auto">
+                                        <Link href={publication.link} target="_blank" className="md:hidden block w-full mt-6 mb-2 mx-auto">
                                             <Image src={publication.image} alt={publication.title} width={1100} height={506} className="w-full h-auto rounded-sm" />
                                         </Link>
                                     )}
@@ -209,7 +209,7 @@ export default function Home() {
 
 
                                 {publication.timeline.includes("preview") && (
-                                    <div className={`hidden md:flex w-full max-w-96 items-center mb-6 ${index % 2 === 1 ? "timeline-start justify-end" : "timeline-end justify-start"}`}>
+                                    <div className={`hidden md:flex w-full max-w-xl items-center self-center ${index % 2 === 1 ? "timeline-start justify-end" : "timeline-end justify-start"}`}>
                                         <Link href={publication.link} target="_blank" className="block w-full">
                                             <Image src={publication.image} alt={publication.title} width={1100} height={506} className="w-full h-auto rounded-sm" />
                                         </Link>
