@@ -45,7 +45,10 @@ type LandingItem = Pick<(typeof publications)[number], "title" | "image_sliding"
 };
 
 const featuredPublications = publications.filter(publication => publication.keys.includes('home_sliding'))
+const egoHumanoidV2 = featuredPublications.find(publication => publication.link === 'https://arxiv.org/abs/2609.37181')
+const otherFeaturedPublications = featuredPublications.filter(publication => publication !== egoHumanoidV2)
 const landings: LandingItem[] = [
+    ...(egoHumanoidV2 ? [egoHumanoidV2] : []),
     {
         title: alpasim2026.title,
         image_sliding: alpasim2026.image,
@@ -56,7 +59,7 @@ const landings: LandingItem[] = [
         linkLabel: "Explore the challenge",
         icon: [{ type: "github", link: alpasim2026.repository }],
     },
-    ...[0,1,2,3,5,4].flatMap(index => featuredPublications[index] ? [featuredPublications[index]] : []),
+    ...[0,1,2,3,5,4].flatMap(index => otherFeaturedPublications[index] ? [otherFeaturedPublications[index]] : []),
 ]
 
 

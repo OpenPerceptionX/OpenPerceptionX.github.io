@@ -66,6 +66,31 @@ export const publications: {
     timeline: string[];
 }[] = [
     {
+        title: "EgoHumanoid-V2: Human-to-Humanoid Transfer of Coordinated Whole-Body Skills for Loco-Manipulation",
+        link: "https://arxiv.org/abs/2609.37181",
+        image: "/EgoHumanoid-V2/assets/figures/framework.webp",
+        image_sliding: "/EgoHumanoid-V2/assets/images/project-overview-v17.jpg",
+        author: "Jin Chen, Yiming Jiang, Chongyang Xu, Modi Shi, Shijia Peng, Li Chen, Tianyu Li, Mu Xu, Yilun Chen, Steven Hoi, Hongyang Li",
+        note: "Preprint 2026",
+        noteoption: '',
+        star: "https://img.shields.io/github/stars/OpenDriveLab/EgoHumanoid-V2?style=social",
+        starlink: "https://github.com/OpenDriveLab/EgoHumanoid-V2",
+        icon: [
+            {
+                type: "page",
+                link: "/EgoHumanoid-V2/",
+            },
+            {
+                type: "github",
+                link: "https://github.com/OpenDriveLab/EgoHumanoid-V2",
+            },
+        ],
+        description: "Egocentric human demonstrations transfer coordinated whole-body loco-manipulation skills to humanoids through coarse-to-fine action alignment and visual alignment, without target-task robot demonstrations.",
+        keys: ['embodied_ai', 'home_sliding'],
+        time: '2026.09.29',
+        timeline: ['tembodied', 'highlight'],
+    },
+    {
         title: "Native Memory Compression for Long-Horizon Robotic Manipulation",
         link: "https://arxiv.org/abs/2607.06678",
         image: "/assets/publication/nativemem.jpg",
