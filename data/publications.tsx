@@ -68,8 +68,8 @@ export const publications: {
     {
         title: "EgoHumanoid-V2: Human-to-Humanoid Transfer of Coordinated Whole-Body Skills for Loco-Manipulation",
         link: "https://arxiv.org/abs/2609.37181",
-        image: "/EgoHumanoid-V2/assets/figures/framework.webp",
-        image_sliding: "/EgoHumanoid-V2/assets/images/project-overview-v17.jpg",
+        image: "/assets/publication/egohumanoid-v2-teaser.gif",
+        image_sliding: "/assets/publication/egohumanoid-v2-teaser.gif",
         author: "Jin Chen, Yiming Jiang, Chongyang Xu, Modi Shi, Shijia Peng, Li Chen, Tianyu Li, Mu Xu, Yilun Chen, Steven Hoi, Hongyang Li",
         note: "Preprint 2026",
         noteoption: '',

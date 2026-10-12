@@ -42,13 +42,14 @@ import { alpasim2026 } from "@/data/alpasim2026"
 type LandingItem = Pick<(typeof publications)[number], "title" | "image_sliding" | "description" | "note" | "link" | "icon"> & {
     linkLabel?: string;
     imageFit?: "contain" | "cover";
+    imageAspectRatio?: number;
 };
 
 const featuredPublications = publications.filter(publication => publication.keys.includes('home_sliding'))
 const egoHumanoidV2 = featuredPublications.find(publication => publication.link === 'https://arxiv.org/abs/2609.37181')
 const otherFeaturedPublications = featuredPublications.filter(publication => publication !== egoHumanoidV2)
 const landings: LandingItem[] = [
-    ...(egoHumanoidV2 ? [egoHumanoidV2] : []),
+    ...(egoHumanoidV2 ? [{ ...egoHumanoidV2, imageFit: "contain" as const, imageAspectRatio: 1100 / 506 }] : []),
     {
         title: alpasim2026.title,
         image_sliding: alpasim2026.image,
@@ -113,7 +114,7 @@ export function Landing() {
                             
 
                             <div className="flex-1/2 w-full lg:h-full flex flex-col justify-center select-none">
-                                <AspectRatio ratio={landing.imageFit === "contain" ? 1058 / 468 : 16 / 9}>
+                                <AspectRatio ratio={landing.imageAspectRatio ?? (landing.imageFit === "contain" ? 1058 / 468 : 16 / 9)}>
                                     <Image
                                         src={landing.image_sliding ?? ""}
                                         alt={landing.title}
