@@ -554,3 +554,20 @@ html, body { overflow-x: clip; }
  .section-heading .alignment-overview { font-size: .9375rem; gap: .55rem 1.25rem; }
  .alignment-step { font-size: .875rem; padding: 10px 14px; }
 }
+
+.contact-section { padding-block: 40px; background: var(--color-paper); }
+.contact-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.contact-inner h2 { font-size: 1.1rem; letter-spacing: -.02em; }
+.contact-links { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 32px; font-size: .9375rem; font-weight: 500; }
+.contact-links a, .contact-wechat { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; color: var(--color-secondary); }
+.contact-wechat { padding: 0; border: 0; background: transparent; font: inherit; cursor: pointer; }
+.contact-links a:hover, .contact-wechat:hover { color: var(--color-accent); }
+.wechat-dialog { width: min(440px, calc(100vw - 32px)); max-height: 94svh; margin: auto; padding: 20px; border: 1px solid var(--color-rule); border-radius: var(--radius-md); background: var(--color-paper); color: var(--color-ink); }
+.wechat-dialog::backdrop { background: var(--color-overlay); }
+.wechat-dialog-header { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 12px; }
+.wechat-dialog-header h2 { font-size: 1rem; letter-spacing: -.02em; }
+.wechat-dialog img { width: 100%; height: auto; max-height: 72svh; object-fit: contain; }
+@media (max-width: 600px) {
+ .contact-inner { align-items: flex-start; flex-direction: column; gap: 12px; }
+ .contact-links { gap: 8px 24px; }
+}
