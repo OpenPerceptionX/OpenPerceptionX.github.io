@@ -225,3 +225,15 @@ $$('video').forEach(video => {
   new MutationObserver(pending).observe(video,{attributes:true,attributeFilter:['poster']});
   ready();
 });
+
+// Native dialog keeps the original WeChat QR image available at a readable size.
+const wechatDialog = document.querySelector('#wechat-dialog');
+const wechatOpener = document.querySelector('.contact-wechat');
+wechatOpener.addEventListener('click', () => wechatDialog.showModal());
+document.querySelector('#close-wechat').addEventListener('click', () => wechatDialog.close());
+wechatDialog.addEventListener('click', (event) => {
+  if (event.target !== wechatDialog) return;
+  const rect = wechatDialog.getBoundingClientRect();
+  if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) wechatDialog.close();
+});
+wechatDialog.addEventListener('close', () => wechatOpener.focus({ preventScroll: true }));

@@ -46,6 +46,7 @@ members.forEach((member) => {
         scholar[member.name] = scholarlink.url;
     }
 });
+scholar["Zhenjie Yang"] = "https://scholar.google.com/citations?user=jVlRiUEAAAAJ";
 
 
 
@@ -65,6 +66,49 @@ export const publications: {
     time: string;
     timeline: string[];
 }[] = [
+    {
+        title: "SimVTA: Simulation-Grounded Video-Trajectory Alignment for Driving World Action Models",
+        link: "https://arxiv.org/abs/2610.13781",
+        image: "/SimVTA/assets/figure-1.webp",
+        author: "Changhui Jing, Haochen Tian, Hongchen Li, Tianyu Li, Caojun Wang, Zihao Zhang, Yanhao Liu, Chengen Xie, Bailin Li, Hao Zhao, Zhenjie Yang",
+        note: "Preprint 2026",
+        noteoption: '',
+        star: "https://img.shields.io/github/stars/OpenDriveLab/SimVTA?style=social",
+        starlink: "https://github.com/OpenDriveLab/SimVTA",
+        icon: [
+            { type: "page", link: "/SimVTA/" },
+            { type: "github", link: "https://github.com/OpenDriveLab/SimVTA" },
+        ],
+        description: "SimVTA aligns candidate driving trajectories with simulator-rendered future videos, combining reward-guided trajectory optimization with matched visual supervision for world action model post-training.",
+        keys: ['end_to_end_ad'],
+        time: '2026.10.09',
+        timeline: ['te2e'],
+    },
+    {
+        title: "EgoHumanoid-V2: Human-to-Humanoid Transfer of Coordinated Whole-Body Skills for Loco-Manipulation",
+        link: "https://arxiv.org/abs/2609.37181",
+        image: "/assets/publication/egohumanoid-v2-teaser.gif",
+        image_sliding: "/assets/publication/egohumanoid-v2-teaser.gif",
+        author: "Jin Chen, Yiming Jiang, Chongyang Xu, Modi Shi, Shijia Peng, Li Chen, Tianyu Li, Mu Xu, Yilun Chen, Steven Hoi, Hongyang Li",
+        note: "Preprint 2026",
+        noteoption: '',
+        star: "https://img.shields.io/github/stars/OpenDriveLab/EgoHumanoid-V2?style=social",
+        starlink: "https://github.com/OpenDriveLab/EgoHumanoid-V2",
+        icon: [
+            {
+                type: "page",
+                link: "/EgoHumanoid-V2/",
+            },
+            {
+                type: "github",
+                link: "https://github.com/OpenDriveLab/EgoHumanoid-V2",
+            },
+        ],
+        description: "Egocentric human demonstrations transfer coordinated whole-body loco-manipulation skills to humanoids through coarse-to-fine action alignment and visual alignment, without target-task robot demonstrations.",
+        keys: ['embodied_ai', 'home_sliding'],
+        time: '2026.09.29',
+        timeline: ['tembodied', 'preview'],
+    },
     {
         title: "Native Memory Compression for Long-Horizon Robotic Manipulation",
         link: "https://arxiv.org/abs/2607.06678",
@@ -87,7 +131,7 @@ export const publications: {
         description: "NativeMEM gives pretrained Vision-Language-Action policies long-term, real-time visual memory by compressing each historical frame-view observation into a single native memory token.",
         keys: ['embodied_ai'],
         time: '2026.07.07',
-        timeline: ['tembodied'],
+        timeline: ['tembodied', 'preview'],
     },
     {
         title: "RoboNaldo: Accurate, Stable and Powerful Humanoid Soccer Shooting via Motion-Guided Curriculum Reinforcement Learning",

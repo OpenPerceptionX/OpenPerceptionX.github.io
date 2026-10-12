@@ -518,3 +518,56 @@ html, body { overflow-x: clip; }
 .task-scores-table { table-layout: fixed; min-width: 640px; }
 .task-scores-table th, .task-scores-table td { text-align: center; font-variant-numeric: tabular-nums lining-nums; }
 .task-scores-table th:first-child { width: 30%; text-align: left; }
+
+/* Matching header and data rows make the two alignment metrics comparable. */
+.results-grid .chart-card h3 { margin: 0; line-height: 28px; }
+.results-grid .score-column-head { display: grid; grid-template-columns: 80px minmax(0, 1fr) 60px; gap: .55rem; align-items: center; height: 44px; margin-top: 20px; border-bottom: 1px solid var(--color-rule); color: var(--color-muted); font-size: .8rem; }
+.score-column-head span:last-child { grid-column: 2 / 4; text-align: right; }
+.results-grid .bar-chart { gap: 0; padding: 0; }
+.results-grid .chart-row { min-height: 56px; font-size: .85rem; }
+.results-grid .chart-row strong { font-size: 1rem; }
+.results-grid .bar-track { height: 18px; border-radius: 3px; }
+.results-grid .bar { border-radius: 3px; }
+.results-grid .chart-scale { margin-top: 12px; }
+.results-grid .endpoint-table { table-layout: fixed; margin-top: 20px; }
+.results-grid .endpoint-table th, .results-grid .endpoint-table td { padding: 0 .35rem; vertical-align: middle; }
+.results-grid .endpoint-table thead tr { height: 44px; }
+.results-grid .endpoint-table thead th { font-size: .8rem; text-align: right; white-space: normal; }
+.results-grid .endpoint-table thead th:first-child { text-align: left; }
+.results-grid .endpoint-table tbody tr { height: 56px; }
+.results-grid .endpoint-table tbody th { font-size: .85rem; font-weight: 500; }
+.results-grid .endpoint-table tbody td { font-size: 1rem; font-weight: 650; font-variant-numeric: tabular-nums; }
+@media (max-width: 600px) {
+  .results-grid .score-column-head, .results-grid .chart-row { grid-template-columns: 66px minmax(0, 1fr) 60px; gap: .4rem; }
+  .results-grid .chart-scale { margin-left: 73px; margin-right: 66px; }
+}
+
+/* Match the method legend and stage controls to the section typography. */
+.section-heading .alignment-overview { font-family: var(--font-display); font-size: 1rem; font-weight: 500; line-height: 1.5; letter-spacing: 0; gap: .75rem 1.75rem; color: var(--color-secondary); }
+.alignment-overview > span { display: inline-flex; align-items: baseline; gap: .4rem; }
+.alignment-overview strong { font-weight: 700; }
+.alignment-step { display: inline-flex; align-items: baseline; gap: .6rem; min-height: 44px; padding: 10px 16px; font-family: var(--font-display); font-size: .9375rem; font-weight: 500; line-height: 1.4; letter-spacing: 0; }
+.alignment-step .stage-symbol { display: inline; margin: 0; color: inherit; font-size: inherit; font-weight: 700; white-space: nowrap; }
+.alignment-step .stage-divider { opacity: .55; }
+.alignment-step sub { position: relative; bottom: -.2em; font-size: .72em; line-height: 0; vertical-align: baseline; }
+@media (max-width: 600px) {
+ .section-heading .alignment-overview { font-size: .9375rem; gap: .55rem 1.25rem; }
+ .alignment-step { font-size: .875rem; padding: 10px 14px; }
+}
+
+.contact-section { padding-block: 40px; background: var(--color-paper); }
+.contact-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.contact-inner h2 { font-size: 1.1rem; letter-spacing: -.02em; }
+.contact-links { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 32px; font-size: .9375rem; font-weight: 500; }
+.contact-links a, .contact-wechat { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; color: var(--color-secondary); }
+.contact-wechat { padding: 0; border: 0; background: transparent; font: inherit; cursor: pointer; }
+.contact-links a:hover, .contact-wechat:hover { color: var(--color-accent); }
+.wechat-dialog { width: min(440px, calc(100vw - 32px)); max-height: 94svh; margin: auto; padding: 20px; border: 1px solid var(--color-rule); border-radius: var(--radius-md); background: var(--color-paper); color: var(--color-ink); }
+.wechat-dialog::backdrop { background: var(--color-overlay); }
+.wechat-dialog-header { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 12px; }
+.wechat-dialog-header h2 { font-size: 1rem; letter-spacing: -.02em; }
+.wechat-dialog img { width: 100%; height: auto; max-height: 72svh; object-fit: contain; }
+@media (max-width: 600px) {
+ .contact-inner { align-items: flex-start; flex-direction: column; gap: 12px; }
+ .contact-links { gap: 8px 24px; }
+}

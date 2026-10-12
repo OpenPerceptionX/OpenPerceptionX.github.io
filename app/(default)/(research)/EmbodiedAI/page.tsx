@@ -85,7 +85,7 @@ export default function Home() {
 
 
                                 <div
-                                className={`mb-6 grid gap-1 ${
+                                className={`mb-6 grid gap-1 ${publication.timeline.includes("preview") ? "md:mb-12" : ""} ${
                                     index % 2 === 1 ? "timeline-end md:text-start" : "timeline-start md:text-end"
                                 }`}
                                 >
@@ -179,6 +179,12 @@ export default function Home() {
                                     </div>
 
 
+
+                                    {publication.timeline.includes("preview") && (
+                                        <Link href={publication.link} target="_blank" className={`block w-full max-w-xl mt-6 mb-2 ${index % 2 === 1 ? "mr-auto" : "ml-auto"}`}>
+                                            <Image src={publication.image} alt={publication.title} width={1100} height={506} className="w-full h-auto rounded-sm" />
+                                        </Link>
+                                    )}
 
                                     {
                                         publication.timeline.includes("highlight") && (
