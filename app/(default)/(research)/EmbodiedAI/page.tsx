@@ -180,6 +180,12 @@ export default function Home() {
 
 
 
+                                    {publication.timeline.includes("preview") && (
+                                        <Link href={publication.link} target="_blank" className="md:hidden block w-full max-w-80 mt-4 mb-2 mx-auto">
+                                            <Image src={publication.image} alt={publication.title} width={1100} height={506} className="w-full h-auto rounded-sm" />
+                                        </Link>
+                                    )}
+
                                     {
                                         publication.timeline.includes("highlight") && (
                                             <div className="px-20 md:px-0 xl:px-20 w-full flex justify-center items-center relative mt-3">
@@ -201,6 +207,14 @@ export default function Home() {
                                 </div>
 
 
+
+                                {publication.timeline.includes("preview") && (
+                                    <div className={`hidden md:flex w-full max-w-96 items-center mb-6 ${index % 2 === 1 ? "timeline-start justify-end" : "timeline-end justify-start"}`}>
+                                        <Link href={publication.link} target="_blank" className="block w-full">
+                                            <Image src={publication.image} alt={publication.title} width={1100} height={506} className="w-full h-auto rounded-sm" />
+                                        </Link>
+                                    </div>
+                                )}
 
                                 {
                                     index != [...publications.values()].filter(publication => publication.timeline.includes("tembodied")).length - 1 && (

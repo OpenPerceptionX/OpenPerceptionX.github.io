@@ -88,7 +88,7 @@ export const publications: {
         description: "Egocentric human demonstrations transfer coordinated whole-body loco-manipulation skills to humanoids through coarse-to-fine action alignment and visual alignment, without target-task robot demonstrations.",
         keys: ['embodied_ai', 'home_sliding'],
         time: '2026.09.29',
-        timeline: ['tembodied'],
+        timeline: ['tembodied', 'preview'],
     },
     {
         title: "Native Memory Compression for Long-Horizon Robotic Manipulation",
@@ -112,7 +112,7 @@ export const publications: {
         description: "NativeMEM gives pretrained Vision-Language-Action policies long-term, real-time visual memory by compressing each historical frame-view observation into a single native memory token.",
         keys: ['embodied_ai'],
         time: '2026.07.07',
-        timeline: ['tembodied'],
+        timeline: ['tembodied', 'preview'],
     },
     {
         title: "RoboNaldo: Accurate, Stable and Powerful Humanoid Soccer Shooting via Motion-Guided Curriculum Reinforcement Learning",
