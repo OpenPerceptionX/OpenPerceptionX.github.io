@@ -69,8 +69,8 @@ export const publications: {
     {
         title: "PingpongDuo: Agile Humanoid Table Tennis Doubles with Safe Team Coordination",
         link: "https://arxiv.org/abs/2610.20579",
-        image: "/assets/publication/pingpongduo.webp",
-        image_sliding: "/assets/publication/pingpongduo.webp",
+        image: "/assets/publication/pingpongduo.webp?v=8e561b3",
+        image_sliding: "/assets/publication/pingpongduo.webp?v=8e561b3",
         author: "Haoran Jiang, Yichao Zhong, Kai Zhang, Cheng Liu, Yixuan Pan, Zhenjie Yang, Jingbo Wang, Tianyu Li, Li Chen",
         note: "Preprint 2026",
         noteoption: '',
