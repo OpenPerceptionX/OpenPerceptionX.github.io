@@ -67,6 +67,24 @@ export const publications: {
     timeline: string[];
 }[] = [
     {
+        title: "PingpongDuo: Agile Humanoid Table Tennis Doubles with Safe Team Coordination",
+        link: "https://arxiv.org/abs/2610.20579",
+        image: "/assets/publication/pingpongduo.webp",
+        image_sliding: "/assets/publication/pingpongduo.webp",
+        author: "Haoran Jiang, Yichao Zhong, Kai Zhang, Cheng Liu, Yixuan Pan, Zhenjie Yang, Jingbo Wang, Tianyu Li, Li Chen",
+        note: "Preprint 2026",
+        noteoption: '',
+        star: "",
+        starlink: "",
+        icon: [
+            { type: "page", link: "https://www.archon.tech/research/PingpongDuo" },
+        ],
+        description: "Two humanoid teammates play table tennis doubles through agile footwork, alternating strikes, and safe team coordination.",
+        keys: ['embodied_ai', 'home_sliding'],
+        time: '2026.10.15',
+        timeline: ['tembodied', 'preview'],
+    },
+    {
         title: "SimVTA: Simulation-Grounded Video-Trajectory Alignment for Driving World Action Models",
         link: "https://arxiv.org/abs/2610.13781",
         image: "/SimVTA/assets/figure-1.webp",

@@ -46,10 +46,12 @@ type LandingItem = Pick<(typeof publications)[number], "title" | "image_sliding"
 };
 
 const featuredPublications = publications.filter(publication => publication.keys.includes('home_sliding'))
+const pingpongDuo = featuredPublications.find(publication => publication.link === 'https://arxiv.org/abs/2610.20579')
 const egoHumanoidV2 = featuredPublications.find(publication => publication.link === 'https://arxiv.org/abs/2609.37181')
 const haco = featuredPublications.find(publication => publication.link === 'https://arxiv.org/abs/2609.36596')
-const otherFeaturedPublications = featuredPublications.filter(publication => publication !== egoHumanoidV2 && publication !== haco)
+const otherFeaturedPublications = featuredPublications.filter(publication => publication !== pingpongDuo && publication !== egoHumanoidV2 && publication !== haco)
 const landings: LandingItem[] = [
+    ...(pingpongDuo ? [{ ...pingpongDuo, imageFit: "contain" as const, imageAspectRatio: 16 / 9 }] : []),
     ...(egoHumanoidV2 ? [{ ...egoHumanoidV2, imageFit: "contain" as const, imageAspectRatio: 1100 / 506 }] : []),
     {
         title: alpasim2026.title,
