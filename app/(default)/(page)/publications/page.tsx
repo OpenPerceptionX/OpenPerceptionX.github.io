@@ -106,11 +106,12 @@ export default function Home() {
                                                 {
                                                     publication.author.split(', ').map((author, index) => {
                                                         const trimmedAuthor = author.trim();
+                                                        const authorLink = publication.authorLinks?.[trimmedAuthor] ?? scholar[trimmedAuthor];
                                                         return (
                                                             <div key={author}>
                                                                 {
-                                                                    trimmedAuthor in scholar ? (
-                                                                        <Link className="text-o-dark-blue animated-underline-gray" href={scholar[trimmedAuthor]} target={scholar[trimmedAuthor].startsWith('http') ? '_blank' : '_self'}>
+                                                                    authorLink ? (
+                                                                        <Link className="text-o-dark-blue animated-underline-gray" href={authorLink} target={authorLink.startsWith('http') ? '_blank' : '_self'}>
                                                                             {trimmedAuthor}
                                                                         </Link>
                                                                     ) : (
@@ -163,10 +164,19 @@ export default function Home() {
                                                     </Link>
                                                 )
                                             }
+                                            {publication.linkLabel && (
+                                                <Link href={publication.link} target="_blank" rel="noopener noreferrer" className="text-sm text-o-dark-blue animated-underline-gray">
+                                                    {publication.linkLabel}
+                                                </Link>
+                                            )}
                                             {
                                                 publication.icon.map((link) => (
                                                     link.type != 'github' && (
-                                                        link.type != 'cite' ?
+                                                        link.label ?
+                                                        <Link href={link.link} target={link.link.startsWith('http') ? '_blank' : '_self'} rel="noopener noreferrer" key={link.type} className="text-sm text-o-dark-blue animated-underline-gray">
+                                                            {link.label}
+                                                        </Link>
+                                                        : link.type != 'cite' ?
                                                         <Link href={link.link} target={link.link.startsWith('http') ? '_blank' : '_self'} key={link.type} className="size-4 md:size-5 group/icon">
                                                             <AspectRatio ratio={1/1}>
                                                                 <Image

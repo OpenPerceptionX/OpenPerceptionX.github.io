@@ -53,14 +53,16 @@ scholar["Zhenjie Yang"] = "https://scholar.google.com/citations?user=jVlRiUEAAAA
 export const publications: {
     title: string;
     link: string;
+    linkLabel?: string;
     image: string,
     image_sliding?: string,
     author: string;
+    authorLinks?: Record<string, string>;
     note: string;
     noteoption: string;
     star: string;
     starlink: string
-    icon: { type: string; link: string }[];
+    icon: { type: string; link: string; label?: string }[];
     description: string;
     keys: string[];
     time: string;
@@ -69,17 +71,29 @@ export const publications: {
     {
         title: "PingpongDuo: Agile Humanoid Table Tennis Doubles with Safe Team Coordination",
         link: "https://arxiv.org/abs/2610.20579",
-        image: "/assets/publication/pingpongduo.webp?v=8e561b3",
-        image_sliding: "/assets/publication/pingpongduo.webp?v=8e561b3",
+        linkLabel: "arXiv",
+        image: "/assets/publication/pingpongduo-demo.webp",
+        image_sliding: "/assets/publication/pingpongduo-demo.webp",
         author: "Haoran Jiang, Yichao Zhong, Kai Zhang, Cheng Liu, Yixuan Pan, Zhenjie Yang, Jingbo Wang, Tianyu Li, Li Chen",
+        authorLinks: {
+            "Haoran Jiang": "https://hrriver7.github.io/",
+            "Yichao Zhong": "https://z-taylcr7.github.io/",
+            "Kai Zhang": "https://github.com/junkerman2004",
+            "Cheng Liu": "https://liucheng532.github.io/",
+            "Yixuan Pan": "https://lzpyx.github.io/",
+            "Zhenjie Yang": "https://github.com/jayyoung0802",
+            "Jingbo Wang": "https://wangjingbo1219.github.io/",
+            "Tianyu Li": "https://sephyli.github.io/",
+            "Li Chen": "https://ilnehc.github.io/",
+        },
         note: "Preprint 2026",
         noteoption: '',
         star: "",
         starlink: "",
         icon: [
-            { type: "page", link: "https://www.archon.tech/research/PingpongDuo" },
+            { type: "page", link: "https://www.archon.tech/research/PingpongDuo", label: "Project page" },
         ],
-        description: "Two humanoid teammates play table tennis doubles through agile footwork, alternating strikes, and safe team coordination.",
+        description: "The first humanoid table tennis doubles system",
         keys: ['embodied_ai', 'home_sliding'],
         time: '2026.10.15',
         timeline: ['tembodied', 'preview'],
