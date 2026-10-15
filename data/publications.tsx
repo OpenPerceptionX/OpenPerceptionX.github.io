@@ -93,7 +93,7 @@ export const publications: {
         icon: [
             { type: "page", link: "https://www.archon.tech/research/PingpongDuo", label: "Project page" },
         ],
-        description: "The first humanoid table tennis doubles system",
+        description: "The first humanoid table tennis doubles system. PingpongDuo combines agile footwork, precise striking, and collision-aware coordination, enabling two humanoid teammates to sustain rallies in strict alternation.",
         keys: ['embodied_ai', 'home_sliding'],
         time: '2026.10.15',
         timeline: ['tembodied', 'preview'],
