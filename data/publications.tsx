@@ -69,6 +69,30 @@ export const publications: {
     timeline: string[];
 }[] = [
     {
+        title: "From Pixel to Poses: Object-centric Tool Manipulation Learning from Human Demonstrations",
+        link: "https://github.com/OpenDriveLab/P2P-T",
+        image: "/P2PT/assets/img/overview.png",
+        author: "Bangjun Wang, Longyan Wu, Yukun Wei, Shenghe Shao, Chaoyi Huang, Wenze Cui, Zetong Xu, Hanlin Wu, Long Chen, Yi Ma, Hongyang Li",
+        note: "Preprint 2026",
+        noteoption: '',
+        star: "https://img.shields.io/github/stars/OpenDriveLab/P2P-T?style=social",
+        starlink: "https://github.com/OpenDriveLab/P2P-T",
+        icon: [
+            {
+                type: "page",
+                link: "/P2PT",
+            },
+            {
+                type: "github",
+                link: "https://github.com/OpenDriveLab/P2P-T",
+            },
+        ],
+        description: "P2P-T learns object-centric tool manipulation from in-the-wild human demonstrations and transfers pose-aware priors to precise robot execution without aligned human-robot data.",
+        keys: ['embodied_ai', 'home_sliding'],
+        time: '2026.09.28',
+        timeline: ['tembodied', 'highlight'],
+    },
+    {
         title: "PingpongDuo: Agile Humanoid Table Tennis Doubles with Safe Team Coordination",
         link: "https://arxiv.org/abs/2610.20579",
         linkLabel: "arXiv",

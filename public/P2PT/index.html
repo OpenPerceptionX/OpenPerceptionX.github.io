@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>From Pixel to Poses: Object-centric Tool Manipulation Learning</title>
+<meta content="P2P-T learns object-centric tool manipulation from human demonstrations and transfers pose-aware priors to robot execution without aligned human-robot data." name="description"/>
+<link href="assets/css/p2pt.css" rel="stylesheet"/>
+</head>
+<body><a class="skip-link" href="#overview">Skip to content</a>
+<div class="progress" id="progress"></div>
+<header class="topbar">
+<a aria-label="P2P-T home" class="brand" href="#top">P2P-T</a>
+<nav aria-label="Page navigation" class="nav">
+<a href="#overview">Overview</a>
+<a href="#method">Method</a>
+<a href="#demos">Demos</a>
+<a href="#evaluation">Evaluation protocol</a>
+<a href="#results">Results</a>
+<a href="#analysis">Analysis</a>
+<a href="#bibtex">BibTeX</a>
+</nav>
+</header>
+<main id="top">
+<section aria-label="P2P-T introduction" class="hero"><video aria-label="P2P-T project demonstration video" autoplay="" class="hero-video" fetchpriority="high" loop="" muted="" playsinline="" preload="auto" src="assets/videos/hero.mp4">Your browser does not support the video element.</video><div aria-hidden="true" class="hero-shade"></div>
+<div class="hero-content">
+<p class="eyebrow">Learning tool use from human demonstrations</p>
+<h1>
+<span class="title-main">From Pixel<br/>to Poses.</span>
+<span class="title-rest">Object-centric tool manipulation learning from human demonstrations</span>
+</h1>
+<p class="lead">P2P-T learns embodiment-independent 6D tool pose priors from in-the-wild human video, then turns those priors into precise robot actions without human-robot aligned data.</p>
+<div aria-label="Project actions" class="hero-actions"><a class="btn primary" href="#demos"><svg aria-hidden="true" class="icon" viewbox="0 0 24 24"><path d="m9 5 10 7-10 7Z"></path></svg> Demos</a><a class="btn" href="https://arxiv.org/abs/2609.35375" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" class="icon" viewbox="0 0 24 24"><path d="M6 3h9l3 3v15H6zM15 3v4h4M9 12h6m-6 4h6"></path></svg> arXiv</a><a class="btn" href="https://github.com/OpenDriveLab/P2P-T" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" class="icon" viewbox="0 0 24 24"><path d="m8 8-4 4 4 4m8-8 4 4-4 4m-3-12-2 16"></path></svg> GitHub</a><a class="btn" href="mailto:contact@bangjunwang.com"><svg aria-hidden="true" class="icon" viewBox="0 0 24 24"><path d="M4 6h16v12H4zM4 7l8 6 8-6"></path></svg> Contact</a></div>
+<div class="project-credits container"><div class="authors">
+<span><strong>Bangjun Wang</strong><sup>1</sup></span>
+<span><strong>Longyan Wu</strong><sup>2</sup></span>
+<span><strong>Yukun Wei</strong><sup>1</sup></span>
+<span><strong>Shenghe Shao</strong><sup>1</sup></span>
+<span><strong>Chaoyi Huang</strong><sup>1</sup></span>
+<span><strong>Wenze Cui</strong><sup>1</sup></span>
+<span><strong>Zetong Xu</strong><sup>1</sup></span>
+<span><strong>Hanlin Wu</strong><sup>1</sup></span>
+<span><strong>Long Chen</strong><sup>3</sup></span>
+<span><strong>Yi Ma</strong><sup>1</sup></span>
+<span><strong>Hongyang Li</strong><sup>1,2</sup></span>
+</div><div class="affiliations">
+<span><sup>1</sup> The University of Hong Kong</span>
+<span><sup>2</sup> Shanghai Innovation Institute</span>
+<span><sup>3</sup> Xiaomi EV</span>
+</div><div class="corresponding"><span>arXiv preprint · September 2026</span></div></div></div>
+</section>
+<section class="section container" data-section-number="01" id="overview">
+<div class="section-head">
+<p class="eyebrow"><span class="section-number">01</span>At a glance</p>
+<h2>Teach robots tool use through object motion</h2>
+</div>
+<div class="overview-grid">
+<article class="statement">
+<p>P2P-T turns unstructured human videos into <strong>structured, object-centric pose trajectories</strong>. A foundation-model pipeline finds the tool, reconstructs its geometry, and tracks its 6D motion. A two-stage learner then transfers those priors to a low-level robot policy, keeping the task affordance while leaving embodiment-specific control to the robot.</p>
+<div class="metrics-row">
+<div><strong>2 stages</strong><span>world model → policy</span></div>
+<div><strong>3,094 clips</strong><span>pretraining corpus</span></div>
+<div><strong>17 tools</strong><span>categories in the mix</span></div>
+<div><strong>0.57</strong><span>average success rate</span></div>
+</div>
+</article>
+<figure class="figure-panel paper-figure">
+<img alt="P2P-T overview: human video preprocessing, object-centric world model pretraining, and pose-aware deployment" decoding="async" height="1135" loading="lazy" src="assets/img/teaser.png" width="2400"/>
+<figcaption>From in-the-wild human demonstrations to pose-aware robot execution.</figcaption>
+</figure>
+</div>
+<div class="contribution-grid">
+<article><span class="number">01</span><h3>Automated pose extraction</h3><p>Grounded-SAM, SAM 3D, and FoundationPose convert raw RGB video into clean tool masks, meshes, and 6D trajectories.</p></article>
+<article><span class="number">02</span><h3>Embodiment-independent priors</h3><p>The Stage 1 world model predicts future object poses, so the learned dynamics transfer across human and robot bodies.</p></article>
+<article><span class="number">03</span><h3>Pose-aware execution</h3><p>Stage 2 injects future pose latents into a diffusion action expert for precise, receding-horizon control.</p></article>
+</div>
+</section>
+<section class="section container" data-section-number="02" id="method">
+<div class="section-head"><p class="eyebrow"><span class="section-number">02</span>Method</p><h2>Two stages bridge pixels and physical action</h2></div>
+<div class="method-grid">
+<article class="method-step" data-method-stage="stage1"><span>Stage 1</span><h3>Object-centric world model</h3><p>Frozen DINOv2, SigLIP, and T5 encoders feed an autoregressive transformer that predicts future 6D tool poses and auxiliary frames from human demonstrations.</p></article>
+<article class="method-step" data-method-stage="stage2"><span>Stage 2</span><h3>Pose-aware post-training</h3><p>A frozen Stage 1 model produces future pose latents. An RDT-based action expert conditions on those latents, language, images, and proprioception.</p></article>
+<article class="method-step" data-method-stage="deployment"><span>Deployment</span><h3>Receding-horizon control</h3><p>The robot samples action chunks and refreshes its pose prior as new camera observations arrive, connecting object-level dynamics with robot-specific control.</p></article>
+</div>
+<figure class="method-figure">
+<div class="paper-art-wrap"><img alt="P2P-T two-stage framework diagram" decoding="async" height="792" loading="lazy" src="assets/img/pipeline_v9.png" width="2400"/></div>
+<figcaption>Two-stage framework: object-centric world model pretraining followed by pose-aware policy post-training.</figcaption>
+<div class="method-explanation"><strong>Whole architecture</strong><p>P2P-T separates embodiment-independent reasoning from robot-specific control. Stage 1 learns future object-centric pose latents from human demonstrations; Stage 2 conditions a low-level action expert on those latents together with current RGB, language, and proprioception.</p></div></figure>
+<figure class="method-figure">
+<div class="paper-art-wrap"><img alt="P2P-T preprocessing pipeline from video frames to 6D tool poses" decoding="async" height="683" loading="lazy" src="assets/img/preprocess_v3.png" width="2400"/></div>
+<figcaption>Automated preprocessing removes the need for dense human annotation.</figcaption>
+<div class="method-explanation"><strong>Preprocess pipeline</strong><p>The pipeline turns unstructured RGB video into validated 6D tool trajectories: Grounded-SAM isolates the tool, SAM 3D reconstructs an instance mesh, and FoundationPose tracks its SE(3) pose across the sequence. The resulting supervision avoids dense human-robot alignment.</p></div></figure>
+</section>
+<section class="section wide" data-section-number="03" id="demos">
+<div class="container"><div class="section-head"><p class="eyebrow"><span class="section-number">03</span>Robot demonstrations</p><h2>Precision tool use beyond pick-and-place</h2></div></div>
+<div class="container video-feature">
+<figure class="task-feature-visual"><img alt="P2P-T real-world evaluation tasks: hammer, cup, brush, screwdriver, knife, and spoon" height="754" loading="lazy" src="assets/img/tasks_v3.png" width="1600"/><figcaption>Six task demonstrations spanning impact, pouring, sweeping, slicing, scooping, and tool alignment.</figcaption></figure>
+<div class="feature-copy"><h3>Six real-world tasks</h3><p>Each task requires continuous spatial reasoning, contact-rich control, and a tool-specific working pose. Tools are randomly placed, then re-oriented and operated by a UR10e robot with a Robotiq 2F-140 gripper.</p><dl class="compact-list"><div><dt>Hammer</dt><dd>Strike a target with dynamic impacts.</dd></div><div><dt>Cup</dt><dd>Pour while maintaining orientation through the motion.</dd></div><div><dt>Brush</dt><dd>Sweep across a surface with sustained contact.</dd></div><div><dt>Screwdriver · Knife · Spoon</dt><dd>Rotate, slice, and scoop through precise 6D trajectories.</dd></div></dl></div>
+</div>
+<!-- <div class="container paper-figure task-figure"><img alt="Six P2P-T real-world tool manipulation tasks" decoding="async" height="868" loading="lazy" src="assets/img/tasks.png" width="2144"/><p class="figure-note">Six tools. Six distinct demands on orientation, contact, and control.</p></div> -->
+<div class="execution-heading"><h3>Real-world execution</h3><p>P2P-T's real-world inference results on UR10e.</p></div><div class="container media-grid"><article class="media-card demo-video-card"><div class="demo-video-frame" style='--poster: url("assets/videos/inference-posters/hammer.jpg")'><video aria-label="Hammer inference robot execution" controls="" muted="" playsinline="" poster="assets/videos/inference-posters/hammer.jpg" preload="metadata"><source src="assets/videos/inference/hammer.mp4" type="video/mp4"/>Your browser does not support the video element.</video></div><h4>Hammer</h4><p>Strike a target with dynamic impacts.</p></article><article class="media-card demo-video-card"><div class="demo-video-frame" style='--poster: url("assets/videos/inference-posters/cup.jpg")'><video aria-label="Cup inference robot execution" controls="" muted="" playsinline="" poster="assets/videos/inference-posters/cup.jpg" preload="metadata"><source src="assets/videos/inference/cup.mp4" type="video/mp4"/>Your browser does not support the video element.</video></div><h4>Cup</h4><p>Pour while maintaining orientation through the motion.</p></article><article class="media-card demo-video-card"><div class="demo-video-frame" style='--poster: url("assets/videos/inference-posters/knife.jpg")'><video aria-label="Knife inference robot execution" controls="" muted="" playsinline="" poster="assets/videos/inference-posters/knife.jpg" preload="metadata"><source src="assets/videos/inference/knife.mp4" type="video/mp4"/>Your browser does not support the video element.</video></div><h4>Knife</h4><p>Slice with a precise downward working direction.</p></article><article class="media-card demo-video-card"><div class="demo-video-frame" style='--poster: url("assets/videos/inference-posters/brush.jpg")'><video aria-label="Brush inference robot execution" controls="" muted="" playsinline="" poster="assets/videos/inference-posters/brush.jpg" preload="metadata"><source src="assets/videos/inference/brush.mp4" type="video/mp4"/>Your browser does not support the video element.</video></div><h4>Brush</h4><p>Sweep across a surface with sustained contact.</p></article><article class="media-card demo-video-card"><div class="demo-video-frame" style='--poster: url("assets/videos/inference-posters/spoon.jpg")'><video aria-label="Spoon inference robot execution" controls="" muted="" playsinline="" poster="assets/videos/inference-posters/spoon.jpg" preload="metadata"><source src="assets/videos/inference/spoon.mp4" type="video/mp4"/>Your browser does not support the video element.</video></div><h4>Spoon</h4><p>Scoop while coordinating pitch and tool orientation.</p></article><article class="media-card demo-video-card"><div class="demo-video-frame" style='--poster: url("assets/videos/inference-posters/screwdriver.jpg")'><video aria-label="Screwdriver inference robot execution" controls="" muted="" playsinline="" poster="assets/videos/inference-posters/screwdriver.jpg" preload="metadata"><source src="assets/videos/inference/screwdriver.mp4" type="video/mp4"/>Your browser does not support the video element.</video></div><h4>Screwdriver</h4><p>Rotate and align the tool with the screw.</p></article></div>
+</section>
+<section class="section container evaluation-section" data-section-number="04" id="evaluation">
+<div class="section-head"><p class="eyebrow"><span class="section-number">04</span>Evaluation protocol</p><h2>Trajectory inference from random tool poses</h2></div>
+<div class="protocol-intro"><p>For each task, we randomly place the tool on the table, requiring the robot to adapt to its initial position and pose, infer the corresponding trajectory, and progressively reorient the tool into the correct working pose while maintaining contact or precise directional control. This evaluates tool use from realistic, unaligned starting conditions rather than simplified, pre-aligned setups. We use 100 demonstrations for adaptation and evaluate each task over 50 trials.</p></div>
+<div aria-label="Evaluation protocol example videos" class="protocol-videos" data-protocol-videos="">
+<figure class="protocol-video-card"><video aria-label="Random tool placement and trajectory inference example 1" controls="" muted="" playsinline="" preload="metadata"><source src="assets/videos/eval_protocol/knife.mp4" type="video/mp4"/>Your browser does not support the video element.</video><figcaption><span>Random placement - inferred trajectory</span></figcaption></figure>
+<figure class="protocol-video-card"><video aria-label="Random tool placement and trajectory inference example 2" controls="" muted="" playsinline="" preload="metadata"><source src="assets/videos/eval_protocol/knife_2.mp4" type="video/mp4"/>Your browser does not support the video element.</video><figcaption><span>Random placement - inferred trajectory</span></figcaption></figure>
+<figure class="protocol-video-card"><video aria-label="Random tool placement and trajectory inference example 3" controls="" muted="" playsinline="" preload="metadata"><source src="assets/videos/eval_protocol/knife_3.mp4" type="video/mp4"/>Your browser does not support the video element.</video><figcaption><span>Random placement - inferred trajectory</span></figcaption></figure>
+</div>
+</section>
+<section class="section container" data-section-number="05" id="results">
+<div class="section-head"><p class="eyebrow"><span class="section-number">05</span>Results</p><h2>Strong gains on complex real-world manipulation</h2></div>
+<div class="results-highlight p2pt-highlight"><div><strong>0.57</strong><span>average success</span></div><div><strong>+73%</strong><span>over π<sub>0.5</sub></span></div><div><strong>30 Hz</strong><span>execution rate</span></div></div>
+<div class="results-chart-card">
+<div class="results-chart-head"><div><h3>Real-world policy evaluation</h3><p>Success rate (%) · 100 demonstrations and 50 trials per task. Selected baselines shown.</p></div><div class="chart-legend"><span><i class="bar-baseline"></i>Baselines</span><span><i class="bar-native"></i>P2P-T</span></div></div>
+<div class="mini-chart-grid real-results">
+<article class="mini-chart"><h4>Hammer</h4><div class="grouped-bars"><span aria-label="π0.5: 24% success" class="bar-pi" style="--value:24" title="π0.5: 24% success"><b>24%</b><em>π<sub>0.5</sub></em></span><span aria-label="Octo: 21% success" class="bar-baseline" style="--value:21" title="Octo: 21% success"><b>21%</b><em>Octo</em></span><span aria-label="P2P-T: 59% success" class="bar-native" style="--value:59" title="P2P-T: 59% success"><b>59%</b><em>P2P-T</em></span></div></article>
+<article class="mini-chart"><h4>Cup</h4><div class="grouped-bars"><span aria-label="π0.5: 49% success" class="bar-pi" style="--value:49" title="π0.5: 49% success"><b>49%</b><em>π<sub>0.5</sub></em></span><span aria-label="Lingbot-VA: 38% success" class="bar-baseline" style="--value:38" title="Lingbot-VA: 38% success"><b>38%</b><em>Lingbot-VA</em></span><span aria-label="P2P-T: 60% success" class="bar-native" style="--value:60" title="P2P-T: 60% success"><b>60%</b><em>P2P-T</em></span></div></article>
+<article class="mini-chart"><h4>Brush</h4><div class="grouped-bars"><span aria-label="π0.5: 27% success" class="bar-pi" style="--value:27" title="π0.5: 27% success"><b>27%</b><em>π<sub>0.5</sub></em></span><span aria-label="Octo: 27% success" class="bar-baseline" style="--value:27" title="Octo: 27% success"><b>27%</b><em>Octo</em></span><span aria-label="P2P-T: 55% success" class="bar-native" style="--value:55" title="P2P-T: 55% success"><b>55%</b><em>P2P-T</em></span></div></article>
+<article class="mini-chart"><h4>Screwdriver</h4><div class="grouped-bars"><span aria-label="π0.5: 35% success" class="bar-pi" style="--value:35" title="π0.5: 35% success"><b>35%</b><em>π<sub>0.5</sub></em></span><span aria-label="Lingbot-VA: 36% success" class="bar-baseline" style="--value:36" title="Lingbot-VA: 36% success"><b>36%</b><em>Lingbot-VA</em></span><span aria-label="P2P-T: 54% success" class="bar-native" style="--value:54" title="P2P-T: 54% success"><b>54%</b><em>P2P-T</em></span></div></article>
+<article class="mini-chart"><h4>Knife</h4><div class="grouped-bars"><span aria-label="π0.5: 37% success" class="bar-pi" style="--value:37" title="π0.5: 37% success"><b>37%</b><em>π<sub>0.5</sub></em></span><span aria-label="OpenVLA: 24% success" class="bar-baseline" style="--value:24" title="OpenVLA: 24% success"><b>24%</b><em>OpenVLA</em></span><span aria-label="P2P-T: 57% success" class="bar-native" style="--value:57" title="P2P-T: 57% success"><b>57%</b><em>P2P-T</em></span></div></article>
+<article class="mini-chart"><h4>Spoon</h4><div class="grouped-bars"><span aria-label="π0.5: 24% success" class="bar-pi" style="--value:24" title="π0.5: 24% success"><b>24%</b><em>π<sub>0.5</sub></em></span><span aria-label="Octo: 26% success" class="bar-baseline" style="--value:26" title="Octo: 26% success"><b>26%</b><em>Octo</em></span><span aria-label="P2P-T: 58% success" class="bar-native" style="--value:58" title="P2P-T: 58% success"><b>58%</b><em>P2P-T</em></span></div></article>
+</div>
+</div>
+<div class="table-wrap"><table><caption>Scaling verification</caption><thead><tr><th>Variant</th><th>Parameters</th><th>Hammer</th><th>Cup</th><th>Average</th></tr></thead><tbody><tr><td>P2P-T-Small</td><td>1.189B</td><td>0.34</td><td>0.48</td><td>0.41</td></tr><tr><td>P2P-T-Base</td><td>1.921B</td><td>0.59</td><td>0.60</td><td>0.60</td></tr><tr class="best"><td>P2P-T-Large</td><td>2.832B</td><td>0.64</td><td>0.68</td><td>0.66</td></tr></tbody></table></div><div class="table-wrap ablation-table"><table><caption>Ablation on framework design</caption><thead><tr><th>Object-centric pretraining</th><th>Pose-aware post-training</th><th>Hammer</th><th>Cup</th><th>Average</th></tr></thead><tbody><tr><td>✓</td><td>×</td><td>0.12</td><td>0.14</td><td>0.13</td></tr><tr><td>×</td><td>✓</td><td>0.32</td><td>0.36</td><td>0.34</td></tr><tr class="best"><td>✓</td><td>✓</td><td>0.59</td><td>0.60</td><td>0.60</td></tr></tbody></table><p class="table-note">Both components are needed for the strongest pose-aware execution performance.</p></div>
+</section>
+<section class="section container" data-section-number="06" id="analysis">
+<div class="section-head"><p class="eyebrow"><span class="section-number">06</span>Qualitative analysis</p><h2>Structured priors carry tool affordances across bodies</h2></div>
+<div class="analysis-stack"><figure class="attention-panel"><div class="attention-visual"><video aria-label="P2P-T preprocessing visualization" autoplay="" controls="" loop="" muted="" playsinline="" preload="metadata"><source src="assets/videos/foundationpose_vis/preprocess_vis.mp4" type="video/mp4"/>Your browser does not support the video element.</video></div><figcaption class="attention-copy"><h3 class="analysis-highlight-title">From affordance to action</h3><p>Human demonstrations provide the object-level trajectory: where a tool should move, how it should orient, and how its contact evolves. P2P-T keeps that structure while learning robot-specific actuator commands in Stage 2.</p></figcaption></figure></div>
+<div class="analysis-case"><div class="analysis-case-copy"><span class="kicker">Failure cases</span><h3>Why pose priors matter</h3><p>In most cases, when tools are placed in initial poses that were not seen during training, <span class="analysis-highlight">baseline models linger around the target and cannot complete a reliable grasp.</span> In other cases, they overfit to a demonstrated trajectory, grasp a random component of the tool, and fail to use the tool correctly. P2P-T's future pose latents make the intended orientation and progression explicit, helping the action expert maintain a stable working trajectory.</p><p class="analysis-note">These clips show representative failures from the baseline comparison. The pose-aware prior keeps the tool aligned with its intended affordance.</p></div><div class="failure-video-grid"><figure class="case-video"><video controls="" muted="" playsinline="" poster="assets/img/video-posters/failure-screwdriver.jpg" preload="metadata"><source src="assets/videos/failure-screwdriver.mp4" type="video/mp4"/>Your browser does not support the video element.</video><figcaption><strong>Screwdriver</strong><span>The policy fails to generalize to a new initial tool pose and uses the screwdriver incorrectly.</span></figcaption></figure><figure class="case-video"><video controls="" muted="" playsinline="" poster="assets/img/video-posters/failure-hammer.jpg" preload="metadata"><source src="assets/videos/failure-hammer.mp4" type="video/mp4"/>Your browser does not support the video element.</video><figcaption><strong>Hammer</strong><span>The interaction misses the target working pose.</span></figcaption></figure><figure class="case-video"><video controls="" muted="" playsinline="" poster="assets/img/video-posters/failure-knife.jpg" preload="metadata"><source src="assets/videos/failure-knife.mp4" type="video/mp4"/>Your browser does not support the video element.</video><figcaption><strong>Knife</strong><span>The end-effector loses the intended cutting direction.</span></figcaption></figure></div></div>
+</section>
+<section class="section container" data-section-number="07" id="bibtex"><div class="section-head"><p class="eyebrow"><span class="section-number">07</span>Citation</p><h2>BibTeX</h2></div><div class="code-head"><button aria-label="Copy BibTeX citation" aria-live="polite" class="copy" data-copy="#bibtex-code" type="button">Copy</button></div><pre id="bibtex-code"><code>@article{wang2026p2pt,
+  title={From Pixel to Poses: Object-centric Tool Manipulation Learning from Human Demonstrations},
+  author={Wang, Bangjun and Wu, Longyan and Wei, Yukun and Shao, Shenghe and Huang, Chaoyi and Cui, Wenze and Xu, Zetong and Wu, Hanlin and Chen, Long and Ma, Yi and Li, Hongyang},
+  journal={arXiv preprint},
+  year={2026}
+}</code></pre></section>
+</main>
+<footer class="footer container"><p>Project page for P2P-T · <a href="https://github.com/OpenDriveLab/P2P-T" rel="noopener noreferrer" target="_blank">OpenDriveLab/P2P-T</a></p></footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
+
