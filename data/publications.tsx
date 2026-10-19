@@ -71,7 +71,7 @@ export const publications: {
     {
         title: "From Pixel to Poses: Object-centric Tool Manipulation Learning from Human Demonstrations",
         link: "https://github.com/OpenDriveLab/P2P-T",
-        image: "/P2PT/assets/img/teaser.png",
+        image: "/P2P-T/assets/img/teaser.png",
         author: "Bangjun Wang, Longyan Wu, Yukun Wei, Shenghe Shao, Chaoyi Huang, Wenze Cui, Zetong Xu, Hanlin Wu, Long Chen, Yi Ma, Hongyang Li",
         note: "Preprint 2026",
         noteoption: '',
@@ -80,7 +80,7 @@ export const publications: {
         icon: [
             {
                 type: "page",
-                link: "/P2PT",
+                link: "/P2P-T/",
             },
             {
                 type: "github",

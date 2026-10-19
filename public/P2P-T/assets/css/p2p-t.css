@@ -123,10 +123,10 @@ figcaption, .figure-note { color: var(--muted); font-size: 12px; line-height: 1.
 .media-grid .placeholder-video { aspect-ratio: 16 / 10; }
 
 /* Percent values with a consistent, honest 0–100% bar scale. */
-.p2pt-highlight { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-bottom: 56px; }
-.p2pt-highlight > div { padding-top: 20px; border-top: 1px solid var(--line); }
-.p2pt-highlight strong { display: block; font-size: clamp(42px, 5.3vw, 72px); line-height: 1.1; font-weight: 400; letter-spacing: -.055em; }
-.p2pt-highlight span { display: block; margin-top: 10px; font-size: 12px; color: var(--muted); }
+.p2p-t-highlight { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-bottom: 56px; }
+.p2p-t-highlight > div { padding-top: 20px; border-top: 1px solid var(--line); }
+.p2p-t-highlight strong { display: block; font-size: clamp(42px, 5.3vw, 72px); line-height: 1.1; font-weight: 400; letter-spacing: -.055em; }
+.p2p-t-highlight span { display: block; margin-top: 10px; font-size: 12px; color: var(--muted); }
 .results-chart-head { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; }
 .results-chart-head h3 { font-size: 18px; }
 .results-chart-head p { font-size: 12px; margin-top: 7px; color: var(--muted); }
@@ -208,9 +208,9 @@ pre { margin: 0; padding: 28px; border-radius: 8px; background: var(--surface); 
   .method-figure img { padding: 7px; }
   .media-grid { grid-template-columns: 1fr; gap: 25px; }
   .media-grid .placeholder-video { aspect-ratio: 16 / 9; }
-  .p2pt-highlight { gap: 16px; margin-bottom: 38px; }
-  .p2pt-highlight strong { font-size: clamp(31px, 7vw, 46px); }
-  .p2pt-highlight span { font-size: 10px; }
+  .p2p-t-highlight { gap: 16px; margin-bottom: 38px; }
+  .p2p-t-highlight strong { font-size: clamp(31px, 7vw, 46px); }
+  .p2p-t-highlight span { font-size: 10px; }
   .results-chart-head { display: block; }
   .chart-legend { margin-top: 16px; }
   .mini-chart-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 34px 24px; }
