@@ -41,11 +41,46 @@ const organizers: {
     {
         name: "Hongyang Li",
         affiliation: 'The University of Hong Kong',
-        link: 'https://datascience.hku.hk/people/hongyang-li/'
+        link: 'https://ai.hku.hk/index.php/people/academic-staff/hongyang'
+    },
+    {
+        name: "Li Chen",
+        affiliation: 'Archon Robotics',
+        link: 'https://ilnehc.github.io/'
+    },
+    {
+        name: "Jonghyun Choi",
+        affiliation: 'Seoul National University',
+        link: 'https://ppolon.github.io/'
+    },
+    {
+        name: "Wansoo Kim",
+        affiliation: 'Hanyang University',
+        link: 'https://sites.google.com/hanyang.ac.kr/harco-lab/peoples/wansoo-kim'
+    },
+    {
+        name: "Majid Khadiv",
+        affiliation: 'Technical University of Munich',
+        link: 'https://www.ce.cit.tum.de/en/aipd/members/majid-khadiv/'
+    },
+    {
+        name: "Nelson Rosa",
+        affiliation: 'Independent Researcher',
+        link: 'https://scholar.google.com/citations?user=kUryZHAAAAAJ'
+    },
+    {
+        name: "Zhenjie Yang",
+        affiliation: 'The University of Hong Kong',
+        link: 'https://scholar.google.com/citations?user=jVlRiUEAAAAJ'
+    },
+    {
+        name: "Ilyass Taouil",
+        affiliation: 'Technical University of Munich',
+        link: 'https://itaouil.github.io/'
     },
     {
         name: "Huijie Wang",
-        affiliation: 'OpenDriveLab',
+        affiliation: 'Archon Robotics',
         link: 'https://faikit.github.io/'
     },
 ];
@@ -215,9 +250,38 @@ export default function Home() {
                     </h2>
                 </div>
             </div>
+
+
+
             <div className="w-full px-6 flex justify-center mt-12">
-                <div className="w-full max-w-7xl flex">
-                    To be announced.
+                <div className="w-full max-w-7xl">
+                    <div className="w-full max-w-5xl flex flex-col gap-6">
+                        {[...organizers.values()].map((organizer) => (
+                            <div className="flex gap-6" key={organizer.name}>
+                                {
+                                    organizer.link == "" && (
+                                        <div className="flex-1/2">
+                                            <span>
+                                                {organizer.name}
+                                            </span>
+                                        </div>
+                                    )
+                                }
+                                {
+                                    organizer.link != "" && (
+                                        <div className="flex-1/2">
+                                            <Link href={organizer.link} target={organizer.link.startsWith('http') ? '_blank' : '_self'} className="hover:text-o-blue">
+                                                {organizer.name}
+                                            </Link>
+                                        </div>
+                                    )
+                                }
+                                <i className="flex-1/2">
+                                    {organizer.affiliation}
+                                </i>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
 
