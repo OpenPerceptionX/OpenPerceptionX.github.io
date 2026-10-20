@@ -137,14 +137,14 @@ export default function Home() {
                                 alt='ICRA'
                                 width={128}
                                 height={1}
-                                className='h-12 w-auto shrink-0 object-contain select-none'
+                                className='h-14 w-auto shrink-0 object-contain select-none'
                             />
                             <Image
                                 src='https://assets.archonrobotics.tech/odl/logo/IEEE_RAS_logo_4C_stacked-HiRes.fw_.png.png'
                                 alt='IEEE RAS'
                                 width={128}
                                 height={1}
-                                className='h-12 w-auto shrink-0 object-contain select-none'
+                                className='h-14 w-auto shrink-0 object-contain select-none'
                             />
                         </div>
                         <h1 className="text-white text-t1 font-bold">
