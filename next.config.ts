@@ -16,6 +16,11 @@ const nextConfig: NextConfig = {
             },
             {
                 protocol: 'https',
+                hostname: 'assets.archonrobotics.tech',
+                pathname: '/**',
+            },
+            {
+                protocol: 'https',
                 hostname: 'img.shields.io',
                 pathname: '/**',
             },

@@ -130,14 +130,26 @@ export const NavigatorProject: {
             id: "related",
         },
     ],
-    "/neurips2026/workshop": [
+    "/icra2027/workshop": [
         {
             text: "Introduction",
             id: "introduction",
         },
         {
+            text: "Schedule",
+            id: "schedule",
+        },
+        {
             text: "Speakers",
             id: "speaker",
+        },
+        {
+            text: "Organizers",
+            id: "organizer",
+        },
+        {
+            text: "Related Workshops",
+            id: "related",
         },
     ],
     // "/challenge2026": [

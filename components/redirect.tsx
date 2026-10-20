@@ -204,9 +204,9 @@ export default function Redirect() {
 
     // event 2025
     if (
-        pathname.toLowerCase().startsWith('/neurips2026')
+        pathname.toLowerCase().startsWith('/icra2027')
     ) {
-        redirect('/neurips2026/workshop/')
+        redirect('/icra2027/workshop/')
     }
     if (
         pathname.toLowerCase().startsWith('/cvpr2026')
