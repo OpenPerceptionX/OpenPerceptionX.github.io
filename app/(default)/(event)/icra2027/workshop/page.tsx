@@ -94,22 +94,22 @@ export default function Home() {
                         fill
                         className='object-center object-cover rounded-sm select-none'
                     />
-                    <div aria-hidden="true" className="absolute inset-0 rounded-sm bg-black/50 pointer-events-none" />
+                    <div aria-hidden="true" className="absolute inset-0 rounded-sm bg-black/40 pointer-events-none" />
                     <div className="w-full h-full absolute z-10 flex flex-col justify-end items-start p-6 xl:p-10 gap-6">
-                        <div className="flex flex-row gap-6">
+                        <div className="flex flex-row items-center gap-6">
                             <Image
                                 src='https://assets.archonrobotics.tech/odl/logo/icra.png'
                                 alt='ICRA'
                                 width={128}
                                 height={1}
-                                className='select-none'
+                                className='h-12 w-auto shrink-0 object-contain select-none'
                             />
                             <Image
                                 src='https://assets.archonrobotics.tech/odl/logo/IEEE_RAS_logo_4C_stacked-HiRes.fw_.png.png'
                                 alt='IEEE RAS'
                                 width={128}
                                 height={1}
-                                className='select-none'
+                                className='h-12 w-auto shrink-0 object-contain select-none'
                             />
                         </div>
                         <h1 className="text-white text-t1 font-bold">
