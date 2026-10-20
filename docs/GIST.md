@@ -1,0 +1,11 @@
+| Size class | Breakpoint | Device representation | [layout] Layout columns | [layout] Margin (each side) | [layout] Body | [layout] Gutter | [spacing] Section padding (each end) | [spacing] Major group gap | [spacing] Paragraph / content gap | [spacing] Related-item gap | [spacing] Card inner padding | [font] Page heading size | [font] Section heading size | [font] Body text size |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Compact width | width < 600dp | 99.96% of phones in portrait | 4 | 16dp | Scaling | 16dp | 48dp | 24dp | 24dp | 12dp | 24dp | 48px | 30px | 18px |
+| Medium width | 600dp ≤ width < 840dp | 93.73% of tablets in portrait,<br>most large unfolded inner displays in portrait | 8 | 32dp | Scaling | 24dp | 48dp | 24dp | 24dp | 12dp | 24dp | 48px | 30px | 18px |
+| Expanded width | 840dp ≤ width < 1200dp | 97.22% of tablets in landscape,<br>most large unfolded inner displays in landscape are at least expanded width | 12 | Scaling | Fixed: 752dp | 24dp | 96dp | 48dp | 24dp | 12dp | 24dp | 60px | 36px | 18px |
+| Large width | 1200dp ≤ width < 1600dp | Large tablet displays | 12 | Fixed: 224dp | Scaling | 24dp | 96dp | 48dp | 24dp | 12dp | 24dp | 60px | 36px | 18px |
+| Extra-large width | width ≥ 1600dp | Desktop displays | 12 | Scaling | Fixed: 1152dp | 24dp | 96dp | 48dp | 24dp | 12dp | 24dp | 72px | 48px | 18px |
+| Compact height | height < 480dp | 99.78% of phones in landscape | By width | By width | By width | By width | By width | By width | By width | By width | By width | By width | By width | By width |
+| Medium height | 480dp ≤ height < 900dp | 96.56% of tablets in landscape,<br>97.59% of phones in portrait | By width | By width | By width | By width | By width | By width | By width | By width | By width | By width | By width | By width |
+| Expanded height | height ≥ 900dp | 94.25% of tablets in portrait | By width | By width | By width | By width | By width | By width | By width | By width | By width | By width | By width | By width |
+| Special case | All widths | Full-width sections | 4/8/12 | 24dp | Scaling, no maximum | 16dp (<600dp); 24dp (≥600dp) | By component | By component | By component | By component | By component | By component | By component | By component |
