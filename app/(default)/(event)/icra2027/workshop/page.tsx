@@ -92,20 +92,21 @@ export default function Home() {
                         src='https://assets.archonrobotics.tech/odl/event/icra2027/terrence-low-EABOE-NK0wU-unsplash.jpg'
                         alt='Sydney'
                         fill
-                        className='object-center object-cover bg-gradient-landing rounded-sm bg-black bg-opacity-30 bg-blend-overlay select-none'
+                        className='object-center object-cover rounded-sm select-none'
                     />
-                    <div className="w-full h-full absolute flex flex-col justify-end items-start p-6 xl:p-10 gap-6">
+                    <div aria-hidden="true" className="absolute inset-0 rounded-sm bg-black/50 pointer-events-none" />
+                    <div className="w-full h-full absolute z-10 flex flex-col justify-end items-start p-6 xl:p-10 gap-6">
                         <div className="flex flex-row gap-6">
                             <Image
-                                src='https://assets.archonrobotics.tech/odl/logo/ICRA2027_LOGOICRA-1-scaled.png'
-                                alt='cvpr'
+                                src='https://assets.archonrobotics.tech/odl/logo/icra.png'
+                                alt='ICRA'
                                 width={128}
                                 height={1}
                                 className='select-none'
                             />
                             <Image
-                                src='https://assets.archonrobotics.tech/odl/logo/IEEE_RAS_logo_4C_stacked-HiRes.fw_.png.webp'
-                                alt='cvpr'
+                                src='https://assets.archonrobotics.tech/odl/logo/IEEE_RAS_logo_4C_stacked-HiRes.fw_.png.png'
+                                alt='IEEE RAS'
                                 width={128}
                                 height={1}
                                 className='select-none'
