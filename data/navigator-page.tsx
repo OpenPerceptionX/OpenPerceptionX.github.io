@@ -82,6 +82,10 @@ export const NavigatorPage: {
     ],
     "/events": [
         {
+            text: "2026",
+            id: "2026",
+        },
+        {
             text: "2025",
             id: "2025",
         },
