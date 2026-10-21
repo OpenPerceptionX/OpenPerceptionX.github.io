@@ -2,7 +2,7 @@
  * genre: modern-minimal · tone: technical research · palette: blue
  * nav: N3 Side rail · footer: Ft2 Inline · audience: ICLR reviewers
  * pre-emit critique: P5 H5 E4 S5 R5 V4 · user-directed reference structure */
-@import url("tokens.css");
+@import url("tokens.css?v=20261021-cdn");
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; overflow-x: clip; }

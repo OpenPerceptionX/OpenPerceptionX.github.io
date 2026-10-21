@@ -1,14 +1,14 @@
 /* Hallmark · Photographic · studied-DNA: EgoHumanoid · technical research */
 @font-face {
   font-family: "Manrope";
-  src: url("assets/fonts/manrope.woff2") format("woff2");
+  src: url("https://assets.archonrobotics.tech/odl/project/EgoHumanoid-V2/assets__fonts__manrope.woff2") format("woff2");
   font-style: normal;
   font-weight: 400 800;
   font-display: swap;
 }
 @font-face {
   font-family: "DM Sans";
-  src: url("assets/fonts/dm-sans.woff2") format("woff2");
+  src: url("https://assets.archonrobotics.tech/odl/project/EgoHumanoid-V2/assets__fonts__dm-sans.woff2") format("woff2");
   font-style: normal;
   font-weight: 400 700;
   font-display: swap;

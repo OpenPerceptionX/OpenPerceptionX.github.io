@@ -50,3 +50,24 @@ The user runs the preview. After a relevant UI implementation change, check desk
 - **Distribution:** user-deployed HTML metadata, static routes, aliases, HTTP status, social previews, and real image URLs; see [SEO](../SEO.md).
 
 Record page/route, viewport, relevant preference/state, result, and remaining issues after each check. An implementation fix closes a source issue only; keep browser acceptance pending until that check actually happens.
+
+## 2026-10-21: EgoHumanoid-V2 CDN cutover
+
+Scope: resource URLs and verified binary cleanup for the standalone project and
+its LambdaHumanoid mirror; no layout, content, font family, or palette changes.
+
+- Confirmed base: `https://assets.archonrobotics.tech/odl/project/EgoHumanoid-V2/`.
+- All 171 uploaded objects passed HTTP status and byte-size checks. WOFF2 CORS
+  allows both sites; overview MP4 returned Range/206 as required for seeking.
+- Main `npm run build`, both project JS syntax checks, and `git diff --check` passed.
+  No user development session was running; no local preview server was started.
+- Browser request interception served the edited local source under each existing
+  HTTPS origin and loaded real CDN resources. Both origins passed font/logo loads,
+  original WeChat QR dialog open/close, overview video metadata and seek to 90 s,
+  390px overflow checks, and zero JavaScript page errors.
+- This interception check is pre-deployment verification, not a claim that deployed
+  production has been inspected. Final appearance remains available for user review.
+- Current project media removed only after matching the handoff hashes and CDN
+  object sizes. Original upload ZIP remains outside Git. Unused old root favicons
+  were separately archived; shared main-site OpenDriveLab logo was preserved.
+- No force-push or Git history rewrite was performed.
