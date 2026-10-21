@@ -1,8 +1,8 @@
-@font-face { font-family: Inter; font-style: normal; font-weight: 300; font-display: swap; src: url("../../../WorldEngine/static/fonts/inter-300.ttf") format("truetype"); }
-@font-face { font-family: Inter; font-style: normal; font-weight: 400; font-display: swap; src: url("../../../WorldEngine/static/fonts/inter-400.ttf") format("truetype"); }
-@font-face { font-family: Inter; font-style: normal; font-weight: 500; font-display: swap; src: url("../../../WorldEngine/static/fonts/inter-500.ttf") format("truetype"); }
-@font-face { font-family: Inter; font-style: normal; font-weight: 600; font-display: swap; src: url("../../../WorldEngine/static/fonts/inter-600.ttf") format("truetype"); }
-@font-face { font-family: Inter; font-style: normal; font-weight: 700; font-display: swap; src: url("../../../WorldEngine/static/fonts/inter-700.ttf") format("truetype"); }
+@font-face { font-family: Inter; font-style: normal; font-weight: 300; font-display: swap; src: url("../../WorldEngine/static/fonts/inter-300.ttf") format("truetype"); }
+@font-face { font-family: Inter; font-style: normal; font-weight: 400; font-display: swap; src: url("../../WorldEngine/static/fonts/inter-400.ttf") format("truetype"); }
+@font-face { font-family: Inter; font-style: normal; font-weight: 500; font-display: swap; src: url("../../WorldEngine/static/fonts/inter-500.ttf") format("truetype"); }
+@font-face { font-family: Inter; font-style: normal; font-weight: 600; font-display: swap; src: url("../../WorldEngine/static/fonts/inter-600.ttf") format("truetype"); }
+@font-face { font-family: Inter; font-style: normal; font-weight: 700; font-display: swap; src: url("../../WorldEngine/static/fonts/inter-700.ttf") format("truetype"); }
 :root {
   --paper: #f8f7f3;
   --surface: #eeede7;
@@ -310,7 +310,7 @@ pre { margin: 0; padding: 28px; border-radius: 8px; background: var(--surface); 
 /* Keep the execution label aligned with the task-card container below it. */
 .execution-heading { width: min(var(--max), calc(100% - var(--gutter) * 2)); margin: 58px auto 22px; box-sizing: border-box; }
 .hero > .project-credits { width: 100%; margin-inline: 0; }
-@font-face { font-family: Manrope; font-style: normal; font-weight: 200 800; font-display: swap; src: url("../../../EgoHumanoid-V2/assets/fonts/manrope.woff2") format("woff2"); }
+@font-face { font-family: Manrope; font-style: normal; font-weight: 200 800; font-display: swap; src: url("../../EgoHumanoid-V2/assets/fonts/manrope.woff2") format("woff2"); }
 .hero h1, .hero .title-main, .hero .title-rest { font-family: Manrope, Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
 .hero h1 { letter-spacing: -.075em; }
 .hero .title-rest { letter-spacing: -.035em; }
