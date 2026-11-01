@@ -75,7 +75,7 @@ const organizers: {
     },
     {
         name: "Huijie Wang",
-        affiliation: 'Archon Robotics',
+        affiliation: 'OpenDriveLab',
         link: 'https://faikit.github.io/'
     },
 ];
