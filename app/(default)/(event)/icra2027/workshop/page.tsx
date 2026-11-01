@@ -69,11 +69,6 @@ const organizers: {
         link: 'https://scholar.google.com/citations?user=kUryZHAAAAAJ'
     },
     {
-        name: "Zhenjie Yang",
-        affiliation: 'The University of Hong Kong',
-        link: 'https://scholar.google.com/citations?user=jVlRiUEAAAAJ'
-    },
-    {
         name: "Ilyass Taouil",
         affiliation: 'Technical University of Munich',
         link: 'https://itaouil.github.io/'
@@ -182,7 +177,7 @@ export default function Home() {
             <div className="w-full px-6 flex justify-center mt-12">
                 <div className="w-full max-w-7xl flex flex-col gap-3">
                     <p className="leading-relaxed">
-                        A world simulator is only as good as what can be learned in it.
+                        Despite rapid advances in humanoid robotics, progress remains <b>fragmented</b> across locomotion, manipulation, perception, and reasoning. Real-world tasks, however, demand tight coordination under dynamic and uncertain conditions. Recent advances in learning-based control, scalable data, multimodal foundation models, and hardware-software co-design make this a timely moment to explore <b>Whole-Body Intelligence (WBI)</b> as a unifying framework integrating perception, reasoning, learning, and whole-body control to enable robust loco-manipulation and general-purpose humanoid behavior.
                     </p>
                 </div>
             </div>
